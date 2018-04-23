@@ -1,0 +1,12 @@
+- name: Etsi ja suorita sovelluksia
+  href: index.md
+- name: selaimessa
+  href: run-app-browser.md
+- name: puhelimessa (pohjaan perustuvat)
+  href: run-app-client.md
+- name: puhelimessa (mallipohjaiset)
+  href: run-app-client-model-driven.md
+- name: Microsoft-ryhmissä
+  href: open-app-embedded-in-teams.md
+- name: AppSourcesta
+  href: app-source.md

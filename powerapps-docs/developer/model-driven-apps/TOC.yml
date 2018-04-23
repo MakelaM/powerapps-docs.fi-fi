@@ -1,0 +1,8 @@
+- name: Yleiskatsaus
+  href: overview.md
+- name: Käytä verkkoresursseja
+  href: web-resources.md
+- name: Asiakkaan komentosarjat
+  href: client-scripting.md
+- name: Mukauta komentoja
+  href: customize-commands.md
