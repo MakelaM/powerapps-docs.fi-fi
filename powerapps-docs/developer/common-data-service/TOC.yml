@@ -1,0 +1,19 @@
+- name: Yleiskatsaus
+  href: overview.md
+- name: Ratkaisuihin tutustuminen
+  href: introduction-solutions.md
+- name: Common Data Service sovellusten tietokohteita varten
+  href: entities.md
+  items:
+    - name: Kohteiden metatiedot
+      href: entity-metadata.md
+    - name: Määritteiden metatiedot
+      href: entity-attribute-metadata.md
+    - name: Määritesuhteen metatiedot
+      href: entity-relationship-metadata.md
+    - name: Lisätiedot kohteista
+      href: reference/entities/toc.yml
+- name: Sovella liiketoimintalogiikkaa koodin avulla
+  href: apply-business-logic-with-code.md
+- name: Käytä Common Data Servicea sovellusten verkkopalveluita varten
+  href: use-web-services.md

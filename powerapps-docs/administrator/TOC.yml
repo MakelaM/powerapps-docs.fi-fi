@@ -1,0 +1,40 @@
+- name: Hallitse PowerAppsia
+  href: index.md
+- name: Pika-aloitus
+  items:
+    - name: Luo ympäristö
+      href: create-environment.md
+    - name: Luo DLP-käytäntö
+      href: create-dlp-policy.md
+    - name: Näytä vuokraajasi aktiiviset käyttäjät
+      href: admin-view-user-licenses.md
+    - name: Näytä sovellukset ympäristöissäsi
+      href: admin-view-apps.md
+- name: Käsitteet
+  items:
+    - name: Käyttöoikeuksien yleiskuvaus
+      href: pricing-billing-skus.md
+    - name: Ympäristöjen yleiskuvaus
+      href: environments-overview.md
+    - name: Tietoryhmiin tutustuminen
+      href: introduction-to-data-groups.md
+    - name: Alueiden yleiskuvaus
+      href: regions-overview.md
+- name: Toimintaohjeet
+  items:
+    - name: Osta PowerApps
+      href: signup-for-powerapps-admin.md
+    - name: Hallinnoi käyttöoikeuksia organisaatiossasi
+      href: signup-question-and-answer.md
+    - name: Hallinnoi DLP-käytäntöjä
+      href: prevent-data-loss.md
+    - name: Luo tietokanta
+      href: create-database.md
+    - name: Hallitse ympäristöjä
+      href: environments-administration.md
+    - name: Konfiguroi ympäristön turvallisuus
+      href: database-security.md
+    - name: Hallinnoi sovelluksia organisaatiossasi
+      href: admin-manage-apps.md
+    - name: Siirrä sovellusta vuokraajien tai ympäristöjen välillä
+      href: environment-and-tenant-migration.md
