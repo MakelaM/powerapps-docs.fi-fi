@@ -36,5 +36,20 @@
       href: database-security.md
     - name: Hallinnoi sovelluksia organisaatiossasi
       href: admin-manage-apps.md
-    - name: Siirrä sovellusta vuokraajien tai ympäristöjen välillä
+    - name: Siirrä sovellus vuokraajien tai ympäristöjen välillä
       href: environment-and-tenant-migration.md
+    - name: Vastaaminen järjestelmän muodostamia lokeja koskeviin DSR-pyyntöihin
+      href: powerapps-gdpr-dsr-guide-systemlogs.md
+    - name: Vastaaminen PowerApps-asiakastietoja koskeviin DSR-pyyntöihin
+      href: powerapps-gdpr-dsr-guide.md
+      items:
+        - name: Vastaaminen DSR-pyyntöjen vientiin
+          href: powerapps-gdpr-export-dsr.md
+        - name: Vastaaminen DSR-pyyntöjen poistamiseen
+          href: powerapps-gdpr-delete-dsr.md
+    - name: 'Vastaaminen Apps-asiakastietojen CDS:ää koskeviin DSR-pyyntöihin'
+      href: common-data-service-gdpr-dsr-guide.md
+- name: Lisätietoja
+  items:
+    - name: PowerAppsin PowerShell-tuki (esiversio)
+      href: powerapps-powershell.md

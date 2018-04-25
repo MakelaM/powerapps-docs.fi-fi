@@ -6,6 +6,12 @@
       href: signup-for-powerapps.md
     - name: Rekisteröidy PowerApps-yhteisösuunnitelmaa varten
       href: dev-community-plan.md
+    - name: Uudet ominaisuudet
+      href: ./canvas-apps/release-notes.md
+    - name: Yleisiä ongelmia ja ratkaisuja
+      href: ./canvas-apps/common-issues-and-resolutions.md
+    - name: Tulevat ja viimeisimmät verkkoseminaarit
+      href: ./canvas-apps/webinars-listing.md
 - name: Pohjaan perustuvat sovellukset
   href: ./canvas-apps/getting-started.md
   items:
@@ -123,12 +129,14 @@
               href: ./canvas-apps/add-scrolling-screen.md
             - name: Luo yleinen sovellus
               href: ./canvas-apps/global-apps.md
-            - name: Luo käytettävissä olevia sovelluksia
+            - name: Luo helppokäyttöinen sovellus
               href: ./canvas-apps/accessible-apps.md
         - name: Hallitse sovellustasi
           items:
             - name: Sivustoon powerapps.com tutustuminen
               href: ./canvas-apps/intro-maker-portal.md
+            - name: Työskentele ympäristöissä
+              href: ./canvas-apps/working-with-environments.md
             - name: Muokkaa sovellusta
               href: ./canvas-apps/edit-app.md
             - name: Muuta näytön kokoa ja suuntaa
@@ -195,21 +203,13 @@
           href: ./canvas-apps/connections-list.md
         - name: 'Järjestelmävaatimukset, rajoitukset ja konfigurointi'
           href: ./canvas-apps/limits-and-config.md
-    - name: Resurssit
-      items:
-        - name: Työskentele ympäristöissä
-          href: ./canvas-apps/working-with-environments.md
-        - name: Uudet ominaisuudet
-          href: ./canvas-apps/release-notes.md
-        - name: Yleisiä ongelmia ja ratkaisuja
-          href: ./canvas-apps/common-issues-and-resolutions.md
-        - name: Tulevat ja viimeisimmät verkkoseminaarit
-          href: ./canvas-apps/webinars-listing.md
 - name: Mallipohjaiset sovellukset
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
     - name: Mallipohjaisten sovellusten yleiskuvaus
       href: ./model-driven-apps/overview-model-driven-samples.md
+    - name: Luo ensimmäinen mallipohjainen sovelluksesi
+      href: .//model-driven-apps/build-first-model-driven-app.md
     - name: Jaa mallipohjainen sovellus
       href: ./model-driven-apps/share-model-driven-app.md
     - name: Kehittäjiä varten
