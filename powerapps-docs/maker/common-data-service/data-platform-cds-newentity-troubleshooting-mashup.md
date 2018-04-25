@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 08/18/2017
 ms.author: millopis
 ms.openlocfilehash: dafed76565a4bd3fb3e2822319d344f49376b4fc
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.sourcegitcommit: aa2d0166dccb38100183c093f293233b46f3669d
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="troubleshooting-power-query"></a>Power Queryn vianmääritys
 Kun käytät Power Queryä laatiaksesi mukautetun kohteen, joka sisältää tietoja ulkoisista lähteistä, esiin saattaa tulla tämä virhe:
