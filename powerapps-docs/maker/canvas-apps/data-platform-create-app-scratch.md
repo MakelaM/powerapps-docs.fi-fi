@@ -1,7 +1,6 @@
 ---
 title: Sovelluksen luominen alusta alkaen käyttämällä Common Data Service -tietokantaa | Microsoft Docs
 description: Sovelluksen luominen tietueiden lisäämistä, päivitystä ja poistamista varten.
-services: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -9,16 +8,15 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: cb60ea139be12e51ea9faac7f61ca769d80c1af7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a0aab890e52b49bb0cac382338a8fa02eec736a0
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-an-app-from-scratch-using-a-common-data-service-database"></a>Sovelluksen luominen alusta alkaen käyttämällä Common Data Service -tietokantaa
 Voit rakentaa sovelluksen, jolla hallitaan Common Data Service -tietokannassa säilytettävien tietojen hallintaan käyttämällä (sisäänrakennettuja) vakioentiteettejä, (organisaatiosi luomia) mukautettuja entiteettejä tai kumpiakin.
@@ -41,7 +39,6 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
     Voit suunnitella sovelluksen alusta alkaen puhelimille tai muille laitteille (kuten tableteille). Tässä aiheessa keskitytään puhelinsovelluksen luomiseen.
 
 ## <a name="specify-an-entity"></a>Entiteetin määritys
-
 1. Napsauta tai napauta näytön keskialueella olevaa kohtaa **yhdistä tietoihin** ja sitten napsauta tai napauta **Tiedot**-ruudun **Common Data Service** -yhteyttä.
 
 1. Suodata entiteettiluetteloa kirjoittamalla tai liittämällä hakukenttään pari ensimmäistä kirjainta sanasta **Accounts**, valitse **Accounts**-valintaruutu ja napsauta tai napauta **Yhdistä**.
@@ -122,7 +119,7 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
     ![Seuraava-kuvake](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. Napsauta tai napauta **FormScreen**-näytöllä peruutuskuvaketta ja aseta sen **OnSelect**-ominaisuudeksi tämä kaava:<br>
-`ResetForm(EditForm1);Navigate(FormScreen, ScreenTransition.None)`
+`ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Peruutuskuvake](./media/data-platform-create-app-scratch/cancel-icon.png)
 

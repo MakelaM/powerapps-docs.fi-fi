@@ -1,25 +1,22 @@
 ---
 title: Tietueen näyttäminen, muokkaaminen tai lisääminen taulukosta | Microsoft Docs
 description: Käytä lomaketta tietueen näyttämiseen, muokkaamiseen tai lisäämiseen tietolähteesi taulukosta.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: karthik-1
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/06/2017
 ms.author: sharik
-ms.openlocfilehash: c21a9350445365065b1a0cdbe91484f446ac6a81
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: d24777ec34759a98421784995f5a73b0dfc1d2d2
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Tietueen näyttäminen, muokkaaminen tai lisääminen taulukosta PowerAppsissa
 Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjekti tietueen kaikkien kenttien näyttämiseksi. Voit muokata mitä tahansa tietueen kenttää (tai lisätä tietueen) ja tallentaa muutokset takaisin tietolähteeseen lisäämällä ja määrittämällä ensin **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektin.
