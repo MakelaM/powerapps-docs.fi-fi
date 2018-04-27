@@ -35,14 +35,18 @@
       items:
         - name: Mukauta luotua sovellusta
           items:
-            - name: Mukauta selausnäyttöä
+            - name: 1 – Valikoimat
               href: ./canvas-apps/customize-layout-sharepoint.md
-            - name: Mukauta lomaketta
+            - name: 2 – Lomakkeet
               href: ./canvas-apps/customize-forms-sharepoint.md
-            - name: Mukauta kortti
+            - name: 3 – Kortit
               href: ./canvas-apps/customize-card.md
         - name: Luo sovellus alusta alkaen
-          href: ./canvas-apps/data-platform-create-app-scratch.md
+          items:
+            - name: Common Data Service sovelluksia varten
+              href: ./canvas-apps/data-platform-create-app-scratch.md
+            - name: Excel
+              href: ./canvas-apps/get-started-create-from-blank.md
         - name: Jaa sovellus
           href: ./canvas-apps/share-app.md
         - name: 'Upota sovellus Power BI:ssä'
@@ -95,8 +99,6 @@
       items:
         - name: Mukauta SharePointin luettelolomake
           href: ./canvas-apps/customize-list-form.md
-        - name: Luo Excel-sovellus alusta alkaen
-          href: ./canvas-apps/get-started-create-from-blank.md
         - name: Mukauta sovellus
           items:
             - name: Lisää ja määritä komponentti
@@ -131,6 +133,9 @@
               href: ./canvas-apps/global-apps.md
             - name: Luo helppokäyttöinen sovellus
               href: ./canvas-apps/accessible-apps.md
+              items:
+                - name: Väri
+                  href: ./canvas-apps/accessible-apps-color.md
         - name: Hallitse sovellustasi
           items:
             - name: Sivustoon powerapps.com tutustuminen
