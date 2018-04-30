@@ -1,25 +1,22 @@
 ---
 title: 'Yhdistelmäruutuohjausobjekti: viittaus | Microsoft Docs'
 description: Yhdistelmäruutuohjausobjekteja koskevaa tietoa, kuten ominaisuuksia ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 09/13/2017
 ms.author: fikaradz
-ms.openlocfilehash: 4d298e24ea967cbf5cb47638d4296f6efbd758c7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4fde158bbca9d132801236f418c8a7652444728e
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutuohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista.  Tukee hakua ja useita valintoja.
@@ -46,9 +43,11 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 **IsSearchable** – Voiko käyttäjä etsiä kohteita ennen valitsemista.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
-**[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[Reunan väri](properties-color-border.md)** – Ohjausobjektin reunan väri.
+
+**[Reunan tyyli](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -56,9 +55,13 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 
 **DisplayFields** – Luettelo kentistä, jotka näytetään jokaisesta haun palauttamasta kohteesta.  Helpoin määrittää Ominaisuudet-välilehden tietoruudun kautta.
 
-**[DisplayMode](properties-core.md)**  – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Muokkaa**) tai vain tarkastella tietoja (**Näytä**) vai onko ominaisuus kokonaan poissa käytöstä (**Ei käytössä**).
+**[Näyttötila](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
 
-**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
+
+**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **InputTextPlaceholder** – Loppukäyttäjälle näytettävä ohjeteksti, jos kohteita ei ole valittu.
 
@@ -66,11 +69,13 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 
 **OnNavigate** – Sovelluksen reagointitapa, kun käyttäjä valitsee kohteen.
 
-**[OnSelect](properties-core.md)** – Sovelluksen reagointitapa, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[Valittaessa](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Width](properties-size-location.md)** – Leveys eli ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Näkyvissä](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
@@ -85,3 +90,28 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
     Sovellukseesi tulee näkyviin toiminnallinen **yhdistelmäruutu**.
 
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **ChevronFill** ja **ChevronBackground**
+* **ChevronHoverFill** ja **ChevronHoverBackground**
+* **SelectionColor** ja **SelectionFill**
+* **SelectionFill** ja **[Fill](properties-color-border.md)**
+* **SelectionTagColor** ja **SelectionTagFill**
+
+Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+
+    > [!NOTE]
+> Kosketusnäytöissä näytönlukuohjelman käyttäjät voivat siirtyä yhdistelmäruudun sisällössä peräkkäisessä järjestyksessä. Yhdistelmäruutu toimii painikkeena, joka näyttää tai piilottaa sen sisällön, kun se on valittuna.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+
+    > [!NOTE]
+> Voit sarkainnäppäimellä siirtyä yhdistelmäruutuun tai siitä pois. Voit nuolinäppäimillä siirtyä yhdistelmäruudun sisällössä. Voit Escape-näppäimellä sulkea avattavan valikon, kun se on avattuna.
