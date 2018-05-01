@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 02/05/2017
 ms.author: gregli
 ms.openlocfilehash: b15a394db060617aeae8324094a70aa8cadf6755
-ms.sourcegitcommit: 33099e6197c0139679cd08c42e9e2a5717904c92
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ismatch-function-in-powerapps"></a>IsMatch-funktio PowerAppsissa
 Testaa, vastaako merkkijono hakuarvoa.
@@ -45,7 +45,7 @@ Yhdistä näitä elementtejä käyttämällä [merkkijonon yhdistämisoperaattor
 ### <a name="ordinary-characters"></a>Tavalliset merkit
 Yksinkertaisin malli on sarja tavallisia merkkejä, joille haetaan täyttä vastaavuutta.
 
-Esimerkiksi merkkijono ”Hei” vastaa täysin mallia **”Hei”**. Ei enempää tai vähempää. Merkkijono ”hei!” ei vastaa mallia lopussa olevan huutomerkin ja ”h”-kirjaimen väärän kirjainkoon vuoksi. (Katso kohdasta [Vastaavuusvalinnat](#match-options) tapoja tämän toiminnon muokkaamiseksi.)
+Esimerkiksi merkkijono ”Hei” vastaa täysin mallia **"Hei"**. Ei enempää tai vähempää. Merkkijono ”hei!” ei vastaa mallia lopussa olevan huutomerkin ja ”h”-kirjaimen väärän kirjainkoon vuoksi. (Katso kohdasta [Vastaavuusvalinnat](#match-options) tapoja tämän toiminnon muokkaamiseksi.)
 
 Mallikielessä tietyt merkit on varattu erityistoimintoja varten. Jos haluat käyttää näitä merkkejä mallissa, lisää merkin vasemmalle puolelle **\\** (kenoviiva) ilmaisemaan, että merkki tulee tulkita kirjaimellisesti tai käytä yhtä esimääritetyistä malleista. Erikoismerkit on lueteltu tässä taulukossa:
 
@@ -63,7 +63,7 @@ Mallikielessä tietyt merkit on varattu erityistoimintoja varten. Jos haluat kä
 | **&#124;** |pystyviiva tai putkimerkki |
 | **\\** |kenoviiva |
 
-Voit esimerkiksi saada vastaavuuden "Hei?" käyttämällä mallia **"Hei\\?"**, jossa on kenoviiva ennen kysymysmerkkiä.
+Voit esimerkiksi saada vastaavuuden ”Hei?” käyttämällä mallia **"Hei\\?"**, jossa on kenoviiva ennen kysymysmerkkiä.
 
 ### <a name="predefined-patterns"></a>Esimääritetyt mallit
 Esimääritettyjen mallien avulla voidaan yksinkertaisesti etsiä vastaavuuksia yhdelle merkkijoukon merkeistä tai usean merkin sarjalle. Käytä [merkkijonon yhdistämisoperaattoria **&**](operators.md) omien merkkijonojen yhdistämiseksi **Match**-luetteloinnin jäsenten kanssa:
@@ -77,10 +77,10 @@ Esimääritettyjen mallien avulla voidaan yksinkertaisesti etsiä vastaavuuksia 
 | **Hyphen** |Vastaa yhdysmerkkiä. |**\\-** |
 | **LeftParen** |Vastaa vasenta suljetta ”(”. |**\\(** |
 | **Letter** |Vastaa kirjainta. |**\\p{L}** |
-| **MultipleDigits** |Vastaa yhtä tai useampaa merkkiä. |**\\d+** |
+| **MultipleDigits** |Vastaa yhtä tai useampaa numeroa. |**\\d+** |
 | **MultipleLetters** |Vastaa yhtä tai useampaa kirjainta. |**\\p{L}+** |
 | **MultipleNonSpaces** |Vastaa yhtä tai useampaa merkkiä, joka ei ole välilyöntimerkki (välilyönti, sarkain, uusi rivi). |**\\S+** |
-| **MultipleSpaces** |Vastaa yhtä tai useampaa välilyöntimerkkiä (välilyönti, sarkain, uusi rivi). |**\\s+** |
+| **MultipleSpaces** |Vastaa yhtä tai useampaa välilyöntimerkkiä (välilyönti, sarkain, uusi rivi). |**\\S+** |
 | **NonSpace** |Vastaa yhtä merkkiä, joka ei ole välilyöntimerkki. |**\\S** |
 | **OptionalDigits** |Vastaa nollaa, yhtä tai useampaa merkkiä. |**\\d** |
 | **OptionalLetters** |Vastaa nollaa, yhtä tai useampaa kirjainta. |**\\p{L}** |
@@ -92,12 +92,12 @@ Esimääritettyjen mallien avulla voidaan yksinkertaisesti etsiä vastaavuuksia 
 
 Esimerkiksi malli **"A" & MultipleDigits** vastaa kirjainta ”A”, jonka jälkeen esiintyy yksi tai useampi numero.  
 
-### <a name="regular-expressions"></a>Säännönmukainen lauseke
+### <a name="regular-expressions"></a>Säännönmukaiset lausekkeet
 **IsMatch**-funktion käyttämä malli on *säännönmukainen lauseke*. Yllä kuvatut tavalliset merkit ja esimääritetyt mallit auttavat rakentamaan säännönmukaisen lausekkeen.  
 
 Säännönmukaiset lausekkeet ovat hyvin tehokkaita, ne ovat saatavilla useissa ohjelmointikielissä ja niitä käytetään useisiin eri tarkoituksiin. Tässä artikkelissa ei voida kuvailla kaikkia säännönmukaisten lausekkeiden ominaisuuksia, mutta verkossa on saatavilla suuri määrä tietoja ja oppaita.  
 
-Säännönmukaisille lausekkeille on eri kielioppivaihtoehtoja. PowerApps käyttää JavaScript-kieliopin varianttia. Katso lisätietoja kohdasta [säännönmukaisen lausekkeen syntaksi](http://msdn.microsoft.com/library/1400241x.aspx).
+Säännönmukaisille lausekkeille on eri kielioppivaihtoehtoja. PowerApps käyttää JavaScript-kieliopin muunnelmaa. Katso lisätietoja kohdasta [säännönmukaisen lausekkeen syntaksi](http://msdn.microsoft.com/library/1400241x.aspx).
 
 Yllä olevan **Match**-luetteloinnin taulukon luetteloinnit laajentuvat säännönmukaisiksi lausekkeiksi ja ”Säännönmukainen lauseke” -sarakkeen merkkijono määrittelee kyseisen lausekkeen.
 
@@ -143,7 +143,7 @@ Käyttäjä kirjoittaa **TextInput1**-kohtaan **Hei maailma**.
 | **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )** |Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. |**tosi** |
 | **IsMatch( "123", MultipleDigits & Period & OptionalDigits )** |Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. Tekstissä ei ole pistettä, joten tälle mallille ei löydy vastaavuutta. |**epätosi** |
 
-### <a name="regular-expressions"></a>Säännönmukainen lauseke
+### <a name="regular-expressions"></a>Säännönmukaiset lausekkeet
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **IsMatch( "986", "\d+" )** |Vastaa kokonaislukua, joka on suurempi kuin nolla. |**tosi** |
