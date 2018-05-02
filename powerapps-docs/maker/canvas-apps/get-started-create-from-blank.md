@@ -1,294 +1,239 @@
 ---
 title: Sovelluksen luominen alusta alkaen | Microsoft Docs
-description: Voit luoda sovelluksen alusta alkaen määrittämällä kaikki käyttöliittymän elementit ja toiminnot, joilla voit hallita liiketoiminnallesi tärkeitä tietoja.
-services: ''
-suite: powerapps
-documentationcenter: na
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/16/2016
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: efc965d607198ed6366f3390960ccdf44b2ea210
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 29f07162ec2815398cda5bcc359f7388df261bc0
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-an-app-from-scratch"></a>Sovelluksen luominen alusta alkaen
-Luo oma sovelluksesi alusta alkaen käyttämällä erinäisiä tietolähteitä. Voit halutessasi lisätä uusia lähteitä myöhemmin. Voit määrittää jokaisen käyttöliittymäelementin ulkoasun ja toiminnan sekä optimoida tuloksen omia tavoitteitasi ja työnkulkuasi varten. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
-
-Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdellä näytöllä käyttäjät voivat selata tietuejoukkoa:
-
-![Näyttö, jolla käyttäjä voi selata tietojoukkoa](./media/get-started-create-from-blank/first-screen-final.png)
-
-Toisella näytöllä käyttäjät voivat luoda tietueen, päivittää tietueen yhtä tai useampaa kenttää tai poistaa koko tietueen:
-
-![Näyttö, jolla käyttäjä voi lisätä tai päivittää tietoja](./media/get-started-create-from-blank/changescreen-final.png)
+# <a name="create-an-excel-app-from-scratch"></a>Excel-sovelluksen luominen alusta alkaen
+Voit luoda oman, taulukoksi muotoillun sovelluksesi alusta alkaen Excel-tietojen perusteella ja lisätä sitten halutessasi tietoja muista lähteistä. Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdessä näytössä käyttäjät voivat selata tietuejoukkoa. Toisessa näytössä käyttäjät voivat luoda tietueen, päivittää vähintään tietueen yhden kentän tai poistaa koko tietueen. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
 
 ## <a name="prerequisites"></a>Edellytykset
-Voit käyttää omaa Excel-tiedostoasi ja katsoa opetusohjelmasta vain yleiset käsitteet. Excel-tiedoston tietojen täytyy kuitenkin olla taulukkomuodossa. Lisätietoja on artikkelissa [Excel-taulukon muotoileminen](how-to-excel-tips.md).
-
-Noudata seuraavia ohjeita tarkasti luomalla ensin Excel-tiedosto, jossa on nämä mallitiedot.
+Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, jossa on nämä mallitiedot.
 
 1. Kopioi nämä tiedot ja liitä ne Excel-tiedostoon.
 
-   | Aloituspäivä | Aloitusaika | Vapaaehtoinen 1 | Vapaaehtoinen 2 |
-   | --- | --- | --- | --- |
-   | Lauantai |Klo 10–12 |Vasquez |Kumashiro |
-   | Lauantai |Klo 12–14 |Ice |Singhal |
-   | Lauantai |Klo 14–16 |Myk |Mueller |
-   | Sunnuntai |Klo 10–12 |Li |Adams |
-   | Sunnuntai |Klo 10–12 |Singh |Morgan |
-   | Sunnuntai |Klo 10–12 |Batye |Nguyen |
+    | StartDay | StartTime | Vapaaehtoinen | Varmuuskopiointi |
+    | --- | --- | --- | --- |
+    | Lauantai |Klo 10–12 |Vasquez |Kumashiro |
+    | Lauantai |Klo 12–14 |Ice |Singhal |
+    | Lauantai |Klo 14–16 |Myk |Mueller |
+    | Sunnuntai |Klo 10–12 |Li |Adams |
+    | Sunnuntai |Klo 10–12 |Singh |Morgan |
+    | Sunnuntai |Klo 10–12 |Batye |Nguyen |
 
 2. Muotoile tiedot taulukoksi nimeltä **Schedule**, jotta PowerApps voi jäsentää tiedot.
 
     Lisätietoja on artikkelissa [Excel-taulukon muotoileminen](how-to-excel-tips.md).
 
-3. Tallenna tiedosto nimellä **eventsignup.xls** ja lataa se [pilvitallennustilille](connections/cloud-storage-blob-connections.md), kuten OneDriveen.
+3. Tallenna tiedosto nimellä **eventsignup.xls**, sulje se ja lataa se sitten [pilvitallennustilille](connections/cloud-storage-blob-connections.md), kuten OneDriveen.
 
-4. Jos olet uusi PowerApps-käyttäjä:
+> [!IMPORTANT]
+> Voit käyttää omaa Excel-tiedostoasi ja katsoa opetusohjelmasta vain yleiset käsitteet. Excel-tiedoston tietojen täytyy kuitenkin olla taulukkomuodossa. Lisätietoja on artikkelissa [Excel-taulukon muotoileminen](how-to-excel-tips.md).
 
-   * Lue, kuinka voit [lisätä ohjausobjektin ja asettaa sen ominaisuudet](add-configure-controls.md), jotka määrittelevät sen ulkoasun ja toiminnot.
-   * Lue, kuinka [ruutu lisätään ja nimetään uudelleen](add-screen-context-variables.md).
+## <a name="open-a-blank-app"></a>Avaa tyhjä sovellus
+1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com).
 
-## <a name="create-a-blank-app-and-connect-to-data"></a>Luo tyhjä sovellus ja muodosta yhteys tietoihin
-1. Napsauta tai napauta PowerApps Studion **Tiedosto-valikon** (lähellä ruudun vasenta reunaa) kohtaa **Uusi**.
+    ![PowerAppsin aloitussivu](./media/get-started-create-from-blank/sign-in.png)
 
-    ![Tiedosto-valikon Uusi-vaihtoehto](./media/get-started-create-from-blank/file-new.png)
+    Voit suunnitella sovelluksen alusta alkaen puhelimia tai muita laitteita (kuten tabletteja) varten. Tässä artikkelissa keskitytään sovelluksen suunnittelemiseen puhelinta varten.
 
-2. Napsauta tai napauta **Tyhjä sovellus** -ruudulta kohtaa **Puhelinasettelu**.
+1. Vie **Tee tämän kaltaisia sovelluksia** -kohdassa hiiren osoitin **Aloita tyhjästä** -ruudun kohdalle, valitse puhelinkuvake ja sitten valitse sitten **Tee tämä sovellus**.
 
-    ![Asetus sovelluksen luomiseksi tiedoista](./media/get-started-create-from-blank/create-from-blank.png)
+    ![Tyhjän sovelluksen ruutu](./media/get-started-create-from-blank/blank-app.png)
 
-3. Pyydettäessä katso esittely, jossa selitetään PowerAppsin pääalueet (tai napsauta tai napauta **Ohita**).
+    PowerApps Studio luo tyhjän sovelluksen puhelimia varten.
 
-    ![Pikaesittely](./media/get-started-create-from-blank/quick-tour.png)
+1. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, valitse **Ohita**.
 
-    Voit aina katsella esittelyn myöhemmin napsauttamalla tai napauttamalla kysymysmerkkikuvaketta, joka on lähellä ruudun vasenta yläkulmaa ja sitten napsauttamalla tai napauttamalla **Katso esittely**.
+## <a name="connect-to-data"></a>Yhdistä tietoihin
+1. Valitse näytön keskellä **Yhdistä tietoihin**.
 
-4. Voit vaihtaa pikkukuvanäkymään napsauttamalla tai napauttamalla vasemman navigointipalkin oikeassa yläkulmassa olevaa kuvaketta.
+1. Valitse **Tiedot**-ruudussa pilvitallennustilisi yhteys, jos se on näkyvissä. Muutoin lisää yhteys seuraavasti:
 
-    ![Näkymien vaihtaminen](./media/get-started-create-from-blank/toggle-view.png)
+    1. Valitse **Uusi yhteys**, valitse tilisi pilvitallennustilaruutu ja valitse sitten **Luo**.
+    2. Anna tilin tunnistetietosi, jos niitä pyydetään.
 
-5. Napsauta tai napauta oikean ruudun kohtaa **Lisää tietolähde**.
+1. Valitse **Valitse Excel-tiedosto**, kirjoita tai liitä ensimmäiset kirjaimet sanasta **eventsignup** luettelon suodattamista varten ja valitse sitten lataamasi tiedosto.
 
-    ![Lisää tietolähde](./media/get-started-create-from-blank/add-data-source.png)
+1. Valitse **Valitse taulukko**, valitse **Aikataulu**-valintaruutu ja valitse sitten **Yhdistä**.
 
-6. Suorita jompikumpi seuraavista toimista:
+## <a name="create-the-view-screen"></a>Tarkastelunäytön luominen
 
-   * Jos olet jo muodostanut yhteyden pilvitallennustiliisi, napsauta tai napauta sitä.
-   * Jos et ole muodostanut yhteyttä pilvitallennustiliisi, napsauta tai napauta kohtaa **Lisää yhteys**, napsauta tai napauta tilisi tyyppiä, napsauta tai napauta **Yhdistä** ja syötä (kysyttäessä) tunnistetietosi.
+1. Valitse **Aloitus**-välilehdessä kohdan **Uusi näyttö** vieressä oleva alanuoli, jolloin näyttötyyppien luettelo avautuu, ja valitse sitten **Luettelonäyttö**.
 
-7. Siirry kohdassa **Valitse Excel-tiedosto** tiedostoon **eventsignup.xlsx** ja napsauta tai napauta sitä.
-
-    ![Käytettävän Excel-tiedoston määrittäminen](./media/get-started-create-from-blank/select-excel-file.png)
-
-8. Valitse **Valitse taulukko** -kohdasta **Schedule**-valintaruutu ja sitten napsauta tai napauta **Yhdistä**.
-
-    ![Käytettävän Excel-taulukon määrittäminen](./media/get-started-create-from-blank/select-table.png)
-
-    Oikeanpuoleisen ruudun **Tietolähteet**-välilehdellä näytetään tietolähteet, jotka olet lisännyt sovellukseesi.
-
-    ![Yhdistettyjen tietolähteiden näyttäminen](./media/get-started-create-from-blank/data-connect.png)
-
-    Tämä opetusohjelma vaatii vain yhden tietolähteen, mutta voit lisätä muita tietolähteitä myöhemmin.
-
-## <a name="show-the-data"></a>Näytä tiedot
-1. Napsauta tai napauta **Aloitus**-välilehdeltä **Uusi näyttö** ja napsauta tai napauta **Luettelonäyttö**.
-
-    ![Lisää asettelu ja siihen otsikko, aliotsikko ja runkoelementti](./media/get-started-create-from-blank/add-gallery.png)
+    ![Luettelonäytön lisääminen](./media/get-started-create-from-blank/add-list-screen.png)
 
     Kun näyttö lisätään, siinä on useita oletusohjausobjekteja, kuten hakukenttä ja **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Valikoima kattaa koko näytön hakukentän alapuolella.
 
-2. Napsauta tai napauta mitä tahansa valikoiman kohtaa paitsi nuolta, esimerkiksi hakukentän alapuolista aluetta.
+2. Valitse valikoima napsauttamalla tai napauttamalla lähellä sen keskiosaa.
 
-    ![Valitse valikoima](./media/get-started-create-from-blank/select-gallery.png)
+    Valikoiman ympärillä näkyy valintakehys kahvoineen.
 
-3. Avaa oikeanpuoleisen ruudun **Asettelut**-luettelo ja napsauta tai napauta vaihtoehtoa, jossa on otsikko, aliotsikko ja runko.
+    ![Luettelonäytön lisääminen](./media/get-started-create-from-blank/select-gallery.png)
 
-    ![Valitse valikoima](./media/get-started-create-from-blank/select-layout.png)
+3. Valitse oikeanpuoleisessa ruudussa **CustomGallerySample**, jolloin **Tiedot**-ruutu avautuu.
 
-4. Napsauta tai napauta ominaisuusluettelon kohtaa **[Items](controls/properties-core.md)**, kopioi tämä kaava ja liitä se kaavariville:
+    ![Tietoruudun avaaminen](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
-    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Vapaaehtoinen_x0020_1"), "Vapaaehtoinen_x0020_1", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+1. Valitse **Tietolähde**-kohdassa oleva alanuoli, jolloin sovelluksen tietolähteiden luettelo avautuu, ja valitse sitten **Aikataulu**.
 
-    Jos et ole varma ominaisuusluettelon sijainnista, katso [Lisää ja määritä ohjausobjekteja](add-configure-controls.md).
+    ![Tietolähteen valitseminen](./media/get-started-create-from-blank/select-schedule.png)
 
-    > [!NOTE]
-> PowerApps näyttää Excel- ja SharePoint-tietolähteiden sarakkeiden nimien välilyönnit muodossa **”\_x0020\_”**. Tässä esimerkissä sarake **”Vapaaehtoinen 1”** näkyy kaavassa muodossa **"Vapaaehtoinen_x0020_1"**.
+1. Valitse **Asettelu**, avaa asettelujen luettelo valitsemalla alanuoli ja valitse sitten **Otsikko, alaotsikko ja leipäteksti**.
 
-    Tässä valikoimassa näytetään **Schedule**-taulukon tiedot.
+    ![Asettelun valitseminen](./media/get-started-create-from-blank/select-layout.png)
 
-    ![Valikoiman oletusarvoiset Schedule-tiedot](./media/get-started-create-from-blank/show-data-default.png)
+1. Vaihda näytettävä sarake **Otsikko2**-kohdassa **Varmuuskopiointi**-sarakkeesta **Vapaaehtoinen**-sarakkeeksi.
 
-    Hakukentällä voidaan suodattaa valikoimaa käyttäjän kirjoittaman tekstin mukaan. Jos käyttäjä kirjoittaa ainakin yhden kirjaimen hakukenttään, valikoimassa näytetään vain tietueet, joissa **Vapaaehtoinen 1** -kenttä sisältää käyttäjän antaman tekstin.
+     ![Selitteen sarakkeen vaihtaminen](./media/get-started-create-from-blank/change-title2.png)
 
-    Lajittelupainikkeella tietueet voidaan lajitella **Vapaaehtoinen 1** -sarakkeen tietojen mukaan. Jos käyttäjä napsauttaa tai napauttaa tätä painiketta, lajittelujärjestys vaihtuu nousevan ja laskevan välillä.
+1. Sulje **Tiedot**-ruutu valitsemalla oikean yläkulman sulkemiskuvake.
 
-    Kaava sisältää funktiot **Sort**, **If**, **IsBlank**, **Filter** ja **Text**. Katso lisätietoja näistä ja muista funktioista kohdasta [Lisätietoja kaavasta](formula-reference.md)
+    Valikoimassa näkyy kunkin vapaaehtoisen nimi ja kyseisen vapaaehtoisen vuoron päivä ja aika.
 
-5. Kirjoita hakukenttään **i** ja napsauta tai napauta lajittelupainiketta kerran (tai pariton määrä kertoja).
+    ![Valikoiman aikataulutiedot lajittelemattomina](./media/get-started-create-from-blank/show-data-unsorted.png)
+
+4. Valitse valikoima ja varmista, että ominaisuusluettelossa näkyy ominaisuus **[Items](controls/properties-core.md)**.
+
+    Kuten kaavariviltä näkyy, kyseisen ominaisuuden arvo on **Schedule**.
+
+    ![Valikoiman aikataulutiedot lajittelemattomina](./media/get-started-create-from-blank/set-property.png)
+
+1. Vaihda **Items**-ominaisuuden arvo kopioimalla tämä kaava ja liittämällä se kaavariville:
+
+    **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Vapaaehtoinen"), "Vapaaehtoinen", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+
+    Valikoiman tiedot näkyvät aakkosjärjestyksessä vapaaehtoisten nimien mukaan.
+
+    ![Valikoiman aikataulutiedot lajiteltuina](./media/get-started-create-from-blank/show-data-sorted.png)
+
+    Käyttäjät voivat lajitella ja suodattaa valikoiman vapaaehtoisen nimen mukaan kyseisen kaavan **SortByColumns**- ja **Search**-funktioiden perusteella.
+
+    - Jos käyttäjä kirjoittaa ainakin yhden kirjaimen hakukenttään, valikoimassa näytetään vain tietueet, joissa **Vapaaehtoinen**-kenttä sisältää käyttäjän antaman tekstin.
+    - Jos käyttäjä valitsee lajittelupainikkeen, tietueet näkyvät valikoimassa nousevassa tai laskevassa järjestyksessä (sen mukaan, miten monta kertaa käyttäjä valitsee painikkeen) **Vapaaehtoinen**-kentän perusteella.
+
+    Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavasta](formula-reference.md).
+
+5. Kirjoita **i** hakuruutuun, valitse lajittelupainike napsauttamalla tai napauttamalla sitä ja valitse se sitten vielä kerran (tai pariton määrä lisäkertoja).
 
     Valikoima näyttää nämä tulokset.
 
     ![Lajittele ja suodata valikoimaa](./media/get-started-create-from-blank/sort-filter.png)
 
-    Lisätietoja **[lajittelusta](functions/function-sort.md)**, **[suodatuksesta](functions/function-filter-lookup.md)** ja [muista funktioista](formula-reference.md)
+1. Tyhjennä kaikki teksti hakuruudusta.
 
-6. Valitse ruudun yläosan **[Otsikko](controls/control-text-box.md)**-ohjausobjekti napsauttamalla tai napauttamalla sitä.
-
-    ![Valitse otsikkorivi](./media/get-started-create-from-blank/select-title-bar.png)
-
-7. Napsauta tai napauta ominaisuusluettelossa **[Text](controls/properties-core.md)**, kopioi tämä teksti ja liitä se kaavariville.<br>
-   **"Näytä tietueet"**
+6. Valitse näytön yläreunassa **[Selite](controls/control-text-box.md)**-ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Näytä tietueet**.
 
     ![Muuta otsikkoriviä](./media/get-started-create-from-blank/change-title-bar.png)
 
-## <a name="create-the-changescreen-and-its-banner"></a>Luo ChangeScreen ja sen palkki
-1. Poista **Screen1** ja muuta kohteen **Screen2** nimeksi **ViewScreen**.
+## <a name="create-the-change-screen"></a>Muutosnäytön luominen
+1. Valitse **Aloitus**-välilehdessä alanuoli **Uusi näyttö** -kohdan vieressä ja valitse sitten **Lomakenäyttö**.
 
-    ![Nimeä näyttö uudelleen](./media/get-started-create-from-blank/rename-screen.png)
+     ![Lomakenäytön lisääminen](./media/get-started-create-from-blank/add-form-screen.png)
 
-2. Lisää näyttö ja anna sen nimeksi **ChangeScreen**.
+1. Valitse juuri lisäämässäsi näytössä **Yhdistä tietoihin**, jolloin **Tiedot**-ruutu avautuu, ja yhdistä sitten tietolähde **Schedule**-arvoon.
 
-    ![Lisää ja nimeä näyttö uudelleen](./media/get-started-create-from-blank/add-screen.png)
+1. Valitse **Kentät**-kohdassa kaikki valintaruudut, jolloin kaikki kentät näkyvät lomakkeessa.
 
-3. Napsauta tai napauta **Lisää**-välilehdeltä **Teksti** ja sitten napsauta tai napauta **[Otsikko](controls/control-text-box.md)**.
+     ![Kenttien näyttäminen](./media/get-started-create-from-blank/show-fields.png)
 
-4. Määritä juuri lisäämäsi **Otsikko**-ohjausobjekti:
+1. Vedä **Vapaaehtoinen**-kenttää ylöspäin niin, että se näkyy kenttäluettelossa ensimmäisenä.
 
-   * Määritä sen **Text**-ominaisuudeksi tämä kaava:
-     <br>**"Muuta tietuetta"**
+     ![Kenttien järjestäminen uudelleen](./media/get-started-create-from-blank/reorder-fields.png)
 
-   * Määritä sen **Fill**-ominaisuudeksi tämä kaava:
-     <br>**RGBA(62, 96, 170, 1)**.
+1. Valitse lomake ja määritä sen **Item**-ominaisuudeksi tämä lauseke kirjoittamalla tai liittämällä se kaavariville:<br>**BrowseGallery1.Selected**
 
-   * Määritä sen **Color**-ominaisuudeksi tämä kaava:
-     <br>**RGBA(255, 255, 255, 1)**
+1. Valitse näytön yläreunassa **[Selite](controls/control-text-box.md)**-ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Vaihda tietueet**.
 
-   * Määritä sen **Align**-ominaisuudeksi **Center**.
-   * Määritä sen **X**-ominaisuudeksi **0**.
+    ![Muuta otsikkoriviä](./media/get-started-create-from-blank/change-title-bar2.png)
 
-   * Määritä sen **Leveys**-ominaisuudeksi **640**.
-     **Otsikko**-ohjausobjekti muuttuu tekemiesi muutosten mukaisesti.
+## <a name="delete-and-rename-screens"></a>Näyttöjen poistaminen ja uudelleennimeäminen
+1. Valitse vasemmassa siirtymispalkissa kolme pistettä (...) kohdassa **Näyttö1** ja valitse sitten **Poista**.
 
-     ![ChangeScreen palkin kanssa](./media/get-started-create-from-blank/change-screen-blank.png)
+    ![Näytön poistaminen](./media/get-started-create-from-blank/delete-screen.png)
 
-## <a name="add-and-configure-a-form"></a>Lisää ja määritä lomake
-1. Napsauta tai napauta **Lisää**-välilehdeltä **Lomakkeet** ja napsauta tai napauta **Muokkaa**.
+1. Valitse kolme pistettä (...) kohdassa **Näyttö2**, valitse **Nimeä uudelleen** ja kirjoita tai liitä sitten **ViewScreen**.
 
-2. Siirrä lomaketta ja muuta sen kokoa niin, että se kattaa suurimman osan näytöstä.
+1. Valitse kolme pistettä (...) kohdassa **Näyttö3**, valitse **Nimeä uudelleen** ja kirjoita tai liitä sitten **ChangeScreen**.
 
-    ![Lisää lomake](./media/get-started-create-from-blank/add-form.png)
+## <a name="configure-icons-on-the-view-screen"></a>Tarkastelunäytön kuvakkeiden määrittäminen
+1. Valitse **ViewScreen**-näytön yläreunassa pyöreä nuoli -kuvake.
 
-    Lomakkeen nimi on oletusarvoisesti **Form1**, paitsi jos olet jo lisännyt ja poistanut lomakkeen. Tässä tapauksessa anna lomakkeelle nimi **Form1**.
+    ![Tietueen lisääminen](./media/get-started-create-from-blank/refresh-icon.png)
 
-3. Määritä **Form1**:n **[DataSource](controls/control-form-detail.md)**-ominaisuudeksi **Schedule**.
+1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:<br>**Refresh(Schedule)**
 
-4. Määritä **Form1**:n **Item**-ominaisuudeksi tämä lauseke:
-   <br>**BrowseGallery1.Selected**
+    Kun käyttäjä valitsee tämän kuvakkeen, tietoja **Schedule**-arvo päivitetään Excel-tiedostosta.
 
-5. Napsauta tai napauta oikeanpuoleisessa ruudussa olevia kenttien valintaruutuja niiden näyttämiseksi.
+    Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavasta](formula-reference.md).
 
-    ![Näytä kentät lomakkeessa](./media/get-started-create-from-blank/schedule-checkbox.png)
-
-6. Napsauta tai napauta lomakkeen alaosasta **Lisää mukautettu kortti**.
-
-    ![Lisää mukautettu kortti](./media/get-started-create-from-blank/add-custom-card.png)
-
-7. Lisää uuteen korttiin **[Otsikko](controls/control-text-box.md)**-ohjausobjekti.
-
-8. Määritä uuden ohjausobjektin **[AutoHeight](controls/control-text-box.md)**-ominaisuudeksi **tosi** ja määritä sen **[Text](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Form1.Error**
-
-    Otsikko näyttää lomakkeen virheet.
-
-9. Napsauta tai napauta vasemman navigointipalkin **ChangeScreen**-pikkukuvaa, niin se valitaan.
-
-10. Napsauta tai napauta **Lisää**-välilehdeltä **Kuvakkeet**, napsauta tai napauta vaihtoehtoa, jolla lisätään **Takaisin-nuoli** ja siirrä sitten nuoli näytön vasempaan alakulmaan.
-
-11. Määritä nuolen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-
-     **ResetForm(Form1);Navigate(ViewScreen,ScreenTransition.None)**
-
-      Kun käyttäjä napsauttaa tai napauttaa nuolta, **[Navigate](functions/function-navigate.md)**-funktio avaa **ViewScreen**-näytön.
-
-12. Lisää lomakkeen alapuolelle **[Painike](controls/control-button.md)**-ohjausobjekti ja aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi **"Tallenna"**.
-
-     ![Tallennuspainikkeen lisääminen](./media/get-started-create-from-blank/add-save-button.png)
-
-13. Määritä painikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-
-    **SubmitForm(Form1); If(Form1.ErrorKind = ErrorKind.None, Navigate(ViewScreen, ScreenTransition.None))**
-
-    Kun käyttäjä napsauttaa tai napauttaa painiketta, **[SubmitForm](functions/function-form.md)**-funktio tallentaa muutokset tietolähteeseen ja **ViewScreen** näytetään uudelleen.
-
-14. Lisää näytön alaosaan uusi painike, aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi **”Poista”** ja aseta sitten sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-
-    **Remove(Schedule,BrowseGallery1.Selected);<br>If(IsEmpty(Errors(Schedule)),Navigate(ViewScreen,ScreenTransition.None))**
-
-    Kun käyttäjä napsauttaa tai napauttaa tätä painiketta, **[Remove](functions/function-remove-removeif.md)**-funktio poistaa tietueen ja **ViewScreen** näytetään uudelleen.
-
-15. Määritä **Poista**-painikkeen **[Visible](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-    <br>**Form1.Mode=FormMode.Edit**
-
-    Tämä vaihe piilottaa **Poista**-painikkeen, kun käyttäjä on luomassa tietuetta.
-
-    **ChangeScreen** vastaa tätä esimerkkiä:
-
-    ![Lopullinen ChangeScreen](./media/get-started-create-from-blank/changescreen-final.png)
-
-## <a name="set-navigation-from-viewscreen"></a>ViewScreenistä siirtymisen asettaminen
-1. Napsauta tai napauta vasemman navigointipalkin **ViewScreen**-pikkukuvaa.
-
-    ![Avaa ViewScreen](./media/get-started-create-from-blank/select-viewscreen.png)
-
-2. Napsauta tai napauta valikoiman ensimmäisen tietueen **Seuraava-nuolta**.
-
-    ![Seuraava-nuoli](./media/get-started-create-from-blank/next-arrow.png)
-
-3. Määritä nuolen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-
-    **Navigate(ChangeScreen,ScreenTransition.None)**
-
-4. Napsauta tai napauta oikean yläkulman plus-kuvaketta.
+1. Valitse plus-kuvake **ViewScreen**-näytön oikeassa yläkulmassa.
 
     ![Tietueen lisääminen](./media/get-started-create-from-blank/add-record.png)
 
-5. Määritä valitun kuvakkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:<br>**NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)**
 
-    **NewForm(Form1);Navigate(ChangeScreen,ScreenTransition.None)**`
+    Kun käyttäjä valitsee tämän kuvakkeen, **ChangeScreen** näytetään kaikki kentät tyhjänä, jotta käyttäjä voi luoda tietueen helpommin.
 
-     Kun käyttäjä napsauttaa tai napauttaa tätä kuvaketta, **ChangeScreen** näytetään kaikki kentät tyhjänä, jotta käyttäjä voi luoda tietueen helpommin.
+1. Valitse oikealle osoittava nuoli valikoiman ensimmäisessä tietueessa.
 
-## <a name="run-the-app"></a>Sovelluksen suorittaminen
-Kun mukautat sovellusta, voit testata muutoksia suorittamalla sovelluksen Esikatselu-tilassa tämän osion vaiheiden mukaisesti.
+    ![Nuolen valitseminen](./media/get-started-create-from-blank/select-arrow.png)
 
-1. Valitse vasemmasta navigointipalkista **ViewScreen** napsauttamalla tai napauttamalla ylintä pikkukuvaa.
+1. Määritä nuolen **OnSelect**-ominaisuudeksi tämä kaava:<br>**EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)**
 
-    ![ViewScreenin valitseminen](./media/get-started-create-from-blank/select-viewscreen.png)
+    Kun käyttäjä valitsee tämän kuvakkeen, **ChangeScreen** näytetään niin, että jokaisessa kentässä näkyvät valitun tietueen tiedot, jotta käyttäjä voi luoda tietueen tai muokata sitä helpommin.
 
-2. Avaa esikatselutila painamalla F5-näppäintä (tai napsauttamalla tai napauttamalla **Esikatselu**-kuvaketta oikean yläkulman läheltä).
+## <a name="configure-icons-on-the-change-screen"></a>Muutosnäytön kuvakkeiden määrittäminen
+1. Valitse **ChangeScreen**-näytössä x-kuvake vasemmassa yläkulmassa.
+
+    ![Peruutuskuvake](./media/get-started-create-from-blank/cancel-icon.png)
+
+1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:<br>**ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)**
+
+    Kun käyttäjä valitsee tämän kuvakkeen, kaikki käyttäjän tässä näytössä tekemät muutokset hylätään, ja tarkastelunäyttö avautuu.
+
+1. Valitse valintamerkkikuvake oikeassa yläkulmassa.
+
+    ![Valintamerkkikuvake](./media/get-started-create-from-blank/checkmark-icon.png)
+
+1. Määritä valintamerkin **OnSelect**-ominaisuudeksi tämä kaava:<br>**SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)**
+
+    Kun käyttäjä valitsee tämän kuvakkeen, kaikki käyttäjän tässä näytössä tekemät muutokset tallennetaan, ja tarkastelunäyttö avautuu.
+
+1. Valitse **Lisää**-välilehdessä **Kuvakkeet** ja valitse sitten **Roskakori**-kuvake.
+
+1. Määritä uuden kuvakkeen **Väri**-ominaisuuden arvoksi **Valkoinen** ja siirrä uusi kuvake valintamerkkikuvakkeen viereen.
+
+    ![Roskakorikuvake](./media/get-started-create-from-blank/trash-icon.png)
+
+1. Määritä roskakorikuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:<br>**Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)**
+
+    Kun käyttäjä valitsee tämän kuvakkeen, valittu tietue poistetaan tietolähteestä ja tarkastelunäyttö avautuu.
+
+## <a name="test-the-app"></a>Sovelluksen testaus
+1. Valitse **ViewScreen**-näyttö ja avaa sitten esikatselu painamalla F5-näppäintä (tai valitsemalla **Esikatselu**-kuvake lähellä oikeaa yläkulmaa).
 
     ![Esikatselutilan avaaminen](./media/get-started-create-from-blank/open-preview.png)
 
-3. Napsauta tai napauta tietueen Seuraava-nuolta, niin tietueesta näytetään tietoja.
+1. Lisää tietue.
 
-4. Muuta **ChangeScreen**-ruudulla yhden tai useamman kentän tietoja ja tallenna muutokset napsauttamalla tai napauttamalla **Tallenna** tai poista tietue napsauttamalla tai napauttamalla **Poista**.
+1. Päivitä lisäämäsi tietue ja tallenna sitten muutokset.
 
-5. Sulje esikatselutila painamalla ESC-näppäintä (tai napsauttamalla tai napauttamalla Sulje-kuvaketta otsikkorivin alapuolella).
+1. Päivitä lisäämäsi tietue ja peruuta sitten muutokset.
 
-    ![Esikatselutilan sulkeminen](./media/get-started-create-from-blank/close-preview.png)
+1. Poista lisäämäsi tietue.
+
+1. Sulje esikatselutila painamalla Esc-näppäintä (tai valitsemalla sulkemiskuvake oikeassa yläkulmassa).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * Tallenna sovelluksesi pilveen painamalla Ctrl+S, jotta voit suorittaa sen muissa laitteissa.
 * [Jaa sovellus](share-app.md) niin, että muut voivat suorittaa sen.
-* Lisätietoa [valikoimista](add-gallery.md), [lomakkeista](add-form.md) ja [kaavoista](working-with-formulas.md).
+* Lue lisätietoja [funktioista](working-with-formulas.md), kuten **Patch**, joiden avulla voit hallita tietoja luomatta vakiolomaketta.
