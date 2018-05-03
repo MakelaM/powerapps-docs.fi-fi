@@ -1,25 +1,22 @@
 ---
 title: Tutustu tietolähteisiin | Microsoft Docs
 description: Viitetietoja yhteyksien ja tietolähteiden käyttämiseen Microsoft PowerAppsissa.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/08/2017
 ms.author: gregli
-ms.openlocfilehash: ae53ebb6c0ae4743ffd4e978e680920a56452a7d
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 5e9b9ec980e6dd4aeacfef42b40fe7f52c19d558
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="understand-data-sources-in-powerapps"></a>Tutustu tietolähteisiin PowerAppsissa
 Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset käyttävät näitä tietolähteitä käyttämällä **yhteyksiä**.
