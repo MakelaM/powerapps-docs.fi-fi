@@ -1,8 +1,6 @@
 ---
 title: Aloita ilmainen kokeilu | Microsoft Docs
 description: Rekisteröidy ja hanki yksityishenkilön 30 päivän maksuton PowerApps-käyttöoikeus.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,16 +8,15 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/12/2018
 ms.author: anneta
-ms.openlocfilehash: a982e888e19fecd835a45f0e72e7c02ac4387897
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 485dfcf47f76a042afab80c769f994c6cbf1ceac
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Rekisteröidy, niin saat kokeilla PowerAppsia ilmaiseksi
 Jotta voit luoda sovelluksen PowerAppsissa, tarvitset jonkin erityyppisistä käyttöoikeuksista, jotka tarjoavat eritasoisia toimintoja. Sinulla on jo PowerApps-käyttöoikeus, jos organisaatiosi on ostanut sinulle jonkin useista Office 365- tai Dynamics 365 -versioista tai PowerAppsin palvelupaketin 1 tai 2 käyttöoikeuden.

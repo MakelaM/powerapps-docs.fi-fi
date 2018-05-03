@@ -1,25 +1,22 @@
 ---
 title: Opetusohjelma mallipohjaisen sovelluksen jakamiseen PowerAppsin avulla | Microsoft Docs
 description: Tässä opetusohjelmassa neuvotaan, miten mallipohjainen sovellus jaetaan
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: Mattp123
-manager: brycho
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
-ms.workload: na
-ms.tgt_pltfrm: na
 ms.devlang: na
-ms.topic: article
+ms.topic: conceptual
+ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 4f971668b506776cfd1a9cce2f61d591a4a0db5e
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 4068bbc4e67adee344544c0ba69895244d3dab83
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opetusohjelma: mallipohjaisen sovelluksen jakaminen PowerAppsilla
 
@@ -29,9 +26,6 @@ Tässä opetusohjelmassa suoritat vaiheet, joilla mallipohjainen sovellus jaetaa
 - Mukautetun käyttöoikeusroolin luominen
 - Mukautetun käyttöoikeusroolin käyttäjien määrittäminen
 - Käyttöoikeusroolin lisääminen sovellukseen
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
 ## <a name="prerequisites"></a>Edellytykset
 Sovelluksen voi jakaa vain [!INCLUDE [powerapps](../../includes/powerapps.md)]ympäristön järjestelmänvalvojan tai järjestelmänvalvojan roolissa. 

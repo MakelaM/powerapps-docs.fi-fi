@@ -1,25 +1,22 @@
 ---
 title: SQL Server -yhteyden yleiskatsaus | Microsoft Docs
 description: Vaiheittaiset ohjeet yhteyden muodostamiseen Azure SQL- tai paikalliseen SQL Server -tietokantaan
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
-ms.openlocfilehash: 26bae9c6407ce168eaa06ce29034452a48a1b846
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: 33b3f85d3cd2dbe59684eccc208ebec4cdd09549
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>SQL Server -yhteyden luominen PowerAppsista
 ![SQL-palvelimen kuvake](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -53,7 +50,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
     ![Lisää SQL Server -yhteys](./media/connection-azure-sqldatabase/add-sql-connection.png)
 5. Suorita jompikumpi seuraavista vaiheista:
    
-   * Määritä **Yhdistä suoraan (pilvipalvelut)** ja kirjoita tai liitä palvelimen nimi, tietokannan nimi, käyttäjänimi ja salasana, jota haluat käyttää tietokantaa varten.
+   * Määritä **Yhdistä suoraan (pilvipalvelut)** ja kirjoita tai liitä palvelimen nimi sekä haluamasi tietokannan nimi, käyttäjänimi ja salasana.
      
        ![Muodosta yhteys tietokantaan Azuressa](./media/connection-azure-sqldatabase/connect-azure.png)
    * Määritä **Yhdistä käyttämällä paikallista tietoyhdyskäytävää**, kirjoita tai liitä palvelimen nimi, tietokannan nimi, käyttäjänimi ja salasana, jota haluat käyttää tietokannalle ja määritä todennustyyppi ja yhdyskäytävä.
