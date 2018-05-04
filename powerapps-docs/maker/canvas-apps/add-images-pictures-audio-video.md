@@ -1,0 +1,201 @@
+---
+title: Upota multimediatiedostoja sovellukseen ja lataa niitä | Microsoft Docs
+description: Multimediatiedostojen näyttäminen sovelluksessa ja niiden lataaminen tietolähteeseen
+services: ''
+suite: powerapps
+documentationcenter: ''
+author: karthik-1
+manager: anneta
+editor: ''
+ms.service: powerapps
+ms.devlang: na
+ms.topic: article
+ms.tgt_pltfrm: na
+ms.workload: na
+ms.date: 07/12/2017
+ms.author: sharik
+ms.openlocfilehash: 75ec8131a4e9a4be796f06669d8d25ff559eaf69
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 03/22/2018
+---
+# <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
+Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä on Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
+
+## <a name="prerequisites"></a>Edellytykset
+[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [asenna](http://aka.ms/powerappsinstall) se. Kun avaat PowerAppsin, kirjaudu samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+
+## <a name="add-media-from-a-file-or-the-cloud"></a>Lisää media tiedostosta tai pilvipalvelusta
+Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ääni).
+
+1. Valitse **Sisältö**-välilehdessä **Media**.
+
+2. Valitse **Media**-kohdassa **Kuvat**, **Videot** tai **Ääni** ja valitse **Selaa**:
+
+    ![Selaa mediaa][1]
+
+3. Valitse lisättävä tiedosto ja valitse **Avaa**.
+
+    Tietokoneesi **Kuvat**-kansio avautuu, ja voit valita kuvan sieltä tai siirtyä toiseen kansioon.
+
+4. Kun olet lisännyt haluamasi tiedostot, palaa oletustyötilaan painamalla ESC-näppäintä.
+
+5. Valitse **Lisää**-välilehdessä **Media** ja valitse sitten **Kuva**, **Video** tai **Ääni**:
+
+    ![Valitse mediatyyppi][8]
+
+6. Jos olet lisännyt kuvan ohjausobjektin, aseta sen **[Kuva](controls/properties-visual.md)**-ominaisuus lisäämääsi tiedostoon:  
+
+    ![Määritä kuvan ominaisuus](./media/add-images-pictures-audio-video/imageproperty.png)
+
+    > [!NOTE]
+> Määritä vain tiedoston nimi, ilman tiedostopäätettä, yksinkertaisten lainausmerkkien sisälle.
+
+7. Jos olet lisännyt video- tai ääniohjausobjektin, aseta sen **Media**-ominaisuus lisäämääsi tiedostoon:  
+
+    ![Määritä mediaominaisuus](./media/add-images-pictures-audio-video/mediaproperty.png)
+
+    > [!NOTE]
+> Toista YouTube-video asettamalla video-ohjausobjektin **Media**-ominaisuus oikeaan URL-osoitteeseen lainausmerkeillä ympäröitynä.
+
+## <a name="add-media-from-azure-media-services"></a>Median lisääminen Microsoft Azure -mediapalveluista
+1. Lataa ja julkaise videoresurssisi Azure Media Services -tililtäsi kohteesta **AMS > Asetukset > resurssit**.
+
+2. Kun video on julkaistu, kopioi sen URL-osoite.
+
+3. Kun toimit PowerAppsista käsin, lisää **Video**-ohjausobjekti kohdasta **Lisää > Media**.
+
+4. Aseta **Media**-ominaisuus kopioimaasi URL-osoitteeseen.
+
+    Kuten tässä kaaviossa näkyy, voit valita minkä tahansa suoratoisto-URL-osoitteen, jota Microsoft Azure -mediapalvelut tukee:
+
+    ![Määritä mediaominaisuus](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
+
+## <a name="add-images-from-the-cloud-to-your-app"></a>Kuvien lisääminen pilvipalvelusta sovellukseen
+Tässä skenaariossa voit tallentaa kuvia OneDrive for Business -pilvitallennuspalvelun tililtä. Voit käyttää Excel-taulukkoa, joka sisältää kuvien polut, ja voit näyttää kuvat sovelluksesi valikoima-ohjausobjektissa.
+
+Tämä skenaario käyttää [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip)-pakettia, joka sisältää joitakin .jpeg-tiedostoja.
+
+> [!NOTE]
+> Excel-tiedostossa näiden kuvien polussa on käytettävä vinoviivaa. Kun PowerApps tallentaa kuvan polut Excel-taulukkoon, polussa käytetään kenoviivoja. Jos käytät kuvan polkuja tällaisessa taulukossa, muuta polut Excel-taulukossa käyttämään vinoviivaa kenoviivojen asemasta. Muussa tapauksessa kuvat eivät näy.  
+
+1. Lataa [CreateFirstApp.zip](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) ja pura **Assets**-kansio pilvipalvelun tallennustilan tiliisi.
+
+2. Vaihda **Assets**-kansion nimeksi **Assets_images**.
+
+3. Luo yksisarakkeinen taulukko Excel-laskentataulukossa ja täytä siihen seuraavat tiedot:
+
+    ![Takit-taulukko](./media/add-images-pictures-audio-video/jackets.png)
+
+4. Anna taulukolle nimi **Takit** ja Excel-tiedostolle nimi **Assets.xlsx**.
+
+5. Lataa **Takit**-taulukko tietolähteeksi sovellukseesi.  
+
+6. Lisää **Vain kuva** -ohjausobjekti (**Lisää**-välilehti > **Valikoima**) ja aseta sen **Items**-ominaisuudeksi `Jackets`:  
+
+    ![Items-ominaisuus](./media/add-images-pictures-audio-video/items-jackets.png)
+
+    Valikoimaan päivitetään automaattisesti kuvat:  
+
+    ![Takkien kuvat](./media/add-images-pictures-audio-video/images.png)
+
+    Kun määrität **Items**-ominaisuuden, sarake, jonka nimi on **PowerAppsId** lisätään automaattisesti Excel-taulukkoon.
+
+    Excel-taulukon kuvan polku voi olla myös kuvan URL-osoite. Esimerkkinä on [Lattiapäällystearviot](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx)-mallitiedosto. Voit ladata sen pilvipalvelun tallennustiliisi, lisätä `FlooringEstimates` taulukon tietolähteeksi sovelluksellesi ja määrittää sitten valikoiman ohjausobjektiksi `FlooringEstimates`. Kuvat päivitetään automaattisesti valikoimaan.
+
+## <a name="upload-pen-drawings-to-the-cloud"></a>Lataa kynäpiirustukset pilveen
+Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive for Business -palveluun ja tutkit, miten piirustukset tallennetaan sinne.
+
+1. Lisää Excelissä **Image [image]** soluun A1.
+
+2. Luo taulukko suorittamalla seuraavat vaiheet:    
+
+   1. Valitse solu A1.
+
+   2. Valitse **Lisää**-valintanauhasta **Taulukko**.
+
+   3. Valitse valintaikkunassa **Taulukossa on otsikot** ja valitse sitten **OK**.
+
+       ![Luo taulukko](./media/add-images-pictures-audio-video/create-table.png)
+
+       Excel-tiedostosi on nyt taulukkomuodossa. Katso kohdasta [Muotoile tiedot taulukoksi](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) lisätietoja taulukon muotoilusta Excelissä.
+
+   4. Anna taulukolle nimi **Piirustukset**:
+
+       ![Anna taulukon uudeksi nimeksi Piirustukset](./media/add-images-pictures-audio-video/name-media-table.png)
+
+3. Tallenna Excel-tiedosto OneDrive for Business -palveluun nimellä **SavePen.xlsx**.
+
+4. Luo [tyhjä sovellus](get-started-create-from-blank.md) PowerAppsissa.
+
+5. Lisää OneDrive for Business -tilisi [tietolähteeksi](add-data-connection.md) sovelluksessasi:
+
+   1. Napauta tai napsauta **Näkymä**-välilehteä ja napsauta tai napauta sitten kohtaa **Tietolähteet**.
+
+       ![](./media/add-images-pictures-audio-video/choose-data-sources.png)
+
+   2. Napsauta tai napauta kohtaa **Lisää tietolähde** ja napsauta tai napauta kohtaa **OneDrive for Business**.
+
+       ![](./media/add-images-pictures-audio-video/select-source.png)
+
+   3. Napsauta tai napauta tiedostoa **SavePen.xlsx**.
+
+   4. Valitse **Piirustukset**-taulukko ja napsauta tai napauta sitten kohtaa **Yhdistä**.
+
+       ![Yhdistä](./media/add-images-pictures-audio-video/savepen.png)  
+
+       Nyt Piirustukset-taulukko luetteloidaan tietolähteeksi.
+
+6. Valitse **Lisää**-välilehdestä **Teksti** ja valitse sitten **Kynäsyöte**.
+
+7. Nimeä uusi ohjausobjekti uudelleen nimellä **MyPen**:  
+
+    ![Nimeä uudelleen](./media/add-images-pictures-audio-video/rename-mypen.png)
+
+8. Lisää **Lisää**-välilehdessä **Button**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi tämä kaava:
+
+    **Patch(Piirustukset, Defaults(Piirustukset), {Image:MyPen.Image})**
+
+9. Lisää **Kuvavalikoima**-ohjausobjekti (**Lisää**-välilehti > **Valikoima**) ja aseta sen **Items**-ominaisuudeksi `Drawings`. Valikoima-ohjausobjektin **Image**-ominaisuudeksi asetetaan automaattisesti `ThisItem.Image`.
+
+    Järjestä ohjausobjektit niin, että näyttösi näyttää seuraavalta:  
+
+    ![Mallinäyttö](./media/add-images-pictures-audio-video/screen.png)
+
+10. Paina F5-näppäintä tai valitse Esikatsele ( ![Esikatselu-painike](./media/add-images-pictures-audio-video/preview.png) ).
+
+11. Piirrä jotain MyPen-kuvaan ja valitse sitten painike.
+
+    Piirroksesi näkyy valikoima-ohjausobjektin ensimmäisessä kuvassa.
+
+12. Lisää jotain muuta piirrokseesi ja valitse painike.
+
+    Piirroksesi näkyy valikoima-ohjausobjektin toisessa kuvassa.
+
+13. Sulje esikatseluikkuna painamalla ESC-näppäintä.
+
+    Pilvitallennuspalvelun tilillesi on luotu automaattisesti **SavePen_images**-kansio. Tämä kansio sisältää tallennetut kuvasi ja niiden tiedostonimien tunnukset. Jotta saat kansion näkyviin, sinun on ehkä päivitettävä selainikkuna esimerkiksi painamalla F5-näppäintä.
+
+    Tiedostossa **SavePen.xlsx**, **Kuva**-sarake määrittää uusien kuvien polun.
+
+### <a name="known-limitations"></a>Tunnetut rajoitukset
+[Tutustu näihin rajoituksiin](connections/cloud-storage-blob-connections.md#known-limitations) saadaksesi lisätietoja siitä, miten voit jakaa Excel-tietoja organisaatiossasi.
+
+## <a name="for-more-information"></a>Lisätietoja
+Muista testata sovelluksesi eri ympäristöissä, mukaan lukien [selainikkunassa](https://home.dynamics.com/) ja puhelimessa.
+
+Lisätietoja kehittyneemmistä skenaarioista, joihin liittyy multamediatiedostojen lataaminen suoraan toiseen tietolähteeseen, on kohdissa [Ammattilaistason vihjeitä kuvakaappauksia varten](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) ja [Mukautetut liittimet kuvan palvelimeen lataamista varten](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
+
+Toinen tapa ladata tiedostoja tietolähteeseen on käyttää [Patch](functions/function-patch.md)-funktiota.
+
+[1]: ./media/add-images-pictures-audio-video/add-image-video-audio-file.png
+[3]: ./media/add-images-pictures-audio-video/add-intro-sound.png
+[4]: ./media/add-images-pictures-audio-video/add-picture.png
+[5]: ./media/add-images-pictures-audio-video/camera-gallery.png
+[6]: ./media/add-images-pictures-audio-video/audio-gallery.png
+[7]: ./media/add-images-pictures-audio-video/pen-gallery.png
+[8]: ./media/add-images-pictures-audio-video/mediaoptions.png
+[9]: ./media/add-images-pictures-audio-video/imageproperty.png
+[10]: ./media/add-images-pictures-audio-video/mediaproperty.png
+[11]: ./media/add-images-pictures-audio-video/renamecamera.png

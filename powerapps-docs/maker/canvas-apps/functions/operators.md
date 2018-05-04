@@ -1,6 +1,6 @@
 ---
 title: Operaattorit | Microsoft Docs
-description: Viittaustietoja operaattoreista PowerAppsissa, muun muassa syntaksi ja esimerkkejä
+description: Viitetietoja operaattoreista PowerAppsissa, mukaan lukien syntaksi ja esimerkkejä
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 07/24/2017
 ms.author: gregli
 ms.openlocfilehash: 3250251e02170d2dd7bab441bc3c94705216ec00
-ms.sourcegitcommit: 397a968f57ce5aaaf2b86e804dfedda8cf34f307
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="operators-and-data-types-in-powerapps"></a>Operaattorit ja tietotyypit PowerAppsissa
 Jotkin näistä operaattoreista ovat riippuvaisia tekijän kielestä.  Jos haluat lisätietoja, katso [Yleiset sovellukset](../global-apps.md).
@@ -30,21 +30,21 @@ Jotkin näistä operaattoreista ovat riippuvaisia tekijän kielestä.  Jos halua
 | **.**<br>[tai **,** [riippuen kielestä](../global-apps.md)] |Desimaalierotin |**1.23**<br>[tai **1,23** riippuen kielestä] |Erotin numeron kokonaisosien ja murto-osien välissä.  Merkki on riippuvainen kielestä. |
 | **( )** |Sulkeet |**Filter(T, A &lt; 10)**<br><br>**(1 + 2) * 3** |Pakottaa käsittelyjärjestyksen ja ryhmittää suuremman lausekkeen alilausekkeet |
 | **+** |Aritmeettiset operaattorit |**1 + 2** |Yhteenlasku |
-| **-** |&nbsp; |**2 - 1** |Vähennyslasku ja merkki |
+| **-** |&nbsp; |**2 - 1** |Vähennyslasku ja etumerkki |
 | **\*** |&nbsp; |**2 * 3** |Kertolasku |
 | **/** |&nbsp; |**2 / 3** |Jakolasku (katso myös **[Mod](function-mod.md)**-funktio) |
 | **^** |&nbsp; |**2 ^ 3** |Potenssiin korotus, vastaa **[Power](function-numericals.md)**-funktiota |
 | **%** |&nbsp; |**20%** |Prosenttiosuus (vastaa: &quot;* 1/100&quot;) |
-| **=** |Vertailuoperaattorit |**Price = 100** |Yhtä suuri kuin |
-| **&gt;** |&nbsp; |**Price &gt; 100** |Suurempi kuin |
-| **&gt;=** |&nbsp; |**Price &gt; 100** |Suurempi tai yhtä suuri kuin |
-| **&lt;** |&nbsp; |**Price &lt; 100** |Pienempi kuin |
-| **&lt;=** |&nbsp; |**Price &lt;= 100** |Pienempi tai yhtä suuri kuin |
-| **&lt;&gt;** |&nbsp; |**Price &lt;&gt; 100** |Eri suuri kuin |
-| **&amp;** |Merkkijonon yhdistämisoperaattori |**&quot;hello&quot; &amp; &quot; &quot; &amp; &quot;world&quot;** |Muodostaa useista merkkijonoista yhtenäisen näkymän |
-| **&amp;&amp;** tai **And** |Loogiset operaattorit |**Price &lt; 100 &amp;&amp; Slider1.Value = 20**<br>tai **Price &lt; 100 And Slider1.Value = 20** |Looginen yhdistäminen, vastaa **[And](function-logicals.md)**-funktiota |
-| **&#124;&#124;** tai **Or** |&nbsp; |**Price &lt; 100 &#124;&#124; Slider1.Value = 20** tai **Price &lt; 100 Or Slider1.Value = 20** |Looginen erottaminen, vastaa **[Or](function-logicals.md)**-funktiota |
-| **!** tai **Not** |&nbsp; |**!(Price &lt; 100)** tai **Not (Price &lt; 100)** |Looginen negaatio, vastaa **[Not](function-logicals.md)**-funktiota |
+| **=** |Vertailuoperaattorit |**Hinta = 100** |Yhtä suuri kuin |
+| **&gt;** |&nbsp; |**Hinta &gt; 100** |Suurempi kuin |
+| **&gt;=** |&nbsp; |**Hinta &gt; 100** |Suurempi tai yhtä suuri kuin |
+| **&lt;** |&nbsp; |**Hinta &lt; 100** |Pienempi kuin |
+| **&lt;=** |&nbsp; |**Hinta &lt;= 100** |Pienempi tai yhtä suuri kuin |
+| **&lt;&gt;** |&nbsp; |**Hinta &lt;&gt; 100** |Eri suuri kuin |
+| **&amp;** |Merkkijonon yhdistämisoperaattori |**&quot;hei&quot; &amp; &quot; &quot; &amp; &quot;maailma&quot;** |Muodostaa useista merkkijonoista yhtenäisen näkymän |
+| **&amp;&amp;** tai **And** |Loogiset operaattorit |**Hinta &lt; 100 &amp;&amp; Slider1.Value = 20**<br>tai **Hinta &lt; 100 And Slider1.Value = 20** |Looginen yhdistäminen, vastaa **[And](function-logicals.md)**-funktiota |
+| **&#124;&#124;** tai **Or** |&nbsp; |**Hinta &lt; 100 &#124;&#124; Slider1.Value = 20** tai **Hinta &lt; 100 Or Slider1.Value = 20** |Looginen erottaminen, vastaa **[Or](function-logicals.md)**-funktiota |
+| **!** tai **Not** |&nbsp; |**!(Hinta &lt; 100)** tai **Not (Hinta &lt; 100)** |Looginen negaatio, vastaa **[Not](function-logicals.md)**-funktiota |
 | **exactin** |[Jäsenyysoperaattorit](#in-and-exactin-operators) |**Gallery1.Selected exactin SavedItems** |[Kokoelmaan](../working-with-data-sources.md#collections) tai taulukkoon kuuluva |
 | **exactin** |&nbsp; |**&quot;Windows&quot; exactin ”To display windows in the Windows operating system...”** |Alimerkkijonotesti (kirjainkoko on merkitsevä) |
 | **in** |&nbsp; |**Gallery1.Selected in SavedItems** |Kokoelmaan tai taulukkoon kuuluva |
@@ -70,18 +70,18 @@ Voit käyttää **[in](operators.md#in-and-exactin-operators)**- ja **[exactin](
     Valikoima näyttää vain Europan, koska se on ainoa nimi, joka sisältää määrittämäsi kirjaimen.
 
 ## <a name="thisitem-operator"></a>ThisItem-operaattori
-Voit näyttää tietoa **[Gallery](../controls/control-gallery.md)**-, **[Edit form](../controls/control-form-detail.md)**- tai **[Display form](../controls/control-form-detail.md)** -ohjausobjekteissa sitomalla sen taulukkoon tai kokoelmaan.  Nämä ohjausobjektit ovat säilöjä muille korteille ja ohjausobjekteille.  Jokainen säilössä oleva kortti tai ohjausobjekti voi käyttää sidottua tietoa **[ThisItem](operators.md#thisitem-operator)**-operaattorin avulla.   
+Voit näyttää tietoa **[valikoima](../controls/control-gallery.md)**-, **[muokkaa lomaketta](../controls/control-form-detail.md)**- tai **[näytä lomake](../controls/control-form-detail.md)** -ohjausobjekteissa sitomalla sen taulukkoon tai kokoelmaan.  Nämä ohjausobjektit ovat säilöjä muille korteille ja ohjausobjekteille.  Jokainen säilössä oleva kortti tai ohjausobjekti voi käyttää sidottua tietoa **[ThisItem](operators.md#thisitem-operator)**-operaattorin avulla.   
 
 Voit käyttää **[ThisItem](operators.md#thisitem-operator)**-operaattoria määrittääksesi tiedon [sarakkeen](../working-with-tables.md#columns) jokaiselle kortille tai ohjausobjektille ulommassa ohjausobjektissa. Esimerkiksi operaattori kohdan [Näytä valikoiman kuvat ja teksti](../show-images-text-gallery-sort-filter.md) tuotevalikoimassa määritti, että kuvan ohjausobjekti näytti tuotemuotoilun, ylempi otsikko näytti tuotteen nimen ja alempi otsikko näytti varastossa olevien yksikköjen määrän.
 
 Sisäkkäisissä valikoimissa **[ThisItem](operators.md#thisitem-operator)** viittaa sisimmän valikoiman kohteisiin. Olettaen, että sisemmän ja ulomman valikoiman rivikentät eivät olleet ristiriidassa, voit käyttää myös tarkentamattomia kentän (sarakkeen) nimiä suoraan. Tämän lähestymistavan avulla sisemmän valikoiman säännöt voivat viitata ulomman valikoiman kohteisiin.
 
 ## <a name="parent-operator"></a>Parent-operaattori
-Jotkin ohjausobjektit isännöivät muita ohjausobjekteja. Esimerkiksi **[Screen](../controls/control-screen.md)**-, **[Gallery](../controls/control-gallery.md)**-, **[Card](../controls/control-card.md)**-, **[Edit form](../controls/control-form-detail.md)**- ja **[Display form](../controls/control-form-detail.md)** -ohjausobjektit ovat kaikki ohjausobjektien säilöjä. Kutsumme isännöivää ohjausobjektia sisällä olevien ohjausobjektien ”ylätasoksi”.
+Jotkin ohjausobjektit isännöivät muita ohjausobjekteja. Esimerkiksi **[näyttö](../controls/control-screen.md)**-, **[valikoima](../controls/control-gallery.md)**-, **[kortti](../controls/control-card.md)**-, **[muokkaa lomaketta](../controls/control-form-detail.md)**- ja **[näytä lomake](../controls/control-form-detail.md)** -ohjausobjektit ovat kaikki ohjausobjektien säilöjä. Kutsumme isännöivää ohjausobjektia sisällä olevien ohjausobjektien ”ylätasoksi”.
 
 Kaikkiin ohjausobjekteihin PowerAppsissa voidaan viitata nimellä mistä tahansa sovelluksessa. **Screen1** voi olla näytön nimi sovelluksessa. Voit hakea tämän näytön taustavärin käyttämällä funktiota **Screen1.Fill**.
 
-Tämän näytön ohjausobjekteilla on toinen vaihtoehto. Ne voivat käyttää suhteellista viittausta: **Parent.Fill**. **[Parent](operators.md#parent-operator)**-operaattorilla viitataan ohjausobjektiin, joka isännöi tätä ohjausobjektia, jolloin sen kaikki ominaisuudet ovat käytettävissä. **[Parent](operators.md#parent-operator)**-operaattorin käyttäminen on hyödyllistä, koska se ei ole riippuvainen ohjausobjektin nimestä. Voit kopioida ja liittää säilön ohjausobjektin säätämättä viittauksia säilössä. Tämä operaattori tekee myös aliohjausobjektien ja ylemmän tason ohjausobjektien suhteista selkeämpiä kaavoja luettaessa.
+Tämän näytön ohjausobjekteilla on toinen vaihtoehto: Ne voivat käyttää suhteellista viittausta: **Parent.Fill**. **[Parent](operators.md#parent-operator)**-operaattori viittaa ohjausobjektiin, joka isännöi tätä ohjausobjektia ja tuo siten kaikki sen ominaisuudet saataville. **[Parent](operators.md#parent-operator)**-operaattorin käyttäminen on hyödyllistä, koska se ei ole riippuvainen ohjausobjektin nimestä. Voit kopioida ja liittää säilön ohjausobjektin säätämättä viittauksia säilössä. Tämä operaattori tekee myös aliohjausobjektien ja ylemmän tason ohjausobjektien suhteista selkeämpiä kaavoja luettaessa.
 
 ## <a name="disambiguation-operator"></a>Selvitysoperaattori
 Jotkin funktiot luovat [tietuealueita](../working-with-tables.md#record-scope) taulukon kenttien käyttämiseksi tietueita käsiteltäessä, kuten **Filter**, **AddColumns** ja **Sum**.  Tietuealueen kanssa lisätyt kentän nimet ohittavat samat nimet muualta sovelluksesta.  Kun näin tapahtuu, voit edelleen käyttää arvoja tietuealueen ulkopuolelta käyttämällä **@** selvitysoperaattoria:

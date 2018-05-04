@@ -1,5 +1,5 @@
 ---
-title: Power BI -projektiraportin julkaiseminen ja koontinäytön luominen | Microsoft Docs
+title: Julkaise Power BI -projektiraportti ja luo koontinäyttö| Microsoft Docs
 description: Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, minkä jälkeen luomme raportin pohjalta koontinäytön.
 services: ''
 suite: powerapps
@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 01/30/2018
 ms.author: mblythe
 ms.openlocfilehash: 6f54274af043964f02ef02a5ce97c261a410391d
-ms.sourcegitcommit: e827813cd898ca9a1046b5952ea5e32ce2989a65
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="publish-the-power-bi-project-report-and-create-a-dashboard"></a>Power BI -projektiraportin julkaiseminen ja koontinäytön luominen
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/14/2018
 Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, minkä jälkeen luomme raportin pohjalta koontinäytön. Usein raportit sisältävät runsaasti visualisointeja ja koontinäytössä käytetään vain alijoukkoa. Tässä tapauksessa lisäämme kaikki neljä visualisointia koontinäyttöön.
 
 ## <a name="step-1-publish-the-dataset-and-report"></a>Vaihe 1: tietojoukon ja raportin julkaiseminen
-1. Napsauta tai napauta Power BI Desktopin **Aloitus**-välilehdellä **Julkaise**.
+1. Napsauta tai napauta Power BI Desktopin **Aloitus**-välilehdessä **Julkaise**.
    
     ![Tietojoukon ja raportin julkaiseminen](./media/sharepoint-scenario-publish-report/06-01-01-publish.png)
 2. Jos et ole vielä kirjautunut Power BI -palveluun, anna tili ja napsauta tai napauta **Kirjaudu sisään**.
@@ -75,7 +75,7 @@ Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, m
 1. Napsauta tai napauta ylävasemmalla olevaa kaaviota ja valitse ![Kiinnitä-kuvake](./media/sharepoint-scenario-publish-report/icon-pin.png).
    
     ![Kiinnitä kaavio](./media/sharepoint-scenario-publish-report/06-01-12-pin-projected.png)
-2. Anna nimi koontinäytölle, johon haluat kiinnittää kohteen ja napsauta tai napauta **Kiinnitä**.
+2. Anna nimi koontinäytölle, johon haluat kiinnittää kohteen, ja napsauta tai napauta **Kiinnitä**.
    
     ![Kiinnitä kaavio uuteen koontinäyttöön](./media/sharepoint-scenario-publish-report/06-01-13-pin-new.png)
 3. Napsauta tai napauta yläoikealla olevaa kaaviota ja valitse ![Kiinnitä-kuvake](./media/sharepoint-scenario-publish-report/icon-pin.png).

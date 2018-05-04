@@ -1,6 +1,6 @@
 ---
-title: 'Kuvan ohjausobjekti: viittaus | Microsoft Docs'
-description: Kuvan ohjausobjektin tiedot, kuten ominaisuudet ja esimerkit
+title: 'Kuvan ohjausobjekti: viitetiedot | Microsoft Docs'
+description: Kuva-ohjausobjektin tiedot, mukaan lukien ominaisuudet ja esimerkit
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,16 +16,16 @@ ms.workload: na
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 0ab25713976e9f89fa74b5f7664b13dca447841e
-ms.sourcegitcommit: 87327f99636c68c62c755c4eb48861249a5a3add
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="image-control-in-powerapps"></a>Kuvan ohjausobjekti PowerAppsissa
+# <a name="image-control-in-powerapps"></a>Kuva-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka näyttää kuvan esimerkiksi paikallisesta tiedostosta tai tietolähteestä.
 
 ## <a name="description"></a>Kuvaus
-Jos lisäät sovellukseen vähintään yhden **kuvan** ohjausobjektin, voit näyttää yksittäisiä, tietojoukkoon kuulumattomia kuvia tai lisätä tietolähdearkiston kuvia.
+Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyttää yksittäisiä, tietojoukkoon kuulumattomia kuvia tai lisätä tietolähdearkiston kuvia.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **[Image](properties-visual.md)** – Kuvan, äänen tai mikrofonin ohjausobjektissa näkyvän kuvan nimi.
@@ -37,19 +37,19 @@ Jos lisäät sovellukseen vähintään yhden **kuvan** ohjausobjektin, voit näy
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Reunan tyyli määrittää, onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)**  – Onko ohjausobjektin reuna **Solid** (kiinteä), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
 
-**[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
+**[Reunan paksuus](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin näppäimistösyötteisen reunan paksuus.
 
 **CalculateOriginalDimensions** – Ottaa käyttöön ominaisuudet **OriginalHeight** (alkuperäinen korkeus) ja **OriginalWidth** (alkuperäinen leveys).
 
-**[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Muokkaa**) tai vain tarkastella (**Näytä**) vai onko ominaisuus kokonaan poissa käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella (**View**) vai onko ominaisuus kokonaan poissa käytöstä (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuus **ei ole käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-ominaisuus **ei ole käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -61,7 +61,7 @@ Jos lisäät sovellukseen vähintään yhden **kuvan** ohjausobjektin, voit näy
 
 **[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
-**[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun käyttäjä pitää hiiren osoitinta sen päällä.
+**[HoverFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä pitää hiiren osoitinta sen päällä.
 
 **[ImagePosition](properties-visual.md)** – Kuvan tai ohjausobjektin asettelu (**Täytä**, **Sovita**, **Venytä**, **Vierekkäin** tai **Keskitä**), jos se ei ole saman kokoinen kuin näyttö.
 
@@ -85,13 +85,13 @@ Jos lisäät sovellukseen vähintään yhden **kuvan** ohjausobjektin, voit näy
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[RadiusBottomLeft](properties-size-location.md)** – Vasemman alakulman pyöristysaste.
+**[RadiusBottomLeft](properties-size-location.md)** – Vasemman alakulman pyöristysmäärä.
 
-**[RadiusBottomRight](properties-size-location.md)** – Oikean alakulman pyöristysaste.
+**[RadiusBottomRight](properties-size-location.md)** – Oikean alakulman pyöristysmäärä.
 
-**[RadiusTopLeft](properties-size-location.md)** – Vasemman yläkulman pyöristysaste.
+**[RadiusTopLeft](properties-size-location.md)** – Vasemman yläkulman pyöristysmäärä.
 
-**[RadiusTopRight](properties-size-location.md)** – Oikean yläkulman pyöristysaste.
+**[RadiusTopRight](properties-size-location.md)** – Oikean yläkulman pyöristysmäärä.
 
 **[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin hiiren osoittimen ollessa ohjausobjektin päällä.
 
@@ -99,27 +99,27 @@ Jos lisäät sovellukseen vähintään yhden **kuvan** ohjausobjektin, voit näy
 
 **[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Leveys eli ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (näytön, jos pääsäilöä ei ole).
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-[**Poista** (*DataSource*, ThisItem)](../functions/function-remove-removeif.md)
+[**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="show-an-image-from-a-local-file"></a>Paikallisen tiedoston kuvan näyttäminen
-1. Valitse **Tiedostot**-valikosta **Media** ja napauta tai napsauta sitten **Selaa**-painiketta.
+1. Valitse **Tiedosto**-valikosta **Media** ja napauta tai napsauta sitten **Selaa**-painiketta.
 2. Napauta tai napsauta kuvatiedostoa, jonka haluat lisätä. Valitse sitten **Avaa** ja palaa oletustyötilaan painamalla Esc-näppäintä.
-3. Lisää **kuvan** ohjausobjekti ja määritä sen **Image**-ominaisuudeksi juuri lisäämäsi tiedoston nimi.
+3. Lisää **kuva**-ohjausobjekti ja määritä sen **Image**-ominaisuudeksi juuri lisäämäsi tiedoston nimi.
 
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
-    **Kuvan** ohjausobjekti näyttää valitsemasi kuvan.
+    **Kuva**-ohjausobjekti näyttää valitsemasi kuvan.
 
 ### <a name="show-a-set-of-images-from-a-data-source"></a>Tietolähteen kuvajoukon näyttäminen
-1. Lataa tämä [Excel-tiedosto](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) ja tallenna se omaan, paikalliseen laitteeseen.
+1. Lataa tämä [Excel-tiedosto](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) ja tallenna se paikalliseen laitteeseesi.
 2. Luo tai avaa sovellus PowerApps Studiossa ja valitse sitten oikeanpuoleisesta ruudusta **Lisää tietolähde**.
 
     Jos **Lisää tietolähde** ei näy oikeanpuoleisessa ruudussa, napsauta tai napauta vasemmassa siirtymispalkissa olevaa näyttöä.

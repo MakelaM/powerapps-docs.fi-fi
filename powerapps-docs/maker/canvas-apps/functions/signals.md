@@ -1,6 +1,6 @@
 ---
-title: Acceleration-, App-, Compass-, Connection- ja Location-signaalit | Microsoft Docs
-description: Viittaustietoja Acceleration-, App-, Compass-, Connection- ja Location-tunnistimista, kuten syntaksi ja esimerkkejä
+title: Kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijaintisignaalit | Microsoft Docs
+description: Viitetietoja kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijainti-tunnistimista, mukaan lukien syntaksi ja esimerkkejä
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,19 +16,19 @@ ms.workload: na
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: ae649c4935a92d9db800dcd75fddf848eccbfcc1
-ms.sourcegitcommit: 33099e6197c0139679cd08c42e9e2a5717904c92
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Acceleration-, App-, Compass-, Connection- ja Location-signaalit PowerAppsissa
+# <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijainti-signaalit PowerAppsissa
 Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.  
 
 ## <a name="description-and-syntax"></a>Kuvaus ja syntaksi
 Kaikki signaalit palauttavat [tietueen](../working-with-tables.md#records) tiedoista. Voit käyttää tietoja ja tallentaa ne tietueeksi. Voit myös poimia yksittäisiä ominaisuuksia käyttämällä **.** [-operaattoria](operators.md).
 
 ### <a name="acceleration"></a>Acceleration
-**Acceleration**-signaali palauttaa laitteen kiihtyvyyden kolmessa ulottuvuudessa suhteessa laitteen näyttöön. Kiihtyvyys mitataan *g*-yksikköinä 9,81 m/s<sup>2</sup>:sta tai 32,2 ft/s<sup>2</sup>:sta (maan vetovoiman aiheuttama kiihtyvyys maan pinnalla).
+**Acceleration**-signaali palauttaa laitteen kiihtyvyyden kolmessa ulottuvuudessa suhteessa laitteen näyttöön. Kiihtyvyys mitataan *g*-yksikköinä 9,81 m/s<sup>2</sup> tai 32,2 ft/s<sup>2</sup> (maan vetovoiman aiheuttama kiihtyvyys maan pinnalla).
 
 | Signaalin ominaisuus | Kuvaus |
 | --- | --- |
