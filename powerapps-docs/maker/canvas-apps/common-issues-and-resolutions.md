@@ -1,8 +1,6 @@
 ---
 title: 'Yleisiä ongelmia ja ratkaisuja: PowerApps | Microsoft Docs'
 description: Lue PowerAppsiin liittyvistä ongelmista ja ratkaisuista
-services: ''
-suite: powerapps
 documentationcenter: na
 author: skjerland
 manager: kfile
@@ -10,19 +8,26 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/05/2018
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/12/2018
 ms.author: sharik
-ms.openlocfilehash: 6df3a0d92f8dd8352f93bdb377ac9c4b446e1e99
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 369bbc445d54152f5b6319922d79a58c9b79121c
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Yleisiä ongelmia ja ratkaisuja: PowerApps
 ## <a name="recently-addedchanged"></a>Äskettäin tehty lisäys/muutos
+1. **Mukautetun kuvan käyttäminen sovelluksen kuvakkeena**
+
+    PowerApps Studio for Windowsin versiossa 3.18043 mukautettuja kuvia ei voi käyttää sovellusten kuvakkeina. Voit kiertää tämän ongelman käyttämällä [PowerApps Studion verkkoversiota](https://web.powerapps.com) mukautetun kuvan lataamiseen. Voit vaihtoehtoisesti käyttää jotain Windowsin PowerApps Studioon sisältyvää kuvaketta ja mukauttaa sen taustaväriä.
+
+1. **Näyttöjen kopioiminen ja liittäminen sovellusten välillä**
+
+    Näyttöjen kopioimista ja liittämistä sovellusten välillä ei tällä hetkellä tueta. Voit kiertää ongelman, lisäämällä kohdesovellukseen uuden näytön, kopioimalla sitten ohjausobjektit lähdesovelluksen näytöstä ja liittämällä ne sitten kohdesovelluksen näyttöön.
+
 1. **SharePoint-lomakkeiden asettelun muuttaminen**
 
     Kun SharePoint-lomakkeen asetuksia muokataan ja lomakkeen asettelu halutaan vaihtaa (oletusmuotoisesta) pystysuorasta vaakasuoraan, näyttöön voi joissakin kieliversioissa ilmaantua useita virhesymboleja (keltaisia kolmioita ohjausobjektien kohdalla). Voit korjata nämä virheet ja säilyttää vaaka-asettelun napsauttamalla **Kumoa**.

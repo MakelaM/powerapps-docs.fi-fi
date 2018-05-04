@@ -13,13 +13,13 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 03/21/2018
+ms.date: 04/09/2018
 ms.author: sharik
-ms.openlocfilehash: e9e5c156e9cb3ad47375be9a237a757a6db1158b
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 92438c37b870ace2ed5b2ec086cf6c5fb1548fdc
+ms.sourcegitcommit: d7ed5144f96d1ecc17084c30ed0e2ba3c6b03c26
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="whats-new-in-powerapps"></a>PowerAppsin uudet ominaisuudet
 Lisätietoja tunnetuista rajoituksista on artikkelissa [Yleisiä ongelmia ja ratkaisuja](common-issues-and-resolutions.md).
@@ -34,18 +34,20 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
 
 **Tulossa pian:** Jatkamme julkaisutietojen PDF-tiedostojen päivittämistä sitä mukaa, kun ominaisuudet ovat saatavilla, ja tarjoamme tiedot myös verkkosivullamme.
 
-## <a name="mar-21"></a>21. maaliskuuta
-1. Laadi [mallipohjaisia sovelluksia](../model-driven-apps/model-driven-app-overview.md), joiden lähtökohta on oman organisaatiosi tietomallissa. Sovellus kehitetään keskeisten liiketoimintatietojenne ja -prosessienne perusteella Common Data Servicessä, ja sitä käytetään lomakkeiden, näkymien ja muiden osien mallintamiseen. Mallipohjaiset sovellukset luovat automaattisesti erinomaisen, kaikkiin laitteisiin sopivan käyttöliittymän.
-2. [Luo tietokanta](../../administrator/create-database.md) ympäristössä käyttämällä Common Data Servicen uusinta versiota.
-3. Common Data Service for Apps sisältää nyt:
+## <a name="apr-9"></a>9. huhti
+* Leikkaa (Ctrl + X), kopioi (Ctrl + C) ja liitä (Ctrl + V) komentoja&mdash;, mukaan lukien niiden tyylejä, kaavoja ja ominaisuuksia &mdash;kaikkiin sovelluksiin selaimessa.
 
+## <a name="mar-21"></a>21. maaliskuuta
+1. Laadi [mallipohjaisia sovelluksia](../model-driven-apps/model-driven-app-overview.md), joiden lähtökohta on oman organisaatiosi tietomallissa. Sovellus kehitetään keskeisten liiketoimintatietojenne ja -prosessienne perusteella Common Data Service for Appsissa, ja sitä käytetään lomakkeiden, näkymien ja muiden osien mallintamiseen. Mallipohjaiset sovellukset luovat automaattisesti erinomaisen, kaikkiin laitteisiin sopivan käyttöliittymän.
+2. [Luo tietokanta](../../administrator/create-database.md) CDS for Appsin uusimmalla versiolla.
+3. CDS for Apps sisältää nyt:
     - **Lisää tietotyyppejä**, jotka tukevat monimutkaisempia kohteiden määritelmiä ja tarjoavat monipuolisempia kokemuksia. (Koskee kangas- ja mallipohjaisia sovelluksia.)
-    - [Luo ja mukauta kohteita](../common-data-service/data-platform-create-entity.md) Common Data Service for Appsille suoraan PowerApps-sivustosta. **Päivitetty käyttökokemus** sisältää entistä paremman suorituskyvyn, helppokäyttöisemmän käyttöliittymän ja hyödyllisiä ominaisuuksia, kuten yhdenmukaisen asetusjoukkojen luomisen. (Koskee kangas- ja mallipohjaisia sovelluksia.)
-    - Luo **palvelinpuolen liiketoimintasääntöjä** Common Data Service for Appsiin syötettyjen tietojen vahvistamista varten. (Koskee kangas- ja mallipohjaisia sovelluksia.)
-    - Luo **laskettuja ja koontikenttiä** Common Data Service for Apps -kohteille suoraan PowerApps-sivustosta. (Koskee kangas- ja mallipohjaisia sovelluksia.)  
-    - Kehittäjät voivat käyttää Common Data Service for Apps **Software Development Kit** -työkalua (SDK) koodipohjaisten muokkausten luomiseksi Common Data Serviceen.
-    - Kehittyneet käyttäjät voivat käyttää Common Data Service for Appsiin tallennettuja tietoja uuden **OData Web API**:n kautta.
-    - [Tuo tietoja](../common-data-service/data-platform-cds-newentity-pq.md) Common Data Serviceen **Power Queryn** avulla. Käytä Power Queryä verkossa tietojen tuomiseen suoraan Common Data Serviceen useista lähteistä
+    - [Luo ja mukauta kohteita](../common-data-service/data-platform-create-entity.md) CDS for Appsille suoraan PowerApps-sivustosta. **Päivitetty käyttökokemus** sisältää entistä paremman suorituskyvyn, helppokäyttöisemmän käyttöliittymän ja hyödyllisiä ominaisuuksia, kuten yhdenmukaisen asetusjoukkojen luomisen. (Koskee kangas- ja mallipohjaisia sovelluksia.)
+    - Luo **palvelinpuolen liiketoimintasääntöjä** CDS for Appsiin syötettyjen tietojen vahvistamista varten. (Koskee kangas- ja mallipohjaisia sovelluksia.)
+    - Luo **laskettuja ja koontikenttiä** CDS for Apps -kohteille suoraan PowerApps-sivustosta. (Koskee kangas- ja mallipohjaisia sovelluksia.)  
+    - Kehittäjät voivat käyttää CDS for Apps **Software Development Kit** -työkalua (SDK) koodipohjaisten muokkausten luomiseksi CDS for Appsiin.
+    - Kehittyneet käyttäjät voivat käyttää CDS for Appsiin tallennettuja tietoja uuden **OData Web API**:n kautta.
+    - [Tuo tietoja](../common-data-service/data-platform-cds-newentity-pq.md) CDS for Appsiin **Power Querylla**. Käytä Power Queryä verkossa tietojen tuomiseen suoraan CDS for Appsiin useista lähteistä
 
 ## <a name="mar-5"></a>5. maaliskuuta
 1. Lisää (ja poista) [liitteitä](controls/control-attachments.md) SharePoint-luetteloihin.
@@ -83,8 +85,3 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
 
 ## <a name="nov-10"></a>10. marraskuuta
 * [Nimeä sääntöjä uudelleen](working-with-rules.md) sovelluksessa ja näytä säännöt valitun ohjausobjektin ollessa säännön ehto.
-
-## <a name="oct-30"></a>30. lokakuuta
-1. [Näytä kaikki säännöt](working-with-rules.md) sovelluksessa, ei ainoastaan niitä, jotka koskevat valittua ohjausobjektia.
-2. Lisätty kuvakkeita, joita sovellusten laatijat ovat eniten pyytäneet.
-3. Parannettu sovellusten suorituskykyä Android- ja iOS-laitteissa.
