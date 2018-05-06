@@ -1,7 +1,6 @@
 ---
 title: Pikaopas entiteettien suhteisiin hakukentän kautta | Microsoft Docs
 description: Pikaopas suhteen luomiseen entiteettien välille käyttämällä hakukenttää
-services: powerapps
 documentationcenter: na
 author: clwesene
 manager: kfile
@@ -9,22 +8,21 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 3/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 37450b6e9f43780deaed4ff34b005472501bdb23
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a607058d1e26f37a4bffa054d9dc148be8b6b011
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-create-a-relationship"></a>Pikaopas: Luo suhde
 Yhden entiteetin tiedot liittyvät usein toiseen entiteettiin. Käytössäsi voi olla esimerkiksi **opettajien** entiteetti ja **luokan** entiteetti. **Luokan** entiteetissä saattaa olla hakusuhde **opettajien** entiteettiin näyttämään, kuka opettaja opettaa luokkaa. Voit käyttää hakukenttää näyttämään tietoja **opettajien** entiteetistä. Tätä kutsutaan yleisesti hakukentäksi.
 
 ## <a name="define-a-relationship"></a>Määritä suhde
-Voit luoda erityyppisiä suhteita yhdestä entiteetistä toiseen (tai entiteetin ja itsensä välille). Jokaisella entiteetillä voi olla suhde useampaan kuin yhteen entiteettiin ja jokaisella entiteetillä voi olla useampi kuin yksi suhde toiseen entiteettiin. Yleisiä suhdetyyppejä ovat:
+Voit luoda erityyppisiä suhteita yhdestä entiteetistä toiseen (tai entiteetin ja itsensä välille). Jokaisella entiteetillä voi olla suhde yhteen tai useampaan entiteettiin ja useampia suhteita toiseen entiteettiin. Yleisiä suhdetyyppejä ovat:
 
 
 * **Monesta yhteen** – Tässä suhdetyypissä jokainen tietue entiteetissä A voi vastata useampaa kuin yhtä tietuetta entiteetissä B, mutta jokainen tietue entiteetissä B voi vastata vain yhtä tietuetta entiteetissä A. Esimerkiksi luokalla on yksi luokkahuone. Tämä on yleisin suhdetyyppi, ja se näkyy kenttäluettelossa nimellä **hakukenttä**

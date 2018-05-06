@@ -1,0 +1,66 @@
+### YamlMime:Tutorial
+title: Aloitus
+metadata:
+  title: Aloitus | Microsoft PowerApps
+  description: Tutustu PowerAppsiin, sen ohjelmistoelementteihin ja liittyviin tekniikoihin.
+  audience: Business User
+  level: Beginner
+  nextTutorialHref: create-app-sharepoint.yml
+  nextTutorialTitle: Sovelluksen luominen SharePointista
+  displayType: one-column
+  author: AFTOwen
+  manager: kfile
+  ms.service: powerapps
+  ms.component: canvas
+  ms.topic: interactive-tutorial
+  ms.date: 10/27/2017
+  ms.author: anneta
+  ms.openlocfilehash: a9a56b33c7d1db94d630b504b4db0a0d5ca2c125
+  ms.sourcegitcommit: 6a75c4c499bcdbeb9d65d3a9af47dedcf900f38d
+  ms.translationtype: HT
+  ms.contentlocale: fi-FI
+  ms.lasthandoff: 05/03/2018
+items:
+- durationInMinutes: 1
+  content: >
+    Tutustu PowerAppsiin, sen ohjelmistoelementteihin ja liittyviin tekniikoihin. Tarkastele eri sovelluksenluontitapoja, ja luo sovellus SharePoint-luettelosta.
+- title: Esittelyssä PowerApps
+  durationInMinutes: 5
+  content: >
+    > [!Video https://www.youtube.com/embed/n9fkvkekINE?rel=0]
+
+
+    [!INCLUDE [](includes/learning-introducing-powerapps.md)]
+- title: PowerAppsin osat
+  durationInMinutes: 6
+  content: >
+    > [!Video https://www.youtube.com/embed/r6mowYePq1Q?rel=0]
+
+
+    [!INCLUDE [](includes/learning-powerapps-parts.md)]
+- title: Aiheeseen liittyvät tekniikat
+  durationInMinutes: 6
+  content: >
+    > [!Video https://www.youtube.com/embed/C81IfqIn9LI?rel=0]
+
+
+    [!INCLUDE [](includes/learning-related-technologies.md)]
+- title: Nopea katsaus sovellusten luomiseen
+  durationInMinutes: 6
+  content: >
+    > [!Video https://www.youtube.com/embed/NOv3kacXqho?rel=0]
+
+
+    [!INCLUDE [](includes/learning-quick-look-powerapps.md)]
+- title: Luo ensimmäinen sovelluksesi
+  durationInMinutes: 5
+  content: >
+    > [!Video https://www.youtube.com/embed/ixRpT48Z6IQ?rel=0]
+
+
+    [!INCLUDE [](includes/learning-create-first-app-powerapps.md)]
+- title: Kertaa tämä osio
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/learning-review-section-one.md)]
+- content: Olet suorittanut Microsoft PowerAppsin ohjatun oppimisen **Aloitus**-osion.

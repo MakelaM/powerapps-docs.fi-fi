@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 11/08/2015
 ms.author: gregli
 ms.openlocfilehash: bcade879bfad04a50f80c26638f994897d9b42c0
-ms.sourcegitcommit: 6afca7cb4234d3a60111c5950e7855106ff97e56
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funktio PowerAppsissa
 Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) nykyisessä näytössä.
@@ -32,15 +32,15 @@ Kontekstimuuttujat on rajoitettu näyttöä varten, mikä tarkoittaa, ettet voi 
 PowerApps perustuu kaavoihin, jotka lasketaan automaattisesti uudelleen, kun käyttäjä on vuorovaikutuksessa sovelluksen kanssa.  Kontekstimuuttujat eivät tarjoa tätä etua, ja ne voivat vaikeuttaa sovelluksesi laatimista ja ymmärtämistä.  Ennen kuin käytät kontekstimuuttujaa, tutustu kohtaan [muuttujien käyttäminen](../working-with-variables.md).
 
 ## <a name="description"></a>Kuvaus
-Voit luoda tai päivittää kontekstimuuttujan välittämällä yksittäisen [tietueen](../working-with-tables.md#records) **UpdateContext**-funktiolle. Määritä kullekin tietueelle [sarakkeen](../working-with-tables.md#columns) nimi, joka määrittää tai vastaa muuttujan nimeä ja arvo, jonka haluat määrittää kyseiselle muuttujalle.
+Voit luoda tai päivittää kontekstimuuttujan välittämällä yksittäisen [tietueen](../working-with-tables.md#records) **UpdateContext**-funktiolle. Määritä kullekin tietueelle [sarakkeen](../working-with-tables.md#columns) nimi, joka määrittää tai vastaa muuttujan nimeä, ja arvo, jonka haluat määrittää kyseiselle muuttujalle.
 
 * Jos määrität muuttujan nimen, jonka olet määrittänyt aikaisemmin, **UpdateContext** asettaa muuttujan arvoksi määrittämäsi arvon.
 * Jos määrität muuttujan nimen, jota ei ole vielä olemassa, **UpdateContext** luo muuttujan tällä nimellä ja asettaa tälle muuttujalle määrittämäsi arvon.
-* Jos olet aiemmin määrittänyt muuttujan mutta et määritä sitä tässä nimenomaisessa **UpdateContext**-kaavassa, sen arvo pysyy samana.
+* Jos olet aiemmin määrittänyt muuttujan, mutta et määritä sitä tässä nimenomaisessa **UpdateContext**-kaavassa, sen arvo pysyy samana.
 
 Kontekstimuuttujia luodaan implisiittisesti käyttämällä **UpdateContext**- tai [**Navigate**-funktiota](function-navigate.md).  Eksplisiittinen määrittely ei ole välttämätön.  Jos poistat kaikki **UpdateContext**- ja **Navigate**-viittaukset kontekstimuuttujaan, kyseisen kontekstimuuttujan olemassaolo päättyy.  Poista muuttujasarjan arvot määrittämällä sen arvoksi [**Blank**-funktion](function-isblank-isempty.md) tulos.
 
-Voit nähdä-muuttujien arvot määritelmät ja käyttötarkoitukset Tiedosto-valikon Muuttujat-näkymässä luontiympäristössä.
+Voit nähdä-muuttujien arvot, määritelmät ja käyttötarkoitukset Tiedosto-valikon Muuttujat-näkymässä luontiympäristössä.
 
 Voit viitata kontekstimuuttujaan kaavassa käyttämällä muuttujan sarakkeen nimeä. Esimerkiksi, **UpdateContext( { ShowLogo: true } )** luo kontekstimuuttujan, jonka nimi on **ShowLogo**, ja asettaa sen arvoksi **true**. Voit sitten käyttää tämän kontekstimuuttujan arvoa käyttämällä kaavassa nimeä **ShowLogo**.  Voit kirjoittaa **ShowLogo**n kaavaksi kuvan hallinnan **Visible**-ominaisuudelle ja näyttää tai piilottaa tämän ohjausobjektin sen perusteella, onko kontekstimuuttujan arvo **true** vai **false**.
 
