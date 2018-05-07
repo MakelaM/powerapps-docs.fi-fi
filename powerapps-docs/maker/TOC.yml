@@ -41,13 +41,13 @@
               href: ./canvas-apps/customize-forms-sharepoint.md
             - name: 3 – Kortit
               href: ./canvas-apps/customize-card.md
-        - name: Luo sovellus alusta alkaen
+        - name: Sovelluksen luominen alusta alkaen
           items:
-            - name: Common Data Service sovelluksia varten
+            - name: Microsoft Common Data Service for Apps
               href: ./canvas-apps/data-platform-create-app-scratch.md
             - name: Excel
               href: ./canvas-apps/get-started-create-from-blank.md
-        - name: Jaa sovellus
+        - name: Sovelluksen jakaminen
           href: ./canvas-apps/share-app.md
         - name: 'Upota sovellus Power BI:ssä'
           href: ./canvas-apps/embed-powerapps-powerbi.md
@@ -228,8 +228,6 @@
           href: ./common-data-service/data-platform-create-entity.md
         - name: Luo mukautettu kohde tiedoista
           href: ./common-data-service/data-platform-cds-newentity-pq.md
-        - name: Hallitse kenttiä
-          href: ./common-data-service/data-platform-manage-fields.md
         - name: Luo asetusjoukko
           href: ./common-data-service/custom-picklists.md
         - name: Luo suhde
@@ -244,6 +242,18 @@
           href: ./common-data-service/create-custom-entity.md
     - name: Esimerkit ja resurssit
       href: ./common-data-service/samples-resources.md
+    - name: Käsitteet
+      items:
+        - name: Entiteettien käyttöoikeusvaatimukset
+          href: ./common-data-service/data-platform-entity-licenses.md
+    - name: Toimintaohjeet
+      items:
+        - name: Mukautettujen kenttien hallinta entiteetissä
+          href: ./common-data-service/data-platform-manage-fields.md
+    - name: Lisätietoja
+      items:
+        - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'
+          href: ./common-data-service/data-platform-restricted-entities.md
     - name: Kehittäjiä varten
       href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
