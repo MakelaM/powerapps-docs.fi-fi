@@ -15,17 +15,19 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 09/29/2017
 ms.author: fikaradz
-ms.openlocfilehash: b58e99e4775ed5c18d3498864c6e652e814ddf19
-ms.sourcegitcommit: c76ec82db5d261be1fb7fdeeec3e119cdfada57f
+ms.openlocfilehash: 5bb7e4f27ed7ee0a30fb028d4d8dfd20a5fc250b
+ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="attachments-control-in-powerapps"></a>Liiteohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ladata tiedostoja laitteeseen sekä ladata ja poistaa tiedostoja SharePoint-luettelosta.
 
 ## <a name="limitations"></a>Rajoitukset
 Liiteohjausobjektia koskevat tilapäisesti seuraavat rajoitukset:
+1. Internet Explorer ei tue liitteen latausta.
+
 1. Liitteen lataaminen toimii vain SharePoint-luettelon tietolähteiden kanssa.  Muiden tietolähteiden tuki lisätään asteittain, alkaen CDS:stä.
 
 1. Lataaminen ja poistaminen toimivat vain lomakkeen sisällä.  Liiteohjausobjekti näyttää käytöstä poistetulta, kun käyttäjä on Muokkaa-tilassa eikä lomakkeen sisällä.   Huomaa, että loppukäyttäjän on tallennettava lomake, jos tiedoston lisäykset ja poistot halutaan tallentaa taustatietokantaan.

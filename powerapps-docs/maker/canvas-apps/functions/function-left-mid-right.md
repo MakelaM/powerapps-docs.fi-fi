@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 2cf54b1225578b2bb2bdefa8c0bd02dc0c9c0283
-ms.sourcegitcommit: 33099e6197c0139679cd08c42e9e2a5717904c92
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="left-mid-and-right-functions-in-powerapps"></a>Left-, Mid- ja Right-funktiot PowerAppsissa
 Poimii tekstimerkkijonosta vasemmanpuoleisen osan, keskiosan tai oikeanpuoleisen osan.
@@ -50,13 +50,13 @@ Jos aloituskohta on negatiivinen tai suurempi kuin merkkijonon loppukohta, **Mid
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-string"></a>Yksittäinen merkkijono
-Tämän osan esimerkeissä käytetään tekstisyöte-ohjausobjektia niiden [tietolähteenä](../working-with-data-sources.md). Ohjausobjektin nimi on **Author**, ja se sisältää merkkijonon ”E. E. Cummings”.
+Tämän osan esimerkeissä käytetään tekstisyöte-ohjausobjektia niiden [tietolähteenä](../working-with-data-sources.md). Ohjausobjektin nimi on **Author**, ja se sisältää merkkijonon "E. E. Cummings".
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Left( Author.Text, 5 )** |Poimii viisi merkkiä merkkijonon alusta. |E. E." |
-| **Mid( Author.Text, 7, 4 )** |Poimii merkkijonosta enintään neljä merkkiä seitsemännestä merkistä alkaen. |”Cumm” |
-| **Right( Author.Text, 5 )** |Poimii viisi merkkiä merkkijonon lopusta. |”mings” |
+| **Left( Author.Text, 5 )** |Poimii viisi merkkiä merkkijonon alusta. |"E. E." |
+| **Mid( Author.Text, 7, 4 )** |Poimii merkkijonosta enintään neljä merkkiä seitsemännestä merkistä alkaen. |"Cumm" |
+| **Right( Author.Text, 5 )** |Poimii viisi merkkiä merkkijonon lopusta. |"mings" |
 
 ### <a name="single-column-table"></a>Yksisarakkeinen taulukko
 Jokaisessa tämän osan esimerkissä poimitaan merkkijonoja **Address**-[sarakkeesta](../working-with-tables.md#columns) tästä tietolähteestä, jonka nimi on **People**, ja palautetaan yksisarakkeinen taulukko, joka sisältää tulokset:
@@ -70,7 +70,7 @@ Jokaisessa tämän osan esimerkissä poimitaan merkkijonoja **Address**-[sarakke
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Poimii seitsemän viimeistä merkkiä jokaisesta merkkijonosta. |![](media/function-left-mid-right/people-table-right.png) |
 
 ### <a name="step-by-step-example"></a>Vaiheittainen esimerkki
-1. Tuot tai luot [kokoelman](../working-with-data-sources.md#collections), jonka nimi on **Inventory**, ja näytät sen valikoimassa, kuten kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäisessä toimintosarjassa on kuvattu.
+1. Tuo tai luo [kokoelma](../working-with-data-sources.md#collections), jonka nimi on **Inventory**, ja näytä se valikoimassa, kuten kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäisessä toimintosarjassa on kuvattu.
 2. Määritä ominaisuus **[Text](../controls/properties-core.md)** gallerian alemmalle otsikolle tällä funktiolla:
    
     **Right(ThisItem.ProductName, 3)**

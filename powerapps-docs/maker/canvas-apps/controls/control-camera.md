@@ -1,6 +1,6 @@
 ---
 title: 'Kameran ohjausobjekti: viittaus | Microsoft Docs'
-description: Tietoja kameran ohjausobjektista, kuten ominaisuudet ja esimerkkejä
+description: Kameran ohjausobjektin tiedot, mukaan lukien ominaisuudet ja esimerkit
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,19 +16,19 @@ ms.workload: na
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: a3a724ad42082962ec8aea4e616f1d75aa7299ec
-ms.sourcegitcommit: 33099e6197c0139679cd08c42e9e2a5717904c92
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="camera-control-in-powerapps"></a>Kameran ohjausobjekti PowerAppsissa
-Ohjausobjekti, jolla käyttäjä voi ottaa valokuvia käyttämällä laitteen kameraa.
+Ohjausobjekti, jolla käyttäjä voi ottaa valokuvia laitteen kameralla.
 
 ## <a name="description"></a>Kuvaus
 Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteeseen yhden tai useita valokuvia mistä tahansa sovelluksen käyttöpaikasta.
 
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
-**Kamera** – Sovelluksen käyttämän kameran numerotunnus, jos laitteella on useampi kuin yksi kamera.
+**Camera** – Sovelluksen käyttämän kameran numerotunnus, jos laitteella on useampi kuin yksi kamera.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
@@ -51,11 +51,11 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **Photo** – Kuva, joka siepataan, kun käyttäjä ottaa kuvan.
 
-**Stream** – **StreamRate** -ominaisuuden perusteella automaattisesti päivitetty kuva.
+**Stream** – **StreamRate**-ominaisuuden perusteella automaattisesti päivitetty kuva.
 
 **StreamRate** – Miten usein kuva päivitetään **Stream**-ominaisuudessa millisekunteina.  Tämä arvo voi olla välillä 100 (1/10 sekuntia) – 3 600 000 (1 tunti).
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
 
 **[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
@@ -72,7 +72,7 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-photos-to-an-image-gallery-control"></a>Lisää valokuvia Kuvavalikoima-ohjausobjektiin
-1. Lisää **Kamera**-ohjausobjekti, anna sen nimeksi **MyCamera** ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
+1. Lisää **Kamera**-ohjausobjekti, anna sen nimeksi **MyCamera** ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
    **Collect(MyPix, MyCamera.Photo)**
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?

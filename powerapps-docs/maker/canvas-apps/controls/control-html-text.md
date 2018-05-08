@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: bb652f3ba6decad7cb6f93007eaec6340f230ca1
-ms.sourcegitcommit: 33099e6197c0139679cd08c42e9e2a5717904c92
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstin ohjausobjekti PowerAppsissa
 Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
@@ -28,50 +28,50 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 **HTML-tekstin** ohjausobjekti näyttää tekstin ja numerot, mutta se voi lisäksi muuntaa HTML-tunnisteet, kuten sitovat välilyönnit.
 
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
-**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[Fontti](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
-**HTML-teksti** – HTML-tekstin ohjausobjektissa näkyvä teksti, joka voi sisältää HTML-tunnisteita.
+**HTMLText** – HTML-tekstin ohjausobjektissa näkyvä teksti, joka voi sisältää HTML-tunnisteita.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
-**[Reunan väri](properties-color-border.md)** – Ohjausobjektin reunan väri.
+**[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[Reunan tyyli](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
 
-**[Reunan paksuus](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
+**[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Näyttötila](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
 
-**[Käytöstä poistetun reunan väri](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[Näyttötila](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
-**[Käytöstä poistetun täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[Näyttötila](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
-**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[Valintareunaväri](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
-**[Valittaessa](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**[Täyttö alhaalla](properties-size-location.md)** – Ohjausobjektin tekstin ja alareunan välinen etäisyys.
+**[PaddingBottom](properties-size-location.md)** – Ohjausobjektin tekstin ja alareunan välinen etäisyys.
 
-**[Täyttö vasemmalla](properties-size-location.md)** – Ohjausobjektin tekstin ja vasemman reunan välinen etäisyys.
+**[PaddingLeft](properties-size-location.md)** – Ohjausobjektin tekstin ja vasemman reunan välinen etäisyys.
 
-**[Täyttö oikealla](properties-size-location.md)** – Ohjausobjektin tekstin ja oikean reunan välinen etäisyys.
+**[PaddingRight](properties-size-location.md)** – Ohjausobjektin tekstin ja oikean reunan välinen etäisyys.
 
-**[Täyttö ylhäällä](properties-size-location.md)** – Ohjausobjektin tekstin ja yläreunan välinen etäisyys.
+**[PaddingTop](properties-size-location.md)** – Ohjausobjektin tekstin ja yläreunan välinen etäisyys.
 
-**[Koko](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
+**[Size](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
 
-**[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka näytetään, kun kohdistin on ohjausobjektin päällä.
 
-**[Näkyvissä](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
@@ -83,7 +83,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 \<p> Olemme suorittaneet erittäin \&nbsp; \&quot; perusteellisen \&quot; globalisoinnin ja lokalisoinnin. \<p>
 
-Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
+Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
 1. Lisää **HTML-tekstin** ohjausobjekti ja määritä sen **HTMLText**-ominaisuudeksi tämä arvo:<br>
    **Source.Text**

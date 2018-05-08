@@ -1,0 +1,2 @@
+Tällä hetkellä käsiteltävän tietueen kentät ovat käytettävissä kaavassa.  Niihin yksinkertaisesti viitataan nimellä, kuten mihin tahansa muuhun arvoon.  Voit myös viitata ohjausobjektin ominaisuuksiin ja muihin arvoihin sovelluksesi eri osista.  Katso lisätietoja alla olevista esimerkeistä ja aiheesta [tietueen laajuuden kanssa työskentely](../maker/canvas-apps/working-with-tables.md#record-scope). 
+
