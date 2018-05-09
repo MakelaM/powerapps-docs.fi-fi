@@ -1,32 +1,29 @@
 ---
 title: Palveluilmoituksen lähettäminen | Microsoft Docs
 description: Lue, kuinka voit lähettää sovellukselle natiiveja palveluilmoituksia PowerAppsissa.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: jamesol-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: 29199a60004f2cf77e4c4eaea3d812c4d98fcc20
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 0792a47db2174dc440488eb854987bca80c8b363
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="send-a-pull-notification-in-powerapps"></a>Pull-ilmoituksen lähettäminen PowerAppsissa
-Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa lisää ilmoitustyyppejä.
+Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.
 
 ![Esimerkki palveluilmoituksesta](./media/add-notifications/pic1-notification-screenshot.png)
 
-Lisää sovellukseesi palveluilmoitus, jos:
+Lisää sovellukseesi palveluilmoitus seuraavissa tilanteissa:
 
 * Tieto tulee lähettää käyttäjälle heti.
 * Käyttäjien täytyy suorittaa sovelluksessasi tärkeitä tehtäviä esiladatussa kontekstissa.
@@ -54,7 +51,7 @@ Lisää PowerApps Notification -yhteys sovellukseen, johon sinulla on **Osallist
     ![Näyttökuva yhteyden luomisesta PowerApps-sovelluksiin, jotka vastaanottavat nämä palveluilmoitukset](./media/add-notifications/pic5-step2-create-connection.jpg)
 3. (valinnainen) Parametrin välittäminen sovellukselle, kun se avautuu (sen jälkeen, kun käyttäjä on napauttanut palveluilmoitusta).
    
-    Tässä esimerkissä välitämme kentät **CaseID** ja **Initial Owner** valitulle yhteydelle.
+    Tässä esimerkissä välitetään kentät **CaseID** ja **Initial Owner** valitulle yhteydelle.
    
     ![Näyttökuva valinnaisten parametrien välittämisestä palveluilmoitukseen](./media/add-notifications/pic6-step3-configure-notif.jpg)
 
@@ -75,7 +72,7 @@ Voit lähettää palveluilmoituksen yhdestä sovelluksesta toiseen tai samaan so
     ![Yhteyden lisääminen](./media/add-notifications/add-connection.png)
 5. Kutsu palveluilmoitusyhteyden kautta **SendPushNotification**-menetelmä.
    
-    Tässä esimerkissä aktivoimme tämän ilmoituksen käyttämällä **OnSuccess**-ominaisuutta lomakkeessa.
+    Tässä esimerkissä aktivoimme ilmoituksen käyttämällä **OnSuccess**-ominaisuutta lomakkeessa.
    
     ![PowerApps-kaava](./media/add-notifications/powerapps-function.png)
 

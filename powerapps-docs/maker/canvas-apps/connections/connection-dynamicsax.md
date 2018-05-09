@@ -1,25 +1,22 @@
 ---
 title: Dynamics AX -yhteyden yleiskatsaus | Microsoft Docs
 description: Katso saatavilla olevat Dynamics AX:n funktiot, vastaukset ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: kuntalme
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 09/13/2016
-ms.author: sharik
-ms.openlocfilehash: edbf16982dfff5c8bda8abe314a8f211af362093
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: 747261548521bf619b1b23b22de217aa39a1a0d7
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-from-microsoft-powerapps-to-dynamics-ax"></a>Yhdistäminen Microsoft PowerAppsista Dynamics AX:ään
 ![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)
@@ -37,6 +34,6 @@ Katso tietoja tietojen lisäämisestä Dynamics AX:stä olemassa olevaan sovellu
 Katso [luettelo saatavilla olevista yhteyksistä](../connections-list.md) ja lue kuinka voit [hallita yhteyksiä](../add-manage-connections.md) PowerAppsissa.
 
 ### <a name="next-steps"></a>Seuraavat vaiheet
-* Lue, miten [näytetään tietolähteen tietoja](../add-gallery.md).
+* Opi [näyttämään tietolähteen tietoja](../add-gallery.md).
 * Lue, miten [tarkastellaan tietoja ja luodaan tai päivitetään tietueita](../add-form.md).
 

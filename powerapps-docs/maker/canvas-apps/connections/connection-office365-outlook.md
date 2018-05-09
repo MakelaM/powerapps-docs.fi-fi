@@ -1,32 +1,29 @@
 ---
 title: Yleiskuvaus yhteydestä Office 365 Outlookiin | Microsoft Docs
 description: Viitetiedot ja esimerkkejä Office 365 Outlookin yhteydestä PowerAppsiin
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
+documentationcenter: ''
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/20/2017
-ms.author: archanan
-ms.openlocfilehash: 2932e3145d38bd0b82c0c56882861e7976572c62
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: 728aa61c2ae082b1c6a3cd2d9d663bbe5ac77d9b
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="connect-to-office-365-outlook-from-powerapps"></a>Office 365 Outlookiin yhdistäminen PowerAppsista
+# <a name="connect-to-office-365-outlook-from-powerapps"></a>Yhteyden muodostaminen PowerAppsista Office 365 Outlookiin
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 
-Jos muodostat yhteyden Office 365 Outlookiin, voit näyttää, lähettää, poistaa ja vastata sähköpostiviesteihin ja suorittaa muita tehtäviä.
+Jos muodostat yhteyden Office 365 Outlookiin, voit näyttää, lähettää ja poistaa sähköpostiviestejä, vastata viesteihin ja suorittaa muita tehtäviä.
 
-Voit lisätä ohjausobjekteja, joilla nämä funktiot suoritetaan sovelluksessasi. Voit lisätä esimerkiksi **tekstisyöte**-ohjausobjektin, joka kysyy vastaanottajaa, aihetta ja sähköpostiviestin tekstiosaa, tai **painike**-ohjausobjektin, jolla sähköpostiviesti lähetetään.
+Voit lisätä ohjausobjekteja, joilla nämä funktiot suoritetaan sovelluksessasi. Voit lisätä esimerkiksi **Tekstisyöte**-ohjausobjektin, joka kysyy vastaanottajaa, aihetta ja sähköpostiviestin tekstiosaa, tai **Painike**-ohjausobjektin, jolla sähköpostiviesti lähetetään.
 
 Tässä aiheessa näytetään, miten muodostat yhteyden Office 365 Outlookiin, miten lisäät Office 365 Outlookin sovelluksesi tietolähteeksi ja miten käytät kyseisiä tietoja eri ohjausobjekteissa.
 
@@ -44,7 +41,7 @@ Tässä aiheessa näytetään, miten muodostat yhteyden Office 365 Outlookiin, m
 Office 365 Outlook -yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäväksi.
 
 ## <a name="show-messages"></a>Viestien näyttäminen
-1. Valitse **Lisää**-valikosta **Valikoima** ja valitse jokin **tekstivalikoima**-ohjausobjekti.
+1. Valitse **Lisää**-valikosta **Valikoima** ja valitse jokin **Tekstivalikoima**-ohjausobjekti.
 2. Määritä sen **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
    
     `Office365.GetEmails({fetchOnlyUnread:false})`
@@ -63,19 +60,19 @@ Office 365 Outlook -yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis 
 
 ## <a name="send-a-message"></a>Viestin lähettäminen
 1. Valitse **Lisää**-valikosta **Teksti** ja valitse sitten **Tekstisyöte**.
-2. Toista edelliset vaiheet kahdesti, jonka jälkeen ruutuja on kolme. Järjestä ne sitten sarakkeeseen:  
+2. Toista edelliset vaiheet kahdesti, minkä jälkeen ruutuja on kolme. Järjestä ne sitten sarakkeeseen:  
    
     ![Kolme ruutua sarakkeessa](./media/connection-office365-outlook/threetextinput.png)
 3. Nimeä ohjausobjektit uudelleen:  
    
-   * **syötäVastaanottaja**
-   * **syötäAihe**
-   * **syötäTekstiosa**
+   * **inputTo**
+   * **inputSubject**
+   * **inputBody**
 4. Valitse **Lisää**-valikosta **Ohjausobjektit** ja valitse **Painike**. Määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
    
     `Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text)`
-5. Siirrä painiketta niin, että se näkyy kaikkien muiden ohjausobjektien alapuolella ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi **”Lähetä sähköposti”**.
-6. Paina F5 tai valitse Esikatselu-painike (![Esikatselu-painike](./media/connection-office365-outlook/preview.png)). Kirjoita kelvollinen sähköpostiosoite kohtaan **syötäVastaanottaja** ja mitä ikinä haluat toisiin **tekstisyöte**-ohjausobjekteihin.
+5. Siirrä painiketta niin, että se näkyy kaikkien muiden ohjausobjektien alapuolella, ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi **"Send email"**.
+6. Paina F5 tai valitse Esikatselu-painike (![Esikatselu-painike](./media/connection-office365-outlook/preview.png)). Kirjoita kelvollinen sähköpostiosoite kohtaan **inputTo** ja haluamasi teksti toisiin **Tekstisyöte**-ohjausobjekteihin.
 7. Lähetä viesti valitsemalla **Lähetä sähköposti**. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 ## <a name="send-a-message-with-an-attachment"></a>Viestin lähettäminen liitteen kanssa
@@ -99,7 +96,7 @@ Tässä esimerkissä lähetetään kuvan lisäksi äänitiedosto:
 `Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})`
 
 ## <a name="delete-a-message"></a>Viestin poistaminen
-1. Valitse **Lisää**-valikosta **Valikoima** ja valitse jokin **tekstivalikoima**-ohjausobjekti.
+1. Valitse **Lisää**-valikosta **Valikoima** ja valitse jokin **Tekstivalikoima**-ohjausobjekti.
 2. Määritä sen **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
    
     `Office365.GetEmails({fetchOnlyUnread:false})`

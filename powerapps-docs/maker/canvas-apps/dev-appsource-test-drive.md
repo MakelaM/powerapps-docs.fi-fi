@@ -1,25 +1,22 @@
 ---
 title: Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa | Microsoft Docs
 description: Käytä AppSourcea sovellusten jakamiseen asiakkaille ja liidien luomiseksi yrityksellesi.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/08/2017
 ms.author: litran
-ms.openlocfilehash: 5e2a14a2c453dc1aabe8657f7c0ae13c388abb4a
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 11f0e0b8a0aa0dce59588c2e1eea21885f19b741
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="let-customers-test-drive-your-apps-on-appsource"></a>Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa
 Oletko kiinnostunut sovellusten luomisesta PowerAppsissa? Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisuja osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten ja työnkulkujen jakamiseksi asiakkaiden kanssa ja liidien luomiseksi yrityksellesi.

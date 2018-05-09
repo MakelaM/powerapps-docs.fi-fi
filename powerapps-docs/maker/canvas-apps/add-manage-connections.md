@@ -1,25 +1,22 @@
 ---
 title: Pilvipalveluiden tietolähteiden yhteyksien lisääminen ja hallinta | Microsoft Docs
 description: Lisää, poista ja päivitä yhteyksiä tietolähteisiin, kuten SharePoint, SQL Server, OneDrive for Business, Salesforce ja Office 365
-services: ''
-suite: powerapps
 documentationcenter: na
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/09/2017
-ms.author: archanan
-ms.openlocfilehash: 890bf55524189abb7b4d5c9c62a8318ae1637546
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: 63db86984ef68571329aa953cb6bbaac505d834e
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manage-your-connections-in-powerapps"></a>Yhteyksien hallinta PowerAppsissa
 Luo osoitteessa [powerapps.com](https://web.powerapps.com) yhteys PowerAppsista yhteen tai useampaan tietolähteeseen, poista yhteys tai päivitä sen tunnistetietoja.
@@ -33,7 +30,7 @@ Tämän artikkelin jälkeen seuraava vaihe on näyttää ja hallita tietoyhteyde
 * Yhdistä SQL Serveriin ja päivitä taulukko sovelluksestasi.
 * Lähetä sähköpostia Office 365:ssä.
 * Lähetä twiitti.
-* Yhdistä Twilioon ja lähetä SMS-tekstiviesti sovelluksestasi.
+* Yhdistä Twilioon ja lähetä tekstiviesti sovelluksestasi.
 
 ## <a name="prerequisites"></a>Edellytykset
 1. [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
@@ -48,9 +45,9 @@ On myös muita tietolähteitä, jotka eivät ole taulukoita, kuten sähköposti,
 
 Käyttämällä **[Valikoima](controls/control-gallery.md)**-, **[Näytä lomake](controls/control-form-detail.md)**- ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekteja on helppoa luoda sovellus, joka lukee ja kirjoittaa tietoa tietolähteestä. Pääset alkuun lukemalla artikkelin [Tutustu tietolomakkeisiin](working-with-forms.md).
 
-Yhteyksien luomisen ja hallinnan lisäksi osoitteessa [powerapps.com](https://web.powerapps.com) voit myös luoda yhteyksiä, kun suoritat näitä tehtäviä:
+Voit luoda ja hallita yhteyksiä osoitteessa [powerapps.com](https://web.powerapps.com). Tämän lisäksi luot yhteyksiä, kun suoritat näitä tehtäviä:
 
-* Sovelluksen automaattinen luominen [tiedoista](app-from-sharepoint.md), kuten mukautetusta SharePoint-luettelosta.
+* Sovelluksen automaattinen luominen [tiedoista](app-from-sharepoint.md), kuten mukautetusta SharePoint-luettelosta
 * Olemassa olevan sovelluksen päivittäminen tai uuden luominen alusta alkaen, kuten aiheessa [yhteyden lisääminen](add-data-connection.md) kuvataan.
 * Toisen käyttäjän luoman ja [sinulle jaetun](share-app.md) sovelluksen avaaminen.
 
@@ -71,17 +68,17 @@ Yhteyksien luomisen ja hallinnan lisäksi osoitteessa [powerapps.com](https://we
 5. Napsauta tai napauta **Luo**-painiketta.
    
    ![Yhteyden lisääminen](./media/add-manage-connections/create-connection.png)
-6. Noudata ohjeita. Jotkin liittimet pyytävät tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Jotkin, kuten **Microsoft Translator**, eivät.
+6. Noudata ohjeita. Jotkin liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Toiset, kuten **Microsoft Translator**, eivät.
    
-   Esimerkiksi nämä liittimet tarvitsevat lisätietoja ennen kuin voit käyttää niitä.
+   Esimerkiksi seuraavat liittimet tarvitsevat lisätietoja, ennen kuin voit käyttää niitä.
    
    * [SharePoint](connections/connection-sharepoint-online.md)
    * [SQL Server](connections/connection-azure-sqldatabase.md)
 
-Uusi liitin näytetään kohdan **Yhteydet** alla ja voit [lisätä sen sovellukseen](add-data-connection.md).
+Uusi liitin näytetään kohdan **Yhteydet** alla, ja voit [lisätä sen sovellukseen](add-data-connection.md).
 
 ## <a name="update-or-delete-a-connection"></a>Yhteyden päivittäminen tai poistaminen
-Etsi yhteysluettelosta yhteys, jonka haluat päivittää tai poistaa ja napsauta tai napauta kolmea pistettä yhteyden oikealla puolella.
+Etsi yhteysluettelosta yhteys, jonka haluat päivittää tai poistaa, ja napsauta tai napauta kolmea pistettä yhteyden oikealla puolella.
 
 ![Yhteyden päivittäminen](./media/add-manage-connections/auth-or-delete.png)
 

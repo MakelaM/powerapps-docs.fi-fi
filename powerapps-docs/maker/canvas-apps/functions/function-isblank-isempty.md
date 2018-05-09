@@ -1,25 +1,22 @@
 ---
 title: Blank-, Coalesce-, IsBlank- ja IsEmpty-funktiot | Microsoft Docs
 description: PowerAppsin Blank-, Coalesce-, IsBlank- IsEmpty-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-ms.openlocfilehash: f4e104456cd1ae60bfb60b49e3cf28dca89926d8
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 80d06a30dbe334f7fa9691d2a56805d53876693c
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>PowerAppsin Blank-, Coalesce-, IsBlank- ja IsEmpty-funktiot
 Testaa, onko arvo tyhjä tai että sisältääkö [taulukko](../working-with-tables.md) nolla [tietuetta](../working-with-tables.md#records) ja mahdollistaa *tyhjien* arvojen luomisen.

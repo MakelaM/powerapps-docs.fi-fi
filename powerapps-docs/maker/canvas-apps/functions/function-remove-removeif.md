@@ -1,25 +1,22 @@
 ---
 title: Remove- ja RemoveIf-funktio | Microsoft Docs
 description: Tietoja PowerAppsin Remove- ja RemoveIf-funktiosta, mukaan lukien syntaksi ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: 1baeebdff0edb728e18f7215ceacadb1317c33b8
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1f4df70ce3274c4d83c39955df58ebc344038de3
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="remove-and-removeif-functions-in-powerapps"></a>PowerAppsin Remove- ja RemoveIf-funktio
 Poistaa [tietueita](../working-with-tables.md#records) [tietolähteestä](../working-with-data-sources.md).
