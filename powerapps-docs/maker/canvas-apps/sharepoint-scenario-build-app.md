@@ -1,25 +1,22 @@
 ---
 title: Luo sovellus ja hallitse projekteja | Microsoft Docs
 description: Tässä tehtävässä rakennamme sovelluksen alusta alkaen. Tämä sovellus sallii käyttäjän määrittää esimiehen projekteihin ja päivittää projektin tietoja.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: da64b3b8f5453c41bf5e9c6fcf61ce335b47ff71
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: fca166ef388921e08bf71149a8b1274a31a7dc52
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-app-to-manage-projects"></a>Luo sovellus ja hallitse projekteja
 > [!NOTE]
@@ -31,8 +28,6 @@ Tässä tehtävässä rakennamme sovelluksen alusta alkaen. Tämä sovellus sall
 > Tämän skenaarion [latauspaketti](https://aka.ms/o4ia0f) sisältää viimeistellyn version tästä sovelluksesta: project-details-app.msapp.
 
 ## <a name="quick-review-of-powerapps-studio"></a>Lyhyt PowerApps Studio -katsaus
-Käytit verkon PowerApps Studiota viime tehtävässä, mutta haluamme varmistaa, että olet ymmärtänyt kaikki sen osat, ennen kuin siirrymme eteenpäin. Voit jatkaa verkon PowerApps Studion käyttöä, tai voit käyttää [PowerApps Studiota Windowsille](https://aka.ms/powerappswin).
-
 PowerApps Studiossa on kolme ruutua ja valintanauha, joiden avulla sovellusten luominen on samankaltaista kuin diapinon tekeminen PowerPointissa:
 
 1. Vasen siirtymispalkki, jossa näkyy sovelluksen kaikkien näyttöjen ja ohjausobjektien hierarkkinen näkymä, sekä näyttöjen pikkukuvat
