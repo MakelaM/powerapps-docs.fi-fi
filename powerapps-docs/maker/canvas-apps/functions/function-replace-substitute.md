@@ -1,25 +1,22 @@
 ---
 title: Replace- ja Substitute-funktio | Microsoft Docs
 description: PowerAppsin Replace- ja Substitute-funktion viitetiedot, mukaan lukien syntaksi
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: fe8f1e1cc8e54c3abf4b44bbfe46d9f96a7adfe7
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: d08cbb1ae487c7ae4423d67a499f5477a5ea263b
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="replace-and-substitute-functions-in-powerapps"></a>Replace- ja Substitute-funktio PowerAppsissa
 Korvaa tekstimerkkijonon osa toisella merkkijonolla.
@@ -49,7 +46,7 @@ Jos välität yksittäisen merkkijonon, palautusarvo on muunnettu merkkijono.  J
 **Replace**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
 
 * *SingleColumnTable* – Pakollinen. Käsiteltävä yksisarakkeinen merkkijonotaulukko.
-* *StartingPosition* – Pakollinen.  Merkin sijainti, josta korvaus aloitetaan.  Taulukon jokaisen merkkijonon ensimmäinen merkki on sijainnissa 1.
+* *StartingPosition* – Pakollinen.  Merkin sijainti, josta korvaus aloitetaan.  Taulukon jokaisen merkkijonon ensimmäinen merkki on vastaa sijaintia 1.
 * *NumberOfCharacters* – Pakollinen.  Korvattavien merkkien määrä kussakin merkkijonossa.
 * *NewString* – Pakollinen.  Korvaava merkkijono. Tämän argumentin merkkien määrä voi olla eri kuin *NumberOfCharacters*-argumentin.
 
