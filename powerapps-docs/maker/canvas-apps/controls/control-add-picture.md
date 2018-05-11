@@ -1,25 +1,22 @@
 ---
 title: 'Lisää kuva -ohjausobjekti: viitetiedot | Microsoft Docs'
 description: Tietoja Lisää kuva -ohjausobjektista, mukaan lukien ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 6a7c60755f5623803d20bec4ec9881108b1116c6
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 8882873367442238012445c901bd86b33ff6863c
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-picture-control-in-powerapps"></a>Lisää kuva -ohjausobjekti PowerAppsissa
 Ottaa valokuvan tai lataa kuvat paikallisesta laitteesta.
@@ -27,86 +24,97 @@ Ottaa valokuvan tai lataa kuvat paikallisesta laitteesta.
 ## <a name="description"></a>Kuvaus
 Tämän ohjausobjektin avulla käyttäjät voivat ottaa kuvia tai ladata kuvatiedostoja laitteestaan ja päivittää tietolähteen tällä sisällöllä. Mobiililaitteessa käyttäjälle esitetään laitteen vaihtoehtojen valintaikkuna, jossa voidaan valita, otetaanko valokuva vai käytetäänkö jo käytettävissä olevaa valokuvaa.
 
-Tämä ohjausobjekti on yhdistelmäohjausobjekti, joka koostuu kahdesta ohjausobjektista.  Valitse kerran painamalla tai napauttamalla ulkoinen ohjausobjekti, joka näyttää, että kuva on ladattu.  Valitse sisäinen selitteen ohjausobjekti painamalla tai napauttamalla uudelleen.
+Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kaksi ohjausobjektia: **Kuva** ja **Lisää mediasisältöä -painike**. **Kuvan** ohjausobjekti näyttää ladatun kuvan tai paikkamerkin, jos kuvaa ei ole ladattu. **Lisää mediasisältöä -painike** ohjaa lataamaan kuvan.
 
-## <a name="outer-control-properties"></a>Ulomman ohjausobjektin ominaisuudet
-Nämä ominaisuudet koskevat ulkoista ohjausobjektia.
+Katso [kuvan ohjausobjektin viittauksesta](control-image.md) **kuvan** ominaisuudet.
 
-**[BorderColor](properties-color-border.md)** – ohjausobjektin reunan väri.
+## <a name="add-media-button-properties"></a>Lisää mediasisältöä -painikkeen ominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi. Kuvan lisäämisen tarkoitus tulee kuvata.
+
+**[Align](properties-text.md)**  – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.
+
+**[Reunan väri](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
 **[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
+**ChangePictureText** – teksti, joka näkyy painikkeessa, kun kuva on ladattu.
+
+**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
-
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos ohjausobjektin **[DisplayMode](properties-core.md)**-ominaisuudeksi on asetettu **Ei käytössä**.
-
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-ominaisuudeksi on määritetty **Ei käytössä**.
 
 **Error** – Jos kuvaa ladatessa esiintyy ongelma, tämä ominaisuus sisältää tarvittavan virhesanoman.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
+
+**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+
+**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **vaaleampi**.
+
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
-**[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun käyttäjä pitää hiiren osoitinta sen päällä.
+**[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
+
+**[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
+
+**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
 
 **Media** – Ääni- tai video-ohjausobjektin toistaman leikkeen tunniste.
 
-**[OnSelect](properties-core.md)** – Sovelluksen reagointitapa, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[OnChange](properties-core.md)** – Sovelluksen reagointitapa, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
+
+**[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+
+**[Padding](properties-size-location.md)** – Tuonti- tai vientipainikkeen tekstin ja painikkeen reunojen välinen etäisyys.
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
+**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+
+**[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+
+**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
+
+**[Koko](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
+
+**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
+
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Text](properties-core.md)** – Teksti, joka näkyy painikkeessa, kun kuvaa ei ole ladattu.
+
+**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
+
+**[Underline](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti alleviivattua.
+
+**[VerticalAlign](properties-text.md)** – Ohjausobjektin tekstin sijainti suhteessa ohjausobjektin pystysuoraan keskikohtaan.
 
 **[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
-## <a name="inner-text-properties"></a>Sisemmän tekstin ominaisuudet
-Nämä ominaisuudet koskevat selitteen ohjausobjektia, jossa lukee oletusarvoisesti ”Tap or click to add a picture” (Lisää kuva napauttamalla tai napsauttamalla).  Valitse tämä sisempi ohjausobjekti, painamalla tai napauttamalla **Lisää kuva** -ohjausobjektia kerran ja sitten uudelleen.
-
-**[Align](properties-text.md)**  – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.
-
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
-
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksen arvoksi on asetettu **Disabled** (ei käytössä).
-
-**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
-
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
-
-**[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
-
-**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
-
-**[OnChange](properties-core.md)** – Sovelluksen reagointitapa, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
-
-**[Padding](properties-size-location.md)** – Tuonti- tai vientipainikkeen tekstin ja painikkeen reunojen välinen etäisyys.
-
-**[PressedColor](properties-color-border.md)** –Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
-
-**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
-
-**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
-
-**[Text](properties-core.md)**  – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
-
-**[Underline](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti alleviivattua.
-
-**[VerticalAlign](properties-text.md)** – Ohjausobjektin tekstin sijainti suhteessa ohjausobjektin pystysuoraan keskikohtaan.
-
-## <a name="related-functions"></a>Liittyvät toiminnot
+## <a name="related-functions"></a>Liittyvät funktiot
 [**Patch**( *Tietolähde*, *Perustietue*, *Muutostietue* )](../functions/function-patch.md)
 
-## <a name="example"></a>Esimerkki
+## <a name="examples"></a>Esimerkkejä
 ### <a name="add-images-to-an-image-gallery-control"></a>Lisää kuvia Kuvavalikoima-ohjausobjektiin
 1. Lisää **Lisää kuva** -ohjausobjekti ja napsauta sitä sen jälkeen kolmesti.
    
@@ -127,3 +135,17 @@ Nämä ominaisuudet koskevat selitteen ohjausobjektia, jossa lukee oletusarvoise
 
 Tallenna kuvat paikallisesti **[SaveData](../functions/function-savedata-loaddata.md)**-funktiolla tai päivitä tietolähde **[Patch](../functions/function-patch.md)**-funktiolla.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Samat ohjeet koskevat sekä **[Painiketta](control-button.md)** että **[Kuvaa](control-image.md)**. Huomioi lisäksi seuraavat asiat:
+
+### <a name="color-contrast"></a>Värikontrasti
+* **Lisää mediasisältö -painikkeen** tekstin ja taustan välisen kontrastin on oltava riittävän suuri. Koska ladatussa kuvassa voi olla eri värejä, käytä läpinäkymätöntä **[täyttöä](properties-color-border.md)** **Lisää mediasisältöä -painikkeessa** yhtenäisen kontrastin varmistamiseksi.
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **Lisää mediasisältö -painikkeessa** on oltava **teksti** ja **ChangePictureText**, jotka kehottavat käyttäjää lisäämään tai vaihtamaan kuvan.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **Lisää mediasisältöä -painikkeen** **[TabIndex](properties-accessibility.md)**-arvon on oltava nolla tai suurempi, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **Lisää mediasisältöä -painikkeessa** on oltava selvästi näkyvät kohdistuksen ilmaisimet. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+ 

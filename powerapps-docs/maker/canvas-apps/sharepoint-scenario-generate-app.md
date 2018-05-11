@@ -1,25 +1,22 @@
 ---
 title: Projektipyyntöjä käsittelevän sovelluksen laatiminen| Microsoft Docs
 description: Tässä tehtävässä luomme tavallisen *kolmen näytön sovelluksen* suoraan SharePoint-luettelosta.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 021a323fbb5a1a3331c4eb92ce0b47427b5562b4
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4ae16517332864066f5b744e85ce3fe48c97a1df
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-an-app-to-handle-project-requests"></a>Sovelluksen luominen projektipyyntöjen hallintaa varten
 > [!NOTE]
@@ -36,7 +33,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Luo sovellus](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
 
-2. Anna sovellukselle nimi, kuten ”Projektipyyntösovellus”, ja napsauta tai napauta sitten **Luo**. Kun sovellus on valmis, se avautuu PowerApps Studio for Webissä.
+2. Anna sovellukselle nimi, kuten ”Projektipyyntösovellus”, ja napsauta tai napauta sitten **Luo**. Kun sovellus on valmis, se avautuu PowerApps Studiossa.
    
     ![Määritä sovelluksen nimi](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 

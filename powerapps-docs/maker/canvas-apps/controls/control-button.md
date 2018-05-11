@@ -1,25 +1,22 @@
 ---
 title: 'Painike-ohjausobjekti: viittaus | Microsoft Docs'
 description: Painike-ohjausobjektin tiedot, mukaan lukien ominaisuudet ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 3bab51ee290d779cd01789f55ee7c5908395537a
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 8a22e1075d15d96b7e1a6383260d5b7ccb653c3a
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="button-control-in-powerapps"></a>Painike-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa sovelluksen toimintojen käyttämiseksi.
@@ -39,21 +36,23 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun sillä on näppäimistökohdistus.
-
 **[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
 **[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -63,7 +62,7 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
 **[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
@@ -97,9 +96,9 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
+**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
 
-**[TabIndex](properties-accessibility.md)** – Mukauttaa ohjausobjektien sarkainjärjestystä suorituksen aikana, kun arvona on nollasta poikkeava arvo.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
 **[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
 
@@ -113,7 +112,7 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 **[Navigate( *NäytönNimi*, *NäytönSiirtymäarvo* )](../functions/function-navigate.md)**
@@ -184,3 +183,15 @@ Voit myös määrittää **Painike**-ohjausobjektin värin asettamalla sen **[Ho
 
 * Korvaa jonkin luomasi painikkeen **[ColorFade](../functions/function-colors.md)**-funktio **[ColorValue](../functions/function-colors.md)**-funktiolla ja tarkastele tuloksia.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+* [Tavalliset värikontrastivaatimukset](../accessible-apps-color.md) pätevät.
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[Teksti](properties-core.md)** on oltava käytössä.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+ 

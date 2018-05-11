@@ -1,25 +1,22 @@
 ---
 title: 'Ympyräkaavio-ohjausobjekti: viittaus | Microsoft Docs'
 description: Ympyräkaavio-ohjausobjektin ominaisuudet ja joitakin esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 1388eac45e5086f677cb83c8db9593fe01a9819f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: bda839765d797bf87590f037221b116bad781657
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pie-chart-control-in-powerapps"></a>PowerAppsin Ympyräkaavio-ohjausobjekti
 Ohjausobjekti, joka näyttää suhteellisia arvoja verrattuna toisiinsa.
@@ -27,21 +24,23 @@ Ohjausobjekti, joka näyttää suhteellisia arvoja verrattuna toisiinsa.
 ## <a name="description"></a>Kuvaus
 Lisää **Ympyräkaavio**-ohjausobjekti, jos haluat näyttää suhteellisia tietoja taulukosta, joka sisältää selitteet kauimpana vasemmalla olevassa sarakkeessa ja arvot siitä seuraavassa sarakkeessa.
 
-## <a name="key-properties"></a>Tärkeimmät ominaisuudet
+Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)**, kuvan kaaviosta ja kaavion **selitteen**.
+
+## <a name="chart-key-properties"></a>Kaavion tärkeimmät ominaisuudet
 **[Items](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
 
 **ShowLabels** – Näytetäänkö ympyräkaaviossa arvot, jotka liittyvät lohkoihin.
 
-## <a name="additional-properties"></a>Lisäominaisuudet
+## <a name="additional-chart-properties"></a>Muut kaavion ominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
 **[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
 **[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
@@ -65,15 +64,17 @@ Lisää **Ympyräkaavio**-ohjausobjekti, jos haluat näyttää suhteellisia tiet
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[Size](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
+**[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 [**Max**( *TietoLähde*, *SarakkeenNimi* )](../functions/function-aggregates.md)
@@ -90,3 +91,27 @@ Lisää **Ympyräkaavio**-ohjausobjekti, jos haluat näyttää suhteellisia tiet
    
     **Ympyräkaavio**-ohjausobjekti näyttää tuotteiden liikevaihtotiedot verrattuna muihin tuotteisiin.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* kaikki kohteet **ItemColorSet**-ominaisuudessa
+* kaikki kohteet **ItemColorSet**-ominaisuudessa ja taustaväri
+* **[Väri](properties-color-border.md)** ja taustaväri
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[Selite](control-text-box.md)** on pakollinen ennen kuvaa kaaviosta. Selite toimii kuvan otsikkona.
+
+    > [!NOTE]
+> Kaaviokuvat ja **kaavioselitteet** on piilotettu näytönlukuohjelmien käyttäjiltä. Tiedot esitetään heille taulukkomuodossa. He voivat myös selata painikkeita, joilla valitaan kaavion tietoja.
+
+### <a name="low-vision-support"></a>Tuki heikkonäköisille
+* **Selite** on pakollinen.
+* Suosittelemme asettamaan **ShowLabels**-ominaisuuden arvoksi **tosi**. Tämä auttaa heikkonäköisiä käyttäjiä selvittämään nopeasti mitä kukin ympyräkaavion sektori edustaa.
+* Suosittelemme asettamaan **LabelPosition**-ominaisuuden arvoksi **LabelPosition.Outside**. Tämä parantaa selitteiden luettavuutta yhtenäistämällä värikontrastia.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+
+    > [!NOTE]
+> Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.

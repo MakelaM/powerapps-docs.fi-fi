@@ -12,11 +12,11 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.openlocfilehash: 33b3f85d3cd2dbe59684eccc208ebec4cdd09549
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 65fa5cff5d3b9c9595cc3f9338a7e7af43256f86
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>SQL Server -yhteyden luominen PowerAppsista
 ![SQL-palvelimen kuvake](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -25,7 +25,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin, [asenna](http://aka.ms/powerappsinstall) PowerApps Studio ja avaa se. Kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin [ja kirjaudu sitten sisään](http://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Kerää seuraavat tiedot tietokantaan, joka sisältää vähintään yhden taulukon, jossa on perusavain:
   
   * tietokannan nimi

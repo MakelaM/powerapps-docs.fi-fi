@@ -1,25 +1,22 @@
 ---
 title: Aloita kaavojen käyttäminen | Microsoft Docs
 description: Kaavojen avulla voit mukauttaa sovellusta.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 076b9a67d700cc318491471182fe273b2edaaff9
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e4c2f78fb00e726bd0b0bf3cde4fe4f42d40dddc
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-formulas"></a>Aloita kaavojen käyttäminen
 Määritä sovellukseesi kaavoja, jotka eivät ainoastaan laske arvoja ja suorita muita tehtäviä (samalla tavoin kuin Excelissä), vaan myös vastaavat käyttäjän syötteeseen (kuten sovellus edellyttää).
@@ -35,8 +32,8 @@ Tässä aiheessa annetaan vain yleiskatsaus kaavojen käsittelemiseen. Saat tark
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin, [asenna](http://aka.ms/powerappsinstall) ja avaa se ja kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
-* Lue, miten [määrität ohjausobjektin](add-configure-controls.md) PowerAppsissa.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 
 ## <a name="show-a-simple-value"></a>Näytä yksinkertainen arvo
 Excelissä voit syöttää tietoja, kuten luvun **42** tai lauseen **Hei maailma**, kirjoittamalla ne soluun. Tieto näkyy solussa aina täsmälleen samalla tavalla kuin kirjoitit sen. PowerAppsissa voit vastaavasti määrittää muuttumattoman tiedon määrittämällä selitteelle ominaisuuden **[Teksti](controls/properties-core.md)**, jolloin haluamaasi tarkkaa merkkijonoa ympäröivät lainausmerkit.

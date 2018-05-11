@@ -1,6 +1,6 @@
 ---
-title: Opas asiakkaiden luomien tietojen rekisteröityjen tietopyynnöille | Microsoft Docs
-description: 'PowerApps: PowerApps: opas asiakkaiden luomien tietojen rekisteröityjen tietopyynnöille'
+title: Vastaaminen CDS for Appsia koskeviin DSR-pyyntöihin | Microsoft Docs
+description: Ohjeet CDS for Appsia koskeviin DSR-pyyntöihin vastaamiseen
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -13,84 +13,89 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/17/2018
+ms.date: 04/23/2018
 ms.author: paulliew
-ms.openlocfilehash: cff822e24f1384833caa0baa945a7d3d07a8ee9b
-ms.sourcegitcommit: e3a2819c14ad67cc4ca6640b9064550d0f553d8f
+ms.openlocfilehash: 88a3d0c31a9608a901d99a8a901a209f14c13fc0
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="responding-to-data-subject-rights-dsr-requests-for-customer-data-in-common-data-service-for-apps"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin rekisteröityjen tietopyyntöihin vastaaminen
+# <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen
 
 ## <a name="introduction-to-dsr-requests"></a>Johdanto DSR-pyyntöihin
-Osana pyrkimyksiämme auttaa sinua täyttämään yleiseen tietosuoja-asetuksen (GDPR) vaatimukset olemme luoneet tämän asiakirjan, jolla voit valmistautua asetuksen voimaantuloon. Tässä asiakirjassa kerrotaan, miten valmistaudumme yleiseen tietosuoja-asetukseen. Annamme myös esimerkkejä toimenpiteistä, joihin voit ryhtyä jo tänään Microsoftin tuella täyttääksesi yleisen tietosuoja-asetuksen vaatimukset, kun käytät PowerApps-sovelluksia, Microsoft Flow’ta ja Common Data Service for Appsia.
+Euroopan unionin (EU) yleinen tietosuoja-asetus (GDPR) antaa ihmisille (joita kutsutaan *asetuksessa rekisteröidyiksi*) oikeudet hallita henkilötietoja, joita työnantaja tai muu organisaatio tai virasto (jota kutsutaan *henkilötietorekisterinpitäjäksi* tai vain *rekisterinpitäjäksi*) on heistä kerännyt. GDPR määrittää henkilötiedoiksi hyvin yleisesti mitkä tahansa tiedot, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön. GPDR antaa rekisteröidyille oikeuden seuraaviin toimiin heidän henkilökohtaisiin tietoihinsa liittyen:
 
-GDPR antaa ihmisille (joita kutsutaan asetuksessa rekisteröidyiksi) oikeuden hallita henkilötietoja, joita työnantaja, muu organisaatio tai virasto (jota kutsutaan rekisterinpitäjäksi) on heistä kerännyt. GDPR määrittää henkilötiedoiksi hyvin yleisesti mitkä tahansa tiedot, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön. GDPR antaa rekisteröidyille tietyt oikeudet henkilötietoihinsa. Näitä oikeuksia ovat oikeus tarkistaa henkilötiedot, oikeus pyytää henkilötietojen korjaamista, oikeus rajoittaa henkilötietojen käsittelyä, oikeus pyytää henkilötietojen poistamista ja oikeus vastaanottaa henkilötiedot sähköisessä muodossa, jotta ne voidaan siirtää toiselle rekisterinpitäjälle. Rekisteröidyn rekisterinpitäjälle tekemää virallista pyyntöä ryhtyä toimiin henkilötietoihin liittyen kutsutaan rekisteröidyn tietopyynnöksi.
+* Kopion saaminen
+* Korjausten pyytäminen
+* Käsittelyn rajoittaminen
+* Poistaminen
+* Tietojen saaminen sähköisessä muodossa niin, että ne voidaan siirtää toiselle rekisterinpitäjälle
 
-Tässä oppaassa käsitellään sitä, miten Microsoftin tuotteet, palvelut ja hallintatyökalut auttavat rekisterinpitäjiä etsimään henkilötietoja ja suorittamaan niille toimintoja, jotta ne voivat vastata rekisteröityjen tietopyyntöihin. Erityisesti käsittelemme sitä, miten voit etsiä ja käyttää Microsoftin pilvipalveluihin tallennettuja henkilötietoja sekä suorittaa niille toimenpiteitä. Alla on lyhyt yleiskuvaus tässä oppaassa käsiteltävistä prosesseista:
+Rekisteröidyn rekisterinpitäjälle tekemää virallista pyyntöä ryhtyä toimiin henkilötietoihin liittyen kutsutaan rekisteröidyn tietopyynnöksi (Data Subject Rights, DSR).
 
-1. **Etsiminen**: Haku- ja etsintätyökalulla voit etsiä helpommin asiakastietoja, jotka saattavat olla rekisteröidyn tietopyynnön kohteena. Kun mahdollisesti oleelliset tiedostot on kerätty, voit suorittaa niille rekisteröidyn tietopyynnön toimintoja, jotka kuvataan seuraavissa vaiheissa ja joilla voit vastata pyyntöön. Voit myös tulla siihen tulokseen, että pyyntö ei täytä organisaatiosi vaatimuksia rekisteröidyn tietopyyntöön vastaamiselle.
+Tässä asiakirjassa kerrotaan, miten Microsoft valmistautuu yleiseen tietosuoja-asetukseen. Annamme myös esimerkkejä toimenpiteistä, joihin voit ryhtyä täyttääksesi yleisen tietosuoja-asetuksen vaatimukset, kun käytät PowerApps-sovelluksia, Microsoft Flow’ta ja Common Data Service for Appsia. Opit, miten Microsoftin tuotteet, palvelut ja hallintatyökalut auttavat rekisterinpitäjiä etsimään Microsoftin pilvipalveluissa olevia henkilötietoja ja suorittamaan niille toimintoja rekisteröityjen tietopyyntöihin vastaamiseksi.
 
-2. **Tarkistaminen**: hae Microsoftin pilvipalveluihin tallennetut henkilötiedot ja ota niistä pyydettäessä kopio, jonka voit toimittaa rekisteröidylle.
+Tässä artikkelissa käsitellään seuraavia toimintoja:
 
-3. **Korjaaminen**: tee henkilötietoihin muutoksia tai suorita niille muita pyydettyjä toimintoja soveltuvin osin.
+* **Etsiminen**: Haku- ja etsintätyökalulla voit etsiä helpommin asiakastietoja, jotka saattavat olla rekisteröidyn tietopyynnön kohteena. Kun mahdollisesti oleelliset tiedostot on kerätty, voit suorittaa niille alla kuvattuja rekisteröidyn tietopyynnön toimintoja, jotta voit vastata pyyntöön. Voit myös tulla siihen tulokseen, että pyyntö ei täytä organisaatiosi vaatimuksia rekisteröidyn tietopyyntöön vastaamiselle.
 
-4. **Rajoittaminen**: Rajoita henkilötietojen käsittelyä joko poistamalla erilaisten verkkopalveluiden käyttöoikeuksia tai poistamalla halutut palvelut käytöstä, jos se on mahdollista. Voit poistaa tietoja Microsoftin pilvipalveluista ja tallentaa ne paikallisesti tai muuhun sijaintiin.
+* **Tarkistaminen**: hae Microsoftin pilvipalveluihin tallennetut henkilötiedot ja ota niistä pyydettäessä kopio, jonka voit toimittaa rekisteröidylle.
 
-5. **Poistaminen**: poista Microsoftin pilvipalveluihin tallennetut henkilötiedot pysyvästi.
+* **Korjaaminen**: tee henkilötietoihin muutoksia tai suorita niille muita pyydettyjä toimintoja soveltuvin osin.
 
-6. **Vieminen**: toimita rekisteröidyn henkilötietojen kopio sähköisessä (koneluettavassa) muodossa rekisteröidylle.
+* **Rajoittaminen**: Rajoita henkilötietojen käsittelyä joko poistamalla erilaisten verkkopalveluiden käyttöoikeuksia tai poistamalla halutut palvelut käytöstä, jos se on mahdollista. Voit poistaa tietoja Microsoftin pilvipalveluista ja tallentaa ne paikallisesti tai muuhun sijaintiin.
 
-Kussakin tämän oppaan osiossa esitellään tekniset toimintatavat, joilla rekisterinpitäjäorganisaatio voi reagoida rekisteröidyn henkilötietopyyntöön Microsoftin pilvipalvelussa.
+* **Poistaminen**: poista Microsoftin pilvipalveluihin tallennetut henkilötiedot pysyvästi.
 
-## <a name="common-data-service-customer-data"></a>Common Data Service -asiakastiedot
+* **Vieminen**: toimita rekisteröidyn henkilötietojen kopio sähköisessä (koneluettavassa) muodossa rekisteröidylle.
+
+## <a name="cds-for-apps-customer-data"></a>Apps-asiakastietojen CDS
 
 > [!IMPORTANT]
-> Koskee sekä Common Data Service for Appsia että Common Data Serviceä (aiempi versio)
+> Koskee sekä CDS for Appsia että aiempaa Common Data Service -versiota
 
-Common Data Service -palveluja (CDS) on kaksi eri tyyppiä: Common Data Service for Apps ja Common Data Servicen edellinen versio. Henkilötietojen käsittelyprosessit poikkeavat versioissa toisistaan.
+CDS for Appsissa ja aiemmassa Common Data Service (CDS) -versiossa on erilliset prosessit henkilötietojen käsittelyyn.
 
-Voit tunnistaa käyttämäsi CDS-ympäristön suorittamalla seuraavat vaiheet [PowerApps-sivustossa](https://web.powerapps.com):
+Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com) ja suorittamalla seuraavat vaiheet:
 
-1.  Valitse avattavasta Ympäristö-luettelosta **Ympäristö**.
-2.  Valitse **Tiedot**  >  **Entiteetit**.
+1. Valitse ympäristösi avattavasta **Ympäristö**-luettelosta.
+2. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
 
-    Ympäristösi on Common Data Service for Apps, jos nämä entiteetit näkyvät:
+    Ympäristösi on CDS for Apps, jos luettelossa on seuraavat entiteetit:
 
     ![PowerApps-entiteettien luettelo](./media/common-data-service-gdpr-dsr-guide/powerapps-entities-list.png)
 
-    Ympäristösi on Common Data Servicen edellinen versio, jos nämä entiteetit näkyvät:
+    Ympäristösi on CDS:n aiempi versio, jos luettelossa on seuraavat entiteetit:
 
     ![PowerAppsin vanhojen entiteettien luettelo](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-list.png)
 
-Kun olet selvittänyt, mikä CDS-ympäristön tyyppi on käytössäsi, voit tunnistaa henkilökohtaiset tiedot tämän asiakirjan vastaavien osioiden avulla.
+Kun olet selvittänyt, minkä tyyppinen CDS-ympäristö sinulla on, noudata seuraavia vaiheita henkilötietojen tunnistamiseksi.
 
 > [!NOTE]
-> Käytössäsi voi olla tiettyjä ympäristöjä CDS for Appsissa ja muita ympäristöjä CDS:ssä (aiempi versio), joten sinun on toistettava alla kuvattu prosessi jokaiselle organisaatiosi ympäristölle.
+> Käytössäsi voi olla tiettyjä ympäristöjä CDS for Appsissa ja muita ympäristöjä CDS:n aiemmassa versiossa, joten sinun on toistettava alla kuvattu prosessi jokaiselle organisaatiosi ympäristölle.
 
-## <a name="user-personal-data-in-common-data-service-for-apps"></a>Käyttäjän henkilötiedot Common Data Service for Appsissa
+## <a name="user-personal-data-in-cds-for-apps"></a>Käyttäjän henkilötiedot CDS for Appsissa
 
 ### <a name="prerequisites"></a>Edellytykset
-Käyttäjä on luotava Office 365 -hallintakeskuksessa, ja hänelle on määritettävä tarvittava Common Data Service -käyttöoikeus Common Data Servicen käyttämistä varten.  Tarvitaan myös käyttöoikeusrooli, ennen kuin käyttäjä voi käyttää Common Data Serviceä.
+Sinun on luotava käyttäjät Office 365 -hallintakeskuksessa ja määritettävä heille asianmukaiset käyttöoikeudet ja suojausroolit, ennen kuin he voivat käyttää CDS for Appsia.
 
-Käyttäjän henkilötiedot tallennetaan Office 365 -hallintakeskukseen ja CDS-järjestelmän käyttäjäentiteettiin.  Office 365 -hallintakeskuksessa säilytetään ja ylläpidetään tiettyjä käyttäjän perushenkilötietoja, joita ovat esimerkiksi käyttäjänimi, käyttäjätunnus, puhelin, sähköposti ja osoite. Nämä käyttäjän henkilötiedot synkronoidaan CDS-järjestelmän käyttäjäentiteettiin kaikissa ympäristöissä.  Järjestelmänvalvoja voi päivittää näitä henkilötietoja vain Office 365 -hallintakeskuksessa. Nämä määritteet synkronoidaan sen jälkeen automaattisesti CDS for Appsiin. Järjestelmänvalvoja voi myös luoda mukautettuja määritteitä muiden henkilötietojen taltioimiseksi CDS-järjestelmän käyttäjäentiteettiin.  Mukautettuja määritteitä ylläpidetään ja hallitaan CDS-järjestelmässä manuaalisesti järjestelmänvalvojan toimesta.
+Office 365 -hallintakeskuksessa säilytetään ja ylläpidetään tiettyjä käyttäjän perushenkilötietoja, joita ovat esimerkiksi käyttäjänimi, käyttäjätunnus, puhelin, sähköposti ja osoite. Järjestelmänvalvoja voi päivittää näitä henkilötietoja vain Office 365 -hallintakeskuksessa. Nämä määritteet synkronoidaan sen jälkeen automaattisesti CDS for Appsiin. Järjestelmänvalvoja voi myös luoda mukautettuja määritteitä käyttäjien muiden henkilötietojen taltioimiseksi CDS for Apps -järjestelmän käyttäjäentiteettiin. Näitä määritteitä voidaan ylläpitää ja hallita manuaalisesti.
 
-Kun käyttäjä poistetaan Office 365 -hallintakeskuksesta, käyttäjätietuetta ei poisteta automaattisesti CSD-järjestelmän käyttäjäentiteetistä. Sillä tavoin estetään häiriöiden aiheuttaminen liiketoimintasovelluksiin, jotka voivat olla kriittisiä organisaation toiminnan jatkumisen kannalta.  CDS-järjestelmänvalvojan on etsittävä ja poistettava käyttäjän henkilötiedot CDS:stä sovellusta käyttämällä.
+Kun käyttäjä poistetaan Office 365 -hallintakeskuksesta, käyttäjätietuetta ei poisteta automaattisesti CDS for Apps -järjestelmän käyttäjäentiteetistä. Näin estetään häiriöiden aiheuttaminen liiketoimintasovelluksiin, jotka voivat olla kriittisiä organisaation toiminnan jatkumisen kannalta. Käyttäjän tila CDS for Appsissa on Ei käytössä, mutta CDS for Apps -järjestelmänvalvojan tulee etsiä ja poistaa käyttäjän henkilötiedot CDS for Appsista sovelluksessa.
 
-Alla luetellut etsintä-, korjaamis-, vienti- ja poistotoiminnot voi suorittaa vain käyttäjä, jolla on Office 365:n yleisen järjestelmänvalvojan rooli ja CDS-järjestelmänvalvojan käyttöoikeusrooli.
+Alla luetellut etsintä-, korjaamis-, vienti- ja poistotoiminnot voi suorittaa vain käyttäjä, jolla on Office 365:n yleisen järjestelmänvalvojan rooli ja CDS-järjestelmänvalvojan rooli.
 
 ### <a name="discover"></a>Etsintä
+Järjestelmänvalvojat voivat luoda useita CDS for Apps -esiintymiä. Näitä esiintymiä voi käyttää kokeiluun, kehitykseen ja tuotantoon. Jokaisessa esiintymässä on kopio järjestelmän käyttäjäentiteetistä ja mahdollisista järjestelmänvalvojan lisäämistä mukautetuista määritteistä sekä käyttäjän henkilötiedot, jotka on synkronoitu Office 365 -hallintakeskuksesta.
 
-Järjestelmänvalvojat voivat luoda useita CDS-esiintymiä.  Näitä esiintymiä voi käyttää kokeiluun, kehitykseen ja tuotantoon.   Jokaisessa esiintymässä on kopio järjestelmän käyttäjäentiteetistä ja mahdollisista järjestelmänvalvojan lisäämistä mukautetuista määritteistä sekä käyttäjän henkilötiedot, jotka on synkronoitu Office 365 -hallintakeskuksesta.
+Järjestelmänvalvoja voi nähdä luettelon kaikista CDS for Apps -esiintymistä siirtymällä Dynamics 365 -hallintakeskukseen PowerApps-hallintakeskuksen kautta.
 
-Järjestelmänvalvoja voi nähdä luettelon kaikista CDS-esiintymistä siirtymällä Dynamics 365 -hallintakeskukseen PowerApps-hallintakeskuksen kautta.
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
 
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
 
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
+3.  Napsauta tai napauta **Dynamics 365 -hallintakeskusta**.
 
     ![PowerApps-ympäristön tiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-environment-details.png)
 
@@ -98,306 +103,336 @@ Järjestelmänvalvoja voi nähdä luettelon kaikista CDS-esiintymistä siirtymä
 
     ![PowerApps-esiintymän valitsin](./media/common-data-service-gdpr-dsr-guide/powerapps-instance-picker.png)
 
-CDS-järjestelmän käyttäjien henkilötietoja voi olla seuraavissa kohteissa:
+Voit etsiä henkilötietoja CDS for Appsissa seuraavista resursseista:
 
-|Henkilötietoja sisältävät resurssit | Tarkoitus | Sivuston käyttö | Ohjelmallinen käyttö
+|Resurssi | Tarkoitus | Sivuston käyttö | Ohjelmallinen käyttö
 | --- | --- | --- | ---
-| Entiteettitietue | Järjestelmän käyttäjäentiteetti | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan kautta](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
-| Seurantahistoria | Tämän avulla asiakkaat voivat tunnistaa resursseja, joita käyttävät ovat luoneet, käyttäneet, muuttaneet tai poistaneet entiteettitasolla. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan kautta](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update)
+| Entiteettitietue | Tämä on järjestelmän käyttäjäentiteetti, johon käyttäjän henkilötietoja tallennetaan. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
+| Seurantahistoria | Tämän avulla asiakkaat voivat tunnistaa resursseja, joita käyttävät ovat luoneet, käyttäneet, muuttaneet tai poistaneet entiteettitasolla. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
 
 #### <a name="user"></a>Käyttäjä
-Office 365 -hallintakeskuksessa ylläpidettävät ja hallittavat käyttäjien henkilötiedot on tallennettu Azure Active Directoryyn.  Näitä henkilötietoja hallitaan Office 365 -hallintakeskuksessa, ja ne synkronoidaan automaattisesti kaikkiin CDS-ympäristöihin.  Järjestelmänvalvoja ei voi päivittää näitä henkilötietoja suoraan CDS-järjestelmään, kun käyttäjä on aktiivinen, vaan ne on päivitettävä suoraan Office 365 -hallintakeskuksessa.  Muita henkilötietoja, kuten mukautettuja määritteitä, voidaan lisätä suoraan CDS:ään, jolloin järjestelmänvalvojan on ylläpidettävä ja hallittava niitä manuaalisesti.
+Käyttäjän henkilötiedot tallennetaan Azure Active Directoryyn ja ne synkronoidaan automaattisesti kaikkiin CDS for Apps -ympäristöihin. Järjestelmänvalvoja ei voi päivittää näitä henkilötietoja suoraan CDS for Appsissa, kun käyttäjä on aktiivinen&mdash;, vaan ne on päivitettävä Office 365 -hallintakeskuksessa. Järjestelmänvalvoja voi lisätä henkilötietoja (esimerkiksi mukautettuja määritteitä) suoraan CDS for Appsiin, mutta kyseisiä tietoja on hallittava manuaalisesti.
 
-CDS-järjestelmänvalvoja voi etsiä tietyn käyttäjän ja tähän liittyvät henkilötiedot seuraavasti:
+Etsi käyttäjä ja hänen henkilötietonsa siirtymällä [PowerApps-hallintakeskuksen](https://admin.powerapps.com/) ja toimimalla seuraavasti:
 
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
 
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
-4.  Napsauta ympäristön nimeä.
-5.  Valitse **Avaa**-painike.
-6.  Valitse **Asetukset**  >  **Suojaus**.
-7.  Valitse **Käyttäjät**.
-8.  Kirjoita käyttäjän nimi **Haku**-ruutuun.
-9.  Valitse **Hae**-painike.
-10. Kaksoisnapsauta käyttäjää.
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta ja napsauta tai napauta **Avaa**.
+
+3. Valitse **Asetukset**  >  **Suojaus**  >  **Käyttäjät**.
+
+4. Kirjoita käyttäjän nimi **hakuruutuun** ja napsauta tai napauta **Hae**.
+
+5. Voit tarkastella käyttäjän henkilötietoja kaksoisnapsauttamalla tai kaksoisnapauttamalla käyttäjän nimeä.
 
     ![PowerApps-käyttäjälomake](./media/common-data-service-gdpr-dsr-guide/powerapps-user-form.png)
 
 #### <a name="audit-history"></a>Seurantahistoria
-Kun Common Data Servicen entiteetin [seuranta on käytössä](https://docs.microsoft.com/dynamics365/customer-engagement/admin/audit-data-user-activity), käyttäjän henkilötiedot kirjataan seurantahistoriaan yhdessä niiden tapahtumien kanssa, joita käyttäjä oli suorittamassa.
+Kun entiteetin [seuranta on käytössä](https://docs.microsoft.com/dynamics365/customer-engagement/admin/audit-data-user-activity) CDS for Appsissa, käyttäjän henkilötiedot kirjataan seurantahistoriaan yhdessä niiden tapahtumien kanssa, joita käyttäjä suorittaa.
 
 ### <a name="rectify"></a>Korjaaminen
+Jos rekisteröity pyytää sinua korjaamaan henkilötietoja, joita organisaatiosi tietoihin sisältyy, sinun ja organisaatiosi täytyy päättää, onko pyynnön toteuttaminen asianmukaista. Tietojen korjaaminen saattaa tarkoittaa henkilötietojen muokkaamista ja poistamista tiedostossa tai muussa kohteessa.
 
-Jos rekisteröity pyytää sinua korjaamaan henkilötietoja, joita organisaatiosi tietoihin sisältyy, sinun ja organisaatiosi täytyy päättää, hyväksyttekö pyynnön.  Tietojen korjaaminen saattaa tarkoittaa henkilötietojen muokkaamista ja poistamista tiedostossa tai muussa kohteessa.
+Azure Active Directoryn avulla voit hallita CDS for Appsissa olevia loppukäyttäjiesi käyttäjätietoja (henkilötietoja). Yritysasiakkaat voivat hallita rekisteröityjen korjauspyyntöjä esimerkiksi tietyn Microsoft-palvelun rajoitetuilla muokkaustoiminnoilla. Rekisterinpitäjänä Microsoft ei tarjoa mahdollisuutta korjata järjestelmän luomia lokeja, sillä ne kuvaavat faktapohjaisia toimintoja ja täten Microsoftin palveluiden tapahtumien historiatietoja. Lisätietoja on ohjeaiheessa [GDPR: rekisteröityjen tietopyynnöt (DSR-pyynnöt)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
 
-Azure Active Directoryn avulla voit hallita Common Data Service for Appsissa olevia loppukäyttäjiesi käyttäjätietoja (henkilötietoja). Yritysasiakkaat voivat hallita rekisteröityjen korjauspyyntöjä, esimerkiksi rajoitetuilla muokkaustoiminnoilla tietyn Microsoft-palvelun luoteen mukaisesti.  Rekisterinpitäjänä Microsoft ei tarjoa mahdollisuutta korjata järjestelmän luomia lokeja, sillä ne kuvaavat faktapohjaisia toimintoja ja täten Microsoftin palveluiden tapahtumien historiatietoja. Lisätietoja on ohjeaiheessa [GDPR: rekisteröityjen tietopyynnöt (DSR-pyynnöt)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
-
-Kun käyttäjätietue on poistettu Azure Active Directorysta, järjestelmänvalvojat voivat poistaa kaikista esiintymistä käyttäjän kaikki jäljellä olevat henkilötiedot, kuten mahdollisesti lisätyt mukautetut määritteet.  
+Kun käyttäjätietue on poistettu Azure Active Directorysta, järjestelmänvalvojat voivat poistaa kaikista esiintymistä käyttäjän kaikki jäljellä olevat henkilötiedot, kuten mukautetut määritteet.  
 
 ### <a name="export"></a>Vieminen
 
 #### <a name="system-user"></a>Järjestelmäkäyttäjä
-Järjestelmän käyttäjäentiteettiin tallennetut käyttäjän henkilötiedot voidaan viedä Excel-tiedostoon portaalin käyttäjäluettelosta.
+Voit viedä järjestelmän käyttäjäentiteettiin tallennetut käyttäjän henkilötiedot Exceliin hallintakeskuksen käyttäjäluettelosta.
 
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
 
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
-4.  Napsauta ympäristön nimeä.
-5.  Valitse Avaa-painike ja sitten Asetukset > Suojaus.
-6.  Valitse Aktivoidut käyttäjät -näkymä.
-7.  Valitse Vie Exceliin -painike.
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
+
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta ja napsauta tai napauta **Avaa**.
+
+3. Siirry kohtaan **Asetukset** > **Suojaus**, ja valitse sitten **Aktivoidut käyttäjät -näkymä**.
+
+4. Napsauta **Vie Exceliin**.
 
 #### <a name="audit-history"></a>Seurantahistoria
-Seurantahistorian näyttökuvia voi siepata ja kopioida sovelluksesta alla olevien ohjeiden avulla.
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
-4.  Napsauta ympäristön nimeä.
-5.  Valitse Avaa-painike.
-6.  Valitse Asetukset > Seuranta.
+Voit ottaa näyttökuvia seurantahistoriasta hallintakeskuksessa.
+
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
+
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta ja napsauta tai napauta **Avaa**.
+
+3. Siirry kohtaan **Asetukset** > **Seuranta**, ja valitse sitten **Seurantayhteenvedon näkymä**.
 
     ![PowerApps-seurantahistorian valikko](./media/common-data-service-gdpr-dsr-guide/powerapps-audit-history-menu.png)
 
-7.  Valitse Seurantayhteenvedon näkymä.
-8.  Etsi käyttäjän seurantatietue.
+4. Etsi käyttäjän seurantatietue ja ota sitten käyttökuva painamalla Alt + PrtScn.
 
     ![PowerApps-seurantahistorian tiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-audit-history-details.png)
 
-9.  Sieppaa näyttökuva painamalla Alt + PrtScn.
-10. Tallenna näyttökuva tiedostoon.
-11. Voit lähettää tiedoston sitten DSR-pyytäjälle.
+5. Tallenna näyttökuva tiedostona, jotta voit lähettää sen DSR-pyynnön tekijälle.
 
 ### <a name="delete"></a>Poistaminen
 
 #### <a name="user"></a>Käyttäjä
-Kun käyttäjä poistetaan Office 365 -hallintakeskuksesta, käyttäjän tilaksi asetetaan CSD-järjestelmässä Ei käytössä. Käyttäjän henkilötietoja ei kuitenkaan poisteta automaattisesti. Sillä tavoin estetään häiriöiden aiheuttaminen liiketoimintasovelluksiin, jotka voivat olla kriittisiä organisaation toiminnan jatkumisen kannalta.
-Käyttäjän henkilötietojen poistaminen CDS-järjestelmästä edellyttää, että järjestelmänvalvoja poistaa käytöstä poistetun käyttäjän henkilötiedot manuaalisesti.
+Kun käyttäjä poistetaan Office 365 -hallintakeskuksesta, käyttäjätietuetta ei poisteta automaattisesti CDS for Apps -järjestelmän käyttäjäentiteetistä. Näin estetään häiriöiden aiheuttaminen liiketoimintasovelluksiin, jotka voivat olla kriittisiä organisaation toiminnan jatkumisen kannalta. Käyttäjän tila CDS for Appsissa on Ei käytössä, mutta CDS for Apps -järjestelmänvalvojan tulee etsiä ja poistaa käyttäjän henkilötiedot CDS for Appsista sovelluksessa.
 
-#### <a name="remove-user-personal-data-via-user-form"></a>Käyttäjän henkilötietojen poistaminen käyttäjälomakkeen kautta
-Kun käyttäjätietue poistetaan Azure Active Directorysta, käyttäjälomakkeessa näytetään seuraava sanoma.
-Tämän käyttäjän tietoja ei hallita enää Office 365:ssä. Voit päivittää tämän tietueen vastauksena DSR-pyyntöihin poistamalla tai korvaamalla kaikki tähän käyttäjään liittyvät henkilötiedot.
+#### <a name="remove-a-users-personal-data-from-the-users-summary-page"></a>Käyttäjän henkilötietojen poistaminen käyttäjän yhteenvetosivulta
+Kun käyttäjätietue poistetaan Azure Active Directorysta, käyttäjän yhteenvetosivulla näytetään seuraava sanoma:
 
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
-4.  Napsauta ympäristön nimeä.
-5.  Valitse **Avaa**-painike.
-6.  Valitse **Asetukset**  >  **Suojaus**  >  **Käyttäjät**.
-7.  Valitse **Käytöstä poistetut käyttäjät** -näkymä.
-8.  Kirjoita käyttäjänimi **Hae tietueita** -ruutuun ja valitse **Hae**-painike.
-9.  Kaksoisnapsauta käyttäjänimeä hakutuloksissa.
-10. Poista kaikki henkilötiedot ja valitse **Tallenna**.
+*Tämän käyttäjän tietoja ei hallita enää Office 365:ssä. Voit päivittää tämän tietueen vastauksena DSR-pyyntöihin poistamalla tai korvaamalla kaikki tähän käyttäjään liittyvät henkilötiedot.*
 
-#### <a name="remove-user-personal-data-via-excel-importexport"></a>Käyttäjän henkilötietojen poistaminen Excelin tuonti- ja vientitoiminnolla
-1.  Valitse **Asetukset**  >  **Suojaus**  >  **Käyttäjät**.
-2.  Valitse **Käytöstä poistetut käyttäjät** -näkymä.
-3.  Luo Excel-malli, joka sisältää sarakkeet kaikille päivitettäville käyttäjän henkilötiedoille.
-4.  Valitse **Lataa tiedosto**.
-5.  Avaa ladattu Excel-tiedoston, tee tarvittavat päivitykset ja tallenna tiedosto.
-6.  Palaa Käytöstä poistetut käyttäjät -näkymään ja valitse Tuo tiedot.
-7.  Valitse päivitetty Excel-tiedostosi Lataa datatiedosto -valintaikkunasta.
-8.  Tee tarvittavat muutokset Yhdistä kentät -ikkunassa.
-9.  Valitse Seuraava ja Lähetä.
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
 
-Lisätietoja Excel-mallien käyttämisestä on ohjeaiheessa [Lisätietoja Excelistä](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates).
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
 
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta ja napsauta tai napauta **Avaa**.
 
-#### <a name="remove-audit-history-via-the-audit-summary-view-form"></a>Seurantahistorian poistaminen Seurantayhteenvedon näkymä -lomakkeella
+3. Siirry kohtaan **Asetukset** > **Suojaus** > **Käyttäjät**, ja valitse sitten **Käytöstä poistetut käyttäjät -näkymä**.
 
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
-4.  Napsauta ympäristön nimeä.
-5.  Valitse Avaa-painike.
-6.  Valitse Asetukset > Seuranta.
-7.  Valitse Seurantayhteenvedon näkymä.
-8.  Käyttäjän tekemien muutosten muutoshistorian etsiminen
-9.  Valitse tarvittavien rivien valintaruudut.
-10. Napsauta Poista muutoshistoria -kuvaketta.
+4. Kirjoita käyttäjän nimi **hakuruutuun** ja napsauta tai napauta **Hae**.
 
-## <a name="personal-data-stored-in-common-data-service-for-apps-databases"></a>Common Data Service for Apps -tietokantoihin tallennetut henkilötiedot
+9. Kaksoisnapsauta käyttäjänimeä hakutuloksissa.
+
+10. Poista kaikki henkilötiedot käyttäjän yhteenvetosivulla ja napsauta tai napauta **Tallenna**.
+
+#### <a name="remove-a-users-personal-data-by-using-excel"></a>Käyttäjän henkilötietojen poistaminen Excelin avulla
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
+
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta ja napsauta tai napauta **Avaa**.
+
+3. Siirry kohtaan **Asetukset** > **Suojaus** > **Käyttäjät**, ja valitse sitten **Käytöstä poistetut käyttäjät -näkymä**.
+
+4. Luo ja lataa Excel-mallitiedosto käyttäjän henkilötiedoista. Vaiheittaiset ohjeet ovat artikkelissa [Uuden Excel-mallin luominen](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
+
+8. Avaa ladattu Excel-mallitiedosto, poista käyttäjän henkilötiedot ja tallenna sitten tiedosto.
+
+9. Palaa **Käytöstä poistetut käyttäjät** -näkymään ja napsauta tai napauta **Tuo tiedot**.
+
+10. Valitse Excel-mallitiedosto **Lataa datatiedosto** -valintaikkunassa ja tee tarvittavat muutokset **Yhdistä kentät** -ikkunassa.
+
+12. Napsauta tai napauta **Seuraava**, ja sitten napsauta tai napauta **Lähetä**.
+
+#### <a name="remove-audit-history-from-the-audit-summary-view-page"></a>Seurantahistorian poistaminen Seurantayhteenvedon näkymä -sivulla
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
+
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta ja napsauta tai napauta **Avaa**.
+
+3. Siirry kohtaan **Asetukset** > **Seuranta**, ja valitse sitten **Seurantayhteenvedon näkymä**.
+
+4. Etsi käyttäjän muutoshistoria, napsauta tai napauta rivi(e)n vieressä olevaa valintaruutua ja napsauta tai napauta **Poista muutoshistoria**.
+
+## <a name="personal-data-stored-in-databases-of-cds-for-apps"></a>CDS for Apps -tietokantoihin tallennetut henkilötiedot
 
 ### <a name="prerequisites"></a>Edellytykset
-Olet mahdollisesti tallentanut yksityishenkilöiden, kuten omien asiakkaittesi, henkilötietoja CDS-entiteettien sisältöön.  
+Olet mahdollisesti tallentanut yksityishenkilöiden, kuten omien asiakkaittesi, henkilötietoja CDS for Apps -entiteetteihin.  
 
-Jos yksityishenkilö lähettää organisaatiollesi DSR-pyynnön, CDS-järjestelmänvalvojan on etsittävä kaikki entiteetit, joissa henkilöön sovelluksessasi viitataan.  CDS-järjestelmänvalvojan vastuulla on ylläpitää hakemistoa siitä, minne henkilötietoja tallennetaan erilaisissa käyttämissäsi entiteeteissä, jotta voit vastata yksityishenkilöjen DSR-pyyntöihin.
+CDS-järjestelmänvalvoja on vastuussa henkilötietojen tallennuspaikkahakemiston ylläpidosta eri entiteeteissä, jotta hän osaa paikantaa tarvittavat henkilötiedot DSR-pyyntöihin vastaamiseksi.  
 
-Sisällössäsi olevia henkilötietoja voi sitten viedä, korjata tai poistaa entiteetissä käyttämällä tuotteen sisäistä toimintoa.  
+Henkilötietoja voi sitten viedä, korjata tai poistaa entiteetissä käyttämällä tuotteen sisäistä toimintoa.  
 
 ### <a name="discover"></a>Etsintä
-Kun CDS-järjestelmänvalvoja vastaanottaa DSR-pyynnön yksityishenkilöltä, järjestelmänvalvojan täytyy tunnistaa, mitkä ympäristöt tai CDS-esiintymät sisältävät tämän henkilön henkilötietoja.  Organisaatiossasi tulisi kehittää käytäntöjä ja menettelytapoja, joilla ylläpidetään hakemistoa yksityishenkilöiden henkilötietojen tallentamiseen käytettävistä ympäristöistä, esiintymistä ja entiteeteistä. Siten pystyt tunnistamaan sisältöösi tallennetut henkilötiedot.
+Kun CDS-järjestelmänvalvoja vastaanottaa DSR-pyynnön yksityishenkilöltä, järjestelmänvalvojan täytyy tunnistaa, mitkä ympäristöt tai CDS-esiintymät sisältävät tämän henkilön henkilötietoja. Henkilötiedot tallennetaan yleensä avainentiteetteihin (esimerkiksi tili, yhteyshenkilö, liidi, mahdollisuus jne.), mutta on sinun vastuullasi laatia hakemistoon liittyvät käytännöt ja toimintatavat, jotka varmistavat, että yksityishenkilöiden henkilötiedot ovat löydettävissä DSR-pyyntöihin vastaamiseksi.
 
-Käyttämällä hakemistoa henkilötietojen tallentamiseen käytettävistä ympäristöistä, esiintymistä ja entiteeteistä voit määrittää CDS-hakukoneen henkilötietojen hakemiseen.  CDS-järjestelmänvalvoja voi määrittää hakuentiteetit ja -kentät. Lisätietoja on ohjeaiheessa [Määritä osuvuushaku](https://go.microsoft.com/fwlink/?linkid=872506).
-Sen jälkeen CDS-järjestelmänvalvoja käyttää CDS-ympäristöä ja suorittaa haun.
+Hakemiston avulla CDS-järjestelmänvalvojat voivat määrittää haun entiteetit ja kentät ja käyttää sitten CDS for Apps - ympäristöä henkilötietojen löytämiseen. Lisätietoja on kohdassa [Määritä osuvuushaku](https://go.microsoft.com/fwlink/?linkid=872506).
 
-1.  Valitse **Haku**-kuvaketta.
-2.  Valitse **Osuvuushaku**.
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
+
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta, napsauta tai napauta hakupainiketta ja napsauta tai napauta **Osuvuushaku**.
 
     ![PowerAppsin osuvuushakuvalikko](./media/common-data-service-gdpr-dsr-guide/powerapps-relevance-search-menu.png)
 
-3.  Kirjoita hakukenttään henkilön henkilötieto.
-4.  Napsauta hakukuvaketta.
+3. Kirjoita hakukenttään henkilön henkilötieto ja napsauta tai napauta **Haku**-painiketta.
 
     ![PowerAppsin osuvuushaun tulokset](./media/common-data-service-gdpr-dsr-guide/powerapps-relevance-search-results.png)
 
-Sisällössäsi olevat henkilötiedot tallennetaan yleensä keskeisiin entiteetteihin, joita ovat esimerkiksi tilit, yhteystiedot, liidit ja mahdollisuudet. On silti omalla vastuullasi ylläpitää hakemistoa yksityishenkilöiden henkilötietojen tallennussijainneista.
-
 ### <a name="rectify"></a>Korjaaminen
-CDS-järjestelmänvalvoja voi päivittää yksityishenkilöjen henkilötietoja käyttämällä osuvuushaun hakutulosluetteloa.  Käyttäjien henkilötietoja on kuitenkin saatettu tallentaa myös muihin mukautettuihin entiteetteihin.  CDS-järjestelmänvalvojan vastuulla on ylläpitää näiden mukautettujen entiteettien hakemistoa ja tehdä tarvittavat päivitykset henkilöjen henkilötietoihin.
+CDS-järjestelmänvalvoja voi päivittää yksityishenkilöjen henkilötietoja käyttämällä osuvuushaun hakutulosluetteloa. Yksityishenkilöiden henkilötietoja voidaan tallentaa myös muihin mukautettuihin entiteetteihin. CDS-järjestelmänvalvojan vastuulla on ylläpitää näiden mukautettujen entiteettien hakemistoa ja tehdä tarvittavat päivitykset henkilöjen henkilötietoihin.
 
-Osuvuushaun tuloksissa:
+Tee seuraavat toiminnot osuvuushaun tuloksissa:
 
-1.  Napsauta kohdetta, josta henkilön henkilötietoja löytyi.
-2.  Päivitä tiedot tarvittavilta osiltaan.
-3.  Valitse Tallenna.
+1. Napsauta tai napauta kohdetta, joka sisältää henkilön henkilötietoja.
+
+2. Päivitä henkilön henkilötietoja tarvittaessa ja napsauta tai napauta **Tallenna**.
 
     ![PowerApps-tilitiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-account-details.png)
 
 ### <a name="export"></a>Vieminen
-Voit taltioida näyttökuvan ja jakaa sen DSR-pyytäjälle seuraamalla alla olevia ohjeita.
+Voit ottaa tiedoista näyttökuvan ja jakaa sen DSR-pyynnön tekijälle.
 
-[PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
-1.  Siirry Ympäristöt-välilehdelle.
-2.  Valitse Ympäristöt-luettelosta ympäristö.
-3.  Napsauta Dynamics 365 -hallintakeskuksen linkkiä.
-4.  Napsauta ympäristön nimeä.
-5.  Valitse **Haku**-kuvaketta.
-6.  Valitse Osuvuushaku.
-7.  Kirjoita hakukenttään henkilön henkilötieto.
-8.  Napsauta hakukuvaketta.
-9.  Etsi kohde ja kaksoisnapsauta sitä.
-10. Sieppaa näyttökuva painamalla <alt> + <PrtScn>.
-11. Tallenna näyttökuva tiedostoon.
-12. Voit lähettää tiedoston sitten DSR-pyytäjälle.
+Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/):
+
+1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten ympäristö luettelosta.
+
+2. Napsauta tai napauta **Dynamics 365 -hallintakeskusta**, valitse ympäristö luettelosta, napsauta tai napauta hakupainiketta ja napsauta tai napauta **Osuvuushaku**.
+
+    ![PowerAppsin osuvuushakuvalikko](./media/common-data-service-gdpr-dsr-guide/powerapps-relevance-search-menu.png)
+
+3. Kirjoita hakukenttään henkilön henkilötieto ja napsauta tai napauta **Haku**-painiketta.
+
+    ![PowerAppsin osuvuushaun tulokset](./media/common-data-service-gdpr-dsr-guide/powerapps-relevance-search-results.png)
+
+4. Kaksoisnapsauta kohdetta hakutulosten luettelossa.
+
+5. Ota näyttökuva painamalla Alt + PrtScn.
+
+6. Tallenna näyttökuva tiedostona, jotta voit lähettää sen DSR-pyynnön tekijälle.
 
 ### <a name="delete"></a>Poistaminen
-
-CDS-järjestelmänvalvoja voi poistaa yksityishenkilön henkilötietoja tietueista, joihin ne on tallennettu.  CDS-järjestelmänvalvoja voi joko (1) poistaa tietueen, johon henkilötietoja on tallennettu, tai (2) poistaa henkilötietojen sisällön tietueesta.  
+CDS-järjestelmänvalvoja voi poistaa yksityishenkilön henkilötietoja tietueista, joihin ne on tallennettu.  CDS-järjestelmänvalvoja voi joko poistaa tietueen, johon henkilötietoja on tallennettu, tai poistaa henkilötietojen sisällön tietueesta.  
 
 > [!NOTE]
 > CDS-järjestelmänvalvoja voi mukauttaa ympäristöä siten, että tietueen poistamisen entiteetistä estetään. Jos ympäristö määritetään näin, henkilötietojen sisältö on poistettava tietueesta itse tietueen poistamisen sijaan.
 
-Osuvuushaun tuloksissa:
-1.  Napsauta kohdetta, josta henkilön henkilötietoja löytyi.
-2.  Napsauta valintanauhan Poista-kuvaketta (huomautus: tämä kuvake ei ole käytössä, jos tietuetta ei voi poistaa).
+Tee seuraavat toiminnot osuvuushaun tuloksissa:
+
+1. Napsauta tai napauta kohdetta, joka sisältää henkilön henkilötietoja.
+
+2. Napsauta tai napauta Valintanauhassa olevaa **Poista**-painiketta. (Huomaa, että **Poista**-painike ei ole käytettävissä, jos tietuetta ei voi poistaa).
 
     ![PowerApps-tilin poistaminen](./media/common-data-service-gdpr-dsr-guide/powerapps-account-delete.png)
 
-## <a name="personal-data-stored-in-common-data-service-previous-version-databases"></a>Common Data Service (aiempi versio) -tietokantoihin tallennetut henkilötiedot
+## <a name="personal-data-stored-in-databases-of-the-previous-version-of-cds"></a>Aiemman CDS -version tietokantoihin tallennetut henkilötiedot
 
 ### <a name="prerequisites"></a>Edellytykset
+Olet mahdollisesti tallentanut yksityishenkilöiden, kuten omien asiakkaittesi, henkilötietoja CDS-entiteetteihin.  
 
-Olet mahdollisesti tallentanut yksityishenkilöiden, kuten omien asiakkaittesi tai käyttäjiesi, henkilötietoja CDS-entiteettien sisältöön.  
+CDS-järjestelmänvalvoja on vastuussa henkilötietojen tallennuspaikkahakemiston ylläpidosta eri entiteeteissä, jotta hän osaa paikantaa tarvittavat henkilötiedot DSR-pyyntöihin vastaamiseksi.  
 
-Jos yksityishenkilö lähettää organisaatiollesi DSR-pyynnön, CDS-järjestelmänvalvojan on etsittävä kaikki entiteetit, joissa henkilöön sovelluksessasi viitataan.  CDS-järjestelmänvalvojan vastuulla on ylläpitää hakemistoa siitä, minne henkilötietoja tallennetaan erilaisissa käyttämissäsi entiteeteissä, jotta voit vastata yksityishenkilöjen DSR-pyyntöihin.
-
-Sisällössäsi olevia henkilötietoja voi sitten viedä, korjata tai poistaa entiteetissä käyttämällä tuotteen sisäistä toimintoa.  
+Henkilötietoja voi sitten viedä, korjata tai poistaa entiteetissä käyttämällä tuotteen sisäistä toimintoa.  
 
 ### <a name="discover"></a>Etsintä
-Kun CDS-järjestelmänvalvoja vastaanottaa DSR-pyynnön yksityishenkilöltä, järjestelmänvalvojan täytyy tunnistaa, mitkä ympäristöt tai CDS-esiintymät sisältävät tämän henkilön henkilötietoja.  Organisaatiossasi tulisi kehittää käytäntöjä ja menettelytapoja, joilla ylläpidetään hakemistoa yksityishenkilöiden henkilötietojen tallentamiseen käytettävistä ympäristöistä, esiintymistä ja entiteeteistä. Siten pystyt tunnistamaan sisältöösi tallennetut henkilötiedot.
+Kun CDS-järjestelmänvalvoja vastaanottaa DSR-pyynnön yksityishenkilöltä, järjestelmänvalvojan täytyy tunnistaa, mitkä ympäristöt tai CDS-esiintymät sisältävät tämän henkilön henkilötietoja. Henkilötiedot tallennetaan yleensä avainentiteetteihin (esimerkiksi tili, yhteyshenkilö, liidi, mahdollisuus jne.), mutta on sinun vastuullasi laatia hakemistoon liittyvät käytännöt ja toimintatavat, jotka varmistavat, että yksityishenkilöiden henkilötiedot ovat löydettävissä DSR-pyyntöihin vastaamiseksi.
 
-Yksityishenkilöjen henkilötietoja voi olla seuraavissa kohteissa:
+Voit etsiä aiemman CDS-version käyttäjien henkilötietoja seuraavista resursseista:
 
-|Henkilötietoja sisältävät resurssit | Tarkoitus | Sivuston käyttö |    Ohjelmallinen käyttö
+|Resurssi | Tarkoitus | Sivuston käyttö |  Ohjelmallinen käyttö
 | --- | --- | --- | ---
-|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | PowerApps Maker Portal |    Ei
+|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com) |      Ei
 
 #### <a name="entity-records"></a>Entiteetin tietueet
 Yksityishenkilöiden henkilötietoja voidaan tallentaa mihin tahansa liiketoimintaentiteettiin.
-Tämä Common Data Servicen versio sisältää oman tietokantarakenteensa ja infrastruktuurinsa.  Sillä on myös omat entiteettinsä, joiden hallinta tapahtuu käyttämällä [PowerApps-sivustoa](http://web.powerapps.com/).
+
+Tämä CDS-versio sisältää oman tietokantarakenteensa ja infrastruktuurinsa. Sillä on oma entiteetit, joita hallitaan [PowerAppsissa](http://web.powerapps.com/).
 
 Näet entiteettiluettelon seuraavasti:
 
-1.  Valitse ympäristö.
+1. Valitse ympäristösi avattavasta **Ympäristö**-luettelosta.
+
+2. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
 
     ![PowerAppsin vanhat entiteetit](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
 
-2.  Valitse **Tiedot**  >  **Entiteetit**-välilehti.
-3.  Valitse entiteetti, kuten tilin entiteetti.
+3. Napsauta tai napauta luettelossa olevaa entiteettiä (esimerkiksi Tili-entiteettiä) alla kuvatulla tavalla.
 
     ![PowerAppsin vanhojen entiteettien tietoluettelo](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
 
-4.  Napsauta entiteettiä.
-5.  Valitse **Tiedot**-välilehti. Näet luettelon entiteetin tietueista.
+4. Napsauta tai napauta **Tiedot**-välilehteä. Näet luettelon entiteetin tietueista.
 
     ![PowerAppsin vanhan tilin tiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
 
-6.  Napsauta **Vie tiedot** -kuvaketta.
-7.  Avaa Excel-laskentataulukko, kun vienti on valmis.
-8.  Valitse Ota muokkaaminen käyttöön -ruutu.
-9.  Napsauta hakukuvaketta.
-10. Kirjoita haettava henkilötieto.
-Sisällössäsi olevat henkilötiedot tallennetaan yleensä keskeisiin entiteetteihin, joita ovat esimerkiksi tilit, yhteystiedot, liidit, mahdollisuudet tai työntekijät. On silti omalla vastuullasi ylläpitää hakemistoa yksityishenkilöiden henkilötietojen tallennussijainneista.
-11. **Hae yksityishenkilön henkilötiedot toistamalla yllä olevat vaiheet kullekin liiketoimintaentiteetille** käyttämällä hakemistoa entiteeteistä, joihin henkilötiedot on tallennettu.
+5. Napsauta tai napauta **Vie tiedot**.
+
+6. Kun vienti on valmis, napsauta tai napauta **Avaa Excelissä**, ja napsauta tai napauta **Ota muokkaus käyttöön**.
+
+7. Napsauta tai napauta hakupainiketta, kirjoita hakukenttään henkilön henkilötieto ja napsauta tai napauta **Haku**-painiketta.
+
+8. Toista yllä olevat vaiheet kullekin liiketoimintaentiteetille käyttämällä hakemistoa entiteeteistä, joihin henkilötiedot on tallennettu.
 
 ### <a name="rectify"></a>Korjaaminen
-Jos rekisteröity pyytää sinua korjaamaan henkilötietoja, joita organisaatiosi tietoihin sisältyy, sinun ja organisaatiosi täytyy päättää, hyväksyttekö pyynnön.  Tietojen korjaaminen saattaa tarkoittaa henkilötietojen muokkaamista ja poistamista tiedostossa tai muussa kohteessa.
+Jos rekisteröity pyytää sinua korjaamaan henkilötietoja, joita organisaatiosi tietoihin sisältyy, sinun ja organisaatiosi täytyy päättää, onko pyynnön toteuttaminen asianmukaista. Tietojen korjaaminen saattaa tarkoittaa henkilötietojen muokkaamista ja poistamista tiedostossa tai muussa kohteessa.
 
-Azure Active Directoryn avulla voit hallita Common Data Service for Appsissa olevia loppukäyttäjiesi käyttäjätietoja (henkilötietoja). Yritysasiakkaat voivat hallita rekisteröityjen korjauspyyntöjä, esimerkiksi rajoitetuilla muokkaustoiminnoilla tietyn Microsoft-palvelun luoteen mukaisesti.  Rekisterinpitäjänä Microsoft ei tarjoa mahdollisuutta korjata järjestelmän luomia lokeja, sillä ne kuvaavat faktapohjaisia toimintoja ja täten Microsoftin palveluiden tapahtumien historiatietoja.  
-
-Lisätietoja on ohjeaiheessa [GDPR: rekisteröityjen tietopyynnöt (DSR-pyynnöt)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
+Azure Active Directoryn avulla voit hallita CDS:n aiemmassa versiossa olevia loppukäyttäjiesi käyttäjätietoja (henkilötietoja). Yritysasiakkaat voivat hallita rekisteröityjen korjauspyyntöjä esimerkiksi tietyn Microsoft-palvelun rajoitetuilla muokkaustoiminnoilla. Rekisterinpitäjänä Microsoft ei tarjoa mahdollisuutta korjata järjestelmän luomia lokeja, sillä ne kuvaavat faktapohjaisia toimintoja ja täten Microsoftin palveluiden tapahtumien historiatietoja. Lisätietoja on ohjeaiheessa [GDPR: rekisteröityjen tietopyynnöt (DSR-pyynnöt)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
 
 CDS-ympäristössä sijaitsevien henkilötietojen korjaaminen tapahtuu viemällä entiteetin tiedot Excel-laskentataulukkoon, päivittämällä tiedot taulukossa ja tuomalla päivitykset takaisin tietokantaan.
-CDS-järjestelmänvalvojan vastuulla on tunnistaa kaikki entiteetit, joihin yksityishenkilöiden henkilötietoja on tallennettu, ja toistaa alla olevat vaiheet jokaiselle näistä entiteeteistä.
 
-[PowerApps-sivustossa](http://web.powerapps.com/):
+CDS-järjestelmänvalvojan vastuulla on tunnistaa kaikki entiteetit, joihin yksityishenkilöiden henkilötietoja sisältyy, ja toistaa seuraavat vaiheet jokaiselle entiteeteistä.
 
-1.  Valitse **Tiedot**  >  **Entiteetit**.
-2.  Napsauta entiteettiä, kuten tiliä.
-3.  Valitse **Tiedot**-vaihtoehto.
-4.  Napsauta **Vie tiedot** -kuvaketta.
-5.  Napsauta **Avaa Excelissä** -kuvaketta, kun vienti on valmis.
-6.  **Ota muokkaaminen käyttöön** Excel-laskentataulukossa ja päivitä henkilötiedot.
-7.  **Tallenna** päivitetty laskentataulukko. Valitse **Tallenna nimellä**, niin näet tiedoston sijainnin.
+Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
+
+1. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
+
+    ![PowerAppsin vanhat entiteetit](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
+
+2. Napsauta tai napauta luettelossa olevaa entiteettiä (esimerkiksi Tili-entiteettiä) alla kuvatulla tavalla.
+
+    ![PowerAppsin vanhojen entiteettien tietoluettelo](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
+
+3. Napsauta tai napauta **Tiedot**-välilehteä. Näet luettelon entiteetin tietueista.
 
     ![PowerAppsin vanhan tilin tiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
 
-8.  Tee tarvittavat päivitykset henkilötietoihin.
-9.  Tallenna päivitykset.
-10. Valitse Tiedot > Entiteetit > Tili ja napsauta lomakkeen Tuo tiedot -kuvaketta.
-11. Napsauta Haku-ruutua.
-12. Valitse tiedosto, joka sisältää tekemäsi päivitykset.
-13. Napsauta Avaa-ruutua.
-14. Napsauta Tuo-painiketta.
+4. Napsauta tai napauta **Vie tiedot**.
+
+5. Kun vienti on valmis, napsauta tai napauta **Avaa Excelissä**, ja napsauta tai napauta **Ota muokkaus käyttöön**.
+
+6. Napsauta tai napauta valikkorivillä olevaa **Tiedosto**-kohtaa, napsauta tai napauta **Tallenna nimellä** ja valitse sitten sijainti, johon haluat tallentaa tiedoston.
+
+7. Tee tarvittavat päivitykset henkilötietoihin ja tallenna laskentataulukko.
+
+10. Siirry PowerAppsissa takaisin **Tiedot**-välilehdelle ja napsauta tai napauta **Tuo tiedot**.
+
+11. Napsauta **Haku**-painiketta ja valitse ja avaa Excel-laskentataulukko, jonka olet juuri päivittänyt.
+
+12. Napsauta kohtaa **Tuo**.
 
 ### <a name="export"></a>Vieminen
+Voit viedä kunkin entiteetin henkilötiedot Excel-laskentataulukkoon ja tarkastella sitä.
 
-Voit tarkastella jokaisen entiteetin henkilötietoja ja viedä niitä Excel-laskentataulukkoon.
+Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
 
-[PowerApps-sivustossa](http://web.powerapps.com/):
+1. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
 
-1.  Valitse **Tiedot**  >  **Entiteetit**.
-2.  Valitse **entiteetti**, jonka tietoja haluat tarkastella ja viedä.
-3.  Valitse **Tiedot**-vaihtoehto.
-4.  Napsauta **Vie tiedot** -kuvaketta. Vienti tapahtuu taustatoimintona, ja saat ilmoituksen, kun se on valmis.
-5. Voit tarkastella vietyjä tietoja napsauttamalla Avaa Excelissä -kuvaketta.
+    ![PowerAppsin vanhat entiteetit](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
+
+2. Napsauta tai napauta luettelossa olevaa entiteettiä, jonka haluat viedä ja näyttää (esimerkiksi Tili-entiteettiä), alla kuvatulla tavalla.
+
+    ![PowerAppsin vanhojen entiteettien tietoluettelo](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
+
+3. Napsauta tai napauta **Tiedot**-välilehteä. Näet luettelon entiteetin tietueista.
+
+    ![PowerAppsin vanhan tilin tiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
+
+4. Napsauta tai napauta **Vie tiedot**.
+
+    Vienti suoritetaan taustatoimintona, ja saat ilmoituksen, kun se on valmis.
+
+5. Voit tarkastella vietyjä tietoja napsauttamalla **Avaa Excelissä**.
 
 ### <a name="delete"></a>Poistaminen
 Voit poistaa entiteetteihin tallennettuja henkilötietoja käyttämällä tietojen vienti- ja tuontitoimintoa.
 
 CDS-järjestelmänvalvojan vastuulla on tunnistaa kaikki entiteetit, joihin yksityishenkilöiden henkilötietoja sisältyy, ja toistaa seuraavat vaiheet jokaiselle entiteeteistä.
 
-[PowerApps-sivustossa](http://web.powerapps.com/):
+Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
 
-1.  Valitse **Tiedot**  >  **Entiteetit**.
-2.  Vieritä **entiteettiluetteloa** alaspäin ja etsi entiteetti, jonka henkilötiedot haluat poistaa.
-3.  Napsauta entiteettiä.
-4.  Valitse **Tiedot**-vaihtoehto.
-5.  Napsauta **Vie tiedot** -kuvaketta.
-6.  Napsauta **Avaa Excelissä** -kuvaketta, kun vienti on valmis.
-7.  **Ota muokkaaminen käyttöön** Excel-laskentataulukossa.
-8.  **Tallenna** päivitetty laskentataulukko. Valitse Tallenna nimellä, niin näet tiedoston sijainnin.
-9.  Poista poistettavien henkilötietotietueiden rivit.
-10. Tallenna päivitykset.
-11. Napsauta **Entiteetit**-lomakkeen **Tuo tiedot** -kuvaketta.
-12. Napsauta **Haku**-ruutua.
-13. Valitse tiedosto, joka sisältää tekemäsi päivitykset.
-14. Napsauta **Open**-ruutua.
-15. Napsauta Tuo-painiketta.
+1. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
+
+    ![PowerAppsin vanhat entiteetit](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities.png)
+
+2. Napsauta tai napauta luettelossa olevaa entiteettiä, josta haluat poistaa henkilötietoja (esimerkiksi Tili-entiteettiä), alla kuvatulla tavalla.
+
+    ![PowerAppsin vanhojen entiteettien tietoluettelo](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-entities-details-list.png)
+
+3. Napsauta tai napauta **Tiedot**-välilehteä. Näet luettelon entiteetin tietueista.
+
+    ![PowerAppsin vanhan tilin tiedot](./media/common-data-service-gdpr-dsr-guide/powerapps-legacy-account-data.png)
+
+4. Napsauta tai napauta **Vie tiedot**.
+
+5. Kun vienti on valmis, napsauta tai napauta **Avaa Excelissä**, ja napsauta tai napauta **Ota muokkaus käyttöön**.
+
+6. Napsauta tai napauta valikkorivillä olevaa **Tiedosto**-kohtaa, napsauta tai napauta **Tallenna nimellä** ja valitse sitten sijainti, johon haluat tallentaa tiedoston.
+
+7. Poista rivit, jotka sisältävät entiteetistä poistettavat henkilötiedot, ja tallenna laskentataulukko.
+
+10. Siirry PowerAppsissa takaisin **Tiedot**-välilehdelle ja napsauta tai napauta **Tuo tiedot**.
+
+11. Napsauta **Haku**-painiketta ja valitse ja avaa Excel-laskentataulukko, jonka olet juuri päivittänyt.
+
+12. Napsauta kohtaa **Tuo**.

@@ -1,25 +1,22 @@
 ---
 title: 'Kameran ohjausobjekti: viittaus | Microsoft Docs'
 description: Kameran ohjausobjektin tiedot, mukaan lukien ominaisuudet ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: a3a724ad42082962ec8aea4e616f1d75aa7299ec
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 78cf8d73758e931d009080f03962c3450088a553
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="camera-control-in-powerapps"></a>Kameran ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi ottaa valokuvia laitteen kameralla.
@@ -31,9 +28,11 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 **Camera** – Sovelluksen käyttämän kameran numerotunnus, jos laitteella on useampi kuin yksi kamera.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi. Tulee kuvata kuvan käyttötarkoituksen.
+
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -42,6 +41,10 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 **Contrast** – Miten helposti käyttäjä voi erottaa samankaltaiset värit kuvasta.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -55,6 +58,8 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **StreamRate** – Miten usein kuva päivitetään **Stream**-ominaisuudessa millisekunteina.  Tämä arvo voi olla välillä 100 (1/10 sekuntia) – 3 600 000 (1 tunti).
 
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
 **[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
 
 **[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
@@ -65,28 +70,43 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
-**Zoom** – Prosenttiosuus, jonka verran kameran kuvaa tai PDF-katseluohjelman tiedoston näkymää suurennetaan.
-
-## <a name="related-functions"></a>Liittyvät funktiot
+## <a name="related-functions"></a>Liitetyt toiminnot
 [**Patch**( *Tietolähde*, *Perustietue*, *Muutostietue* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-photos-to-an-image-gallery-control"></a>Lisää valokuvia Kuvavalikoima-ohjausobjektiin
 1. Lisää **Kamera**-ohjausobjekti, anna sen nimeksi **MyCamera** ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
    **Collect(MyPix, MyCamera.Photo)**
-   
+
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-   
+
     Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 2. Paina F5 ja ota valokuva napsauttamalla tai napauttamalla **MyCamera**.
-3. Lisää **[Kuvavalikoima](control-gallery.md)**-ohjausobjekti ja muuta **[Kuva](control-image.md)**-ohjausobjektin, sen mallin sekä itse **Kuvavalikoima**-ohjausobjektin koko näyttöön sopivaksi.
-4. Määritä **Kuvavalikoima**-ohjausobjektin **[Items](properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**MyPix.Url**.
+3. Lisää **[Pystysuuntainen valikoima](control-gallery.md)** -ohjausobjekti ja muuta sen **[Kuva](control-image.md)**-ohjausobjektin sekä itse **Kuvavalikoima**-ohjausobjektin koko näyttöön sopivaksi.
+4. Aseta **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)**-ominaisuuden arvoksi:<br>**MyPix**.
 5. Määritä **Kuva**-ohjausobjektin **[Image](properties-visual.md)**-ominaisuudeksi seuraava lauseke:<br>
    **ThisItem.Url**
-   
+
     Ottamasi kuva näkyy **Kuvavalikoima**-ohjausobjektissa.
 6. Ota niin monta kuvaa kuin haluat ja palaa oletustyötilaan painamalla Esc.
 7. (valinnainen) Määritä **Kuva**-ohjausobjektin **OnSelect**-ominaisuudeksi **Kuvavalikoima**-ohjausobjektissa **Remove(MyPix, ThisItem)**, paina F5 ja poista valokuva napsauttamalla tai napauttamalla sitä.
 
 Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)**-funktiota tallentaaksesi valokuvat paikallisesti tai **[Patch](../functions/function-patch.md)**-funktiota tietolähteen päivittämiseksi.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Kamerasyötteen näyttämisen lisäksi kameran ohjausobjekti toimii myös painikkeena, joka ottaa kuvan. Siinä on siis samanlaisia helppokäyttötoimintojen kannalta huomioon otettavia seikkoja kuin painikkeilla.
+
+### <a name="video-alternatives"></a>Vaihtoehdot videoille
+* Harkitse vaihtoehtoisen syöttötavan lisäämistä näkövammaisille käyttäjille. Esimerkiksi **[Lisää kuva](control-add-picture.md)**, jonka avulla käyttäjät voivat ladata kuvan laitteestaan.
+
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **[FocusedBorderColor](properties-color-border.md)**  ja ulkopuolinen väri
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.

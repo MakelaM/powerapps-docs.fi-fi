@@ -1,8 +1,6 @@
 ---
-title: Johdanto | Microsoft Docs
-description: Mukautettujen yrityssovellusten luominen ja käyttäminen Microsoft PowerAppsilla
-services: ''
-suite: powerapps
+title: Mitä ovat pohjaan perustuvat sovellukset? | Microsoft Docs
+description: Miten voit suunnitella ja luoda liiketoiminta-aluesovellus PowerAppsin pohjasta
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,18 +8,17 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: hero-article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/14/2018
 ms.author: anneta
-ms.openlocfilehash: 2d45f6a054fb95ab3a4ebf037ac1115497724ef4
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 224f75e4254807163ffdb646e9ea109af5f50db5
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="introduction-to-powerapps"></a>PowerAppsin esittely
+# <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
 Tervetuloa PowerAppsiin. PowerApps on palvelu, jonka avulla voit luoda selaimessa, puhelimessa tai tabletilla toimivia yrityssovelluksia ilman minkäänlaista ohjelmointikokemusta. PowerAppsin logiikka ja tietojen kanssa työskenteleminen koostuu PowerPointin visuaalisten vedä ja pudota -käsitteiden ja Excel-tyyppisten lausekkeiden yhdistelmästä.
 
 PowerAppsilla voit integroida yritystiedot [monista eri Microsoftin ja kolmansien osapuolten lähteistä](connections-list.md) yhteen tehokkaaseen sovellukseen. Voit myös luoda sovelluksia käyttäjille suoritettavaksi SharePointissa, Power BI:ssä ja ryhmissä.

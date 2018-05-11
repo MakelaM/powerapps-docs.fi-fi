@@ -1,25 +1,22 @@
 ---
 title: 'Vienti- ja tuonti-ohjausobjektit: viitetiedot | Microsoft Docs'
 description: Tiedot vienti- ja tuonti-ohjausobjekteista, mukaan lukien ominaisuudet ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 2bc1eddc09fde255fbc1f7a7899ba2f416374e0c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 958589deb4fdee42cb8e6df13ff15addbc06c07e
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Vienti- ja tuonti-ohjausobjektit PowerAppsissa
 Ohjausobjektit tietojen viemistä varten paikalliseen tiedostoon ja sen jälkeen näiden tietojen tuomiseen toiseen sovellukseen PowerAppsissa.
@@ -48,23 +45,27 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 
 **[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Salliiko ohjausobjekti käyttäjän syötteen (**Edit**), näyttääkö vain tiedot (**View**) vai onko poistettu käytöstä (**Disabled**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos ohjausobjektin **[DisplayMode](properties-core.md)**-ominaisuudeksi on asetettu **Disabled**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuudeksi on asetettu **Disabled** (ei käytössä).
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuudeksi on asetettu **Disabled** (ei käytössä).
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
+
+**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
 **[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **Bold** (lihavoitu), **Semibold** (puolilihavoitu), **Normal** (normaali) tai **Lighter** (kevyempi).
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
 **[HoverColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
@@ -76,7 +77,7 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedColor](properties-color-border.md)** –Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -90,9 +91,11 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 
 **[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti yliviivattua.
+**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
 
-**[Text](properties-core.md)** – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Text](properties-core.md)**  – Teksti, joka näkyy ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
 
 **[Underline](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti alleviivattua.
 
@@ -122,3 +125,6 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 7. Paina F5-näppäintä, napsauta tai napauta kohtaa **MyData**, napsauta tai napauta viemääsi tiedostoa ja napsauta tai napauta sitten **Avaa**.
 8. Paina ESC-näppäintä, napsauta tai napauta kohtaa **Kokoelmat** **Tiedosto**-valikossa ja vahvista, että nykyisellä sovelluksella on viemäsi tiedot.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Ohjeet ovat samat kuin **[Painike](control-button.md)**-ohjausobjektille, sillä **Vie** ja **Tuo** ovat erityisiä painikkeita.

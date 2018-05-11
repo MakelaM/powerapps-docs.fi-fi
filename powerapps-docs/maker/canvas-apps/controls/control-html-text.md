@@ -1,25 +1,22 @@
 ---
 title: 'HTML-tekstin ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja, kuten ominaisuudet ja esimerkkejä, HTML-tekstin ohjausobjektista
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: bb652f3ba6decad7cb6f93007eaec6340f230ca1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: aacd47621148c03eef88dea31763ab4af2658bfc
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstin ohjausobjekti PowerAppsissa
 Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
@@ -32,20 +29,20 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 **[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
-**HTMLText** – HTML-tekstin ohjausobjektissa näkyvä teksti, joka voi sisältää HTML-tunnisteita.
+**HtmlText** – HTML-tekstin ohjausobjektissa näkyvä teksti, joka voi sisältää HTML-tunnisteita.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -65,7 +62,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 **[Size](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka näytetään, kun kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
 
 **[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
@@ -73,7 +70,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 [**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
@@ -85,8 +82,22 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
-1. Lisää **HTML-tekstin** ohjausobjekti ja määritä sen **HTMLText**-ominaisuudeksi tämä arvo:<br>
+1. Lisää **HTML-tekstin** ohjausobjekti ja aseta sen **HtmlText**-ominaisuuden arvoksi:<br>
    **Source.Text**
    
      **HTML-tekstin** ohjausobjekti näyttää saman tekstin kuin **[Selite](control-text-box.md)**-ohjausobjekti, mutta se muuntaa tunnisteet sopiviksi merkeiksi.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+**HTML-teksti** ei ole tarkoitettu vuorovaikutteiseksi. Sitä käytetään vain tekstin näyttämistä varten.
+
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **[Väri](properties-color-border.md)** ja **[täyttö](properties-color-border.md)**
+* Mukautettuja värejä sisältävä teksti ja sen tausta
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **HtmlText** on oltava käytössä.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **HtmlText** ei saa sisältää vuorovaikutteisia elementtejä, kuten `<button>`, `<a>` tai `<input>`. PowerAppsin **[TabIndex](properties-accessibility.md)**-järjestelmä ei käsittele **HtmlText**-ominaisuuden sisältämiä elementtejä.

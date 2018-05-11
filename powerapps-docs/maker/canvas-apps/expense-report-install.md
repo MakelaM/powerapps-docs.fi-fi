@@ -1,25 +1,22 @@
 ---
 title: Kuluraportti-PowerApps-mallin asentaminen ja määrittäminen | Microsoft Docs
 description: Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-PowerApps-mallin asentamista ja määrittämistä varten.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: caburk
-manager: ''
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 02/20/2018
+ms.topic: sample
+ms.component: canvas
+ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 0a4c35fe756e6ba9baf899a302d739467e21b591
-ms.sourcegitcommit: eac8ad7b54a0b0eba6444a38a952dbfd17bc64b5
+ms.openlocfilehash: bce21a5fe07cb5bf608c36371a7cbe45e845b2ad
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Kuluraportti-PowerApps-mallin asentaminen ja määrittäminen
 
@@ -63,13 +60,13 @@ Tähän luetteloon tallennetaan kuluraportit.
 
 10. Napsauta **Luo**.
 
-### <a name="create-costcenter-column"></a>CostCenter-sarakkeen luominen
+### <a name="create-cost-center-column"></a>Kustannuskeskus-sarakkeen luominen
 
 1. Napsauta **Kulut**-luetteloa.
 2. Napsauta **hammaspyöräkuvaketta** verkkosivun yläosassa oikealla.
-3. Napsauta **Luetteloasetuksia**.
+3. Napsauta **Luetteloasetukset**.
 4. Napsauta **Luo sarake**.
-5. Syötä **Sarakkeen nimi** -tekstikenttään**CostCenter**.
+5. Syötä **Sarakkeen nimi** -tekstikenttään**Kustannuskeskus**.
 6. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Valinta**.
 7. Syötä **Kirjoita kukin vaihtoehto omalle rivilleen** -tekstikenttään seuraavat arvot, kukin omalle rivilleen: 
     - Microsoft
@@ -236,7 +233,7 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 ### <a name="create-sharepoint-connection"></a>SharePoint-yhteyden luominen
 
 1.  Napsauta **+ Uusi yhteys**.
-2.  Syötä **Haku**-tekstikenttään **Outlook**.
+2.  Syötä **Haku**-tekstikenttään **SharePoint**.
 3.  Valitse luettelosta **SharePoint**.
 4.  Napsauta **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
@@ -262,7 +259,7 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-sharepoint.png)
 
 10. Napsauta **Tallenna**.
-11. Napsauta **SharePoint-yhteyden** **punaista kuvaketta**.
+11. Napsauta **Hyväksynnän yhteyden** **punaista kuvaketta**.
 12. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-approvals.png)
@@ -385,7 +382,10 @@ Katso tästä videosta, miten Kuluraportti-PowerApps-mallia käytetään.
 
 [![Kuluraportti-mallin asennusvideo](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
-
+##<a name="next-steps"></a>Seuraavat vaiheet
+- [SharePoint-luettelolomakkeen mukauttaminen](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
+- [Ohjausobjektin lisääminen ja määrittäminen](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
+- [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
 
 
 

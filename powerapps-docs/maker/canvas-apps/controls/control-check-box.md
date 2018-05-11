@@ -1,25 +1,22 @@
 ---
 title: 'Valintaruutu-ohjausobjekti: viitetiedot | Microsoft Docs'
 description: Valintaruutu-ohjausobjektia koskevaa tietoa, mukaan lukien ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 3784e90bbf6ed45d2b67b6211efaab279e37feca
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 649ebff0c6ce78d317cfeaf8978bcd97f4a68b11
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="check-box-control-in-powerapps"></a>Valintaruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi valita tai tyhjentää ja asettaa siten sen arvoksi **true** tai **false**.
@@ -37,7 +34,7 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **Solid** (yhtenäinen), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
+**[BorderStyle](properties-color-border.md)**  – Onko ohjausobjektin reuna **Solid** (kiinteä), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -51,15 +48,19 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 
 **[Väri](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Edit**), vain tarkastella tietoja (**View**) vai onko ominaisuus poistettu käytöstä (**Disabled**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Disabled** (ei käytössä).
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Disabled** (ei käytössä).
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Disabled** (ei käytössä).
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
+
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
@@ -67,7 +68,7 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
 **[HoverColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
@@ -95,13 +96,15 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**[Palautus](properties-core.md)**  – Palautetaanko ohjausobjektin oletusarvo.
+**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
+**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
 
 **[Underline](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti alleviivattua.
 
@@ -129,5 +132,23 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 3. Paina F5-näppäintä, napsauta tai napauta kohdetta **chkReserve** määrittääksesi sen **[Value](properties-core.md)**-ominaisuuden arvoksi **true** ja napsauta tai napauta sitten kohdetta **chkReserve**  uudelleen määrittääksesi sen **[Value](properties-core.md)**-ominaisuuden arvoksi **false**.
    
     **[Päivämäärävalitsin](control-date-picker.md)**-ohjausobjekti tulee näkyviin, kun **chkReserve**n **[Value](properties-core.md)**-ominaisuuden arvo on **true**, mutta ei, jos se on **false**.
-4. Palaa oletustyötilaan painamalla ESC-näppäintä.
+4. Palaa oletustyötilaan painamalla Esc-näppäintä.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **CheckmarkFill** ja **CheckboxBackgroundFill**
+* **CheckboxBackgroundFill** ja **[Täyttö](properties-color-border.md)**
+* **CheckboxBackgroundFill** ja **[PressedFill](properties-color-border.md)**
+* **CheckboxBackgroundFill** ja **[HoverFill](properties-color-border.md)**
+
+Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[Teksti](properties-core.md)** on oltava olemassa.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+ 

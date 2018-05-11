@@ -1,6 +1,6 @@
 ---
-title: Järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service -palveluissa | Microsoft Docs
-description: Järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service -palveluissa
+title: Järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service for Apps -palveluissa  | Microsoft Docs
+description: Miten vastaat järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin PowerApps-, Microsoft Flow- ja Common Data Service for Apps -palveluissa
 services: powerapps
 suite: powerapps
 documentationcenter: na
@@ -14,16 +14,16 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/18/2018
+ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 1b85ac81969407fe4e84c41fd93debeccddb0f05
-ms.sourcegitcommit: e3a2819c14ad67cc4ca6640b9064550d0f553d8f
+ms.openlocfilehash: c3086ce05ba748b5387ec4ae5a1e794658b5677a
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="responding-to-dsr-requests-for-system-generated-logs-in-powerapps-microsoft-flow-and-common-data-service-for-apps"></a>Järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service for Apps -palveluissa
-Microsoft tarjoaa mahdollisuuden käyttää, viedä ja poistaa järjestelmän luomia lokeja, jotka voidaan luokitella henkilötiedoiksi yleisen tietosuoja-asetuksen (GDPR) *henkilötietojen* laajan määritelmän mukaisesti. Esimerkkejä järjestelmän luomista lokeista, jotka voidaan luokitella henkilötiedoiksi yleisen tietosuoja-asetuksen mukaisesti:
+Microsoft tarjoaa mahdollisuuden käyttää, viedä ja poistaa järjestelmän luomia lokeja, jotka voidaan luokitella henkilötiedoiksi Euroopan Unionin (EU) yleisen tietosuoja-asetuksen (GDPR) *henkilötietojen* laajan määritelmän mukaisesti. Esimerkkejä järjestelmän luomista lokeista, jotka voidaan luokitella henkilötiedoiksi yleisen tietosuoja-asetuksen mukaisesti:
 * Tuotteen ja palvelun käyttötiedot, kuten käyttäjän toimintalokit
 * Käyttäjän hakupyynnöt ja kyselytiedot
 * Tuotteen ja palveluiden luomat tiedot järjestelmän toiminnallisuuden ja käyttäjien tai muiden järjestelmien vuorovaikutuksen seurauksena
@@ -31,7 +31,9 @@ Microsoft tarjoaa mahdollisuuden käyttää, viedä ja poistaa järjestelmän lu
 Huomaathan, että järjestelmän luomien lokien tietojen rajoittamista tai korjaamista ei tueta. Järjestelmän luomien lokien tiedot ovat oikeita toimia, joita käyttäjä on tehnyt Microsoftin pilvipalveluissa, ja diagnostiikkatiedot&mdash;mukaan lukien niiden muokkaaminen&mdash;vaarantaisi toimien historiatiedot ja lisäisi petos- ja tietoturvariskejä.
 
 ## <a name="accessing-and-exporting-system-generated-logs"></a>Järjestelmän luomien lokien käyttäminen ja vienti
-Järjestelmänvalvojat pääsevät käsiksi järjestelmän luomiin lokeihin, jotka sisältävät tietoja siitä, miten käyttäjä on käyttänyt PowerApps-, Microsoft Flow- ja CDS for Apps -palveluita ja -sovelluksia. Järjestelmän luomien lokien käyttäminen ja vienti:
+Järjestelmänvalvojat pääsevät käsiksi järjestelmän luomiin lokeihin, jotka sisältävät tietoja siitä, miten käyttäjä on käyttänyt PowerApps-, Microsoft Flow- ja Common Data Service (CDS) for Apps -palveluita ja -sovelluksia.
+
+Järjestelmän luomien lokien käyttäminen ja vienti:
 
 1. Siirry [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/) -portaaliin ja kirjaudu sisään Office 365:n yleisen järjestelmänvalvojan tunnistetiedoilla.
 
@@ -55,7 +57,7 @@ Seuraavassa taulukossa on yhteenveto järjestelmän luomien lokien käytöstä j
 | Miltä järjestelmän luomien lokien tiedot näyttävät? |  Esimerkki järjestelmän luomasta lokitietueesta JSON-muodossa: <br> [{ <br>"DateTime": "2017-04- 28T12:09:29-07:00",  <br> "AppName": "SharePoint", <br> "Action": "OpenFile", "IP": "154.192.13.131", <br> "DevicePlatform": "Windows 1.0.1607" <br>}]
 
 > [!NOTE]
->  Jotkin ominaisuudet eivät salli henkilötietoja sisältävien järjestelmän luomien lokien viemistä tai poistamista, jotta kyseisten tietojen koskemattomuus säilyy suojaus- ja valvontasyistä.
+>  Turvallisuus- ja valvontasyistä jotkin ominaisuudet eivät salli henkilötietoja sisältävien järjestelmän luomien lokien viemistä tai poistamista, jotta kyseisten tietojen koskemattomuus säilyy.
 >
 >
 

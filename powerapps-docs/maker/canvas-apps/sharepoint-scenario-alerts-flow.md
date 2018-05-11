@@ -1,34 +1,31 @@
 ---
-title: Määritä tietoilmoituksia Power BI -koontinäyttöön | Microsoft Docs
+title: Tietoilmoitusten määrittäminen Power BI -koontinäyttöön | Microsoft Docs
 description: Tässä tehtävässä lisäämme Power BI:hin ilmoituksen, joka hälyttää, jos odottavien projektien hyväksyminen kestää liian kauan, ja työnkulun, joka reagoi ilmoituksen tapahtuessa.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 91d1fc6872992823aaa3c5c7baa9f36efd2fc99f
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 663c5dfcad45e65044958c9d3b8b1aa111840a61
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="set-up-data-alerts-for-the-power-bi-dashboard"></a>Määritä tietoilmoituksia Power BI -koontinäyttöön
+# <a name="set-up-data-alerts-for-the-power-bi-dashboard"></a>Tietoilmoitusten määrittäminen Power BI -koontinäyttöön
 > [!NOTE]
 > Tämä artikkeli on osa opetusohjelmasarjaa PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämisestä SharePoint Onlinen kanssa. Varmista, että luet [sarjan esittelyn](sharepoint-scenario-intro.md), jotta saat paremman käsityksen kokonaiskuvasta, sekä aiheeseen liittyvät ladattavat tiedostot.
 
 Tässä tehtävässä lisäämme Power BI:hin ilmoituksen, joka hälyttää, jos odottavien projektien hyväksyminen kestää liian kauan, ja työnkulun, joka reagoi ilmoituksen tapahtuessa. Katso lisätietoja ilmoituksista kohdasta [Tietoilmoitukset Power BI -palvelussa](https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
-## <a name="step-1-create-an-alert"></a>Vaihe 1: Luo ilmoitus
-1. Avaa viime tehtävässä luomasi koontinäyttö Power BI -palvelussa.
+## <a name="step-1-create-an-alert"></a>Vaihe 1: luo ilmoitus
+1. Avaa edellisessä tehtävässä luomasi koontinäyttö Power BI -palvelussa.
 2. Napsauta tai napauta yksinumeroisen kortin kolmea pistettä (**. . .**).
    
     ![Päivien enimmäismäärä hyväksynnän odottamiselle -kortti](./media/sharepoint-scenario-alerts-flow/07-01-01-tile-ellipsis.png)
@@ -46,7 +43,7 @@ Ilmoitus ei käynnisty juuri nyt, vaikka 56 on suurempi kuin raja-arvo 25. Se k�
 
 Kun ilmoitukset käynnistyvät, Power BI lähettää sähköpostiviestin ilmoituksen tekijälle. Seuraavassa vaiheessa selvitämme, miten Microsoft Flow’lla voidaan lähettää muita viestejä.
 
-## <a name="step-2-create-a-flow-that-responds-to-the-alert"></a>Vaihe 2: Luo työnkulku, joka reagoi ilmoitukseen
+## <a name="step-2-create-a-flow-that-responds-to-the-alert"></a>Vaihe 2: luo työnkulku, joka reagoi ilmoitukseen
 1. Kirjaudu osoitteeseen flow.microsoft.com ja napsauta tai napauta kohtaa **Palvelut** ja sitten **Power BI**.
    
     ![Power BI Microsoft Flow’ssa](./media/sharepoint-scenario-alerts-flow/07-01-05-power-bi.png)

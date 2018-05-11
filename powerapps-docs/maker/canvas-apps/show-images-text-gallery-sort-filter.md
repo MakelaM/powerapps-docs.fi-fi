@@ -1,24 +1,21 @@
 ---
 title: Näytä, lajittele ja suodata tietoja valikoimassa | Microsoft Docs
 description: Valikoiman avulla voit näyttää kuvia ja tekstiä. Lajittele ja suodata kuvia PowerAppsissa.
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/02/2015
 ms.author: lonu
-ms.openlocfilehash: 5bf013ffb77b757aed7a900ac4c35c2693859285
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 959431b69d4f432335997697d8f25b5b8815d63c
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Näytä, lajittele ja suodata tietoja PowerApps-valikoimassa
 Luo valikoima, jonka avulla voit näyttää kuvia ja tekstiä useista tuotteista, ja lajittele ja suodata näitä tietoja.
@@ -31,7 +28,7 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
 > 
 
 ### <a name="prerequisites"></a>Edellytykset
-* [Kirjaudu](../signup-for-powerapps.md) PowerAppsiin ja [asenna](http://aka.ms/powerappsinstall) PowerApps. Kun avaat PowerAppsin, kirjaudu samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo tablettisovellus [mallista](get-started-test-drive.md), [tiedoista](get-started-create-from-data.md) tai [tyhjästä](get-started-create-from-blank.md).
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 * Näissä vaiheissa käytetään [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip)-sovellusta mallisyötetietoina, jotka sisältävät .jpg-kuvia. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoja tai tuoda omasi.

@@ -1,25 +1,22 @@
 ---
 title: 'Selite-ohjausobjekti: viitetiedot | Microsoft Docs'
 description: Tietoja selite-ohjausobjektista, mukaan lukien ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: f0547963060d31f86b32cc2aaff38b116d35036b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: caa8cf8678a509e4d66442f790b8d89905d48b92
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="label-control-in-powerapps"></a>Selite-ohjausobjekti PowerAppsissa
 Kenttä, jossa näkyy arvoja, kuten tekstiä, numeroita, päivämääriä tai valuutta.
@@ -59,6 +56,10 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
+
 **[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
@@ -87,15 +88,17 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedColor](properties-color-border.md)** –Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
+**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti yliviivattua.
+**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
 
-**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin hiiren osoittimen ollessa ohjausobjektin päällä.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
 
 **[Underline](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti alleviivattua.
 
@@ -140,3 +143,28 @@ Tässä toimenpiteessä luot kokoelman, jonka nimi on **KaupunkienVäkiluvut**. 
     Kun valikoima on valittuna, oikeanpuoleisessa ruudussa näkyvät valikoimaa koskevat vaihtoehdot.
 4. Määritä **Gallery1**-ruudussa, ylimmäksi luetteloksi **Väkiluku**, keskimmäiseksi luetteloksi **Kaupunki** ja alimmaiseksi luetteloksi **Maa**.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Nimestään huolimatta **Label**-ohjausobjektia ei tarvitse käyttää toisen ohjausobjektin nimenä. Sen avulla voidaan näyttää mikä tahansa teksti.
+
+**Label**-ohjausobjektia voidaan käyttää painikkeena tai linkkinä määrittämällä **[OnSelect](properties-core.md)**-toiminta. Tällä tavalla käytettynä siinä on samanlaisia helppokäyttötoimintojen kannalta huomioon otettavia seikkoja kuin painikkeilla.
+
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **[Color](properties-color-border.md)** ja **[Fill](properties-color-border.md)**
+* Muut [tavalliset värien kontrasti vaatimukset](../accessible-apps-color.md) pätevät (käytettäessä painikkeena tai linkkinä)
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[Tekstiä](properties-core.md)** on oltava.
+
+    > [!NOTE]
+> Näytönlukuohjelmat käsittelevät **Label**-ohjausobjekteja painikkeina, kun **[TabIndex](properties-accessibility.md)** on nolla tai suurempi.
+
+### <a name="low-vision-support"></a>Huonon näön tuki
+* **Label**-ohjausobjektin pitäisi näyttää linkiltä, jos sitä käytetään linkkinä.
+    * Määritä **[Underline](properties-text.md)**-asetuksen arvoksi **true**
+    * **[HoverColor](properties-color-border.md)** -ohjausobjektin asetuksen tulee olla eri kuin  **[Color](properties-color-border.md)**-ohjausobjektin asetuksen
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)** -asetuksen on oltava nolla tai suurempi, jos tekstiä käytetään painikkeena tai linkkinä. Näin näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistusilmaisimien on oltava selvästi näkyvissä, jos tekstiä käytetään painikkeena tai linkkinä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.

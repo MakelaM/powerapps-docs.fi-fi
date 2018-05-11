@@ -1,25 +1,22 @@
 ---
 title: 'Kuvan ohjausobjekti: viitetiedot | Microsoft Docs'
 description: Kuva-ohjausobjektin tiedot, mukaan lukien ominaisuudet ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 0ab25713976e9f89fa74b5f7664b13dca447841e
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: bd07c6ee0a0084171c928c6908c33caae974d765
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="image-control-in-powerapps"></a>Kuva-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka näyttää kuvan esimerkiksi paikallisesta tiedostosta tai tietolähteestä.
@@ -31,6 +28,8 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 **[Image](properties-visual.md)** – Kuvan, äänen tai mikrofonin ohjausobjektissa näkyvän kuvan nimi.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
+
 **ApplyEXIFOrientation** – Määrittää, käytetäänkö automaattisesti kuvan EXIF-tiedoissa olevaa suuntaa.
 
 **AutoDisableOnSelect** – Poistaa ohjausobjektin automaattisesti käytöstä OnSelect-toiminnon suorittamisen ajaksi.
@@ -39,9 +38,7 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **[BorderStyle](properties-color-border.md)**  – Onko ohjausobjektin reuna **Solid** (kiinteä), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
 
-**[Reunan paksuus](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
-
-**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin näppäimistösyötteisen reunan paksuus.
+**[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
 **CalculateOriginalDimensions** – Ottaa käyttöön ominaisuudet **OriginalHeight** (alkuperäinen korkeus) ja **OriginalWidth** (alkuperäinen leveys).
 
@@ -57,7 +54,11 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **FlipVertical** – Määrittää, käännetäänkö kuva pystysuunnassa ennen sen näyttämistä.
 
-**[Height](properties-size-location.md)** – Ohjausobjektin korkeus eli sen ylä- ja alareunan välinen etäisyys.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
+
+**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
@@ -93,7 +94,9 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **[RadiusTopRight](properties-size-location.md)** – Oikean yläkulman pyöristysmäärä.
 
-**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin hiiren osoittimen ollessa ohjausobjektin päällä.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
 
 **Transparency** – Läpinäkyvyys eli missä määrin kuvan takana olevat ohjausobjektit pysyvät näkyvissä.
 
@@ -130,3 +133,25 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
     **Valikoima**-ohjausobjekti näyttää lataamasi Excel-tiedoston linkkeihin pohjautuvia kuvia kokolattiamatoista sekä puu- ja laattalattioista.
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+* [Tavalliset värikontrastivaatimukset](../accessible-apps-color.md) pätevät käytettäessä kuvaa painikkeena.
+* Harkitse kuvan kontrastiongelmien tarkistamista, jos se ei ole pelkästään koristeena.
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava olemassa, jos kuvaa käytetään painikkeena tai muussa kuin koristeellisessa tarkoituksessa.
+* **[AccessibleLabel](properties-accessibility.md)** on oltava tyhjä tai tyhjä merkkijono **""**, jos kuva on pelkästään koristeena. Näin näytönlukuohjelmat voivat ohittaa kuvan.
+* **[AccessibleLabel](properties-accessibility.md)** voi olla tyhjä tai tyhjä merkkijono **""**, jos kuvassa esitetään tarpeetonta tietoa.
+    * Esimerkiksi **kuva** rataksista yhdessä **[AccessibleLabel](properties-accessibility.md)**-objektin kanssa, jonka arvo on **Asetukset**. Kuvaa ei käytetä painikkeena. Se on **[selitteen](control-text-box.md)** vieressä, jossa lukee myös **Asetukset**. Näytönlukuohjelmat lukevat kuvan tekstinä **Asetukset**, ja sitten myös selitteen tekstinä **Asetukset**. Tämä on tarpeetonta. Tässä tapauksessa **kuva** ei tarvitse **[AccessibleLabel](properties-accessibility.md)**-objektia.
+
+    > [!IMPORTANT]
+> Näytönlukuohjelmat lukevat aina **kuva**t, joilla **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, riippumatta siitä, onko **[AccessibleLabel](properties-accessibility.md)** tyhjä vai ei. Tämä johtuu siitä, että ne hahmonnetaan painikkeina. Jos **[AccessibleLabel](properties-accessibility.md)**-objektia ei ole, näytönlukuohjelmat lukevat kuvan **painikkeena**.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-objektin arvo on oltava suurempi tai yhtä suuri kuin 0, jos kuvaa käytetään painikkeena. Näin näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistusilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+
+    > [!NOTE]
+> Jos **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, **kuva** hahmonnetaan painikkeena. Kuvan visuaalinen ulkoasu ei muutu, mutta näytönlukuohjelmat tunnistavat kuvan oikein painikkeeksi. Jos **[TabIndex](properties-accessibility.md)** on pienempi kuin 0, **kuva** tunnistetaan kuvana.

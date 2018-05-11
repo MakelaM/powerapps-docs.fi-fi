@@ -1,25 +1,22 @@
 ---
 title: Luokitus-ohjausobjektin viitetiedot| Microsoft Docs
 description: Tietoja Luokitus-ohjausobjektista, mukaan lukien ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 4dd23b8c94ee4760e40b4513e7a88667f85c3a4b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 1df75e5de1f0d8a2515b4dcf761593145d72f70a
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rating-control-in-powerapps"></a>Luokitus-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ilmaista arvon numeron 1 ja määrittämäsi suurimman numeron väliltä.
@@ -33,17 +30,21 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 **Max** – Suurin arvo, jonka käyttäjä voi antaa liukusäätimelle tai luokitukselle.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
+
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
-
-**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin näppäimistösyötteisen reunan paksuus.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
+
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -59,11 +60,11 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 
 **ShowValue** – Näytetäänkö liukusäätimen tai luokituksen arvo, kun käyttäjä muuttaa kyseistä arvoa tai pitää osoitinta ohjausobjektin päällä.
 
-**[TabIndex](properties-accessibility.md)**  – Mukauttaa ohjausobjektien sarkainjärjestystä suorituksen aikana, kun arvona on nollasta poikkeava arvo.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
 
-**[Näkyvissä](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilotettu.
+**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
@@ -91,3 +92,24 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
     **[Tekstisyöte](control-text-input.md)**-ohjausobjektin vihjeteksti muuttuu alhaista luokitusta vastaavaksi.
 6. Palaa oletustyötilaan painamalla Esc-näppäintä.
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **RatingFill** ja **[Fill](properties-color-border.md)**
+
+Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+
+    > [!NOTE]
+> Näytönlukuohjelmat käsittelevät **Rating** -ohjausobjektin valintanappeina.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+* Jos tähtiä on liikaa, harkitse eri ohjausobjektin käyttämistä. Muuten käyttö näppäimistöllä voi olla vaikeaa ja valinnan tekeminen tarkasti kosketusnäytöllä vaikeaa.
+
+    > [!NOTE]
+> **Rating**-kohteessa voidaan käyttää samoja valintanappien näppäimistövuorovaikutuksia.

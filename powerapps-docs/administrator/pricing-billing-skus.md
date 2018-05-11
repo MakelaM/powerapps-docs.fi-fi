@@ -5,7 +5,7 @@ services: ''
 suite: powerapps
 documentationcenter: na
 author: jamesol-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -13,13 +13,13 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 01/19/2017
+ms.date: 04/24/2018
 ms.author: jamesol
-ms.openlocfilehash: f3b53905bb335cf61eae3e184d4984d56907fe4c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 5fb57b7e790d22a4b055b073c7d60e1d65a69b81
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="licensing-overview"></a>Käyttöoikeuksien yleiskatsaus
 PowerAppsin käyttöoikeudet myönnetään käyttäjäkohtaisesti. Jokainen käyttäjä, joka luo tai suorittaa sovelluksia palvelun avulla, tarvitsee käyttöoikeuden. Office 365- ja Dynamics 365 -asiakkaat hyötyvät heti PowerApps- ja Microsoft Flow -ominaisuuksista, jotka sisältyvät näihin palveluihin. Asiakkaat, jotka haluavat kehittää sovelluksia ja työnkulkuja, jotka käyttävät Office 365:n ja Dynamics 365:n ulkopuolisia tietolähteitä tai tarvitsevat lisätoimintoja, voivat ostaa erilliset PowerApps- ja Microsoft Flow -tilaukset. Näiden eri käyttöoikeusryhmien välillä on merkittäviä eroja.
@@ -35,7 +35,7 @@ Office 365:n ja Dynamics 365:n PowerApps-ominaisuuksien avulla käyttäjät voiv
 |  | Sisältyvät palvelupaketit |
 | --- | --- |
 | Mitkä Microsoft Office 365 -palvelupaketit sisältävät PowerAppsin? |Nämä palvelupaketit sisältävät PowerApps for Office 365:n: <br><br>Office 365 Business Essentials <br>Office 365 Business Premium <br>Office 365 Education <br>Office 365 Education Plus <br>Office 365 Enterprise E1 <br>Office 365 Enterprise E3 <br>Office 365 Enterprise E5<br><br>*Office 365 Enterprise E2 sisältää samat ominaisuudet kuin Office 365 Enterprise E1, ja Office 365 Enterprise E4 sisältää samat ominaisuudet kuin Office 365 Enterprise E3.*<br><br>Office 365 Enterprise F1 sisältää PowerApps for Office 365 Enterprise F1:n. |
-| Mitkä Microsoft Dynamics 365 -sovellukset ja palvelupaketit sisältävät PowerAppsin? |Nämä sovellukset sisältävät PowerApps for Dynamics 365:n:<br><br>Dynamics 365 for Sales, Enterprise edition <br>Dynamics 365 for Customer Service, Enterprise edition <br>Dynamics 365 for Operations, Enterprise edition <br>Dynamics 365 for Field Service, Enterprise edition <br>Dynamics 365 for Project Service Automation, Enterprise edition <br>Dynamics 365 for Team Members, Enterprise edition <br>Dynamics 365 for Financials, Business edition <br>Dynamics 365 for Team Members, Business edition <br><br>Nämä palvelupaketit sisältävät PowerAppsin palvelupaketin 2:<br><br>Dynamics 365, Enterprise edition, palvelupaketti 1<br>Dynamics 365, Enterprise edition, palvelupaketti 2 <br><br>*PowerApps for Dynamics 365 sisältyy myös olemassa oleviin CRM Online Enterprise, Professional, Basic ja Essential -tilauksiin.* |
+| Mitkä Microsoft Dynamics 365 -sovellukset ja palvelupaketit sisältävät PowerAppsin? |Nämä sovellukset sisältävät PowerApps for Dynamics 365:n:<br><br>Dynamics 365 for Team Members Enterprise edition <br>Dynamics 365 for Financials Business edition <br>Dynamics 365 for Team Members Business edition<br>Dynamics 365 for Talent <br><br>Nämä palvelupaketit sisältävät PowerAppsin palvelupaketin 2:<br><br>Dynamics 365 Customer Engagement Plan Enterprise Edition<br>Dynamics 365 Plan Enterprise Edition <br>Dynamics 365 for Sales Enterprise edition <br>Dynamics 365 for Customer Service Enterprise edition<br>Dynamics 365 for Case Management Enterprise Edition <br>Dynamics 365 for Operations Enterprise edition <br>Dynamics 365 for Field Service Enterprise edition <br>Dynamics 365 for Project Service Automation Enterprise edition<br>Microsoft Relationship Sales Solution <br><br>*PowerApps for Dynamics 365 sisältyy myös Dynamics CRM Online Enterprisen, Professionalin, Basicin ja Essentialin tilauksiin.* |
 
 ### <a name="powerapps-for-office-365-enterprise-f1"></a>PowerApps for Office 365 Enterprise F1
 PowerApps sisältyy Office 365 Enterprise F1:een. Sen avulla käyttäjät voivat suorittaa sovelluksia ja automatisoida työnkulkuja. Käyttäjät eivät voi kuitenkaan luoda sovelluksia tässä palvelupaketissa (toisin kuin esimerkiksi Office 365 E1-, E3- ja E5-palvelupaketeissa). Tässä taulukossa on tarkemmat tiedot siitä, mitä käyttäjät voivat tehdä PowerApps for Office 365 Enterprise F1:llä:

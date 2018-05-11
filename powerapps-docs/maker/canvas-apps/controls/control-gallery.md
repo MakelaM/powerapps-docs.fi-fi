@@ -1,25 +1,22 @@
 ---
 title: 'Valikoima-ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja, kuten ominaisuudet ja esimerkkejä, Valikoima-ohjausobjektista
-services: ''
-suite: powerapps
 documentationcenter: na
-author: RickSaling
-manager: anneta
+author: fikaradz
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
-ms.openlocfilehash: 9839059cca741e47f5f519a45e7291847c1bc792
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: dde430d6174af5be75a4fc8ae13dabd6f3759899
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="gallery-control-in-powerapps"></a>PowerAppsin Valikoima-ohjausobjekti
 Ohjausobjekti, joka sisältää muita ohjausobjekteja ja tietoja.
@@ -37,15 +34,17 @@ Saatavilla on ennalta määritettyjä Valikoima-ohjausobjekteja kuvien ja teksti
 **Selected** – Valittu kohde.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi. Käytetään kuvaamaan kohteiden luetteloa.
+
 **AllItems** – Kaikki valikoiman kohteet, mukaan lukien lisäohjausarvot, jotka ovat osa valikoiman mallipohjaa.
 
 **[Reunan väri](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[Reunan tyyli](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
-**[Reunan paksuus](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
+**[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus pois käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -77,7 +76,7 @@ Saatavilla on ennalta määritettyjä Valikoima-ohjausobjekteja kuvien ja teksti
 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 [**Filter**( *Tietolähde*, *Kaava* )](../functions/function-filter-lookup.md)
@@ -96,3 +95,22 @@ Saatavilla on ennalta määritettyjä Valikoima-ohjausobjekteja kuvien ja teksti
 * [Äänien vastaanottaminen](control-microphone.md#example)
 * [Piirustusten vastaanottaminen](control-pen-input.md#create-a-set-of-images)
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, seuraavien objektien välillä on oltava asianmukainen värikontrasti:
+* **[BorderColor](properties-color-border.md)** ja väri valikoiman ulkopuolella (jos reuna on käytössä)
+* **[Täyttö](properties-color-border.md)** ja väri valikoiman ulkopuolella (jos reuna ei ole käytössä)
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+
+    > [!NOTE]
+> Näytönlukuohjelmat ilmoittavat, kun valikoiman kohteet muuttuvat. **AccessibleLabel** mainitaan myös. Tämä antaa ilmoitukselle kontekstin, mikä on erityisen tärkeää, jos samassa näytössä on useampi valikoima.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* Suosittelemme asettamaan **ShowScrollbar**-ominaisuuden arvoksi **tosi**. Useimmissa kosketusnäyttölaitteissa vierityspalkki näytetään ainoastaan vierittäessä.
+* Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, vain näppäimistöä käyttävien käyttäjien on myös voitava valita kohteet jollain tavalla. Voit mahdollistaa tämän lisäämällä **[painikkeen](control-button.md)**, jonka **OnSelect**-ominaisuuden arvoksi on asetettu **Select(Parent)**.
+
+    > [!NOTE]
+> Valikoiman ulkopuolella olevia ohjausobjekteja ei oteta huomioon valikoimassa käytettävässä näppäimistön siirtymisjärjestyksessä. Valikoiman ohjausobjektien **[TabIndex](properties-accessibility.md)**-ominaisuus on rajoitettu. Lue lisätietoja [helppokäyttöisyysasetuksista](properties-accessibility.md).

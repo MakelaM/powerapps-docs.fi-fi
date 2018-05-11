@@ -1,30 +1,27 @@
 ---
 title: Upota multimediatiedostoja sovellukseen ja lataa niitä | Microsoft Docs
 description: Multimediatiedostojen näyttäminen sovelluksessa ja niiden lataaminen tietolähteeseen
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: karthik-1
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 75ec8131a4e9a4be796f06669d8d25ff559eaf69
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4d622eb6cdfaed91547a59be8f5a5dc6651957e5
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
-Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä on Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
+Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
 
 ## <a name="prerequisites"></a>Edellytykset
-[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [asenna](http://aka.ms/powerappsinstall) se. Kun avaat PowerAppsin, kirjaudu samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
 ## <a name="add-media-from-a-file-or-the-cloud"></a>Lisää media tiedostosta tai pilvipalvelusta
 Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ääni).
@@ -45,22 +42,22 @@ Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ä
 
     ![Valitse mediatyyppi][8]
 
-6. Jos olet lisännyt kuvan ohjausobjektin, aseta sen **[Kuva](controls/properties-visual.md)**-ominaisuus lisäämääsi tiedostoon:  
+6. Jos olet lisännyt kuvan ohjausobjektin, aseta sen **[Image](controls/properties-visual.md)**-ominaisuus lisäämääsi tiedostoon:  
 
     ![Määritä kuvan ominaisuus](./media/add-images-pictures-audio-video/imageproperty.png)
 
     > [!NOTE]
-> Määritä vain tiedoston nimi, ilman tiedostopäätettä, yksinkertaisten lainausmerkkien sisälle.
+> Määritä vain tiedoston nimi, ilman tiedostopäätettä ja puolilainausmerkeissä.
 
 7. Jos olet lisännyt video- tai ääniohjausobjektin, aseta sen **Media**-ominaisuus lisäämääsi tiedostoon:  
 
     ![Määritä mediaominaisuus](./media/add-images-pictures-audio-video/mediaproperty.png)
 
     > [!NOTE]
-> Toista YouTube-video asettamalla video-ohjausobjektin **Media**-ominaisuus oikeaan URL-osoitteeseen lainausmerkeillä ympäröitynä.
+> Toista YouTube-video asettamalla video-ohjausobjektin **Media**-ominaisuus oikeaan URL-osoitteeseen lainausmerkkien sisään.
 
 ## <a name="add-media-from-azure-media-services"></a>Median lisääminen Microsoft Azure -mediapalveluista
-1. Lataa ja julkaise videoresurssisi Azure Media Services -tililtäsi kohteesta **AMS > Asetukset > resurssit**.
+1. Lataa ja julkaise videoresurssisi Azure-mediapalveluiden tililtäsi kohteesta **AMS > Asetukset > Resurssit**.
 
 2. Kun video on julkaistu, kopioi sen URL-osoite.
 
@@ -86,11 +83,11 @@ Tämä skenaario käyttää [CreateFirstApp.zip](http://pwrappssamples.blob.core
 
 3. Luo yksisarakkeinen taulukko Excel-laskentataulukossa ja täytä siihen seuraavat tiedot:
 
-    ![Takit-taulukko](./media/add-images-pictures-audio-video/jackets.png)
+    ![Jackets-taulukko](./media/add-images-pictures-audio-video/jackets.png)
 
-4. Anna taulukolle nimi **Takit** ja Excel-tiedostolle nimi **Assets.xlsx**.
+4. Anna taulukolle nimi **Jackets** ja Excel-tiedostolle nimi **Assets.xlsx**.
 
-5. Lataa **Takit**-taulukko tietolähteeksi sovellukseesi.  
+5. Lataa **Jackets**-taulukko tietolähteeksi sovellukseesi.  
 
 6. Lisää **Vain kuva** -ohjausobjekti (**Lisää**-välilehti > **Valikoima**) ja aseta sen **Items**-ominaisuudeksi `Jackets`:  
 
@@ -100,12 +97,12 @@ Tämä skenaario käyttää [CreateFirstApp.zip](http://pwrappssamples.blob.core
 
     ![Takkien kuvat](./media/add-images-pictures-audio-video/images.png)
 
-    Kun määrität **Items**-ominaisuuden, sarake, jonka nimi on **PowerAppsId** lisätään automaattisesti Excel-taulukkoon.
+    Kun määrität **Items**-ominaisuuden, sarake, jonka nimi on **PowerAppsId**, lisätään automaattisesti Excel-taulukkoon.
 
-    Excel-taulukon kuvan polku voi olla myös kuvan URL-osoite. Esimerkkinä on [Lattiapäällystearviot](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx)-mallitiedosto. Voit ladata sen pilvipalvelun tallennustiliisi, lisätä `FlooringEstimates` taulukon tietolähteeksi sovelluksellesi ja määrittää sitten valikoiman ohjausobjektiksi `FlooringEstimates`. Kuvat päivitetään automaattisesti valikoimaan.
+    Excel-taulukon kuvan polku voi olla myös kuvan URL-osoite. Esimerkkinä on [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) -mallitiedosto. Voit ladata sen pilvipalvelun tallennustiliisi, lisätä `FlooringEstimates`-taulukon tietolähteeksi sovelluksellesi ja määrittää sitten valikoiman ohjausobjektiksi `FlooringEstimates`. Kuvat päivitetään automaattisesti valikoimaan.
 
 ## <a name="upload-pen-drawings-to-the-cloud"></a>Lataa kynäpiirustukset pilveen
-Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive for Business -palveluun ja tutkit, miten piirustukset tallennetaan sinne.
+Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive for Business -palveluun, ja näet, miten piirustukset tallennetaan sinne.
 
 1. Lisää Excelissä **Image [image]** soluun A1.
 
@@ -121,9 +118,9 @@ Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive
 
        Excel-tiedostosi on nyt taulukkomuodossa. Katso kohdasta [Muotoile tiedot taulukoksi](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) lisätietoja taulukon muotoilusta Excelissä.
 
-   4. Anna taulukolle nimi **Piirustukset**:
+   4. Anna taulukolle nimi **Drawings**:
 
-       ![Anna taulukon uudeksi nimeksi Piirustukset](./media/add-images-pictures-audio-video/name-media-table.png)
+       ![Anna taulukon uudeksi nimeksi Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
 3. Tallenna Excel-tiedosto OneDrive for Business -palveluun nimellä **SavePen.xlsx**.
 
@@ -141,11 +138,11 @@ Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive
 
    3. Napsauta tai napauta tiedostoa **SavePen.xlsx**.
 
-   4. Valitse **Piirustukset**-taulukko ja napsauta tai napauta sitten kohtaa **Yhdistä**.
+   4. Valitse **Drawings**-taulukko ja napsauta tai napauta sitten kohtaa **Yhdistä**.
 
        ![Yhdistä](./media/add-images-pictures-audio-video/savepen.png)  
 
-       Nyt Piirustukset-taulukko luetteloidaan tietolähteeksi.
+       Nyt Drawings-taulukko luetteloidaan tietolähteeksi.
 
 6. Valitse **Lisää**-välilehdestä **Teksti** ja valitse sitten **Kynäsyöte**.
 
@@ -155,11 +152,11 @@ Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive
 
 8. Lisää **Lisää**-välilehdessä **Button**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    **Patch(Piirustukset, Defaults(Piirustukset), {Image:MyPen.Image})**
+    **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
 
 9. Lisää **Kuvavalikoima**-ohjausobjekti (**Lisää**-välilehti > **Valikoima**) ja aseta sen **Items**-ominaisuudeksi `Drawings`. Valikoima-ohjausobjektin **Image**-ominaisuudeksi asetetaan automaattisesti `ThisItem.Image`.
 
-    Järjestä ohjausobjektit niin, että näyttösi näyttää seuraavalta:  
+    Järjestä ohjausobjektit niin, että näyttösi näyttää tältä:  
 
     ![Mallinäyttö](./media/add-images-pictures-audio-video/screen.png)
 
@@ -177,13 +174,13 @@ Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive
 
     Pilvitallennuspalvelun tilillesi on luotu automaattisesti **SavePen_images**-kansio. Tämä kansio sisältää tallennetut kuvasi ja niiden tiedostonimien tunnukset. Jotta saat kansion näkyviin, sinun on ehkä päivitettävä selainikkuna esimerkiksi painamalla F5-näppäintä.
 
-    Tiedostossa **SavePen.xlsx**, **Kuva**-sarake määrittää uusien kuvien polun.
+    Tiedoston **SavePen.xlsx** **Image**-sarake määrittää uusien kuvien polun.
 
 ### <a name="known-limitations"></a>Tunnetut rajoitukset
 [Tutustu näihin rajoituksiin](connections/cloud-storage-blob-connections.md#known-limitations) saadaksesi lisätietoja siitä, miten voit jakaa Excel-tietoja organisaatiossasi.
 
 ## <a name="for-more-information"></a>Lisätietoja
-Muista testata sovelluksesi eri ympäristöissä, mukaan lukien [selainikkunassa](https://home.dynamics.com/) ja puhelimessa.
+Muista testata sovelluksesi eri ympäristöissä, kuten [selainikkunassa](https://home.dynamics.com/) ja puhelimessa.
 
 Lisätietoja kehittyneemmistä skenaarioista, joihin liittyy multamediatiedostojen lataaminen suoraan toiseen tietolähteeseen, on kohdissa [Ammattilaistason vihjeitä kuvakaappauksia varten](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) ja [Mukautetut liittimet kuvan palvelimeen lataamista varten](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
 

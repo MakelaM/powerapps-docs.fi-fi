@@ -1,26 +1,23 @@
 ---
 title: Kuvien lisääminen Exceliin | Microsoft Docs
 description: Vaiheittaiset ohjeet kuvatiedostojen ja kynäpiirustusten lisäämiseen Exceliin pilvipalvelutilillä
-services: ''
-suite: powerapps
 documentationcenter: ''
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/25/2016
-ms.author: sharik
-ms.openlocfilehash: 75b3315833fc6ced9ef3d8eb252d0f8639ccd696
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 29da2a8814b0de7d34915f9992aeb963743785d2
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="add-images-to-excel-from-powerapps"></a>Kuvien lisääminen Exceliin PowerAppsista
+# <a name="add-images-to-excel-from-powerapps"></a>Kuvien lisääminen PowerAppsista Exceliin
 Luo automaattisesti sovellus, jossa käyttäjät voivat näyttää, lisätä tai poistaa kuvia tiedostoista tai piirustuksia **Kynä**-ohjausobjektista. Sovellus perustuu Excel-tiedostoon, joka luodaan ja ladataan pilvipalvelutilille.
 
 ## <a name="prerequisites"></a>Edellytykset
@@ -30,7 +27,7 @@ Luo automaattisesti sovellus, jossa käyttäjät voivat näyttää, lisätä tai
 * [PowerApps-yhteys](add-data-connection.md) pilvitallennustiliin (kuten Dropbox, OneDrive tai Google Drive), jossa voit säilyttää Excel-tiedostoa.
 
 ## <a name="create-the-data-source-and-the-app"></a>Tietolähteen ja sovelluksen luominen
-1. Lisää **Kuvateksti** ja **Kuva [kuva]** kahteen tyhjään Excel-soluun, jotka ovat vierekkäin (esimerkiksi A1 ja B1), ja joiden alla on kaksi tyhjää solua.
+1. Lisää **Kuvateksti** ja **Kuva [kuva]** kahteen tyhjään Excel-soluun, jotka ovat vierekkäin (esimerkiksi A1 ja B1) ja joiden alla on kaksi tyhjää solua.
 2. Muotoile päivittämäsi solut ja niiden alla olevat solut taulukoksi ja anna taulukolle nimi (esimerkiksi **Kuvat**).
    
     ![Taulukon luominen](./media/add-images-to-excel/create-table.png)
@@ -44,22 +41,22 @@ Luo automaattisesti sovellus, jossa käyttäjät voivat näyttää, lisätä tai
 6. Napsauta tai napauta luomaasi taulukkoa kohdassa **Valitse taulukko** ja valitse sitten **Yhdistä**.
    
     ![Valitse taulukkosi](./media/add-images-to-excel/select-table.png)
-7. Jos olet juuri asentanut tai päivittänyt PowerAppsin, katso pikaesittely tai napsauta tai napauta **Ohita**.
+7. Jos pikaesittely tulee näkyviin, katso se tai napsauta tai napauta **Ohita**.
    
     ![Pikaesittelyn ensimmäinen näyttö](./media/add-images-to-excel/quick-tour.png)
 
 ## <a name="add-an-image-from-a-file"></a>Kuvan lisääminen tiedostosta
-1. Avaa esikatselutila painamalla F5 (tai napsauttamalla tai napauttamalla lähellä oikeaa yläkulmaa olevaa toista-painiketta) ja napsauta tai napauta oikeassa yläkulmassa plus-kuvaketta.
+1. Avaa esikatselutila painamalla F5 (tai napsauttamalla tai napauttamalla lähellä oikeaa yläkulmaa olevaa toista-painiketta) ja napsauta tai napauta oikeassa yläkulmassa olevaa plus-kuvaketta.
    
     ![Plus-kuvake](./media/add-images-to-excel/plus-icon.png)
 2. Valitse **Kuvateksti**-ruutu, kirjoita tai liitä lyhyt kuvaus kuvatiedostosta, jonka haluat lisätä ja määritä tiedosto napsauttamalla tai napauttamalla alla olevaa kuvaa.
-3. Etsi **Avaa**-valintaikkunassa tiedosto, jonka haluat lisätä, napsauta tai napauta sitä ja valitse sitten **Avaa**.
+3. Etsi **Avaa**-valintaikkunasta tiedosto, jonka haluat lisätä, napsauta tai napauta sitä ja valitse sitten **Avaa**.
    
     ![Lisää kuvateksti ja kuva](./media/add-images-to-excel/add-image.png)
 4. Tallenna muutokset napsauttamalla tai napauttamalla oikeassa yläkulmassa olevaa valintamerkkikuvaketta.
    
     ![Muutosten tallentaminen](./media/add-images-to-excel/checkmark-icon.png)
-5. Lisätä haluamasi määrä kuvia toistamalla viimeiset kolme vaihetta. Palaa oletustyötilaan painamalla Esc.
+5. Voit lisätä niin monta kuvaa kuin haluat toistamalla viimeiset kolme vaihetta. Palaa oletustyötilaan painamalla Esc.
 6. (valinnainen) Poista toinen **Selite**-ohjausobjekteista, jotka näyttävät kuvan kuvatekstin.
 
 ## <a name="add-a-drawing"></a>Piirustuksen lisääminen
@@ -76,5 +73,5 @@ Luo automaattisesti sovellus, jossa käyttäjät voivat näyttää, lisätä tai
 5. Tallenna muutokset napsauttamalla tai napauttamalla oikeassa yläkulmassa olevaa valintamerkkikuvaketta.
    
     ![Muutosten tallentaminen](./media/add-images-to-excel/checkmark-icon.png)
-6. Lisätä haluamasi määrä kuvia toistamalla viimeiset kaksi vaihetta. Palaa oletustyötilaan painamalla Esc.
+6. Voit lisätä niin monta kuvaa kuin haluat toistamalla viimeiset kaksi vaihetta. Palaa oletustyötilaan painamalla Esc.
 

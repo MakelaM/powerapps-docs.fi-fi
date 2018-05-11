@@ -1,8 +1,6 @@
 ---
 title: PowerAppsin uudet ominaisuudet | Microsoft Docs
 description: PowerApps-päivitykset järjestettynä julkaisupäivän mukaan
-services: powerapps
-suite: powerapps
 documentationcenter: na
 author: skjerland
 manager: kfile
@@ -10,16 +8,15 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/09/2018
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/23/2018
 ms.author: sharik
-ms.openlocfilehash: 92438c37b870ace2ed5b2ec086cf6c5fb1548fdc
-ms.sourcegitcommit: d7ed5144f96d1ecc17084c30ed0e2ba3c6b03c26
+ms.openlocfilehash: 00b80bd5b9e0953366dd58d6e3b3266ffe7956bd
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-powerapps"></a>PowerAppsin uudet ominaisuudet
 Lisätietoja tunnetuista rajoituksista on artikkelissa [Yleisiä ongelmia ja ratkaisuja](common-issues-and-resolutions.md).
@@ -33,6 +30,9 @@ Lisätietoja tunnetuista rajoituksista on artikkelissa [Yleisiä ongelmia ja rat
 Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusia ominaisuuksia omien sovellusten ja laajennusten kehittämistä varten ympäristössämme. [Lataa kevään 2018 julkaisutiedot-PDF](https://aka.ms/businessappsreleasenotes), joka kattaa Dynamics 365:n, PowerAppsin, Microsoft Flow'n ja Power BI:n.
 
 **Tulossa pian:** Jatkamme julkaisutietojen PDF-tiedostojen päivittämistä sitä mukaa, kun ominaisuudet ovat saatavilla, ja tarjoamme tiedot myös verkkosivullamme.
+
+## <a name="apr-23"></a>23. huhti
+* Lataa [liitteet](controls/control-attachments.md) Internet Explorerissa SharePointin mukautetuissa luettelolomakkeissa.
 
 ## <a name="apr-9"></a>9. huhti
 * Leikkaa (Ctrl + X), kopioi (Ctrl + C) ja liitä (Ctrl + V) komentoja&mdash;, mukaan lukien niiden tyylejä, kaavoja ja ominaisuuksia &mdash;kaikkiin sovelluksiin selaimessa.
@@ -50,7 +50,7 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
     - [Tuo tietoja](../common-data-service/data-platform-cds-newentity-pq.md) CDS for Appsiin **Power Querylla**. Käytä Power Queryä verkossa tietojen tuomiseen suoraan CDS for Appsiin useista lähteistä
 
 ## <a name="mar-5"></a>5. maaliskuuta
-1. Lisää (ja poista) [liitteitä](controls/control-attachments.md) SharePoint-luetteloihin.
+1. Lisää [liitteitä](controls/control-attachments.md) SharePoint-luetteloihin (ja poista niitä).
 2. Avaa ulkoisia [PDF](controls/control-pdf-viewer.md)-tiedostoja selaimessa. (Kokeellinen ominaisuus)
 
 ## <a name="feb-12"></a>12. helmikuuta
@@ -58,21 +58,21 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
 
 ## <a name="feb-7"></a>7. helmikuuta
 1. Poistettu zoomaus-, kirkkaus- ja kontrastiominaisuudet [kameran](controls/control-camera.md) ja [viivakoodiskannerin](controls/control-barcodescanner.md) ohjausobjekteista.
-2. Korjattu ongelma, jossa [tekstinsyötön](controls/control-text-input.md) ohjausobjektien tyhjennä-painikkeet rajoittavat tilaa, joka on varattu käyttäjän syötettä varten. Tämän korjauksen tuloksena tekstinsyötön ohjausobjektin [tyhjennä](controls/control-text-input.md#additional-properties)-ominaisuutta tuetaan vain Microsoft Edge- (uusin versio) ja Internet Explorer 11 -selaimissa.
+2. Korjattu ongelma, jossa [tekstinsyötön](controls/control-text-input.md) ohjausobjektien Tyhjennä-painikkeet rajoittavat tilaa, joka on varattu käyttäjän syötettä varten. Tämän korjauksen tuloksena tekstinsyötön ohjausobjektin [Tyhjennä](controls/control-text-input.md#additional-properties)-ominaisuutta tuetaan vain Microsoft Edge- (uusin versio) ja Internet Explorer 11 -selaimissa.
 3. Lisätty helppokäyttötoimintojen parannuksia [multimedian](add-images-pictures-audio-video.md) ohjausobjekteihin.
 
 ## <a name="jan-31"></a>31. tammikuuta
-1. Lisätty tekstitykset [Videon](controls/control-audio-video.md) ohjausobjekteihin.
+1. Lisätty tekstitykset [videon](controls/control-audio-video.md) ohjausobjekteihin.
 2. Parannettu virheenkäsittelyä [PDF-katseluohjelman](controls/control-pdf-viewer.md) ohjausobjekteissa.
 
 ## <a name="jan-18"></a>18. tammikuuta
 1. PowerApps for iOS ja PowerApps for Android tukevat nyt Microsoft Authenticator -integrointia.
-2. [Yhdistelmäruutu](controls/control-combo-box.md) korvaa [SharePoint-hakuohjausobjektin](sharepoint-lookup-fields.md) lomakkeissa, ja uusi [tietokortti](working-with-cards.md)malli yksittäisen valinnan hakukenttiä varten on valittuna oletusarvoisesti PowerApps Studiossa.
+2. [Yhdistelmäruutu](controls/control-combo-box.md) korvaa [SharePoint-hakuohjausobjektin](sharepoint-lookup-fields.md) lomakkeissa, ja uusi [tietokortti](working-with-cards.md)malli yksittäisen valinnan hakukenttiä varten on PowerApps Studiossa valittuna oletusarvoisesti.
 3. [Yhdistelmäruudussa](controls/control-combo-box.md) näet kaikki kohteet pitkänä luettelona parannetussa lukutilassa.
-4. Säädä paikallista tietuerajoitusta niin, että tallennetaan korkeintaan 2000 tietuetta [kyselyille, joita ei voi delegoida](delegation-overview.md#non-delegable-limits). (Kokeellinen ominaisuus)
+4. Säädä paikallista tietuerajoitusta niin, että [kyselyille, joita ei voi delegoida](delegation-overview.md#non-delegable-limits), tallennetaan korkeintaan 2 000 tietuetta. (Kokeellinen ominaisuus)
 
 ## <a name="jan-5"></a>5. tammikuuta
-* Toimi suoraan Power BI-raportin tai koontinäytön tietojen perusteella integroimalla [PowerAppsin mukautettu visualisointi (esikatseluversio)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), joka hakee tilannekohtaisia tietoja Power BI-raportista.
+* Toimi suoraan Power BI -raportin tai koontinäytön tietojen perusteella integroimalla [PowerAppsin mukautettu visualisointi (esikatseluversio)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), joka hakee tilannekohtaisia tietoja Power BI -raportista.
 
 ## <a name="dec-8"></a>8. joulukuuta
 1. [Ehtomallit](working-with-rules.md) sääntöjä varten päättelevät ohjausobjektin yleisiä ominaisuuksia (kuten **teksti** tai **arvo**).
@@ -84,4 +84,4 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
 3. [Mukauta SharePoint-luettelolomakkeita](customize-list-form.md) PowerAppsin avulla.
 
 ## <a name="nov-10"></a>10. marraskuuta
-* [Nimeä sääntöjä uudelleen](working-with-rules.md) sovelluksessa ja näytä säännöt valitun ohjausobjektin ollessa säännön ehto.
+* [Nimeä sääntöjä uudelleen](working-with-rules.md) sovelluksessa ja näytä säännöt, kun valittu ohjausobjekti on säännön ehto.

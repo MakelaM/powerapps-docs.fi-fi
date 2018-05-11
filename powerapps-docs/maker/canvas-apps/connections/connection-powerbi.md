@@ -1,25 +1,22 @@
 ---
 title: Power BI -yhteyden yleiskatsaus | Microsoft Docs
 description: Näytä käytettävissä olevat Power BI -yhteydet
-services: ''
-suite: powerapps
-documentationcenter: na
-author: sirui-sun
-manager: anneta
+documentationcenter: ''
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/12/2016
-ms.author: sirsu
-ms.openlocfilehash: 593e22f042945bd64a0a54e197325cbcf74f3400
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: 6e373bdf618bf9e59deef5d8bddf73c06d6f34fd
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Yhdistä Power BI:hin PowerAppsista
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
@@ -29,7 +26,7 @@ Power BI on liiketoiminta-analytiikkatyökalujen ohjelmapaketti, jolla voi analy
 Näissä ohjeissa neuvotaan, miten voit käyttää Power BI -yhteyttä sovelluksessa, ja käytettävissä olevat toiminnot luetellaan.
 
 ## <a name="prerequisites"></a>Edellytykset
-* [Powerapps.com](https://powerapps.com)-sivuston käyttömahdollisuus tai asennettu [PowerApps](http://aka.ms/powerappsinstall)-sovellus
+* [Rekisteröidy](https://web.powerapps.com).
 * Lisää Power BI -[yhteys](https://powerapps.microsoft.com/tutorials/add-manage-connections/).
 * Luo sovellus [mallista](https://powerapps.microsoft.com/tutorials/get-started-test-drive/), [tiedoista](https://powerapps.microsoft.com/tutorials/get-started-create-from-data/) tai itse [alusta alkaen](https://powerapps.microsoft.com/tutorials/get-started-create-from-blank/).
 

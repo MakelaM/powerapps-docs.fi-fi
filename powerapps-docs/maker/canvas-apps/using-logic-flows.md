@@ -1,34 +1,28 @@
 ---
 title: Käynnistä työnkulku sovelluksessa | Microsoft Docs
 description: Luo työnkulku, joka suorittaa yhden tai useamman tehtävän sovelluksessa ilmenneen tapahtuman jälkeen, kuten käyttäjän painettua painiketta.
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: stepsic-microsoft-com
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 378394fe0c42d0418a62974c26b217ab473d40ed
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 19e30477b7015061a4e4b781e1c53a55d1fda1a7
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-a-flow-in-an-app"></a>Käynnistä työnkulku sovelluksessa
 Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Kirjaudu](../signup-for-powerapps.md) PowerAppsiin ja noudata sitten jompiakumpia seuraavista vaiheista:
-
-  * Asenna PowerApps [Windows Storessa](http://aka.ms/powerappsinstall), avaa se ja kirjaudu sisään samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
-  * Avaa [powerapps.com](http://web.powerapps.com)issa verkon PowerApps Studio napsauttamalla tai napauttamalla vasemmassa alakulmassa **Uusi sovellus**.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Luo työnkulku

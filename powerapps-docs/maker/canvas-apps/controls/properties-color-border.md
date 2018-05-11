@@ -1,25 +1,22 @@
 ---
 title: Väri- ja reunaominaisuudet | Microsoft Docs
 description: Viitetietoja ominaisuuksista, kuten BorderColor, HoverBorderColor ja PressedBorderColor
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 913e9b78445db03fbd59fedbdd0bf9d992175bf1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 5c30d0c96d3d6ad8eee0781a6c209419ba70c860
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="color-and-border-properties-in-powerapps"></a>Väri- ja reunaominaisuudet PowerAppsissa
 ## <a name="overview"></a>Yleiskatsaus
@@ -48,12 +45,17 @@ Nämä ominaisuudet ovat voimassa normaalisti, kun käyttäjä ei ole vuorovaiku
 
 * Koskee ohjausobjekteja **[lisää kuva](control-add-picture.md)**, **[ääni](control-audio-video.md)**, **[painike](control-button.md)**, **[kortti](control-card.md)**, **[valintaruutu](control-check-box.md)**, **[päivämäärävalitsin](control-date-picker.md)**, **[näytä lomake](control-form-detail.md)**, **[avattava valikko](control-drop-down.md)**, **[muokkaa lomaketta](control-form-detail.md)**, **[vie](control-export-import.md)**, **[valikoima](control-gallery.md)**, **[HTML-teksti](control-html-text.md)**, **[kuvake](control-shapes-icons.md)**, **[kuva](control-image.md)**, **[tuo](control-export-import.md)**, **[selite](control-text-box.md)**, **[luetteloruutu](control-list-box.md)**, **[mikrofoni](control-microphone.md)**, **[PDF-katseluohjelma](control-pdf-viewer.md)**, **[kynäsyöte](control-pen-input.md)**, **[valintapainike](control-radio.md)**, **[luokitus](control-rating.md)**, **[näyttö](control-screen.md)**, **[muoto](control-shapes-icons.md)**, **[tekstisyöte](control-text-input.md)**, **[ajastin](control-timer.md)**, **[vaihtopainike](control-toggle.md)** ja **[video](control-audio-video.md)**.
 
-**FocusedBorderThickness** – Ohjausobjektin reunan paksuus, kun sillä on näppäimistökohdistus.
+## <a name="focused"></a>Kohdistettu
+Nämä ominaisuudet ovat käytössä, kun ohjausobjekti on kohdistettuna.
 
-* Koskee ohjausobjekteja **[lisää kuva](control-add-picture.md)**, **[ääni](control-audio-video.md)**, **[painike](control-button.md)**, **[kortti](control-card.md)**, **[valintaruutu](control-check-box.md)**, **[päivämäärävalitsin](control-date-picker.md)**, **[näytä lomake](control-form-detail.md)**, **[avattava valikko](control-drop-down.md)**, **[muokkaa lomaketta](control-form-detail.md)**, **[vie](control-export-import.md)**, **[valikoima](control-gallery.md)**, **[HTML-teksti](control-html-text.md)**, **[kuvake](control-shapes-icons.md)**, **[kuva](control-image.md)**, **[tuo](control-export-import.md)**, **[selite](control-text-box.md)**, **[luetteloruutu](control-list-box.md)**, **[mikrofoni](control-microphone.md)**, **[PDF-katseluohjelma](control-pdf-viewer.md)**, **[kynäsyöte](control-pen-input.md)**, **[valintapainike](control-radio.md)**, **[luokitus](control-rating.md)**, **[näyttö](control-screen.md)**, **[muoto](control-shapes-icons.md)**, **[tekstisyöte](control-text-input.md)**, **[vaihtopainike](control-toggle.md)** ja **[video](control-audio-video.md)**.
+**FocusedBorderColor** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettuna.
+
+**FocusedBorderThickness** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettuna.
+
+* Nämä ominaisuudet koskevat ohjausobjekteja **[Lisää kuva](control-add-picture.md)**, **[Liitteet](control-attachments.md)**, **[Ääni](control-audio-video.md)**, **[Painike](control-button.md)**, **[Kamera](control-camera.md)**, **[Valintaruutu](control-check-box.md)**, **[Yhdistelmäruutu](control-combo-box.md)**, **[Päivämäärän valitsin](control-date-picker.md)**, **[Avattava](control-drop-down.md)**, **[Vie](control-export-import.md)**, **[Valikoima](control-gallery.md)**, **[Kuvake](control-shapes-icons.md)**, **[Kuva](control-image.md)**, **[Tuo](control-export-import.md)**, **[Selite](control-text-box.md)**, **[Luetteloruutu](control-list-box.md)**, **[Mikrofoni](control-microphone.md)**, **[Radio](control-radio.md)**, **[Luokitus](control-rating.md)**, **[Muoto](control-shapes-icons.md)**, **[Liukusäädin](control-slider.md)**, **[Tekstisyöte](control-text-input.md)**, **[Ajastin](control-timer.md)**, **[Vaihda](control-toggle.md)** ja **[Video](control-audio-video.md)**.
 
 ## <a name="disabled"></a>Ei käytössä
-Nämä ominaisuudet ovat käytössä, kun ohjausobjektit on poistettu käytöstä.  Ohjausobjekti voidaan poistaa käytöstä, jos **[poistettu käytöstä](properties-core.md)** -ominaisuuden arvo on *true*.
+Nämä ominaisuudet ovat käytössä, kun ohjausobjekti on poistettu käytöstä.  Ohjausobjekti voidaan poistaa käytöstä, jos **[poistettu käytöstä](properties-core.md)** -ominaisuuden arvo on *true*.
 
 **DisabledBorderColor** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 

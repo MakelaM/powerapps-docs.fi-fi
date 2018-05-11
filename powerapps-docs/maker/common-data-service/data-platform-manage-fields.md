@@ -1,7 +1,6 @@
 ---
-title: Mukautettujen kenttien hallinta entiteetin pika-aloituksessa | Microsoft Docs
-description: Luo, lue, päivitä ja poista entiteetin mukautettuja kenttiä pika-aloituksessa.
-services: powerapps
+title: Mukautettujen kenttien hallinta entiteetissä | Microsoft Docs
+description: Ohjeet räätälöityjen kenttien luomiseen, lukemiseen, päivittämiseen ja poistamiseen CDC for Apps -entiteetissä.
 documentationcenter: na
 author: clwesene
 manager: kfile
@@ -10,29 +9,27 @@ tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 3/21/2018
+ms.component: cds
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 2175b684d88d1823fd2672f672e776ca1e26f164
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ff522ee5d5614888c6cc0fcfb1e7d6658a36c6ae
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="quickstart-manage-custom-fields"></a>Pika-aloitus: mukautettuja kenttien hallinta
+# <a name="manage-custom-fields-in-an-entity"></a>Mukautettujen kenttien hallinta entiteetissä
 Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun entiteetin. Mukautetun kentän luomisen yhteydessä määritetään joukko ominaisuuksia, kuten kentän nimi, näyttönimi ja kentän sisältämien tietojen tyyppi. Lisätietoja on kohdassa [Entiteetin määritteiden metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
-> Jokaisessa entiteetissä on [järjestelmäkenttiä], joista ilmenee esimerkiksi tietueen viimeisin päivitysajankohta ja päivittäjä. Lisäksi [vakioentiteeteissä](data-platform-intro.md#system-fields) on vakiokenttiä (oletuskenttiä). Järjestelmä- ja vakiokenttiä ei voi muokata tai poistaa. Jos luot mukautetun kentän, sen on tarjottava näistä sisäänrakennetuista kentistä poikkeavia lisätoimintoja.
+> Jokaisessa entiteetissä on järjestelmäkenttiä, joista ilmenee esimerkiksi tietueen viimeisin päivitysajankohta ja päivittäjä. Lisäksi vakioentiteeteissä on vakiokenttiä (oletuskenttiä). Järjestelmä- ja vakiokenttiä ei voi muokata tai poistaa. Jos luot mukautetun kentän, sen on tarjottava näistä sisäänrakennetuista kentistä poikkeavia lisätoimintoja.
 
 ## <a name="create-a-field"></a>Kentän luominen
-
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
-    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
+    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "Entiteettiluettelo")
 
-2. Napsauta tai napauta olemassa olevaa entiteettiä tai [Luo uusi entiteetti](data-platform-create-entity.md).
+2. Napsauta tai napauta olemassa olevaa entiteettiä tai [Luo uusi entiteetti](data-platform-create-entity.md)
 
 3. Lisää uusi kenttä entiteettiin napsauttamalla kohtaa **Lisää kenttä**.
 
@@ -64,7 +61,6 @@ Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun 
     Saat ilmoituksen, kun toiminto on suoritettu onnistuneesti. Jos toiminto epäonnistuu, virheilmoitus kertoo ilmenneet ongelmat ja niiden korjauskeinot.
 
 ## <a name="create-a-calculated-or-roll-up-field"></a>Lasketun kentän tai koontikentän luominen
-
 Laskettujen kenttien avulla voit automatisoida organisaation liiketoimintaprosessien manuaalisia laskutoimituksia. Esimerkiksi myyntihenkilö saattaa haluta tietää liiketoimintamahdollisuuden painotetun tuoton, joka lasketaan kertomalla liiketoimintamahdollisuuden tuottoarvio sen todennäköisyydellä. Tai ehkä hän haluaa, että kaikkiin yli 500 euron tilauksiin sovelletaan automaattisesti alennusta. Laskettu kenttä voi sisältää yksinkertaisia laskutoimituksia tai monenlaisia ehdollisia toimintoja, kuten ”suurempi kuin” tai ”tai muuten”. Laskettuja kenttiä voi luoda seuraavilla tietotyypeillä:
 
 * Yksi tekstirivi
@@ -76,7 +72,6 @@ Laskettujen kenttien avulla voit automatisoida organisaation liiketoimintaproses
 * Päivämäärä ja aika
 
 Lisätietoja tuetuista lauseketyypeistä ja esimerkkejä on kohdassa [Laskettujen kenttien määrittely](/dynamics365/customer-engagement/customize/define-calculated-fields).
-
 
 ## <a name="update-or-delete-a-field"></a>Päivitä tai poista kenttä
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio, napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa ja valitse entiteetti.
@@ -93,7 +88,7 @@ Lisätietoja tuetuista lauseketyypeistä ja esimerkkejä on kohdassa [Laskettuje
     Saat ilmoituksen, kun toiminto on suoritettu onnistuneesti. Jos toiminto epäonnistuu, virheilmoitus kertoo ilmenneet ongelmat ja niiden korjauskeinot.
 
 ## <a name="best-practices-and-restrictions"></a>Parhaat käytännöt ja rajoitukset
-Pidä seuraavat asiat mielessä, kun luot ja muokkaat kenttiä:
+Muista seuraavat asiat, kun luot ja muokkaat kenttiä:
 
 * Järjestelmäkenttiä ja niiden arvoja ei voi muokata tai poistaa.
 * Vakioentiteetissä ei voi muokata eikä poistaa vakiokenttää (oletuskenttä), lisätä tietoja vaativaa kenttää eikä tehdä muita muutoksia, jotka saattavat vioittaa kyseistä entiteettiä käyttävää sovellusta.
@@ -107,5 +102,5 @@ Pidä seuraavat asiat mielessä, kun luot ja muokkaat kenttiä:
 * [Sovelluksen luominen alusta alkaen käyttämällä Common Data Service -tietokantaa](../canvas-apps/data-platform-create-app-scratch.md)
 
 ## <a name="privacy-notice"></a>Tietosuojailmoitus
-Microsoft PowerApps Common Data Model kerää ja tallentaa mukautettuja entiteettejä ja kenttien nimiä diagnostiikkajärjestelmäämme.  Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Tekijöiden luomat entiteettien ja kenttien nimet auttavat meitä ymmärtämään Microsoft PowerApps -yhteisössä yleisiä skenaarioita ja havaitsemaan palvelun vakioentiteettitarjonnan puutteita, kuten organisaatioihin liittyviä rakenteita. Microsoft ei avaa eikä käytä näihin entiteetteihin liittyvien tietokantataulukoiden tietoja eikä niitä replikoida tietokannan luomisalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät saatetaan replikoida monelle alueelle ja poistetaan tietojen säilytyskäytäntöjemme mukaisesti. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessa](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.
+Microsoft PowerApps Common Data Model kerää ja tallentaa mukautettuja entiteettejä ja kenttien nimiä diagnostiikkajärjestelmäämme.  Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Tekijöiden antamat entiteettien ja kenttien nimet auttavat meitä ymmärtämään Microsoft PowerApps -yhteisössä yleisiä skenaarioita ja havaitsemaan palvelun vakioentiteettitarjonnan puutteita, kuten organisaatioihin liittyviä rakenteita. Microsoft ei avaa eikä käytä näihin entiteetteihin liittyvien tietokantataulukoiden tietoja, eikä niitä replikoida tietokannan luomisalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan replikoida monelle alueelle ja poistetaan Microsoftin tietojen säilytyskäytäntöjemme mukaisesti. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessa](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.
 

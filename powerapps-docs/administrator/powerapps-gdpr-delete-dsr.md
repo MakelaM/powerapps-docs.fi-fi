@@ -1,7 +1,6 @@
 ---
-title: Asiakastietoihin | Microsoft Docsiin kohdistuvien DSR-pyyntöjen poistamiseen vastaaminen
-description: Asiakastietoihin kohdistuvien DSR-pyyntöjen poistamiseen vastaaminen
-services: powerapps
+title: Asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen | Microsoft Docs
+description: Ohjeet PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaamiseen
 suite: powerapps
 documentationcenter: na
 author: jamesol-msft
@@ -13,23 +12,23 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 04/17/2018
+ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 67e1ad0056f80b892343506ec9a89845e0bca05e
-ms.sourcegitcommit: e3a2819c14ad67cc4ca6640b9064550d0f553d8f
+ms.openlocfilehash: e4f555416aadb90d882717072f614ccb958fa733
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="responding-to-delete-data-subject-rights-dsr-requests-for-customer-data-in-powerapps"></a>PowerAppsissa oleviin asiakastietoihin kohdistuvien DSR-pyyntöjen poistamiseen vastaaminen
+# <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen
 
-Käyttäjän oikeus tietojensa poistamiseen organisaation asiakastiedoista on yleisen tietosuoja-asetuksen (GDPR) keskeisimpiä oikeuksia. Henkilötietojen poistaminen käsittää järjestelmän luomien lokien poistamisen, mutta ei valvontalokitietoja.
+Käyttäjän oikeus tietojensa poistamiseen organisaation asiakastiedoista on Euroopan Unionin (EU) yleisen tietosuoja-asetuksen (GDPR) keskeisimpiä oikeuksia. Henkilötietojen poistaminen käsittää järjestelmän luomien lokien poistamisen, mutta ei valvontalokitietoja.
 
 PowerApps tarjoaa käyttäjille mahdollisuuden luoda toimialakohtaisia sovelluksia, jotka ovat tärkeä osa organisaation päivittäistä toimintaa. Kun käyttäjä poistuu organisaatiosi palveluksesta, sinun täytyy tarkistaa tiedot manuaalisesti ja päättää, täytyykö tietyt tiedot ja hänen luomansa resurssit poistaa. Muut henkilökohtaiset tiedot poistetaan automaattisesti, kun käyttäjän tili poistetaan Microsoft Azure Active Directorysta.
 
 Tässä on erittely siitä, mitä henkilötietoja poistetaan automaattisesti ja mitkä tiedot vaativat manuaalisen tarkistuksen ja poistamisen:
 
-Edellyttää manuaalisen tarkistuksen ja poistamisen |   Poistetaan automaattisesti, kun käyttäjä poistetaan Azure Active Directorysta.
+Edellyttää manuaalisen tarkistuksen ja poistamisen |   Poistetaan automaattisesti, kun käyttäjä poistetaan Azure Active Directorysta
 --- | ---
 Ympäristö\** | Yhdyskäytävä
 Ympäristön käyttöoikeudet\*** | Yhdyskäytävien käyttöoikeudet
@@ -42,44 +41,47 @@ Mukautettujen yhdistimien käyttöoikeudet |
 
 \** Kukin näistä resursseista sisältää ”tekijä”- ja ”muokannut”-tietueet, jotka sisältävät henkilökohtaisia tietoja. Tietoturvasyistä nämä tietueet säilytetään, kunnes resurssi poistetaan.
 
-\*** Niiden ympäristöjen kohdalla, jotka sisältävät Common Data Servicen (CDS) sovellusten tietokannalle, ympäristön käyttöoikeudet (eli käyttäjät, jotka on määritetty ympäristön tekijän ja järjestelmänvalvojan rooleihin) on tallennettu tietueina kyseiseen tietokantaan. Katso lisätiedot siitä, miten DSR-pyyntöihin vastataan, kun ne koskevat sovellusten CDS:n käyttäjiä ohjeartikkelista [DSR:ien suorittaminen Common Data Servicen asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872251).
+\*** Niiden ympäristöjen kohdalla, jotka sisältävät Common Data Servicen (CDS) sovellusten tietokannalle, ympäristön käyttöoikeudet (eli käyttäjät, jotka on määritetty ympäristön tekijän ja järjestelmänvalvojan rooleihin) on tallennettu tietueina kyseiseen tietokantaan. Saat lisätietoja CDC for Appsia käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
 
 Manuaalista tarkistusta edellyttäviä tietoja ja resursseja varten PowerApps tarjoaa seuraavat ominaisuudet, joiden avulla tietyn käyttäjän henkilökohtaiset tiedot voidaan (tarvittaessa) määrittää uudelleen tai poistaa:
 
-- Sivustot: [PowerApps-sivusto](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
-- PowerShell: PowerApps-sovellusten cmdlet-komennot [sovelluskehittäjille](https://go.microsoft.com/fwlink/?linkid=871448) sekä [järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804) ja [paikallisten yhdyskäytävien](https://go.microsoft.com/fwlink/?linkid=872238) cmdlet-komennot.
-Ja tässä on erittely siitä, mitkä ominaisuudet ovat käytettävissä kunkin tyyppisen resurssin poistamiseen, joka voi sisältää henkilötietoja:
+* Sivustot: [PowerApps-sivusto](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+
+* PowerShell: PowerApps-sovellusten cmdlet-komennot [sovelluskehittäjille](https://go.microsoft.com/fwlink/?linkid=871448) sekä [järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804) ja [paikallisten yhdyskäytävien](https://go.microsoft.com/fwlink/?linkid=872238) cmdlet-komennot.
+
+Tässä on erittely siitä, mitkä ominaisuudet ovat käytettävissä kunkin tyyppisen resurssin poistamiseen, joka voi sisältää henkilötietoja:
 
 Henkilötietoja sisältävät resurssit | Sivuston käyttö | PowerShellin käyttö
 --- | --- | ---
-Ympäristö | PowerApps-hallintakeskus |  PowerApps cmdlet-komennot
-Ympäristön käyttöoikeudet**   | PowerApps-hallintakeskus | PowerApps cmdlet-komennot
-Kangas-sovellus  | PowerApps-hallintakeskus <br> PowerApps-sivusto| PowerApps cmdlet-komennot
-Kangas-sovelluksen käyttöoikeudet  | PowerApps-hallintakeskus | PowerApps cmdlet-komennot
+Ympäristö | PowerAppsin hallintakeskus |  PowerApps cmdlet-komennot
+Ympäristön käyttöoikeudet**   | PowerAppsin hallintakeskus | PowerApps cmdlet-komennot
+Kangas-sovellus  | PowerAppsin hallintakeskus <br> PowerApps| PowerApps cmdlet-komennot
+Kangas-sovelluksen käyttöoikeudet  | PowerAppsin hallintakeskus | PowerApps cmdlet-komennot
 Yhteys | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
 Yhteyksien käyttöoikeudet | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
 Mukautettu yhdistin | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
 Mukautettujen yhdistimien käyttöoikeudet | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
 
-\** Kun Sovellusten CDS käytössä, jos tietokanta luodaan ympäristöön, ympäristön käyttöoikeudet ja mallipohjaisten sovellusten käyttöoikeudet tallennetaan tietueina kyseisen tietokannan esiintymään. Katso lisätiedot siitä, miten DSR-pyyntöihin vastataan, kun ne koskevat Sovellusten CDS:n käyttäjiä ohjeartikkelista [DSR:ien suorittaminen Common Data Servicen asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872251).
+\** Kun Sovellusten CDS käytössä, jos tietokanta luodaan ympäristöön, ympäristön käyttöoikeudet ja mallipohjaisten sovellusten käyttöoikeudet tallennetaan tietueina kyseisen tietokannan esiintymään. Saat lisätietoja CDC for Appsia käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
 
 ## <a name="prerequisites"></a>Edellytykset
 
 ### <a name="for-users"></a>Käyttäjille
-Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps-sivuston](https://web.powerapps.com) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
+Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps](https://web.powerapps.com) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### <a name="for-administrators"></a>Järjestelmänvalvojille
-Mikäli halutaan suorittaa tässä asiakirjassa kuvattuja järjestelmänvalvojan toimenpiteitä käyttämällä [PowerApps-hallintakeskusta](https://admin.powerapps.com/), Microsoft Flow -hallintakeskusta tai [PowerShellin cmdlet-komentoja PowerApps-järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804), tarvitaan tili, joka sisältää molemmat seuraavista käyttöoikeuksista:
+Mikäli halutaan suorittaa tässä asiakirjassa kuvattuja järjestelmänvalvojan toimenpiteitä käyttämällä [PowerApps-hallintakeskusta](https://admin.powerapps.com/), Microsoft Flow -hallintakeskusta tai [PowerShellin cmdlet-komentoja PowerApps-järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804), tarvitaan seuraavat asiat:
 
-- PowerAppsin palvelupaketin 2 maksettu tai kokeiluversion käyttöoikeus. Voit myös [rekisteröityä kokeiluversion käyttöoikeuden](http://web.powerapps.com/trial) saamiseksi ja uusia sen 30 päivän kuluttua.
-- [Office 365:n yleisen järjestelmänvalvojan](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleisen järjestelmänvalvojan](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) oikeudet ovat myös pakollisia, jos haluat tehdä hakuja toisen käyttäjän resursseihin. Muussa tapauksessa sinulla on oikeudet vain niihin ympäristöihin ja ympäristön resursseihin, joihin sinulla on ympäristön järjestelmänvalvojan oikeudet.
+* Maksullisen PowerApps-palvelupaketin 2 käyttöoikeus tai PowerApps-palvelupaketin 2 kokeiluversion käyttöoikeus. Voit rekisteröityä 30 päivän maksuttoman kokeiluversion käyttäjäksi osoitteessa [http://web.powerapps.com/trial](http://web.powerapps.com/trial). Kokeiluversion käyttöoikeudet voi uusia, jos ne ovat vanhentuneet.
+
+* [Office 365:n yleisen järjestelmänvalvojan](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleisen järjestelmänvalvojan](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) oikeudet ovat myös pakollisia, jos haluat tehdä hakuja toisen käyttäjän resursseihin. (Huomioi, että ympäristön järjestelmänvalvojilla on pääsy vain niihin ympäristöihin ja ympäristön resursseihin, joihin heillä on oikeudet.)
 
 ## <a name="step-1-delete-or-reassign-all-environments-created-by-the-user"></a>Vaihe 1: Poista tai määritä uudelleen kaikki käyttäjän luomat ympäristöt
 Järjestelmänvalvojana tehtävänäsi on kaksi päätöstä, kun käsittelet DSR-poistopyyntöä kussakin ympäristössä, jonka käyttäjä on luonut:
 
-1.  Jos päätät, että kukaan muu organisaatiossasi ei käytä kyseistä ympäristöä, voit halutessasi poistaa ympäristön.
+1. Jos päätät, että kukaan muu organisaatiossasi ei käytä kyseistä ympäristöä, voit halutessasi poistaa ympäristön.
 
-2.  Jos päätät, että ympäristöä tarvitaan edelleen, voit halutessasi säilyttää ympäristön ja lisätä itsesi (tai jonkun toisen käyttäjän organisaatiossasi) ympäristön järjestelmänvalvojaksi.
+2. Jos päätät, että ympäristöä tarvitaan edelleen, voit halutessasi säilyttää ympäristön ja lisätä itsesi (tai jonkun toisen käyttäjän organisaatiossasi) ympäristön järjestelmänvalvojaksi.
 
 > [!IMPORTANT]
 > Ympäristön poistaminen poistaa pysyvästi kaikki ympäristön resurssit, mukaan lukien kaikki sovellukset, työnkulut, yhteydet jne. Tutustu siis ympäristön sisältöön huolella ennen sen poistamista.
@@ -142,20 +144,20 @@ Lisätietoja on [Ympäristöjen hallinta](environments-administration.md) -kohda
 
 ### <a name="for-environments-without-a-cds-for-apps-database"></a>Ympäristöt, joissa ei ole Sovellusten CDS -tietokantaa
 
-#### <a name="powerapps-admin-center"></a>PowerApps-hallintakeskus
+#### <a name="powerapps-admin-center"></a>PowerAppsin hallintakeskus
 Järjestelmänvalvoja voi poistaa käyttäjän ympäristön käyttöoikeudet alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
 
-1.  Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
+1. Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
 
     Sinun on oltava [Office 365:n yleinen järjestelmänvalvoja](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleinen järjestelmänvalvoja](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal), jotta voit tarkastella kaikkia ympäristöjä, jotka on luotu organisaation sisällä.
 
     ![Hallintakeskuksen aloitussivu](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.  Valitse **Suojaus**.
+2. Valitse **Suojaus**.
 
     Jos ympäristössä ei ole Sovellusten CDS -tietokantaa, näkyviin tulee osa, jossa ovat **Ympäristön roolit.**
 
-4.  Valitse **Ympäristön roolit** -kohdassa sekä **Ympäristön järjestelmänvalvoja** että **Ympäristön tekijä** erikseen ja etsi käyttäjän nimi etsintäpalkin avulla.
+3. Valitse **Ympäristön roolit** -kohdassa sekä **Ympäristön järjestelmänvalvoja** että **Ympäristön tekijä** erikseen ja etsi käyttäjän nimi etsintäpalkin avulla.
 
     ![Ympäristöroolit-sivu](./media/powerapps-gdpr-delete-dsr/admin-environment-role-share-page.png)
 
@@ -198,23 +200,23 @@ Käyttäjä voi poistaa sovelluksen [PowerApps-sivustolta](https://web.powerapps
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-center"></a>Poista käyttäjän kangassovellus PowerApps-hallintakeskuksen avulla
 Järjestelmänvalvoja voi poistaa käyttäjän luomat sovellukset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
 
-1.  Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
+1. Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
 
     Sinun on oltava [Office 365:n yleinen järjestelmänvalvoja](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleinen järjestelmänvalvoja](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal), jotta voit tarkastella kaikkia ympäristöjä, jotka on luotu organisaation sisällä.
 
     ![Hallintakeskuksen aloitussivu](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.  Valitse **Resurssit** > **Sovellukset**.
+2. Valitse **Resurssit** > **Sovellukset**.
 
-3.  Hae etsintäpalkin avulla käyttäjän nimi, jolla saadaan näkyviin sovellukset, jotka kyseinen käyttäjä on luonut tähän ympäristöön:
+3. Hae etsintäpalkin avulla käyttäjän nimi, jolla saadaan näkyviin sovellukset, jotka kyseinen käyttäjä on luonut tähän ympäristöön:
 
     ![Hae sovelluksia](./media/powerapps-gdpr-delete-dsr/search-apps.png)
 
-4.  Valitse **Tiedot** käyttäjän omistaman jokaisen sovelluksen kohdalla:
+4. Valitse **Tiedot** käyttäjän omistaman jokaisen sovelluksen kohdalla:
 
     ![Valitse sovelluksen tiedot](./media/powerapps-gdpr-delete-dsr/select-app-details.png)
 
-5.  Valitse **Poista** kunkin sovelluksen poistamiseksi:
+5. Valitse **Poista** kunkin sovelluksen poistamiseksi:
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-powershell-cmdlets"></a>Poista käyttäjän kangassovellus PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komentojen avulla
 Jos järjestelmänvalvoja päättää poistaa kaikki käyttäjän omistamat kangassovellukset, hän voi tehdä niin käyttämällä **Remove-AdminApp**-toimintoa kohdassa [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804):
@@ -236,22 +238,22 @@ Aina, kun sovellus on jaettu käyttäjän kanssa, PowerApps tallentaa tietueen n
 > [!NOTE]
 > Sovelluksen omistajan roolimääritys voidaan poistaa vain määrittämällä sovellukselle uusi omistaja.
 
-### <a name="powerapps-admin-center"></a>PowerApps-hallintakeskus
-Järjestelmänvalvoja voi poistaa käyttäjän sovelluksen roolimääritykset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
+### <a name="powerapps-admin-center"></a>PowerAppsin hallintakeskus
+Järjestelmänvalvoja voi poistaa käyttäjän sovellusroolimääritykset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
 
-1.  Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
+1. Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
 
     Sinun on oltava [Office 365:n yleinen järjestelmänvalvoja](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleinen järjestelmänvalvoja](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal), jotta voit tarkastella kaikkia ympäristöjä, jotka on luotu organisaation sisällä.
 
     ![Hallintakeskuksen aloitussivu](./media/powerapps-gdpr-delete-dsr/admin-center-landing.png)
 
-2.  Valitse kussakin ympäristössä **Resurssit** > **Sovellukset**.
+2. Valitse kussakin ympäristössä **Resurssit** > **Sovellukset**.
 
-3.  Valitse **Jaa** kullekin ympäristössä olevalle sovellukselle:
+3. Valitse **Jaa** kullekin ympäristössä olevalle sovellukselle:
 
     ![Valitse sovelluksen jakaminen](./media/powerapps-gdpr-delete-dsr/select-admin-share-nofilter.png)
 
-6.  Jos käyttäjällä on käyttöoikeus sovellukseen, poista sovelluksen **Jaa**-näytöllä hänen käyttöoikeutensa ja valitse **Tallenna**.
+4. Jos käyttäjällä on käyttöoikeus sovellukseen, poista sovelluksen **Jaa**-näytöllä hänen käyttöoikeutensa ja valitse **Tallenna**.
 
     ![Järjestelmänvalvojan sovelluksen jakaminen -sivu](./media/powerapps-gdpr-delete-dsr/admin-share-page.png)
 
@@ -334,8 +336,7 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 Toiminto, jolla järjestelmänvalvoja voi etsiä ja poistaa käyttäjän yhdistinroolimäärityksiä käyttämällä [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
 
 ## <a name="step-9-delete-the-users-personal-data-in-microsoft-flow"></a>Vaihe 9: Poista käyttäjän henkilötiedot Microsoft Flow’sta
-PowerApps-käyttöoikeudet sisältävät aina Microsoft Flow -ominaisuudet. Sen lisäksi, että Microsoft Flow sisältyy PowerAppsin käyttöoikeuksiin, se on saatavilla erillisenä palvelunakin.
-Saat lisätietoja Microsoft Flow -palvelua käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen Microsoft Flow’n asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872250).
+PowerApps-käyttöoikeudet sisältävät aina Microsoft Flow -ominaisuudet. Sen lisäksi, että Microsoft Flow sisältyy PowerAppsin käyttöoikeuksiin, se on saatavilla erillisenä palvelunakin. Saat lisätietoja Microsoft Flow -palvelua käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [GPDR DSR:ien suorittaminen Microsoft Flow’n asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872250).
 
 > [!IMPORTANT]
 > Suosittelemme, että järjestelmänvalvoja suorittaa tämän vaiheen PowerApps-käyttäjän puolesta.
@@ -343,7 +344,7 @@ Saat lisätietoja Microsoft Flow -palvelua käyttäneiden käyttäjien DSR-pyynt
 ## <a name="step-10-delete-the-users-personal-data-in-instances-of-cds-for-apps"></a>Vaihe 10: Poista käyttäjän henkilötiedot Sovellusten CDS:n esiintymistä
 Tietyt PowerApps-käyttöoikeudet, esimerkiksi PowerAppsin yhteisön palvelupaketti, antavat organisaatiosi käyttäjille mahdollisuuden luoda sovellusten CDS:n esiintymiä sekä luoda ja kehittää sovelluksia sovellusten CDS:n avulla. PowerAppsin yhteisön palvelupaketti on maksuton käyttöoikeus, jolla käyttäjät voivat kokeilla sovellusten CDS:ää yksittäisessä ympäristössä. PowerAppsin hinnoittelusivulta saat lisätietoa kapasiteeteista, jotka kukin PowerApps-käyttöoikeus sisältää.
 
-Katso lisätiedot siitä, miten DSR-pyyntöihin vastataan, kun ne koskevat Sovellusten CDS:n käyttäjiä ohjeartikkelista [DSR:ien suorittaminen Sovellusten CDS:n asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872251).
+Saat lisätietoja CDC for Appsia käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
 
 > [!IMPORTANT]
 > Suosittelemme, että järjestelmänvalvoja suorittaa tämän vaiheen PowerApps-käyttäjän puolesta.

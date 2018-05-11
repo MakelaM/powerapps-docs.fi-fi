@@ -9,12 +9,12 @@ Ensimmäisessä opastetun oppimisen aiheessa käsitellään PowerAppsin pääosi
 Emme odota että käytät paljon aikaa PowerAppsin osiin *tutustumiseen*, mutta uskomme sen auttavan rakentamaan tietopohjaa.
 
 ## <a name="webpowerappscom"></a>web.powerapps.com
-Jos rakennat sovelluksia, käytät luultavasti paljon aikaa täällä. Täällä olevat **esimerkkisovellukset ja mallipohjat** auttavat oppimisessa ja voit tarkastella kaikkia luomiasi sovelluksia. Sovelluksia luodaan **PowerApps Studion verkkoversiossa** tai **PowerApps Studion Windows-versiossa** ja niitä voidaan jakaa henkilöille ja organisaatioille. Voit hallita muun muassa seuraavia tietoja: **yhteydet**, **yhdyskäytävät** ja **entiteetit** (jotka kuvaillaan jäljempänä). Voit myös tarkastella kaikkia **flows.microsoft.com**-osoitteessa luotuja **työnkulkuja**, joita voit integroida sovelluksiisi.
+Jos rakennat sovelluksia, käytät luultavasti paljon aikaa täällä. Täällä olevat **esimerkkisovellukset ja mallipohjat** auttavat oppimisessa ja voit tarkastella kaikkia luomiasi sovelluksia. Sovellukset luodaan **PowerApps Studiossa**, ja niitä voidaan jakaa henkilöille ja organisaatioille. Voit hallita muun muassa seuraavia tietoja: **yhteydet**, **yhdyskäytävät** ja **entiteetit** (jotka kuvaillaan jäljempänä). Voit myös tarkastella kaikkia **flows.microsoft.com**-osoitteessa luotuja **työnkulkuja**, joita voit integroida sovelluksiisi.
 
 ![Web.powerapps.com-sivusto](./media/learning-powerapps-parts/powerapps-web-site.png)
 
 ## <a name="powerapps-studio"></a>PowerApps Studio
-**PowerApps Studio** on saatavilla ajantasaisilla verkkoselaimella käytettävänä verkkosovelluksena sekä Windows-sovelluksena. PowerApps Studiossa on kolme ruutua ja valintanauha, joiden avulla sovellusten luominen on **samankaltaista kuin diapinon tekeminen PowerPointissa**:
+**PowerApps Studio** on saatavilla ajantasaisella verkkoselaimella käytettävänä verkkosovelluksena. PowerApps Studiossa on kolme ruutua ja valintanauha, joiden avulla sovellusten luominen on **samankaltaista kuin diapinon tekeminen PowerPointissa**:
 
 1. **Vasen siirtymispalkki**, jossa voit näyttää pikkukuvan jokaiselle sovelluksesi näytölle tai hierarkkisen näkymän kaikista ohjausobjekteista eri näytöillä
 2. **Keskiruutu**, joka näyttää käsiteltävän näytön

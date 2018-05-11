@@ -1,8 +1,6 @@
 ---
 title: Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot | Microsoft Docs
 description: PowerAppsin järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
-services: ''
-suite: PowerApps
 documentationcenter: na
 author: skjerland
 manager: kfile
@@ -10,16 +8,15 @@ editor: ''
 tags: ''
 ms.service: PowerApps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/07/2018
 ms.author: sharik
-ms.openlocfilehash: 84115ea98ec5d7d0fd60d36fc0cd3cc9196980ff
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 5bf57ec96569751b3db656abdf04cebb1e13133a
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-limits-and-configuration-values"></a>Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -40,7 +37,7 @@ Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaati
 | Mozilla Firefox (uusin versio) |Windows 7 SP1, 8.1 ja 10 <br> Android 5 tai uudempi <br>iOS 8 tai uudempi <br>macOS |
 | Apple Safari (uusin versio) |iOS 8 tai uudempi <br>macOS |
 
-## <a name="supported-browsers-for-powerapps-studio-for-web"></a>Tuetut selaimet PowerApps Studio for web -palvelua varten
+## <a name="supported-browsers-for-powerapps-studio"></a>PowerApps Studion tuetut selaimet
 | **Selain** | **Käyttöjärjestelmä** |
 | --- | --- |
 | Google Chrome (uusin versio)<br>(suositus) |Windows 7 SP1, 8.1 ja 10 <br>macOS |
