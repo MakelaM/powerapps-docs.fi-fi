@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 04/01/2017
 ms.author: fikaradz
 ms.openlocfilehash: 2f4f4867fa9d1fb13dfd613cc3564703b0c220e2
-ms.sourcegitcommit: 6afca7cb4234d3a60111c5950e7855106ff97e56
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="show-items-of-different-heights-in-a-powerapps-gallery"></a>Erikorkuisten kohteiden näyttäminen PowerApps-valikoimassa
 Jos tietojoukon kentässä on kohteita, joiden tietomäärät poikkeavat toisistaan, voit näyttää enemmän tietoja sisältävän kohteen kokonaan tarvitsematta jättää tyhjää tilaa vähemmän tietoja sisältävien kenttien loppuun. Lisää ja määritä valikoiman ohjausobjektille **joustava korkeus**, jotta voit:
@@ -44,7 +44,7 @@ Jos et ole koskaan lisännyt ohjausobjekteja valikoimaan, katso ohjeet kohdasta 
 
 3. Napsauta tai napauta PowerApps Studion **Tiedosto-valikon** kohtaa **Uusi**.
 
-4. Napsauta tai napauta **Tyhjä sovellus** -ruudulla kohtaa **Puhelinasettelu**.
+4. Napsauta tai napauta **Tyhjä sovellus** -ruudussa kohtaa **Puhelinasettelu**.
 
     ![Tiedosto-valikon Uusi-vaihtoehto](./media/gallery-dynamic-sizing/blank-app.png)
 
@@ -65,7 +65,7 @@ Jos et ole koskaan lisännyt ohjausobjekteja valikoimaan, katso ohjeet kohdasta 
 
     ![Kynäkuvake](./media/gallery-dynamic-sizing/edit-template.png)
 
-2. Kun Valikoiman mallipohja on valittuna, lisää siihen**[Otsikko](controls/control-text-box.md)**- ohjausobjekti.
+2. Kun Valikoiman mallipohja on valittuna, lisää siihen **[Otsikko](controls/control-text-box.md)**- ohjausobjekti.
 
 3. Määritä **Otsikko**-ohjausobjektin **Teksti**-ominaisuus tällä lausekkeella:<br>
    **ThisItem.Name**
@@ -73,7 +73,7 @@ Jos et ole koskaan lisännyt ohjausobjekteja valikoimaan, katso ohjeet kohdasta 
     ![Lisää otsikko](./media/gallery-dynamic-sizing/add-text-box.png)
 
 ## <a name="show-the-product-overviews"></a>Tuotekuvausten näyttäminen
-1. Kun valikoiman mallipohja on valittuna, lisää toinen **Otsikko**-ohjausobjekti ja siirrä se ensimmäisen **Otsikko**- ohjausobjektin alle.  
+1. Kun valikoiman mallipohja on valittuna, lisää toinen **Otsikko**-ohjausobjekti ja siirrä se ensimmäisen **Otsikko**-ohjausobjektin alle.  
 
 2. Määritä toisen **Otsikko**-ohjausobjektin **Teksti**-ominaisuus tällä lausekkeella:<br> **ThisItem.Overview**
 

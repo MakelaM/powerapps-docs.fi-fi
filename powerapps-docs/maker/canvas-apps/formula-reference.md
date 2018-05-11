@@ -1,5 +1,5 @@
 ---
-title: Funktiot, signaalit, ja luetteloinnit | Microsoft Docs
+title: Funktiot, signaalit ja luetteloinnit | Microsoft Docs
 description: Viitetietoja funktioista, signaaleista ja luetteloinneista PowerAppsissa.
 services: ''
 suite: powerapps
@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 08/28/2017
 ms.author: gregli
-ms.openlocfilehash: dac61ab9ce4195f6336fe1625cea12f728eb3e41
-ms.sourcegitcommit: 6afca7cb4234d3a60111c5950e7855106ff97e56
+ms.openlocfilehash: 3ceb9eae42e88e7cfb78492f9e58812481a0881d
+ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -106,7 +106,7 @@ Muita elementtejä ovat:
 ## <a name="d"></a>D
 **[DataSourceInfo](functions/function-datasourceinfo.md)** – antaa tietoja tietolähteestä.
 
-**[Date](functions/function-date-time.md)** – palauttaa päivämäärän ja ajan arvon **vuoden**, **kuukauden**, ja **päivän** arvojen perusteella.  
+**[Date](functions/function-date-time.md)** – palauttaa päivämäärän ja ajan arvon **vuoden**, **kuukauden** ja **päivän** arvojen perusteella.  
 
 **[DateAdd](functions/function-dateadd-datediff.md)** – lisää päiviä, kuukausia, neljännesvuosia tai vuosia päivämäärä- ja aika-arvoon.
 
@@ -165,7 +165,9 @@ Muita elementtejä ovat:
 **[Hour](functions/function-datetime-parts.md)** – palauttaa tunnin osan päivämäärä- ja aika-arvosta.
 
 ## <a name="i"></a>I
-**[If](functions/function-if.md)** – palauttaa yhden arvon, jos ehto on tosi, ja toisen arvon, jos ei ole.  
+**[If](functions/function-if.md)** – palauttaa yhden arvon, jos ehto on tosi, ja toisen arvon, jos ei ole. 
+
+**[IfError](functions/function-iferror.md)**  – havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toimen. 
 
 **[IsBlank](functions/function-isblank-isempty.md)** – tarkistaa, onko arvo [tyhjä](functions/function-isblank-isempty.md).
 
@@ -175,7 +177,7 @@ Muita elementtejä ovat:
 
 **[IsNumeric](functions/function-isnumeric.md)** – tarkistaa, onko arvo numeerinen.
 
-**[IsToday](functions/function-now-today-istoday.md)** – tarkistaa, onko päivämäärä- ja aika-arvoa jossain vaiheessa tämän päivän aikana.
+**[IsToday](functions/function-now-today-istoday.md)** – tarkistaa, onko päivämäärä- ja aika-arvo jossain vaiheessa tämän päivän aikana.
 
 ## <a name="l"></a>L
 **[Language](functions/function-language.md)** – palauttaa nykyisen käyttäjän kielitunnisteen.
@@ -184,7 +186,7 @@ Muita elementtejä ovat:
 
 **[LastN](functions/function-first-last.md)** – palauttaa taulukon viimeisen tietuejoukon (N tietuetta).
 
-**[Launch](functions/function-param.md)** – käynnistää siirtymisen Internet-osoitteeseen tai sovelluksen.
+**[Launch](functions/function-param.md)** – avaa Internet-osoitteen tai sovelluksen.
 
 **[Left](functions/function-left-mid-right.md)** – palauttaa merkkijonossa äärimmäisenä vasemmalla olevan osan.
 
@@ -281,6 +283,8 @@ Muita elementtejä ovat:
 **[Set](functions/function-set.md)** – asettaa yleisen muuttujan arvon.
 
 **[ShowColumns](functions/function-table-shaping.md)** – palauttaa taulukon, jossa on vain valitut sarakkeet.
+
+**[ShowError](functions/function-showerror.md)** – näyttää virhesanoman käyttäjälle.
 
 **[Shuffle](functions/function-shuffle.md)** – järjestää taulukon tietueet uudelleen satunnaisesti.
 
