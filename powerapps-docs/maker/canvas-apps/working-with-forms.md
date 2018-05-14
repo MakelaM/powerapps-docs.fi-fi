@@ -1,25 +1,22 @@
 ---
 title: Tutustu lomakkeisiin | Microsoft Docs
 description: Lomakkeiden avulla voit kerätä ja näyttää tietoja tietolähteestä.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: 983eec5b3a6aa0f90ffe3f8460646bb92955e424
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a9cd26ad41ceaa5b94678a3ef87bf0ab6dda98a1
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understand-data-forms-in-microsoft-powerapps"></a>Tutustu tietolomakkeisiin Microsoft PowerAppsissa
 Lisää kolmentyyppisiä ohjausobjekteja, jotta käyttäjä voi selata tietueita, näyttää kyseisen tietueen tietoja ja luoda tietueen ja muokata sitä:
@@ -38,7 +35,7 @@ Kuten tässä ohjeaiheessa kuvataan, nämä ohjausobjektit voi yhdistää kaavoj
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin, [asenna](http://aka.ms/powerappsinstall) ja avaa se ja kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 
 ## <a name="explore-a-generated-app"></a>Tutki luotua sovellusta

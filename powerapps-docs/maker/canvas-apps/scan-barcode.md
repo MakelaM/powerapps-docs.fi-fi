@@ -1,27 +1,24 @@
 ---
 title: Skannaa viivakoodi | Microsoft Docs
 description: Skannaa useita erityyppisiä viivakoodeja, kuten UPC ja Codabar
-services: ''
-suite: powerapps
 documentationcenter: na
 author: aftowen
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: anneta
-ms.openlocfilehash: 078c53300c4e1489d179f9c91818a8e23616f3ae
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6960b41effb109f6f2266ba279b4d51ea51e744f
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="scan-a-barcode-in-microsoft-powerapps"></a>Skannaa viivakoodi Microsoft PowerAppsissa
+# <a name="scan-a-barcode-in-powerapps"></a>Skannaa viivakoodi PowerAppsissa
 Skannaa useita erityyppisiä viivakoodeja luomalla sovellus ja suorittamalla se kamerallisessa laitteessa, kuten puhelimessa. Viivakoodia vastaava numeerinen arvo näkyy **Otsikko**-ohjausobjektissa, ja voit ladata nämä tiedot erilaisiin [tietolähteisiin](connections-list.md).
 
 Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
@@ -38,8 +35,7 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 ## <a name="create-a-blank-app"></a>Tyhjän sovelluksen luominen
 1. [Rekisteröidy PowerAppsiin](../signup-for-powerapps.md) ja tee sitten *jompikumpi* seuraavista toimista:
 
-   * [Avaa PowerApps](https://create.powerapps.com/api/start) selaimessa laitteessa, jossa on kamera.
-   * [Asenna PowerApps](http://aka.ms/powerappsinstall) Windows-kaupasta laitteeseen, jossa on kamera. Avaa PowerApps uudelleen, kirjaudu sisään ja napsauta tai napauta **Tiedosto-valikon** (lähellä vasenta reunaa) kohtaa **Uusi**.
+1. [Avaa PowerApps](https://create.powerapps.com) selaimessa laitteessa, jossa on kamera.
 
 2. Napsauta tai napauta kohdassa **Aloita puhtaalta pöydältä tai mallin kanssa** **Puhelinasettelu** **Tyhjä sovellus** -ruudussa.
 

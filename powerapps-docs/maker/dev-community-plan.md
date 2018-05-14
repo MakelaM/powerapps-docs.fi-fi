@@ -1,33 +1,30 @@
 ---
 title: PowerAppsin yhteisön palvelupaketti – ilmainen kehitysympäristö yksilökäyttöön | Microsoft Docs
 description: Rekisteröidy, niin voit kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 05/01/2016
 ms.author: mblythe
-ms.openlocfilehash: 3a7407f0f93ee5cd6bb749f79c258a1cf6c20b96
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 70200430b0cee7356d70795440b908a8837ba18d
+ms.sourcegitcommit: 6a75c4c499bcdbeb9d65d3a9af47dedcf900f38d
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerAppsin yhteisön palvelupaketti: ilmainen kehitysympäristö yksilökäyttöön
-Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä, PowerAppsin yhteisön palvelupaketti on oikea palvelupaketti sinua varten. PowerAppsin yhteisön palvelupaketti sisältää ilmaisen kehitysympäristön yksilökäyttöön, jonka avulla voit:
+Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä, PowerAppsin yhteisön palvelupaketti on oikea palvelupaketti sinua varten. PowerAppsin yhteisön palvelupaketti sisältää ilmaisen kehitysympäristö yksilökäyttöön, jonka avulla voit
 
-* Oppia tekemään yrityssovelluksia ja työnkulkuja PowerAppsin ja Microsoft Flow’n täydellä toiminnallisuudella.
-* Luoda yhteyden mihin tahansa tietolähteeseen käyttämällä yli sataa [valmista liitintä](./canvas-apps/connections-list.md) tai luomalla omia [mukautettuja liittimiä](./canvas-apps/register-custom-api.md).
-* Tutustua [Common Data Servicen](https://docs.microsoft.com/common-data-service/entity-reference/introduction) käyttöön tehokkaiden yrityssovellusten luomiseksi Common Data Modelin ja [SDK](https://aka.ms/eek20s):n avulla.
-* Viedä luomasi ratkaisut omaan ympäristöösi ja [lisätä ne AppSource-luetteloon](./canvas-apps/dev-appsource-test-drive.md), jotta asiakkaasi voivat testata niitä.
+* oppia yrityssovellusten ja työnkulkujen tekemisestä PowerAppsin ja Microsoft Flow'n täydellä toiminnallisuudella
+* luoda yhteyden mihin tahansa tietolähteeseen käyttämällä yli sataa [valmista liitintä](./canvas-apps/connections-list.md) tai luomalla omia [mukautettuja liittimiä](./canvas-apps/register-custom-api.md)
+* tutustua [Common Data Servicen](https://docs.microsoft.com/common-data-service/entity-reference/introduction) käyttöön tehokkaiden yrityssovellusten luomiseksi Common Data Modelin ja [SDK:n](https://aka.ms/eek20s) avulla
+* viedä luomasi ratkaisut omaan ympäristöösi ja [lisätä ne AppSource-luetteloon](./canvas-apps/dev-appsource-test-drive.md), jotta asiakkaasi voivat testata niitä.
 
 ## <a name="who-can-sign-up-for-the-powerapps-community-plan"></a>Kuka voi rekisteröityä PowerAppsin yhteisön palvelupakettiin?
 Kuka tahansa, jolla on [työ- tai koulutili](signup-for-powerapps.md#faq), voi rekisteröityä PowerAppsin yhteisön palvelupakettiin. Suosittelemme tätä erityisesti, jos:
@@ -36,9 +33,9 @@ Kuka tahansa, jolla on [työ- tai koulutili](signup-for-powerapps.md#faq), voi r
 * Olet kiinnostunut AppSourcen kautta levitettävien yrityssovellusten ja työnkulkujen rakentamisesta.
 
 ## <a name="where-can-i-sign-up-for-the-powerapps-community-plan"></a>Missä voin rekisteröityä PowerAppsin yhteisön palvelupakettiin?
-Rekisteröidy [PowerAppsin yhteisön palvelupakettiin verkkosivustossa](https://powerapps.microsoft.com/communityplan). Jos olet olemassa oleva PowerApps-käyttäjä Office 365:n tai Dynamics 365:n kautta, voit myös [luoda ympäristön yksilökäyttöä varten](https://web.powerapps.com/community/signup).
+Rekisteröidy [PowerAppsin yhteisön palvelupakettiin verkkosivustossa](https://powerapps.microsoft.com/communityplan). Jos olet jo PowerApps-käyttäjä Office 365:n tai Dynamics 365:n kautta, voit myös [luoda ympäristön yksilökäyttöä varten](https://web.powerapps.com/community/signup).
 
-Kun olet rekisteröitynyt yhteisön palvelupakettiin, sinut ohjataan [PowerApps-sivustolle](https://web.powerapps.com) omaan ympäristöösi. Ympäristö nimetään oman nimesi mukaan, esimerkiksi ”Jussi Virtasen ympäristö”. Jos tämänniminen ympäristö on jo olemassa, ympäristön nimeksi asetetaan ”Jussi Virtasen (1) ympäristö”.  Seuraavassa kuvassa näytetään ympäristön ulkoasu.
+Kun olet rekisteröitynyt yhteisön palvelupakettiin, sinut ohjataan [PowerApps-sivustolle](https://web.powerapps.com) omaan ympäristöösi. Ympäristö nimetään oman nimesi mukaan, esimerkiksi ”Jari Kanteen ympäristö”. Jos tämänniminen ympäristö on jo olemassa, ympäristön nimeksi asetetaan ”Jari Kanteen (1) ympäristö”.  Seuraavassa kuvassa näytetään ympäristön ulkoasu.
 
 ![Oma yhteisön palvelupaketin ympäristö](./media/dev-community-plan/individual-environment.png)
 
@@ -55,8 +52,8 @@ Saat oman ympäristön kautta seuraavat toiminnallisuudet:
 | **Tärkeimmät ominaisuudet** | |
 | Sovellusten luominen ja suorittaminen |Kyllä. Voit luoda sovelluksia rajoituksetta |
 | Sovellusten jakaminen\* |Ei |
-| Common Data Servicen käyttö |Kyllä |
-| Tietojesi mallintaminen käyttämällä Common Data Serviceä |Kyllä |
+| Common Data Servicen käyttö |Kyllä** |
+| Tietojesi mallintaminen käyttämällä Common Data Serviceä |Kyllä** |
 | Ympäristön enterprise-luokan järjestelmänvalvonta ja käyttäjäkäytännöt |Kyllä |
 | **Yhteydet** | |
 | Yhdistäminen Office 365:een, Dynamics 365:een ja muihin liittimiin |Kyllä |
@@ -65,9 +62,9 @@ Saat oman ympäristön kautta seuraavat toiminnallisuudet:
 | Paikallisten tietojen käyttäminen paikallisen yhdyskäytävän avulla |Kyllä |
 | Mukautettujen liitinten luominen omiin järjestelmiisi yhdistämistä varten |Kyllä. Voit luoda mukautettuja liittimiä rajoituksetta |
 | **Common Data Service** | |
-| Sovellusten luominen ja suorittaminen Common Data Servicessä |Kyllä |
-| Mallinna tietojasi Common Data Servicessä |Kyllä |
-| Luo tietokanta Common Data Servicessä |Kyllä |
+| Sovellusten luominen ja suorittaminen Common Data Servicessä |Kyllä** |
+| Mallinna tietojasi Common Data Servicessä |Kyllä** |
+| Luo tietokanta Common Data Servicessä |Kyllä** |
 | **Hallinta** | |
 | Lisää työtovereita ympäristön tekijöiksi ja järjestelmänvalvojiksi |Ei |
 | Lisää työtovereita tietokantarooleihin |Ei |
@@ -76,10 +73,12 @@ Saat oman ympäristön kautta seuraavat toiminnallisuudet:
 
 *Et voi jakaa sovelluksia, työnkulkuja, yhteyksiä jne. vuokraajasi muiden käyttäjien kanssa. Et voi myöskään lisätä muita käyttäjiä ympäristön järjestelmänvalvojiksi tai tekijöiksi tai hallintakeskuksen tietokantarooleiksi.
 
+\*\*Tietokantaa ei voi nykyisin luoda Common Data Servicen avulla omassa ympäristössä, mutta tämä toiminto on käytettävissä taas pian uudelleen. Jos olet luonut tietokannan aiemmin, voit jatkaa sen käyttöä ongelmitta. 
+
 ## <a name="what-are-the-capacity-limits-for-the-individual-environment"></a>Mitkä ovat oman ympäristön kapasiteettirajat?
 | **Kapasiteetti** |  |
 | --- | --- |
-| Työnkulkujen suorittamisia/kuukausi |750 |
+| Työnkulkujen suorituksia/kuukausi |750 |
 | Tietokannan koko |200 Mt |
 | Tallennustila |2 Gt |
 
@@ -89,7 +88,7 @@ Et voi käyttää lisäosia näihin määriin. Jos kapasiteettirajat eivät riit
 > Oman ympäristön kapasiteetti, käytettynä tai ei, ei vaikuta yrityksesi kokonaiskiintiöön.
 
 ## <a name="publishing-to-appsource"></a>Julkaisu AppSourceen
-Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisua osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten ja työnkulkujen jakamiseksi asiakkaiden kanssa ja liidien kehittämiseksi yrityksellesi. Katso lisätietoja kohdasta [Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa](./canvas-apps/dev-appsource-test-drive.md).
+Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisua osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten ja työnkulkujen jakamiseksi asiakkaiden kanssa ja liidien luomiseksi yrityksellesi. Katso lisätietoja kohdasta [Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa](./canvas-apps/dev-appsource-test-drive.md).
 
 ## <a name="frequently-asked-questions"></a>Usein kysytyt kysymykset
 **K:** Mitä minun kannattaa tehdä, jos saavutan ympäristön kapasiteettirajat?
@@ -98,7 +97,7 @@ Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test
 
 | **Kapasiteetti** |  |
 | --- | --- |
-| Työnkulkujen suorittamisia/kuukausi |750 |
+| Työnkulkujen suorituksia/kuukausi |750 |
 | Tietokannan koko |200 Mt |
 | Tallennustila |2 Gt |
 
