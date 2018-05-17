@@ -226,16 +226,6 @@
       items:
         - name: Luo kohde
           href: ./common-data-service/data-platform-create-entity.md
-        - name: Luo mukautettu kohde tiedoista
-          href: ./common-data-service/data-platform-cds-newentity-pq.md
-        - name: Luo asetusjoukko
-          href: ./common-data-service/custom-picklists.md
-        - name: Luo suhde
-          href: ./common-data-service/data-platform-entity-lookup.md
-        - name: Luo liiketoimintasääntö
-          href: ./common-data-service/data-platform-create-business-rule.md
-        - name: Poista mukautettu kohde
-          href: ./common-data-service/data-platform-delete-entity.md
     - name: Opetusohjelmat
       items:
         - name: 'Luo mukautettu kohde, jossa on osia'
@@ -250,6 +240,16 @@
       items:
         - name: Mukautettujen kenttien hallinta entiteetissä
           href: ./common-data-service/data-platform-manage-fields.md
+        - name: Luo mukautettu kohde tiedoista
+          href: ./common-data-service/data-platform-cds-newentity-pq.md
+        - name: Luo asetusjoukko
+          href: ./common-data-service/custom-picklists.md
+        - name: Luo entiteettien välinen suhde
+          href: ./common-data-service/data-platform-entity-lookup.md
+        - name: Luo liiketoimintasääntö
+          href: ./common-data-service/data-platform-create-business-rule.md
+        - name: Poista mukautettu entiteetti
+          href: ./common-data-service/data-platform-delete-entity.md
     - name: Lisätietoja
       items:
         - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'

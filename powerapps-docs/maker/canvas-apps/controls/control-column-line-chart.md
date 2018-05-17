@@ -1,6 +1,6 @@
 ---
 title: 'Pylväskaavio- ja viivakaavio-ohjausobjektit: viittaus | Microsoft Docs'
-description: Pylväskaavio- ja viivakaavio-ohjausobjekteja koskevaa tietoa, kuten ominaisuuksia ja esimerkkejä
+description: Pylväskaavio- ja viivakaavio-ohjausobjekteja koskevaa tietoa, mukaan lukien ominaisuuksia ja esimerkkejä
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 039b267394ef6be5e3038fa0b07149f69fee6a51
-ms.sourcegitcommit: 33099e6197c0139679cd08c42e9e2a5717904c92
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>Pylväskaavio- ja viivakaavio-ohjausobjektit PowerAppsissa
 Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
@@ -28,22 +28,22 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 **Pylväskaavio**-ohjausobjekti tai **viivakaavio**-ohjausobjekti käsittävät oletusarvoisesti useita ohjausobjekteja, jotka on ryhmitelty yhteen. Nämä ohjausobjektit sisältävät otsikon, tiedon ja tietojen selitteen.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**[Items](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
+**[Kohteet](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
 
 **NumberOfSeries** – Pylväs- tai viivakaavion edustamien tietosarakkeiden määrä.
 
 ## <a name="all-properties"></a>Kaikki ominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva**vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviivat**, **pisteet** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) tai vain tarkastella tietoja (**Näytä**) vai onko ominaisuus kokonaan poissa käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Poistettu käytöstä**.
 
 **[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
@@ -59,9 +59,9 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 
 * **ItemsGap**-ominaisuus on käytettävissä **pylväskaavio**-ohjausobjektin kanssa, mutta ei **viivakaavio**-ohjausobjektin kanssa.
 
-**Markers** – Näytetäänkö pylväs- tai viivakaaviossa kunkin arvopisteen arvo.
+**Merkit** – Näytetäänkö pylväs- tai viivakaaviossa kunkin arvopisteen arvo.
 
-**MarkerSuffix** – Teksti, joka näytetään jokaisen pylväskaavion arvon jälkeen, jos pylväskaavion **Markers**-ominaisuudeksi on määritetty **tosi**.
+**MarkerSuffix** – Teksti, joka näytetään jokaisen pylväskaavion arvon jälkeen, jos pylväskaavion **Merkit**-ominaisuudeksi on määritetty **true**.
 
 * **MarkerSuffix**-ominaisuus on käytettävissä **pylväskaavio**-ohjausobjektin kanssa, mutta ei **viivakaavio**-ohjausobjektin kanssa.
 
@@ -89,17 +89,17 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 
 * **SeriesAxisMin**-ominaisuus on käytettävissä **pylväskaavio**-ohjausobjektin kanssa, mutta ei **viivakaavio**-ohjausobjektin kanssa.
 
-**[Size](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
+**[Koko](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Leveys eli ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (näytön, jos pääsäilöä ei ole).
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
 **XLabelAngle** – Pylväs- tai viivakaavion x-akselin alapuolella olevien otsikoiden kulma.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 **YAxisMax** – Viivakaavion y-akselin enimmäisarvo.
 
@@ -120,9 +120,9 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
    
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
    
-    Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 2. Palaa oletustyötilaan painamalla F5, napsauta tai napauta **[painike](control-button.md)** ohjausobjektia ja paina sitten Esc.
-3. Lisää **pylväskaavio**- tai **viivakaavio**-ohjausobjekti, määritä sen **[Items](properties-core.md)**-ominaisuuden arvoksi **Tuotto** ja määritä sen **NumberOfSeries** -ominaisuuden arvoksi **3**.
+3. Lisää **pylväskaavio**- tai **viivakaavio**-ohjausobjekti, määritä sen **[Kohteet](properties-core.md)**-ominaisuuden arvoksi **Tuotto** ja määritä sen **NumberOfSeries** -ominaisuuden arvoksi **3**.
    
     Ohjausobjekti näyttää kunkin tuotteen tuottotiedot kolmen vuoden ajalta.
 

@@ -16,10 +16,10 @@ ms.workload: na
 ms.date: 09/14/2017
 ms.author: sharik
 ms.openlocfilehash: 739813b2b4905653543461008986901d4e2ee95b
-ms.sourcegitcommit: faaf9adebd72794d2988fba1b27a31d70b5268f8
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="save-and-publish-an-app-in-powerapps"></a>Tallenna ja julkaise sovellus PowerAppsissa
 Kun tallennat sovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
@@ -36,7 +36,7 @@ Valitse **Tallenna** PowerApps Studion **Tiedosto**-valikossa (vasemmassa reunas
 
     ![Tallenna päivitetty sovellus](./media/save-publish-app/save-app.png)
 
-PowerApps voi tallentaa sovelluksen kahden minuutin välein. Jos olet tallentanut sovelluksen kerran, PowerApps jatkaa sovelluksen version tallentamista säännöllisesti. Käyttäjän ei tarvitse painaa tai napauttaa Tallenna-toimintoa. Tekijät voivat ottaa **Automaattinen tallentaminen** -asetuksen käyttöön tai poistaa sen käytöstä **Tiedosto**-valikon **Tili**-välilehdeltä.
+PowerApps voi tallentaa sovelluksen kahden minuutin välein. Jos olet tallentanut sovelluksen kerran, PowerApps jatkaa sovelluksen version tallentamista säännöllisesti. Käyttäjän ei tarvitse painaa tai napauttaa Tallenna-toimintoa. Tekijät voivat ottaa **Automaattinen tallentaminen** -asetuksen käyttöön tai poistaa sen käytöstä **Tiedosto**-valikon **Tili**-välilehdestä.
 
 ![Automaattinen tallentaminen -asetus](./media/save-publish-app/autosave.png)
 
@@ -49,10 +49,10 @@ PowerApps voi tallentaa sovelluksen kahden minuutin välein. Jos olet tallentanu
    ![Tarkista julkaisu](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-> Suosittelemme päivittämään ja/tai julkaisemaan sovelluksen uudelleen kuuden kuukauden kuluessa edellisestä julkaisusta, jotta sovellus pysyy synkronoituna viimeisimmän PowerApps-version kanssa. Jos et päivitä tai julkaise sovellusta uudelleen kuuden kuukauden kuluessa, se saattaa lakata toimimasta ilman varoitusta.
+> Suosittelemme päivittämään tai julkaisemaan sovelluksen uudelleen kuuden kuukauden kuluessa edellisestä julkaisusta, jotta sovellus pysyy synkronoituna viimeisimmän PowerApps-version kanssa. Jos et päivitä tai julkaise sovellusta uudelleen kuuden kuukauden kuluessa, se saattaa lakata toimimasta ilman varoitusta.
 
 ## <a name="identify-the-live-version"></a>Tunnista reaaliaikainen versio
-Mene osoitteeseen [powerapps.com](https://web.powerapps.com) ja valitse **Tiedosto**-valikosta (vasen reuna) kohta **Sovellukset**. Napsauta tai napauta sitten sovelluksen tietokuvaketta ja valitse **Versiot**-välilehti.
+Siirry osoitteeseen [powerapps.com](https://web.powerapps.com) ja valitse **Tiedosto**-valikosta (vasen reuna) kohta **Sovellukset**. Napsauta tai napauta sitten sovelluksen tietokuvaketta ja valitse **Versiot**-välilehti.
 
 **Reaaliaikainen** versio julkaistaan kaikille, joille sovellus on jaettu. Sovelluksen uusinta versiota voivat käyttää vain ne, joilla on käyttöoikeus sen muokkaamiseen.
 
@@ -62,4 +62,4 @@ Julkaise uusin versio valitsemalla **Julkaise tämä versio** ja napsauta tai na
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * [Nimeä sovellus uudelleen](set-name-tile.md) osoitteesta powerapps.com.
-* [Palauta sovellus](restore-an-app.md), jos sinulla on sovelluksesta useita versioita.
+* [Palauta sovellus](restore-an-app.md), jos sinulla on useita versioita sovelluksesta.

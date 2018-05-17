@@ -15,10 +15,10 @@ ms.workload: na
 ms.date: 01/20/2017
 ms.author: sharik
 ms.openlocfilehash: a1966016b07a79a23880511a5cc0d6da8643adbc
-ms.sourcegitcommit: 6afca7cb4234d3a60111c5950e7855106ff97e56
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>SharePoint-luettelojen linkittäminen käyttämällä hakukenttiä
 Tässä opetusohjelmassa näytetään, miten voit yhdistää kaksi SharePoint-luetteloa hakukentillä.
@@ -39,18 +39,18 @@ Sinulla voi olla esimerkiksi **Tilaukset**-luettelo, jossa on **Asiakkaat**-luet
 ### <a name="what-are-choice-fields-used-for"></a>Mihin Valinta-kenttiä käytetään?
 **Valinta**-kenttiä käytetään erittäin lyhyissä luetteloissa. Erillisen luettelon luomisen sijaan sisällytät luettelon arvot pieneen valikkoon, joka tulee näkyviin, kun napsautat tai napautat **Valinta**-kenttää ja valitset jonkin arvoista.
 
-Esimerkkejä tiedoista ovat asiakkaan tilakoodi, tuotteen saatavuus, tilakoodit, käytännössä siis mikä tahansa suhteellisen lyhyt kiinteä luettelo. Näistä tiedoista voidaan itse asiassa luoda erillisiä luetteloita ja käyttää sitten **Haku**-kenttää niiden linkittämiseen. On kuitenkin yleensä helpompaa ja nopeampaa toteuttaa ne **Valinta**-kenttinä.
+Esimerkkejä tiedoista ovat asiakkaan tilakoodi, tuotteen saatavuus ja tilakoodit – käytännössä siis mikä tahansa suhteellisen lyhyt kiinteä luettelo. Näistä tiedoista voidaan itse asiassa luoda erillisiä luetteloita ja käyttää **Haku**-kenttää niiden linkittämiseen. On kuitenkin yleensä helpompaa ja nopeampaa toteuttaa ne **Valinta**-kenttinä.
 
 ## <a name="create-the-lists-in-sharepoint"></a>Luettelojen luominen SharePointissa
-Tässä opetusohjelmassa linkität yhteen kaksi muokattua SharePoint-luetteloa, **Assets** ja **RepairShop**. **Assets**-luetteloa käytetään laitteiston seuraamiseen tiimin sisällä. Koska laitteita menee ajoittain rikki, käytämme **RepairShop**-luetteloa paikallisten korjaamojen löytämiseen.
+Tässä opetusohjelmassa linkität yhteen kaksi muokattua SharePoint-luetteloa, **Assets** ja **RepairShop**. **Assets**-luetteloa käytetään laitteiston seuraamiseen tiimin sisällä. Koska laitteita rikkoutuu ajoittain, käytämme **RepairShop**-luetteloa paikallisten korjaamojen löytämiseen.
 
 ### <a name="the-lookup-fields-used-in-this-example"></a>Tässä esimerkissä käytetyt hakukentät
-**RepairShop**-luettelo käyttää *ContactEmail*-kenttää myymälän tunnistamiseen. Tämä luettelo on määritetty ensin, jotta jokaisella **Assets**-luettelon rivillä on paikka johon viitata.
+**RepairShop**-luettelo käyttää *ContactEmail*-kenttää myymälän tunnistamiseen. Tämä luettelo on määritetty ensin, jotta jokaisella **Assets**-luettelon rivillä on paikka, johon viitata.
 
 **Assets**-luettelo sisältää kaksi kenttää:
 
-* toinen on **Haku**-tyyppinen kenttä, *RepairShop*, joka käyttää sähköpostiosoitteita **RepairShop**-luettelon merkintöihin viittaamiseen;
-* toinen on **Valinta**-tyyppinen kenttä, *AssetType*, jossa luetellaan laitteistotyypit, joihin tämä resurssi voi kuulua.
+* toinen on **Haku**-tyyppinen kenttä *RepairShop*, joka käyttää sähköpostiosoitteita **RepairShop**-luettelon merkintöihin viittaamiseen, ja
+* toinen on **Valinta**-tyyppinen kenttä *AssetType*, jossa luetellaan laitteistotyypit, joihin tämä resurssi voi kuulua.
 
 Määrität todennäköisesti lisää kenttiä seurattavasta tiedosta riippuen.
 
@@ -67,7 +67,7 @@ Tämä tehdään ensin, jotta **RepairShop**-merkinnät ovat valittavissasi *Ass
 
 3. Lisää muut tarvitsemasi kentät.
 
-4. Napsauta tai napauta **+ Uusi** syöttääksesi esimerkkitiedot luetteloon. Täytä vähintään 3 riviä eri *ContactEmail*-arvoilla. Kun resurssi on korjattava, valitset jonkin näistä.
+4. Napsauta tai napauta **+ Uusi** ja syötä esimerkkitiedot luetteloon. Täytä vähintään kolme riviä eri *ContactEmail*-arvoilla. Kun resurssi on korjattava, valitset jonkin näistä.
 
     ![](./media/sharepoint-lookup-fields/add-repair-shops.png)
 
@@ -99,7 +99,7 @@ Tämän sovelluksen avulla voit lisätä tietoja **Assets**-luetteloon.
 
     ![](./media/sharepoint-lookup-fields/create-app.png)
 
-1. Valitse SharePoint-sivustosi **Viimeisimmät sivustot** -luettelosta tai syöttämällä sivustosi URL-osoite suoraan tekstikenttään. Napsauta tai napauta **Siirry**.
+1. Valitse SharePoint-sivustosi **Viimeisimmät sivustot** -luettelosta tai kirjoittamalla sivustosi URL-osoite suoraan tekstikenttään. Napsauta tai napauta **Siirry**.
 
     ![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
 
@@ -129,10 +129,10 @@ Nyt voit suorittaa sovelluksen ja katsoa, miltä hakukenttien tietojen näyttök
 
 7. (valinnainen) Toista tämä menettely ja lisää luetteloon niin monta kohdetta kuin haluat.
 
-8. Palaa oletustyötilaan painamalla ESC-näppäintä.
+8. Palaa oletustyötilaan painamalla Esc-näppäintä.
 
 ## <a name="for-more-information"></a>Lisätietoja
 * [Esittelyssä haun tuki ja uusi esimerkkisovellus](https://powerapps.microsoft.com/blog/support-for-lookups/)
 * [Suorituskyky-, Päivitä-painike, ForAll sekä useiden kenttien haut](https://powerapps.microsoft.com/blog/performance-refresh-forall-multiple-field-lookups-531/)
 * [Sovelluksen luominen käyttämällä Common Data Service -tietokantaa](data-platform-create-app.md)
-* [Sovelluksen luominen alusta alkaen käyttämällä Common Data Service -tietokantaa](data-platform-create-app-scratch.md)
+* [Sovelluksen luominen alusta alkaen Common Data Service -tietokannan avulla](data-platform-create-app-scratch.md)

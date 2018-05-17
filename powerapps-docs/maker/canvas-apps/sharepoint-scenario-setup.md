@@ -1,5 +1,5 @@
 ---
-title: Luo luetteloita SharePoint Onlinen integroimiseksi PowerAppsin, Microsoft Flow’n ja Power BI | Microsoft Docs -asiakirjojen kanssa
+title: Luo luetteloita SharePoint Onlinen integroimiseksi PowerAppsin, Microsoft Flow’n ja Power BI:n kanssa | Microsoft Docs
 description: Tässä tehtävässä luomme SharePoint-luetteloita, jotka toimivat sovellusten, työnkulkujen, raporttien ja koontinäyttöjen tietolähteinä.
 services: ''
 suite: powerapps
@@ -16,19 +16,19 @@ ms.workload: na
 ms.date: 12/19/2017
 ms.author: mblythe
 ms.openlocfilehash: ad9033b51142d1bb6b014abe0cc049a0b5c27ee5
-ms.sourcegitcommit: 6afca7cb4234d3a60111c5950e7855106ff97e56
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="set-up-lists-for-sharepoint-online-integration-with-powerapps-microsoft-flow-and-power-bi"></a>Luo luetteloita SharePoint Onlinen integroimiseksi PowerAppsin, Microsoft Flow’n ja Power BI:n kanssa
 > [!NOTE]
 > Tämä artikkeli on osa opetusohjelmasarjaa PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämisestä SharePoint Onlinen kanssa. Varmista, että luet [sarjan esittelyn](sharepoint-scenario-intro.md), jotta saat paremman käsityksen kokonaiskuvasta, sekä aiheeseen liittyvät ladattavat tiedostot.
 
-SharePointissa on lukemattomia ominaisuuksia jakamista ja yhteistyötä varten, mutta keskitymme tässä artikkelissa yhteen skenaarion ominaisuuteen: [SharePoint-luettelot](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). Luettelo on yksinkertaisesti tietokokoelma, jonka voit jakaa ryhmäsi jäsenten ja muiden sivuston käyttäjien kanssa. Käymme läpi tässä skenaariossa käytettyjä luetteloita. Sitten voit luoda niitä omalla SharePoint Online -sivustollasi.
+SharePointissa on lukemattomia jakamisen ja yhteistyön ominaisuuksia, mutta keskitymme tässä artikkelissa yhteen skenaarion ominaisuuteen: [SharePoint-luettelot](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). Luettelo on yksinkertaisesti tietokokoelma, jonka voit jakaa ryhmäsi jäsenten ja muiden sivuston käyttäjien kanssa. Käymme läpi tässä skenaariossa käytettyjä luetteloita. Sitten voit luoda niitä omalla SharePoint Online -sivustollasi.
 
 ## <a name="step-1-understand-the-lists"></a>Vaihe 1: Luetteloiden ymmärtäminen
-Ensimmäinen luettelo on **Projektipyynnöt**, jossa projektin pyytäjä lisää pyynnön. Sitten projektin hyväksyjä tarkastelee pyyntöä ja hyväksyy tai hylkää sen.
+Ensimmäinen luettelo on **Projektipyynnöt**, jolla projektin pyytäjä lisää pyynnön. Sitten projektin hyväksyjä tarkastelee pyyntöä ja hyväksyy tai hylkää sen.
 
 | **Luettelon sarake** | **Tietotyyppi** | **Muistiinpanot** |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ Ensimmäinen luettelo on **Projektipyynnöt**, jossa projektin pyytäjä lisää
 | Hyväksytty |Yksi tekstirivi |Arvot: odottava, kyllä, ei |
 
 > [!NOTE]
-> Käytämme myös **Tunnus**-saraketta, jonka SharePoint muodostaa automaattisesti ja joka on oletuksena piilotettuna. Yksinkertaisuuden vuoksi käytämme tietojen perustyyppejä, mutta oikeassa sovelluksessa ne saattavat olla monimutkaisempia, kuten **Henkilö tai ryhmä** **Pyytäjä**-sarakkeessa. Lisätietoja PowerAppsin tukemista tietotyypeistä saat lukemalla [Microsoft PowerAppsin yhdistäminen SharePointiin](connections/connection-sharepoint-online.md#known-issues) -artikkelin.
+> Käytämme myös **Tunnus**-saraketta, jonka SharePoint muodostaa automaattisesti ja joka on oletusarvoisesti piilotettuna. Yksinkertaisuuden vuoksi käytämme tietojen perustyyppejä, mutta oikeassa sovelluksessa ne saattavat olla monimutkaisempia, kuten **Henkilö tai ryhmä** **Pyytäjä**-sarakkeessa. Lisätietoja PowerAppsin tukemista tietotyypeistä saat lukemalla [Microsoft PowerAppsin yhdistäminen SharePointiin](connections/connection-sharepoint-online.md#known-issues) -artikkelin.
 
 Toinen luettelo on **Projektitiedot**, johon tallentuu kaikkien hyväksyttyjen projektien tiedot, kuten sille valittu projektipäällikkö.
 
@@ -58,7 +58,7 @@ Toinen luettelo on **Projektitiedot**, johon tallentuu kaikkien hyväksyttyjen p
 | Valittu projektipäällikkö |Yksi tekstirivi |Projektipäällikkö |
 
 ## <a name="step-2-create-and-review-the-lists"></a>Vaihe 2: Luo luettelo ja tarkastele sitä
-Voidaksesi jatkaa tätä skenaariota sinun on luotava kaksi SharePoint-luetteloa ja täytettävä ne esimerkkitiedoilla. Näytämme sinulle, miten tämä tehdään, luomalla luettelo ja liittämällä siihen esimerkkitietoja. Varmista, että sinulla on [latauspaketin](https://aka.ms/o4ia0f) Excel-tiedostot.
+Voidaksesi jatkaa tätä skenaariota sinun on luotava kaksi SharePoint-luetteloa ja täytettävä ne esimerkkitiedoilla. Näytämme sinulle, miten tämä tehdään luomalla luettelo ja liittämällä siihen esimerkkitietoja. Varmista, että sinulla on [latauspaketin](https://aka.ms/o4ia0f) Excel-tiedostot.
 
 > [!NOTE]
 > Käytä tätä vaihetta varten Internet Explorer -selainta.
@@ -73,7 +73,7 @@ Voidaksesi jatkaa tätä skenaariota sinun on luotava kaksi SharePoint-luetteloa
    
     ![Anna uudelle luettelolle nimi](./media/sharepoint-scenario-setup/01-01-02-create-list.png)
    
-    **Projektipyynnöt**-luettelo luodaan oletusarvona olevan **Otsikko**-kentän kanssa.
+    **Projektipyynnöt**-luettelo luodaan oletusarvoisen **Otsikko**-kentän kanssa.
    
     ![Projektipyynnöt-luettelo](./media/sharepoint-scenario-setup/01-01-03-initial-list.png)
 
@@ -83,7 +83,7 @@ Voidaksesi jatkaa tätä skenaariota sinun on luotava kaksi SharePoint-luetteloa
    
     ![Lisää yksi tekstirivi -kenttä](./media/sharepoint-scenario-setup/01-01-04-add-column.png)
 
-2. Anna nimi ”Kuvaus” ja  napauta tai napsauta sitten **Tallenna**.
+2. Anna nimi ”Kuvaus” ja napauta tai napsauta sitten **Tallenna**.
    
 3. Toista vaiheet **1** ja **2** muita luettelossa olevia sarakkeita varten:
    
@@ -115,7 +115,7 @@ Kuten tämän opetusohjelmasarjan johdannossa todettiin, olemme lisänneet kaksi
 
 1. Napauta tai napsauta [PowerApps Studion](https://create.powerapps.com/studio/) vasemmassa ruudussa **Avaa**. 
 
-2. Napauta tai napsauta **Selaa** ja avaa sitten **project-management-app.msapp**-tiedosto, jonka olet ladannut.
+2. Napauta tai napsauta **Selaa** ja avaa sitten lataamasi **project-management-app.msapp**-tiedosto.
 
 3. Napauta tai napsauta **Salli**, jotta PowerApps voi käyttää SharePointia.
 
@@ -125,13 +125,13 @@ Kuten tämän opetusohjelmasarjan johdannossa todettiin, olemme lisänneet kaksi
 5. Napauta tai napsauta **Tiedot**-paneelin kolmea pistettä (**. . .**) **Projektitiedot**-kohdan vieressä ja napauta tai napsauta sitten **Poista**.
    
     ![Projektitietojen tietolähteen poistaminen](./media/sharepoint-scenario-setup/01-03-02-remove.png)
-6. Napauta tai napsauta**Lisää tietolähde**.
+6. Napauta tai napsauta **Lisää tietolähde**.
    
     ![Tietolähteen lisääminen](./media/sharepoint-scenario-setup/01-03-03-add.png)
 
-7. Esitämme kaksi tapaa, joilla voit luoda yhteyden luetteloon. Valitse sopiva sen perusteella, onko PowerAppsin ja SharePointin välille jo luotu sinua varten yhteys: 
+7. Esitämme kaksi tapaa, joilla voit luoda yhteyden luetteloon. Valitse sopiva tapa sen perusteella, onko PowerAppsin ja SharePointin välille jo luotu sinua varten yhteys: 
 
-    * Jos näet, että SharePoint-yhteys on jo luotu, napauta tai napsauta sitä yhteyttä.
+    * Jos näet, että SharePoint-yhteys on jo luotu, napauta tai napsauta kyseistä yhteyttä.
 
         ![Olemassa oleva yhteys](./media/sharepoint-scenario-setup/01-03-03aa-existing-connection.png)
 
@@ -158,7 +158,7 @@ Kuten tämän opetusohjelmasarjan johdannossa todettiin, olemme lisänneet kaksi
     
     ![Projektitietojen tietolähteen päivittäminen](./media/sharepoint-scenario-setup/01-03-02-remove.png)
 
-11. Napauta ![oikeassa yläkulmassa olevaa Suorita sovellus -kuvaketta,](./media/sharepoint-scenario-setup/icon-run-arrow.png) jotta voit suorittaa sovelluksen ja varmistaa, että yhteydet toimivat asianmukaisesti.
+11. Napsauta ![Suorita sovellus -kuvaketta](./media/sharepoint-scenario-setup/icon-run-arrow.png) oikeassa yläkulmassa, jotta voit suorittaa sovelluksen ja varmistaa, että yhteydet toimivat asianmukaisesti.
 
 12. Napauta tai napsauta **Tiedosto** ja tallenna sitten sovellus pilveen. 
 
@@ -175,7 +175,7 @@ Kuten tämän opetusohjelmasarjan johdannossa todettiin, olemme lisänneet kaksi
    
     ![Tietolähdeasetukset](./media/sharepoint-scenario-setup/01-03-05-settings.png)
 
-4. Anna SharePoint Online -sivuston URL-osoite ja napauta tai napsauta sitten **OK** ja sen jälkeen **Sulje**.
+4. Anna SharePoint Online -sivuston URL-osoite ja napsauta tai napauta sitten **OK** ja sen jälkeen **Sulje**.
    
     ![SharePoint-luetteloiden URL-osoite](./media/sharepoint-scenario-setup/01-03-06-list-url.png)
 
@@ -183,7 +183,7 @@ Kuten tämän opetusohjelmasarjan johdannossa todettiin, olemme lisänneet kaksi
    
     ![Ota kyselyn muutokset käyttöön](./media/sharepoint-scenario-setup/01-03-07-apply.png)
 
-6. Kirjaudu Microsoft-tilille (SharePoint Onlineen kirjautumiseen käyttämäsi tili) ja napauta tai napsauta sitten **Yhdistä**.
+6. Kirjaudu Microsoft-tiliin (SharePoint Onlineen kirjautumiseen käyttämäsi tili) ja napauta tai napsauta sitten **Yhdistä**.
    
     ![Yhdistä SharePoint Onlineen](./media/sharepoint-scenario-setup/01-03-08-connect.png)
 

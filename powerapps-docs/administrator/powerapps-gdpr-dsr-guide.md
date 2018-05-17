@@ -1,45 +1,37 @@
 ---
 title: PowerApps-asiakastietoihin kohdistuvien Data Subject Rights (DSR) -pyyntöihin vastaaminen | Microsoft Docs
 description: Ohjeet PowerApps-asiakastietoihin liittyviin DSR-pyyntöihin vastaamiseen
-services: powerapps
-suite: powerapps
-documentationcenter: na
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 567a1e5d93d21fc315fe61b965ffb9005111172c
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 73dc9a319899a941e410d69d10cdc8fd96eba4ea
+ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-powerapps-customer-data"></a>PowerApps-asiakastietojen rekisteröityjen tietopyyntöihin vastaaminen
 
 ## <a name="introduction-to-dsr-requests"></a>Rekisteröityjen tietopyyntöjen johdanto
-Euroopan unionin (EU) yleinen tietosuoja-asetus (GDPR) antaa ihmisille (joita kutsutaan *asetuksessa rekisteröidyiksi*) oikeudet hallita henkilötietoja, joita työnantaja tai muu organisaatio tai virasto (jota kutsutaan *henkilötietorekisterinpitäjäksi* tai vain *rekisterinpitäjäksi*) on heistä kerännyt. Yleinen tietosuoja-asetus määrittää henkilötiedoiksi hyvin yleisesti mitkä tahansa tiedot, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön. GPDR antaa rekisteröidyille oikeuden seuraaviin toimiin heidän henkilökohtaisiin tietoihinsa liittyen:
+Euroopan unionin (EU) yleinen tietosuoja-asetus (GDPR) antaa ihmisille (joita kutsutaan *asetuksessa rekisteröidyiksi*) oikeudet hallita henkilötietoja, joita työnantaja tai muu organisaatio tai virasto (jota kutsutaan *henkilötietorekisterinpitäjäksi* tai vain *rekisterinpitäjäksi*) on heistä kerännyt. GDPR määrittää henkilötiedoiksi hyvin yleisesti mitkä tahansa tiedot, jotka liittyvät tunnistettuun tai tunnistettavissa olevaan luonnolliseen henkilöön. GPDR antaa rekisteröidyille oikeuden seuraaviin toimiin heidän henkilökohtaisiin tietoihinsa liittyen:
 
 * Kopion saaminen
-* Pyytää korjauksia
-* Rajoittaa käsittelyä
+* Korjausten pyytäminen
+* Käsittelyn rajoittaminen
 * Poistaminen
-* Saada tiedot sähköisessä muodossa niin, että ne voidaan siirtää toiselle ohjaajalle
+* Tietojen saaminen sähköisessä muodossa niin, että ne voidaan siirtää toiselle rekisterinpitäjälle
 
 Rekisteröidyn rekisterinpitäjälle tekemää virallista pyyntöä ryhtyä toimiin henkilötietoihin liittyen kutsutaan rekisteröidyn tietopyynnöksi (Data Subject Rights, DSR).
 
-Tässä asiakirjassa kerrotaan, miten Microsoft valmistautuu yleiseen tietosuoja-asetukseen. Annamme myös esimerkkejä toimenpiteistä, joihin voit ryhtyä täyttääksesi yleisen tietosuoja-asetuksen vaatimukset, kun käytät PowerApps-sovelluksia, Microsoft Flow’ta ja Common Data Service for Appsia. Opit, miten Microsoftin tuotteet, palvelut ja hallintatyökalut auttavat rekisterinpitäjiä etsimään Microsoftin pilvipalveluissa olevia henkilötietoja ja suorittamaan niille toimintoja, jotta ne voivat vastata rekisteröityjen tietopyyntöihin.
+Tässä asiakirjassa kerrotaan, miten Microsoft valmistautuu yleiseen tietosuoja-asetukseen. Annamme myös esimerkkejä toimenpiteistä, joihin voit ryhtyä täyttääksesi yleisen tietosuoja-asetuksen vaatimukset, kun käytät PowerApps-sovelluksia, Microsoft Flow’ta ja Common Data Service for Appsia. Opit, miten Microsoftin tuotteet, palvelut ja hallintatyökalut auttavat rekisterinpitäjiä etsimään Microsoftin pilvipalveluissa olevia henkilötietoja ja suorittamaan niille toimintoja rekisteröityjen tietopyyntöihin vastaamiseksi.
 
 Tässä artikkelissa käsitellään seuraavia toimintoja:
 
-* **Etsiminen**: Haku- ja etsintätyökalulla voit etsiä helpommin asiakastietoja, jotka saattavat olla rekisteröidyn tietopyynnön kohteena. Kun mahdollisesti oleelliset tiedostot on kerätty, voit suorittaa niille rekisteröidyn tietopyynnön toimintoja, jotka kuvataan seuraavissa vaiheissa ja joilla voit vastata pyyntöön. Voit myös tulla siihen tulokseen, että pyyntö ei täytä organisaatiosi vaatimuksia rekisteröidyn tietopyyntöön vastaamiselle.
+* **Etsiminen**: Haku- ja etsintätyökalulla voit etsiä helpommin asiakastietoja, jotka saattavat olla rekisteröidyn tietopyynnön kohteena. Kun mahdollisesti oleelliset tiedostot on kerätty, voit suorittaa niille alla kuvattuja rekisteröidyn tietopyynnön toimintoja, jotta voit vastata pyyntöön. Voit myös tulla siihen tulokseen, että pyyntö ei täytä organisaatiosi vaatimuksia rekisteröidyn tietopyyntöön vastaamiselle.
 
 * **Tarkistaminen**: hae Microsoftin pilvipalveluihin tallennetut henkilötiedot ja ota niistä pyydettäessä kopio, jonka voit toimittaa rekisteröidylle.
 
@@ -99,7 +91,7 @@ Saat lisätietoja CDC for Appsin tallentamien henkilötietojen löytämisestä o
 > Suosittelemme, että järjestelmänvalvoja suorittaa tämän vaiheen PowerApps-käyttäjän puolesta.
 
 ## <a name="rectify"></a>Korjaaminen
-Jos rekisteröity pyytää sinua korjaamaan henkilötietoja, joita organisaatiosi tietoihin sisältyy, sinun ja organisaatiosi täytyy päättää, hyväksyttekö pyynnön. Tietojen korjaaminen saattaa tarkoittaa henkilötietojen muokkaamista ja poistamista tiedostossa tai muussa kohteessa.
+Jos rekisteröity pyytää sinua korjaamaan henkilötietoja, joita organisaatiosi tietoihin sisältyy, sinun ja organisaatiosi täytyy päättää, onko pyynnön toteuttaminen asianmukaista. Tietojen korjaaminen saattaa tarkoittaa henkilötietojen muokkaamista ja poistamista tiedostossa tai muussa kohteessa.
 
 Azure Active Directoryn avulla voit hallita PowerAppsissa olevia loppukäyttäjiesi käyttäjätietoja (henkilötietoja). Yritysasiakkaat voivat hallita rekisteröityjen korjauspyyntöjä, esimerkiksi tietyn Microsoft-palvelun rajoitetuilla muokkaustoiminnoilla. Rekisterinpitäjänä Microsoft ei tarjoa mahdollisuutta korjata järjestelmän luomia lokeja, sillä ne kuvaavat faktapohjaisia toimintoja ja täten Microsoftin palveluiden tapahtumien historiatietoja. Lisätietoja on ohjeaiheessa [GDPR: rekisteröityjen tietopyynnöt (DSR-pyynnöt)](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
 
