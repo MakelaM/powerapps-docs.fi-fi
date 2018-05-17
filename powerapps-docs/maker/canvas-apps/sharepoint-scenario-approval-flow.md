@@ -1,25 +1,22 @@
 ---
 title: Työnkulun luominen projektin hyväksyntien hallintaan | Microsoft Docs
 description: Tässä tehtävässä luomme työnkulun, joka ohjaa projektien hyväksyntäprosessia.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: mgblythe
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/09/18
 ms.author: mblythe
-ms.openlocfilehash: 4af1571bb72c713c6186f5237d6b3791eb95808b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 2a3bb307d403d372d0cae89a0eb9d3fd86271768
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-flow-to-manage-project-approvals"></a>Työnkulun luominen projektin hyväksyntien hallintaan
 > [!NOTE]
@@ -55,7 +52,7 @@ Tämä haara lähettää oletusarvoisesti hyväksyntäsähköpostiviestin pyytä
 1. Napsauta tai napauta **Jos kyllä** -haarassa **Inform item creator of approval** (Ilmoita hyväksynnästä kohteen tekijälle) ja sitten **Muokkaa**, niin näet pyytäjälle lähetetyn sähköpostiviestin oletusasetukset.
    
     ![Muokkaa sähköpostiasetuksia](./media/sharepoint-scenario-approval-flow/03-01-07-yes-email.png)
-2. Sähköpostiviesti lähetetään oletusarvoisesti luettelokohteen luoneelle henkilölle ja sisältää näkemäsi aiherivin ja viestin. Voit halutessasi päivittää näitä.
+2. Sähköpostiviesti lähetetään oletusarvoisesti luettelokohteen luoneelle henkilölle ja sisältää näkemäsi aiherivin ja viestin. Voit halutessasi päivittää niitä.
    
     ![Oletussähköpostiasetukset](./media/sharepoint-scenario-approval-flow/03-01-07a-yes-email-defaults.png)
 3. Napsauta tai napauta **Lisää toiminto**.

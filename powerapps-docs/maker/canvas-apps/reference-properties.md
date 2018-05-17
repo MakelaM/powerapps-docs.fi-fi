@@ -1,25 +1,22 @@
 ---
 title: Etsi ominaisuuksia | Microsoft Docs
 description: Etsi ominaisuuksia ohjausobjektin, luokan tai aakkosjärjestyksen mukaan.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/17/2016
 ms.author: gregli
-ms.openlocfilehash: 11f3a29989057a3dc1a75c40877314596a62859d
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ae72dad8143c747714e8573ecc3cc5a9644044b4
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Ohjausobjektit ja ominaisuudet PowerAppsissa
 Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuksia. Kullakin ohjausobjektityypillä on erilainen ominaisuusjoukko. Jotkin ominaisuudet, kuten **korkeus** ja **leveys**, ovat yhteisiä melkein kaikentyyppisille ohjausobjekteille, mutta jotkin ominaisuudet, kuten **CheckboxSize**, koskevat vain yhdenlaista ohjausobjektia.
