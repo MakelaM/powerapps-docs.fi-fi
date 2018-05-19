@@ -1,30 +1,25 @@
 ---
 title: Tietoyhteyden lisääminen sovellukseen | Microsoft Docs
 description: Tietoyhteyden lisääminen olemassa olevaan tai tyhjään sovellukseen
-services: ''
-suite: powerapps
 documentationcenter: na
-author: archnair
-manager: anneta
+author: lancedMicrosoft
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 10/02/2017
-ms.author: archanan
-ms.openlocfilehash: 2134aa28f1b842614e1f4b82acaca2f100126120
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.topic: conceptual
+ms.component: canvas
+ms.date: 04/06/2018
+ms.author: lanced
+ms.openlocfilehash: 44ee7b992f5817a5d6b8d791b05e1db671d3e6ba
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-a-data-connection-in-powerapps"></a>Tietoyhteyden lisääminen PowerAppsissa
-Lisää PowerAppsissa tietoyhteys olemassa olevaan sovellukseen tai sovellukseen, jonka olet luonut alusta alkaen. Tässä aiheessa käytetään PowerApps Studiota, mutta voit myös käyttää [powerapps.com](https://web.powerapps.com)-sivustoa, kuten kuvataan aiheessa [Yhteyksien hallinta](add-manage-connections.md).
-
-Sovelluksesi tietoyhteys voi yhdistää SharePointiin, Salesforceen, OneDriveen tai [johonkin useista muista tietolähteistä](connections-list.md).
+Lisää PowerAppsissa tietoyhteys olemassa olevaan sovellukseen tai sovellukseen, jonka olet luonut alusta alkaen. Sovelluksesi voi yhdistää SharePointiin, Salesforceen, OneDriveen ja [moneen muuhun tietolähteeseen](connections-list.md).
 
 Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja hallita tietoyhteydestä saatuja tietoja sovelluksessasi, kuten näissä esimerkeissä:
 
@@ -33,60 +28,58 @@ Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja halli
 * Yhdistä SQL Serveriin ja päivitä taulukko sovelluksestasi.
 
 ## <a name="prerequisites"></a>Edellytykset
-[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin, [asenna](http://aka.ms/powerappsinstall) ja avaa se ja kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](http://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
-## <a name="background-on-data-connections"></a>Taustatietoja tietoyhteyksistä
-Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset voivat käyttää näitä tietolähteitä käyttämällä **liittimiä**.
+## <a name="add-a-data-source"></a>Lisää tietolähde
+1. **Aloitus**-välilehdellä siirrä osoitin **Aloita tyhjästä**-ruudun päälle ja valitse sitten **Tee tämä sovellus.**
 
-Yleisimmät tietolähteet ovat taulukoita, joita voit käyttää tiedon hakemiseen ja tallentamiseen. Voit käyttää tietolähteiden liittimiä tietojen lukemiseen ja kirjoittamiseen Microsoft Excel -työkirjoihin, SharePoint-luetteloihin, SQL-taulukoihin ja moniin muihin muotoihin, jotka voidaan tallentaa pilvipalveluihin, kuten OneDrive for Business, DropBox, SQL Server ja niin edelleen.
+    ![Sovelluksen luominen alusta alkaen](./media/add-data-connection/blank-app-tile.png)
 
-Taulukoita sisältämättömiin tietolähteisiin kuuluvat sähköposti, kalenterit, Twitter ja ilmoitukset.
-
-Käyttämällä **[Valikoima](controls/control-gallery.md)**-, **[Näytä lomake](controls/control-form-detail.md)**- ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekteja on helppoa luoda sovellus, joka lukee ja kirjoittaa tietoa tietolähteestä. Pääset alkuun lukemalla artikkelin [Tutustu tietolomakkeisiin](working-with-forms.md).
-
-## <a name="add-a-connection"></a>Yhteyden lisääminen
-1. Napsauta tai napauta **Tiedosto**-valikon (lähellä vasenta reunaa) kohtaa **Uusi**.
-
-    ![Tiedosto-valikon Uusi-vaihtoehto](./media/add-data-connection/file-new.png)
-
-2. Napsauta tai napauta **Tyhjä sovellus** -ruudun kohtaa **Puhelinasettelu**.
-
-    ![Sovelluksen luominen alusta alkaen](./media/add-data-connection/blank-app.png)
+1. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, valitse **Ohita**.
 
 3. Napsauta tai napauta keskimmäisellä ruudulla **Yhdistä tietoihin**.
 
-4. Jos **Tiedot**-ruudun yhteysluettelossa on haluamasi yhteys, lisää se sovellukseen napsauttamalla tai napauttamalla sitä. Muussa tapauksessa siirry seuraavaan vaiheeseen.
+4. Jos **Tiedot**-ruudun yhteysluettelossa on haluamasi yhteys, lisää se sovellukseen valitsemalla sen. Muussa tapauksessa siirry seuraavaan vaiheeseen.
 
     ![Tietolähteen lisääminen](./media/add-data-connection/choose-existing-connections.png)
 
-5. Avaa yhteysluettelo napsauttamalla tai napauttamalla **Uusi yhteys** -kohtaa.
+5. Avaa luettelo liittimistä valitsemalla **Uusi yhteys**.
 
     ![Yhteyden lisääminen](./media/add-data-connection/new-connection.png)
 
-6. Selaa yhteysluetteloa ja etsi yhteys, jonka haluat luoda (esimerkiksi **Office 365 Outlook**) ja napsauta tai napauta sitä.
+6. Selaa luetteloa ja valitse yhteys, jonka haluat luoda (esimerkiksi **Office 365 Outlook**).
 
     ![Yhteyden valinta](./media/add-data-connection/choose-connection.png)
 
-7. Luo yhteys ja lisää se sovellukseesi napsauttamalla tai napauttamalla **Luo**.
+7. Luo yhteys ja lisää se sovellukseesi valitsemalla **Luo**.
 
-    Jotkin yhteydet, kuten **Microsoft Translator**, eivät vaadi lisävaiheita ja voit näyttää niiltä saatuja tietoja välittömästi. Jotkin muut liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Esimerkiksi [SharePoint](connections/connection-sharepoint-online.md) ja [SQL Server](connections/connection-azure-sqldatabase.md) tarvitsevat lisätietoja, ennen kuin voit käyttää niitä.
+    Jotkin liittimet, kuten **Office 365 Outlook**, eivät vaadi lisävaiheita, ja voit näyttää niiltä saatuja tietoja välittömästi. Jotkin muut liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Esimerkiksi [SharePoint](connections/connection-sharepoint-online.md) ja [SQL Server](connections/connection-azure-sqldatabase.md) tarvitsevat lisätietoja, ennen kuin voit käyttää niitä.
 
-## <a name="view-or-change-a-data-source"></a>Tietolähteen tarkastelu tai muuttaminen
-Sovellusta päivitettäessä tietolähdettä, jolla on **Kohde**-ominaisuus, voi olla tarpeen muuttaa valikoimassa, lomakkeessa tai muussa ohjausobjektissa tai se on ehkä tunnistettava. Voit esimerkiksi työskennellä jonkun muun luoman sovelluksen parissa tai voit haluta etsiä tietolähteen, jonka määritit aiemmin.
+## <a name="add-another-data-source"></a>Lisää toinen tietolähde
+1. Lisää ohjausobjekti, johon haluat lisätä tietolähteen.
 
-1. Valitse ohjausobjekti, jolle haluat määrittää tietolähteen.
+    Ohjausobjektilla on oltava **Kohteet**-ominaisuus, kuten valikoimilla ja luetteloruuduilla, tai **Kohde**-ominaisuus, kuten lomakkeilla.
+
+1. **Tiedot**-ruudussa (joka avautuu automaattisesti) avaa luettelo kohdassa **Tietolähde** ja valitse sitten **Lisää tietolähde**.
+
+1. Noudata edellä olevia ohjeita, alkaen vaiheesta 4.
+
+## <a name="identify-or-change-a-data-source"></a>Tietolähteen tunnistaminen tai muuttaminen
+Sovellusta päivitettäessä voi olla tarpeen tunnistaa valikoimassa, lomakkeessa tai muussa ohjausobjektissa esiintyvien tietojen lähde tai muuttaa sitä. Tietolähteitä voi haluta tunnistaa esimerkiksi päivitettäessä jonkun muun luomaa sovellusta tai sovellusta, jonka käyttäjä on itse luonut kauan sitten.
+
+1. Valitse ohjausobjekti, jonka tietolähteen haluat tunnistaa tai muuttaa.
 
     Valitse esimerkiksi valikoima (eikä valikoiman sisältämää ohjausobjektia) napsauttamalla tai napauttamalla sitä näyttöjen ja ohjausobjektien hierarkkisessa luettelossa lähellä vasenta reunaa.
 
     Tietolähteen nimi näkyy oikeanpuoleisen ruudun **Ominaisuudet**-välilehdessä.
 
-    ![Tietolähde Ominaisuudet-välilehdessä](./media/add-data-connection/properties-tab.png)
-
-2. Tietolähteen lisätietojen näyttämiseksi tai lähteen muuttamiseksi napsauta tai napauta oikeanpuoleisen ruudun kohtaa **Tiedot**.
+2. Muuta tietolähde tai näytä siitä enemmän tietoja valitsemalla se.
 
     ![Tietoruutu](./media/add-data-connection/data-pane.png)
 
-3. Muuta tietolähdettä napsauttamalla tai napauttamalla tietoruudun viereistä alaspäin osoittavaa nuolta ja valitse tai luo uusi tietolähde.
+3. Muuta tietolähde avaamalla luettelo tietolähteistä ja valitsemalla tai luomalla toisen lähteen.
+
+     ![Tietoruutu](./media/add-data-connection/datasource-list.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * Tietojen näyttämiseksi tai päivittämiseksi lähteessä, kuten Excel, SharePoint tai SQL Server, [lisää valikoima](add-gallery.md) ja [lisää lomake](add-form.md).

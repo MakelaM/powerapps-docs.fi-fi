@@ -1,25 +1,22 @@
 ---
 title: SharePoint-luettelolomakkeen mukauttaminen PowerAppsin avulla | Microsoft Docs
 description: Käytä PowerAppsia luettelolomakkeen mukauttamiseksi SharePointissa.
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 02/05/2018
-ms.author: sharik
-ms.openlocfilehash: 62c3050ecee4d068d5417fe3846abb3495990d8b
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 34c4e4126015f9a5f53ef6f07c9c66e4a4141db0
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-a-sharepoint-list-form-using-powerapps"></a>SharePoint-luettelon mukauttaminen PowerAppsin avulla
 
@@ -36,11 +33,11 @@ Oletko valmis mukauttamaan? Aloitetaan!
 > [!NOTE]
 > **Mukauta lomakkeita** -vaihtoehto ei ole käytettävissä tai se ei välttämättä toimi oikein, jos SharePoint-luettelo sisältää tietotyyppejä, joita PowerApps ei tue.
 
-Napsauta tai napauta SharePoint-luettelon komentopalkissa **PowerApps** ja napsauta tai napauta **Mukauta lomakkeita**. Toiminto avaa Verkon PowerApps Studion selaimessa, jossa PowerApps luo yhden näytön lomakesovelluksen seuraavan esimerkin mukaan.
+Napsauta tai napauta SharePoint-luettelon komentopalkissa **PowerApps** ja napsauta tai napauta **Mukauta lomakkeita**. Toiminto avaa PowerApps Studion selaimessa, jossa PowerApps luo yhden näytön lomakesovelluksen seuraavan esimerkin mukaan.
 
 ![Yhden näytön lomakesovellus](./media/customize-list-form/list-form-app.png)
 
-Voit palata SharePoint-luetteloosi milloin tahansa napsauttamalla tai napauttamalla **Takaisin SharePointiin** Verkon PowerApps Studion vasemmassa ylälaidassa.
+Voit palata SharePoint-luetteloosi milloin tahansa napsauttamalla tai napauttamalla **Takaisin SharePointiin** PowerApps Studion vasemmassa ylälaidassa.
 
 ## <a name="customize-the-list-form"></a>Luettelolomakkeen mukauttaminen
 
@@ -91,7 +88,7 @@ Näet vaiheittaiset ohjeet kenttien piilottamiseen sekä muiden lomakemuutosten 
 
     * **Käytä oletusarvoista SharePoint-lomaketta** – SharePoint käyttää SharePoint-oletuslomaketta luettelossasi.
 
-    * **Käytä PowerAppsissa luotua mukautettua lomaketta** – SharePoint käyttää PowerAppsissa mukauttamaasi lomaketta. (Voit vaihtoehtoisesti julkaista lomakkeen uudelleen Verkon PowerApps Studion **Tallenna**-sivulta.)
+    * **Käytä PowerAppsissa luotua mukautettua lomaketta** – SharePoint käyttää PowerAppsissa mukauttamaasi lomaketta. (Voit vaihtoehtoisesti julkaista lomakkeen uudelleen PowerApps Studion **Tallenna**-sivulta.)
 
     Voit siirtyä asetusten välillä tarpeen mukaan.
 
@@ -111,7 +108,7 @@ Näet vaiheittaiset ohjeet kenttien piilottamiseen sekä muiden lomakemuutosten 
 
 **K:** Miten mukautettu luettelo eroaa erillisestä sovelluksesta, jonka luon SharePointista tai PowerAppsista?
 
-**V:** SharePointista luomasi luettelolomakesovellus on erityisen tyyppinen PowerApps-sovellus, jota voidaan käyttää vain SharePoint-luettelossa. Nämä luettelolomakesovellukset eivät näy sovellusluettelossasi Verkon PowerApps Studiossa tai PowerApps Mobilessa, etkä voi suorittaa niitä SharePoint-luettelon ulkopuolella.
+**V:** SharePointista luomasi luettelolomakesovellus on erityisen tyyppinen PowerApps-sovellus, jota voidaan käyttää vain SharePoint-luettelossa. Nämä luettelolomakesovellukset eivät näy sovellusluettelossasi PowerApps Studiossa tai PowerApps Mobilessa, etkä voi suorittaa niitä SharePoint-luettelon ulkopuolella.
 
 **K:** Milloin minun tulisi luoda mukautettu luettelolomake ja milloin erillinen sovellus?
 
@@ -145,12 +142,12 @@ Näet vaiheittaiset ohjeet kenttien piilottamiseen sekä muiden lomakemuutosten 
 
 1. Napsauta tai napauta SharePoint-luettelon komentopalkissa **PowerApps** ja napsauta tai napauta **Mukauta lomakkeita**.
 
-1. Napsauta tai napauta Verkon PowerApps Studiossa **Tiedosto** ja sitten **Tallenna**-sivulla **Näytä kaikki versiot**. **Versiot**-sivu avautuu uudessa selaimen välilehdessä.
+1. Napsauta tai napauta PowerApps Studiossa **Tiedosto** ja sitten **Tallenna**-sivulla **Näytä kaikki versiot**. **Versiot**-sivu avautuu uudessa selaimen välilehdessä.
 
     > [!NOTE]
     > Jos et näe **Näytä kaikki versiot** -painiketta, napsauta tai napauta **Tallenna**. Painikkeen pitäisi tulla näkyviin.
 
-1. Palaa toisen selainvälilehden **Tallenna**-sivulle sulkematta **Versiot**-sivua tai selaimen välilehteä. Napsauta tai napauta sitten vasemman siirtymisruudun ylälaidassa olevaa nuolta ja valitse **Takaisin SharePointiin** lomakkeen avaamiseksi ja Verkon PowerApps Studion sulkemiseksi.
+1. Palaa toisen selainvälilehden **Tallenna**-sivulle sulkematta **Versiot**-sivua tai selaimen välilehteä. Napsauta tai napauta sitten vasemman siirtymisruudun ylälaidassa olevaa nuolta ja valitse **Takaisin SharePointiin** lomakkeen avaamiseksi ja PowerApps Studion sulkemiseksi.
 
 1. Palaa toisen selainvälilehden **Versiot**-sivulle, etsi palautettava versio ja napsauta **Palauta**.
 

@@ -1,27 +1,27 @@
 ---
 title: Yleisiä PowerAppsin ongelmia ja ratkaisuja| Microsoft Docs
 description: Luettelo yleisistä PowerAppsin ongelmista ja ratkaisuista
-documentationcenter: na
 author: skjerland
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 05/03/2018
+ms.date: 05/10/2018
 ms.author: sharik
-ms.openlocfilehash: b37672c4b78cf097eb49a05306ecf3eb8311476f
-ms.sourcegitcommit: 99d50f9a79fe4f35ba56f365de6593abd893978e
+ms.openlocfilehash: 71e6d6977ff84ac8131acb9353f919c5ee80995b
+ms.sourcegitcommit: fe556abcfd6bdfeb5fdeea8f07b185b4b502d02f
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/06/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Yleisiä PowerAppsin ongelmia ja ratkaisuja
 Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttäjät saattavat kohdata PowerAppsia käyttäessään. Tarvittaessa annetaan ratkaisuehdotuksia.
 
 ## <a name="recently-addedchanged"></a>Äskettäin tehty lisäys/muutos
+1. **Sivuston käynnistäminen upotetusta sovelluksesta**
+
+    Internet Explorer- ja Microsoft Edge -selaimet saattavat estää URL-osoitteen tai sivuston avaamisen, jos se on suojatussa tilassa tai alemmassa suojausvyöhykkeessä kuin missä sovellus ladataan. Voit ratkaista tämän ongelman [muuttamalla suojaus- ja tietosuoja-asetuksia](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings) selaimessa.
+
 1. **Yhdistelmäruudun ohjausobjektit valikoimissa**
 
     Kun käytät **yhdistelmäruudun** ohjausobjektia valikoiman sisällä, sen valintoja ei säilytetä, kun käyttäjä selaa valikoimaa. Tämä ei ole ongelma, jos käytät **yhdistelmäruudun** ohjausobjektia sellaisen valikoiman sisällä, jota ei voi selata. Ratkaisua ei ole tällä hetkellä käytettävissä.

@@ -15,14 +15,14 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 425600830a64652df7084a0222c02273a1607818
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f90f7bcdf28388366015a5f5f981e0ab4118f162
+ms.sourcegitcommit: aebffb0bba30e786dd288fb1b79a8bcc4e0bdd9c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="configure-environment-security"></a>Konfiguroi ympäristön turvallisuus
-Common Data Service käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan turvallisuusartefaktit, jotka ovat välttämättömiä sovelluksen suojaamista varten. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöiltä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
+Common Data Service käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
 
 ## <a name="assign-security-roles-to-users"></a>Käyttäjien käyttöoikeusroolien määrittäminen
 Käyttöoikeusroolit hallitsevat erilaisilla käyttöoikeustasoilla ja oikeuksilla, mitä tietoja käyttäjä voi käyttää. Käyttöoikeusroolin käyttöoikeustasojen ja oikeuksien yhdistelmä rajoittaa käyttäjän näkemiä tietoja ja vuorovaikutusta tietojen kanssa.
@@ -35,22 +35,30 @@ Ympäristön järjestelmänvalvoja voi määrittää ympäristön roolin käytt�
 
 2. Valitse **Suojaus**-välilehti.
 
-3. Napsauta linkkiä, jotta voit hallita ympäristön rooleja Dynamics 365:ssä.
+3. Tarkista, onko käyttäjä lisätty ympäristöön, valitsemalla **Näytä ympäristössä olevien käyttäjien luettelo**.
+    
+    ![](./media/database-security/security-viewuser.png)
 
-    ![](./media/environment-admin/Security-Link-D365.png)
+4. Jos käyttäjää ei löydy, voit lisätä käyttäjän PowerAppsin hallintakeskuksessa. Lisää käyttäjä antamalla tämän sähköpostiosoite organisaatiossasi ja valitsemalla **Lisää käyttäjä**.
 
-4. Valitse käyttäjä ympäristön käyttäjäluettelosta.
+    ![](./media/database-security/security-adduser.png)
+
+    Odota muutama minuutti, ennen kuin tarkistat, löytyykö käyttäjä ympäristön käyttäjien luettelosta.
+  
+5. Valitse käyttäjä ympäristön käyttäjäluettelosta.
 
     ![](./media/environment-admin/D365-Select-User.png)
 
-5. Määritä rooli käyttäjälle.
+6. Määritä rooli käyttäjälle.
 
     ![](./media/environment-admin/D365-Assign-Role.png)
 
     > [!NOTE]
     > Tällä hetkellä rooleja voidaan määrittää vain käyttäjille. Roolin määrittäminen käyttöoikeusryhmälle ei vielä ole mahdollista.
 
-6. Päivitä määritykset ympäristön rooliin valitsemalla **OK**.
+7. Päivitä määritykset ympäristön rooliin valitsemalla **OK**.
+
+
 
 
 ## <a name="predefined-security-roles"></a>Ennalta määritetyt käyttöoikeusroolit

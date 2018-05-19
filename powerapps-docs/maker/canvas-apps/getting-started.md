@@ -1,73 +1,55 @@
 ---
 title: Mitä ovat pohjaan perustuvat sovellukset? | Microsoft Docs
-description: Miten voit suunnitella ja luoda liiketoiminta-aluesovellus PowerAppsin pohjasta
-documentationcenter: na
+description: Voit suunnitella ja rakentaa pohjaan perustuvia sovelluksia PowerAppsissa, jotta liiketoiminta-alueen tietoja voidaan käyttää selaimessa tai mobiililaitteilla
 author: AFTOwen
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
+ms.topic: overview
 ms.component: canvas
-ms.date: 03/14/2018
+ms.date: 04/26/2018
 ms.author: anneta
-ms.openlocfilehash: 224f75e4254807163ffdb646e9ea109af5f50db5
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: d520f47393c5462f36445e4c8df81617dfddafd2
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
-Tervetuloa PowerAppsiin. PowerApps on palvelu, jonka avulla voit luoda selaimessa, puhelimessa tai tabletilla toimivia yrityssovelluksia ilman minkäänlaista ohjelmointikokemusta. PowerAppsin logiikka ja tietojen kanssa työskenteleminen koostuu PowerPointin visuaalisten vedä ja pudota -käsitteiden ja Excel-tyyppisten lausekkeiden yhdistelmästä.
+Voit suunnitella ja rakentaa liiketoimintasovelluksen pohjan avulla Microsoft PowerAppsissa kirjoittamatta perinteistä ohjelmointikieltä, kuten C#. Suunnittele sovellus vetämällä ja pudottamalla elementtejä pohjalle, kuten PowerPoint-esitystä suunnitellessasi. Luo Excel-tyyppisiä lausekkeita logiikan määrittelemiseksi ja tietojen työstämiseksi. Voit rakentaa sovelluksia, jotka integroivat liiketoimintatietoja [useista erilaisista Microsoftin ja kolmannen osapuolen lähteistä](connections-list.md). Jaettuasi sovelluksesi se on käytettävissä selaimessa tai mobiililaitteilla, ja upotettuasi sen sitä voidaan käyttää SharePointissa, Power BI:ssä tai Teamsissa.
 
-PowerAppsilla voit integroida yritystiedot [monista eri Microsoftin ja kolmansien osapuolten lähteistä](connections-list.md) yhteen tehokkaaseen sovellukseen. Voit myös luoda sovelluksia käyttäjille suoritettavaksi SharePointissa, Power BI:ssä ja ryhmissä.
+Jos et tarvitse mukautettua mallia ja tietosi ovat Common Data Service (CDS) for Appsissa, voit luoda mallipohjaisen sovelluksen liiketoimintatietojesi ja -prosessiesi avulla automaattisesti. Tällaisella sovelluksella voi mallintaa lomakkeita, näkymiä ja muita komponentteja, ja oletusarvoinen käyttöliittymä skaalautuu laitteen (puhelin, tabletti tai vastaava) mukaan automaattisesti. Lisätietoa tällaisista sovelluksista on kohdassa [Yleiskatsaus mallipohjaisen sovelluksen luomiseen](../model-driven-apps/model-driven-app-overview.md).
 
-Jos olet aloittelija sovellusten kehittämisessä, PowerApps sisältää malleja ja mallitietoja, joiden avulla voit nopeasti luoda sovelluksen ja sitten mukauttaa sitä, jotta se sopii yrityksesi tarpeisiin paremmin. Vähäisellä kokemuksella ja luovuudella kehität pian omat sovelluksesi alusta loppuun. Jos olet kokenut kehittäjä, voit hyödyntää kehittyneitä toimintoja ja todella innovoida. Jos voit kuvitella sen, voit myös luoda sen!
+## <a name="build-an-app"></a>Sovelluksen rakentaminen
+Pääset alkuun luomalla sovelluksen automaattisesti esimerkiksi jostakin seuraavista lähteistä:
+- [mallisovellus](open-and-run-a-sample-app.md)
+- [malli](get-started-test-drive.md)
+- [CDS for Apps](data-platform-create-app.md)
+- [SharePoint](app-from-sharepoint.md)
+- [Excel](get-started-create-from-data.md)
 
-## <a name="generate-an-app-automatically"></a>Luo sovellus automaattisesti
-PowerAppsissa voit helposti luoda sovelluksen automaattisesti mm. näistä tietolähteistä:
+Valitse PowerApps-sivustossa **Aloita tiedoista** tai valitse mallisovellus, kuten **Service Desk** tai **Budget Tracker**.
 
-* [Common Data Service sovelluksia varten](data-platform-create-app.md)
-* [SharePoint](app-from-sharepoint.md)
-* [Excel](get-started-create-from-data.md)
-* [SQL Server](connections/connection-azure-sqldatabase.md)
-* [Salesforce](add-manage-connections.md)
-* [Dynamics 365](connections/connection-dynamics-crmonline.md)
+![PowerApps-sivusto](./media/getting-started/sample-apps.png)
 
-Voit myös [luoda sovelluksen mallista](get-started-test-drive.md). Kukin malli perustuu kuvitteellisiin pilvitilin tietoihin, kuten Dropbox. Tutustu eri näyttöihin ja käyttöliittymäelementteihin (joita kutsutaan [ohjausobjekteiksi](reference-properties.md)), niin saat selville, miten ne määritetään. Kokeile mukauttamista, niin löydät tekniikoita, joita voit soveltaa omiin sovelluksiisi.
+Kun olet luonut sovelluksen automaattisesti, mukauta sen ulkoasu ja toiminta käyttäjien työnkulkujen perusteella. Muuta esimerkiksi näytettävien tietojen tyyppiä, niiden lajittelutapaa tai sitä, voivatko käyttäjät määrittää numeron kirjoittamalla sen vai valitsemalla sen liukusäätimellä. Lisää ja mukauta [näyttöjä](add-screen-context-variables.md), [valikoimia](customize-layout-sharepoint.md), [lomakkeita](customize-forms-sharepoint.md) ja muita ohjausobjekteja.
 
-## <a name="customize-an-app"></a>Mukauta sovellus
-Kun luot sovelluksen automaattisesti, PowerApps kehittää oletusliittymän tietojen ympärille, mutta voit mukauttaa sovelluksen ulkoasua ja toimintaa käyttäjiesi työnkulkujen perusteella. Haluat ehkä esimerkiksi muuttaa näytettävien tietojen tyyppiä, niiden lajittelutapaa tai sitä, voivatko käyttäjät määrittää numeron kirjoittamalla sen tai valitsemalla sen liukusäätimellä. Voit lisätä ja mukauttaa [näyttöjä](add-screen-context-variables.md), [valikoimia](customize-layout-sharepoint.md), [lomakkeita](customize-forms-sharepoint.md) ja muita ohjausobjekteja sovelluksiesi suorituskyvyn parantamiseksi.
-
-Saat ideoita sovellustesi parantamiseen entisestään [avaamalla mallisovelluksen](open-and-run-a-sample-app.md), joka antaa paremman käsityksen siitä, mitä voit saada aikaan vain ripauksella luovuutta ja kokemusta.
-
-![Esimerkkisovellukset](./media/getting-started/sample-apps.png)
-
-## <a name="create-an-app-from-scratch"></a>Sovelluksen luominen alusta alkaen
-Luotuasi sovelluksen tai pari automaattisesti ja saatuasi kokemusta mukauttamisesta voit [luoda sovelluksen tyhjästä](get-started-create-from-blank.md). Tyhjästä aloittaminen opettaa joustavuutta sovelluksen suunnitteluun, työnkulkuun ja ohjausobjekteihin, ja voit sisällyttää useampia erilaisia tietolähteitä.
+Kun olet luonut sovelluksen tai pari automaattisesti ja saanut kokemusta mukauttamisesta, luo sovellus tyhjästä [CDS for Appsin](data-platform-create-app-scratch.md), [Excelin](get-started-create-from-blank.md) tai jonkin muun tietolähteen avulla. Tyhjästä aloittaminen opettaa joustavuutta sovelluksen suunnitteluun, työnkulkuun ja ohjausobjekteihin, ja voit sisällyttää useampia erilaisia tietolähteitä.
 
 ## <a name="share-and-run-an-app"></a>Jaa ja suorita sovellus
-Kun sovellus on valmis ja tallennat sen pilveen, voit jakaa sen muiden kanssa organisaatiossasi. Hallitset itse sovelluksesi käyttöoikeustasoja: päätät, ketkä käyttäjät tai ryhmät voivat suorittaa sovelluksen ja voivatko he myös mukauttaa sitä tai jakaa sen organisaation muiden henkilöiden kanssa.
+Kun sovellus on valmis ja tallennat sen pilveen, [voit jakaa sen muiden kanssa](share-app.md) organisaatiossasi. Määritä, ketkä käyttäjät tai mitkä ryhmät voivat suorittaa sovelluksen ja voivatko ne myös jakaa sen muiden organisaatioon kuuluvien kanssa.
 
-Voit suorittaa omia sovelluksiasi – ja kanssasi jaettuja sovelluksia – Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa.
+Voit suorittaa omia sovelluksiasi – ja kanssasi jaettuja sovelluksia – Windowsissa, [verkkoselaimessa](../../user/run-app-browser.md) tai [iOS- tai Android-laitteessa](../../user/run-app-client.md).
 
-Lisätietoja on seuraavissa ohjeaiheissa:
-
-* [Jaa sovellus muiden kanssa](share-app.md)
-* [Suorita sovelluksia verkkoselaimessa](../../user/run-app-browser.md)
-* [Suorita sovelluksia puhelimessa tai tabletissa](../../user/run-app-client.md)
-
-## <a name="get-help-and-support"></a>Hanki ohjeita ja tukea
-Jos sinulla on kysyttävää PowerAppsista, apua on saatavana usealla eri tavalla:
-
+## <a name="learn-more"></a>Lue lisätietoja
 * Tutustu vaiheittaisiin, käsitteellisiin ja viiteaiheisiin vasemmassa siirtymisruudussa.
 * Käy omassa tahdissa läpi [ohjatun oppimisen kursseja](https://docs.microsoft.com/powerapps/guided-learning/).
-* Lue julkaisuja ja julkaise itse [PowerAppsin yhteisössä](https://aka.ms/powerapps-community), missä kuka tahansa PowerAppsin käyttäjä voi esittää kysymyksiä, joihin toiset voivat vastata. Ennen kuin julkaiset kysymyksen, katso yhteisöstä, onko kysymykseesi jo ehkä vastattu.
 * Tarkasta [tulevat verkkoseminaarit](webinars-listing.md#upcoming-webinars), joista saattaa olla hyötyä PowerAppsin ominaisuuksien ja toimintojen käytössä. Voit myös katsella [menneitä verkkoseminaareja](webinars-listing.md#past-webinars) halutessasi.
+
+## <a name="share-your-experience"></a>Jaa kokemuksesi
+* Lue julkaisuja ja julkaise itse [PowerAppsin yhteisössä](https://aka.ms/powerapps-community), missä kuka tahansa PowerAppsin käyttäjä voi esittää kysymyksiä, joihin toiset voivat vastata. Ennen kuin julkaiset kysymyksen, katso yhteisöstä, onko kysymykseesi jo ehkä vastattu.
+* Lähetä idea, jonka pohjalta voimme parantaa PowerAppsia [PowerApps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas) -osiossa.
 * Luo [tukipyyntö](https://powerapps.microsoft.com/support/pro/), niin saat teknistä tukea. Jos olet organisaatiosi PowerApps-järjestelmänvalvoja, voit myös avata tukipalvelupyynnön [PowerApps-hallintakeskuksessa](https://portal.office.com/Support/Support.aspx).
 
-Lisäksi tarvitsemme apua sinulta tehdäksemme PowerAppsista vieläkin paremman!
-
-* Kerro ja lähetä meille PowerAppsin parantamisideoita [PowerApps-ideasivulla](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
-* Ilmoita PowerAppsissa kohtaamastasi ongelmasta [PowerApps-keskustelupalstalla](https://powerusers.microsoft.com/t5/General-Discussion/bd-p/PowerAppsForum1) antamalla ongelman tiedot, niin tutkimme asiaa.
+## <a name="next-steps"></a>Seuraavat vaiheet
+- [Rekisteröi ilmainen käyttöoikeus.](../signup-for-powerapps.md)
+- [Kirjaudu sisään PowerAppsiin.](https://web.powerapps.com)
+- [Avaa mallisovellus.](open-and-run-a-sample-app.md)

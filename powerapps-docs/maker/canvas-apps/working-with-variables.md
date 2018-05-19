@@ -12,11 +12,11 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: d77bc3c90b16fae60fb0daf78376beaa31d67098
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 66b3183f6b1215fc0de2a763da2388698501a9b7
+ms.sourcegitcommit: 99d50f9a79fe4f35ba56f365de6593abd893978e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/06/2018
 ---
 # <a name="understand-variables-in-powerapps"></a>Tutustu PowerAppsin muuttujiin
 Jos olet joskus käyttänyt jotakin toista ohjelmointityökalua, kuten Visual Basicia tai JavaScriptiä, ihmettelet ehkä, **missä muuttujat ovat.** PowerApps on hieman erilainen ja edellyttää erilaista käyttötapaa. Muuttujien etsimisen sijaan mieti, **mitä tekisit Excelissä.**
@@ -257,5 +257,5 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 12. Esikatsele uudelleen painamalla F5-näppäintä, kirjoita luvut tekstisyötteen ohjausobjektiin ja valitse painikkeet.  Valitse **Tallenna**-painike.  Sulje ja lataa sovellus uudelleen ja lataa kokoelma uudelleen valitsemalla **Lataus**-painike.  
     
     > [!NOTE]
-    > **SaveData** ja **LoadData** eivät toimi verkkoselainta käytettäessä. Sinun tulee käyttää PowerApps Studio for Windowsia tai PowerApps Mobilea.
+    > **SaveData** ja **LoadData** eivät toimi PowerApps Studiossa, mutta PowerApps Mobilessa ne toimivat.
 
