@@ -8,11 +8,11 @@ ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
 ms.author: sharik
-ms.openlocfilehash: a2dea7da0cc87ad016d5eff6e04b9e03e66341db
-ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
+ms.openlocfilehash: fb0a7640e0a8b6da6664925528965d3fe6b8c82e
+ms.sourcegitcommit: fe556abcfd6bdfeb5fdeea8f07b185b4b502d02f
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="what-is-common-data-service-for-apps"></a>Mikä on Microsoft Common Data Service for Apps?
 Common Data Service (CDS) for Apps -palvelussa voit säilyttää ja hallita liiketoimintasovellustesi käyttämiä tietoja turvallisesti. CDS for Appsin tiedot tallennetaan joukkoon entiteettejä. *Entiteetti* on tietuejoukko, jota käytetään tietojen tallentamiseen samoin kuin taulukossa säilytetään tietoja tietokannassa. CDS for Apps sisältää peruskokoelman vakioentiteettejä, jotka kattavat tyypilliset tilanteet, mutta voit lisäksi luoda mukautettuja entiteettejä oman organisaatiosi tarpeisiin ja täyttää ne tiedoilla Power Querya käyttämällä. Sovellusten tekijät voivat sen jälkeen rakentaa PowerAppsissa runsaita sovelluksia tietojen avulla.
