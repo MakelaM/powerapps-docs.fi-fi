@@ -9,11 +9,11 @@ ms.component: canvas
 ms.topic: landing-page
 ms.date: 10/27/2017
 ms.author: mblythe
-ms.openlocfilehash: afefa1fcf09cb9c4f732fa94e37bb148262eeb04
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: d79039fd70d2e214b269e0d5be97d208192a16fc
+ms.sourcegitcommit: dc689eb0bc0e60b6f8c2f78a18f7aa114bf84165
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/19/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -38,27 +38,27 @@ ms.lasthandoff: 04/26/2018
 Aloittaminen </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-1">Esittelyssä PowerApps</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=1">Esittelyssä PowerApps</a>
                                 <span style="margin-left: 32px; align-self: center;">5 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-2">PowerAppsin osat</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=2">PowerAppsin osat</a>
                                 <span style="margin-left: 32px; align-self: center;">6 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-3">Aiheeseen liittyvät teknologiat</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=3">Aiheeseen liittyvät teknologiat</a>
                                 <span style="margin-left: 32px; align-self: center;">6 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-4">Nopea katsaus sovellusten luomiseen</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=4">Nopea katsaus sovellusten luomiseen</a>
                                 <span style="margin-left: 32px; align-self: center;">6 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-5">Luo ensimmäinen sovelluksesi</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=5">Luo ensimmäinen sovelluksesi</a>
                                 <span style="margin-left: 32px; align-self: center;">5 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="get-started.yml#step-6">Kertaa tämä osio</a>
+                                <a class="barLink" href="get-started.yml?tutorial-step=6">Kertaa tämä osio</a>
                                 <span style="margin-left: 32px; align-self: center;">2 min</span>
                               </li>
                           </ul>
@@ -81,19 +81,19 @@ Aloittaminen </h3>
 Sovelluksen luominen SharePointista </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-1">Luo sovellus</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=1">Luo sovellus</a>
                                 <span style="margin-left: 32px; align-self: center;">3 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-2">Tutustu luotuun sovellukseen</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=2">Tutustu luotuun sovellukseen</a>
                                 <span style="margin-left: 32px; align-self: center;">5 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-3">Mukauta sovellusta</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=3">Mukauta sovellusta</a>
                                 <span style="margin-left: 32px; align-self: center;">5 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="create-app-sharepoint.yml#step-4">Tutustu sovellusten kaavoihin</a>
+                                <a class="barLink" href="create-app-sharepoint.yml?tutorial-step=4">Tutustu sovellusten kaavoihin</a>
                                 <span style="margin-left: 32px; align-self: center;">9 min</span>
                               </li>
                             </ul>
@@ -116,15 +116,15 @@ Sovelluksen luominen SharePointista </h3>
 Sovellusten hallitseminen </h3>
                           <ul class="noBullet" style="margin: 24px;">
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-1">Jaa sovelluksesi</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=1">Jaa sovelluksesi</a>
                                 <span style="margin-left: 32px; align-self: center;">5 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-2">Käytä sovellusten versiointia</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=2">Käytä sovellusten versiointia</a>
                                 <span style="margin-left: 32px; align-self: center;">1 min</span>
                               </li>
                               <li style="display: flex; justify-content: space-between;">
-                                <a class="barLink" href="manage-apps.yml#step-3">Ympäristöt</a>
+                                <a class="barLink" href="manage-apps.yml?tutorial-step=3">Ympäristöt</a>
                                 <span style="margin-left: 32px; align-self: center;">8 min</span>
                               </li>
                           </ul>
