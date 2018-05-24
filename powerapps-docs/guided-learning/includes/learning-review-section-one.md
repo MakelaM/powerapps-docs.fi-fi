@@ -7,7 +7,7 @@ PowerApps yhdistyy ennestään käytössä oleviin **pilvipalveluihin ja tietol�
 PowerAppsin käyttö on helpointa aloittaa käyttämällä näytteitä, harjoittelemalla mallien kanssa ja luomalla sovelluksia omista tiedoista. Olemme esitelleet SharePoint-luetteloon perustuvan sovelluksen luomisen. Sinulla on nyt vankat perustiedot, joiden avulla voit tuota pikaa ryhtyä kehittämään ja jakamaan sovelluksia. 
 
 ## <a name="whats-next"></a>Mitä seuraavaksi?
-Onnittelut! Olet päässyt PowerAppsin ohjatun oppimisen ensimmäisen osion loppuun. Riippumatta siitä, kuinka paljon sinulla oli alussa kokemusta, toivomme, että olet saanut selkeän kuvan siitä, mikä PowerApps on ja miten voit aloittaa sovellusten luomisen. Seuraavassa on joitakin hyödyllisiä resursseja ja latauksia, mutta suosittelemme, että jatkat ohjatun oppimisen kurssia. Jos olet valmis jatkamaan, katso miten voit [luoda ja mukauttaa sovelluksia SharePoint-luettelosta](https://docs.microsoft.com/powerapps/guided-learning/create-app-sharepoint#step-1)
+Onnittelut! Olet päässyt PowerAppsin ohjatun oppimisen ensimmäisen osion loppuun. Riippumatta siitä, kuinka paljon sinulla oli alussa kokemusta, toivomme, että olet saanut selkeän kuvan siitä, mikä PowerApps on ja miten voit aloittaa sovellusten luomisen. Seuraavassa on joitakin hyödyllisiä resursseja ja latauksia, mutta suosittelemme, että jatkat ohjatun oppimisen kurssia. Jos olet valmis jatkamaan, katso miten voit [luoda ja mukauttaa sovelluksia SharePoint-luettelosta](https://docs.microsoft.com/powerapps/guided-learning/create-app-sharepoint?tutorial-step=1)
 
 ## <a name="powerapps-resources"></a>PowerApps-resurssit
 * Tutustu tarkemmin [PowerApps-dokumentaatioon](https://docs.microsoft.com/powerapps/)
