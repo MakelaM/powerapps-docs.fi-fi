@@ -1,0 +1,54 @@
+### YamlMime:Tutorial
+title: Sovelluksen luominen SharePointista
+metadata:
+  title: Sovelluksen luominen SharePointista | Microsoft PowerApps
+  description: Luo SharePoint-luettelosta sovellus, jossa on kolme näyttöä. Tutki sen jälkeen sovellusta ja päivitä se.
+  audience: Business User
+  level: Beginner
+  nextTutorialHref: manage-apps
+  nextTutorialTitle: Sovellusten hallinta
+  displayType: one-column
+  author: AFTOwen
+  manager: kfile
+  ms.service: powerapps
+  ms.topic: get-started-article
+  ms.date: 10/27/2017
+  ms.author: anneta
+  ms.openlocfilehash: a65eabb4bc42deff686fd40186914fefe77e6e0c
+  ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+  ms.translationtype: HT
+  ms.contentlocale: fi-FI
+  ms.lasthandoff: 03/28/2018
+items:
+- durationInMinutes: 1
+  content: >
+    Luo SharePoint-luettelosta sovellus, jossa on kolme näyttöä. Tutki sen jälkeen näyttöjä ja ohjausobjekteja sovelluksen kautta. Päivitä sovelluksen näyttöjä, ohjausobjekteja ja kenttiä. Käytä kaavoja mukauttaaksesi sovelluksen toimintaa enemmän.
+- title: Sovelluksen luominen
+  durationInMinutes: 3
+  content: >
+    > [!Video https://www.youtube.com/embed/m6KfAwEdtYU?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-generate.md)]
+- title: Tutki luotua sovellusta
+  durationInMinutes: 5
+  content: >
+    > [!Video https://www.youtube.com/embed/OJ8a9VINeKU?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-explore-controls.md)]
+- title: Mukauta sovellusta
+  durationInMinutes: 5
+  content: >
+    > [!Video https://www.youtube.com/embed/KydeusvKndQ?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-customize.md)]
+- title: Tutustu sovellusten kaavoihin
+  durationInMinutes: 9
+  content: >
+    > [!Video https://www.youtube.com/embed/9TBA19YU7EA?rel=0]
+
+
+    [!INCLUDE [](includes/learning-spo-app-explore-formulas.md)]
+- content: Olet suorittanut Microsoft PowerAppsin ohjatun oppimisen osion **Sovelluksen luominen SharePointista**.
