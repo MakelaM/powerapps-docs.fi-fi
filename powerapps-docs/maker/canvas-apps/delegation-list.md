@@ -16,13 +16,13 @@ ms.workload: na
 ms.date: 08/15/2017
 ms.author: archanan
 ms.openlocfilehash: e073c0a8c471dc8b863894e2d229b15b66b3ce60
-ms.sourcegitcommit: 6afca7cb4234d3a60111c5950e7855106ff97e56
+ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
-[Tutustu delegointiin](delegation-overview.md) -artikkelin mukaisesti delegointi on toimintaa, jossa PowerApps delegoi tiedonkäsittelyn tietolähteelle sen sijaan, että se siirtäisi tiedot sovellukseen käsiteltäväksi paikallisesti.
+[Tutustu delegointiin](delegation-overview.md) -artikkelin mukaisesti delegointi on toimintaa, jossa PowerApps delegoi tiedonkäsittelyn tietolähteelle sen sijaan, että siirtäisi tiedot sovellukseen käsiteltäväksi paikallisesti.
 
 Delegointia tuetaan vain taulukkomuotoisissa tietolähteissä. Luettelossa esitetään taulukkomuotoiset tietolähteet ja tieto siitä, tukevatko ne delegointia. Tietoja tästä on seuraavassa osiossa.
 
