@@ -8,11 +8,11 @@ ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
 ms.author: sharik
-ms.openlocfilehash: fb0a7640e0a8b6da6664925528965d3fe6b8c82e
-ms.sourcegitcommit: fe556abcfd6bdfeb5fdeea8f07b185b4b502d02f
+ms.openlocfilehash: fb079689ef76e4ad7815b8410ecff4a475877810
+ms.sourcegitcommit: ba587b467044161d1dbcd73625b37aa52b057270
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="what-is-common-data-service-for-apps"></a>Mikä on Microsoft Common Data Service for Apps?
 Common Data Service (CDS) for Apps -palvelussa voit säilyttää ja hallita liiketoimintasovellustesi käyttämiä tietoja turvallisesti. CDS for Appsin tiedot tallennetaan joukkoon entiteettejä. *Entiteetti* on tietuejoukko, jota käytetään tietojen tallentamiseen samoin kuin taulukossa säilytetään tietoja tietokannassa. CDS for Apps sisältää peruskokoelman vakioentiteettejä, jotka kattavat tyypilliset tilanteet, mutta voit lisäksi luoda mukautettuja entiteettejä oman organisaatiosi tarpeisiin ja täyttää ne tiedoilla Power Querya käyttämällä. Sovellusten tekijät voivat sen jälkeen rakentaa PowerAppsissa runsaita sovelluksia tietojen avulla.
@@ -34,7 +34,7 @@ Kun kehität sovellusta, voit käyttää vakioentiteettejä, mukautettuja entite
 
 ![Näyttökuva, jossa esitetään luettelo entiteeteistä.](./media/data-platform-cds-intro/entitylist.png "Entiteettiluettelo")
 
-Täydellinen luettelo entiteeteistä on kohdassa [Lisätiedot kohteista](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/reference/about-entity-reference).
+Täydellinen luettelo entiteeteistä on kohdassa [Lisätiedot kohteista](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 Voit laajentaa vakioentiteettien toimintoja luomalla yhden tai useamman mukautetun entiteetin, joihin tallennat organisaation yksilöllisiä tietoja. Lisätietoja on kohdassa [Mukautetun entiteetin luominen](create-custom-entity.md).
 
