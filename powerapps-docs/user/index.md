@@ -1,18 +1,17 @@
 ---
 title: Miten voin etsiä ja suorittaa sovelluksia? | Microsoft Docs
 description: Yleiskatsaus PowerApps-sovellusten etsimiseen ja suorittamiseen.
-author: SKjerland
-manager: kfile
+author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: overview
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: 484f6efb0c10bfa5a1d0e5ccdb0939422ddaf835
-ms.sourcegitcommit: 167fd8e589689be26101584ab1b3a26be61808f7
+ms.author: matp
+ms.openlocfilehash: 6c5a207ec2eb41d2cf19250bd5f319ed692a43e6
+ms.sourcegitcommit: 3f5adf07cac1c798f3d4843ed5928505becde30e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/26/2018
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Miten voin etsiä ja suorittaa sovelluksia?
 Oletpa sitten liikkuvaa työtä tekevä kenttähenkilö tai kiireisessä sairaalassa toimiva lääkäri, sinulle voidaan luoda tehtävien ja roolien mukaisia *pohjaan* perustuvia sovelluksia, jotka tunnet heti omaksesi. Lähes kaikki pohjaan perustuvien sovellusten ominaisuudet ovat muokattavissa, ja niihin on mahdollista yhdistää useita tietolähteitä niin, että käyttäjien on helpompi keskittyä tehtäviensä suorittamiseen.
