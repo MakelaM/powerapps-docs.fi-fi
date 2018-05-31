@@ -8,11 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 0215e013f6879ea8d04de8fe74e077c983370bff
-ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
+ms.openlocfilehash: 158abc3969090e081df41b6b52036d71b6949150
+ms.sourcegitcommit: f236364ecb06dd86244cd9a607c31e0d716912e2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34445702"
 ---
 # <a name="manage-data-loss-prevention-dlp-policies"></a>Tietojen menetyksen estämiskäytäntöjen hallinta | Microsoft Docs
 Organisaation tiedot ovat sen menestykselle erittäin tärkeitä. Tietojen on oltava päätöksenteossa helposti käytettävissä, mutta riittävän suojatut. Niitä ei saa jakaa asiattomien tahojen käyttöön. Jotta tietoturva voidaan taata, PowerApps antaa mahdollisuuden luoda ja valvoa tietojen menetyksen estämiskäytäntöjä (DLP, Data Loss Prevention). Ne määrittävät, minkä kuluttajaliitinten kanssa tietyt yritystiedot voidaan jakaa. PowerAppsia käyttävä organisaatio ei ehkä esimerkiksi halua, että sen SharePointiin tallennetut yritystiedot julkaistaan automaattisesti organisaation Twitter-syötteessä.
@@ -22,7 +23,7 @@ Jotta voit luoda, muokata tai poistaa DLP-käytäntöjä, sinulla on oltava ymp�
 DLP-käytännön luomisohjeet ovat kohdassa [Pikaopas: luo tietojen menetyksen estämisen (DLP) käytäntö](create-dlp-policy.md).
 
 ## <a name="find-a-dlp-policy"></a>DLP-käytännön etsiminen
-1. Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.poweraps.com]([https://admin.powerapps.com).
+1. Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com]([https://admin.powerapps.com).
 2. Valitse siirtymisruudussa **Tietokäytännöt**. Jos käytäntöjen luettelo on pitkä, etsi tietyt DLP-käytännöt **hakukentän** avulla.
 
     ![](./media/prevent-data-loss/data-policies.png)

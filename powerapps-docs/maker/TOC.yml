@@ -250,6 +250,10 @@
           href: ./common-data-service/data-platform-create-business-rule.md
         - name: Poista mukautettu entiteetti
           href: ./common-data-service/data-platform-delete-entity.md
+        - name: Entiteettitietojen avaaminen Excelissä
+          href: ./common-data-service/data-platform-excel-addin.md
+        - name: Luo Power BI -raportti
+          href: ./common-data-service/data-platform-powerbi-connector.md
     - name: Lisätietoja
       items:
         - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'

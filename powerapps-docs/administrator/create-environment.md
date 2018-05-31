@@ -8,11 +8,12 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
 ms.author: sharik
-ms.openlocfilehash: 322886a485a863d5ebf505ba2d1f5763dcfea60e
-ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
+ms.openlocfilehash: 50a3819d4a659d48e1372487c5b50dc8295ee398
+ms.sourcegitcommit: f236364ecb06dd86244cd9a607c31e0d716912e2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34445794"
 ---
 # <a name="quickstart-create-an-environment"></a>Pikaopas: ympäristön luominen
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, -sovelluksia ja -työnkulkuja. Lisäksi sitä käytetään säilönä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. PowerApps luo jokaiselle vuokraajalle automaattisesti yhden oletusympäristön, joka jaetaan kaikille käyttäjille kyseisessä vuokraajassa.
@@ -27,7 +28,7 @@ Tämän pikaoppaan avulla opit luomaan ympäristön ja sille tarkoitetun tietoka
  * PowerApps-ympäristön järjestelmänvalvojan, Office 365:n yleisen järjestelmänvalvojan tai Azure Active Directory vuokraajan järjestelmänvalvojan oikeudet. Lisätietoja on kohdassa [Ympäristöjen hallinta PowerAppsissa](environments-administration.md).
 
 ## <a name="sign-in-to-the-powerapps-admin-center"></a>PowerApps-hallintakeskukseen kirjautuminen
-Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com]([https://admin.powerapps.com).
+Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com](https://admin.powerapps.com).
 
 ## <a name="create-an-environment-and-database"></a>Ympäristön ja tietokannan luominen
 1. Napsauta tai napauta siirtymisruudun kohtaa **Ympäristöt** ja valitse sitten **Uusi ympäristö**.
