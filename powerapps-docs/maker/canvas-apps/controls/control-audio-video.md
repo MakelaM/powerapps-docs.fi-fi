@@ -1,31 +1,31 @@
 ---
 title: 'Äänen ja videon ohjausobjektit: viittaus | Microsoft Docs'
 description: Äänen ja videon ohjausobjekteja koskevaa tietoa, mukaan lukien ominaisuuksia ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 1661477ced59a678ac278dfcebe5e6f661c3e3f1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: fa235c606082f2fd83339ba11fa81fdb2988c23a
+ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31833421"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Äänen ja videon ohjausobjektit PowerAppsissa
 Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubessa.
 
 ## <a name="description"></a>Kuvaus
-**Ääni**-ohjausobjekti toistaa äänileikkeen tiedostosta, tallenteen **[Mikrofoni](control-microphone.md)**-ohjausobjektista tai ääniraidan videotiedoston. **Video**-ohjausobjekti toistaa videoleikkeen tiedostosta tai YouTubesta, jos määrität URL-osoitteen valinnaisella tekstityksellä.
+**Ääni**-ohjausobjekti toistaa äänileikkeen tiedostosta, tallenteen **[Mikrofoni](control-microphone.md)**-ohjausobjektista tai ääniraidan videotiedoston.
+
+**Video**-ohjausobjekti toistaa videoleikkeen tiedostosta, YouTubesta tai Microsoft Azure -mediapalveluista.  Tekstitys voidaan näyttää, jos se on määritetty.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **Loop** – Alkaako ääni- tai videoleike automaattisesti alusta, kun sen toistaminen lopetetaan.
@@ -35,13 +35,15 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 **ShowControls** – Näytetäänkö ääni- tai videosoittimessa esimerkiksi toistopainike ja äänenvoimakkuuden liukusäädin sekä näytetäänkö kynän ohjausobjektissa esimerkiksi piirustuksen, poistamisen ja tyhjentämisen kuvakkeet.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi. Tämän pitäisi olla video- tai äänileikkeen otsikko.
+
 **AutoPause** – Keskeytetäänkö ääni- tai videoleike automaattisesti, jos käyttäjä siirtyy eri näyttöön.
 
 **AutoStart** – Alkaako ääni- tai video-ohjausobjekti toistaa leikettä automaattisesti, kun käyttäjä siirtyy tämän ohjausobjektin sisältävään näyttöön.
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviivat**, **pisteet** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -50,6 +52,10 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
 **[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
+
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -72,6 +78,8 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 **StartTime** – Aika siitä, kun ääni- tai videoleikkeen toistaminen on aloitettu.
 
 **Aika** – Mediaohjausobjektin nykyinen sijainti.
+
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
 **[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin osoittimen ollessa ohjausobjektin päällä.
 
@@ -103,3 +111,37 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 1. Lisää **Video**-ohjausobjekti ja aseta sen **Media**-ominaisuus YouTube-videon URL-osoitteeseen lainausmerkeissä.
 2. Paina F5 ja toista sitten leike napsauttamalla tai napauttamalla **Video**-ohjausobjektin toistopainiketta.
 3. Palaa oletustyötilaan painamalla Esc-näppäintä.
+
+### <a name="play-a-video-from-azure-media-services"></a>Videon toistaminen Microsoft Azure -mediapalveluista
+1. Kun videot on julkaistu Microsoft Azure -mediapalveluissa, kopioi kokoonpanotietojen URL-osoite. Käynnistä palvelusi virtauttamisen päätepiste, jos sitä ei ole vielä käynnistetty.
+1. Lisää **Video**-ohjausobjekti ja aseta sen **Media**-ominaisuus Microsoft Azure -mediapalveluiden videon URL-osoitteeseen lainausmerkeissä.
+2. Paina F5 ja toista sitten leike napsauttamalla tai napauttamalla **Video**-ohjausobjektin toistopainiketta.
+3. Palaa oletustyötilaan painamalla Esc-näppäintä.
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="audio-and-video-alternatives"></a>Vaihtoehdot ääni- ja videoleikkeille
+* **ShowControls**-ominaisuutena on oltava true, jotta käyttäjät voivat kuunnella tai katsella multimediaa omassa tahdissaan. Tämän ansiosta käyttäjät voivat myös näyttää tai piilottaa tekstityksen tai valita koko näytön tilan videosoittimessa.
+* Videoissa on oltava tekstitys.
+  *  YouTube-videoihin voit lisätä tekstityksen YouTuben tarjoamien luontityökalujen avulla.
+  *  Muihin videoihin voit luoda tekstityksen WebVTT-muodossa, ladata sen ja määrittää **ClosedCaptionsUrl**-ominaisuuden url-sijaintiin. Rajoituksia on useita. Videota ja tekstitystä isännöivän palvelimen on tuettava CORS:ää ja käytettävä HTTPS-protokollaa. Tekstitys ei toimi Internet Explorerissa.
+* Harkitse ääni- tai videotallenteen antamista käyttämällä jotakin seuraavista menetelmistä:
+  1. Lisää teksti **[selitteeseen](control-text-box.md)** ja sijoita se multimediasoittimen viereen. Halutessasi voit luoda **[painikkeen](control-button.md)**, jolla tekstin voi näyttää tai piilottaa.
+  2. Lisää teksti eri näyttöön. Luo **[painike](control-button.md)**, joka siirtyy näytölle, ja sijoita painike multimediasoittimen viereen.
+  3. Jos kuvaus on lyhyt, se voidaan lisätä **[AccessibleLabel](properties-accessibility.md)**-objektiin.
+
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **[FocusedBorderColor](properties-color-border.md)**  ja ulkopuolinen väri
+* **[Kuva](properties-visual.md)** ja multimediasoittimen ohjausobjektit (jos sovellettavissa)
+* **[Täyttö](properties-color-border.md)** ja multimediasoittimen ohjausobjektit (jos täyttö on näkyvissä)
+
+Anna tekstitys ja/tai tallenne, jos videosisällössä on värikontrastiongelmia.
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
+* **AutoStart**-ominaisuuden arvona on oltava false, koska näppäimistön käyttäjien voi olla vaikea lopettaa toistoa nopeasti.

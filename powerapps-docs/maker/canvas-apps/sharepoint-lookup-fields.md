@@ -1,24 +1,23 @@
 ---
 title: Suhteen luominen SharePoint-luettelojen välille hakukentän avulla | Microsoft Docs
 description: Suhteen luominen SharePoint-luettelojen välille käyttämällä hakukenttää.
-services: powerapps
 documentationcenter: na
 author: skjerland
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: a1966016b07a79a23880511a5cc0d6da8643adbc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 0a257df76980bcf1801c9ed98de87ae06c4ae624
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32330073"
 ---
 # <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>SharePoint-luettelojen linkittäminen käyttämällä hakukenttiä
 Tässä opetusohjelmassa näytetään, miten voit yhdistää kaksi SharePoint-luetteloa hakukentillä.
@@ -93,7 +92,7 @@ Tämä tehdään ensin, jotta **RepairShop**-merkinnät ovat valittavissasi *Ass
 ## <a name="create-an-app-from-the-assets-list"></a>Sovelluksen luominen Assets-luettelosta
 Tämän sovelluksen avulla voit lisätä tietoja **Assets**-luetteloon.
 
-1. Avaa PowerApps Studio. Jos olet uusi PowerAppsin käyttäjä, [rekisteröidy ilmaiseksi](https://powerapps.microsoft.com) organisaation sähköpostiosoitteellasi ja lataa PowerApps Studio Windows-kaupasta ohjeiden mukaan.
+1. [Kirjaudu sisään PowerApps Studioon](http://web.powerapps.com). Jos olet uusi PowerApps-käyttäjä, [rekisteröidy ilmaiseksi](https://powerapps.microsoft.com) organisaatiosähköpostiosoitteesi avulla.
 
 2. Napsauta tai napauta **Tiedosto**-valikossa (vasemmassa laidassa) **Uusi** ja napsauta tai napauta **SharePoint**.
 

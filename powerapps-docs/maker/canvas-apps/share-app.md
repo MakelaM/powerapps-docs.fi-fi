@@ -1,8 +1,6 @@
 ---
 title: Sovelluksen jakaminen | Microsoft Docs
 description: Jaa sovelluksesi antamalla käyttäjille käyttöoikeus sen suorittamiseen tai muokkaamiseen
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,16 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 22950d866ed8e61dd0824701ef8af86f5bed2dc6
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: c87f0e644668e9b9804b001560402972fd3d4531
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32329130"
 ---
 # <a name="share-an-app-in-powerapps"></a>Sovelluksen jakaminen PowerAppsissa
 Sovellusten luominen liiketoiminnan tarpeisiin on hienoa, mutta PowerAppsin todellisena etuna on sovellusten jakaminen muille. Tässä aiheessa kerrotaan, miten jaat sovelluksia tietyille käyttäjille, käyttöoikeusryhmille tai koko organisaatiolle.
@@ -60,13 +58,13 @@ Ilmoitus sisältää erityyppisen linkin määrittämäsi käyttöoikeuden mukaa
 ### <a name="how-do-my-users-see-the-app-i-shared"></a>Miten käyttäjät näkevät jakamani sovelluksen?
 Kun olet jakanut sovelluksen yhden tai useamman käyttäjän tai käyttöoikeusryhmän kanssa, tapa, jolla he näkevät sovelluksen, vaihtelee jaetun käyttöoikeuden mukaan.
 
-##### <a name="if-you-shared-an-app-with-user-permission"></a>Jos sovellus on jaettu *Käyttäjä*-käyttöoikeudella
+##### <a name="if-you-shared-an-app-with-can-use-permission"></a>Jos sovellus on jaettu *Voivat käyttää* -käyttöoikeudella
 Henkilöt, joille jaat sovelluksen saavat sähköposti-ilmoituksen, jos valitsit kyseisen valintaruudun sovelluksen jakamisnäytössä. Sähköpostiviestissä on linkki, jota napsauttamalla tai napauttamalla käyttäjä voi suorittaa sovelluksen [Dynamics 365](http://home.dynamics.com):ssä. Lisäämme pian tuen universaaleille linkeille. Tämän jälkeen sovellus aukeaa PowerApps Studiossa tai PowerApps Mobilessa, jos jompikumpi niistä on asennettuna.
 
 Käyttäjät voivat myös löytää sovelluksen [Dynamics 365](http://home.dynamics.com):n AppSourcesta (jos et esimerkiksi lähettänyt sähköpostiviestiä). [Lue lisää](../../user/app-source.md) siitä, miten käyttäjät voivat ladata sovelluksia AppSourcen kautta.
 
-##### <a name="if-you-shared-an-app-with-contributor-permission"></a>Jos sovellus on jaettu *Osallistuja*-käyttöoikeudella
-Henkilöt, joille jaat sovelluksen saavat sähköposti-ilmoituksen, jos valitsit kyseisen valintaruudun sovelluksen jakamisnäytössä. Sähköpostiviestissä on linkki, jota napsauttamalla tai napauttamalla käyttäjä voi suoraan avata sovelluksen muokkaamista varten käyttämällä verkon PowerApps Studiota. Sähköpostiviestissä on myös linkki, joka suorittaa sovelluksen [Dynamics 365](http://home.dynamics.com):ssä. Lisäämme pian tuen universaaleille linkeille. Tämän jälkeen sovellus aukeaa PowerApps Studiossa tai PowerApps Mobilessa, jos jompikumpi niistä on asennettuna.
+##### <a name="if-you-shared-an-app-with-can-edit-permission"></a>Jos sovellus on jaettu *Voivat muokata* -käyttöoikeudella
+Henkilöt, joille jaat sovelluksen saavat sähköposti-ilmoituksen, jos valitsit kyseisen valintaruudun sovelluksen jakamisnäytössä. Sähköpostiviestissä on linkki, jota napsauttamalla tai napauttamalla käyttäjä voi suoraan avata sovelluksen muokkaamista varten käyttämällä PowerApps Studiota. Sähköpostiviestissä on myös linkki, joka suorittaa sovelluksen [Dynamics 365](http://home.dynamics.com):ssä. Lisäämme pian tuen universaaleille linkeille. Tämän jälkeen sovellus aukeaa PowerApps Studiossa tai PowerApps Mobilessa, jos jompikumpi niistä on asennettuna.
 
 Käyttäjät voivat myös löytää sovelluksen osoitteesta [powerapps.com](http://web.powerapps.com) (jos et esimerkiksi lähettänyt sähköpostiviestiä). Kyseessä on sovellusten luojien koti, jossa he voivat selata luomiaan sovelluksia tai sovelluksia, jotka on jaettu heille **Osallistuja**-käyttöoikeudella. [Dynamics 365](http://home.dynamics.com) on sen sijaan paikka, jossa käyttäjät voivat suorittaa nopeasti sovelluksia PowerAppsista ja muista yrityssovelluksista.
 

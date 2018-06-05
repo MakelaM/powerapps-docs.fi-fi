@@ -1,25 +1,23 @@
 ---
 title: 'PDF-katseluohjelman ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja PDF-katseluohjelman ohjausobjektista, kuten ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: c3ed17faae5963f71531b2fdc2ef9b08ee2569cc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 7f6350a70bff19df0c83d2082fe8fb463d81d772
+ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32330832"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>PDF-katseluohjelman ohjausobjekti (kokeellinen) PowerAppsissa
 Kokeellinen ohjausobjekti, joka näyttää PDF-tiedoston sisällön.
@@ -41,7 +39,7 @@ Jos asiakirjaa ei voi avata PowerAppsissa, loppukäyttäjälle annetaan mahdolli
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviivat**, **pisteet** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -99,8 +97,17 @@ Jos asiakirjaa ei voi avata PowerAppsissa, loppukäyttäjälle annetaan mahdolli
 
 ## <a name="example"></a>Esimerkki
 * Lisää **PDF-katseluohjelman** ohjausobjekti ja määritä sen **Document**-ominaisuuden arvoksi PDF-tiedoston URL-osoite lainausmerkeissä, kuten seuraavassa esimerkissä:<br>
-  **"http://www.who.int/gho/publications/world_health_statistics/EN_WHS2015_TOC.pdf?ua=1"**
+  **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
     Ohjausobjekti näyttää PDF-tiedoston.
 
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Kaikkia PDF-tiedostojen helppokäyttötoimintoja ei tueta, sillä **PDF-katseluohjelma** on vielä koevaiheessa. Tämän vuoksi **ShowControls**-ominaisuudeksi on asetettava **true**, jotta käyttäjät voivat avata tiedoston ulkoisessa sovelluksessa.
+
+Opi luomaan helppokäyttöisiä PDF-tiedostoja [WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html)- ja [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/)-standardien avulla.
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* Harkitse otsikon lisäämistä **[selitteen](control-text-box.md)** avulla, jos PDF-tiedostossa ei ole otsikkoa. Otsikko voidaan sijoittaa välittömästi ennen **PDF-katseluohjelmaa**.
