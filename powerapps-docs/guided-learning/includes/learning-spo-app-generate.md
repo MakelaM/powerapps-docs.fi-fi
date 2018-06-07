@@ -13,7 +13,7 @@ Rakenna sovellus napsauttamalla **PowerApps** ja sitten **Luo sovellus**. Syöt�
 Uusi kolmen näytön sovelluksesi avautuu PowerApps Studiossa. Kaikilla tiedoista luoduilla sovelluksilla on samat näytöt:
 
 * **Selaa**-näyttö: tässä voit selata, lajitella, suodattaa ja päivittää luettelosta noudettuja tietoja sekä lisätä kohteita napsauttamalla (+)-kuvaketta.
-* **Tiedot**-näyttö: tässä voit tarkastella kohteen tietoja sekä poistaa tietueen tai muokata sitä.
+* **Tiedot**-näyttö: tässä voit tarkastella kohteen tietoja sekä poistaa kohteen tai muokata sitä.
 * **Muokkaa/luo**-näyttö: tässä muokataan olemassa olevaa kohdetta tai luodaan uusi.
 
 Voit vaihtaa pikkukuvanäkymään napsauttamalla tai napauttamalla vasemman navigointipalkin oikeassa yläkulmassa olevaa kuvaketta.
