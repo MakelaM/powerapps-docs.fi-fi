@@ -1,5 +1,5 @@
 ---
-title: Näytä nykyisen käyttäjän tiedot | Microsoft Docs
+title: Nykyisen käyttäjän tietojen näyttäminen | Microsoft Docs
 description: Lisää User-funktio, joka näyttää PowerAppsiin kirjautuneen käyttäjän nimen ja sähköpostiosoitteen
 documentationcenter: ''
 author: lonu
@@ -12,13 +12,14 @@ ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
 ms.openlocfilehash: 11177ffa8913afe4d0245708dd8c9b2b0b50c8c2
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826656"
 ---
 # <a name="show-information-about-a-powerapps-user"></a>Hae tietoa PowerAppsin käyttäjästä
-User-funktio voit näyttää koko nimen, sähköpostiosoitteen ja kuvan, joka on liitetty sisään kirjautuneeseen käyttäjään. Voit käyttää näitä tietoja lomakkeen automaattiseen täyttämiseen.
+User-funktio voi näyttää koko nimen, sähköpostiosoitteen ja kuvan, joka on liitetty sisään kirjautuneeseen käyttäjään. Voit käyttää näitä tietoja lomakkeen automaattiseen täyttämiseen.
 
 Voit käyttää tätä ominaisuutta esimerkiksi seuraavasti:
 
@@ -31,14 +32,14 @@ Periaatteessa voit käyttää tätä kaikissa tilanteissa, joissa käyttäjä hy
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## <a name="show-user-details"></a>Käyttäjän tietojen näyttäminen
-1. Napsauta tai napauta **Lisää**-välilehdeltä **Media** ja napsauta tai napauta **Image** (kuva).
+1. Napsauta tai napauta **Lisää**-välilehdeltä **Media** ja napsauta tai napauta **Kuva**.
    
    ![][2]
 2. Määritä **[Image](controls/properties-visual.md)**-ominaisuudeksi tämä kaava:
    <br>**User().Image**
    
     ![][3]
-3. Napsauta tai napauta **Lisää**-välilehdeltä **Text** ja napsauta tai napauta sitten **Label**:  
+3. Napsauta tai napauta **Lisää**-välilehdeltä **Text** ja napsauta tai napauta sitten **Selite**:  
    
     ![][4]
 4. Aseta **[Text](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
@@ -46,7 +47,7 @@ Periaatteessa voit käyttää tätä kaikissa tilanteissa, joissa käyttäjä hy
    
    ![][6]
    
-   Kun toimit näin, selitteeseen täytetään automaattisesti koko nimesi. Siirrä selite Image-ohjausobjektin alapuolelle, kuten seuraavassa:
+   Kun toimit näin, selitteeseen täytetään automaattisesti koko nimesi. Siirrä selite Kuva-ohjausobjektin alapuolelle, kuten seuraavassa:
    
    ![][5]
 5. Lisää toinen selite ja aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
@@ -54,7 +55,7 @@ Periaatteessa voit käyttää tätä kaikissa tilanteissa, joissa käyttäjä hy
    
     ![][8]
    
-    Kun toimit näin, selitteeseen täytetään automaattisesti sähköpostiosoitteesi. Siirrä selite ensimmäisen selitteen alapuolelle, kuten seuraavassa:  
+    Näin selitteeseen täytetään automaattisesti sähköpostiosoitteesi. Siirrä selite ensimmäisen selitteen alapuolelle, kuten seuraavassa:  
    
     ![][7]
 

@@ -13,10 +13,11 @@ ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
 ms.openlocfilehash: 4068bbc4e67adee344544c0ba69895244d3dab83
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330372"
 ---
 # <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opetusohjelma: mallipohjaisen sovelluksen jakaminen PowerAppsilla
 
@@ -115,11 +116,11 @@ Nämä ennalta määritetyt roolit ovat käytettävissä ympäristössä [!INCLU
 
 |Käyttöoikeusrooli  |*Oikeudet  |Kuvaus |
 |---------|---------|---------|
-|Ympäristön tekijä     |  Ei mitään       | Voi luoda ympäristöön liittyviä uusia resursseja, kuten sovelluksia, yhteyksiä, mukautettuja ohjelmointirajapintoja, yhdyskäytäviä ja työnkulkuja Microsoft Flow -palvelun avulla. Ei kuitenkaan omaa mitään oikeuksia ympäristössä olevien tietojen käyttöön. Lisätietoja: [Ympäristöjen yleiskuvaus](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|Järjestelmänvalvoja     |  Luominen, lukeminen, kirjoittaminen, poistaminen, mukauttaminen, käyttöoikeusroolit       | Täydet ympäristön mukauttamis- ja hallintaoikeudet, mukaan lukien käyttöoikeusroolien luominen, muokkaaminen ja määrittäminen. Pystyy tarkastelemaan kaikkia ympäristössä olevia tietoja. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
+|Ympäristön tekijä     |  Ei mitään       | Voi luoda ympäristöön liittyviä uusia resursseja, kuten sovelluksia, yhteyksiä, mukautettuja ohjelmointirajapintoja, yhdyskäytäviä ja työnkulkuja Microsoft Flow -palvelun avulla. Ei kuitenkaan omista mitään oikeuksia ympäristössä olevien tietojen käyttöön. Lisätietoja: [Ympäristöjen yleiskuvaus](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
+|Järjestelmänvalvoja     |  Luominen, lukeminen, kirjoittaminen, poistaminen, mukautukset, käyttöoikeusroolit       | Täydet ympäristön mukauttamis- ja hallintaoikeudet, mukaan lukien käyttöoikeusroolien luominen, muokkaaminen ja määrittäminen. Pystyy tarkastelemaan kaikkia ympäristössä olevia tietoja. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Järjestelmämukauttaja     | Luominen (itse), lukeminen (itse), kirjoittaminen (itse), poistaminen (itse), mukautukset         | Täydet oikeudet ympäristön mukauttamiseen. Voi kuitenkin tarkastella vain itse luotujen ympäristöentiteettien tietueita. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Common Data Servicen käyttäjä     |  Lukeminen, luominen (itse), kirjoittaminen (itse), poistaminen (itse)       | Voi suorittaa sovelluksen ympäristössä ja suorittaa yleisiä tehtäviä omille tietueilleen.        |
-|Edustaja     | Toisen käyttäjän puolesta toimiminen        | Mahdollistaa koodin suorittamisen toisena käyttäjänä tai toiseksi käyttäjäksi tekeytyneenä.  Käytetään yleensä toisen käyttöoikeusroolin yhteydessä, jotta voidaan käyttää tietueita. Lisätietoja: [Toiseksi käyttäjäksi tekeytyminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
+|Edustaja     | Toisen käyttäjän puolesta toimiminen        | Mahdollistaa koodin suorittamisen toisena käyttäjänä tai toiseksi käyttäjäksi tekeytyneenä.  Käytetään yleensä toisen käyttöoikeusroolin yhteydessä, jotta tietueita voidaan käyttää. Lisätietoja: [Toiseksi käyttäjäksi tekeytyminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Oikeuden vaikutusalue on yleinen, ellei toisin määritetä.
 

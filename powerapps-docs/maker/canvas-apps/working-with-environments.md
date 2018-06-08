@@ -1,5 +1,5 @@
 ---
-title: Ympäristöjen kanssa työskentely | Microsoft Docs
+title: Työskentely eri ympäristöissä | Microsoft Docs
 description: Vaihda ympäristöjä ja opi ymmärtämään, miten sivujesi sisältö muuttuu.
 documentationcenter: na
 author: linhtranms
@@ -13,28 +13,29 @@ ms.component: canvas
 ms.date: 10/14/2016
 ms.author: litran
 ms.openlocfilehash: 4bf196041853e9f88c97aabcd3ff1c234b2608be
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329475"
 ---
-# <a name="working-with-environments-and-microsoft-powerapps"></a>Ympäristöjen ja Microsoft PowerAppsin kanssa työskentely
-PowerAppsin avulla voit työskennellä eri ympäristöissä ja siirtyä helposti niiden välillä. Katso yleiskatsaus ympäristöistä kohdassa [Ympäristöjen yleiskatsaus](../../administrator/environments-overview.md), jossa selitetään yksityiskohtaisesti, miksi ympäristöjä käytetään ja miten voit luoda ja hallita niitä. Tämä artikkeli kattaa seuraavat ympäristöä koskevat ohjeaiheet:
+# <a name="working-with-environments-and-microsoft-powerapps"></a>Microsoft PowerAppsin käyttäminen eri ympäristöissä
+PowerAppsin avulla voit työskennellä eri ympäristöissä ja siirtyä helposti niiden välillä. Lue ympäristöjen yleiskuvaus kohdasta [Ympäristöjen yleiskuvaus](../../administrator/environments-overview.md), jossa selitetään yksityiskohtaisesti, miksi ympäristöjä käytetään ja miten voit luoda ja hallita niitä. Tämä artikkeli kattaa seuraavat ympäristöä koskevat ohjeaiheet:
 
 * ympäristön vaihtaminen powerapps.comissa
-* miten luodaan sovellus oikeaan ympäristöön
-* miten tarkastellaan sovellusta oikeassa ympäristössä
+* sovelluksen luominen oikeaan ympäristöön
+* sovelluksen tarkasteleminen oikeassa ympäristössä
 
 ## <a name="switch-the-environment"></a>Ympäristön vaihtaminen
 Kun rekisteröidyt ja kirjaudut ensimmäisen kerran powerapps.comiin, päädyt todennäköisesti oletusympäristöön. Voit tarkistaa asian katsomalla sivun oikeaa yläkulmaa.
 
 ![Oletusympäristö](./media/working-with-environments/env-dropdown.png)
 
-*Oletusympäristö* on kaikille helppokäyttöinen. Voit aloittaa sovellusten luomisen tässä ympäristössä ja jakaa sovelluksiasi muiden käyttäjien kanssa. Sinulla voi myös olla käyttöoikeus muihin ympäristöihin, kuten niihin, jotka [olet luonut itse](../../administrator/environments-administration.md) tai muiden luomiin ympäristöihin, joihin sinulla on kuitenkin käyttöoikeus. Voit vaihtaa ympäristöjä napsauttamalla oikeassa yläkulmassa olevaa ympäristön avattavaa valikkoa ja valitsemalla eri ympäristön. Tässä esimerkissä näytetään vaihtaminen *oletusympäristöstä* *ympäristöön 1*.
+*Oletusympäristö* on kaikille helppokäyttöinen. Voit aloittaa sovellusten luomisen tässä ympäristössä ja jakaa sovelluksiasi muiden käyttäjien kanssa. Sinulla voi myös olla käyttöoikeus muihin ympäristöihin, kuten niihin, jotka [olet luonut itse](../../administrator/environments-administration.md), tai muiden luomiin ympäristöihin, joihin sinulla on käyttöoikeus. Voit vaihtaa ympäristöjä napsauttamalla oikeassa yläkulmassa olevaa avattavaa ympäristövalikkoa ja valitsemalla toisen ympäristön. Tässä esimerkissä näytetään vaihtaminen *oletusympäristöstä* *ympäristöön 1*.
 
 ![Ympäristön vaihtaminen](./media/working-with-environments/switch-env.png)
 
-Kun siirryt toiseen ympäristöön (kuten ympäristöön 1), näet kaikki luomasi sovellukset tai sovellukset, joita voit käyttää tässä uudessa ympäristössä.
+Kun vaihdat ympäristöä (esimerkiksi ympäristöön 1), huomaat, että kaikki sovellukset, jotka olet luonut tai joihin sinulla on käyttöoikeus, näkyvät myös uudessa ympäristössä.
 
 ## <a name="create-apps-in-the-right-environment"></a>Sovelluksen luominen oikeaan ympäristöön
 Voit luoda sovelluksia itse luomassasi ympäristössä tai ympäristössä, johon olet saanut käyttöoikeudet. Oman ympäristön luominen edellyttää kuitenkin [tarkkaa suunnitelmaa](../../administrator/pricing-billing-skus.md). Ennen kuin luot sovelluksen, **varmista aina, että olet valinnut ympäristön, jossa haluat sovelluksen olevan**. Muussa tapauksessa joudut siirtämään sovelluksia eri ympäristöjen välillä.
@@ -45,17 +46,17 @@ Luo sovellus oikeassa ympäristössä tekemällä jokin seuraavista:
 
 - Jos PowerApps Studio on avattu, valitse ympäristö uudelleen oikeassa yläkulmassa.
 
-5. Valitse **Tilin**-sivulla **Vaihda** nykyisen ympäristön nimen vierestä.
+5. Siirry **Tili**-sivulle ja valitse tällä hetkellä käytössä olevan ympäristön nimen vieressä oleva **Vaihda**-painike.
 
 6. Valitse ympäristö, johon haluat luoda sovelluksen.
 
     ![Ympäristön vaihtaminen Studiossa](./media/working-with-environments/studio-env-dropdown2.PNG)
 
-7. Aloita sovelluksen luominen valitsemalla **Uusi**. Sovelluksesi sijaitsee nyt vaiheessa 6 valitussa ympäristössä.
+7. Aloita sovelluksen luominen valitsemalla **Uusi**. Sovelluksesi sijaitsee nyt siinä ympäristössä, jonka valitsit vaiheessa 6.
 
     ![Ympäristön vaihtaminen Studiossa](./media/working-with-environments/new-app.PNG)
 
-## <a name="view-apps-in-the-right-environment"></a>Tarkastele sovellusta oikeassa ympäristössä
+## <a name="view-apps-in-the-right-environment"></a>Sovelluksen tarkasteleminen oikeassa ympäristössä
 Riippumatta siitä, työskenteletkö [powerapps.comissa](http://web.powerapps.com) tai PowerApps Studiossa, luettelo näkemistäsi sovelluksista, yhteyksistä jne. suodatetaan aina avattavasta valikosta valitun ympäristön perusteella. Jos et näe etsimiäsi sovelluksia, varmista aina, että oikea ympäristö on valittuna.
 
 Katso lisätietoja ympäristöistä [tästä yleiskatsauksesta](../../administrator/environments-overview.md).

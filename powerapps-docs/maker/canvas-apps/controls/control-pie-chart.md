@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: bda839765d797bf87590f037221b116bad781657
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31833673"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>PowerAppsin Ympyräkaavio-ohjausobjekti
 Ohjausobjekti, joka näyttää suhteellisia arvoja verrattuna toisiinsa.
@@ -27,7 +28,7 @@ Lisää **Ympyräkaavio**-ohjausobjekti, jos haluat näyttää suhteellisia tiet
 Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)**, kuvan kaaviosta ja kaavion **selitteen**.
 
 ## <a name="chart-key-properties"></a>Kaavion tärkeimmät ominaisuudet
-**[Items](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
+**[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
 
 **ShowLabels** – Näytetäänkö ympyräkaaviossa arvot, jotka liittyvät lohkoihin.
 
@@ -38,15 +39,15 @@ Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjauso
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
 **[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **Explode** – Lohkojen etäisyys toisistaan ympyräkaaviossa.
 
-**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -64,20 +65,20 @@ Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjauso
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
+**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
-[**Max**( *TietoLähde*, *SarakkeenNimi* )](../functions/function-aggregates.md)
+[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **[Painike](control-button.md)**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
@@ -85,8 +86,8 @@ Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjauso
    
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
    
-    Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-2. Palaa oletustyötilaan painamalla F5, napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia ja paina sitten Esc.
+    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+2. Palaa oletustyötilaan painamalla F5, napsauta tai napauta **[painike](control-button.md)** ohjausobjektia ja paina sitten Esc.
 3. Lisää **Ympyräkaavio**-ohjausobjekti ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi **Revenue2015**.
    
     **Ympyräkaavio**-ohjausobjekti näyttää tuotteiden liikevaihtotiedot verrattuna muihin tuotteisiin.

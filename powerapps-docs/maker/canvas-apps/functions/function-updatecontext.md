@@ -1,25 +1,23 @@
 ---
 title: UpdateContext-funktio | Microsoft Docs
 description: Viitetiedot sekä syntaksi ja esimerkkejä PowerAppsin UpdateContext-funktiolle
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/08/2015
 ms.author: gregli
-ms.openlocfilehash: bcade879bfad04a50f80c26638f994897d9b42c0
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: a784251899e7c51ef8213b6d6f31c2830b08e2dc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838851"
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funktio PowerAppsissa
 Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) nykyisessä näytössä.

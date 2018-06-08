@@ -1,6 +1,6 @@
 ---
-title: Yhteyden luominen SharePointiin PowerAppsista | Microsoft Docs
-description: Luo powerapps.comissa yhteys SharePointiin käytettäväksi sovelluksen automaattiseen luontiin tai luomiseen alusta alkaen.
+title: Yhteyden luominen PowerAppsista SharePointiin | Microsoft Docs
+description: Luo powerapps.comissa yhteys SharePointiin sovelluksen automaattista luontia varten tai luomiseen alusta alkaen.
 documentationcenter: na
 author: aftowen
 manager: kfile
@@ -13,28 +13,29 @@ ms.component: canvas
 ms.date: 09/03/2016
 ms.author: anneta
 ms.openlocfilehash: 16c585f553373faee609683774e7938e8bd165f1
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31824586"
 ---
-# <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Yhteyden luominen SharePointiin PowerAppsista
-Luo yhteys joko SharePoint Onlineen tai paikalliseen SharePointiin, jotta voit luoda sovelluksen automaattisesti tai luoda sellaisen alusta alkaen.
+# <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Yhteyden luominen PowerAppsista SharePointiin
+Luo yhteys joko SharePoint Onlineen tai paikalliseen SharePointiin, jotta voit luoda sovelluksen automaattisesti tai alusta alkaen.
 
-Jos et tunne PowerAppsia, katso [PowerAppsin johdanto](getting-started.md).
+Jos et tunne PowerAppsia, katso [PowerAppsin esittely](getting-started.md).
 
 Kirjoittamishetkellä PowerApps tukee mukautettuja luetteloita, mutta ei kirjastoja. Lisäksi voit näyttää joitain tietotyyppejä sarakkeissa, kuten **Valinta** ja **Kuva**, mutta et voi päivittää kyseisiä tietoja. Katso lisätietoja kohdasta [Tunnetut ongelmat](connections/connection-sharepoint-online.md#known-issues).
 
 ## <a name="specify-a-sharepoint-connection"></a>SharePoint-yhteyden määrittäminen
 1. Jos et ole vielä rekisteröitynyt, [rekisteröidy PowerAppsiin](../signup-for-powerapps.md).
 
-2. Kirjaudu sisään osoitteeseen [powerapps.com](https://web.powerapps.com) samoilla tunnistetiedoilla kuin joilla rekisteröidyit.
+2. Kirjaudu sisään osoitteeseen [powerapps.com](https://web.powerapps.com) samoilla tunnistetiedoilla, joilla rekisteröidyit.
 
 3. Napsauta tai napauta vasemman siirtymispalkin kohtaa **Hallitse** ja napsauta tai napauta kohtaa **Yhteydet**.
 
     ![Tiedosto-valikon Uusi-vaihtoehto](./media/connect-to-sharepoint/manage-connections.png)
 
-4. Napsauta tai napauta oikean yläkulman läheistä kohtaa **Uusi yhteys**.
+4. Napsauta tai napauta oikean yläkulman lähellä olevaa kohtaa **Uusi yhteys**.
 
     ![Uusi yhteys -painike](./media/connect-to-sharepoint/new-connection.png)
 
@@ -62,13 +63,13 @@ Kirjoittamishetkellä PowerApps tukee mukautettuja luetteloita, mutta ei kirjast
     > [!NOTE]
 > Yhdyskäytäviä ja paikallisia yhteyksiä voi luoda ja käyttää vain käyttäjän [oletusympäristössä](working-with-environments.md).
 
-2. Syötä käyttäjänimesi ja salasanasi.
+2. Anna käyttäjänimesi ja salasanasi.
 
     Jos tunnistetietoihisi kuuluu toimialuenimi, anna käyttäjänimi muodossa *Toimialue\Alias*.
 
     ![Tunnistetietojen määritys](./media/connect-to-sharepoint/specify-credentials.png)
 
-3. Jos sinulla ei ole asennettuna paikallista yhdyskäytävää, [asenna sellainen](gateway-reference.md) ja päivitä yhdyskäytäväluettelo napsauttamalla tai napauttamalla päivityskuvaketta.
+3. Jos sinulla ei ole asennettuna paikallista tietoyhdyskäytävää, [asenna sellainen](gateway-reference.md) ja päivitä yhdyskäytäväluettelo napsauttamalla tai napauttamalla päivityskuvaketta.
 
     ![Yhdyskäytävän asentaminen](./media/connect-to-sharepoint/install-gateway.png)
 

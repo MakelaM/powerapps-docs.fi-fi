@@ -1,6 +1,6 @@
 ---
 title: Remove- ja RemoveIf-funktio | Microsoft Docs
-description: Tietoja PowerAppsin Remove- ja RemoveIf-funktiosta, mukaan lukien syntaksi ja esimerkit
+description: Tietoja PowerAppsin Remove- ja RemoveIf-funktiosta, mukaan lukien syntaksi ja esimerkkejä
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
 ms.openlocfilehash: 1f4df70ce3274c4d83c39955df58ebc344038de3
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832709"
 ---
 # <a name="remove-and-removeif-functions-in-powerapps"></a>PowerAppsin Remove- ja RemoveIf-funktio
 Poistaa [tietueita](../working-with-tables.md#records) [tietolähteestä](../working-with-data-sources.md).
@@ -28,7 +29,7 @@ Poistaa [tietueita](../working-with-tables.md#records) [tietolähteestä](../wor
 Jos kyseessä on [kokoelma](../working-with-data-sources.md#collections), koko tietueen on oltava funktion mukainen. Jos haluat poistaa kaikki tietueen kopiot, käytä **All**-argumenttia; muussa tapauksessa vain yksi tietueen kopio poistetaan.
 
 ### <a name="removeif-function"></a>RemoveIf-funktio
-Käytä **RemoveIf**-funktiota, jos haluat soveltaa tietueen/tietueiden poistamiseen yhtä tai useampaa ehtoa. Kukin ehto voi olla mikä tahansa kaava, jonka tulos on **tosi** tai **epätosi**, ja se voi viitata tietolähteen [sarakkeisiin](../working-with-tables.md#columns) nimen mukaan. Kukin ehto arvioidaan erikseen kunkin tietueen osalta, ja tietue poistetaan, jos kaikkien ehtojen arvoksi tulee **tosi**.
+Käytä **RemoveIf**-funktiota, jos haluat soveltaa tietueen/tietueiden poistamiseen yhtä tai useampaa ehtoa. Kukin ehto voi olla mikä tahansa kaava, jonka tulos on **true** tai **false**, ja se voi viitata tietolähteen [sarakkeisiin](../working-with-tables.md#columns) nimen mukaan. Kukin ehto arvioidaan erikseen kunkin tietueen osalta, ja tietue poistetaan, jos kaikkien ehtojen arvoksi tulee **true**.
 
 Sekä **Remove** että **RemoveIf** palauttavat muokatun tietolähteen [taulukon muodossa](../working-with-tables.md). Näitä funktioita voidaan käyttää vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
 
@@ -47,13 +48,13 @@ Jos haluat poistaa kaikki tietolähteen tietueet, voit käyttää myös **[Clear
 **Remove**( *DataSource*, *Table* [, **All** ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen tai tietueet, jotka haluat poistaa.
-* *Table* – Pakollinen. Taulukko, joka sisältää poistettavat tietueet.
+* *Taulukko* – Pakollinen. Taulukko, joka sisältää poistettavat tietueet.
 * **All** – Valinnainen. Sama tietue voi näkyä kokoelmassa useamman kerran.  Voit lisätä **All**-argumentin, jos haluat poistaa kaikki tietueen kopiot.
 
 **RemoveIf**( *DataSource*, *Condition* [, ... ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen tai tietueet, jotka haluat poistaa.
-* *Condition(s)* – Pakollinen. Kaava, joka määrittää poistettavien tietueiden arvoksi **tosi**.  Voit käyttää kaavassa *DataSource*-tietolähteessä olevia sarakenimiä.  Jos määrität useita ehtoja *(Conditions)*, niiden kaikkien arvoksi on tultava **tosi**, ennen kuin tietue tai tietueet poistetaan.
+* *Condition(s)* – Pakollinen. Kaava, joka määrittää poistettavan tietueen tai poistettavien tietueiden arvoksi **true**.  Voit käyttää kaavassa *DataSource*-tietolähteessä olevia sarakenimiä.  Jos määrität useita ehtoja (*Conditions*), niiden kaikkien arvoksi on tultava **true**, ennen kuin tietue tai tietueet poistetaan.
 
 ## <a name="examples"></a>Esimerkkejä
 Näissä esimerkeissä poistat tietueita tietolähteestä, jonka nimi on **IceCream** ja joka alkaa seuraavan taulukon tiedoilla:
@@ -64,9 +65,9 @@ Näissä esimerkeissä poistat tietueita tietolähteestä, jonka nimi on **IceCr
 | --- | --- | --- |
 | **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Poistaa tietolähteestä **Chocolate**-tietueen. |<style> img { max-width: none } </style> ![](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
 | **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Poistaa tietolähteestä kaksi tietuetta. |![](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
-| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Muokkaa tietueita, joiden määrä **(Quantity)** on suurempi kuin **150**. |![](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
-| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Poistaa tietueita, joiden määrä **(Quantity)** on suurempi kuin 150 ja maku **(Flavor)** alkaa **S**-kirjaimella. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>**IceCream**-tietolähdettä on muokattu. |
-| **RemoveIf(&nbsp;IceCream, tosi )** |Poistaa tietolähteestä kaikki tietueet. |![](media/function-remove-removeif/icecream-empty.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Muokkaa tietueita, joiden määrä (**Quantity**) on suurempi kuin **150**. |![](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Poistaa tietueita, joiden määrä (**Quantity**) on suurempi kuin 150 ja maku **(Flavor)** alkaa **S**-kirjaimella. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>**IceCream**-tietolähdettä on muokattu. |
+| **RemoveIf(&nbsp;IceCream, true )** |Poistaa tietolähteestä kaikki tietueet. |![](media/function-remove-removeif/icecream-empty.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
 
 ### <a name="step-by-step"></a>Ohjeet vaihe vaiheelta
 1. Tuo tai luo kokoelma, jonka nimi on **Luettelo**, ja näytä se valikoimassa artikkelin [Tietojen näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) mukaan.

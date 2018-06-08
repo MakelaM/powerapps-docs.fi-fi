@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: bd07c6ee0a0084171c928c6908c33caae974d765
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835136"
 ---
 # <a name="image-control-in-powerapps"></a>Kuva-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka näyttää kuvan esimerkiksi paikallisesta tiedostosta tai tietolähteestä.
@@ -36,7 +37,7 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)**  – Onko ohjausobjektin reuna **Solid** (kiinteä), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -44,7 +45,7 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella (**View**) vai onko ominaisuus kokonaan poissa käytöstä (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
 
@@ -86,27 +87,27 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[RadiusBottomLeft](properties-size-location.md)** – Vasemman alakulman pyöristysmäärä.
+**[RadiusBottomLeft](properties-size-location.md)** – Ohjausobjektin vasemman alakulman pyöristysaste.
 
-**[RadiusBottomRight](properties-size-location.md)** – Oikean alakulman pyöristysmäärä.
+**[RadiusBottomRight](properties-size-location.md)** – Ohjausobjektin oikean alakulman pyöristysaste.
 
-**[RadiusTopLeft](properties-size-location.md)** – Vasemman yläkulman pyöristysmäärä.
+**[RadiusTopLeft](properties-size-location.md)** – Ohjausobjektin vasemman yläkulman pyöristysaste.
 
-**[RadiusTopRight](properties-size-location.md)** – Oikean yläkulman pyöristysmäärä.
+**[RadiusTopRight](properties-size-location.md)** – Ohjausobjektin oikean yläkulman pyöristysaste.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
 **Transparency** – Läpinäkyvyys eli missä määrin kuvan takana olevat ohjausobjektit pysyvät näkyvissä.
 
 **[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 [**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)

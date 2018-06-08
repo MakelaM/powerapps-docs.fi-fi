@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 03/08/2017
 ms.author: gregli
 ms.openlocfilehash: 5e9b9ec980e6dd4aeacfef42b40fe7f52c19d558
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838736"
 ---
 # <a name="understand-data-sources-in-powerapps"></a>Tutustu tietolähteisiin PowerAppsissa
 Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset käyttävät näitä tietolähteitä käyttämällä **yhteyksiä**.
@@ -41,9 +42,9 @@ Kun pyydät PowerAppsia luomaan sovelluksen tiedoista, näitä ohjausobjekteja k
 [Kokoelma](working-with-data-sources.md#collections) on erityinen tietolähde. Se tallennetaan paikallisesti sovellukseen eikä sillä ole tukena yhteyttä pilvipalveluun, joten saman käyttäjän tai eri käyttäjien tietoja ei voi jakaa laitteiden välillä. Kokoelmia voidaan ladata ja tallentaa paikallisesti.
 
 ### <a name="kinds-of-tables"></a>Taulukkotyypit
-PowerApps-sovelluksen sisäiset taulukot ovat kiinteitä arvoja, kuten numero tai merkkijono on arvo. Sisäisiä taulukoita ei tallenneta mihinkään, ja ne ovat olemassa vain sovelluksen muistissa. Et voi muokata taulukon rakennetta tai tietoa suoraan. Voit sen sijaan luoda uuden taulukon käyttämällä kaavaa: kaavan avulla voit tehdä muokatun kopion alkuperäisestä taulukosta.
+PowerApps-sovelluksen sisäiset taulukot ovat kiinteitä arvoja, kuten numero tai merkkijono on arvo. Sisäisiä taulukoita ei tallenneta mihinkään, ja ne ovat olemassa vain sovelluksen muistissa. Et voi muokata taulukon rakennetta tai tietoa suoraan. Voit sen sijaan luoda uuden taulukon käyttämällä kaavaa. Kaavan avulla voit tehdä muokatun kopion alkuperäisestä taulukosta.
 
-Ulkoiset taulukot tallennetaan tietolähteeseen myöhempää hakemista ja jakamista varten.  PowerApps tarjoaa "yhteydet" tallennetun tiedon lukemista ja kirjoittamista varten.  Voit käyttää useita tietotaulukoita yhteyden sisällä.  Kun valitset, mitä taulukoita käytetään sovelluksessa, jokaisesta tulee erillinen *tietolähde*.  
+Ulkoiset taulukot tallennetaan tietolähteeseen myöhempää hakemista ja jakamista varten.  PowerApps tarjoaa tallennetun tiedon lukemiseen ja kirjoittamiseen tarkoitettuja yhteyksiä.  Voit käyttää useita tietotaulukoita yhteyden sisällä.  Valitset sovelluksessa käytettävät taulukot, ja niistä jokaisesta tulee erillinen *tietolähde*.  
 
 Saat lisätietoja [Taulukoiden käsitteleminen](working-with-tables.md) -kohdasta, jossa kerrotaan sisäisistä taulukoista yksityiskohtaisemmin. Kohdasta on myös hyötyä pilvipalvelussa olevien ulkoisten taulukoiden kanssa.
 
@@ -53,14 +54,14 @@ Voit käyttää taulukon tietolähteitä samalla tavalla kuin sisäistä PowerAp
 * Tietolähteellä on samat sarakenimet ja tietotyypit kuin yhteyden pohjalla olevalla taulukolla.
   
     > [!NOTE]
-> SharePoint- ja Excel-tietolähteissä, joissa on välilyönnin sisältäviä sarakenimiä, PowerApps korvaa välilyönnit merkkijonolla **\_x0020\_**. Esimerkiksi, **"Sarakkeen Nimi"** SharePointissa tai Excelissä näkyy muodossa **"Sarakkeen_x0020_Nimi"** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+> SharePoint- ja Excel-tietolähteissä, joissa on välilyönnin sisältäviä sarakenimiä, PowerApps korvaa välilyönnit merkkijonolla **\_x0020\_**. Esimerkiksi, **”Sarakkeen Nimi”** SharePointissa tai Excelissä näkyy muodossa **”Sarakkeen_x0020_Nimi”** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
 * Tietolähde ladataan palvelusta automaattisesti, kun sovellus ladataan.  Voit pakottaa tietojen päivityksen käyttämällä **[Refresh](functions/function-refresh.md)**-funktiota.
 * Kun käyttäjät suorittavat sovelluksen, he voivat luoda, muokata ja poistaa tietueita ja siirtää muutokset takaisin palvelussa pohjalla olevaan taulukkoon.
   * Tietueita voidaan luoda **[Patch](functions/function-patch.md)**- ja **[Collect](functions/function-clear-collect-clearcollect.md)**-funktioilla.  
   * Tietueita voidaan muokata **[Patch](functions/function-patch.md)**-, **[Update](functions/function-update-updateif.md)**- ja **[UpdateIf](functions/function-update-updateif.md)**-funktioilla.
   * Tietueita voidaan poistaa **[Remove](functions/function-remove-removeif.md)**- ja **[RemoveIf](functions/function-remove-removeif.md)**-funktioilla.
   * Tietolähteen käsittelyssä ilmenevät virheet ovat saatavilla **[Errors](functions/function-errors.md)**-funktiolla.
-* **[DataSourceInfo](functions/function-datasourceinfo.md)**-, **[Defaults](functions/function-defaults.md)**- ja **[Validate](functions/function-validate.md)**-funktiot tarjoavat tietoja tietolähteestä, jonka avulla voit optimoida käyttökokemuksen.
+* **[DataSourceInfo](functions/function-datasourceinfo.md)**-, **[Defaults](functions/function-defaults.md)**- ja **[Validate](functions/function-validate.md)**-funktiot tarjoavat tietolähteestä tietoja, joiden avulla voit optimoida käyttökokemuksen.
 
 ### <a name="creating-data-sources"></a>Tietolähteiden luominen
 PowerAppsia ei voi käyttää yhdistetyn tietolähteen luomiseen tai sen rakenteen muokkaamiseen. Tietolähteen on oltava palvelussa valmiina. Jotta voit esimerkiksi luoda taulukon OneDriveen tallennetussa Excel-työkirjassa, käytät ensin Excel Onlinea OneDrivessa työkirjan luomiseen. Seuraavaksi luot siihen yhteyden sovelluksestasi.  
@@ -86,7 +87,7 @@ Huomaa: jotta voit muokata tietolähteen olemassa olevaa tietuetta, tietueen on 
 * **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekti tarjoaa säilön syötteen korteille, jotka koostuvat käyttäjäsyötteen ohjausobjekteista, kuten tekstinsyötön ohjausobjektista tai liukusäätimestä.  **[Tietolähde](controls/control-form-detail.md)**- ja **[Kohde](controls/control-form-detail.md)**-ominaisuuksia käytetään muokattavan tietueen tunnistamiseen.
 * Jokaisella syötteen kortilla on **[Default](controls/properties-core.md)**-ominaisuus, joka asetetaan yleensä lomakkeen **ThisItem**-tietueen kenttään.  Tämän jälkeen syötteen kortissa olevat ohjausobjektit saavat syötearvonsa **[Default](controls/properties-core.md)**-ominaisuudesta.  Sinun ei yleensä tarvitse muokata tätä.
 * Jokainen syötteen kortti paljastaa **[Update](controls/control-card.md)**-ominaisuuden.  Tämä ominaisuus yhdistää käyttäjän syötteen tietueen tiettyyn kenttään takaisin tietolähteeseen kirjoittamista varten.  Sinun ei yleensä tarvitse muokata tätä.
-* Näytön painike tai kuvan ohjausobjekti antaa käyttäjän tallentaa muutokset tietueeseen.  Ohjausobjektin **[OnSelect](controls/properties-core.md)**-kaava kutsuu **[SubmitForm](functions/function-form.md)**-funktiota tämän työn suorittamiseksi.  **[SubmitForm](functions/function-form.md)** lukee korttien kaikki **[Update](controls/control-card.md)**-ominaisuudet ja käyttää tätä kirjoittaakseen takaisin tietolähteeseen.
+* Näytön painike tai kuvan ohjausobjekti antaa käyttäjän tallentaa muutokset tietueeseen.  Ohjausobjektin **[OnSelect](controls/properties-core.md)**-kaava kutsuu **[SubmitForm](functions/function-form.md)**-funktion suorittamaan tämän tehtävän.  **[SubmitForm](functions/function-form.md)** lukee korttien kaikki **[Update](controls/control-card.md)**-ominaisuudet ja kirjoittaa niiden avulla takaisin tietolähteeseen.
 * Joskus voi esiintyä ongelmia.  Verkkoyhteys on saattanut katketa tai palvelu voi tehdä todennustarkistuksen, josta sovellus ei ole tiennyt.  Lomakkeen ohjausobjektin **Error**- ja **[ErrorKind](controls/control-form-detail.md)**-ominaisuudet tuovat tämän tiedon käytettäväksi, jotta voit näyttää sen käyttäjälle.  
 
 Voit hallita prosessia tarkemmin käyttämällä myös **[Patch](functions/function-patch.md)**- ja **[Errors](functions/function-errors.md)**-funktiota.  **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekti paljastaa **[Updates](controls/control-form-detail.md)**-ominaisuuden, jotta voit lukea lomakkeessa olevien kenttien arvot.  Voit käyttää tätä ominaisuutta myös kutsuaksesi mukautetun liittimen ohittaen **Patch**- ja **SubmitForm**-funktiot kokonaan.
@@ -95,7 +96,7 @@ Voit hallita prosessia tarkemmin käyttämällä myös **[Patch](functions/funct
 Ennen kuin teet muutoksen tietueeseen, sovelluksen tulee tehdä kaikki mahdollinen varmistaakseen, että muutos on hyväksyttävä.  Tähän on kaksi syytä:
 
 * *Välitön palaute käyttäjälle*.  Paras hetki korjata ongelma on heti sen tapahtuessa, kun se on käyttäjällä tuoreessa muistissa.  Jokaisella kosketuksella tai näppäinpainalluksella voi tulla esiin punaista tekstiä, joka yksilöi ongelman syöttämisessä.
-* *Vähemmän verkkoliikennettä ja pienempi käyttäjän viive*.  Mitä enemmän sovelluksessa havaitaan ongelmia, sitä vähemmän tarvitaan ongelmien tunnistamiseen ja ratkaisemiseen liittyviä verkkokeskusteluita.  Jokainen keskustelu vie aikaa, jolloin käyttäjän on odotettava ennen kuin hän voi jatkaa.
+* *Vähemmän verkkoliikennettä ja pienempi käyttäjän viive*.  Mitä enemmän sovelluksessa havaitaan ongelmia, sitä vähemmän tarvitaan ongelmien tunnistamiseen ja ratkaisemiseen liittyviä verkkokeskusteluita.  Jokainen keskustelu vie aikaa, jolloin käyttäjän on odotettava, ennen kuin hän voi jatkaa.
 
 PowerApps tarjoaa vahvistamiseen kaksi työkalua:
 
@@ -105,7 +106,7 @@ PowerApps tarjoaa vahvistamiseen kaksi työkalua:
 ### <a name="error-handling"></a>Virheenkäsittely
 Erinomaista, olet vahvistanut tietueesi.  On aika päivittää tietue **[Patch](functions/function-patch.md)**-funktiolla!
 
-Yhä voidaan kuitenkin törmätä ongelmiin.  Verkko ei toimi, vahvistus palvelussa epäonnistuu tai käyttäjällä ei ole oikeita oikeuksia – tässä vain muutamia ongelmia, joita sovelluksesi saattaa kohdata.  Sen täytyy vastata asianmukaisesti virhetilanteisiin, antaa käyttäjälle palautetta sekä tarjota ohjeita virheen korjaamiseen.  
+Voit silti edelleen törmätä ongelmiin.  Verkko ei toimi, vahvistus palvelussa epäonnistuu tai käyttäjällä ei ole oikeita oikeuksia – tässä vain muutamia ongelmia, joita sovelluksesi saattaa kohdata.  Sen täytyy vastata asianmukaisesti virhetilanteisiin, antaa käyttäjälle palautetta sekä tarjota ohjeita virheen korjaamiseen.  
 
 Kun virheitä esiintyy tietolähteessä, sovelluksesi tallentaa virheen tiedot automaattisesti ja asettaa ne **[Errors](functions/function-errors.md)**-funktiolla käytettäviksi.  Virheet liittyvät tietueisiin, joissa ongelmat esiintyivät.  Jos käyttäjä voi korjata ongelman, kuten vahvistusongelman, hän voi lähettää tietueen uudelleen, jolloin virheet poistetaan.
 
@@ -114,22 +115,22 @@ Jos virhe esiintyy, kun tietue luodaan **[Patch](functions/function-patch.md)**-
 **[Errors](functions/function-errors.md)**-funktio palauttaa virhetietotaulukon.  Nämä tiedot voivat sisältää saraketietoja, jos virhe voidaan yhdistää tiettyyn sarakkeeseen.  Käytä saraketason virheviestejä otsikon ohjausobjekteissa, jotka ovat lähellä paikkaa, jossa sarake sijaitsee muokkausruudulla.  Käytä tietuetason virheviestejä, kun virhetaulukon **Sarake** on *tyhjä*, lähellä koko tietueen **Tallenna**-painiketta.  
 
 ### <a name="working-with-large-data-sources"></a>Suurten tietolähteiden käsitteleminen
-Kun olet luomassa raportteja suurista tietolähteistä (mahdollisesti miljoonia tietueita), haluat minimoida verkkoliikenteen. Oletetaan, että haluat raportin kaikista New York Cityn asiakkaista, joiden Tilakoodi on "Platina". Ja että asiakastaulukkosi sisältää miljoonia tietueita.
+Kun olet luomassa raportteja suurista tietolähteistä (mahdollisesti miljoonia tietueita), haluat minimoida verkkoliikenteen. Oletetaan, että haluat raportin kaikista New York Cityn asiakkaista, joiden Tilakoodi on ”Platina”. Ja että asiakastaulukkosi sisältää miljoonia tietueita.
 
-**Et** halua tuoda näitä miljoonia asiakkaita sovellukseesi ja valita haluamasi asiakkaita. Haluat sen sijaan, että tämä valinta tehdään pilvipalvelussa, johon taulukkosi on tallennettu, ja vain valitut tietueet lähetetään verkon kautta.
+**Et** halua tuoda näitä miljoonia asiakkaita sovellukseesi ja valita sitten haluamiasi asiakkaita. Haluat sen sijaan, että tämä valinta tehdään pilvipalvelussa, johon taulukkosi on tallennettu, ja vain valitut tietueet lähetetään verkon kautta.
 
-Monet – mutta eivät kaikki – tietueiden valitsemiseen käytettävät funktiot voidaan *delegoida*. Tämä tarkoittaa, että ne suoritetaan pilvipalvelun sisällä. Saat ohjeita tähän lukemalla [delegoinnista](delegation-overview.md).
+Monet – mutta eivät kaikki – tietueiden valitsemiseen käytettävät funktiot voidaan *delegoida*. Tämä tarkoittaa, että ne suoritetaan pilvipalvelun sisällä. Ohjeet ovat kohdassa [Delegointi](delegation-overview.md).
 
 ## <a name="collections"></a>Kokoelmat
-Kokoelmat ovat erityinen tietolähdetyyppi.  Se tallennetaan paikallisesti sovellukseen eikä sillä ole tukena yhteyttä pilvipalveluun, joten saman käyttäjän tai eri käyttäjien tietoja ei voi jakaa laitteiden välillä.  Kokoelmat toimivat muiden tietolähteiden tavoin muutamaa poikkeusta lukuun ottamatta:
+Kokoelmat ovat erityinen tietolähdetyyppi.  Ne tallennetaan paikallisesti sovellukseen, eikä niillä ole tukena pilvipalveluyhteyttä. Näin ollen saman käyttäjän tai eri käyttäjien tietoja ei voi jakaa laitteiden välillä.  Kokoelmat toimivat samalla tavoin kuin muut tietolähteet muutamaa poikkeusta lukuun ottamatta:
 
 * Kokoelmia voidaan luoda dynaamisesti **[Collect](functions/function-clear-collect-clearcollect.md)**-funktiolla.  Yhteyspohjaisista tietolähteistä poiketen niitä ei tarvitse muodostaa etukäteen.
 * Kokoelman sarakkeita voidaan muokata milloin tahansa käyttämällä **[Collect](functions/function-clear-collect-clearcollect.md)**-funktiota.
 * Kokoelmat sallivat tietueiden kaksoiskappaleet.  Kokoelmassa voi olla useampia kopioita samasta tietueesta.  Funktiot, kuten **[Remove](functions/function-remove-removeif.md)**, toimivat ensimmäisen löytämänsä osuman kohdalla, ellei **All**-argumenttia ole annettu.
 * Voit käyttää **[SaveData](functions/function-savedata-loaddata.md)**- ja **[LoadData](functions/function-savedata-loaddata.md)**-funktioita kokoelman kopion tallentamiseen ja lataamiseen uudelleen.  Tiedot tallennetaan yksityiseen sijaintiin, jota muut käyttäjät, sovellukset tai laitteet eivät voi käyttää.
-* Voit käyttää **[Vie](controls/control-export-import.md)**- ja **[Tuo](controls/control-export-import.md)**-ohjausobjekteja tallentaaksesi ja ladataksesi uudelleen kopion kokoelmasta tiedostoon, jota käyttäjä voi käyttää.  
+* **[Vie](controls/control-export-import.md)**- ja **[Tuo](controls/control-export-import.md)**-ohjausobjektien avulla voit tallentaa ja ladata valikoiman kopion uudelleen tiedostoon, jota käyttäjä voi käyttää.  
 
-Katso lisätietoja kokoelman käyttämisestä tietolähteenä kohdasta [kokoelman luominen ja päivittäminen](create-update-collection.md).
+Lisätietoja kokoelman käyttämisestä tietolähteenä on kohdassa [Kokoelman luominen ja päivittäminen](create-update-collection.md).
 
-Kokoelmia käytetään yleisesti sovelluksen yleisen tilan ylläpitämiseen.  Kohdasta [muuttujien käyttäminen](working-with-variables.md) näet hallintatilan käytettävissä olevat asetukset.
+Kokoelmia käytetään yleisesti sovelluksen yleisen tilan ylläpitämiseen.  Kohdassa [Muuttujien käyttäminen](working-with-variables.md) on lisätietoja tilan hallinnan asetuksista.
 

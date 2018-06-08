@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 05/19/2017
 ms.author: sharik
 ms.openlocfilehash: d6c857a75a21123cdd0e826682fc595a503d67fd
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32328785"
 ---
 # <a name="edit-an-app-in-powerapps"></a>Sovelluksen muokkaaminen PowerAppsissa
 Muokkaa mitä tahansa sovellusta, jonka olet luonut tai johon sinulla on **voi muokata** -käyttöoikeudet. Voit muokata sovellusta PowerApps Studiossa. Jos yrität muokata sovellusta, joka on avoimena muokkausta varten muualla, viesti kertoo, onko se jo sinulla avattuna, vai onko se toisella käyttäjällä.
@@ -38,7 +39,7 @@ Muokkaa mitä tahansa sovellusta, jonka olet luonut tai johon sinulla on **voi m
 1. Napsauta tai napauta kolmea pistettä (...) sen sovelluksen kohdalla, jota haluat muokata, ja napsauta tai napauta kohtaa **Muokkaa**.
 
 ## <a name="collaborate-on-an-app"></a>Sovelluksen yhteiskäyttö
-Kuka tahansa, jolla on sovellukseen **voi muokata** -käyttöoikeudet, voi muokata sitä, mutta vain yksi henkilö voi muokata sovellusta kerrallaan. Jos yrität muokata sovellusta, jota joku muu on jo muokkaamassa, tämä sanoma tulee näkyviin. Ei voi jatkaa ennen kuin toinen henkilö sulkee sovelluksen (tai ennen kuin tämän henkilön istunto aikakatkaistaan).
+Kuka tahansa, jolla on sovellukseen **voi muokata** -käyttöoikeudet, voi muokata sitä, mutta vain yksi henkilö voi muokata sovellusta kerrallaan. Jos yrität muokata sovellusta, jota joku muu on jo muokkaamassa, tämä sanoma tulee näkyviin. Et voi jatkaa ennen kuin toinen henkilö sulkee sovelluksen (tai ennen kuin tämän henkilön istunto aikakatkaistaan).
 
 ![](./media/edit-app/applock-otheruser.png)
 

@@ -13,17 +13,18 @@ ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
 ms.openlocfilehash: d0b2ff351f7026967359f1b4d386a71d7ed5441f
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838713"
 ---
 # <a name="patch-function-in-powerapps"></a>PowerAppsin Patch-funktio
 Muokkaa [tietolähteen](../working-with-data-sources.md) [tietuetta](../working-with-tables.md#records) tai luo sellaisen tai yhdistää tietueita tietolähteen ulkopuolella.
 
-Käytä **Patch**-funktiota tietueiden muokkaamiseksi monimutkaisissa tilanteissa, kun esimerkiksi suoritat päivityksiä, jotka eivät vaadi käyttäjän toimia tai käytät lomakkeita, jotka ulottuvat usealle näytölle.
+Käytä **Patch**-funktiota tietueiden muokkaamiseksi monimutkaisissa tilanteissa, esimerkiksi kun suoritat päivityksiä, jotka eivät vaadi käyttäjän toimia, tai käytät lomakkeita, jotka ulottuvat usealle näytölle.
 
-Vähemmän monimutkaisissa tilanteissa voit käyttää **Muokkaa lomaketta** -ohjausobjektia tietolähteen tietueiden helpompaa päivittämistä varten. Kun lisäät **Muokkaa lomaketta** -ohjausobjektin, tarjoat käyttäjille täytettävän lomakkeen, jonka muutokset tallennetaan tietolähteeseen. Lisätietoja on kohdassa [Tutustu tietolomakkeisiin](../working-with-forms.md).
+Vähemmän monimutkaisissa tilanteissa voit käyttää **Muokattu lomake** -ohjausobjektia tietolähteen tietueiden helpompaa päivittämistä varten. Kun lisäät **Muokattu lomake** -ohjausobjektin, tarjoat käyttäjille täytettävän lomakkeen, jonka muutokset tallennetaan tietolähteeseen. Lisätietoja on kohdassa [Tutustu tietolomakkeisiin](../working-with-forms.md).
 
 ## <a name="overview"></a>Yleiskatsaus
 Käytä **Patch**-funktiota muokkaamaan yhtä tai useampaa tietolähteen tietuetta.  Tiettyjen [kenttien](../working-with-tables.md#elements-of-a-table) arvoja muokataan vaikuttamatta muihin ominaisuuksiin. Esimerkiksi tämä kaava muuttaa Contoso-nimisen asiakkaan puhelinnumeroa:
@@ -40,7 +41,7 @@ Vaikka et työskentelisikään tietolähteen kanssa, voit käyttää **Patch**-f
 
 ## <a name="description"></a>Kuvaus
 ### <a name="modify-or-create-a-record-in-a-data-source"></a>Tietueen luominen tai muokkaaminen tietolähteessä
-Tämän funktion käyttämiseksi tietolähteen kanssa määritä tietolähde ja sitten määritä perustietue:
+Määritä tietolähde ja sitten määritä perustietue tämän funktion käyttämiseksi tietolähteen kanssa:
 
 * Tietueen muokkaamiseksi perustietueen täytyy olla peräisin tietolähteestä.  Perustietue saattaa olla peräisin valikoiman **[Items](../controls/properties-core.md)**-ominaisuudesta, se saatettiin sijoittaa [kontekstimuuttujan](../working-with-variables.md#create-a-context-variable) kautta tai se voi olla peräisin jostain muualta. Tietue pitää kuitenkin pystyä jäljittämään takaisin tietolähteeseen.  Tämä on tärkeää, sillä tietue sisältää lisätietoja, jotka auttavat löytämään tietueen uudelleen muokkausta varten.  
 * Luo tietue käyttämällä **[Defaults](function-defaults.md)**-funktiota perustietueen luomiseksi oletusarvoilla.  
@@ -49,7 +50,7 @@ Määritä sitten yksi tai useampi muutostietue, jotka sisältävät uusia omina
 
 **Patch**-funktion palautusarvo on tietue, jota muokkasit tai jonka loit.  Jos loit tietueen, palautusarvo voi sisältää ominaisuuksia, joita tietolähde loi automaattisesti.
 
-Kun päivität tietolähdettä, voi esiintyä yksi tai useampi ongelma. Käytä **[Errors](function-errors.md)**-funktiota ongelmien tunnistamiseen ja tarkasteluun, kuten kuvaillaan aiheessa [Tietolähteiden kanssa työskentely](../working-with-data-sources.md).
+Kun päivität tietolähdettä, voi esiintyä yksi tai useampi ongelma. Käytä **[Errors](function-errors.md)**-funktiota ongelmien tunnistamiseen ja tarkasteluun, kuten kuvataan aiheessa [Tietolähteiden kanssa työskentely](../working-with-data-sources.md).
 
 Liittyviin funktioihin kuuluvat **[Update](function-update-updateif.md)**-funktio, jota voidaan käyttää kokonaisen tietueen korvaamiseen, sekä **[Collect](function-clear-collect-clearcollect.md)**-funktio, jota voidaan käyttää tietueen luomiseen.  Voit käyttää **[UpdateIf](function-update-updateif.md)**-funktiota muokkaamaan useiden tietueiden tiettyjä ominaisuuksia ehdon perusteella.
 
@@ -67,16 +68,16 @@ Määritä kaksi tai useampaa tietuetta, jotka haluat yhdistää. Tietueet käsi
 
 ## <a name="syntax"></a>Syntaksi
 #### <a name="modify-or-create-a-record-in-a-data-source"></a>Tietueen luominen tai muokkaaminen tietolähteessä
-**Patch**( *TietoLähde*, *Perustietue*, *Muutostietue1* [, *Muutostietue2*, … ])
+**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord1* [, *ChangeRecord2*, … ])
 
 * *Tietolähde* – Pakollinen. Tietolähde, joka sisältää tietueen, jota haluat muokata tai tulee sisältämään tietueen, jonka haluat luoda.
-* *Perustietue* – Pakollinen. Muokattava tai luotava tietue.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.
-* *Muutostietue(et)* – Pakollinen.  Yksi tai useampi tietue, jotka sisältävät *Perustietueen* muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
+* *BaseRecord* – Pakollinen. Muokattava tai luotava tietue.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.
+* *Muutostietue(et)* – Pakollinen.  Yksi tai useampi tietue, jotka sisältävät *BaseRecord*in muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
 
 #### <a name="modify-or-create-a-set-of-records-in-a-data-source"></a>Tietueiden joukon luominen tai muokkaaminen tietolähteessä
-**Patch**( *Tietolähde*, *Perustietuetaulukko*, *Muutostietuetaulukko1*, [, *Muutostietuetaulukko2*, … ] )
+**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] )
 
-* *Tietolähde* – Pakollinen. Tietolähde, joka sisältää tietueet, joita haluat muokata tai tulee sisältämään tietueet, jotka haluat luoda.
+* *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueet, joita haluat muokata tai tulee sisältämään tietueet, jotka haluat luoda.
 * *Perustietuetaulukko* – Pakollinen. Muokattavien tai luotavien tietueiden taulukko.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.
 * *Muutostietuetaulukko* – Pakollinen.  Yksi tai useampi tietueiden taulukko, jotka sisältävät *Perustietuetaulukon* tietueiden muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
 
@@ -87,7 +88,7 @@ Määritä kaksi tai useampaa tietuetta, jotka haluat yhdistää. Tietueet käsi
 
 ## <a name="examples"></a>Esimerkkejä
 #### <a name="modify-or-create-a-record-in-a-data-source"></a>Tietueen luominen tai muokkaaminen (tietolähteessä)
-Näissä esimerkeissä muokataan tai luodaan tietue tietolähteessä nimeltä **IceCream**, joka sisältää tämän [taulukon](../working-with-tables.md) tiedot, ja luodaan automaattisesti arvot **ID**[-sarakkeelle](../working-with-tables.md#columns):
+Näissä esimerkeissä muokataan tietuetta tai luodaan se tietolähteessä nimeltä **IceCream**, joka sisältää tämän [taulukon](../working-with-tables.md) tiedot, ja luodaan automaattisesti arvot **ID**[-sarakkeelle](../working-with-tables.md#columns):
 
 ![](media/function-patch/icecream.png)
 
@@ -103,5 +104,5 @@ Kun edelliset kaavat on arvioitu, tietolähteessä on lopulta nämä arvot:
 #### <a name="merge-records-outside-of-a-data-source"></a>Tietueiden yhdistäminen (tietolähteen ulkopuolella)
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** |Yhdistää kaksi tietuetta tietolähteen ulkopuolella:<br><ul><li>Tietueiden **Name**-sarakkeen arvot eivät täsmää. Tulos sisältää arvon (**Jim**) tietueessa, joka on lähempänä argumenttiluettelon loppua arvon (**James**) sijaan, joka on lähempänä alkua.</li><li>Ensimmäinen tietue sisältää sarakkeen (**Score**), joka ei ole olemassa toisessa tietueessa. Tulos sisältää kyseisen sarakkeen arvollaan (**90**).</li><li>Toinen sarake sisältää sarakkeen (**Passed**), joka ei ole olemassa ensimmäisessä tietueessa. Tulos sisältää kyseisen sarakkeen arvollaan (**true**). |{&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |
+| **Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** |Yhdistää kaksi tietuetta tietolähteen ulkopuolella:<br><ul><li>Tietueiden **Name**-sarakkeen arvot eivät täsmää. Tulos sisältää arvon (**Jim**) tietueessa, joka on lähempänä argumenttiluettelon loppua arvon (**James**) sijaan tietueessa, joka on lähempänä alkua.</li><li>Ensimmäinen tietue sisältää sarakkeen (**Score**), jota ei ole olemassa toisessa tietueessa. Tulos sisältää kyseisen sarakkeen arvollaan (**90**).</li><li>Toinen sarake sisältää sarakkeen (**Passed**), jota ei ole olemassa ensimmäisessä tietueessa. Tulos sisältää kyseisen sarakkeen arvollaan (**true**). |{&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |
 

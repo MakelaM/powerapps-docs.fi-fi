@@ -1,22 +1,18 @@
 ---
 title: Yleiskuvaus Office 365 -käyttäjät -yhteydestä | Microsoft Docs
 description: Ohjeet Office 365 -käyttäjien yhteyden luomiseen, muutama esimerkki ja kaikki funktiot
-documentationcenter: ''
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/07/2016
 ms.author: lanced
-ms.openlocfilehash: 061d70ed1bae2971379acef4ea43ca85d805e756
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: a1e0ddd7dad50ec269a0946163cc7b822ddb0681
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803476"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Yhdistäminen Office 365 -käyttäjät -yhteyteen PowerAppsissa
 ![Office 365 -käyttäjät](./media/connection-office365-users/office365icon.png)
@@ -143,7 +139,7 @@ Tämä yhteys sisältää seuraavat funktiot:
 Hae oma profiili: noutaa nykyisen käyttäjän profiilin.
 
 #### <a name="input-properties"></a>Syöteominaisuudet
-Ei mitään
+Ei mitään.
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
 | Ominaisuuden nimi | Tyyppi | Kuvaus |

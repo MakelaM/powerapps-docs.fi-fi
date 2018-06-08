@@ -1,6 +1,6 @@
 ---
-title: Integroi PowerApps, Microsoft Flow ja Power BI SharePoint Onlinen kanssa (johdanto) | Microsoft Docs
-description: 'Tämän sarjan opetusohjelmissa tutkitaan, miten laaditaan yksinkertainen projektinhallintaohjelma, joka perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI.'
+title: PowerAppsin, Microsoft Flow'n ja Power BI:n integroiminen SharePoint Onlinen kanssa (johdanto) | Microsoft Docs
+description: 'Tässä opetusohjelmasarjassa tutkitaan, miten laaditaan yksinkertainen projektinhallintaohjelma, joka perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI.'
 documentationcenter: na
 author: mgblythe
 manager: kfile
@@ -13,13 +13,14 @@ ms.component: canvas
 ms.date: 12/19/2017
 ms.author: mblythe
 ms.openlocfilehash: 35dad5e3cbc2e78d5571cca5f9f120ca58ac3382
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31828849"
 ---
-# <a name="integrate-powerapps-microsoft-flow-and-power-bi-with-sharepoint-online"></a>Integroi PowerApps, Microsoft Flow ja Power BI SharePoint Onlinen kanssa
-Onko käytössäsi SharePoint Online ja haluako automatisoida ja virtaviivaistaa liiketoimintaprosessejasi paremmin? Oletko työskennellyt PowerAppsin, Microsoft Flow'n tai Power BI:n kanssa, muttet ole varma, miten näitä käytetään SharePoint Onlinen kanssa? Olet tullut oikeaan paikkaan! Tämän sarjan opetusohjelmissa tutkitaan, miten laaditaan yksinkertainen projektinhallintaohjelma, joka perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI. Nämä tekniikat toimivat yhdessä, mikä helpottaa liiketoimintasi *mittaamista*, *toimimista* tulosten perusteella ja työnkulkujen *automatisoimista*. Kun olet käynyt läpi tämän sarjan, käytössäsi on hieno skenaario, kuten tämä:
+# <a name="integrate-powerapps-microsoft-flow-and-power-bi-with-sharepoint-online"></a>PowerAppsin, Microsoft Flow'n ja Power BI:n integroiminen SharePoint Onlinen kanssa
+Onko käytössäsi SharePoint Online ja haluatko automatisoida ja virtaviivaistaa liiketoimintaprosessejasi paremmin? Oletko työskennellyt PowerAppsin, Microsoft Flow'n tai Power BI:n kanssa, muttet ole varma, miten näitä käytetään SharePoint Onlinen kanssa? Olet tullut oikeaan paikkaan! Tässä opetusohjelmasarjassa tutkitaan, miten laaditaan yksinkertainen projektinhallintaohjelma, joka perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI. Nämä tekniikat toimivat yhdessä, mikä helpottaa liiketoimintasi *mittaamista*, *toimimista* tulosten perusteella ja työnkulkujen *automatisoimista*. Kun olet käynyt läpi tämän sarjan, käytössäsi on hieno skenaario, kuten tämä:
 
 ![Valmiin skenaarion kaavio](./media/sharepoint-scenario-intro/composite-with-background.png)
 
@@ -29,7 +30,7 @@ Tässä opetusohjelmasarjassa yrityksellä Contoso on SharePoint Online -sivusto
 ## <a name="getting-started-quickly"></a>Nopeasti alkuun pääseminen
 Tässä opetusohjelmasarjassa esittämämme skenaario on yksinkertainen verrattuna täysimittaiseen projektihallinta- ja analyysisovellukseen, mutta kestää silti jonkun aikaa. Jos haluat vain nopean esittelyn PowerAppsin, Microsoft Flow'n ja Power BI:n käytöstä SharePointin kanssa, tutustu seuraaviin artikkeleihin:
 
-* **PowerApps**: [Sovelluksen luominen SharePointin sisältä PowerAppsilla ](generate-app-from-sharepoint-list-interface.md) ja [Luo sovellus SharePoint-luettelon tiedonhallintaa varten](app-from-sharepoint.md)
+* **PowerApps**: [Sovelluksen luominen SharePointista PowerAppsilla](generate-app-from-sharepoint-list-interface.md) ja [Luo sovellus SharePoint-luettelon tiedonhallintaa varten](app-from-sharepoint.md)
 * **Microsoft Flow**: [Odota hyväksyntää Microsoft Flow'ssa](https://docs.microsoft.com/flow/wait-for-approvals)
 * **Power BI**: [Upota raportin verkko-osa SharePoint Onlinessä](https://docs.microsoft.com/power-bi/service-embed-report-spo)
 
@@ -46,7 +47,7 @@ Skenaarion suorittamiseen tarvitset seuraavat tilaukset ja tietokoneen työkalut
 | Power BI Pro -tilaus |[Kokeiluversion tilaus](https://powerbi.microsoft.com/get-started/) (napsauta **KOKEILE ILMAISEKSI**) |
 | Power BI Desktop |[Ladattavissa maksutta](https://powerbi.microsoft.com/get-started/) (napsauta **LATAA ILMAISEKSI**) |
 
-Ihannetapauksessa sinulla on kaikkien tekniikoiden perustason tuntemusta, mutta voit silti tehdä skenaarion loppuun, vaikka jotkin näistä tekniikoista olisivatkin sinulle uusia. Käytä seuraavaa sisältöä apuna päästäksesi nopeasti liikkeelle:
+Ihannetapauksessa sinulla on kaikkien tekniikoiden perustason tuntemusta, mutta voit silti tehdä skenaarion loppuun, vaikka jotkin näistä tekniikoista olisivatkin sinulle uusia. Käytä seuraavaa sisältöä apuna, jotta pääset nopeasti liikkeelle:
 
 * [Aloita SharePointin käyttäminen](https://support.office.com/article/Get-started-with-SharePoint-909ec2f0-05c8-4e92-8ad3-3f8b0b6cf261)
 * [Opastettu perehdytys PowerAppsin käyttöön](../../guided-learning/index.md)

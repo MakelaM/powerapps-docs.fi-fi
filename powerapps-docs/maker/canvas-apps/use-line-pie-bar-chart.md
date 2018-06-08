@@ -1,24 +1,22 @@
 ---
 title: Kaavioiden luominen | Microsoft Docs
 description: Tietoluokkien näyttäminen viiva-, ympyrä- tai palkkikaavioina
-services: ''
-suite: powerapps
 documentationcenter: ''
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 727d19973056a9c738bd0087f99a36889ab50421
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f4b6f604ecd7557f7b7b54769d66da850e18ef4f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329797"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Tietojen näyttäminen viiva-, ympyrä- tai palkkikaavioina PowerAppsissa
 Käytä viiva-, ympyrä- ja palkkikaavioita tietojesi näyttämiseen. Kun käsittelet kaavioita, tuomiesi tietojen jäsentelyn tulee olla seuraavanlainen:
@@ -33,10 +31,10 @@ Tietojesi tulee näyttää esimerkiksi seuraavan kaltaisilta:
 Voit luoda ja käyttää näitä kaavioita PowerAppsissa. Aloitetaan.
 
 ## <a name="prerequisites"></a>Edellytykset
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [asenna](http://aka.ms/powerappsinstall) PowerApps. Kun avaat PowerAppsin, kirjaudu samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo sovellus [mallista](get-started-test-drive.md), [tiedoista](get-started-create-from-data.md) tai itse [alusta alkaen](get-started-create-from-blank.md).
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
-* Lataa [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), joka sisältää mallitietoja XML-tiedostomuodossa. Tuo tiedosto suoraan sovellukseesi noudattamalla tämän aiheen vaiheita. Voit vaihtoehtoisesti purkaa .zip-tiedoston, avata XML-tiedoston Excelissä ja tallentaa tiedoston [pilvitallennustilan tiliin](connections/cloud-storage-blob-connections.md).
+* Lataa [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), joka sisältää mallitietoja XML-tiedostomuodossa. Tuo tiedosto suoraan sovellukseesi noudattamalla tämän aiheen vaiheita. Voit vaihtoehtoisesti purkaa .zip-tiedoston, avata XML-tiedoston Excelissä ja tallentaa tiedoston [pilvipalveluun](connections/cloud-storage-blob-connections.md).
 
 ## <a name="import-the-sample-data"></a>Mallitietojen tuominen
 Näissä vaiheissa tuomme mallitiedot kokoelmaan, jonka nimi on **ProductRevenue**.
@@ -55,7 +53,7 @@ Näissä vaiheissa tuomme mallitiedot kokoelmaan, jonka nimi on **ProductRevenue
 
 5. Valitse **Tiedosto**-valikosta **Kokoelmat**.
 
-    ProductRevenue-kokoelma näytetään, ja se sisältää tuomasi kaaviotiedot:
+    Näyttöön tulee ProductRevenue-kokoelma, joka sisältää tuomasi kaaviotiedot:
 
     ![][1]  
 

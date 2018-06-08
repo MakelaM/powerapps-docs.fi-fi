@@ -1,6 +1,6 @@
 ---
 title: Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot | Microsoft Docs
-description: Viitetiedot Color-luetteloinnille ja ColorFade-, ColorValue- ja RGBA-funktioille, mukaan lukien syntaksi ja esimerkkejä
+description: Tietoa väriluetteloinnista, värien häivyttämisestä, väriarvoista ja RGBA-asetuksista, sekä syntakseja ja muutamia esimerkkejä
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,16 +13,17 @@ ms.component: canvas
 ms.date: 10/25/2015
 ms.author: gregli
 ms.openlocfilehash: f4eeabf5708fffa6881b84402280d5639d96cc0a
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838667"
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot PowerAppsissa
 Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituksen määrittäminen.
 
 ## <a name="description"></a>Kuvaus
-**Color**-luettelointi on helppo tapa käyttää värejä, jotka on määritetty HTML:n CSS-tyylimäärityksissä.  Esimerkiksi **Color.Red** palauttaa puhtaan punaisen värin.  Tämän artikkelin lopussa on luettelo näistä väreistä.   
+**Väriluettelointi** on helppo tapa käyttää värejä, jotka on määritetty HTML:n CSS-tyylimäärityksillä.  Esimerkiksi **Color.Red** palauttaa puhtaan punaisen värin.  Tämän artikkelin lopussa on luettelo näistä väreistä.   
 
 **ColorValue**-funktio palauttaa CSS-värimerkkijonon mukaisen värin.  Voit käyttää sekä CSS-värien nimiä, kuten ”RosyBrown”, että heksadesimaaleja, kuten ”#bc8f8f”.
 
@@ -33,7 +34,7 @@ Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituk
 ## <a name="syntax"></a>Syntaksi
 **Color**.*ColorName*
 
-* *ColorName* - Pakollinen.  CSS-tyylimäärityksen mukainen värin nimi.  Katso mahdolliset arvot alla olevasta luettelosta.
+* *ColorName* – Pakollinen.  CSS-tyylimäärityksen mukainen värin nimi.  Katso mahdolliset arvot alla olevasta luettelosta.
 
 **ColorValue**( *CSSColor* )
 
@@ -42,12 +43,12 @@ Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituk
 **RGBA**( *punainen*, *vihreä*, *sininen*, *alfa* )
 
 * *Punainen*, *vihreä*, *sininen* – Pakollinen.  Värikomponenttiarvot 0 (ei värikylläisyyttä) – 255 (täysi värikylläisyys).
-* *Alfa* – pakollinen.  Alfakomponentti väliltä 0 (täysin läpinäkyvä) – 1 (täysin läpinäkymätön).  Voit käyttää myös prosenttimäärää 0 % – 100 %.
+* *Alfa* – pakollinen.  Alfakomponentti väliltä 0 (täysin läpinäkyvä) – 1 (täysin läpinäkymätön).  Voit käyttää myös prosenttimäärää 0–100 %.
 
 **ColorFade**( *Color*, *FadeAmount* )
 
-* *Color* – Pakollinen.  Väriarvo, kuten **Color.Red** tai **ColorValue**- tai **RGBA**-arvo.
-* *FadeAmount* - Pakollinen.  Luku väliltä –1 ja 1.  –1 tummentaa värin kokonaan mustaksi, 0 ei vaikuta väriin ja 1 kirkastaa värin kokonaan valkoiseksi.  
+* *Color* – Pakollinen.  Väriarvo, kuten **Color.Red** tai **ColorValue**- tai **RGBA**-määritys.
+* *FadeAmount* – Pakollinen.  Luku väliltä –1 ja 1.  –1 tummentaa värin kokonaan mustaksi, 0 ei vaikuta väriin ja 1 kirkastaa värin kokonaan valkoiseksi.  
 
 ## <a name="built-in-colors"></a>Valmiit värit
 | Väriluettelointi | ColorValue esitettynä heksadesimaaleina | RGBA | Väriruutu |

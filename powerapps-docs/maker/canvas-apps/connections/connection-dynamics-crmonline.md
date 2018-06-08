@@ -1,25 +1,21 @@
 ---
 title: Dynamics 365 -yhteyden yleiskatsaus | Microsoft Docs
 description: Luo sovellus tietojen hallintaa varten Dynamics 365:ssä
-documentationcenter: ''
 author: Mattp123
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2017
 ms.author: matp
-ms.openlocfilehash: ea5c5c655f4e7462178f1e79db6a3695c11d1556
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 425620f3e20af7945c0e1506cab23a90c5209973
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803048"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Yhdistä Dynamics 365:een PowerAppsista
-PowerAppsin avulla voit nopeasti luoda, mukauttaa, jakaa ja suorittaa mobiilisovelluksia käyttäen vain vähän tai ei lainkaan koodia. Dynamics 365-liittimen avulla voit luoda hyödyllisiä mobiilisovelluksia organisaatiollesi jaettaviksi vain muutamassa minuutissa.
+PowerAppsin avulla voit nopeasti luoda, mukauttaa, jakaa ja suorittaa mobiilisovelluksia käyttäen vain vähän tai ei lainkaan koodia. Dynamics 365 -liittimen avulla voit luoda hyödyllisiä mobiilisovelluksia organisaatiollesi jaettaviksi vain muutamassa minuutissa.
 
 Tämän artikkelin ohjeiden mukaisesti luot sovelluksen, jolla käyttäjät voivat selata, lisätä, poistaa ja tehdä päivityksiä yhteystietoihin Dynamics 365:ssä. Käyttäjät voivat suorittaa sovelluksen [selaimessa](../../../user/run-app-browser.md) tai [mobiililaitteessa](../../../user/run-app-client.md), kuten puhelimessa.
 
@@ -48,16 +44,16 @@ Jotta voit seurata tätä opetusohjelmaa, tarvitset Microsoft Office 365 -tilin,
 1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com/) ja valitse sitten **Uusi sovellus** lähellä vasenta alakulmaa.
    
     ![Uusi sovellus](./media/connection-dynamics-crmonline/new-app.png)
-2. Napsauta kohdassa **Aloita tiedoillasi** käyttöön **puhelinasettelu** **Dynamics 365** -ruudussa.
+2. Napsauta kohdassa **Aloita tiedoillasi** **Puhelinasettelu** **Dynamics 365** -ruudussa.
    
-    ![PowerApps – valitse Dynamics 365-liitin](./media/connection-dynamics-crmonline/phonelayout.png)
-3. Valitse kohdassa **yhteydet** haluamasi yhteys ja valitse sitten tietojoukko, joka vastaa Dynamics 365:n esiintymää, jota haluat hallita sovelluksessa.
+    ![PowerApps – valitse Dynamics 365 -liitin](./media/connection-dynamics-crmonline/phonelayout.png)
+3. Valitse kohdassa **Yhteydet** haluamasi yhteys ja valitse sitten tietojoukko, joka vastaa Dynamics 365:n esiintymää, jota haluat hallita sovelluksessa.
 4. Napsauta kohdassa **Valitse taulukko** **Yhteystiedot** ja valitse sitten **Yhdistä**.
 5. Voit vaihtaa pikkukuvanäkymään napsauttamalla tai napauttamalla vasemman navigointipalkin oikeassa yläkulmassa olevaa kuvaketta.
    
     ![Näkymien vaihtaminen](./media/connection-dynamics-crmonline/toggle-view.png)
 
-PowerApps luo yhteyshenkilötietueiden perusteella kolmen näytön sovelluksen.
+PowerApps luo kolmen näytön sovelluksen yhteyshenkilötietueiden perusteella.
 
 * **BrowseScreen1**. Tämä näyttö näkyy oletusarvoisesti, kun käyttäjät avaavat sovelluksen. Tämän näytön pikkukuva ilmestyy vasempaan siirtymispalkkiin kahden muun näytön yläpuolelle.
 * **DetailScreen1**. Tämä näyttö tulee näkyviin, kun käyttäjä napsauttaa **BrowseScreen1**-näytössä olevaa kohdetta.  Vasempaan siirtymispalkkiin tulee näkyviin näytön **DetailScreen1** pikkukuva kahden muun näytön väliin.
@@ -72,12 +68,12 @@ Tässä toimenpiteessä määrität **BrowseScreen1**:n näyttämään jokaisen 
    
     ![Asettelun valitseminen](./media/connection-dynamics-crmonline/select-gallery.png)
 2. Napsauta tai napauta oikean ruudun välilehteä **Tiedot**.
-3. Napsauta tai napauta asettelujen luettelossa sitä, joka näyttää kuvia ja tekstiä kahden sarakkeen ruudukossa.
+3. Napsauta tai napauta asettelujen luettelossa asettelua, joka näyttää kuvia ja tekstiä kahden sarakkeen ruudukossa.
    
     Joudut ehkä vierittämään näyttöä alaspäin nähdäksesi tämän asetuksen.
    
     ![Asettelun valitseminen](./media/connection-dynamics-crmonline/select-layout.png)
-4. Kopioi tämä kaava ja liitä kaava valikoiman ollessa edelleen valittuna kaavariville (**fx**-painikkeen oikealle puolelle):
+4. Kopioi tämä kaava ja liitä se valikoiman ollessa edelleen valittuna kaavariville (**fx**-painikkeen oikealle puolelle):
    
     `SortByColumns(Search(Filter(Contacts,statuscode=1), TextSearchBox1.Text, "lastname"), "lastname", If(SortDescending1, Descending, Ascending))`
 5. Valitse oikeanpuoleisessa ruudussa yläreunan avattavan luettelon kohta **firstname** ja keskimmäisen avattavan luettelon kohta **lastname**.
@@ -97,7 +93,7 @@ Tässä toimenpiteessä määrität **BrowseScreen1**:n näyttämään jokaisen 
     ![Piilota kentät](./media/connection-dynamics-crmonline/hide-field.png)
 4. Napsauta mitä tahansa kohtaa otsikkorivin alla valitaksesi **Form1**-lomakkeen.
    
-    ![Valitse Form1-lomake](./media/connection-dynamics-crmonline/select-form1.png)
+    ![Valitse Form1](./media/connection-dynamics-crmonline/select-form1.png)
 5. Napsauta oikeanpuoleisessa ruudussa silmäkuvaketta kullekin näistä kentistä siten, että näytössä näkyy kuva (jos taulukko sisältää sellaisen) ja neljä muuta kenttää:
    
    * **entityimage**
@@ -108,9 +104,9 @@ Tässä toimenpiteessä määrität **BrowseScreen1**:n näyttämään jokaisen 
      
      Oikeanpuoleisen ruudun pitäisi muistuttaa tätä kaaviota:
      
-     ![Valitse Form1-lomake](./media/connection-dynamics-crmonline/show-fields.png)
+     ![Valitse Form1](./media/connection-dynamics-crmonline/show-fields.png)
 6. Valitse **EditScreen1** napsauttamalla vasemman siirtymispalkin alinta pikkukuvaa.
-7. Toista tämän toimintosarjan vaiheet mukauttaaksesi **EditScreen1**-näytön samalla tavalla kuin **DetailsScreen1**-näytön.
+7. Toista tämän toimintosarjan vaiheet mukauttaaksesi **EditScreen1**-näyttöä samalla tavalla kuin mukautit **DetailsScreen1**-näyttöä.
 8. (valinnainen) Tallenna sovellus.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet

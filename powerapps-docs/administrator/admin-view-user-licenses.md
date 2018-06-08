@@ -1,18 +1,18 @@
 ---
 title: Vuokraajasi aktiivisten käyttäjien luettelon lataamisen pikaopas | Microsoft Docs
 description: Tämän pikaoppaan avulla opit lataamaan luettelon vuokraajasi aktiivisista käyttäjistä
-author: SKjerland
-manager: kfile
+author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: e36dcd767f2738feef32da0f28a56b8f3f014ecb
-ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
+ms.author: jimh
+ms.openlocfilehash: 1488b0231009ef3dd3b0b93e21a14a61f3d1c3cd
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552480"
 ---
 # <a name="quickstart-download-a-list-of-active-users-in-your-tenant"></a>Pikaopas: Lataa luettelo vuokraajasi aktiivisista käyttäjistä
 Jos olet 365:n yleinen järjestelmänvalvoja tai Azure Active Directory -vuokraajan järjestelmänvalvoja, voit ladata vuokraajasi aktiivisten käyttäjien luettelon. Näin voit nähdä PowerAppsin, Microsoft Flow’n tai molempien käyttäjien lisäksi myös näille käyttäjille määritetyt käyttöoikeudet.

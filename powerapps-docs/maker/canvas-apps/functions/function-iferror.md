@@ -1,25 +1,23 @@
 ---
 title: IfError-funktio | Microsoft Docs
 description: PowerAppsin IfError-funktion viitetietoja, kuten syntaksi ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 03/21/2018
 ms.author: gregli
-ms.openlocfilehash: c0da6a00f1176c8f44db6e508cca92b0cbf99beb
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 2bd8ba7dc9b764399165c75361215cee2edb4e7b
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31831442"
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funktio PowerAppsissa
 Havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toiminnon.

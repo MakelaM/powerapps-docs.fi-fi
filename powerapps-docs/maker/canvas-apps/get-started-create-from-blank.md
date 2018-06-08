@@ -7,10 +7,11 @@ ms.component: canvas
 ms.date: 04/23/2018
 ms.author: anneta
 ms.openlocfilehash: 29f07162ec2815398cda5bcc359f7388df261bc0
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836966"
 ---
 # <a name="create-an-excel-app-from-scratch"></a>Excel-sovelluksen luominen alusta alkaen
 Voit luoda oman, taulukoksi muotoillun sovelluksesi alusta alkaen Excel-tietojen perusteella ja lisätä sitten halutessasi tietoja muista lähteistä. Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdessä näytössä käyttäjät voivat selata tietuejoukkoa. Toisessa näytössä käyttäjät voivat luoda tietueen, päivittää vähintään tietueen yhden kentän tai poistaa koko tietueen. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
@@ -235,5 +236,5 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * Tallenna sovelluksesi pilveen painamalla Ctrl+S, jotta voit suorittaa sen muissa laitteissa.
-* [Jaa sovellus](share-app.md) niin, että muut voivat suorittaa sen.
+* [Jaa sovellus](share-app.md), jotta muut voivat suorittaa sen.
 * Lue lisätietoja [funktioista](working-with-formulas.md), kuten **Patch**, joiden avulla voit hallita tietoja luomatta vakiolomaketta.

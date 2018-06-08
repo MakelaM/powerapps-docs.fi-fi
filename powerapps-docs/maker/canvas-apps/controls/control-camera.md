@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 78cf8d73758e931d009080f03962c3450088a553
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329935"
 ---
 # <a name="camera-control-in-powerapps"></a>Kameran ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi ottaa valokuvia laitteen kameralla.
@@ -40,7 +41,7 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **Contrast** – Miten helposti käyttäjä voi erottaa samankaltaiset värit kuvasta.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella tietoja (**View**), vai onko ominaisuus poistettu käytöstä (**Disabled**).
 
 **[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
@@ -56,22 +57,22 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **Stream** – **StreamRate**-ominaisuuden perusteella automaattisesti päivitetty kuva.
 
-**StreamRate** – Miten usein kuva päivitetään **Stream**-ominaisuudessa millisekunteina.  Tämä arvo voi olla välillä 100 (1/10 sekuntia) – 3 600 000 (1 tunti).
+**StreamRate** – Miten usein kuva päivitetään **Stream**-ominaisuudessa millisekunteina.  Tämä arvo voi olla alueella 100 (1/10 sekuntia) – 3 600 000 (1 tunti).
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
-## <a name="related-functions"></a>Liitetyt toiminnot
-[**Patch**( *Tietolähde*, *Perustietue*, *Muutostietue* )](../functions/function-patch.md)
+## <a name="related-functions"></a>Liittyvät toiminnot
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-photos-to-an-image-gallery-control"></a>Lisää valokuvia Kuvavalikoima-ohjausobjektiin

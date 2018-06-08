@@ -1,5 +1,5 @@
 ---
-title: Skannaa viivakoodi | Microsoft Docs
+title: Viivakoodin skannaaminen | Microsoft Docs
 description: Skannaa useita erityyppisiä viivakoodeja, kuten UPC ja Codabar
 documentationcenter: na
 author: aftowen
@@ -13,31 +13,32 @@ ms.component: canvas
 ms.date: 10/23/2016
 ms.author: anneta
 ms.openlocfilehash: 6960b41effb109f6f2266ba279b4d51ea51e744f
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32328716"
 ---
 # <a name="scan-a-barcode-in-powerapps"></a>Skannaa viivakoodi PowerAppsissa
-Skannaa useita erityyppisiä viivakoodeja luomalla sovellus ja suorittamalla se kamerallisessa laitteessa, kuten puhelimessa. Viivakoodia vastaava numeerinen arvo näkyy **Otsikko**-ohjausobjektissa, ja voit ladata nämä tiedot erilaisiin [tietolähteisiin](connections-list.md).
+Skannaa useita erityyppisiä viivakoodeja luomalla sovellus ja suorittamalla se kameralla varustetussa laitteessa, kuten puhelimessa. Viivakoodia vastaava numeerinen arvo näkyy **Nimi**-ohjausobjektissa, ja voit ladata nämä tiedot erilaisiin [tietolähteisiin](connections-list.md).
 
 Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 * Viivakoodien on oltava vähintään 2,5 cm korkeita ja 4 cm leveitä.
-* Skannaa viivakoodeja puhelimella: pidä puhelinta pystysuunnassa ja siirrä sitä hitaasti 18–25 cm:n päähän viivakoodista.
-* Pitkät viivakoodityypit (kuten I2of5, jossa voi olla yli 15 merkkiä) voi antaa katkaistun tai muuten väärän tuloksen etenkin, jos viivakoodin tuloste on epäselvä.
-* iPhone-ja Android-laitteissa voit määrittää **Viivakoodi**-ohjausobjektin **Korkeus**-ominaisuuden, mutta kiinteä kuvasuhde määrittää sen leveyden.
+* Skannaa viivakoodeja puhelimella: Pidä puhelinta pystysuunnassa ja siirrä sitä hitaasti 18–25 cm:n päähän viivakoodista.
+* Pitkät viivakoodityypit (kuten I2of5, jossa voi olla yli 15 merkkiä) voivat antaa katkaistun tai muun väärän tuloksen etenkin, jos viivakoodin tuloste on epäselvä.
+* iPhone- ja Android-laitteissa voit määrittää **Viivakoodi**-ohjausobjektin **Height**-ominaisuuden, mutta kiinteä kuvasuhde määrittää sen leveyden.
 * Joudut ehkä määrittämään **Viivakoodi**-ohjausobjektin **Scanrate**-ominaisuudeksi **35** tai vähemmän.
-* Voit pidentää muistin kestoa iOS-laitteissa määrittämällä **Viivakoodi**-ohjausobjektin **Korkeus**-ominaisuudeksi **700** (tai alhaisempi) ja **Scanrate**-ominaisuudeksi **30**.
+* Voit pidentää muistin kestoa iOS-laitteissa määrittämällä **Viivakoodi**-ohjausobjektin **Height**-ominaisuudeksi **700** (tai alhaisempi) ja **Scanrate**-ominaisuudeksi **30**.
 * Jos muisti loppuu laitteesta ja sovellus kaatuu, käynnistä sovellus uudelleen.
 
 ## <a name="create-a-blank-app"></a>Tyhjän sovelluksen luominen
 1. [Rekisteröidy PowerAppsiin](../signup-for-powerapps.md) ja tee sitten *jompikumpi* seuraavista toimista:
 
-1. [Avaa PowerApps](https://create.powerapps.com) selaimessa laitteessa, jossa on kamera.
+1. [Avaa PowerApps](https://create.powerapps.com) selaimessa laitteella, jossa on kamera.
 
-2. Napsauta tai napauta kohdassa **Aloita puhtaalta pöydältä tai mallin kanssa** **Puhelinasettelu** **Tyhjä sovellus** -ruudussa.
+2. Napsauta tai napauta **Tyhjä sovellus** -ruudulla **Aloita puhtaalta pöydältä tai mallin kanssa** ja sitten **Puhelinasettelu**.
 
     ![Sovelluksen luominen alusta alkaen](./media/scan-barcode/create-from-blank.png)
 
@@ -51,7 +52,7 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 ## <a name="add-a-barcode-control"></a>Viivakoodi-ohjausobjektin lisääminen
 1. Napsauta tai napauta **Lisää**-välilehdestä **Media** ja napsauta tai napauta sitten **Viivakoodi**.
 
-    ![Lisää viivakoodiskanneri](./media/scan-barcode/add-scanner.png)
+    ![Viivakoodiskannerin lisääminen](./media/scan-barcode/add-scanner.png)
 
 2. Varmista, että **Viivakoodi**-ohjausobjekti on valittuna vahvistamalla, että sen ympärillä on valintakehys (kahvoineen ohjausobjektin koon muuttamista varten).
 
@@ -62,24 +63,24 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
     > [!TIP]
 > Ensimmäinen lisäämäsi **Viivakoodi**-ohjausobjekti on oletusarvoisesti nimeltään **Barcode1**. Jos poistat kyseisen ohjausobjektin ja lisäät toisen **Viivakoodi**-ohjausobjektin, se saa oletusarvoisesti nimekseen **Barcode2**. Nimeämällä ohjausobjektin manuaalisesti voit varmistaa, että kaavat viittaavat ohjausobjektiin sen oikealla nimellä.
 
-    ![Viivakoodin ohjausobjektin nimeäminen uudelleen](./media/scan-barcode/rename-barcode.png)
+    ![Viivakoodi-ohjausobjektin nimeäminen uudelleen](./media/scan-barcode/rename-barcode.png)
 
-## <a name="add-a-text-input-control"></a>Lisää tekstisyötteen ohjausobjekti
-1. Napsauta tai napauta **Lisää**-välilehdestä **Teksti** ja sitten **Tekstisyöte**.
+## <a name="add-a-text-input-control"></a>Tekstisyöte-ohjausobjektin lisääminen
+1. Napsauta tai napauta **Lisää**-välilehdellä **Teksti** ja sitten **Tekstisyöte**.
 
     Jos **Lisää**-välilehti ei tule näkyviin, suurenna PowerApps-ikkunaa.
 
-    ![Lisää tekstisyötteen ohjausobjekti](./media/scan-barcode/add-text-input.png)
+    ![Tekstisyötteen ohjausobjektin lisääminen](./media/scan-barcode/add-text-input.png)
 
 2. Vedä valintakehys alas (ei koonmuuttokahvoja) **Tekstisyötteen**-ohjausobjektin ympärille, kunnes se näkyy **MyScanner**-kohdan alla.
 
     ![Otsikko ja valintakehys](./media/scan-barcode/move-input-text.png)
 
-3. Varmista **Tekstisyöte**-ohjausobjektin ollessa yhä valittuna, että **Oletus** näkyy ominaisuusluettelossa, ja kirjoita tai liitä sitten **MyScanner.Text** kaavariville.
+3. Varmista **Tekstisyöte**-ohjausobjektin ollessa yhä valittuna, että **Default** näkyy ominaisuusluettelossa, ja kirjoita tai liitä sitten kaavariville **MyScanner.Text**.
 
-    ![Otsikko-ohjausobjektin Teksti-ominaisuus](./media/scan-barcode/default-text.png)
+    ![Otsikko-ohjausobjektin Text-ominaisuus](./media/scan-barcode/default-text.png)
 
-## <a name="change-the-barcode-type"></a>Muuta viivakoodin tyyppiä
+## <a name="change-the-barcode-type"></a>Viivakoodin tyypin muuttaminen
 1. Napsauta tai napauta **Lisää**-välilehdessä **Ohjausobjektit** ja sitten **Avattava luettelo**.
 
     ![Avattavan luettelon lisääminen](./media/scan-barcode/insert-dropdown.png)
@@ -88,10 +89,10 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 
     ![Avattavan luettelon siirtäminen](./media/scan-barcode/move-dropdown.png)
 
-3. Varmista **Avattava luettelo** -ohjausobjektin ollessa yhä valittuna, että **Kohteet** näkyy ominaisuusluettelossa, ja kirjoita tai liitä sitten tämä merkkijono kaavariville:<br>
+3. Varmista **Avattava luettelo** -ohjausobjektin ollessa yhä valittuna, että **Items** näkyy ominaisuusluettelossa, ja kirjoita tai liitä sitten tämä merkkijono kaavariville:<br>
     **[Codabar, Code128, Code39, Ean, I2of5, Upc]**
 
-    ![Avattavan luettelon Kohteet-ominaisuuden määrittäminen](./media/scan-barcode/items-property.png)
+    ![Avattavan luettelon Items-ominaisuuden määrittäminen](./media/scan-barcode/items-property.png)
 
 4. Anna **Aloitus**-välilehdessä **Avattava luettelo** -ohjausobjektin uudeksi nimeksi **ChooseType**.
 
@@ -105,11 +106,11 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 
     ![Esikatselutilan avaaminen](./media/scan-barcode/open-preview.png)
 
-2. Pidä viivakoodia laitteen kameran edessä, kunnes viivakoodin numeerinen osa näkyy **Otsikko**-ohjausobjektissa.
+2. Pidä viivakoodia laitteen kameran edessä, kunnes viivakoodin numeerinen osa näkyy **Nimi**-ohjausobjektissa.
 
     Jos numeerista osaa ei näy, kokeile eri asetusta **BarcodeType**-luettelossa. Jos oikeat tiedot eivät vieläkään näy, kirjoita oikea numero **Tekstisyöte**-ohjausobjektiin.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-* [Yhdistä sovellus tietolähteeseen](add-data-connection.md) ja määritä **[Ohjelmakorjaus](functions/function-patch.md)**-funktio siten, että käyttäjät voivat tallentaa tulokset.
+* [Yhdistä sovellus tietolähteeseen](add-data-connection.md) ja määritä **[Patch](functions/function-patch.md)**-funktio siten, että käyttäjät voivat tallentaa tulokset.
 * Lisää **[Avattava luettelo](controls/control-drop-down.md)** -ohjausobjekti ja määritä se niin, että käyttäjät voivat valita skannattavan viivakoodin.
 * Lisää **[Liukusäädin](controls/control-slider.md)**-ohjausobjekti ja määritä se niin, että käyttäjät voivat säätää **Viivakoodi**-ohjausobjektin skannausnopeutta tai korkeutta.

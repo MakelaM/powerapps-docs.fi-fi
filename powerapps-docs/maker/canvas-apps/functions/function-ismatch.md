@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 02/05/2017
 ms.author: gregli
 ms.openlocfilehash: 26bbef6e61845708e20efb3bd201ae61867d1026
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838414"
 ---
 # <a name="ismatch-function-in-powerapps"></a>IsMatch-funktio PowerAppsissa
 Testaa, vastaako merkkijono hakuarvoa.
@@ -145,9 +146,9 @@ Käyttäjä kirjoittaa **TextInput1**-kohtaan **Hei maailma**.
 | --- | --- | --- |
 | **IsMatch( "986", "\d+" )** |Vastaa kokonaislukua, joka on suurempi kuin nolla. |**tosi** |
 | **IsMatch( "1.02", "\d+(\.\d\d)?" )** |Vastaa positiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen. Esimerkiksi 3.00 on kelvollinen, mutta 3.1 ei. |**tosi** |
-| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** |Vastaa positiivista tai negatiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen. |**tosi** |
-| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** |Vastaa Yhdysvaltojen sosiaaliturvatunnusta.  Vahvistaa annetun syötekentän muodon, tyypin ja pituuden. Vastattavan merkkijonon täytyy sisältää 3 numeroa, joiden perässä on viiva, sitten 2 numeroa, viiva ja 4 numeroa. |**tosi** |
-| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** |Sama kuin edellisessä esimerkissä, mutta yksi syötteen viiva on väärässä paikassa. |**epätosi** |
+| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** |Vastaa positiivista tai negatiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen. |**true** |
+| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** |Vastaa Yhdysvaltojen sosiaaliturvatunnusta.  Vahvistaa annetun syötekentän muodon, tyypin ja pituuden. Vastattavan merkkijonon täytyy sisältää 3 numeroa, joiden perässä on viiva, sitten 2 numeroa, viiva ja 4 numeroa. |**true** |
+| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** |Sama kuin edellisessä esimerkissä, mutta yksi syötteen viiva on väärässä paikassa. |**false** |
 | **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )** |Vahvistaa vahvan salasanan, jonka täytyy sisältää 8, 9 tai 10 merkkiä sekä vähintään yhden numeron ja yhden kirjaimen. Merkkijono ei saa sisältää erikoismerkkejä. |**epätosi** |
 | **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |Vahvistaa http-, https- tai ftp-url-osoitteen. |**tosi** |
 

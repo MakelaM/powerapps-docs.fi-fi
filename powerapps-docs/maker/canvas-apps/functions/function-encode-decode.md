@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 7454eacbcfaaacc15eb617e673f48520ca33b6dc
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825460"
 ---
 # <a name="encodeurl-and-plaintext-functions-in-powerapps"></a>PowerAppsin EncodeUrl- ja PlainText-funktiot
 Koodaa merkkijonoja ja poistaa niiden koodauksia.
@@ -34,14 +35,14 @@ Näiden funktioiden paluuarvo on koodattu merkkijono tai merkkijono, jonka kooda
 ## <a name="syntax"></a>Syntaksi
 **EncodeUrl**( *Merkkijono* )
 
-* *Merkkijono* – Pakollinen.  Koodattava URL-osoite.
+* *String* – Pakollinen.  Koodattava URL-osoite.
 
 **PlainText**( *Merkkijono* )
 
-* *Merkkijono* – Pakollinen. Merkkijono, josta poistetaan HTML- ja XML-tunnisteet.
+* *String* – Pakollinen. Merkkijono, josta poistetaan HTML- ja XML-tunnisteet.
 
 ## <a name="examples"></a>Esimerkkejä
-Jos näytät tekstivalikoimassa RSS-syötteen ja asetat valikoimassa olevan otsikon **[Text](../controls/properties-core.md)**-ominaisuudeksi **ThisItem.description**, otsikossa saattaa näkyä raakaa HTML- tai XML-koodia esimerkin mukaisesti:
+Jos näytät tekstivalikoimassa RSS-syötteen ja asetat valikoimassa olevan selitteen **[Text](../controls/properties-core.md)**-ominaisuudeksi **ThisItem.description**, otsikossa saattaa näkyä raakaa HTML- tai XML-koodia esimerkin mukaisesti:
 
     <p>We have done an unusually&nbsp;&quot;deep&quot; globalization and localization.<p>
 

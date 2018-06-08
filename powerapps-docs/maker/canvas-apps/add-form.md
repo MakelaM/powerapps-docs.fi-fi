@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/06/2017
 ms.author: sharik
 ms.openlocfilehash: d24777ec34759a98421784995f5a73b0dfc1d2d2
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826264"
 ---
 # <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Tietueen näyttäminen, muokkaaminen tai lisääminen taulukosta PowerAppsissa
 Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjekti tietueen kaikkien kenttien näyttämiseksi. Voit muokata mitä tahansa tietueen kenttää (tai lisätä tietueen) ja tallentaa muutokset takaisin tietolähteeseen lisäämällä ja määrittämällä ensin **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektin.
@@ -30,7 +31,7 @@ Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohj
 * Jos käytät olemassa olevaa sovellusta, [lisää siihen näyttö](add-screen-context-variables.md).
 
 ## <a name="add-a-form-and-show-data"></a>Lomakkeen lisääminen ja tietojen näyttäminen
-1. Lisää **[Avattava luettelo](controls/control-drop-down.md)** -ohjausobjekti, anna sille nimeksi **ChooseProduct** ja aseta sen **[Items](controls/properties-core.md)**-ominaisuudeksi tämä arvo:
+1. Lisää **[Avattava luettelo](controls/control-drop-down.md)** -ohjausobjekti, anna sille nimeksi **ChooseProduct** ja aseta sen **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava arvo:
 
     **FlooringEstimates.Name**
 
@@ -50,7 +51,7 @@ Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohj
 
    **First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))**
 
-   Tämä kaava määrittää, että kun olet suorittanut lomakkeen määritykset, siinä näkyvät tietueet, jotka käyttäjä valitsee kohdassa **ChooseProduct**.
+   Tällä kaavalla määritetään, että lomakkeen määritysten suorittamisen jälkeen siinä näkyvät tietueet, jotka käyttäjä valitsee kohdassa **ChooseProduct**.
 
 4. Napsauta tai napauta **Tiedot**-ruudulta kenttien valintaruutuja niiden näyttämiseksi.
 
@@ -91,7 +92,7 @@ Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohj
 
     ![Tallennuspainikkeen lisääminen](./media/add-form/save-button.png)  
 
-4. Määritä **Tallenna**-painikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+4. Määritä **Tallenna**-painikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
    **SubmitForm(EditForm)**
 

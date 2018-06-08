@@ -1,6 +1,6 @@
 ---
 title: Now-, Today- ja IsToday-funktiot | Microsoft Docs
-description: Viitetiedot Now-, Today- ja IsToday-funktioille PowerAppsissa, mukaan lukien syntaksi ja esimerkkejä
+description: Viitetiedot PowerAppsin Now-, Today- ja IsToday-funktioille, mukaan lukien syntaksi ja esimerkkejä
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 410e9be47b4356a97292eb5de17c5dc10885fae3
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31829136"
 ---
 # <a name="now-today-and-istoday-functions-in-powerapps"></a>Now-, Today- ja IsToday-funktiot PowerAppsissa
 Palauttaa nykyisen päivämäärän ja ajan ja testaa, vastaako päivämäärä/aika-arvo tätä päivää.
@@ -26,7 +27,7 @@ Palauttaa nykyisen päivämäärän ja ajan ja testaa, vastaako päivämäärä/
 
 **Today**-funktio palauttaa nykyisen päivämäärän päivämäärä/aika-arvona. Aikaosa vastaa keskiyötä. **Today**-funktiolla on sama arvo koko päivän ajan tämän päivän keskiyöstä huomiseen keskiyöhön.
 
-**IsToday**-funktio testaa, onko päivämäärä/aika-arvo tämän päivän keskiyön ja huomisen keskiyön välillä. Tämä funktio palauttaa totuusarvon **true** tai **false**.
+**IsToday**-funktiolla testataan, onko päivämäärä/aika-arvo tämän päivän keskiyön ja huomisen keskiyön välillä. Tämä funktio palauttaa totuusarvon **true** tai **false**.
 
 Kaikki nämä funktiot toimivat nykyisen käyttäjän paikallisen ajan mukaisesti.
 
@@ -39,7 +40,7 @@ Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittelemine
 
 **IsToday**( *DateTime* )
 
-* *DateTime* – pakollinen.  Testattava päivämäärä/aika-arvo.
+* *DateTime* – Pakollinen.  Testattava päivämäärä/aika-arvo.
 
 ## <a name="examples"></a>Esimerkkejä
 Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 2015** ja kieli on **en-us**.

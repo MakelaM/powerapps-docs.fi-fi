@@ -12,10 +12,11 @@ ms.component: canvas
 ms.date: 06/05/2017
 ms.author: sharik
 ms.openlocfilehash: 19e30477b7015061a4e4b781e1c53a55d1fda1a7
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329613"
 ---
 # <a name="start-a-flow-in-an-app"></a>Käynnistä työnkulku sovelluksessa
 Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
@@ -26,7 +27,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Luo työnkulku
-1. Kirjaudu [powerapps.com](http://web.powerapps.com)iin ja valitse sitten vasemmassa siirtymispalkissa **Työnkulut**.
+1. Kirjaudu [powerapps.com](http://web.powerapps.com):iin ja valitse sitten vasemmassa siirtymispalkissa **Työnkulut**.
 
 2. Valitse **Omat työnkulut** -sivulla **Luo tyhjästä**.
 
@@ -40,9 +41,9 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 
     ![Toiminnon lisäämisvaihtoehto](./media/using-logic-flows/add-action.png)
 
-4. Määritä ruudussa, jossa lukee **Hae kaikki palvelut ja toiminnot**, toiminto työnkululle, kuten tässä esimerkissä:
+4. Määritä toiminto työnkululle ruudussa, jossa lukee **Hae kaikki palvelut ja toiminnot**, kuten tässä esimerkissä:
 
-   1. Kirjoita valintaruutuun **SharePoint** ja valitse sitten kohdassa **Toiminnot** luettelosta **SharePoint – Luo kohde**.
+   1. Kirjoita valintaruutuun **SharePoint** ja valitse sitten kohdassa **Toiminnot** olevasta luettelosta **SharePoint – Luo kohde**.
 
        ![SharePoint-kohteen luontivaihtoehto](./media/using-logic-flows/create-sharepoint-item.png)
 
@@ -53,11 +54,11 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
        > [!NOTE]
 > Määritä sivuston URL-osoite, joka ei sisällä luetteloa.
 
-   4. Valitse **Luettelonimi**-ruudussa luettelo, jota haluat käyttää.
+   4. Valitse **Luettelon nimi** -ruudusta luettelo, jota haluat käyttää.
 
    5. Napsauta tai napauta **Otsikko**-ruutua ja valitse sitten **Lisää dynaaminen sisältö**.
 
-       ![Lisää Kysy PowerAppsissa -parametri Otsikko-kenttään](./media/using-logic-flows/ask-in-powerapps.png)
+       ![Lisää Otsikko-kenttään Kysy PowerAppsissa -parametri](./media/using-logic-flows/ask-in-powerapps.png)
 
    6. Valitse parametrien luettelossa **Kysy PowerAppsissa**.
 
@@ -70,7 +71,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
     ![Nimeä ja tallenna työnkulku](./media/using-logic-flows/name-flow.png)
 
 ## <a name="add-a-flow-to-an-app"></a>Lisää työnkulku sovellukseen
-1. Valitse PowerAppsissa **Tiedosto**-valikossa **Uusi**.
+1. Valitse PowerAppsissa **Tiedosto**-valikosta **Uusi**.
 
 2. Valitse **Tyhjä sovellus** -ruudusta **Puhelinasettelu**.
 
@@ -78,7 +79,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 
 4. Lisää **[Painike](controls/control-button.md)**-ohjausobjekti ja siirrä se ohjausobjektin **RecordTitle** alle.
 
-5. **[Painike](controls/control-button.md)**-ohjausobjektin ollessa valittuna valitse **Toiminnot**-välilehdestä **Työnkulut**.
+5. Kun **[Painike](controls/control-button.md)**-ohjausobjekti on valittuna, valitse **Toiminnot**-välilehdestä **Työnkulut**.
 
     ![Työnkulut-valinta Toiminto-välilehdessä](./media/using-logic-flows/action-tab.png)
 
@@ -94,7 +95,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
     ![OnSelect-ominaisuus, joka sisältää työnkulun](./media/using-logic-flows/onselect-with-flow.png)
 
 ## <a name="test-the-flow"></a>Testaa työnkulku
-1. Avaa esikatselu painamalla F5 (tai valitsemalla nuolen oikean yläkulman läheltä).
+1. Avaa esikatselu painamalla F5 (tai valitsemalla nuoli oikean yläkulman läheltä).
 
     ![OnSelect-ominaisuus, joka sisältää työnkulun](./media/using-logic-flows/open-preview.png)
 

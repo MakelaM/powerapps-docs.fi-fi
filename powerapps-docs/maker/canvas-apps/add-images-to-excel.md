@@ -12,10 +12,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: anneta
 ms.openlocfilehash: 29da2a8814b0de7d34915f9992aeb963743785d2
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32328831"
 ---
 # <a name="add-images-to-excel-from-powerapps"></a>Kuvien lisääminen PowerAppsista Exceliin
 Luo automaattisesti sovellus, jossa käyttäjät voivat näyttää, lisätä tai poistaa kuvia tiedostoista tai piirustuksia **Kynä**-ohjausobjektista. Sovellus perustuu Excel-tiedostoon, joka luodaan ja ladataan pilvipalvelutilille.

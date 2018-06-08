@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 6d981c410b22dd9db52cdf077a00e6eaae83be75
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827363"
 ---
 # <a name="shuffle-function-in-powerapps"></a>PowerAppsin Shuffle-funktio
 Järjestää [taulukon](../working-with-tables.md) [tietueet](../working-with-tables.md#records) uudelleen satunnaisesti.
@@ -27,12 +28,12 @@ Järjestää [taulukon](../working-with-tables.md) [tietueet](../working-with-ta
 **Shuffle** palauttaa taulukon, jolla on samat [sarakkeet](../working-with-tables.md#columns) ja sama määrä rivejä kuin argumentissa.
 
 ## <a name="syntax"></a>Syntaksi
-**Shuffle**( *Taulukko* )
+**Shuffle**( *Table* )
 
-* *Taulukko* – Pakollinen.  Sekoitettava taulukko.
+* *Table* – Pakollinen.  Sekoitettava taulukko.
 
 ## <a name="example"></a>Esimerkki
-Jos olet tallentanut tietoja pelikorteista [kokoelmaan](../working-with-data-sources.md#collections) nimeltä **Pakka**, tämä kaava palauttaa kopion kyseisestä kokoelmasta satunnaisessa järjestyksessä.
+Jos olet tallentanut tietoja pelikorteista [kokoelmaan](../working-with-data-sources.md#collections) nimeltä **Deck**, tämä kaava palauttaa kopion kyseisestä kokoelmasta satunnaisessa järjestyksessä.
 
-**Shuffle(Pakka)**
+**Shuffle(Deck)**
 

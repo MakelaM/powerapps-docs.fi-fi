@@ -1,6 +1,6 @@
 ---
 title: Kohdeluettelon näyttäminen | Microsoft Docs
-description: Käytä valikoimaa kohdeluettelon näyttämiseksi sovelluksessasi ja suodata luetteloa määrittämällä kriteeri.
+description: Näytä kohdeluettelo sovelluksessasi valikoiman avulla ja suodata luetteloa määrittämällä kriteeri.
 documentationcenter: na
 author: karthik-1
 manager: kfile
@@ -13,12 +13,13 @@ ms.component: canvas
 ms.date: 09/28/2017
 ms.author: sharik
 ms.openlocfilehash: 60ec1fc7f896aeb3391ed794920e987b232d09f3
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31833484"
 ---
-# <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen
+# <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
 Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovellukseesi **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektissa annettua suodatuskriteeriä.
 
 ## <a name="prerequisites"></a>Edellytykset
@@ -32,34 +33,34 @@ Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovelluksee
 ## <a name="add-a-gallery-control"></a>Valikoima-ohjausobjektin lisääminen
 1. Avaa PowerApps ja napsauta tai napauta **Uusi** lähellä vasenta reunaa.
 
-2. Napsauta tai napauta **Tyhjä sovellus** -ruudulta kohtaa **Puhelinasettelu**.
+2. Napsauta tai napauta **Tyhjä sovellus** -ruudussa kohtaa **Puhelinasettelu**.
 
 3. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, napsauta tai napauta **Ohita**.
 
 4. [Lisää yhteys](add-data-connection.md) Excel-tiedoston **FlooringEstimates**-taulukkoon.
 
-5. (valinnainen) Lisää oletusnäytölle **Valikoima**-ohjausobjekti napsauttamalla tai napauttamalla **Lisää**-välilehteä, napsauttamalla tai napauttamalla kohtaa **Valikoima** ja sitten napsauttamalla tai napauttamalla tyhjää **Valikoima**-ohjausobjektia tai sellaista, joka sisältää oletusjoukon ohjausobjekteja.
+5. (valinnainen) Lisää oletusnäytölle **Valikoima**-ohjausobjekti valitsemalla **Lisää**-välilehti ja napsauttamalla tai napauttamalla ensin kohtaa **Valikoima** ja sitten joko tyhjää tai ohjausobjektien oletusjoukon sisältävää **Valikoima**-ohjausobjektia.
 
     Näihin vaihtoehtoihin kuuluu **Valikoima**-ohjausobjekteja, joita voi vierittää vaaka- tai pystysuoraan. Voit myös lisätä **Valikoima**-ohjausobjektin, jonka koko perustuu automaattisesti kohteissa olevan sisällön määrään.
 
-    ![Lisää valikoima](./media/add-gallery/gallery-dropdown.png)
+    ![Valikoiman lisääminen](./media/add-gallery/gallery-dropdown.png)
 
-6. Napsauta tai napauta **Aloitus**-välilehdellä **Uusi näyttö**.
+6. Napsauta tai napauta **Aloitus**-välilehdestä **Uusi näyttö**.
 
     Voit lisätä näytön, joka on tyhjä, jota voi vierittää, joka sisältää **Valikoima**-ohjausobjektin tai joka sisältää lomakkeen.
 
 7. Lisää näyttö, joka sisältää **Valikoima**-ohjausobjektin ja muita ohjausobjekteja, kuten hakupalkin, napsauttamalla tai napauttamalla kohtaa **Luettelonäyttö**.
 
     > [!NOTE]
-> Lisäsitpä sitten **Valikoima**-ohjausobjektin uudelle näytölle tai olemassa olevalle, voit valita **Valikoiman** napauttamalla sen alaosaa, ja napsauta tai napauta sitten oikean ruudun **FlooringEstimates**-kohtaa ja napsauta tai napauta eri asettelua **Tiedot**-ruudulla. Jätä tätä opetusohjelmaa varten asettelu oletusarvoonsa.
+> Lisäsitpä **Valikoima**-ohjausobjektin uuteen tai olemassa olevaan näyttöön, voit valita sen napauttamalla tai napsauttamalla **Valikoima**-ohjausobjektin alaosaa. Valitse sitten oikeanpuoleisessa ruudussa **FlooringEstimates** ja napsauta tai napauta eri asettelua **Tiedot**-ruudussa. Jätä tätä opetusohjelmaa varten asettelu oletusarvoonsa.
 
     ![Valikoiman asettelun valinta](./media/add-gallery/select-layout.png)
 
-8. Napsauta tai napauta **Valikoima**-ohjausobjektia näytöllä, johon lisäsit sen.
+8. Napsauta tai napauta **Valikoima**-ohjausobjektia näytössä, jonka juuri lisäsit.
 
 9. Napsauta tai napauta oikean ruudun **Ominaisuudet**-välilehden kohtaa **CustomGallerySample**.
 
-10. Napsauta tai napauta **Tiedot**-ruudulla kohtaa **CustomGallerySample** ja sitten napsauta tai napauta kohtaa **FlooringEstimates**.
+10. Valitse **Tiedot**-ruudussa ensin **CustomGallerySample** ja sitten **FlooringEstimates**.
 
     ![Tietolähteen valinta](./media/add-gallery/choose-data.png)
 
@@ -70,7 +71,7 @@ Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovelluksee
     Tämän aiheen myöhemmässä osiossa määritetään lajittelu ja haku.
 
 ## <a name="add-a-control-to-the-gallery-control"></a>Ohjausobjektin lisääminen Valikoima-ohjausobjektiin
-Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Valikoima**-ohjausobjektin ensimmäinen ohjausobjektijoukko on mallipohja, joka määrittää, kuinka kaikki **Valikoima**-ohjausobjektin tiedot näytetään.
+Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Valikoima**-ohjausobjektin ensimmäinen ohjausobjektijoukko on mallipohja, joka määrittää, miten kaikki **Valikoima**-ohjausobjektin tiedot näytetään.
 
 1. Valitse mallipohja napsauttamalla tai napauttamalla **Valikoima**-ohjausobjektin alaosaa ja sitten napsauttamalla tai napauttamalla vasemman yläkulman lyijykynäkuvaketta.
 
@@ -79,9 +80,9 @@ Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Va
 2. Kun mallipohja on valittuna, lisää **[Selite](controls/control-text-box.md)**-ohjausobjekti ja sitten siirrä sitä ja muuta sen kokoa niin, että se ei ole muiden mallipohjan ohjausobjektien päällä.
 
     ![Selitteen lisääminen](./media/add-gallery/add-text-box.png)
-3. Avaa **Tiedot**-ruutu valitsemalla mallipohja ja napsauttamalla tai napauttamalla oikealla ruudulla kohtaa **Flooring Estimates**.
+3. Avaa **Tiedot**-ruutu valitsemalla mallipohja ja napsauttamalla tai napauttamalla sitten oikeanpuoleisessa ruudussa kohtaa **Flooring Estimates**.
 
-4. Valitse aiemmin lisäämäsi selite ja avaa korostettu luettelo **Tiedot**-ruudulla.
+4. Valitse aiemmin lisäämäsi selite ja avaa korostettu luettelo **Tiedot**-ruudussa.
 
     ![Avattavan luettelon avaaminen](./media/add-gallery/open-dropdown.png)
 
@@ -94,13 +95,13 @@ Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Va
     ![Lopullinen valikoima](./media/add-gallery/final-gallery.png)
 
 ## <a name="filter-the-gallery-control"></a>Valikoima-ohjausobjektin suodattaminen
-**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää, mitä se näyttää. Tässä prosessissa kyseinen ominaisuus määritetään niin, että **Valikoima**-ohjausobjekti näyttää vain ne kohteet, joissa tuotteen nimi sisältää **TextSearchBox1**-kentässä määritetyn tekstin.
+**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää, mitä se näyttää. Tässä toimintosarjassa kyseinen ominaisuus määritetään niin, että **Valikoima**-ohjausobjekti näyttää vain ne kohteet, joissa tuotteen nimi sisältää **TextSearchBox1**-kentässä määritetyn tekstin.
 
 ![Tekstihakukenttä](./media/add-gallery/text-search-box.png)
 
 1. Valitse **Valikoima**-ohjausobjekti napsauttamalla tai napauttamalla ohjausobjektin alaosaa.
 
-2. Aseta **Lisäasetukset**-välilehdellä **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+2. Määritä **Lisäasetukset**-välilehdessä **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
     **If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
 
@@ -110,8 +111,8 @@ Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Va
 
     **Valikoima**-ohjausobjekti näyttää vain kohteet, jotka täyttävät suodatusehdon.
 
-## <a name="sort-the-gallery-control"></a>Valikoima-ohjausobjektin lajitteleminen
-**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää järjestyksen, jolla kohteet näytetään. Tässä prosessissa ominaisuus määritetään niin, että **Valikoima**-ohjausobjekti näyttää kohteet siinä järjestyksessä, kuin kohdassa **ImageSortUpDown1** on määritetty.
+## <a name="sort-the-gallery-control"></a>Valikoima-ohjausobjektin lajittelu
+**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää järjestyksen, jossa kohteet näytetään. Tässä toimintosarjassa ominaisuus määritetään niin, että **Valikoima**-ohjausobjekti näyttää kohteet kohdassa **ImageSortUpDown1** määritetyssä järjestyksessä.
 
 ![Lajittelun kuva](./media/add-gallery/image-sorting.png)
 
@@ -144,4 +145,4 @@ Tässä esimerkissä määritetään **FlooringEstimates**-tietolähteen **Hardw
 **First(Filter(FlooringEstimates, Category = "Hardwood"))**
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Opi, kuinka työskennellään [lomakkeiden](working-with-forms.md) ja [kaavojen](working-with-formulas.md) kanssa.
+Opi käyttämään [lomakkeita](working-with-forms.md) ja [kaavoja](working-with-formulas.md).

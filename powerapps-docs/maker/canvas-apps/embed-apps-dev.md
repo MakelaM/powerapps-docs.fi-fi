@@ -1,6 +1,6 @@
 ---
 title: PowerAppsin integroiminen verkkosivustoihin ja muihin palveluihin | Microsoft Docs
-description: Upota sovelluksia sivustoihin ja muihin palveluihin.
+description: Sovelluksien upottaminen sivustoihin ja muihin palveluihin.
 documentationcenter: na
 author: mgblythe
 manager: kfile
@@ -13,24 +13,25 @@ ms.component: canvas
 ms.date: 10/20/2017
 ms.author: mblythe
 ms.openlocfilehash: 0f4ea37d93b20a768fa16d1dcdb41f921336f043
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827047"
 ---
 # <a name="integrate-powerapps-into-websites-and-other-services"></a>PowerAppsin integroiminen verkkosivustoihin ja muihin palveluihin
-Luomasi sovellukset ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä ihmiset työskentelevät. PowerAppsin avulla voit upottaa sovelluksia iframe-kehykseen niin, että ne voi integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI:hin tai SharePointiin.
+Luomasi sovellukset ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä ihmiset työskentelevät. PowerAppsin avulla voit upottaa sovelluksia iframe-kehykseen niin, että ne voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI:hin tai SharePointiin.
 
-Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen upottamista varten. Sen jälkeen upotamme resurssien järjestelysovelluksemme verkkosivulle.
+Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen upottamista varten. Sen jälkeen upotamme verkkosivulle resurssien järjestelysovelluksemme.
 
-![Upotetun sovelluksen sisältävä Power BI -koontinäyttö](./media/embed-apps-dev/embed-dashboard.png)
+![Power BI -koontinäyttö, joka sisältää upotetun sovelluksen](./media/embed-apps-dev/embed-dashboard.png)
 
 Ota huomioon seuraavat rajoitukset:
 
 * Vain saman vuokraajan PowerApps-käyttäjät voivat käyttää upotettua sovellusta.
 * Jos käytät PowerAppsia Internet Explorer 11 -selaimella, sinun on poistettava yhteensopivuusnäkymä käytöstä.
 
-Voit myös integroida PowerAppsin SharePoint Onlineen (käyttämättä iframe-kehystä). Lisää tietoa on kohdassa [Sovelluksen luominen SharePointin sisältä PowerAppsilla](../canvas-apps/generate-app-from-sharepoint-list-interface.md).
+Voit integroida PowerAppsin myös SharePoint Onlineen (käyttämättä iframe-kehystä). Lisää tietoa on kohdassa [Sovelluksen luominen SharePointin sisältä PowerAppsilla](../canvas-apps/generate-app-from-sharepoint-list-interface.md).
 
 ## <a name="set-uri-parameters-for-your-app"></a>Sovelluksen URI-parametrien määrittäminen
 Jos haluat upottaa sovelluksen, ensimmäinen vaihe on määrittää parametrit Uniform Resource Identifierille (URI) niin, että iframe-kehys tietää, mistä sovellus löytyy. URI on seuraavassa muodossa:

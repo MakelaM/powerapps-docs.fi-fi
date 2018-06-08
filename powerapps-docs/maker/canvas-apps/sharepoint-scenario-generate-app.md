@@ -13,16 +13,17 @@ ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
 ms.openlocfilehash: 4ae16517332864066f5b744e85ce3fe48c97a1df
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329774"
 ---
 # <a name="generate-an-app-to-handle-project-requests"></a>Sovelluksen luominen projektipyyntöjen hallintaa varten
 > [!NOTE]
-> Tämä artikkeli on osa opetusohjelmasarjaa, joka käsittelee PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämistä SharePoint Onlinen kanssa. Varmista, että luet [sarjan esittelyn](sharepoint-scenario-intro.md), jotta saat paremman käsityksen kokonaiskuvasta, sekä aiheeseen liittyvät ladattavat tiedostot.
+> Tämä artikkeli on osa opetusohjelmasarjaa, joka käsittelee PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämistä SharePoint Onlinen kanssa. Lukemalla [sarjan esittelyn](sharepoint-scenario-intro.md) saat paremman käsityksen kokonaiskuvasta sekä aiheeseen liittyvät ladattavat tiedostot.
 
-Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmäisen sovelluksemme. PowerApps on integroitu SharePointin kanssa, joten on helppoa luoda tavallinen *kolmen näytön sovellus* suoraan luettelosta. Tämän sovelluksen avulla voit tarkastella yhteenvetoa ja yksityiskohtaisia tietoja jokaisesta luettelon kohteesta, päivittää olemassa olevia luettelokohteita ja luoda uusia luettelokohteita. Jos luot sovelluksen suoraan luettelosta, sovellus näkyy kyseisen luettelon *näkymänä*. Voit suorittaa kyseisen sovelluksen selaimessa sekä matkapuhelimessa.
+Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmäisen sovelluksemme. PowerApps on integroitu SharePointin kanssa, joten tavallisen *kolmen näytön sovelluksen* luominen suoraan luettelosta on helppoa. Tämän sovelluksen avulla voit tarkastella yhteenvetoa ja yksityiskohtaisia tietoja jokaisesta luettelon kohteesta, päivittää olemassa olevia luettelokohteita ja luoda uusia luettelokohteita. Jos luot sovelluksen suoraan luettelosta, sovellus näkyy kyseisen luettelon *näkymänä*. Voit suorittaa kyseisen sovelluksen selaimessa sekä matkapuhelimessa.
 
 > [!TIP]
 > Tämän skenaarion [latauspaketti](https://aka.ms/o4ia0f) sisältää viimeistellyn version tästä sovelluksesta: project-requests-app.msapp.
@@ -33,13 +34,13 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Luo sovellus](./media/sharepoint-scenario-generate-app/02-01-01-create-app.png)
 
-2. Anna sovellukselle nimi, kuten ”Projektipyyntösovellus”, ja napsauta tai napauta sitten **Luo**. Kun sovellus on valmis, se avautuu PowerApps Studiossa.
+2. Anna sovellukselle nimi, kuten ”Projektipyyntösovellus”, ja napsauta tai napauta sitten kohtaa **Luo**. Kun sovellus on valmis, se avautuu PowerApps Studiossa.
    
     ![Määritä sovelluksen nimi](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
 ## <a name="step-2-review-the-app-in-powerapps-studio"></a>Vaihe 2: Tarkista sovellus PowerApps Studiossa
 
-1. PowerApps Studiossa näkyy vasemmassa siirtymispalkissa oletusarvoisesti hierarkkinen näkymä näytöistä ja ohjausobjekteista sovelluksessa.
+1. PowerApps Studiossa näkyy vasemmassa siirtymispalkissa oletusarvoisesti hierarkkinen näkymä sovelluksen näytöistä ja ohjausobjekteista.
    
     ![PowerApps Studio ja hierarkkinen näkymä](./media/sharepoint-scenario-generate-app/02-02-01-studio-screens-hierarchy.png)
 
@@ -47,13 +48,13 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![PowerApps Studion näkymän valitsin](./media/sharepoint-scenario-generate-app/02-02-02-studio-view-selector.png)
 
-3. Napsauta tai napauta kutakin näyttöä tarkastellaksesi sitä keskimmäisessä ruudussa. Näyttöjä on kolme:
+3. Napsauta tai napauta kutakin näyttöä sen tarkastelemiseksi keskimmäisessä ruudussa. Näyttöjä on kolme:
    
     (a). **Selaa**-näyttö, jossa selaat, lajittelet ja suodatat luettelosta haettuja tietoja.
     
     (b). **Tiedot**-näyttö, jossa voit tarkastella kohteita tarkemmin.
     
-    (c). **Muokkaa /luo**-näyttö, jossa muokataan olemassa olevaa kohdetta tai luodaan uusi.
+    (c). **Muokkaa/luo**-näyttö, jossa muokataan olemassa olevaa kohdetta tai luodaan uusi.
       
       ![PowerApps Studio, jossa näkyy pikkukuvanäkymä](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
@@ -79,7 +80,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
 
      ![Valikoimakentät](./media/sharepoint-scenario-generate-app/02-03-02-gallery-fields.png)
 
-5. Valitse **Items**-ominaisuus**BrowseGallery1**n ollessa edelleen valittuina.
+5. Valitse **Items**-ominaisuus **BrowseGallery1**:n ollessa edelleen valittuina.
    
     ![Items-ominaisuus](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
 
@@ -87,11 +88,11 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Kaavarivi](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    
-    Näin voit lajitella ja etsiä **Otsikko**-kenttää PowerAppsin valitseman oletusarvoisen sijasta. Katso lisätietoja kohdasta [Kaavoja pintaa syvemmältä](#formula-deep-dive).
+    Näin voit lajitella ja hakea **Otsikko**-kentästä PowerAppsin valitseman oletuksen sijasta. Katso lisätietoja kohdasta [Kaavoja pintaa syvemmältä](#formula-deep-dive).
 
-6. Napsauta tai napauta kohtaa **Tiedosto** ja sen jälkeen **Tallenna**. Napsauta tai napauta ![Takaisin sovellukseen -kuvaketta](./media/sharepoint-scenario-generate-app/icon-back-to-app.png) palataksesi sovellukseen.
+6. Napsauta tai napauta kohtaa **Tiedosto** ja sen jälkeen **Tallenna**. Palaa sovellukseen napsauttamalla tai napauttamalla ![Takaisin sovellukseen -kuvaketta](./media/sharepoint-scenario-generate-app/icon-back-to-app.png).
 
-## <a name="step-4-review-the-apps-details-screen-and-edit-screen"></a>Vaihe 4: Tarkista sovelluksen tiedot -näyttö ja muokkausnäyttö
+## <a name="step-4-review-the-apps-details-screen-and-edit-screen"></a>Vaihe 4: Tarkista sovelluksen tiedot-näyttö ja muokkausnäyttö
 1. Napsauta tai napauta tiedot-näyttöä.
    
     Tässä näytössä on erilainen asettelu, joka sisältää kohteen *Näytä lomake* valikoimasta valitun kohteen tietojen näyttämiseen. Sillä on ohjausobjekteja kohteiden muokkaamista ja poistamista varten ja takaisin selailunäyttöön siirtymistä varten.
@@ -113,11 +114,11 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Avaa projektipyyntösovellus](./media/sharepoint-scenario-generate-app/02-05-02-open-app.png)
 
-3. Napsauta tai napauta sovelluksessa ![siirry tietoihin-kuvaketta](./media/sharepoint-scenario-generate-app/icon-details-arrow.png) valikoiman selauksen ensimmäistä kohdetta varten.
+3. Napsauta tai napauta sovelluksessa ![siirry tietoihin -kuvaketta](./media/sharepoint-scenario-generate-app/icon-details-arrow.png) valikoiman selauksen ensimmäistä kohdetta varten.
    
     ![Ensimmäinen valikoiman kohde](./media/sharepoint-scenario-generate-app/02-05-04-first-item.png)
 
-4. Napsauta tai napauta ![muokkauksen kynäkuvaketta](./media/sharepoint-scenario-generate-app/icon-pencil.png) muokataksesi kohdetta.
+4. Napsauta tai napauta ![muokkauksen kynäkuvaketta](./media/sharepoint-scenario-generate-app/icon-pencil.png) kohteen muokkaamiseksi.
 
 5. Päivitä **Kuvaus**-kenttä. Muuta viimeinen sana ”ryhmä” sanaksi ”tiimi” ja napsauta tai napauta sitten ![valintamerkkikuvaketta](./media/sharepoint-scenario-generate-app/icon-check-mark.png)
    
@@ -132,10 +133,10 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Vahvista muutoksesi](./media/sharepoint-scenario-generate-app/02-05-09-verify-edit.png)
 
-Tämä on melko yksinkertainen sovellus, ja teimme siihen vain muutaman perusmukautuksen, mutta kuten näet, on mahdollista luoda mielenkiintoisia toimintoja nopeasti. Siirrymme seuraavaan tehtävään, mutta tarkastele vielä halutessasi sovellusta tarkemmin ja katso, miten ohjausobjektit ja kaavat toimivat yhdessä ja ohjaavat sovelluksen toimintaa.
+Tämä on melko yksinkertainen sovellus, ja teimme siihen vain muutaman perusmukautuksen, mutta kuten näet, mielenkiintoisten toimintojen luominen nopeasti on mahdollista. Siirrymme seuraavaan tehtävään, mutta tarkastele vielä halutessasi sovellusta tarkemmin ja katso, miten ohjausobjektit ja kaavat toimivat yhdessä ja ohjaavat sovelluksen toimintaa.
 
 ## <a name="formula-deep-dive"></a>Kaavoja pintaa syvemmältä
-Tämä osa on valinnainen, mutta se auttaa ymmärtämään kaavojen toimintaa paremmin. Tämän tehtävän vaiheessa 3 muokkasimme **BrowseGallery1**:n **Items**-ominaisuuden kaavaa. Tarkemmin sanottuna, muutimme lajittelua ja hakua käyttämään **Otsikko**-kenttää PowerAppsin valitseman kentän sijaan. Tässä on muokattu kaava:
+Tämä osa on valinnainen, mutta se auttaa ymmärtämään kaavojen toimintaa paremmin. Tämän tehtävän vaiheessa 3 muokkasimme **BrowseGallery1**:n **Items**-ominaisuuden kaavaa. Tarkemmin sanottuna muutimme lajittelua ja hakua käyttämään **Otsikko**-kenttää PowerAppsin valitseman kentän sijaan. Tässä on muokattu kaava:
 
 **SortByColumns ( Filter ( 'Project Requests', StartsWith ( Otsikko, TextSearchBox1.Text ) ), "Otsikko", If ( SortDescending1, Descending, Ascending ) )**
 
@@ -148,7 +149,7 @@ Mutta mitä tämä kaava tekee? Se määrittää tietolähteen, joka näkyy vali
 
 Kun yhdistelet funktioita kaavaan, tapahtuu seuraavaa:
 
-1. Jos kirjoitat hakuruutuun tekstiä **StartsWith** funktio vertaa kyseistä tekstiä jokaisen merkkijonon alkuun luettelon **Otsikko**-sarakkeessa.
+1. Jos kirjoitat hakuruutuun tekstiä, **StartsWith**-funktio vertaa kyseistä tekstiä jokaisen merkkijonon alkuun luettelon **Otsikko**-sarakkeessa.
    
     **StartsWith ( Otsikko, TextSearchBox1.Text )**
    
@@ -164,7 +165,7 @@ Kun yhdistelet funktioita kaavaan, tapahtuu seuraavaa:
 
 4. Nyt **SortByColumns**-funktio voi lajitella valikoiman. Tässä tapauksessa se lajittelee **Otsikko**-kentän perusteella, mutta tämä voi olla eri kenttä kuin se, mitä haet.
 
-Jos jaksoit kanssamme tänne asti, toivomme, että sait paremman käsityksen siitä, miten tämä kaava toimii ja miten voit yhdistää funktioita ja muita elementtejä saadaksesi sovellukset toimimaan tarvitsemallasi tavalla. Lisätietoja on artikkelissa [Viitetietoja PowerAppsin kaavoista](formula-reference.md).
+Jos luit tänne asti, toivomme, että sait paremman käsityksen siitä, miten tämä kaava toimii ja miten voit yhdistää funktioita ja muita elementtejä, jotta sovellukset toimivat tarvitsemallasi tavalla. Lisätietoja on artikkelissa [Viitetietoja PowerAppsin kaavoista](formula-reference.md).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 Seuraava vaihe on tämän opetusohjelmasarjan [Luo työnkulku projektin työnkulkujen hallitsemista varten](sharepoint-scenario-approval-flow.md).

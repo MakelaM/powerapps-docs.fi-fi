@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: d03e587d86262bcecf59012e36af0c3dc27b29a3
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31831419"
 ---
 # <a name="screen-control-in-powerapps"></a>Screen-ohjausobjekti PowerAppsissa
 Käyttöliittymän elementti, joka sisältää yhden tai useamman muun ohjausobjektin sovelluksessa.
@@ -65,7 +66,7 @@ Useimmissa sovelluksissa on useita **näytön** ohjausobjekteja, jotka sisältä
     **Target** näkyy valitsemasi värisenä.
 7. Napsauta tai napauta **Target**-ohjausobjektissa **[Muoto](control-shapes-icons.md)**-ohjausobjektia palataksesi **Source**-ohjausobjektiin.
 8. (valinnainen) Napsauta tai napauta toista valintaa **[Valintanappi](control-radio.md)**-ohjausobjektissa ja napsauta tai napauta **[Muoto](control-shapes-icons.md)**-ohjausobjektia vahvistaaksesi, että **Target** näkyy erivärisenä.
-9. Palaa oletustyötilaan painamalla Esc.
+9. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 01/09/18
 ms.author: mblythe
 ms.openlocfilehash: 2a3bb307d403d372d0cae89a0eb9d3fd86271768
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835882"
 ---
 # <a name="create-a-flow-to-manage-project-approvals"></a>Työnkulun luominen projektin hyväksyntien hallintaan
 > [!NOTE]
@@ -24,16 +25,16 @@ ms.lasthandoff: 04/26/2018
 
 Tässä tehtävässä luomme työnkulun, joka ohjaa projektien hyväksyntäprosessia. Microsoft Flow on integroitu SharePointin kanssa, jolloin työnkulku on helppo luoda suoraan luettelosta. Luomamme työnkulku käynnistyy, kun kohde lisätään **projektipyyntöjen** luetteloon. Työnkulku lähettää sähköpostiviestin projektin hyväksyjälle, joka hyväksyy tai hylkää pyynnön suoraan sähköpostiviestissä. Työnkulku lähettää sitten hyväksyntä- tai hylkäyssähköpostiviestin projektin pyytäjälle ja päivittää SharePoint-luettelot tämän mukaan.
 
-## <a name="step-1-configure-the-flow-template"></a>Vaihe 1: Määritä työnkulkumalli
+## <a name="step-1-configure-the-flow-template"></a>Vaihe 1: Työnkulkumallin määrittäminen
 1. Napsauta tai napauta **projektipyyntöjen** luettelossa **Työnkulku** ja sitten **Luo työnkulku**.
    
-    ![Luo työnkulku](./media/sharepoint-scenario-approval-flow/03-01-01-create-flow.png)
+    ![Työnkulun luominen](./media/sharepoint-scenario-approval-flow/03-01-01-create-flow.png)
 2. Napsauta tai napauta oikeanpuoleisessa ruudussa **Aloita hyväksyminen, kun uusi kohde lisätään**.
    
-    ![Luo hyväksynnän työnkulku](./media/sharepoint-scenario-approval-flow/03-01-02-approval-flow.png)
+    ![Hyväksynnän työnkulun luominen](./media/sharepoint-scenario-approval-flow/03-01-02-approval-flow.png)
 3. Jos et ole vielä kirjautunut, kirjaudu SharePointiin ja Outlookiin ja napsauta tai napauta sitten **Jatka**.
    
-    ![Kirjaudu ja käytä mallia](./media/sharepoint-scenario-approval-flow/03-01-03-continue.png)
+    ![Kirjautuminen ja mallin käyttäminen](./media/sharepoint-scenario-approval-flow/03-01-03-continue.png)
    
     Näet nyt tämän työnkulun mallin, joka on valmis täytettäväksi. Työnkulun ruudut edustavat vaiheita. Ne saavat tiedot aiemmista vaiheista sekä antamistasi tiedoista. Kukin vaihe voi näin ollen tuottaa tietoja seuraavia vaiheita varten.
    
@@ -46,25 +47,25 @@ Tässä tehtävässä luomme työnkulun, joka ohjaa projektien hyväksyntäprose
    
     ![Hyväksynnän ehto](./media/sharepoint-scenario-approval-flow/03-01-06-condition.png)
 
-## <a name="step-2-create-actions-for-approve--yes"></a>Vaihe 2: Luo hyväksynnän toiminnot = kyllä
+## <a name="step-2-create-actions-for-approve--yes"></a>Vaihe 2: Hyväksynnän toimintojen luominen = kyllä
 Tämä haara lähettää oletusarvoisesti hyväksyntäsähköpostiviestin pyytäjälle. Päivitämme myös **projektipyyntöjen** luettelon ja lisäämme kohteen **projektitietojen** luetteloon, koska projekti on hyväksytty.
 
 1. Napsauta tai napauta **Jos kyllä** -haarassa **Inform item creator of approval** (Ilmoita hyväksynnästä kohteen tekijälle) ja sitten **Muokkaa**, niin näet pyytäjälle lähetetyn sähköpostiviestin oletusasetukset.
    
-    ![Muokkaa sähköpostiasetuksia](./media/sharepoint-scenario-approval-flow/03-01-07-yes-email.png)
-2. Sähköpostiviesti lähetetään oletusarvoisesti luettelokohteen luoneelle henkilölle ja sisältää näkemäsi aiherivin ja viestin. Voit halutessasi päivittää niitä.
+    ![Sähköpostiasetusten muokkaaminen](./media/sharepoint-scenario-approval-flow/03-01-07-yes-email.png)
+2. Sähköpostiviesti lähetetään oletusarvoisesti luettelokohteen luoneelle henkilölle, ja se sisältää näkemäsi aiherivin ja viestin. Voit halutessasi päivittää niitä.
    
     ![Oletussähköpostiasetukset](./media/sharepoint-scenario-approval-flow/03-01-07a-yes-email-defaults.png)
 3. Napsauta tai napauta **Lisää toiminto**.
    
-    ![Lisää toiminto](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
+    ![Toiminnon lisääminen](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
 4. Etsi kohdasta **Valitse toiminto** ”SharePoint” ja napsauta tai napauta sitten **SharePoint – Päivitä kohde**.
    
-    ![Päivitä kohteen toiminto](./media/sharepoint-scenario-approval-flow/03-00-02-update.png)
+    ![Kohteen toiminnon päivitys](./media/sharepoint-scenario-approval-flow/03-00-02-update.png)
 5. Kirjoita SharePoint-sivuston URL-osoite ja luettelon nimi.
    
-    ![Päivitä kohteen parametrit](./media/sharepoint-scenario-approval-flow/03-00-03-update-list.png)
-6. Valitse **Tunnus**-ruutu ja napsauta tai napauta sitten *Dynaaminen sisältö* valintaikkunassa **Tunnus**.
+    ![Kohteen parametrien päivitys](./media/sharepoint-scenario-approval-flow/03-00-03-update-list.png)
+6. Valitse **Tunnus**-ruutu ja napsauta tai napauta sitten *Dynaaminen sisältö* -valintaikkunassa **Tunnus**.
    
     ![Tunnus dynaamisen sisällön luettelossa](./media/sharepoint-scenario-approval-flow/03-00-04-list-id.png)
    
@@ -77,7 +78,7 @@ Tämä haara lähettää oletusarvoisesti hyväksyntäsähköpostiviestin pyytä
     ![Luettelon päivitys](./media/sharepoint-scenario-approval-flow/03-01-08-yes-update-complete.png)
 9. Napsauta tai napauta uudelleen **Lisää toiminto**. Tällä kertaa lisäämme kohteen **projektitietojen** luetteloon hyväksytylle projektille.
    
-    ![Lisää toiminto](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
+    ![Toiminnon lisääminen](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
 10. Etsi kohdasta **Valitse toiminto** ”SharePoint” ja valitse sitten **SharePoint – Luo kohde**.
     
     ![Kohteen luontitoiminto](./media/sharepoint-scenario-approval-flow/03-01-09-create.png)
@@ -94,24 +95,24 @@ Tämä haara lähettää oletusarvoisesti hyväksyntäsähköpostiviestin pyytä
     
     ![Kohteen luonti valmis](./media/sharepoint-scenario-approval-flow/03-01-11-yes-create-complete.png)
 
-## <a name="step-3-review-action-for-approve--no"></a>Vaihe 3: Tarkista hyväksyntätoiminto = ei
+## <a name="step-3-review-action-for-approve--no"></a>Vaihe 3: Hyväksyntätoiminnon tarkistaminen = ei
 Tämä haara lähettää oletusarvoisesti hylkäyssähköpostiviestin pyytäjälle. Päivitämme myös **projektipyyntöjen** luettelon. Projekti ei etene, joten emme lisää kohdetta **projektitietojen** luetteloon.
 
 1. Napsauta tai napauta **Jos ei** -haarassa **Inform item creator of rejection** (Ilmoita hylkäyksestä kohteen tekijälle) ja sitten **Muokkaa**, niin näet pyytäjälle lähetetyn sähköpostiviestin oletusasetukset.
    
-    ![Muokkaa sähköpostiasetuksia](./media/sharepoint-scenario-approval-flow/03-01-12-no-email.png)
-2. Sähköpostiviesti lähetetään oletusarvoisesti luettelokohteen luoneelle henkilölle ja sisältää näkemäsi aiherivin ja viestin. Voit halutessasi päivittää niitä.
+    ![Sähköpostiasetusten muokkaaminen](./media/sharepoint-scenario-approval-flow/03-01-12-no-email.png)
+2. Sähköpostiviesti lähetetään oletusarvoisesti luettelokohteen luoneelle henkilölle, ja se sisältää näkemäsi aiherivin ja viestin. Voit halutessasi päivittää niitä.
    
     ![Oletussähköpostiasetukset](./media/sharepoint-scenario-approval-flow/03-01-13-no-email-defaults.png)
 3. Napsauta tai napauta **Lisää toiminto**.
    
-    ![Lisää toiminto](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
+    ![Toiminnon lisääminen](./media/sharepoint-scenario-approval-flow/03-00-01-add-action.png)
 4. Etsi kohdasta **Valitse toiminto** ”SharePoint” ja napsauta tai napauta sitten **SharePoint – Päivitä kohde**.
    
-    ![Päivitä kohteen toiminto](./media/sharepoint-scenario-approval-flow/03-00-02-update.png)
+    ![Kohteen toiminnon päivitys](./media/sharepoint-scenario-approval-flow/03-00-02-update.png)
 5. Kirjoita SharePoint-sivuston URL-osoite ja luettelon nimi.
    
-    ![Päivitä kohteen parametrit](./media/sharepoint-scenario-approval-flow/03-00-03-update-list.png)
+    ![Kohteen parametrien päivitys](./media/sharepoint-scenario-approval-flow/03-00-03-update-list.png)
 6. Valitse **Tunnus**-ruutu ja napsauta tai napauta sitten dynaamisen sisällön valintaikkunassa **Tunnus**.
    
     ![Tunnus dynaamisen sisällön luettelossa](./media/sharepoint-scenario-approval-flow/03-00-04-list-id.png)
@@ -131,7 +132,7 @@ Tämä haara lähettää oletusarvoisesti hylkäyssähköpostiviestin pyytäjäl
    
     ![Valmis-painike](./media/sharepoint-scenario-approval-flow/03-01-15a-done-button.png)
 
-## <a name="step-4-run-the-approval-flow"></a>Vaihe 4: Hyväksyntätyönkulun suorittaminen
+## <a name="step-4-run-the-approval-flow"></a>Vaihe 4: Suorita hyväksyntätyönkulku
 1. Napsauta tai napauta **projektipyyntöjen** luettelossa **Nopea muokkaus** ja lisää seuraava kohde:
    
    * **Otsikko** = "New monitor for Megan"

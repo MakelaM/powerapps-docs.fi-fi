@@ -1,5 +1,5 @@
 ---
-title: Table-funktio | Microsoft Docs
+title: Taulukkofunktio | Microsoft Docs
 description: PowerAppsin Table-funktion viitetiedot, mukaan lukien syntaksi ja esimerkkejä
 documentationcenter: na
 author: gregli-msft
@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 28d393d9be240b3e9ba57d108761c7a38f013b24
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826863"
 ---
 # <a name="table-function-in-powerapps"></a>PowerAppsin Table-funktio
 Luo väliaikaisen [taulukon](../working-with-tables.md).
@@ -28,12 +29,12 @@ Taulukon [sarakkeet](../working-with-tables.md#columns) ovat yhdistelmä kaikkie
 
 PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit määrittää taulukon funktion argumenttina ja funktio voi palauttaa tuloksena taulukon. **Table** ei luo pysyvää taulukkoa. Sen sijaan se palauttaa väliaikaisen taulukon, joka on koottu sen argumenteista.  Voit määrittää tämän väliaikaisen taulukon argumenttina toiselle funktiolle, visualisoida sen kokoelmassa tai upottaa sen toiseen taulukkoon.  Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
 
-Voit myös luoda yhden sarakkeen taulukon syntaksilla **[ arvo1, arvo2, ... ]**.
+Voit myös luoda yhden sarakkeen taulukon syntaksilla **[ value1, value2, ... ]**.
 
 ## <a name="syntax"></a>Syntaksi
-**Table**( *Tietue1* [, *Tietue2*, ... ] )
+**Table**( *Record1* [, *Record2*, ... ] )
 
-* *Tietue(et)* – Pakollinen. Taulukkoon lisättävät tietueet.
+* *Record* (yksi tai useampi) – Pakollinen. Taulukkoon lisättävät tietueet.
 
 ## <a name="examples"></a>Esimerkkejä
 * Määritä luetteloruudun **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:

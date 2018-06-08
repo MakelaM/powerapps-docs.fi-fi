@@ -1,28 +1,21 @@
 ---
 title: Pilvitallennusyhteyden yleiskatsaus | Microsoft Docs
 description: Ohjeet pilvitallennustiliin yhdistämiseen ja Excel-tietojen näyttämiseen sovelluksessasi
-services: ''
-suite: powerapps
-documentationcenter: ''
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2016
-ms.author: archanan
-ms.openlocfilehash: fbe6cf68dace0ae8924f1ec5dc12b1a1ec1cde25
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: b0141315f041d81b929a53761952d9b5e355c82e
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803022"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Pilvitallennustiliin yhdistäminen PowerAppsista
-PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedoston ja käyttää sen tietoja kaikkialla sovelluksessasi käyttämällä näitä yhteyksiä. Näitä yhteyksiä ovat muun muassa:  
+PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedoston ja käyttää sen tietoja kaikkialla sovelluksessasi käyttämällä näitä yhteyksiä. Näitä yhteyksiä ovat muun muassa seuraavat:  
 
 | **Azure Blob** | **Box** | **Dropbox** | **Google Drive** | **OneDrive** | **OneDrive<br>for Business** |
 | --- | --- | --- | --- | --- | --- |
@@ -32,7 +25,7 @@ PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedosto
 
 * Excel-tiedosto, jossa tiedot on [muotoiltu taulukoksi](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664):
   
-  1. Avaa Excel-tiedosto ja valitse mikä tahansa solu tiedossa, jota haluat käyttää.
+  1. Avaa Excel-tiedosto ja valitse mikä tahansa solu tiedoissa, joita haluat käyttää.
   2. Valitse **Lisää**-välilehdeltä **Taulukko**.
   3. Valitse **Tallenna taulukkona** -valintaikkunasta **Taulukossa on otsikot** -valintaruutu ja valitse sitten **OK**.
   4. Tallenna muutokset.
@@ -46,7 +39,7 @@ PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedosto
     ![Anna käyttäjänimi ja salasana](./media/cloud-storage-blob-connections/signin.png)
    
     Kun olet kirjautunut sisään, yhteys on käytettävissä sovelluksissasi.
-4. Napsauta tai napauta valintanauhan **Näkymä**-välilehden kohtaa **Tietolähteet**. Napsauta tai napauta oikeanpuoleisessa ruudussa **Lisää tietolähde**, napsauta tai napauta pilvitallennusyhteyttäsi ja valitse sitten Excel-taulukko.
+4. Napsauta tai napauta nauhan **Näkymä**-välilehden kohtaa **Tietolähteet**. Napsauta tai napauta oikeanpuoleisessa ruudussa **Lisää tietolähde**, napsauta tai napauta pilvitallennusyhteyttäsi ja valitse sitten Excel-taulukko.
 5. Valitse **Yhdistä**.
    
     Taulukko luetteloidaan tietolähteeksi:
@@ -54,7 +47,7 @@ PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedosto
     ![Valitse Excel-taulukko](./media/cloud-storage-blob-connections/selecttable.png)
    
     > [!NOTE]
-> Muista, että Excel-tietojen täytyy olla muotoiltu taulukoksi.
+> Muista, että Excel-tietojen täytyy olla taulukoksi muotoiltuja.
 
 ## <a name="using-the-excel-data-in-your-app"></a>Excel-tietojen käyttäminen sovelluksessasi
 1. Valitse **Lisää**-valikosta **Valikoima** ja valitse valikoimaohjausobjekti **With text**.
@@ -77,31 +70,31 @@ PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedosto
 > [!NOTE]
 > Ensimmäinen laatikko on todellisuudessa Image-ohjausobjekti. Jos Excel-taulukossa ei ole kuvaa, voit poistaa Image-ohjausobjektin ja korvata sen selitteellä. [Ohjausobjektien lisääminen ja määrittäminen](../add-configure-controls.md) -artikkelista on hyötyä tässä vaiheessa.
 
-[Tutustu taulukoihin ja tietueisiin](../working-with-tables.md) tarjoaa lisätietoja ja esimerkkejä.  
+[Tutustu taulukkoihin ja tietueisiin](../working-with-tables.md) tarjoaa lisätietoja ja esimerkkejä.  
 
 ## <a name="sharing-your-app"></a>Sovelluksen jakaminen
 Voit jakaa [sovelluksia](../share-app.md), [resursseja](../share-app-resources.md), kuten liittimiä, ja [tietoja](../share-app-data.md) muiden organisaation jäsenten kanssa.
 
-Jos jaat kansiota Dropboxissa, jaetun kansion täytyy olla liitetty käyttäjän Dropbox-tiliin.
+Jos jaat kansion Dropboxissa, jaetun kansion täytyy olla liitettynä käyttäjän Dropbox-tiliin.
 
-Liittimillä on [tiettyjä rajoituksia](#sharing-excel-tables) liittyen Excel-tiedostoihin.
+Liittimillä on [tiettyjä rajoituksia](#sharing-excel-tables) Excel-tiedostoihin liittyen.
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
-Jos yrität käyttää Excel-yhtyettä sovelluksessasi ja näkyviin tulee **Tietotyyppiä ei tueta** tai **Ei muotoiltu taulukoksi**, [muotoile tiedot taulukoksi](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
+Jos yrität käyttää Excel-yhteyttä sovelluksessasi ja näkyviin tulee **Tietotyyppiä ei tueta** tai **Ei muotoiltu taulukoksi**, [muotoile tiedot taulukoksi](https://support.office.com/article/Create-an-Excel-table-in-a-worksheet-E81AA349-B006-4F8A-9806-5AF9DF0AC664).
 
-Jos Excel-tiedoissa on laskettu sarake, et voi käyttää sitä sovelluksen luomiseen, eikä kyseisiä tietoja voi lisätä olemassa olevaan sovellukseen.
+Jos Excel-tiedoissa on laskettu sarake, et voi käyttää sitä sovelluksen luomiseen eikä kyseisiä tietoja voi lisätä olemassa olevaan sovellukseen.
 
 ### <a name="sharing-excel-tables"></a>Excel-taulukoiden jakaminen
 Voit jakaa tietoja Excel-tiedostossa seuraavasti:
 
 * OneDrive for Businessissa voit jakaa itse tiedoston.
-* OneDrivessa voit jakaa kansion, joka sisältää tiedoston, ja määrittää minkä tahansa median tiedostopolut, mutta et URL-osoitteita.
+* OneDrivessa voit jakaa kansion, joka sisältää tiedoston, ja määrittää median tiedostopolut, ei URL-osoitteita.
 * Dropboxissa tai Google Drivessa voit jakaa tiedoston tai kansion.
 
 ## <a name="helpful-links"></a>Hyödyllisiä linkkejä
 Kaikki [käytettävissä olevat yhteydet](../connections-list.md).  
 Lue, miten [lisäät yhteyksiä](../add-manage-connections.md) ja [tietolähteitä](../add-data-connection.md) sovelluksiisi.  
-[Tutustu taulukoihin ja tietueisiin](../working-with-tables.md), joiden tietolähteet ovat taulukkomuotoisia.  
+[Tutustu taulukkoihin ja tietueisiin](../working-with-tables.md), joiden tietolähteet ovat taulukkomuotoisia.  
 Muita valikoimiin liittyviä resursseja ovat esimerkiksi [Kohdeluettelon näyttäminen](../add-gallery.md) ja [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md).
 
 <!--Icon references-->

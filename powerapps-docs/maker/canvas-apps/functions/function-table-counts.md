@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 762fa0ae7afe6b3693f74f308ba0a776aa27ed15
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832064"
 ---
 # <a name="count-counta-countif-and-countrows-functions-in-powerapps"></a>PowerAppsin Count-, CountA-, CountIf- ja CountRows-funktiot
 Laskee kaikki [tietueet](../working-with-tables.md#records) [taulukossa](../working-with-tables.md), tai laskee kaikki tietueet, jotka täyttävät ehdon.
@@ -24,9 +25,9 @@ Laskee kaikki [tietueet](../working-with-tables.md#records) [taulukossa](../work
 ## <a name="description"></a>Kuvaus
 **Count**-funktio laskee yksisarakkeisessa taulukossa niiden tietueiden lukumäärän, jotka sisältävät numeron.
 
-**CountA**-funktio laskee yksisarakkeisessa taulukossa niiden tietueiden lukumäärän, jotka eivät ole *tyhjiä*. Tämän funktion laskentaan sisältyy [tyhjä](function-isblank-isempty.md) teksti (””).
+**CountA**-funktio laskee yksisarakkeisessa taulukossa niiden tietueiden lukumäärän, jotka eivät ole *tyhjiä*. Tämän funktion laskentaan sisältyy [tyhjä](function-isblank-isempty.md) teksti ("").
 
-**CountIf**-funktio laskee taulukossa niiden tietueiden lukumäärän, joiden loogisen kaavan arvo on **true**.  Kaava voi viitata taulukon [sarakkeisiin](../working-with-tables.md#columns).
+**CountIf**-funktio laskee taulukossa niiden tietueiden lukumäärän, joiden loogisen kaavan arvo on **tosi**.  Kaava voi viitata taulukon [sarakkeisiin](../working-with-tables.md#columns).
 
 **CountRows**-funktio laskee taulukon tietueiden lukumäärän.
 
@@ -43,14 +44,14 @@ Kaikki nämä funktiot palauttavat luvun.
 **CountIf**( *Table*, *LogicalFormula* )
 
 * *Taulukko* – Pakollinen.  Laskettava tietuetaulukko.
-* *LogicalFormula* – Pakollinen.  Kullekin taulukon tietueelle arvioitava kaava.  Tietueet, jotka palauttavat arvon **true** tälle kaavalle, lasketaan.  Kaava voi viitata taulukon sarakkeisiin.
+* *LogicalFormula* – Pakollinen.  Kullekin taulukon tietueelle arvioitava kaava.  Tietueet, jotka palauttavat arvon **tosi** tälle kaavalle, lasketaan.  Kaava voi viitata taulukon sarakkeisiin.
 
-**CountRows**( *Table* )
+**CountRows**( *Taulukko* )
 
 * *Taulukko* – Pakollinen.  Laskettava tietuetaulukko.
 
 ## <a name="example"></a>Esimerkki
-1. Tuo tai luo [kokoelma](../working-with-data-sources.md#collections), jonka nimi on **Inventory**, kuten kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäisessä alitoimintosarjassa on kuvattu.
+1. Tuo tai luo [kokoelma](../working-with-data-sources.md#collections), jonka nimi on **Inventory** (katso kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäinen alitoimintosarja).
 2. Lisää selite ja aseta sen **[Teksti](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
     **CountIf(Inventory, UnitsInStock < 30)**

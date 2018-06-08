@@ -1,22 +1,19 @@
 ---
 title: Opetusohjelma sellaisen mukautetun entiteetin luomiseen, jossa on osia PowerAppsin kanssa| Microsoft Docs
 description: Opetusohjelma, joka sisältää vaiheittaiset ohjeet entiteetin luomiseen ja määrittämiseen PowerApps-sovelluksessa käyttämistä varten.
-documentationcenter: na
 author: Mattp123
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
+ms.topic: tutorial
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: dcd7acb9b6a7556e30cfa1aa46385024dcd0bcb5
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: c587ed6488ae498e3ec662016ee1d028023e4095
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168247"
 ---
 # <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opetusohjelma: Luo osia sisältävä mukautettu entiteetti PowerAppsissa
 
@@ -36,7 +33,7 @@ Opetusohjelman esimerkkitapauksena on lemmikkieläinten hoitoyritys Contoso, jok
 
 Kirjaudu sisään [PowerAppsiin](https://powerapps.microsoft.com/). Jos sinulla ei ole vielä [!INCLUDE [powerapps](../../includes/powerapps.md)]tiliä, valitse **Aloita maksutta** -linkki [powerapps.com](https://web.powerapps.com)issa.
 
-## <a name="create-a-custom-entity"></a>Luo mukautettu kohde
+## <a name="create-a-custom-entity"></a>Mukautetun entiteetin luominen
 
 1. Laajenna vasemmassa siirtymisruudussa **Tiedot**, valitse **Entiteetit** ja valitse sitten **Uusi entiteetti**.
     ![Uusi entiteetti](media/create-custom-entity/create-new-entity.png)

@@ -1,25 +1,18 @@
 ---
 title: Microsoft Translator -yhteyden yleiskatsaus | Microsoft Docs
 description: Ohjeet Microsoft Translator -yhteyden luomiseen, muutama esimerkki ja kaikki funktiot
-services: ''
-suite: powerapps
-documentationcenter: na
-author: archnair
-manager: anneta
-editor: ''
-tags: ''
+author: lancedMicrosoft
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
-ms.author: archanan
-ms.openlocfilehash: e5680fbc24475f9eb5776994de1a60cdb1c052ac
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: lanced
+ms.openlocfilehash: c375429b7ac2341766c36ca58e1bbf3c78c9a6d1
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803393"
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Yhdistä Microsoft Translatoriin PowerAppsista
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)

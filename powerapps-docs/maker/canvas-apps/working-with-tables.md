@@ -1,6 +1,6 @@
 ---
-title: Tutustu taulukkoihin | Microsoft Docs
-description: Taulukoiden, sarakkeiden ja tietueiden käsittelemisen viitetiedot
+title: Tietoa taulukoista | Microsoft Docs
+description: Tietoa taulukoiden, sarakkeiden ja tietueiden käsittelemisestä
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,297 +13,298 @@ ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
 ms.openlocfilehash: 42a7c0db6aaf46d8cdbd112cf72c6f95f58dc9ec
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31839173"
 ---
-# <a name="understand-tables-and-records-in-powerapps"></a>Tutustu taulukkoihin ja tietueisiin PowerAppsissa
-Voit luoda sovelluksen, joka käyttää tietoja Microsoft Excelistä, SharePointista, SQL Serveristä ja useista muista lähteistä, jotka tallentavat tietoja tietueisiin ja taulukkoihin. Jos haluat käsitellä tällaisia tietoja tehokkaasti, tutustu näiden rakenteiden taustalla oleviin käsitteisiin.
+# <a name="understand-tables-and-records-in-powerapps"></a>Tutustu PowerAppsissa käytettäviin taulukkoihin ja tietueisiin
+Voit luoda sovelluksen, joka käyttää tietoja Microsoft Excelistä, SharePointista, SQL Serveristä ja useista muista lähteistä, jotka tallentavat tietoja tietueisiin ja taulukkoihin. Jos haluat käsitellä tällaisia tietoja mahdollisimman tehokkaasti, tutustu näiden rakenteiden taustalla oleviin käsitteisiin.
 
-* Tietue sisältää yhden tai useamman henkilön, sijainnin tai asian tietoluokan. Tietue voi esimerkiksi sisältää yksittäisen asiakkaan nimen, sähköpostiosoitteen ja puhelinnumeron. Muut työkalut viittaavat tietueeseen termillä ”rivi” tai ”kohde”.
+* Tietue sisältää yhden tai useamman tietoluokan, joka koskee henkilöä, paikkaa tai asiaa. Tietue voi esimerkiksi sisältää yksittäisen asiakkaan nimen, sähköpostiosoitteen ja puhelinnumeron. Muut työkalut viittaavat tietueeseen termillä ”rivi” tai ”kohde”.
 * Taulukko sisältää yhden tai useampia tietueita, jotka sisältävät samat tietoluokat. Taulukko saattaa esimerkiksi sisältää 50 asiakkaan nimet, sähköpostiosoitteet ja puhelinnumerot.
 
-Sovelluksessa käytetään [kaavoja](working-with-formulas.md), joilla luodaan, päivitetään ja käsitellään tietueita ja taulukkoja. Todennäköisesti luet ja kirjoitat tietoja ulkoiseen [tietolähteen](working-with-data-sources.md), joka on laajennettu taulukko. Lisäksi luot ehkä yhden tai useita sisäisiä taulukoita, joita kutsutaan [kokoelmiksi](working-with-data-sources.md#collections).
+Kun luot, päivität ja käsittelet sovelluksessasi tietueita ja taulukkoja, tarvitset [kaavoja](working-with-formulas.md). Todennäköisesti luet ja kirjoitat tietoja ulkoiseen [tietolähteeseen](working-with-data-sources.md), joka on laajennettu taulukko. Lisäksi luot ehkä yhden tai useita sisäisiä taulukoita, joita kutsutaan [kokoelmiksi](working-with-data-sources.md#collections).
 
-Voit luoda erilaisia kaavoja, jotka ottavat taulukon nimen argumenttina samalla tavalla kuin kaavat Excelissä ottavat yhden tai useampia soluviittauksia argumentteina. Jotkin powerAppsin kaavat palauttavat taulukon, joka kuvastaa määrittämiäsi argumentteja. Voit esimerkiksi luoda seuraavan kaavan:
+Voit luoda erilaisia kaavoja, joille taulukon nimi annetaan argumenttina samalla tavoin kuin Excelissä olevalle kaavalle annetaan yksi tai useampi soluviittaus argumentteina. Jotkin PowerAppsin kaavat palauttavat taulukon, joka kuvastaa muita argumentteja, joita sinä määrität. Voit luoda kaavan esimerkiksi:
 
-* päivittämään tietueen taulukossa määrittämällä kyseisen taulukon yhtenä useista argumenteista **[Ohjelmakorjaus](functions/function-patch.md)**-funktiolle
-* lisäämään, poistamaan ja nimeämään uudelleen taulukon sarakkeet määrittämällä kyseisen taulukon argumenttina **[AddColumns](functions/function-table-shaping.md)**-, **[DropColumns](functions/function-table-shaping.md)**- tai **[RenameColumns](functions/function-table-shaping.md)**-funktiolle. Mikään näistä funktioista ei muokkaa alkuperäistä taulukkoa. Sen sijaan funktio palauttaa toisen taulukon määrittämiesi argumenttien perusteella.
+* päivittämään taulukossa olevan tietueen siten, että kyseinen taulukko määritetään yhdeksi **[Patch](functions/function-patch.md)**-funktion useista argumenteista
+* lisäämään, poistamaan ja nimeämään uudelleen taulukon sarakkeita siten, että kyseinen taulukko määritetään argumentiksi **[AddColumns](functions/function-table-shaping.md)**-, **[DropColumns](functions/function-table-shaping.md)**- tai **[RenameColumns](functions/function-table-shaping.md)**-funktiolle. Mikään näistä funktioista ei muokkaa alkuperäistä taulukkoa. Sen sijaan funktio palauttaa toisen taulukon määrittämiesi argumenttien perusteella.
 
 ## <a name="elements-of-a-table"></a>Taulukon osat
 ![](media/working-with-tables/elements-of-a-table.png)
 
 ### <a name="records"></a>Tietueet
-Kukin tietue sisältää vähintään yhden henkilön, sijainnin tai asian tietoluokan. Edellä olevassa esimerkissä näkyy tietue kullekin tuotteelle (**Chocolate**, **Bread** ja **Water**) ja sarakkeen kullekin tietoluokalle (**Price**, **Quantity on Hand** ja **Quantity on Order**).
+Kukin tietue sisältää vähintään yhden henkilön, sijainnin tai asian tietoluokan. Edellä olevassa esimerkissä näkyy tietue kullekin tuotteelle (**Suklaa**, **Leipä** ja **Vesi**) ja sarakkeet kullekin tietoluokalle (**Hinta**, **Saatavilla oleva määrä** ja **Tilattu määrä**).
 
-Kaavassa voit viitata tietueeseen yksinään, taulukon kontekstin ulkopuolella, käyttämällä aaltosulkeita. Tätä tietuetta **{ Name: "Strawberries", Price: 7.99 }** ei esimerkiksi ole liitetty taulukkoon.
+Jos haluat viitata kaavassa johonkin tietueeseen yksinään taulukon kontekstin ulkopuolella, voit käyttää aaltosulkeita. Esimerkiksi tietuetta **{ Nimi: "Mansikat", Hinta: 7.99 }** ei ole liitetty taulukkoon.
 
 ### <a name="fields"></a>Kentät
-Kenttä on yksittäinen tieto tietueessa. Voit visualisoida tämän tyyppisen kentän arvona tietylle tietueelle.
+Kenttä on yksittäinen tieto-osio tietueessa. Voit määrittää tämän tyyppisen kentän näkymään arvona tietyssä tietueessa olevassa sarakkeessa.
 
-Samoin kuin ohjausobjektilla, kenttään viitataan tietueeseen käyttämällä **.** [-operaattoria](functions/operators.md) tietueessa.  Esimerkiksi **First(Products).Name** palauttaa **Name**-kentän **Products**-taulukon ensimmäiselle tietueelle.
+Samoin kuin ohjausobjektilla, tietueen kenttää viitataan käyttämällä tietueessa **.** [-operaattoria](functions/operators.md).  Esimerkiksi **First(Tuotteet).Nimi** hakee **Nimi**-kentän sisällön **Tuotteet**-taulukon ensimmäiseen tietueeseen.
 
-Kenttä voi sisältää toiseen tietueen tai taulukon, kuten esimerkki **[GroupBy](functions/function-groupby.md)**-funktiosta esittää. Voit asettaa sisäkkäin niin monta tieto- ja taulukkotasoa kuin haluat.
+Kenttä voi sisältää toisen tietueen tai taulukon, kuten esimerkki **[GroupBy](functions/function-groupby.md)**-funktiosta esittää. Voit asettaa sisäkkäin niin monta tieto- ja taulukkotasoa kuin haluat.
 
 ### <a name="columns"></a>Sarakkeet
-Sarake viittaa taulukon yhden tai useamman tietueen samaan kenttään. Yllä olevassa esimerkissä kullakin tuotteella on hinta-kenttä, ja kyseinen hinta on samassa sarakkeessa kaikille tuotteille.  Yllä olevassa taulukossa on neljä saraketta, jotka näkyvät yläreunassa vaakasuunnassa:
+Sarake viittaa kenttään, joka on yhteinen taulukon tietueessa oleville tietueille. Edellä kuvatussa esimerkissä kullakin tuotteella on Hinta-kenttä, ja kaikkien tuotteiden Hinta-kenttä näkyy samassa sarakkeessa.  Edellä olevan taulukon yläreunassa on neljä saraketta:
 
-* **Name**
-* **Price**
-* **Quantity on Hand**
-* **Quantity on Order**
+* **Nimi**
+* **Hinta**
+* **Käytettävissä oleva määrä**
+* **Tilauksen määrä**
 
 Sarakkeen nimi kuvastaa kyseisen sarakkeen kenttiä.
 
-Kaikki sarakkeen arvot ovat samaa tietotyyppiä. Yllä olevassa esimerkissä ”Quantity on Hand” -sarake sisältää aina luvun eikä voi sisältää merkkijonoa, kuten ”12 units”, yhdelle tietueelle.  Minkä tahansa kentän arvo voi myös olla *tyhjä*.  
+Kaikki sarakkeen arvot ovat samaa tietotyyppiä. Edellä kuvatussa esimerkissä ”Käytettävissä oleva määrä” -sarake sisältää kutakin tietuetta kohden yhden numeron, eikä se voi sisältää merkkijonoa, kuten ”12 yksikköä”.  Minkä tahansa kentän arvo voi olla myös *tyhjä*.  
 
 Olet ehkä on kutsunut sarakkeita ”kentiksi” muissa työkaluissa.
 
 > [!NOTE]
-> SharePoint- ja Excel-tietolähteissä, joissa on välilyönnin sisältäviä sarakenimiä, PowerApps korvaa välilyönnit merkkijonolla **\_x0020\_**. Esimerkiksi **"Sarakkeen Nimi"** SharePointissa tai Excelissä näkyy muodossa **"Sarakkeen_x0020_Nimi"** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+> SharePoint- ja Excel -tietolähteissä, joissa on välilyönnin sisältäviä sarakenimiä, PowerApps korvaa välilyönnit merkkijonolla **\_x0020\_**. Esimerkiksi SharePointissa tai Excelissä näkyvä **"Sarakkeen Nimi"** näkyy PowerAppsissa muodossa **"Sarakkeen_x0020_Nimi"**, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
 
 ### <a name="table"></a>Taulukko
-Taulukko koostuu yhdestä tai useammasta tietueesta, joista kullakin on useita kenttiä, joilla on yhtenäiset nimet kaikissa tietueet.
+Taulukko koostuu yhdestä tai useammasta tietueesta, ja jokaisessa tietueessa on useita kenttiä. Kenttien nimet ovat yhdenmukaisia kaikissa tietueissa.
 
-Kaikilla taulukoilla, joka on tallennettu tietolähteeseen tai kokoelmaan, on nimi, jolla viitataan taulukkoon, ja se välitetään funktioille, jotka ottavat taulukot argumentteina.  Taulukot voivat olla myös funktion tai kaavan tulos.
+Kaikilla tietolähteeseen tai kokoelmaan tallennetuilla taulukoilla on nimi, jolla käyttäjä viittaa taulukkoon. Tämä nimi annetaan funktioon argumenttina.  Taulukkoja voidaan saada myös funktion tai kaavan tuloksena.
 
-Seuraavan esimerkin mukaisesti voit ilmaista taulukon kaavan **[Table](functions/function-table.md)**-funktiolla, jossa on tietuejoukko, jotka ilmaistaan aaltosulkeilla:
+Seuraavassa esimerkissä taulukko ilmaistaan kaavassa käyttämällä **[Table](functions/function-table.md)**-funktiota, ja funktion tietojoukko ilmaistaan aaltosulkeilla:
 
-**Table( { Value: "Strawberry" }, { Value: "Vanilla" } )**
+**Table( { Arvo: "Mansikka" }, { Arvo: "Vanilja" } )**
 
-Voit myös määrittää yksisarakkeisen taulukon hakasulkeilla.  Edellinen kaava voidaan kirjoittaa myös näin:
+Voit myös määrittää yksisarakkeisen taulukon käyttämällä hakasulkeita.  Edellisen kaavan voi kirjoittaa myös näin:
 
-**[ "Strawberry", "Vanilla" ]**
+**[ "Mansikka", "Vanilja" ]**
 
 ## <a name="table-formulas"></a>Taulukkokaavat
-Excelissä ja PowerAppsissa käytetään kaavoja, joilla käsitellään numeroita ja tekstimerkkijonoja samankaltaisilla tavoilla:
+Excelissä ja PowerAppsissa käytetään kaavoja, joilla käsitellään numeroita ja tekstimerkkijonoja samalla tavoin:
 
-* Kirjoita Excelissä arvo, kuten **42** soluun **A1**, ja kirjoita sitten kaava, kuten **A1 + 2**, toiseen soluun näyttääksesi arvon **44**.
-* Määritä PowerAppsissa **Slider1**:n **[Default](controls/properties-core.md)**-ominaisuudeksi **42**, ja määritä selitteen **[Text](controls/properties-core.md)**-ominaisuudeksi **Slider1.Value + 2** näyttääksesi arvon **44**.
+* Kirjoita Excelissä soluun **A1** arvo **42**, ja kirjoita sitten toiseen soluun kaava **A1 + 2**. Näkyviin tulee arvo **44**.
+* Määritä PowerAppsissa **Slider1**:n **[Oletus](controls/properties-core.md)**-ominaisuudeksi **42**, ja määritä selitteen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **Slider1.Arvo + 2**, jolloin näkyviin tulee arvo **44**.
 
-Molemmissa tapauksissa laskettu arvo muuttuu automaattisesti, jos muutat argumenttien arvoja (esimerkiksi numeroa solussa **A1** tai **Slider1**:n arvoa).
+Kummassakin tapauksessa laskettu arvo muuttuu automaattisesti, jos muutat argumenttien arvoja (esimerkiksi numeroa solussa **A1** tai **Slider1**:n arvoa).
 
-Kaavojen avulla voit vastaavasti käsitellä tietoja taulukoissa ja tietueissa. Voit käyttää taulukoiden nimiä argumentteina joissakin kaavoissa, kuten **Min(Catalog, Price)**, jotta voit näyttää **Catalog**-taulukon alimman arvon **Price**-sarakkeessa. Muut kaavat tarjoavat kokonaisia taulukkoja palautusarvoina, kuten **RenameColumns(Catalog, "Price", "Cost")**, joka palauttaa kaikki tietueet **Catalog**-taulukosta, mutta muuttaa**Price**-sarakkeen nimeksi **Cost**.
+Samalla tavoin voit käyttää kaavoja taulukoissa ja tietueissa olevien tietojen käyttöönottoon ja käsittelyyn. Voit käyttää taulukoiden nimiä argumentteina joissakin kaavoissa. Esimerkiksi käyttämällä kaavaa **Min(Tuoteluettelo, Hinta)** voit näyttää **Tuoteluettelo**-taulukon pienimmän arvon **Hinta**-sarakkeessa. Lisäksi on kaavoja, jotka tarjoavat palautusarvoina kokonaisia taulukkoja. Esimerkiksi **RenameColumns(Tuoteluettelo, "Hinta", "Kustannus")**-kaava palauttaa kaikki tietueet **Tuoteluettelo**-taulukosta, mutta muuttaa**Hinta**-sarakkeen nimeksi **Kustannus**.
 
-Samoin kuin numerot, kaavat, jotka liittyvät taulukkoihin ja tietueisiin, lasketaan automaattisesti uudelleen, kun niiden pohjana oleva taulukko tai tietue muuttuu. Jos **Catalog**-taulukon tuotteen hinta laskee edellistä vähimmäishintaa alhaisemmaksi, **[Min](functions/function-aggregates.md)**-kaavan palautusarvo muuttuu automaattisesti tätä vastaavaksi.
+Numeroiden tavoin myös taulukkoihin ja tietueisiin liittyvät kaavat lasketaan automaattisesti uudelleen, jos niiden pohjana oleva taulukko tai tietue muuttuu. Jos **Tuoteluettelo**-taulukossa olevan tuotteen aiheuttama kustannus laskee edellistä vähimmäisarvoa pienemmäksi, **[Min](functions/function-aggregates.md)**-kaavan palautusarvo muuttuu automaattisesti tätä vastaavaksi.
 
 Katsotaan joitakin yksinkertaisia esimerkkejä.
 
-1. Lisää **Text gallery** -ohjausobjekti ja määritä sen **[Items](controls/properties-core.md)**-ominaisuudeksi taulukon nimi.
+1. Lisää **Tekstivalikoima** -ohjausobjekti ja määritä sen **[Kohteet](controls/properties-core.md)**-ominaisuudeksi taulukon nimi.
    
-    Valikoima näyttää oletusarvoisesti paikkamerkkitekstin taulukosta nimeltä **TextualGallerySample**. Valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi asetetaan automaattisesti tämä taulukko.
+    Valikoima näyttää oletusarvoisesti paikkamerkkitekstin taulukosta, jonka nimi on **TextualGallerySample**. Valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuudeksi asetetaan automaattisesti tämä taulukko.
    
     > [!NOTE]
 > Jotkin ohjausobjektit on järjestetty uudelleen ja suurennettu esimerkkitarkoituksessa.
    
     ![](media/working-with-tables/gallery-items.png)
-2. Sen sijaan, että asetat **[Items](controls/properties-core.md)**-ominaisuudeksi taulukon nimen, aseta se kaavaksi, joka sisältää taulukon nimen argumenttina, kuten tässä esimerkissä:<br>
+2. Sen sijaan, että määrittäisit **[Kohteet](controls/properties-core.md)**-ominaisuuden taulukon nimelle, määritä se kaavalle, jossa taulukon nimi annetaan argumenttina tämän esimerkin mukaisesti:<br>
    **Sort(TextualGallerySample, Heading, Descending)**
    
-    Tämä kaava sisältää **[Sort](functions/function-sort.md)**-funktion, joka ottaa taulukon nimen ensimmäisenä argumenttinaan ja sarakkeen nimen kyseisessä taulukossa toisena argumenttinaan. Funktio tukee myös valinnaista kolmatta argumenttia, joka määrää, että tietojen lajittelu tehdään laskevassa järjestyksessä.
+    Tämä kaava sisältää **[Sort](functions/function-sort.md)**-funktion, jossa taulukon nimi (TextualGallerySample) on ensimmäinen argumentti ja taulukossa olevan sarakkeen nimi (Heading) toinen argumentti. Funktio tukee myös valinnaista kolmatta argumenttia, joka määrää, että tietojen lajittelu tehdään laskevassa järjestyksessä (Descending).
    
     ![](media/working-with-tables/gallery-items-sort.png)
-3. Aseta **[Items](controls/properties-core.md)**-ominaisuudeksi kaava, joka ottaa kaavan edellisestä vaiheesta argumenttina ja palauttaa taulukon, kuten tässä esimerkissä:<br>
+3. Aseta **[Kohteet](controls/properties-core.md)**-ominaisuudeksi kaava, jolle edellisen vaiheen kaava annetaan argumenttina. Kaava palauttaa taulukon tämän esimerkin mukaisesti:<br>
    **FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
    
-    Tässä kaavassa käytetään **[FirstN](functions/function-first-last.md)**-funktiota näyttämään tietty tietueiden määrä taulukossa. Voit käyttää **[Sort](functions/function-sort.md)**-funktiota ensimmäisenä **[FirstN](functions/function-first-last.md)**-argumenttina ja numeroa (tässä tapauksessa **2**) toisena argumenttina, joka määrittää, kuinka monta tietuetta näytetään.
+    Tässä kaavassa käytetään **[FirstN](functions/function-first-last.md)**-funktiota näyttämään taulukossa tietty määrä tietueita. **[Sort](functions/function-sort.md)**-funktio on **[FirstN](functions/function-first-last.md)**-funktion ensimmäinen argumentti, ja numero (tässä tapauksessa **2**) on toinen argumentti, joka määrittää, kuinka monta tietuetta näytetään.
    
-    Koko kaava palauttaa taulukon, joka sisältää **TextualGallerySample**-taulukon kaksi ensimmäistä tietuetta lajiteltuna **Heading**-sarakkeen mukaan laskevassa järjestyksessä.
+    Koko kaava palauttaa taulukon, jossa **TextualGallerySample**-taulukon kaksi ensimmäistä tietuetta näkyvät laskevassa järjestyksessä **Heading**-sarakkeessa.
    
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
 ### <a name="table-functions-and-control-properties"></a>Taulukkofunktiot ja ohjausobjektien ominaisuudet
-Monet PowerAppsin funktiot ottavat taulukon nimen argumenttina, luovat toisen taulukon, joka sisältää samat tiedot, käsittelevät uuden taulukon muiden argumenttien perusteella ja palauttavat sitten tuloksen. Nämä funktiot eivät muokkaa alkuperäistä taulukkoa, vaikka se olisi tietolähde.
+Monet PowerAppsin funktiot määrittävät taulukon nimen argumentiksi, luovat toisen taulukon, joka sisältää samat tiedot, käsittelevät uuden taulukon muiden argumenttien perusteella ja palauttavat sitten tuloksen. Nämä funktiot eivät muokkaa alkuperäistä taulukkoa, vaikka se olisi tietolähde.
 
-* **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** – Lajittelee ja suodattaa tietueita.
-* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** – Palauttaa taulukon ensimmäiset tai viimeiset N-tietueet.
-* **[Abs](functions/function-numericals.md)**, **[Sqrt](functions/function-numericals.md)**, **[Round](functions/function-round.md)**, **[RoundUp](functions/function-round.md)**, **[RoundDown](functions/function-round.md)** – aritmeettiset toiminnot kullekin yksisarakkeisen taulukon tietueelle, mistä tuloksena saadaan tulosten yksisarakkeinen taulukko.
-* **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Right](functions/function-left-mid-right.md)**, **[Replace](functions/function-replace-substitute.md)**, **[Substitute](functions/function-replace-substitute.md)**, **[Trim](functions/function-trim.md)**, **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Proper](functions/function-lower-upper-proper.md)** – merkkijonon käsittelytoimintoja yksisarakkeisen taulukon kullekin tietueelle, mistä tuloksena saadaan merkkijonojen yksisarakkeinen taulukko.
-* **[Len](functions/function-len.md)** – Palauttaa merkkijonosarakkeessa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.
-* **[Concatenate](functions/function-concatenate.md)** – yhdistää useita merkkijonojen sarakkeita, mistä tuloksena saadaan merkkijonojen yksisarakkeinen taulukko.
-* **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)** – Sarakkeen käsittelyä taulukossa, mistä saadaan tuloksena uusi taulukko, jossa on erilaisia sarakkeita.
-* **[Distinct](functions/function-distinct.md)** – Poistaa tietueiden kaksoiskappaleet.
-* **[Shuffle](functions/function-shuffle.md)** – Sekoittaa tietueita satunnaisessa järjestyksessä.
-* **[HashTags](functions/function-hashtags.md)** – Etsii aihetunnisteita merkkijonosta.
-* **[Errors](functions/function-errors.md)** – Antaa virhetietoja työskenneltäessä tietolähteen parissa.
+* **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** – nämä lajittelevat ja suodattavat tietueita.
+* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** – nämä palauttavat N-määrän taulukon ensimmäisiä tai viimeisiä tietueita.
+* **[Abs](functions/function-numericals.md)**, **[Sqrt](functions/function-numericals.md)**, **[Round](functions/function-round.md)**, **[RoundUp](functions/function-round.md)**, **[RoundDown](functions/function-round.md)** – nämä ovat aritmeettisia toimintoja, joita käytetään kussakin yksisarakkeisen taulukon tietueessa. Tuloksena saadaan yksisarakkeinen tulostaulukko.
+* **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Right](functions/function-left-mid-right.md)**, **[Replace](functions/function-replace-substitute.md)**, **[Substitute](functions/function-replace-substitute.md)**, **[Trim](functions/function-trim.md)**, **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Proper](functions/function-lower-upper-proper.md)** – nämä ovat merkkijonon käsittelytoimintoja, joita käytetään kussakin yksisarakkeisen taulukon tietueessa. Tuloksena saadaan yksisarakkeinen merkkijonotaulukko.
+* **[Len](functions/function-len.md)** – tämä palauttaa merkkijonosarakkeeseen yksisarakkeisen taulukon, joka sisältää kunkin merkkijonon pituuden.
+* **[Concatenate](functions/function-concatenate.md)** – tätä käytetään merkkijonosarakkeiden yhdistämiseen. Tuloksena saadaan yksisarakkeinen merkkijonotaulukko.
+* **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)** – näitä käytetään taulukon sarakkeiden käsittelyyn. Tuloksena saadaan uusi taulukko, jossa on erilaisia sarakkeita.
+* **[Distinct](functions/function-distinct.md)** – poistaa tietueiden kaksoiskappaleet.
+* **[Shuffle](functions/function-shuffle.md)** – sekoittaa tietueet satunnaiseen järjestykseen.
+* **[HashTags](functions/function-hashtags.md)** – tällä etsitään merkkijonoja aihetunnisteen perusteella.
+* **[Errors](functions/function-errors.md)** – antaa virhetietoja työskenneltäessä tietolähteen parissa.
 
-Voit suorittaa funktion taulukossa, joka sisältää useita sarakkeita, vaikka funktio vaatisi yksittäisen sarakkeen argumenttina. Voit purkaa yksittäisen sarakkeen usean sarakkeen taulukosta **[ShowColumns](functions/function-table-shaping.md)**-funktiolla argumenttina funktiolle, jota haluat käyttää, kuten tässä esimerkissä:<br>**Lower( ShowColumns( Products, "Name" ) )**
+Voit suorittaa funktion taulukossa, joka sisältää useita sarakkeita, vaikka funktio vaatisi yksittäisen sarakkeen argumenttina. Voit purkaa yksittäisen sarakkeen usean sarakkeen taulukosta käyttämällä **[ShowColumns](functions/function-table-shaping.md)**-funktiota argumenttina funktiolle, jota haluat käyttää. Katso mallia seuraavasta esimerkistä:<br>**Lower( ShowColumns( Tuotteet, "Nimi" ) )**
 
-Tämä kaava luo yksisarakkeisen taulukon, joka sisältää **Products**-taulukon **Name**-sarakkeiden kaikki tiedot, mutta muuntaa kaikki isot kirjaimet pieniksi kirjaimiksi. Jos määrität taulukon argumenttina funktiolle **[AddColumns](functions/function-table-shaping.md)**, **[RenameColumns](functions/function-table-shaping.md)** tai **[ DropColumns](functions/function-table-shaping.md)**, voit muotoilla kyseisen taulukon täysin haluamallasi tavalla.
+Tämä kaava luo yksisarakkeisen taulukon, joka sisältää **Tuotteet**-taulukon **Nimi**-sarakkeen kaikki tiedot, mutta muuntaa kaikki isot kirjaimet pieniksi kirjaimiksi. Jos määrität **[AddColumns](functions/function-table-shaping.md)**-, **[RenameColumns](functions/function-table-shaping.md)**- tai **[ DropColumns](functions/function-table-shaping.md)**-funktion argumentiksi taulukon, voit muotoilla kyseisen taulukon täysin haluamallasi tavalla.
 
-Jos määrität tietolähteen argumenttina jollekin näistä funktioista, kyseisen tietolähteen tietueita muokataan, ja tietolähteen uusi arvo taulukkona palautetaan yleensä.
+Jos määrität tietolähteen argumenttina jollekin näistä funktioista, kyseisen tietolähteen tietueita muokataan, ja yleensä tietolähteen uusi arvo palautetaan taulukkona.
 
-* **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – Luo tai tyhjentää kokoelman tai lisää siihen.
-* **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** – Päivittää tietueet vastaamaan yhtä tai useampia määrittämiäsi ehtoja.
-* **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** – Poistaa tietueet, jotka vastaavat yhtä tai useampaa määrittämääsi ehtoa.
+* **[Collect](functions/function-clear-collect-clearcollect.md)**, **[Clear](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – näillä luodaan kokoelma, tyhjennetään kokoelma ja tehdään kokoelmaan lisäyksiä.
+* **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** – näillä päivitetään tietueet, jotka vastaavat yhtä tai useampaa määrittämääsi kriteeriä.
+* **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** – näillä poistetaan tietueet, jotka vastaavat yhtä tai useampaa määrittämääsi kriteeriä.
 
 Seuraavilla ohjausobjekteilla on ominaisuuksia, jotka ovat taulukoita:
 
-* **Items** – Koskee valikoimia ja luetteloruutuja. Taulukko näytetään valikoimassa.
-* **SelectedItems** – Koskee luetteloruutuja. Käyttäjän valitsemien kohteiden taulukko.
+* **Kohteet** – Koskee valikoimia ja luetteloruutuja. Taulukko, joka näytetään valikoimassa.
+* **ValitutKohteet** – Koskee luetteloruutuja. Käyttäjän valitsemien kohteiden taulukko.
 
 ## <a name="record-formulas"></a>Tietueen kaavat
-Voit myös luoda kaavan, joka laskee yksittäisen tietueen tiedot, ottaa argumentiksi yksittäisen tietueen ja tarjoaa yksittäisen tietueen palautusarvona. Katsotaan uudestaan edellistä valikoimaesimerkkiä. Käytetään **Gallery1.Selected**-ominaisuutta näyttämään tiedot mistä tahansa tietueesta, jonka käyttäjä valitsee kyseisestä valikoimasta.
+Voit myös luoda kaavan, joka laskee yksittäisen tietueen tiedot, määrittää argumentiksi yksittäisen tietueen ja tarjoaa yksittäisen tietueen palautusarvona. Katsotaan uudestaan edellistä valikoimaesimerkkiä. Käytetään **Gallery1.Selected**-ominaisuutta näyttämään tiedot mistä tahansa tietueesta, jonka käyttäjä valitsee kyseisestä valikoimasta.
 
 1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
-2. Jos painike ei ole valittuna, valitse se napsauttamalla sitä ja suorita kaava napsauttamalla sitä uudelleen.
+2. Jos painike ei ole valittuna, valitse se napsauttamalla sitä, ja suorita kaava napsauttamalla sitä uudelleen.
 
-3. Valitse **Tiedosto**-valikosta **Kokoelmat**.
+3. Valitse **Tiedosto**-valikosta **Kokoelmat.**
 
 ![](media/working-with-tables/selected-collection.png)
 
-Tämä kaava palauttaa tietueen, joka sisältää valikoiman sillä hetkellä valitun tietueen tietojen lisäksi myös valikoiman jokaisen ohjausobjektin. Tietue sisältää esimerkiksi sekä **Body**-sarakkeen, joka vastaa alkuperäisen taulukon **Body**-saraketta, että **Body1** sarakkeen, joka edustaa otsikkoa, joka näyttää kyseisen sarakkeen tiedot. Valitse **Body1**-sarakkeen taulukko-kuvake, niin voit porautua näihin tietoihin.
+Tämän kaavan palauttama tietue sisältää paitsi valikoimassa valittuna olevan tietueen tiedot, myös valikoiman jokaisen ohjausobjektin. Tietue sisältää esimerkiksi sekä **Body**-sarakkeen, joka vastaa alkuperäisen taulukon **Body**-saraketta, että **Body1** sarakkeen, joka edustaa selitettä ja näyttää kyseisen sarakkeen tiedot. Valitse **Body1**-sarakkeen taulukko-kuvake, niin voit perehtyä näihin tietoihin.
 
-Nyt kun sinulla on valittuna tietue, voit poistaa siitä yksittäisiä kenttiä **.** -operaattorilla.
+Nyt kun sinulla on tietue valittuna, voit poistaa siitä yksittäisiä kenttiä käyttämällä **.** -operaattoria.
 
-1. Painamalla Esc-näppäintä voit palata oletusarvoiseen työtilaan ja lisätä sitten otsikon valikoiman alle.
+1. Palaa oletusarvoiseen työtilaan painamalla Esc-näppäintä. Lisää valikoiman alle selite.
 
-2. Määritä selitteen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-    **Gallery.Selected.Heading**
+2. Määritä selitteen **[Teksti](controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:<br>
+    **Valikoima.Valittuna.Otsikko**
    
     ![](media/working-with-tables/gallery-selected.png)
 
-Olet ottanut **Selected**-ominaisuuden, joka on tietue, ja poiminut siitä **Heading**-ominaisuuden.  
+Olet ottanut **Valittuna**-ominaisuuden, joka on tietue, ja poiminut siitä **Otsikko**-ominaisuuden.  
 
-Voit myös käyttää tietuetta yleiskäyttöisenä säilönä liittyville nimetyille arvoille.
+Voit myös käyttää tietueita yleiskäyttöisenä säilönä valikoimaan liittyville nimetyille arvoille.
 
-* Jos luot kaavan funktioiden **[UpdateContext](functions/function-updatecontext.md)** ja **[Navigate](functions/function-navigate.md)** ympärille, kerää päivitettävät [kontekstimuuttujat](working-with-variables.md#create-a-context-variable) tietueen avulla.
-* Käytä **[Edit form](controls/control-form-detail.md)** -ohjausobjektin **[Updates](controls/control-form-detail.md)**-ominaisuutta keräämään muutokset, jotka käyttäjä on tehnyt lomakkeeseen.
-* Käytä **[Patch](functions/function-patch.md)**-funktiota päivittämään tietolähde mutta myös yhdistämään tietueita.
+* Jos luot kaavan funktioiden **[UpdateContext](functions/function-updatecontext.md)** ja **[Navigate](functions/function-navigate.md)** ympärille, voit käyttää tietuetta keräämään [kontekstimuuttujat](working-with-variables.md#create-a-context-variable), jotka haluat päivittää.
+* Käytä **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektin **[Päivitykset](controls/control-form-detail.md)**-ominaisuutta keräämään muutokset, jotka käyttäjä on tehnyt lomakkeeseen.
+* Voit käyttää **[Patch](functions/function-patch.md)**-funktiota tietolähteen päivittämiseen, mutta myös tietueiden yhdistämiseen.
 
 Näissä tapauksissa tietue ei koskaan ollut taulukon osa.
 
 ### <a name="record-functions-and-control-properties"></a>Tietuefunktiot ja ohjausobjektien ominaisuudet
 Funktiot, jotka palauttavat tietueita:
 
-* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** – Palauttaa taulukon ensimmäisen tai viimeisen N-tietueen.
-* **[Lookup](functions/function-filter-lookup.md)** – Palauttaa ensimmäisen tietueen taulukosta, joka vastaa yhtä tai useampia ehtoja.
+* **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** – Palauttaa taulukon ensimmäisen tai viimeisen tietueen/tietueet.
+* **[Lookup](functions/function-filter-lookup.md)** – Palauttaa ensimmäisen tietueen taulukosta, joka vastaa yhtä tai useampaa kriteeriä.
 * **[Patch](functions/function-patch.md)** – Päivittää tietolähteen tai yhdistää tietueita.
 * **[Defaults](functions/function-defaults.md)** – Palauttaa tietolähteelle oletusarvot.
 
 Ominaisuudet, jotka palauttavat tietueita:
 
-* **Selected** – Koskee valikoimia ja luetteloruutuja. Palauttaa valittuna olevan tietueen.
-* **Updates** – Koskee valikoimia.  Tuo yhteen kaikki muutokset, jotka käyttäjä tekee tietolomakkeeseen.
-* **[Update](functions/function-update-updateif.md)** – Koskee syöteohjausobjekteja, kuten tekstisyötteen ohjausobjekteja ja liukusäätimiä. Määrittää yksittäiset ominaisuudet valikoimalle tietojen kokoamiseksi.
+* **Valittuna** – Koskee valikoimia ja luetteloruutuja. Palauttaa valittuna olevan tietueen.
+* **Päivitykset** – Koskee valikoimia.  Tuo yhteen kaikki muutokset, jotka käyttäjä tekee tietolomakkeeseen.
+* **[Päivitä](functions/function-update-updateif.md)** – Koskee syöteohjausobjekteja, kuten tekstisyötteen ohjausobjekteja ja liukusäätimiä. Määrittää valikoimalle yksittäiset ominaisuudet, joiden mukaan tiedot kootaan yhteen.
 
-## <a name="record-scope"></a>Tietueen laajuus
+## <a name="record-scope"></a>Tietueen vaikutusalue
 Jotkin toiminnot toimivat arvioimalla kaavan kaikissa taulukon tietueissa erikseen.  Kaavan tulosta käytetään eri tavoin:  
 
-* **Filter**, **Lookup** – Kaava määrittää, sisällytetäänkö tietue tulokseen.
-* **Sort** – Kaava antaa arvon, jonka mukaan tietueita lajitellaan.
-* **Concat** – Kaava määrittää merkkijonot, jotka yhdistetään.
-* **ForAll** – Kaava voi palauttaa minkä tahansa arvon mahdollisen sivuvaikutuksen kanssa.
-* **Distinct** – Kaava palauttaa arvon, jolla tunnistetaan tietueiden kaksoiskappaleet.  
-* **AddColumns** – Kaava antaa lisätyn kentän arvon.
-* **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** – Kaava antaa koostearvon.
+* **Filter**, **Lookup** – määrittää, sisällytetäänkö tietue tulokseen.
+* **Sort** – antaa arvon, jonka mukaan tietueita lajitellaan.
+* **Concat** – määrittää merkkijonot, jotka yhdistetään.
+* **ForAll** – voi palauttaa minkä tahansa arvon, ja sillä voi olla jokin sivuvaikutus.
+* **Distinct** – palauttaa arvon, jolla tunnistetaan tietueiden kaksoiskappaleet.  
+* **AddColumns** – antaa lisätyn kentän arvon.
+* **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** – nämä määritteet antavat koostearvon.
 
-Näissä kaavoissa voidaan viitata käsiteltäviin tietueen kenttiin.  Kaikki nämä funktiot luovat ”tietueen vaikutusalueen”, jossa kaava lasketaan, tietueen kenttien ollessa käytettävissä ylimmän tason tunnisteina.  Voit myös viitata ohjausobjektin ominaisuuksiin ja muihin arvoihin sovelluksesi eri osista.
+Näiden kaavojen sisällä voit viitata käsiteltävänä olevan tietueen kenttiin.  Kaikki nämä funktiot luovat ”tietueen vaikutusalueen”, jossa kaava lasketaan ja tietueen kentät ovat käytettävissä ylimmän tason tunnisteina.  Voit myös viitata ohjausobjektin ominaisuuksiin ja muihin arvoihin, jotka sijaitsevat sovelluksesi eri osissa.
 
-Katsotaan esimerkiksi **Products**-taulukkoa:
+Katsotaan esimerkiksi **Tuotteet**-taulukkoa:
 
 ![](media/working-with-tables/requested.png)
 
 Määritä, pyydettiinkö mitään näitä tuotteita enemmän kuin niitä oli saatavana:
 
-**Filter( Products, 'Quantity Requested' > 'Quantity Available' )**
+**Filter( Tuotteet, 'Pyydetty määrä' > 'Käytettävissä oleva määrä' )**
 
-Ensimmäinen suodatuksen **Filter**-argumentti on käsiteltävä tietueiden taulukko, ja toinen argumentti on kaava.  **Filter** luo tietueen laajuuden kaavan arvioimista varten, missä käytettävissä ovat jokaisen tietueen kentät, tässä tapauksessa **Product**, **Quantity Requested** ja **Quantity Available**.  Vertailun tulos määrittää, sisällytetäänkö jokainen tietue funktion tulokseen:
+**Filter**-kaavan ensimmäinen argumentti on käsiteltävänä oleva tietuetaulukko, ja toinen argumentti on kaava.  **Filter**-kaava luo tietueen vaikutusalueen, jonka perusteella määritetään tämä kaava, jossa kunkin tietueen kentät ovat käytettävissä. Tässä tapauksessa näitä kenttiä ovat **Tuote**, **Pyydetty määrä** ja **Käytettävissä oleva määrä**.  Vertailun tulos määrittää, sisällytetäänkö kukin tietue funktion tulokseen:
 
 ![](media/working-with-tables/needed.png)
 
-Laajennetaan esimerkkiä laskemalla, paljonko kutakin tuotetta tilataan:
+Laajennetaan esimerkkiä laskemalla, kuinka paljon kutakin tuotetta on tilattava:
 
-**AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' )**
+**AddColumns( Filter( Tuotteet, 'Pyydetty määrä' > 'Käytettävissä oleva määrä' ), "Tilattava määrä", 'Pyydetty määrä' - 'Käytettävissä oleva määrä' )**
 
-Tässä lisäämme lasketun sarakkeen tulokseen.  **AddColumns**illa on oma tietuealueensa, jolla se laskee pyydettyjen ja saatavana olevien tuotteiden välisen eron.
+Tässä lisäämme lasketun sarakkeen tulokseen.  **AddColumns**-ominaisuudella on oma tietuealueensa, jonka mukaan se laskee pyydettyjen ja saatavana olevien tuotteiden välisen eron.
 
 ![](media/working-with-tables/toorder.png)
 
 Lopuksi voimme pienentää tulostaulukkoa niin, että se sisältää vain haluamamme sarakkeet:
 
-**ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+**ShowColumns( AddColumns( Filter( Tuotteet, 'Pyydetty määrä' > 'Käytettävissä  oleva määrä' ), "Tilattava määrä", 'Pyydetty määrä' - 'Käytettävissä oleva määrä' ), "Tuote", "Tilattava määrä" )**
 
 ![](media/working-with-tables/toorderonly.png)
 
-Huomaa, että käytämme edellä toisinaan lainausmerkkejä (”) ja toisinaan heittomerkkejä (').  Heittomerkkejä on käytettävä, kun viitataan objektin arvoon, kuten kenttään tai taulukkoon, kun objektin nimessä on välilyönti.  Lainausmerkkejä käytetään, kun emme viittaa objektin arvoon, vaan sen sijaan keskustelemme siitä. Tämä koskee erityisesti tilanteita, joissa objektia ei vielä ole, kuten **AddColumns**in yhteydessä.  
+Huomaa, että käytämme edellä toisinaan lainausmerkkejä (") ja toisinaan heittomerkkejä (').  Heittomerkkejä on käytettävä, kun viitataan objektin arvoon, kuten kenttään tai taulukkoon, jossa objektin nimessä on välilyönti.  Lainausmerkkejä käytetään, kun emme viittaa objektin arvoon, vaan sen sijaan keskustelemme siitä. Tämä koskee erityisesti tilanteita, joissa objektia ei vielä ole, kuten **AddColumns**-määritteen yhteydessä.  
 
 ### <a name="disambiguation"></a>Selvitys
-Tietuealueen kanssa lisätyt kentän nimet ohittavat samat nimet muualta sovelluksesta.  Kun näin tapahtuu, voit edelleen käyttää arvoja tietuealueen ulkopuolelta käyttämällä [**@** selvitysoperaattoria](functions/operators.md):
+Tietuealueen kanssa lisättyjen kenttien nimet ohittavat samat nimet, jotka ovat peräisin muualta sovelluksesta.  Kun näin tapahtuu, voit edelleen käyttää arvoja tietuealueen ulkopuolelta käyttämällä [**@** selvitysoperaattoria](functions/operators.md):
 
-* Voit käyttää sisäkkäisten tietuealueiden arvoja **@** -operaattorin avulla ja käytettävän taulukon nimeä mallin ***Table *[@* FieldName*]** avulla.  
-* Voit käyttää yleisiä arvoja, kuten tietolähteitä, kokoelmia ja kontekstimuuttujia, mallin **[@*ObjectName*]** avulla (ilman taulukon nimeä).
+* Voit käyttää sisäkkäisten tietuealueiden arvoja käyttämällä **@** -operaattoria siten, että käsiteltävänä olevan taulukon nimi esitetään mallin ***Table *[@* FieldName*]** mukaisesti.  
+* Voit käyttää yleisiä arvoja, kuten tietolähteitä, kokoelmia ja kontekstimuuttujia, esittämällä ne mallin **[@*ObjectName*]** mukaisesti (ilman taulukon määritystä).
 
-Jos käsiteltävä taulukko on lauseke, kuten **Filter( *table*, ... )**, selvitysoperaattoria ei voi käyttää.  Vain sisin tietuealue voi käyttää kenttiä tästä taulukkolausekkeesta ilman selvitysoperaattoria.
+Jos käsiteltävä taulukko on lauseke, kuten **Filter( *taulukko*, ... )**, selvitysoperaattoria ei voi käyttää.  Vain sisin tietuealue voi käyttää kenttiä tästä taulukkolausekkeesta ilman selvitysoperaattoria.
 
 Kuvitellaan esimerkiksi kokoelma **X**:
 
 ![](media/working-with-tables/X.png)
 
-Voit luoda tämän kokoelman käyttämällä **ClearCollect( X, \[1, 2\] )**.
+Voit luoda tämän kokoelman käyttämällä kaavaa **ClearCollect( X, \[1, 2\] )**.
 
-Ja toisen kokoelman **Y**:
+Ja toinen kokoelma **Y**:
 
 ![](media/working-with-tables/Y.png)
 
-Voit luoda tämän kokoelman käyttämällä **ClearCollect( Y, ["A", "B"] )**.
+Voit luoda tämän kokoelman käyttämällä kaavaa **ClearCollect( Y, ["A", "B"] )**.
 
-Määritä lisäksi kontekstimuuttuja nimeltä **Value** tällä kaavalla: **UpdateContext( {Value: "!"} )**
+Määritä lisäksi kontekstimuuttuja, jonka nimi on **Arvo**, käyttämällä  tätä kaavaa: **UpdateContext( {Arvo: "!"} )**
 
-Kootaan sitten kaikki tiedot yhteen.  Tässä kontekstissa seuraava kaava:
+Kootaan nyt kaikki tiedot yhteen.  Tässä kontekstissa seuraava kaava:
 
-* **Ungroup( ForAll( X, ForAll( Y, Y[@Value] & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+* **Ungroup( ForAll( X, ForAll( Y, Y[@Value] & Teksti( X[@Value] ) & [@Value] ) ), "Arvo" )**
 
 tuottaa tämän taulukon:
 
 ![](media/working-with-tables/XY.png)
 
-Mitä tapahtui?  Uloin **ForAll**-funktio määrittää tietuealueen **X**:lle myöntäen käyttöoikeuden kunkin tietueen **Value**-kenttään, kun niitä käsitellään.  Sitä voidaan käyttää yksinkertaisesti sanalla **Value** tai tekstillä **X[@Value]**.
+Mitä tapahtui?  Uloin **ForAll**-funktio määrittää tietuealueen **X**:lle ja antaa käyttöoikeuden kunkin tietueen **Arvo**-kenttään, kun niitä käsitellään.  Se voidaan ottaa käyttöön sanalla **Arvo** tai tekstillä **X[@Value]**.
 
-Sisin **ForAll**-funktio määrittää toisen tietuealueen **Y**:lle.  Koska tässä taulukossa on myös määritetty **Value**-kenttä, **Value**-kentän käyttäminen tässä viittaa kenttään **Y**:n tietueessa eikä enää **X**:n tietueessa.  Jotta **X**:n **Value**-kenttää voidaan käyttää, joudumme käyttämään pidempää versiota ja selvitysoperaattoria.
+Sisin **ForAll**-funktio määrittää toisen tietuealueen **Y**:lle.  Koska myös tässä taulukossa on määritettynä **Arvo**-kenttä, **Arvo**-kentän käyttäminen tässä viittaa **Y**:n tietueessa olevaan kenttään eikä enää **X**:n tietueessa olevaan kenttään.  Voidaksemme käyttää **X**:n **Arvo**-kenttää meidän on käytettävä pidempää versiota ja selvitysoperaattoria.
 
-Koska **Y** on alueen sisin tietue, tämän taulukon tietuiden käyttämiseen ei tarvita selvitystä. Näin ollen voimme käyttää tätä kaavaa ja samaa tulosta:
+Koska **Y** on alueen sisin tietuealue, tämän taulukon tietueiden käyttämiseen ei tarvita selvitystä. Näin ollen voimme käyttää tätä kaavaa ja samaa tulosta:
 
-* **Ungroup( ForAll( X, ForAll( Y, Value & Text( X[@Value] ) & [@Value] ) ), "Value" )**
+* **Ungroup( ForAll( X, ForAll( Y, Arvo & Teksti( X[@Value] ) & [@Value] ) ), "Arvo" )**
 
-Kaikki **ForAll**-tietuealueet ohittavat yleisen vaikutusalueen.  Määrittämämme **Value**-kontekstimuuttuja ei ole käytettävissä nimen mukaan ilman selvennysoperaattoria.   Jotta voimme käyttää tätä arvoa, joudumme käyttämään tekstiä **[@Value]**.
+Kaikki **ForAll**-tietuealueet ohittavat yleisen vaikutusalueen.  Määrittämämme **Arvo**-kontekstimuuttuja ei ole käytettävissä nimen perusteella ilman selvennysoperaattoria.   Jotta voimme käyttää tätä arvoa, joudumme käyttämään määritystä **[@Value]**.
 
 **Ungroup** tasoittaa tuloksen, koska sisäkkäiset **ForAll**-funktiot tuottavat sisäkkäisen tulostaulukon.
 
 ## <a name="inline-syntax"></a>Sisäinen syntaksi
 ### <a name="records"></a>Tietueet
-Tietueita voidaan ilmaista aaltosulkeilla, jotka sisältävät nimetyt kenttäarvot.  Voit esimerkiksi ilmaista ohjeaiheen alussa taulukon ensimmäisen tietueen käyttämällä seuraavaa kaavaa:
+Tietueita ilmaistaan aaltosulkeilla, jotka sisältävät nimetyt kenttäarvot.  Voit esimerkiksi ilmaista tämän ohjeaiheen alussa olevan taulukon ensimmäisen tietueen käyttämällä seuraavaa kaavaa:
 
-**{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }**
+**{ Nimi: "Suklaa", Hinta: 3.95, 'Käytettävissä oleva määrä': 12, 'Tilattu määrä': 10 }**
 
-Voit myös upottaa kaavoja muihin kaavoihin, kuten tässä esimerkissä näytetään:
+Voit myös upottaa kaavoja muihin kaavoihin tämän esimerkin mukaan:
 
-**{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }**
+**{ Nimi: First(Tuotteet).Nimi, Hinta: First(Tuotteet).Hinta * 1.095 }**
 
-Voit sijoittaa tietueita sisäkkäin käyttämällä aaltosulkeita sisäkkäin, kuten tässä esimerkissä näytetään:
+Voit sijoittaa tietueita sisäkkäin käyttämällä aaltosulkeita sisäkkäin tämän esimerkin mukaisesti:
 
-**{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }**
+**{ 'Määrä': { 'Saatavana': ThisItem.QuantOnHand, 'Tilattuna': ThisItem.QuantOnOrder } }**
 
-Lisää jokaisen sarakkeen nimi, joka sisältää erikoismerkin, kuten välilyönnin tai kaksoispisteen, heittomerkkien sisään.  Kun haluat käyttää heittomerkkiä sarakkeen nimen sisällä, tuplaa se.
+Lisää heittomerkkien sisään jokainen sarakkeen nimi, joka sisältää erikoismerkin, kuten välilyönnin tai kaksoispisteen.  Kun haluat käyttää heittomerkkiä sarakkeen nimen sisällä, tuplaa se.
 
-Huomaa, että arvo **Price**-sarakkeessa ei sisällä valuuttasymbolia, kuten dollarimerkkiä. Kyseinen muotoilu otetaan käyttöön, kun arvo näytetään.  
+Huomaa, että **Hinta**-sarakkeessa oleva arvo ei sisällä valuuttasymbolia, kuten dollarimerkkiä. Kyseinen muotoilu otetaan käyttöön, kun arvo näytetään.  
 
 ### <a name="tables"></a>Taulukot
-Voit luoda taulukon **[Table](functions/function-table.md)**-funktiolla ja tietuejoukolla. Voit ilmaista taulukon ohjeaiheen alussa käyttämällä seuraavaa kaavaa:
+Voit luoda taulukon käyttämällä **[Table](functions/function-table.md)**-funktiota ja tietuejoukkoa. Voit ilmaista tämän ohjeaiheen alussa olevan taulukon käyttämällä seuraavaa kaavaa:
 
-**Table( { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } )**
+**Table( { Nimi: "Suklaa", Hinta: 3.95, 'Saatavana oleva määrä': 12, 'Tilattu määrä': 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Nimi: "Leipä", Hinta: 4.95, 'Saatavana oleva määrä': 34, 'Tilattu määrä': 0 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Nimi: "Vesi", Hinta: 4.95, 'Saatavana oleva määrä': 10, 'Tilattu määrä': 0 } )**
 
-Voit myös asettaa taulukoita sisäkkäin:
+Voit myös asettaa taulukkoja sisäkkäin:
 
-**Table( { Name: "Chocolate",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) } )**
+**Table( { Nimi: "Suklaa",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Määrähistoria': Table( { N: "Q1", OnHand: 10, OnOrder: 10 },<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) } )**
 
 ### <a name="value-tables"></a>Arvotaulukot
-Voit luoda yhden sarakkeen taulukoita määrittämällä arvot hakasulkeisissa. Tuloksena saatavassa taulukossa on yksittäinen sarake nimeltä **Value**.
+Voit luoda yksisarakkeisia taulukkoja määrittämällä arvot hakasulkeisissa. Tuloksena saatavassa taulukossa on yksittäinen sarake, jonka nimi on **Arvo**.
 
-Esimerkiksi **[ 1, 2, 3, 4 ]** vastaa kaavaa **Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )** ja palauttaa tämän taulukon:
+Esimerkiksi **[ 1, 2, 3, 4 ]** vastaa kaavaa **Table( { Arvo: 1 }, { Arvo: 2 }, { Arvo: 3 }, { Arvo 4 } )** ja palauttaa tämän taulukon:
 
 ![](media/working-with-tables/inline-table.png)
 

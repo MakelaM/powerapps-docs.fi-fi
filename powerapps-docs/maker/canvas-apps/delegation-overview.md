@@ -1,43 +1,41 @@
 ---
 title: Tutustu delegointiin | Microsoft Docs
 description: Delegoinnin avulla voidaan käsitellä suuria tietomääriä tehokkaasti.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/27/2018
 ms.author: gregli
-ms.openlocfilehash: 98cf32e1b379812e1d3175e6403b7c6fd7fb794b
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 0800adf43f5a7d74d0334e9f39216a70b9350d6d
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838052"
 ---
 # <a name="understand-delegation"></a>Tutustu delegointiin
-PowerApps sisältää tehokkaita funktioita taulukkojen tietojen suodattamiseen, lajittelemiseen ja muotoilemiseen. Joitakin näitä funktioita ovat **[Suodatin](functions/function-filter-lookup.md)**, **[Lajittele](functions/function-sort.md)** ja **[AddColumns](functions/function-table-shaping.md)**.  Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin.  Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.  
+PowerApps sisältää tehokkaita funktioita taulukkojen tietojen suodattamiseen, lajittelemiseen ja muotoilemiseen. Joitakin näistä funktioita ovat **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** ja **[AddColumns](functions/function-table-shaping.md)**.  Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin.  Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.  
 
-Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienentäminen, jota joudutaan siirtämään laitteeseesi.  Ehkä vain muutama kourallinen tietueita miljoonien joukosta tarvitaan, tai yksittäinen koostearvo voi edustaa tuhansia tietueita.  Tai ehkä vain ensimmäinen tietuejoukko voidaan hakea ja muut tuoda, kun käyttäjä ilmoittaa tarvitsevansa lisää.  Keskittyneisyys voi huomattavasti pienentää sovelluksen tarvitsemaa käsittelytehoa, muistia ja verkon kaistanleveyttä. Tästä on tuloksena nopeammat reaktioajat käyttäjillesi jopa matkapuhelinverkon kautta liitetyissä puhelimissa.  
+Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienentäminen, jota joudutaan siirtämään laitteeseesi.  Ehkä vain muutama kourallinen tietueita miljoonien joukosta tarvitaan, tai yksittäinen koostearvo voi edustaa tuhansia tietueita.  Tai ehkä vain ensimmäinen tietuejoukko voidaan hakea ja muut tuoda, kun käyttäjä ilmoittaa tarvitsevansa lisää.  Keskittyneisyys voi huomattavasti pienentää sovelluksen tarvitsemaa käsittelytehoa, muistia ja verkon kaistanleveyttä. Tämän ansiosta käyttäjiesi kokemat vasteajat lyhenevät jopa matkapuhelinverkon kautta liitetyissä puhelimissa.  
 
 *Delegoinnissa* yhdistyvät PowerApps-kaavojen ilmaisukyky ja tarve rajoittaa verkon kautta siirrettäviä tietoja.  Lyhyesti sanottuna se tarkoittaa sitä, että PowerApps delegoi tietojen käsittelyn tietolähteeseen sen sijaan, että tiedot siirretään sovellukseen käsiteltäväksi paikallisesti.  
 
-Tässä asia monimutkaistuu, ja juuri tästä syystä tämä artikkeli on olemassa, sillä kaikkea, mitä voidaan ilmaista PowerApps-kaavassa, ei voida delegoida jokaiseen tietolähteeseen.  PowerApps-kieli imitoi Excelin kaavakieltä, johon sisältyy täydellinen ja välitön käyttöoikeus muistissa olevaan täydelliseen työkirjaan monine erilaisine numeron- ja tekstinkäsittelyfunktioineen.  Näin ollen PowerApps-kieli on monin verroin monipuolisempi kuin mitä useimmat tietolähteet voivat tukea, ja siihen kuuluvat tehokkaat tietokantamoduulit, kuten SQL Server.
+Tässä asia monimutkaistuu, ja juuri tästä syystä tämä artikkeli on olemassa: kaikkea, mitä voidaan ilmaista PowerApps-kaavassa, ei voida delegoida jokaiseen tietolähteeseen.  PowerApps-kieli imitoi Excelin kaavakieltä, johon sisältyy täydellinen ja välitön käyttöoikeus muistissa olevaan täydelliseen työkirjaan monine erilaisine numeron- ja tekstinkäsittelyfunktioineen.  Näin ollen PowerApps-kieli on monin verroin monipuolisempi kuin mitä useimmat tietolähteet voivat tukea, ja siihen kuuluvat tehokkaat tietokantamoduulit, kuten SQL Server.
 
-**Suurien tietomäärien käyttäminen edellyttää delegoitavien tietolähteiden ja kaavojen käyttöä.**  Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemansa tietoja. Ota huomioon [sinisellä pisteellä merkityt ehdotukset](delegation-overview.md#blue-dot-suggestions), jotka ilmoittavat paikat, joissa delegointia ei voi tehdä.  Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä käsittely voidaan tehdä paikallisesti, jos kaavaa ei voi delegoida. 
+**Suurien tietomäärien käyttäminen edellyttää delegoitavien tietolähteiden ja kaavojen käyttöä.**  Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiansa tietoja. Ota huomioon [sinisellä pisteellä merkityt ehdotukset](delegation-overview.md#blue-dot-suggestions), jotka ilmoittavat paikat, joissa delegointia ei voi tehdä.  Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä käsittely voidaan tehdä paikallisesti, jos kaavaa ei voi delegoida. 
 
 ## <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
-Katso [delegointiluettelosta](delegation-list.md) täydellistä luetteloa tietolähteistä, jotka tukevat delegointia ja sen laajuutta.
+Katso [delegointiluettelosta](delegation-list.md) täydellinen luettelo tietolähteistä, jotka tukevat delegointia, ja tuetun delegoinnin laajuus.
 
-Lisäämme jatkuvasti delegointitukea olemassa oleviin tietolähteisiin ja lisäämme tietolähteitä.
+Lisäämme jatkuvasti delegointitukea olemassa oleviin tietolähteisiin. Lisäämme myös tietolähteitä.
 
-Tuodut Excel-työkirjat (lisää staattista tietoa sovellukseen -tietolähteellä), kokoelmat ja taulukot, jotka on tallennettu kontekstimuuttujiin, eivät edellytä delegointia. Kaikki nämä tiedot ovat jo muistissa ja koko PowerApps-kieltä voidaan soveltaa.
+(Lisää staattista tietoa sovellukseen -tietolähteen avulla) tuodut Excel-työkirjat, kokoelmat ja taulukot, jotka on tallennettu kontekstimuuttujiin, eivät edellytä delegointia. Kaikki nämä tiedot ovat jo muistissa, ja koko PowerApps-kieltä voidaan soveltaa.
 
 ## <a name="delegable-functions"></a>Delegoitavat funktiot
 Seuraava vaihe on vain delegoitavien kaavojen käyttäminen. Tässä ovat kaavan osat, jotka voidaan delegoida.  Jokainen tietolähde on kuitenkin erilainen, eivätkä ne kaikki tue kaikkia näitä elementtejä. Tarkista sinisellä pisteellä merkityt ehdotukset kaavassasi.
@@ -47,7 +45,7 @@ Nämä luettelot muuttuvat ajan myötä. Pyrimme tukemaan delegoinnilla useampia
 ### <a name="filter-functions"></a>Suodatustoiminnot
 **[Filter](functions/function-filter-lookup.md)**, **[Search](functions/function-filter-lookup.md)** ja **[LookUp](functions/function-filter-lookup.md)** voidaan delegoida.  
 
-**Filter**- ja **LookUp**-funktioissa voidaan käyttää seuraavia termejä valitsemaan tarvittavia tietueita taulukon sarakkeilla:
+**Filter**- ja **LookUp**-funktioissa voidaan käyttää seuraavia termejä tarvittavien tietueiden valitsemiseen taulukon sarakkeista:
 
 * **[And](functions/function-logicals.md)** (mukaan lukien **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (mukaan lukien **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (mukaan lukien **[!](functions/operators.md)**)
 * **[In](functions/operators.md)**
@@ -79,7 +77,7 @@ Joitakin huomionarvoisia kohteita puuttuu yllä olevasta luettelosta:
 ### <a name="aggregate-functions"></a>Koostefunktiot
 **[Sum](functions/function-aggregates.md)**, **[Average](functions/function-aggregates.md)**, **[Min](functions/function-aggregates.md)** ja **[Max](functions/function-aggregates.md)** voidaan delegoida.  Vain rajoitettu tietolähteiden määrä tukee tätä delegointia tällä hetkellä. Katso lisätietoja [delegointiluettelosta](delegation-list.md).
 
-Laskentafunktioita, kuten **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)** and **[Count](functions/function-table-counts.md)**, ei voi delegoida.
+Laskentafunktioita, kuten **[CountRows](functions/function-table-counts.md)**, **[CountA](functions/function-table-counts.md)** ja **[Count](functions/function-table-counts.md)**, ei voi delegoida.
 
 Muita koostefunktioita, kuten **[StdevP](functions/function-aggregates.md)** ja **[VarP](functions/function-aggregates.md)**, ei voi delegoida.
 
@@ -119,33 +117,33 @@ Joissakin tapauksissa tiedät, että 2000 (tai 1000 tai 1500) on riittävä tila
 Jotta sovellus voi skaalautua suuriin tietomääriin, pienennä tämä asetus arvoon 1.  Kaikki, mitä ei voi delegoida, palauttaa nyt vain yhden tietueen, joka on helppo tunnistaa sovellusta testattaessa.  Tämä voi auttaa estämään yllätyksiä yritettäessä ottaa soveltuvuusselvityssovellusta käyttöön.
 
 ## <a name="blue-dot-suggestions"></a>Sinisellä pisteellä merkityt ehdotukset
-Muokkausominaisuus tarjoaa sinisillä pisteillä merkityillä ehdotuksilla helpon tavan tietää, mitä delegoidaan ja mitä ei, kun kaavassa on jotakin, mitä ei voi delegoida.
+Muokkausominaisuus tarjoaa sinisillä pisteillä merkittyjä ehdotuksia sen erottamiseen, mitä delegoidaan ja mitä ei, kun kaavassa on jotakin, mitä ei voi delegoida.
 
 Siniset pisteet näytetään vain kaavoissa, jotka toimivat delegoitavissa tietolähteissä.  Jos et näe sinistä pistettä ja uskot, että kaavaa ei ole delegoitu oikein, vertaa tietolähdetyyppiä edellä olevaan <a href="#delegable-data-sources">delegoitavien tietolähteiden</a> luetteloon.
 
 ## <a name="examples"></a>Esimerkkejä
-Tässä esimerkissä käytämme SQL Server -taulukkoa, joka sisältää tuotteita, tässä tapauksessa hedelmien nimiä **[dbo].[Products]**.  Uudessa näytössä PowerApps voi luoda kolmen näytön perussovelluksen yhdistettynä tähän tietolähteeseen:
+Tässä esimerkissä käytämme SQL Server -taulukkoa **[dbo].[Products]**, joka sisältää tuotteita, tässä tapauksessa hedelmien nimiä.  Uudessa näytössä PowerApps voi luoda kolmen näytön perussovelluksen, joka on yhdistetty tähän tietolähteeseen:
 
 ![Kolmen näytön sovellus](./media/delegation-overview/products-afd.png)
 
 Huomaa kaava valikoiman **Kohteet**-ominaisuudelle.  Se käyttää **SortByColumns**- ja **Search**-funktioita, jotka molemmat voidaan delegoida.
 
-Kirjoitetaan **”Apple”** haun tekstisyötteen ohjausobjektiin.  Jos olet tarkkaavainen, näet liikkuvia pisteitä näytön yläosassa hetken ajan, kun uuden haun uutta tietoa käsitellään.  Liikkuvat pisteet ilmaisevat kommunikoinnin SQL Serverin kanssa:
+Kirjoitetaan **Apple** haun tekstisyötteen ohjausobjektiin.  Jos olet tarkkaavainen, näet liikkuvia pisteitä näytön yläosassa hetken ajan, kun uuden haun uutta tietoa käsitellään.  Liikkuvat pisteet ilmaisevat kommunikointia SQL Serverin kanssa:
 
 ![Haun tekstisyötteen ohjausobjekti](./media/delegation-overview/products-apple.png)
 
 Koska tämä on kaikki delegoitavissa, vaikka **[dbo].[Products]**-taulukko sisältäisi miljoonia tietueita, löydämme ne kaikki käymällä sivuja läpi valikoimassa käyttäjän selatessa tuloksia.
 
-Huomioi, että näemme osuman sekä termille ”Apple” että termille ”Pineapple”.  **Search**-funktio löytää hakutermin tekstisarakkeen mistä tahansa kohdasta.  Jos kuitenkin haluamme löytää esimerkiksi hakutermin vain hedelmän nimen alussa,  voimme käyttää toista delegoitavaa funktiota **Filter** ja monimutkaisempaa hakutermiä (yksinkertaisuuden vuoksi poistamme **SortByColumns**-kutsun):
+Huomaa, että näemme osuman sekä termille ”Apple” että termille ”Pineapple”.  **Search**-funktio löytää hakutermin tekstisarakkeen mistä tahansa kohdasta.  Jos kuitenkin haluamme löytää esimerkiksi hakutermin vain hedelmän nimen alussa,  voimme käyttää toista delegoitavaa funktiota **Filter** ja monimutkaisempaa hakutermiä (yksinkertaisuuden vuoksi poistamme **SortByColumns**-kutsun):
 
-![Remove SortByColumns -kutsu](./media/delegation-overview/products-apple-bluedot.png)
+![Poistetaan SortByColumns-kutsu](./media/delegation-overview/products-apple-bluedot.png)
 
-Tämä näyttää toimivan: vain **”Apples”** näkyy nyt oikein ja **”Pineapple”** ei.  Valikoiman vieressä näkyy kuitenkin sininen piste, ja osa kaavasta on alleviivattu sinisellä aaltoviivalla.  Sininen piste näkyy jopa näytön pikkukuvassa.  Jos pidämme kohdistinta valikoiman vieressä olevan sinisen pisteen päällä, seuraava teksti tulee näkyviin:
+Tämä näyttää toimivan: vain **”Apples”** näkyy nyt, kuten pitääkin, ja **”Pineapple”** ei.  Valikoiman vieressä näkyy kuitenkin sininen piste, ja osa kaavasta on alleviivattu sinisellä aaltoviivalla.  Sininen piste näkyy jopa näytön pikkukuvassa.  Jos pidämme kohdistinta valikoiman vieressä olevan sinisen pisteen päällä, seuraava teksti tulee näkyviin:
 
 ![Kohdistin sinisen pisteen päällä](./media/delegation-overview/products-apple-bluepopup.png)
 
 Vaikka käytämme delegoitavaa **Filter**-funktiota SQL Serverin kanssa, joka on delegoitava tietolähde, funktiossa **Filter** käyttämämme kaava ei ole delegoitava.  Funktioita **Mid** ja **Len** ei voi delegoida mihinkään tietolähteeseen.
 
-Mutta se toimi, eikö toiminutkin?  Tavallaan.  Tästä syystä näemme sinisen pisteen keltaisen vaarakuvakkeen ja punaisen aaltoviivavirheen sijasta.  Jos **[dbo].[Products]**-taulukko sisältää alle 500 tietuetta, sitten tämä toimi täydellisesti.   Kaikki tietueet tuotiin laitteeseen ja funktiota **Filter** sovellettiin paikallisesti.  
+Mutta se toimi, eikö toiminutkin?  Tavallaan.  Tästä syystä näemme sinisen pisteen keltaisen vaarakuvakkeen ja punaisen aaltoviivavirheen sijasta.  Jos **[dbo].[Products]**-taulukko sisältää alle 500 tietuetta, tämä toimi täydellisesti.   Kaikki tietueet tuotiin laitteeseen ja funktiota **Filter** sovellettiin paikallisesti.  
 
-Jos sen sijaan tämä taulukko sisältää enemmän kuin 500 tietuetta, vain ne hedelmät *taulukon ensimmäisten 500 tietueen joukossa*, jotka alkavat sanalla **”Apple”**, näytetään valikoimassa.  Jos **”Apple, Fuji”** näkyy nimessä tietueessa 501 tai 500 001, sitä ei löydetä.
+Jos tämä taulukko sen sijaan sisältää enemmän kuin 500 tietuetta, vain ne hedelmät *taulukon ensimmäisten 500 tietueen joukossa*, jotka alkavat **Apple**, näytetään valikoimassa.  Jos **Apple, Fuji** on tietueen 501 tai 500 001 nimi, sitä ei löydetä.

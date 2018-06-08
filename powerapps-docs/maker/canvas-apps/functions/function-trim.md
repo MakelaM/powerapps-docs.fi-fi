@@ -1,28 +1,26 @@
 ---
 title: Trim- ja TrimEnds-funktiot | Microsoft Docs
 description: PowerAppsin Trim- ja TrimEnds-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkki
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 09/09/2016
 ms.author: gregli
-ms.openlocfilehash: 7dc9372071b905cf2b95f7355864276d8f344d9c
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 38aa25c46bf8b29c413ca9c3df92f9528bfa97d5
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31831117"
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Trim- ja TrimEnds-funktiot PowerAppsissa
-Poistaa ylimääräiset välilyönnit tekstimerkkijonosta.
+Poistavat ylimääräiset välilyönnit tekstimerkkijonosta.
 
 ## <a name="description"></a>Kuvaus
 **Trim**-funktio poistaa tekstimerkkijonosta kaikki välilyönnit lukuun ottamatta yksittäisiä välejä sanojen välillä.  
@@ -31,28 +29,28 @@ Poistaa ylimääräiset välilyönnit tekstimerkkijonosta.
 
 Jos määrität yksittäisen tekstimerkkijonon, molempien funktioiden palautusarvo on merkkijono, josta on poistettu kaikki ylimääräiset välilyönnit. Jos määrität yksisarakkeisen, merkkijonoja sisältävän [taulukon](../working-with-tables.md), palautusarvo on yksisarakkeinen taulukko, joka sisältää merkkijonoja, joista on poistettu välilyönnit. Jos käytät monisarakkeista taulukkoa, voit muokata sen yksisarakkeiseksi taulukoksi kohdan [taulukoiden käyttö](../working-with-tables.md) mukaan.
 
-Sanojen välisiä välilyöntejä poistava **Trim**-funktio on yhdenmukainen on samannimisen Microsoft Excelin funktion kanssa. **TrimEnds**-funktio on kuitenkin yhdenmukainen sellaisten ohjelmointityökalujen kanssa, jotka poistavat välilyöntejä vain kunkin merkkijonon alusta ja lopusta.
+Sanojen välisiä välilyöntejä poistava **Trim**-funktio on yhdenmukainen samannimisen Microsoft Excelin funktion kanssa. **TrimEnds**-funktio on kuitenkin yhdenmukainen sellaisten ohjelmointityökalujen kanssa, jotka poistavat välilyöntejä vain kunkin merkkijonon alusta ja lopusta.
 
 ## <a name="syntax"></a>Syntaksi
-**Trim**( *Merkkijono* )<br>**TrimEnds**( *Merkkijono* )
+**Trim**( *String* )<br>**TrimEnds**( *String* )
 
 * *String* – Pakollinen. Tekstimerkkijono, josta välilyönnit poistetaan.
 
-**Trim**( *YksiSarakkeinenTaulukko* )<br>**TrimEnds**( *YksiSarakkeinenTaulukko* )
+**Trim**( *SingleColumnTable* )<br>**TrimEnds**( *SingleColumnTable* )
 
-* *YksiSarakkeinenTaulukko* – pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista poistetaan välilyöntejä.
+* *SingleColumnTable* – pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista poistetaan välilyöntejä.
 
 ## <a name="example"></a>Esimerkki
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maailma&nbsp;&nbsp;&nbsp;"&nbsp;)** |Poistaa kaikki välilyönnit merkkijonon alusta ja lopusta sekä ylimääräiset välilyönnit merkkijonon sisältä. |”Hei maailma” |
-| **TrimEnds(&nbsp;"&nbsp;&nbsp;&nbsp;Hei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maailma&nbsp;&nbsp;&nbsp;"&nbsp;)** |Poistaa kaikki välilyönnit merkkijonon alusta ja lopusta. |”Hei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maailma” |
+| **TrimEnds(&nbsp;"&nbsp;&nbsp;&nbsp;Hei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maailma&nbsp;&nbsp;&nbsp;"&nbsp;)** |Poistaa kaikki välilyönnit merkkijonon alusta ja lopusta. |"Hei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maailma" |
 
 Seuraavissa esimerkeissä käytetään yksisarakkeista kokoelmaa, jonka nimi on **Spaces** ja joka sisältää nämä merkkijonot:
 
 ![](media/function-trim/input-strings.png)
 
-Luo tämä kokoelma määrittämällä **[painike](../controls/control-button.md)**-ohjausobjektin **OnSelect**-ominaisuudeksi tämä kaava avaamalla esikatselutila ja napsauttamalla tai napauttamalla painiketta:
+Luo tämä kokoelma määrittämällä **[Painike](../controls/control-button.md)**-ohjausobjektin **OnSelect**-ominaisuudeksi tämä kaava avaamalla esikatselutila ja napsauttamalla tai napauttamalla painiketta:
 <br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Kaava | Kuvaus | Tulos |
@@ -61,5 +59,5 @@ Luo tämä kokoelma määrittämällä **[painike](../controls/control-button.md
 | **TrimEnds(&nbsp;Spaces&nbsp;)** |Poistaa kaikki välilyönnit jokaisen merkkijonon alusta ja lopusta **Spaces**-kokoelmassa. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
 
 > [!NOTE]
-> Ylimääräiset välilyönnit eivät näy, jos näytät kokoelman napsauttamalla tai napauttamalla kohtaa **Kokoelmat** **Tiedosto**-valikossa. Voit tarkistaa merkkijonon pituuden käyttämällä **[Len](function-len.md)** funktiota.
+> Ylimääräiset välilyönnit eivät näy, jos näytät kokoelman napsauttamalla tai napauttamalla kohtaa **Kokoelmat** **Tiedosto**-valikossa. Voit tarkistaa merkkijonon pituuden käyttämällä **[Len](function-len.md)**-funktiota.
 

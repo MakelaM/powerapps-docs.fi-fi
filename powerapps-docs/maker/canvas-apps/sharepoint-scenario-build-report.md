@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 01/10/2018
 ms.author: mblythe
 ms.openlocfilehash: 4863ee2c19c17eb8afcc8913dcfb5f3831af828c
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31839104"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Power BI -raportin luominen projektien analysointiin
 > [!NOTE]
@@ -37,8 +38,8 @@ Power BI Desktopin vasemmassa reunassa on kolme näkymäkuvaketta, jotka näkyv�
 **Raportti**-näkymässä on viisi pääaluetta:
 
 1. Valintanauha, joka sisältää raportteihin ja visualisointeihin liittyviä yleisiä tehtäviä.
-2. **Raportti**-näkymä eli pohja, jossa visualisointeja luodaan ja järjestellään.
-3. Alareunassa oleva **Sivut**-välilehden alue, josta voit valita tai lisätä uuden raportin sivun.
+2. **Raportti**-näkymä eli pohja, jossa visualisointeja luodaan ja järjestellään
+3. Alareunassa oleva **Sivu**-välilehtien alue, josta voit valita tai lisätä uuden raporttisivun.
 4. **Visualisoinnit**-ruutu, jossa voit muuttaa visualisointeja, mukauttaa värejä tai akseleita, lisätä suodattimia, vetää kenttiä ja paljon muuta.
 5. **Kentät**-ruutu, jossa kyselyn elementtejä ja suodattimia voi vetää **Raportti**-näkymään tai **Visualisoinnit**-ruudun **Suodattimet**-alueelle.
 
@@ -70,7 +71,7 @@ Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poi
 1. Napsauta tai napauta Power BI Desktopin **Aloitus**-välilehdellä **Nouda tiedot** ja sitten **Lisää…**
    
     ![Nouda tiedot](./media/sharepoint-scenario-build-report/05-01-01-get-data.png)
-2. Napsauta tai napauta **Nouda tiedot** -valintaikkunassa **SharePoint Online -luettelo** ja sitten **Yhdistä**.
+2. Napsauta tai napauta **Nouda tiedot** -valintaikkunassa **SharePoint Online -luettelo** ja sitten **Muodosta yhteys**.
    
     ![Yhdistäminen SharePoint-luetteloon](./media/sharepoint-scenario-build-report/05-01-02-sharepoint-list.png)
 3. Anna SharePoint-sivustosi URL-osoite ja napsauta tai napauta **OK**.
@@ -156,9 +157,9 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
 
 5. **Luo suhde** -valintaikkunassa:
    
-   1. Valitse ensimmäiselle taulukolle **Project Requests** ja **Id**-sarake.
+   1. Valitse ensimmäisessä taulukossa **Project Requests** ja **Id**-sarake.
    
-   2. Valitse toiselle taulukolle **Projektin Tiedot** ja **RequestId**-sarake.
+   2. Valitse toisessa taulukossa **Project Details** ja **RequestId**-sarake.
    
    3. Näytön pitäisi nyt näyttää samalta kuin seuraavassa kuvassa. Kun olet valmis, napsauta tai napauta **OK** ja sitten **Sulje**.
       
@@ -185,7 +186,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
     ![Uusi sarake](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
 2. Kirjoita kaavariville seuraava kaava: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]), 1,0,7,0,1)**.
    
-    Tämä kaava määrittää, onko **päivämäärä**sarakkeessa oleva päivä arkipäivä. Jos päivämäärä on arkipäivä, **IsWeekDay**-sarake saa arvon 1; muussa tapauksessa se saa arvon 0.
+    Tämä kaava määrittää, onko **Päivämäärä**-sarakkeessa oleva päivä arkipäivä. Jos päivämäärä on arkipäivä, **IsWeekDay**-sarake saa arvon 1; muussa tapauksessa se saa arvon 0.
 3. Lisää **IsWeekDay**-sarake **Dates**-taulukkoon painamalla Enter.
    
     ![Lisää IsWeekDay-sarake](./media/sharepoint-scenario-build-report/05-02-08-column-isweekday.png)
@@ -241,7 +242,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
     ![Lisää RequestDateAge-sarake](./media/sharepoint-scenario-build-report/05-02-10-column-requestdateage.png)
 
 ### <a name="add-a-measure-to-the-project-details-table"></a>Lisää mittayksikkö Projektin tiedot -taulukkoon
-1. Napsauta tai napauta oikeassa ruudussa **Projektin tiedot** -taulukkoa ja sitten **Uusi mittayksikkö**.
+1. Napsauta tai napauta oikeassa ruudussa **Project Details** -taulukkoa ja sitten **Uusi mittari**.
    
     ![Uusi mittayksikkö](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Kirjoita kaavariville seuraava kaava:
@@ -256,13 +257,13 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
     )
     ```
    
-    Tämä kaava laskee projektin toteutuneiden ja arvioitujen päivien välisen varianssin. Lisäämme tämän mittayksikkönä emmekä laskettuna sarakkeena, joten se palauttaa oikeat tulokset riippumatta siitä, miten tiedot on suodatettu tai koostettu raporttiin.
-3. Lisää **VarProjectedActual**-mittayksikkö **Projektin tiedot** -taulukkoon painamalla Enter.
+    Tämä kaava laskee projektin toteutuneiden ja arvioitujen päivien välisen varianssin. Lisäämme tämän mittarina emmekä laskettuna sarakkeena, joten se palauttaa oikeat tulokset riippumatta siitä, miten tiedot on suodatettu tai koostettu raporttiin.
+3. Lisää **VarProjectedActual**-mittari **Project Details** -taulukkoon painamalla Enter.
    
-    ![Lisää VarProjectedActual-mittayksikkö](./media/sharepoint-scenario-build-report/05-02-11-measure-varprojectedactual.png)
+    ![Lisää VarProjectedActual-mittari](./media/sharepoint-scenario-build-report/05-02-11-measure-varprojectedactual.png)
 
 ### <a name="add-a-measure-to-the-project-requests-table"></a>Mittayksikön lisääminen Projektipyynnöt-taulukkoon
-1. Napsauta tai napauta oikeassa ruudussa **Projektipyynnöt**-taulukkoa ja sitten **Uusi mittayksikkö**.
+1. Napsauta tai napauta oikeassa ruudussa **Project Requests** -taulukkoa ja sitten **Uusi mittari**.
    
     ![Uusi mittayksikkö](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Kirjoita kaavariville seuraava kaava:
@@ -308,7 +309,7 @@ Kun olemme luoneet raportin visualisoinnit Power BI Desktopissa, julkaisemme tie
 5. Visualisoinnin pitäisi nyt näyttää samalta kuin seuraavassa kuvassa.
    
     ![ProjectedDays ja ActualDays sarakkeen PMAssigned mukaan](./media/sharepoint-scenario-build-report/05-03-04-chart-projected.png)
-6. Vedä **Status** **Kentät**-ruudun kohdasta **Projektin tiedot** **Visualisoinnit**-ruudun **suodatin**alueelle ja valitse sitten **Valmis**-valintaruutu.
+6. Vedä **Status** **Kentät**-ruudun kohdasta **Project Details** **Visualisoinnit**-ruudun **Suodattimet**-alueelle ja valitse sitten **Valmis**-valintaruutu.
    
    ![Suodata Status-sarakkeen perusteella](./media/sharepoint-scenario-build-report/05-03-05-filters-projected.png)
    
@@ -328,7 +329,7 @@ Kun olemme luoneet raportin visualisoinnit Power BI Desktopissa, julkaisemme tie
 4. Vedä **VarProjectedActual** **Kentät**-ruudun kohdasta **Projektin tiedot** **Visualisoinnit**-ruudun kohtaan **Arvo**.
    
     ![Arvo Visualisoinnit-ruudussa](./media/sharepoint-scenario-build-report/05-03-07a-value-variance.png)
-5. Vedä **Status** **Kentät**-ruudun kohdasta **Projektin tiedot** **Visualisoinnit**-ruudun **suodatin**alueelle ja valitse sitten **Valmis**-valintaruutu.
+5. Vedä **Status** **Kentät**-ruudun kohdasta **Project Details** **Visualisoinnit**-ruudun **Suodattimet**-alueelle ja valitse sitten **Valmis**-valintaruutu.
    
     ![Suodata Status-sarakkeen perusteella](./media/sharepoint-scenario-build-report/05-03-07b-filters-variance.png)
    

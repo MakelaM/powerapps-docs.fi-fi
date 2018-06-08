@@ -1,19 +1,18 @@
 ---
 title: Ympäristön luomisen pikaopas | Microsoft Docs
 description: Tämän pikaoppaan avulla opit luomaan ympäristön
-author: skjerland
-manager: kfile
+author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: 50a3819d4a659d48e1372487c5b50dc8295ee398
-ms.sourcegitcommit: f236364ecb06dd86244cd9a607c31e0d716912e2
+ms.author: jimh
+ms.openlocfilehash: f648d68a19c646a2a69a8eebca85ac9e33af0686
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34445794"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552848"
 ---
 # <a name="quickstart-create-an-environment"></a>Pikaopas: ympäristön luominen
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, -sovelluksia ja -työnkulkuja. Lisäksi sitä käytetään säilönä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. PowerApps luo jokaiselle vuokraajalle automaattisesti yhden oletusympäristön, joka jaetaan kaikille käyttäjille kyseisessä vuokraajassa.

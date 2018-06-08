@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 12/08/2017
 ms.author: mblythe
 ms.openlocfilehash: 375738cd5481430f06307b4c98b342c377d9bc4c
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836352"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
 Tässä artikkelissa kerrotaan, miten luodaan perussovellus, joka analysoi tekstiä käyttämällä [Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API)](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview). Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda sovelluksen, joka kutsuu API:a.

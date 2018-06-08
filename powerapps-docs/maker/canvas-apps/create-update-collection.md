@@ -12,10 +12,11 @@ ms.component: canvas
 ms.date: 11/30/2015
 ms.author: lonu
 ms.openlocfilehash: 01065fd1a12b3d55e8726582cead3d86a6e6a8ad
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330286"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Luo ja päivitä kokoelma sovelluksessasi
 Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessasi. Kokoelma on joukko kohteita, jotka ovat samankaltaisia. Voit luoda esimerkiksi MyImages-kokoelman, johon tallennat kuvat kaikista tuotteista, joita yrityksesi myy. PowerAppsissa voit lisätä MyImages-kokoelman ja luoda sovelluksen, joka näyttää kuvia kyseisistä tuotteista. Voit myös luoda hinnastokokoelman, joka sisältää luettelon tuotteista ja kunkin tuotteen hinnan.
@@ -23,7 +24,7 @@ Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessas
 Voit luoda ja käyttää kokoelmia PowerAppsissa. Aloitetaan.
 
 ### <a name="prerequisites"></a>Edellytykset
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin [ja kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo sovellus tai avaa olemassa oleva sovellus PowerAppsissa.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 * Näissä ohjeissa käytetään esimerkkisyötetietona [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-tiedostoa. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoa tai tuoda omasi.

@@ -1,18 +1,19 @@
 ---
 title: Mikä on Microsoft Common Data Service for Apps? | Microsoft Docs
 description: Johdanto sovelluksille tarkoitettuun Common Data Service (CDS) for Apps -palveluun, entiteetteihin ja palvelinpuolen logiikkaan.
-author: SKjerland
+author: Mattp123
 manager: kfile
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
-ms.author: sharik
-ms.openlocfilehash: fb079689ef76e4ad7815b8410ecff4a475877810
-ms.sourcegitcommit: ba587b467044161d1dbcd73625b37aa52b057270
+ms.author: matp
+ms.openlocfilehash: b26f788a782e42125d6397d38b2d946f8188e475
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552825"
 ---
 # <a name="what-is-common-data-service-for-apps"></a>Mikä on Microsoft Common Data Service for Apps?
 Common Data Service (CDS) for Apps -palvelussa voit säilyttää ja hallita liiketoimintasovellustesi käyttämiä tietoja turvallisesti. CDS for Appsin tiedot tallennetaan joukkoon entiteettejä. *Entiteetti* on tietuejoukko, jota käytetään tietojen tallentamiseen samoin kuin taulukossa säilytetään tietoja tietokannassa. CDS for Apps sisältää peruskokoelman vakioentiteettejä, jotka kattavat tyypilliset tilanteet, mutta voit lisäksi luoda mukautettuja entiteettejä oman organisaatiosi tarpeisiin ja täyttää ne tiedoilla Power Querya käyttämällä. Sovellusten tekijät voivat sen jälkeen rakentaa PowerAppsissa runsaita sovelluksia tietojen avulla.
@@ -56,4 +57,4 @@ CDS for Appsin käytön aloittaminen:
 * [Yhdistä verkossa tai lähiverkossa olevaan tietolähteeseen Power Query -apuohjelmalla](./data-platform-cds-newentity-pq.md) ja tuo tiedot suoraan CDS for Appsiin.
 
 ## <a name="privacy-notice"></a>Tietosuojailmoitus
-Microsoft PowerAppsin yleisen tietomallin avulla Microsoft kerää ja tallentaa mukautettuja entiteettien ja kenttien nimiä diagnostiikkajärjestelmiimme. Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Sovellustekijöiden antamat entiteettien ja kenttien nimet auttavat meitä ymmärtämään Microsoft PowerApps -yhteisössä yleisiä skenaarioita ja havaitsemaan palvelun vakioentiteettitarjonnan puutteita, kuten organisaatioihin liittyviä rakenteita. Microsoft ei avaa eikä käytä näihin entiteetteihin liittyvien tietokantataulukoiden tietoja, eikä niitä replikoida tietokannan luomisalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan replikoida monelle alueelle ja poistetaan tietojen säilytyskäytäntöjemme mukaisesti. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessa](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.
+Microsoft PowerAppsin yleisen tietomallin avulla Microsoft kerää ja tallentaa mukautettuja entiteettien ja kenttien nimiä diagnostiikkajärjestelmiimme. Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Sovellustekijöiden antamat entiteettien ja kenttien nimet auttavat meitä ymmärtämään Microsoft PowerApps -yhteisössä yleisiä skenaarioita ja havaitsemaan palvelun vakioentiteettitarjonnan puutteita, kuten organisaatioihin liittyviä rakenteita. Microsoft ei käytä näihin entiteetteihin liittyvissä tietokantataulukoissa olevia tietoja, eikä jäljennä niitä tietokannan käyttöoikeusalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan replikoida monelle alueelle ja poistetaan tietojen säilytyskäytäntöjemme mukaisesti. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessamme](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.

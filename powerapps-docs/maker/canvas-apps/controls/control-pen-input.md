@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 84981a00a516f553d3f1b318f12a6f68064c66b2
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832167"
 ---
 # <a name="pen-input-control-in-powerapps"></a>PowerAppsin Kynän syöte -ohjausobjekti
 Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan alueita.
@@ -25,9 +26,9 @@ Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan aluei
 Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää kaavioita ja kirjoittaa sanoja, jotka voidaan muuntaa kirjoitetuksi tekstiksi.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**[Color](properties-color-border.md)** – Syötettyjen vetojen väri.
+**[Väri](properties-color-border.md)** – Syötettyjen vetojen väri.
 
-**Mode** – Ohjausobjekti on joko **Piirrä** tai **Poista**-tilassa.  Tilan valinta on vanhentunut.
+**Tila** – Ohjausobjekti on joko **Piirrä**- tai **Poista**-tilassa.  Tilan valinta on vanhentunut.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi. Voidaan käyttää kuvaamaan ohjausobjektin tarkoitusta sekä vaihtoehtoisia syöttötapoja.
@@ -38,13 +39,13 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**Input** – Syöte.
+**Syöte** – Syöte.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -54,31 +55,31 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
 
 **ShowControls** – Näytetäänkö ääni- tai videosoittimessa esimerkiksi toistopainike ja äänenvoimakkuuden liukusäädin sekä näytetäänkö kynän ohjausobjektissa esimerkiksi piirustuksen, poistamisen ja tyhjentämisen kuvakkeet.
 
-**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
+**[Koko](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
+**[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
-[**Collect**( *KokoelmanNimi*, *KerättävätTiedot* )](../functions/function-clear-collect-clearcollect.md)
+[**Collect**( *CollectionName*, *DatatoCollect* )](../functions/function-clear-collect-clearcollect.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="create-a-set-of-images"></a>Kuvajoukon luominen
-1. Lisää **Kynän syöte** -ohjausobjekti, anna sille nimi **MyDoodles** ja aseta sen **ShowControls**-ominaisuudeksi **tosi**.
+1. Lisää **Kynän syöte** -ohjausobjekti, anna sille nimi **MyDoodles** ja aseta sen **ShowControls**-ominaisuudeksi **true**.
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **[Painike](control-button.md)**-ohjausobjekti, siirrä se **MyDoodles**-kohdan alle ja aseta **[Painike](control-button.md)**-ohjausobjektin **[Text](properties-core.md)**-ominaisuudeksi **Lisää**.
+2. Lisää **[Painike](control-button.md)**-ohjausobjekti, siirrä se **MyDoodles**-kohdan alle ja aseta **[Painike](control-button.md)**-ohjausobjektin **[Teksti](properties-core.md)**-ominaisuudeksi **Lisää**.
 3. Määritä **[Painikkeen](control-button.md)** **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
    **Collect(Doodles, {Sketch:MyDoodles.Image})**
-4. Lisää **Kuvavalikoima**-ohjausobjekti, siirrä se **[Painike](control-button.md)**-ohjausobjektin alle ja pienenä **Kuvavalikoima**-ohjausobjektin kokoa, kunnes se näyttää vain kolme kohdetta.
-5. Määritä **Kuvavalikoima**-ohjausobjektin **[Items](properties-core.md)**-ominaisuudeksi **Doodles** ja paina F5-näppäintä.
+4. Lisää **Kuvavalikoima**-ohjausobjekti, siirrä se **[Painike](control-button.md)**-ohjausobjektin alle ja pienennä **Kuvavalikoima**-ohjausobjektin kokoa, kunnes se näyttää vain kolme kohdetta.
+5. Määritä **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)**-ominaisuudeksi **Doodles** ja paina F5-näppäintä.
 6. Piirrä **MyDoodles**-kohtaan kuva ja napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia.
    
     Piirtämäsi kuva näkyy **Kuvavalikoima**-ohjausobjektissa.
@@ -87,7 +88,7 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
    **Remove(Doodles, ThisItem)**
 9. Poista piirustus napsauttamalla tai napauttamalla sitä **Kuvavalikoima**-ohjausobjektissa.
 
-Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)**-funktiota piirustusten paikalliseen tallentamiseen tai **[Patch](../functions/function-patch.md)**-funktiota niiden tallentamiseksi tietolähteeseen.
+Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)**-funktiota piirustusten paikalliseen tallentamiseen tai **[Ohjelmakorjaus](../functions/function-patch.md)**-funktiota niiden tallentamiseksi tietolähteeseen.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: aacd47621148c03eef88dea31763ab4af2658bfc
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830786"
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstin ohjausobjekti PowerAppsissa
 Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
@@ -27,7 +28,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
 **[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
 **HtmlText** – HTML-tekstin ohjausobjektissa näkyvä teksti, joka voi sisältää HTML-tunnisteita.
 
@@ -40,13 +41,13 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
 
 **[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
 
-**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
@@ -62,15 +63,15 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 **[Size](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
+**[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 [**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
@@ -80,7 +81,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 \<p> Olemme suorittaneet erittäin \&nbsp; \&quot; perusteellisen \&quot; globalisoinnin ja lokalisoinnin. \<p>
 
-Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
+Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
 1. Lisää **HTML-tekstin** ohjausobjekti ja aseta sen **HtmlText**-ominaisuuden arvoksi:<br>
    **Source.Text**
@@ -93,7 +94,7 @@ Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configur
 
 ### <a name="color-contrast"></a>Värikontrasti
 Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
-* **[Väri](properties-color-border.md)** ja **[täyttö](properties-color-border.md)**
+* **[Color](properties-color-border.md)** ja **[Fill](properties-color-border.md)**
 * Mukautettuja värejä sisältävä teksti ja sen tausta
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki

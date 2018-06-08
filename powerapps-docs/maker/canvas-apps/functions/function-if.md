@@ -1,25 +1,23 @@
 ---
 title: If- ja Switch-funktiot | Microsoft Docs
 description: PowerAppsin If- ja Switch-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 04/24/2017
 ms.author: gregli
-ms.openlocfilehash: 9254eaf63d816fc8ac9890026f74bdeaeaa9b1a4
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f4e5510224d5abc7a6d2ccaa286d08c8f170fa10
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838391"
 ---
 # <a name="if-and-switch-functions-in-powerapps"></a>If- ja Switch-funktiot PowerAppsissa
 Määrittää, onko mikään joukon ehdoista tosi (**If**) tai vastaako kaavan tulos mitään joukon arvoa (**Switch**), ja palauttaa sitten tuloksen tai suorittaa toiminnon.

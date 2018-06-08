@@ -12,10 +12,11 @@ ms.component: canvas
 ms.date: 06/02/2015
 ms.author: lonu
 ms.openlocfilehash: 959431b69d4f432335997697d8f25b5b8815d63c
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330288"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Näytä, lajittele ja suodata tietoja PowerApps-valikoimassa
 Luo valikoima, jonka avulla voit näyttää kuvia ja tekstiä useista tuotteista, ja lajittele ja suodata näitä tietoja.
@@ -34,21 +35,21 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
 * Näissä vaiheissa käytetään [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip)-sovellusta mallisyötetietoina, jotka sisältävät .jpg-kuvia. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoja tai tuoda omasi.
 
 ## <a name="show-data-in-a-gallery"></a>Tietojen näyttäminen valikoimassa
-1. Luo valikoima nimeltä **Luettelo** mallitietoja käyttäen. Tähän kuuluvat seuraavat vaiheet:  
+1. Luo valikoima nimeltä **Inventory** mallitietoja käyttäen. Tähän kuuluvat seuraavat vaiheet:  
    
    1. Valitse **Lisää**-välilehdestä **Ohjausobjektit** ja valitse sitten **Tuo**:
       
       ![][1]  
-   2. Määritä tuontiohjausobjektin **[OnSelect](controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+   2. Määritä tuontiohjausobjektin **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
       **Collect(Inventory, Import1!Data)**
       
       ![][12]  
    3. Avaa Windowsin Resurssienhallinta valitsemalla **Tuo tiedot** -painike. Valitse *CreateFirstApp.zip* ja sitten **Avaa**.
-   4. Valitse **Tiedosto**-valikosta **Kokoelmat**. Luettelo-kokoelma näytetään, ja se sisältää tuomasi tiedot:
+   4. Valitse **Tiedosto**-valikosta **Kokoelmat**. Inventory-kokoelma näytetään, ja se sisältää tuomasi tiedot:
       
       ![][3]  
       
-      Olemme nyt luoneet Luettelo-kokoelman, joka sisältää viiden tuotteen tietoja, kuten mallikuvan, tuotteen nimen ja kappaleiden määrän varastossa.
+      Olemme nyt luoneet Inventory-kokoelman, joka sisältää viiden tuotteen tietoja, kuten mallikuvan, tuotteen nimen ja kappaleiden määrän varastossa.
       
       > [!NOTE]
       > Tuontiohjausobjektilla tuodaan Excel-tyyppisiä tietoja ja luodaan kokoelma. Tuontiohjausobjekti tuo tiedot, kun luot ja esikatselet sovellusta. Tuontiohjausobjekti ei tällä hetkellä tuo tietoja, kun sovellus julkaistaan.
@@ -61,7 +62,7 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
 4. Napsauta tai napauta oikeanpuoleisessa ruudussa vaihtoehtoa, jossa otsikko ja alaotsikko peittävät grafiikan:
    
     ![][15]
-5. Määritä valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuudelle **Luettelo**:
+5. Määritä valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi **Inventory**:
    
     ![][5]
 6. Anna valikoimalle uusi nimi **ProductGallery** ja siirrä valikoimaa siten, että se ei peitä muita ohjausobjekteja. Muuta valikoiman kokoa siten, että siinä näkyy kolme tuotetta:
@@ -75,7 +76,7 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
    > Kun muutat minkä tahansa valikoiman ensimmäistä kohdetta, muutat automaattisesti valikoiman kaikkia muita kohteita.  
    > 
    > 
-8. Määritä selitteen **[Teksti](controls/properties-core.md)**-ominaisuus seuraavalla lausekkeella:  
+8. Määritä selitteen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
     **ThisItem!UnitsInStock** <br/>
    
     Tämän jälkeen selite näyttää kappaleiden lukumäärän varastossa kullekin tuotteelle:
@@ -83,11 +84,11 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
 ![][8]  
 
 > [!NOTE]
-> Yläselitteen **[Teksti](controls/properties-core.md)**-ominaisuudeksi tulee oletusarvoisesti ```ThisItem!ProductName```. Voit muuttaa sen joksikin muuksi kohteeksi kokoelmassa. Jos kokoelmassa on esimerkiksi kentät *ProductDescription* tai *Price*, voit määrittää selitteeksi ```ThisItem!ProductDescription``` tai ```ThisItem!Price```.
+> Yläselitteen **[Text](controls/properties-core.md)**-ominaisuudeksi tulee oletusarvoisesti ```ThisItem!ProductName```. Voit muuttaa sen joksikin muuksi kohteeksi kokoelmassa. Jos kokoelmassa on esimerkiksi kentät *ProductDescription* tai *Price*, voit määrittää selitteeksi ```ThisItem!ProductDescription``` tai ```ThisItem!Price```.
 > 
 > 
 
-Näissä vaiheissa toimme kokoelmaan .jpg kuvia sisältäviä tietoja. Sitten lisäsimme valikoiman, jossa näkyvät nämä tiedot, ja määritimme selitteen, joka ilmoittaa kunkin tuotteen varastossa olevan määrän.
+Näissä vaiheissa toimme kokoelmaan .jpg-kuvia sisältäviä tietoja. Sitten lisäsimme valikoiman, jossa näkyvät nämä tiedot, ja määritimme selitteen, joka ilmoittaa kunkin tuotteen varastossa olevan määrän.
 
 ## <a name="highlight-the-gallery-item-you-select"></a>Korosta valitsemasi valikoiman kohde
 1. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen. Muokkauskuvake tulee näkyviin (vasemmassa yläkulmassa). Valitse muokkauskuvake:  
@@ -101,7 +102,7 @@ Näissä vaiheissa toimme kokoelmaan .jpg kuvia sisältäviä tietoja. Sitten li
    
     **If(ThisItem!IsSelected, true)**
    
-    Sininen suorakulmio ympäröi nykyisen valinnan valikoimassa. Vahvista, että suorakulmio näkyy jokaisen valitsemasi kohteen ympärillä valitsemalla muutamia valikoiman kohteita. Muista, että voit myös avata **esikatselun**![][2] ja tarkastaa ja testata tuloksen.
+    Sininen suorakulmio ympäröi nykyisen valinnan valikoimassa. Vahvista, että suorakulmio näkyy jokaisen valitsemasi kohteen ympärillä valitsemalla muutamia valikoiman kohteita. Muista, että voit myös avata **esikatselun** ![][2] ja tarkastaa ja testata tuloksen.
 
 > [!TIP]
 > Valitse suorakulmio, valitse sitten **Aloitus**-välilehdessä **Järjestä uudelleen** ja lopuksi **Lähetä taustalle**. Tämän toiminnon avulla voit valita valikoiman kohteen ilman, että reunus peittää mitään.
@@ -115,13 +116,13 @@ Näissä vaiheissa lajittelemme valikoiman kohteet nousevassa ja laskevassa jär
 
 #### <a name="sort-in-ascending-or-descending-order"></a>Lajittelu nousevassa tai laskevassa järjestyksessä
 1. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen.
-2. **[Kohteet](controls/properties-core.md)**-ominaisuutena on tällä hetkellä Luettelo (kokoelman nimi). Muuta se seuraavaksi:  
+2. **[Items](controls/properties-core.md)**-ominaisuutena on tällä hetkellä Inventory (kokoelmasi nimi). Muuta se seuraavaksi:  
    
     **Sort(Inventory, ProductName)**
    
     Kun teet näin, valikoiman kohteet lajitellaan nousevassa järjestyksessä tuotteen nimen mukaan:  ![][11]  
    
-    Kokeile laskevaa järjestystä. Määritä valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+    Kokeile laskevaa järjestystä. Määritä valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
    
     Sort(Inventory, ProductName, Descending)  
 
@@ -133,7 +134,7 @@ Näissä vaiheissa lajittelemme valikoiman kohteet nousevassa ja laskevassa jär
       ```Min(Inventory, UnitsInStock)```  
    2. Valitse **Sisältö**-välilehdestä **Suurin** ja kirjoita sitten seuraava lauseke:  
       ```Max(Inventory, UnitsInStock)```
-3. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen. Määritä valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuus seuraavalla lausekkeella:  
+3. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen. Määritä valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
    ```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
 4. Aseta **esikatselussa** liukusäädin arvoon, joka on valikoiman suurimman ja pienimmän määrän välissä. Kun säädät liukusäädintä, valikoimassa näkyvät vain ne tuotteet, joita on valitsemaasi arvoa vähemmän:  
    ![][13]  
@@ -141,10 +142,10 @@ Näissä vaiheissa lajittelemme valikoiman kohteet nousevassa ja laskevassa jär
 Lisätään seuraavaksi suodatin:
 
 1. Palaa takaisin suunnittelutyökaluun.
-2. Valitse **Lisää**-välilehdessä **Teksti**, valitse **Syöteteksti** ja anna uudelle ohjausobjektille uusi nimi **NameFilter**. Siirrä teksti-ohjausobjekti liukusäätimen alle.
-3. Määritä valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuus seuraavalla lausekkeella:  
+2. Valitse **Lisää**-välilehdessä **Teksti**, valitse **Syöteteksti** ja anna uudelle ohjausobjektille uusi nimi **NameFilter**. Siirrä Teksti-ohjausobjekti liukusäätimen alle.
+3. Määritä valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
    ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
-4. Aseta **esikatselussa** liukusäädin arvoon *30* ja kirjoita kirjain *g* tekstinsyötön ohjausobjektiin. Näyttöön tulee valikoiman ainoa tuote, jota on varastossa alle 30 kappaletta *ja* jonka nimessä on g-kirjain:  
+4. Aseta **esikatselussa** liukusäädin arvoon *30* ja kirjoita kirjain *g* Tekstisyöte-ohjausobjektiin. Näyttöön tulee valikoiman ainoa tuote, jota on varastossa alle 30 kappaletta *ja* jonka nimessä on g-kirjain:  
    ![][14]  
 
 ## <a name="tips-and-tricks"></a>Vihjeitä ja vinkkejä
@@ -152,16 +153,16 @@ Lisätään seuraavaksi suodatin:
 * Voit muuttaa ohjausobjektien kokoa ja siirrellä niitä napsauttamalla ja vetämällä, kun suunnittelet sovellustasi.
 * Sulje esikatseluikkuna painamalla **ESC**-näppäintä tai valitsemalla **X**-merkki.
 * Kun käytät valikoimaa, valitse sen ensimmäinen kohde, kun haluat tehdä muutoksia kaikkiin valikoiman kohteisiin. Valitse ensimmäinen kohde, kun haluat lisätä esimerkiksi reunan kaikkiin valikoiman kohteisiin.
-* Voit päivittää valikoiman ominaisuuksia valitsemalla minkä tahansa valikoiman kohteen *paitsi* ensimmäisen. Valitse esimerkiksi toinen kohde, kun haluat päivittää *Kohteet*- tai *ShowScrollbar*-ominaisuuksia, jotka koskevat valikoimaa (ei valikoiman kohteita).  
+* Voit päivittää valikoiman ominaisuuksia valitsemalla minkä tahansa valikoiman kohteen *paitsi* ensimmäisen. Valitse esimerkiksi toinen kohde, kun haluat päivittää *Items*- tai *ShowScrollbar*-ominaisuuksia, jotka koskevat valikoimaa (ei valikoiman kohteita).  
 
-## <a name="what-you-learned"></a>Mitä olet oppinut
+## <a name="what-you-learned"></a>Mitä opimme
 Tässä aiheessa:
 
 * Loimme kokoelman, toimme .jpg-kuvia sisältäviä tietoja kokoelmaan ja näytimme valikoiman tiedot.
 * Määritimme valikoiman kunkin kuvan alapuolelle selitteen, joka ilmoittaa kyseisen kohteen kappalemäärän varastossa.
 * Lisäsimme reunuksen valitun kohteen ympärille.
 * Lajittelimme kohteet tuotteen nimen mukaan nousevassa ja laskevassa järjestyksessä.
-* Lisäsimme liukusäätimen ja syötetekstin ohjausobjektin, jolla suodatimme tuotteita niiden varastossa olevan lukumäärän ja tuotteen nimen mukaan.
+* Lisäsimme liukusäätimen ja Syöteteksti-ohjausobjektin, jolla suodatimme tuotteita niiden varastossa olevan lukumäärän ja tuotteen nimen mukaan.
 
 [1]: ./media/show-images-text-gallery-sort-filter/import.png
 [2]: ./media/show-images-text-gallery-sort-filter/preview.png

@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 8a95e84449828e77152206817f3d964315074b90
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837684"
 ---
 # <a name="radio-control-in-powerapps"></a>Valintanappi PowerAppsissa
 Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
@@ -25,7 +26,7 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
 **Valintanappi** on ohjausobjekti, jota on käytetty jo kymmeniä vuosia. Se sopii parhaiten luetteloihin, joissa on vain muutama toisensa poissulkeva vaihtoehto.
 
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
-**[Default](properties-core.md)** – alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
+**[Oletus](properties-core.md)** – Alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
 
 **[Items](properties-core.md)** – Tietolähde, joka tulee näkyviin ohjausobjektissa, kuten galleriassa, luettelossa tai kaaviossa.
 
@@ -42,15 +43,15 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -58,9 +59,9 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
-**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **vaaleampi**.
+**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -72,7 +73,7 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
 
 **[LineHeight](properties-text.md)** – esimerkiksi tekstin tai luettelon rivien välinen etäisyys.
 
-**[OnChange](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
+**[OnChange](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi käyttämällä liukusäädintä).
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -100,21 +101,21 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
+**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Underline](properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattua.
+**[Underline](properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattu.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Onko ohjausobjekti näytössä vai piilotettuna.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 [**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
@@ -132,7 +133,7 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
    
     **[Selite](control-text-box.md)**-ohjausobjekti näyttää valintasi mukaisen tekstin.
 4. (valinnainen) Valitse toinen **Valintanappi**-ohjausobjektin vaihtoehdoista ja tarkista, että näyttöön tulee asiaankuuluva teksti.
-5. Palaa oletustyötilaan painamalla Esc-näppäintä.
+5. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

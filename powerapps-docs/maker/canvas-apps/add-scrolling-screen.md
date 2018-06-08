@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: lonu
 ms.openlocfilehash: fd7b418de7a78220dfc1019c923749fb8e6ddf5c
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825322"
 ---
 # <a name="add-a-scrolling-screen-in-powerapps"></a>Vieritysnäytön lisääminen PowerAppsissa
 Luo näyttö, jossa käyttäjät voivat näyttää eri kohteita vierittämällä sitä. Voit esimerkiksi luoda sovelluksen, joka näyttää tiedot sekä pylväskaaviossa että viivakaaviossa. Lisäämällä vieritysnäytön voit lisätä useita ohjausobjekteja, jotka käyttäjä voi näyttää vierittämällä ruutua.

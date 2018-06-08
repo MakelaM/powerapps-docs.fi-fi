@@ -1,6 +1,6 @@
 ---
-title: 'Yhdistelmäruutuohjausobjekti: viittaus | Microsoft Docs'
-description: Yhdistelmäruutuohjausobjekteja koskevaa tietoa, kuten ominaisuuksia ja esimerkkejä
+title: 'Yhdistelmäruutu-ohjausobjekti: viittaus | Microsoft Docs'
+description: Yhdistelmäruutu-ohjausobjektia koskevaa tietoa, kuten ominaisuuksia ja esimerkkejä
 documentationcenter: na
 author: fikaradz
 manager: kfile
@@ -13,23 +13,24 @@ ms.component: canvas
 ms.date: 09/13/2017
 ms.author: fikaradz
 ms.openlocfilehash: 1a790627ad1dbd1bebecca84cb41ee29dcf148dd
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329498"
 ---
-# <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutuohjausobjekti PowerAppsissa
+# <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista.  Tukee hakua ja useita valintoja.
 
 ## <a name="description"></a>Kuvaus
-**Yhdistelmäruutu**ohjausobjektin avulla voit etsiä kohteita, jotka aiot valita.  Haku suoritetaan palvelinpuolella käyttämällä SearchField-ominaisuutta, joten erittäin suuret tietolähteet eivät vaikuta suorituskykyyn.  
+**Yhdistelmäruutu**-ohjausobjektin avulla voit etsiä kohteita, jotka aiot valita.  Haku suoritetaan palvelinpuolella käyttämällä SearchField-ominaisuutta, joten erittäin suuret tietolähteet eivät vaikuta suorituskykyyn.  
 
 Yksittäinen tai monivalintatila määritetään SelectMultiple-ominaisuudella.
 
 Valittavia kohteita etsittäessä voit näyttää kullekin kohteelle yksittäisen tietoarvon, kaksi arvoa tai kuvan ja kaksi arvoa (henkilö) muokkaamalla tietoruudun asettelun asetuksia.
 
 ## <a name="people-picker"></a>Henkilöiden valinta
-Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henkilö**mallin tietoruudun asettelun asetuksista ja määrittämällä toisiinsa liittyvät tieto-ominaisuudet näytettäväksi alla olevan henkilön osalta.
+Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henkilö**-mallin tietoruudun asettelun asetuksista ja määrittämällä toisiinsa liittyvät tieto-ominaisuudet näytettäväksi alla olevan henkilön osalta.
 
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
 **[Items](properties-core.md)**  – Valintojen tekemisessä käytetyn tiedon lähde.
@@ -57,7 +58,7 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 
 **DisplayFields** – Luettelo kentistä, jotka näytetään jokaisesta haun palauttamasta kohteesta.  Helpoin määrittää Ominaisuudet-välilehden tietoruudun kautta.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella tietoja (**View**), vai onko ominaisuus poistettu käytöstä (**Disabled**).
 
 **[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
@@ -75,23 +76,23 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (näytön, jos pääsäilöä ei ole).
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **yhdistelmäruutuohjausobjekti** Ohjausobjektit-valikon Lisää-välilehdeltä.  
+1. Lisää **Yhdistelmäruutu**-ohjausobjekti Ohjausobjektit-valikon Lisää-välilehdeltä.  
 2. Valitse Ominaisuusasetukset-välilehdeltä Tiedot.  
 3. Valitse tietolähde, asettelu ja siihen liittyvät ominaisuudet alta.
 4. Määritä **SelectMultiple**-ominaisuus Lisäasetukset-välilehdeltä.
 
-    Sovellukseesi tulee näkyviin toiminnallinen **yhdistelmäruutu**.
+    Sovellukseesi tulee näkyviin toiminnallinen **Yhdistelmäruutu**.
 
-    Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
+    Miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

@@ -1,6 +1,6 @@
 ---
-title: Back- ja Navigate-funktiot | Microsoft Docs
-description: PowerAppsin Navigate- ja Back-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkit
+title: Back- ja Navigate-funktio | Microsoft Docs
+description: Tietoa PowerAppsin Navigate- ja Back-funktiosta, mukaan lukien syntaksi ja esimerkkejä
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,20 +13,21 @@ ms.component: canvas
 ms.date: 11/08/2015
 ms.author: gregli
 ms.openlocfilehash: ecb8b8176dd8489866a5ca88a6b69e1520c3ad69
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31834454"
 ---
-# <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktiot PowerAppsissa
+# <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 Nämä funktiot vaihtavat näytettävää näyttöä.
 
 ## <a name="overview"></a>Yleiskatsaus
-Useimmat sovellukset sisältävät useita näyttöjä.  Voit vaihtaa näytettävää näyttöä **Back**- ja **Navigate**-funktioilla. Aseta esimerkiksi jonkin painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi kaava, joka sisältää **Navigate**-funktion, jos haluat näyttää eri näytön, kun käyttäjä valitsee kyseisen painikkeen. Voit määrittää kaavassa siirtymäefektin, kuten **Fade**, joka määrittää, miltä siirtymä näytöltä toiselle näyttää.  
+Useimmissa sovelluksissa on useita näyttöjä.  Voit vaihtaa näytettävää näyttöä **Back**- ja **Navigate** -funktioilla. Aseta esimerkiksi jonkin painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi kaava, joka sisältää **Navigate**-funktion, jos haluat hakea näkyviin toisen näytön, kun käyttäjä valitsee kyseisen painikkeen. Voit määrittää kaavaan siirtymäefektin, kuten **Häivytys**, joka määrittää, miltä siirtymä näytöltä toiselle näyttää.  
 
-**Back** ja **Navigate** vaihtavat vain näytettävää näyttöä. Näytöt, joita ei näytetä, jatkavat edelleen toimintaansa taustalla. Voit rakentaa kaavoja, jotka viittaavat toisella näytöllä olevien ohjausobjektien ominaisuuksiin. Käyttäjä voi esimerkiksi muuttaa liukusäätimen arvoa yhdellä näytöllä, siirtyä sen jälkeen toiselle näytölle, joka käyttää kyseistä arvoa jossakin kaavassa, ja nähdä, kuinka tämä vaikuttaa uuteen näyttöön.  Käyttäjä voi siirtyä takaisin alkuperäiseen näyttöön ja nähdä, että liukusäädin säilyttää arvonsa.
+**Back** ja **Navigate** vaihtavat vain näytettävää näyttöä. Näytöt, joita ei näytetä, toimivat edelleen taustalla. Voit rakentaa kaavoja, jotka viittaavat toisella näytöllä olevien ohjausobjektien ominaisuuksiin. Käyttäjä voi esimerkiksi muuttaa liukusäätimen arvoa yhdellä näytöllä, siirtyä sen jälkeen toiselle näytölle, joka käyttää kyseistä arvoa jossakin kaavassa, ja nähdä, kuinka tämä vaikuttaa uuteen näyttöön.  Sen jälkeen käyttäjä voi siirtyä takaisin alkuperäiseen näyttöön ja nähdä, että liukusäädin säilyttää arvonsa.
 
-[Kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) voidaan myös säilyttää, kun käyttäjä siirtyy näyttöjen välillä. Voit käyttää **Navigate**-funktiota asettamaan näytölle vähintään yhden kontekstimuuttujan, jotka kaava näyttää – tämä on ainoa tapa asettaa kontekstimuuttuja näytön ulkopuolelta. Voit käyttää tätä menetelmää parametrien välittämiseksi näytölle. Jos olet käyttänyt jotakin muuta ohjelmointityökalua, tämä menetelmä on samankaltainen kuin parametrien välittäminen toimintosarjoille.
+Myös [kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) säilytetään, kun käyttäjä siirtyy näyttöjen välillä. **Navigate**-funktiolla voit asettaa näytölle yhden tai useamman kontekstimuuttujan, jotka kaava näyttää – tämä on ainoa tapa asettaa kontekstimuuttuja näytön ulkopuolelta. Tällä menetelmällä voit välittää näytölle parametrejä. Jos olet käyttänyt jotakin toista ohjelmointityökalua, tämä menetelmä vastaa parametrien välittämistä toimintosarjoille.
 
 ## <a name="description"></a>Kuvaus
 ### <a name="back"></a>Back
@@ -57,15 +58,15 @@ Näitä funktioita voidaan käyttää vain [toimintakaavassa](../working-with-fo
 
 **Navigate**( *Näyttö*, *Siirtymä* [, *UpdateContextRecord* ] )
 
-* *Näyttö* – Pakollinen. Avattava näyttö.
-* *Siirtymä* – Pakollinen.  Nykyisestä näytöstä uuteen siirtymisen visuaalinen efekti. Katso tämän argumentin kelvolliset arvot tämän aiheen aiemmasta osasta.
+* *Screen* – Pakollinen. Avattava näyttö.
+* *Transition* – Pakollinen.  Nykyisestä näytöstä uuteen siirtymisen visuaalinen efekti. Katso tämän argumentin kelvolliset arvot tämän aiheen aiemmasta osasta.
 * *UpdateContextRecord* – Valinnainen.  Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon jokaiselle sarakkeelle. Tämä tietue päivittää uuden näytön kontekstimuuttujat, jos se välitetään **[UpdateContext](function-updatecontext.md)**-funktiolle.
 
 ## <a name="examples"></a>Esimerkkejä
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Navigate( Lisätiedot, ScreenTransition.None )** |Näyttää **Lisätiedot**-näytön ilman siirtymäefektiä tai muutoksia kontekstimuuttujan arvoon. |**Lisätiedot**-näyttö ilmestyy nopeasti. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
+| **Navigate( Lisätiedot, ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Mitään kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
 | **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä ja päivittää **ID**-kontekstimuuttujan arvoksi **12**. |Uusi näyttö häivytetään, **Lisätiedot**-näyttö näytetään ja kyseisen näytön kontekstimuuttujan **ID**-arvoksi asetetaan **12**. |
 | **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä. Päivittää **ID**-kontekstimuuttujan arvoksi **12** ja päivittää **Shade**-kontekstimuuttujan arvoksi **Color.Red**. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. **Lisätiedot**-ruudun **ID**-kontekstimuuttujan arvoksi asetetaan **12** ja **Shade**-kontekstimuuttujan arvoksi asetetaan **Color.Red**. Jos asetat jonkin **Lisätiedot**-näytön ohjausobjektin **Fill**-ominaisuudeksi **Shade**, kyseinen ohjausobjekti näytetään punaisena. |
 

@@ -1,33 +1,31 @@
 ---
 title: Value-funktio | Microsoft Docs
 description: PowerAppsin Value-funktion viitetiedot, mukaan lukien syntaksi
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: ce377c87347b2ee027271b94eb623a58d7f58bd1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: c9f28f8b38099e373397afc7835398ece5f0f208
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827208"
 ---
 # <a name="value-function-in-powerapps"></a>PowerAppsin Value-funktio
 Muuntaa merkkijonon luvuksi.
 
 ## <a name="description"></a>Kuvaus
-**Value**-funktio muuntaa tekstimerkkijonon, joka sisältää numeromerkkejä, lukuarvoksi. Käytä tätä toimintoa, kun haluat suorittaa laskutoimituksia luvuilla, jotka käyttäjä on lisännyt tekstinä.
+**Value**-funktio muuntaa numeromerkkejä sisältävän tekstimerkkijonon lukuarvoksi. Käytä tätä toimintoa, kun haluat suorittaa laskutoimituksia luvuilla, jotka käyttäjä on lisännyt tekstinä.
 
-Eri kielissä merkit **,** ja **.** tulkitaan eri tavalla.  Oletusarvoisesti teksti tulkitaan nykyisen käyttäjän kielellä.  Voit määrittää kielen, jota käytetään kielitunnisteella käyttämällä samoja kielitunnisteita, jotka **[Language](function-language.md)** funktio palauttaa.
+Eri kielissä merkit **,** ja **.** tulkitaan eri tavalla.  Oletusarvoisesti teksti tulkitaan nykyisen käyttäjän kielellä.  Voit määrittää käytettävän kielen kielitunnisteella käyttämällä samoja kielitunnisteita, jotka **[Language](function-language.md)** funktio palauttaa.
 
 Merkkijonon muotoa koskevat huomautukset:
 
@@ -35,15 +33,15 @@ Merkkijonon muotoa koskevat huomautukset:
 * Merkkijonon loppuun voi sisältyä prosenttimerkki (**%**), joka ilmaisee, että kyseessä on prosenttiluku.  Luku jaetaan sadalla ennen tuloksen palauttamista.  Prosentti- ja valuuttasymboleita ei voi sekoittaa.
 * Merkkijonossa voidaan käyttää tieteellistä merkintätapaa, jossa 12 x 10<sup>3</sup> ilmaistaan muodossa "12e3".
 
-Jos luku ei ole oikeassa muodossa **Value** palauttaa *tyhjän*.
+Jos luku ei ole oikeassa muodossa, **Value** palauttaa *tyhjän*.
 
 Käytä funktioita [**DateValue**](function-datevalue-timevalue.md), [**TimeValue**](function-datevalue-timevalue.md) ja [**DateTimeValue**](function-datevalue-timevalue.md) päivä- ja aika-arvojen muuntamiseen.
 
 ## <a name="syntax"></a>Syntaksi
-**Value**( *merkkijono* [, *kielitunniste* ] )
+**Value**( *String* [, *LanguageTag* ] )
 
-* *Merkkijono* vaaditaan. Numeeriseksi arvoksi muunnettava merkkijono.
-* *Kielitunniste* – valinnainen.  Kielitunniste, jonka perusteella merkkijono jäsennetään.  Jos sitä ei syötetä, käytetään nykyisen käyttäjän kieltä.
+* *String* vaaditaan. Numeeriseksi arvoksi muunnettava merkkijono.
+* *LanguageTag* – valinnainen.  Kielitunniste, jonka perusteella merkkijono jäsennetään.  Jos sitä ei syötetä, käytetään nykyisen käyttäjän kieltä.
 
 ## <a name="examples"></a>Esimerkkejä
 Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinnut kielekseen englannin.  **Language**-funktio palauttaa tuloksen "en-US".

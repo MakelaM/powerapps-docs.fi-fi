@@ -1,24 +1,21 @@
 ---
 title: Sovelluksen luominen Excelistä | Microsoft Docs
 description: PowerAppsin käyttäminen sovelluksen luomiseen automaattisesti käyttämällä pilvitallennustiliin tallennettua Excel-tiedostoa
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOWen
 manager: kfile
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.custom: mvc
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: a2bbcead313961e064a57d2ea567b5596ece4f7a
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 54d53d5f3385be4b5d38a2bf220da139ba3bd3a4
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827254"
 ---
 # <a name="generate-an-app-from-excel-in-powerapps"></a>Sovelluksen luominen Excelistä PowerAppsissa
 Tässä aiheessa luot automaattisesti ensimmäisen sovellukseksi PowerAppsissa käyttämällä Excel-taulukon tietoja. Valitset Excel-tiedoston, luot sovelluksen ja suoritat sitten luomasi sovelluksen. Jokainen luotu sovellus sisältää näytöt tietueiden selaamiseen, tietueiden tietojen näyttämiseen ja tietueiden luomiseen ja päivittämiseen. Luomalla sovelluksen saat luotua nopeasti toimivan, Excel-tietoja käyttävän sovelluksen, ja voit sitten mukauttaa sovellusta omien tarpeidesi mukaan. 

@@ -1,32 +1,30 @@
 ---
-title: Tutustu toimintakaavoihin | Microsoft Docs
+title: Tutustu toimintakaavioihin | Microsoft Docs
 description: Viitetietoja toimintakaavojen käyttämisestä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 11/10/2015
 ms.author: gregli
-ms.openlocfilehash: 7bb0d9f3db9353511e8a5ed85f016049a96f7dae
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6b097d02b3fe97ff0db362d399cf2b2c3f28e545
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826348"
 ---
 # <a name="understand-behavior-formulas-in-powerapps"></a>Tutustu toimintakaavoihin PowerAppsissa
 
-Useimmat kaavat laskevat arvon.  Kuten Excel-laskentataulukossakin, uudelleenlaskenta tapahtuu automaattisesti, kun arvot muuttuvat.  Voit esimerkiksi haluta näyttää arvon **[selite](controls/control-text-box.md)**-ohjausobjektissa punaisena, jos arvo on pienempi kuin nolla ja muussa tapauksessa mustana. Voit siis määrittää selitteen **[Color](controls/properties-color-border.md)**-ominaisuudeksi seuraavan kaavan:
+Useimmat kaavat laskevat arvon.  Kuten Excel-laskentataulukossakin, uudelleenlaskenta tapahtuu automaattisesti, kun arvot muuttuvat.  Voit esimerkiksi haluta näyttää arvon **[selite](controls/control-text-box.md)**-ohjausobjektissa punaisena, jos arvo on pienempi kuin nolla ja muussa tapauksessa mustana. Voit siis määrittää tämän ohjausobjektin **[Color](controls/properties-color-border.md)**-ominaisuudeksi seuraavan kaavan:
 <br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
-Mitä tarkoittaa tässä yhteydessä se, kun käyttäjä valitsee **[painike](controls/control-button.md)**-ohjausobjektin?  Arvo ei ole muuttunut, joten mitään uutta laskettavaa ei ole. Excelissä ei ole mitään **[painike](controls/control-button.md)**-ohjausobjektia vastaavaa.  
+Mitä tässä yhteydessä tarkoittaa se, kun käyttäjä valitsee **[painike](controls/control-button.md)**-ohjausobjektin?  Arvo ei ole muuttunut, joten mitään uutta laskettavaa ei ole. Excelissä ei ole mitään **[painike](controls/control-button.md)**-ohjausobjektia vastaavaa.  
 
 Valitsemalla **[painike](controls/control-button.md)**-ohjausobjektin käyttäjä käynnistää toimintojen tai tapahtumien sarjan, joka muuttaa sovelluksen tilaa:
 

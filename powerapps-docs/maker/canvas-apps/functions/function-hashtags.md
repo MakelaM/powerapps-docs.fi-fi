@@ -1,25 +1,23 @@
 ---
 title: HashTags-funktio | Microsoft Docs
 description: PowerAppsin HashTags-funktion viitetiedot, mukaan lukien syntaksi ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: b2f79c55724d9dc0bc9cfaf9e2e462c646cddb85
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ebeecf7ae429f9e18c1b41b7c0f0ddd7da5be07c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826203"
 ---
 # <a name="hashtags-function-in-powerapps"></a>PowerAppsin HashTags-funktio
 Poimii aihetunnisteet (#merkkijonot) merkkijonosta.
@@ -37,17 +35,17 @@ Poimii aihetunnisteet (#merkkijonot) merkkijonosta.
 ## <a name="syntax"></a>Syntaksi
 **HashTags**( *Merkkijono* )
 
-* *Merkkijono* – Pakollinen.  Merkkijono, josta etsitään aihetunnisteet.
+* *Merkkijono* – pakollinen.  Merkkijono, josta etsitään aihetunnisteet.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="step-by-step"></a>Vaihe vaiheelta
 1. Lisää **[Tekstisyöte](../controls/control-text-input.md)**-ohjausobjekti, anna sille nimeksi **Twiitti** ja kirjoita siihen tämä lause:
    
     **Tämä #sovellus on #HUIKEA ja se voi #laskea123 tai #123abc mutta ei #1-23 tai #$\*(#@")**
-2. Lisää pystysuora mukautettu valikoima ja aseta sen **[Items](../controls/properties-core.md)**-ominaisuudeksi tämä funktio:
+2. Lisää pystysuuntainen mukautettu valikoima ja aseta sen **[Items](../controls/properties-core.md)**-ominaisuudeksi tämä funktio:
    
-    **HashTags(Twiitti.Text)**
-3. Lisää valikoiman mallipohjaan **[Otsikko](../controls/control-text-box.md)**-ohjausobjekti.
+    **HashTags(Tweet.Text)**
+3. Lisää valikoiman mallipohjaan **[selite](../controls/control-text-box.md)**-ohjausobjekti.
    
     Valikoima näyttää nämä aihetunnisteet:
    

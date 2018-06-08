@@ -1,5 +1,5 @@
 ---
-title: Yrityskehittäjien, kumppanien ja ohjelmistotoimittajien PowerApps | Microsoft Docs
+title: PowerApps yritysten kehittäjille, kumppaneille ja ohjelmistotoimittajille | Microsoft Docs
 description: Johdanto ratkaisujen kehittämiseen PowerAppsissa.
 documentationcenter: na
 author: mgblythe
@@ -13,12 +13,13 @@ ms.component: canvas
 ms.date: 05/01/2017
 ms.author: mblythe
 ms.openlocfilehash: 302b2557e56a4450116a0232282e87cc4634dd5e
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31828323"
 ---
-# <a name="powerapps-for-enterprise-developers-partners-and-isvs"></a>Yrityskehittäjien, kumppanien ja ohjelmistotoimittajien PowerApps
+# <a name="powerapps-for-enterprise-developers-partners-and-isvs"></a>PowerApps yritysten kehittäjille, kumppaneille ja ohjelmistotoimittajille
 
 Kehittäjänä voit hankkia laajemman PowerAppsin ja luoda organisaatioille ja asiakkaille entistä tehokkaampia ratkaisuja.
 
@@ -32,9 +33,9 @@ Anna yrityskehittäjänä organisaatiollesi mahdollisuus luoda vankkoja, räät�
 
 - **Upota sovelluksia**: Upota sovellukset suoraan sivuston käyttöliittymään ja luo siten integroituja ratkaisuja, joissa otetaan käyttöön organisaatiosi henkilöstön työssään jo ennestään käyttämiä sovelluksia. [Lisätietoja](embed-apps-dev.md)
 
-- **Luo offline-tilassa toimivia sovelluksia**: Kehitä offline-tilassa toimivia sovelluksia, niin että käyttäjät voivat työskennellä tehokkaasti myös ilman verkkoyhteyttä. [Lisätietoja](offline-apps.md)
+- **Luo offline-tilassa toimivia sovelluksia**: Kehitä offline-tilassa toimivia sovelluksia, jotta käyttäjät voivat työskennellä tehokkaasti myös ilman verkkoyhteyttä. [Lisätietoja](offline-apps.md)
 
-## <a name="powerapps-for-isvs-and-microsoft-partners"></a>Ohjelmistotoimittajien ja Microsoft-kumppanien PowerApps
+## <a name="powerapps-for-isvs-and-microsoft-partners"></a>PowerApps ohjelmistotoimittajille ja Microsoft-kumppaneille
 
 Microsoft-kumppanina tai riippumattomana ohjelmistotoimittajana (ISV, Independent Software Vendor) voit nopeuttaa asiakkaiden käyttöönottoaikataulua laajentamalla tuotteitasi niin, että niihin voi integroida asiakkaan tieto- ja liiketoimintaprosessit:
 
@@ -42,4 +43,4 @@ Microsoft-kumppanina tai riippumattomana ohjelmistotoimittajana (ISV, Independen
 
 - **Lisää ratkaisusi AppSourceen**: Luo liiketoiminnallesi uusia liidejä kehittämällä sovellus PowerAppsissa ja julkaisemalla se Microsoft AppSourcessa uusien asiakkaiden kokeiltavaksi. [Lisätietoja](dev-appsource-test-drive.md)
 
-- **Aloita maksutta jo tänään**: Rekisteröidy ilmaiseksi Microsoft PowerApps yhteisön palvelupakettiin ja ala luoda sovelluksia asianmukaisessa, yksilöllisessä ympäristössä. [Lisätietoja](../dev-community-plan.md)
+- **Aloita maksutta jo tänään**: Rekisteröidy ilmaiseksi Microsoft PowerApps -yhteisön palvelupakettiin ja ala luoda sovelluksia asianmukaisessa, yksilöllisessä ympäristössä. [Lisätietoja](../dev-community-plan.md)

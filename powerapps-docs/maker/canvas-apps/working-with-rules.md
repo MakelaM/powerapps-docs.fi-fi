@@ -1,5 +1,5 @@
 ---
-title: Säännön luominen | Microsoft Docs
+title: Säännön laatiminen | Microsoft Docs
 description: Vaiheittaiset ohjeet sovelluksen logiikan kehittämiseen sääntöjä luomalla
 documentationcenter: na
 author: karthik-1
@@ -13,28 +13,29 @@ ms.component: canvas
 ms.date: 11/10/2017
 ms.author: sharik
 ms.openlocfilehash: f8578625ea3661a9070bddcc5b2ff63c6ecde4fd
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31828007"
 ---
 # <a name="create-a-rule-in-powerapps"></a>Säännön luominen PowerAppsissa
-Voit luoda sääntöjä, joilla voit muokata sovellusta automaattisesti määrittämiesi ehtojen perusteella. Luo esimerkiksi sellainen sääntö, jolla luettelokohteet näytetään punaisella, keltaisella tai vihreällä niiden tilan perusteella tai jolla hyväksyntä-painike näytetään vain tietyille käyttäjille (esimerkiksi esimiehille).
+Voit luoda sääntöjä, joilla voit muokata sovellusta automaattisesti määrittämiesi ehtojen perusteella. Luo esimerkiksi sellainen sääntö, jolla luettelokohteet näytetään punaisella, keltaisella tai vihreällä niiden tilan perusteella tai jolla hyväksyntäpainike näytetään vain tietyille käyttäjille (esimerkiksi esimiehille).
 
-Voit lisätä sääntöjä useisiin erilaisiin ohjausobjekteihin. Tässä ohjeaiheessa lisäämme säännön, joka muuttaa **otsikko**-ohjausobjektin tekstin väriä, jos **liukusäätimen** arvo on suurempi kuin 70.
+Voit lisätä sääntöjä useisiin erilaisiin ohjausobjekteihin. Tässä ohjeaiheessa lisäämme säännön, joka muuttaa **Nimi**-ohjausobjektin tekstin väriä, jos **Liukusäädin**-ohjausobjektin arvo on suurempi kuin 70.
 
-## <a name="add-a-rule"></a>Lisää sääntö
+## <a name="add-a-rule"></a>Säännön lisääminen
 1. Valitse ohjausobjekti (tai lisää ohjausobjekti ja jätä se valituksi).
 
-    [Lisää otsikko ja liukusäädin](add-configure-controls.md), määritä otsikon **teksti**-ominaisuuden arvoksi **Slider1.Value** ja valitse sitten liukusäädin tätä ohjeaihetta varten.
+    [Lisää nimi ja liukusäädin](add-configure-controls.md), määritä nimen **teksti**-ominaisuuden arvoksi **Slider1.Value** ja valitse sitten liukusäädin tätä ohjeaihetta varten.
 
 1. Napsauta tai napauta oikeanpuoleisessa paneelissa **Säännöt** ja napsauta tai napauta sitten **Uusi sääntö**.
 
-    ![Luo uusi sääntö](./media/working-with-rules/new-rule.png)
+    ![Uuden säännön luominen](./media/working-with-rules/new-rule.png)
 
     Jos valitset ohjausobjektin, jolle on jo määritetty yksi tai useampi sääntö, voit muokata mitä tahansa niistä napsauttamalla tai napauttamalla sitä.  
 
-## <a name="add-a-condition"></a>Lisää ehto
+## <a name="add-a-condition"></a>Ehdon lisääminen
 Ehto on lauseke, joka antaa tulokseksi tosi tai epätosi, kuten onko arvo suurempi kuin 70. Voit kirjoittaa lausekkeen perustuen malliin tai täysin alusta, ja voit mukauttaa lauseketta käyttöliittymän (Intellisense) ohjeiden perusteella.
 
 1. Napsauta tai napauta **Lisää ehto** ja valitse sitten malli tai **Mukautettu ehto**.
@@ -94,7 +95,7 @@ Toiminnot määrittävät, mitä tapahtuu, kun sääntöä sovelletaan. PowerApp
     Aseta tässä ohjeaiheessa liukusäätimen arvoksi suurempi kuin 70 ja vahvista, että otsikkotekstin väri muuttuu.
 
 ## <a name="see-all-rules"></a>Katso kaikki säännöt
-**Säännöt**-välilehdellä näkyy oletusarvoisesti vain valitun ohjausobjektin säännöt ja kaikki aliohjausobjektit, joita käytetään säännön ehdossa tai toiminnossa. Jos haluat näyttää kaikki sovelluksen säännöt, poista valinta **Näytä vain tämän ohjausobjektin säännöt**-valintaruudusta.
+**Säännöt**-välilehdellä näkyvät oletusarvoisesti vain valitun ohjausobjektin säännöt ja kaikki aliohjausobjektit, joita käytetään säännön ehdossa tai toiminnossa. Jos haluat näyttää kaikki sovelluksen säännöt, poista valinta **Näytä vain tämän ohjausobjektin säännöt**-valintaruudusta.
 
 ![Poista suodatin](./media/working-with-rules/rules-filter.png)
 

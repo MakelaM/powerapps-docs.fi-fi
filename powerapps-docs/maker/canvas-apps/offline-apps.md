@@ -13,13 +13,14 @@ ms.component: canvas
 ms.date: 05/09/2017
 ms.author: mblythe
 ms.openlocfilehash: e73324d6cfce5edf7ece0350b2047dc7842373bb
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836765"
 ---
 # <a name="develop-offline-capable-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia sovelluksia PowerAppsissa
-Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia sovelluksia. Voit:
+Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia, kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia sovelluksia. Voit:
 
 * Käynnistää Powerappsin mobiilisovelluksen offline-tilassa.
 * Suorittaa kehittämiäsi sovelluksia offline-tilassa.
@@ -27,12 +28,12 @@ Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, mit
 * Käyttää [kokoelmia](../canvas-apps/create-update-collection.md) ja hyödyntää funktioita, kuten [LoadData ja SaveData](../canvas-apps/functions/function-savedata-loaddata.md), perustietojen tallennukseen offline-tilassa.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Offline-tilassa toimivien sovellusten luominen
-Ensimmäinen asia mietittäessä offline-tilanteita on se, miten sovelluksesi käsittelevät tietoja. PowerApps-sovellukset käyttävät tietoja pääasiassa käyttöympäristön, kuten SharePointin, Office 365:n ja Common Data Servicen tarjoamien [liittimien](../canvas-apps/connections-list.md) kautta. Voit myös luoda mukautettuja liittimiä, jotka antavat sovelluksille mahdollisuuden käyttää mitä tahansa palvelua, joka tarjoaa RESTful-päätepisteen. Tämä voi olla WWW-ohjelmointirajapinta tai palvelu, kuten Azure Functions. Nämä liittimet käyttävät HTTPS-yhteyttä Internetin kautta, mikä tarkoittaa, että käyttäjillä on oltava online-yhteys, jotta he voivat käyttää tietoja ja muita palvelun tarjoamia ominaisuuksia.
+Ensimmäinen asia mietittäessä offline-tilanteita on se, miten sovelluksesi käsittelevät tietoja. PowerApps-sovellukset käyttävät tietoja pääasiassa käyttöympäristön, kuten SharePointin, Office 365:n ja Common Data Servicen tarjoamien [liittimien](../canvas-apps/connections-list.md) kautta. Voit myös luoda mukautettuja liittimiä, jotka antavat sovelluksille mahdollisuuden käyttää mitä tahansa palvelua, joka tarjoaa RESTful-päätepisteen. Tämä voi olla WWW-ohjelmointirajapinta tai palvelu, kuten Azure Functions. Nämä liittimet toimivat Internetin kautta HTTPS-käytännöllä, minkä vuoksi käyttäjillä on oltava Internet-yhteys, jotta he voivat käyttää palvelun tarjoamia tietoja ja ominaisuuksia.
 
 ![PowerApps-sovellus liittimineen](./media/offline-apps/online-app.png)
 
 ### <a name="handling-offline-data"></a>Offline-tietojen käsitteleminen
-Powerappsin kiinnostavimpia puolia ovat joukko ominaisuuksia ja kaavoja, jotka mahdollistavat suodatuksen, haun, lajittelun, koostamisen ja tietojen käsittelyn yhdenmukaisesti tietolähteestä riippumatta. Lähteet voivat vaihdella sovelluksen muistissa olevista kokoelmista SharePoint-luetteloihin, SQL-tietokantoihin ja Common Data Serviceen. Tämän yhdenmukaisuuden ansiosta voit helposti kohdistaa sovelluksen eri loppukäyttäjiä varten. Tärkeintä tässä on se, että tämä mahdollistaa myös paikallisten kokoelmien käyttämisen tietojen hallintaan lähes kokonaan ilman muutoksia sovelluksen logiikkaan. Itse asiassa paikalliset kokoelmat ovat ensisijainen mekanismi offline-tietojen käsittelyyn.
+PowerAppsin kiinnostavimpia puolia ovat joukko ominaisuuksia ja kaavoja, jotka mahdollistavat suodatuksen, haun, lajittelun, koostamisen ja tietojen käsittelyn yhdenmukaisesti tietolähteestä riippumatta. Lähteet voivat vaihdella sovelluksen muistissa olevista kokoelmista SharePoint-luetteloihin, SQL-tietokantoihin ja Common Data Serviceen. Tämän yhdenmukaisuuden ansiosta voit helposti kohdistaa sovelluksen eri loppukäyttäjiä varten. Tärkeintä tässä on se, että tämä mahdollistaa myös paikallisten kokoelmien käyttämisen tietojen hallintaan lähes kokonaan ilman muutoksia sovelluksen logiikkaan. Itse asiassa paikalliset kokoelmat ovat ensisijainen mekanismi offline-tietojen käsittelyyn.
 
 ## <a name="building-an-offline-twitter-app"></a>Offline-tilassa toimivan Twitter-sovelluksen rakentaminen
 Jotta painopisteenä voidaan pitää sovelluskehityksen offline-ominaisuuksia, näytämme yksinkertaisen Twitteriin liittyvän skenaarion. Laadimme sovelluksen, jonka avulla voit lukea Twitter-julkaisuja ja lähettää twiittejä ollessasi offline-tilassa. Kun sovellus siirtyy online-tilaan, sovellus julkaisee twiitit ja lataa paikalliset tiedot uudelleen.
@@ -183,10 +184,10 @@ Nyt kun sovellus on valmis, tarkastetaan, miltä se näyttää, ennen kuin voimm
 ## <a name="testing-the-app"></a>Sovelluksen testaaminen
 Seuraavien vaiheiden avulla voit testata sovellusta:
 
-1. Suorita Powerapps mobiililaitteessa online-tilassa. Sinun on suoritettava sovellus vähintään kerran online-tilassa, jotta voit ladata sovelluksen laitteeseen.
+1. Suorita PowerApps mobiililaitteessa online-tilassa. Sinun on suoritettava sovellus vähintään kerran online-tilassa, jotta voit ladata sovelluksen laitteeseen.
 2. Käynnistä Twitter-sovellus.
 3. Huomaa, että twiittejä on ladattu ja että tilana näkyy **Yhdistetty**.
-4. Sulje Powerapps kokonaan.
+4. Sulje PowerApps kokonaan.
 5. Aseta laite lentokonetilaan varmistaaksesi, että se on offline-tilassa.
 6. Suorita PowerApps. Twitter-sovellus voidaan nyt suorittaa offline-tilassa, ja voit käyttää muita sovelluksia, joita olet aiemmin suorittanut tässä laitteessa online-tilassa (ts. PowerApps piilottaa sovellukset, joita ei ole vielä ladattu laitteeseen).
 7. Suorita sovellus uudelleen.

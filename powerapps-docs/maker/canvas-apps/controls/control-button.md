@@ -1,22 +1,18 @@
 ---
 title: 'Painike-ohjausobjekti: viittaus | Microsoft Docs'
 description: Painike-ohjausobjektin tiedot, mukaan lukien ominaisuudet ja esimerkit
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 8a22e1075d15d96b7e1a6383260d5b7ccb653c3a
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: a5d818bf12bafaa5c557afae1d93b6ba0a6a7d2f
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803439"
 ---
 # <a name="button-control-in-powerapps"></a>Painike-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa sovelluksen toimintojen käyttämiseksi.
@@ -40,15 +36,15 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
 **[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
@@ -56,19 +52,19 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)**  – Tekstin ulkoasussa käytettävän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **vaaleampi**.
+**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun hiiren kohdistin on kyseisen ohjausobjektin päällä.
 
 **[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
 **[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
 
-**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
+**[Italic](properties-text.md)**  – Ilmaisee, onko ohjausobjektin teksti kursivoitu.
 
 **[PaddingBottom](properties-size-location.md)** – Ohjausobjektin tekstin ja alareunan välinen etäisyys.
 
@@ -82,57 +78,57 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedColor](properties-color-border.md)** –Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**[RadiusBottomLeft](properties-size-location.md)** – Vasemman alakulman pyöristysaste.
+**[RadiusBottomLeft](properties-size-location.md)** – Ohjausobjektin vasemman alakulman pyöristysaste.
 
-**[RadiusBottomRight](properties-size-location.md)** – Oikean alakulman pyöristysaste.
+**[RadiusBottomRight](properties-size-location.md)** – Ohjausobjektin oikean alakulman pyöristysaste.
 
-**[RadiusTopLeft](properties-size-location.md)** – Vasemman yläkulman pyöristysaste.
+**[RadiusTopLeft](properties-size-location.md)** – Ohjausobjektin vasemman yläkulman pyöristysaste.
 
-**[RadiusTopRight](properties-size-location.md)** – Oikean yläkulman pyöristysaste.
+**[RadiusTopRight](properties-size-location.md)** – Ohjausobjektin oikean yläkulman pyöristysaste.
 
-**[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
+**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
+**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Underline](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti alleviivattua.
+**[Underline](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti alleviivattu.
 
 **[VerticalAlign](properties-text.md)** – Ohjausobjektin tekstin sijainti suhteessa ohjausobjektin pystysuoraan keskikohtaan.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
-## <a name="related-functions"></a>Liitetyt toiminnot
-**[Navigate( *NäytönNimi*, *NäytönSiirtymäarvo* )](../functions/function-navigate.md)**
+## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
+**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)**
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="add-a-basic-formula-to-a-button"></a>Peruskaavan lisääminen painikkeeseen
 1. Lisää **[Tekstisyöte](control-text-input.md)**-ohjausobjekti ja anna sille nimi **Source**.
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **Painike**-ohjausobjekti, määritä sen **[Text](properties-core.md)**-ominaisuus näyttämään "Lisää" ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
+2. Lisää **Painike**-ohjausobjekti, määritä sen **[Text](properties-core.md)**-ominaisuudeksi ”Lisää” ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
    **UpdateContext({Total:Total + Value(Source.Text)})**
    
     Haluatko lisätietoja **[UpdateContext](../functions/function-updatecontext.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-3. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, aseta sen **[Text](properties-core.md)**-ominaisuudeksi **Total** ja paina **F5**-näppäintä.
+3. Lisää **[Nimi](control-text-box.md)**-ohjausobjekti, aseta sen **[Text](properties-core.md)**-ominaisuudeksi **Total** ja paina **F5**-näppäintä.
 4. Poista oletusteksti **Source**-kohdasta, kirjoita siihen numero ja sitten napsauta tai napauta **Lisää**.
    
-    **[Selite](control-text-box.md)**-ohjausobjekti näyttää kirjoittamasi numeron.
+    **[Nimi](control-text-box.md)**-ohjausobjekti näyttää kirjoittamasi numeron.
 5. Poista numero **Source**-kohdasta, kirjoita siihen toinen numero ja napsauta tai napauta sitten **Lisää**.
    
-    **[Selite](control-text-box.md)**-ohjausobjekti näyttää kahden kirjoittamasi numeron summan.
+    **[Nimi](control-text-box.md)**-ohjausobjekti näyttää kahden kirjoittamasi numeron summan.
 6. (valinnainen) Toista edellinen vaihe vähintään yhden kerran.
 7. Voit palata oletustyötilaan painamalla ESC-näppäintä (tai napsauttamalla oikean yläkulman sulkemiskuvaketta).
 
@@ -152,7 +148,7 @@ Lisää kaava, joka tyhjentää **Tekstisyöte**-ohjausobjektin syöttöjen väl
 ### <a name="add-another-button-to-reset-the-total"></a>Toisen painikkeen lisääminen kokonaismäärän nollaamiseksi
 Lisää toinen painike, joka tyhjentää kokonaismäärän laskutoimitusten välillä.
 
-1. Lisää uusi **Painike**-ohjausobjekti, määritä sen **[Text](properties-core.md)**-ominaisuus näyttämään ”Tyhjennä” ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:
+1. Lisää uusi **Painike**-ohjausobjekti, määritä sen **[Text](properties-core.md)**-ominaisuudeksi ”Tyhjennä” ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:
    
     **UpdateContext({Total:0})**
 2. Paina **F5**, laske useita numeroita yhteen ja sitten tyhjennä kokonaismäärä napsauttamalla tai napauttamalla **Tyhjennä**.
@@ -172,14 +168,14 @@ PowerApps luo oletuksena nelikulmion muotoisen **Painike**-ohjausobjektin, jonka
    * Luo välilehden muotoinen painike asettamalla ominaisuuksien **[RadiusTopLeft](properties-size-location.md)** ja **[RadiusTopRight](properties-size-location.md)** arvoksi **300**ja ominaisuuksien **[RadiusBottomLeft](properties-size-location.md)** ja **[RadiusBottomRight](properties-size-location.md)** arvoksi **100**.
 
 #### <a name="change-a-buttons-color-when-you-hover-over-it"></a>Painikkeen värin muuttaminen, kun hiiren on sen päällä
-Oletuksena **Painikkeen** täyttöväri himmenee 20 %, kun hiiren osoitin on sen päällä. Voit muuttaa tätä muokkaamalla **[HoverFill](properties-color-border.md)**-ominaisuutta, joka käyttää **[ColorFade](../functions/function-colors.md)**-funktiota. Jos asetat **[ColorFade](../functions/function-colors.md)**-kaavaksi positiivisen prosenttiluvun, väri muuttuu vaaleammaksi osoittimen ollessa sen päällä, kun taas negatiivinen prosenttiluku tekee siitä tummemman.
+Oletuksena **Painike**-ohjausobjektin täyttöväri himmenee 20 %, kun hiiren osoitin on sen päällä. Voit muuttaa tätä muokkaamalla **[HoverFill](properties-color-border.md)**-ominaisuutta, joka käyttää **[ColorFade](../functions/function-colors.md)**-funktiota. Jos asetat **[ColorFade](../functions/function-colors.md)**-kaavaksi positiivisen prosenttiluvun, väri muuttuu vaaleammaksi osoittimen ollessa sen päällä, kun taas negatiivinen prosenttiluku tekee siitä tummemman.
 
 * Muuta jonkin luomasi painikkeen **[HoverFill](properties-color-border.md)**-ominaisuuden **[ColorFade](../functions/function-colors.md)**-prosenttimäärää ja tarkastele tuloksia.
 
 Voit myös määrittää **Painike**-ohjausobjektin värin asettamalla sen **[HoverFill](properties-color-border.md)**-ominaisuudeksi kaavan, joka sisältää **[ColorFade](../functions/function-colors.md)**-funktion sijaan **[ColorValue](../functions/function-colors.md)**-funktion, esimerkiksi **ColorValue("Red")**.
 
 > [!NOTE]
-> Väri voi olla mikä tahansa CSS-värimääritelmä, joko nimi tai heksadesimaaliarvo.
+> Väri voi olla mikä tahansa CSS-värimääritys, joko nimi tai heksadesimaaliarvo.
 
 * Korvaa jonkin luomasi painikkeen **[ColorFade](../functions/function-colors.md)**-funktio **[ColorValue](../functions/function-colors.md)**-funktiolla ja tarkastele tuloksia.
 

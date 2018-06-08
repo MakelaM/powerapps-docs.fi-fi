@@ -1,8 +1,6 @@
 ---
 title: Uuden sovelluksen upottaminen Power BI -raporttiin | Microsoft Docs
 description: Upota sovellus, joka käyttää samaa tietolähdettä ja voidaan suodattaa samalla tavalla kuin muut raporttikohteet
-services: powerapps
-suite: powerapps
 documentationcenter: na
 author: mgblythe
 manager: kfile
@@ -10,16 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: tutorial
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: 839a9ce79f86fccd9fb91afe3938cc76160f0c08
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 33656e44f782a626eecc28787af984ace7339cd6
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830466"
 ---
 # <a name="tutorial-embed-a-new-app-in-a-power-bi-report"></a>Opetusohjelma: Uuden sovelluksen upottaminen Power BI -raporttiin
 

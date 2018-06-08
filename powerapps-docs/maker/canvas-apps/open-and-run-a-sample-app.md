@@ -1,8 +1,6 @@
 ---
 title: Malliohjelman käyttäminen (pikaopas) | Microsoft Docs
 description: Vaiheittaiset ohjeet malliin perustuvan kangas-sovelluksen luomiseen PowerAppsissa
-services: ''
-suite: powerapps
 documentationcenter: na
 author: AFTOwen
 manager: kfile
@@ -10,16 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/11/2018
 ms.author: anneta
-ms.openlocfilehash: 47b98bb0656df7f3459a9191677efea170f522ab
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4f1d30f9645bb49ac2d838791cb52fc071073601
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826817"
 ---
 # <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Pikaopas: Luo kangas-sovellus mallin perusteella PowerAppsissa
 Tässä pikaoppaassa luot kangas-sovelluksen mallin perusteella, jolloin voit tutkia suunnittelumahdollisuuksia ja löytää ideoita, joita voit käyttää kehittäessäsi omia kangas-sovelluksiasi.

@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 1df75e5de1f0d8a2515b4dcf761593145d72f70a
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31834649"
 ---
 # <a name="rating-control-in-powerapps"></a>Luokitus-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ilmaista arvon numeron 1 ja määrittämäsi suurimman numeron väliltä.
@@ -25,7 +26,7 @@ Ohjausobjekti, jolla käyttäjät voivat ilmaista arvon numeron 1 ja määrittä
 Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän tähtiä valitsemalla ilmaista, kuinka paljon hän piti jostakin asiasta.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**[Default](properties-core.md)** – Ohjausobjektin alkuarvo ennen kuin käyttäjä on muuttanut sitä.
+**[Default](properties-core.md)** – Ohjausobjektin alkuarvo, ennen kuin käyttäjä on muuttanut sitä.
 
 **Max** – Suurin arvo, jonka käyttäjä voi antaa liukusäätimelle tai luokitukselle.
 
@@ -38,7 +39,7 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -56,21 +57,21 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 
 **ReadOnly** – Voiko käyttäjä muuttaa liukusäätimen tai luokituksen ohjausobjektin arvoa.
 
-**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
+**[Reset](properties-core.md)** – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**ShowValue** – Näytetäänkö liukusäätimen tai luokituksen arvo, kun käyttäjä muuttaa kyseistä arvoa tai pitää osoitinta ohjausobjektin päällä.
+**ShowValue** – Näytetäänkö liukusäätimen tai luokituksen arvo, kun käyttäjä tekee muutoksia kyseiseen arvoon tai kun tämä pitää osoitinta ohjausobjektin kohdalla.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 [**Average**( *Arvo1*, *Arvo2,* ... )](../functions/function-aggregates.md)
@@ -90,7 +91,7 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 5. Napsauta tai napauta vähemmän kuin neljä tähteä kohdassa **Kvantitatiivinen**.
    
     **[Tekstisyöte](control-text-input.md)**-ohjausobjektin vihjeteksti muuttuu alhaista luokitusta vastaavaksi.
-6. Palaa oletustyötilaan painamalla Esc-näppäintä.
+6. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

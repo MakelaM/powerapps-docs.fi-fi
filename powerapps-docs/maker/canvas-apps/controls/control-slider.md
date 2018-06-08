@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 672a3d9a96545bf695128fcc823ec1d3437ae4a4
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837822"
 ---
 # <a name="slider-control-in-powerapps"></a>Liukusäädin PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi määrittää arvon vetämällä kahvaa.
@@ -38,13 +39,13 @@ Käyttäjä voi valita arvon pienimmän ja suurimman määrittämäsi arvon väl
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)**  – Onko ohjausobjektin reuna **Solid** (kiinteä), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
 **[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
@@ -70,7 +71,7 @@ Käyttäjä voi valita arvon pienimmän ja suurimman määrittämäsi arvon väl
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**RailFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false** tai liukusäätimen kahvan oikealla puolella olevan viivan väri.
+**RailFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false**, tai liukusäätimen kahvan oikealla puolella olevan viivan väri.
 
 **RailHoverFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false** tai liukusäätimen kahvan oikealla puolella olevan viivan väri silloin, kun osoitinta pidetään valitsinkytkimen tai liukusäätimen yläpuolella.
 
@@ -78,23 +79,23 @@ Käyttäjä voi valita arvon pienimmän ja suurimman määrittämäsi arvon väl
 
 **[Reset](properties-core.md)** – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**ShowValue** – Näytetäänkö liukusäätimen tai luokituksen arvo, kun käyttäjä tekee muutoksia kyseiseen arvoon tai kun tämä pitää osoitinta ohjausobjektin päällä.
+**ShowValue** – Näytetäänkö liukusäätimen tai luokituksen arvo, kun käyttäjä tekee muutoksia kyseiseen arvoon tai kun tämä pitää osoitinta ohjausobjektin kohdalla.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
 **ValueFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true** tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri.
 
-**ValueHoverFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true** tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri, kun osoitinta pidetään ohjausobjektin tai liukusäätimen päällä.
+**ValueHoverFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true**, tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri, kun osoitinta pidetään ohjausobjektin tai liukusäätimen päällä.
 
 **[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 [**Sum**( *Arvo1*, *Arvo2* )](../functions/function-aggregates.md)
@@ -113,7 +114,7 @@ Käyttäjä voi valita arvon pienimmän ja suurimman määrittämäsi arvon väl
    **Filter(KaupunkienVäkiluvut, Väkiluku > MinVäkiluku)**
 6. Määritä valikoiman ensimmäisen kohteen ylimmän otsikon **[Text](properties-core.md)**-ominaisuudeksi **TämäKohde.Kaupunki** ja määritä alimman otsikon **[Text](properties-core.md)**-ominaisuudeksi seuraava kaava:<br> **Text(ThisItem.Väkiluku, "##,###")**
 7. Paina F5-näppäintä ja säädä **MinVäkiluku**-liukusäädin näyttämään vain ne kaupungit, joiden väkiluku on suurempi kuin määrittämäsi arvo.
-8. Palaa oletustyötilaan painamalla Esc-näppäintä.
+8. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

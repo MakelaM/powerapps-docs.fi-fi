@@ -1,8 +1,6 @@
 ---
 title: PowerAppsin mukautettu visualisointi Power BI:lle | Microsoft Docs
 description: Toimintosarja ja rajoitukset sellaisen sovelluksen upottamiseen, joka käyttää samaa tietolähdettä ja joka voidaan suodattaa muiden Power BI -raporttikohteiden mukaisesti
-services: powerapps
-suite: powerapps
 documentationcenter: na
 author: mgblythe
 manager: kfile
@@ -10,16 +8,16 @@ editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: tutorial
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: a1ca27ddaff4264fe961588701859fe1ad730c42
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: da3d21e3f4488f552568a95d856af175f9a042eb
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827093"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 

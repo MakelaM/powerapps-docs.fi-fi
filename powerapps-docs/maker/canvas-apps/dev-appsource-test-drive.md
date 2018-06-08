@@ -1,6 +1,6 @@
 ---
 title: Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa | Microsoft Docs
-description: Käytä AppSourcea sovellusten jakamiseen asiakkaille ja liidien luomiseksi yrityksellesi.
+description: Käytä AppSourcea sovellusten jakamiseen asiakkaille ja liidien luomiseen yrityksellesi.
 documentationcenter: na
 author: linhtranms
 manager: kfile
@@ -13,29 +13,30 @@ ms.component: canvas
 ms.date: 05/08/2017
 ms.author: litran
 ms.openlocfilehash: 11f0e0b8a0aa0dce59588c2e1eea21885f19b741
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836375"
 ---
 # <a name="let-customers-test-drive-your-apps-on-appsource"></a>Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa
-Oletko kiinnostunut sovellusten luomisesta PowerAppsissa? Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisuja osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten ja työnkulkujen jakamiseksi asiakkaiden kanssa ja liidien luomiseksi yrityksellesi.
+Oletko kiinnostunut sovellusten luomisesta PowerAppsissa? Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisuja osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten jakamiseen asiakkaiden kanssa ja liidien luomiseen yrityksellesi.
 
 ## <a name="what-is-a-test-drive-solution"></a>Mikä on Test Drive -ratkaisu?
 Test Drive -ratkaisun avulla asiakkaasi voivat testata oikeaa sovellusta rekisteröitymättä PowerApps-palvelupakettia varten tai asentamatta sovelluksia. Asiakkaat vain kirjautuvat sisään osoitteessa AppSource.com käyttämällä Azure Active Directory (AAD) -tiliään ja suorittavat sovelluksen verkkoselaimessa. Ilman Test Drivea asiakkaat voivat vain lukea tietoja sovelluksestasi tai katsoa videon, jossa sitä kuvaillaan. Test Driven avulla asiakas saa paremman kuvan ratkaisustasi ja sovelluksesi toiminnallisuudesta. He pääsevät oikeasti käyttämään sovellusta. Asiakkaat eivät voi katsoa konepellin alle ja tarkastella sovelluksen rakennetta, joten immateriaalioikeutesi on suojattu. Keräämme ja jaamme liiditietoja käyttäjistä, jotka käyttävät Test Drive -sovellustasi, mikä auttaa kasvattamaan liiketoimintaasi.
 
 Tässä on esimerkki [sovellussivusta](https://go.microsoft.com/fwlink/?linkid=848867) AppSource.comissa:
 
-![Esimerkki-AppSource-sivu ](./media/dev-appsource-test-drive/sample-app-source-listing.png)
+![Esimerkki AppSource-sivusta ](./media/dev-appsource-test-drive/sample-app-source-listing.png)
 
 **Ilmainen kokeiluversio** -linkin valitseminen yllä olevalta sovellussivulta käynnistää siihen liittyvän PowerApps Test Drive -sovelluksen suoraan käyttäjän selaimessa:
 
 ![Esimerkki App Web Playeristä](./media/dev-appsource-test-drive/sample-app-web-player.png)
 
 ## <a name="how-do-i-build-a-test-drive-solution"></a>Kuinka rakennan Test Drive -ratkaisun?
-Sovelluksen rakentaminen Test Drive -ratkaisua varten on kuin sovelluksen luominen yleensä PowerAppsissa, mutta sitä varten käytetään upotettuja tietoja ulkoisten tietolähteiden sijaan. Upotettujen tietojen käyttäminen pienentää estettä sovelluksen antamiseksi asiakkaasi käyttöön, jotta kynnys sovelluksen kokeiluun olisi mahdollisimman matala. Asiakkaille lopulta levitettävä täysi ratkaisu sisältää yleensä tietoyhteyksiä, mutta upotetut tiedot sopivat hyvin Test Drive -ratkaisua varten.
+Sovelluksen rakentaminen Test Drive -ratkaisua varten on kuin sovelluksen luominen yleensä PowerAppsissa, mutta sitä varten käytetään upotettuja tietoja ulkoisten tietolähteiden sijaan. Upotettujen tietojen käyttäminen helpottaa sovelluksen antamista asiakkaasi käyttöön, jotta kynnys sovelluksen kokeiluun olisi mahdollisimman matala. Asiakkaille lopulta levitettävä täysi ratkaisu sisältää yleensä tietoyhteyksiä, mutta upotetut tiedot sopivat hyvin Test Drive -ratkaisuun.
 
-PowerApps tukee suoraan sovellusten rakentamista upotetuilla tiedoilla, joten tarvitset vain sovelluksen käyttämät esimerkkitiedot. Nämä tiedot tulee sisällyttää Excel-tiedostoon yhtenä tai useampana taulukkona. PowerAppsissa sitten noudetaan Excel-taulukkojen tiedot sovellukseen ja niitä käsitellään siinä ulkoisen tietolähteen sijasta. Alla kuvatussa kolmen vaiheen prosessissa näytetään, kuinka tiedot noudetaan ja kuinka niitä käytetään sovelluksessa.
+PowerApps tukee suoraan sovellusten rakentamista upotettujen tietojen avulla, joten tarvitset vain sovelluksen käyttämät esimerkkitiedot. Nämä tiedot tulee sisällyttää Excel-tiedostoon yhtenä tai useampana taulukkona. PowerAppsissa noudetaan sitten Excel-taulukkojen tiedot sovellukseen ja niitä käsitellään sovelluksessa, ei ulkoisen yhteyden kautta. Alla kuvatussa kolmivaiheisessa prosessissa näytetään, kuinka tiedot noudetaan ja kuinka niitä käytetään sovelluksessa.
 
 ### <a name="step-1-import-data-into-the-app"></a>Vaihe 1: Tietojen tuominen sovellukseen
 Oletetaan, että sinulla on Excel-tiedosto, jossa on kaksi taulukkoa: **SiteInspector** ja **SitePhotos**.
@@ -59,7 +60,7 @@ Jos sovelluksesi sallii myös kirjoittamisen, nouda tiedot ensin taulukoista *ko
 ClearCollect(SiteInspectorCollect,SiteInspector); ClearCollect(SitePhotosCollect,SitePhotos)
 ```
 
-Kaava tyhjentää kummankin kokoelman ja kerää tiedot taulukoista asianmukaiseen kokoelmaan:
+Kaava tyhjentää molemmat kokoelmat ja kerää tiedot taulukoista asianmukaiseen kokoelmaan:
 
 * Lataa tiedot kutsumalla tämä kaava jossain kohtaa sovelluksessasi.
 * Tarkastele kaikkia sovelluksesi kokoelmia valikossa **Tiedosto** > **Kokoelmat**.
@@ -67,24 +68,24 @@ Kaava tyhjentää kummankin kokoelman ja kerää tiedot taulukoista asianmukaise
 
 Jos haluat käyttää **Title**-kenttää, käytä kaavassasi tekstiä **SiteInspectorCollect.Title**.
 
-### <a name="step-3-add-update-and-delete-data-in-your-app"></a>Vaihe3: Tietojen lisääminen, päivitys ja poistaminen sovelluksessa
-Olet nähnyt, kuinka tietoja voidaan lukea suoraan kokoelmasta; nyt näytämme kuinka voit lisätä, päivittää tai poistaa kokoelman tietoja:
+### <a name="step-3-add-update-and-delete-data-in-your-app"></a>Vaihe 3: Tietojen lisääminen, päivitys ja poistaminen sovelluksessa
+Olet nähnyt, kuinka tietoja voidaan lukea suoraan kokoelmasta. Nyt näytämme, kuinka voit lisätä, päivittää tai poistaa kokoelman tietoja:
 
-**Lisää kokoelmaan rivi** käyttämällä kaavaa [Collect( DataSource, Kohde, ... )](../canvas-apps/functions/function-clear-collect-clearcollect.md):
+**Lisää kokoelmaan rivi** käyttämällä kaavaa [Collect( DataSource, Item, ... )](../canvas-apps/functions/function-clear-collect-clearcollect.md):
 
 ```
 Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),
     Title:TitleText.Text,SubTitle:SubTitleText.Text,Description:DescriptionText.Text)
 ```
 
-**Päivitä kokoelman rivi** käyttämällä kaavaa [UpdateIf( DataSource, Ehto1, Muutostietue1 [, Ehto2, Muutostietue2, ...] )](../canvas-apps/functions/function-update-updateif.md):
+**Päivitä kokoelman rivi** käyttämällä kaavaa [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](../canvas-apps/functions/function-update-updateif.md):
 
 ```
 UpdateIf(SiteInspectorCollect,ID=record.ID,
     {Title:TitleEditText.Text,SubTitle:SubTitleEditText.Text,Description:DescriptionEditText.Text)
 ```
 
-**Poista kokoelmasta rivi** käyttämällä kaavaa [RemoveIf( DataSource, Ehto [, ...] )](../canvas-apps/functions/function-remove-removeif.md):
+**Poista kokoelmasta rivi** käyttämällä kaavaa [RemoveIf( DataSource, Condition [, ...] )](../canvas-apps/functions/function-remove-removeif.md):
 
 ```
 RemoveIf(SiteInspectorCollect,ID=record.ID)
@@ -96,7 +97,7 @@ RemoveIf(SiteInspectorCollect,ID=record.ID)
 Yhteenvetona voit luoda sovelluksestasi version, joka käyttää upotettuja tietoja. Se simuloi tietolähteitä käyttävän sovelluksesi käyttökokemusta. Kun tiedot on upotettu, olet valmis julkaisemaan sovelluksen Test Drive -ratkaisuna AppSource.comissa.
 
 ## <a name="how-do-i-list-my-test-drive-solution-on-appsourcecom"></a>Kuinka julkaisen Test Drive -ratkaisun AppSource.comissa?
-Nyt kun sovelluksesi on valmis, on aika julkaista se AppSource.comissa. Tämän prosessin aloittamiseksi ole hyvä ja täytä [sovelluslomake](https://powerapps.microsoft.com/partners/get-listed/) PowerApps.comissa.
+Kun sovelluksesi on nyt valmis, on aika julkaista se AppSource.comissa. Tämän prosessin aloittamiseksi täytä [sovelluslomake](https://powerapps.microsoft.com/partners/get-listed/) PowerApps.comissa.
 
-Kun olet täyttänyt lomakkeen, saat sähköpostiviestin, jossa on ohjeet sovelluksen lähettämiseksi julkaisua varten AppSource.comissa. Koko prosessin alusta loppuun näyttävän perehdytysdokumentaation voi myös ladata [täältä](https://go.microsoft.com/fwlink/?linkid=851031).
+Kun olet täyttänyt lomakkeen, saat sähköpostiviestin, jossa on ohjeet sovelluksen lähettämiseen AppSource.comissa julkaisemista varten. Koko prosessin alusta loppuun esittelevän perehdytysdokumentaation voi myös ladata [täältä](https://go.microsoft.com/fwlink/?linkid=851031).
 

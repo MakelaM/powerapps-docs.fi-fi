@@ -1,6 +1,6 @@
 ---
 title: Text-funktio | Microsoft Docs
-description: Tietoja PowerAppsin Text-funktiosta, mukaan lukien syntaksi ja joitakin esimerkkejä
+description: Tietoja PowerAppsin Text-funktiosta, kuten syntaksi ja joitakin esimerkkejä
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
 ms.openlocfilehash: a63a972e7af3c821d2441519c2a887bbe110faac
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31838943"
 ---
 # <a name="text-function-in-powerapps"></a>PowerAppsin Text-funktio
 Muotoilee luvun tai päivämäärän/kellonajan esitystavan.
@@ -24,7 +25,7 @@ Muotoilee luvun tai päivämäärän/kellonajan esitystavan.
 ## <a name="description"></a>Kuvaus
 **Text**-funktio soveltaa numeron tai päivämäärän/kellonajan muotoiluun jotain seuraavan tyyppisistä argumenteista:
 
-* Ennalta määritetty päivämäärän/kellonajan esitystapa, jonka voit määrittää käyttämällä **DateTimeFormat** -luettelointia.  Tätä tyyppiä suositellaan päivämäärien ja kellonaikojen muotoiluun, koska se mukautuu automaattisesti kunkin käyttäjän kielen ja sijaintipaikan mukaan.
+* Ennalta määritetty päivämäärän/kellonajan esitystapa, jonka voit määrittää käyttämällä **DateTimeFormat**-luettelointia.  Tätä tyyppiä suositellaan päivämäärien ja kellonaikojen muotoiluun, koska se mukautuu automaattisesti kunkin käyttäjän kielen ja sijaintipaikan mukaan.
 * Mukautettu muotoilu tarkoittaa merkkijonoa, jossa käytetään paikkamerkkejä osoittamaan, miten päivämäärä ja kellonaika muotoillaan. Paikkamerkit osoittavat näytössä näkyvien numeroiden määrän, käytetäänkö ryhmittelyerottimia ja miten kuukausien nimet esitetään. PowerApps tukee samaa paikkamerkkien osajoukkoa, jota Microsoft Excel käyttää.
 
 Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../show-text-dates-times.md).
@@ -33,13 +34,13 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 | Ennalta määritetty muotoilu | Kuvaus |
 | --- | --- |
 | **DateTimeFormat.LongDate** |Koko vuosi, kuukausi, kuukauden päivä ja viikonpäivä. Kuukausien nimiä ja viikonpäiviä ei lyhennetä. |
-| **DateTimeFormat.LongDateTime** |Koko vuosi, kuukausi, kuukauden päivä, viikonpäivä, plus tunnit (12 tunnin kello), minuutit, sekunnit ja AM/PM-merkintä. Kuukausien nimiä ja viikonpäiviä ei lyhennetä. |
-| **DateTimeFormat.LongDateTime24** |Koko vuosi, kuukausi, kuukauden päivä, viikonpäivä, sekä tunnit (24 tunnin kello), minuutit ja sekunnit. Kuukausien nimiä ja viikonpäiviä ei lyhennetä. |
+| **DateTimeFormat.LongDateTime** |Koko vuosi, kuukausi, kuukauden päivä, viikonpäivä sekä tunnit (12 tunnin kello), minuutit, sekunnit ja AM/PM-merkintä. Kuukausien nimiä ja viikonpäiviä ei lyhennetä. |
+| **DateTimeFormat.LongDateTime24** |Koko vuosi, kuukausi, kuukauden päivä, viikonpäivä sekä tunnit (24 tunnin kello), minuutit ja sekunnit. Kuukausien nimiä ja viikonpäiviä ei lyhennetä. |
 | **DateTimeFormat.LongTime** |Tunnit (12 tunnin kello), minuutit, sekunnit ja AM/PM. Sama kuin ShortTime. |
 | **DateTimeFormat.LongTime24** |Tunnit (24 tunnin kello), minuutit, sekunnit. Sama kuin ShortTime24. |
 | **DateTimeFormat.ShortDate** |Nelinumeroinen vuosiluku sekä kaksinumeroinen kuukausi ja kuukauden päivä. |
-| **DateTimeFormat.ShortDateTime** |Nelinumeroinen vuosi, kaksinumeroinen kuukausi ja kuukauden päivä, sekä tunnit (12 tunnin kello), minuutit, sekunnit ja AM/PM-merkintä. |
-| **DateTimeFormat.ShortDateTime24** |Nelinumeroinen vuosi, kaksinumeroinen kuukausi ja kuukauden päivä, sekä tunnit (24 tunnin kello), minuutit ja sekunnit. |
+| **DateTimeFormat.ShortDateTime** |Nelinumeroinen vuosi, kaksinumeroinen kuukausi ja kuukauden päivä sekä tunnit (12 tunnin kello), minuutit, sekunnit ja AM/PM-merkintä. |
+| **DateTimeFormat.ShortDateTime24** |Nelinumeroinen vuosi, kaksinumeroinen kuukausi ja kuukauden päivä sekä tunnit (24 tunnin kello), minuutit ja sekunnit. |
 | **DateTimeFormat.ShortTime** |Tunnit (12 tunnin kello), minuutit, sekunnit ja AM/PM.  Sama kuin LongTime. |
 | **DateTimeFormat.ShortTime24** |Tunnit (24 tunnin kello), minuutit ja sekunnit.  Sama kuin LongTime24. |
 | **DateTimeFormat.UTC** |Päivämäärän ja kellonajan arvo muunnetaan UTC-arvoon nykyisen käyttäjän aikavyöhykkeen perusteella ja muotoillaan ISO 8601-standardin mukaisesti. |
@@ -52,7 +53,7 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 | **.** (*piste*) |Näyttää luvun desimaalierottimen.  Riippuu mukautetun muodon kielestä; katso lisätietoja kohdasta [Yleisiä sovelluksia](#global-apps). |
 | **,** (*pilkku*) |Näyttää ryhmittelyerottimen, jota joissakin kielissä käytetään tuhaterottimena. **Text**-funktio erottaa ryhmät pilkuilla, jos muotoilussa on ristikkomerkkien (**#**) tai nollien sisällä oleva pilkku.  Riippuu mukautetun muodon kielestä; katso lisätietoja kohdasta [Yleisiä sovelluksia](#global-apps). |
 
-Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, luku pyöristetään niin moneen desimaaliin kuin muodossa on paikkamerkkejä. Jos desimaalipilkun vasemmalla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, ylimääräiset numerot näytetään. Jos desimaalipilkun vasemmalla puolella on vain ristikkomerkkejä (#), lukua 1 pienemmän arvot alkavat desimaalipilkulla (esimerkiksi **.47**).
+Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, luku pyöristetään niin moneen desimaaliin kuin muodossa on paikkamerkkejä. Jos desimaalipilkun vasemmalla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, ylimääräiset numerot näytetään. Jos desimaalipilkun vasemmalla puolella on vain ristikkomerkkejä (#), lukua 1 pienemmän arvot alkavat desimaalipilkulla (esimerkiksi **,47**).
 
 ### <a name="date-and-time-placeholders"></a>Päivämäärän ja kellonajan paikkamerkit
 | Paikkamerkki | Kuvaus |
@@ -70,9 +71,9 @@ Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on pai
 | **h** |Näyttää tunnit ilman ensimmäistä nollaa. |
 | **hh** |Näyttää tunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. Jos muotoiluun sisältyy **AM** tai **PM**, aika näkyy 12 tunnin mukaan. Muussa tapauksessa aika näytetään 24 tunnin mukaan. |
 | **m** |Näyttää minuutit lukuna ilman ensimmäistä nollaa.  > [!NOTE]
-> **m**- tai **mm** -koodin on oltava heti **h**- tai **hh**- koodin perässä tai heti ennen **ss** -koodia; muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |
+> **m**- tai **mm** -koodin on oltava heti **h**- tai **hh**-koodin perässä tai heti ennen **ss**-koodia; muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |
 | **mm** |Näyttää minuutit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. > [!NOTE]
-> **m**- tai **mm** -paikkamerkin on oltava heti **h**- tai **hh** -paikkamerkin jälkeen tai heti ennen **ss**-paikkamerkkiä. Muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |
+> **m**- tai **mm**-paikkamerkin on oltava heti **h**- tai **hh**-paikkamerkin jälkeen tai heti ennen **ss**-paikkamerkkiä. Muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |
 | **s** |Näyttää sekunnin lukuna ilman ensimmäistä nollaa. |
 | **ss** |Näyttää sekunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. |
 | **f** |Näyttää sekunnin murto-osat. |
@@ -102,9 +103,9 @@ Voit sisällyttää muotoilumerkkijonoon seuraavia merkkejä.  Ne näkyvät **Te
 | &nbsp; |Välilyönti |
 
 ## <a name="global-apps"></a>Yleiset sovellukset
-**Text**-funktio on maailmanlaajuinen.  Se tuntee suuren määrän kieliä ja osaa merkitä päivämäärät, kellonajat, valuutat ja numerot kielen mukaan.  Onnistuakseen tässä se tarvitsee seuraavat kaksi tietoa:
+**Text**-funktio on maailmanlaajuinen.  Se tuntee suuren määrän kieliä ja osaa kirjoittaa päivämäärät, kellonajat, valuutat ja numerot kielen mukaan.  Onnistuakseen tässä se tarvitsee seuraavat kaksi tietoa:
 
-* **Mukautettavan muodon kieli:** miten mukautettu muoto tulkitaan tekstin laatijaa varten?  Erotinmerkeillä (**.** ja **,**) on eri kielissä eri merkitykset.  Tämä hoidetaan käyttämällä kielikoodilla varustettua paikkamerkkiä.  Lisäksi [etukäteen määritetyt päivämäärän ja kellonajan muotoilut ](#predefined-datetime-formats) ovat kieliagnostisia, eli käytetty kieli ei vaikuta niihin.
+* **Mukautettavan muodon kieli:** miten mukautettu muoto tulkitaan tekstin laatijaa varten?  Erotinmerkeillä (**.** ja **,**) on eri kielissä eri merkitykset.  Tämä hoidetaan käyttämällä kielikoodilla varustettua paikkamerkkiä.  Lisäksi [etukäteen määritetyt päivämäärän ja kellonajan muotoilut](#predefined-datetime-formats) ovat kieliagnostisia, eli käytetty kieli ei vaikuta niihin.
 * **Tuloksen kieli:** millä kielellä tulos näytetään käyttäjälle?  Kuukausien ja viikonpäivien nimet on muotoiltava sovelluksen käyttäjän kielen mukaisiksi.  Tämä hoidetaan lisäämällä **Text**-funktioon kolmas valinnainen argumentti. 
 
 Kumpaankin näistä määrityksistä liitetään [kielitunniste](function-language.md#language-tags).  Voit tarkastella tuettujen kielten luetteloa kirjoittamalla kaavariville tai lisänäkymään **Text( 1234, "", )** ja selaamalla kolmanteen argumenttiin ehdotettuja kieliasetuksia.
@@ -123,7 +124,7 @@ Jos et lisää kielen paikkamerkkiä luodessasi kaavaa ja muotoiltu merkkijono o
 Jos tätä paikkamerkkiä ei löydy, kun sovellus suoritetaan, ohjelma olettaa, että asetus on **[$-en-US]**. 
 
 > [!NOTE]
-> Tulevassa versiossa tämän paikkamerkin syntaksi voi muuttua, jotta sitä ei sekoitettaisi Excelin tukemaan paikkamerkkiin, joka on samatyyppinen mutta erilainen.
+> Tulevassa versiossa tämän paikkamerkin syntaksi voi muuttua, jotta sitä ei sekoitettaisi Excelin tukemaan paikkamerkkiin, joka on samantyyppinen mutta erilainen.
 
 #### <a name="result-language-tag"></a>Tuloksen kielitunniste
 **Text**-funktion tuloksessa näkyy käännetyn kielen mukainen kuukausi, viikonpäivä, AM/PM, ryhmityserottaja ja desimaalimerkki.
@@ -133,15 +134,15 @@ Oletusmuotoisesti **Text**-funktio käyttää sitä kieltä, jota sovelluksessa 
 ## <a name="syntax"></a>Syntaksi
 **Text**( *Number*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
 
-* *Number* - Pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
-* *DateTimeFormat* - Pakollinen.  **DateTimeFormat** - Luetteloinnin osa.
-* *ResultLanguageTag* - Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
+* *Number* – Pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
+* *DateTimeFormat* – Pakollinen.  **DateTimeFormat** – Luetteloinnin osa.
+* *ResultLanguageTag* – Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
 
 **Text**( *Number*, *CustomFormat* [, *ResultLanguageTag* ] )
 
-* *Number* - Pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
+* *Number* – Pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *CustomFormat* – pakollinen. Yksi tai useampi paikkamerkki lainausmerkkien sisällä.
-* *ResultLanguageTag* - Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
+* *ResultLanguageTag* – Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
 
 ## <a name="examples"></a>Esimerkkejä
 Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinnut kielekseen englannin.  **Language**-funktio palauttaa tuloksen "en-US".
@@ -150,7 +151,7 @@ Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinn
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Muotoilee luvun yhden desimaalin tarkkuudella. |"1234.6" |
-| **Teksti (&nbsp;8,9,&nbsp;”#. 000”&nbsp;)** |Lisää tarvittaessa nollat numeron desimaaliosan loppuun. |"8.900" |
+| **Teksti (&nbsp;8.9,&nbsp;”#. 000”&nbsp;)** |Lisää tarvittaessa nollat numeron desimaaliosan loppuun. |"8.900" |
 | **Text(&nbsp;0.631,&nbsp;"0.#"&nbsp;)** |Lisää tarvittaessa kokonaislukuun nollan. |"0.6" |
 | **Text(&nbsp;12,&nbsp;"#.0#"&nbsp;)**<br>**Text(&nbsp;1234.568,&nbsp;"#.0#"&nbsp;)** |Lisää numeroon nollan yhden desimaalin tarkkuudella ja lisää toisen desimaalin, jos se syötetään. |"12.0"<br>"1234.57" |
 | **Text(&nbsp;12000,&nbsp;"$ #,###"&nbsp;)**<br>**Text(&nbsp;1200000,&nbsp;"$&nbsp;#,###"&nbsp;)** |Sijoittaa lukuun kolmen numeron välein tuhaterottimen ja lisää valuuttasymbolin. |"$&nbsp;12,000"<br>"$&nbsp;1,200,000" |
@@ -165,13 +166,13 @@ Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinn
 | **Text( Now(), DateTimeFormat.LongDate )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä 12 tunnin mukaan. |"Monday, November 23, 2015 2:37:47 PM" |
 | **Text( Now(), DateTimeFormat.LongTime24 )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä 24 tunnin mukaan. |"14:37:47" |
 | **Text( Now(), DateTimeFormat.ShortDate )** |Päivämäärä lyhyenä merkkijonona, käytössä olevan kielen mukaan esitettynä. |"11/23/2015" |
-| **Text( Now(), "d-mmm-yy" )** |Esitetään käyttämällä paikkamerkkejä: <ul><li>**d** - yksi- tai kaksinumeroinen kuukauden päivä<li>**-** - tulokseen kopioitu literaalimerkki<li>**mmm** - kolmikirjaiminen kuukauden lyhenne<li>**-** - toinen tulokseen kopioitu literaalimerkki<li>**yy** - vuosiluku kaksinumeroisena lyhenteenä</ul> |"23-Nov-15" |
+| **Text( Now(), "d-mmm-yy" )** |Esitetään käyttämällä paikkamerkkejä: <ul><li>**d** – yksi- tai kaksinumeroinen kuukauden päivä<li>**-** – tulokseen kopioitu literaalimerkki<li>**mmm** – kolmikirjaiminen kuukauden lyhenne<li>**-** – toinen tulokseen kopioitu literaalimerkki<li>**yy** – vuosiluku kaksinumeroisena lyhenteenä</ul> |"23-Nov-15" |
 
 ### <a name="global-apps"></a>Yleiset sovellukset
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Text( 1234567.89, "[$-en-US]$ #,###" )** |Tulkitsee pilkun (**,**) tuhaterottimeksi, joka näytetään kolmen merkin välein, ja lisää valuuttamerkin **$** Koska desimaaleja ei käytetä, arvo pyöristetään suurempaan kokonaislukuun. Tässä tapauksessa **[$-en-US]** on valinnainen, sillä se on oletusarvo. |"$ 1,234,568" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###" )** |Tulkitsee pilkun (**,**) desimaalierottimeksi ja merkinnän **&euro;** valuuttasymboliksi.  Koska **[$-fr-FR]** määrittää ainoastaan, miten muotoilumerkkijono tulkitaan, desimaalierottimena käytetään oletusmuotoisen ”en-US” kielitunnisteen mukaista pistettä (**"."**) ja valuuttasymbolina merkkiä **$**. |"$ 1234567.89" |
+| **Text( 1234567.89, "[$-en-US]$ #,###" )** |Tulkitsee pilkun (**,**) tuhaterottimeksi, joka näytetään kolmen merkin välein, ja lisää valuuttamerkin **$**. Koska desimaaleja ei käytetä, arvo pyöristetään suurempaan kokonaislukuun. Tässä tapauksessa **[$-en-US]** on valinnainen, sillä se on oletusarvo. |"$ 1,234,568" |
+| **Text( 1234567.89, "[$-es-ES]&euro; #,###" )** |Tulkitsee pilkun (**,**) desimaalierottimeksi ja merkinnän **&euro;** valuuttasymboliksi.  Koska **[$-fr-FR]** määrittää ainoastaan, miten muotoilumerkkijono tulkitaan, desimaalierottimena käytetään oletusmuotoisen en-US-kielitunnisteen mukaista pistettä (**"."**) ja valuuttasymbolina merkkiä **$**. |"$ 1234567.89" |
 | **Text( 1234567.89, "[$-es-ES]&euro; #,###", "es-ES" )** |Tulkitsee pilkun (**,**) desimaalierottimeksi.  Tuloksen kielitunnisteeksi on asetettu "fr-FR", joten desimaalierottimena käytetään pilkkua ( **,**) ja valuuttasymbolina merkkiä **&euro;**. |"&euro; 1234567,89" |
 | **Text( Date(2016,1,31), "dddd mmmm d" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän muotoiltuna nykyisen käyttäjän kielen mukaan. Koska paikkamerkit eivät ole kieleen sidottuja, tekstin muotoiluun ei tarvita kielitunnistetta. |"Saturday January 31" |
 | **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän kielitunnisteen "es-ES" mukaisesti. |"domingo enero 31" |

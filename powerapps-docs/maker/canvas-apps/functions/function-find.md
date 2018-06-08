@@ -1,25 +1,23 @@
 ---
 title: Etsi-funktio | Microsoft Docs
 description: PowerAppsin Etsi-funktion viitetietoja, kuten syntaksi ja esimerkit
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: f43575fbe84173485ef39f3988bf6a049a4b9417
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 8e95f03c934e0989269ff9ec21b432f609cb13ad
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826081"
 ---
 # <a name="find-function-in-powerapps"></a>PowerAppsin Etsi-funktio
 Etsii toisen merkkijonon sisältä tekstimerkkijonon, jos se on olemassa.

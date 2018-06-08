@@ -1,18 +1,18 @@
 ---
 title: Pikaopas sovellusten käyttöön selaimessa | Microsoft Docs
 description: Tässä pikaoppaassa opimme suorittamaan sovelluksia selaimessa
-author: SKjerland
-manager: kfile
+author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 03/07/2018
-ms.author: sharik
-ms.openlocfilehash: c188294e8b09dbcc25152715daec8e377763af11
-ms.sourcegitcommit: 167fd8e589689be26101584ab1b3a26be61808f7
+ms.author: matp
+ms.openlocfilehash: ba3b52bbbe12fad8773f09f4c753e4a55d09a6f0
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552710"
 ---
 # <a name="quickstart-run-an-app-in-a-web-browser"></a>Pikaopas: Suorita sovellus verkkoselaimessa
 Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa [Dynamics 365 -aloitussivulta](https://home.dynamics.com).

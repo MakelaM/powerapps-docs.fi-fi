@@ -13,20 +13,21 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
 ms.openlocfilehash: 68f81dffa4ba861978dacb1b7ad6830b0736ed6e
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837144"
 ---
 # <a name="global-support"></a>Yleinen tuki
 PowerApps on maailmanlaajuinen tuote.  Voit luoda ja käyttää sovelluksia useilla eri kielillä ja alueilla.
 
 Sovelluksia luotaessa ja käytettäessä PowerAppsin näyttämä teksti on käännetty useille eri kielille.  Näet valikkokohtia, valintaikkunoita, valintanauhan välilehtiä ja muuta tekstiä omalla kielelläsi.  Päivämäärien ja numeroiden kirjoittaminen ja näyttäminen on myös sovitettu omaan kieleesi ja alueeseesi.  Esimerkiksi pistettä "." käytetään desimaalierottimena joillain alueilla, kun taas toisilla alueilla käytetään pilkkua ",".  
 
-Myös luomasi sovellukset voivat olla maailmanlaajuisia.  Käytä **[Language](functions/function-language.md)**-, **[Text](functions/function-text.md)**, **[Value](functions/function-value.md)**-, **[DateValue](functions/function-datevalue-timevalue.md)**-funktioita ja muita funktioita määrittääksesi, mitä näytetään ja käytetään syötteenä eri kielissä.   
+Myös luomasi sovellukset voivat olla maailmanlaajuisia.  Käytä **[Language](functions/function-language.md)**-, **[Text](functions/function-text.md)**, **[Value](functions/function-value.md)**-, **[DateValue](functions/function-datevalue-timevalue.md)**-funktioita ja muita funktioita määrittämään, mitä näytetään ja käytetään syötteenä eri kielissä.   
 
 ## <a name="language-settings"></a>Kieliasetukset
-Kun käytössä on alkuperäinen studio tai soitin, isännän käyttöjärjestelmä määrittää käytetyn kielen.  Windowsissa asetuksia voi muuttaa kohdassa Kaikki asetukset ja Aika ja kieli.  Windows antaa sinun määrittää desimaalierottimena käytettävät merkit ohittaen kieliasetuksen.  
+Kun käytössä on alkuperäinen studio tai soitin, isännän käyttöjärjestelmä määrittää käytetyn kielen.  Windowsissa asetuksia voi muuttaa kohdassa Kaikki asetukset > Aika ja kieli.  Windows antaa sinun määrittää desimaalierottimena käytettävät merkit ohittaen kieliasetuksen.  
 
 Kun käytetään verkkotoimintoja, käytettävä kieli määräytyy selaimen mukaan.  Useimmat selaimet käyttävät isännän käyttöjärjestelmän asetuksia. Jotkin selaimet antavat asettaa kielen manuaalisesti.
 
@@ -56,9 +57,9 @@ Voit halutessasi antaa ohjausobjektille uuden nimen, **Casilla1**.  Punainen kou
 
 Voit käyttää haluamiasi nimiä seuraaville:
 
-* Ohjausobjektin nimet
-* Kokoelman nimet
-* Kontekstimuuttujan nimet
+* Ohjausobjektien nimet
+* Kokoelmien nimet
+* Kontekstimuuttujien nimet
 
 ### <a name="formula-separators-and-chaining-operator"></a>Kaavaerottimet ja ketjutusoperaattori
 Jotkin [erottimet ja operaattorit](functions/operators.md) siirtyvät tekijän kielen desimaalierottimesta riippuen:
@@ -70,8 +71,8 @@ Jotkin [erottimet ja operaattorit](functions/operators.md) siirtyvät tekijän k
 
 Muutos PowerApps-luetteloerottimessa vaikuttaa myös siihen, mitä Excel-luetteloerottimelle tapahtuu.  Se vaikuttaa
 
-* argumentteihin funktiokutsuissa
-* kenttiin [tietueessa](working-with-tables.md#elements-of-a-table)
+* argumentteihin funktiokutsuissa.
+* kenttiin [tietueessa](working-with-tables.md#elements-of-a-table).
 * tietueisiin [arvotaulukossa](working-with-tables.md#inline-syntax).
 
 Katso esimerkiksi seuraavaa "en-US"-muotoista kaavaa:
@@ -109,7 +110,7 @@ Numerot, päivämäärät ja kellonajat kirjoitetaan eri muodoissa eri puolilla 
 
 **[Text](functions/function-text.md)**-funktio muotoilee numerot ja päivämäärät käyttämällä käyttäjän kieliasetusta.
 
-**Text** edellyttää muotoilumerkkijonoa selvittääkseen, miten haluat muotoilla numeron tai päivämäärän.  Tämä muotoilumerkkijono voi olla kahdentyyppinen:
+**Text** edellyttää muotoilumerkkijonoa sen selvittämiseksi, kuinka haluat muotoilla numeron tai päivämäärän.  Tämä muotoilumerkkijono voi olla kahdentyyppinen:
 
 * **Yleinen luettelointi.**  Esimerkiksi **Text( Now(), DateTimeFormat.LongDate )**.  Tämä kaava muotoilee nykyisen päivämäärän kieleen sopivaan muotoon.  Tämä on muotoilumerkkijonon ensisijainen määritystapa.
 * **Mukautettu muotoilumerkkijono.**  Esimerkiksi **Text( Now(), "[$-en-US]dddd, mmmm dd, yyyy" )** näyttää saman tekstin kuin luettelointi, kun käytössä on kieli "en-US".  Mukautetun muotoilumerkkijonon etu on, että voit määrittää täsmälleen mitä tahdot.

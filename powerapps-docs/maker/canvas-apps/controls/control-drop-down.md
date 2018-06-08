@@ -13,19 +13,20 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 3df14293f478c24dbe64b84d0c2d1ea50b485fa3
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31835113"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Avattava luettelo -ohjausobjekti PowerAppsissa
 Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luettelon.
 
 ## <a name="description"></a>Kuvaus
-**Avattava luettelo** -ohjausobjekti säästää näyttötilaa erityisesti, kun luettelo sisältää paljon vaihtoehtoja. Ohjausobjekti käyttää vain yhden rivin, kunnes käyttäjä valitsee nuolenkärjen ja paljastaa näin lisää vaihtoehtoja.
+**Avattava luettelo** -ohjausobjekti säästää näyttötilaa erityisesti, kun luettelo sisältää paljon vaihtoehtoja. Ohjausobjekti käyttää vain yhden rivin, kunnes käyttäjä valitsee nuolenkärjen ja avaa näin lisää vaihtoehtoja.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**[Default](properties-core.md)** – alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
+**[Oletus](properties-core.md)** – Alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
 
 **[Items](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
 
@@ -46,15 +47,15 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 **ChevronFill** – Avattavan luettelon alaspäin osoittavan nuolen väri.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -62,21 +63,21 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
-**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **vaaleampi**.
+**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun hiiren kohdistin on kyseisen ohjausobjektin päällä.
 
 **[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
 **[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
 
-**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
+**[Italic](properties-text.md)** – Onko ohjausobjektin teksti kursivoitu.
 
-**[OnChange](properties-core.md)**  – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
+**[OnChange](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -90,31 +91,31 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedColor](properties-color-border.md)** –Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[Reset](properties-core.md)**  – Palautetaanko ohjausobjektin oletusarvo.
+**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**[SelectionColor](properties-color-border.md)** – Luettelon valitun kohteen tai kohteiden tekstin väri tai kynä-ohjausobjektin valintatyökalun väri.
+**[SelectionColor](properties-color-border.md)** – Luettelosta valitun kohteen tai kohteiden tekstin väri tai kynä-ohjausobjektin valintatyökalun väri.
 
 **[SelectionFill](properties-color-border.md)** – Luettelon valitun kohteen tai kohteiden taustaväri tai kynä-ohjausobjektin valitun alueen väri.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
+**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Underline](properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattua.
+**[Underline](properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattu.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Onko ohjausobjekti näytössä vai piilotettuna.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
@@ -126,7 +127,7 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
    <br>**ClearCollect(KaupunkienVäkiluvut, {Kaupunki:"Lontoo", Maa:"Yhdistynyt kuningaskunta", Väkiluku:8615000}, {Kaupunki:"Berliini", Maa:"Saksa", Väkiluku:3562000}, {Kaupunki:"Madrid", Maa:"Espanja", Väkiluku:3165000}, {Kaupunki:"Rooma", Maa:"Italia", Väkiluku:2874000}, {Kaupunki:"Pariisi", Maa:"Ranska", Väkiluku:2273000}, {Kaupunki:"Hampuri", Maa:"Saksa", Väkiluku:1760000}, {Maa:"Barcelona", Maa:"Espanja", Väkiluku:1602000}, {Kaupunki:"München", Maa:"Saksa", Väkiluku:1494000}, {Kaupunki:"Milano", Maa:"Italia", Väkiluku:1344000})**
    
     Haluatko lisätietoja **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-3. Paina F5-näppäintä, napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia ja paina Esc.
+3. Paina F5-näppäintä, napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia ja paina ESC-näppäintä.
 4. Lisää **Avattava luettelo** -ohjausobjekti, anna sille nimeksi **Maat** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä arvo:
    <br>**Distinct(KaupunkienVäkiluvut, Maa)**
 5. Lisää pystysuuntainen **Tekstivalikoima** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:

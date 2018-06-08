@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
 ms.openlocfilehash: c01a69f311378e8e818036c866b96a78f223baf9
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837121"
 ---
 # <a name="endswith-and-startswith-functions-in-powerapps"></a>EndsWith- ja StartsWith-funktiot PowerAppsissa
 Testaa, alkaako tekstimerkkijono toisella merkkijonolla tai päättyykö se toiseen tekstimerkkijonoon.
@@ -65,9 +66,9 @@ Loput tämän ohjeaiheen esimerkeistä näyttävät hakutuloksia luettelosta, jo
 
 Luo tämä tietolähde kokoelmana luomalla **[Painike](../controls/control-button.md)**-ohjausobjekti ja määrittämällä sen **OnSelect**-ominaisuuden arvoksi tämä kaava:
 
-**ClearCollect( Asiakkaat, Table( { Nimi: "Fred Garcia", Yritys: "Northwind Traders" }, { Nimi: "Cole Miller", Yritys: "Contoso" }, { Nimi: "Glenda Johnson", Yritys: "Contoso" }, { Nimi: "Mike Collins", Yritys: "Adventure Works" }, { Nimi: "Colleen Jones", Yritys: "Adventure Works" } ) )**
+**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
 
-Kuten tässä esimerkissä, voit näyttää luettelon [**Valikoima-ohjausobjektin**](../controls/control-gallery.md) tietueista näytön alareunassa. Näytön yläosassa voit lisätä [**Tekstisyöte**](../controls/control-text-input.md)-ohjausobjektin nimeltä **hakusyöte**, jotta käyttäjät voivat määrittää, mitkä tietueet kiinnostavat heitä.
+Kuten tässä esimerkissä, voit näyttää luettelon [**Valikoima-ohjausobjektin**](../controls/control-gallery.md) tietueista näytön alareunassa. Näytön yläosassa voit lisätä [**Tekstisyöte**](../controls/control-text-input.md)-ohjausobjektin nimeltä **SearchInput**, jotta käyttäjät voivat määrittää, mitkä tietueet kiinnostavat heitä.
 
 ![](media/function-startswith/customers-ux-unfiltered.png)
 
@@ -79,15 +80,15 @@ Voit suodattaa **Nimi**-sarakkeen perusteella määrittämällä valikoiman **Ko
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Filter( Asiakkaat, StartsWith( Nimi, hakusyöte.Text ) )** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Nimi**-sarakkeen alussa esiintyy hakumerkkijono. Testin kirjainkoolla ei ole merkitystä. Jos käyttäjä kirjoittaa hakuruutuun **co**, valikoima näyttää tulokset **Colleen Jones** ja **Cole Miller**. Valikoima ei näytä tietuetta **Mike Collins**, koska sen **Nimi**-sarake ei ala hakumerkkijonolla. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-name-co-startswith.png) |
-| **Filter( Asiakkaat, hakusyöte.Text in Nimi)** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Nimi**-sarakkeen jossain kohdassa esiintyy hakumerkkijono. Testin kirjainkoolla ei ole merkitystä. Jos käyttäjä kirjoittaa hakukenttään **co**, valikoima näyttää tulokset **Colleen Jones,** **Cole Miller** ja **Mike Collins**, koska hakumerkkijono esiintyy jossain kohdassa tietueen **Nimi**-saraketta. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-name-co-contains.png) |
-| **Search( Asiakkaat, hakusyöte.Text, "Nimi" )** |**Search**-funktio etsii vastaavuutta missä tahansa kunkin tietueen **Nimi**-sarakkeen osassa, samaan tapaan kuin **in**-operaattori. Huomaa, että sarakkeen nimi on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-name-co-contains.png) |
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen alussa esiintyy hakumerkkijono. Testin kirjainkoolla ei ole merkitystä. Jos käyttäjä kirjoittaa hakuruutuun **co**, valikoima näyttää tulokset **Colleen Jones** ja **Cole Miller**. Valikoima ei näytä tietuetta **Mike Collins**, koska sen **Name**-sarake ei ala hakumerkkijonolla. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-name-co-startswith.png) |
+| **Filter( Customers, SearchInput.Text in Name )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen jossain kohdassa esiintyy hakumerkkijono. Testin kirjainkoolla ei ole merkitystä. Jos käyttäjä kirjoittaa hakukenttään **co**, valikoima näyttää tulokset **Colleen Jones,** **Cole Miller** ja **Mike Collins**, koska hakumerkkijono esiintyy jossain kohdassa tietueen **Name**-saraketta. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-name-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name" )** |**Search**-funktio etsii vastaavuutta missä tahansa kunkin tietueen **Name**-sarakkeen osassa, samaan tapaan kuin **in**-operaattori. Huomaa, että sarakkeen nimi on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-name-co-contains.png) |
 
-Voit laajentaa haun sisältämään sekä **Yritys**-sarakkeen että **Nimi**-sarakkeen:
+Voit laajentaa haun sisältämään sekä **Company**-sarakkeen että **Name**-sarakkeen:
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Filter( Asiakkaat, StartsWith( Nimi, hakusyöte.Text ) &#124;&#124; StartsWith( Yritys, hakusyöte.Text ) )** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Nimi**-sarake tai **Yritys**-sarake alkaa hakumerkkijonolla (esimerkiksi **co**).  [**&#124;&#124;**-operaattori ](operators.md) on *true*, jos jompikumpi **StartsWith**-funktio on *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
-| **Filter( Asiakkaat, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Nimi**-sarakkeen tai **Yritys**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
-| **Search( Asiakkaat, hakusyöte.Text, "Nimi", "Yritys" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Asiakkaat**-tietolähteestä tietueet, joiden **Nimi**-sarakkeen tai **Yritys**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Suodatin**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarake tai **Company**-sarake alkaa hakumerkkijonolla (esimerkiksi **co**).  [**&#124;&#124;**-operaattori ](operators.md) on *true*, jos jompikumpi **StartsWith**-funktio on *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
+| **Filter( Asiakkaat, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Suodatin**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
 

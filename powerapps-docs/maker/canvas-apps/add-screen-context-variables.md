@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 07/10/2017
 ms.author: anneta
 ms.openlocfilehash: 19c06fa9bfc7098227e5f30a1c913522d9e6e7a3
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825253"
 ---
 # <a name="add-a-screen-and-navigate-between-screens"></a>Lisää näyttö ja siirry näytöstä toiseen
 Luo usean näytön sovellus ja lisää tapoja, joilla käyttäjät voivat siirtyä niiden välillä.
@@ -39,7 +40,7 @@ Luo usean näytön sovellus ja lisää tapoja, joilla käyttäjät voivat siirty
     ![Vasemman siirtymispalkin kaksi näyttöä](./media/add-screen-context-variables/two-screens-in-nav.png)
 
 ## <a name="add-navigation"></a>Lisää siirtyminen
-1. Avaa **Lisää**-välilehti **Lähde**-näytön ollessa valittuna, napsauta tai napauta kohtaa **Kuvakkeet** ja napsauta tai napauta sitten **Seuraava-nuolta**.  
+1. Avaa **Lisää**-välilehti **Lähde**-näytön ollessa valittuna, napsauta tai napauta **Kuvakkeet** ja napsauta tai napauta sitten **Seuraava nuoli**.  
 
     ![Lisää-välilehden Muodot-vaihtoehto](./media/add-screen-context-variables/add-next-arrow.png)
 
@@ -53,9 +54,9 @@ Luo usean näytön sovellus ja lisää tapoja, joilla käyttäjät voivat siirty
 
     Kun käyttäjä napsauttaa tai napauttaa nuolta, **Kohde**-näyttö voimistuu esiin.
 
-4. Lisää **Kohde**-näytössä **takaisin-nuoli** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+4. Lisää **Kohde**-näyttöön **takaisin-nuoli** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    <br>**Navigate(Lähde, ScreenTransition.Fade)**
 
 5. Avaa esikatselutila (![](./media/add-screen-context-variables/preview.png) tai paina F5-näppäintä) ja siirry sitten näyttöjen välillä napsauttamalla tai napauttamalla lisäämiäsi nuolia.
 
-6. Palaa oletustyötilaan painamalla **Esc**-näppäintä.
+6. Palaa oletustyötilaan painamalla **Esc**.

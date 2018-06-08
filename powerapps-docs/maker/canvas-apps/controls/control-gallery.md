@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
 ms.openlocfilehash: dde430d6174af5be75a4fc8ae13dabd6f3759899
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837253"
 ---
 # <a name="gallery-control-in-powerapps"></a>PowerAppsin Valikoima-ohjausobjekti
 Ohjausobjekti, joka sisältää muita ohjausobjekteja ja tietoja.
@@ -38,19 +39,19 @@ Saatavilla on ennalta määritettyjä Valikoima-ohjausobjekteja kuvien ja teksti
 
 **AllItems** – Kaikki valikoiman kohteet, mukaan lukien lisäohjausarvot, jotka ovat osa valikoiman mallipohjaa.
 
-**[Reunan väri](properties-color-border.md)** – Ohjausobjektin reunan väri.
+**[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
 **[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**Layout** – Vierittääkö käyttäjä valikoiman läpi tai mukauttaako käyttäjä liukusäädintä ylhäältä alas (**pystysuora**) vai vasemmalta oikealle (**vaakasuuntainen**).
+**Layout** – Vierittääkö käyttäjä valikoiman läpi tai mukauttaako käyttäjä liukusäädintä ylhäältä alas (**Vertical**) vai vasemmalta oikealle (**Horizontal**).
 
 **NavigationStep** – Kuinka paljon valikoimaa vieritetään, jos sen **ShowNavigation**-ominaisuudeksi on asetettu **tosi** ja käyttäjä valitsee valikoiman jommassakummassa päässä olevan siirtymisnuolen.
 
@@ -68,15 +69,15 @@ Saatavilla on ennalta määritettyjä Valikoima-ohjausobjekteja kuvien ja teksti
 
 **Transition** – Visuaalinen efekti (**Pop**, **Push** tai **None**), kun käyttäjä siirtää osoittimen valikoiman sisältämän kohteen päälle.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
 **WrapCount** – Näytettävien kohteiden määrä riviä tai saraketta kohden perustuen vaaka- tai pystysuoraan asetteluun.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 [**Filter**( *Tietolähde*, *Kaava* )](../functions/function-filter-lookup.md)

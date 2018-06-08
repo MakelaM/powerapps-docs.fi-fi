@@ -1,6 +1,6 @@
 ---
 title: 'Sarakkeiden ohjausobjekti: viitetiedot | Microsoft Docs'
-description: Tässä aiheessa on tietoja Microsoft PowerAppsin sarake-ohjausobjektista.
+description: Tässä aiheessa on tietoja Microsoft PowerAppsin Sarake-ohjausobjektista.
 documentationcenter: na
 author: fikaradz
 manager: kfile
@@ -13,25 +13,26 @@ ms.component: canvas
 ms.date: 06/05/2017
 ms.author: kfend
 ms.openlocfilehash: e79314b8e615a931a3ba8116a53b216afe5d145a
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826036"
 ---
 # <a name="column-control-in-powerapps"></a>Sarake-ohjausobjekti PowerAppsissa
-Tarjoaa näyttökokemuksen yhdessä kentässä [**tietotaulukko**](control-data-table.md)-ohjausobjektissa.
+Tarjoaa näyttökokemuksen yhdessä kentässä [**Tietotaulukko**](control-data-table.md)-ohjausobjektissa.
 
 ## <a name="description"></a>Kuvaus
-[**Tietotaulukko**](control-data-table.md)-ohjausobjekti näyttää tietojoukon taulukkomuotoisena ja kutakin saraketta kyseisessä taulukkomuodossa edustaa **sarake**-ohjausobjekti. **Sarake**-ohjausobjekti tarjoaa ominaisuudet, joita sovelluksen laatija voi käyttää sarakkeen ulkonäön ja käyttäytymisen muokkaamiseen.
+[**Tietotaulukko**](control-data-table.md)-ohjausobjekti näyttää tietojoukon taulukkomuotoisena, ja kutakin saraketta kyseisessä taulukkomuodossa edustaa **Sarake**-ohjausobjekti. **Sarake**-ohjausobjekti tarjoaa ominaisuudet, joita sovelluksen laatija voi käyttää sarakkeen ulkonäön ja käyttäytymisen muokkaamiseen.
 
 ## <a name="capabilities"></a>Ominaisuudet
 ### <a name="now-available"></a>Nyt käytettävissä
-* Muuta **sarake**-ohjausobjektin leveyttä.
-* Muuta **sarake**-ohjausobjektin tekstiä.
-* Siirry napsauttamalla tai napauttamalla **sarake**-ohjausobjektissa olevaa arvoa.
+* Muuta **Sarake**-ohjausobjektin leveyttä.
+* Muuta **Sarake**-ohjausobjektin tekstiä.
+* Siirry napsauttamalla tai napauttamalla **Sarake**-ohjausobjektissa olevaa arvoa.
 
 ### <a name="not-yet-available"></a>Ei ole vielä käytettävissä
-* Muokkaa **sarake**-ohjausobjektin ulkoasua.
+* Muokkaa **Sarake**-ohjausobjektin ulkoasua.
 
 ### <a name="known-issues"></a>Tunnetut ongelmat
 * **Visible**-ominaisuutta ei vielä voi käyttää.
@@ -49,12 +50,12 @@ Tarjoaa näyttökokemuksen yhdessä kentässä [**tietotaulukko**](control-data-
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="resize-a-column"></a>Sarakkeen koon muuttaminen
 1. Luo tyhjä tablettisovellus.
-2. Napsauta tai napauta **Lisää**-välilehdessä **tietotaulukkoa** ja muuta sitten **tietotaulukko**-ohjausobjektin kokoa siten, että se peittää koko näytön.
+2. Napsauta tai napauta **Lisää**-välilehdessä **Tietotaulukkoa** ja muuta sitten **Tietotaulukko**-ohjausobjektin kokoa siten, että se peittää koko näytön.
 3. Napsauta tai napauta alanuolta, joka on oikeanpuoleisessa ruudussa olevan tekstin **Tietolähdettä ei ole valittu** oikealla puolella, ja napsauta tai napauta kohtaa **Lisää tietolähde**.
 4. Napsauta tai napauta yhteysluettelossa yhteyttä, jonka haluat luoda Common Data Service -tietokantaasi.
 5. Napsauta tai napauta entiteettiluettelosta **Tili** ja napsauta tai napauta **Yhdistä**.
    
-    **Tietotaulukko**-ohjausobjekti on alustettu ja se näyttää oletuskenttien joukon.
+    **Tietotaulukko**-ohjausobjekti on alustettu, ja se näyttää oletuskenttien joukon.
 6. Napsauta tai napauta **Koko nimi** -saraketta.
    
     ![Sarake-ohjausobjekti on valittuna](./media/control-column/pre-resize-column.png)

@@ -1,32 +1,30 @@
 ---
 title: Sovellusten luominen tai muokkaaminen selaimessa | Microsoft Docs
 description: Luo tai muokkaa sovelluksia selaimessa käyttämällä Verkon PowerApps Studiota.
-services: powerapps
-suite: powerapps
 documentationcenter: na
-author: skjerland
+author: aftowen
 manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 03/08/2018
-ms.author: sharik
-ms.openlocfilehash: 5d120cd0a754b2aa6ad45c5cc81435810e382c61
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 4add1e15c1a85b27b83295422dbb6472ac02ad9f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329107"
 ---
 # <a name="create-or-edit-apps-in-powerapps-studio-for-web"></a>Luo tai muokkaa sovelluksia Verkon PowerApps Studiossa
 Luo ja muokkaa sovelluksia Verkon PowerApps Studiossa, joka avautuu selainikkunassa Windowsissa tai muussa käyttöympäristössä.
 
 ## <a name="prerequisites"></a>Edellytykset
 * [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
-* Varmista, että käytät [tuettua selainta](limits-and-config.md#supported-browsers-for-powerapps-studio-for-web).
+* Varmista, että käytät [tuettua selainta](limits-and-config.md#supported-browsers-for-powerapps-studio).
 
 ## <a name="open-powerapps-studio-for-web"></a>Avaa Verkon PowerApps Studio
 1. Kirjaudu sisään sivustoon [powerapps.com](http://go.microsoft.com/fwlink/p/?LinkId=708209).

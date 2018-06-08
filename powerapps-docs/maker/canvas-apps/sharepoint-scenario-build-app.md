@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
 ms.openlocfilehash: fca166ef388921e08bf71149a8b1274a31a7dc52
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330625"
 ---
 # <a name="create-an-app-to-manage-projects"></a>Luo sovellus ja hallitse projekteja
 > [!NOTE]
@@ -32,7 +33,7 @@ PowerApps Studiossa on kolme ruutua ja valintanauha, joiden avulla sovellusten l
 
 1. Vasen siirtymispalkki, jossa näkyy sovelluksen kaikkien näyttöjen ja ohjausobjektien hierarkkinen näkymä, sekä näyttöjen pikkukuvat
 2. Keskimmäinen ruutu, joka sisältää sovelluksen näytön, jossa työskennellään
-3. Oikea ruutu, jossa asetetaan asetuksia, kuten asettelu ja tietolähteet
+3. Oikea ruutu, jossa määritetään asetuksia, kuten asettelu ja tietolähteet
 4. Avattava Ominaisuus-luettelo, jossa valitaan ominaisuudet, joihin kaavat vaikuttavat
 5. Kaavarivi, johon lisätään kaavoja (kuten Excelissä), jotka vaikuttavat sovelluksen toimintaan
 6. Valintanauha, jossa lisätään ohjausobjekteja ja mukautetaan suunnitteluelementtejä
@@ -119,10 +120,10 @@ Tässä vaiheessa kerromme tavan, jolla voit siirtyä sovelluksen muihin näytt�
 2. Valitse keskimmäisessä ruudussa oletusarvo **[Otsikko]** ja päivitä sitten kaavarivillä **Teksti**-ominaisuuden arvoksi ”Contoso Project Management”.
    
     ![Teksti-ominaisuus kaavarivillä](./media/sharepoint-scenario-build-app/04-03-02-text-property.png)
-3. Valitse **Lisää**-välilehti, napsauta tai napauta **Otsikko** ja vedä sitten otsikko alas yläpalkin alapuolelle.
+3. Valitse **Lisää**-välilehti, napsauta tai napauta **Nimi** ja vedä sitten otsikko alas yläpalkin alapuolelle.
    
-    ![Lisää otsikko](./media/sharepoint-scenario-build-app/04-03-03-text-default.png)
-4. Määritä seuraavat otsikon ominaisuudet kaavarivillä:
+    ![Lisää nimi](./media/sharepoint-scenario-build-app/04-03-03-text-default.png)
+4. Määritä seuraavat nimen ominaisuudet kaavarivillä:
    
    * **Väri**-ominaisuus = **DarkGray**
 
@@ -130,12 +131,12 @@ Tässä vaiheessa kerromme tavan, jolla voit siirtyä sovelluksen muihin näytt�
 
    * **Teksti**-ominaisuus = ”**Napsauta tai napauta tehtävää ja jatka...”**
      
-     ![Päivitä otsikkoteksti](./media/sharepoint-scenario-build-app/04-03-04-text-updated.png)
+     ![Päivitä nimiteksti](./media/sharepoint-scenario-build-app/04-03-04-text-updated.png)
 
 ### <a name="add-two-navigation-buttons"></a>Lisää kaksi siirtymispainiketta
-1. Napsauta tai napauta **Lisää**-välilehdessä **Painike** ja vedä sitten painike otsikon alapuolelle.
+1. Napsauta tai napauta **Lisää**-välilehdessä **Painike** ja vedä sitten painike nimen alapuolelle.
    
-    ![Lisää-painike](./media/sharepoint-scenario-build-app/04-03-05-button-default.png)
+    ![Lisää painike](./media/sharepoint-scenario-build-app/04-03-05-button-default.png)
 2. Määritä seuraavat painikkeen ominaisuudet kaavarivillä:
    
    * **OnSelect**-ominaisuus = **Navigate(AssignManager, Fade)**. Kun suoritat sovelluksen ja napsautat tätä painiketta, siirryt sovelluksen seuraavaan näyttöön himmennettyjen siirtymien kautta.
@@ -157,7 +158,7 @@ Tässä vaiheessa kerromme tavan, jolla voit siirtyä sovelluksen muihin näytt�
 > Painikkeessa on nimi **Päivitä tiedot**, mutta siirrymme ensin **ViewProjects**-näyttöön valitsemaan päivitettävän projektin.
 
 ### <a name="run-the-app"></a>Sovelluksen suorittaminen
-Sovellus ei voi vielä tehdä paljoakaan, mutta voit suorittaa sen halutessasi:
+Sovelluksella ei voi vielä tehdä paljoakaan, mutta voit suorittaa sen halutessasi:
 
 1. Napsauta tai napauta **SelectTask**-näyttöä (sovellus käynnistyy valitusta näytöstä esikatselutilassa PowerApps Studiossa).
 
@@ -165,7 +166,7 @@ Sovellus ei voi vielä tehdä paljoakaan, mutta voit suorittaa sen halutessasi:
 
 3. Napsauta tai napauta jotakin painiketta, jotta voit siirtyä toiseen näyttöön.
 
-4. Napsauta tai napauta ![Sulje sovelluksen esikatselu -kuvaketta](./media/sharepoint-scenario-build-app/icon-close-preview.png) oikeassa yläkulmassa sulkeaksesi sovelluksen.
+4. Napsauta tai napauta ![Sulje sovelluksen esikatselu -kuvake](./media/sharepoint-scenario-build-app/icon-close-preview.png) oikeassa yläkulmassa sulkeaksesi sovelluksen.
 
 ## <a name="step-4-build-the-assignmanager-screen"></a>Vaihe 4: Rakenna AssignManager-näyttö
 Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka on hyväksytty, mutta joilla ei vielä ole esimiestä. Lisäämme muita ohjausobjekteja, jotta voit määrittää esimiehen.
@@ -181,7 +182,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
 
 1. Muuta kohdan **[Otsikko]** arvoksi **Assign Manager**.
 
-2. Lisää otsikko käyttäen seuraavia ominaisuuksia:
+2. Lisää nimi käyttäen seuraavia ominaisuuksia:
    
    * **Väri**-ominaisuus = **DarkGray**
 
@@ -195,7 +196,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
 
 1. Napsauta tai napauta näytön yläreunassa olevaa sinistä palkkia.
 
-2. Napsauta tai napauta **Lisää**-välilehdestä **Kuvakkeet** ja napsauta tai napauta sitten **Vasemmalle**.
+2. Napsauta tai napauta **Lisää**-välilehdestä **Kuvakkeet** ja napsauta tai napauta sitten **Vasen**.
    
     ![Lisää vasen nuoli](./media/sharepoint-scenario-build-app/04-04-02-icon-left.png)
 
@@ -245,7 +246,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
      
      ![Valikoimakentät](./media/sharepoint-scenario-build-app/04-04-07-gallery-fields.png)
 
-5. Muuta soveltuvin osin valikoiman otsikoiden kokoa ja poista nuoli ensimmäisestä valikoimakohteesta (emme joudu siirtymään pois tästä valikoimasta).
+5. Muuta soveltuvin osin valikoiman nimien kokoa ja poista nuoli ensimmäisestä valikoimakohteesta (emme joudu siirtymään pois tästä valikoimasta).
    
     ![Poista nuoli -kuvake](./media/sharepoint-scenario-build-app/04-04-07a-remove-arrow.png)
    
@@ -261,11 +262,11 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
    
     ![Valikoima, jossa on valittu kohde](./media/sharepoint-scenario-build-app/04-04-08-gallery-selected.png)
 
-### <a name="add-a-label-text-input-and-ok-button-to-submit-manager-assignments"></a>Lisää otsikko, tekstisyöte ja OK-painike, joilla lähetetään esimiestehtäviä
+### <a name="add-a-label-text-input-and-ok-button-to-submit-manager-assignments"></a>Lisää nimi, tekstisyöte ja OK-painike, joilla lähetetään esimiestehtäviä
 
 1. Napsauta tai napauta jotakin työstetyn valikoiman ulkopuolista kohtaa.
 
-2. Napsauta tai napauta **Lisää**-välilehdessä **Otsikko**. Vedä otsikko vasemmalle valikoiman alle. Määritä seuraavat otsikon ominaisuudet:
+2. Napsauta tai napauta **Lisää**-välilehdessä **Nimi**. Vedä nimi vasemmalle valikoiman alle. Määritä seuraavat nimen ominaisuudet:
    
    * **Koko**-ominaisuus = **20**
 
@@ -371,7 +372,7 @@ Tässä vaiheessa yhdistämme muokkauslomakkeen **UpdateDetails**-näytössä ti
 
 3. Napsauta tai napauta vasemmassa siirtymispalkissa **UpdateDetails**-näytön alla olevaa kohtaa **EditForm1**.
 
-4. Määritä seuraavat otsikon ominaisuudet lomakkeelle:
+4. Määritä lomakkeelle seuraavat ominaisuudet:
    
    * **DataSource**-ominaisuus = **'Project Details'**
 
@@ -471,7 +472,7 @@ Nyt kun olemme lisänneet sovelluksen SharePoint-sivustoon, omaksumme projektin 
    
    ![Hae sovellusvalikoimassa](./media/sharepoint-scenario-build-app/04-07-09-search-new.png)
 
-3. Valitse ![Tiedot-nuolikuvaketta](./media/sharepoint-scenario-build-app/icon-details-arrow.png) **Uusi BI-ohjelmisto** -kohteelle.
+3. Valitse ![Tiedot-nuolikuvake](./media/sharepoint-scenario-build-app/icon-details-arrow.png) kohteelle **Uusi BI-ohjelmisto**.
    
    ![Valikoiman kohde valittuna](./media/sharepoint-scenario-build-app/04-07-10-select-project.png)
 
@@ -498,17 +499,17 @@ Tämä on toinen valinnainen osa, jossa käsitellään PowerApps-kaavoja. Ensimm
 
 Mitä tämä kaava tekee? Kun valitset kohteen valikoimassa ja napsautat **OK**-painiketta, kaava päivittää **Projektitiedot**-luettelon asettaen **PMAssigned**-sarakkeen arvoon, jonka määritit tekstisyötteessä. Kaavassa käytetään funktioita sen tehtävien suorittamiseen:
 
-* [**Ohjelmakorjaus**-funktio](functions/function-patch.md) muokkaa yhtä tai useampaa tietolähteen tietuetta.
+* [**Patch**-funktio](functions/function-patch.md) muokkaa yhtä tai useampaa tietolähteen tietuetta.
 
 * [**LookUp**-funktio](functions/function-filter-lookup.md) etsii taulukosta ensimmäisen tietueen, joka täyttää kaavan.
 
 Kun yhdistelet funktioita kaavaan, tapahtuu seuraavaa:
 
-1. Kun napsautat **OK**-painiketta, **Ohjelmakorjaus**-funktiota kutsutaan päivittämään **Projektitiedot**-luettelo.
+1. Kun napsautat **OK**-painiketta, **Patch**-funktiota kutsutaan päivittämään **Projektitiedot**-luettelo.
 
-2. **Ohjelmakorjaus**-funktiossa **LookUp**-funktio tunnistaa, mikä **Projektitiedot**-luettelon rivi päivitetään. Se tekee tämän vertaamalla valitun valikoiman kohteen tunnusta luettelon tunnukseen. Esimerkiksi tunnus 12 tarkoittaa, että **Uusi BI-ohjelmisto** -merkintää täytyy päivittää.
+2. **Patch**-funktiossa **LookUp**-funktio tunnistaa, mikä **Projektitiedot**-luettelon rivi päivitetään. Se tekee tämän vertaamalla valitun valikoiman kohteen tunnusta luettelon tunnukseen. Esimerkiksi tunnus 12 tarkoittaa, että **Uusi BI-ohjelmisto** -merkintää täytyy päivittää.
 
-3. Nyt kun **Ohjelmakorjaus**-funktiolla on oikea tunnus, se päivittää **PMAssigned**-kentän arvoon kohdassa **TextInput1.Text**.
+3. Nyt kun **Patch**-funktiolla on oikea tunnus, se päivittää **PMAssigned**-kentän arvoon kohdassa **TextInput1.Text**.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 Seuraava vaihe tässä opetusohjelmasarjassa on [luoda Power BI -raportti projektin analysoimista varten](sharepoint-scenario-build-report.md).

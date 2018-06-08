@@ -1,23 +1,18 @@
 ---
 title: 'Äänen ja videon ohjausobjektit: viittaus | Microsoft Docs'
 description: Äänen ja videon ohjausobjekteja koskevaa tietoa, mukaan lukien ominaisuuksia ja esimerkkejä
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: fa235c606082f2fd83339ba11fa81fdb2988c23a
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: aae87f408452cd83856c2e1c2e07065d4b8df49f
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833421"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803278"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Äänen ja videon ohjausobjektit PowerAppsissa
 Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubessa.
@@ -51,13 +46,13 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
 **[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
-**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **[Kuva](properties-visual.md)** – Kuvan, äänen tai mikrofonin ohjausobjektissa näkyvän kuvan nimi.
 
@@ -81,15 +76,15 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin osoittimen ollessa ohjausobjektin päällä.
+**[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
 **[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 [**First**( *TableName* )](../functions/function-first-last.md)

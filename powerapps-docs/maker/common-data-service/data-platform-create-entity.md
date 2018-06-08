@@ -1,18 +1,18 @@
 ---
 title: Mukautetun entiteetin luomisen pikaopas | Microsoft Docs
 description: Tämän pikaoppaan avulla opit luomaan mukautetun entiteetin PowerAppsissa.
-author: SKjerland
-manager: kfile
+author: Mattp123
 ms.service: powerapps
 ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
-ms.author: sharik
-ms.openlocfilehash: 55ebd94fb0c895a64323e948d421c758c6af7cc8
-ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
+ms.author: matp
+ms.openlocfilehash: 66c96f7496266e03491e404de2bb329f82b6a2bf
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552917"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Pikaopas: Mukautetun entiteetin luominen
 PowerAppsissa *entiteetti* määrittää tiedot, joita haluat seurata sellaisten tietueiden muodossa, jotka yleensä sisältävät ominaisuuksia, kuten yrityksen nimi, sijainti, tuotteet, sähköposti ja puhelinnumero. Voit sitten näyttää tiedot kehittämällä sovelluksen, joka viittaa entiteettiin. PowerApps tarjoaa vakioentiteetit tyypillisiin organisaation skenaarioihin (kuten tapaamisten seuranta), mutta haluat ehkä myös luoda mukautettuja entiteettejä omalle organisaatiollesi ominaisten tietojen tallentamiseen.
@@ -27,7 +27,7 @@ Tämän pikaoppaan noudattamista varten tarvitaan seuraavat kohteet:
 ## <a name="sign-in-to-powerapps"></a>PowerAppsiin kirjautuminen
 Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com]([https://web.powerapps.com).
 
-## <a name="create-an-entity"></a>Luo kohde
+## <a name="create-an-entity"></a>Entiteetin luominen
 1. Laajenna siirtymisruudussa **Tiedot** napsauttamalla tai napauttamalla sitä ja valitse sitten **Entiteetit**.
 
     ![Luettelo entiteeteistä ja niiden tiedot](./media/data-platform-cds-create-entity/entitylist.png "Entiteettiluettelo")
@@ -89,4 +89,4 @@ Tämän pikaoppaan avulla olet oppinut luomaan mukautetun entiteetin nimeltä Tu
 > [Luo suhde](data-platform-entity-lookup.md)
 
 ## <a name="privacy-notice"></a>Tietosuojailmoitus
-Microsoft PowerAppsin yleisen tietomallin avulla Microsoft kerää ja tallentaa mukautettuja entiteettien ja kenttien nimiä diagnostiikkajärjestelmiimme. Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Sovellustekijöiden antamat entiteettien ja kenttien nimet auttavat meitä ymmärtämään Microsoft PowerApps -yhteisössä yleisiä skenaarioita ja havaitsemaan palvelun vakioentiteettitarjonnan puutteita, kuten organisaatioihin liittyviä rakenteita. Microsoft ei avaa eikä käytä näihin entiteetteihin liittyvien tietokantataulukoiden tietoja, eikä niitä replikoida tietokannan luomisalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan replikoida monelle alueelle ja poistetaan tietojen säilytyskäytäntöjemme mukaisesti. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessa](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.
+Microsoft PowerAppsin yleisen tietomallin avulla Microsoft kerää ja tallentaa mukautettuja entiteettien ja kenttien nimiä diagnostiikkajärjestelmiimme. Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Sovellustekijöiden antamat entiteettien ja kenttien nimet auttavat meitä ymmärtämään Microsoft PowerApps -yhteisössä yleisiä skenaarioita ja havaitsemaan palvelun vakioentiteettitarjonnan puutteita, kuten organisaatioihin liittyviä rakenteita. Microsoft ei käytä näihin entiteetteihin liittyvissä tietokantataulukoissa olevia tietoja, eikä jäljennä niitä tietokannan käyttöoikeusalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan replikoida monelle alueelle ja poistetaan tietojen säilytyskäytäntöjemme mukaisesti. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessamme](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.

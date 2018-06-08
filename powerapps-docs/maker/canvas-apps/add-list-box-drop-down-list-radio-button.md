@@ -12,13 +12,14 @@ ms.component: canvas
 ms.date: 10/23/2016
 ms.author: lonu
 ms.openlocfilehash: 1fbaf4f9d740084a1ed0d630b94d1cd41713ba03
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825552"
 ---
 # <a name="add-a-list-box-a-drop-down-list-or-radio-buttons"></a>Lisää luetteloruutu, avattava luettelo tai valintanapit
-PowerApps sisältää moni- ja yksittäisvalintavaihtoehtoja, mukaan lukien luetteloruutu, avattava luettelo ja valintanapit. Tässä aiheessa lisäämme nämä ohjausobjektit ja käytämme **Taulukko**-kaavaa luetteloiden rakentamiseen. Kun jokin luettelon kohde on valittuna, muut ohjausobjektit päivitetään.
+PowerApps sisältää moni- ja yksittäisvalintavaihtoehtoja, kuten luetteloruudun, avattavan luettelon ja valintanapit. Tässä aiheessa lisäämme nämä ohjausobjektit ja käytämme **Taulukko**-kaavaa luetteloiden rakentamiseen. Kun jokin luettelon kohde on valittuna, muut ohjausobjektit päivitetään.
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
@@ -56,7 +57,7 @@ PowerApps sisältää moni- ja yksittäisvalintavaihtoehtoja, mukaan lukien luet
 
 7. Esikatsele luomustasi ![][1]. Valitse eri muodot **Luetteloruutu**-ohjausobjektissa. Vain valitsemasi muoto tai muodot näytetään. Palaa näyttöösi painamalla ESC-näppäintä tai valitsemalla **X**.
 
-Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohjausobjektiin. **Luetteloruutu**-ohjausobjektissa tehdyn valinnan mukaan näytetään eri muotoja. Voit käyttää tätä muihin elementteihin liiketoiminnassa. Voit esimerkiksi käyttää **Luetteloruutu**-ohjausobjektia esimerkiksi tuotekuvien tai -kuvausten näyttämiseen.
+Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohjausobjektiin. **Luetteloruutu**-ohjausobjektissa tehdyn valinnan mukaan näytetään eri muotoja. Voit käyttää tätä muihinkin elementteihin liiketoiminnassa. Voit esimerkiksi käyttää **Luetteloruutu**-ohjausobjektia esimerkiksi tuotekuvien tai -kuvausten näyttämiseen.
 
 ## <a name="add-radio-buttons"></a>Valintanappien lisääminen
 1. Valitse **Aloitus**-välilehdeltä **Uusi näyttö**.
@@ -83,7 +84,7 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohj
 
     ![][14]  
 
-7. Esikatsele luomustasi : ![][1]. Valitse eri valintanappi ympyrän värin muuttamiseksi. Palaa näyttöösi painamalla ESC-näppäintä tai valitsemalla **X**.
+7. Esikatsele luomustasi: ![][1]. Valitse eri valintanappi ympyrän värin muuttamiseksi. Palaa näyttöösi painamalla ESC-näppäintä tai valitsemalla **X**.
 
 ## <a name="add-a-drop-down-list"></a>Avattavan luettelon lisääminen
 1. Lisää näyttö ja lisää sitten **Avattava luettelo** -ohjausobjekti.
@@ -96,7 +97,7 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohj
 3. Lisää ympyrä, siirrä se **Avattava luettelo** -ohjausobjektin alle ja aseta ympyrän **[Fill](controls/properties-color-border.md)**-ominaisuudeksi tämä kaava:  
    ```If(DDChoices.Selected.Value = "red", RGBA(192, 0, 0, 1), DDChoices.Selected.Value = "green", RGBA(0, 176, 80, 1), DDChoices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```
 
-4. Esikatsele luomustasi : ![][1]. Valitse eri vaihtoehtoja ympyrän värin muuttamiseksi.
+4. Esikatsele luomustasi: ![][1]. Valitse eri vaihtoehtoja ympyrän värin muuttamiseksi.
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/preview.png
 [2]: ./media/add-list-box-drop-down-list-radio-button/listbox.png

@@ -13,13 +13,14 @@ ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
 ms.openlocfilehash: 958589deb4fdee42cb8e6df13ff15addbc06c07e
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31830689"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Vienti- ja tuonti-ohjausobjektit PowerAppsissa
-Ohjausobjektit tietojen viemistä varten paikalliseen tiedostoon ja sen jälkeen näiden tietojen tuomiseen toiseen sovellukseen PowerAppsissa.
+Ohjausobjektit tietojen viemiseen paikalliseen tiedostoon ja sen jälkeen näiden tietojen tuomiseen toiseen sovellukseen PowerAppsissa.
 
 ## <a name="description"></a>Kuvaus
 Jos haluat luoda useamman kuin yhden sovelluksen, joka käyttää samoja tietoja, mutta et halua jakaa tietoja näiden sovellusten ulkopuolella, voit viedä ja tuoda ne käyttämällä **Vienti**-ohjausobjektia ja **Tuonti**-ohjausobjektia. Kun viet tietoja, luot pakatun tiedoston, jonka voit kopioida toiseen koneeseen, mutta et pysty lukemaan sitä missään muussa ohjelmassa kuin PowerAppsissa.
@@ -28,7 +29,7 @@ Jos haluat luoda useamman kuin yhden sovelluksen, joka käyttää samoja tietoja
 Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tietoturvauhkille ja tietovuodoille.  On suositeltavaa ilmoittaa käyttäjille, että he voivat tuoda vain tunnistettuja ja luotettuja tiedostoja ja viedä vain tietoja, jotka eivät ole luottamuksellisia tai arkaluontoisia.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**Data** – Sen kokoelman, jonka haluat viedä paikalliseen tiedostoon, nimi.
+**Data** – Sen kokoelman nimi, jonka haluat viedä paikalliseen tiedostoon.
 
 * **Data**-ominaisuus on käytettävissä **Vienti**-ohjausobjektille, mutta ei **Tuonti**-ohjausobjektille.
 
@@ -39,19 +40,19 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)**  – Onko ohjausobjektin reuna **Solid** (kiinteä), **Dashed** (katkoviiva), **Dotted** (pisteviiva) vai **None** (ei mitään).
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -59,17 +60,17 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
-**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **Bold** (lihavoitu), **Semibold** (puolilihavoitu), **Normal** (normaali) tai **Lighter** (kevyempi).
+**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun hiiren kohdistin on kyseisen ohjausobjektin päällä.
 
-**[HoverColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
+**[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
-**[HoverFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
+**[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
 
 **[Italic](properties-text.md)** – Onko ohjausobjektin teksti kursivoitu.
 
@@ -77,37 +78,37 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedColor](properties-color-border.md)** –Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**[RadiusBottomLeft](properties-size-location.md)** – Vasemman alakulman pyöristysmäärä.
+**[RadiusBottomLeft](properties-size-location.md)** – Ohjausobjektin vasemman alakulman pyöristysaste.
 
-**[RadiusBottomRight](properties-size-location.md)** – Oikean alakulman pyöristysmäärä.
+**[RadiusBottomRight](properties-size-location.md)** – Ohjausobjektin oikean alakulman pyöristysaste.
 
-**[RadiusTopLeft](properties-size-location.md)** – Vasemman yläkulman pyöristysmäärä.
+**[RadiusTopLeft](properties-size-location.md)** – Ohjausobjektin vasemman yläkulman pyöristysaste.
 
-**[RadiusTopRight](properties-size-location.md)** – Oikean yläkulman pyöristysmäärä.
+**[RadiusTopRight](properties-size-location.md)** – Ohjausobjektin oikean yläkulman pyöristysaste.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
+**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Text](properties-core.md)**  – Teksti, joka näkyy ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
+**[Text](properties-core.md)**  – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
 
-**[Underline](properties-text.md)** – Onko ohjausobjektissa näkyvä teksti alleviivattua.
+**[Underline](properties-text.md)** – Ilmaisee, onko ohjausobjektissa näkyvä teksti alleviivattu.
 
 **[VerticalAlign](properties-text.md)** – Ohjausobjektin tekstin sijainti suhteessa ohjausobjektin pystysuoraan keskikohtaan.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
-**[Width](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
+**[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **[Painike](control-button.md)**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:
@@ -119,8 +120,8 @@ Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tie
 2. Paina F5-näppäintä, napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia ja paina ESC-näppäintä.
 3. Lisää **Vienti**-ohjausobjekti ja määritä sen **Data**-ominaisuuden arvoksi **Products**.
 4. Paina F5-näppäintä, napsauta tai napauta **Vienti**-ohjausobjektia ja määritä sitten sen tiedoston nimi, johon haluat viedä tiedot.
-5. Napsauta tai napauta **Save** ja palaa sitten oletustyötilaan painamalla ESC-näppäintä.
-6. Lisää uuteen tai aiemmin luotuun sovellukseen **tuonti**-ohjausobjekti, anna sen nimeksi **MyData**, ja määritä sen **[OnSelect](properties-core.md)**-ominaisuuden arvoksi tämä kaava:<br>
+5. Napsauta tai napauta **Tallenna** ja palaa sitten oletustyötilaan painamalla ESC-näppäintä.
+6. Lisää uuteen tai aiemmin luotuun sovellukseen **Tuonti**-ohjausobjekti, anna sen nimeksi **MyData**, ja määritä sen **[OnSelect](properties-core.md)**-ominaisuuden arvoksi tämä kaava:<br>
    **Collect(ImportedProducts, MyData.Data)**
 7. Paina F5-näppäintä, napsauta tai napauta kohtaa **MyData**, napsauta tai napauta viemääsi tiedostoa ja napsauta tai napauta sitten **Avaa**.
 8. Paina ESC-näppäintä, napsauta tai napauta kohtaa **Kokoelmat** **Tiedosto**-valikossa ja vahvista, että nykyisellä sovelluksella on viemäsi tiedot.

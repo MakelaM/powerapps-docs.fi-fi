@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 03/07/2018
 ms.author: sharik
 ms.openlocfilehash: 5bf57ec96569751b3db656abdf04cebb1e13133a
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32329843"
 ---
 # <a name="system-requirements-limits-and-configuration-values"></a>Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -76,14 +77,14 @@ Käytä näitä osoitteita esimerkiksi, jos sinun täytyy lisätä IP-osoitteita
 ## <a name="required-services"></a>Vaaditut palvelut
 Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studiolla on tietoliikennettä, sekä niiden käyttötarkoitukset. Verkkosi **ei** saa estää näitä palveluja.
 
-| Toimialueet | Protokollat | Käyttötarkoitukset |
+| Toimialue(et) | Protokollat | Käyttötarkoitukset |
 | --- | --- | --- |
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Yhdistimien/ohjelmointirajapintojen suorituspalvelu |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph – käyttäjätietojen hankkimiseen (esimerkiksi profiilikuvat) |
 | gallery.azure.com |https |Esimerkki- ja mallisovellukset |
-| *.azure-apim.net |https |API Hubs - eri alitoimialueet kutakin lokaalia varten |
+| *.azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
 | *.powerapps.com |https |WebAuth + portaali |
 | *.azureedge.net |https |WebAuth |
 | *.blob.core.windows.net |https |Blob-objektisäilö |

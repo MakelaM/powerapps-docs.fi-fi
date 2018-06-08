@@ -13,12 +13,13 @@ ms.component: canvas
 ms.date: 09/13/2016
 ms.author: gregli
 ms.openlocfilehash: 15d458142bc1077b1bf55ae6e358c826f813ecb2
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31829506"
 ---
-# <a name="abs-exp-ln-power-and-sqrt-functions-in-powerapps"></a>PowerAppsin Abs-, Exp-, Ln-, Power- ja Sqrt-funktiot
+# <a name="abs-exp-ln-power-and-sqrt-functions-in-powerapps"></a>Abs-, Exp-, Ln-, Power- ja Sqrt-funktiot PowerAppsissa
 Laskevat itseisarvot, luonnolliset logaritmit, neliöjuuret sekä *e*:n tai minkä tahansa numeron määritettyyn potenssiin korottamisen tulokset.
 
 ## <a name="description"></a>Kuvaus
@@ -28,18 +29,18 @@ Laskevat itseisarvot, luonnolliset logaritmit, neliöjuuret sekä *e*:n tai mink
 
 **Ln**-funktio palauttaa argumenttinsa luonnollisen logaritmin (*e*-kanta).
 
-**Power**-funktio palauttaa luvun korotettuna haluttuun potenssiin.  [**^**-operaattori](operators.md) vastaa Power-funktiota.
+**Power**-funktio palauttaa luvun korotettuna haluttuun potenssiin.  Se vastaa [**^** operaattorin](operators.md) käyttämistä.
 
-**Sqrt**-funktio palauttaa numeron, joka kerrottuna itsellään on yhtä kuin sen argumentti.
+**Sqrt**-funktio palauttaa numeron, joka kerrottuna itsellään on yhtä suuri kuin sen argumentti.
 
-Jos välität yhden numeron, paluuarvo on yksi tulos, joka perustuu kutsuttuun funktioon.  Jos välität yhden sarakkeen [taulukon](../working-with-tables.md), joka sisältää numeroita, paluuarvo on yhden sarakkeen tulostaulukko, jossa on yksi tulos jokaiselle argumentin taulukon tietueelle. Jos käytät monisarakkeista taulukkoa, voit muokata sen yksisarakkeiseksi taulukoksi kohdan [taulukoiden käyttö](../working-with-tables.md) mukaan.  
+Jos välität yhden numeron, paluuarvo on yksi tulos, joka perustuu kutsuttuun funktioon.  Jos välität yhden sarakkeen [taulukon](../working-with-tables.md), joka sisältää numeroita, paluuarvo on yhden sarakkeen tulostaulukko, jossa on yksi tulos jokaiselle argumentin taulukon tietueelle. Jos käytät monisarakkeista taulukkoa, voit muokata sen yksisarakkeiseksi taulukoksi kohdan [Taulukoiden käyttö](../working-with-tables.md) mukaisesti.  
 
 Jos argumentti tuottaa määrittämättömän arvon, tulos on *tyhjä*.  Näin voi tapahtua esimerkiksi, jos yritetään saada negatiivisen numeron neliöjuuri tai logaritmi.
 
 ## <a name="syntax"></a>Syntaksi
 **Abs**( *Numero* )<br>**Exp**( *Numero* )<br>**Ln**( *Numero* )<br>**Sqrt**( *Numero* )
 
-* *Numero* – Pakollinen. Numero, jolle toiminto suoritetaan.
+* *Number* – Pakollinen. Numero, jolle toiminto suoritetaan.
 
 **Power**( *Kantaluku*, *Eksponentti* )
 
@@ -48,15 +49,15 @@ Jos argumentti tuottaa määrittämättömän arvon, tulos on *tyhjä*.  Näin v
 
 **Abs**( *YksisarakkeinenTaulukko* )<br>**Exp**( *YksisarakkeinenTaulukko* )<br>**Ln**( *YksisarakkeinenTaulukko* )<br>**Sqrt**( *YksisarakkeinenTaulukko* )
 
-* *YksisarakkeinenTaulukko* – Pakollinen. Yhden sarakkeen numeroita sisältävä taulukko, jolle toiminto suoritetaan.
+* *Yksisarakkeinen taulukko* – Pakollinen. Yhden sarakkeen numeroita sisältävä taulukko, jolle toiminto suoritetaan.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-number"></a>Yksittäinen luku
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Abs( -55 )** |Palauttaa luvun ilman miinusmerkkiä. |55 |
-| **Exp( 2 )** |Palauttaa luvun *e* korotettuna potenssiin 2, tai *e* \* *e*. |7,389056... |
-| **Ln( 100 )** |Palauttaa luvun 100 luonnollisen logaritmin (*e*-kanta). |4,605170... |
+| **Exp( 2 )** |Palauttaa luvun *e* korotettuna potenssiin 2, tai *e* \* *e*. |7.389056... |
+| **Ln( 100 )** |Palauttaa luvun 100 luonnollisen logaritmin (*e*-kanta). |4.605170... |
 | **Power( 5, 3 )** |Palauttaa luvun 5 korotettuna potenssiin 3, tai 5 \* 5 \* 5. |125 |
 | **Sqrt( 9 )** |Palauttaa luvun, joka kerrottuna itsellään on yhtä suuri kuin 9. |3 |
 

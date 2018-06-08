@@ -12,10 +12,11 @@ ms.component: canvas
 ms.date: 07/12/2017
 ms.author: sharik
 ms.openlocfilehash: 4d622eb6cdfaed91547a59be8f5a5dc6651957e5
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330901"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
 Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.

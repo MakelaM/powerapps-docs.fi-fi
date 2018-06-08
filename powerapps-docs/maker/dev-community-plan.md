@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 05/01/2016
 ms.author: mblythe
 ms.openlocfilehash: 70200430b0cee7356d70795440b908a8837ba18d
-ms.sourcegitcommit: 6a75c4c499bcdbeb9d65d3a9af47dedcf900f38d
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33078416"
 ---
 # <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerAppsin yhteisön palvelupaketti: ilmainen kehitysympäristö yksilökäyttöön
 Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä, PowerAppsin yhteisön palvelupaketti on oikea palvelupaketti sinua varten. PowerAppsin yhteisön palvelupaketti sisältää ilmaisen kehitysympäristö yksilökäyttöön, jonka avulla voit

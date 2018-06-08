@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 03/19/2018
 ms.author: anneta
 ms.openlocfilehash: 29010630412de78945d9d35212210b7ce1a8407f
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827892"
 ---
 # <a name="create-an-app-from-a-powerapps-template"></a>Luo sovellus PowerAppsin mallin pohjalta
 Luo sovellus automaattisesti tiettyyn skenaarioon, kuten budjetin seurantaan tai lomien ajoittamiseen, sopivalla mallilla, ja suorita sovellus ymmärtääksesi sen oletustoimintaa.
@@ -42,7 +43,7 @@ Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi]
 
     ![Avaa PowerApps-malli](./media/get-started-test-drive/open-template.png)
 
-    Esimerkkitiedot kopioidaan pilvitallennustilan tiliisi, sovellus luodaan, ja sen aloitussivu avataan.
+    Esimerkkitiedot kopioidaan pilvitallennustilan tiliisi, sovellus luodaan ja sen aloitussivu avataan.
 
 ## <a name="run-the-app"></a>Sovelluksen suorittaminen
 Mallin pohjalta tehty sovellus avautuu oletustyötilassa, jossa teet suurimman osan muokkauksista. Tutustu siihen, miten sovellus toimii **Esikatselu**-tilassa, ennen kuin teet muutoksia sovellukseen.

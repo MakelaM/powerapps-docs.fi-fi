@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 04/03/2018
 ms.author: yifwang
 ms.openlocfilehash: fd458fe6c8962bbc4443c1de7aad0f1c4eea7fac
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826616"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Excel-taulukon muotoileminen ja nimeämisvinkkejä
 Jotta Excel-tietoja voi käyttää PowerAppsissa, ne on muotoiltava taulukoksi. Näiden ohjeiden avulla opit muotoilemaan taulukon Excelissä. Lisäksi saat vinkkejä Excel-sarakkeiden nimeämiseen.

@@ -13,10 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: a2e62ef2aa0a52bde33ea3e40faf96889597b09b
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31825897"
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>PowerAppsin And-, Or- ja Not-funktiot
 Totuusarvon logiikkafunktiot, joita käytetään yleensä muokkaamaan vertailujen tuloksia ja testauksia.
@@ -43,7 +44,7 @@ Käytä tätä funktiota määrittämään, onko liukusäätimen arvo välin 50�
 
 **Or(Slider1.Value < 50, Slider1.Value> 100)**
 
-Jos [taulukko](../working-with-tables.md) sisältää [sarakkeet](../working-with-tables.md#columns) **Osasto** ja **Palkka**, voit käyttää tätä funktiota **Tulos**-sarakkeessa näyttämään arvo **tosi** kaikilla riveillä, joissa **Osasto**-sarakkeen arvo on **HR** tai **Palkka**-sarakkeen arvo on suurempi kuin **200 000**:
+Jos [taulukko](../working-with-tables.md) sisältää [sarakkeet](../working-with-tables.md#columns) **Osasto** ja **Palkka**, voit käyttää tätä funktiota **Tulos**-sarakkeessa näyttämään arvon **tosi** kaikilla riveillä, joissa **Osasto**-sarakkeen arvo on **HR** tai **Palkka**-sarakkeen arvo on suurempi kuin **200 000**:
 
 **Or(Osasto = HR, Palkka >= 200000)**
 

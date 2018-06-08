@@ -13,13 +13,14 @@ ms.component: canvas
 ms.date: 08/28/2017
 ms.author: lanced
 ms.openlocfilehash: dc68b0f404c2a8d636deb4e77c2ada4582ed3a37
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836742"
 ---
 # <a name="overview-of-connectors-for-powerapps"></a>PowerAppsin liittimien yleiskatsaus
-Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteessä* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerAppsissa on liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi sovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).
+Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteeseen* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerAppsissa on liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi sovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).
 
 Seuraavassa taulukossa on linkit suosituimpien liitinten lisätietoihin. Katso luettelo kaikista liittimistä kohdasta [Kaikki liittimet](#all-connectors).
 
@@ -40,14 +41,14 @@ Vakioliittimet toimivat eri tavoin riippuen niiden käyttämästä tietolähtees
 
     [Tutustu tietolähteisiin PowerAppsissa](working-with-data-sources.md)
 
-    [Luo sovellus Excel-tiedoista](get-started-create-from-data.md)
+    [Sovelluksen luominen Excel-tiedoista](get-started-create-from-data.md)
 
     [Sovelluksen luominen alusta alkaen](get-started-create-from-blank.md)
 
     > [!NOTE]
-> Exceliin yhdistämistä varten työkirjan täytyy olla isännöitynä pilvipohjaisessa palvelussa, kuten OneDrivessa. Katso lisätietoja aiheesta [Pilvitallennustiliin yhdistäminen PowerAppsista](connections/cloud-storage-blob-connections.md).
+> Exceliin yhdistämistä varten tarvitaan pilvipohjaisessa palvelussa, kuten OneDrivessa, isännöity työkirja. Katso lisätietoja aiheesta [Pilvitallennustiliin yhdistäminen PowerAppsista](connections/cloud-storage-blob-connections.md).
 
-* Muut liittimet toimivat funktiopohjaisten tietolähteiden kanssa, kuten Twitter, Facebook ja Office 365 Outlook. Kun työskentelet näiden tietolähteiden kanssa, PowerAppsiin palautettavat tiedot pohjautuvat palvelun tiettyjen funktioiden kutsumiseen. Esimerkiksi Twitter-liittimellä voit kutsua funktion `Twitter.MyFollowers()`, niin saat paluuarvona luettelon seuraajistasi. Voit edelleen käyttää näitä tietoja lomakkeessa tai valikoimassa, mutta se on hieman monimutkaisempaa kuin taulukkomuotoisten tietojen käyttäminen. Katso lisätietoja aiheesta [Twitteriin yhdistäminen PowerAppsista](connections/connection-twitter.md).
+* Muut liittimet toimivat funktiopohjaisten tietolähteiden kanssa, kuten Twitter, Facebook ja Office 365 Outlook. Kun työskentelet näiden tietolähteiden kanssa, PowerAppsiin palautettavat tiedot pohjautuvat palvelun tiettyjen funktioiden kutsumiseen. Esimerkiksi Twitter-liittimellä voit kutsua funktion `Twitter.MyFollowers()`, jolloin saat paluuarvona luettelon seuraajistasi. Voit edelleen käyttää näitä tietoja lomakkeessa tai valikoimassa, mutta se on hieman monimutkaisempaa kuin taulukkomuotoisten tietojen käyttäminen. Katso lisätietoja aiheesta [Twitteriin yhdistäminen PowerAppsista](connections/connection-twitter.md).
 
 ## <a name="all-connectors"></a>Kaikki liittimet
 Seuraavassa luettelossa on kaikki liittimet. Katso lisätietoja liittimistä kohdasta [Microsoft-liitinten viittaus](https://docs.microsoft.com/connectors/). Premium-liittimet vaativat PowerAppsin palvelupaketin 1 tai 2. Lisätietoja saat [PowerAppsin palvelupakettisivulta](https://powerapps.microsoft.com/pricing/).

@@ -1,6 +1,6 @@
 ---
-title: Date- ja Time-funktiot | Microsoft Docs
-description: PowerAppsin Date- ja Time-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkit
+title: Date- ja Time-funktio | Microsoft Docs
+description: PowerAppsin Date- ja Time-funktion viitetiedot, mukaan lukien syntaksi ja esimerkit
 documentationcenter: na
 author: gregli-msft
 manager: kfile
@@ -13,12 +13,13 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 1d6c2485a8f54e0676cee5443085fb962f144831
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31826725"
 ---
-# <a name="date-and-time-functions-in-powerapps"></a>Date- ja Time-funktiot PowerAppsissa
+# <a name="date-and-time-functions-in-powerapps"></a>Date- ja Time-funktio PowerAppsissa
 Muuntaa päivämäärän ja kellonajan komponentit päivämäärä/aika-arvoksi.
 
 ## <a name="description"></a>Kuvaus
@@ -35,26 +36,26 @@ Katso **[DateValue](function-datevalue-timevalue.md)**-, **[TimeValue](function-
 Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](../show-text-dates-times.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Date**( *vuosi*, *kuukausi*, *päivä* )
+**Date**( *Year*, *Month*, *Day* )
 
-* *Vuosi* – pakollinen.  Lukua 1899 suuremmat luvut tulkitaan absoluuttisina (1980 tulkitaan vuotena 1980). Luvut 0–1899 tulkitaan suhteessa lukuun 1900. (Esimerkiksi 80 tulkitaan 1980.)
-* *Kuukausi* – pakollinen.  Luku, joka on välillä 1–12.
-* *Päivä* – pakollinen. Numero, joka on välillä 1–31.
+* *Year* – Pakollinen.  Lukua 1899 suuremmat luvut tulkitaan absoluuttisina (1980 tulkitaan vuotena 1980). Luvut 0–1899 tulkitaan suhteessa lukuun 1900. (Esimerkiksi 80 tulkitaan 1980.)
+* *Month* – Pakollinen.  Luku, joka on välillä 1–12.
+* *Day* – Pakollinen. Numero, joka on välillä 1–31.
 
-**Time**( *tunti*, *minuutti*, *sekunti* )
+**Time**( *Hour*, *Minute*, *Second* )
 
-* *Tunti* – pakollinen.  Luku, joka on välillä 0 (12:00 AM) – 23 (11:00 PM).
-* *Minuutti* – pakollinen. Numero, joka on välillä 0–59.
-* *Sekunti* – pakollinen. Numero, joka on välillä 0–59.
+* *Hour* – Pakollinen.  Luku, joka on välillä 0 (12:00 AM) – 23 (11:00 PM).
+* *Minute* – Pakollinen. Numero, joka on välillä 0–59.
+* *Second* – Pakollinen. Numero, joka on välillä 0–59.
 
 ## <a name="examples"></a>Esimerkkejä
-### <a name="date"></a>Päivämäärä
-Jos käyttäjä kirjoittaa **1979** tekstisyöte-ohjausobjektiin, jonka nimi on **PalkkausVuosi**, **3** tekstisyöte-ohjausobjektiin, jonka nimi on **PalkkausKuukausi**, ja **17** tekstisyöte-ohjausobjektiin, jonka nimi on **PalkkausPäivä**, funktio palauttaa tuloksen **3/17/1979**:
+### <a name="date"></a>Date
+Jos käyttäjä kirjoittaa **1979** tekstisyöte-ohjausobjektiin, jonka nimi on **HireYear**, **3** tekstisyöte-ohjausobjektiin, jonka nimi on **HireMonth**, ja **17** tekstisyöte-ohjausobjektiin, jonka nimi on **HireDate**, funktio palauttaa tuloksen **3/17/1979**:
 
-**Date(Value(PalkkausVuosi.Text), Value(PalkkausKuukausi.Text), Value(PalkkausPäivä.Text))**
+**Date(Value(HireYear.Text), Value(HireMonth.Text), Value(HireDay.Text))**
 
-### <a name="time"></a>Aika
-Jos käyttäjä kirjoittaa **14** tekstisyöte-ohjausobjektiin, jonka nimi on **SyntymäTunti**, **50** tekstisyöte-ohjausobjektiin, jonka nimi on **SyntymäMinuutti**, ja **24** tekstisyöte-ohjausobjektiin, jonka nimi on **SyntymäSekunti**, funktio palauttaa tuloksen **02:50:24 p**.
+### <a name="time"></a>Time
+Jos käyttäjä kirjoittaa **14** tekstisyöte-ohjausobjektiin, jonka nimi on **BirthHour**, **50** tekstisyöte-ohjausobjektiin, jonka nimi on **BirthMinute**, ja **24** tekstisyöte-ohjausobjektiin, jonka nimi on **BirthSecond**, funktio palauttaa tuloksen **02:50:24 p**.
 
-**Text(Time(Value(SyntymäTunti.Text), Value(SyntymäMinuutti.Text), Value(SyntymäSekunti.Text)), "hh:mm:ss a/p")**
+**Text(Time(Value(BirthHour.Text), Value(BirthMinute.Text), Value(BirthSecond.Text)), "hh:mm:ss a/p")**
 

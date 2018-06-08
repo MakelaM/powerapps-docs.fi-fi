@@ -1,25 +1,23 @@
 ---
 title: Näytön koon ja suunnan muuttaminen | Microsoft Docs
 description: Vaiheittaiset ohjeet näytön koko- ja suunta-asetusten muuttamiseen
-services: ''
-suite: powerapps
 documentationcenter: na
 author: lonu
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: be123445c1b719012dcb71c7aa93d93dace64935
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: e114f0b4c763f7f89e5a78b3bae7a69c3961bbc8
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31827501"
 ---
 # <a name="change-screen-size-and-orientation-in-powerapps"></a>Näytön koon ja suunnan muuttaminen PowerAppsissa
 Mukauta sovellusta muuttamalla sen näytön kokoa ja suuntaa.
@@ -40,7 +38,7 @@ Mukauta sovellusta muuttamalla sen näytön kokoa ja suuntaa.
 
     ![Tablet-sovelluksen kuvasuhteen muuttaminen](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
 
-4. Valitse kohdassa **Lukitse kuvasuhde** **Käytössä** tai **Ei käytössä**.
+4. Valitse kohdassa **Lukitse kuvasuhde**joko **Käytössä** tai **Ei käytössä**.
 
     Jos lukitset kuvasuhteen, sovellus säilyttää puhelimelle sopivan kuvasuhteen. Jos sovellus on käynnissä muunlaisessa laitteessa, sovellus näkyy väärin ja tulos voi olla ei-toivottu. Jos vapautat kuvasuhteen lukituksen, sovellus säätää kuvasuhteen sen laitteen mukaan, jossa se toimii.
 

@@ -1,25 +1,23 @@
 ---
 title: AddColumns-, DropColumns-, RenameColumns- ja ShowColumns-funktiot | Microsoft Docs
 description: PowerAppsin AddColumns-, DropColumns-, RenameColumns- ja ShowColumns-funktioiden viitetietoja, kuten syntaksi ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: gregli-msft
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 0b7fe4d8e0b9129be126985bbb49cc5ffecbcd44
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 4ed3bae7b4b8fc10053a1a2fec49e7116ec4d4e4
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31837299"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>AddColumns-, DropColumns-, RenameColumns- ja ShowColumns-funktiot PowerAppsissa
 Muokkaa [taulukkoa](../working-with-tables.md) lisäämällä, poistamalla, nimeämällä uudelleen ja valitsemalla sen [sarakkeita](../working-with-tables.md#columns).
