@@ -13,13 +13,14 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 396a2d5325b7b72f3637dba1edddeead49594167
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31832577"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>DateValue-, TimeValue- ja DateTimeValue-funktiot PowerAppsissa
-Muuntaa merkkijonon päivämäärän ja/tai ajan päivämäärä- ja aika-arvoksi.
+Muuntavat merkkijonon päivämäärän ja/tai ajan päivämäärä- ja aika-arvoksi.
 
 ## <a name="description"></a>Kuvaus
 **DateValue**-funktio muuntaa päivämäärämerkkijonon (esimerkiksi ”10/01/2014”) päivämäärä- ja aika-arvoksi.
@@ -46,10 +47,10 @@ Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](..
 Jos haluat muuntaa numeroita, tutustu **[Value](function-value.md)**-funktioon.
 
 ## <a name="syntax"></a>Syntaksi
-**DateValue**( *Merkkijono* [, *Kieli* ])<br>**DateTimeValue**( *Merkkijono* [, *Kieli* ])<br>**TimeValue**( *Merkkijono* [, *Kieli* ])
+**DateValue**( *String* [, *Language* ])<br>**DateTimeValue**( *String* [, *Language* ])<br>**TimeValue**( *String* [, *Language* ])
 
-* *Merkkijono* – pakollinen.  Tekstimerkkijono, joka sisältää päivämäärän, kellonajan tai niiden yhdistelmän.
-* *Kieli* – valinnainen.  Kielimerkkijono, vastaa **[Language](function-language.md)**-funktion kahta ensimmäistä merkkiä.  Jos kieltä ei syötetä, käytetään nykyisen käyttäjän asiakkaan kieltä.  
+* *String* – pakollinen.  Tekstimerkkijono, joka sisältää päivämäärän, kellonajan tai niiden yhdistelmän.
+* *Language* – valinnainen.  Kielimerkkijono, vastaa **[Language](function-language.md)**-funktion kahta ensimmäistä merkkiä.  Jos kieltä ei syötetä, käytetään nykyisen käyttäjän asiakkaan kieltä.  
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="datevalue"></a>DateValue
@@ -60,12 +61,12 @@ Jos syötit **10/11/2014** tekstinsyöttöohjausobjektiin, jonka nimi on **Aloit
     Selitteenä näkyisi **Saturday, October 11, 2014**, jos tietokoneen kielialueen tunnukseksi on asetettu **EN**.
   
     > [!NOTE]
-> Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin, ja huutomerkin välittömästi sen perään.
+> Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
 * **Text(DateValue(Aloituspäivä.Text, "fr"), DateTimeFormat.LongDate)**
   
     Selitteessä näkyisi **Monday, November 10, 2014**.
 
-Jos tekisit saman **20. lokakuuta 2014**:
+Jos tekisit saman päivämäärälle **20. lokakuuta 2014**:
 
 * **DateDiff(DateValue(Aloituspäivä.Text), Today())**
   
@@ -79,7 +80,7 @@ Jos syötät **10/11/2014 1:50:24.765 PM** tekstinsyöttöohjausobjektiin, jonka
     Selitteenä näkyisi **Saturday, October 11, 2014 1:50:24 PM**, jos tietokoneen kielialueen tunnukseksi on asetettu EN.
   
     > [!NOTE]
-> **DateTimeFormat**-parametrin avulla voit käyttää **LongDateTime**-muodon lisäksi on monia muita vaihtoehtoja. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin, ja huutomerkin välittömästi sen perään.
+> Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
 * **Text(DateTimeValue(Alku.Text, "fr"), DateTimeFormat.LongDateTime)**
   
     Selitteessä näkyisi **Monday, November 10, 2014 1:50:24 PM**.
