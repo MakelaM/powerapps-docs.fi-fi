@@ -1,22 +1,24 @@
 ---
 title: Mikä on Microsoft Common Data Service for Apps? | Microsoft Docs
 description: Johdanto sovelluksille tarkoitettuun Common Data Service (CDS) for Apps -palveluun, entiteetteihin ja palvelinpuolen logiikkaan.
-author: Mattp123
+author: clwesene
 manager: kfile
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: b26f788a782e42125d6397d38b2d946f8188e475
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 586750edf476a9145e2822522cc0b4b5ad729539
+ms.sourcegitcommit: 7296649d03ebc33dc5ddb9e7c551869dc781f154
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34552825"
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35250819"
 ---
 # <a name="what-is-common-data-service-for-apps"></a>Mikä on Microsoft Common Data Service for Apps?
 Common Data Service (CDS) for Apps -palvelussa voit säilyttää ja hallita liiketoimintasovellustesi käyttämiä tietoja turvallisesti. CDS for Appsin tiedot tallennetaan joukkoon entiteettejä. *Entiteetti* on tietuejoukko, jota käytetään tietojen tallentamiseen samoin kuin taulukossa säilytetään tietoja tietokannassa. CDS for Apps sisältää peruskokoelman vakioentiteettejä, jotka kattavat tyypilliset tilanteet, mutta voit lisäksi luoda mukautettuja entiteettejä oman organisaatiosi tarpeisiin ja täyttää ne tiedoilla Power Querya käyttämällä. Sovellusten tekijät voivat sen jälkeen rakentaa PowerAppsissa runsaita sovelluksia tietojen avulla.
+
+![Näyttökuva, jossa on yleiskatsaus yrityssovelluksen käyttöympäristöstä.](./media/data-platform-cds-intro/platform.png "Käyttöympäristön yleiskatsaus")
 
 Lisätietoja CDC for Appsin käyttöön tarvittavan palvelupaketin ostamisesta on kohdassa [Hinnoittelutiedot](../../administrator/pricing-billing-skus.md).
 
@@ -24,11 +26,31 @@ Lisätietoja CDC for Appsin käyttöön tarvittavan palvelupaketin ostamisesta o
 CDC for Appsin vakioentiteetit ja mukautetut entiteetit tarjoavat turvallisen pilvipohjaisen tallennusvaihtoehdon tiedoillesi. Entiteettien avulla voit luoda organisaation tietojen yrityskeskeisen määrityksen, jota voidaan käyttää sovelluksissa. Jos et ole varma, ovatko entiteetit paras vaihtoehto, huomioi seuraavat edut:
 
 * **Helppo hallita** &ndash;Metatiedot ja tiedot on tallennettu pilvipalveluun. Sinun ei tarvitse huolehtia tallentamisen yksityiskohdista.
-* **Helppo jakaa** &ndash;Voit jakaa tietoja helposti työtovereidesi kanssa &mdash; PowerApps hallitsee käyttöoikeuksia.
 * **Helppo suojata** &ndash;Tiedot tallennetaan turvallisesti, ja käyttäjät näkevät ne vain, jos annat heille käyttöoikeuden. Roolipohjaisen suojauksen avulla voit hallita, kuka organisaatiossa voi käyttää entiteettejä.
-* **Monipuoliset metatiedot** &ndash;Tietotyyppejä ja suhteita hyödynnetään suoraan PowerAppsissa. Esimerkiksi kenttätyypin määrittäminen URL-osoitteeksi esittää tietosi hyperlinkkinä sovelluksessa.
+* **Dynamics 365 -tietojen käyttäminen** &ndash;Dynamics 365 -sovellusten tiedot tallennetaan myös Common Data Service for Appsiin. Voit näin nopeasti luoda sovelluksia, joiden avulla voit hyödyntää Dynamics 365 -tietoja ja laajentaa sovelluksia PowerAppsin avulla.
+* **Monipuoliset metatiedot** &ndash;Tietotyyppejä ja suhteita hyödynnetään suoraan PowerAppsissa.
 * **Logiikka ja vahvistus** &ndash; Varmista tietojen laatu ja liiketoimintaprosessien sujuvuus määrittämällä laskettuja kenttiä, liiketoimintasääntöjä, työnkulkuja ja liiketoimintaprosessien työnkulkuja.
 * **Tuottavuustyökalut** &ndash; Entiteetit ovat käytettävissä Microsoft Excelin apuohjelmissa. Ne lisäävät tuottavuutta ja varmistavat, että tiedot ovat käytettävissä.
+
+## <a name="dynamics-365-and-the-common-data-service-for-apps"></a>Dynamics 365 ja Common Data Service for Apps
+
+Dynamics 365 -sovellukset, kuten Dynamics 365 for Sales, Service tai Talent, käyttävät myös Common Data Service for Appsia tallentamaan ja suojaamaan sovellusten käyttämiä tietoja. Voit näin luoda sovelluksia PowerAppsin ja Common Data Service for Appsin avulla suoraan ilman integrointia Dynamics 365:ssä jo käytössä olevien tärkeiden yritystietojen avulla.
+
+* **Sovellusten luominen Dynamics 365 -tietojen avulla** &ndash; Voit luoda sovelluksia nopeasti yritystietojen avulla PowerAppsissa tai Pro Developer SDK:ssä.
+* **Uudelleenkäytettävien yrityslogiikkojen ja -sääntöjen hallinta** &ndash; Dynamics 365 -entiteeteissä jo määritettyjä yritysääntöjä ja -logiikoita sovelletaan PowerAppsiin tietojen johdonmukaisuuden varmistamiseksi siitä riippumatta, miten ja missä sovelluksessa tietoja käytetään.
+* **Uudelleenkäytettävät taidot Dynamics 365:ssä ja PowerAppsissa** &ndash; Käyttäjät, jotka ovat hyödyntäneet taitojaan aiemmin PowerAppsissa tai Dynamics 365:ssä, voivat nyt hyödyntää näitä taitoja uudessa Common Data Service for Apps -käyttöympäristössä. Esimerkiksi entiteettejä, lomakkeita ja kaavioita voidaan nyt luoda kaikissa sovelluksissa.
+
+    > [!NOTE]
+    > Dynamics 365 for Finance and Operations edellyttää nykyisin Data Integratorin määritystä, jotta Finance and Operationsin tiedot ovat saatavilla Common Data Service for Appsissa.
+
+## <a name="integrating-data-into-the-common-data-service"></a>Tietojen integrointi Common Data Serviceen
+
+Sovelluksen luomisessa käytetään yleensä useamman kuin yhden lähteen tietoja. Vaikka tämä voidaan toisinaan suorittaa sovellustasolla, joissakin tapauksissa näiden tietojen integrointi yhdessä samaan säilöön helpottaa sovelluksen luomista ja luo yhden logiikkajoukon tietojen ylläpitoon ja käyttöön. Common Data Service for Appsin avulla tiedot voidaan integroida useasta lähteestä yhteen säilöön, jota voidaan sitten käyttää PowerAppsissa, Flow’ssa ja Power BI:ssä Dynamics 365 -sovelluksista jo saatavien tietojen kanssa.
+
+* **Ajastettu integrointi muihin järjestelmiin** &ndash; Tiedot, jotka pidetään toisessa sovelluksessa, voidaan synkronoida säännöllisesti Common Data Service for Appsin kanssa, jotta voit hyödyntää muiden sovellusten tietoja PowerAppsissa.
+* **Tietojen muuntaminen ja tuominen PowerQueryn avulla** &ndash; Voit muuntaa Common Data Serviceen tuotavat tiedot PowerQueryn kautta monista verkkotietolähteistä. PowerQuery on yleinen työkalu, jota käytetään Excelissä ja Power BI:ssä.
+* **Tietojen kertatuominen** &ndash; Excel- ja CSV-tiedostojen yksinkertaista tuomista ja viemistä voidaan käyttää kerran tai tietoja voidaan tuoda epäsäännöllisesti Common Data Service for Appsiin.
+
 
 ## <a name="interacting-with-entities"></a>Entiteettien käyttäminen
 Kun kehität sovellusta, voit käyttää vakioentiteettejä, mukautettuja entiteettejä tai molempia. CDC for Apps tarjoaa vakioentiteetit oletusarvona. Vakioentiteetit on suunniteltu parhaiden käytäntöjen mukaisesti tallentamaan yleisimmät organisaatiossa käytetyt käsitteet ja skenaariot.

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 11/11/2017
 ms.author: ankitsar
-ms.openlocfilehash: 8ae6bd0e576abd3a4115e452b286607b5c695acb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 69e3baaa769282ca8ac7372ba3360829a1624f3d
+ms.sourcegitcommit: 6bfb002180148a3f22a4d1d8d750fc442489ebe4
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834832"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35291739"
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Tutustu SharePoint-lomakkeiden integrointiin
 Nyt voit helposti [mukauttaa mitä tahansa SharePoint-luettelolomakkeita](customize-list-form.md) PowerAppsissa. Näissä ohjeissa neuvomme vaiheittain, miten nämä lomakkeet toimivat ja miten niitä voi mukauttaa lisää.
@@ -76,7 +76,7 @@ Nämä oletusarvot varmistavat, että SharePointissa suoritettava lomake toimii.
 ![](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
->**SharePointIntegration**-ohjausobjektin ominaisuudet ovat käytettävissä vain, kun lomake suoritetaan SharePointissa. Niitä ei voi käyttää, kun lomaketta mukautetaan PowerApps Studiossa.
+>**SharePointIntegration**-ohjausobjektin ominaisuudet ovat käytettävissä vain, kun lomake suoritetaan SharePointissa. Niitä ei voi käyttää, kun lomaketta mukautetaan PowerApps Studiossa. Nämä ominaisuudet eivät ole ehkä käytettävissä **OnStartissa** tai **OnVisiblessa**. 
 
 **SharePointIntegration**-ohjausobjektin ominaisuudet:
 
@@ -109,3 +109,5 @@ Nyt kun tunnet oletuslomakkeen ja **SharePointIntegration**-ohjausobjektin toimi
 * Muista liittää **RequestHide()** kaikkien lomakkeidesi **OnSuccess**-kaavaan. Ilman sitä SharePoint ei tiedä, milloin lomake pitäisi piilottaa.
 
 * Et voi piilottaa lomaketta, kun käyttäjä napsauttaa tai napauttaa **Peruuta**-painiketta SharePointissa. Muista sen vuoksi aina nollata lomakkeet **SharePointIntegration**-ohjausobjektin **OnCancel**-kaavassa.
+
+* **SharePointIntegration**-ohjausobjektin ominaisuudet eivät ole ehkä käytettävissä **OnStartissa** tai **OnVisiblessa**, ja nämä tapahtumat suoritetaan vain kerran, kun luettelo on ladattu. Voit käyttää **OnNew**, **OnView**, tai **OnEdit** suorittaa logiikka, ennen kuin lomake näytetään käyttäjälle aina, kun kaavoja. 
