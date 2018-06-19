@@ -224,7 +224,7 @@
   items:
     - name: Pika-aloitukset
       items:
-        - name: Luo kohde
+        - name: Entiteetin luominen
           href: ./common-data-service/data-platform-create-entity.md
     - name: Opetusohjelmat
       items:
@@ -250,6 +250,8 @@
           href: ./common-data-service/data-platform-create-business-rule.md
         - name: Poista mukautettu entiteetti
           href: ./common-data-service/data-platform-delete-entity.md
+        - name: Tuo tai vie tietoja entiteetistä
+          href: ./common-data-service/data-platform-import-export.md
         - name: Entiteettitietojen avaaminen Excelissä
           href: ./common-data-service/data-platform-excel-addin.md
         - name: Luo Power BI -raportti
