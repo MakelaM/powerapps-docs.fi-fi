@@ -202,12 +202,402 @@
       items:
         - name: Lisätietoja kaavasta
           href: ./canvas-apps/formula-reference.md
+          items:
+            - name: Abs
+              href: ./canvas-apps/functions/function-numericals.md
+            - name: Acceleration
+              href: ./canvas-apps/functions/signals.md
+            - name: Acos
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Acot
+              href: ./canvas-apps/functions/function-trig.md
+            - name: AddColumns
+              href: ./canvas-apps/functions/function-table-shaping.md
+            - name: Ja
+              href: ./canvas-apps/functions/function-logicals.md
+            - name: Sovellus
+              href: ./canvas-apps/functions/signals.md
+            - name: Asin
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Atan
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Atan2
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Average
+              href: ./canvas-apps/functions/function-aggregates.md
+            - name: Back
+              href: ./canvas-apps/functions/function-navigate.md
+            - name: Blank
+              href: ./canvas-apps/functions/function-isblank-isempty.md
+            - name: Kalenteri
+              href: ./canvas-apps/functions/function-clock-calendar.md
+            - name: Char
+              href: ./canvas-apps/functions/function-char.md
+            - name: Valinnat
+              href: ./canvas-apps/functions/function-choices.md
+            - name: Clear
+              href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+            - name: ClearCollect
+              href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+            - name: Kello
+              href: ./canvas-apps/functions/function-clock-calendar.md
+            - name: Coalesce
+              href: ./canvas-apps/functions/function-isblank-isempty.md
+            - name: Collect
+              href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+            - name: Väri
+              href: ./canvas-apps/functions/function-colors.md
+            - name: ColorFade
+              href: ./canvas-apps/functions/function-colors.md
+            - name: ColorValue
+              href: ./canvas-apps/functions/function-colors.md
+            - name: Compass
+              href: ./canvas-apps/functions/signals.md
+            - name: Concat
+              href: ./canvas-apps/functions/function-concatenate.md
+            - name: Concatenate
+              href: ./canvas-apps/functions/function-concatenate.md
+            - name: Yhteys
+              href: ./canvas-apps/functions/signals.md
+            - name: Määrä
+              href: ./canvas-apps/functions/function-table-counts.md
+            - name: Cos
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Cot
+              href: ./canvas-apps/functions/function-trig.md
+            - name: CountA
+              href: ./canvas-apps/functions/function-table-counts.md
+            - name: CountIf
+              href: ./canvas-apps/functions/function-table-counts.md
+            - name: CountRows
+              href: ./canvas-apps/functions/function-table-counts.md
+            - name: DataSourceInfo
+              href: ./canvas-apps/functions/function-datasourceinfo.md
+            - name: Päivämäärä
+              href: ./canvas-apps/functions/function-date-time.md
+            - name: DateAdd
+              href: ./canvas-apps/functions/function-dateadd-datediff.md
+            - name: DateDiff
+              href: ./canvas-apps/functions/function-dateadd-datediff.md
+            - name: DateTimeValue
+              href: ./canvas-apps/functions/function-datevalue-timevalue.md
+            - name: DateValue
+              href: ./canvas-apps/functions/function-datevalue-timevalue.md
+            - name: Päivä
+              href: ./canvas-apps/functions/function-datetime-parts.md
+            - name: Oletukset
+              href: ./canvas-apps/functions/function-defaults.md
+            - name: Asteet
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Poista käytöstä
+              href: ./canvas-apps/functions/function-enable-disable.md
+            - name: Erota
+              href: ./canvas-apps/functions/function-distinct.md
+            - name: Lataa
+              href: ./canvas-apps/functions/function-param.md
+            - name: DropColumns
+              href: ./canvas-apps/functions/function-table-shaping.md
+            - name: EditForm
+              href: ./canvas-apps/functions/function-form.md
+            - name: Ota käyttöön
+              href: ./canvas-apps/functions/function-enable-disable.md
+            - name: EndsWith
+              href: ./canvas-apps/functions/function-startswith.md
+            - name: Virheet
+              href: ./canvas-apps/functions/function-errors.md
+            - name: EncodeUrl
+              href: ./canvas-apps/functions/function-encode-decode.md
+            - name: Lopeta
+              href: ./canvas-apps/functions/function-exit.md
+            - name: Exp
+              href: ./canvas-apps/functions/function-numericals.md
+            - name: Filter
+              href: ./canvas-apps/functions/function-filter-lookup.md
+            - name: Etsi
+              href: ./canvas-apps/functions/function-find.md
+            - name: Ensimmäinen
+              href: ./canvas-apps/functions/function-first-last.md
+            - name: FirstN
+              href: ./canvas-apps/functions/function-first-last.md
+            - name: ForAll
+              href: ./canvas-apps/functions/function-forall.md
+            - name: GroupBy
+              href: ./canvas-apps/functions/function-groupby.md
+            - name: HashTags
+              href: ./canvas-apps/functions/function-hashtags.md
+            - name: Tunti
+              href: ./canvas-apps/functions/function-datetime-parts.md
+            - name: Jos
+              href: ./canvas-apps/functions/function-if.md
+            - name: IfError
+              href: ./canvas-apps/functions/function-iferror.md
+            - name: IsBlank
+              href: ./canvas-apps/functions/function-isblank-isempty.md
+            - name: IsEmpty
+              href: ./canvas-apps/functions/function-isblank-isempty.md
+            - name: IsMatch
+              href: ./canvas-apps/functions/function-ismatch.md
+            - name: IsNumeric
+              href: ./canvas-apps/functions/function-isnumeric.md
+            - name: IsToday
+              href: ./canvas-apps/functions/function-now-today-istoday.md
+            - name: Kieli
+              href: ./canvas-apps/functions/function-language.md
+            - name: Viimeinen
+              href: ./canvas-apps/functions/function-first-last.md
+            - name: LastN
+              href: ./canvas-apps/functions/function-first-last.md
+            - name: Käynnistä
+              href: ./canvas-apps/functions/function-param.md
+            - name: Vasen
+              href: ./canvas-apps/functions/function-left-mid-right.md
+            - name: Len
+              href: ./canvas-apps/functions/function-len.md
+            - name: Ln
+              href: ./canvas-apps/functions/function-numericals.md
+            - name: LoadData
+              href: ./canvas-apps/functions/function-savedata-loaddata.md
+            - name: Sijainti
+              href: ./canvas-apps/functions/signals.md
+            - name: LookUp
+              href: ./canvas-apps/functions/function-filter-lookup.md
+            - name: Alempi
+              href: ./canvas-apps/functions/function-lower-upper-proper.md
+            - name: Max
+              href: ./canvas-apps/functions/function-aggregates.md
+            - name: Keski
+              href: ./canvas-apps/functions/function-left-mid-right.md
+            - name: Min
+              href: ./canvas-apps/functions/function-aggregates.md
+            - name: Minuutti
+              href: ./canvas-apps/functions/function-datetime-parts.md
+            - name: Mod
+              href: ./canvas-apps/functions/function-mod.md
+            - name: Kuukausi
+              href: ./canvas-apps/functions/function-datetime-parts.md
+            - name: Navigate
+              href: ./canvas-apps/functions/function-navigate.md
+            - name: NewForm
+              href: ./canvas-apps/functions/function-form.md
+            - name: Ei
+              href: ./canvas-apps/functions/function-logicals.md
+            - name: Ilmoita
+              href: ./canvas-apps/functions/function-showerror.md
+            - name: Nyt
+              href: ./canvas-apps/functions/function-now-today-istoday.md
+            - name: Operaattorit
+              href: ./canvas-apps/functions/operators.md
+            - name: Tai
+              href: ./canvas-apps/functions/function-logicals.md
+            - name: Param
+              href: ./canvas-apps/functions/function-param.md
+            - name: Patch
+              href: ./canvas-apps/functions/function-patch.md
+            - name: Pi
+              href: ./canvas-apps/functions/function-trig.md
+            - name: PlainText
+              href: ./canvas-apps/functions/function-encode-decode.md
+            - name: Power
+              href: ./canvas-apps/functions/function-numericals.md
+            - name: Proper
+              href: ./canvas-apps/functions/function-lower-upper-proper.md
+            - name: Radiaanit
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Rand
+              href: ./canvas-apps/functions/function-rand.md
+            - name: Päivitä
+              href: ./canvas-apps/functions/function-refresh.md
+            - name: Poista
+              href: ./canvas-apps/functions/function-remove-removeif.md
+            - name: RemoveIf
+              href: ./canvas-apps/functions/function-remove-removeif.md
+            - name: RenameColumns
+              href: ./canvas-apps/functions/function-table-shaping.md
+            - name: Korvaa
+              href: ./canvas-apps/functions/function-replace-substitute.md
+            - name: Palauta
+              href: ./canvas-apps/functions/function-reset.md
+            - name: ResetForm
+              href: ./canvas-apps/functions/function-form.md
+            - name: Kumoa
+              href: ./canvas-apps/functions/function-revert.md
+            - name: RGBA
+              href: ./canvas-apps/functions/function-colors.md
+            - name: Oikea
+              href: ./canvas-apps/functions/function-left-mid-right.md
+            - name: Pyöristä
+              href: ./canvas-apps/functions/function-round.md
+            - name: RoundDown
+              href: ./canvas-apps/functions/function-round.md
+            - name: RoundUp
+              href: ./canvas-apps/functions/function-round.md
+            - name: SaveData
+              href: ./canvas-apps/functions/function-savedata-loaddata.md
+            - name: Haku
+              href: ./canvas-apps/functions/function-filter-lookup.md
+            - name: Sekunti
+              href: ./canvas-apps/functions/function-datetime-parts.md
+            - name: Valitse
+              href: ./canvas-apps/functions/function-select.md
+            - name: Määritä
+              href: ./canvas-apps/functions/function-set.md
+            - name: ShowColumns
+              href: ./canvas-apps/functions/function-table-shaping.md
+            - name: Sekoita
+              href: ./canvas-apps/functions/function-shuffle.md
+            - name: Sin
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Sort
+              href: ./canvas-apps/functions/function-sort.md
+            - name: SortByColumns
+              href: ./canvas-apps/functions/function-sort.md
+            - name: Jaa
+              href: ./canvas-apps/functions/function-split.md
+            - name: Sqrt
+              href: ./canvas-apps/functions/function-numericals.md
+            - name: StartsWith
+              href: ./canvas-apps/functions/function-startswith.md
+            - name: StdevP
+              href: ./canvas-apps/functions/function-aggregates.md
+            - name: Korvaava
+              href: ./canvas-apps/functions/function-replace-substitute.md
+            - name: SubmitForm
+              href: ./canvas-apps/functions/function-form.md
+            - name: Sum
+              href: ./canvas-apps/functions/function-aggregates.md
+            - name: Valitsin
+              href: ./canvas-apps/functions/function-if.md
+            - name: Taulukko
+              href: ./canvas-apps/functions/function-table.md
+            - name: Tan
+              href: ./canvas-apps/functions/function-trig.md
+            - name: Teksti
+              href: ./canvas-apps/functions/function-text.md
+            - name: Time
+              href: ./canvas-apps/functions/function-date-time.md
+            - name: TimeValue
+              href: ./canvas-apps/functions/function-datevalue-timevalue.md
+            - name: TimeZoneOffset
+              href: ./canvas-apps/functions/function-dateadd-datediff.md
+            - name: Tänään
+              href: ./canvas-apps/functions/function-now-today-istoday.md
+            - name: Tasoita
+              href: ./canvas-apps/functions/function-trim.md
+            - name: TrimEnds
+              href: ./canvas-apps/functions/function-trim.md
+            - name: Ungroup
+              href: ./canvas-apps/functions/function-groupby.md
+            - name: Päivitä
+              href: ./canvas-apps/functions/function-update-updateif.md
+            - name: UpdateContext
+              href: ./canvas-apps/functions/function-updatecontext.md
+            - name: UpdateIf
+              href: ./canvas-apps/functions/function-update-updateif.md
+            - name: Ylempi
+              href: ./canvas-apps/functions/function-lower-upper-proper.md
+            - name: Käyttäjä
+              href: ./canvas-apps/functions/function-user.md
+            - name: Vahvista
+              href: ./canvas-apps/functions/function-validate.md
+            - name: Arvo
+              href: ./canvas-apps/functions/function-value.md
+            - name: VarP
+              href: ./canvas-apps/functions/function-aggregates.md
+            - name: ViewForm
+              href: ./canvas-apps/functions/function-form.md
+            - name: Viikonpäivä
+              href: ./canvas-apps/functions/function-datetime-parts.md
+            - name: Vuosi
+              href: ./canvas-apps/functions/function-datetime-parts.md
         - name: Lisätietoja komponenteista
           href: ./canvas-apps/reference-properties.md
+          items:
+            - name: Lisää kuva
+              href: ./canvas-apps/controls/control-add-picture.md
+            - name: Liitteet
+              href: ./canvas-apps/controls/control-attachments.md
+            - name: Ääni
+              href: ./canvas-apps/controls/control-audio-video.md
+            - name: Viivakoodiskanneri (kokeellinen)
+              href: ./canvas-apps/controls/control-barcodescanner.md
+            - name: Painike
+              href: ./canvas-apps/controls/control-button.md
+            - name: Kamera
+              href: ./canvas-apps/controls/control-camera.md
+            - name: Kortti
+              href: ./canvas-apps/controls/control-card.md
+            - name: Valintaruutu
+              href: ./canvas-apps/controls/control-check-box.md
+            - name: Pylväskaavio
+              href: ./canvas-apps/controls/control-column-line-chart.md
+            - name: Sarake
+              href: ./canvas-apps/controls/control-column.md
+            - name: Yhdistelmäruutu
+              href: ./canvas-apps/controls/control-combo-box.md
+            - name: Tietotaulukko
+              href: ./canvas-apps/controls/control-data-table.md
+            - name: Päivämäärän valitsin
+              href: ./canvas-apps/controls/control-date-picker.md
+            - name: Näytä lomake
+              href: ./canvas-apps/controls/control-form-detail.md
+            - name: Avattava luettelo
+              href: ./canvas-apps/controls/control-drop-down.md
+            - name: Muokkaa lomaketta
+              href: ./canvas-apps/controls/control-form-detail.md
+            - name: Vieminen
+              href: ./canvas-apps/controls/control-export-import.md
+            - name: Galleria
+              href: ./canvas-apps/controls/control-gallery.md
+            - name: HTML-teksti
+              href: ./canvas-apps/controls/control-html-text.md
+            - name: Kuvake
+              href: ./canvas-apps/controls/control-shapes-icons.md
+            - name: Kuva
+              href: ./canvas-apps/controls/control-image.md
+            - name: Tuo
+              href: ./canvas-apps/controls/control-export-import.md
+            - name: Viivakaavio
+              href: ./canvas-apps/controls/control-column-line-chart.md
+            - name: Luetteloruutu
+              href: ./canvas-apps/controls/control-list-box.md
+            - name: Mikrofoni
+              href: ./canvas-apps/controls/control-microphone.md
+            - name: PDF-katseluohjelma (kokeellinen)
+              href: ./canvas-apps/controls/control-pdf-viewer.md
+            - name: Kynän syöte
+              href: ./canvas-apps/controls/control-pen-input.md
+            - name: Ympyräkaavio
+              href: ./canvas-apps/controls/control-pie-chart.md
+            - name: Power BI -ruutu
+              href: ./canvas-apps/controls/control-power-bi-tile.md
+            - name: Radio
+              href: ./canvas-apps/controls/control-radio.md
+            - name: Luokitus
+              href: ./canvas-apps/controls/control-rating.md
+            - name: RTF-editori (kokeellinen)
+              href: ./canvas-apps/controls/control-richtexteditor.md
+            - name: Näyttö
+              href: ./canvas-apps/controls/control-screen.md
+            - name: Muoto
+              href: ./canvas-apps/controls/control-shapes-icons.md
+            - name: Liukusäädin
+              href: ./canvas-apps/controls/control-slider.md
+            - name: Selite
+              href: ./canvas-apps/controls/control-text-box.md
+            - name: Tekstisyöte
+              href: ./canvas-apps/controls/control-text-input.md
+            - name: Ajastin
+              href: ./canvas-apps/controls/control-timer.md
+            - name: Vaihda
+              href: ./canvas-apps/controls/control-toggle.md
+            - name: Video
+              href: ./canvas-apps/controls/control-audio-video.md
         - name: Lisätietoa liittimistä
           href: ./canvas-apps/connections-list.md
         - name: 'Järjestelmävaatimukset, rajoitukset ja konfigurointi'
           href: ./canvas-apps/limits-and-config.md
+        - name: Hae istunnon tunnus
+          href: ./canvas-apps/get-sessionid.md
 - name: Mallipohjaiset sovellukset
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
