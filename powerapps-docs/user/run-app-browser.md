@@ -7,12 +7,12 @@ ms.component: pa-user
 ms.topic: quickstart
 ms.date: 03/07/2018
 ms.author: matp
-ms.openlocfilehash: ba3b52bbbe12fad8773f09f4c753e4a55d09a6f0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4aed5f0d34bf88bca706c1c6421ac3b692308ebb
+ms.sourcegitcommit: 63351b1bda5a8dd00786912f95aba9fb3ebfe75c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34552710"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36261714"
 ---
 # <a name="quickstart-run-an-app-in-a-web-browser"></a>Pikaopas: Suorita sovellus verkkoselaimessa
 Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa [Dynamics 365 -aloitussivulta](https://home.dynamics.com).
@@ -20,7 +20,7 @@ Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovellu
 Jotta voit seurata tätä pikaopasta, tarvitset [Microsoft Office 365 -tilauksen](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1), johon sisältyy Dynamics 365, ja käyttöoikeuden [tuettuun selaimeen ja käyttöjärjestelmään](../maker/canvas-apps/limits-and-config.md). Varmista myös, että sinulla on käyttöoikeus luomaasi tai jonkun muun luomaan ja kanssasi jakamaan sovellukseen.
 
 ## <a name="sign-in-to-dynamics-365"></a>Kirjaudu Dynamics 365:een
-Kirjaudu Dynamics 365:een osoitteessa [https://home.dynamics.com]([https://home.dynamics.com).
+Kirjaudu Dynamics 365:een osoitteessa [https://home.dynamics.com](https://home.dynamics.com).
 
 ## <a name="find-an-app-on-the-home-page"></a>Sovelluksen etsiminen aloitussivulta
 Aloitussivulla voi olla useita yrityssovelluksia. Voit etsiä tietyn sovelluksen kirjoittamalla osan sen nimestä hakuruutuun. Voit myös suodattaa luetteloa ja näyttää vain tietyn lähteen luomat sovellukset, kuten PowerAppsin. Tee tämä napsauttamalla tai napauttamalla **Suodatin** ja valitsemalla sitten lähteen.

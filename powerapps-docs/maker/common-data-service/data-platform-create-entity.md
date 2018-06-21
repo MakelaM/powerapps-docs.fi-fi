@@ -7,12 +7,12 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: 66c96f7496266e03491e404de2bb329f82b6a2bf
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ecbdc81b2688ee9aabf5e0df6416212957ca2642
+ms.sourcegitcommit: 222df368f1f35e9357b0b1adf0e69d7206d8126e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34552917"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298488"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Pikaopas: Mukautetun entiteetin luominen
 PowerAppsissa *entiteetti* määrittää tiedot, joita haluat seurata sellaisten tietueiden muodossa, jotka yleensä sisältävät ominaisuuksia, kuten yrityksen nimi, sijainti, tuotteet, sähköposti ja puhelinnumero. Voit sitten näyttää tiedot kehittämällä sovelluksen, joka viittaa entiteettiin. PowerApps tarjoaa vakioentiteetit tyypillisiin organisaation skenaarioihin (kuten tapaamisten seuranta), mutta haluat ehkä myös luoda mukautettuja entiteettejä omalle organisaatiollesi ominaisten tietojen tallentamiseen.
@@ -25,7 +25,7 @@ Tämän pikaoppaan noudattamista varten tarvitaan seuraavat kohteet:
 * Järjestelmänvalvoja- tai Järjestelmämukauttaja-käyttöoikeusrooli Common Data Servicessä sovelluksille.
 
 ## <a name="sign-in-to-powerapps"></a>PowerAppsiin kirjautuminen
-Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com]([https://web.powerapps.com).
+Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://web.powerapps.com).
 
 ## <a name="create-an-entity"></a>Entiteetin luominen
 1. Laajenna siirtymisruudussa **Tiedot** napsauttamalla tai napauttamalla sitä ja valitse sitten **Entiteetit**.
