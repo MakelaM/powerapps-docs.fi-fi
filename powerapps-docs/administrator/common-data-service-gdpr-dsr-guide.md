@@ -1,25 +1,20 @@
 ---
-title: Vastaaminen CDS for Appsia koskeviin DSR-pyyntöihin | Microsoft Docs
-description: Ohjeet CDS for Appsia koskeviin DSR-pyyntöihin vastaamiseen
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: Common Data Service (CDS) for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen | Microsoft Docs
+description: Ohjeet Common Data Service (CDS) for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaamiseen
 author: jamesol-msft
+ms.reviewer: paulliew
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 04/23/2018
-ms.author: paulliew
-ms.openlocfilehash: 88a3d0c31a9608a901d99a8a901a209f14c13fc0
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.author: jamesol
+ms.openlocfilehash: ef5d646e30f5d09dbfe5f111a3ad018b030f79d9
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168224"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen
 

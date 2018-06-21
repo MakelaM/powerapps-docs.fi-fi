@@ -1,25 +1,18 @@
 ---
 title: Pikaohje ympäristöissäsi ladattujen sovellusten luettelon lataamiseksi | Microsoft Docs
-description: Tämän pikaoppaan avulla opit lataamaan ympäristöissäsi luotujen sovellusten luettelon
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: Tämän pikaoppaan avulla opit lataamaan ympäristöissäsi luotujen sovellusten luettelon.
+author: jimholtz
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-admin
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: debe9dd0ab3aa948537820cccd3304a6b4225c54
-ms.sourcegitcommit: c5e3991e0e4e9f22a1e094d699f35adabfb97c6c
+ms.author: jimh
+ms.openlocfilehash: d9c379ca95bb299c56639bb01803f45c1744d8f2
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552595"
 ---
 # <a name="quickstart-download-a-list-of-apps-created-in-your-environments"></a>Pikaopas: lataa ympäristöissäsi luotujen sovellusten luettelo
 Jos olet ympäristön järjestelmänvalvoja, voit tarkastella ja ladata luettelon sovelluksista, jotka on luotu ympäristöissä, joita hallitset. Jos olet 365:n yleinen järjestelmänvalvoja tai Azure Active Directory -vuokraajan järjestelmänvalvoja, voit tarkastella ja ladata luettelon sovelluksista, jotka on luotu kaikissa organisaatiosi ympäristöissä.
@@ -29,9 +22,9 @@ Tässä pikaoppaassa opetetaan, miten ladataan yhdessä ympäristössä luotujen
 ## <a name="prerequisites"></a>Edellytykset
  Tämän pikaoppaan noudattamista varten tarvitaan seuraavat kohteet:
  * PowerAppsin palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeus. Vaihtoehtoisesti voit rekisteröityä [ilmaisen PowerAppsin palvelupaketin 2 kokeiluversion](https://web.powerapps.com/signup?redirect=marketing&email=) käyttäjäksi.
- * PowerApps-ympäristön järjestelmänvalvojan, Office 365:n yleisen järjestelmänvalvojan tai Azure Active Directory vuokraajan järjestelmänvalvojan oikeudet. Lisätietoja on artikkelissa [ympäristöjen hallinta PowerAppsissa](environments-administration.md).
+ * PowerApps-ympäristön järjestelmänvalvojan, Office 365:n yleisen järjestelmänvalvojan tai Azure Active Directory vuokraajan järjestelmänvalvojan oikeudet. Lisätietoja on kohdassa [Ympäristöjen hallinta PowerAppsissa](environments-administration.md).
 
-## <a name="sign-in-to-the-powerapps-admin-center"></a>Kirjaudu sisään PowerApps-hallintakeskukseen
+## <a name="sign-in-to-the-powerapps-admin-center"></a>PowerApps-hallintakeskukseen kirjautuminen
 Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com]([https://admin.powerapps.com).
 
 ## <a name="download-the-list-of-apps"></a>Lataa luettelo sovelluksista

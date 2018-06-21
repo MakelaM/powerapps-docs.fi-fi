@@ -1,34 +1,27 @@
 ---
 title: Sovellusten siirtäminen ympäristöjen ja vuokraajien välillä | Microsoft Docs
-description: Sovellusten siirtäminen ympäristöjen ja vuokraajien välillä
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Ohjeet PowerApps-sovellusten siirtämiseen ympäristöjen ja vuokraajien välillä
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
+ms-topic: conceptual
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
+ms.component: pa-admin
+ms.topic: conceptual
 ms.author: jamesol
-ms.openlocfilehash: 3a63f525a44d1b617ba872dce7936fc97b151967
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 3a064bdb3f75bf45047e3ae0ff465fde1d2b66fa
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34167833"
 ---
 # <a name="environment-and-tenant-app-migration-through-packaging"></a>Sovellusten siirtäminen ympäristöjen ja vuokraajien välillä paketoinnin avulla
-Lue kuinka resursseja voidaan siirtää yhdestä ympäristöstä toiseen paketoinnin avulla. Nämä ympäristöt voivat olla samassa vuokraajassa tai eri vuokraajissa.
+Lue, miten resursseja voidaan siirtää yhdestä ympäristöstä toiseen paketoinnin avulla. Nämä ympäristöt voivat olla samassa vuokraajassa tai eri vuokraajissa.
 
 ## <a name="the-scenario"></a>Skenaario
-Yksi yleinen skenaario, jossa voi olla tarpeen siirtää resursseja, on sellainen, jossa käytössä on testaus- ja kehitysympäristöt sekä tuotantoympäristö. Kehittäjillä ja testaajilla on laajat käyttöoikeudet ympäristöjensä sovelluksiin. Mutta kun on aika siirtää uusi sovellus tuotantoon, siinä ympäristössä on tarkat käyttöoikeussäännöt sovelluksen päivitykseen tai muuttamiseen.
+Yksi yleinen skenaario, jossa voi olla tarpeen siirtää resursseja, on sellainen, jossa käytössä on testaus- ja kehitysympäristöt sekä tuotantoympäristö. Kehittäjillä ja testaajilla on laajat käyttöoikeudet ympäristöjensä sovelluksiin. Toisaalta, kun on aika siirtää uusi sovellus tuotantoon, kyseisessä ympäristössä on tarkat käyttöoikeussäännöt sovelluksen päivitykseen tai muuttamiseen.
 
-Toinen skenaario on sellainen, jossa eri asiakkailla on omat ympäristöt ja tiedot. Kun lisätään uusi asiakas, hänelle luodaan uusi ympäristö ja tässä skenaariossa sovellukset siirrettäisiin kyseiseen ympäristöön.
+Toinen skenaario on sellainen, jossa eri asiakkailla on omat ympäristöt ja tiedot. Kun lisätään uusi asiakas, hänelle luodaan uusi ympäristö, ja tässä skenaariossa sovellukset siirrettäisiin kyseiseen ympäristöön.
 
 ## <a name="which-resources-can-i-migrate-through-packaging"></a>Mitä resursseja voin siirtää paketoinnin avulla?
 Kun viet sovelluksen, siihen liittyvät resurssit siirretään myös pakettiin.  Aluksi tuetaan vain osaa kaikista resurssityypeistä alla olevan taulukon mukaisesti.
@@ -43,47 +36,47 @@ Kun viet sovelluksen, siihen liittyvät resurssit siirretään myös pakettiin. 
 | Yhdyskäytävät |Ei |Yhdyskäytäviä tuetaan vain oletusympäristöissä (ja {vuokraajan nimi} (esikatselusta) -ympäristöissä), joten viemistä/siirtämistä ei tueta. |
 
 ## <a name="how-do-i-get-access-to-packaging-for-my-app"></a>Kuinka voin käyttää paketointia sovellukselleni?
-Sovelluksen vienti on saatavilla käyttäjille, joilla on sovellukseen muokkausoikeus.
+Sovelluksen vienti on käytettävissä käyttäjille, joilla on sovelluksen muokkausoikeus.
 
-Sovelluksen tuonti on saatavilla käyttäjille, joilla on kohdeympäristössä Ympäristön tekijä -käyttöoikeus.
+Sovelluksen tuonti on käytettävissä käyttäjille, joilla on ympäristön tekijä -käyttöoikeus kohdeympäristössä.
 
 Käyttäjällä täytyy olla PowerAppsin palvelupaketti 2 tai PowerAppsin palvelupaketin 2 kokeilukäyttöoikeus sovellusten viemistä tai tuomista varten.
 
 > [!NOTE]
-> Kun paketointi on esikatselussa, kuka tahansa käyttäjä, jolla on kelvollinen PowerApps-käyttöoikeus voi testata sovellustensa ja ympäristöjensä paketointia.
+> Kun paketointi on esikatselussa, kuka tahansa käyttäjä, jolla on kelvollinen PowerApps-käyttöoikeus, voi testata sovellustensa ja ympäristöjensä paketointia.
 
 ## <a name="exporting-an-app"></a>Sovelluksen vieminen
 1. Napsauta tai napauta osoitteessa http://web.powerapps.com kohtaa **Sovellukset**, valitse vietävän sovelluksen kolme pistettä ja valitse **Vie (esiversio)**.
 
     ![Viennin valinta](./media/environment-and-tenant-migration/select-export.png)
-2. Kun paketin vientisivu avautuu, anna paketille Nimi ja Kuvaus.
+2. Kun paketin vientisivu avautuu, anna paketille nimi ja kuvaus vastaaviin kohtiin.
 
     ![Paketin tietojen tarkistus](./media/environment-and-tenant-migration/package-details.png)
-3. ”Käy läpi paketin sisältö” -kohdassa voit valinnaisesti lisätä kommentteja tai huomautuksia tai muuttaa asetuksia yksittäisten resurssien tuomiselle kohdeympäristöön paketin tuomisen aikana.
+3. Käy läpi paketin sisältö -kohdassa voit valinnaisesti lisätä kommentteja tai huomautuksia tai muuttaa asetuksia yksittäisten resurssien tuomiselle kohdeympäristöön paketin tuomisen aikana.
 
     ![Paketin sisällön määritys](./media/environment-and-tenant-migration/export-package-content.png)
 
-4. Kun olet valmis, valitse **Vie**. Pakettitiedoston lataus alkaa muutaman sekunnin kuluttua.
+4. Kun olet valmis, valitse **Vienti**. Pakettitiedoston lataus alkaa muutaman sekunnin kuluttua.
 
 ## <a name="importing-an-app"></a>Sovelluksen tuominen
 1. Napsauta tai napauta osoitteessa http://web.powerapps.com kohtaa **Sovellukset** ja valitse **Tuo paketti (esiversio)**.
 
     ![Tuonnin valinta](./media/environment-and-tenant-migration/select-import.png)
-2. Valitse **Lataa palvelimeen** ja valitse sovelluspakettitiedosto, jonka haluat tuoda.
+2. Valitse **Lataa** ja valitse sovelluspakettitiedosto, jonka haluat tuoda.
 
     ![Pakettitiedoston valinta](./media/environment-and-tenant-migration/select-file.png)
-3. Kun paketti on ladattu palvelimelle, sinun tulee tarkistaa paketin sisältö ja antaa lisätietoja kohteille, jotka on merkitty punaisella kuvakkeella, valitsemalla kohteiden jakoavainkuvakkeet ja antamalla vaaditut tiedot.
+3. Kun paketti on ladattu palvelimeen, sinun täytyy tarkistaa paketin sisältö ja antaa lisätietoja kohteille, jotka on merkitty punaisella kuvakkeella, valitsemalla kohteiden jakoavainkuvakkeet ja antamalla vaaditut tiedot.
 
-    ![Paketin sisällön läpi käynti](./media/environment-and-tenant-migration/import-package-content.png)
-4. Kun olet antanut kaikki vaaditut tiedot, valitse **Tuo**.
+    ![Paketin sisällön läpikäynti](./media/environment-and-tenant-migration/import-package-content.png)
+4. Kun olet antanut kaikki vaaditut tiedot, valitse **Tuonti**.
 
     ![Päivitetty paketin sisältö](./media/environment-and-tenant-migration/import-package-content-dirty.png)
-5. Kun tuonti on valmis, sinut ohjataan automaattisesti (alla olevaa muistuttavalle) sivulle, jolla näytetään, onko tuonti onnistunut.
+5. Kun tuonti on valmis, sinut ohjataan automaattisesti (alla olevaa muistuttavalle) sivulle, jossa näytetään, onko tuonti onnistunut.
 
     ![Tuonnin tulosten tarkistus](./media/environment-and-tenant-migration/import-results.png)
 
 > [!NOTE]
->  Jos tuot sovellusta ja valitsit olemassa olevan sovelluksen **Päivittämisen**, uudet muutokset tallennetaan sovellusten luonnoksena.  Sinun tulee [julkaista](http://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) muutokset, jotta ne ovat saatavilla kaikille sovellusten käyttäjille.
+>  Jos tuot sovellusta ja valitsit olemassa olevan sovelluksen **päivittämisen**, uudet muutokset tallennetaan sovellusten luonnoksena.  Sinun tulee [julkaista](http://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) muutokset, jotta ne ovat saatavilla kaikille sovellusten käyttäjille.
 >
 >
 
@@ -96,36 +89,36 @@ Osoitteessa https://web.powerapps.com rakennettujen entiteettien, asetusjoukkoje
 
 1. Valitse osoitteessa http://web.powerapps.com suunnittelutila **Malliin perustuva (esikatselu)** ympäristössäsi.
 
-  ![Malliin perustuvan suunnittelutilan valinta](./media/environment-and-tenant-migration/select-model-driven.png)
+    ![Malliin perustuvan suunnittelutilan valinta](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Avaa tämän ympäristön oletusratkaisun ratkaisunhallinta valitsemalla vasemmasta siirtymispalkista **Lisäasetukset**.
 
-  ![Lisäasetusten valinta](./media/environment-and-tenant-migration/select-advanced.png)
+    ![Lisäasetusten valinta](./media/environment-and-tenant-migration/select-advanced.png)
 
 3. Valitse **Vie ratkaisu** ja suorita vaaditut vaiheet.  Ratkaisupakettitiedoston lataus alkaa muutaman sekunnin päästä.
 
-  ![Viennin valinta](./media/environment-and-tenant-migration/select-export-solution.png)
+    ![Viennin valinta](./media/environment-and-tenant-migration/select-export-solution.png)
 
 ## <a name="importing-cds-customization-and-model-driven-apps"></a>CDS-mukautusten ja mallipohjaisten sovellusten tuominen
 CDS-ratkaisupaketin tuominen vaatii valitettavasti manuaalisen ratkaisun, jota pyrimme aktiivisesti korjaamaan:
 
 1. Valitse osoitteessa http://web.powerapps.com suunnittelutila **Malliin perustuva (esikatselu)** ympäristössäsi.
 
-  ![Malliin perustuvan suunnittelutilan valinta](./media/environment-and-tenant-migration/select-model-driven.png)
+    ![Malliin perustuvan suunnittelutilan valinta](./media/environment-and-tenant-migration/select-model-driven.png)
 
 2. Avaa tämän ympäristön oletusratkaisun ratkaisunhallinta valitsemalla vasemmasta siirtymispalkista **Lisäasetukset**.
 
-  ![Lisäasetusten valinta](./media/environment-and-tenant-migration/select-advanced.png)
+    ![Lisäasetusten valinta](./media/environment-and-tenant-migration/select-advanced.png)
 
 3. Kopioi osoite selaimestasi, tee siihen seuraavat muutokset ja siirry uuteen osoitteeseen selaimessasi:
 
-  - Osoitteen alkuperäinen rakenne: https://{organisaationyksilöivänimi}.crm.dynamics.com/tools/solution/edit.aspx?id={ratkaisunnimi}
+    * Osoitteen alkuperäinen rakenne: https://{organisaationyksilöivänimi}.crm.dynamics.com/tools/solution/edit.aspx?id={ratkaisunnimi}
 
-    ![URL-osoitteen muokkaus](./media/environment-and-tenant-migration/edit-url.png)
+        ![URL-osoitteen muokkaus](./media/environment-and-tenant-migration/edit-url.png)
 
-  - Osoitteen uusi rakenne: https://{organisaationyksilöivänimi}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
+    * Osoitteen uusi rakenne: https://{organisaationyksilöivänimi}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
 
-      ![Paketin valinta](./media/environment-and-tenant-migration/select-package.png)
+        ![Paketin valinta](./media/environment-and-tenant-migration/select-package.png)
 
 4. Valitse tuotava CDS-ratkaisupakettitiedosto ja suorita ohjattu toiminto.
 

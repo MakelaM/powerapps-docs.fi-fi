@@ -7,66 +7,35 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 4/18/2018
 ms.author: audrie
-ms.openlocfilehash: 7c171b155e077f8e765268d3cb6838e5989d8a00
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: a5cfa772ce4f7e9f5679164b9309baa31bfc6a96
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803370"
 ---
 # <a name="powerapps-webinar-listing"></a>Luettelo PowerApps-verkkoseminaareista #
 Nämä verkkoseminaarit auttavat sinua hyödyntämään Microsoft PowerAppsin ominaisuuksia ja toimintoja. Voit ehdottaa lisää käsiteltäviä aiheita kommenttiosiossa, joka on tämän aiheen alapuolella.
 
 ## <a name="upcoming-webinars"></a>Tulevat verkkoseminaarit ##
-**Malliin perustuvan sovelluksen sarja, osa 1 | Entiteettien ja tietojen tuontien hallinta**
-<br>Audrie Gordon ja Clay Wesener
-<br>*1. toukokuuta klo 10.00 PST, klo 12.00 EST*
 
-PowerApps-tiimin Clay Wesener kertoo, miten voit luoda CDS:n sovelluksen tietokannalle. Opit luomaan ja selaamaan entiteettejä ja kenttiä. Saat myös tietää sovelluksen heti käyttövalmiista ominaisuuksista! 
+**Liitin-sarja | Microsoft StaffHub (vaihdon suunnittelu) -sovellukset ja PowerApps**
+<br>Marc-André Lépine
+<br>*5. kesäkuuta, 10.00 PST, 13.00 EST*
+<br>
+Marc-André Lépine PowerAppsin ja Flow’n Azure-neuvonantajaryhmästä kertoo tässä istunnossa, miten hän loi upean sovelluksen täydentämään ja laajentamaan StaffHub-liittimen käyttömahdollisuuksia. Myöhemmin tällä viikolla hän näyttää, miten hän laajensi liitintä käyttämällä mukautettua ohjelmointirajapintaa.  
 
-Tämä on osa 1 kolmiosaisesta sarjasta:
-<br>**Osa 1: Entiteetit**
-<br>Osa 2: Lomakkeet ja näkymät
-<br>Osa 3: Kaaviot ja koontinäytöt
+[Napsauta tästä, jos haluat katsoa 5. kesäkuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=LAximnEnKy8)
 
-Saat upean mahdollisuuden tietää, miten voit käyttää uudelleen vakiomuotoisia entiteettejä ja kenttiä sekä luoda omia mukautettuja skenaarioita käden käänteessä!
+**PowerAppsin hallinta | Usein kysytyt kysymykset**
+<br>Manas Maheshwari
+<br>*12. kesäkuuta, 9.30 PST, 12.30 EST*
 
-[Napsauta tästä, jos haluat katsoa 1. toukokuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=02NWfHRYkeo)
+PowerApps-tiimin ylempi ohjelmapäällikkö Manas Maheshwari tulee jakamaan muutamia parhaita hallintakäytäntöjä ja vastaamaan kysymyksiisi PowerAppsin hallinnasta, ympäristöistä ja tietokannoista suorana! Saat tietää kaiken tarvittavan PowerApps-ympäristöjen hallinnasta. Toivottavasti osallistut, niin saat vastauksen tärkeimpiin hallintakysymyksiisi.
 
-**Syväsukellus | IWMentorin Laura Rogers jakaa tuotantosovelluksia koskevia parhaita käytäntöjä**
-<br>Audrie Gordon ja Laura Rodgers
-<br>*14. toukokuuta klo 10.00 PST, 12.00 EST*
+[Napsauta tästä, jos haluat katsoa 12. kesäkuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=9Sy_vT5kIts)
 
-IW Mentorin Laura Rogers on tarjonnut koulutusta ja tuotantosovelluksia yrityksille jo monen vuoden ajan. Hän on opettanut meille monta asiaa etenkin SharePoint-tekniikoista. Laura kertoo tämän verkkoseminaarin aikana parhaista käytännöistä ja kokemuksista luotaessa tuotantotason sovelluksia PowerAppsin ja Business Application Platformin avulla. Hän esittelee lisäksi mainion tuotantosovelluksen laskujen ja mittojen seuraamiseen. Älä anna tämän tapahtuman mennä sivu suun! IW Mentorin verkkosivusto: https://www.iwmentor.com/
-
-[Napsauta tästä, jos haluat katsoa 14. toukokuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=I50GtV9w7Os)
-
-**Malliin perustuvan sovelluksen sarja, osa 2 | Lomakkeiden ja näkymien luominen**
-<br>Audrie Gordon ja Clay Wesener
-<br>*15. toukokuuta klo 10.00 PST, 12.00 EST*
-
-Malliin perustuvat sovellukset takaavat sovellusten tekijöille monipuolisia kokemuksia yksinkertaisten ja monimutkaisten lomakeskenaarioiden suunnitteluun. Opi käyttämään uutta Forms Designer -sovellustamme, jonka avulla voit luoda tarvittavat lomakkeet osassa 1 aloitetulle mallisovellukselle. Anees kertoo sinulle lomakkeen komponenteista, kuten välilehdistä, osioista ja kentistä. Hän myös jakaa parhaita käytäntöjä liiketoimintalogiikan ja suodattimien integroimiseksi. 
-
-Tämä on osa 2 kolmiosaisesta sarjasta:
-<br>Osa 1: Entiteetit
-<br>**Osa 2: Lomakkeet ja näkymät**
-<br>Osa 3: Kaaviot ja koontinäytöt
-
-[Napsauta tästä, jos haluat katsoa 15. toukokuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=v7VoX-V2ek4)
-
-**Malliin perustuvan sovelluksen sarja, osa 3 | Kaavioiden ja koontinäyttöjen tarkasteleminen**
-<br>Audrie Gordon ja Clay Wesener
-<br>*29. toukokuuta klo 10.00 PST, 12.00 EST
-
-PowerApps tarjoaa koostetun lähestymistavan raportointiin ja lukuisia ominaisuuksia, jotka liittyvät näkymiin ja koontinäyttöjen luomiseen. Malliin perustuvan sovelluksen sarjassamme on hyödyllisiä kaavioita ja koontinäyttöjä, joiden avulla voimme optimoida ja nykyaikaistaa työstämäämme ratkaisua. 
-
-Tämä on osa 3 kolmiosaisesta sarjasta:
-<br>Osa 1: Entiteetit
-<br>Osa 2: Lomakkeet ja näkymät
-<br>**Osa 3: Kaaviot ja koontinäytöt**
-
-[Napsauta tästä, jos haluat katsoa 29. toukokuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=kJ5eTWh7Hyg)
-
-**Universal Audit -sovelluksen sisällä: näe, mihin PowerApps ja Flow pystyvät Paul Culmseenin kanssa**
+**Universal Audit -sovelluksen sisällä: näe, mihin PowerApps ja Flow pystyvät Paul Culmseen kanssa**
 <br>Paul Culmsee
 <br>*14. kesäkuuta klo 6.00 PST, klo 9.00 EST*
 
@@ -74,10 +43,21 @@ Tästä suositusta PowerApps-valikoiman sovelluksesta on tullut 3–5 pyyntöä 
 
 [Napsauta tästä, jos haluat katsoa 14. kesäkuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=6Wn47bDOMEE)
 
-## <a name="past-webinars"></a>Menneet verkkoseminaarit ##
-Verkkoseminaarit ovat katsottavissa nauhoitettuina suoran lähetyksen jälkeen. Huomaa, että sinun on annettava rekisteröintitiedot uudelleen, minkä jälkeen sinulle lähetetään sähköpostitse linkki tallenteeseen.
+**Aloittaminen | PowerAppsin oppimispolut – Näin opit luomaan sovelluksia nopeasti**
+<br>Audrie Gordon
+<br>*26. kesäkuuta klo 18.00 PST, klo 21.00 EST*
 
-### <a name="getting-started-webinar-series"></a>Käytön aloittamista käsittelevä verkkoseminaarisarja ###
+PowerApps-tiimin Audrie Gordon jakaa parhaita käytäntöjä ja pika-aloitusstrategioita PowerAppsin opetteluun ja sen käyttöönottoon organisaatiossasi. Älä jätä osallistumatta tähän erityiseen keskusteluun, joka käydään YouTubessa työajan jälkeen. 
+
+[Napsauta tästä, jos haluat katsoa 26. kesäkuuta pidettävän verkkoseminaarin](https://www.youtube.com/watch?v=ykNRxKvAirg)
+
+## <a name="past-webinars"></a>Menneet verkkoseminaarit ##
+Verkkoseminaarit ovat katsottavissa nauhoitettuina suoran lähetyksen jälkeen. Huomaa, että joissakin tapauksissa sinun on annettava rekisteröintitiedot uudelleen, minkä jälkeen sinulle lähetetään sähköpostitse linkki tallenteeseen. 
+
+### <a name="beginner-webinar-series"></a>Aloittelijan verkkoseminaarisarja ###
+**Viisi parasta vinkkiä vakavasti otettavien sovellusten suunnitteluun**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Top-5-tips-for-designing-and-building-PowerApps-that-mean/m-p/116843)
+
 **Valikoimaohjausobjektien käytön aloittaminen**
 <br>Audrie Gordon [Rekisteröidy ja katso heti](https://info.microsoft.com/US-EAD-WBNR-FY17-02Feb-28-GettingStartedwithPowerAppsGalleries300759_01Registration-ForminBody.html)
 
@@ -85,108 +65,112 @@ Verkkoseminaarit ovat katsottavissa nauhoitettuina suoran lähetyksen jälkeen. 
 <br>Audrie Gordon [Rekisteröidy ja katso heti](https://info.microsoft.com/US-EAD-WBNR-FY17-03Mar-14-GettingStartedwithPowerAppsFormulas300770_01Registration-ForminBody.html)
 
 **Lomakkeiden käytön aloittaminen PowerAppsissa**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=WnuwLkNbWk4)
-
-**Viisi parasta vinkkiä vakavasti otettavien sovellusten suunnitteluun**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=Ql-pK9ixKxw)
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-with-PowerApp-Forms/m-p/116842)
 
 **Ohjausobjektien käytön aloittaminen PowerAppsissa**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=lUo0DXvJENI)
-
-**Aloittaminen | Tuotteiden integroinnit: Tiimit + vihjeitä PowerAppsin käyttöön**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=obBQk-aSElI)
-
-**Common Data Servicen käytön aloittaminen**
-<br>Jono Luk [Katso heti](https://info.microsoft.com/US-PowerBI-WBNR-FY17-04Apr-18-GettingStartedwiththeCommonDataServices312618_01Registration-ForminBody.html)
-
-**Malliin perustuvien sovellusten käytön aloittaminen**
-<br>Adrian Orth [Katso heti](https://www.youtube.com/watch?v=buDDSzJTgns)
-
-### <a name="model-driven-apps"></a>Malliin perustuvat sovellukset ###
-**Malliin perustuvan sovelluksen komponentit | Johdanto malliin perustuviin sovelluksiin**
-<br>Charles Sterling ja Adrian Orth [Katso heti](https://www.youtube.com/watch?v=buDDSzJTgns)
-
-**Malliin perustuvan sovelluksen komponentit | Malliin perustuvien mallipohjien käytön aloittaminen**
-<br>Charles Sterling ja Casey Burke [Katso heti](https://www.youtube.com/watch?v=FShakkXKiS8)
-
-### <a name="pro-topics"></a>Ammattilaisaiheet ###
-**PowerApps-sovellusten ottaminen käyttöön**
-<br>James Oleinik [Katso heti](https://www.youtube.com/watch?v=LF49hFB14Cs)
-
-**InfoPath Designer -lomakkeen rakentaminen uudelleen PowerAppsissa**
-<br>Daniel Christian [Katso heti](https://www.youtube.com/watch?v=ohQcxcVZSK4)
-
-**Yhdistäminen PowerAppsista paikallisiin tietoihin**
-<br>Archana Nair ja Dimah Zaidalkilani [Katso heti](https://www.youtube.com/watch?v=YBdO2MAulx8)
-
-**Sovelluksen elinkaari PowerAppsin uusien Tallenna- ja julkaise-vaihtoehtojen kanssa**
-<br>Karthik Bharathy [Katso heti](https://www.youtube.com/watch?v=Np3DXBQvq2I)
-
-**Ammattilaisen vinkit yhdistämisestä PowerAppsista Exceliin OneDrive for Businessissa**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=WPhux5_3Sfs)
-
-**Liittimien optimointi PowerAppsissa ja Microsoft Flow’ssa**
-<br>Theresa Palmer-Boroski [Katso heti](https://www.youtube.com/watch?v=6jwt4qXA2IQ)
-
-**Ammattilaisen vinkit InfoPath Designer -käyttäjille, jotka ovat siirtymässä PowerAppsiin – osa 1**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=EZ09dRuiWLw)
-
-**Ammattilaisen vinkit siirtymiseen InfoPathista PowerAppsiin – osa 2**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=Bm2XePxLcSM)
-
-**Esittelyssä SharePoint Onlinen luettelolomakkeet**
-<br>Ankit Saraf [Katso heti](https://www.youtube.com/watch?v=3dCwg6wtViI)
-
-**Tutustuminen Office Graph -malleihin**
-<br>Emma Cooper [Katso heti](https://www.youtube.com/watch?v=SwLNN3tPVNs)
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Introduction-to-PowerApps-Controls/m-p/116844)
 
 **PowerApps-yhteisön mahdollisuudet ja palkinnot**
-<br> Audrie Gordon ja Mackenzie Lyng [Katso heti](https://www.youtube.com/watch?v=MTIkTPUgDSY)
+<br> Audrie Gordon ja Mackenzie Lyng [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Community-Opportunities-and-Rewards/m-p/116856)
 
 **Yleiskatsaus vuonna 2017 julkaistaviin PowerApps-ominaisuuksiin**
-<br>Darshan Desai [Katso heti](https://www.youtube.com/watch?v=XFMh8-zLkEM)
+<br>Darshan Desai [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Overview-of-PowerApps-Feature-Releases-for-2017/m-p/116858)
 
-**Keskittyminen PowerAppsin hakutoiminnon käyttämiseen**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=uTPtNaSK_gc)
+**Tutustuminen Office Graph -malleihin**
+<br>Emma Cooper [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-New-Office-Graph-Templates-Part-1-by-Emma-Cooper/m-p/81860)
 
 **Uudet Office Graph -mallit (osa 2)**
-<br>Emma Cooper [Katso heti](https://www.youtube.com/watch?v=9PopTeLdpmU)
+<br>Emma Cooper [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Getting-Started-New-Office-Graph-Templates-Part-2-by-Emma-Cooper/m-p/116840)
+
+### <a name="intermediate-webinar-series"></a>Keskitason verkkoseminaarisarja ###
+**Sovelluksen elinkaari PowerAppsin uusien Tallenna- ja julkaise-vaihtoehtojen kanssa**
+<br>Karthik Bharathy [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Application-LIfecycle-with-the-new-Save-and-publish-options-in/m-p/116860)
+
+**Keskittyminen PowerAppsin hakutoiminnon käyttämiseen**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Focus-on-Using-the-Lookup-Function/m-p/116866)
 
 **PowerAppsin ja Flow’n käyttäminen toimialan ”portaalien” luomiseen**
-<br>Vishwas Lele [Katso heti](http://www.youtube.com/watch?v=eSMAAFHK44c)
+<br>Vishwas Lele [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-PowerApps-and-Flow-to-create-Line-of-Business-portals-by/m-p/116869)
 
+**IWMentorin Laura Rogers jakaa tuotantosovelluksia koskevia parhaita käytäntöjä**
+<br>Laura Rodgers [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Laura-Rogers-from-IWMentor-Shares-Best-Practices-for-Production/m-p/116871)
 
-### <a name="deep-dives"></a>Syväsukellukset ###
-**Syväsukellus | PowerApps-kaavat**
-<br>Greg Lindhorst [Katso heti](https://www.youtube.com/watch?v=PuePMMuj5ps)
+### <a name="advanced-webinar-series"></a>Edistyneen verkkoseminaarisarja ###
+**PowerApps-kaavat**
+<br>Greg Lindhorst [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Deep-dive-on-formulas-by-Greg-Lindhorst/m-p/116899)
 
-**Syväsukellus | Palvelimen tiedostojen korjaukseen liittyvien ratkaisujen luominen PowerAppsilla, Brian Blanchard**
-<br>Brian Blanchard ja Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=QAe0oBecowU)
+**Palvelimen tiedostojen korjaukseen liittyvien ratkaisujen luominen PowerAppsilla, Brian Blanchard**
+<br>Brian Blanchard ja Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Server-Patching-Solutions-with-PowerApps-by-Brian/m-p/116901)
 
-**Syväsukellus | Palvelimen tiedostojen korjaukseen liittyvien ratkaisujen luominen PowerAppsilla, Brian Blanchard (osa 2)**
-<br>Brian Blanchard ja Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=FDU7ONCN4_U)
+**Palvelimen tiedostojen korjaukseen liittyvien ratkaisujen luominen PowerAppsilla, Brian Blanchard (osa 2)**
+<br>Brian Blanchard ja Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Server-Patching-Solutions-with-PowerApps-by-Brian/m-p/116902)
 
-**Syväsukellus | Napsautusanalytiikka PowerAppsissa, Vivek Bavishi**
-<br>Vivek Bavishi ja Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=OM-rlhKJFTA)
+**Napsautusanalytiikka PowerAppsissa, Vivek Bavishi**
+<br>Vivek Bavishi ja Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Click-Through-PowerApps-Analytics-by-Vivek-Bavishi/m-p/116906)
 
- **Syväsukellus | PowerAppsin käyttäminen Business Process Managementissa (BPM) Dawid van Heerden mukaan**
-<br>Dawid van Heerden [Katso heti](https://www.youtube.com/watch?v=Jj3hPkAf5KU)
-
+ **PowerAppsin käyttäminen liiketoimintaprosessien hallinnassa, Dawid van Heerden**
+<br>Dawid van Heerden [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-PowerApps-and-Flow-for-Business-Process-Management/m-p/116907)
 
 ### <a name="connector-series"></a>Liitin-sarja ###
-**Liitin-sarja | Liittimien käsitteleminen: Planner-liittimen käyttäminen**
-<br> Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=NBPL9Uw7qzg)
+**Liittimien optimointi PowerAppsissa ja Microsoft Flow’ssa**
+<br>Theresa Palmer-Boroski [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Optimizing-Connectors-in-PowerApps-and-Microsoft-Flow-by-Theresa/m-p/116874)
 
-**Liitin-sarja | Office Graphin ja PowerAppsin yhdistetty teho**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=AOGGyoElGaQ)
+**Teamsin + PowerAppsin vihjeet ja vinkit**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Teams-PowerApps-Tips-and-Tricks/m-p/116846)
 
-**Liitin-sarja | Project Online (PWA)**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=oncGxlmFqy8)
+**Vinkit PowerAppsista Exceliin yhdistämiseen OneDrive for Businessissa**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Pro-tips-for-connecting-to-Excel-from-PowerApps-by-Audrie-Gordon/m-p/116881)
 
+**Yhdistäminen PowerAppsista paikallisiin tietoihin**
+<br>Archana Nair ja Dimah Zaidalkilani [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-On-Premises-Data-from-PowerApps/m-p/116885)
 
-### <a name="app-designer-topics"></a>Sovellusten suunnitteluohjelman aiheet ###
-**Esiripun takana PowerApps-kehittäjän kanssa – tarkempi katsaus malleihin: Marie Hoeger**
-<br>Audrie Gordon [Katso heti](https://www.youtube.com/watch?v=YF3DKZxlUdM)
+**Työskentely liittimien kanssa: Planner-yhdistimen käyttäminen**
+<br> Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Using-the-Planner-Connector/m-p/116886)
 
+**Office Graphin ja PowerAppsin yhdistetty teho**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/The-Power-of-Office-Graph-with-PowerApps/m-p/116888)
+
+**Liittimien käyttäminen: Project Online (PWA)**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-Project-Online-PWA/m-p/116889)
+
+### <a name="sharepoint-series"></a>SharePoint-sarja ###
 **Sovellusten luominen nopeasti PowerApps Studion avulla**
-<br>Karthik Bharathy [Katso heti](https://www.youtube.com/watch?v=us85WpXe4cA)
+<br>Karthik Bharathy [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rapidly-build-applications-with-PowerApps-Studio/m-p/116849)
+
+**InfoPath Designer -lomakkeen rakentaminen uudelleen PowerAppsissa**
+<br>Daniel Christian [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Rebuilding-an-InfoPath-Designer-Form/m-p/116909)
+
+**Vinkit InfoPath Designer -käyttäjille, jotka ovat siirtymässä PowerAppsiin – osa 1**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Tips-for-InfoPath-Designers-Transitioning-to-PowerApps-Part-1/m-p/116910)
+
+**Vinkit siirtymiseen InfoPathista PowerAppsiin – osa 2**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Tips-for-InfoPath-Designers-Transitioning-to-PowerApps-Part-2/m-p/116912)
+
+**Esittelyssä SharePoint Onlinen luettelolomakkeet**
+<br>Ankit Saraf [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Introducing-List-Forms-in-SharePoint-Online/m-p/116916)
+
+### <a name="model-driven-series"></a>Malliin perustuva sarja ###
+**Malliin perustuvan sovelluksen komponentit | Johdanto malliin perustuviin sovelluksiin**
+<br>Charles Sterling ja Adrian Orth [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Series-Introduction-to-Model-Driven-Apps/m-p/116820)
+
+**Malliin perustuvan sovelluksen komponentit | Mallien käytön aloittaminen**
+<br>Charles Sterling ja Casey Burke [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Understanding-Model-Driven-App-Templates/m-p/116833)
+
+**Malliin perustuvan sovelluksen sarja, osa 1 | Entiteettien ja tietojen tuontien hallinta**
+<br>Audrie Gordon ja Clay Wesener [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-1-Managing-Entities-and-Data/m-p/116837)
+
+**Malliin perustuvan sovelluksen sarja, osa 2 | Lomakkeiden ja näkymien luominen**
+<br>Audrie Gordon ja Anees Ansari [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-2-Creating-Forms-and-Views-with/m-p/116838)
+
+**Malliin perustuvan sovelluksen sarja, osa 3 | Kaavioiden ja koontinäyttöjen tarkasteleminen**
+<br>Audrie Gordon ja Casey Burke [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Model-Driven-App-Components-Part-3-Exploring-Charts-and/m-p/119732)
+
+### <a name="app-designer-series"></a>Sovelluksen suunnittelutoimintosarja ###
+**Sovellusten kehittäminen käyttöönottoa ja käytettävyyttä varten**
+<br>Veronica Ward [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Apps-for-Adoption-and-Usability-with-Veronica-Ward/m-p/117625#M38)
+
+**Valintaikkunoiden tai ponnahdussanomien luominen PowerAppsissa**
+<br>Veronica Ward [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Dialogs-in-PowerApps-by-Veronica-Ward/m-p/117627#M39)
+
+**Esiripun takana PowerApps-kehittäjän kanssa – tarkempi katsaus malleihin: Marie Hoeger**
+<br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Developer-Intro-and-Discussing-Templates/m-p/116848)

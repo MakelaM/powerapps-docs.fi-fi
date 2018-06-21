@@ -1,28 +1,23 @@
 ---
-title: Pikaopas tietojen lisäämiseen Common Data Servicessä olevaan entiteettiin Power Queryllä | Microsoft Docs
-description: Tämän pikaoppaan vaiheittaisissa ohjeissa neuvotaan, miten Common Data Service for Appsissa olevaan uuteen tai olemassa olevaan entiteettiin lisätään tietoja toisesta tiedonlähteestä Power Query -apuohjelman avulla.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Tietojen lisääminen Common Data Service for Appsissa olevaan entiteettiin Power Queryn avulla | Microsoft Docs
+description: Vaiheittaiset ohjeet tietojen lisäämiseen Common Data Service (CDS) for Appsissa olevaan uuteen tai olemassa olevaan entiteettiin toisesta tietolähteestä Power Queryn avulla.
 author: AFTOwen
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
-ms.openlocfilehash: 77906602fad6708857a6c34f44d1bc3c7c258f6c
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 60d1843e48a1dc1d310d877bcba67460da557993
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168293"
 ---
-# <a name="quickstart-add-data-to-an-entity-in-the-common-data-service-by-using-power-query"></a>Pikaopas: Tietojen lisääminen Common Data Servicessä olevaan entiteettiin Power Queryn avulla
-Tässä toimenpiteessä luot entiteetin [Common Data Service for Appsissa](data-platform-intro.md) ja täytät entiteetin Power Queryn avulla OData-syötteen tiedoilla. Voit integroida tietoja samalla tavalla muun muassa seuraavista verkon ja lähiverkon lähteistä:
+# <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Tietojen lisääminen Common Data Service for Appsissa olevaan entiteettiin Power Queryn avulla
+Tässä toimenpiteessä luot entiteetin [Common Data Service (CDS) for Appsissa](data-platform-intro.md) ja täytät entiteetin OData-syötteen tiedoilla Power Queryn avulla. Voit integroida tietoja samalla tavalla muun muassa seuraavista verkon ja lähiverkon lähteistä:
 
 * SQL Server
 * Salesforce

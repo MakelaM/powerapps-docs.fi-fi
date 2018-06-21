@@ -1,29 +1,26 @@
 ---
-title: Common Data Servicen malleja ja muita resursseja | Microsoft Docs
-description: Malleja ja muita resursseja, joiden avulla voit luoda sovelluksia.
-documentationcenter: na
+title: Common Data Service for Appsin malleja ja muita resursseja | Microsoft Docs
+description: Malleja ja muita resursseja, joiden avulla voit luoda sovelluksia PowerAppsissa.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
-ms.date: 3/17/2018
+ms.topic: conceptual
+ms.date: 03/17/2018
 ms.author: clwesene
-ms.openlocfilehash: 90453f3f560d063cadc2ef331e9de62d0406e1ff
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 405cafabd57ea234d5202076060ee0987b6904db
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168454"
 ---
-# <a name="samples-and-other-resources--for-the-common-data-service"></a>Common Data Servicen malleja ja muita resursseja
+# <a name="samples-and-other-resources-for-common-data-service-for-apps"></a>Common Data Service for Appsin malleja ja muita resursseja
 ## <a name="samples"></a>Esimerkit
-Useat mallit käyttävät Common Data Serviceä. Löydät nämä mallit [powerapps.com](https://web.powerapps.com)issa valitsemalla siirtymisruudussa **aloitussivun**.
+Useat mallit käyttävät Common Data Service (CDS) for Appsia. Löydät nämä mallit [powerapps.com](https://web.powerapps.com)-sivustossa valitsemalla siirtymisruudussa **aloitussivun**.
 
 ## <a name="videos"></a>Videot
-Lisää videoita on YouTubessa [MS PowerAppsin](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) ja [Microsoft Igniten](https://www.youtube.com/channel/UCrhJmfAGQ5K81XQ8_od1iTg) kanavilla.
+Videoita on YouTube-kanavilla [MS PowerApps](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) ja [Microsoft Ignite](https://www.youtube.com/channel/UCrhJmfAGQ5K81XQ8_od1iTg).
 
 ## <a name="blog-posts"></a>Blogikirjoitukset
 Toimintaohjeita on [PowerApps-blogin](https://powerapps.microsoft.com/blog/) julkaisuissa.
@@ -32,5 +29,5 @@ Toimintaohjeita on [PowerApps-blogin](https://powerapps.microsoft.com/blog/) jul
 Useita Microsoft Ignite -konferenssin istuntoja on tallennettu, ja ne ovat katsottavissa osoitteessa [Microsoft Ignite On-Demand](https://myignite.microsoft.com/videos). Etsi termejä PowerApps ja common data model.
 
 ## <a name="overview"></a>Yleiskatsaus
-Lue Common Data Servicen ja Common Data Modelin yleiskatsaus kohdasta [Common Data Service and Common Data Model overview](https://docs.microsoft.com/common-data-service/entity-reference/security-model).
+Lue lisää CDS for Appsista ja Common Data Modelista [Common Data Service for Appsin ja Common Data Modelin yleiskatsauksesta](https://docs.microsoft.com/common-data-service/entity-reference/security-model).
 

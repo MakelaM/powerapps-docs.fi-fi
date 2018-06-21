@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 04/18/2018
 ms.author: matp
-ms.openlocfilehash: dfef87d9c85de3a8311081c3b99eaa9d072dc444
-ms.sourcegitcommit: f236364ecb06dd86244cd9a607c31e0d716912e2
+ms.openlocfilehash: 3d7aa26696adb187906c9c793c546abd1b97764f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34445633"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34583482"
 ---
 # <a name="quickstart-build-your-first-model-driven-app-from-scratch"></a>Pikaopas: Luo ensimmäinen mallipohjainen sovelluksesi alusta alkaen
 Mallipohjainen sovelluskehitys on komponenttikeskeinen sovelluskehitystapa. Tässä pikaoppaassa kerrotaan, miten voit helposti luoda mallipohjaisen sovelluksen käyttämällä [!INCLUDE [powerapps](../../includes/powerapps.md)]-ympäristössäsi saatavilla olevia perusentiteettejä. 
@@ -31,6 +31,9 @@ Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com/). Jos sinulla ei ole
 2.  Valitse vasemmassa siirtymisruudussa **Mallipohjainen**. 
 
     ![Mallipohjainen](media/build-first-model-driven-app/choose-design-mode.png)
+
+  > [!IMPORTANT]
+  > Jos **mallipohjaista** suunnittelutilaa ei ole käytettävissä, saatat joutua [luomaan ympäristön](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
 3. Valitse vasemmassa ruudussa **Sovellukset** ja sitten **Luo sovellus**.
 

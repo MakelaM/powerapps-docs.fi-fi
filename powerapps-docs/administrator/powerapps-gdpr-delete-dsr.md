@@ -1,24 +1,19 @@
 ---
 title: Asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen | Microsoft Docs
-description: Ohjeet PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaamiseen
-suite: powerapps
-documentationcenter: na
+description: Ohjeet PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaamiseen.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/23/2018
+ms.component: pa-admin
+ms.topic: conceptual
+ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: e4f555416aadb90d882717072f614ccb958fa733
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 495d9976b1daa6e7adb20d97c0840b3a1ba90c4b
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552687"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen
 
@@ -53,14 +48,14 @@ Tässä on erittely siitä, mitkä ominaisuudet ovat käytettävissä kunkin tyy
 
 Henkilötietoja sisältävät resurssit | Sivuston käyttö | PowerShellin käyttö
 --- | --- | ---
-Ympäristö | PowerAppsin hallintakeskus |  PowerApps cmdlet-komennot
-Ympäristön käyttöoikeudet**   | PowerAppsin hallintakeskus | PowerApps cmdlet-komennot
-Kangas-sovellus  | PowerAppsin hallintakeskus <br> PowerApps| PowerApps cmdlet-komennot
-Kangas-sovelluksen käyttöoikeudet  | PowerAppsin hallintakeskus | PowerApps cmdlet-komennot
-Yhteys | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
-Yhteyksien käyttöoikeudet | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
-Mukautettu yhdistin | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
-Mukautettujen yhdistimien käyttöoikeudet | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: kehitteillä
+Ympäristö | PowerApps-hallintakeskus |  PowerAppsin cmdlet-komennot
+Ympäristön oikeudet**   | PowerApps-hallintakeskus | PowerAppsin cmdlet-komennot
+Kangas-sovellus  | PowerApps-hallintakeskus <br> PowerApps| PowerAppsin cmdlet-komennot
+Kangas-sovelluksen käyttöoikeudet  | PowerApps-hallintakeskus | PowerAppsin cmdlet-komennot
+Yhteys | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+Yhteyksien oikeudet | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+Mukautettu yhdistin | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+Mukautettujen yhdistimien käyttöoikeudet | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
 
 \** Kun Sovellusten CDS käytössä, jos tietokanta luodaan ympäristöön, ympäristön käyttöoikeudet ja mallipohjaisten sovellusten käyttöoikeudet tallennetaan tietueina kyseisen tietokannan esiintymään. Saat lisätietoja CDC for Appsia käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
 
@@ -68,6 +63,26 @@ Mukautettujen yhdistimien käyttöoikeudet | | Sovelluksen luoja: käytettäviss
 
 ### <a name="for-users"></a>Käyttäjille
 Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps](https://web.powerapps.com) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
+
+#### <a name="unmanaged-tenant"></a>Muu kuin hallittu vuokraaja
+Jos olet [muun kuin hallitun vuokraajan](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover) jäsen, mikä tarkoittaa, ettei Azure AD -vuokraajallasi ei ole yleistä järjestelmänvalvojaa, pystyt edelleen poistamaan henkilökohtaiset tietosi tässä artikkelissa annettujen ohjeiden mukaisesti.  Kuitenkin koska vuokraajallasi ei ole yleistä järjestelmänvalvojaa, sinun on poistettava oma tilisi vuokraajasta alla olevan [Vaiheen 11: Poista käyttäjä Azure Active Directorysta](#step-11-delete-the-user-from-azure-active-directory) ohjeiden mukaisesti.
+
+Voit selvittää, oletko muun kuin hallitun vuokraajan jäsen, toimimalla seuraavasti:
+
+1. Avaa seuraava URL-osoite selaimessa ja muista korvata sähköpostiosoitteesi URL-osoitteessa: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
+
+2. Jos olet **muun kuin hallitun vuokraajan** jäsen, vastauksessa näkyy `"IsViral": true`.
+```
+{
+  ...
+  "Login": "foobar@unmanagedcontoso.com",
+  "DomainName": "unmanagedcontoso.com",
+  "IsViral": true,
+  ...
+}
+```
+
+3. Muussa tapauksessa kuulut **hallittuun vuokraajaan**.
 
 ### <a name="for-administrators"></a>Järjestelmänvalvojille
 Mikäli halutaan suorittaa tässä asiakirjassa kuvattuja järjestelmänvalvojan toimenpiteitä käyttämällä [PowerApps-hallintakeskusta](https://admin.powerapps.com/), Microsoft Flow -hallintakeskusta tai [PowerShellin cmdlet-komentoja PowerApps-järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804), tarvitaan seuraavat asiat:
@@ -144,10 +159,10 @@ Lisätietoja on [Ympäristöjen hallinta](environments-administration.md) -kohda
 
 ### <a name="for-environments-without-a-cds-for-apps-database"></a>Ympäristöt, joissa ei ole Sovellusten CDS -tietokantaa
 
-#### <a name="powerapps-admin-center"></a>PowerAppsin hallintakeskus
+#### <a name="powerapps-admin-center"></a>PowerApps-hallintakeskus
 Järjestelmänvalvoja voi poistaa käyttäjän ympäristön käyttöoikeudet alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
 
-1. Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
+1. Valitse [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
 
     Sinun on oltava [Office 365:n yleinen järjestelmänvalvoja](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleinen järjestelmänvalvoja](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal), jotta voit tarkastella kaikkia ympäristöjä, jotka on luotu organisaation sisällä.
 
@@ -200,7 +215,7 @@ Käyttäjä voi poistaa sovelluksen [PowerApps-sivustolta](https://web.powerapps
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-center"></a>Poista käyttäjän kangassovellus PowerApps-hallintakeskuksen avulla
 Järjestelmänvalvoja voi poistaa käyttäjän luomat sovellukset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
 
-1. Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
+1. Valitse [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
 
     Sinun on oltava [Office 365:n yleinen järjestelmänvalvoja](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleinen järjestelmänvalvoja](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal), jotta voit tarkastella kaikkia ympäristöjä, jotka on luotu organisaation sisällä.
 
@@ -238,10 +253,10 @@ Aina, kun sovellus on jaettu käyttäjän kanssa, PowerApps tallentaa tietueen n
 > [!NOTE]
 > Sovelluksen omistajan roolimääritys voidaan poistaa vain määrittämällä sovellukselle uusi omistaja.
 
-### <a name="powerapps-admin-center"></a>PowerAppsin hallintakeskus
+### <a name="powerapps-admin-center"></a>PowerApps-hallintakeskus
 Järjestelmänvalvoja voi poistaa käyttäjän sovellusroolimääritykset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
 
-1. Valitse [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
+1. Valitse [PowerApps-hallintakeskuksessa](https://admin.powerapps.com/) kukin ympäristö organisaatiossasi.
 
     Sinun on oltava [Office 365:n yleinen järjestelmänvalvoja](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleinen järjestelmänvalvoja](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal), jotta voit tarkastella kaikkia ympäristöjä, jotka on luotu organisaation sisällä.
 
@@ -257,7 +272,7 @@ Järjestelmänvalvoja voi poistaa käyttäjän sovellusroolimääritykset alkaen
 
     ![Järjestelmänvalvojan sovelluksen jakaminen -sivu](./media/powerapps-gdpr-delete-dsr/admin-share-page.png)
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
 Järjestelmänvalvoja voi poistaa kaikki käyttäjän kangassovellusten roolimääritykset käyttämällä **Remove-AdminAppRoleAssignmnet**-toimintoa kohdassa [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804):
 
 ```
@@ -282,7 +297,15 @@ Get-Connection | Remove-Connection
 ```
 
 ### <a name="powershell-cmdlets-for-powerapps-administrators"></a>PowerShellin cmdlet-komennot PowerAppsin järjestelmänvalvojille
-Toiminto, jolla järjestelmänvalvoja voi etsiä ja poistaa käyttäjän yhteyksiä käyttämällä [PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+Järjestelmänvalvoja voi poistaa kaikki käyttäjän yhteydet käyttämällä **Remove-AdminConnection**-funktiota kohdassa [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all connections for the DSR user and deletes them
+Get-AdminConnection -CreatedBy $deleteDsrUserId | Remove-AdminConnection
+```
 
 ## <a name="step-6-delete-the-users-permissions-to-shared-connections"></a>Vaihe 6: Poista käyttäjän oikeudet jaettuihin yhteyksiin
 
@@ -298,8 +321,16 @@ Get-ConnectionRoleAssignment | Remove-ConnectionRoleAssignment
 > [!NOTE]
 > Omistajan roolimäärityksiä ei voi poistaa poistamatta yhteysresurssia.
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot
-Toiminto, jolla järjestelmänvalvoja voi etsiä ja poistaa käyttäjän yhteysroolimäärityksiä käyttämällä [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvoja voi poistaa kaikki käyttäjän yhteysroolimääritykset käyttämällä **Remove-AdminConnectionRoleAssignment**-funktiota kohdassa [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all connection role assignments for the DSR user and deletes them
+Get-AdminConnectionRoleAssignment -PrincipalObjectId $deleteDsrUserId | Remove-AdminConnectionRoleAssignment
+```
 
 ## <a name="step-7-delete-custom-connectors-created-by-the-user"></a>Vaihe 7: Poista käyttäjän luomat mukautetut yhdistimet
 Mukautetut yhdistimet täydentävät valmiina tulevia yhdistimiä ja mahdollistavat yhdistämisen muihin ohjelmointirajapintoihin, SaaS-järjestelmiin ja asiakkaan kehittämiin järjestelmiin. Haluat ehkä siirtää Mukautetun yhdistimen omistajuuden muille käyttäjille organisaatiossa tai poistaa Mukautetun yhdistimen.
@@ -314,8 +345,16 @@ Add-PowerAppsAccount
 Get-Connector -FilterNonCustomConnectors | Remove-Connector
 ```
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot
-Toiminto, jolla järjestelmänvalvoja voi etsiä ja poistaa käyttäjän mukautettuja yhdistimiä käyttämällä [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvoja voi poistaa kaikki käyttäjän luomat mukautetut liittimet käyttämällä **Remove-AdminConnector**-funktiota kohdassa [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all custom connectors created by the DSR user and deletes them
+Get-AdminConnector -CreatedBy $deleteDsrUserId | Remove-AdminConnector
+```
 
 ## <a name="step-8-delete-the-users-permissions-to-shared-custom-connectors"></a>Vaihe 8: Poista käyttäjän oikeudet jaettuihin mukautettuihin yhdistimiin
 
@@ -332,8 +371,16 @@ Get-ConnectorRoleAssignment | Remove-ConnectorRoleAssignment
 > [!NOTE]
 > Omistajan roolimäärityksiä ei voi poistaa poistamatta yhteysresurssia.
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot
-Toiminto, jolla järjestelmänvalvoja voi etsiä ja poistaa käyttäjän yhdistinroolimäärityksiä käyttämällä [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvoja voi poistaa kaikki käyttäjän mukautetut liittimen roolimääritykset käyttämällä **Remove-AdminConnectorRoleAssignment**-funktiota kohdassa [PowerAppsin järjestelmänvalvojan PowerShellin cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804):
+
+```
+Add-PowerAppsAccount
+$deleteDsrUserId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+
+#Retrieves all custom connector role assignments for the DSR user and deletes them
+Get-AdminConnectorRoleAssignment -PrincipalObjectId $deleteDsrUserId | Remove-AdminConnectorRoleAssignment
+```
 
 ## <a name="step-9-delete-the-users-personal-data-in-microsoft-flow"></a>Vaihe 9: Poista käyttäjän henkilötiedot Microsoft Flow’sta
 PowerApps-käyttöoikeudet sisältävät aina Microsoft Flow -ominaisuudet. Sen lisäksi, että Microsoft Flow sisältyy PowerAppsin käyttöoikeuksiin, se on saatavilla erillisenä palvelunakin. Saat lisätietoja Microsoft Flow -palvelua käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [GPDR DSR:ien suorittaminen Microsoft Flow’n asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872250).
@@ -350,4 +397,19 @@ Saat lisätietoja CDC for Appsia käyttäneiden käyttäjien DSR-pyyntöihin vas
 > Suosittelemme, että järjestelmänvalvoja suorittaa tämän vaiheen PowerApps-käyttäjän puolesta.
 
 ## <a name="step-11-delete-the-user-from-azure-active-directory"></a>Vaihe 11: Poista käyttäjä Azure Active Directorysta
-Kun edellä mainitut vaiheet on suoritettu, viimeinen vaihe on käyttäjän tilin poistaminen Azure Active Directorysta. Tämä tehdään seuraamalla ohjeita Azure Data Subject Request GDPR -dokumentaatiosta, joka on [Office 365 Service Trust Portalissa](https://servicetrust.microsoft.com/ViewPage/GDPRDSR).
+Kun edellä olevat vaiheet on suoritettu, viimeinen vaihe on poistaa käyttäjän Azure Active Directory -tili.
+
+### <a name="managed-tenant"></a>Hallittu vuokraaja
+Hallitun Azure AD -vuokraajan järjestelmänvalvojana voit poistaa käyttäjän tilin [Office 365 Service Trust Portalissa](https://servicetrust.microsoft.com/ViewPage/GDPRDSR) olevan Azuren rekisteröityjen tietopyyntöjen GDPR -dokumentaation ohjeiden mukaisesti.
+
+### <a name="unmanaged-tenant"></a>Muu kuin hallittu vuokraaja
+Jos olet muun kuin hallitun vuokraajan jäsen, sinun on poistettava tilisi Azure AD -vuokraajasta noudattamalla seuraavia ohjeita:
+
+> [!NOTE]
+> Tarkista edellä olevan [Muu kuin hallittu vuokraaja -osion](#unmanaged-tenant) ohjeiden mukaisesti, oletko hallitun vai muun vuokraajan jäsen.
+
+1. Siirry [työpaikan ja koulun tietosuojasivulle](https://go.microsoft.com/fwlink/?linkid=87312) ja kirjaudu sisään Azure AD -tililläsi.
+
+2. Valitse **Sulje tili** ja poista tilisi Azure AD -vuokraajasta ohjeiden mukaisesti.
+
+    ![Valitse sovelluksen jakaminen](./media/powerapps-gdpr-delete-dsr/close-account.png)

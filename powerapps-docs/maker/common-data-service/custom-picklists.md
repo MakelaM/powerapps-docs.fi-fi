@@ -1,24 +1,21 @@
 ---
-title: Pikaopas asetusjoukon luomiseen| Microsoft Docs
-description: Tässä pikaoppaassa luot asetusjoukon
-documentationcenter: na
+title: Asetusjoukon luominen | Microsoft Docs
+description: Vaiheittaiset ohjeet asetusjoukon luomiseen.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
-ms.date: 3/21/2018
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: e31bec33a90a962e302e2bc92c0f2a676ce1a4cc
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 188add46a8e52cfeb75ef1bb670ca3b457963024
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168592"
 ---
-# <a name="quickstart-create-an-option-set"></a>Pikaopas: asetusjoukon luominen
+# <a name="create-an-option-set"></a>Asetusjoukon luominen
 
 Asetusjoukkojen avulla voit liittää kiinteiden arvojen avattavan luettelon sovelluksesi käyttäjään tietojen yhtenäisyyden varmistamiseksi. Näitä kutsutaan joskus valintaluetteloiksi tai vaihtoehtokentiksi muissa sovelluksissa. Kuten entiteettien kyseessä ollessa voit käyttää vakioasetusjoukkoja tai luoda mukautettuja asetusjoukkoja sovelluksessasi käytettäväksi.
 
@@ -28,7 +25,7 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
 
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
-    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "Entiteettiluettelo")
+    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
 2. Napsauta tai napauta olemassa olevaa entiteettiä tai [Luo uusi entiteetti](data-platform-create-entity.md)
 

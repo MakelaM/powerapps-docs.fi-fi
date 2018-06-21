@@ -1,25 +1,23 @@
 ---
 title: 'Ajastin-ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja Ajastin-ohjausobjektista, kuten ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 008c992ad3452c1844064335a51593c222fb1ac1
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 6d4f8f0393b7cb2d6471f159193327f07e648357
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836903"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -45,7 +43,7 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviivat**, **pisteet** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
@@ -59,17 +57,21 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 
 **[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Fontti](properties-text.md)**  – Tekstissä käytetyn fonttiperheen nimi.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin leveys: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
-**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin kohdalla.
+**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
 
-**[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen kohdalla.
+**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+
+**[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun hiiren kohdistin on kyseisen ohjausobjektin päällä.
+
+**[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
 **[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
 
@@ -81,31 +83,33 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
+**[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**[Palauta](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
+**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
 **[Koko](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
 **Start** – Toistetaanko ääni- tai videoleike.
 
-**[Strikethrough](properties-text.md)**  – Yliviivataanko ohjausobjektissa näkyvä teksti.
+**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
-**[Teksti](properties-core.md)**  – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
+
+**[Text](properties-core.md)**  – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
 
 **[Työkaluvihje](properties-core.md)** – Työkaluvihjeen ohjeteksti, joka ilmestyy näkyviin, kun hiiren osoitin on ohjausobjektin päällä.
 
-**[Alleviivattu](properties-text.md)** – Ilmaisee, onko ohjausobjektissa näytettävä teksti alleviivattu.
+**[Underline](properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattu.
 
-**[Näkyvissä](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Onko ohjausobjekti näytössä vai piilotettuna.
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 [**Refresh**( *DataSource* )](../functions/function-refresh.md)
@@ -123,18 +127,44 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
     Haluatko lisätietoja **[RoundUp](../functions/function-round.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 
     Selite näyttää, kuinka monen sekunnin kuluttua ajastin käynnistyy uudelleen.
-5. (valinnainen) Aseta ajastimen **[Näkyvissä](properties-core.md)**-ominaisuus tilaan **false**.
 
 ### <a name="animate-a-control"></a>Ohjausobjektin animointi
 1. Lisää ajastin ja anna sille nimi **FadeIn**.
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Määritä ajastimen **Kesto**-ominaisuudeksi **5000** sekä **Toista**- ja **Autostart**-ominaisuudet tilaan **true**.
+2. Määritä ajastimen **Kesto**-ominaisuuden arvoksi **5 000**, **Toista**-ominaisuuden arvoksi **tosi** ja **[Teksti](properties-core.md)**-ominaisuuden arvoksi **Toggle animation** (Vaihda animaatio).
 3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)**-ominaisuudeksi **160**, **[Leveys](properties-size-location.md)**-ominaisuudeksi **600** ja **[Koko](properties-text.md)**-ominaisuudeksi **60**.
 4. Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuus näyttämään **Welcome!** ja määritä sen **[Väri](properties-color-border.md)**-ominaisuudeksi tämä kaava:
    <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
     Haluatko lisätietoja **[ColorFade](../functions/function-colors.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 
-    Selitteen teksti häivytetään valkoiseksi, minkä jälkeen se palaa täyteen voimakkuuteen. Tämän jälkeen prosessi toistuu.
-5. (valinnainen) Aseta ajastimen **[Näkyvissä](properties-core.md)**-ominaisuus tilaan **false**.
+5. Käynnistä tai pysäytä animaatio valitsemalla ajastinpainike. Selitteen teksti häivytetään valkoiseksi, minkä jälkeen se palaa täyteen voimakkuuteen. Tämän jälkeen prosessi toistuu.
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Ohjeet ovat samat kuin **[Painike](control-button.md)**-ohjausobjektille, sillä **Ajastin** on erityinen painike.
+
+> [!IMPORTANT]
+> **Ajastimen** hallintaa ilman käyttäjän suoria toimia ei tueta helppokäyttöisyyttä varten. Esimerkiksi ajastin voidaan piilottaa sijoittamalla muita ohjausobjekteja sen päälle tai asettamalla sen **[Näkyvä](properties-core.md)** -ominaisuuden arvoksi **epätosi**. Ajastin käynnistyy automaattisesti, kun näyttö avautuu, ja se suorittaa jonkin ajan kuluttua automaattisesti joitakin toimintoja. Tällä hetkellä ei ole yleistä tapaa tehdä tästä skenaariosta helppokäyttöistä.
+
+Muita helppokäyttötoimintojen ohjeita ovat seuraavat:
+
+### <a name="timing"></a>Ajoitus
+Jos **Ajastin** käynnistetään tai pysäytetään automaattisesti, mieti onko käyttäjillä riittävästi aikaa lukea ja käyttää sisältöä. Näppäimistön ja näytönlukuohjelman käyttäjät saattavat tarvita enemmän aikaa ajastettuun tapahtumaan reagointiin.
+
+Jokin seuraavista strategioista riittää:
+* Salli käyttäjien peruuttaa ajastettu tapahtuma
+* Salli käyttäjien säätää aikarajaa ennen sen alkamista
+* Varoita 20 sekuntia ennen aikarajan umpeutumista ja tarjoa mahdollisuus pidentää aikaa helposti
+
+Nämä vaatimukset eivät koske kaikkia tilanteita. Lue lisää [aikarajoja koskevasta WCAG 2.0 -ohjeesta](https://www.w3.org/TR/WCAG20/#time-limits).
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[Teksti](properties-core.md)** on oltava käytössä.
+* Älä käytä **[Tekstiä](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin. Näytönlukuohjelman käyttäjille ei ilmoiteta **[Tekstin](properties-core.md)** muutoksista.
+
+    > [!NOTE]
+> Näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein. Ajastimen **[Teksti](properties-core.md)** ei kuitenkaan sisälly ilmoitukseen.
+
+* Harkitse **[Selitteen](control-text-box.md)** lisäämistä kuluneen ajan näyttämiseksi. Opasta käyttäjää käynnistämään tai pysäyttämään ajastin ajastimen **[Tekstin](properties-core.md)** avulla.

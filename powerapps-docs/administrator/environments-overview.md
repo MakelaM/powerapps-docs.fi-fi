@@ -1,25 +1,19 @@
 ---
 title: Ympäristöjen yleiskatsaus | Microsoft Docs
-description: Mitä ympäristöt ovat, ja miten niitä käytetään?
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Lue lisätietoja PowerAppsin ympäristöistä ja niiden käyttämisestä
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 4b71f931aa3e8263166d52b68ba375917405c2b8
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 4973265baf701851ac5c2e8bca9da541b246c068
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34167788"
 ---
 # <a name="environments-overview"></a>Ympäristöjen yleiskatsaus
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, sovelluksia ja työnkulkuja. Lisäksi niitä käytetään säilöinä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. Ympäristöjen hyödyntämistapa riippuu organisaatiosta ja kehitettävistä sovelluksista. Esimerkki:
@@ -81,13 +75,13 @@ Oletusympäristö nimetään seuraavasti: ”{Azure AD -vuokraajan nimi} (oletus
 Voit luoda ympäristöjä eri tarkoituksiin. Kokeiluympäristö on tarkoitettu ympäristön ja tietokannan kokeiluun Common Data Service -kokemuksen kanssa. Se vanhentuu tietyn ajan kuluessa. Lisätietoja on [PowerAppsin Ympäristöjen hallinta](environments-administration.md) -osiossa.
 
 ## <a name="choosing-an-environment"></a>Ympäristön valitseminen
-Ympäristöjen myötä näet nyt uuden kokemuksen, kun saavut osoitteeseen [https://web.powerapps.com](https://web.powerapps.com).  Sovellukset, yhteydet ja muut sivustolla näytettävät kohteet suodatetaan nyt nykyisen valittuna olevan ympäristön perusteella.  Nykyinen ympäristö näytetään otsikon oikean reunan lähellä olevassa ympäristövalitsimessa. Jos haluat valita eri ympäristöön, napsauta tai napauta valitsinta, jolloin näkyviin tulee luettelo käytettävissä olevista ympäristöistä. Napsauta tai napauta ympäristöä, jonka haluat ottaa käyttöön.
+Ympäristöjen myötä näet nyt uuden kokemuksen, kun saavut osoitteeseen [https://web.powerapps.com](https://web.powerapps.com).  Sovellukset, yhteydet ja muut sivustolla näytettävät kohteet suodatetaan nyt nykyisen valittuna olevan ympäristön perusteella.  Nykyinen ympäristö näytetään otsikon oikean reunan lähellä olevassa ympäristövalitsimessa. Jos haluat valita eri ympäristön, napsauta tai napauta valitsinta, jolloin näkyviin tulee luettelo käytettävissä olevista ympäristöistä. Napsauta tai napauta ympäristöä, jonka haluat ottaa käyttöön.
 
 Ympäristö näytetään valitsimessa, jos jokin seuraavista ehdoista täyttyy:
 
 * Olet ympäristön järjestelmänvalvoja kyseisessä ympäristössä.
 * Olet ympäristön tekijä kyseisessä ympäristössä.
-* Et ole ympäristön järjestelmänvalvoja tai ympäristön tekijä kyseisessä ympäristössä, mutta sinulle on annettu osallistuja-käyttöoikeus vähintään yhteen ympäristössä olevaan sovellukseen. Lisätietoja saat kohdasta [sovelluksen jakaminen](../maker/canvas-apps/share-app.md). Tässä tapauksessa et voi luoda sovelluksia tässä ympäristössä. Voi vain muokata nykyisiä sovelluksia, jotka on jaettu kanssasi.
+* Et ole ympäristön järjestelmänvalvoja tai ympäristön tekijä kyseisessä ympäristössä, mutta sinulle on annettu osallistuja-käyttöoikeus vähintään yhteen ympäristössä olevaan sovellukseen. Lisätietoja saat kohdasta [sovelluksen jakaminen](../maker/canvas-apps/share-app.md). Tässä tapauksessa et voi luoda sovelluksia tässä ympäristössä. Voit vain muokata nykyisiä sovelluksia, jotka on jaettu kanssasi.
 
 ![](./media/environments-overview/EnvironmentPicker.png)
 

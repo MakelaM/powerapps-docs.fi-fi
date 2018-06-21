@@ -1,25 +1,19 @@
 ---
 title: Alueiden yleiskatsaus | Microsoft Docs
-description: 'PowerApps-sovelluksen alueet: sovellusten käyttöönottoalueet, käytettävissä olevat alueet ja aluekohtaiset ominaisuudet'
-services: ''
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: anneta
-editor: ''
-tags: ''
+description: Lue lisätietoja alueista PowerAppsissa
+author: manasmams
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: ab5443ae628a80d52d5bbcb1fa46ceed05391794
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 818d751a45eee6d746d4f318a98169a771787d92
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34445771"
 ---
 # <a name="regions-overview-in-powerapps"></a>PowerAppsin alueiden yleiskatsaus
 ## <a name="how-do-i-find-out-where-my-app-is-deployed"></a>Miten saan tietää, missä sovellukseni otetaan käyttöön?
@@ -29,7 +23,7 @@ Jos olet järjestelmänvalvoja, voit määrittää jokaisen ympäristön alueen 
 
 * Siirry [hallintakeskukseen](https://admin.powerapps.com) ja kirjaudu sisään työpaikan tilillä.
   
-    Kaikki olemassa olevat ympäristöt luetellaan hallintakeskuksen **Ympäristöt**-välilehdessä. Luettelo osoittaa myös sovelluksen **käyttöönottoalueen**:
+    Kaikki olemassa olevat ympäristöt luetellaan hallintakeskuksen **Ympäristöt**-välilehdellä. Luettelo osoittaa myös sovelluksen **käyttöönottoalueen**:
   
    ![Ympäristöt-välilehti](./media/regions-overview/environment-list.png)
 
@@ -44,7 +38,7 @@ Jos olet järjestelmänvalvoja, voit määrittää jokaisen ympäristön alueen 
 * Yhdistynyt kuningaskunta
 
 ## <a name="what-features-are-specific-to-a-given-region"></a>Mitkä ominaisuudet ovat aluekohtaisia?
-Ympäristöjä luodaan eri alueilla, ja ne ovat aina kyseiseen sijaintiin sidoksissa. Tietyssä ympäristössä luotu sovellus otetaan käyttöön kyseisen maantieteellisen alueen palvelinkeskuksissa. Tämä koskee kaikkia kyseisessä ympäristössä luotuja kohteita, kuten Common Data Service -palvelun tietokantoja, sovelluksia, yhteyksiä, yhdyskäytäviä ja mukautettuja liittimiä.
+Ympäristöjä luodaan eri alueilla, ja ne ovat aina sidoksissa kyseiseen sijaintiin. Tietyssä ympäristössä luotu sovellus otetaan käyttöön kyseisen maantieteellisen alueen palvelinkeskuksissa. Tämä koskee kaikkia kyseisessä ympäristössä luotuja kohteita, kuten Common Data Service -palvelun tietokantoja, sovelluksia, yhteyksiä, yhdyskäytäviä ja mukautettuja liittimiä.
 
 Jos käyttäjät ovat esimerkiksi Euroopassa, kannattaa luoda ympäristö Eurooppa-alueella ja käyttää sitä siellä. Siten takaat parhaan mahdollisen toimivuuden. Jos käyttäjät ovat Yhdysvalloissa, luo ja käytä ympäristöä Yhdysvalloissa.
 
@@ -53,5 +47,4 @@ Jos käyttäjät ovat esimerkiksi Euroopassa, kannattaa luoda ympäristö Euroop
 
 > [!NOTE]
 > Paikalliset tietoyhdyskäytävät eivät ole käytettävissä Intian alueella tai mukautetuissa ympäristöissä. Yhdyskäytävät on luotava oletusympäristössä.
-
 

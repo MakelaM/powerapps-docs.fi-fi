@@ -51,6 +51,8 @@
               href: powerapps-gdpr-delete-dsr.md
         - name: Apps-asiakastietojen CDS
           href: common-data-service-gdpr-dsr-guide.md
+        - name: CDS for Appsin tietojen integrointi
+          href: data-integration-gdpr-dsr-guide.md
 - name: Lisätietoja
   items:
     - name: PowerAppsin PowerShell-tuki (esiversio)

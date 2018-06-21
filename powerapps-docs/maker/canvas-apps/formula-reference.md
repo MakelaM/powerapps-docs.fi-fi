@@ -10,13 +10,14 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: reference
 ms.component: canvas
-ms.date: 08/28/2017
+ms.date: 06/05/2018
 ms.author: gregli
-ms.openlocfilehash: d7dd33954d337bbfc65b486333e89c4598b11305
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: af089f81b8fd96ec022fe32495cb14f2827f28b5
+ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822577"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -219,6 +220,8 @@ Muita elementtejä ovat:
 
 **[Not](functions/function-logicals.md)** – totuusarvoehdon NOT-operaattori.  Palauttaa arvon **tosi**, jos sen argumentti on **epätosi**, ja palauttaa arvon **epätosi**, jos sen argumentti on **tosi**.  Voit myös käyttää [**!**-operaattoria](functions/operators.md).
 
+**[Ilmoita](functions/function-showerror.md)** – Näyttää ilmoitussanoman käyttäjälle.
+
 **[Now](functions/function-now-today-istoday.md)** – Palauttaa nykyisen päivämäärä- ja aika-arvon.
 
 ## <a name="o"></a>O
@@ -280,8 +283,6 @@ Muita elementtejä ovat:
 **[Set](functions/function-set.md)** – asettaa yleisen muuttujan arvon.
 
 **[ShowColumns](functions/function-table-shaping.md)** – palauttaa taulukon, jossa on vain valitut sarakkeet.
-
-**[ShowError](functions/function-showerror.md)** – näyttää virhesanoman käyttäjälle.
 
 **[Shuffle](functions/function-shuffle.md)** – järjestää taulukon tietueet uudelleen satunnaisesti.
 

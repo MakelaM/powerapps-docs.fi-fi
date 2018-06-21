@@ -1,25 +1,23 @@
 ---
 title: Sivustoon powerapps.com tutustuminen | Microsoft Docs
 description: Uusi koti kaikille sovellusten tekijöille.
-services: ''
-suite: powerapps
 documentationcenter: na
 author: linhtranms
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: fb54cbc163bc1afd8dd43c0539c28c0d0fddf809
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: f29f75522eb01c61c3528e61018fb759980e79f9
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330211"
 ---
 # <a name="introduction-to-powerappscom"></a>Sivustoon powerapps.com tutustuminen
 PowerApps-tiimi esittelee uudelleen [powerapps.com](http://web.powerapps.com)-sivuston sovellusten tekijöiden uutena kotina. Olemme uudistaneet sivun ja tehneet siitä sovelluskehittäjille ensisijaisen sivuston, jolla he voivat helposti aloittaa sovellusten tekemisen ja Microsoft Common Data Servicen käytön sekä hallita sovelluksiaan samassa paikassa. Tästä artikkelista saat seuraaviin aiheisiin liittyviä ohjeita:
@@ -37,7 +35,7 @@ Näet otsikon oikean laidan vieressä avattavan ympäristövalikon, jossa voit n
 
 ![Otsikkoympäristö](./media/intro-maker-portal/environment.png)
 
-Avattavan ympäristöluettelon vieressä on latauskuvake. Napsauta tai napauta tätä kuvaketta näyttääksesi valintaikkunan, jossa on linkit PowerApps Mobilen (iOS- tai Android-käyttöjärjestelmälle) tai Windowsin PowerApps Studion lataamiseksi.
+Avattavan ympäristöluettelon vieressä on latauskuvake. Napsauta tai napauta tätä kuvaketta, jolloin avautuu valintaikkuna, jossa on linkit PowerApps Mobilen lataamiseksi (iOS- tai Android-laitteisiin).
 
 ![Otsikon lataaminen](./media/intro-maker-portal/downloads2.png)
 
@@ -60,9 +58,9 @@ Oikean yläkulman vieressä on suoraan **Sovellukset**-sivuun linkittävä **Sov
 
 Jos et ole koskaan kirjautunut sisään, luonut sovellusta tai suorittanut sovellusta, et näe **Viimeaikaiset sovellukset** -osiota. Näkyviin tulee sen sijaan **Luo sovellus** -palkki.
 
-![Luo sovellus](./media/intro-maker-portal/createapp.png)
+![Sovelluksen luominen](./media/intro-maker-portal/createapp.png)
 
-Napsauta tai napauta **Aloittaminen** tässä bannerissa, niin saat näkyviin vaihtoehdot sovelluksen luomiseen **Windowsin PowerApps Studion** tai **Verkon PowerApps Studion** avulla.
+Napsauta tai napauta **Aloittaminen** tässä palkissa, jolloin näkyviin tulevat vaihtoehdot sovelluksen luomiseen **PowerApps Studion** avulla.
 
 ![Luo modaalinen sovellus](./media/intro-maker-portal/createmodal2.png)
 
@@ -93,7 +91,7 @@ Napsauta tai napauta **Aloittaminen** tässä bannerissa, niin saat näkyviin va
 
 **Käytä Microsoft Common Data Serviceä** -palkin alla näet esimerkkisovelluksia ja yhdistettyjä esimerkkisovelluksia, jotka olemme luoneet käyttöösi.
 
-* **Esimerkkisovellukset** – esimerkkisovellukset on luotu erilaisia yrityskäyttötilanteita varten puhelin- tai tablet-asettelulle. Napsauttamalla sovellusta näet nopeasti kuvauksen sovelluksen toiminnasta, mille asettelulle sovellus on luotu ja mitä ominaisuuksia sovellus sisältää (esimerkiksi kamera, GPS tai valintanapit). Tämä on uusille käyttäjille nopea tapa oppia PowerAppsin ominaisuudet. Voit myös käyttää mallia identtisen sovelluksen luomiseksi Windowsin PowerApps Studiossa.
+* **Esimerkkisovellukset** – esimerkkisovellukset on luotu erilaisia yrityskäyttötilanteita varten puhelin- tai tablet-asettelulle. Napsauttamalla sovellusta näet nopeasti kuvauksen sovelluksen toiminnasta, mille asettelulle sovellus on luotu ja mitä ominaisuuksia sovellus sisältää (esimerkiksi kamera, GPS tai valintanapit). Tämä on uusille käyttäjille nopea tapa oppia PowerAppsin ominaisuudet. Voit myös käyttää mallia samanlaisen sovelluksen luomiseksi PowerApps Studiossa.
   
     ![Esimerkkisovellukset](./media/intro-maker-portal/sampleapps2.png)
 * **Yhdistetyt esimerkkisovellukset** – Nämä sovellukset muodostavat tietoihisi yhteyden tietoyhteyden, kuten Office 365:n, Salesforcen, Trellon tai Wunderlistin, kautta. Tämä sovellussarja eroaa yllä olevista esimerkkisovelluksista. Kun napsautat tai napautat yhdistettyä esimerkkisovellusta, valmistelet itse asiassa uuden esiintymän sovelluksesta (voit ajatella sitä mallina). Se pyytää antamaan tunnistetiedot tietoihisi yhdistämistä varten. Yhdistetyn esimerkkisovelluksen paras ominaisuus on se, että esiintymä valmistellaan tässä. Tämän jälkeen voit avata sen PowerApps Studiossa oppiaksesi, miten vastaava sovellus luotiin. Huono puoli on se, että luominen voi kestää kauan (jopa minuutin). Ole kärsivällinen ja anna selaimen avautua, kun napsautat tai napautat yhdistettyä esimerkkisovellusta.
@@ -113,7 +111,7 @@ Huomaa, että luettelonäkymä näyttää vain valitun ympäristön sovellukset.
 
 ## <a name="whats-new"></a>Uudet ominaisuudet
 
-* Sovelluksen napsauttaminen tai napauttaminen avaa sen Verkon PowerApps Studion uudessa välilehdessä.
+* Sovelluksen napsauttaminen tai napauttaminen avaa sen nyt PowerApps Studiossa uudessa välilehdessä.
 * Oletusarvoisesti **Sovellukset**-sivu näyttää kaikki sovellukset, joihin sinulla on muokkausoikeus. Näet **Kaikki sovellukset** (myös sovellukset, joita voit vain käyttää) valitsemalla **Kaikki sovellukset** -suodattimen.
   
    ![Sovellukset-suodatin](./media/intro-maker-portal/allapps_filter.png)

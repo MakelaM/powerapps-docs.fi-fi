@@ -1,24 +1,25 @@
 ### YamlMime:Tutorial
 title: Sovelluksen luominen SharePointista
 metadata:
-  title: Sovelluksen luominen SharePointista | Microsoft PowerApps
+  title: Sovelluksen luominen SharePointista | Microsoft Docs
   description: Luo SharePoint-luettelosta sovellus, jossa on kolme näyttöä. Tutki sen jälkeen sovellusta ja päivitä se.
   audience: Business User
   level: Beginner
-  nextTutorialHref: manage-apps
+  nextTutorialHref: manage-apps.yml
   nextTutorialTitle: Sovellusten hallinta
   displayType: one-column
   author: AFTOwen
-  manager: kfile
   ms.service: powerapps
-  ms.topic: get-started-article
+  ms.component: canvas
+  ms.topic: interactive-tutorial
   ms.date: 10/27/2017
   ms.author: anneta
-  ms.openlocfilehash: a65eabb4bc42deff686fd40186914fefe77e6e0c
-  ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+  ms.openlocfilehash: aeb576022f3abcf584bfa5104e1279f75b4bc035
+  ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
   ms.translationtype: HT
   ms.contentlocale: fi-FI
-  ms.lasthandoff: 03/28/2018
+  ms.lasthandoff: 06/04/2018
+  ms.locfileid: "34453626"
 items:
 - durationInMinutes: 1
   content: >

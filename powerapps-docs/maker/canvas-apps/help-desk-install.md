@@ -12,11 +12,12 @@ ms.topic: sample
 ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: e042230acec8bf70a2a99eee316d234cb5cdea15
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 4601cabae10f3373f8d2ef18190d71af536811b5
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470039"
 ---
 # <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Asenna ja määritä Help Desk PowerApps -malli
 
@@ -24,33 +25,33 @@ Vaiheittaiset ohjeet Help Desk PowerApps -mallin asentamista ja määrittämist�
 
 Näiden vaiheiden arvioitu suoritusaika on **10–15 minuuttia**
 
-Jos haluat nähdä tämän prosessin esittelyn, katso tämä video.
+> [!TIP]
+> Jos haluat nähdä tämän prosessin esittelyn, katso tämä [video](https://youtu.be/z4cdtD6hB_4).
 
-[![Help Deskin asennusvideo](./media/help-desk-install/help-desk-install-video.png)](https://youtu.be/z4cdtD6hB_4 )
 
 ## <a name="help-desk-powerapps-sample-overview"></a>Help Desk PowerAppsin -mallin yleiskatsaus
 Tukipalvelu tarjoaa käyttäjäystävällisen tavan muodostaa yhteys loppukäyttäjien ja tukiasiantuntijoiden välille. Löydä nopeasti vastauksia tärkeimpiin kysymyksiisi, seuraa avointen tukipyyntöjen edistymistä ja tarkista edellisten pyyntöjen tiedot. Tämä sovellus edellyttää jonkin verran määrittämistä, jotta saat siitä haluamasi kaltaisen.
 
 ![Help Desk PowerAppin aloitusnäyttö](./media/help-desk-install/Login-screen.png)
 
-Katso tästä videosta, miten Help Desk PowerApp -näytettä käytetään.
-
-[![Help Desk -esittelyvideo](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
+> [!TIP]
+> Katso tästä [videosta](https://youtu.be/sl5fXwwnvzI), miten Help Desk PowerApp -mallia käytetään.
 
 ## <a name="prerequisites"></a>Edellytykset
 
 - [Rekisteröidy](https://web.powerapps.com/) PowerAppsiin.
+- Kelvollinen SharePoint Online -käyttöoikeus ja luetteloiden luontioikeus tarvitaan.
 
 ## <a name="create-the-helpdesk-sharepoint-list"></a>Luo HelpDeskin SharePoint-luettelo
 
 Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 1. Avaa selain ja siirry kohteeseen https://portal.office.com.
-2. Kirjaudu sisään tilillä, jolla on oikeus luoda luetteloita.
+2. Kirjaudu sisään tilillä, jolla on oikeus luoda SharePoint-luetteloita.
 3. Siirry sivustokokoelmaan, johon haluat sijoittaa tukipalvelun luettelon.
 4. Napsauta **hammaspyöräkuvaketta** web-sivun yläosassa oikealla.
 5. Napsauta kohtaa **Lisää sovellus**.
-6. Syötä **Etsi sovellus** -tekstiruutuun **Custom**.
+6. Syötä **Etsi sovellus** -tekstiruutuun **Mukautettu**.
 7. Napsauta **hakukuvaketta**.
 8. Napsauta **Custom List** -sovellusta.
 9. Syötä **Nimi**-tekstiruutuun **HelpDesk**.
@@ -60,14 +61,15 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 10. Valitse **Luo**.
 
-### <a name="create-description-column"></a>Luo Kuvaus-sarake
+### <a name="create-description-column"></a>Kuvaus-sarakkeen luominen
 
-1. Napsauta **Luo sarake**.
-2. Syötä **Sarakkeen nimi** -tekstikenttään**Kuvaus**.
-3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Useita tekstirivejä**.
-4. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Kyllä**.
-5. Valitse **Määritä sallittavan tekstin tyyppi** -valintanappiluettelossa **Vain teksti**.
-6. Valitse **OK**.
+1. Valitse kolme pistettä HelpDesk-luettelon vieressä ja valitse **Asetukset**.
+2. Napsauta **Luo sarake**.
+3. Syötä **Sarakkeen nimi** -tekstikenttään**Kuvaus**.
+4. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Useita tekstirivejä**.
+5. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Kyllä**.
+6. Valitse **Määritä sallittavan tekstin tyyppi** -valintanappiluettelossa **Vain teksti**.
+7. Valitse **OK**.
 
 ### <a name="create-category-column"></a>Luo Luokka-sarake
 
@@ -80,7 +82,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 5. Valitse **Pakota yksilölliset arvot** -valintanappiluettelossa **Ei**.
 6. Valitse **Vaihtoehtojen näyttömuoto** -valintanappiluettelossa **Avattava valikko**.
 7. Syötä **Oletusarvo** -tekstiruutuun **Kannettavan tietokoneen tai PC-laitteen ongelma**.
-8. Valitse **OK**.
+8. Napsauta **OK**.
 
 ### <a name="create-percentcomplete-column"></a>ProsenttiaValmiina-sarakkeen luominen
 
@@ -137,29 +139,28 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 ## <a name="download-the-help-desk-powerapp"></a>Lataa Help Desk PowerApp
 
-1.  Siirry selaimella kohteeseen http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip.
-2.  Lataa PowerApps-paketti ja tallenna se tietokoneeseesi.
+1.  [Lataa](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) PowerApps-paketti ja tallenna se tietokoneeseesi.
 
-## <a name="create-connections"></a>Luo yhteydet
+## <a name="create-connections"></a>Yhteyksien luominen
 
-1.  Siirry selaimella kohteeseen https://web.powerapps.com.
+1.  Siirry selaimella osoitteeseen https://web.powerapps.com.
 2.  Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
-3.  Valitse vasemmasta valikosta **Yhteydet**.
+3.  Valitse vasemmasta valikosta **Tiedot** ja **Yhteydet**.
     
 ### <a name="create-office-365-outlook-connection"></a>Luo Office 365 Outlook -yhteys
 
-1.  Napsauta kohtaa **+ Uusi yhteys**.
+1.  Napsauta **+ Uusi yhteys**.
 2.  Syötä **Haku**-tekstikenttään **Office 365 Outlook**.
 3.  Valitse luettelosta **Office 365 Outlook**.
-4.  Valitse **Luo**.
+4.  Napsauta **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
 
-### <a name="create-sharepoint-connection"></a>Luo SharePoint-yhteys
+### <a name="create-sharepoint-connection"></a>SharePoint-yhteyden luominen
 
-1.  Napsauta kohtaa **+ Uusi yhteys**.
-2.  Syötä **Haku**-tekstikenttään **Outlook**.
+1.  Napsauta **+ Uusi yhteys**.
+2.  Syötä **Haku**-tekstikenttään **SharePoint**.
 3.  Valitse luettelosta **SharePoint**.
-4.  Valitse **Luo**.
+4.  Napsauta **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
 
 ### <a name="create-office-365-users-connection"></a>Office 365 Users -yhteyden luominen
@@ -175,11 +176,11 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 1.  Siirry selaimella kohteeseen https://web.powerapps.com.
 2.  Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
 3.  Valitse vasemmasta valikosta **Sovellukset**. 
-4.  Valitse **Tuo paketti (esikatselu)**.
+4.  Napsauta kohtaa **Tuo paketti (esikatselu)**.
     
     ![Tuo paketti -näyttö](./media/help-desk-install/import-package.png)
 
-5.  Napsauta **Lataa**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
+5.  Napsauta **Lataa palvelimeen**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
 6.  Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
 7.  Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
     
@@ -209,16 +210,14 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 ## <a name="configure-the-powerapp-to-use-the-sharepoint-list"></a>Määritä PowerApp käyttämään SharePoint-luetteloa
 
-1. Napsauta selaimessa **Sovellukset**.
-2. Napsauta **kolmea pistettä** HelpDesk PowerAppin vieressä.
-3. Napsauta **Muokkaa verkossa**.
-4. Napsauta **Salli**.
+1. Valitse seuraavissa vaiheissa **Avaa sovellus**.
+2. Valitse **Salli** oikeutta pyydettäessä.
 
-### <a name="delete-connections"></a>Poista yhteydet
+### <a name="delete-connections"></a>Yhteyksien poistaminen
 
 1. Napsauta **Näkymä**.
 2. Napsauta **Tietolähteet**.
-3. Napsauta **Tiedot**-ruudussa **kolmea pistettä** kohdan **HelpDesk** vieressä.
+3. Napsauta **Tiedot**-ruudussa **kolmea pistettä** **HelpDeskin** SharePoint-yhteyden vieressä.
 4. Napsauta **Poista**.
 
 ### <a name="helpdesk-list"></a>HelpDesk-luettelo
@@ -255,7 +254,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 7. Napsauta **Julkaise**.
 8. Napsauta **Julkaise tämä versio**.
 
-## <a name="modify-the-flow"></a>Muokkaa työnkulkua
+## <a name="modify-the-flow"></a>Työnkulun muokkaaminen
 
 1.  Valitse vasemmasta valikosta **Työnkulut**.
 2.  Jos sinua pyydetään kirjautumaan sisään, kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
@@ -274,7 +273,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 7.  Laajenna **Vaihda**.
 8.  Laajenna **EI ALOITETTU** -tapaus.
-9.  Laajenna **Lähetä sähköpostiviesti** -toiminto.
+9.  Laajenna **Tapausta ei aloitettu** -toiminto.
 10. Muuta **Vastaanottaja** siten, että se vastaa tukipalvelun järjestelmänvalvojan sähköpostiosoitetta.
 
     ![Muokkaa työnkulun näyttöä](./media/help-desk-install/edit-flow-condition-send-email.png) 
@@ -287,11 +286,11 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 2. Napsauta **kolmea pistettä** HelpDesk PowerAppin vieressä.
 3. Napsauta **Avaa**. 
 
-Katso tästä videosta, miten Help Desk PowerApp -näytettä käytetään.
+> [!TIP]
+> Katso tästä [videosta](https://youtu.be/sl5fXwwnvzI), miten Help Desk PowerApp -mallia käytetään.
 
-[![Help Desk -esittelyvideo](./media/help-desk-install/help-desk-demo-video.png)](https://youtu.be/sl5fXwwnvzI)
 
-##<a name="next-steps"></a>Seuraavat vaiheet
+## <a name="next-steps"></a>Seuraavat vaiheet
 - [SharePoint-luettelolomakkeen mukauttaminen](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
 - [Ohjausobjektin lisääminen ja määrittäminen](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
 - [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

@@ -1,25 +1,23 @@
 ---
 title: 'Ohjausobjektin vaihtopainike: viitetiedot | Microsoft Docs'
 description: Tietoja ohjausobjektin vaihtopainikkeesta, kuten ominaisuudet ja esimerkkejä
-services: ''
-suite: powerapps
 documentationcenter: na
 author: fikaradz
-manager: anneta
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: dac1f8ea99746f04d2d3305e279a4bc5faf67903
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 0344a43707170bccebfd01d8b3a1bba24f3c183f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836857"
 ---
 # <a name="toggle-control-in-powerapps"></a>Ohjausobjektin vaihtopainike PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi ottaa käyttöön tai poistaa käytöstä siirtämällä sen kahvaa.
@@ -27,23 +25,23 @@ Ohjausobjekti, jonka käyttäjä voi ottaa käyttöön tai poistaa käytöstä s
 ## <a name="description"></a>Kuvaus
 Vaihtopainike on suunniteltu uusimpia käyttöliittymiä varten, mutta se toimii samalla tavalla kuin valintaruutu.
 
-## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**[Oletus](properties-core.md)** – Ohjausobjektin alkuarvo, ennen kuin käyttäjä muuttaa sitä.
+## <a name="key-properties"></a>Keskeiset ominaisuudet
+**[Oletus](properties-core.md)** – Ohjausobjektin alkuarvo ennen kuin käyttäjä muuttaa sitä.
 
 **[Arvo](properties-core.md)** – Syöteohjausobjektin arvo.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+**[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
+
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
-**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviivat**, **pisteet** vai **ei mitään**.
+**[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin näppäimistösyötteisen reunan paksuus.
+**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
-
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
 **FalseFill** – Värintäytön vaihtopainike, kun Poistettu käytöstä on valittuna.
 
@@ -51,35 +49,41 @@ Vaihtopainike on suunniteltu uusimpia käyttöliittymiä varten, mutta se toimii
 
 **FalseText** – Teksti, joka näytetään, kun Poistettu käytöstä on valittuna.
 
-**[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
+**[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+
+**[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
+
+**HandleFill** – Vaihtokahvan täyttöväri.
+
+**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin kohdalla.
 
 **[OnChange](properties-core.md)**  – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
 
-**OnCheck** – Miten sovellus reagoi, kun valintaruudun tai vaihtopainikkeen arvo muuttuu arvoksi **true**.
+**OnCheck** – Miten sovellus reagoi, kun valintaruudun tai vaihtopainikkeen arvo muuttuu arvoon **true**.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**OnUnheck** – Miten sovellus reagoi, kun valintaruudun tai vaihtopainikkeen arvo muuttuu arvoksi **false**.
+**OnUnheck** – Miten sovellus reagoi, kun valintaruudun tai vaihtopainikkeen arvo muuttuu arvoon **false**.
 
 **[PressedBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**RailFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false** tai liukusäätimen kahvan oikealla puolella olevan viivan väri.
+**RailFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false**, tai liukusäätimen kahvan oikealla puolella olevan viivan väri.
 
-**RailHoverFill** – Vaihtopainikkeen ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false** tai liukusäätimen kahvan oikealla puolella olevan viivan väri, kun osoitinta pidetään ohjausobjektin vaihtopainikkeen tai liukusäätimen kohdalla.
+**RailHoverFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **false**, tai liukusäätimen kahvan oikealla puolella olevan viivan väri silloin, kun osoitinta pidetään valitsinkytkimen tai liukusäätimen kohdalla.
 
 **[Nollaa](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
 **ShowLabel** – Näytetäänkö tekstiotsikko ohjausobjektin vaihtopainikkeen vieressä.
 
-**[TabIndex](properties-accessibility.md)** – Mukauttaa ohjausobjektien sarkainjärjestystä käytön aikana, kun arvona on nollasta poikkeava arvo.
+**[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
 **TextPosition** – Onko selite ohjausobjektin vaihtopainikkeen vasemmalla vai oikealla puolella.
 
-**[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin osoittimen ollessa ohjausobjektin päällä.
+**[Työkaluvihje](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun kohdistin on ohjausobjektin kohdalla.
 
 **TrueFill** – Värintäytön vaihtopainike, kun Käytössä on valittuna.
 
@@ -87,30 +91,57 @@ Vaihtopainike on suunniteltu uusimpia käyttöliittymiä varten, mutta se toimii
 
 **TrueText** – Teksti, joka näytetään, kun Käytössä on valittuna.
 
-**ValueFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true** tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri.
+**ValueFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true**, tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri.
 
-**ValueHoverFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true** tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri, kun osoitinta pidetään ohjausobjektin tai liukusäätimen päällä.
+**ValueHoverFill** – Ohjausobjektin suorakulmion taustaväri, kun valintakytkimen arvo on **true**, tai liukusäätimen kahvan vasemmalla puolella olevan viivan väri, kun osoitinta pidetään ohjausobjektin tai liukusäätimen päällä.
 
-**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
-## <a name="related-functions"></a>Liittyvät funktiot
-[**If**( *Condition*, *Result* )](../functions/function-if.md)
+## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
+[**If**( *Ehto*, *Tulos* )](../functions/function-if.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää vaihtopainike ja anna sille nimeksi **MemberDiscount**.
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuudeksi tämä kaava:
+2. Lisää selite ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:
    <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
     Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä ja muuta **MemberDiscount**-arvoa.
 
     Selitteessä on eri hinta sen mukaan, onko **MemberDiscount** käytössä vai poissa käytöstä.
-4. Palaa oletustyötilaan painamalla Esc-näppäintä.
+4. Palaa oletustyötilaan painamalla ESC-näppäintä.
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* **HandleFill** ja **FalseFill**
+* **HandleFill** ja **FalseHoverFill**
+* **HandleFill** ja **TrueFill**
+* **HandleFill** ja **TrueHoverFill**
+* **FalseFill** ja ohjausobjektin ulkopuolinen väri
+* **FalseHoverFill** ja ohjausobjektin ulkopuolinen väri
+* **TrueFill** ja ohjausobjektin ulkopuolinen väri
+* **TrueHoverFill** ja ohjausobjektin ulkopuolinen väri
+
+Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+* **FalseText** on oltava käytössä.
+* **TrueText** on oltava käytössä.
+
+### <a name="low-vision-support"></a>Tuki heikkonäköisille
+* Harkitse **ShowLabel**-ominaisuuden asettamista arvoon **true**, jotta käyttäjät voivat nopeasti määrittää vaihtoarvon.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.

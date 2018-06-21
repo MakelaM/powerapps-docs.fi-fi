@@ -1,32 +1,23 @@
 ---
-title: Mallipohjaisen sovelluksen suorittaminen mobiililaitteella PowerAppsin avulla | Microsoft Docs
-description: Ohjeet mallipohjaisen sovelluksen suorittamiseen mobiililaitteella
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Pikaopas mallipohjaisen sovelluksen suorittamiseen mobiililaitteessa PowerAppsin avulla | Microsoft Docs
+description: Tässä pikaoppaassa opit suorittamaan mallipohjaisen sovelluksen mobiililaitteessa.
 author: Mattp123
-manager: brycho
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 73b8aca29af2e9ee5fa117a7e7b79a8d3dbaca9f
-ms.sourcegitcommit: a9ac8a3ed734cb5f70b61476168d1bff5de844f8
+ms.openlocfilehash: 5556739d0a067e9475cd253efdf733ae91218719
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34074057"
 ---
-# <a name="quickstart-run-a-model-driven-app-on-a-mobile-device"></a>Pikaopas: Mallipohjaisen sovelluksen suorittaminen mobiililaitteella
+# <a name="quickstart-run-a-model-driven-app-on-a-mobile-device"></a>Pikaopas: Mallipohjaisen sovelluksen suorittaminen mobiililaitteessa
 
 Kun sovellus on luotu ja jaettu, voit käyttää sitä useissa tavallisissa mobiililaitteissa, kuten Windows-, iOS- tai Android-laitteessa tai selaimessa. Tässä pikaoppaassa opimme suorittamaan mallipohjaisen sovelluksen mobiililaitteessa. 
-
-> [!IMPORTANT]
-> [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
 Jotta voit seurata tätä pikaopasta, [rekisteröidy ennen aloittamista ilmaiseksi PowerAppsiin](https://web.powerapps.com/signup?redirect=marketing&email=), jos et ole jo tehnyt sitä. Varmista myös, että sinulla on käyttöoikeus luomaasi tai jonkun muun luomaan ja jakamaan sovellukseen.
 

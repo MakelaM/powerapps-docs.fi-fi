@@ -1,25 +1,18 @@
 ---
 title: SharePoint-yhteyden yleiskatsaus | Microsoft Docs
 description: Katso SharePointin käytettävissä olevat funktiot, vastaukset ja esimerkit
-services: ''
-suite: powerapps
-documentationcenter: ''
 author: sarafankit
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 07/12/2017
-ms.author: sharik
-ms.openlocfilehash: f79809b2eb74d4cea2ee9719a3a76e8149a533dc
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: ankitsar
+ms.openlocfilehash: 8a49e0e4e866e7e9eda4834904ee84c082140376
+ms.sourcegitcommit: 7354a0c61578fcc0b9965bf557b9d7c553c73e96
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34803301"
 ---
 # <a name="connect-to-sharepoint-from-powerapps"></a>Yhdistä PowerAppsista SharePointiin
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
@@ -52,13 +45,11 @@ Voit lisätä tietoa mukautetusta luettelosta mutta et kirjastosta. Kaikentyyppi
 PowerApps voi lukea sarakkeita, jotka sisältävät välilyöntejä, mutta välilyönnit korvataan heksadesimaalikoodilla **"\_x0020\_"**. Esimerkiksi **Sarakkeen nimi** SharePointissa näkyy muodossa **Sarakkeen_x0020_Nimi** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
 
 ## <a name="prerequisites"></a>Edellytykset
-Avaa PowerApps suorittamalla *toinen* näistä vaiheista:
+1. [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin.
 
-* [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin, [asenna Windowsin PowerApps Studio](http://aka.ms/powerappsinstall) ja avaa se. Kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+1. [Kirjaudu sisään](http://web.powerapps.com) PowerAppsiin antamalla samat tunnistetiedot kuin rekisteröityessäsi.
 
-* [Avaa Verkon PowerApps Studio](https://create.powerapps.com/api/start) selaimessa.
-
-    Katso luetteloa tuetuista selaimista ja Verkon PowerApps Studion esikatseluversion rajoitteista kohdasta [Sovellusten luominen ja muokkaaminen selaimessa](../create-app-browser.md).
+1. Valitse lähellä vasenta reunaa **Sovellukset** ja sitten **Luo sovellus** palkissa.
 
 ## <a name="create-an-app"></a>Sovelluksen luominen
 * [Luo sovellus automaattisesti](../app-from-sharepoint.md) SharePoint-luettelon tietojen perusteella.

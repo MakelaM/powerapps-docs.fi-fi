@@ -1,33 +1,26 @@
 ---
 title: PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaaminen | Microsoft Docs
-description: Ohjeet PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaamiseen
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Ohjeet PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaamiseen.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/23/2018
+ms.component: pa-admin
+ms.topic: conceptual
+ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 97f5a6a970e07f9908c02074ef97234b58a52894
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 000f15ea7b1fa4e11cbe49b44e57017daf973a89
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552963"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-export-powerapps-customer-data"></a>PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaaminen
 Oikeus tietojen siirtämiseen antaa rekisteröidylle oikeuden pyytää kopiota henkilötiedoistaan sähköisessä muodossa (yleensä tämä on jäsennelty, yleisesti käytetty, koneluettava ja yhteentoimiva muoto), jossa tiedot voidaan siirtää toiselle rekisterinpitäjälle:
 
-* Sivustot: [PowerApps](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Sivustot: [PowerApps-portaali](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
-* PowerShellin käyttö: PowerAppsin cmdlet-komennot, [Tekijän cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871448), [Järjestelmänvalvojan cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804) ja [Paikalliset yhdyskäytävän cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=872238)
+* PowerShellin käyttö: PowerApps [Sovelluksen luojan cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871448), [Järjestelmänvalvojan cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804) ja [Paikalliset yhdyskäytävän cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=872238)
 
 Alla on yhteenveto henkilötietojen tyypeistä, jotka PowerApps voi tallentaa tietylle käyttäjälle ja joiden avulla tiedot voi hakea ja viedä.
 
@@ -35,24 +28,24 @@ Henkilötietoja sisältävät resurssit | Sivuston käyttö |   PowerShellin kä
 --- | --- | --
 Ympäristö | PowerApps-hallintakeskus |  PowerAppsin cmdlet-komennot
 Ympäristön oikeudet**   | PowerApps-hallintakeskus    | PowerAppsin cmdlet-komennot
-Kaaviosovellus  | PowerApps-hallintakeskus <br> Tekijöiden PowerApps-portaali |  PowerAppsin cmdlet-komennot
-Kaaviosovellusten oikeudet  | PowerApps-hallintakeskus <br> Tekijöiden PowerApps-portaali    | PowerAppsin cmdlet-komennot
-Yhdyskäytävä | Tekijöiden PowerApps-portaali*** | Paikalliset yhdyskäytävän cmdlet-komennot
-Yhdyskäytävien oikeudet | Tekijöiden PowerApps-portaali*** |
-Mukautettu yhdistin | |    Tekijä: saatavilla <br> Järjestelmänvalvoja: kehitteillä
-Mukautettujen yhdistimien oikeudet | |    Tekijä: saatavilla <br> Järjestelmänvalvoja: kehitteillä
-Yhteys | | Tekijä: saatavilla <br> Järjestelmänvalvoja: kehitteillä
-Yhteyksien oikeudet  | | Tekijä: saatavilla <br> Järjestelmänvalvoja: kehitteillä
-PowerAppsin käyttäjäasetukset, käyttäjäsovelluksen asetukset ja ilmoitukset | | Tekijä: saatavilla <br> Järjestelmänvalvoja: kehitteillä
+Kaaviosovellus  | PowerApps-hallintakeskus <br> PowerApps-portaali |    PowerAppsin cmdlet-komennot
+Kaaviosovellusten oikeudet  | PowerApps-hallintakeskus <br> PowerApps-portaali  | PowerAppsin cmdlet-komennot
+Yhdyskäytävä | PowerApps-portaali***   | Paikalliset yhdyskäytävän cmdlet-komennot
+Yhdyskäytävien oikeudet | PowerApps-portaali***   |
+Mukautettu yhdistin | |    Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+Mukautettujen yhdistimien oikeudet | |    Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+Yhteys | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+Yhteyksien oikeudet  | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
+PowerAppsin käyttäjäasetukset, käyttäjäsovelluksen asetukset ja ilmoitukset | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
 
 > ** Kun Common Data Service (CDS) for Apps on käytössä ja tietokanta luodaan ympäristöön, ympäristön käyttöoikeudet ja mallipohjaisten sovellusten käyttöoikeudet tallennetaan tietueina CDS for Apps -tietokannan esiintymään. Saat lisätietoja CDC for Appsia käyttävien käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
 
-> *** Järjestelmänvalvoja voi käyttää näitä resursseja [PowerAppsin](https://web.powerapps.com) kautta vain, jos resurssin omistaja on myöntänyt eksplisiittisesti hänelle käyttöoikeuden. Jos näin ei ole, järjestelmänvalvojan on hyödynnettävä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804).
+> *** Järjestelmänvalvoja voi käyttää näitä resursseja [PowerApps-portaalista](https://web.powerapps.com) vain, jos resurssin omistaja on myöntänyt eksplisiittisesti hänelle käyttöoikeuden. Jos näin ei ole, järjestelmänvalvojan on hyödynnettävä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## <a name="prerequisites"></a>Edellytykset
 
 ### <a name="for-users"></a>Käyttäjille
-Kuka tahansa käyttäjä, jolla on kelvollinen PowerApps-käyttöoikeus, voi suorittaa tässä asiakirjassa mainitut käyttäjätoiminnot [PowerAppsin](https://web.powerapps.com) tai [Tekijöiden cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) avulla.
+Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps-portaalia](https://web.powerapps.com) tai [sovelluksen luojien cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### <a name="for-admins"></a>Järjestelmänvalvojille
 Tässä asiakirjassa mainittujen hallintatoimintojen suorittaminen PowerAppsin hallintakeskuksen, Microsoft Flow -hallintakeskuksen tai [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) avulla edellyttää seuraavia käyttöoikeuksia:
@@ -74,15 +67,15 @@ Järjestelmänvalvojat voivat viedä kaikki tietyn käyttäjän luomat ympärist
 
     ![Ympäristön tiedot](./media/powerapps-gdpr-export-dsr/environment-details.png)
 
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Käyttäjät voivat viedä ympäristöt, joihin heillä on käyttöoikeus PowerAppsissa, käyttämällä [PowerAppsin tekijän PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-PowerAppsEnvironment**-funktiota:
+### <a name="powershell-cmdlets-for-app-creators"></a>Sovellusten luojien PowerShellin cmdlet-komennot
+Käyttäjät voivat viedä ympäristöt, joihin heillä on käyttöoikeus PowerAppsissa, käyttämällä [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-PowerAppsEnvironment**-funktiota:
 
 ~~~~
 Add-PowerAppsAccount
 Get-PowerAppsEnvironment | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
 ~~~~
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
 Järjestelmänvalvojat voivat viedä kaikki käyttäjän luomat ympäristöt [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminEnvironment**-funktiolla:
 
 ~~~~
@@ -113,7 +106,7 @@ Järjestelmänvalvojat voivat viedä käyttäjän ympäristöjen oikeudet [Power
 
 4. Jos käyttäjällä on jommankumman roolin käyttöoikeus, siirry **Käyttäjät**-sivulle, kopioi tiedot ja liitä ne tiedostojen muokkausohjelmaan, kuten Microsoft Wordiin.
 
-#### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
+#### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
 Järjestelmänvalvojat voivat viedä kaikki käyttäjän ympäristön roolimääritykset kaikissa ympäristöissä ilman Sovellusten CDS -tietokantaa käyttämällä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminEnvironmentRoleAssignment**-funktiota:
 
 ~~~~
@@ -132,8 +125,8 @@ Kun Sovellusten CDS on käytössä, jos tietokanta luodaan ympäristöön, rooli
  
 ## <a name="step-3-export-personal-data-contained-within-canvas-apps-created-by-the-user"></a>Vaihe 3: vie käyttäjän luomiin kaaviosovelluksiin sisältyvät henkilötiedot
 
-### <a name="powerapps-maker-portal"></a>Tekijöiden PowerApps-portaali
-Käyttäjä voi viedä sovelluksen [PowerAppsista](https://web.powerapps.com). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
+### <a name="powerapps-portal"></a>PowerApps-portaali
+Käyttäjä voi viedä sovelluksen [PowerApps-portaalista](https://web.powerapps.com). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
 
 ### <a name="powerapps-admin-center"></a>PowerApps-hallintakeskus
 Järjestelmänvalvoja voi viedä käyttäjän luomat sovellukset [PowerApps-hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
@@ -154,9 +147,9 @@ Järjestelmänvalvoja voi viedä käyttäjän luomat sovellukset [PowerApps-hall
 
     ![Anna käyttäjälle käyttöoikeus](./media/powerapps-gdpr-export-dsr/grant-access.png)
 
-5. Kun sinulla on käyttäjän kunkin sovelluksen käyttöoikeus, voit viedä sovelluksen [PowerAppsista](https://web.powerapps.com). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
+5. Kun sinulla on käyttöoikeus jokaiseen käyttäjän sovellukseen, voit viedä sovelluksen [PowerApps-portaalista](https://web.powerapps.com). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
 Järjestelmänvalvojat voivat viedä käyttäjän luomat sovellukset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminApp**-funktiolla:
 
 ~~~~
@@ -168,8 +161,8 @@ Get-AdminApp -Owner $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.j
 ## <a name="step-4-export-the-users-permissions-to-canvas-apps"></a>Vaihe 4: vie käyttäjän kaaviosovellusten oikeudet
 Aina, kun sovellus on jaettu käyttäjän kanssa, PowerApps tallentaa tietueen nimeltä *roolimääritys*, joka kuvaa käyttäjän oikeuksia (CanEdit tai CanUser) sovellukseen. Lisätietoja saat kohdasta [Sovelluksen jakaminen](../maker/canvas-apps/share-app.md#share-an-app).
 
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Käyttäjät voivat viedä kaikkien niiden sovellusten roolimääritykset, joihin heillä on käyttöoikeus, [PowerAppsin tekijän PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-RoleAssignment**-funktiolla:
+### <a name="powershell-cmdlets-for-app-creators"></a>Sovellusten luojien PowerShellin cmdlet-komennot
+Käyttäjät voivat viedä kaikkien niiden sovellusten roolimääritykset, joihin heillä on käyttöoikeus, [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-RoleAssignment**-funktiolla:
 
 ~~~~
 Add-PowerAppsAccount
@@ -193,7 +186,7 @@ Järjestelmänvalvojat voivat viedä käyttäjän sovellusten roolimääritykset
 
     ![Järjestelmänvalvojan sovelluksen jakaminen -sivu](./media/powerapps-gdpr-export-dsr/admin-share-page.png)
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
 Järjestelmänvalvojat voivat viedä käyttäjän kaikki sovellusten roolimääritykset vuokraajan kaikista sovelluksista käyttämällä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminAppRoleAssignment**-funktiota:
 
 ~~~~
@@ -205,74 +198,109 @@ Get-AdminAppRoleAssignment -UserId $userId | ConvertTo-Json | Out-File -FilePath
 ## <a name="step-5-export-personal-data-contained-within-connections-created-by-the-user"></a>Vaihe 5: vie käyttäjän luomiin yhteyksiin sisältyvät henkilötiedot
 Yhteyksiä käytetään yhdistimien kanssa muodostettaessa yhteyksiä muihin ohjelmointirajapintoihin ja SaaS-järjestelmiin. Yhteyksien sisällä on viittauksia käyttäjään, joka ne on luonut, ja sen vuoksi ne voidaan poistaa, jotta saadaan poistettua mahdolliset viittaukset käyttäjään.
 
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Käyttäjät voivat viedä kaikki yhteydet, joihin heillä on käyttöoikeus, [PowerAppsin tekijän PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-Connection**-funktiolla:
+### <a name="powershell-cmdlets-for-app-creators"></a>Sovellusten luojien PowerShellin cmdlet-komennot
+Käyttäjät voivat viedä kaikki yhteydet, joihin heillä on käyttöoikeus, [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-Connection**-funktiolla:
 
 ~~~~
 Add-PowerAppsAccount
 Get-Connection | ConvertTo-Json | out-file -FilePath "UserDetails.json"
 ~~~~
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
-Funktio, jolla järjestelmänvalvoja voi viedä käyttäjän luomat yhteydet [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennoilla](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
- 
-## <a name="step-6-export-the-users-permissions-to-shared-connections"></a>Vaihe 6: vie käyttäjän jaettujen yhteyksien oikeudet
-
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Käyttäjät voivat viedä kaikkien niiden yhteyksien roolimääritykset, joihin heillä on käyttöoikeus, [PowerAppsin tekijän PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-ConnectionRoleAssignment**-funktiolla:
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvojat voivat viedä käyttäjän luomat yhteydet [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminConnection**-funktiolla:
 
 ~~~~
 Add-PowerAppsAccount
-Get-ConnectionRoleAssignment | ConvertTo-Json | out-file -FilePath "UserDetails.json"
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnection -CreatedBy $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
+ 
+## <a name="step-6-export-the-users-permissions-to-shared-connections"></a>Vaihe 6: vie käyttäjän jaettujen yhteyksien oikeudet
+
+### <a name="powershell-cmdlets-for-app-creators"></a>Sovellusten luojien PowerShellin cmdlet-komennot
+Käyttäjät voivat viedä kaikkien niiden yhteyksien roolimääritykset, joihin heillä on käyttöoikeus, [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-ConnectionRoleAssignment**-funktiolla:
+
+~~~~
+Add-PowerAppsAccount
+Get-ConnectionRoleAssignment | ConvertTo-Json | Out-file -FilePath "UserDetails.json"
 ~~~~
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
-Funktio, jolla järjestelmänvalvoja voi viedä käyttäjän yhteyksien roolimääritykset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennoilla](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvojat voivat viedä käyttäjän kaikki yhteysroolimääritykset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminConnectionRoleAssignment**-funktiolla:
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnectionRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
 
 ## <a name="step-7-export-personal-data-contained-within-custom-connectors-created-by-the-user"></a>Vaihe 7: vie käyttäjän luomiin mukautettuihin yhdistimiin sisältyvät henkilötiedot
 Mukautetut yhdistimet täydentävät valmiina tulevia yhdistimiä ja mahdollistavat yhdistämisen muihin ohjelmointirajapintoihin, SaaS-järjestelmiin ja mukautettuihin järjestelmiin.
 
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Käyttäjät voivat viedä kaikki itse luomansa mukautetut yhdistimet käyttämällä [PowerAppsin tekijän PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-Connector**-funktiota:
+### <a name="powerapps-app-creator-powershell-cmdlets"></a>PowerAppsin sovelluksen luojan PowerShell-cmdlet-komennot
+Käyttäjät voivat viedä kaikki itse luomansa mukautetut liittimet käyttämällä [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-Connector**-funktiota:
 
 ~~~~
 Add-PowerAppsAccount  
 Get-Connector -FilterNonCustomConnectors | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
 ~~~~
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
-Funktio, jolla järjestelmänvalvoja voi viedä käyttäjän luomat mukautetut yhdistimet [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennoilla](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvojat voivat viedä kaikki käyttäjän luomat mukautetut liittimet [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminConnector**-funktiolla:
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnector -CreatedBy $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
 
 ## <a name="step-8-export-the-users-permissions-to-custom-connectors"></a>Vaihe 8: vie käyttäjän mukautettujen yhdistimien oikeudet
 
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Käyttäjät voivat viedä kaikkien niiden mukautettujen yhdistimien roolimääritykset, joihin heillä on käyttöoikeus, [PowerAppsin tekijän PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-ConnectorRoleAssignment**-funktiolla:
+### <a name="powershell-cmdlets-for-app-creators"></a>Sovellusten luojien PowerShellin cmdlet-komennot
+Käyttäjät voivat viedä kaikkien niiden mukautettujen yhdistimien roolimääritykset, joihin heillä on käyttöoikeus, [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-ConnectorRoleAssignment**-funktiolla:
 
 ~~~~
 Add-PowerAppsAccount  
 Get-ConnectorRoleAssignment | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
 ~~~~
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
-Funktio, jolla järjestelmänvalvoja voi viedä käyttäjän mukautettujen yhdistimien roolimääritykset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennoilla](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvojat voivat viedä kaikki käyttäjän mukautetun liittimen roolimääritykset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminConnectorRoleAssignment**-funktiolla:
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminConnectorRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | Out-File -FilePath "UserDetails.json"
+~~~~
  
 ## <a name="step-9-export-powerapps-notifications-user-settings-and-user-app-settings"></a>Vaihe 9: vie PowerAppsin ilmoitukset, käyttäjäasetukset ja käyttäjäsovelluksen asetukset
-PowerApps lähettää käyttäjille useita erilaisia ilmoituksia, esimerkiksi siitä, kun sovellus jaetaan heidän kanssaan tai kun Sovellusten CDS -vientitoiminto on suoritettu. Käyttäjän ilmoitushistoria näkyy heille [PowerAppsissa](https://web.powerapps.com).
+PowerApps lähettää käyttäjille useita erilaisia ilmoituksia, esimerkiksi siitä, kun sovellus jaetaan heidän kanssaan tai kun Sovellusten CDS -vientitoiminto on suoritettu. Käyttäjän ilmoitushistoria näkyy hänelle [PowerApps-portaalissa](https://web.powerapps.com).
 
 PowerApps tallentaa myös useita eri käyttäjäasetuksia ja asetuksia, joiden avulla tarjotaan PowerAppsin suorituspalvelun ja portaalin käyttökokemus, mukaan lukien tiedot siitä, milloin käyttäjä viimeksi avasi sovelluksen, kiinnitti sovelluksen jne.
 
-### <a name="powerapps-maker-powershell-cmdlets"></a>PowerAppsin tekijän PowerShell-cmdlet-komennot
-Funktio, jolla voi viedä käyttäjän PowerAppsin ilmoitukset, käyttäjäasetukset ja käyttäjäsovelluksen asetukset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennoilla](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+### <a name="powershell-cmdlets-for-app-creators"></a>Sovellusten luojien PowerShellin cmdlet-komennot
+Käyttäjät voivat viedä omat PowerApps-ilmoituksensa, käyttäjäasetuksensa ja käyttäjäsovellusten asetuksensa [PowerAppsin sovelluksen luojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871448) **Get-AdminPowerAppsUserDetails**-funktiolla:
 
-### <a name="powerapps-admin-powershell-cmdlets"></a>PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennot
-Funktio, jolla järjestelmänvalvoja voi viedä käyttäjän PowerAppsin ilmoitukset, käyttäjäasetukset ja käyttäjäsovelluksen asetukset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komennoilla](https://go.microsoft.com/fwlink/?linkid=871804), on kehitteillä.
+~~~~
+Add-PowerAppsAccount  
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json"
+~~~~
+
+### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
+Järjestelmänvalvojat voivat viedä PowerApps-ilmoitukset, käyttäjäasetukset ja käyttäjän käyttäjäsovellusten asetukset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminPowerAppsUserDetails**-funktiolla:
+
+~~~~
+Add-PowerAppsAccount
+$userId = "0ecb1fcc-6782-4e46-a4c4-738c1d3accea"
+Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -UserPrincipalName foobar@microsoft.com
+~~~~
 
 ## <a name="step-10-export-personal-data-contained-for-a-user-stored-gateway-or-in-the-users-gateway-permissions"></a>Vaihe 10: vie käyttäjän tallentaman yhdyskäytävän tai käyttäjän yhdyskäytävän oikeuksiin sisältyvät henkilötiedot
 
-### <a name="powerapps-maker-portal"></a>Tekijöiden PowerApps-portaali
-Käyttäjät voivat viedä yhdyskäytäväpalveluun tallennetut henkilötiedot [PowerAppsista](https://web.powerapps.com) seuraavasti:
+### <a name="powerapps-portal"></a>PowerApps-portaali
+Käyttäjät voivat viedä yhdyskäytäväpalveluun tallennetut henkilötiedot [PowerApps-portaalista](https://web.powerapps.com) seuraavasti:
 
-1. Valitse [PowerAppsissa](https://web.powerapps.com) vuokraajasi oletusympäristössä **Yhdyskäytävät** ja sitten **Tiedot** kaikkien niiden yhdyskäytävien kohdalla, joihin sinulla on käyttöoikeus.
+1. Valitse [PowerApps-portaalissa](https://web.powerapps.com) vuokraajasi oletusympäristössä **Yhdyskäytävät** ja sitten **Tiedot** kaikkien niiden yhdyskäytävien kohdalla, joihin sinulla on käyttöoikeus.
 
     ![Yhdyskäytävän saapumissivu](./media/powerapps-gdpr-export-dsr/gateway-select-details.png)
 
@@ -287,10 +315,13 @@ Käyttäjät voivat viedä yhdyskäytäväpalveluun tallennetut henkilötiedot [
 ### <a name="gateway-powershell-cmdlets"></a>Yhdyskäytävän PowerShell-cmdlet-komennot
 On olemassa myös PowerShell-cmdlet-komentoja, joiden avulla voit hakea, hallita ja poistaa henkilökohtaisia yhdyskäytäviäsi. Katso lisätietoja ohjeaiheesta [Paikalliset yhdyskäytävän cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=872238).
 
+### <a name="administrators"></a>Järjestelmänvalvojat
+Artikkelin [Tutustu Microsoft PowerAppsin paikallisiin tietoyhdyskäytäviin](https://docs.microsoft.com/powerapps/maker/canvas-apps/gateway-reference#tenant-level-administration) osassa **Vuokraajan hallinta** on ohjeet yhdyskäytävien hallintaan organisaatiossasi.
+
 ## <a name="step-11-export-the-users-personal-data-in-microsoft-flow"></a>Vaihe 11: vie käyttäjän henkilötiedot Microsoft Flow -palvelusta
 PowerApps-käyttöoikeudet sisältävät aina Microsoft Flow -ominaisuudet. Sen lisäksi, että Microsoft Flow sisältyy PowerAppsin käyttöoikeuksiin, se on saatavilla erillisenä palvelunakin. Saat lisätietoja Microsoft Flow -palvelua käyttäneiden käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [GPDR DSR:ien suorittaminen Microsoft Flow’n asiakastiedoille](https://go.microsoft.com/fwlink/?linkid=872250).
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 >  Suosittelemme, että järjestelmänvalvoja suorittaa tämän vaiheen PowerApps-käyttäjien puolesta.
 >
 >

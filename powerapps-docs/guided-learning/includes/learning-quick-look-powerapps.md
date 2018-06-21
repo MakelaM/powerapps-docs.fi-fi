@@ -10,7 +10,7 @@ Kukin esimerkkisovellus on suunniteltu tiettyyn tarkoitukseen, kuten budjetin ha
 ![PowerAppsin sovellus lattiapäällysteyritykselle](./media/learning-quick-look-powerapps/powerapps-flooring-sample.png)
 
 ## <a name="create-an-app-from-a-template"></a>Sovelluksen luominen mallin pohjalta
-Toinen hyvä tapa aloittaa on **sovelluksen rakentaminen mallista**. Mallipohjat ovat periaatteessa esimerkkisovelluksia. Avaa sovellus ja tutki, miten se on rakennettu. Mallipohjissa käytetään esimerkkitietoja, joiden tarkoituksena on auttaa käyttäjiä tutustumaan sovellusten tarjoamiin mahdollisuuksiin. Kun avaat sovellukset PowerApps Studiossa **, voit nähdä käytännössä, miten sovellus rakennetaan**. Huomaa, että mallit ovat toistaiseksi käytettävissä vain Windowsin PowerApps Studiossa, ei PowerApps Studion verkkoversiossa.
+Toinen hyvä tapa aloittaa on **sovelluksen rakentaminen mallista**. Mallipohjat ovat periaatteessa esimerkkisovelluksia. Avaa sovellus ja tutki, miten se on rakennettu. Mallipohjissa käytetään esimerkkitietoja, joiden tarkoituksena on auttaa käyttäjiä tutustumaan sovellusten tarjoamiin mahdollisuuksiin. Kun avaat sovellukset PowerApps Studiossa **, voit nähdä käytännössä, miten sovellus rakennetaan**.
 
 ![PowerApps-sovelluksen mallipohja](./media/learning-quick-look-powerapps/powerapps-templates.png)
 
@@ -24,7 +24,7 @@ Jos työryhmäsi on alkanut käyttää PowerAppsia, sinulla saattaa jo olla **ja
 ![PowerApps-sovellusten jakaminen](./media/learning-quick-look-powerapps/powerapps-sharing.png)
 
 ## <a name="create-an-app-from-a-data-source"></a>Sovelluksen luominen tietolähteestä
-Luo sovellus **PowerApps Studio for web**- tai **PowerApps Studio for Windows** -sovelluksessa. Pystyt muodostamaan yhteyden tietolähteisiin ja aloittamaan sovellusten luomisen visuaalisessa suunnittelutyökalussa.
+Luo sovelluksia **PowerApps Studiossa**. Pystyt muodostamaan yhteyden tietolähteisiin ja aloittamaan sovellusten luomisen visuaalisessa suunnittelutyökalussa.
 
 ![PowerApps-sovelluksen luominen tiedoista](./media/learning-quick-look-powerapps/powerapps-app-from-data.png)
 

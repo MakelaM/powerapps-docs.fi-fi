@@ -1,25 +1,19 @@
 ---
-title: Sovelluksen lisääminen Microsoft Teamsiin | Microsoft Docs
-description: Lisää sovellus Microsoft Teams -kanavaan, jotta ihmiset, joiden kanssa olet jakanut sovelluksen, voivat avata sen kyseisessä kanavassa.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Pikaopas sovelluksen lisäämiseen Microsoft Teamsiin | Microsoft Docs
+description: Tässä pikaoppaassa opit lisäämään sovelluksen Microsoft Teams -kanavaan, jotta ihmiset, joiden kanssa olet jakanut sovelluksen, voivat avata sen kyseisessä kanavassa.
 author: mgblythe
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 01/18/2018
 ms.author: mblythe
-ms.openlocfilehash: 02248cc3e98f256df36bb6a57fac6e66c684a8bf
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: 9c670a61f89b8bf038bae117614895f18101fe0c
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34074126"
 ---
 # <a name="quickstart-add-an-app-to-microsoft-teams"></a>Pikaopas: Sovelluksen lisääminen Microsoft Teamsiin
 

@@ -1,28 +1,22 @@
 ---
 title: Konfiguroi ympäristön turvallisuus | Microsoft Docs
 description: Tässä aiheessa kerrotaan, miten ympäristön tietoturva määritetään.
-services: powerapps
-suite: powerapps
-documentationcenter: na
 author: manasmams
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: f90f7bcdf28388366015a5f5f981e0ab4118f162
-ms.sourcegitcommit: aebffb0bba30e786dd288fb1b79a8bcc4e0bdd9c
+ms.openlocfilehash: d9bd70acaacbbeda98c14337035a233b7c70c181
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168155"
 ---
 # <a name="configure-environment-security"></a>Konfiguroi ympäristön turvallisuus
-Common Data Service käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
+Common Data Service (CDS) for Apps käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
 
 ## <a name="assign-security-roles-to-users"></a>Käyttäjien käyttöoikeusroolien määrittäminen
 Käyttöoikeusroolit hallitsevat erilaisilla käyttöoikeustasoilla ja oikeuksilla, mitä tietoja käyttäjä voi käyttää. Käyttöoikeusroolin käyttöoikeustasojen ja oikeuksien yhdistelmä rajoittaa käyttäjän näkemiä tietoja ja vuorovaikutusta tietojen kanssa.
@@ -58,9 +52,6 @@ Ympäristön järjestelmänvalvoja voi määrittää ympäristön roolin käytt�
 
 7. Päivitä määritykset ympäristön rooliin valitsemalla **OK**.
 
-
-
-
 ## <a name="predefined-security-roles"></a>Ennalta määritetyt käyttöoikeusroolit
 PowerApps-ympäristö sisältää ennalta määritettyjä käyttöoikeusrooleja, jotka pohjautuvat yleisiin käyttäjien tehtäviin. Niiden käyttöoikeustasot on määritetty tietoturvan parhaiden käytäntötavoitteiden mukaisesti tarjoamaan käyttöoikeuden vain niihin liiketoiminnan tietoihin, joita sovelluksen käyttö vaatii.
 
@@ -77,7 +68,6 @@ PowerApps-ympäristö sisältää ennalta määritettyjä käyttöoikeusrooleja,
 - Ympäristön tekijät voivat resurssien luomisen lisäksi jakaa kehittämiään sovelluksia ympäristössä organisaation muille käyttäjille. He voivat jakaa sovelluksia yksittäisten käyttäjien kanssa. Lisätietoja on kohdassa [Sovelluksen jakaminen PowerAppsissa](../maker/canvas-apps/share-app.md).
 
 - Käyttäjille, jotka tekevät tietokantaan yhteydessä olevia sovelluksia ja luovat tai päivittävät entiteettejä ja käyttöoikeusrooleja, on määritettävä sekä järjestelmänmukauttajan että ympäristön tekijän rooli, sillä ympäristön tekijällä ei ole tietokannan käyttöoikeutta.
-
 
 ## <a name="create-or-configure-a-custom-security-role"></a>Mukautetun käyttöoikeusroolin luominen tai määrittäminen
 Jos sovellus perustuu mukautettuun entiteettiin, käyttöoikeudet on määritettävä erikseen, ennen kuin käyttäjät voivat työstää sovellusta. Se voidaan tehdä jollain seuraavista tavoista.

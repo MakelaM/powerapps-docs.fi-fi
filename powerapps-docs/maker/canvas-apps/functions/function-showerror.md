@@ -1,42 +1,51 @@
 ---
 title: ShowError-toiminto | Microsoft Docs
 description: ShowError-toiminnon viitetietoja PowerAppsissa mukaan lukien syntaksi ja esimerkkejä
-services: ''
-suite: powerapps
-documentationcenter: na
 author: gregli-msft
-manager: anneta
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 03/21/2018
+ms.topic: reference
+ms.component: canvas
+ms.date: 06/05/2018
 ms.author: gregli
-ms.openlocfilehash: 7c1d5a8c7b35d316a2720d564977170029e28359
-ms.sourcegitcommit: a9d33322228c398d29964429602dc3fe19fa67d2
+ms.openlocfilehash: 5b75c2cabedba4caf11aa3f922acc0a71ffca377
+ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822531"
 ---
-# <a name="showerror-function-in-powerapps"></a>ShowError-toiminto PowerAppsissa
-Näyttää virheen käyttäjälle.
+# <a name="notify-function-in-powerapps"></a>PowerAppsin Ilmoita-funktio
+Näyttää ilmoitussanoman käyttäjälle.
 
 ## <a name="description"></a>Kuvaus
-**ShowError**-toiminto näyttää virheen käyttäjälle.  Sanomat näkyvät, kun kehität sovellustasi ja kun käyttäjät käyttävät sovellustasi.
+**Ilmoita**-funktio näyttää käyttäjälle ilmoitussanoman näytön yläreunassa parhaillaan näytettävän sisällön päällä.  
 
-**ShowError**-toimintoa voidaan käyttää vain [toimintokaavoissa](../working-with-formulas-in-depth.md).
+Sopivaa väriä ja kuvaketta käytetään sanoman tyypin mukaan.   Funktion toinen argumentti määrittää tyypin:
 
-**ShowError** palauttaa aina arvon *true*.
+| NotificationType-argumentti | Kuvaus |
+| --- | --- |
+| **NotificationType.Error** | Näyttää sanoman virheenä. |
+| **NotificationType.Information** (oletus) | Näyttää sanoman tietona.  |
+| **NotificationType.Success** | Näyttää sanoman onnistumisena. |
+| **NotificationType.Warning** | Näyttää sanoman varoituksena. |
 
-**ShowError** voidaan yhdistää [**IfError**](function-iferror.md)-toiminnon kanssa havaitsemaan virheitä ja ilmoittamaan niistä mukautetulla virhesanomalla.
+Sanomat näkyvät, kun kehität sovellustasi ja kun käyttäjät käyttävät sovellustasi.
+
+**Notify**-funktiota voidaan käyttää vain [toimintokaavoissa](../working-with-formulas-in-depth.md).
+
+**Notify** voidaan yhdistää [**IfError**](function-iferror.md)-funktion kanssa havaitsemaan virheitä ja ilmoittamaan niistä mukautetulla virhesanomalla.
+
+PowerApps voi lähettää myös palveluilmoituksia käyttämällä täysin **Notify**-funktiosta poikkeavaa tapaa.  Lisätietoja on artikkelissa [Ilmoituksen lähettäminen PowerAppsissa](../add-notifications.md).
+
+**Notify** palauttaa aina arvon *true*.
+
+Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError**, kun se pystyi näyttämään vain virhesanomia.
 
 ## <a name="syntax"></a>Syntaksi
-**ShowError**( *Sanoma* )
+**Notify**( *Message*, [ *NotificationType* ] )
 
-* *Sanoma* – Pakollinen.  Sanoma, joka näytetään käyttäjälle. 
+* *Message* – Pakollinen.  Sanoma, joka näytetään käyttäjälle.
+* *NotificationType* – Valinnainen.  Näytettävän sanoman tyyppi edellä olevasta taulukosta.  Oletus on **NotificationType.Information**.  
 
 ## <a name="examples"></a>Esimerkkejä
 
@@ -46,10 +55,40 @@ Näyttää virheen käyttäjälle.
 
 2. Määritä **painikkeen** **OnSelect**-ominaisuudeksi:
 
-    **ShowError (”Hei maailma”)**
+    **Notify( ”Hei maailma” )**
 
 3. Napsauta tai paina painiketta.  
 
-    Aina kun painiketta napsautetaan, käyttäjä näkee sanoman **Hei maailma**.
+    Aina kun painiketta napsautetaan, käyttäjä näkee sanoman **Hei maailma** tietona.
 
-    ![Kehitysympäristö, jossa painike näkyvillä.OnSelect kutsuu ShowError-toimintoa ja tuo näyttöön tuloksena saatavan Hei maailma -sanoman punaisena ilmoitussanomana käyttäjälle](media/function-showerror/hello-world.png)
+    ![Kehitysympäristö, jossa painike näkyvillä.OnSelect kutsuu Notify-funktiota ja tuo näyttöön tuloksena saatavan Hei maailma -sanoman sinisenä ilmoitussanomana käyttäjälle](media/function-showerror/hello-world.png)
+
+4. Muuta sanoman tyyppi ilmoittamaan virheestä.  Lisää toinen argumentti kaavaan:
+
+    **Notify( ”Hei maailma”, NotificationType.Error )**
+
+5. Napsauta tai paina painiketta.
+
+    Aina kun painiketta napsautetaan, käyttäjä näkee nyt sanoman **Hei maailma** virheenä.
+
+    ![Kehitysympäristö, jossa painike näkyvillä.OnSelect kutsuu Notify-funktiota ja tuo näyttöön tuloksena saatavan Hei maailma -sanoman punaisena ilmoitussanomana käyttäjälle](media/function-showerror/hello-world-error.png)
+
+4. Muuta sanoman tyyppi antamaan varoituksen.  Muuta toista argumenttia kaavassa:
+
+    **Notify( ”Hei maailma”, NotificationType.Warning )**
+
+5. Napsauta tai paina painiketta.
+
+    Aina kun painiketta napsautetaan, käyttäjä näkee nyt sanoman **Hei maailma** varoituksena.
+
+    ![Kehitysympäristö, jossa painike näkyvillä.OnSelect kutsuu Notify-funktiota ja tuo näyttöön tuloksena saatavan Hei maailma -sanoman oranssina ilmoitussanomana käyttäjälle](media/function-showerror/hello-world-warning.png)
+
+4. Muuta sanoman tyyppi ilmoittamaan onnistumisesta.  Muuta toista argumenttia kaavassa:
+
+    **Notify( ”Hei maailma”, NotificationType.Success )**
+
+5. Napsauta tai paina painiketta.
+
+    Aina kun painiketta napsautetaan, käyttäjä näkee nyt sanoman **Hei maailma** onnistumisena.
+
+    ![Kehitysympäristö, jossa painike näkyvillä.OnSelect kutsuu Notify-funktiota ja tuo näyttöön tuloksena saatavan Hei maailma -sanoman vihreänä ilmoitussanomana käyttäjälle](media/function-showerror/hello-world-success.png)

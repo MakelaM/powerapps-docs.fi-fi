@@ -1,43 +1,46 @@
 ---
-title: PowerAppsin uudet ominaisuudet | Microsoft Docs
+title: Uudet ominaisuudet | Microsoft Docs
 description: PowerApps-päivitykset järjestettynä julkaisupäivän mukaan
 documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
-ms.date: 04/23/2018
-ms.author: sharik
-ms.openlocfilehash: 00b80bd5b9e0953366dd58d6e3b3266ffe7956bd
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.date: 05/21/2018
+ms.author: anneta
+ms.openlocfilehash: ef4360dda5d4003ff91389af78958052bbb1e052
+ms.sourcegitcommit: 68e2c696397f3002dd14e72a4c2054a603a5e2d7
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "34851703"
 ---
 # <a name="whats-new-in-powerapps"></a>PowerAppsin uudet ominaisuudet
-Lisätietoja tunnetuista rajoituksista on artikkelissa [Yleisiä ongelmia ja ratkaisuja](common-issues-and-resolutions.md).
+> [!IMPORTANT]
+> **Julkaisutietojen esittely**<br>
+> Etsitkö tietoa äskettäin julkaistuista tai tulevista PowerAppsin ominaisuuksista?<br>
+[Näytä julkaisutiedot](https://docs.microsoft.com/en-us/business-applications-release-notes/april18/powerapps/overview). Olemme keränneet kaikki yksityiskohdat, päästä päähän, ylhäältä alas, joita voit käyttää suunnitteluun.
 
+Lisätietoja tunnetuista rajoituksista on artikkelissa [Yleisiä ongelmia ja ratkaisuja](common-issues-and-resolutions.md).
 
 > [!NOTE]
 > Julkaisut annetaan tiedoksi muutaman päivän kuluessa. Uudet tai päivitetyt toiminnot eivät ehkä näy heti.
 
-## <a name="announcing-the-business-applications-spring-18-release-notes"></a>Esittelyssä Business Applications -sovellusten kevään 2018 julkaisutiedot
+## <a name="may-30"></a>Toukokuun 30.
+1. [RTF-editorin ohjausobjekti](controls/control-richtexteditor.md)(kokeellinen) - sallii käyttäjien muotoilla tekstiä WYSIWYG-muokkausalueen sisällä. 
 
-Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusia ominaisuuksia omien sovellusten ja laajennusten kehittämistä varten ympäristössämme. [Lataa kevään 2018 julkaisutiedot-PDF](https://aka.ms/businessappsreleasenotes), joka kattaa Dynamics 365:n, PowerAppsin, Microsoft Flow'n ja Power BI:n.
+## <a name="may-21"></a>Toukokuun 21.
+1. Sovelluksen käyttäjät voivat tuoda ja viedä tietoja Excelistä tai paikallisesti tallennetuista CSV-tiedostoista käyttäen **Nouda tiedot Excel-tiedostosta** ja **Vie tiedot** -ominaisuuksia, jotka ovat nyt saatavilla päivitettyihin Common Data Service (CDS) for Apps -ympäristöihin. 
+1. Sovelluksen käyttäjät voivat [avata entiteettejä Excelissä](../common-data-service/data-platform-excel-addin.md) luodakseen, päivittääkseen ja poistaakseen CDS for Apps:iin tallennettuja tietoja käyttämällä PowerAppsin Excel-apuohjelmaa. 
+1. [Luo ja julkaise Power BI -raportteja](../common-data-service/data-platform-powerbi-connector.md) CDS for Appsiin yhdistettyä Power BI Desktopia käyttämällä. 
 
-**Tulossa pian:** Jatkamme julkaisutietojen PDF-tiedostojen päivittämistä sitä mukaa, kun ominaisuudet ovat saatavilla, ja tarjoamme tiedot myös verkkosivullamme.
-
-## <a name="apr-23"></a>23. huhti
+## <a name="april-23"></a>Huhtikuun 23.
 * Lataa [liitteet](controls/control-attachments.md) Internet Explorerissa SharePointin mukautetuissa luettelolomakkeissa.
 
-## <a name="apr-9"></a>9. huhti
+## <a name="april-9"></a>Huhtikuun 9.
 * Leikkaa (Ctrl + X), kopioi (Ctrl + C) ja liitä (Ctrl + V) komentoja&mdash;, mukaan lukien niiden tyylejä, kaavoja ja ominaisuuksia &mdash;kaikkiin sovelluksiin selaimessa.
 
-## <a name="mar-21"></a>21. maaliskuuta
+## <a name="march-21"></a>Maaliskuun 21.
 1. Laadi [mallipohjaisia sovelluksia](../model-driven-apps/model-driven-app-overview.md), joiden lähtökohta on oman organisaatiosi tietomallissa. Sovellus kehitetään keskeisten liiketoimintatietojenne ja -prosessienne perusteella Common Data Service for Appsissa, ja sitä käytetään lomakkeiden, näkymien ja muiden osien mallintamiseen. Mallipohjaiset sovellukset luovat automaattisesti erinomaisen, kaikkiin laitteisiin sopivan käyttöliittymän.
 2. [Luo tietokanta](../../administrator/create-database.md) CDS for Appsin uusimmalla versiolla.
 3. CDS for Apps sisältää nyt:
@@ -49,7 +52,7 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
     - Kehittyneet käyttäjät voivat käyttää CDS for Appsiin tallennettuja tietoja uuden **OData Web API**:n kautta.
     - [Tuo tietoja](../common-data-service/data-platform-cds-newentity-pq.md) CDS for Appsiin **Power Querylla**. Käytä Power Queryä verkossa tietojen tuomiseen suoraan CDS for Appsiin useista lähteistä
 
-## <a name="mar-5"></a>5. maaliskuuta
+## <a name="march-5"></a>Maaliskuun 5.
 1. Lisää [liitteitä](controls/control-attachments.md) SharePoint-luetteloihin (ja poista niitä).
 2. Avaa ulkoisia [PDF](controls/control-pdf-viewer.md)-tiedostoja selaimessa. (Kokeellinen ominaisuus)
 
@@ -73,15 +76,3 @@ Tutustu Microsoftin yrityssovellusten uusimpiin päivityksiin ja kokoelmaan uusi
 
 ## <a name="jan-5"></a>5. tammikuuta
 * Toimi suoraan Power BI -raportin tai koontinäytön tietojen perusteella integroimalla [PowerAppsin mukautettu visualisointi (esikatseluversio)](https://powerapps.microsoft.com/blog/powerbi-powerapps-visual/), joka hakee tilannekohtaisia tietoja Power BI -raportista.
-
-## <a name="dec-8"></a>8. joulukuuta
-1. [Ehtomallit](working-with-rules.md) sääntöjä varten päättelevät ohjausobjektin yleisiä ominaisuuksia (kuten **teksti** tai **arvo**).
-2. Lopeta [**toimintojen määrittämisen** vahvistusikkunan näyttäminen](working-with-rules.md) määritettäessä sääntöjen toimintoja.
-
-## <a name="nov-13"></a>13. marraskuuta
-1. Valitse samaan kenttään useita arvoja SharePoint-luetteloissa.
-2. [Tarkastele ja lataa liitteitä](controls/control-attachments.md) SharePoint-luetteloissa.
-3. [Mukauta SharePoint-luettelolomakkeita](customize-list-form.md) PowerAppsin avulla.
-
-## <a name="nov-10"></a>10. marraskuuta
-* [Nimeä sääntöjä uudelleen](working-with-rules.md) sovelluksessa ja näytä säännöt, kun valittu ohjausobjekti on säännön ehto.

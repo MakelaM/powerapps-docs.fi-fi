@@ -1,25 +1,18 @@
 ---
 title: Organisaatiossa luotujen sovellusten hallinta | Microsoft Docs
-description: Vaiheittaiset ohjeet organisaatiossasi luotujen sovellusten hallintaan
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: Ohjeet organisaatiossasi luotujen PowerApps-sovellusten hallintaan
+author: jimholtz
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: 307951163c4291ff29d8fe0bdec9237e0bbbe0e4
-ms.sourcegitcommit: c5e3991e0e4e9f22a1e094d699f35adabfb97c6c
+ms.author: jimh
+ms.openlocfilehash: 8ef92fec0245bbe27529be0acb214cad7d2b928e
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552549"
 ---
 # <a name="manage-apps-created-in-your-organization"></a>Organisaatiossa luotujen sovellusten hallinta
 Jos olet ympäristön järjestelmänvalvoja, 365:n yleinen järjestelmänvalvoja tai Azure Active Directory -vuokraajan järjestelmänvalvoja, voit tarkastella organisaatiossasi luotuja sovelluksia.
@@ -34,7 +27,7 @@ Järjestelmänvalvojien käytössä on seuraavat PowerApps-hallintakeskuksen toi
 * PowerApps-ympäristön järjestelmänvalvojan, Office 365:n yleisen järjestelmänvalvojan tai Azure Active Directory vuokraajan järjestelmänvalvojan oikeudet. Lisätietoja on kohdassa [Ympäristöjen hallinta PowerAppsissa](environments-administration.md).
 
 ## <a name="manage-an-app"></a>Sovelluksen hallinta
-1. Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com]([https://admin.powerapps.com).
+1. Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com](https://admin.powerapps.com).
 2. Valitse siirtymisruudussa **Ympäristöt** ja napsauta tai napauta sitten ympäristöä, jossa hallittava sovellus on.
 
     Jos et näe siirtymisruudussa kohtaa **Ympäristöt**, sinulla ei ole Powerappsin palvelupakettia 2, Microsoft Flow -palvelupakettia 2 tai PowerAppsin palvelupaketin 2 kokeiluversion käyttöoikeutta.

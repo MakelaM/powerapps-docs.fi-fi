@@ -1,29 +1,25 @@
 ---
-title: Pikaopas entiteettien suhteisiin hakukentän kautta | Microsoft Docs
-description: Pikaopas suhteen luomiseen entiteettien välille käyttämällä hakukenttää
-documentationcenter: na
+title: Suhteen luominen entiteettien välille käyttämällä hakukenttää | Microsoft Docs
+description: Vaiheittaiset ohjeet entiteettien välisen suhteen luomiseen PowerAppsissa käyttämällä hakukenttää.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
 ms.component: cds
-ms.date: 3/21/2018
+ms.topic: conceptual
+ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: a607058d1e26f37a4bffa054d9dc148be8b6b011
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: f1952c2349eb54f2c6348f5abc4dee9a4645348a
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168431"
 ---
-# <a name="quickstart-create-a-relationship"></a>Pikaopas: Luo suhde
+# <a name="create-a-relationship-between-entities"></a>Luo entiteettien välinen suhde
 Yhden entiteetin tiedot liittyvät usein toiseen entiteettiin. Käytössäsi voi olla esimerkiksi **opettajien** entiteetti ja **luokan** entiteetti. **Luokan** entiteetissä saattaa olla hakusuhde **opettajien** entiteettiin näyttämään, kuka opettaja opettaa luokkaa. Voit käyttää hakukenttää näyttämään tietoja **opettajien** entiteetistä. Tätä kutsutaan yleisesti hakukentäksi.
 
 ## <a name="define-a-relationship"></a>Määritä suhde
 Voit luoda erityyppisiä suhteita yhdestä entiteetistä toiseen (tai entiteetin ja itsensä välille). Jokaisella entiteetillä voi olla suhde yhteen tai useampaan entiteettiin ja useampia suhteita toiseen entiteettiin. Yleisiä suhdetyyppejä ovat:
-
 
 * **Monesta yhteen** – Tässä suhdetyypissä jokainen tietue entiteetissä A voi vastata useampaa kuin yhtä tietuetta entiteetissä B, mutta jokainen tietue entiteetissä B voi vastata vain yhtä tietuetta entiteetissä A. Esimerkiksi luokalla on yksi luokkahuone. Tämä on yleisin suhdetyyppi, ja se näkyy kenttäluettelossa nimellä **hakukenttä**
 * **Yhdestä moneen** – Tässä suhdetyypissä jokainen tietue entiteetissä B voi vastata useampaa kuin yhtä tietuetta entiteetissä A, mutta jokainen tietue entiteetissä A voi vastata vain yhtä tietuetta entiteetissä B. Esimerkiksi yksi opettaja opettaa montaa luokkaa.
@@ -89,5 +85,5 @@ Jos [luot sovelluksen automaattisesti](../canvas-apps/data-platform-create-app.m
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * [Sovelluksen luominen käyttämällä Common Data Service -tietokantaa](../canvas-apps/data-platform-create-app.md)
-* [Sovelluksen luominen alusta alkaen käyttämällä Common Data Service -tietokantaa](../canvas-apps/data-platform-create-app-scratch.md)
+* [Sovelluksen luominen alusta alkaen Common Data Service -tietokannan avulla](../canvas-apps/data-platform-create-app-scratch.md)
 

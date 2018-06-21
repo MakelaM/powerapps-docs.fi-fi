@@ -1,25 +1,19 @@
 ---
 title: Yleiskatsaus käyttöoikeuksiin | Microsoft Docs
-description: Microsoft PowerApps -käyttöoikeuksien yleiskatsaus.
-services: ''
-suite: powerapps
-documentationcenter: na
+description: Yleiskatsaus käyttöoikeuksiin PowerAppsissa.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: jamesol
-ms.openlocfilehash: 5fb57b7e790d22a4b055b073c7d60e1d65a69b81
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 03aa8fc5254529a337f7bbdf40428ab4a1042a92
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168109"
 ---
 # <a name="licensing-overview"></a>Käyttöoikeuksien yleiskatsaus
 PowerAppsin käyttöoikeudet myönnetään käyttäjäkohtaisesti. Jokainen käyttäjä, joka luo tai suorittaa sovelluksia palvelun avulla, tarvitsee käyttöoikeuden. Office 365- ja Dynamics 365 -asiakkaat hyötyvät heti PowerApps- ja Microsoft Flow -ominaisuuksista, jotka sisältyvät näihin palveluihin. Asiakkaat, jotka haluavat kehittää sovelluksia ja työnkulkuja, jotka käyttävät Office 365:n ja Dynamics 365:n ulkopuolisia tietolähteitä tai tarvitsevat lisätoimintoja, voivat ostaa erilliset PowerApps- ja Microsoft Flow -tilaukset. Näiden eri käyttöoikeusryhmien välillä on merkittäviä eroja.
@@ -63,7 +57,7 @@ PowerApps sisältyy Office 365 Enterprise F1:een. Sen avulla käyttäjät voivat
 | **Hallinta** | |
 | Tukee tietokäytäntöjä, jotka Office 365:n järjestelmänvalvoja muodostaa |Kyllä |
 | Työtovereiden lisääminen ympäristön tekijöiksi ja järjestelmänvalvojiksi |Ei |
-| Työtovereiden lisääminen tietokantarooleihin |Ei |
+| Lisää työtovereita tietokantarooleihin |Ei |
 | Ympäristöjen tietokäytäntöjen muodostaminen |Ei |
 
 ### <a name="powerapps-standalone-plan-1-and-plan-2"></a>Erillinen PowerApps-palvelupaketti 1 ja 2

@@ -1,32 +1,25 @@
 ---
-title: PowerShell-tuki | Microsoft Docs
-description: Powershell-cmdlet-komentojen kuvaus ja niiden asennus- ja suoritusohjeet
-services: powerapps
-suite: powerapps
-documentationcenter: na
+title: PowerShell-tuki (esikatselu) | Microsoft Docs
+description: Powershell-cmdlet-komentojen kuvaus ja niiden asennus- ja suoritusohjeet.
 author: jamesol-msft
 manager: kfile
-editor: ''
-tags: ''
-ms-topic: article
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
-ms.date: 04/23/2018
+ms.component: pa-admin
+ms.topic: reference
+ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 69508b2127c5c919db4a334045c6eed3bb9374af
-ms.sourcegitcommit: 0a781b50a8551f2e61c22725ef1c43ba4fdf752a
+ms.openlocfilehash: 788f9ec1ce1ac8604606d2d2ad836a0cd12360d4
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34552986"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerAppsin PowerShell-tuki (esiversio)
 Sovellusten tekijöille ja järjestelmänvalvojille tarkoitetulla PowerShell-cmdlet-komentojen esiversiolla voit automatisoida monia seuranta- ja hallintatehtäviä, jotka on tällä hetkellä mahdollista suorittaa vain manuaalisesti [PowerAppsissa](https://web.powerapps.com) tai [PowerApps-hallintakeskuksessa](https://admin.powerapps.com).
 
 ## <a name="installation"></a>Asennus
-Suorita sovellusten tekijöille tarkoitetut PowerShell-cmdlet-komennot seuraavasti:
+Suorita sovellusten luojille tarkoitetut PowerShell-cmdlet-komennot seuraavasti:
 
 1. Lataa[PowerShell-komentosarjatiedosto](https://go.microsoft.com/fwlink/?linkid=872358).
 
@@ -47,19 +40,19 @@ Suorita sovellusten tekijöille tarkoitetut PowerShell-cmdlet-komennot seuraavas
     Import-Module .\Microsoft.PowerApps.PowerShell.psm1 -Force
     ```
 
-6. Ennen minkään komennon käyttöä sinun on annettava tunnistetietosi seuraavan komennon avulla. Näitä tunnistetietoja päivitetään enintään noin 8 tuntia, ennen kuin sinua pyydetään kirjautumaan sisään uudelleen cmdlet-komentojen käytön jatkamista varten.
+6.  Järjestelmässä on tällä hetkellä [tunnettu ongelma](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036), joka saattaa vaatia sinua poistamaan manuaalisesti PowerShell-tiedostojen eston käyttämällä seuraavaa komentoa:
+
+    ```
+    dir . | Unblock-File
+    ```
+7. Ennen minkään komennon käyttöä sinun on annettava tunnistetietosi seuraavan komennon avulla. Näitä tunnistetietoja päivitetään enintään noin 8 tuntia, ennen kuin sinua pyydetään kirjautumaan sisään uudelleen cmdlet-komentojen käytön jatkamista varten.
 
     ```
     Add-PowerAppsAccount
     ```
 
-7.  Järjestelmässä on tällä hetkellä [tunnettu ongelma](https://powerusers.microsoft.com/t5/Administering-PowerApps/Getting-errors-when-I-try-to-import-the-preview-powerapps/td-p/109036), joka saattaa vaatia sinua poistamaan manuaalisesti PowerShell-tiedostojen eston käyttämällä seuraavaa komentoa:
 
-    ```
-    dir . | Unblock-File
-    ```
-
-## <a name="powerapps-cmdlets-for-app-makers-preview"></a>PowerApps cmdlet-komennot sovellusten tekijöille (esiversio)
+## <a name="powerapps-cmdlets-for-app-creators-preview"></a>PowerAppsin cmdlet-komennot sovellusten luojille (esiversio)
 
 ### <a name="prerequisite"></a>Edellytys
 Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa toiminnot näissä cmdlet-komennoissa, mutta heillä on käytettävissään vain ne resurssit (esimerkiksi sovellukset, työnkulut jne.), jotka on luotu tai jaettu heidän kanssaan.
@@ -77,6 +70,7 @@ Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa t
 | Yhteyden käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-ConnectionRoleAssignment <br> Set-ConnectionRoleAssignment <br> Remove-ConnectionRoleAssignment
 | Yhdistimien lukeminen ja poistaminen | Get-Connector <br> Remove-Connector
 | Mukautettujen yhdistimien käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-ConnectorRoleAssignment <br> Set-ConnectorRoleAssignment <br> Remove-ConnectorRoleAssignment
+
 
 > [!NOTE]
 > Käytä seuraavia komentoja syntaksin ymmärtämiseen ja kunkin cmdlet-komennon esimerkkien tarkasteluun:
@@ -103,6 +97,13 @@ Jotta voit suorittaa järjestelmänvalvojan cmdlet-komentojen hallintatoimia, si
 | Kaaviosovellusten lukeminen ja poistaminen | Get-AdminApp <br> Remove-AdminApp
 | Kaaviosovelluksen käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
 | Työnkulkujen lukeminen, päivittäminen ja poistaminen | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
+| Yhteyksien lukeminen ja poistaminen | Get-AdminConnection <br> Remove-AdminConnection
+| Yhteyden käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
+| Mukautettujen liittimien lukeminen ja poistaminen | Get-AdminConnector <br> Remove-AdminConnector
+| Mukautettujen yhdistimien käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-AdminConnectorRoleAssignment <br> Set-AdminConnectorRoleAssignment <br> Remove-AdminConnectorRoleAssignment
+| PowerAppsin käyttäjäasetusten, käyttäjäsovelluksen asetusten ja ilmoitusten lukeminen | Get-AdminPowerAppsUserDetails
+| Sellaisten käyttäjän Microsoft Flow -asetusten lukeminen ja poistaminen, jotka eivät näy käyttäjälle, mutta jotka tukevat työnkulun suorittamista | Get-AdminFlowUserDetails <br> Remove-AdminFlowUserDetails
+| Tietojen menetyksen estämiskäytäntöjen luominen, lukeminen, päivittäminen ja poistaminen organisaatiossasi | Get-AdminApiPolicy <br> Add-AdminApiPolicy <br> Remove-AdminApiPolicy <br> Set-AdminApiPolicy <br> Add-ConnectorToBusinessDataGroup <br>  Remove-ConnectorFromBusinessDataGroup
 
 > [!NOTE]
 > Käytä seuraavia komentoja syntaksin ymmärtämiseen ja kunkin cmdlet-komennon esimerkkien tarkasteluun:

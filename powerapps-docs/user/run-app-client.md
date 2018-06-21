@@ -1,25 +1,18 @@
 ---
 title: Pikaopas pohjaan perustuvan sovelluksen suorittamiseen mobiililaitteessa | Microsoft Docs
-description: Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa
-services: powerapps
-suite: powerapps
-documentationcenter: na
-author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+description: Tässä pikaoppaassa opit suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa.
+author: Mattp123
 ms.service: powerapps
-ms.devlang: na
+ms.component: pa-user
 ms.topic: quickstart
-ms.tgt_pltfrm: na
-ms.workload: na
 ms.date: 03/21/2018
-ms.author: sharik
-ms.openlocfilehash: 555a33460109fdb1edc054cd58cb5e6f88126935
-ms.sourcegitcommit: d7ed5144f96d1ecc17084c30ed0e2ba3c6b03c26
+ms.author: matp
+ms.openlocfilehash: 55fd0bb164fcbb552db68fb89d77c7a7d0807cdc
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553032"
 ---
 # <a name="quickstart-run-a-canvas-app-on-a-mobile-device"></a>Pikaopas: Suorita pohjaan perustuva sovellus mobiililaitteessa
 Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa. Sovellukset, jotka toimivat mobiililaitteessa, voivat hyödyntää laitteen ominaisuuksia, kuten sijaintipalveluja ja kameraa.

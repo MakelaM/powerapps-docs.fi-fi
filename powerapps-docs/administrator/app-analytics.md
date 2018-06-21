@@ -1,25 +1,19 @@
 ---
-title: Sovellusanalytiikka | Microsoft Docs
-description: Voit tarkastella raportteja sovelluksesi käytöstä ja suorituskyvystä.
-services: ''
-suite: powerapps
-documentationcenter: na
+title: Sovelluksesi analytiikkaraporttien tarkastelu | Microsoft Docs
+description: Voit tarkastella raportteja PowerApps-sovellustesi käytöstä ja suorituskyvystä.
 author: jamesol-msft
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 08/29/2017
 ms.author: jamesol
-ms.openlocfilehash: e66978f6134919b18f4cfba913f1bb34394d8832
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: ba4b518cdc1b965a26a7e3fc3722dd23d601e693
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168201"
 ---
 # <a name="view-analytics-reports-for-your-app"></a>Sovelluksesi analytiikkaraporttien tarkastelu
 Oletko rakentanut sovelluksen ja jakanut sen organisaatiossasi?  Haluatko tietää, kuinka moni työtoverisi käyttää sovellusta päivittäin?
@@ -30,7 +24,7 @@ Sovelluksen käyttöraportin avulla voit seurata, kuinka moni on käyttänyt sov
 
 ![Sovelluksen käyttöraportti](./media/app-analytics/analytics.png)
 
-## <a name="how-do-i-get-access-to-my-apps-reports"></a>Kuinka voin avata sovellukseni raportit?
+## <a name="how-do-i-get-access-to-my-apps-reports"></a>Kuinka voin tarkastella sovellukseni raportteja?
 Kaikki raportit ovat saatavilla kaikille käyttäjille, joilla on sovellukseen muokkausoikeus, mutta käyttäjällä täytyy olla PowerAppsin palvelupaketti 2 tai PowerAppsin palvelupaketin 2 kokeilukäyttöoikeus.
 
 ## <a name="where-do-i-find-my-apps-reports"></a>Mistä löydän sovellukseni raportit?

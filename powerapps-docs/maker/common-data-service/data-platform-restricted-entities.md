@@ -1,22 +1,19 @@
 ---
 title: Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia | Microsoft Docs
-description: Lista Common Data Service for Appsin sisältämistä rajoitetuista entiteeteistä, jotka vaativat Dynamics 365 -käyttöoikeuksia.
-documentationcenter: na
+description: Luettelo Common Data Service (CDS) for Appsin sisältämistä rajoitetuista entiteeteistä, jotka edellyttävät Dynamics 365 -käyttöoikeuksia.
 author: clwesene
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
-ms.topic: reference
 ms.component: cds
+ms.topic: reference
 ms.date: 05/01/2018
 ms.author: clwesene
-ms.openlocfilehash: 508f58b48f2dd51bf25f23905cc3513db90ed1ce
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 79b6e386154b15ae6c625afbebbed18a8a86c420
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34167994"
 ---
 # <a name="restricted-entities-requiring-dynamics-365-licenses"></a>Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia
 Sovellusten tekijät voivat käyttää useimpia Common Data Service (CDC) for Appsin sisältämiä entiteettejä sovellusten ja työnkulkujen luomiseen käyttäjille, joilla on pelkästään PowerApps Plan 1 -käyttöoikeus. Jotkin entiteetit sisältävät kuitenkin monitasoista liiketoimintalogiikkaa, joka vaatii sovellusten käyttäjiltä PowerApps Plan 2- tai Microsoft Flow Plan 2 -käyttöoikeudet (katso lisätietoja kohdasta [Entiteettien käyttöoikeusvaatimukset](data-platform-entity-licenses.md)). Vielä pienempi joukko Dynamics 365 -tuotteisiin sidottuja entiteettejä vaatii pohjaan ja malliin perustuvien sovellusten käyttäjiltä vastaavan Dynamics 365 -tuotteen käyttöoikeuden, jos heidän täytyy luoda, päivittää tai poistaa tietueita entiteettien sisältä. Näitä kutsutaan *rajoitetuiksi* entiteeteiksi.

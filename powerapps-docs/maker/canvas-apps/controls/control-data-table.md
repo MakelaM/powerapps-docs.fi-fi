@@ -1,24 +1,23 @@
 ---
 title: 'Tietotaulukko-ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietotaulukko-ohjausobjektin ominaisuudet ja joitakin esimerkkejä
-services: powerapps
 documentationcenter: na
 author: jasongre
-manager: kfend
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: reference
+ms.component: canvas
 ms.date: 06/05/2017
 ms.author: kfend
-ms.openlocfilehash: 431fb0233fa58d59a62a9d5d2cf07bfdd23d6271
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.openlocfilehash: aa6e778a1c0426c696aaf48c542eccc4887c0e36
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "31836243"
 ---
 # <a name="data-table-control-in-powerapps"></a>Tietotaulukko-ohjausobjekti PowerAppsissa
 Näyttää tietojoukon taulukkomuodossa.
@@ -145,3 +144,16 @@ PowerAppsin **Tietotaulukko**-ohjausobjekti otettiin käyttöön 5.5.2017. Täss
    
     ![Tietotaulukkoon yhdistetty muokkauslomake](./media/control-data-table/connected-form-data-table.png)
 
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="color-contrast"></a>Värikontrasti
+Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+* [**Color**](properties-color-border.md) ja [**Fill**](properties-color-border.md)
+* **HeadingColor** ja **HeadingFill**
+* **SelectedColor** ja **SelectedFill**
+* [**HoverColor**](properties-color-border.md)-väri ja [**HoverFill**](properties-color-border.md)-täyttö
+
+Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-color.md).
+
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **NoDataText** on oltava käytössä.

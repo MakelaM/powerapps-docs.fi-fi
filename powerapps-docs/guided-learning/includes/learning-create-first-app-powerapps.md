@@ -1,11 +1,9 @@
 Nyt tunnet kaikki PowerAppsin osat ja sovellusten luomisen vaihtoehdot, joten on aika rakentaa sovellus. Tässä aiheessa luomme puhelinsovelluksen SharePoint Online -luettelosta, mutta voit käyttää tietoja useista eri lähteistä, kuten Excel, pilvitallennuspalvelut kuten Salesforce ja paikalliset lähteet kuten SQL Server.
 
 ## <a name="connect-to-a-data-source"></a>Yhdistäminen tietolähteeseen
-Ensimmäinen vaihe sovelluksen luomiseksi tietojen pohjalta on valita PowerApps Studion käytettävä versio ja sitten luoda yhteys tietolähteeseen. Napsauta tai napauta osoitteessa web.powerapps.com kohtaa **Uusi sovellus** ja valitse, käytetäänkö PowerApps Studion Windows- vai verkkoversiota.
+Valitse web.powerapps.com-sivustossa **Sovellukset** lähellä vasenta reunaa ja valitse sitten **Luo sovellus** palkista.
 
-![Aloittaminen osoitteessa web.powerapps.com](./media/learning-create-first-app-powerapps/generate-choose-studio.png)
-
-PowerApps Studiossa voit valita aloittamisen tietojen tai mallipohjan pohjalta tai alusta alkaen. Rakennamme puhelinsovelluksen SharePoint-luettelosta, joten napsauta tai napauta **SharePoint**-kohdan alta **Puhelinasettelu**.
+PowerAppsissa voit luoda sovelluksen tiedoista, mallista tai alusta alkaen. Rakennamme puhelinsovelluksen SharePoint-luettelosta, joten napsauta tai napauta **SharePoint**-kohdan alta **Puhelinasettelu**.
 
 ![Puhelinsovellus SharePoint-luettelosta](./media/learning-create-first-app-powerapps/generate-sharepoint-phone.png)
 

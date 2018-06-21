@@ -1,25 +1,19 @@
 ---
 title: PowerAppsin ostaminen organisaatiollesi | Microsoft Docs
-description: Näiden ohjeiden avulla voit rekisteröityä PowerAppsiin järjestelmänvalvojana.
-services: powerapps
-suite: powerapps
-documentationcenter: na
+description: Ohjeet PowerAppsiin rekisteröitymiseen järjestelmänvalvojana.
 author: manasmams
-manager: anneta
-editor: ''
-tags: ''
+manager: kfile
 ms.service: powerapps
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.component: pa-admin
+ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 43d39abbd78723202efd756edf6d070724e3157e
-ms.sourcegitcommit: 078ba325480147e6e4da61e319ed53219f1c5cfc
+ms.openlocfilehash: 4b26c16259a7699f1178641ead8c1b5908106468
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34168500"
 ---
 # <a name="purchase-powerapps-for-your-organization"></a>PowerAppsin ostaminen organisaatiollesi
 Tässä artikkelissa kerrotaan, miten voit ostaa PowerAppsin organisaatiollesi järjestelmänvalvojana. Voit ostaa PowerAppsin suoraan PowerApps-sivustolta Office 365 -hallintakeskuksen kautta tai Microsoft-edustajaltasi tai -kumppaniltasi. Tässä artikkelissa käsitellään PowerAppsin kokeiluvaihtoehtoja, joita on saatavilla PowerAppsin palvelupakettia 1 tai palvelupakettia 2 varten, sekä kerrotaan, miten PowerAppsin palvelupaketin 1 tai palvelupaketin 2 voi ostaa organisaationa. Lisätietoja on kohdassa [PowerApps organisaatiossasi, kysymyksiä ja vastauksia](signup-question-and-answer.md).
@@ -53,7 +47,7 @@ Voit ostaa PowerApps-tilauksia organisaatiollesi [Office 365 -hallintakeskuksen 
 
 
 ### <a name="purchase-a-subscription-trial"></a>Kokeiluversion tilaaminen
-1. Selaa [Office 365 -hallintakeskukseen][6].
+1. Siirry [Office 365 -hallintakeskukseen][6].
 
 2. Valitse vasemmalla olevassa siirtymisruudussa **Laskutus -> Tilaukset**.
 
@@ -68,13 +62,13 @@ Voit ostaa PowerApps-tilauksia organisaatiollesi [Office 365 -hallintakeskuksen 
     Kohdassa **Laskutus -> Tilaukset** näet **Microsoft PowerAppsin palvelupaketin 1 kokeiluversion** tai **Microsoft PowerAppsin palvelupaketin 2 kokeiluversion** sekä luettelon 100:sta saatavilla olevasta lisenssistä. Ilmainen kokeilu kestää 90 päivää.
 
 ### <a name="purchase-a-subscription"></a>Kokeiluversion tilaaminen
-1. Selaa [Office 365 -hallintakeskukseen][6].
+1. Siirry [Office 365 -hallintakeskukseen][6].
 
 2. Valitse vasemmalla olevassa siirtymisruudussa **Laskutus -> Tilaukset**.
 
 3. Valitse oikealla puolella **+ Lisää tilauksia**.
 
-4. Liikuta **Muut palvelupaketit** -kohdassa hiiren osoitinta kolmen pisteen (...) päällä haluamasi palvelupaketin osalta ja valitse **Osta nyt**.
+4. Liikuta **Muut palvelupaketit** -kohdassa hiiren osoitin haluamasi palvelupaketin kolmen pisteen (...) päälle ja valitse **Osta nyt**.
 
     ![](./media/signup-for-powerapps-admin/admin-purchase-paid.png)
 
@@ -86,7 +80,7 @@ Voit ostaa PowerApps-tilauksia organisaatiollesi [Office 365 -hallintakeskuksen 
 
 6. Anna tarvittavat tiedot uloskuittaus-työnkulkuun.
 
-    Kohdassa **Laskutus -> Tilaukset** näet luetteloituina **Microsoft PowerAppsin palvelupaketin 1**  tai **Microsoft PowerAppsin palvelupaketin 2** . Jos haluat myöhemmin lisätä uusia lisenssejä, palaa takaisin **Lisää tilauksia** -kohtaan ja valitse sitten **Muuta lisenssien määrää**.
+    Kohdassa **Laskutus -> Tilaukset** näet luetteloituina **Microsoft PowerAppsin palvelupaketin 1** tai **Microsoft PowerAppsin palvelupaketin 2**. Jos haluat myöhemmin lisätä uusia lisenssejä, palaa takaisin **Lisää tilauksia** -kohtaan ja valitse sitten **Muuta lisenssien määrää**.
 
 ## <a name="add-ons"></a>Lisäosat
 Näitä ei vielä tueta.

@@ -1,25 +1,23 @@
 ---
 title: Tutustu paikallisiin tietoyhdyskäytäviin | Microsoft Docs
 description: Paikallisten tietoyhdyskäytävien viitetietoja, kuten asennus ja vianmääritys
-services: ''
-suite: powerapps
 documentationcenter: na
-author: skjerland
-manager: anneta
+author: aftowen
+manager: kfile
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.workload: na
+ms.topic: conceptual
+ms.component: canvas
 ms.date: 10/20/2017
-ms.author: sharik
-ms.openlocfilehash: 1b17c7007ad87fa2a1801473a977fd8ec94ffdea
-ms.sourcegitcommit: 59785e9e82da8f5bd459dcb5da3d5c18064b0899
+ms.author: anneta
+ms.openlocfilehash: 2c754fa8e479494ae1002e5339d2d8d5eeb2480f
+ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "32330441"
 ---
 # <a name="understand-on-premises-data-gateways-for-microsoft-powerapps"></a>Tutustu Microsoft PowerAppsin paikallisiin tietoyhdyskäytäviin
 ## <a name="installation-and-configuration"></a>Asennus ja määritys
@@ -141,6 +139,10 @@ Paikallinen tietoyhdyskäytävä on määritetty käyttämään *NT SERVICE\PBIE
 Tätä tiliä ei käytetä yhdistämiseen paikallisiin tietolähteisiin tai työpaikan tai oppilaitoksen tiliin, jolla kirjaudut sisään pilvipalveluihin.
 
 Jos kohtaat todentamisen vuoksi ongelmia välityspalvelimen kanssa, sinun kannattaa vaihtaa Windows-palvelutili toimialuekäyttäjäksi tai hallituksi palvelutiliksi kohdan [Välityspalvelimen määritys](https://docs.microsoft.com/power-bi/service-gateway-proxy#changing-the-gateway-service-account-to-a-domain-user) mukaan.
+
+## <a name="tenant-level-administration"></a>Vuokraajatason hallinta 
+
+Tällä hetkellä ei ole yhtä paikkaa, jossa vuokraajan järjestelmänvalvojat voivat hallita kaikkia yhdyskäytäviä, joita muut käyttäjät ovat asentaneet ja määrittäneet.  Jos olet vuokraajan järjestelmänvalvoja, sinun kannattaa pyytää organisaatiosi käyttäjiä lisäämään sinut järjestelmänvalvojaksi jokaiseen asentamaansa yhdyskäytävään. Näin voit hallita kaikkia organisaatiosi yhdyskäytäviä Yhdyskäytäväasetukset-sivulla tai [PowerShell-komennoilla](https://docs.microsoft.com/power-bi/service-gateway-high-availability-clusters#powershell-support-for-gateway-clusters).
 
 ## <a name="frequently-asked-questions"></a>Usein kysytyt kysymykset
 #### <a name="general"></a>Yleistä
