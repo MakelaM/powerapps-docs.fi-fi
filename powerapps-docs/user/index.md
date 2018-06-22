@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3f5adf07cac1c798f3d4843ed5928505becde30e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/26/2018
+ms.locfileid: "34552664"
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Miten voin etsiä ja suorittaa sovelluksia?
 Oletpa sitten liikkuvaa työtä tekevä kenttähenkilö tai kiireisessä sairaalassa toimiva lääkäri, sinulle voidaan luoda tehtävien ja roolien mukaisia *pohjaan* perustuvia sovelluksia, jotka tunnet heti omaksesi. Lähes kaikki pohjaan perustuvien sovellusten ominaisuudet ovat muokattavissa, ja niihin on mahdollista yhdistää useita tietolähteitä niin, että käyttäjien on helpompi keskittyä tehtäviensä suorittamiseen.

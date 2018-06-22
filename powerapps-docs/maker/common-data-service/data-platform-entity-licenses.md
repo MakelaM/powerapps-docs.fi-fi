@@ -13,6 +13,7 @@ ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34167100"
 ---
 # <a name="license-requirements-for-entities"></a>Entiteettien käyttöoikeusvaatimukset
 Sovellusten tekijät voivat käyttää useimpia Common Data Service (CDC) for Appsin sisältämiä entiteettejä (mukaan lukien mukautetut entiteetit ja Common Data Modelin mukaiset entiteetit) sovellusten ja työnkulkujen luomiseen käyttäjille, joilla on pelkästään PowerApps Plan 1 tai Microsoft Flow Plan 1. Joissakin tapauksissa monimutkaisia liiketoimintalogiikkaa tai Dynamics 365 -tuotteisiin sidoksissa olevat entiteetit vaativat, että sovelluksen käyttäjällä on tietty käyttöoikeus. Lisätietoja käytettävissä olevista sopimuksista löytyy [PowerAppsin hinnoittelusivulta](https://powerapps.microsoft.com/pricing).

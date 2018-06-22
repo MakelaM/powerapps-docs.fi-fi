@@ -11,6 +11,7 @@ ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
 ms.translationtype: HT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32329912"
 ---
 # <a name="accessible-colors-in-powerapps"></a>Helppokäyttöisyysvärit PowerAppsissa
 Sovelluksissa käytettävien värien tulisi olla sellaisia, että värisokeat ja näkökyvyltään alentuneen henkilöt voivat käyttää sovelluksia. Kaikki PowerAppsin teemat ovat oletusarvoisesti helppokäyttöisiä. Kun muokkaat sovelluksessa käytettyjä värejä, varmista helppokäyttöisyys seuraavien ohjeiden mukaisesti.

@@ -38,6 +38,8 @@
       href: admin-manage-apps.md
     - name: Siirrä sovellus vuokraajien tai ympäristöjen välillä
       href: environment-and-tenant-migration.md
+    - name: Tuo ja vie resursseja
+      href: export-import-packages.md
     - name: DSR-pyyntöihin vastaaminen
       items:
         - name: Järjestelmän luomat lokit

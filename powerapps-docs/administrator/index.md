@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3f5adf07cac1c798f3d4843ed5928505becde30e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/26/2018
+ms.locfileid: "34552411"
 ---
 # <a name="whats-the-role-of-a-powerapps-administrator"></a>Mikä tehtävä PowerAppsin järjestelmänvalvojalla on?
 PowerAppsia, Microsoft Flow’ta ja Common Data Servicen (CDS) sovelluskäyttöä hallitaan [PowerApps-hallintakeskuksesta](https://admin.powerapps.com).
