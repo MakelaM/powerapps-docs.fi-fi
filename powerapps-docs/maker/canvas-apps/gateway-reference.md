@@ -188,7 +188,7 @@ Voit käyttää kolmannen osapuolen työkalua, [Azure Speed Test -sovellusta](ht
 **Kysymys:** Mihin tunnistetietoni tallennetaan?  
 **Vastaus:** Tietolähteelle antamasi tunnistetiedot tallennetaan salattuina yhdyskäytävän pilvipalveluun. Tunnistetietojen salaus puretaan paikallisessa yhdyskäytävässä.
 
-**Kysymys:** Voinko sijoittaa yhdyskäytävän edustaverkkoon (toiselta nimeltään DMZ tai suojattu aliverkko)?  
+**Kysymys:** Voinko sijoittaa yhdyskäytävän eteisverkkoon (toiselta nimeltään DMZ tai suojattu aliverkko)?  
 **Vastaus:** Yhdyskäytävä vaatii liitettävyyden tietolähteeseen. Jos tietolähde ei ole edustaverkossasi, yhdyskäytävä ei välttämättä voi muodostaa yhteyttä siihen. Esimerkiksi tietokone, joka käyttää SQL Serveriä, ei välttämättä ole edustaverkossasi, etkä voi yhdistää tähän tietokoneeseen edustaverkosta. Jos olet sijoittanut yhdyskäytävän edustaverkkoon, yhdyskäytävä ei voi tavoittaa SQL Serveriä käyttävää tietokonetta.
 
 #### <a name="high-availabilitydisaster-recovery"></a>Korkea käytettävyys / järjestelmäpalautus
