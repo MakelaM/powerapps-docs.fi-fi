@@ -63,7 +63,7 @@ Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://w
      
     Lisätietoja on artikkelissa [Entiteetin kenttien hallinta](data-platform-manage-fields.md).
 
-    ![Uusi kenttä] ja (./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä ja ](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
 
 6. Lisää kolme kenttää seuraavilla määrityksillä toistamalla edelliset vaiheet:
     * **Näyttönimi** = Tuotteen luokitus; **Tietotyyppi** = Kokonaisluku; Valitse **Pakollinen**-valintaruudun valinta
