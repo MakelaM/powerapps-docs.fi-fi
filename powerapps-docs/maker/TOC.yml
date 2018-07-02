@@ -596,7 +596,7 @@
           href: ./canvas-apps/connections-list.md
         - name: 'Järjestelmävaatimukset, rajoitukset ja konfigurointi'
           href: ./canvas-apps/limits-and-config.md
-        - name: Hae istunnon tunnus
+        - name: Hae istunto- tai sovellustunnus
           href: ./canvas-apps/get-sessionid.md
 - name: Mallipohjaiset sovellukset
   href: ./model-driven-apps/model-driven-app-overview.md

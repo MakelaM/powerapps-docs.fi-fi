@@ -7,12 +7,12 @@ ms.topic: overview
 ms.component: canvas
 ms.date: 04/26/2018
 ms.author: anneta
-ms.openlocfilehash: d520f47393c5462f36445e4c8df81617dfddafd2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 606f5aa15d057387542471f82fd071f4044cfd1e
+ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329820"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36311588"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
 Voit suunnitella ja rakentaa liiketoimintasovelluksen pohjan avulla Microsoft PowerAppsissa kirjoittamatta perinteistä ohjelmointikieltä, kuten C#. Suunnittele sovellus vetämällä ja pudottamalla elementtejä pohjalle, kuten PowerPoint-esitystä suunnitellessasi. Luo Excel-tyyppisiä lausekkeita logiikan määrittelemiseksi ja tietojen työstämiseksi. Voit rakentaa sovelluksia, jotka integroivat liiketoimintatietoja [useista erilaisista Microsoftin ja kolmannen osapuolen lähteistä](connections-list.md). Jaettuasi sovelluksesi se on käytettävissä selaimessa tai mobiililaitteilla, ja upotettuasi sen sitä voidaan käyttää SharePointissa, Power BI:ssä tai Teamsissa.
@@ -43,7 +43,7 @@ Voit suorittaa omia sovelluksiasi – ja kanssasi jaettuja sovelluksia – Windo
 ## <a name="learn-more"></a>Lue lisätietoja
 * Tutustu vaiheittaisiin, käsitteellisiin ja viiteaiheisiin vasemmassa siirtymisruudussa.
 * Käy omassa tahdissa läpi [ohjatun oppimisen kursseja](https://docs.microsoft.com/powerapps/guided-learning/).
-* Tarkasta [tulevat verkkoseminaarit](webinars-listing.md#upcoming-webinars), joista saattaa olla hyötyä PowerAppsin ominaisuuksien ja toimintojen käytössä. Voit myös katsella [menneitä verkkoseminaareja](webinars-listing.md#past-webinars) halutessasi.
+* Tarkista [verkkoseminaarit](webinars-listing.md), joihin sinulla on tarvittaessa pääsy opetellessasi käyttämään PowerAppsin ominaisuuksia ja toimintoja.
 
 ## <a name="share-your-experience"></a>Jaa kokemuksesi
 * Lue julkaisuja ja julkaise itse [PowerAppsin yhteisössä](https://aka.ms/powerapps-community), missä kuka tahansa PowerAppsin käyttäjä voi esittää kysymyksiä, joihin toiset voivat vastata. Ennen kuin julkaiset kysymyksen, katso yhteisöstä, onko kysymykseesi jo ehkä vastattu.
