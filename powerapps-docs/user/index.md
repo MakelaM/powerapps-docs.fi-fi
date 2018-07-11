@@ -5,14 +5,18 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/21/2018
+ms.date: 07/09/2018
 ms.author: matp
-ms.openlocfilehash: 6c5a207ec2eb41d2cf19250bd5f319ed692a43e6
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+manager: kvivek
+ms.custom: ''
+ms.reviewer: ''
+ms.assetid: ''
+ms.openlocfilehash: 83670a844c62a6daea489d5484641e9c457653f8
+ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552664"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37925658"
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Miten voin etsiä ja suorittaa sovelluksia?
 Oletpa sitten liikkuvaa työtä tekevä kenttähenkilö tai kiireisessä sairaalassa toimiva lääkäri, sinulle voidaan luoda tehtävien ja roolien mukaisia *pohjaan* perustuvia sovelluksia, jotka tunnet heti omaksesi. Lähes kaikki pohjaan perustuvien sovellusten ominaisuudet ovat muokattavissa, ja niihin on mahdollista yhdistää useita tietolähteitä niin, että käyttäjien on helpompi keskittyä tehtäviensä suorittamiseen.
