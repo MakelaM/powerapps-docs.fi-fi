@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 3100ebae3d3f9b7cdef839d74e9d289b4059de5d
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7f78cc61b4e6af34af7bf6944e70e783872bc255
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838460"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897497"
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerAppsin Tekstisyöte-ohjausobjekti
 Ruutu, johon käyttäjä voi kirjoittaa tekstiä, numeroita ja muuta tietoa.
@@ -149,17 +149,23 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 6. (valinnainen) Lisää enemmän nimiä kokoelmaan ja palaa oletustyötilaan painamalla ESC-näppäintä.
 
 ### <a name="prompt-for-a-password"></a>Kysy salasana
+
 1. Lisää tekstisyötteen ohjausobjekti, anna sen nimeksi **inputPassword** ja aseta sen **Tila**-ominaisuudeksi **Salasana**.
-2. Lisää selite ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
+
+1. Lisää selite ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
    **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
-   
+
     Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-3. Paina F5-näppäintä ja kirjoita sitten **P@ssw0rd** kohtaan **inputPassword**.
-   
+
+1. Paina F5-näppäintä ja kirjoita sitten **P@ssw0rd** kohtaan **inputPassword**.
+
     Kun olet kirjoittanut salasanan, selite ei enää näytä tekstiä **Access denied**, vaan siinä näkyy teksti **Access granted**.
-4. Palaa oletustyötilaan painamalla Esc-näppäintä.
-5. (valinnainen) Lisää ohjausobjekti, kuten nuoli, määritä se siirtymään toiseen näyttöön ja näytä se vasta, kun käyttäjä kirjoittaa salasanan.
-6. (valinnainen) Lisää painike, määritä sen **[Text](properties-core.md)**-ominaisuus näyttämään **Kirjaudu sisään**, lisää ajastin ja poista käytöstä tekstisyötteen ohjausobjekti tietyksi ajaksi, jos käyttäjä kirjoittaa väärän salasanan ja napsauttaa tai napauttaa sitten **Kirjaudu sisään** -painiketta.
+
+1. Palaa oletustyötilaan painamalla Esc-näppäintä.
+
+1. (valinnainen) Lisää ohjausobjekti, kuten nuoli, määritä se siirtymään toiseen näyttöön ja näytä se vasta, kun käyttäjä kirjoittaa salasanan.
+
+1. (valinnainen) Lisää painike, määritä sen **[Text](properties-core.md)**-ominaisuus näyttämään **Kirjaudu sisään**, lisää ajastin ja poista käytöstä tekstisyötteen ohjausobjekti tietyksi ajaksi, jos käyttäjä kirjoittaa väärän salasanan ja napsauttaa tai napauttaa sitten **Kirjaudu sisään** -painiketta.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

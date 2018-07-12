@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 8dc68646808e40792d3e55aa9ac547aa43a78efb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c916784df877b1228fd8d9322a80ccccdc61967f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827340"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897888"
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>SaveData- ja LoadData-funktiot PowerAppsissa
 Tallentaa ja lataa uudelleen [kokoelman](../working-with-data-sources.md#collections).
@@ -39,6 +39,7 @@ Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muil
 * *IgnoreNonexistentFile* – Valinnainen. Totuusarvo (**true**/**false**), joka ilmaisee, näyttääkö vai ohittaako **LoadData**-funktio virheitä, kun se ei löydä vastaavaa tiedostoa. Jos määrität **false**, virheet näytetään. Jos määrität **true**, virheet ohitetaan, mikä on hyödyllistä offline-tilassa tapahtuvia tilanteita varten. **SaveData** voi luoda tiedoston, jos laite on offline-tilassa (toisin sanoen, jos **Connection.Connected**-tila on **false**).
 
 ## <a name="examples"></a>Esimerkkejä
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **If(Connection.Connected, ClearCollect(LocalTweets, Twitter.SearchTweet(”PowerApps”, {maxResults: 100})),LoadData(LocalTweets, ”Tweets”, true))** |Jos laite on yhdistetty, lataa LocalTweets-kokoelma Twitter-palvelusta. Lataa kokoelma muussa tapauksessa paikallisesta tiedostovälimuistista. |Sisältö hahmonnetaan riippumatta siitä, onko laite online- vai offline-tilassa. |

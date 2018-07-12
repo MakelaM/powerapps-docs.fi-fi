@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: e13f5c7fa73c0d95c5be5c755f2d482b1efc8a71
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ee9b19f647258e57b434c42b5f50bd71fc2d4bb2
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832121"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895657"
 ---
 # <a name="restore-an-app-to-a-previous-version"></a>Sovelluksen palauttaminen edelliseen versioon
 Tässä artikkelissa näytetään, miten voit palauttaa sovelluksen edelliseen versioon, joka on tallennettu pilvipalveluun PowerApps-tililtäsi.
@@ -32,7 +32,7 @@ Tässä artikkelissa näytetään, miten voit palauttaa sovelluksen edelliseen v
     ![Suodata omistamasi sovellukset](./media/restore-an-app/filter-list.png)
 
     > [!NOTE]
-> Jos sovellus, jonka haluat palauttaa, ei tule näkyviin, varmista, että olet oikeassa ympäristössä.
+   > Jos sovellus, jonka haluat palauttaa, ei tule näkyviin, varmista, että olet oikeassa ympäristössä.
 
 3. Napsauta tai napauta palautettavan sovelluksen Tiedot-kuvaketta lähellä oikeaa reunaa.
 

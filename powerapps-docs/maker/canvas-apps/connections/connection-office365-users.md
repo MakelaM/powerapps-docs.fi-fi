@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 06/07/2016
 ms.author: lanced
-ms.openlocfilehash: a1e0ddd7dad50ec269a0946163cc7b822ddb0681
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 679d9b905aa1b7d7b1b731de400e6e133787769b
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803476"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897106"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Yhdistäminen Office 365 -käyttäjät -yhteyteen PowerAppsissa
 ![Office 365 -käyttäjät](./media/connection-office365-users/office365icon.png)
@@ -27,7 +27,7 @@ Tässä artikkelissa näytetään Office 365 -käyttäjät -yhteyden lisäämine
 
 ## <a name="add-a-connection"></a>Yhteyden lisääminen
 1. [Lisää tietoyhteys](../add-data-connection.md) ja valitse **Office 365 -käyttäjät**:  
-   
+
     ![Yhteyden muodostaminen Office 365:een](./media/connection-office365-users/add-office.png)
 2. Valitse **Yhdistä**, kirjaudu pyydettäessä sisään ja syötä työtilisi.
 
@@ -37,7 +37,7 @@ Office 365 -käyttäjät -yhteys on luotu ja lisätty sovellukseesi. Se on nyt v
 ### <a name="show-information-about-the-current-user"></a>Nykyisen käyttäjän tietojen näyttäminen
 1. Valitse **Lisää**-valikosta **Otsikko**
 2. Määritä funktiopalkissa sen **[Text](../controls/properties-core.md)**-ominaisuudeksi jokin seuraavista kaavoista:
-   
+
     `Office365Users.MyProfile().Department`  
     `Office365Users.MyProfile().DisplayName`  
     `Office365Users.MyProfile().GivenName`  
@@ -54,13 +54,13 @@ Otsikko näyttää tiedot, jotka syötit nykyisestä käyttäjästä.
 
 ### <a name="show-information-about-another-user"></a>Toisen käyttäjän tietojen näyttäminen
 1. Valitse **Lisää**-valikosta **Teksti** ja valitse sitten **Tekstisyöte**. Anna sille nimi **InfoAbout**:  
-   
+
     ![Ohjausobjektin nimeäminen uudelleen](./media/connection-office365-users/renameinfoabout.png)
 2. Kirjoita tai liitä **InfoAbout**-kohtaan jonkin organisaatiosi käyttäjän sähköpostiosoite. Kirjoita esimerkiksi *omanimi*@*yourCompany.com*.
 3. Lisää **Otsikko** (**Lisää**-valikko) ja aseta sen **[Text](../controls/properties-core.md)**-ominaisuudeksi jokin seuraavista kaavoista:
-   
+
    * Toisen käyttäjän tietojen näyttäminen:  
-     
+
        `Office365Users.UserProfile(InfoAbout.Text).Department`  
        `Office365Users.UserProfile(InfoAbout.Text).DisplayName`  
        `Office365Users.UserProfile(InfoAbout.Text).GivenName`  
@@ -73,7 +73,7 @@ Otsikko näyttää tiedot, jotka syötit nykyisestä käyttäjästä.
        `Office365Users.UserProfile(InfoAbout.Text).UserPrincipalName`  
        `Office365Users.UserProfile(InfoAbout.Text).AccountEnabled`  
    * Toisen käyttäjän esimiehen tietojen näyttäminen:  
-     
+
        `Office365Users.Manager(InfoAbout.Text).Department`  
        `Office365Users.Manager(InfoAbout.Text).DisplayName`  
        `Office365Users.Manager(InfoAbout.Text).GivenName`  
@@ -100,28 +100,28 @@ Jos luot yhteystiedon ja valitset sen sovelluksen selausnäytöllä, **Otsikko**
 1. Lisää **Tekstisyöte**-ohjausobjekti (**Lisää**-valikko > **Teksti**) ja anna sille nimi **InfoAbout**.
 2. Syötä **InfoAbout**-kohtaan jonkin organisaatiosi käyttäjän sähköpostiosoite. Syötä esimerkiksi *esimiehennimi*@*yourCompany.com*
 3. Lisää **Tekstin kanssa** -valikoima (**Lisää**-valikko > **Valikoima**) ja aseta sen **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   
+
     `Office365Users.DirectReports(InfoAbout.Text)`
-   
+
     Valikoima näyttää tiedot syöttämäsi käyttäjän suorista alaisista.
-   
+
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 4. Valitse toiseen luetteloon **JobTitle**. Valitse kolmanteen luetteloon **DisplayName**. Valikoima päivittyy ja näyttää nämä arvot.  
-   
+
 > [!NOTE]
 > Ensimmäinen laatikko on todellisuudessa Kuva-ohjausobjekti. Jos sinulla ei ole kuvaa, voit poistaa Kuva-ohjausobjektin ja korvata sen otsikolla. [Ohjausobjektien lisääminen ja määrittäminen](../add-configure-controls.md) -artikkeli on tässä hyödyllinen.
 
 ### <a name="search-for-users"></a>Käyttäjien hakeminen
 1. Lisää **Tekstisyöte**-ohjausobjekti (**Lisää**-valikko > **Teksti**) ja anna sille nimi **SearchTerm**. Kirjoita haettava nimi. Kirjoita esimerkiksi etunimesi.
 2. Lisää **Tekstin kanssa** -valikoima (**Lisää**-valikko > **Valikoima**) ja aseta sen **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   
+
     `Office365Users.SearchUser({searchTerm: SearchTerm.Text})`
-   
+
     Valikoima näyttää käyttäjät, joiden nimi sisältää syöttämäsi tekstin.
-   
+
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 3. Valitse toiseen luetteloon **Mail**. Valitse kolmanteen luetteloon **DisplayName**.
-   
+
     Valikoiman toinen ja kolmas otsikko päivitetään.
 
 ## <a name="view-the-available-functions"></a>Selaa käytettävissä olevia funktioita
@@ -142,6 +142,7 @@ Hae oma profiili: noutaa nykyisen käyttäjän profiilin.
 Ei mitään.
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
 | Department |merkkijono |Käyttäjän osasto |
@@ -160,11 +161,13 @@ Ei mitään.
 Hae käyttäjän profiili: noutaa määritetyn käyttäjäprofiilin.
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Id |merkkijono |kyllä |Käyttäjän päänimi tai sähköpostitunnus |
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
 | Department |merkkijono |Käyttäjän osasto |
@@ -183,11 +186,13 @@ Hae käyttäjän profiili: noutaa määritetyn käyttäjäprofiilin.
 Hae esimies: Noutaa määritetyn käyttäjän esimiehen käyttäjäprofiilin
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Id |merkkijono |kyllä |Käyttäjän päänimi tai sähköpostitunnus |
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
 | Department |merkkijono |Käyttäjän osasto |
@@ -206,11 +211,13 @@ Hae esimies: Noutaa määritetyn käyttäjän esimiehen käyttäjäprofiilin
 Hae suorat alaiset: Hae suorat alaiset
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Id |merkkijono |kyllä |Käyttäjän päänimi tai sähköpostitunnus |
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
 | Department |merkkijono |Käyttäjän osasto |
@@ -229,11 +236,13 @@ Hae suorat alaiset: Hae suorat alaiset
 Etsi käyttäjiä: noutaa käyttäjäprofiilien hakutulokset
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | searchTerm |merkkijono |ei |Hakumerkkijono. Koskee seuraavia: näyttönimi, etunimi, sukunimi, sähköposti, lempinimi ja käyttäjän päänimi |
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
 | Department |merkkijono |Käyttäjän osasto |

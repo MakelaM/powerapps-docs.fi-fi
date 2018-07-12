@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/08/2015
 ms.author: gregli
-ms.openlocfilehash: a784251899e7c51ef8213b6d6f31c2830b08e2dc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: e7da24eec1a85a1d57ab83476734639ef0f5dd25
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838851"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898072"
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funktio PowerAppsissa
 Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) nykyisessä näytössä.
@@ -68,6 +68,7 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 * *Kontekstimuuttuja2*: *Arvo2*,... – valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
 
 ## <a name="examples"></a>Esimerkkejä
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **UpdateContext( {&nbsp;Laskuri:&nbsp;1&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Laskuri** ja asettaa sen arvoksi **1**. |Muuttujan **Laskuri** arvo on **1**. Voit viitata kyseisen muuttujan nimeen **Laskuri** kaavassa. |
@@ -85,10 +86,10 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 6. Valitse **Kohde**-näytössä **Shapes** **Lisää**-välilehdeltä ja valitse sitten taaksepäin osoittava nuoli.
 7. Määritä taaksepäin osoittavan nuolen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate(Source, ScreenTransition.Fade)**
 8. Paina **Lähde**-näytössä F5-näppäintä ja valitse sitten painike molemmille kielille.
-   
+
     **Kohde**-näytössä otsikko näkyy kielellä, joka vastaa valitsemaasi painiketta.
 9. Valitse taaksepäin osoittava nuoli palataksesi **Lähde**-näyttöön ja valitse sitten toisen kielen painike.
-   
+
     **Kohde**-näytössä otsikko näkyy kielellä, joka vastaa valitsemaasi painiketta.
 10. Palaa oletustyötilaan painamalla ESC-näppäintä.
 

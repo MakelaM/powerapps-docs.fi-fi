@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 4d622eb6cdfaed91547a59be8f5a5dc6651957e5
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d193c2691f689e935a5dbb92767a16d393098770
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330901"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896738"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
 Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
@@ -48,14 +48,14 @@ Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ä
     ![Määritä kuvan ominaisuus](./media/add-images-pictures-audio-video/imageproperty.png)
 
     > [!NOTE]
-> Määritä vain tiedoston nimi, ilman tiedostopäätettä ja puolilainausmerkeissä.
+   > Määritä vain tiedoston nimi, ilman tiedostopäätettä ja puolilainausmerkeissä.
 
 7. Jos olet lisännyt video- tai ääniohjausobjektin, aseta sen **Media**-ominaisuus lisäämääsi tiedostoon:  
 
     ![Määritä mediaominaisuus](./media/add-images-pictures-audio-video/mediaproperty.png)
 
     > [!NOTE]
-> Toista YouTube-video asettamalla video-ohjausobjektin **Media**-ominaisuus oikeaan URL-osoitteeseen lainausmerkkien sisään.
+   > Toista YouTube-video asettamalla video-ohjausobjektin **Media**-ominaisuus oikeaan URL-osoitteeseen lainausmerkkien sisään.
 
 ## <a name="add-media-from-azure-media-services"></a>Median lisääminen Microsoft Azure -mediapalveluista
 1. Lataa ja julkaise videoresurssisi Azure-mediapalveluiden tililtäsi kohteesta **AMS > Asetukset > Resurssit**.

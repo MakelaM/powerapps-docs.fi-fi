@@ -1,23 +1,19 @@
 ---
 title: Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot | Microsoft Docs
 description: Tietoa väriluetteloinnista, värien häivyttämisestä, väriarvoista ja RGBA-asetuksista, sekä syntakseja ja muutamia esimerkkejä
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2015
 ms.author: gregli
-ms.openlocfilehash: f4eeabf5708fffa6881b84402280d5639d96cc0a
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6615dfee8f7c867bb25c237633fe031d614d517d
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838667"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948637"
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot PowerAppsissa
 Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituksen määrittäminen.
@@ -51,6 +47,7 @@ Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituk
 * *FadeAmount* – Pakollinen.  Luku väliltä –1 ja 1.  –1 tummentaa värin kokonaan mustaksi, 0 ei vaikuta väriin ja 1 kirkastaa värin kokonaan valkoiseksi.  
 
 ## <a name="built-in-colors"></a>Valmiit värit
+
 | Väriluettelointi | ColorValue esitettynä heksadesimaaleina | RGBA | Väriruutu |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![erittäin vaalea sininen](./media/function-colors/color-aliceblue.png) |

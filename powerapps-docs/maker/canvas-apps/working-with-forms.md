@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: a9cd26ad41ceaa5b94678a3ef87bf0ab6dda98a1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: bf66c1f7596b8a3ef4c8495db3f0ac2af8165d8c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330671"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899682"
 ---
 # <a name="understand-data-forms-in-microsoft-powerapps"></a>Tutustu tietolomakkeisiin Microsoft PowerAppsissa
 Lisää kolmentyyppisiä ohjausobjekteja, jotta käyttäjä voi selata tietueita, näyttää kyseisen tietueen tietoja ja luoda tietueen ja muokata sitä:
@@ -157,7 +157,7 @@ Jotta voit tarkalleen noudattaa tämän ohjeaiheen loppuosaa, luo SharePoint-lue
 * Luo puhelinsovellus alusta ja [yhdistä se tietolähteeseen](add-data-connection.md).
   
     > [!NOTE]
-> Tablettisovellukset ovat hyvin samankaltaisia, mutta haluat ehkä erilaisen [näyttöasettelun](#screen-design), jotta voit käyttää hyväksesi ylimääräisen näyttötilan.
+  > Tablettisovellukset ovat hyvin samankaltaisia, mutta haluat ehkä erilaisen [näyttöasettelun](#screen-design), jotta voit käyttää hyväksesi ylimääräisen näyttötilan.
   
     Ohjeaiheen loppuosan esimerkit perustuvat tietolähteeseen nimeltä **Ice Cream**.
 

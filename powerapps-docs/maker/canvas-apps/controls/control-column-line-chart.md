@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: e6a5df9283cc0d6f5ab30f27096ba3e7e9e5bff0
-ms.sourcegitcommit: 8bd4c700969d0fd42950581e03fd5ccbb5273584
+ms.openlocfilehash: 5397c99d02e824a86147af053e1f907f83ce3543
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836266"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898270"
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>Pylväskaavio- ja viivakaavio-ohjausobjektit PowerAppsissa
 Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
@@ -26,7 +26,7 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 **Pylväskaavio** ja **Viivakaavio** ovat ryhmiteltyjä ohjausobjekteja. Kukin ryhmä sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)**, kuvan kaaviosta ja kaavion **selitteen**.
 
 ## <a name="chart-key-properties"></a>Kaavion tärkeimmät ominaisuudet
-**[Kohteet](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
+**[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
 
 **NumberOfSeries** – Pylväs- tai viivakaavion edustamien tietosarakkeiden määrä.
 
@@ -37,13 +37,13 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-ominaisuuden asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
-**[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
+**[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella tietoja (**View**), vai onko ominaisuus poistettu käytöstä (**Disabled**).
 
-**[Font](properties-text.md)**  – Tekstin ulkoasussa käytettävän fonttiperheen nimi.
+**[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
 **GridStyle** – Näytetäänkö pysty- tai viivakaaviossa sen x-akseli, y-akseli, molemmat tai ei kumpaakaan.
 
@@ -87,11 +87,11 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 
 * **SeriesAxisMin**-ominaisuus on käytettävissä **pylväskaavio**-ohjausobjektin kanssa, mutta ei **viivakaavio**-ohjausobjektin kanssa.
 
-**[Koko](properties-text.md)** – Ohjausobjektiin ilmaantuvan tekstin fonttikoko.
+**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
-**[Näkyvissä](properties-core.md)** – Määrittää, onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
@@ -139,7 +139,7 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * Harkitse yhteenvedon lisäämistä kaaviokuvasta. Esimerkiksi ”Viivakaaviossa näkyy myynnin tasainen kasvu tämän vuoden maaliskuun ja elokuun välillä”.
 
     > [!NOTE]
-> Kaaviokuvat ja **kaavioselitteet** on piilotettu näytönlukuohjelmien käyttäjiltä. Tiedot esitetään heille taulukkomuodossa. He voivat myös selata painikkeita, joilla valitaan kaavion tietoja.
+  > Kaaviokuvat ja **kaavioselitteet** on piilotettu näytönlukuohjelmien käyttäjiltä. Tiedot esitetään heille taulukkomuodossa. He voivat myös selata painikkeita, joilla valitaan kaavion tietoja.
 
 ### <a name="low-vision-support"></a>Tuki heikkonäköisille
 * **Kaavioselite** on oltava, jos useampi kuin yksi sarja näkyy.
@@ -150,4 +150,4 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 
     > [!NOTE]
-> Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.
+  > Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 19e30477b7015061a4e4b781e1c53a55d1fda1a7
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7079dc6194361cc700ccaad6c02ca0bcf8a9f9d6
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329613"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895910"
 ---
 # <a name="start-a-flow-in-an-app"></a>Käynnistä työnkulku sovelluksessa
 Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
@@ -52,7 +52,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
    3. Kirjoita tai liitä luettelon sisältävän SharePoint Online -sivuston URL-osoite **Sivuston osoite** -ruutuun.
 
        > [!NOTE]
-> Määritä sivuston URL-osoite, joka ei sisällä luetteloa.
+      > Määritä sivuston URL-osoite, joka ei sisällä luetteloa.
 
    4. Valitse **Luettelon nimi** -ruudusta luettelo, jota haluat käyttää.
 
@@ -86,7 +86,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 6. Valitse avautuvassa ruudussa työnkulku, jonka loit edellisessä toimenpiteessä.
 
     > [!NOTE]
-> Jos luomasi työnkulku ei ole käytettävissä, vahvista onko PowerApps määritetty ympäristöön, jossa loit työnkulun.
+   > Jos luomasi työnkulku ei ole käytettävissä, vahvista onko PowerApps määritetty ympäristöön, jossa loit työnkulun.
 
     ![Lisää työnkulku mukautusruudusta](./media/using-logic-flows/add-flow-from-pane.png)
 

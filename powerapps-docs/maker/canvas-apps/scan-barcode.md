@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/23/2016
 ms.author: anneta
-ms.openlocfilehash: 6960b41effb109f6f2266ba279b4d51ea51e744f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 3e1bc218e6be8dcbbb1a72672aedf1de5d1cd7e9
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32328716"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895933"
 ---
 # <a name="scan-a-barcode-in-powerapps"></a>Skannaa viivakoodi PowerAppsissa
 Skannaa useita erityyppisiä viivakoodeja luomalla sovellus ja suorittamalla se kameralla varustetussa laitteessa, kuten puhelimessa. Viivakoodia vastaava numeerinen arvo näkyy **Nimi**-ohjausobjektissa, ja voit ladata nämä tiedot erilaisiin [tietolähteisiin](connections-list.md).
@@ -36,18 +36,18 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 ## <a name="create-a-blank-app"></a>Tyhjän sovelluksen luominen
 1. [Rekisteröidy PowerAppsiin](../signup-for-powerapps.md) ja tee sitten *jompikumpi* seuraavista toimista:
 
-1. [Avaa PowerApps](https://create.powerapps.com) selaimessa laitteella, jossa on kamera.
+2. [Avaa PowerApps](https://create.powerapps.com) selaimessa laitteella, jossa on kamera.
 
-2. Napsauta tai napauta **Tyhjä sovellus** -ruudulla **Aloita puhtaalta pöydältä tai mallin kanssa** ja sitten **Puhelinasettelu**.
+3. Napsauta tai napauta **Tyhjä sovellus** -ruudulla **Aloita puhtaalta pöydältä tai mallin kanssa** ja sitten **Puhelinasettelu**.
 
     ![Sovelluksen luominen alusta alkaen](./media/scan-barcode/create-from-blank.png)
 
-3. Jos et ole käyttänyt PowerAppsia ennen, tutustu sovelluksen tärkeimpiin ominaisuuksiin käymällä johdanto läpi (tai napsauta tai napauta **Ohita**).
+4. Jos et ole käyttänyt PowerAppsia ennen, tutustu sovelluksen tärkeimpiin ominaisuuksiin käymällä johdanto läpi (tai napsauta tai napauta **Ohita**).
 
     ![Pikaesittelyn avausnäyttö](./media/scan-barcode/quick-tour.png)
 
     > [!NOTE]
-> Voit aina katsella esittelyn myöhemmin napsauttamalla tai napauttamalla kysymysmerkkikuvaketta, joka on lähellä ruudun oikeaa yläkulmaa, ja napsauttamalla tai napauttamalla sitten **Katso esittely**.
+   > Voit aina katsella esittelyn myöhemmin napsauttamalla tai napauttamalla kysymysmerkkikuvaketta, joka on lähellä ruudun oikeaa yläkulmaa, ja napsauttamalla tai napauttamalla sitten **Katso esittely**.
 
 ## <a name="add-a-barcode-control"></a>Viivakoodi-ohjausobjektin lisääminen
 1. Napsauta tai napauta **Lisää**-välilehdestä **Media** ja napsauta tai napauta sitten **Viivakoodi**.
@@ -61,7 +61,7 @@ Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 3. Napsauta tai napauta **Aloitus**-välilehdestä **Barcode1** ja kirjoita tai liitä **MyScanner** kohtaan **Nimeä uudelleen**.
 
     > [!TIP]
-> Ensimmäinen lisäämäsi **Viivakoodi**-ohjausobjekti on oletusarvoisesti nimeltään **Barcode1**. Jos poistat kyseisen ohjausobjektin ja lisäät toisen **Viivakoodi**-ohjausobjektin, se saa oletusarvoisesti nimekseen **Barcode2**. Nimeämällä ohjausobjektin manuaalisesti voit varmistaa, että kaavat viittaavat ohjausobjektiin sen oikealla nimellä.
+   > Ensimmäinen lisäämäsi **Viivakoodi**-ohjausobjekti on oletusarvoisesti nimeltään **Barcode1**. Jos poistat kyseisen ohjausobjektin ja lisäät toisen **Viivakoodi**-ohjausobjektin, se saa oletusarvoisesti nimekseen **Barcode2**. Nimeämällä ohjausobjektin manuaalisesti voit varmistaa, että kaavat viittaavat ohjausobjektiin sen oikealla nimellä.
 
     ![Viivakoodi-ohjausobjektin nimeäminen uudelleen](./media/scan-barcode/rename-barcode.png)
 

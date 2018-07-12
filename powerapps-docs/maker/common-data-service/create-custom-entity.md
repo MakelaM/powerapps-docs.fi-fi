@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: tutorial
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: c587ed6488ae498e3ec662016ee1d028023e4095
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a4430637d197530cff793a2fcde1c2485bf59a9f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168247"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897290"
 ---
 # <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opetusohjelma: Luo osia sisältävä mukautettu entiteetti PowerAppsissa
 
@@ -38,49 +38,49 @@ Kirjaudu sisään [PowerAppsiin](https://powerapps.microsoft.com/). Jos sinulla 
 1. Laajenna vasemmassa siirtymisruudussa **Tiedot**, valitse **Entiteetit** ja valitse sitten **Uusi entiteetti**.
     ![Uusi entiteetti](media/create-custom-entity/create-new-entity.png)
 2. Lisää seuraavat arvot oikeanpuoleiseen ruutuun ja valitse sitten **Seuraava**.
-  - **Näyttönimi**: *Lemmikki* 
-  - **Kuvaus**: *mukautettu entiteetti lemmikkieläinpalvelujen seuraamiseen*
+   - **Näyttönimi**: *Lemmikki* 
+   - **Kuvaus**: *mukautettu entiteetti lemmikkieläinpalvelujen seuraamiseen*
 3. Valitse **Tallenna entiteetti**.
 
 ## <a name="add-and-customize-fields"></a>Lisää ja mukauta kenttiä
  
 1. Valitse **Kentät**-välilehdestä **Ensisijainen nimi** -kenttä.
 2. Tee seuraavat muutokset **Ensisijainen nimi** -kenttään oikeanpuoleisessa ruudussa: 
-  - Muuta **Näyttönimi** nimestä **Ensisijainen nimi** nimeksi *Lemmikin nimi*
-  - Valitse **Haettavissa**  
+   - Muuta **Näyttönimi** nimestä **Ensisijainen nimi** nimeksi *Lemmikin nimi*
+   - Valitse **Haettavissa**  
   
-    ![Vaihda ensisijaista kenttää](media/create-custom-entity/primary-field.png)
+     ![Vaihda ensisijaista kenttää](media/create-custom-entity/primary-field.png)
 3. Valitse **Valmis**.
 4. Valitse entiteetin suunnittelutoiminnon työkalurivin **Kentät**-välilehdestä **Lisää**-kenttä. Kirjoita tai valitse seuraavat arvot ja valinnat **Kentän ominaisuudet** -ruudussa.
-  - **Näyttönimi**. *Lajit*
-  - **Tietotyyppi**. *Asetusjoukko*
-  - **Asetusjoukko**. *Uusi asetusjoukko*
+   - **Näyttönimi**. *Lajit*
+   - **Tietotyyppi**. *Asetusjoukko*
+   - **Asetusjoukko**. *Uusi asetusjoukko*
 5. Luo asetusjoukko
 
-  a. Valitse **Lisää uusi kohde**. 
+   a. Valitse **Lisää uusi kohde**. 
   
-  b. Vaihda **Uusi vaihtoehto** -kohtaan *Koira*. 
+   b. Vaihda **Uusi vaihtoehto** -kohtaan *Koira*. 
    
-  c. Valitse **Lisää uusi kohde**. 
+   c. Valitse **Lisää uusi kohde**. 
     
-  d.  Vaihda **Uusi vaihtoehto** -kohtaan *Kissa*. 
+   d.  Vaihda **Uusi vaihtoehto** -kohtaan *Kissa*. 
     
-  e. Valitse **Tallenna**. 
+   e. Valitse **Tallenna**. 
 
-  ![Uusi asetusjoukko](media/create-custom-entity/optionset-add-items.png)
+   ![Uusi asetusjoukko](media/create-custom-entity/optionset-add-items.png)
 
 6. Valitse **Haettavissa** ja sitten **Valmis**.
 
 7. Valitse **Lisää kenttä** entiteetin suunnittelutoiminnon työkaluriviltä. Kirjoita tai valitse seuraavat arvot **Kentän ominaisuudet** -ruudussa ja valitse sitten **Valmis**.
-  - **Näyttönimi**. *Rotu*
-  - **Tietotyyppi**. *Teksti*
-  - **Haettavissa**. *Kyllä*
+   - **Näyttönimi**. *Rotu*
+   - **Tietotyyppi**. *Teksti*
+   - **Haettavissa**. *Kyllä*
 
 8. Valitse **Lisää kenttä** entiteetin suunnittelutoiminnon työkaluriviltä. 
 
 9. Kirjoita tai valitse seuraavat arvot **Kentän ominaisuudet** -ruudussa ja valitse sitten **Valmis**. 
-  - **Näyttönimi**. *Tapaamisen päivämäärä*
-  - **Tietotyyppi**. *Päivämäärä ja aika*
+   - **Näyttönimi**. *Tapaamisen päivämäärä*
+   - **Tietotyyppi**. *Päivämäärä ja aika*
 
 10. Valitse **Tallenna entiteetti**.
 
@@ -97,10 +97,10 @@ Huomaa, että kun lisäät monta yhteen -suhteen, **Tili**-kenttä, jossa on tie
 
 1. Valitse **Näkymät**-välilehti ja sitten **Aktiiviset lemmikit** -näkymä. Jos et näe **Aktiiviset lemmikit** -näkymää, valitse **Poista suodatin**.
 2. Valitse näkymän suunnittelutyökalusta **Lisää sarakkeita**, valitse seuraavat sarakkeet ja valitse sitten **OK**.
-  - Tili
-  - Tapaamisen päivämäärä 
-  - Rotu 
-  - Lajit
+   - Tili
+   - Tapaamisen päivämäärä 
+   - Rotu 
+   - Lajit
 3. Valitse **Luotu**-sarakkeesta **Poista** ja vahvista sarakkeen poistaminen valitsemalla sitten **OK**.
 4. Järjestä sarakkeita valitsemalla siirrettävä sarake ja käytä sitten nuolinäppäimiä <- ja ->, kunnes näkymä näyttää tältä.
     ![Aktiivisten lemmikkien näkymä](media/create-custom-entity/active-pets-view.png)

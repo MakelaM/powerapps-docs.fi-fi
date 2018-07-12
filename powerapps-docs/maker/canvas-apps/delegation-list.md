@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 08/15/2017
 ms.author: archanan
-ms.openlocfilehash: 87f1895801ec7d1121b042d6baf097b79801f019
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: f1d9b6463cc597d13fa1b9c1389fbfcc6d5b5ded
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830232"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896278"
 ---
 # <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
 [Tutustu delegointiin](delegation-overview.md) -artikkelin mukaisesti delegointi on toimintaa, jossa PowerApps delegoi tiedonkäsittelyn tietolähteelle sen sijaan, että siirtäisi tiedot sovellukseen käsiteltäväksi paikallisesti.
@@ -46,6 +46,7 @@ Tässä asiakirjassa luetellaan nykyinen delegoinnin tukitila kunkin tietolähte
 Tätä tietolähteiden ja delegoitavien funktioiden ja predikaattien luetteloa päivitetään säännöllisesti, jotta se edustaa PowerAppsin nykyistä delegoinnin tukitasoa.
 
 ### <a name="top-level-delegable-functions"></a>Ylimmän tason delegoitavat funktiot
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Average |Ei |Ei |Kyllä |Ei |Ei |
@@ -61,6 +62,7 @@ Tätä tietolähteiden ja delegoitavien funktioiden ja predikaattien luetteloa p
 <sup>1</sup>Vain merkkijonokentille
 
 ### <a name="filter-and-lookup-delegable-predicates"></a>Suodatuksen ja Haun delegoitavat predikaatit
+
 | &nbsp; | Common Data Service | SharePoint | SQL Server | Dynamics 365 | Salesforce |
 | --- | --- | --- | --- | --- | --- |
 | Ei |Kyllä |Ei |Kyllä |Kyllä |Kyllä |

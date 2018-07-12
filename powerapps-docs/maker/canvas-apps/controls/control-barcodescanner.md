@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 22b5cf081755f25b3aff33c36137547882fe3812
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: b8b25f5bfa3ddbce7b1c541afb7a935a2fe4aa36
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803464"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898164"
 ---
 # <a name="barcode-scanner-control-experimental-in-powerapps"></a>Viivakoodiskannerin ohjausobjekti (kokeellinen) PowerAppsissa
 Kokeellinen ohjausobjekti, jolla käyttäjä voi ottaa valokuvia käyttämällä laitteen viivakoodiskanneria.
@@ -32,19 +32,9 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**Brightness** – Miten paljon valoa käyttäjä näkee kuvassa.
-
-**Contrast** – Miten helposti käyttäjä voi erottaa samankaltaiset värit kuvasta.
-
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
-
-**[OnSelect](properties-core.md)** – Sovelluksen reagointitapa, kun käyttäjä napsauttaa tai napauttaa ohjausobjektia.
-
-**OnStream** – Miten sovellus reagoi, kun **Stream**-ominaisuus päivitetään.
-
-**Photo** – Kuva, joka siepataan, kun käyttäjä ottaa kuvan.
 
 **ShowLiveBarcodeDetection** – Ilmaisee, näytetäänkö visuaalisia tietoja viivakoodien tunnistuksen tilasta. Tutkittavat alueet osoitetaan keltaisilla suorakulmioilla. Vihreä viiva suorakulmion halki osoittaa onnistuneen viivakoodin tunnistuksen.
 
@@ -62,9 +52,7 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
-**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan (tai näytön, jos pääsäilöä ei ole) välinen etäisyys.
-
-**Zoom** – Prosenttiosuus, jonka verran viivakoodiskannerin kuvaa tai PDF-katseluohjelman tiedoston näkymää suurennetaan.
+**[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
@@ -87,4 +75,4 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-> Näytönlukuohjelmat ilmoittavat uusista viivakoodeista. Arvoa ei ilmoiteta. Niin kauan kuin viivakoodi on näkyvissä, näytönlukuohjelmat muistuttavat viiden sekunnin välein, että tunnistettu viivakoodi on edelleen sama.
+  > Näytönlukuohjelmat ilmoittavat uusista viivakoodeista. Arvoa ei ilmoiteta. Niin kauan kuin viivakoodi on näkyvissä, näytönlukuohjelmat muistuttavat viiden sekunnin välein, että tunnistettu viivakoodi on edelleen sama.

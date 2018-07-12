@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 386ecbd360dc13c21d48e0c134a87e8b7d007547
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a4bafb954b5723e813fade2ee633a51f4d8385e0
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830175"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895864"
 ---
 # <a name="change-app-name-and-icon-in-powerapps"></a>Sovelluksen nimen ja kuvakkeen muuttaminen PowerAppsissa
 Mukauta sovellusta muuttamalla sen nimeä ja ruutua.
@@ -46,7 +46,7 @@ Noudata vähintään yhtä näistä vaiheista:
 * Napsauta tai napauta kohtaa **Selaa tiedostoja**, napsauta tai napauta kuvaa, jota haluat käyttää, ja napsauta tai napauta sen jälkeen **Avaa**.
 
     > [!NOTE]
-> Saat aikaan parhaan tuloksen, kun käytät neliön muotoista kuvaketta.
+  > Saat aikaan parhaan tuloksen, kun käytät neliön muotoista kuvaketta.
 
 ## <a name="next-step"></a>Seuraava vaihe
 Julkaise sovelluksesi uudelleen käyttäen uusia asetuksia napsauttamalla tai napauttamalla **Tiedosto**-valikossa kohtaa **Tallenna**.

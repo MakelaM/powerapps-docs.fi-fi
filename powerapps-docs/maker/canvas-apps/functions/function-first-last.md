@@ -13,11 +13,11 @@ ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
 ms.openlocfilehash: 947a6c369c41b1ff67c611fa734f927227dde991
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826840"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38095869"
 ---
 # <a name="first-firstn-last-and-lastn-functions-in-powerapps"></a>PowerAppsin First-, FirstN-, Last- ja LastN-funktiot
 Palauttaa taulukon ensimmäiset tai viimeiset [tietueet](../working-with-tables.md#records).

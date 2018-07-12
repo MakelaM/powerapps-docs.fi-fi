@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: 01065fd1a12b3d55e8726582cead3d86a6e6a8ad
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b3bf7c2227d3321a581eb1a568de1ce78ead92ee
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330286"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899889"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Luo ja päivitä kokoelma sovelluksessasi
 Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessasi. Kokoelma on joukko kohteita, jotka ovat samankaltaisia. Voit luoda esimerkiksi MyImages-kokoelman, johon tallennat kuvat kaikista tuotteista, joita yrityksesi myy. PowerAppsissa voit lisätä MyImages-kokoelman ja luoda sovelluksen, joka näyttää kuvia kyseisistä tuotteista. Voit myös luoda hinnastokokoelman, joka sisältää luettelon tuotteista ja kunkin tuotteen hinnan.
@@ -84,7 +84,7 @@ Seuraavissa vaiheittaisissa ohjeissa näytetään, miten luot Collect-funktiolla
    ![][10]  
    
     > [!NOTE]
-> Voit korvata tekstinsyötön toisella sanalla, esimerkiksi sanalla ”city” tai ”state”, kuten kuvassa on tehty.  
+   > Voit korvata tekstinsyötön toisella sanalla, esimerkiksi sanalla ”city” tai ”state”, kuten kuvassa on tehty.  
 6. Valitse **Lisää**-välilehdeltä **Painike**. Määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava funktio:  
    ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
    
@@ -92,7 +92,7 @@ Seuraavissa vaiheittaisissa ohjeissa näytetään, miten luot Collect-funktiolla
     ![][11]  
    
     > [!NOTE]
-> Saman funktion avulla voit lisätä sarakkeita kokoelmaan. Voit lisätä esimerkiksi toisen tekstisyöte-ohjausobjektin Country, jos haluat lisätä Countries-sarakkeen:
+   > Saman funktion avulla voit lisätä sarakkeita kokoelmaan. Voit lisätä esimerkiksi toisen tekstisyöte-ohjausobjektin Country, jos haluat lisätä Countries-sarakkeen:
    
     `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
 7. Nimeä painikeohjausobjekti uudelleen nimellä **AddCityStateButton** ja määritä sen **[Text](controls/properties-core.md)**-ominaisuudeksi **Add City and State**:  
@@ -155,7 +155,7 @@ Tässä ohjeessa on muutama osa. Kun olet valmis, osaat tuoda tietoja kokoelmaan
     ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
    
     > [!NOTE]
-> Kun valitset tämän painikkeen myöhemmin tämän toimintosarjan aikana, luot ja tallennat kokoelman nimeltä **OrderList**. Kokoelma sisältää valikoimaan lisäämäsi tuotteen nimen, liukusäätimellä valitun määrän ja kokonaiskustannukset, jotka lasketaan kertomalla tuotteen hinta määrällä.
+   > Kun valitset tämän painikkeen myöhemmin tämän toimintosarjan aikana, luot ja tallennat kokoelman nimeltä **OrderList**. Kokoelma sisältää valikoimaan lisäämäsi tuotteen nimen, liukusäätimellä valitun määrän ja kokonaiskustannukset, jotka lasketaan kertomalla tuotteen hinta määrällä.
 4. Valitse **Näyttö**-välilehti ja määritä **[OnVisible](controls/control-screen.md)**-ominaisuudeksi seuraava lauseke:  
    
     ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```

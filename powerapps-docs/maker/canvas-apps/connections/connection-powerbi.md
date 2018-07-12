@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/12/2016
 ms.author: lanced
-ms.openlocfilehash: a3a5d24efffd7cd3c9430cafd5050dc96632ee76
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 0666350b9c60fdd3a1ed9cb2a3e7fa7b46bdd683
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803163"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896876"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Yhdistä Power BI:hin PowerAppsista
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
@@ -30,7 +30,7 @@ Näissä ohjeissa neuvotaan, miten voit käyttää Power BI -yhteyttä sovelluks
 ### <a name="list-the-alerts-that-youve-set-up-in-the-power-bi-service"></a>Luettele Power BI -palvelussa määrittämäsi hälytykset
 1. Valitse **Lisää**-valikosta **Valikoima** ja lisää mikä tahansa **tekstivalikoima**.
 2. Näytä nykyiset käyttäjän hälytykset määrittämällä valikoiman [Items](../controls/properties-core.md)-ominaisuudeksi seuraava kaava:
-   
+
    `PowerBI.GetAlerts()`
 
 Hälytysluettelo päivittyy valikoimaan. Saat tietää jokaisen hälytyksen nimen, tunnuksen ja hälytyksen luoneen ryhmätyötilan tunnuksen. Saat lisätietoja hälytyksestä hälytystunnuksen avulla.
@@ -64,6 +64,7 @@ Luettele Power BI -palvelussa määrittämäsi hälytykset.
 Ei mitään.
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | arvo |matriisi |Ei |Power BI -palvelussa määrittämiesi tietohälytysten matriisi. Matriisin jokaisen osan sisältö: <ul><li>alertTitle: hälytyksen otsikko</li><li>alertId: hälytyksen tunnus</li><li>groupId: hälytyksen luoneen ryhmän tunnus</li></ul> |
@@ -75,11 +76,13 @@ Tarkista hälytyksen tila.
 > Jos tähän päätepisteeseen tulee pyyntöjä liian usein, ne rajoitetaan hälytyskohtaisiksi.
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | alertId |kokonaisluku |Kyllä |GetAlertsin palauttama hälytystunnus |
 
 #### <a name="output-properties"></a>Tulosteominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | tileValue |luku |Ei |Ruudun arvo hälytyksen käynnistyshetkellä |

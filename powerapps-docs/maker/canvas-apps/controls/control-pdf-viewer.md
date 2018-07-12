@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 7f6350a70bff19df0c83d2082fe8fb463d81d772
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: c47fb9a120f41166bbe23d55de6b502209a0f20d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32330832"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898477"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>PDF-katseluohjelman ohjausobjekti (kokeellinen) PowerAppsissa
 Kokeellinen ohjausobjekti, joka näyttää PDF-tiedoston sisällön.
@@ -89,22 +89,24 @@ Jos asiakirjaa ei voi avata PowerAppsissa, loppukäyttäjälle annetaan mahdolli
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
-**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
+**[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 **Zoom** – Prosenttiosuus, jolla kameran kuvaa tai PDF-katseluohjelman tiedoston näkymää suurennetaan.
 
 ## <a name="example"></a>Esimerkki
-* Lisää **PDF-katseluohjelman** ohjausobjekti ja määritä sen **Document**-ominaisuuden arvoksi PDF-tiedoston URL-osoite lainausmerkeissä, kuten seuraavassa esimerkissä:<br>
+
+Lisää **PDF-katseluohjelman** ohjausobjekti ja määritä sen **Document**-ominaisuuden arvoksi PDF-tiedoston URL-osoite lainausmerkeissä, kuten seuraavassa esimerkissä:
+
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    Ohjausobjekti näyttää PDF-tiedoston.
+    The control shows the PDF file.
 
-    Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
-
+    Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+
 Kaikkia PDF-tiedostojen helppokäyttötoimintoja ei tueta, sillä **PDF-katseluohjelma** on vielä koevaiheessa. Tämän vuoksi **ShowControls**-ominaisuudeksi on asetettava **true**, jotta käyttäjät voivat avata tiedoston ulkoisessa sovelluksessa.
 
 Opi luomaan helppokäyttöisiä PDF-tiedostoja [WCAG 2.0](https://www.w3.org/TR/WCAG-TECHS/pdf.html)- ja [PDF/UA](https://www.pdfa.org/pdfua-the-iso-standard-for-universal-accessibility/)-standardien avulla.

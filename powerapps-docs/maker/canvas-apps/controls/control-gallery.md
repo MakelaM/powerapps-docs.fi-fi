@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 05/25/2017
 ms.author: sharik
-ms.openlocfilehash: dde430d6174af5be75a4fc8ae13dabd6f3759899
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fcb482844e430444fd95bb2d0c85a8da23c91d84
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837253"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897727"
 ---
 # <a name="gallery-control-in-powerapps"></a>PowerAppsin Valikoima-ohjausobjekti
 Ohjausobjekti, joka sisältää muita ohjausobjekteja ja tietoja.
@@ -107,11 +107,11 @@ Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, s
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-> Näytönlukuohjelmat ilmoittavat, kun valikoiman kohteet muuttuvat. **AccessibleLabel** mainitaan myös. Tämä antaa ilmoitukselle kontekstin, mikä on erityisen tärkeää, jos samassa näytössä on useampi valikoima.
+  > Näytönlukuohjelmat ilmoittavat, kun valikoiman kohteet muuttuvat. **AccessibleLabel** mainitaan myös. Tämä antaa ilmoitukselle kontekstin, mikä on erityisen tärkeää, jos samassa näytössä on useampi valikoima.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 * Suosittelemme asettamaan **ShowScrollbar**-ominaisuuden arvoksi **tosi**. Useimmissa kosketusnäyttölaitteissa vierityspalkki näytetään ainoastaan vierittäessä.
 * Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, vain näppäimistöä käyttävien käyttäjien on myös voitava valita kohteet jollain tavalla. Voit mahdollistaa tämän lisäämällä **[painikkeen](control-button.md)**, jonka **OnSelect**-ominaisuuden arvoksi on asetettu **Select(Parent)**.
 
     > [!NOTE]
-> Valikoiman ulkopuolella olevia ohjausobjekteja ei oteta huomioon valikoimassa käytettävässä näppäimistön siirtymisjärjestyksessä. Valikoiman ohjausobjektien **[TabIndex](properties-accessibility.md)**-ominaisuus on rajoitettu. Lue lisätietoja [helppokäyttöisyysasetuksista](properties-accessibility.md).
+  > Valikoiman ulkopuolella olevia ohjausobjekteja ei oteta huomioon valikoimassa käytettävässä näppäimistön siirtymisjärjestyksessä. Valikoiman ohjausobjektien **[TabIndex](properties-accessibility.md)**-ominaisuus on rajoitettu. Lue lisätietoja [helppokäyttöisyysasetuksista](properties-accessibility.md).

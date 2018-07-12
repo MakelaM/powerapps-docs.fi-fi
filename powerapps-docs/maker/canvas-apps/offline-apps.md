@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: e73324d6cfce5edf7ece0350b2047dc7842373bb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d374ec8459f4182b11ecf91e28af24a31bb6c055
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836765"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896830"
 ---
 # <a name="develop-offline-capable-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia sovelluksia PowerAppsissa
 Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia, kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia sovelluksia. Voit:
@@ -41,19 +41,19 @@ Jotta painopisteenä voidaan pitää sovelluskehityksen offline-ominaisuuksia, n
 Ylätasolla sovellus tekee seuraavaa:
 
 1. Sovelluksen käynnistyksen yhteydessä (ensimmäisen näytön **OnVisible**-ominaisuuden perusteella):
-   
+
    * Jos laite on yhteydessä verkkoon, käytämme Twitter-liitintä suoraan tietojen noutamiseen ja kokoelman täyttämiseen näillä tiedoilla.
    * Jos laite on offline-tilassa, lataamme tiedot paikallisesta välimuistitiedostosta käyttämällä [LoadData](../canvas-apps/functions/function-savedata-loaddata.md)-funktiota.
    * Annamme käyttäjälle mahdollisuuden lähettää twiittejä – jos laite on yhteydessä verkkoon, voimme julkaista suoraan Twitteriin ja päivittää paikallisen välimuistin.
 2. 5 minuutin välein, jos laite on online-tilassa:
-   
+
    * Julkaisemme kaikki paikallisessa välimuistissa olevat twiitit.
    * Päivitämme paikallisen välimuistin ja tallennamme sen [SaveData](../canvas-apps/functions/function-savedata-loaddata.md)-funktion avulla.
 
 ### <a name="step-1-create-a-new-phone-app"></a>Vaihe 1: Luo uusi puhelinsovellus
 1. Avaa PowerApps Studio.
 2. Napsauta tai napauta **uusi** > **tyhjä sovellus** > **puhelinasettelu**.
-   
+
     ![Tyhjä sovellus, puhelinasettelu](./media/offline-apps/blank-app.png)
 
 ### <a name="step-2-add-a-twitter-connection"></a>Vaihe 2: Lisää Twitter-yhteys
@@ -63,7 +63,7 @@ Ylätasolla sovellus tekee seuraavaa:
 2. Napsauta tai napauta kohtaa **Uusi yhteys**, valitse **Twitter** ja napsauta tai napauta kohtaa **Luo**.
 
 3. Anna tunnistetietosi ja luo yhteys.
-   
+
     ![Twitter-yhteyden lisääminen](./media/offline-apps/twitter-connection.png)
 
 ### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Vaihe 3: Lataa twiittejä LocalTweets-kokoelmaan sovelluksen käynnistyksen yhteydessä
@@ -127,20 +127,20 @@ Tämä kaava tarkistaa, onko laite online-tilassa. Jos näin on, selitteen tekst
 ### <a name="step-7-add-a-button-to-post-the-tweet"></a>Vaihe 7: Lisää painike, jolla twiitti lähetetään
 1. Lisää **Button**-ohjausobjekti ja aseta sen **Text**-ominaisuudeksi ”Tweet”.
 2. Määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
-   
+
     ```
     If (Connection.Connected,
-   
+
         Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
-   
+
         Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-   
+
         SaveData(LocalTweetsToPost, "LocalTweetsToPost")
-   
+
     );
-   
+
     UpdateContext({resetNewTweet: true});
-   
+
     UpdateContext({resetNewTweet: false})
     ```  
 
@@ -159,18 +159,18 @@ Lisää uusi **Timer**-ohjausobjekti:
 * Määritä **Autostart**-ominaisuuden arvoksi true.
 
 * Määritä **OnTimerEnd**in arvoksi seuraava kaava:
-  
+
     ```
     If(Connection.Connected,
-  
+
         ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
-  
+
         Clear(LocalTweetsToPost);
-  
+
         Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-  
+
         SaveData(LocalTweetsToPost, "LocalTweetsToPost");
-  
+
         UpdateContext({statusText: "Online data"})
     )
     ```

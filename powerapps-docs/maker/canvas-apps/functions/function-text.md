@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: a63a972e7af3c821d2441519c2a887bbe110faac
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fece9b928cdbfa955ada994e4cdd637eea3f7ac8
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838943"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899705"
 ---
 # <a name="text-function-in-powerapps"></a>PowerAppsin Text-funktio
 Muotoilee luvun tai päivämäärän/kellonajan esitystavan.
@@ -31,6 +31,7 @@ Muotoilee luvun tai päivämäärän/kellonajan esitystavan.
 Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../show-text-dates-times.md).
 
 ### <a name="predefined-datetime-formats"></a> Ennalta määritetyt päivämäärän ja kellonajan muotoilut
+
 | Ennalta määritetty muotoilu | Kuvaus |
 | --- | --- |
 | **DateTimeFormat.LongDate** |Koko vuosi, kuukausi, kuukauden päivä ja viikonpäivä. Kuukausien nimiä ja viikonpäiviä ei lyhennetä. |
@@ -46,6 +47,7 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 | **DateTimeFormat.UTC** |Päivämäärän ja kellonajan arvo muunnetaan UTC-arvoon nykyisen käyttäjän aikavyöhykkeen perusteella ja muotoillaan ISO 8601-standardin mukaisesti. |
 
 ### <a name="number-placeholders"></a>Luvun paikkamerkit
+
 | Paikkamerkki | Kuvaus |
 | --- | --- |
 | **0** (*nolla*) |Näyttää merkityksettömät nollat, jos luvussa on vähemmän numeroita kuin muodossa nollia. Käytä esimerkiksi muotoa **#.00**, jos haluat näyttää luvun **8,9** muodossa **8,90**. |
@@ -56,28 +58,29 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, luku pyöristetään niin moneen desimaaliin kuin muodossa on paikkamerkkejä. Jos desimaalipilkun vasemmalla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, ylimääräiset numerot näytetään. Jos desimaalipilkun vasemmalla puolella on vain ristikkomerkkejä (#), lukua 1 pienemmän arvot alkavat desimaalipilkulla (esimerkiksi **,47**).
 
 ### <a name="date-and-time-placeholders"></a>Päivämäärän ja kellonajan paikkamerkit
-| Paikkamerkki | Kuvaus |
-| --- | --- |
-| **m** |Näyttää kuukauden lukuna ilman ensimmäistä nollaa. |
-| **mm** |Näyttää kuukauden lukuna ja käyttää tarvittaessa ensimmäistä nollaa. |
-| **mmm** |Näyttää kuukauden lyhenteenä (**tam**...**jou**). |
-| **mmmm** |Näyttää kuukauden koko nimen (**tammikuu**...**joulukuu**). |
-| **d** |Näyttää kuukauden päivän ilman ensimmäistä nollaa. |
-| **dd** |Näyttää kuukauden päivän lukuna ja käyttää tarvittaessa ensimmäistä nollaa. |
-| **ddd** |Näyttää päivän lyhenteenä (**su**...**la**). |
-| **dddd** |Näyttää päivän koko nimen (**sunnuntai**...**lauantai**). |
-| **yy** |Näyttää vuoden kaksinumeroisena lukuna. |
-| **yyyy** |Näyttää vuoden nelinumeroisena lukuna. |
-| **h** |Näyttää tunnit ilman ensimmäistä nollaa. |
-| **hh** |Näyttää tunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. Jos muotoiluun sisältyy **AM** tai **PM**, aika näkyy 12 tunnin mukaan. Muussa tapauksessa aika näytetään 24 tunnin mukaan. |
-| **m** |Näyttää minuutit lukuna ilman ensimmäistä nollaa.  > [!NOTE]
-> **m**- tai **mm** -koodin on oltava heti **h**- tai **hh**-koodin perässä tai heti ennen **ss**-koodia; muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |
-| **mm** |Näyttää minuutit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. > [!NOTE]
-> **m**- tai **mm**-paikkamerkin on oltava heti **h**- tai **hh**-paikkamerkin jälkeen tai heti ennen **ss**-paikkamerkkiä. Muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |
-| **s** |Näyttää sekunnin lukuna ilman ensimmäistä nollaa. |
-| **ss** |Näyttää sekunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. |
-| **f** |Näyttää sekunnin murto-osat. |
-| **AM/PM**, **am/pm**, **A/P**, **a/p** |Näyttää ajan 12 tunnin kellon perusteella. **Text**-funktio palauttaa arvon "AM", "am", "A" tai "a" keskiyöstä keskipäivään ja "PM", "pm", "P" tai "p" keskipäivästä keskiyöhön |
+
+|                                                                                                 Paikkamerkki                                                                                                  |                                                                                                     Kuvaus                                                                                                     |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                    **m**                                                                                                     |                                                                               Näyttää kuukauden lukuna ilman ensimmäistä nollaa.                                                                                |
+|                                                                                                    **mm**                                                                                                    |                                                                        Näyttää kuukauden lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                         |
+|                                                                                                   **mmm**                                                                                                    |                                                                             Näyttää kuukauden lyhenteenä (**tam**...**jou**).                                                                             |
+|                                                                                                   **mmmm**                                                                                                   |                                                                          Näyttää kuukauden koko nimen (**tammikuu**...**joulukuu**).                                                                           |
+|                                                                                                    **d**                                                                                                     |                                                                                Näyttää kuukauden päivän ilman ensimmäistä nollaa.                                                                                 |
+|                                                                                                    **dd**                                                                                                    |                                                                         Näyttää kuukauden päivän lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                          |
+|                                                                                                   **ddd**                                                                                                    |                                                                              Näyttää päivän lyhenteenä (**su**...**la**).                                                                              |
+|                                                                                                   **dddd**                                                                                                   |                                                                            Näyttää päivän koko nimen (**sunnuntai**...**lauantai**).                                                                            |
+|                                                                                                    **yy**                                                                                                    |                                                                                      Näyttää vuoden kaksinumeroisena lukuna.                                                                                       |
+|                                                                                                   **yyyy**                                                                                                   |                                                                                      Näyttää vuoden nelinumeroisena lukuna.                                                                                      |
+|                                                                                                    **h**                                                                                                     |                                                                                Näyttää tunnit ilman ensimmäistä nollaa.                                                                                |
+|                                                                                                    **hh**                                                                                                    | Näyttää tunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. Jos muotoiluun sisältyy **AM** tai **PM**, aika näkyy 12 tunnin mukaan. Muussa tapauksessa aika näytetään 24 tunnin mukaan. |
+|                                                                                                    **m**                                                                                                     |                                                                         Näyttää minuutit lukuna ilman ensimmäistä nollaa.  > [!NOTE]                                                                          |
+|            > **m**- tai **mm** -koodin on oltava heti **h**- tai **hh**-koodin perässä tai heti ennen **ss**-koodia; muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan.            |                                                                                                                                                                                                                     |
+|                                                                                                    **mm**                                                                                                    |                                                                   Näyttää minuutit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. > [!NOTE]                                                                   |
+| > **m**- tai **mm**-paikkamerkin on oltava heti **h**- tai **hh**-paikkamerkin jälkeen tai heti ennen **ss**-paikkamerkkiä. Muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |                                                                                                                                                                                                                     |
+|                                                                                                    **s**                                                                                                     |                                                                               Näyttää sekunnin lukuna ilman ensimmäistä nollaa.                                                                               |
+|                                                                                                    **ss**                                                                                                    |                                                                        Näyttää sekunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                        |
+|                                                                                                    **f**                                                                                                     |                                                                                         Näyttää sekunnin murto-osat.                                                                                          |
+|                                                                                    **AM/PM**, **am/pm**, **A/P**, **a/p**                                                                                    |               Näyttää ajan 12 tunnin kellon perusteella. **Text**-funktio palauttaa arvon "AM", "am", "A" tai "a" keskiyöstä keskipäivään ja "PM", "pm", "P" tai "p" keskipäivästä keskiyöhön                |
 
 ### <a name="literal-placeholders"></a>Literaalit paikkamerkit
 Voit sisällyttää muotoilumerkkijonoon seuraavia merkkejä.  Ne näkyvät **Text**-funktion tuloksessa sellaisenaan. Muita merkkejä varataan tulevia paikkamerkkejä varten, joten niitä ei kannata käyttää.
@@ -148,6 +151,7 @@ Oletusmuotoisesti **Text**-funktio käyttää sitä kieltä, jota sovelluksessa 
 Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinnut kielekseen englannin.  **Language**-funktio palauttaa tuloksen "en-US".
 
 ### <a name="number"></a>Luku
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Muotoilee luvun yhden desimaalin tarkkuudella. |"1234.6" |
@@ -169,6 +173,7 @@ Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinn
 | **Text( Now(), "d-mmm-yy" )** |Esitetään käyttämällä paikkamerkkejä: <ul><li>**d** – yksi- tai kaksinumeroinen kuukauden päivä<li>**-** – tulokseen kopioitu literaalimerkki<li>**mmm** – kolmikirjaiminen kuukauden lyhenne<li>**-** – toinen tulokseen kopioitu literaalimerkki<li>**yy** – vuosiluku kaksinumeroisena lyhenteenä</ul> |"23-Nov-15" |
 
 ### <a name="global-apps"></a>Yleiset sovellukset
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Text( 1234567.89, "[$-en-US]$ #,###" )** |Tulkitsee pilkun (**,**) tuhaterottimeksi, joka näytetään kolmen merkin välein, ja lisää valuuttamerkin **$**. Koska desimaaleja ei käytetä, arvo pyöristetään suurempaan kokonaislukuun. Tässä tapauksessa **[$-en-US]** on valinnainen, sillä se on oletusarvo. |"$ 1,234,568" |

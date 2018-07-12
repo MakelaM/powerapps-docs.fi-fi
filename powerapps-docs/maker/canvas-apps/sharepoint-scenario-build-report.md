@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 01/10/2018
 ms.author: mblythe
-ms.openlocfilehash: 4863ee2c19c17eb8afcc8913dcfb5f3831af828c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 7ab372f8e8a03da35752614905017e24672480b3
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839104"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897704"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Power BI -raportin luominen projektien analysointiin
 > [!NOTE]
@@ -94,8 +94,8 @@ Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poi
    
     ![Poista sarakkeet](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)
 3. Poista kaksi **Id**-sarakkeen jälkeistä saraketta: **ServerRedirectedEmbedURL** ja **ContentTypeId**. 
-> [!TIP]
-> Valitse molemmat sarakkeet käyttämällä vaihtonäppäintä ja napsauta tai napauta sitten **Poista sarakkeet**.
+   > [!TIP]
+   > Valitse molemmat sarakkeet käyttämällä vaihtonäppäintä ja napsauta tai napauta sitten **Poista sarakkeet**.
 4. Poista kaikki sarakkeen **PMAssigned** oikealla puolella olevat sarakkeet (yhteensä 22 saraketta). Taulukon pitäisi vastata seuraavaa kuvaa:
    
     ![Project Details -taulukko kyselyeditorissa](./media/sharepoint-scenario-build-report/05-01-08-table-details.png)

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 09/13/2016
 ms.author: gregli
-ms.openlocfilehash: 15d458142bc1077b1bf55ae6e358c826f813ecb2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 8b9e6d7b55eac51d9bf22d28945cfd4349fc957c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31829506"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897765"
 ---
 # <a name="abs-exp-ln-power-and-sqrt-functions-in-powerapps"></a>Abs-, Exp-, Ln-, Power- ja Sqrt-funktiot PowerAppsissa
 Laskevat itseisarvot, luonnolliset logaritmit, neliöjuuret sekä *e*:n tai minkä tahansa numeron määritettyyn potenssiin korottamisen tulokset.
@@ -53,6 +53,7 @@ Jos argumentti tuottaa määrittämättömän arvon, tulos on *tyhjä*.  Näin v
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-number"></a>Yksittäinen luku
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Abs( -55 )** |Palauttaa luvun ilman miinusmerkkiä. |55 |

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: e265934336f3646f52b749ddcec5a5e734bd2c50
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 0192abca52f3ca3d28b911e24a9ca9cd07c95393
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31828889"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895841"
 ---
 # <a name="save-and-publish-an-app-in-powerapps"></a>Tallenna ja julkaise sovellus PowerAppsissa
 Kun tallennat sovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
@@ -47,7 +47,7 @@ PowerApps voi tallentaa sovelluksen kahden minuutin välein. Jos olet tallentanu
    ![Tarkista julkaisu](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-> Suosittelemme päivittämään tai julkaisemaan sovelluksen uudelleen kuuden kuukauden kuluessa edellisestä julkaisusta, jotta sovellus pysyy synkronoituna viimeisimmän PowerApps-version kanssa. Jos et päivitä tai julkaise sovellusta uudelleen kuuden kuukauden kuluessa, se saattaa lakata toimimasta ilman varoitusta.
+   > Suosittelemme päivittämään tai julkaisemaan sovelluksen uudelleen kuuden kuukauden kuluessa edellisestä julkaisusta, jotta sovellus pysyy synkronoituna viimeisimmän PowerApps-version kanssa. Jos et päivitä tai julkaise sovellusta uudelleen kuuden kuukauden kuluessa, se saattaa lakata toimimasta ilman varoitusta.
 
 ## <a name="identify-the-live-version"></a>Tunnista reaaliaikainen versio
 Siirry osoitteeseen [powerapps.com](https://web.powerapps.com) ja valitse **Tiedosto**-valikosta (vasen reuna) kohta **Sovellukset**. Napsauta tai napauta sitten sovelluksen tietokuvaketta ja valitse **Versiot**-välilehti.

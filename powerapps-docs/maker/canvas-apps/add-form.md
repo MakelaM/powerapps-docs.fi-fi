@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/06/2017
 ms.author: sharik
-ms.openlocfilehash: d24777ec34759a98421784995f5a73b0dfc1d2d2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a68986c39ffe251f55c10a26386c8430398d2718
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826264"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895818"
 ---
 # <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Tietueen näyttäminen, muokkaaminen tai lisääminen taulukosta PowerAppsissa
 Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjekti tietueen kaikkien kenttien näyttämiseksi. Voit muokata mitä tahansa tietueen kenttää (tai lisätä tietueen) ja tallentaa muutokset takaisin tietolähteeseen lisäämällä ja määrittämällä ensin **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektin.
@@ -36,7 +36,7 @@ Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohj
     **FlooringEstimates.Name**
 
     > [!NOTE]
-> Jos et ole varma, kuinka ohjausobjekteja lisätään, nimetään uudelleen tai kuinka niille määritetään ominaisuus, katso [Ohjausobjektien lisääminen ja määrittäminen](add-configure-controls.md).
+   > Jos et ole varma, kuinka ohjausobjekteja lisätään, nimetään uudelleen tai kuinka niille määritetään ominaisuus, katso [Ohjausobjektien lisääminen ja määrittäminen](add-configure-controls.md).
 
     Luettelossa näytetään tietolähteeltä saadut lattiatuotteiden nimet.
 
@@ -45,7 +45,7 @@ Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohj
     ![Lomakkeen lisääminen](./media/add-form/add-a-form.png)
 
     > [!NOTE]
-> Tässä aiheessa kuvaillaan **Muokkaa lomaketta** -ohjausobjektia, mutta samanlaiset periaatteet pätevät myös **Näytä lomake** -ohjausobjektiin.
+   > Tässä aiheessa kuvaillaan **Muokkaa lomaketta** -ohjausobjektia, mutta samanlaiset periaatteet pätevät myös **Näytä lomake** -ohjausobjektiin.
 
 3. Aseta lomakkeen **[DataSource](controls/control-form-detail.md)**-ominaisuudeksi **FlooringEstimates** ja **[Item](controls/control-form-detail.md)**-ominaisuudeksi tämä kaava:
 
@@ -56,7 +56,7 @@ Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohj
 4. Napsauta tai napauta **Tiedot**-ruudulta kenttien valintaruutuja niiden näyttämiseksi.
 
     > [!NOTE]
-> Jos **Tiedot**-ruutu on suljettuna, avaa se valitsemalla lomake vasemmanpuoleisesta ruudusta ja napsauttamalla tai napauttamalla sitten oikeanpuoleisesta ruudusta **Tiedot**.
+   > Jos **Tiedot**-ruutu on suljettuna, avaa se valitsemalla lomake vasemmanpuoleisesta ruudusta ja napsauttamalla tai napauttamalla sitten oikeanpuoleisesta ruudusta **Tiedot**.
 
     ![Kenttien näyttäminen lomakkeessa](./media/add-form/checkbox.png)
 

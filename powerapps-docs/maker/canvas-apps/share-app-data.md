@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: 8a763565ff8b48f95f68bdfd91fc21382ad9338f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 8c96a83ae67a8a06aa96b4f4ba091e361430683d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827823"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896117"
 ---
 # <a name="share-excel-data-used-by-your-app"></a>Sovelluksesi käyttämien Excel-tietojen jakaminen
 Voit jakaa Excel-tietoja sovelluksesi käyttäjien kanssa [pilvipalvelussa](connections/cloud-storage-blob-connections.md), kuten Onedrivessa.
@@ -48,7 +48,7 @@ Lisätietoja on kohdassa [Dropbox-kansioiden jakaminen](https://www.dropbox.com/
     ![Jaa-komento](./media/share-app-data/onedrive-share.png)
    
     > [!NOTE]
-> OneDrive for Businessissa jaetaan itse tiedosto, ei tiedoston sisältävää kansiota.
+   > OneDrive for Businessissa jaetaan itse tiedosto, ei tiedoston sisältävää kansiota.
 3. Valitse valintaikkunassa **sähköpostin**.
    
     ![Jakaminen sähköpostitse](./media/share-app-data/onedrive-email.png)

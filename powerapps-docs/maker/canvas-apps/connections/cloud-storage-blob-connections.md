@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.openlocfilehash: b0141315f041d81b929a53761952d9b5e355c82e
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 04bfdd2d59b870184e5e42ac06135d00f52dcc70
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803022"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895680"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Pilvitallennustiliin yhdistäminen PowerAppsista
 PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedoston ja käyttää sen tietoja kaikkialla sovelluksessasi käyttämällä näitä yhteyksiä. Näitä yhteyksiä ovat muun muassa seuraavat:  
@@ -47,7 +47,7 @@ PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedosto
     ![Valitse Excel-taulukko](./media/cloud-storage-blob-connections/selecttable.png)
    
     > [!NOTE]
-> Muista, että Excel-tietojen täytyy olla taulukoksi muotoiltuja.
+   > Muista, että Excel-tietojen täytyy olla taulukoksi muotoiltuja.
 
 ## <a name="using-the-excel-data-in-your-app"></a>Excel-tietojen käyttäminen sovelluksessasi
 1. Valitse **Lisää**-valikosta **Valikoima** ja valitse valikoimaohjausobjekti **With text**.

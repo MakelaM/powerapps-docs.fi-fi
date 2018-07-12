@@ -6,12 +6,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: 29f07162ec2815398cda5bcc359f7388df261bc0
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: bf802668ff56729c1d28fc460495a680fc3c6570
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836966"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896807"
 ---
 # <a name="create-an-excel-app-from-scratch"></a>Excel-sovelluksen luominen alusta alkaen
 Voit luoda oman, taulukoksi muotoillun sovelluksesi alusta alkaen Excel-tietojen perusteella ja lisätä sitten halutessasi tietoja muista lähteistä. Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdessä näytössä käyttäjät voivat selata tietuejoukkoa. Toisessa näytössä käyttäjät voivat luoda tietueen, päivittää vähintään tietueen yhden kentän tai poistaa koko tietueen. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
@@ -84,31 +84,31 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
     ![Tietoruudun avaaminen](./media/get-started-create-from-blank/custom-gallery-sample.png)
 
-1. Valitse **Tietolähde**-kohdassa oleva alanuoli, jolloin sovelluksen tietolähteiden luettelo avautuu, ja valitse sitten **Aikataulu**.
+4. Valitse **Tietolähde**-kohdassa oleva alanuoli, jolloin sovelluksen tietolähteiden luettelo avautuu, ja valitse sitten **Aikataulu**.
 
     ![Tietolähteen valitseminen](./media/get-started-create-from-blank/select-schedule.png)
 
-1. Valitse **Asettelu**, avaa asettelujen luettelo valitsemalla alanuoli ja valitse sitten **Otsikko, alaotsikko ja leipäteksti**.
+5. Valitse **Asettelu**, avaa asettelujen luettelo valitsemalla alanuoli ja valitse sitten **Otsikko, alaotsikko ja leipäteksti**.
 
     ![Asettelun valitseminen](./media/get-started-create-from-blank/select-layout.png)
 
-1. Vaihda näytettävä sarake **Otsikko2**-kohdassa **Varmuuskopiointi**-sarakkeesta **Vapaaehtoinen**-sarakkeeksi.
+6. Vaihda näytettävä sarake **Otsikko2**-kohdassa **Varmuuskopiointi**-sarakkeesta **Vapaaehtoinen**-sarakkeeksi.
 
      ![Selitteen sarakkeen vaihtaminen](./media/get-started-create-from-blank/change-title2.png)
 
-1. Sulje **Tiedot**-ruutu valitsemalla oikean yläkulman sulkemiskuvake.
+7. Sulje **Tiedot**-ruutu valitsemalla oikean yläkulman sulkemiskuvake.
 
     Valikoimassa näkyy kunkin vapaaehtoisen nimi ja kyseisen vapaaehtoisen vuoron päivä ja aika.
 
     ![Valikoiman aikataulutiedot lajittelemattomina](./media/get-started-create-from-blank/show-data-unsorted.png)
 
-4. Valitse valikoima ja varmista, että ominaisuusluettelossa näkyy ominaisuus **[Items](controls/properties-core.md)**.
+8. Valitse valikoima ja varmista, että ominaisuusluettelossa näkyy ominaisuus **[Items](controls/properties-core.md)**.
 
     Kuten kaavariviltä näkyy, kyseisen ominaisuuden arvo on **Schedule**.
 
     ![Valikoiman aikataulutiedot lajittelemattomina](./media/get-started-create-from-blank/set-property.png)
 
-1. Vaihda **Items**-ominaisuuden arvo kopioimalla tämä kaava ja liittämällä se kaavariville:
+9. Vaihda **Items**-ominaisuuden arvo kopioimalla tämä kaava ja liittämällä se kaavariville:
 
     **SortByColumns(Search(Schedule, TextSearchBox1.Text, "Vapaaehtoinen"), "Vapaaehtoinen", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
 
@@ -118,22 +118,22 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
     Käyttäjät voivat lajitella ja suodattaa valikoiman vapaaehtoisen nimen mukaan kyseisen kaavan **SortByColumns**- ja **Search**-funktioiden perusteella.
 
-    - Jos käyttäjä kirjoittaa ainakin yhden kirjaimen hakukenttään, valikoimassa näytetään vain tietueet, joissa **Vapaaehtoinen**-kenttä sisältää käyttäjän antaman tekstin.
-    - Jos käyttäjä valitsee lajittelupainikkeen, tietueet näkyvät valikoimassa nousevassa tai laskevassa järjestyksessä (sen mukaan, miten monta kertaa käyttäjä valitsee painikkeen) **Vapaaehtoinen**-kentän perusteella.
+   - Jos käyttäjä kirjoittaa ainakin yhden kirjaimen hakukenttään, valikoimassa näytetään vain tietueet, joissa **Vapaaehtoinen**-kenttä sisältää käyttäjän antaman tekstin.
+   - Jos käyttäjä valitsee lajittelupainikkeen, tietueet näkyvät valikoimassa nousevassa tai laskevassa järjestyksessä (sen mukaan, miten monta kertaa käyttäjä valitsee painikkeen) **Vapaaehtoinen**-kentän perusteella.
 
-    Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavasta](formula-reference.md).
+     Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavasta](formula-reference.md).
 
-5. Kirjoita **i** hakuruutuun, valitse lajittelupainike napsauttamalla tai napauttamalla sitä ja valitse se sitten vielä kerran (tai pariton määrä lisäkertoja).
+10. Kirjoita **i** hakuruutuun, valitse lajittelupainike napsauttamalla tai napauttamalla sitä ja valitse se sitten vielä kerran (tai pariton määrä lisäkertoja).
 
-    Valikoima näyttää nämä tulokset.
+     Valikoima näyttää nämä tulokset.
 
-    ![Lajittele ja suodata valikoimaa](./media/get-started-create-from-blank/sort-filter.png)
+     ![Lajittele ja suodata valikoimaa](./media/get-started-create-from-blank/sort-filter.png)
 
-1. Tyhjennä kaikki teksti hakuruudusta.
+11. Tyhjennä kaikki teksti hakuruudusta.
 
-6. Valitse näytön yläreunassa **[Selite](controls/control-text-box.md)**-ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Näytä tietueet**.
+12. Valitse näytön yläreunassa **[Selite](controls/control-text-box.md)**-ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Näytä tietueet**.
 
-    ![Muuta otsikkoriviä](./media/get-started-create-from-blank/change-title-bar.png)
+     ![Muuta otsikkoriviä](./media/get-started-create-from-blank/change-title-bar.png)
 
 ## <a name="create-the-change-screen"></a>Muutosnäytön luominen
 1. Valitse **Aloitus**-välilehdessä alanuoli **Uusi näyttö** -kohdan vieressä ja valitse sitten **Lomakenäyttö**.

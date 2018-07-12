@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 05/01/2016
 ms.author: mblythe
-ms.openlocfilehash: 70200430b0cee7356d70795440b908a8837ba18d
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 324fa80060a7c07bd5f0708df9fdabdbe7893236
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33078416"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899475"
 ---
 # <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerAppsin yhteisön palvelupaketti: ilmainen kehitysympäristö yksilökäyttöön
 Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä, PowerAppsin yhteisön palvelupaketti on oikea palvelupaketti sinua varten. PowerAppsin yhteisön palvelupaketti sisältää ilmaisen kehitysympäristö yksilökäyttöön, jonka avulla voit
@@ -77,6 +77,7 @@ Saat oman ympäristön kautta seuraavat toiminnallisuudet:
 \*\*Tietokantaa ei voi nykyisin luoda Common Data Servicen avulla omassa ympäristössä, mutta tämä toiminto on käytettävissä taas pian uudelleen. Jos olet luonut tietokannan aiemmin, voit jatkaa sen käyttöä ongelmitta. 
 
 ## <a name="what-are-the-capacity-limits-for-the-individual-environment"></a>Mitkä ovat oman ympäristön kapasiteettirajat?
+
 | **Kapasiteetti** |  |
 | --- | --- |
 | Työnkulkujen suorituksia/kuukausi |750 |

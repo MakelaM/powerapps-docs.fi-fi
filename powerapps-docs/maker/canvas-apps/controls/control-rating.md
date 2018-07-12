@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 1df75e5de1f0d8a2515b4dcf761593145d72f70a
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 2cdf88c21e9cd8dd957fa5cf704280df325e85fd
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834649"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898302"
 ---
 # <a name="rating-control-in-powerapps"></a>Luokitus-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ilmaista arvon numeron 1 ja määrittämäsi suurimman numeron väliltä.
@@ -105,7 +105,7 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-> Näytönlukuohjelmat käsittelevät **Rating** -ohjausobjektin valintanappeina.
+  > Näytönlukuohjelmat käsittelevät **Rating** -ohjausobjektin valintanappeina.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 * **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
@@ -113,4 +113,4 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
 * Jos tähtiä on liikaa, harkitse eri ohjausobjektin käyttämistä. Muuten käyttö näppäimistöllä voi olla vaikeaa ja valinnan tekeminen tarkasti kosketusnäytöllä vaikeaa.
 
     > [!NOTE]
-> **Rating**-kohteessa voidaan käyttää samoja valintanappien näppäimistövuorovaikutuksia.
+  > **Rating**-kohteessa voidaan käyttää samoja valintanappien näppäimistövuorovaikutuksia.

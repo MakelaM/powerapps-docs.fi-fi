@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: da3d21e3f4488f552568a95d856af175f9a042eb
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9dbc59baf8970582b108ee588904437441107722
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827093"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896370"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -31,11 +31,11 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
     ![Mukautettu visualisointi Marketplacessa](./media/powerapps-custom-visual/powerapps-store.png) 
 
-1. Lisää PowerApps-visualisointi raporttiisi ja määritä siihen liittyvät tietokentät.
+2. Lisää PowerApps-visualisointi raporttiisi ja määritä siihen liittyvät tietokentät.
 
     ![Raporttitietojen valitseminen](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-1. Voit valita olemassa olevan sovelluksen tai luoda uuden. Jos päätät luoda sovelluksen, voit valita missä ympäristössä se luodaan.
+3. Voit valita olemassa olevan sovelluksen tai luoda uuden. Jos päätät luoda sovelluksen, voit valita missä ympäristössä se luodaan.
 
     ![Uusi tai olemassa oleva sovellus](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 
@@ -45,19 +45,19 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
     ![Uusi sovellus](./media/powerapps-custom-visual/new-app.png)
 
-1. Nyt voit käyttää vaiheessa 2 määrittämiäsi tietokenttiä PowerApps Studiossa. `PowerBIIntegration`-objekti toimii samalla tavalla kuin muutkin PowerAppsin vain luku -tietolähteet ja -kokoelmat. Voit käyttää objektia minkä tahansa ohjausobjektin täyttämiseen tai liittämiseen ja suodattamiseen muiden tietolähteiden kanssa.
+4. Nyt voit käyttää vaiheessa 2 määrittämiäsi tietokenttiä PowerApps Studiossa. `PowerBIIntegration`-objekti toimii samalla tavalla kuin muutkin PowerAppsin vain luku -tietolähteet ja -kokoelmat. Voit käyttää objektia minkä tahansa ohjausobjektin täyttämiseen tai liittämiseen ja suodattamiseen muiden tietolähteiden kanssa.
 
     ![Mukautettu kaava](./media/powerapps-custom-visual/custom-formula.png)
 
     Tämä kaava liittää Power BI -tiedon asiakkaan tietolähteeseen: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
- Power BI -raportti ja käynnistetty PowerApps Studio -esiintymä jakavat reaaliaikaisen tietoyhteyden. Kun molemmat ovat avoinna, voit suodattaa tai muuttaa raportin tietoa ja nähdä, että päivitetty tieto vaikuttavaa välittömästi sovellukseesi PowerApps Studiossa.
+   Power BI -raportti ja käynnistetty PowerApps Studio -esiintymä jakavat reaaliaikaisen tietoyhteyden. Kun molemmat ovat avoinna, voit suodattaa tai muuttaa raportin tietoa ja nähdä, että päivitetty tieto vaikuttavaa välittömästi sovellukseesi PowerApps Studiossa.
 
-1. Kun olet suorittanut loppuun sovelluksen luomisen tai muutosten tekemisen sovellukseen, tallenna ja julkaise sovellus PowerAppsissa, jotta näet sovelluksen Power BI -raportissa.
+5. Kun olet suorittanut loppuun sovelluksen luomisen tai muutosten tekemisen sovellukseen, tallenna ja julkaise sovellus PowerAppsissa, jotta näet sovelluksen Power BI -raportissa.
 
-1. Kun olet tyytyväinen tekemiisi muutoksiin, muista jakaa PowerApps-sovellus raporttisi käyttäjien kanssa ja tallentaa sitten raportti.
+6. Kun olet tyytyväinen tekemiisi muutoksiin, muista jakaa PowerApps-sovellus raporttisi käyttäjien kanssa ja tallentaa sitten raportti.
 
-1. Näin olet luonut raportin, jossa käyttäjäsi voivat suorittaa toimintoja, kun he saavat merkityksellistä tietoa tiedoistasi.
+7. Näin olet luonut raportin, jossa käyttäjäsi voivat suorittaa toimintoja, kun he saavat merkityksellistä tietoa tiedoistasi.
 
     ![Raportin käsittely](./media/powerapps-custom-visual/working-report.gif)
 

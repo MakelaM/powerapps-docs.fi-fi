@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: caa8cf8678a509e4d66442f790b8d89905d48b92
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: cfc47e95cff02dfcbcc2d3ff456e32a4ca2c675e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838598"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899431"
 ---
 # <a name="label-control-in-powerapps"></a>Selite-ohjausobjekti PowerAppsissa
 Kenttä, jossa näkyy tietoja, kuten tekstiä, numeroita, päivämääriä tai valuutta.
@@ -129,7 +129,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
   **Today()**
   
     > [!NOTE]
-> Kun määrität kaavan, älä käytä lainausmerkkejä, ellei kaavan argumentti ole merkkijonoliteraali. Aseta siinä tapauksessa argumentti lainausmerkkeihin, mutta älä itse kaavaa.
+  > Kun määrität kaavan, älä käytä lainausmerkkejä, ellei kaavan argumentti ole merkkijonoliteraali. Aseta siinä tapauksessa argumentti lainausmerkkeihin, mutta älä itse kaavaa.
   
     Haluatko lisätietoja **[Today](../functions/function-now-today-istoday.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 
@@ -159,7 +159,7 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **[Teksti](properties-core.md)** on oltava käytössä.
 
     > [!NOTE]
-> Näytönlukuohjelmat käsittelevät **Label**-ohjausobjekteja painikkeina, kun **[TabIndex](properties-accessibility.md)** on nolla tai suurempi.
+  > Näytönlukuohjelmat käsittelevät **Label**-ohjausobjekteja painikkeina, kun **[TabIndex](properties-accessibility.md)** on nolla tai suurempi.
 
 ### <a name="low-vision-support"></a>Huonon näön tuki
 * **Label**-ohjausobjektin pitäisi näyttää linkiltä, jos sitä käytetään linkkinä.

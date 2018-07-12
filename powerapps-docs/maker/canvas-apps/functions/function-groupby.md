@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: b47e1b36ec86b2bf4ee2167b2599d583b97a0fbc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 290f4447d7a5793677cfa426edac85963363a9d1
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837960"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896646"
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>GroupBy- ja Ungroup-funktiot PowerAppsissa
 [Taulukon](../working-with-tables.md) [tietueiden](../working-with-tables.md#records) ryhmittely ja ryhmittelyn purku.
@@ -51,7 +51,7 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
 * *RyhmitteleSarakkeenNimi* – pakollinen.  Sarakenimi, johon tallennetaan tietuetiedot, jotka eivät sisälly kohtaan *SarakkeenNimet*.
   
     > [!NOTE]
-> Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
 
 **Ungroup**( *Taulukko*, *RyhmitteleSarakkeenNimi* )
 
@@ -59,7 +59,7 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
 * *RyhmitteleSarakkeenNimi* – pakollinen. Sarake, joka sisältää tietueen asetustiedot **GroupBy**-funktiolla.
   
     > [!NOTE]
-> Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="create-a-collection"></a>Kokoelman luominen

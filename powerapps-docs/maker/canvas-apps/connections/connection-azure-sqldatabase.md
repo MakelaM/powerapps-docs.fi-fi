@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.openlocfilehash: e11521219fcd368801a6e943f45dbc713309ec36
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: d8d5e29fc7f1c551ac637d86886bc658e7414110
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803416"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898003"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>SQL Server -yhteyden luominen PowerAppsista
 ![SQL-palvelimen kuvake](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -33,7 +33,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
 * Jos käytät paikallista tietokantaa, tunnista [tietoyhdyskäytävä](../gateway-management.md), joka jaettiin kanssasi (tai luo sellainen).
   
     > [!NOTE]
-> Yhdyskäytäviä ja paikallisia yhteyksiä voi luoda ja käyttää vain käyttäjän [oletusympäristössä](../working-with-environments.md).
+  > Yhdyskäytäviä ja paikallisia yhteyksiä voi luoda ja käyttää vain käyttäjän [oletusympäristössä](../working-with-environments.md).
 
 ## <a name="generate-an-app-automatically"></a>Luo sovellus automaattisesti
 1. Napsauta tai napauta PowerApps Studiossa **Tiedosto**-valikon (lähellä vasenta reunaa) kohtaa **Uusi**.
@@ -54,7 +54,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
        ![Muodosta yhteys paikalliseen tietokantaan](./media/connection-azure-sqldatabase/connect-onprem.png)
      
        > [!NOTE]
-> Jos sinulla ei ole yhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja napsauta tai napauta **Päivitä yhdyskäytäväluettelo**.
+     > Jos sinulla ei ole yhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja napsauta tai napauta **Päivitä yhdyskäytäväluettelo**.
 6. Napsauta tai napauta **Yhdistä**.
 7. Napsauta tai napauta vaihtoehtoa kohdassa **Valitse tietojoukko**, napsauta tai napauta vaihtoehtoa kohdassa **Valitse taulukko** ja valitse sitten **Yhdistä**.
    
@@ -77,7 +77,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
        ![Muodosta yhteys tietokantaan Azuressa](./media/connection-azure-sqldatabase/connect-onprem-portal.png)
      
        > [!NOTE]
-> Jos sinulla ei ole yhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja päivitä luettelo napsauttamalla tai napauttamalla myötäpäivään-kuvaketta.
+     > Jos sinulla ei ole yhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja päivitä luettelo napsauttamalla tai napauttamalla myötäpäivään-kuvaketta.
 5. Luo yhteys napsauttamalla tai napauttamalla **Luo**.
 6. Luo sovellus käyttämällä tekniikoita, jotka ovat samanlaisia kuin kohdassa [Luo sovellus alusta alkaen](../get-started-create-from-blank.md) on kuvattu.
 
@@ -98,7 +98,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
        ![Muodosta yhteys tietokantaan Azuressa](./media/connection-azure-sqldatabase/connect-onprem-fromblank.png)
      
        > [!NOTE]
-> Jos sinulla ei ole yhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja päivitä luettelo napsauttamalla tai napauttamalla ympyräkuvaketta.
+     > Jos sinulla ei ole yhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja päivitä luettelo napsauttamalla tai napauttamalla ympyräkuvaketta.
 6. Napsauta tai napauta **Yhdistä**.
 7. Napsauta tai napauta haluamaasi vaihtoehtoa kohdassa **Valitse tietojoukko**.
 8. Valitse kohdasta **Valitse taulukko** yksi tai useampi valintaruutu ja napsauta tai napauta kohtaa **Yhdistä**.

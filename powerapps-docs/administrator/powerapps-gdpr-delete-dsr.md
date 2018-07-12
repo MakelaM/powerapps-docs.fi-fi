@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 495d9976b1daa6e7adb20d97c0840b3a1ba90c4b
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: d518cbf398d0f29b25da9dafcfa6e9026fcee88e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552687"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897175"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen
 
@@ -72,15 +72,15 @@ Voit selvittää, oletko muun kuin hallitun vuokraajan jäsen, toimimalla seuraa
 1. Avaa seuraava URL-osoite selaimessa ja muista korvata sähköpostiosoitteesi URL-osoitteessa: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
 
 2. Jos olet **muun kuin hallitun vuokraajan** jäsen, vastauksessa näkyy `"IsViral": true`.
-```
-{
-  ...
-  "Login": "foobar@unmanagedcontoso.com",
-  "DomainName": "unmanagedcontoso.com",
-  "IsViral": true,
-  ...
-}
-```
+   ```
+   {
+   ...
+   "Login": "foobar@unmanagedcontoso.com",
+   "DomainName": "unmanagedcontoso.com",
+   "IsViral": true,
+   ...
+   }
+   ```
 
 3. Muussa tapauksessa kuulut **hallittuun vuokraajaan**.
 

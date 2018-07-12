@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: e4c2f78fb00e726bd0b0bf3cde4fe4f42d40dddc
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ed4e83fab0cf5a08c4b274863f11070471fc44a4
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330878"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898707"
 ---
 # <a name="get-started-with-formulas"></a>Aloita kaavojen käyttäminen
 Määritä sovellukseesi kaavoja, jotka eivät ainoastaan laske arvoja ja suorita muita tehtäviä (samalla tavoin kuin Excelissä), vaan myös vastaavat käyttäjän syötteeseen (kuten sovellus edellyttää).
@@ -70,7 +70,7 @@ Excelissä voit syöttää tietoja, kuten luvun **42** tai lauseen **Hei maailma
     Excelissä voit näyttää luvun, kuten **42**, kirjoittamalla sen soluun tai kirjoittamalla kaavan, jonka tuloksena on tämä luku, kuten **=SUM(30,12)**. PowerAppsissa saat aikaan saman vaikutuksen määrittämällä ohjausobjektille, kuten selitteelle, **42**:lle tai **Sum(30,12)**:lle ominaisuuden **Teksti**. Solu ja selite näyttävät aina tämän numeron riippumatta siitä, mikä laskentataulukossa tai sovelluksessa muuttuu.
    
     > [!NOTE]
-> PowerAppsissa ei aseteta kaavan eteen yhtäläisyysmerkkiä tai plus-merkkiä, kuten Excelissä. Kaavarivi käsittelee kaikkea siihen kirjoitettua oletusarvoisesti kaavana. Kaavaa ei myöskään ympäröidä lainausmerkeillä (”) kuten aikaisemmin määrittäessäsi merkkijonoa.
+   > PowerAppsissa ei aseteta kaavan eteen yhtäläisyysmerkkiä tai plus-merkkiä, kuten Excelissä. Kaavarivi käsittelee kaikkea siihen kirjoitettua oletusarvoisesti kaavana. Kaavaa ei myöskään ympäröidä lainausmerkeillä (”) kuten aikaisemmin määrittäessäsi merkkijonoa.
 5. Korvaa selitteen **[Teksti](controls/properties-core.md)**-ominaisuuden sisältö **”Hei maailma”** kirjoittamalla sen tilalle **Sum(1,2,3)**.
    
     ![Osittaisen funktion Sum(1,2,3 kirjoittaminen ilman oikeaa suljetta tuo esiin virheitä](./media/working-with-formulas/label-sum-partial.png)
@@ -98,7 +98,7 @@ Excelissä voit käyttää ehdollista muotoilua näyttämään esimerkiksi negat
 1. Määritä selitteen **[Väri](controls/properties-color-border.md)**-ominaisuudeksi seuraava kaava:<br>**If( Value(TekstiRuutu1.Text) < 0, Red, Black )**
    
     > [!NOTE]
-> Määritä kaavassa ohjausobjektin ominaisuus syöttämällä ohjausobjektin nimi niin, että sen perässä on piste, jota seuraa ominaisuuden nimi. Määritä esimerkiksi **TextBox1**:n **[Teksti](controls/properties-core.md)**-ominaisuus kirjoittamalla **TextBox1.Text**.
+   > Määritä kaavassa ohjausobjektin ominaisuus syöttämällä ohjausobjektin nimi niin, että sen perässä on piste, jota seuraa ominaisuuden nimi. Määritä esimerkiksi **TextBox1**:n **[Teksti](controls/properties-core.md)**-ominaisuus kirjoittamalla **TextBox1.Text**.
    
     ![Kuva siitä, miten PowerAppsin uudelleenlaskenta muuttaa selitteen väriä sen arvon perusteella](./media/working-with-formulas/recalc-color1.png)
 2. Määritä muuttujille **TextInput1** ja **TextInput2** kaksi lukua, joiden yhteenlaskettu summa on negatiivinen.

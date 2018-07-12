@@ -12,12 +12,12 @@ ms.topic: sample
 ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: bce21a5fe07cb5bf608c36371a7cbe45e845b2ad
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9ce265df67dd980653766b7bf9d57376c671e18a
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330579"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899958"
 ---
 # <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Kuluraportti-PowerApps-mallin asentaminen ja määrittäminen
 
@@ -241,23 +241,23 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 
 ## <a name="import-the-expense-report-powerapp"></a>Kuluraportti-PowerAppsin tuominen
 
-1.  Siirry selaimella osoitteeseen https://web.powerapps.com.
-2.  Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
-3.  Valitse vasemmasta valikosta **Sovellukset**. 
-4.  Napsauta kohtaa **Tuo paketti (esikatselu)**.
+1. Siirry selaimella osoitteeseen https://web.powerapps.com.
+2. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
+3. Valitse vasemmasta valikosta **Sovellukset**. 
+4. Napsauta kohtaa **Tuo paketti (esikatselu)**.
     
-    ![Tuo paketti -näyttö](./media/expense-report-install/import-package.png)
+   ![Tuo paketti -näyttö](./media/expense-report-install/import-package.png)
 
-5.  Napsauta **Lataa palvelimeen**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
-6.  Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
-7.  Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
+5. Napsauta **Lataa palvelimeen**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
+6. Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
+7. Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
     
-    ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings.png)
+   ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings.png)
 
-8.  Napsauta **SharePoint-yhteyden** **punaista kuvaketta**.
-9.  Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+8. Napsauta **SharePoint-yhteyden** **punaista kuvaketta**.
+9. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
 
-    ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-sharepoint.png)
+   ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-sharepoint.png)
 
 10. Napsauta **Tallenna**.
 11. Napsauta **Hyväksynnän yhteyden** **punaista kuvaketta**.
@@ -265,9 +265,9 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-approvals.png)
 
-13.  Napsauta **Tallenna**.
-14.  Napsauta **Office 365 Outlook -yhteyden** **punaista kuvaketta**.
-15.  Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+13. Napsauta **Tallenna**.
+14. Napsauta **Office 365 Outlook -yhteyden** **punaista kuvaketta**.
+15. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-office365outlook.png)
 
@@ -383,7 +383,7 @@ Katso tästä videosta, miten Kuluraportti-PowerApps-mallia käytetään.
 
 [![Kuluraportti-mallin asennusvideo](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
-##<a name="next-steps"></a>Seuraavat vaiheet
+## <a name="next-steps"></a>Seuraavat vaiheet
 - [SharePoint-luettelolomakkeen mukauttaminen](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
 - [Ohjausobjektin lisääminen ja määrittäminen](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/add-configure-controls)
 - [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

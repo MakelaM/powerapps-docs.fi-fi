@@ -7,12 +7,12 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
 ms.author: jimh
-ms.openlocfilehash: f648d68a19c646a2a69a8eebca85ac9e33af0686
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 857c080ff3b8205b9c74099954cd5156697deb77
+ms.sourcegitcommit: 26932abc6fcdc5e6723b64b506532bb182ab3f8d
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552848"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37026207"
 ---
 # <a name="quickstart-create-an-environment"></a>Pikaopas: ympäristön luominen
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, -sovelluksia ja -työnkulkuja. Lisäksi sitä käytetään säilönä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. PowerApps luo jokaiselle vuokraajalle automaattisesti yhden oletusympäristön, joka jaetaan kaikille käyttäjille kyseisessä vuokraajassa.
@@ -37,8 +37,6 @@ Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com](h
 
     ![Tiedosto ja jakaminen](./media/create-environment/new-environment-dialog.png)
 3. Kun ympäristö on luotu, näyttöön tulee vahvistusviestin sisältävä valintaikkuna ja sinua pyydetään luomaan tietokanta. Valitse **Luo tietokanta**, jotta voit jatkossa käyttää Common Data Serviceä.
-
-    **Huomautus:** tällä hetkellä voit luoda tietokannan vain Azure Active Directory -vuokraajan kotialueella.
 
     ![Tiedosto ja jakaminen](./media/create-environment/create-database-dialog.png)
 4. Valitse tietokantaan tallennettavien tietojen valuutta ja kieli. Valuuttaa tai kieltä ei voi muuttaa, kun tietokanta on luotu. Kun olet valmis, valitse **Luo ympäristö**.

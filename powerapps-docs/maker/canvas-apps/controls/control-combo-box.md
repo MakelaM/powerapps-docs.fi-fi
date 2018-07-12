@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 09/13/2017
 ms.author: fikaradz
-ms.openlocfilehash: 1a790627ad1dbd1bebecca84cb41ee29dcf148dd
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1c8004fd615e5f706103ad4c364f7818dd1cb091
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32329498"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898260"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista.  Tukee hakua ja useita valintoja.
@@ -110,11 +110,11 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-> Kosketusnäytöissä näytönlukuohjelman käyttäjät voivat siirtyä yhdistelmäruudun sisällössä peräkkäisessä järjestyksessä. Yhdistelmäruutu toimii painikkeena, joka näyttää tai piilottaa sen sisällön, kun se on valittuna.
+  > Kosketusnäytöissä näytönlukuohjelman käyttäjät voivat siirtyä yhdistelmäruudun sisällössä peräkkäisessä järjestyksessä. Yhdistelmäruutu toimii painikkeena, joka näyttää tai piilottaa sen sisällön, kun se on valittuna.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 * **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
     > [!NOTE]
-> Voit sarkainnäppäimellä siirtyä yhdistelmäruutuun tai siitä pois. Voit nuolinäppäimillä siirtyä yhdistelmäruudun sisällössä. Voit Escape-näppäimellä sulkea avattavan valikon, kun se on avattuna.
+  > Voit sarkainnäppäimellä siirtyä yhdistelmäruutuun tai siitä pois. Voit nuolinäppäimillä siirtyä yhdistelmäruudun sisällössä. Voit Escape-näppäimellä sulkea avattavan valikon, kun se on avattuna.

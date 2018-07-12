@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: bda839765d797bf87590f037221b116bad781657
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fe61a36278ce4f5fe2fb5ff16bdc0a86dc911e5e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31833673"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899107"
 ---
 # <a name="pie-chart-control-in-powerapps"></a>PowerAppsin Ympyräkaavio-ohjausobjekti
 Ohjausobjekti, joka näyttää suhteellisia arvoja verrattuna toisiinsa.
@@ -104,7 +104,7 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **[Selite](control-text-box.md)** on pakollinen ennen kuvaa kaaviosta. Selite toimii kuvan otsikkona.
 
     > [!NOTE]
-> Kaaviokuvat ja **kaavioselitteet** on piilotettu näytönlukuohjelmien käyttäjiltä. Tiedot esitetään heille taulukkomuodossa. He voivat myös selata painikkeita, joilla valitaan kaavion tietoja.
+  > Kaaviokuvat ja **kaavioselitteet** on piilotettu näytönlukuohjelmien käyttäjiltä. Tiedot esitetään heille taulukkomuodossa. He voivat myös selata painikkeita, joilla valitaan kaavion tietoja.
 
 ### <a name="low-vision-support"></a>Tuki heikkonäköisille
 * **Selite** on pakollinen.
@@ -115,4 +115,4 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 
     > [!NOTE]
-> Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.
+  > Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.

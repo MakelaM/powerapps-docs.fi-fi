@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 2e8281f401088f43aa7785ac5dcf7b2f07bb6f96
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b5d63b26498b94943f5340d9f57f3255390c7c94
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826202"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37895979"
 ---
 # <a name="char-function-in-powerapps"></a>Char-funktio PowerAppsissa
 Muuntaa merkkikoodin merkkijonoksi.
@@ -31,6 +31,7 @@ Muuntaa merkkikoodin merkkijonoksi.
 * *Merkkikoodi* – pakollinen. ASCII-merkkikoodi, joka muunnetaan.
 
 ## <a name="examples"></a>Esimerkkejä
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Char( 65 )** |Palauttaa merkin, joka vastaa ASCII-koodia 65. |A |

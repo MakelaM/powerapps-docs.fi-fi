@@ -7,12 +7,12 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: ecbdc81b2688ee9aabf5e0df6416212957ca2642
-ms.sourcegitcommit: 222df368f1f35e9357b0b1adf0e69d7206d8126e
+ms.openlocfilehash: 45a341d28b4138ce03ce50d7325f9daa0f159d1a
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298488"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897428"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Pikaopas: Mukautetun entiteetin luominen
 PowerAppsissa *entiteetti* määrittää tiedot, joita haluat seurata sellaisten tietueiden muodossa, jotka yleensä sisältävät ominaisuuksia, kuten yrityksen nimi, sijainti, tuotteet, sähköposti ja puhelinnumero. Voit sitten näyttää tiedot kehittämällä sovelluksen, joka viittaa entiteettiin. PowerApps tarjoaa vakioentiteetit tyypillisiin organisaation skenaarioihin (kuten tapaamisten seuranta), mutta haluat ehkä myös luoda mukautettuja entiteettejä omalle organisaatiollesi ominaisten tietojen tallentamiseen.
@@ -38,10 +38,10 @@ Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://w
 
 3. Kirjoita **Uusi entiteetti** -paneelin **Näyttönimi**-ruudussa **Tuotearvostelu** ja lisää halutessasi kuvaus (kuvaukset ovat hyödyllisiä muille henkilöille, jotka mahdollisesti käyttävät entiteettiä). Paneelin muut kentät täytetään automaattisesti, alla olevan mukaisesti. Kun olet valmis, valitse **Seuraava**.
 
-    * **Monikkomuotoinen näyttönimi** – Tämä kenttä täytetään automaattisesti, kun kirjoitat näyttönimen. Voit muuttaa nimen tarvittaessa. Monikkomuotoinen näyttönimi on entiteetin nimi Common Data Service WebAPIssa, jota käytetään käsitellessä entiteettiä PowerAppsissa ja Flow’ssa.
-    * **Nimeä** – tämä kenttä täytetään myös automaattisesti, kun kirjoitat näyttönimen. Etuliite määritettiin luotaessa ympäristöä. Sitä käytetään varmistamaan, että luomasi entiteetit voidaan viedä ja tuoda muihin ympäristöihin ilman yhteensopimattomuutta muiden entiteettien nimien kanssa. Voit muuttaa etuliitteen päivittämällä etuliitteen Publisherissa Common Data Servicen oletusratkaisulle. Jos muutat entiteetin nimeä tallentamisen jälkeen, nykyiset sovellukset voivat lakata toimimasta.
+   * **Monikkomuotoinen näyttönimi** – Tämä kenttä täytetään automaattisesti, kun kirjoitat näyttönimen. Voit muuttaa nimen tarvittaessa. Monikkomuotoinen näyttönimi on entiteetin nimi Common Data Service WebAPIssa, jota käytetään käsitellessä entiteettiä PowerAppsissa ja Flow’ssa.
+   * **Nimeä** – tämä kenttä täytetään myös automaattisesti, kun kirjoitat näyttönimen. Etuliite määritettiin luotaessa ympäristöä. Sitä käytetään varmistamaan, että luomasi entiteetit voidaan viedä ja tuoda muihin ympäristöihin ilman yhteensopimattomuutta muiden entiteettien nimien kanssa. Voit muuttaa etuliitteen päivittämällä etuliitteen Publisherissa Common Data Servicen oletusratkaisulle. Jos muutat entiteetin nimeä tallentamisen jälkeen, nykyiset sovellukset voivat lakata toimimasta.
      
-    ![Uusi entiteetti](./media/data-platform-cds-create-entity/newentitypanel.png "Uusi entiteetti -paneeli")
+     ![Uusi entiteetti](./media/data-platform-cds-create-entity/newentitypanel.png "Uusi entiteetti -paneeli")
 
 4. Avaa **Ensisijainen nimi** -paneeli napauttamalla tai napsauttamalla entiteetin tietosivulla **Ensisijainen nimi** -kenttää ja korvaa sitten **Näyttönimi**-ruudussa näkyvä **Ensisijainen nimi** nimellä **Tuotearvostelu**. Korvaa **Nimi**-ruudussa **PrimaryName** nimellä **ProductReview** ja valitse sitten **Valmis**.
  
@@ -66,15 +66,15 @@ Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://w
     ![Uusi kenttä ja ](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
 
 6. Lisää kolme kenttää seuraavilla määrityksillä toistamalla edelliset vaiheet:
-    * **Näyttönimi** = Tuotteen luokitus; **Tietotyyppi** = Kokonaisluku; Valitse **Pakollinen**-valintaruudun valinta
-    * **Näyttönimi** = Arvostelijan nimi; **Tietotyyppi** = Teksti
-    * **Näyttönimi** = Arvostelijan kommentti; **Tietotyyppi** = Teksti
+   * **Näyttönimi** = Tuotteen luokitus; **Tietotyyppi** = Kokonaisluku; Valitse **Pakollinen**-valintaruudun valinta
+   * **Näyttönimi** = Arvostelijan nimi; **Tietotyyppi** = Teksti
+   * **Näyttönimi** = Arvostelijan kommentti; **Tietotyyppi** = Teksti
 
-    Kun olet valmis, sinulla pitäisi olla viisi kenttää entiteetin tietosivulla.
+     Kun olet valmis, sinulla pitäisi olla viisi kenttää entiteetin tietosivulla.
 
-    ![Kenttäluettelo](./media/data-platform-cds-create-entity/addedfields.png "Luettelo kentistä")
+     ![Kenttäluettelo](./media/data-platform-cds-create-entity/addedfields.png "Luettelo kentistä")
 
-    Huomaa, että kaikilla entiteeteillä on vain luku -järjestelmäkenttiä. Oletusarvoisesti järjestelmäkenttiä ei näytetä kenttäluettelossa, vaikka ne ovat olemassa entiteetissä. Jos haluat nähdä kaikki kentät, voit muuttaa suodatinta komentopalkissa asetuksesta **Oletus** asetukseksi **Kaikki**. Lisätietoja entiteettiin liittyvistä metatiedoista on artikkelissa [Entiteettien metatiedot](../../developer/common-data-service/entity-metadata.md).
+     Huomaa, että kaikilla entiteeteillä on vain luku -järjestelmäkenttiä. Oletusarvoisesti järjestelmäkenttiä ei näytetä kenttäluettelossa, vaikka ne ovat olemassa entiteetissä. Jos haluat nähdä kaikki kentät, voit muuttaa suodatinta komentopalkissa asetuksesta **Oletus** asetukseksi **Kaikki**. Lisätietoja entiteettiin liittyvistä metatiedoista on artikkelissa [Entiteettien metatiedot](../../developer/common-data-service/entity-metadata.md).
 
 7. Tallenna entiteetti valitsemalla **Tallenna entiteetti** ja anna se käyttöön sovelluksiin.
 

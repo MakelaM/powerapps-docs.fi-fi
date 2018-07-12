@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 06/29/2017
 ms.author: gregli
-ms.openlocfilehash: 3615328bf1c272425779998545b0d16ac5626297
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1fdf6c92fb739f1293c90322b508b46f4ec5733e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832600"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898026"
 ---
 # <a name="set-function-in-powerapps"></a>PowerAppsin Joukko-funktio
 Asettaa yleisen muuttujan arvon.
@@ -55,6 +55,7 @@ Yleiset muuttujat eivät voi käyttää samaa nimeä kuin olemassa oleva kokoelm
 * *Arvo* – Pakollinen.  Arvo, joka määritetään kontekstimuuttujalle.
 
 ## <a name="examples"></a>Esimerkkejä
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Set(&nbsp;Counter,&nbsp;1&nbsp;)** |Luo yleisen muuttujan **Laskuri** tai muokkaa sitä ja asettaa sen arvoksi **1**. |**Laskuri**-arvo on **1**. Voit viitata kyseiseen muuttujaan käyttämällä kaavassa nimeä **Laskuri** missä tahansa näytössä. |

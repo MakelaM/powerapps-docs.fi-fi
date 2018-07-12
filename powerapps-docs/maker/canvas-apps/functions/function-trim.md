@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 09/09/2016
 ms.author: gregli
-ms.openlocfilehash: 38aa25c46bf8b29c413ca9c3df92f9528bfa97d5
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: f94144c0b279cc61c0af15c95e7cccf73bb124cd
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31831117"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898417"
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Trim- ja TrimEnds-funktiot PowerAppsissa
 Poistavat ylimääräiset välilyönnit tekstimerkkijonosta.
@@ -41,6 +41,7 @@ Sanojen välisiä välilyöntejä poistava **Trim**-funktio on yhdenmukainen sam
 * *SingleColumnTable* – pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista poistetaan välilyöntejä.
 
 ## <a name="example"></a>Esimerkki
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Trim(&nbsp;"&nbsp;&nbsp;&nbsp;Hei&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maailma&nbsp;&nbsp;&nbsp;"&nbsp;)** |Poistaa kaikki välilyönnit merkkijonon alusta ja lopusta sekä ylimääräiset välilyönnit merkkijonon sisältä. |”Hei maailma” |

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 05/23/2017
 ms.author: gregli
-ms.openlocfilehash: eaf538c1189dffd8fb2169f3eda3f525bcf623de
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 26991baa1feb1ef4821beaf791454def21960d4f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832024"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896623"
 ---
 # <a name="dateadd-datediff-and-timezoneoffset-functions-in-powerapps"></a>DateAdd-, DateDiff- ja TimeZoneOffset-funktiot PowerAppsissa
 Lisää tai etsii päivämäärä/aika-arvon eron ja muuntaa paikallisen ajan ja UTC-ajan välillä.
@@ -56,6 +56,7 @@ Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](..
 Kaikissa näissä esimerkeissä oletetaan, että nykyinen päivämäärä ja aika on **15. heinäkuuta 2013, kello 13:02**.
 
 ### <a name="simple-dateadd"></a>Yksinkertainen DateAdd
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Text( DateAdd( Now(), 3 ),<br>"dd-mm-yyyy hh:mm" )** |Lisää kolme päivää (oletusarvoyksiköt) nykyiseen päivämäärään ja aikaan. |"18-07-2013 13:02" |
@@ -64,6 +65,7 @@ Kaikissa näissä esimerkeissä oletetaan, että nykyinen päivämäärä ja aik
 | **Text( DateAdd( Now(), &#8209;30, Minutes ),<br>"dd-mm-yyyy hh:mm" )** |Vähentää nykyisestä päivämäärästä ja ajasta 30 minuuttia. |"15-07-2013 12:32" |
 
 ### <a name="simple-datediff"></a>Yksinkertainen DateDiff
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **DateDiff( Now(), DateValue("1/1/2014") )** |Palauttaa kahden arvon eron oletusyksikkönä **Päivät** |170 |

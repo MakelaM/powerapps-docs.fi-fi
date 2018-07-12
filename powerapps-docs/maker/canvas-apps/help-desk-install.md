@@ -12,12 +12,12 @@ ms.topic: sample
 ms.component: canvas
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 4601cabae10f3373f8d2ef18190d71af536811b5
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: e7ed897af79831f9d8db7ae6da6719b3e6977807
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34470039"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896968"
 ---
 # <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Asenna ja määritä Help Desk PowerApps -malli
 
@@ -173,27 +173,27 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 ## <a name="import-the-help-desk-powerapp"></a>Tuo Help Desk PowerApp
 
-1.  Siirry selaimella kohteeseen https://web.powerapps.com.
-2.  Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
-3.  Valitse vasemmasta valikosta **Sovellukset**. 
-4.  Napsauta kohtaa **Tuo paketti (esikatselu)**.
+1. Siirry selaimella kohteeseen https://web.powerapps.com.
+2. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
+3. Valitse vasemmasta valikosta **Sovellukset**. 
+4. Napsauta kohtaa **Tuo paketti (esikatselu)**.
     
-    ![Tuo paketti -näyttö](./media/help-desk-install/import-package.png)
+   ![Tuo paketti -näyttö](./media/help-desk-install/import-package.png)
 
-5.  Napsauta **Lataa palvelimeen**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
-6.  Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
-7.  Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
+5. Napsauta **Lataa palvelimeen**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
+6. Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
+7. Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
     
-    ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-settings.png)
+   ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-settings.png)
 
-8.  Napsauta **SharePoint-yhteyden** **punaista kuvaketta**.
-9.  Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+8. Napsauta **SharePoint-yhteyden** **punaista kuvaketta**.
+9. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
 
-    ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-settings-sharepoint.png)
+   ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-settings-sharepoint.png)
 
 10. Napsauta **Tallenna**.
-11.  Napsauta **Office 365 Outlook -yhteyden** **punaista kuvaketta**.
-12.  Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+11. Napsauta **Office 365 Outlook -yhteyden** **punaista kuvaketta**.
+12. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
 
     ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-settings-office365outlook.png)
 
@@ -241,13 +241,13 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 1. Valitse **LoginScreen**.
 2. Valitse **OnStart** avattavasta valikosta.
 3. Laajenna kaavaikkuna ja Etsi **AdminList**-kokoelma.
-4. Korvaa **user@microsoft.com** HelpDesk-järjestelmänvalvojillasi.
+4. Korvaa <strong>user@microsoft.com</strong> HelpDesk-järjestelmänvalvojillasi.
 
     ![Päivitä järjestelmänvalvojaluettelo](./media/help-desk-install/Change-admin.png)
     
-    > [!TIP] 
-    > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, käytä pilkkua järjestelmänvalvojien erottelemiseen.  Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
-    > Jos haluat varmistaa, että AdminList-luettelon osoitteet vastaavat PowerAppsin vaatimaa muotoa, valitse Näytä > Muuttujat > Yleiset > Oma profiili ja katso, onko Sähköposti-sarakkeessa vaadittava sähköpostimuoto.
+   > [!TIP]
+   > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, käytä pilkkua järjestelmänvalvojien erottelemiseen.  Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
+   > Jos haluat varmistaa, että AdminList-luettelon osoitteet vastaavat PowerAppsin vaatimaa muotoa, valitse Näytä > Muuttujat > Yleiset > Oma profiili ja katso, onko Sähköposti-sarakkeessa vaadittava sähköpostimuoto.
 
 5. Napsauta **Tiedosto**.
 6. Napsauta **Tallenna**.

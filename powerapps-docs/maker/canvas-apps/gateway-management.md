@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/30/2016
 ms.author: archanan
-ms.openlocfilehash: d51d134878b04f3cb10ff876ef488f1390e4ef30
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 939758c1550f1006f00bd9a386eb4b9cbcd69af0
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826794"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899912"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Paikallisen tietoyhdyskäytävän hallitseminen PowerAppsissa
 Asenna paikallinen tietoyhdyskäytävä, jonka avulla voit siirtää tietoja nopeasti ja turvallisesti PowerAppsin ja muualla kuin pilvipalvelussa olevan tietolähteen, kuten paikallisella SQL-palvelimella olevan tietokannan tai paikallisen SharePoint-sivuston, välillä. Tarkastele yhdyskäytäviä, joihin sinulla on järjestelmänvalvojan oikeudet, ja hallitse näiden yhdyskäytävien käyttöoikeuksia ja yhteyksiä.
@@ -67,7 +67,7 @@ Valitse **Can use**- ja **Can use + share** -käyttöoikeustasoille tietolähtee
 3. Jaa yhteys napsauttamalla tai napauttamalla kohtaa **Jaa** ja lisäämällä tai poistamalla käyttäjiä.
 
     > [!NOTE]
-> Voit jakaa vain tietyn tyyppisiä yhteyksiä, kuten SQL Serverin. Lisätietoja saat kohdasta [Sovelluksen resurssien jakaminen](share-app-resources.md).
+   > Voit jakaa vain tietyn tyyppisiä yhteyksiä, kuten SQL Serverin. Lisätietoja saat kohdasta [Sovelluksen resurssien jakaminen](share-app-resources.md).
 
 Katso lisätietoja yhteyksien hallinnasta kohdasta [Yhteyksien hallinta](add-manage-connections.md).
 

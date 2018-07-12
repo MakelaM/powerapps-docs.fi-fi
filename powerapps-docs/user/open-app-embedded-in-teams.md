@@ -2,18 +2,21 @@
 title: Pikaopas sovelluksen lisäämiseen Microsoft Teamsiin | Microsoft Docs
 description: Tässä pikaoppaassa opit lisäämään sovelluksen Microsoft Teams -kanavaan, jotta ihmiset, joiden kanssa olet jakanut sovelluksen, voivat avata sen kyseisessä kanavassa.
 author: mgblythe
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
 ms.date: 01/18/2018
-ms.author: mblythe
-ms.openlocfilehash: 9c670a61f89b8bf038bae117614895f18101fe0c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.author: matp
+ms.custom: ''
+ms.reviewer: ''
+ms.assetid: ''
+ms.openlocfilehash: 07543d1724ff2272dfa4e1902d2581fa5034360a
+ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34074126"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37925681"
 ---
 # <a name="quickstart-add-an-app-to-microsoft-teams"></a>Pikaopas: Sovelluksen lisääminen Microsoft Teamsiin
 
@@ -29,7 +32,7 @@ Jotta voit suorittaa tämän pikaoppaan vaiheet, sinulla on oltava [Office 365 -
 
 ## <a name="sign-in-to-powerapps"></a>Kirjautuminen PowerAppsiin
 
-Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com]([https://web.powerapps.com).
+Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://web.powerapps.com).
 
 ## <a name="add-an-app"></a>Sovelluksen lisääminen
 

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-ms.openlocfilehash: bfdd2bc0ed784b9f2302d01f2fc8c176a7d9c4bb
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 33bfc61200d10ca50b80e31fec2bef62044e4be7
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803554"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899636"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Twitter-yhteyden luominen PowerAppsista
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -27,13 +27,13 @@ Tässä kohdassa kerrotaan Twitter-yhteyden muodostamisesta, sen käyttämisest�
 
 ## <a name="connect-to-twitter"></a>Yhdistä Twitteriin
 1. Avaa PowerApps, valitse **Uusi** ja luo **Tyhjä sovellus**. Valitse Puhelin- tai Tabletti-asettelu. Tabletti-asettelussa on enemmän työtilaa:  
-   
+
    ![Avaa tyhjä sovellus](./media/connection-twitter/blank-app.png)
 2. Napsauta tai napauta oikealla olevan ruudun **Tiedot**-välilehteä ja valitse **Lisää tietolähde**.
 3. Valitse **Uusi yhteys** ja **Twitter**:  
-   
+
     ![Yhdistä Twitteriin](./media/connection-twitter/addconnection.png)
-   
+
     ![Yhdistä Twitteriin](./media/connection-twitter/add-twitter.png)
 4. Valitse **Yhdistä**, kirjoita Twitter-tilisi kirjautumistiedot ja valitse sen jälkeen **Valtuuta sovellus**.
 5. Valitse **Lisää tietolähde**. Yhteytesi näkyy kohdassa **Tietolähteet**:  
@@ -45,85 +45,85 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 ### <a name="show-a-timeline"></a>Näytä aikajana
 1. Valitse **Lisää**-valikosta **Valikoima** ja lisää jokin **tekstiä käyttävistä** valikoimista.
 2. Seuraavassa esitellään aikajanoja:  
-   
+
    * Kun haluat hakea näyttöön nykyisen käyttäjän aikajanan, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:
-     
+
        `Twitter.HomeTimeline().TweetText`  
        `Twitter.HomeTimeline({maxResults:3}).TweetText`  
    * Kun haluat hakea näyttöön jonkun toisen käyttäjän aikajanan, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.UserTimeline( *TwitterHandle* ).TweetText`
-     
+
        Anna Twitter-tunnus lainausmerkkien sisällä tai käytä jotain muuta vastaavaa arvoa. Voit esimerkiksi syöttää kaavan lausekkeeseen suoraan arvon `"satyanadella"` tai `"powerapps"`.
    * Lisää tekstisyöte, jonka nimi on **Tweep**, ja aseta sen oletusarvoksi `Tweep.Text`. Kirjoita Tweep-tekstiruutuun Twitter-tunnus, kuten `satyanadella` (ilman lainausmerkkejä ja @-merkkiä).
-     
+
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
-     
+
        Valikoiman ohjausobjektiin ilmaantuvat automaattisesti ne twiitit, joiden julkaisijan tunnuksen kirjoitit tekstiruutuun.
-     
+
      > [!TIP]
-> Jotkin näistä kaavoista käyttävät **maxResults**-argumenttia näyttämään uusimpien twiittien *x*-lukumäärän aikajanalla.
+     > Jotkin näistä kaavoista käyttävät **maxResults**-argumenttia näyttämään uusimpien twiittien *x*-lukumäärän aikajanalla.
 3. Määritä valikoiman **Kohteet**-ominaisuuden asetukseksi `Twitter.HomeTimeline()`.
-   
+
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 4. Valitse ensimmäisestä luettelosta **TweetText**, toisesta luettelosta **TweetedBy** ja kolmannesta luettelosta **CreatedAt**.
-   
+
     Valikoimassa näkyvät nyt valitsemasi ominaisuuksien arvot.
 
 ### <a name="show-followers"></a>Näytä seuraajat
 1. Nyt haemme näyttöön joitakin seuraajia käyttämällä **tekstiä käyttäviä**  vaihtoehtoja:  
-   
+
    * Jos haluat nähdä nykyisen käyttäjän seuraajat, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
    * Jos haluat nähdä jonkun toisen käyttäjän seuraajat, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.Followers( *TwitterHandle* )`
-     
+
        Anna Twitter-tunnus lainausmerkkien sisällä tai käytä jotain muuta vastaavaa arvoa. Voit esimerkiksi syöttää kaavan lausekkeeseen suoraan arvon `"satyanadella"` tai `"powerapps"`.
    * Lisää tekstisyöte, jonka nimi on **Tweep**, ja aseta sen oletusarvoksi `Tweep.Text`. Kirjoita Tweep-tekstiruutuun Twitter-tunnus, kuten `satyanadella` (ilman lainausmerkkejä ja @-merkkiä).
-     
+
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.Followers(Tweep.Text, {maxResults:5})`
-     
+
        Valikoiman ohjausobjektiin ilmaantuvat automaattisesti sen Twitter-tunnuksen seuraajat, jonka kirjoitit tekstiruutuun.
-     
+
      > [!TIP]
-> Jotkin näistä kaavoista käyttävät **maxResults**-argumenttia näyttämään uusimpien twiittien *x*-lukumäärän aikajanalla.
+     > Jotkin näistä kaavoista käyttävät **maxResults**-argumenttia näyttämään uusimpien twiittien *x*-lukumäärän aikajanalla.
 2. Määritä valikoiman **Kohteet**-ominaisuuden asetukseksi `Twitter.MyFollowers()`.
-   
+
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 3. Valitse **käyttäjänimi** toisesta luettelosta ja **koko nimi** kolmannesta luettelosta.
-   
+
     Valikoimassa näkyvät nyt valitsemasi ominaisuuksien arvot.
 
 ### <a name="show-followed-users"></a>Näytä seuratut käyttäjät
 1. Seuraavaksi haemme seurattuja käyttäjiä **tekstiä käyttävän** valikoiman avulla:  
-   
+
    * Jos haluat nähdä, keitä nykyinen käyttäjä seuraa, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
    * Jos haluat nähdä, keitä joku toinen käyttäjä seuraa, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:
-     
+
        `Twitter.Following( *TwitterHandle* )`
-     
+
        Anna Twitter-tunnus lainausmerkkien sisällä tai käytä jotain muuta vastaavaa arvoa. Voit esimerkiksi syöttää kaavan lausekkeeseen suoraan arvon `"satyanadella"` tai `"powerapps"`.
    * Lisää tekstisyöte, jonka nimi on **Tweep**, ja aseta sen oletusarvoksi `Tweep.Text`. Kirjoita Tweep-tekstiruutuun Twitter-tunnus, kuten `satyanadella` (ilman lainausmerkkejä ja @-merkkiä).
-     
+
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
-     
+
        `Twitter.Following(Tweep.Text, {maxResults:5})`
-     
+
        Valikoiman ohjausobjekti näyttää automaattisesti muut Twitter-tunnukset, joita seuraat.
-     
+
      Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 2. Valitse **Leipäteksti1**-luettelosta kohta**Kuvaus**, **Otsikko1**-luettelosta **Käyttäjänimi** ja **Alaotsikko1**-luettelosta **Koko nimi**.
-   
+
     Valikoimassa näkyvät nyt valitsemasi ominaisuuksien arvot.
 
 ### <a name="show-information-about-a-user"></a>Hae tietoa käyttäjästä
@@ -144,22 +144,22 @@ Vaihtoehtoisesti voit käyttää syötetekstin ohjausobjektia ja kirjoittaa Twit
 
 ### <a name="search-tweets"></a>Hae twiittejä
 1. Käytä **tekstillä varustettuja** vaihtoehtoja ja määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
-   
+
     `Twitter.SearchTweet( *SearchTerm* ).TweetText`
-   
+
     Tee haku antamalla lainausmerkeillä varustettu *hakutermi* tai viittaamalla vastaavaan arvoon. Voit esimerkiksi syöttää kaavaan suoraan arvon `"PowerApps"` tai `"microsoft"`.
-   
+
     Vaihtoehtoisesti voit käyttää **syötetekstin** ohjausobjektia ja määrittää hakusanan samalla tavoin kuin olemme tehneet aiemminkin tämän opastusjakson aikana.
-   
+
     > [!TIP]
-> Näytä viisi ensimmäistä tulosta käyttämällä maxResults-ominaisuutta:  
-   
+   > Näytä viisi ensimmäistä tulosta käyttämällä maxResults-ominaisuutta:  
+
     `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
 2. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.
-   
+
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 3. Valitse ensimmäisestä luettelosta **TweetText**, toisesta luettelosta **TweetedBy** ja kolmannesta luettelosta **CreatedAt**.
-   
+
     Valikoimassa näkyvät nyt valitsemasi ominaisuuksien arvot.
 
 ### <a name="send-a-tweet"></a>Lähetä twiitti
@@ -189,12 +189,14 @@ Tämä yhteys sisältää seuraavat funktiot:
 Hae käyttäjän aikajana: hakee määritetyn käyttäjän uusimmat twiitit
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Käyttäjätunnus |merkkijono |kyllä |Twitter-tunnus |
 | maxResults |kokonaisluku |ei |Haettavien twiittien enimmäismäärä, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Twiitin teksti |merkkijono |Kyllä | |
@@ -208,11 +210,13 @@ Hae käyttäjän aikajana: hakee määritetyn käyttäjän uusimmat twiitit
 Hae kotiaikajana: hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on julkaistu minulle ja seuraajilleni
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | maxResults |kokonaisluku |ei |Haettavien twiittien enimmäismäärä, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Twiitin teksti |merkkijono |Kyllä | |
@@ -226,12 +230,14 @@ Hae kotiaikajana: hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on julk
 Hae twiittiä: hakee määritettyä kyselyä vastaavat twiitit
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | searchQuery |merkkijono |kyllä |Kyselyn teksti (voit käyttää Twitterin tukemia kyselyoperaattoreita: http://www.twitter.com/search) |
 | maxResults |kokonaisluku |ei |Haettavien twiittien enimmäismäärä, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Twiitin teksti |merkkijono |Kyllä | |
@@ -245,12 +251,14 @@ Hae twiittiä: hakee määritettyä kyselyä vastaavat twiitit
 Hae seuraajat: hakee määritetyn käyttäjän seuraajat
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Käyttäjätunnus |merkkijono |kyllä |Käyttäjän Twitter-tunnus |
 | maxResults |kokonaisluku |ei |Enimmäismäärä, jonka käyttäjä voi hakea, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Koko nimi |merkkijono |Kyllä | |
@@ -266,11 +274,13 @@ Hae seuraajat: hakee määritetyn käyttäjän seuraajat
 Hae omat seuraajat: hakee omat seuraajani
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | maxResults |kokonaisluku |ei |Enimmäismäärä, jonka käyttäjä voi hakea, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Koko nimi |merkkijono |Kyllä | |
@@ -286,12 +296,14 @@ Hae omat seuraajat: hakee omat seuraajani
 Hae seurattavat: hakee käyttäjät, joita määritetty käyttäjä seuraa
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Käyttäjätunnus |merkkijono |kyllä |Käyttäjän Twitter-tunnus |
 | maxResults |kokonaisluku |ei |Enimmäismäärä, jonka käyttäjä voi hakea, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Koko nimi |merkkijono |Kyllä | |
@@ -307,11 +319,13 @@ Hae seurattavat: hakee käyttäjät, joita määritetty käyttäjä seuraa
 Hae omat seurattavat: hakee käyttäjät, joita itse seuraan
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | maxResults |kokonaisluku |ei |Enimmäismäärä, jonka käyttäjä voi hakea, esimerkiksi {maxResults:5} |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Koko nimi |merkkijono |Kyllä | |
@@ -327,11 +341,13 @@ Hae omat seurattavat: hakee käyttäjät, joita itse seuraan
 Hae käyttäjä: hakee tietoa määritetystä käyttäjästä (esimerkiksi käyttäjänimi, kuvaus, seuraajien määrä jne.)
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Käyttäjätunnus |merkkijono |kyllä |Käyttäjän Twitter-tunnus |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | Koko nimi |merkkijono |Kyllä | |
@@ -347,12 +363,14 @@ Hae käyttäjä: hakee tietoa määritetystä käyttäjästä (esimerkiksi käyt
 Julkaise uusi twiitti: twiittaa
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | tweetText |merkkijono |ei |Julkaistava teksti, esimerkiksi {tweetText: ”hello”} |
 | leipäteksti |merkkijono |ei |Julkaistava mediasisältö |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | TweetId |merkkijono |Kyllä | |
@@ -361,11 +379,13 @@ Julkaise uusi twiitti: twiittaa
 Kun uusi twiitti tulee näkyviin: käynnistää työnkulun, kun julkaistaan uusi hakukyselyä vastaava twiitti
 
 #### <a name="input-properties"></a>Syöteominaisuudet
+
 | Nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | searchQuery |merkkijono |kyllä |Kyselyn teksti (voit käyttää Twitterin tukemia kyselyoperaattoreita: http://www.twitter.com/search) |
 
 #### <a name="output-properties"></a>Output-ominaisuudet
+
 | Ominaisuuden nimi | Tietotyyppi | Pakollinen | Kuvaus |
 | --- | --- | --- | --- |
 | arvo |matriisi |Ei | |

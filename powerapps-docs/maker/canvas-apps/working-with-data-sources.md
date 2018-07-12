@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/08/2017
 ms.author: gregli
-ms.openlocfilehash: 5e9b9ec980e6dd4aeacfef42b40fe7f52c19d558
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4cdc1116de5882b69814bd91b4006debb8c5f5cf
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838736"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899337"
 ---
 # <a name="understand-data-sources-in-powerapps"></a>Tutustu tietolähteisiin PowerAppsissa
 Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset käyttävät näitä tietolähteitä käyttämällä **yhteyksiä**.
@@ -54,7 +54,7 @@ Voit käyttää taulukon tietolähteitä samalla tavalla kuin sisäistä PowerAp
 * Tietolähteellä on samat sarakenimet ja tietotyypit kuin yhteyden pohjalla olevalla taulukolla.
   
     > [!NOTE]
-> SharePoint- ja Excel-tietolähteissä, joissa on välilyönnin sisältäviä sarakenimiä, PowerApps korvaa välilyönnit merkkijonolla **\_x0020\_**. Esimerkiksi, **”Sarakkeen Nimi”** SharePointissa tai Excelissä näkyy muodossa **”Sarakkeen_x0020_Nimi”** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+  > SharePoint- ja Excel-tietolähteissä, joissa on välilyönnin sisältäviä sarakenimiä, PowerApps korvaa välilyönnit merkkijonolla **\_x0020\_**. Esimerkiksi, **”Sarakkeen Nimi”** SharePointissa tai Excelissä näkyy muodossa **”Sarakkeen_x0020_Nimi”** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
 * Tietolähde ladataan palvelusta automaattisesti, kun sovellus ladataan.  Voit pakottaa tietojen päivityksen käyttämällä **[Refresh](functions/function-refresh.md)**-funktiota.
 * Kun käyttäjät suorittavat sovelluksen, he voivat luoda, muokata ja poistaa tietueita ja siirtää muutokset takaisin palvelussa pohjalla olevaan taulukkoon.
   * Tietueita voidaan luoda **[Patch](functions/function-patch.md)**- ja **[Collect](functions/function-clear-collect-clearcollect.md)**-funktioilla.  

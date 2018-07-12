@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 04/18/2018
 ms.author: matp
-ms.openlocfilehash: 3d7aa26696adb187906c9c793c546abd1b97764f
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: c1c03202cb95500bb019a3c23a68e0e8d5418cc9
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34583482"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898394"
 ---
 # <a name="quickstart-build-your-first-model-driven-app-from-scratch"></a>Pikaopas: Luo ensimmäinen mallipohjainen sovelluksesi alusta alkaen
 Mallipohjainen sovelluskehitys on komponenttikeskeinen sovelluskehitystapa. Tässä pikaoppaassa kerrotaan, miten voit helposti luoda mallipohjaisen sovelluksen käyttämällä [!INCLUDE [powerapps](../../includes/powerapps.md)]-ympäristössäsi saatavilla olevia perusentiteettejä. 
@@ -27,43 +27,43 @@ Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com/). Jos sinulla ei ole
 
 ## <a name="create-your-model-driven-app"></a>Mallipohjaisen sovelluksen luominen
 
-1.  Valitse haluamasi ympäristö tai luo uusi siirtymällä [PowerAppsin hallintakeskukseen](https://admin.powerapps.com/).
-2.  Valitse vasemmassa siirtymisruudussa **Mallipohjainen**. 
+1. Valitse haluamasi ympäristö tai luo uusi siirtymällä [PowerAppsin hallintakeskukseen](https://admin.powerapps.com/).
+2. Valitse vasemmassa siirtymisruudussa **Mallipohjainen**. 
 
-    ![Mallipohjainen](media/build-first-model-driven-app/choose-design-mode.png)
+   ![Mallipohjainen](media/build-first-model-driven-app/choose-design-mode.png)
 
-  > [!IMPORTANT]
-  > Jos **mallipohjaista** suunnittelutilaa ei ole käytettävissä, saatat joutua [luomaan ympäristön](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+   > [!IMPORTANT]
+   > Jos **mallipohjaista** suunnittelutilaa ei ole käytettävissä, saatat joutua [luomaan ympäristön](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
 3. Valitse vasemmassa ruudussa **Sovellukset** ja sitten **Luo sovellus**.
 
-4.  Anna **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse sitten **Valmis**: 
-  - **Nimi**: kirjoita sovellukselle nimi, kuten *Ensimmäinen sovellukseni*. 
-  - **Kuvaus**: kirjoita lyhyt kuvaus siitä, mikä sovellus on tai mitä se tekee, kuten *Tämä on ensimmäinen sovellukseni*.
-Katso lisätietoja sovelluksen muista ominaisuuksista kohdasta [Sovelluksen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
+4. Anna **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse sitten **Valmis**: 
+   - **Nimi**: kirjoita sovellukselle nimi, kuten *Ensimmäinen sovellukseni*. 
+   - **Kuvaus**: kirjoita lyhyt kuvaus siitä, mikä sovellus on tai mitä se tekee, kuten *Tämä on ensimmäinen sovellukseni*.
+   Katso lisätietoja sovelluksen muista ominaisuuksista kohdasta [Sovelluksen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
  
-    ![Uuden-sovelluksen-luominen](media/build-first-model-driven-app/create-new-app.png)
+   ![Uuden-sovelluksen-luominen](media/build-first-model-driven-app/create-new-app.png)
 
 ## <a name="add-components-to-your-app"></a>Komponenttien lisääminen sovellukseen
 Sovellusten suunnitteluohjelmassa voit lisätä sovellukseesi komponentteja.
-1.  Avaa sivustokartan suunnitteluohjelma valitsemalla **Avaa sivustokartan suunnitteluohjelma** -nuoli. 
+1. Avaa sivustokartan suunnitteluohjelma valitsemalla **Avaa sivustokartan suunnitteluohjelma** -nuoli. 
 
-    ![Uuden-sivustokartan-luominen](media/build-first-model-driven-app/new-sitemap.png)
+   ![Uuden-sivustokartan-luominen](media/build-first-model-driven-app/new-sitemap.png)
 
-2.  Valitse sivustokartan suunnitteluohjelmassa **Uusi alialue** ja oikeanpuoleisessa ruudussa **Ominaisuudet**-välilehti ja sen jälkeen seuraavat ominaisuudet.
-  - **Tyyppi**: Entiteetti
-  - **Entiteetti**: Tili
+2. Valitse sivustokartan suunnitteluohjelmassa **Uusi alialue** ja oikeanpuoleisessa ruudussa **Ominaisuudet**-välilehti ja sen jälkeen seuraavat ominaisuudet.
+   - **Tyyppi**: Entiteetti
+   - **Entiteetti**: Tili
 
-    ![Komponenttien lisääminen sivustokarttaan](media/build-first-model-driven-app/sitemap.png)
+   ![Komponenttien lisääminen sivustokarttaan](media/build-first-model-driven-app/sitemap.png)
 
-3.  Valitse **Tallenna ja sulje**.
-4.  Valitse sovellusten suunnitteluohjelman kaaviossa **Lomakkeet** ja sitten oikeanpuoleisen ruudun **Päälomakkeet**-ryhmässä **Tili**-lomake.
+3. Valitse **Tallenna ja sulje**.
+4. Valitse sovellusten suunnitteluohjelman kaaviossa **Lomakkeet** ja sitten oikeanpuoleisen ruudun **Päälomakkeet**-ryhmässä **Tili**-lomake.
 
-    ![Tili-päälomake](media/build-first-model-driven-app/main-form.png)
+   ![Tili-päälomake](media/build-first-model-driven-app/main-form.png)
 
-5.  Valitse sovellusten suunnitteluohjelman kaaviossa **Näkymät** ja sitten **Aktiiviset tilit**-, **Kaikki tilit**- ja **Omat aktiiviset tilit** -näkymät.
+5. Valitse sovellusten suunnitteluohjelman kaaviossa **Näkymät** ja sitten **Aktiiviset tilit**-, **Kaikki tilit**- ja **Omat aktiiviset tilit** -näkymät.
 
-    ![Tili-näkymät](media/build-first-model-driven-app/views.png)
+   ![Tili-näkymät](media/build-first-model-driven-app/views.png)
 
 6. Valitse sovellusten suunnitteluohjelman kaaviossa **Kaaviot** ja sitten **Tilit toimialan mukaan** -kaavio.
 7. Valitse sovellusten suunnitteluohjelman työkalurivillä **Tallenna**.

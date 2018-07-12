@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 6d4f8f0393b7cb2d6471f159193327f07e648357
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c175b1b35d063f4e20321c494d5472afa2776990
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836903"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899567"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -165,6 +165,6 @@ Nämä vaatimukset eivät koske kaikkia tilanteita. Lue lisää [aikarajoja kosk
 * Älä käytä **[Tekstiä](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin. Näytönlukuohjelman käyttäjille ei ilmoiteta **[Tekstin](properties-core.md)** muutoksista.
 
     > [!NOTE]
-> Näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein. Ajastimen **[Teksti](properties-core.md)** ei kuitenkaan sisälly ilmoitukseen.
+  > Näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein. Ajastimen **[Teksti](properties-core.md)** ei kuitenkaan sisälly ilmoitukseen.
 
 * Harkitse **[Selitteen](control-text-box.md)** lisäämistä kuluneen ajan näyttämiseksi. Opasta käyttäjää käynnistämään tai pysäyttämään ajastin ajastimen **[Tekstin](properties-core.md)** avulla.

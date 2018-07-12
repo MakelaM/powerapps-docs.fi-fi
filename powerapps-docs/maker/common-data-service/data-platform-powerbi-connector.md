@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: d8323eb103751a1be78aeea0093b9d6651ddc3e2
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: bb0bec7cf459eb9084aea4db7264350b7913e578
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445850"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898745"
 ---
 # <a name="create-a-power-bi-report"></a>Luo Power BI -raportti
 Common Data Service for Appsin avulla voit yhdistää suoraan tietoihisi Power BI Desktopin avulla, jolloin voit luoda raportteja ja julkaista ne Power BI:ssä. Power BI -raportteja voidaan käyttää koontinäytöissä, jakaa muille käyttäjille ja käyttää eri ympäristöissä Power BI -mobiilisovelluksissa.
@@ -57,11 +57,11 @@ Jos haluat käyttää Power BI:tä Common Data Service for Appsissa, tarvitset s
 
 4. Siirtymistoiminto näyttää kaikki ympäristössäsi käytettävissä olevat entiteetit ryhmiteltyinä kolmeen kansioon. Laajenna **Common Data Model** -kansio.
 
-    * Common Data Model – nämä ovat vakioentiteettejä, joita käytetään yleisesti ja jotka ovat käytettävissä kaikissa ympäristöissä Common Data Modelin osana.
-    * Mukautetut entiteetit – nämä ovat entiteettejä, jotka olet luonut tai tuonut ympäristöösi.
-    * Järjestelmä – sisältää kaikki entiteetit ympäristössäsi, mukaan lukien Common Data Model ja mukautetut entiteetit.
+   * Common Data Model – nämä ovat vakioentiteettejä, joita käytetään yleisesti ja jotka ovat käytettävissä kaikissa ympäristöissä Common Data Modelin osana.
+   * Mukautetut entiteetit – nämä ovat entiteettejä, jotka olet luonut tai tuonut ympäristöösi.
+   * Järjestelmä – sisältää kaikki entiteetit ympäristössäsi, mukaan lukien Common Data Model ja mukautetut entiteetit.
 
-    ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
+     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop")
 
 5. Valitse **Tili**-entiteetti, niin näet esikatselun tiedoistasi oikealla olevassa ruudussa, ja valitse **Lataa**.
 

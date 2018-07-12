@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 06/17/2017
 ms.author: gregli
-ms.openlocfilehash: 2b64ebdf91effe812d3fd81d0d1e0bb854147a19
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 45baa2450dbb081b800263a9119729e1c2846008
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839150"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899443"
 ---
 # <a name="understand-data-form-layout-in-microsoft-powerapps"></a>Tutustu tietolomakkeen asetteluun Microsoft PowerAppsissa
 PowerAppsissa voit helposti luoda lomakkeita, jotka ovat tyylikkäitä ja tehokkaita käyttää. Harkitse esimerkiksi tätä peruslomaketta myyntitilausten tallennusta varten:
@@ -57,17 +57,17 @@ Jos olet uusi PowerApps-käyttäjä (tai olet luonut sovelluksia vain automaatti
     Nimi näyttää valikoimasta valitsemasi tietueen myyntitilausnumeron.
 3. (valinnainen) Muotoile nimi seuraavasti:
    
-    1. Määritä sen **Tasaa**-ominaisuudeksi **Keskellä**.
+   1. Määritä sen **Tasaa**-ominaisuudeksi **Keskellä**.
    
-    2. Määritä sen **Koko**-ominaisuudeksi **20**.
+   2. Määritä sen **Koko**-ominaisuudeksi **20**.
    
-    3. Määritä sen **Täyttö**-ominaisuudeksi **Laivastonsininen**.
+   3. Määritä sen **Täyttö**-ominaisuudeksi **Laivastonsininen**.
    
-    4. Määritä sen **Väri**-ominaisuudeksi **Valkoinen**.
+   4. Määritä sen **Väri**-ominaisuudeksi **Valkoinen**.
    
-    5. Määritä sen **Leveys**-ominaisuudeksi **Parent.Width**.
+   5. Määritä sen **Leveys**-ominaisuudeksi **Parent.Width**.
    
-    6. Määritä sen **X**- ja **Y**-ominaisuuksiksi **0**.
+   6. Määritä sen **X**- ja **Y**-ominaisuuksiksi **0**.
       
       ![Otsikkorivi](./media/working-with-form-layout/title-bar.png)
 

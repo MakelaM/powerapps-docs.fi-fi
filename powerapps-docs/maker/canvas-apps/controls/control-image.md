@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: bd07c6ee0a0084171c928c6908c33caae974d765
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 91f1db2f4acd503efce8407dd2c3c60fee6e183e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31835136"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899130"
 ---
 # <a name="image-control-in-powerapps"></a>Kuva-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka näyttää kuvan esimerkiksi paikallisesta tiedostosta tai tietolähteestä.
@@ -145,14 +145,14 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 * **[AccessibleLabel](properties-accessibility.md)** on oltava olemassa, jos kuvaa käytetään painikkeena tai muussa kuin koristeellisessa tarkoituksessa.
 * **[AccessibleLabel](properties-accessibility.md)** on oltava tyhjä tai tyhjä merkkijono **""**, jos kuva on pelkästään koristeena. Näin näytönlukuohjelmat voivat ohittaa kuvan.
 * **[AccessibleLabel](properties-accessibility.md)** voi olla tyhjä tai tyhjä merkkijono **""**, jos kuvassa esitetään tarpeetonta tietoa.
-    * Esimerkiksi **kuva** rataksista yhdessä **[AccessibleLabel](properties-accessibility.md)**-objektin kanssa, jonka arvo on **Asetukset**. Kuvaa ei käytetä painikkeena. Se on **[selitteen](control-text-box.md)** vieressä, jossa lukee myös **Asetukset**. Näytönlukuohjelmat lukevat kuvan tekstinä **Asetukset**, ja sitten myös selitteen tekstinä **Asetukset**. Tämä on tarpeetonta. Tässä tapauksessa **kuva** ei tarvitse **[AccessibleLabel](properties-accessibility.md)**-objektia.
+  * Esimerkiksi **kuva** rataksista yhdessä **[AccessibleLabel](properties-accessibility.md)**-objektin kanssa, jonka arvo on **Asetukset**. Kuvaa ei käytetä painikkeena. Se on **[selitteen](control-text-box.md)** vieressä, jossa lukee myös **Asetukset**. Näytönlukuohjelmat lukevat kuvan tekstinä **Asetukset**, ja sitten myös selitteen tekstinä **Asetukset**. Tämä on tarpeetonta. Tässä tapauksessa **kuva** ei tarvitse **[AccessibleLabel](properties-accessibility.md)**-objektia.
 
     > [!IMPORTANT]
-> Näytönlukuohjelmat lukevat aina **kuva**t, joilla **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, riippumatta siitä, onko **[AccessibleLabel](properties-accessibility.md)** tyhjä vai ei. Tämä johtuu siitä, että ne hahmonnetaan painikkeina. Jos **[AccessibleLabel](properties-accessibility.md)**-objektia ei ole, näytönlukuohjelmat lukevat kuvan **painikkeena**.
+    > Näytönlukuohjelmat lukevat aina **kuva**t, joilla **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, riippumatta siitä, onko **[AccessibleLabel](properties-accessibility.md)** tyhjä vai ei. Tämä johtuu siitä, että ne hahmonnetaan painikkeina. Jos **[AccessibleLabel](properties-accessibility.md)**-objektia ei ole, näytönlukuohjelmat lukevat kuvan **painikkeena**.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 * **[TabIndex](properties-accessibility.md)**-objektin arvo on oltava suurempi tai yhtä suuri kuin 0, jos kuvaa käytetään painikkeena. Näin näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistusilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
     > [!NOTE]
-> Jos **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, **kuva** hahmonnetaan painikkeena. Kuvan visuaalinen ulkoasu ei muutu, mutta näytönlukuohjelmat tunnistavat kuvan oikein painikkeeksi. Jos **[TabIndex](properties-accessibility.md)** on pienempi kuin 0, **kuva** tunnistetaan kuvana.
+  > Jos **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, **kuva** hahmonnetaan painikkeena. Kuvan visuaalinen ulkoasu ei muutu, mutta näytönlukuohjelmat tunnistavat kuvan oikein painikkeeksi. Jos **[TabIndex](properties-accessibility.md)** on pienempi kuin 0, **kuva** tunnistetaan kuvana.

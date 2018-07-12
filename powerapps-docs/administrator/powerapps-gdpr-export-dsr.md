@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 000f15ea7b1fa4e11cbe49b44e57017daf973a89
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 8eb651bcd4ad9320dc8995864249f619bb76ab77
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552963"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896853"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-export-powerapps-customer-data"></a>PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaaminen
 Oikeus tietojen siirtämiseen antaa rekisteröidylle oikeuden pyytää kopiota henkilötiedoistaan sähköisessä muodossa (yleensä tämä on jäsennelty, yleisesti käytetty, koneluettava ja yhteentoimiva muoto), jossa tiedot voidaan siirtää toiselle rekisterinpitäjälle:
@@ -39,7 +39,7 @@ Yhteyksien oikeudet  | | Sovelluksen luoja: käytettävissä <br> Järjestelmän
 PowerAppsin käyttäjäasetukset, käyttäjäsovelluksen asetukset ja ilmoitukset | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
 
 > ** Kun Common Data Service (CDS) for Apps on käytössä ja tietokanta luodaan ympäristöön, ympäristön käyttöoikeudet ja mallipohjaisten sovellusten käyttöoikeudet tallennetaan tietueina CDS for Apps -tietokannan esiintymään. Saat lisätietoja CDC for Appsia käyttävien käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
-
+> 
 > *** Järjestelmänvalvoja voi käyttää näitä resursseja [PowerApps-portaalista](https://web.powerapps.com) vain, jos resurssin omistaja on myöntänyt eksplisiittisesti hänelle käyttöoikeuden. Jos näin ei ole, järjestelmänvalvojan on hyödynnettävä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## <a name="prerequisites"></a>Edellytykset

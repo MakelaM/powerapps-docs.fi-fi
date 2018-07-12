@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 09/28/2017
 ms.author: sharik
-ms.openlocfilehash: 60ec1fc7f896aeb3391ed794920e987b232d09f3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9b2c07e8599ada76aa2f2195fc1240321ed02ef9
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31833484"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898210"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
 Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovellukseesi **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektissa annettua suodatuskriteeriä.
@@ -52,7 +52,7 @@ Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovelluksee
 7. Lisää näyttö, joka sisältää **Valikoima**-ohjausobjektin ja muita ohjausobjekteja, kuten hakupalkin, napsauttamalla tai napauttamalla kohtaa **Luettelonäyttö**.
 
     > [!NOTE]
-> Lisäsitpä **Valikoima**-ohjausobjektin uuteen tai olemassa olevaan näyttöön, voit valita sen napauttamalla tai napsauttamalla **Valikoima**-ohjausobjektin alaosaa. Valitse sitten oikeanpuoleisessa ruudussa **FlooringEstimates** ja napsauta tai napauta eri asettelua **Tiedot**-ruudussa. Jätä tätä opetusohjelmaa varten asettelu oletusarvoonsa.
+   > Lisäsitpä **Valikoima**-ohjausobjektin uuteen tai olemassa olevaan näyttöön, voit valita sen napauttamalla tai napsauttamalla **Valikoima**-ohjausobjektin alaosaa. Valitse sitten oikeanpuoleisessa ruudussa **FlooringEstimates** ja napsauta tai napauta eri asettelua **Tiedot**-ruudussa. Jätä tätä opetusohjelmaa varten asettelu oletusarvoonsa.
 
     ![Valikoiman asettelun valinta](./media/add-gallery/select-layout.png)
 

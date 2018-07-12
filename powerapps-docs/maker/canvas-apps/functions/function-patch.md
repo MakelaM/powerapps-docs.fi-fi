@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: d0b2ff351f7026967359f1b4d386a71d7ed5441f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 02664d3715b2e5b43a56a041e9de8b294559a862
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838713"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899153"
 ---
 # <a name="patch-function-in-powerapps"></a>PowerAppsin Patch-funktio
 Muokkaa [tietolähteen](../working-with-data-sources.md) [tietuetta](../working-with-tables.md#records) tai luo sellaisen tai yhdistää tietueita tietolähteen ulkopuolella.
@@ -102,6 +102,7 @@ Kun edelliset kaavat on arvioitu, tietolähteessä on lopulta nämä arvot:
 ![](media/function-patch/icecream-after.png)
 
 #### <a name="merge-records-outside-of-a-data-source"></a>Tietueiden yhdistäminen (tietolähteen ulkopuolella)
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** |Yhdistää kaksi tietuetta tietolähteen ulkopuolella:<br><ul><li>Tietueiden **Name**-sarakkeen arvot eivät täsmää. Tulos sisältää arvon (**Jim**) tietueessa, joka on lähempänä argumenttiluettelon loppua arvon (**James**) sijaan tietueessa, joka on lähempänä alkua.</li><li>Ensimmäinen tietue sisältää sarakkeen (**Score**), jota ei ole olemassa toisessa tietueessa. Tulos sisältää kyseisen sarakkeen arvollaan (**90**).</li><li>Toinen sarake sisältää sarakkeen (**Passed**), jota ei ole olemassa ensimmäisessä tietueessa. Tulos sisältää kyseisen sarakkeen arvollaan (**true**). |{&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |

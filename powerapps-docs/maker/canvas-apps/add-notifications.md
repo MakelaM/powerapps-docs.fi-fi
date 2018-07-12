@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: 0cf09528f83b2729e50139a3b5f9b5b9c00b6119
-ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
+ms.openlocfilehash: 1ab3b17d03b2fd21fceb0675ca55d33302f67d31
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822554"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37897752"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Palveluilmoituksen lähettäminen PowerAppsissa
 Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.
@@ -41,19 +41,19 @@ Lisää PowerApps Notification -yhteys sovellukseen, johon sinulla on **Osallist
 > Jos aktivoit palveluilmoituksen työnkulun kautta, voit tällä hetkellä lähettää ilmoituksen kerralla vain yhdelle käyttäjälle tai käyttöoikeusryhmälle.
 
 1. Luo [Microsoft Flow'ssa](https://flow.microsoft.com) käynnistin, joka määrittää, milloin palveluilmoitus lähetetään.
-   
+
     Voit esimerkiksi lähettää ilmoituksen, kun tietue lisätään Common Data Servicen **Case**-entiteettiin.
-   
+
     ![Näyttökuva Common Data Service -käynnistimen sisältävän työnkulun luomisesta](./media/add-notifications/pic4-step1-flowupdated.png)
 2. Luo työnkululle toiminto käyttämällä **PowerApps Notification** -yhdistintä ja syöttämällä sen sovelluksen **sovellustunnus**, jolle haluat lähettää ilmoituksen.
-   
+
     Voit myös nimetä yhteyden uudelleen skenaariosi mukaisesti.
-   
+
     ![Näyttökuva yhteyden luomisesta PowerApps-sovelluksiin, jotka vastaanottavat nämä palveluilmoitukset](./media/add-notifications/pic5-step2-create-connection.jpg)
 3. (valinnainen) Parametrin välittäminen sovellukselle, kun se avautuu (sen jälkeen, kun käyttäjä on napauttanut palveluilmoitusta).
-   
+
     Tässä esimerkissä välitetään kentät **CaseID** ja **Initial Owner** valitulle yhteydelle.
-   
+
     ![Näyttökuva valinnaisten parametrien välittämisestä palveluilmoitukseen](./media/add-notifications/pic6-step3-configure-notif.jpg)
 
 ## <a name="send-a-notification-from-an-app"></a>Ilmoituksen lähettäminen sovelluksesta
@@ -61,20 +61,20 @@ Voit lähettää palveluilmoituksen yhdestä sovelluksesta toiseen tai samaan so
 
 1. Siirry [PowerAppsissa](https://web.powerapps.com/) sovellukseen, johon haluat lähettää palveluilmoituksen.
 2. Kopioi **Tiedot**-välilehdeltä sovelluksen **sovellustunnus**.
-   
+
     ![Sovellustunnuksen hakeminen](./media/add-notifications/grab-id.png)
 3. Luo **Yhteydet**-välilehdellä yhteys PowerApps Notification -yhdistimeen ja liitä edellisessä vaiheessa haettu sovellustunnus.
-   
+
     ![Yhteyden luominen](./media/add-notifications/create-connection.png)
 4. Lisää yhteys käynnistinsovellukseen.
-   
+
     Käytämme tässä esimerkissä samaa sovellusta käynnistinsovelluksena. Käyttäjä, joka määrittää tapauksen uudelleen, laukaisee palveluilmoituksen tapauksen uudelle omistajalle.
-   
+
     ![Yhteyden lisääminen](./media/add-notifications/add-connection.png)
 5. Kutsu palveluilmoitusyhteyden kautta **SendPushNotification**-menetelmä.
-   
+
     Tässä esimerkissä aktivoimme ilmoituksen käyttämällä **OnSuccess**-ominaisuutta lomakkeessa.
-   
+
     ![PowerApps-kaava](./media/add-notifications/powerapps-function.png)
 
 ## <a name="load-a-specific-page-and-context-when-a-user-taps-the-notification"></a>Tietyn sivun ja kontekstin lataaminen, kun käyttäjä napauttaa ilmoitusta
@@ -91,16 +91,18 @@ Voit asettaa sovelluksen avaamaan esimerkiksi **Case details** -sivun, kun sovel
 
 > [!TIP]
 > Ilmoitusta varten sovellukseen voidaan luoda yksilöllinen aloitussivu:
-
->1. Luo tyhjä sivu, jota sovellus ei jo avaa muilla tavoin, lisää **Tekstisyöte**-ohjausobjekti ja aseta sen **timer.Duration**-arvo.
->2. Kun luot sovelluksen, aseta ajastimelle arvo, joka ei ole nolla. Kun olet valmis julkaisemaan sovelluksen, laukaise ajastin välittömästi asettamalla arvoksi **0**.
+> 
+> 1. Luo tyhjä sivu, jota sovellus ei jo avaa muilla tavoin, lisää **Tekstisyöte**-ohjausobjekti ja aseta sen **timer.Duration**-arvo.
+> 2. Kun luot sovelluksen, aseta ajastimelle arvo, joka ei ole nolla. Kun olet valmis julkaisemaan sovelluksen, laukaise ajastin välittömästi asettamalla arvoksi **0**.
 
 ## <a name="syntax"></a>Syntaksi
+
 | Nimi | Kuvaus |
 | --- | --- |
 | SendPushNotification |Lähettää palveluilmoituksen sovellukselle, joka määritetään ilmoituksen yhteysasetuksissa. |
 
 ### <a name="parameters"></a>Parametrit
+
 | Nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
 | recipients |Merkkijonomatriisi, pakollinen |Luettelo: <ul> <li>Käyttäjien tai käyttöoikeusryhmien sähköpostiosoitteista</li> <li>Käyttäjien tai käyttöoikeusryhmien objektitunnuksista Azure Active Directoryssä</li></ul> |

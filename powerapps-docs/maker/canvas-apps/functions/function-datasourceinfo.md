@@ -7,12 +7,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/11/2015
 ms.author: gregli
-ms.openlocfilehash: 5f156e5f7d0acb48090ac921aa92f31f3a6d20ea
-ms.sourcegitcommit: 222df368f1f35e9357b0b1adf0e69d7206d8126e
+ms.openlocfilehash: 67354776e7af05fb619033462c52665ce3aa046c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298465"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898624"
 ---
 # <a name="datasourceinfo-function-in-powerapps"></a>PowerAppsin DataSourceInfo-funktio
 Antaa [tietolähteen](../working-with-data-sources.md) tietoja.
@@ -59,7 +59,7 @@ Voit käyttää **DataSourceInfo**-funktiota hakemaan tietoja tietolähteestä k
 * *ColumnName* – Valinnainen. Saraketason tiedoille sarakkeen nimi merkkijonona. Sarake **Puhelin** välitettäisiin muodossa **"Puhelin"**, mukaan lukien lainausmerkit. *ColumnName*-argumenttia ei voi käyttää tietolähdetason tietoja varten.
   
     > [!NOTE]
-> Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
 
 ## <a name="examples"></a>Esimerkkejä
 Tämän osion esimerkeissä käytetään tietolähdettä nimeltä **IceCream**:

@@ -7,17 +7,18 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 03/07/2018
 ms.author: sharik
-ms.openlocfilehash: ffe1a027e378da3f9c505f4980681a4b5a11dbda
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: e76710bc800782624ca1190086cc19dd47d60939
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34851749"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896094"
 ---
 # <a name="system-requirements-limits-and-configuration-values"></a>Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
 
 ## <a name="supported-platforms-for-running-apps-using-the-powerapps-app"></a>Tuetut ympäristöt sovellusten suorittamiseksi PowerApps-sovelluksen avulla
+
 | **Vähimmäisvaatimus** | **Suositus** |
 | --- | --- |
 | iOS 9.3 tai uudempi |iOS 10 tai uudempi sekä vähintään 2 gigatavua RAM-muistia |
@@ -25,6 +26,7 @@ Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaati
 | Windows 8.1 tai uudempi (ainoastaan PC) |Windows 10 Fall Creators -päivitys sekä vähintään 8 gigatavua RAM-muistia|
 
 ## <a name="supported-browsers-for-running-apps"></a>Tuetut selaimet sovellusten suorittamista varten
+
 | **Selain** | **Käyttöjärjestelmä** |
 | --- | --- |
 | Google Chrome (uusin versio)<br>(suositus) |Windows 7 SP1, 8.1 ja 10 <br>Android 5 tai uudempi <br>iOS 8 tai uudempi<br>macOS |
@@ -34,6 +36,7 @@ Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaati
 | Apple Safari (uusin versio) |iOS 8 tai uudempi <br>macOS |
 
 ## <a name="supported-browsers-for-powerapps-studio"></a>PowerApps Studion tuetut selaimet
+
 | **Selain** | **Käyttöjärjestelmä** |
 | --- | --- |
 | Google Chrome (uusin versio)<br>(suositus) |Windows 7 SP1, 8.1 ja 10 <br>macOS |
@@ -58,7 +61,7 @@ Sovelluksen kautta yhdistetystä ohjelmointirajapinnoista tehdyt kutsut (esimerk
 
 Käytä näitä osoitteita esimerkiksi, jos sinun täytyy lisätä IP-osoitteita sallittujen osoitteiden luetteloon Azure SQL -tietokantaa varten.
 
->   [!IMPORTANT] 
+> [!IMPORTANT]
 >   Päivitä aiemmin määritetyt asetukset mahdollisimman pian ennen syyskuun 1. 2018 siten, että ne sisältävät ja vastaavat tämän luettelon alueiden IP-osoitteita, joissa PowerApps-sovelluksesi ovat.
 
 | Alue | Lähtevä IP-osoite |

@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 702be2a4f1747b6f3303d1add30d9157f5665ee7
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c3b1fb9802541159726a33cacd07c6f9743de0e2
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330470"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896692"
 ---
 # <a name="add-and-configure-a-control-in-powerapps"></a>Ohjausobjektin lisääminen ja määrittäminen PowerAppsissa
 Lisää käyttöliittymäelementtejä sovellukseesi ja määritä niiden ulkoasua ja toimintaa suoraan työkaluriviltä, **Ominaisuudet**-välilehdestä tai kaavariviltä. Nämä käyttöliittymäelementit ovat nimeltään ohjausobjekteja. Niiden määritettävät osat ovat nimeltään ominaisuuksia.
@@ -68,7 +68,7 @@ Tässä menettelyssä lisätään ja määritetään **selite**ohjausobjekti, mu
     ![Valittu selite](./media/add-configure-controls/selected-text-box.png)
 
     > [!IMPORTANT]
-> Jos ohjausobjekti on valittuna, kun valitset toisen ohjausobjektin tai tyhjän alueen näytössä, ensimmäinen elementti ei ole enää valittuna.
+   > Jos ohjausobjekti on valittuna, kun valitset toisen ohjausobjektin tai tyhjän alueen näytössä, ensimmäinen elementti ei ole enää valittuna.
 2. Kavenna **selite**ohjausobjektia vetämällä valintakehyksen oikeassa reunassa olevaa kahvaa vasemmalle. (Keskikahva näkyy vain, jos zoomaat lähemmäs.)
 
     ![Selite, jonka kokoa on muutettu](./media/add-configure-controls/shorter-text-box.png)
@@ -173,7 +173,7 @@ Sen sijaan, että määrittäisit ohjausobjektin suoraan, **Ominaisuudet**-väli
     ![Today-funktio](./media/add-configure-controls/today-function.png)
 
     > [!TIP]
-> Voit [muotoilla päivämäärän ja kellonajan](show-text-dates-times.md) usein eri tavoin, minkä lisäksi voit suorittaa niillä laskutoimituksia.
+   > Voit [muotoilla päivämäärän ja kellonajan](show-text-dates-times.md) usein eri tavoin, minkä lisäksi voit suorittaa niillä laskutoimituksia.
 
 ## <a name="configure-two-controls-to-interact-with-each-other"></a>Kahden ohjausobjektin määrittäminen vuorovaikutukseen toistensa kanssa
 Tässä menettelyssä lisätään valintaruutu ja määritetään selitettä, jonka määritit näytettäväksi vain, kun valintaruutu on valittuna.

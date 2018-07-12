@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: fca166ef388921e08bf71149a8b1274a31a7dc52
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: fcf1bcec976e34f07745c315d75569bbc86e583f
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330625"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899521"
 ---
 # <a name="create-an-app-to-manage-projects"></a>Luo sovellus ja hallitse projekteja
 > [!NOTE]
@@ -155,7 +155,7 @@ Tässä vaiheessa kerromme tavan, jolla voit siirtyä sovelluksen muihin näytt�
      ![Päivitä-painikkeen teksti](./media/sharepoint-scenario-build-app/04-03-08-buttons-final.png)
      
      > [!NOTE]
-> Painikkeessa on nimi **Päivitä tiedot**, mutta siirrymme ensin **ViewProjects**-näyttöön valitsemaan päivitettävän projektin.
+     > Painikkeessa on nimi **Päivitä tiedot**, mutta siirrymme ensin **ViewProjects**-näyttöön valitsemaan päivitettävän projektin.
 
 ### <a name="run-the-app"></a>Sovelluksen suorittaminen
 Sovelluksella ei voi vielä tehdä paljoakaan, mutta voit suorittaa sen halutessasi:

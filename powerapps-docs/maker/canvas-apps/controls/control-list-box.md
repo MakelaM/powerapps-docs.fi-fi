@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 24fc5523b2f1d3cced7cdf4af8c30c65d28757a2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: e43d786cf8eac8bb4ca6b13c953281614559c132
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837868"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899406"
 ---
 # <a name="list-box-control-in-powerapps"></a>Luetteloruutu-ohjausobjekti PowerAppsissa
 Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
@@ -170,4 +170,4 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
     > [!NOTE]
-> Sarkainnäppäimellä voit siirtyä **Luetteloruutuun** tai siitä pois. Nuolinäppäimillä voit siirtyä **Luetteloruudun** sisällössä.
+  > Sarkainnäppäimellä voit siirtyä **Luetteloruutuun** tai siitä pois. Nuolinäppäimillä voit siirtyä **Luetteloruudun** sisällössä.

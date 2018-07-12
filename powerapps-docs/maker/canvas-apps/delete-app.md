@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: e0186e0f1f8b1396f2fb90cfffae8e38aacb1ac1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ed454b6656971adb4c209d2dd9a59e5258ef8eac
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827001"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898141"
 ---
 # <a name="delete-an-app-from-powerapps"></a>Sovelluksen poistaminen PowerAppsista
 Tässä aiheessa näytetään, kuinka voit poistaa sovelluksen PowerApps-tililtäsi ja niiden käyttäjien tileiltä, joille sovellus jaettiin.
@@ -31,7 +31,7 @@ Tässä aiheessa näytetään, kuinka voit poistaa sovelluksen PowerApps-tililt�
     ![](./media/delete-app/filter-list.png)
    
     > [!NOTE]
-> Jos sovellusta, jonka haluat poistaa, ei näy, varmista että olet oikeassa ympäristössä.
+   > Jos sovellusta, jonka haluat poistaa, ei näy, varmista että olet oikeassa ympäristössä.
 3. Napsauta tai napauta poistettavan sovelluksen Tiedot-kuvaketta lähellä oikeaa reunaa.
    
     ![](./media/delete-app/app-options.png)
@@ -40,11 +40,11 @@ Tässä aiheessa näytetään, kuinka voit poistaa sovelluksen PowerApps-tililt�
     ![](./media/delete-app/delete-icon.png)
    
     > [!NOTE]
-> Sinulla täytyy olla sovellukseen **Osallistuja**-käyttöoikeus, jotta voit poistaa sen.
+   > Sinulla täytyy olla sovellukseen **Osallistuja**-käyttöoikeus, jotta voit poistaa sen.
 5. Napsauta tai napauta esiin tulevassa valintaikkunassa **Poista pilvipalvelusta**.  
    
     > [!IMPORTANT]
-> Tämä toiminto poistaa sovelluksen pysyvästi omalta tililtäsi sekä kaikkien niiden käyttäjien tileiltä, joille tämä sovellus jaettiin.
+   > Tämä toiminto poistaa sovelluksen pysyvästi omalta tililtäsi sekä kaikkien niiden käyttäjien tileiltä, joille tämä sovellus jaettiin.
    
     ![](./media/delete-app/delete-button.png)
 

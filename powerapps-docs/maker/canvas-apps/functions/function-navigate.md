@@ -3,7 +3,7 @@ title: Back- ja Navigate-funktio | Microsoft Docs
 description: Tietoa PowerAppsin Navigate- ja Back-funktiosta, mukaan lukien syntaksi ja esimerkkejä
 documentationcenter: na
 author: gregli-msft
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/08/2015
 ms.author: gregli
-ms.openlocfilehash: ecb8b8176dd8489866a5ca88a6b69e1520c3ad69
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: e00ee9b3a58bf3255b9f581f405381af05aa07f9
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834454"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948568"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 Nämä funktiot vaihtavat näytettävää näyttöä.
@@ -63,6 +63,7 @@ Näitä funktioita voidaan käyttää vain [toimintakaavassa](../working-with-fo
 * *UpdateContextRecord* – Valinnainen.  Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon jokaiselle sarakkeelle. Tämä tietue päivittää uuden näytön kontekstimuuttujat, jos se välitetään **[UpdateContext](function-updatecontext.md)**-funktiolle.
 
 ## <a name="examples"></a>Esimerkkejä
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Navigate( Lisätiedot, ScreenTransition.None )** |Näyttää **Lisätiedot**-näytön ilman siirtymäefektiä tai muutoksia kontekstimuuttujan arvoon. |**Lisätiedot**-näyttö ilmestyy nopeasti. |

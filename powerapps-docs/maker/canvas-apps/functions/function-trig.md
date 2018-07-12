@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 09/13/2016
 ms.author: gregli
-ms.openlocfilehash: 4d255ec8015caaec1ce066e646c6506c182dc722
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 32739ea0e6ce2caa74794c1b861ba95a2f349a83
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837730"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896462"
 ---
 # <a name="acos-acot-asin-atan-atan2-cos-cot-degrees-pi-radians-sin-and-tan-functions-in-powerapps"></a>Acos-, Acot-, Asin-, Atan-, Atan2-, Cos-, Cot-, Degrees-, Pi-, Radians-, Sin- ja Tan-funktiot PowerAppsissa
 Laskee trigonometriset arvot.
@@ -92,6 +92,7 @@ Jos argumentti tuottaisi määrittämättömän arvon, tulos on *tyhjä*.  Näin
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-number"></a>Yksittäinen luku
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Cos(&nbsp;1.047197&nbsp;)** |Palauttaa kosinin arvolle 1.047197 radiaania eli 60 astetta. |0.5 |

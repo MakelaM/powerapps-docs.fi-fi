@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/01/2015
 ms.author: gregli
-ms.openlocfilehash: 2b3d91a6da0e17ded435aec74a88ea1bbdd4fac1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d1c0a8bdcab3f8a3ba74414ab902092432a34fff
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827731"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899199"
 ---
 # <a name="validate-function-in-powerapps"></a>Vahvista-funktio PowerAppsissa
 **Vahvista**-funktio tarkistaa, onko yksittäisen [sarakkeen](../working-with-tables.md#columns) tai täydellisen [tietueen](../working-with-tables.md#records) arvo kelvollinen [tietolähteelle](../working-with-data-sources.md).  
@@ -55,12 +55,14 @@ Jos **Vahvista** löytää ongelman, funktio palauttaa virhesanoman, jonka voit 
 Näissä esimerkeissä arvojen **Pisteet**-tietolähteen **Prosenttiosuus**-sarakkeessa on oltava alueella 0–100 (nämä luvut mukaan lukien). Jos tiedot läpäisevät vahvistuksen, funktio palauttaa *tyhjä*n arvon. Muussa tapauksessa funktio palauttaa virhesanoman.
 
 ### <a name="validate-with-a-single-column"></a>Vahvista yksittäisen sarakkeen kanssa
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Validate( Scores, Percentage, 10 )** |Tarkistaa, onko **10** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |*tyhjä* |
 | **Validate( Scores, Percentage, 120 )** |Tarkistaa, onko **120** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |”Arvojen on oltava alueella 0–100.” |
 
 ### <a name="validate-with-a-complete-record"></a>Vahvista täydellisen tietueen kanssa
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, onko **10** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |*tyhjä* |

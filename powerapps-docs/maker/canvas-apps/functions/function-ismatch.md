@@ -1,23 +1,19 @@
 ---
 title: IsMatch-funktio | Microsoft Docs
 description: PowerAppsin IsMatch-funktion viitetiedot, mukaan lukien syntaksi
-documentationcenter: na
 author: gregli-msft
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 02/05/2017
 ms.author: gregli
-ms.openlocfilehash: 26bbef6e61845708e20efb3bd201ae61867d1026
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 908602af84c94d4a14dcd2017c2791ee5c25e6ad
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838414"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899245"
 ---
 # <a name="ismatch-function-in-powerapps"></a>IsMatch-funktio PowerAppsissa
 Testaa, vastaako merkkijono hakuarvoa.
@@ -134,21 +130,23 @@ Käyttäjä kirjoittaa **TextInput1**-kohtaan **Hei maailma**.
 | **IsMatch( TextInput1.Text, "hei", Contains & IgnoreCase )** |Testaa, sisältääkö käyttäjän syöte sanan ”hei” (kirjainkoko ei ole merkityksellinen). |**tosi** |
 
 ### <a name="predefined-patterns"></a>Esimääritetyt mallit
-| Kaava | Kuvaus | Tulos |
-| --- | --- | --- |
-| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |Vastaa Yhdysvaltojen sosiaaliturvatunnusta |**tosi** |
-| **IsMatch( "joan@contoso.com", Email )** |Vastaa sähköpostiosoitetta |**tosi** |
-| **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )** |Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. |**tosi** |
-| **IsMatch( "123", MultipleDigits & Period & OptionalDigits )** |Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. Tekstissä ei ole pistettä, joten tälle mallille ei löydy vastaavuutta. |**epätosi** |
+
+|                                                            Kaava                                                            |                                                                Kuvaus                                                                |  Tulos   |
+|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| **IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit & Digit )** |                                              Vastaa Yhdysvaltojen sosiaaliturvatunnusta                                               | **tosi**  |
+|                                           **IsMatch( "joan@contoso.com", Email )**                                            |                                                         Vastaa sähköpostiosoitetta                                                          | **tosi**  |
+|                              **IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )**                               |                                   Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita.                                   | **tosi**  |
+|                                **IsMatch( "123", MultipleDigits & Period & OptionalDigits )**                                 | Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. Tekstissä ei ole pistettä, joten tälle mallille ei löydy vastaavuutta. | **epätosi** |
 
 ### <a name="regular-expressions"></a>Säännönmukaiset lausekkeet
-| Kaava | Kuvaus | Tulos |
-| --- | --- | --- |
-| **IsMatch( "986", "\d+" )** |Vastaa kokonaislukua, joka on suurempi kuin nolla. |**tosi** |
-| **IsMatch( "1.02", "\d+(\.\d\d)?" )** |Vastaa positiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen. Esimerkiksi 3.00 on kelvollinen, mutta 3.1 ei. |**tosi** |
-| **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )** |Vastaa positiivista tai negatiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen. |**true** |
-| **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )** |Vastaa Yhdysvaltojen sosiaaliturvatunnusta.  Vahvistaa annetun syötekentän muodon, tyypin ja pituuden. Vastattavan merkkijonon täytyy sisältää 3 numeroa, joiden perässä on viiva, sitten 2 numeroa, viiva ja 4 numeroa. |**true** |
-| **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )** |Sama kuin edellisessä esimerkissä, mutta yksi syötteen viiva on väärässä paikassa. |**false** |
-| **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )** |Vahvistaa vahvan salasanan, jonka täytyy sisältää 8, 9 tai 10 merkkiä sekä vähintään yhden numeron ja yhden kirjaimen. Merkkijono ei saa sisältää erikoismerkkejä. |**epätosi** |
-| **IsMatch( "http://microsoft.com", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |Vahvistaa http-, https- tai ftp-url-osoitteen. |**tosi** |
+
+|                                                                              Kaava                                                                              |                                                                                                                                  Kuvaus                                                                                                                                   |  Tulos   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+|                                                                    **IsMatch( "986", "\d+" )**                                                                    |                                                                                                                    Vastaa kokonaislukua, joka on suurempi kuin nolla.                                                                                                                     | **tosi**  |
+|                                                               **IsMatch( "1.02", "\d+(\.\d\d)?" )**                                                               |                                        Vastaa positiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen. Esimerkiksi 3.00 on kelvollinen, mutta 3.1 ei.                                         | **tosi**  |
+|                                                            **IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )**                                                             |                                                        Vastaa positiivista tai negatiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää 2 numeroa sen jälkeen.                                                        | **true**  |
+|                                                         **IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )**                                                         | Vastaa Yhdysvaltojen sosiaaliturvatunnusta.  Vahvistaa annetun syötekentän muodon, tyypin ja pituuden. Vastattavan merkkijonon täytyy sisältää 3 numeroa, joiden perässä on viiva, sitten 2 numeroa, viiva ja 4 numeroa. | **true**  |
+|                                                         **IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )**                                                         |                                                                                               Sama kuin edellisessä esimerkissä, mutta yksi syötteen viiva on väärässä paikassa.                                                                                               | **false** |
+|                                         **IsMatch( "weakpassword", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )**                                         |                                        Vahvistaa vahvan salasanan, jonka täytyy sisältää 8, 9 tai 10 merkkiä sekä vähintään yhden numeron ja yhden kirjaimen. Merkkijono ei saa sisältää erikoismerkkejä.                                        | **epätosi** |
+| **IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&amp;%\$#_]\*)?" )** |                                                                                                                     Vahvistaa http-, https- tai ftp-url-osoitteen.                                                                                                                      | **tosi**  |
 

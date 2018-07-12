@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 4973265baf701851ac5c2e8bca9da541b246c068
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4e12faf91b0ce19a4d2ef2ba2e4d9bbca8fb7093
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34167788"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896301"
 ---
 # <a name="environments-overview"></a>Ympäristöjen yleiskatsaus
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, sovelluksia ja työnkulkuja. Lisäksi niitä käytetään säilöinä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. Ympäristöjen hyödyntämistapa riippuu organisaatiosta ja kehitettävistä sovelluksista. Esimerkki:
@@ -39,13 +39,13 @@ Ympäristöillä on kaksi sisäistä roolia, jotka pääsevät käsiksi ympäris
 
 * Ympäristön järjestelmänvalvoja pystyy suorittamaan kaikki ympäristön järjestelmänvalvojan toiminnot, mukaan lukien:
 
-    * ympäristön järjestelmänvalvojan tai ympäristön tekijän roolin lisääminen tai poistaminen käyttäjältä ja ryhmältä
+  * ympäristön järjestelmänvalvojan tai ympäristön tekijän roolin lisääminen tai poistaminen käyttäjältä ja ryhmältä
 
-    * Common Data Service -tietokannan valmisteleminen ympäristölle
+  * Common Data Service -tietokannan valmisteleminen ympäristölle
 
-    * kaikkien ympäristössä luotujen resurssien tarkasteleminen ja hallitseminen
+  * kaikkien ympäristössä luotujen resurssien tarkasteleminen ja hallitseminen
 
-    * tietojen menetyksen estämiskäytäntöjen määrittäminen. Lisätietoa saat kohdasta [Tietojen menetyksen estämiskäytännöt](prevent-data-loss.md).
+  * tietojen menetyksen estämiskäytäntöjen määrittäminen. Lisätietoa saat kohdasta [Tietojen menetyksen estämiskäytännöt](prevent-data-loss.md).
 
     Kun olet luonut tietokannan ympäristössä, voit käyttää järjestelmänvalvojan roolia ympäristön järjestelmänvalvojan sijaan.
 
