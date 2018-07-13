@@ -2,17 +2,19 @@
 title: Dynamics AX -yhteyden yleiskatsaus | Microsoft Docs
 description: Katso saatavilla olevat Dynamics AX:n funktiot, vastaukset ja esimerkit
 author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 09/13/2016
 ms.author: lanced
-ms.openlocfilehash: e5e82b36c362b4790b610614486d2001f9c9974e
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.reviewer: anneta
+ms.openlocfilehash: 39cefba5d23f24bdb98ad266dccdb41458b0d3e4
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803140"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020603"
 ---
 # <a name="connect-from-microsoft-powerapps-to-dynamics-ax"></a>Yhdistäminen Microsoft PowerAppsista Dynamics AX:ään
 ![Dynamics AX Online](./media/connection-dynamicsax/dynamics-ax.png)

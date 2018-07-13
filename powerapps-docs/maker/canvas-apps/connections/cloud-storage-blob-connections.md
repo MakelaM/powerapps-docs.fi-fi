@@ -2,17 +2,19 @@
 title: Pilvitallennusyhteyden yleiskatsaus | Microsoft Docs
 description: Ohjeet pilvitallennustiliin yhdistämiseen ja Excel-tietojen näyttämiseen sovelluksessasi
 author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.openlocfilehash: 04bfdd2d59b870184e5e42ac06135d00f52dcc70
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.reviewer: anneta
+ms.openlocfilehash: 3d7813280f0d17eca327e86a827da72e33f191e3
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895680"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021017"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Pilvitallennustiliin yhdistäminen PowerAppsista
 PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedoston ja käyttää sen tietoja kaikkialla sovelluksessasi käyttämällä näitä yhteyksiä. Näitä yhteyksiä ovat muun muassa seuraavat:  

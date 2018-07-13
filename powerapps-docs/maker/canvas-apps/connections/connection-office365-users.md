@@ -2,17 +2,19 @@
 title: Yleiskuvaus Office 365 -käyttäjät -yhteydestä | Microsoft Docs
 description: Ohjeet Office 365 -käyttäjien yhteyden luomiseen, muutama esimerkki ja kaikki funktiot
 author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/07/2016
 ms.author: lanced
-ms.openlocfilehash: 679d9b905aa1b7d7b1b731de400e6e133787769b
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 253dcd38c4e5c35aad71ac5f220350f19715dfb3
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897106"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018165"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Yhdistäminen Office 365 -käyttäjät -yhteyteen PowerAppsissa
 ![Office 365 -käyttäjät](./media/connection-office365-users/office365icon.png)

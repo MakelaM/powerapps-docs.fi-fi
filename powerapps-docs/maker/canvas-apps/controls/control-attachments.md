@@ -2,17 +2,19 @@
 title: 'Liiteohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja liiteohjausobjektista, kuten ominaisuudet ja esimerkkejä
 author: fikaradz
+manager: kvivek
 ms.service: powerapps
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
 ms.date: 04/23/2018
 ms.author: fikaradz
-ms.openlocfilehash: 3a24f5d879674d8832b7fe5030e871e7f7ba1626
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.reviewer: anneta
+ms.openlocfilehash: d8e195ad3e4f59b9f07e23e17a685d9d1f55bef4
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803117"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022029"
 ---
 # <a name="attachments-control-in-powerapps"></a>Liiteohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ladata tiedostoja laitteeseen sekä ladata ja poistaa tiedostoja SharePoint-luettelosta.
