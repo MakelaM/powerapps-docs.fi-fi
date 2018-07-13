@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 396a2d5325b7b72f3637dba1edddeead49594167
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a0f55de520a180a646e1e73aac423abc74bfed1d
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31832577"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896232"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>DateValue-, TimeValue- ja DateTimeValue-funktiot PowerAppsissa
 Muuntavat merkkijonon päivämäärän ja/tai ajan päivämäärä- ja aika-arvoksi.
@@ -61,7 +61,7 @@ Jos syötit **10/11/2014** tekstinsyöttöohjausobjektiin, jonka nimi on **Aloit
     Selitteenä näkyisi **Saturday, October 11, 2014**, jos tietokoneen kielialueen tunnukseksi on asetettu **EN**.
   
     > [!NOTE]
-> Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
+  > Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
 * **Text(DateValue(Aloituspäivä.Text, "fr"), DateTimeFormat.LongDate)**
   
     Selitteessä näkyisi **Monday, November 10, 2014**.
@@ -80,7 +80,7 @@ Jos syötät **10/11/2014 1:50:24.765 PM** tekstinsyöttöohjausobjektiin, jonka
     Selitteenä näkyisi **Saturday, October 11, 2014 1:50:24 PM**, jos tietokoneen kielialueen tunnukseksi on asetettu EN.
   
     > [!NOTE]
-> Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
+  > Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
 * **Text(DateTimeValue(Alku.Text, "fr"), DateTimeFormat.LongDateTime)**
   
     Selitteessä näkyisi **Monday, November 10, 2014 1:50:24 PM**.
