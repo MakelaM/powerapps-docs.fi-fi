@@ -2,20 +2,24 @@
 title: Helppokäyttöisten sovellusten luominen | Microsoft Docs
 description: Sovellusten luominen toimintarajoitteisille ihmisille
 author: fikaradz
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: fikaradz
-ms.openlocfilehash: 8a7139f6dbc39bc1585156802e30236aa2b68359
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 909f71a61ca3df73b41eb9e1fe0f3dc3f52d1527
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34803071"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018717"
 ---
 # <a name="create-accessible-apps"></a>Helppokäyttöisten sovellusten luominen
 Helppokäyttöisen sovelluksen avulla käyttäjät, joilla on näkö-, kuulo- tai muu rajoite, voivat käyttää sovellusta.  Sen lisäksi, että monet valtiot ja organisaatiot edellyttävät näiden sovellusten käyttöä, alla olevien ohjeiden noudattaminen parantaa käytettävyyttä kaikille käyttäjille.
+
+Tarkista **[Helppokäyttöisyyden tarkistuksen](accessibility-checker.md)** avulla mahdolliset helppokäyttötoimintojen ongelmat sovelluksessasi. 
 
 ## <a name="layout-and-color"></a>Asettelu ja väri
 Terve järki ja yksinkertainen suunnittelu tekevät sovelluksista helpompia käyttää.  Kun teet merkittäviä sovellusmukautuksia, huomioi alla olevat ehdotukset.  PowerApps-teemat ovat oletusarvoisesti helppokäyttöisiä.
@@ -59,4 +63,7 @@ Jos sinulla on allekirjoituskenttä, jossa käytetään PenInput-ohjausobjektia,
 
 
 
-Aiheeseen liittyvää: **[Helppokäyttöisyysasetukset](controls/properties-accessibility.md)**
+Aiheeseen liittyvää:
+- [Helppokäyttöisyysasetukset](controls/properties-accessibility.md)
+- [Helppokäyttöisyyden tarkistuksen käyttäminen](accessibility-checker.md)
+- [Helppokäyttöisyysvärit PowerAppsissa](accessible-apps-color.md)
