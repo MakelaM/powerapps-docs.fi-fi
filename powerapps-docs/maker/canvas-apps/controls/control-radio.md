@@ -1,40 +1,42 @@
 ---
 title: 'Valintanappi: viittaus | Microsoft Docs'
 description: Valintanappeja koskevia tietoja, kuten ominaisuuksia ja esimerkkejä
-documentationcenter: na
 author: fikaradz
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
-ms.date: 10/25/2016
+ms.date: 07/06/2018
 ms.author: fikaradz
-ms.openlocfilehash: 8a95e84449828e77152206817f3d964315074b90
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 4b24d016eb97ca5670a1705adfe063315cb7ebca
+ms.sourcegitcommit: 16a2eeaa4ad9218682143411b609cb961dbcfa91
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837684"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886351"
 ---
 # <a name="radio-control-in-powerapps"></a>Valintanappi PowerAppsissa
-Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
+
+Syötteen ohjausobjekti, joka näyttää useita vaihtoehtoja. Käyttäjät voivat valita niistä vain yhden kerrallaan.
 
 ## <a name="description"></a>Kuvaus
-**Valintanappi** on ohjausobjekti, jota on käytetty jo kymmeniä vuosia. Se sopii parhaiten luetteloihin, joissa on vain muutama toisensa poissulkeva vaihtoehto.
 
-## <a name="key-properties"></a>Keskeiset ominaisuudet
-**[Oletus](properties-core.md)** – Alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
+**Valintanappi**-ohjausobjekti on HTML-syötteen vakio-ohjausobjekti, jota kannattaa käyttää vain muutamassa toisensa poissulkevissa asetuksessa.
 
-**[Items](properties-core.md)** – Tietolähde, joka tulee näkyviin ohjausobjektissa, kuten galleriassa, luettelossa tai kaaviossa.
+Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
+## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 
-**[Value](properties-core.md)**  – Ohjausobjektiin syötetty arvo.
+**[Oletus](properties-core.md)**  – Ohjausobjektin arvo, ennen kuin käyttäjä muuttaa sitä.
+
+**[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
+
+**Asettelu** – Määrittää, onko asettelu vaaka- tai pystysuuntainen.
+
+**[Arvo](properties-core.md)** – Ohjausobjektiin syötetty arvo.
 
 ## <a name="all-properties"></a>Kaikki ominaisuudet
+
 **[Align](properties-text.md)** – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
@@ -118,37 +120,44 @@ Luettelo, josta voi valita vain yhden vaihtoehdon kerrallaan.
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
+
 [**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**["Standard", "Premium"]**
-   
-    Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, siirrä se **Valintanappi**-ohjausobjektin alapuolelle ja aseta **[Selite](control-text-box.md)**-ohjausobjektin **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**If ("Premium" Pricing.Selected.Value "200 euroa per päivä", "150 euroa päivässä")**
-   
-    Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-3. Paina F5-näppäintä ja valitse sen jälkeen jompikumpi **Valintanappi**-ohjausobjektin vaihtoehdoista.
-   
-    **[Selite](control-text-box.md)**-ohjausobjekti näyttää valintasi mukaisen tekstin.
-4. (valinnainen) Valitse toinen **Valintanappi**-ohjausobjektin vaihtoehdoista ja tarkista, että näyttöön tulee asiaankuuluva teksti.
-5. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
+1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:
+
+    **["Standard", "Premium"]**
+
+    Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
+
+2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, siirrä se **Valintanappi**-ohjausobjektin alapuolelle ja aseta **[Selite](control-text-box.md)**-ohjausobjektin **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:
+
+    **If ("Premium" Pricing.Selected.Value "200 euroa per päivä", "150 euroa päivässä")**
+
+    Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+
+3. Pidä Alt-näppäintä painettuna ja valitse jompikumpi **Valintanappi**-ohjausobjektin vaihtoehto.
+
+    **[Selite](control-text-box.md)**-ohjausobjekti näyttää valintasi mukaisen tekstin.
+
+4. (valinnainen) Pidä Alt-näppäintä painettuna, valitse toinen vaihtoehdoista ja tarkista, että näyttöön tulee asianmukainen teksti.
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+
 ### <a name="color-contrast"></a>Värikontrasti
-Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
+
+Varmista [normaalien värikontrastivaatimusten](../accessible-apps-color.md) lisäksi riittävä värikontrasti seuraavien välillä:
+
 * **RadioSelectionFill** ja **RadioBackgroundFill**
 * **RadioBackgroundFill** ja **[Täyttö](properties-color-border.md)**
 
-Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-color.md).
+### <a name="screen-reader-support"></a>Näytönlukuohjelmien tuki
 
-### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
-* Jokaisella valintanapilla on oltava **[arvo](properties-core.md)**.
+* Varmista, että jokaisella asetuksella on **[arvo](properties-core.md)**.
 * Harkitse **[selitteen](control-text-box.md)** lisäämistä otsikoksi jokaisen **Valintanappi**-ohjausobjektin edelle.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
-* Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
- 
+
+* Määritä **[TabIndex](properties-accessibility.md)**-ominaisuudeksi nolla tai suurempi arvo, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Määritä  **[FocusedBorderColor](properties-color-border.md)**- ja **[FocusedBorderThickness](properties-color-border.md)**-ominaisuudet niin, että kohdistusilmaisimet näkyvät selvästi.

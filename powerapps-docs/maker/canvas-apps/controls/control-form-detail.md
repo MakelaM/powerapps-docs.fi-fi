@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: 78615949ab5c05b4cf7da56eae23dd1a0194c7ff
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ac74f459c35e7b2ec123540a5cf55c1ad6a21c0a
+ms.sourcegitcommit: 8d9e5f44bcd5cecd24de2c99d5ba04df9ea67275
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838690"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37406019"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -151,9 +151,9 @@ Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutok
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
 * **Lomake**-ohjausobjektin **Valid**-ominaisuus koostaa kaikkien lomakkeen **[Kortti](control-card.md)**-ohjausobjektien **Valid**-ominaisuudet. Lomakkeen **Valid**-ominaisuuden arvo on **true** vain, jos lomakkeen kaikkien korttien tiedot ovat kelvollisia. Muussa tapauksessa **Valid**-ominaisuus on **false**.
-* Voit määrittää painikkeen tallentamaan muutokset vain, jos lomakkeen tiedot ovat kelvollisia, mutta niitä ei ole vielä lähetetty, määrittämällä painikkeen **Käytössä**-arvoksi seuraavan kaavan:
+* Voit määrittää painikkeen tallentamaan muutokset vain, jos lomakkeen tiedot ovat kelvollisia, mutta niitä ei ole vielä lähetetty, määrittämällä painikkeen **DisplayMode**-arvoksi seuraavan kaavan:
   
-    **SubmitButton.Enabled = IsBlank( Form.Error ) || Form.Valid**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.

@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-ms.openlocfilehash: 80d06a30dbe334f7fa9691d2a56805d53876693c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 29d0399de5404e6bd8995e3aecaedcfd7f1db6e8
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838552"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37898601"
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>PowerAppsin Blank-, Coalesce-, IsBlank- ja IsEmpty-funktiot
 Testaa, onko arvo tyhjä tai sisältääkö [taulukko](../working-with-tables.md) nolla [tietuetta](../working-with-tables.md#records), ja mahdollistaa *tyhjien* arvojen luomisen.
@@ -46,7 +46,7 @@ Mikä tahansa ominaisuus tai laskettu arvo voi olla *tyhjä*.  Esimerkiksi totuu
 * **[If](function-if.md)**-funktion *else*-osaa ei määritetty, ja kaikkien ehtojen arvot olivat **epätosi**.
 * Käytit **[Update](function-update-updateif.md)**-funktiota, mutta et määrittänyt arvoa kaikille sarakkeille. Näin ollen sarakkeille, joita et määrittänyt, ei asetettu arvoja.
 
-**Coalesce**-funktio arvioi argumentin järjestyksessä ja palauttaa ensimmäisen arvon, joka ei ole *tyhjä*.  Käytä funktiota korvaamaan *tyhjä* arvo toisella arvolla niin, että ei-*tyhjiä* arvoja ei muuteta.  Jos kaikki argumentit ovat *tyhjiä*, funktio palauttaa *tyhjän* arvon.  Kaikkien **Coalesce**-funktion argumenttien täytyy olla samaa tyyppiä. Et voi esimerkiksi sekoittaa numeroita ja merkkijonoja.  **Coalesce( arvo1, arvo2 )** on tiiviimpi versio kaavasta **If( IsBlank( arvo1 ) arvo1, arvo2 )** eikä se vaadi **arvo1**:n arvioimista kahdesti.  
+**Coalesce**-funktio arvioi argumentin järjestyksessä ja palauttaa ensimmäisen arvon, joka ei ole *tyhjä*.  Käytä funktiota korvaamaan *tyhjä* arvo toisella arvolla niin, että ei-*tyhjiä* arvoja ei muuteta.  Jos kaikki argumentit ovat *tyhjiä*, funktio palauttaa *tyhjän* arvon.  Kaikkien **Coalesce**-funktion argumenttien täytyy olla samaa tyyppiä. Et voi esimerkiksi sekoittaa numeroita ja merkkijonoja.  **Coalesce( arvo1, arvo2 )** on tiiviimpi versio kaavasta **If( Not( IsBlank( arvo1 ) ), arvo1, arvo2 )** eikä se vaadi **arvo1**:n arvioimista kahdesti.  
 
 **IsEmpty**-funktio testaa, sisältääkö taulukko yhtään tietuetta. Se vastaa **[CountRows](function-table-counts.md)**-funktion käyttämistä, kun haetaan nollaa. Voit tarkistaa, onko tietolähteessä virheitä, yhdistämällä **IsEmpty**-funktion **[Errors](function-errors.md)**-funktioon.
 
@@ -74,32 +74,33 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   
+
     **ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 4. Napsauta tai napauta **Tiedosto**-valikosta **Kokoelmat**.
-   
+
      **Cities**-kokoelma avautuu, ja siinä näytetään yksi tietue, jossa on "Seattle" ja "Rainy":
-   
+
     ![Kokoelma, jossa näytetään Seattle ja sateinen sää](./media/function-isblank-isempty/seattle-rainy.png)
 5. Palaa oletustyötilaan napsauttamalla tai napauttamalla takaisin-nuolta.
 6. Lisää **Otsikko**-ohjausobjekti ja määritä sen **Text**-ominaisuudeksi seuraava kaava:
-   
+
     **IsBlank( First( Cities ).Weather )**
-   
+
     Otsikko näyttää arvon **epätosi**, koska **Weather** sisältää arvon ("Rainy").
 7. Lisää toinen painike ja aseta sen **OnSelect**-ominaisuudeksi seuraava kaava:
-   
+
     **Patch( Cities, First( Cities ), { Weather: Blank() } )**
 8. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
-   
+
     **Cities**-kohdan ensimmäisen tietueen **Weather**-kenttä korvataan *tyhjällä* arvolla. Siitä poistetaan siinä aiemmin ollut "Rainy".
-   
+
     ![Kokoelma, jossa näytetään Seattle ja tyhjä sääkenttä](./media/function-isblank-isempty/seattle-blank.png)
-   
+
     Otsikko näyttää arvon **tosi**, koska **Weather**-kenttä sisältää arvon.
 
 ### <a name="coalesce"></a>Coalesce
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Coalesce( Blank(), 1 )** |Testaa **Blank**-funktion paluuarvon. Blank palauttaa aina *tyhjän* arvon. Koska ensimmäinen argumentti on *tyhjä*, arviointi jatkuu seuraavalla arvolla, kunnes löydetään ei-*tyhjä* arvo. |**1** |
@@ -108,12 +109,12 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 ### <a name="isblank"></a>IsBlank
 1. Luo sovellus alusta alkaen, lisää Tekstisyöte-ohjausobjekti ja anna sille nimeksi **FirstName**.
 2. Lisää otsikko ja aseta sen **[Text](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   
+
     **If( IsBlank( FirstName.Text ), "Etunimi on pakollinen kenttä." )**
-   
+
     Oletuksena Tekstisyöte-ohjausobjektin **[Text](../controls/properties-core.md)**-ominaisuudeksi asetetaan **"Text input"**. Koska ominaisuus sisältää arvon, se ei ole tyhjä, eikä otsikko näytä mitään viestiä.
 3. Poista kaikki merkit Tekstisyöttö-ohjausobjektista, mukaan lukien välilyönnit.
-   
+
     Koska **[Text](../controls/properties-core.md)**-ominaisuus ei sisällä enää merkkejä, se on *tyhjä* ja **IsBlank( FirstName.Text )** palauttaa arvon **tosi**. Pakollisesta kentästä ilmoittava viesti näytetään.
 
 Katso tietoa vahvistuksen suorittamisesta muilla työkaluilla **[Validate](function-validate.md)**-funktion aiheesta ja [tietolähteiden kanssa työskentelyn](../working-with-data-sources.md) aiheesta.  
@@ -132,24 +133,24 @@ Muita esimerkkejä:
 ### <a name="isempty"></a>IsEmpty
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   
+
     **Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
-   
+
     Kokoelma nimeltä **IceCream** luodaan ja se sisältää nämä tiedot:
-   
+
     ![](media/function-isblank-isempty/icecream-strawberry-chocolate.png)
-   
+
     Tässä kokoelmassa on kaksi tietuetta, eikä se ole tyhjä. **IsEmpty( IceCream )** palauttaa arvon **epätosi** ja **CountRows( IceCream )** palauttaa arvon **2**.
 4. Lisää toinen painike ja aseta sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   
+
     **Clear( IceCream )**
 5. Esikatsele sovellustasi, napsauta tai napauta toista painiketta ja sulje esikatselu.  
-   
+
     Kokoelma on nyt tyhjä:
-   
+
     ![](media/function-isblank-isempty/icecream-clear.png)
-   
+
     **[Clear](function-clear-collect-clearcollect.md)**-funktio poistaa kaikki tietueet kokoelmasta, jolloin tuloksena on tyhjä kokoelma. **IsEmpty( IceCream )** palauttaa arvon **tosi** ja **CountRows( IceCream )** palauttaa arvon **0**.
 
 Voit testata **IsEmpty**-funktiolla, onko laskettu taulukko tyhjä, kuten seuraavissa esimerkeissä:

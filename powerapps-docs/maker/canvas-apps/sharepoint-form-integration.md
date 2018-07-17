@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: canvas
 ms.date: 11/11/2017
 ms.author: ankitsar
-ms.openlocfilehash: 69e3baaa769282ca8ac7372ba3360829a1624f3d
-ms.sourcegitcommit: 6bfb002180148a3f22a4d1d8d750fc442489ebe4
+ms.openlocfilehash: f8f21235170483c908149898f92b57cc6c2cb9aa
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291739"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896416"
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Tutustu SharePoint-lomakkeiden integrointiin
 Nyt voit helposti [mukauttaa mitä tahansa SharePoint-luettelolomakkeita](customize-list-form.md) PowerAppsissa. Näissä ohjeissa neuvomme vaiheittain, miten nämä lomakkeet toimivat ja miten niitä voi mukauttaa lisää.
@@ -66,7 +66,7 @@ Oletuslomake muodostuu seuraavista ohjausobjekteista ja niiden oletusarvoista:
 
     * **OnCancel** – Nollaa **SharePointForm1**-lomakkeen muutokset. SharePoint piilottaa lomakkeen aina, kun käyttäjä napsauttaa tai napauttaa **Peruuta**-kohtaa SharePointissa.
 
-        **SubmitForm(SharePointForm1)**
+        **ResetForm(SharePointForm1)**
 
 Nämä oletusarvot varmistavat, että SharePointissa suoritettava lomake toimii. Ne muuttavat PowerApps-lomakkeen tilan, kun käyttäjä käyttää lomaketta SharePointissa. Lisäksi ne varmistavat, että muutokset lähetetään SharePointiin.
 
@@ -103,8 +103,8 @@ Nyt kun tunnet oletuslomakkeen ja **SharePointIntegration**-ohjausobjektin toimi
 
 * Määritä **SharePointIntegration**-ohjausobjektin **OnSave**-kaavalla, mikä mukautettu tapahtuma käynnistyy, kun käyttäjä napsauttaa tai napauttaa **Tallenna**-painiketta SharePointissa. Jos sinulla on useita lomakkeita, muista lähettää vain sillä hetkellä käytössä olevan lomakkeen muutokset.
 
-    >[!TIP]
-     Määritä **OnNew**-, **OnView**- ja **OnEdit**-kaavojen muuttujille eri arvot. Voit käyttää tätä muuttujaa **OnSave**-kaavassa sen määrittämiseen, mikä lomake on käytössä.
+  > [!TIP]
+  >    Määritä **OnNew**-, **OnView**- ja **OnEdit**-kaavojen muuttujille eri arvot. Voit käyttää tätä muuttujaa **OnSave**-kaavassa sen määrittämiseen, mikä lomake on käytössä.
 
 * Muista liittää **RequestHide()** kaikkien lomakkeidesi **OnSuccess**-kaavaan. Ilman sitä SharePoint ei tiedä, milloin lomake pitäisi piilottaa.
 

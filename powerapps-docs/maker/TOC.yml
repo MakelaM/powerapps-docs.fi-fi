@@ -134,7 +134,9 @@
             - name: Luo helppokäyttöinen sovellus
               href: ./canvas-apps/accessible-apps.md
               items:
-                - name: Väri
+                - name: Löydä helppokäyttötoimintojen ongelmat
+                  href: ./canvas-apps/accessibility-checker.md
+                - name: Käytä värejä helppokäyttötoiminnoissa
                   href: ./canvas-apps/accessible-apps-color.md
         - name: Hallitse sovellustasi
           items:

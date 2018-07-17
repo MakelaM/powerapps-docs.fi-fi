@@ -1,41 +1,50 @@
 ---
 title: 'Power BI -ruudun ohjausobjekti: viitetietoja | Microsoft Docs'
 description: Tietoja Power BI -ruudun ohjausobjektista, kuten ominaisuudet ja esimerkkejä
-documentationcenter: na
 author: fikaradz
 manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 07/07/2016
 ms.author: fikaradz
-ms.openlocfilehash: e7bc2e7e0aafa4d933c47bcf47300dc243c38523
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9df201f5d2fd4017debe47626aedaaa2c735682f
+ms.sourcegitcommit: 16a2eeaa4ad9218682143411b609cb961dbcfa91
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827139"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886374"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Power BI -ruudun ohjausobjekti PowerAppsissa
+
 Ohjausobjekti, joka näyttää [Power BI](https://powerbi.microsoft.com) -ruudun sovelluksessa.
 
+Eikö sinulla ole Power BI:tä? [Rekisteröidy](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
+
 ## <a name="description"></a>Kuvaus
-Hyödynnä olemassa olevaa tietojen analysointia ja raportointia näyttämällä **[Power BI -ruutuja](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** sovelluksissasi.  Valitse näytettävä ruutu asettamalla sen **Työtila**-, **Koontinäyttö**- ja **Ruutu**-ominaisuudet asetuspaneelin **Tiedot**-välilehdellä.
+
+Hyödynnä olemassa olevaa tietojen analysointia ja raportointia näyttämällä **[Power BI -ruutuja](https://docs.microsoft.com/power-bi/service-dashboard-tiles)** sovelluksissasi. Määritä näytettävä ruutu asettamalla sen **Työtila**-, **Koontinäyttö**- ja **Ruutu**-ominaisuudet asetuspaneelin **Tiedot**-välilehdessä.
 
 ## <a name="sharing-and-security"></a>Jakaminen ja suojaus
-Kun PowerApp jaetaan, sitä voivat käyttää kaikki käyttäjät, joilla on sovelluksen käyttöoikeus.  Jotta Power BI -sisältö näkyy näille käyttäjille, koontinäyttö, josta ruutu on peräisin, tulee [jakaa](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports) käyttäjän kanssa Power BI:ssä.  Näin varmistetaan, että Power BI -jakamisoikeuksia kunnioitetaan, kun Power BI -sisältöä käytetään sovelluksessa.
+
+Kun jaat sovelluksen, jossa on Power BI -sisältöä, sinun on jaettava sovelluksen itsensä lisäksi myös [koontinäyttö](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports), josta ruutu saadaan. Muutoin Power BI -sisältö ei tule näkyviin niillekään käyttäjille, jotka avaavat sovelluksen. Sovellukset, joissa on Power BI -sisältöä, noudattavat kyseisen sisällön käyttöoikeuksia.
+
+## <a name="performance"></a>Suorituskyky
+
+Yli kolmen Power BI -ruudun lataamista sovellukseen yhtä aikaa ei suositella. Voit hallita ruutujen lataamista ja poistamista muistista määrittämällä **LoadPowerBIContent**-ominaisuuden.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
+
 **Työtila** – Power BI -työtila, josta ruutu on peräisin.
 
 **Koontinäyttö** – Power BI -koontinäyttö, josta ruutu on peräisin.
 
 **Ruutu** – Näytettävän Power BI -ruudun nimi.
 
+**LoadPowerBIContent** – Kun asetuksena on tosi, Power BI -sisältö ladataan ja näytetään. Kun arvo on epätosi, Power BI -sisältö poistetaan, mikä vapauttaa muistia ja optimoi suorituskyvyn.
+
 ## <a name="additional-properties"></a>Lisäominaisuudet
+
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
 **[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
@@ -46,9 +55,9 @@ Kun PowerApp jaetaan, sitä voivat käyttää kaikki käyttäjät, joilla on sov
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia. Sovellus vie käyttäjän oletuksena ruutuun liittyvään Power BI -raporttiin.
+**[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia. Ruutuun liittyvä Power BI -raportti avautuu oletusarvoisesti.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
@@ -57,18 +66,19 @@ Kun PowerApp jaetaan, sitä voivat käyttää kaikki käyttäjät, joilla on sov
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **Power BI -ruudun** ohjausobjekti **Ohjausobjektit**-valikon **Lisää**-välilehdeltä.  
-2. Valitse **Tiedot**-välilehden asetuspaneelissa **Työtila**-asetukseksi "Oma työtila".  Valitse koontinäyttö koontinäyttöluettelosta ja ruutu ruutuluettelosta.
-   
-    Ohjausobjekti muodostaa Power BI -ruudun.
-   
-    Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
-   
-   Eikö sinulla ole Power BI:tä? [Rekisteröidy](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
+1. Avaa **Lisää**-välilehdessä **Ohjausobjektit**-valikko ja lisää sitten **Power BI -ruutu** -ohjausobjekti.
+
+    Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
+
+2. Valitse **Tiedot**-välilehden asetuspaneelissa **Työtila**-asetukseksi **Oma työtila**.
+
+3. Valitse jokin koontinäyttö koontinäyttöjen luettelossa ja valitse sitten ruutu ruutujen luettelossa.
+
+    Ohjausobjekti muodostaa Power BI -ruudun.
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+
 **Power BI-ruutu** on vain säilö Power BI -sisällölle. Opi luomaan helppokäyttöistä sisältöä näiden [Power BI -helppokäyttötoimintojen vinkkien](https://docs.microsoft.com/power-bi/desktop-accessibility) avulla.
 
-### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
-* Harkitse otsikon lisäämistä **[selitteen](control-text-box.md)** avulla, jos Power BI -sisällössä ei ole otsikkoa. Otsikko voidaan sijoittaa välittömästi ennen **Power BI -ruutua**.
+Jos Power BI -sisällössä ei ole otsikkoa, voit lisätä otsikon **[Selite](control-text-box.md)**-ohjausobjektin avulla näytönlukuohjelmien tukea varten. Otsikko voidaan sijoittaa välittömästi ennen Power BI -ruutua.

@@ -1,23 +1,19 @@
 ---
 title: Funktiot, signaalit ja luetteloinnit | Microsoft Docs
 description: Viitetietoja funktioista, signaaleista ja luetteloinneista PowerAppsissa.
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
 ms.component: canvas
 ms.date: 06/05/2018
 ms.author: gregli
-ms.openlocfilehash: af089f81b8fd96ec022fe32495cb14f2827f28b5
-ms.sourcegitcommit: 045c96df42405c60c7675edbadac93455270a021
+ms.openlocfilehash: b131f9da9dbf0624185fc837c5582c9ef0477089
+ms.sourcegitcommit: 6d9fe9967841e381b108a7fb53c9057e295336ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34822577"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948592"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -65,6 +61,8 @@ Muita elementtejä ovat:
 
 **[Char](functions/function-char.md)** – muuntaa merkkikoodin merkkijonoksi.
 
+**[Choices](functions/function-choices.md)** – Palauttaa hakusarakkeen mahdollisten arvojen taulukon.
+
 **[Clear](functions/function-clear-collect-clearcollect.md)** – poistaa kaikki tiedot [kokoelmasta](working-with-data-sources.md#collections).
 
 **[ClearCollect](functions/function-clear-collect-clearcollect.md)** – poistaa kaikki tiedot kokoelmasta ja lisää sitten joukon [tietueita](working-with-tables.md#records).
@@ -86,6 +84,8 @@ Muita elementtejä ovat:
 **[Concat](functions/function-concatenate.md)** – yhdistää merkkijonot tietolähteessä.  
 
 **[Concatenate](functions/function-concatenate.md)** – yhdistää merkkijonot.
+
+**[Concurrent](functions/function-concurrent.md)** – Arvioi useita kaavoja keskenään samanaikaisesti. 
 
 **[Connection](functions/signals.md)** – palauttaa tietoja verkkoyhteydestäsi.
 
@@ -279,6 +279,8 @@ Muita elementtejä ovat:
 **[Search](functions/function-filter-lookup.md)** – etsii taulukosta tietueet, jotka sisältävät merkkijonon yhdessä niiden sarakkeista.  
 
 **[Second](functions/function-datetime-parts.md)** – noutaa päivämäärä- ja aika-arvon sekuntiosuuden.
+
+**[Select](functions/function-select.md)** – Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**-kaavan laskennan.
 
 **[Set](functions/function-set.md)** – asettaa yleisen muuttujan arvon.
 

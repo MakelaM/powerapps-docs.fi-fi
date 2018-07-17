@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: reference
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 788f9ec1ce1ac8604606d2d2ad836a0cd12360d4
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 2cb1e1b83cffee2ccea0a4d4b563de44aaa3e68c
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552986"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37896186"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerAppsin PowerShell-tuki (esiversio)
 Sovellusten tekijöille ja järjestelmänvalvojille tarkoitetulla PowerShell-cmdlet-komentojen esiversiolla voit automatisoida monia seuranta- ja hallintatehtäviä, jotka on tällä hetkellä mahdollista suorittaa vain manuaalisesti [PowerAppsissa](https://web.powerapps.com) tai [PowerApps-hallintakeskuksessa](https://admin.powerapps.com).
@@ -58,6 +58,7 @@ Suorita sovellusten luojille tarkoitetut PowerShell-cmdlet-komennot seuraavasti:
 Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa toiminnot näissä cmdlet-komennoissa, mutta heillä on käytettävissään vain ne resurssit (esimerkiksi sovellukset, työnkulut jne.), jotka on luotu tai jaettu heidän kanssaan.
 
 ### <a name="cmdlet-list"></a>Cmdlet-komentoluettelo
+
 | Tarkoitus | Cmdlet-komento |
 | --- | --- |
 | Ympäristöjen luku | Get-PowerAppsEnvironment <br> Get-FlowEnvironment
@@ -90,13 +91,15 @@ Jotta voit suorittaa järjestelmänvalvojan cmdlet-komentojen hallintatoimia, si
 * [Office 365:n yleisen järjestelmänvalvojan](https://support.office.com/article/assign-admin-roles-in-office-365-for-business-eac4d046-1afd-4f1a-85fc-8219c79e1504) tai [Azure Active Directoryn yleisen järjestelmänvalvojan](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) oikeudet ovat myös pakollisia, jos haluat tehdä hakuja toisen käyttäjän resursseihin. (Huomioi, että ympäristön järjestelmänvalvojilla on pääsy vain niihin ympäristöihin ja ympäristön resursseihin, joihin heillä on oikeudet.)
 
 ### <a name="cmdlet-list"></a>Cmdlet-komentoluettelo
+
 | Tarkoitus | Cmdlet-komennot
 | --- | ---
 | Ympäristöjen lukeminen ja poistaminen | Get-AdminEnvironment <br> Remove-AdminEnvironment
 | Ympäristöjen oikeuksien lukeminen, päivittäminen ja poistaminen <br><br> *Nämä cmdlet-komennot toimivat ainoastaan ympäristöissä, joissa ei ole Common Data Service for Apps -tietokantaa.* | Get-AdminEnvironmentRoleAssignment <br> Set-AdminEnvironmentRoleAssignment <br> Remove-AdminEnvironmentRoleAssignment
 | Kaaviosovellusten lukeminen ja poistaminen | Get-AdminApp <br> Remove-AdminApp
 | Kaaviosovelluksen käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-AdminAppRoleAssignment <br> Remove-AdminAppRoleAssignment <br> Set-AdminAppRoleAssignment <br> Set-AdminAppOwner
-| Työnkulkujen lukeminen, päivittäminen ja poistaminen | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow  <br> Remove-AdminFlowOwnerRole
+| Työnkulkujen lukeminen, päivittäminen ja poistaminen | Get-AdminFlow <br> Enable-AdminFlow <br> Disable-AdminFlow <br> Remove-AdminFlow
+| Työnkulun käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-AdminFlowOwnerRole <br> Set-AdminFlowOwnerRole <br> Remove-AdminFlowOwnerRole
 | Yhteyksien lukeminen ja poistaminen | Get-AdminConnection <br> Remove-AdminConnection
 | Yhteyden käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br> Remove-AdminConnectionRoleAssignment
 | Mukautettujen liittimien lukeminen ja poistaminen | Get-AdminConnector <br> Remove-AdminConnector

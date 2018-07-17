@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 03/21/2018
 ms.author: gregli
-ms.openlocfilehash: 2bd8ba7dc9b764399165c75361215cee2edb4e7b
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ebd4454184f684dbf85ec2b8a9056395b92dc47f
+ms.sourcegitcommit: 234de505a0e8c42459d87053fa00ea3e0ea0b909
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31831442"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37092779"
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funktio PowerAppsissa
 Havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toiminnon.
@@ -30,7 +30,7 @@ Havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toiminnon.
 
 Käytä **IfError**-funktiota virhearvojen korvaamiseen kelvollisella arvolla.  Jos on esimerkiksi mahdollista, että käyttäjän syöte voi aiheuttaa jakolaskun nollalla, korvaa se 0:lla tai muulla kelvollisella, sovellukseen sopivalla arvolla, jotta tuotantovirran laskutoimituksia voidaan suorittaa.
 
-Käytä **IfError**-funktiota [toimintakaavoissa](../working-with-formulas-in-depth.md) toimintojen suorittamiseen, tulosten mahdollisten virheiden tarkistamiseen sekä tarvittaessa lisätoimenpiteiden suorittamiseen tai virheviestin näyttämiseen käyttäjälle [**ShowError**](function-showerror.md)-funktiolla.
+Käytä **IfError**-funktiota [toimintakaavoissa](../working-with-formulas-in-depth.md) toimintojen suorittamiseen, tulosten mahdollisten virheiden tarkistamiseen sekä tarvittaessa lisätoimenpiteiden suorittamiseen tai virheviestin näyttämiseen käyttäjälle [**Notify**](function-showerror.md)-funktiolla.
 
 Jos kaikki argumentit funktioon **IfError** aiheuttavat virheen, viimeisen argumentin arvo palautetaan (se on virhearvo). 
 
@@ -46,7 +46,7 @@ Jos kaikki argumentit funktioon **IfError** aiheuttavat virheen, viimeisen argum
 | --- | --- | --- |
 | **IfError( 1, 2 )** |Ensimmäinen argumentti ei ole virhe.  Se palautetaan, eikä seuraavia argumentteja arvioida.   | 1 |
 | **IfError( 1/0, 2 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, jolloin syntyy ei-virhearvo, joka palautetaan. | 2 | 
-| **IfError( 1/0, ShowError( "Division by Zero" ) )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, ja käyttäjälle näytetään viesti.  **IfError**-funktion palautusarvo on **ShowError**-funktion palautusarvo, joka on pakotettu samantyyppiseksi kuin ensimmäinen argumentti funktioon **IfError** (luku). | 1 |
+| **IfError( 1/0, Notify( "Sisäinen virhe", NotificationType.Error ) )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, ja käyttäjälle näytetään viesti.  **IfError**-funktion palautusarvo on **Notify**-funktion palautusarvo, joka on pakotettu samantyyppiseksi kuin ensimmäinen argumentti funktioon **IfError** (luku). | 1 |
 | **IfError( 1/0, 1/0, 2, 1/0, 3 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan. Myös tästä syntyy virhearvo (toinen jakolasku nollalla).  Kolmas argumentti arvioidaan. Tämä ei tuota palautettavaa virhearvoa.  Neljäs ja viides argumentti ohitetaan.  | 2 |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta

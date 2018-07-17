@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 07/24/2017
 ms.author: gregli
-ms.openlocfilehash: c01a69f311378e8e818036c866b96a78f223baf9
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: f2c1807f221d3134bbf39c74ae2939babbdd256e
+ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837121"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37899360"
 ---
 # <a name="endswith-and-startswith-functions-in-powerapps"></a>EndsWith- ja StartsWith-funktiot PowerAppsissa
 Testaa, alkaako tekstimerkkijono toisella merkkijonolla tai päättyykö se toiseen tekstimerkkijonoon.
@@ -29,7 +29,7 @@ Testaa, alkaako tekstimerkkijono toisella merkkijonolla tai päättyykö se tois
 
 Funktioiden testien kirjainkoko ei ole merkitsevä.  Palautusarvo on totuusarvo **true** tai **false**.  
 
-Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suodatin](function-filter-lookup.md)**-funktioon. Voit etsiä mistä tahansa tekstijonojen sisältä, ei pelkästään alusta tai lopusta, käyttämällä **[in](operators.md#in-and-exactin-operators)**-operaattoria tai **[Search](function-filter-lookup.md)**-funktiota.  Funktioiden valinta riippuu sovelluksesi tarpeista ja siitä, mikä funktio tietolähteellesi voidaan [delegoida](../delegation-overview.md).  Jos jotakin näistä funktioista ei voi delegoida, näyttöön ilmestyy muokkaamisen aikana sininen piste, joka varoittaa tästä rajoituksesta.
+Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suodatin](function-filter-lookup.md)**-funktioon. Voit etsiä mistä tahansa tekstijonojen sisältä, ei pelkästään alusta tai lopusta, käyttämällä **[in](operators.md#in-and-exactin-operators)**-operaattoria tai **[Search](function-filter-lookup.md)**-funktiota.  Funktioiden valinta riippuu sovelluksesi tarpeista ja siitä, mikä funktio tietolähteellesi voidaan [delegoida](../delegation-overview.md).  Jos jotakin näistä funktioista ei voi delegoida, näyttöön ilmestyy muokkaamisen aikana delegointivaroitus, joka varoittaa tästä rajoituksesta.
 
 ## <a name="syntax"></a>Syntaksi
 **EndsWith**( *Text*, *EndText* )
@@ -43,6 +43,7 @@ Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suo
 * *StartText* – Pakollinen.  Teksti, jota haetaan *Tekstin* alusta.  Jos *StartText* on tyhjä merkkijono, **StartsWith** palauttaa arvon *true*.
 
 ## <a name="examples"></a>Esimerkkejä
+
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **EndsWith( "Hei, Maailma", "maailma" )** |Testaa, päättyykö **”Hei, Maailma”** tekstiin **”maailma”**.  Testin kirjainkoolla ei ole merkitystä. |**true** |

@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 3e3cd3b7339303e23411f3ef977cc33db6e5e8e0
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 7fb35c1c59062b892fdd8e3a905d3ee485f6cf61
+ms.sourcegitcommit: 26932abc6fcdc5e6723b64b506532bb182ab3f8d
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445679"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37026230"
 ---
 # <a name="administer-environments-in-powerapps"></a>Ympäristöjen hallinta PowerAppsissa
 [PowerApps-hallintakeskuksessa][1] voit hallita ympäristöjä, jotka olet luonut tai joissa olet ympäristön järjestelmänvalvojan ja järjestelmänvalvojan roolissa. Hallintakeskuksessa voit tehdä seuraavia toimintoja:
@@ -57,6 +57,10 @@ Kun avaat hallintakeskuksen, oletusarvoisesti näkyviin tulee Ympäristöt-väli
 Jos sinulla on Azure AD- tai Office 365 -vuokraajan yleinen järjestelmänvalvoja -rooli, näet kaikkien vuokraajan käyttäjien luomat ympäristöt, koska olet automaattisesti niiden kaikkien ympäristön järjestelmänvalvoja.
 
 ## <a name="rename-your-environment"></a>Ympäristön nimeäminen uudelleen
+
+> [!IMPORTANT]
+> Tämän osan ohjeiden avulla voit uudelleennimetä tuotantoympäristön, joka ei sisällä tietokantaa. Et voi uudelleennimetä kokeiluympäristöjä, ja sinun on uudelleennimettävä tietokannan sisältävät tuotantoympäristöt Dynamics 365 -hallintakeskuksessa.
+
 1. Avaa [PowerApps-hallintakeskus][1] ja valitse luettelosta ympäristö, jonka nimen haluat muuttaa.
 
     ![](./media/environment-admin/environment-list-updated3.png)
@@ -191,10 +195,6 @@ Voit saada virhesanoman tietokannan luomisen yhteydessä seuraavissa skenaariois
 1. **Oletusympäristö**: vuokraajan oletusympäristö ei tällä hetkellä tue tietokannan luomista. 
 
 2. **Henkilökohtaiseen käyttöön tarkoitettu ympäristö:** saat omaan käyttöön tarkoitetun ympäristön, kun rekisteröidyt PowerAppsin yhteisön palvelupaketissa. Jos et ole vielä luonut tietokantaa, et voi tällä hetkellä valmistella tietokantaa henkilökohtaiseen käyttöön tarkoitetussa ympäristössä. 
-
-3. **Ympäristö on Azure Active Directory -vuokraajan kotialueesta poikkeavalla alueella**: tällä hetkellä voit valmistella tietokannan vain Azure Active Directory -vuokraajan kotialueella luoduissa ympäristöissä. Mahdollisuus valmistella tietokanta muilla alueilla on tulossa pian. Joten muista pitää alue vuokraajan oletussijainnin kanssa samana, jos haluat luoda tietokannan vuokraajan ympäristössä.
-
-4. **Tietokantojen luomista ei tueta tietyillä alueilla**: On tiettyjä alueita, joilla tietokannan luominen ei ole käytettävissä. Esimerkiksi Etelä-Amerikan maat. Joten jos vuokraajan kotisijainti on Etelä-Amerikka, et voi tällä hetkellä valmistella tietokantaa missään ympäristössä. 
     
 Pyrimme siihen, että tietokantoja voisi luoda kaikissa edellä mainituissa skenaarioissa.
 Jos saat muita virhesanomia tai sinulla on kysyttävää, ota meihin yhteyttä [täällä][5].

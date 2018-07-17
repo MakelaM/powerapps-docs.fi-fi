@@ -12,12 +12,12 @@ ms.topic: reference
 ms.component: canvas
 ms.date: 08/15/2017
 ms.author: gregli
-ms.openlocfilehash: e488383acbd163383079b5078e464cab89e677ad
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a8cd998744d609c253a31271aab34a30b1e998f3
+ms.sourcegitcommit: a622db0fb3d44fa5e7ebc4bfdc77cd6acb3646be
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31829044"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37843223"
 ---
 # <a name="average-max-min-stdevp-sum-and-varp-functions-in-powerapps"></a>PowerAppsin Average-, Max-, Min-, StdevP-, Sum- ja VarP-funktiot
 Koostefunktiot, jotka koostavat numerojoukon.
@@ -44,7 +44,7 @@ Voit antaa funktioille arvot seuraavin tavoin:
 
 Nämä funktiot toimivat vain numeroarvojen kanssa. Muut arvotyypit, kuten merkkijonot ja tietueet, jätetään huomiotta. Käytä **[Value](function-value.md)**-funktiota muuntamaan merkkijono luvuksi.
 
-**Average**-, **Max**-, **Min**- ja **Sum**-funktiot voidaan delegoida, kun niitä käytetään [näiden funktioiden delegointia tukevan tietolähteen kanssa](../delegation-list.md).  **StdevP**- ja **VarP**-funktioita ei kuitenkaan voi delegoida minkään tietolähteen osalta.  Jos delegointia ei tueta, vain tietojen ensimmäinen osa noudetaan ja sen jälkeen funktio otetaan käyttöön paikallisesti.  Tulos ei ehkä vastaa koko tarinaa.  Muokkaamisen aikana näyttöön ilmestyy sininen piste, joka muistuttaa tästä rajoituksesta ja ehdottaa mahdollisia delegoitavia vaihtoehtoja. Lisätietoja on kohdassa [Delegoinnin yleiskatsaus](../delegation-overview.md).
+**Average**-, **Max**-, **Min**- ja **Sum**-funktiot voidaan delegoida, kun niitä käytetään [näiden funktioiden delegointia tukevan tietolähteen kanssa](../delegation-list.md).  **StdevP**- ja **VarP**-funktioita ei kuitenkaan voi delegoida minkään tietolähteen osalta.  Jos delegointia ei tueta, vain tietojen ensimmäinen osa noudetaan ja sen jälkeen funktio otetaan käyttöön paikallisesti.  Tulos ei ehkä vastaa koko tarinaa.  Muokkaamisen aikana näyttöön tulee delegointivaroitus, joka muistuttaa tästä rajoituksesta ja ehdottaa mahdollisia delegoitavia vaihtoehtoja. Lisätietoja on kohdassa [Delegoinnin yleiskatsaus](../delegation-overview.md).
 
 ## <a name="syntax"></a>Syntaksi
 **Average**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**Max**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**Max**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**Sum**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**StdevP**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**VarP**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )

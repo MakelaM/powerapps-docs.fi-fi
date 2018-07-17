@@ -1,23 +1,18 @@
 ---
 title: Tietoa taulukoista | Microsoft Docs
 description: Tietoa taulukoiden, sarakkeiden ja tietueiden käsittelemisestä
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: canvas
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 42a7c0db6aaf46d8cdbd112cf72c6f95f58dc9ec
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6144d66849316dc2b355b0cb9a56959e10f8a319
+ms.sourcegitcommit: 76ffec3b4d9c18a01f19c583435541ae165a8234
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31839173"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37864257"
 ---
 # <a name="understand-tables-and-records-in-powerapps"></a>Tutustu PowerAppsissa käytettäviin taulukkoihin ja tietueisiin
 Voit luoda sovelluksen, joka käyttää tietoja Microsoft Excelistä, SharePointista, SQL Serveristä ja useista muista lähteistä, jotka tallentavat tietoja tietueisiin ja taulukkoihin. Jos haluat käsitellä tällaisia tietoja mahdollisimman tehokkaasti, tutustu näiden rakenteiden taustalla oleviin käsitteisiin.
@@ -91,26 +86,28 @@ Numeroiden tavoin myös taulukkoihin ja tietueisiin liittyvät kaavat lasketaan 
 
 Katsotaan joitakin yksinkertaisia esimerkkejä.
 
-1. Lisää **Tekstivalikoima** -ohjausobjekti ja määritä sen **[Kohteet](controls/properties-core.md)**-ominaisuudeksi taulukon nimi.
-   
-    Valikoima näyttää oletusarvoisesti paikkamerkkitekstin taulukosta, jonka nimi on **TextualGallerySample**. Valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuudeksi asetetaan automaattisesti tämä taulukko.
-   
-    > [!NOTE]
-> Jotkin ohjausobjektit on järjestetty uudelleen ja suurennettu esimerkkitarkoituksessa.
-   
+1. Luo tyhjä sovellus puhelinta varten ja lisää pystysuora **[Valikoima](controls/control-gallery.md)** -ohjausobjekti, joka sisältää muita ohjausobjekteja.
+
+    Näytössä näkyy oletusarvoisesti paikkamerkkiteksti taulukosta, jonka nimi on **CustomGallerySample**. **[Items](controls/properties-core.md)**-ominaisuus näytön **[Valikoima](controls/control-gallery.md)**-ohjausobjektissa määritetään automaattisesti kyseiseen taulukkoon.
+
     ![](media/working-with-tables/gallery-items.png)
+
+    > [!NOTE]
+    > Jotkin ohjausobjektit on järjestetty uudelleen ja suurennettu esimerkkitarkoituksessa.
+
 2. Sen sijaan, että määrittäisit **[Kohteet](controls/properties-core.md)**-ominaisuuden taulukon nimelle, määritä se kaavalle, jossa taulukon nimi annetaan argumenttina tämän esimerkin mukaisesti:<br>
-   **Sort(TextualGallerySample, Heading, Descending)**
-   
+    **Sort(CustomGallerySample, SampleHeading, Descending)**
+
     Tämä kaava sisältää **[Sort](functions/function-sort.md)**-funktion, jossa taulukon nimi (TextualGallerySample) on ensimmäinen argumentti ja taulukossa olevan sarakkeen nimi (Heading) toinen argumentti. Funktio tukee myös valinnaista kolmatta argumenttia, joka määrää, että tietojen lajittelu tehdään laskevassa järjestyksessä (Descending).
-   
+
     ![](media/working-with-tables/gallery-items-sort.png)
+
 3. Aseta **[Kohteet](controls/properties-core.md)**-ominaisuudeksi kaava, jolle edellisen vaiheen kaava annetaan argumenttina. Kaava palauttaa taulukon tämän esimerkin mukaisesti:<br>
-   **FirstN(Sort(TextualGallerySample, Heading, Descending), 2)**
-   
+   **FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)**
+
     Tässä kaavassa käytetään **[FirstN](functions/function-first-last.md)**-funktiota näyttämään taulukossa tietty määrä tietueita. **[Sort](functions/function-sort.md)**-funktio on **[FirstN](functions/function-first-last.md)**-funktion ensimmäinen argumentti, ja numero (tässä tapauksessa **2**) on toinen argumentti, joka määrittää, kuinka monta tietuetta näytetään.
    
-    Koko kaava palauttaa taulukon, jossa **TextualGallerySample**-taulukon kaksi ensimmäistä tietuetta näkyvät laskevassa järjestyksessä **Heading**-sarakkeessa.
+    Koko kaava palauttaa taulukon, jossa **CustomGallerySample**-taulukon kaksi ensimmäistä tietuetta näkyvät laskevassa järjestyksessä **SampleHeading**-sarakkeessa.
    
     ![](media/working-with-tables/gallery-items-sort-firstn.png)
 
@@ -139,7 +136,7 @@ Jos määrität tietolähteen argumenttina jollekin näistä funktioista, kyseis
 * **[Update](functions/function-update-updateif.md)**, **[UpdateIf](functions/function-update-updateif.md)** – näillä päivitetään tietueet, jotka vastaavat yhtä tai useampaa määrittämääsi kriteeriä.
 * **[Remove](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** – näillä poistetaan tietueet, jotka vastaavat yhtä tai useampaa määrittämääsi kriteeriä.
 
-Seuraavilla ohjausobjekteilla on ominaisuuksia, jotka ovat taulukoita:
+Nämä ominaisuudet määritetään arvoihin, jotka ovat taulukoita:
 
 * **Kohteet** – Koskee valikoimia ja luetteloruutuja. Taulukko, joka näytetään valikoimassa.
 * **ValitutKohteet** – Koskee luetteloruutuja. Käyttäjän valitsemien kohteiden taulukko.
@@ -150,24 +147,27 @@ Voit myös luoda kaavan, joka laskee yksittäisen tietueen tiedot, määrittää
 1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
     **Collect( SelectedRecord, Gallery1.Selected )**
 
-2. Jos painike ei ole valittuna, valitse se napsauttamalla sitä, ja suorita kaava napsauttamalla sitä uudelleen.
+2. Pidä Alt-näppäintä painettuna ja valitse painike.
 
 3. Valitse **Tiedosto**-valikosta **Kokoelmat.**
 
-![](media/working-with-tables/selected-collection.png)
+    ![](media/working-with-tables/selected-collection.png)
 
-Tämän kaavan palauttama tietue sisältää paitsi valikoimassa valittuna olevan tietueen tiedot, myös valikoiman jokaisen ohjausobjektin. Tietue sisältää esimerkiksi sekä **Body**-sarakkeen, joka vastaa alkuperäisen taulukon **Body**-saraketta, että **Body1** sarakkeen, joka edustaa selitettä ja näyttää kyseisen sarakkeen tiedot. Valitse **Body1**-sarakkeen taulukko-kuvake, niin voit perehtyä näihin tietoihin.
+Tämän kaavan palauttama tietue sisältää paitsi valikoimassa valittuna olevan tietueen tiedot, myös valikoiman jokaisen ohjausobjektin. Tietue sisältää esimerkiksi sekä **SampleText**-sarakkeen, joka vastaa alkuperäisen taulukon **SampleText**-saraketta, että **Subtitle1** sarakkeen, joka edustaa selitettä ja näyttää kyseisen sarakkeen tiedot. Valitse taulukkokuvake **Subtitle1**-sarakkeessa, niin voit porautua kyseisiin tietoihin.
+
+> [!NOTE]
+> **Subtitle1**-sarakkeen nimi voi olla **Subtitle2** tai vastaava, jos olet lisännyt elementtejä, joita ei ole määritetty tässä ohjeaiheessa.
 
 Nyt kun sinulla on tietue valittuna, voit poistaa siitä yksittäisiä kenttiä käyttämällä **.** -operaattoria.
 
-1. Palaa oletusarvoiseen työtilaan painamalla Esc-näppäintä. Lisää valikoiman alle selite.
+1. Lisää **[Selite](controls/control-text-box.md)**-ohjausobjekti ja siirrä se sitten valikoiman ja painikkeen alapuolelle.
 
-2. Määritä selitteen **[Teksti](controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:<br>
-    **Valikoima.Valittuna.Otsikko**
+1. Määritä selitteen **[Teksti](controls/properties-core.md)**-ominaisuuteen tämä lauseke:<br>
+    **"Selected: " & Gallery1.Selected.SampleHeading**
    
     ![](media/working-with-tables/gallery-selected.png)
 
-Olet ottanut **Valittuna**-ominaisuuden, joka on tietue, ja poiminut siitä **Otsikko**-ominaisuuden.  
+Olet määrittänyt **Selected**-ominaisuuden, joka on tietue, ja poiminut siitä **SampleHeading**-ominaisuuden.
 
 Voit myös käyttää tietueita yleiskäyttöisenä säilönä valikoimaan liittyville nimetyille arvoille.
 
@@ -235,10 +235,10 @@ Huomaa, että käytämme edellä toisinaan lainausmerkkejä (") ja toisinaan hei
 ### <a name="disambiguation"></a>Selvitys
 Tietuealueen kanssa lisättyjen kenttien nimet ohittavat samat nimet, jotka ovat peräisin muualta sovelluksesta.  Kun näin tapahtuu, voit edelleen käyttää arvoja tietuealueen ulkopuolelta käyttämällä [**@** selvitysoperaattoria](functions/operators.md):
 
-* Voit käyttää sisäkkäisten tietuealueiden arvoja käyttämällä **@** -operaattoria siten, että käsiteltävänä olevan taulukon nimi esitetään mallin ***Table *[@* FieldName*]** mukaisesti.  
-* Voit käyttää yleisiä arvoja, kuten tietolähteitä, kokoelmia ja kontekstimuuttujia, esittämällä ne mallin **[@*ObjectName*]** mukaisesti (ilman taulukon määritystä).
+* Voit käyttää sisäkkäisten tietuealueiden arvoja käyttämällä operaattoria **@** siten, että käsiteltävänä olevan taulukon nimi esitetään tämän mallin mukaisesti:<br>_Table_**[@**_FieldName_**]**
+* Voit käyttää yleisiä arvoja, kuten tietolähteitä, kokoelmia ja kontekstimuuttujia, esittämällä ne mallin **[@**_ObjectName_**]** mukaisesti (ilman taulukon määritystä).
 
-Jos käsiteltävä taulukko on lauseke, kuten **Filter( *taulukko*, ... )**, selvitysoperaattoria ei voi käyttää.  Vain sisin tietuealue voi käyttää kenttiä tästä taulukkolausekkeesta ilman selvitysoperaattoria.
+Jos käsiteltävä taulukko on lauseke, kuten **Filter(** _Table_**,** ... **)**, selvitysoperaattoria ei voi käyttää.  Vain sisin tietuealue voi käyttää kenttiä tästä taulukkolausekkeesta ilman selvitysoperaattoria.
 
 Kuvitellaan esimerkiksi kokoelma **X**:
 
