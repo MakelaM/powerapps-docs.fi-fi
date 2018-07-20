@@ -1,23 +1,20 @@
 ---
 title: Suhteen luominen SharePoint-luettelojen välille hakukentän avulla | Microsoft Docs
 description: Suhteen luominen SharePoint-luettelojen välille käyttämällä hakukenttää.
-documentationcenter: na
 author: skjerland
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: 0a257df76980bcf1801c9ed98de87ae06c4ae624
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 58097eec0bc483d8c38bf354513b70573e43049d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32330073"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023524"
 ---
 # <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>SharePoint-luettelojen linkittäminen käyttämällä hakukenttiä
 Tässä opetusohjelmassa näytetään, miten voit yhdistää kaksi SharePoint-luetteloa hakukentillä.

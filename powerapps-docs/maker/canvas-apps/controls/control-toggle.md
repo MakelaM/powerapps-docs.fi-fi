@@ -1,23 +1,20 @@
 ---
 title: 'Ohjausobjektin vaihtopainike: viitetiedot | Microsoft Docs'
 description: Tietoja ohjausobjektin vaihtopainikkeesta, kuten ominaisuudet ja esimerkkejä
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 0344a43707170bccebfd01d8b3a1bba24f3c183f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a2361e2572d62ca4a2574cd668ba0f1834d04ab9
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836857"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022447"
 ---
 # <a name="toggle-control-in-powerapps"></a>Ohjausobjektin vaihtopainike PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi ottaa käyttöön tai poistaa käytöstä siirtämällä sen kahvaa.

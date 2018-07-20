@@ -1,23 +1,20 @@
 ---
 title: 'Kynän syöte -ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja Kynän syöte -ohjausobjektista, kuten ominaisuudet ja esimerkkejä
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 697752312810473158b4f8cdfed4ef1d7618fdb7
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 0ba56d89a0daf48781617f70b3e9457361215190
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898348"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016004"
 ---
 # <a name="pen-input-control-in-powerapps"></a>PowerAppsin Kynän syöte -ohjausobjekti
 Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan alueita.

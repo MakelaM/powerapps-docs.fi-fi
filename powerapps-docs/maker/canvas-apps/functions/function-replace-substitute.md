@@ -1,23 +1,20 @@
 ---
 title: Replace- ja Substitute-funktio | Microsoft Docs
 description: PowerAppsin Replace- ja Substitute-funktion viitetiedot, mukaan lukien syntaksi
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: d08cbb1ae487c7ae4423d67a499f5477a5ea263b
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: d368114a52f428e3bb9403b71adb6557a432e880
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830369"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014508"
 ---
 # <a name="replace-and-substitute-functions-in-powerapps"></a>Replace- ja Substitute-funktio PowerAppsissa
 Korvaa tekstimerkkijonon osa toisella merkkijonolla.

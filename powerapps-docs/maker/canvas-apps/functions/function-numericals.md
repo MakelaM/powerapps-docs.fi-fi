@@ -1,23 +1,20 @@
 ---
 title: Abs-, Exp-, Ln-, Power- ja Sqrt-funktiot | Microsoft Docs
 description: PowerAppsin Abs- ja Sqrt-funktioiden ja muiden funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkit
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/13/2016
 ms.author: gregli
-ms.openlocfilehash: 8b9e6d7b55eac51d9bf22d28945cfd4349fc957c
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: e1e50b589f301aaeda944074fe7766b79db6a3c2
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897765"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015934"
 ---
 # <a name="abs-exp-ln-power-and-sqrt-functions-in-powerapps"></a>Abs-, Exp-, Ln-, Power- ja Sqrt-funktiot PowerAppsissa
 Laskevat itseisarvot, luonnolliset logaritmit, neliöjuuret sekä *e*:n tai minkä tahansa numeron määritettyyn potenssiin korottamisen tulokset.

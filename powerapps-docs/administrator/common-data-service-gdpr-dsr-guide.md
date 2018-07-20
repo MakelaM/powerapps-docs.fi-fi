@@ -9,12 +9,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: ef5d646e30f5d09dbfe5f111a3ad018b030f79d9
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 2a393bb2ebedde2a08f1ed1534d815e64325077b
+ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168224"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094744"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen
 
@@ -102,8 +102,8 @@ Voit etsiä henkilötietoja CDS for Appsissa seuraavista resursseista:
 
 |Resurssi | Tarkoitus | Sivuston käyttö | Ohjelmallinen käyttö
 | --- | --- | --- | ---
-| Entiteettitietue | Tämä on järjestelmän käyttäjäentiteetti, johon käyttäjän henkilötietoja tallennetaan. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
-| Seurantahistoria | Tämän avulla asiakkaat voivat tunnistaa resursseja, joita käyttävät ovat luoneet, käyttäneet, muuttaneet tai poistaneet entiteettitasolla. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
+| Entiteettitietue | Tämä on järjestelmän käyttäjäentiteetti, johon käyttäjän henkilötietoja tallennetaan. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
+| Seurantahistoria | Tämän avulla asiakkaat voivat tunnistaa resursseja, joita käyttävät ovat luoneet, käyttäneet, muuttaneet tai poistaneet entiteettitasolla. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
 
 #### <a name="user"></a>Käyttäjä
 Käyttäjän henkilötiedot tallennetaan Azure Active Directoryyn ja ne synkronoidaan automaattisesti kaikkiin CDS for Apps -ympäristöihin. Järjestelmänvalvoja ei voi päivittää näitä henkilötietoja suoraan CDS for Appsissa, kun käyttäjä on aktiivinen&mdash;, vaan ne on päivitettävä Office 365 -hallintakeskuksessa. Järjestelmänvalvoja voi lisätä henkilötietoja (esimerkiksi mukautettuja määritteitä) suoraan CDS for Appsiin, mutta kyseisiä tietoja on hallittava manuaalisesti.
@@ -199,7 +199,7 @@ Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.
 
 3. Siirry kohtaan **Asetukset** > **Suojaus** > **Käyttäjät**, ja valitse sitten **Käytöstä poistetut käyttäjät -näkymä**.
 
-4. Luo ja lataa Excel-mallitiedosto käyttäjän henkilötiedoista. Vaiheittaiset ohjeet ovat artikkelissa [Uuden Excel-mallin luominen](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
+4. Luo ja lataa Excel-mallitiedosto käyttäjän henkilötiedoista. Vaiheittaiset ohjeet ovat artikkelissa [Uuden Excel-mallin luominen](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
 
 8. Avaa ladattu Excel-mallitiedosto, poista käyttäjän henkilötiedot ja tallenna sitten tiedosto.
 

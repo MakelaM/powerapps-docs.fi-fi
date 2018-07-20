@@ -2,17 +2,19 @@
 title: Mitä ovat pohjaan perustuvat sovellukset? | Microsoft Docs
 description: Voit suunnitella ja rakentaa pohjaan perustuvia sovelluksia PowerAppsissa, jotta liiketoiminta-alueen tietoja voidaan käyttää selaimessa tai mobiililaitteilla
 author: AFTOwen
+manager: kvivek
 ms.service: powerapps
 ms.topic: overview
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 04/26/2018
 ms.author: anneta
-ms.openlocfilehash: 606f5aa15d057387542471f82fd071f4044cfd1e
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 965396dbeb087e2dfb52a151825884fc5a98c6e1
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311588"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39016394"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
 Voit suunnitella ja rakentaa liiketoimintasovelluksen pohjan avulla Microsoft PowerAppsissa kirjoittamatta perinteistä ohjelmointikieltä, kuten C#. Suunnittele sovellus vetämällä ja pudottamalla elementtejä pohjalle, kuten PowerPoint-esitystä suunnitellessasi. Luo Excel-tyyppisiä lausekkeita logiikan määrittelemiseksi ja tietojen työstämiseksi. Voit rakentaa sovelluksia, jotka integroivat liiketoimintatietoja [useista erilaisista Microsoftin ja kolmannen osapuolen lähteistä](connections-list.md). Jaettuasi sovelluksesi se on käytettävissä selaimessa tai mobiililaitteilla, ja upotettuasi sen sitä voidaan käyttää SharePointissa, Power BI:ssä tai Teamsissa.

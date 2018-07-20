@@ -1,23 +1,20 @@
 ---
 title: 'Vienti- ja tuonti-ohjausobjektit: viitetiedot | Microsoft Docs'
 description: Tiedot vienti- ja tuonti-ohjausobjekteista, mukaan lukien ominaisuudet ja esimerkit
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 958589deb4fdee42cb8e6df13ff15addbc06c07e
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 9eb0cf33c4bac3553592971409f7c52f199b368b
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31830689"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017291"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Vienti- ja tuonti-ohjausobjektit PowerAppsissa
 Ohjausobjektit tietojen viemiseen paikalliseen tiedostoon ja sen jälkeen näiden tietojen tuomiseen toiseen sovellukseen PowerAppsissa.

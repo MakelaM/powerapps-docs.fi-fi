@@ -1,23 +1,20 @@
 ---
 title: Refresh-funktio | Microsoft Docs
 description: Tietoa PowerAppsin Refresh-funktiosta, mukaan lukien syntaksi ja esimerkkejä
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/21/2015
 ms.author: gregli
-ms.openlocfilehash: 9ec2711c4a38f26fec2d44681b2606b4a8ecba29
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: aad4f24c692053cf450104e22bf039fc8dbe32d0
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31825368"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015327"
 ---
 # <a name="refresh-function-in-powerapps"></a>PowerAppsin Refresh-funktio
 Päivittää [tietolähteen](../working-with-data-sources.md) [tietueita](../working-with-tables.md#records).

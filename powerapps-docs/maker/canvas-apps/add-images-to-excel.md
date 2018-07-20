@@ -1,22 +1,20 @@
 ---
 title: Kuvien lisääminen Exceliin | Microsoft Docs
 description: Vaiheittaiset ohjeet kuvatiedostojen ja kynäpiirustusten lisäämiseen Exceliin pilvipalvelutilillä
-documentationcenter: ''
-author: aftowen
-manager: kfile
-editor: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 10/25/2016
 ms.author: anneta
-ms.openlocfilehash: 29da2a8814b0de7d34915f9992aeb963743785d2
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: cc3609991ffb68f6846cb73b7ccfa37227d0c8e7
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32328831"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39019479"
 ---
 # <a name="add-images-to-excel-from-powerapps"></a>Kuvien lisääminen PowerAppsista Exceliin
 Luo automaattisesti sovellus, jossa käyttäjät voivat näyttää, lisätä tai poistaa kuvia tiedostoista tai piirustuksia **Kynä**-ohjausobjektista. Sovellus perustuu Excel-tiedostoon, joka luodaan ja ladataan pilvipalvelutilille.

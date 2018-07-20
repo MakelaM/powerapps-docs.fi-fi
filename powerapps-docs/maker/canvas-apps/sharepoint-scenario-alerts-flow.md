@@ -1,23 +1,20 @@
 ---
 title: Tietoilmoitusten määrittäminen Power BI -koontinäyttöön | Microsoft Docs
 description: Tässä tehtävässä lisäämme Power BI:hin ilmoituksen, joka hälyttää, jos odottavien projektien hyväksyminen kestää liian kauan, ja työnkulun, joka reagoi ilmoituksen tapahtuessa.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 663c5dfcad45e65044958c9d3b8b1aa111840a61
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 88750417fa256e1d0fe8a0184b6d0bc3eb846080
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31827800"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023639"
 ---
 # <a name="set-up-data-alerts-for-the-power-bi-dashboard"></a>Tietoilmoitusten määrittäminen Power BI -koontinäyttöön
 > [!NOTE]

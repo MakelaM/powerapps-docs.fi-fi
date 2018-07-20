@@ -2,17 +2,19 @@
 title: Luettelo verkkoseminaareista | Microsoft Docs
 description: Näyttää luettelon menneistä ja tulevista verkkoseminaareista, mukaan lukien niiden ajan, päivämäärän ja käsitellyt aiheet.
 author: audrieMSFT
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 4/18/2018
 ms.author: audrie
-ms.openlocfilehash: bffc102ad61a05ae8f2b6a26276cbeec718483f6
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 76abd84afc5b4814cfbf2ef14923c1c13e87befb
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898187"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39021822"
 ---
 # <a name="powerapps-webinar-listing"></a>Luettelo PowerApps-verkkoseminaareista #
 Nämä verkkoseminaarit auttavat sinua hyödyntämään Microsoft PowerAppsin ominaisuuksia ja toimintoja. Verkkoseminaarit ovat katsottavissa nauhoitettuina suoran lähetyksen jälkeen. Huomaa, että joissakin tapauksissa sinun on annettava rekisteröintitiedot uudelleen, minkä jälkeen sinulle lähetetään sähköpostitse linkki tallenteeseen. 

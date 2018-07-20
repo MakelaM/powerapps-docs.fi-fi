@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/05/2018
 ms.author: rriley
-ms.openlocfilehash: 74445d4a9398afe00407e7b1a1eae5b7d773dd22
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b57d62d3e64ea08905ddcc8627cf6921d421fb18
+ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020396"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094721"
 ---
 # <a name="transform-your-infopath-forms-to-powerapps"></a>InfoPath-lomakkeiden muuntaminen PowerAppsiin
 
@@ -134,6 +134,6 @@ PowerApps voi kutsua sovelluksia toisista sovelluksista. Joten luo ryhmä sovell
 
 Nyt kun olet omaksunut kaikki edellä mainitut tiedot, olet valmis valloittamaan maailman yksi PowerApps-sovellus kerrallaan. Alla on joitain käteviä linkkejä, jotka voivat auttaa matkan varrella. Yksi niistä on PowerAppsin yhteisösivuston linkki. Osallistu yhteisön keskustellun ja kasvata osaamistasi paljon nopeammin kuin yksin puurtamalla.
 
-[**Kaavahakemisto**](https://docs.microsoft.com/en-us/powerapps/formula-reference) – Oletusfunktioiden selaaminen on erinomainen tapa hankkia lisäinspiraatiota.
+[**Kaavahakemisto**](https://docs.microsoft.com/powerapps/formula-reference) – Oletusfunktioiden selaaminen on erinomainen tapa hankkia lisäinspiraatiota.
 
 [**PowerAppsin yhteisö**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) – Tutustu esimerkkeihin, keskustele muiden kanssa, kysy kysymyksiä ja vastaa muiden kysymyksiin. Auta PowerAppsin yhteisöä kasvamaan.

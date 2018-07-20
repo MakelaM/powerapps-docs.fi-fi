@@ -1,23 +1,20 @@
 ---
 title: 'Tietotaulukko-ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietotaulukko-ohjausobjektin ominaisuudet ja joitakin esimerkkejä
-documentationcenter: na
 author: jasongre
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 06/05/2017
-ms.author: kfend
-ms.openlocfilehash: aa6e778a1c0426c696aaf48c542eccc4887c0e36
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.author: jasongre
+ms.openlocfilehash: c282301ffafd1214c072c5b29e87fbba1515eda2
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836243"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017544"
 ---
 # <a name="data-table-control-in-powerapps"></a>Tietotaulukko-ohjausobjekti PowerAppsissa
 Näyttää tietojoukon taulukkomuodossa.

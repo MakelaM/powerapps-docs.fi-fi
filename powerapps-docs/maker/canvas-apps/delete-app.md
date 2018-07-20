@@ -1,23 +1,20 @@
 ---
 title: Sovelluksen poistaminen | Microsoft Docs
 description: Olemassa olevan sovelluksen poistaminen PowerAppsissa
-documentationcenter: na
 author: jamesol-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: ed454b6656971adb4c209d2dd9a59e5258ef8eac
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: df7c43a0044ac7b56666f06eb3ebf773dcb16b67
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898141"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023616"
 ---
 # <a name="delete-an-app-from-powerapps"></a>Sovelluksen poistaminen PowerAppsista
 Tässä aiheessa näytetään, kuinka voit poistaa sovelluksen PowerApps-tililtäsi ja niiden käyttäjien tileiltä, joille sovellus jaettiin.

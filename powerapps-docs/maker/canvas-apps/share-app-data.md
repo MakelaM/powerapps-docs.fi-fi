@@ -1,23 +1,20 @@
 ---
 title: Sovelluksen käyttämien Excel-tiedostojen jakaminen | Microsoft Docs
 description: Excel-tiedostojen jakaminen Dropboxissa, OneDrivessa ja Google Drivessa. Käyttäjät voivat muokata ja tarkastella tiedostoja ja kansioita.
-documentationcenter: na
 author: jamesol-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: 8c96a83ae67a8a06aa96b4f4ba091e361430683d
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 78423a1f1594e69a40cc4b81123217f960b61879
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896117"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014991"
 ---
 # <a name="share-excel-data-used-by-your-app"></a>Sovelluksesi käyttämien Excel-tietojen jakaminen
 Voit jakaa Excel-tietoja sovelluksesi käyttäjien kanssa [pilvipalvelussa](connections/cloud-storage-blob-connections.md), kuten Onedrivessa.

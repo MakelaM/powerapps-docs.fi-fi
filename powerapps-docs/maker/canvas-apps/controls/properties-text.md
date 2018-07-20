@@ -1,23 +1,20 @@
 ---
 title: Tekstin ominaisuudet | Microsoft Docs
 description: Viitetiedot ominaisuuksille, kuten Teksti, Työkaluvihje ja HintText
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 1331cbbab185656929ebede7c804a8c3dfee52ab
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 27307d9e8c6a1e4e1eefb7dfbd61d65704f7f03d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31835274"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022972"
 ---
 # <a name="text-properties-in-powerapps"></a>Tekstin ominaisuudet PowerAppsissa
 Määritä, kuinka teksti näytetään ohjausobjektissa, työkaluvihjeessä, kun käyttäjä kirjoittaa tietoja, ja määritä muita tekstiin liittyviä ominaisuuksia.

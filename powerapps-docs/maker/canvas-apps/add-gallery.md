@@ -1,23 +1,20 @@
 ---
 title: Kohdeluettelon näyttäminen | Microsoft Docs
 description: Näytä kohdeluettelo sovelluksessasi valikoiman avulla ja suodata luetteloa määrittämällä kriteeri.
-documentationcenter: na
 author: karthik-1
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 09/28/2017
 ms.author: sharik
-ms.openlocfilehash: 9b2c07e8599ada76aa2f2195fc1240321ed02ef9
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 4806d65416816897542973644da592f7e6b2e252
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898210"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020971"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
 Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovellukseesi **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektissa annettua suodatuskriteeriä.
