@@ -1,23 +1,20 @@
 ---
 title: Luokitus-ohjausobjektin viitetiedot| Microsoft Docs
 description: Tietoja Luokitus-ohjausobjektista, mukaan lukien ominaisuudet ja esimerkkejä
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 2cdf88c21e9cd8dd957fa5cf704280df325e85fd
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 591bc1e6e72e6f3d78bdc7a9c262ab9a602a069a
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898302"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022075"
 ---
 # <a name="rating-control-in-powerapps"></a>Luokitus-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ilmaista arvon numeron 1 ja määrittämäsi suurimman numeron väliltä.

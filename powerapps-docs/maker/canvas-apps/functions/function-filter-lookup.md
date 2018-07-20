@@ -1,23 +1,20 @@
 ---
 title: Filter-, Search- ja LookUp-funktiot| Microsoft Docs
 description: PowerAppsin Filter- ja LookUp-funktioiden viitetiedot, kuten syntaksi ja esimerkkejä
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 02/05/2017
 ms.author: gregli
-ms.openlocfilehash: 35dec320b52dd934d616ba067932228b0e15ee3d
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: dc93c1a753b74cd5c1160eaff9e353c00335d563
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31838805"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020810"
 ---
 # <a name="filter-search-and-lookup-functions-in-powerapps"></a>Filter-, Search- ja LookUp-funktiot PowerAppsissa
 Etsii vähintään yhden [tietueen](../working-with-tables.md#records) [taulukosta](../working-with-tables.md).

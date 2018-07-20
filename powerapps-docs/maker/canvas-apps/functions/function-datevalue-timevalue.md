@@ -1,23 +1,20 @@
 ---
 title: DateValue-, TimeValue- ja DateTimeValue-funktiot | Microsoft Docs
 description: Viitetiedot DateValue-, TimeValue- ja DateTimeValue-funktioille PowerAppsissa, mukaan lukien syntaksi ja esimerkkejä
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: a0f55de520a180a646e1e73aac423abc74bfed1d
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: b5087c648c2115c93e4cd122455830e2e40b61f8
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896232"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39015405"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>DateValue-, TimeValue- ja DateTimeValue-funktiot PowerAppsissa
 Muuntavat merkkijonon päivämäärän ja/tai ajan päivämäärä- ja aika-arvoksi.
