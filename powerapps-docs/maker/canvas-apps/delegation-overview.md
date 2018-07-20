@@ -1,23 +1,20 @@
 ---
 title: Tutustu delegointiin | Microsoft Docs
 description: Delegoinnin avulla voidaan käsitellä suuria tietomääriä tehokkaasti.
-documentationcenter: na
-author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/05/2018
-ms.author: gregli
-ms.openlocfilehash: 7e9a6aac1e0df32fa83edaa0b8042dd2df143bf2
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.author: lanced
+ms.openlocfilehash: 484d7b1149f158840238fc3d54713a1e6e33443b
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897474"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023593"
 ---
 # <a name="understand-delegation"></a>Tutustu delegointiin
 PowerApps sisältää tehokkaita funktioita arvotaulukoiden tietojen suodattamiseen, lajittelemiseen ja muotoilemiseen. Näitä funktioita ovat esimerkiksi **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** ja **[AddColumns](functions/function-table-shaping.md)**. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
@@ -142,7 +139,7 @@ Näytön yläreunaan tulee hetkeksi pisteitä, kun sovellus viestii SQL Serverin
 
 Hakutulokset sisältävät sanat **”Apples”**, **”Crab apples”** ja **”Pineapple”**, koska **Search**-funktio hakee kaikkialta tekstisarakkeesta. Jos halusit löytää vain ne tietueet, jotka sisältävät hakusanan hedelmän nimen alussa, voit käyttää monimutkaisempaa hakusanaa toisessa delegoitavassa funktiossa, eli **Filter**-funktiossa. (Yksinkertaisuuden vuoksi poista **SortByColumns**-kutsu.)
 
-![SortByColumns-kutsun poistaminen](./media/delegation-overview/products-apple-delegationwarning.png)
+![Poistetaan SortByColumns-kutsu](./media/delegation-overview/products-apple-delegationwarning.png)
 
 Uudet tulokset sisältävät sanan **”Apples”**, mutta eivät sanoja **”Crab apples”** ja **”Pineapple”**.  Valikoiman vieressä (ja näytön pikkukuvassa, jos vasemmassa siirtymispalkissa näkyy kuitenkin pikkukuvia) ja kaavan osan alapuolella näkyy sininen aaltoviiva. Nämä elementit ilmaisevat varoitusta. Jos pidät osoitinta valikoiman vieressä olevan keltaisen kolmion kohdalla, tämä sanoma tulee näyttöön:
 

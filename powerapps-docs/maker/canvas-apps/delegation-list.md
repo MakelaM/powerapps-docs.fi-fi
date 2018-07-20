@@ -1,23 +1,20 @@
 ---
 title: Delegoitavat tietolähteet | Microsoft Docs
 description: Luettelo kaikista tuetuista delegoitavista tietolähteistä
-documentationcenter: na
-author: archnair
-manager: kfile
-editor: ''
-tags: ''
+author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 08/15/2017
-ms.author: archanan
-ms.openlocfilehash: f1d9b6463cc597d13fa1b9c1389fbfcc6d5b5ded
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.author: lanced
+ms.openlocfilehash: e8863d8e260ecaafd407e93d710917848ce184ad
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896278"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018602"
 ---
 # <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
 [Tutustu delegointiin](delegation-overview.md) -artikkelin mukaisesti delegointi on toimintaa, jossa PowerApps delegoi tiedonkäsittelyn tietolähteelle sen sijaan, että siirtäisi tiedot sovellukseen käsiteltäväksi paikallisesti.

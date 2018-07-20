@@ -1,23 +1,20 @@
 ---
 title: Tutustu muuttujiin | Microsoft Docs
 description: Viitetietoja työskentelyyn tilan, kontekstimuuttujien ja kokoelmien parissa
-documentationcenter: na
 author: gregli-msft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: 66b3183f6b1215fc0de2a763da2388698501a9b7
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b5986c927b75ed7a6e38af913cbfb9877121d0a5
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33673528"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017820"
 ---
 # <a name="understand-variables-in-powerapps"></a>Tutustu PowerAppsin muuttujiin
 Jos olet joskus käyttänyt jotakin toista ohjelmointityökalua, kuten Visual Basicia tai JavaScriptiä, ihmettelet ehkä, **missä muuttujat ovat.** PowerApps on hieman erilainen ja edellyttää erilaista käyttötapaa. Muuttujien etsimisen sijaan mieti, **mitä tekisit Excelissä.**

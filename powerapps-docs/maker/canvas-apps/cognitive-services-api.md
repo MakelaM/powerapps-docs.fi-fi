@@ -1,23 +1,20 @@
 ---
 title: Kognitiivisten palvelujen käyttö PowerAppsissa | Microsoft Docs
 description: Luo perussovellus, joka analysoi tekstiä käyttämällä Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API).
-documentationcenter: na
-author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 12/08/2017
-ms.author: mblythe
-ms.openlocfilehash: 375738cd5481430f06307b4c98b342c377d9bc4c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.author: anneta
+ms.openlocfilehash: c47ddbbc2d50d05f1d4a913aaf7e9c743d5519e0
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31836352"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39020649"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
 Tässä artikkelissa kerrotaan, miten luodaan perussovellus, joka analysoi tekstiä käyttämällä [Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API)](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview). Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda sovelluksen, joka kutsuu API:a.

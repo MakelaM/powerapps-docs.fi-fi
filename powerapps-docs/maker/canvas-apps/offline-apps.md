@@ -1,23 +1,20 @@
 ---
 title: Kehitä offline-tilassa toimivia sovelluksia | Microsoft Docs
 description: Kehitä offline-tilassa toimivia sovelluksia, niin että käyttäjät voivat työskennellä tehokkaasti myös ilman verkkoyhteyttä.
-documentationcenter: na
 author: mgblythe
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: d374ec8459f4182b11ecf91e28af24a31bb6c055
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: cb2ed2404f7270367b3a26bf8eccb733b09fee23
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896830"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023133"
 ---
 # <a name="develop-offline-capable-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia sovelluksia PowerAppsissa
 Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia, kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia sovelluksia. Voit:

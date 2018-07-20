@@ -1,23 +1,20 @@
 ---
 title: Näytön lisääminen ja näyttöjen välillä siirtyminen | Microsoft Docs
 description: Lisää sovellukseen näyttö ja siirry näytöstä toiseen eteen- ja taaksepäin osoittavilla nuolilla PowerAppsissa
-documentationcenter: na
 author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 19c06fa9bfc7098227e5f30a1c913522d9e6e7a3
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: c7a100b6df278812ea93da8c4f5c503a841d4109
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31825253"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022006"
 ---
 # <a name="add-a-screen-and-navigate-between-screens"></a>Lisää näyttö ja siirry näytöstä toiseen
 Luo usean näytön sovellus ja lisää tapoja, joilla käyttäjät voivat siirtyä niiden välillä.

@@ -1,23 +1,20 @@
 ---
 title: Sivustoon powerapps.com tutustuminen | Microsoft Docs
 description: Uusi koti kaikille sovellusten tekijöille.
-documentationcenter: na
 author: linhtranms
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: f29f75522eb01c61c3528e61018fb759980e79f9
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 400df9944b21788e08b0a55e3e0a148f2eccb972
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330211"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017337"
 ---
 # <a name="introduction-to-powerappscom"></a>Sivustoon powerapps.com tutustuminen
 PowerApps-tiimi esittelee uudelleen [powerapps.com](http://web.powerapps.com)-sivuston sovellusten tekijöiden uutena kotina. Olemme uudistaneet sivun ja tehneet siitä sovelluskehittäjille ensisijaisen sivuston, jolla he voivat helposti aloittaa sovellusten tekemisen ja Microsoft Common Data Servicen käytön sekä hallita sovelluksiaan samassa paikassa. Tästä artikkelista saat seuraaviin aiheisiin liittyviä ohjeita:

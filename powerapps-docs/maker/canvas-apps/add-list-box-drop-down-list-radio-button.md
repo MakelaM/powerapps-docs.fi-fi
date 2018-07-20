@@ -1,22 +1,20 @@
 ---
 title: Lisää luetteloruutu, avattava luettelo ja valintanapit | Microsoft Docs
 description: Luo tai määritä monivalintoja PowerAppsissa
-documentationcenter: ''
 author: lonu
-manager: kfile
-editor: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 1fbaf4f9d740084a1ed0d630b94d1cd41713ba03
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ecdd1cc5aa9ccbad7c2973f8ad899b213dcd96f3
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31825552"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023823"
 ---
 # <a name="add-a-list-box-a-drop-down-list-or-radio-buttons"></a>Lisää luetteloruutu, avattava luettelo tai valintanapit
 PowerApps sisältää moni- ja yksittäisvalintavaihtoehtoja, kuten luetteloruudun, avattavan luettelon ja valintanapit. Tässä aiheessa lisäämme nämä ohjausobjektit ja käytämme **Taulukko**-kaavaa luetteloiden rakentamiseen. Kun jokin luettelon kohde on valittuna, muut ohjausobjektit päivitetään.

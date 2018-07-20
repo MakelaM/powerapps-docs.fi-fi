@@ -1,23 +1,20 @@
 ---
 title: Erikorkuisten kohteiden näyttäminen valikoimassa | Microsoft Docs
 description: Voit lisätä ja määrittää korkeudet valikoimaan niin, että ne sopivat automaattisesti kunkin kohteen sisältöön
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/01/2017
 ms.author: fikaradz
-ms.openlocfilehash: 466e0d9cb1acfe4cfeb72256db2deddfd3466e19
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a6f475277e7cde25fea350634aa60e8b150e304d
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31834186"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018579"
 ---
 # <a name="show-items-of-different-heights-in-a-powerapps-gallery"></a>Erikorkuisten kohteiden näyttäminen PowerApps-valikoimassa
 Jos tietojoukon kentässä on kohteita, joiden tietomäärät poikkeavat toisistaan, voit näyttää enemmän tietoja sisältävän kohteen kokonaan tarvitsematta jättää tyhjää tilaa vähemmän tietoja sisältävien kenttien loppuun. Lisää ja määritä valikoiman ohjausobjektille **joustava korkeus**, jotta voit:

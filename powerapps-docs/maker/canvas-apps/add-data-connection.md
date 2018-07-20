@@ -1,23 +1,20 @@
 ---
 title: Tietoyhteyden lisääminen sovellukseen | Microsoft Docs
 description: Tietoyhteyden lisääminen olemassa olevaan tai tyhjään sovellukseen
-documentationcenter: na
 author: lancedMicrosoft
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-ms.openlocfilehash: 44ee7b992f5817a5d6b8d791b05e1db671d3e6ba
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 734e36b00658455198b64317b6f068c0018755a4
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826978"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39018487"
 ---
 # <a name="add-a-data-connection-in-powerapps"></a>Tietoyhteyden lisääminen PowerAppsissa
 Lisää PowerAppsissa tietoyhteys olemassa olevaan sovellukseen tai sovellukseen, jonka olet luonut alusta alkaen. Sovelluksesi voi yhdistää SharePointiin, Salesforceen, OneDriveen ja [moneen muuhun tietolähteeseen](connections-list.md).

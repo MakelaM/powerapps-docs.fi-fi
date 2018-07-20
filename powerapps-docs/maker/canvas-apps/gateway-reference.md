@@ -1,23 +1,20 @@
 ---
 title: Tutustu paikallisiin tietoyhdyskäytäviin | Microsoft Docs
 description: Paikallisten tietoyhdyskäytävien viitetietoja, kuten asennus ja vianmääritys
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
-ms.topic: conceptual
-ms.component: canvas
+ms.topic: reference
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: anneta
-ms.openlocfilehash: 2c754fa8e479494ae1002e5339d2d8d5eeb2480f
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: f39bebd27aad378a5bbf8bff592fa50ea44db679
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "32330441"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017751"
 ---
 # <a name="understand-on-premises-data-gateways-for-microsoft-powerapps"></a>Tutustu Microsoft PowerAppsin paikallisiin tietoyhdyskäytäviin
 ## <a name="installation-and-configuration"></a>Asennus ja määritys
@@ -188,7 +185,7 @@ Voit käyttää kolmannen osapuolen työkalua, [Azure Speed Test -sovellusta](ht
 **Kysymys:** Mihin tunnistetietoni tallennetaan?  
 **Vastaus:** Tietolähteelle antamasi tunnistetiedot tallennetaan salattuina yhdyskäytävän pilvipalveluun. Tunnistetietojen salaus puretaan paikallisessa yhdyskäytävässä.
 
-**Kysymys:** Voinko sijoittaa yhdyskäytävän eteisverkkoon (toiselta nimeltään DMZ tai suojattu aliverkko)?  
+**Kysymys:** Voinko sijoittaa yhdyskäytävän edustaverkkoon (toiselta nimeltään DMZ tai suojattu aliverkko)?  
 **Vastaus:** Yhdyskäytävä vaatii liitettävyyden tietolähteeseen. Jos tietolähde ei ole edustaverkossasi, yhdyskäytävä ei välttämättä voi muodostaa yhteyttä siihen. Esimerkiksi tietokone, joka käyttää SQL Serveriä, ei välttämättä ole edustaverkossasi, etkä voi yhdistää tähän tietokoneeseen edustaverkosta. Jos olet sijoittanut yhdyskäytävän edustaverkkoon, yhdyskäytävä ei voi tavoittaa SQL Serveriä käyttävää tietokonetta.
 
 #### <a name="high-availabilitydisaster-recovery"></a>Korkea käytettävyys / järjestelmäpalautus

@@ -1,23 +1,20 @@
 ---
 title: Helppokäyttöominaisuudet | Microsoft Docs
 description: Tietoja ominaisuuksista, kuten TabIndex ja työvaluvihje
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 01/26/2017
 ms.author: fikaradz
-ms.openlocfilehash: 94d15ff14ccd57ccc392eae47b6c10d6cec50bb1
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 59cc231dfc461a2301de90a7a995ec2ec82790cb
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31825207"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39022926"
 ---
 # <a name="accessibility-properties-in-powerapps"></a>PowerAppsin helppokäyttöominaisuudet
 Ominaisuuksia, jotka on määritetty auttamaan toimintarajoitteisia ihmisiä käyttämään ohjausobjekteja.

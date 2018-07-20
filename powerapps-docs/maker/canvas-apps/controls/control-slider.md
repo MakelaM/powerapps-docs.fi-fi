@@ -1,23 +1,20 @@
 ---
 title: 'Liukusäädin: viitetiedot | Microsoft Docs'
 description: Liukusäädintä koskevaa tietoa, kuten ominaisuuksia ja esimerkkejä
-documentationcenter: na
 author: fikaradz
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: reference
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 672a3d9a96545bf695128fcc823ec1d3437ae4a4
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 54a1dccb1d080be7682f0f6925a4430aa2078bc0
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31837822"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39017406"
 ---
 # <a name="slider-control-in-powerapps"></a>Liukusäädin PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi määrittää arvon vetämällä kahvaa.

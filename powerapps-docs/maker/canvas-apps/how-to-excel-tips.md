@@ -1,23 +1,20 @@
 ---
 title: Excel-taulukon muotoilu | Microsoft Docs
 description: Excel-tietoja voi käyttää vain taulukkoon muotoiltuna. Avainsanan ”kuva” lisääminen sarakkeiden nimiin
-documentationcenter: na
 author: yifwang
-manager: kfile
-editor: ''
-tags: ''
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: yifwang
-ms.openlocfilehash: fd458fe6c8962bbc4443c1de7aad0f1c4eea7fac
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ddc6b9715a3282dbfcce9ae5f63be50ea1406e69
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "31826616"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39023662"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Excel-taulukon muotoileminen ja nimeämisvinkkejä
 Jotta Excel-tietoja voi käyttää PowerAppsissa, ne on muotoiltava taulukoksi. Näiden ohjeiden avulla opit muotoilemaan taulukon Excelissä. Lisäksi saat vinkkejä Excel-sarakkeiden nimeämiseen.
