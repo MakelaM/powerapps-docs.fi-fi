@@ -1,23 +1,20 @@
 ---
 title: Tallenna ja julkaise sovellus| Microsoft Docs
 description: Vaiheittaiset ohjeet sovelluksen tallentamiseen ja julkaisemiseen sovelluksen tekijöille
-documentationcenter: na
-author: aftowen
-manager: kfile
-editor: ''
-tags: ''
+author: AFTOwen
+manager: kvivek
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
-ms.component: canvas
+ms.custom: canvas
+ms.reviewer: ''
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: 0192abca52f3ca3d28b911e24a9ca9cd07c95393
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: a605467b1d7448e3f53cccd49d025cdaca3f8f25
+ms.sourcegitcommit: 0d69781f6f9362ffd4bb0b61aab14371968fbb46
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37895841"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39119447"
 ---
 # <a name="save-and-publish-an-app-in-powerapps"></a>Tallenna ja julkaise sovellus PowerAppsissa
 Kun tallennat sovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
@@ -47,7 +44,7 @@ PowerApps voi tallentaa sovelluksen kahden minuutin välein. Jos olet tallentanu
    ![Tarkista julkaisu](./media/save-publish-app/publish-review.png)
 
    > [!NOTE]
-   > Suosittelemme päivittämään tai julkaisemaan sovelluksen uudelleen kuuden kuukauden kuluessa edellisestä julkaisusta, jotta sovellus pysyy synkronoituna viimeisimmän PowerApps-version kanssa. Jos et päivitä tai julkaise sovellusta uudelleen kuuden kuukauden kuluessa, se saattaa lakata toimimasta ilman varoitusta.
+   > Aina kun julkaiset kaaviosovelluksen, sovelluksesi päivitetään PowerAppsin viimeisimpään versioon, mikä tarkoittaa, että se hyötyy kaikista uusimmista ominaisuuksista ja suorituskyvyn päivityksistä, jotka olemme lisänneet viime julkaisusi jälkeen. Jos et ole julkaissut päivitystä useaan kuukauteen, näet todennäköisesti välittömän kasvun suorituskyvyssä uudelleenjulkaisun jälkeen.
 
 ## <a name="identify-the-live-version"></a>Tunnista reaaliaikainen versio
 Siirry osoitteeseen [powerapps.com](https://web.powerapps.com) ja valitse **Tiedosto**-valikosta (vasen reuna) kohta **Sovellukset**. Napsauta tai napauta sitten sovelluksen tietokuvaketta ja valitse **Versiot**-välilehti.

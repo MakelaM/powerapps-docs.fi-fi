@@ -2,19 +2,22 @@
 title: Helppokäyttöisyysvärit | Microsoft Docs
 description: PowerAppsin värikontrastiopas
 author: tahoon
+manager: kvivek
 ms.service: powerapps
 ms.topic: article
+ms.custom: canvas
+ms.reviewer: anneta
 ms.date: 04/23/2018
 ms.author: tahoon
-ms.openlocfilehash: 56a11edcd1c43313e9b380ca8ac1c8a68d85772d
-ms.sourcegitcommit: 45fac73f04aa03b5796ae6833d777f4757e67945
+ms.openlocfilehash: 289026f18d341381d64423e76effb1abf586557c
+ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32329912"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39014807"
 ---
 # <a name="accessible-colors-in-powerapps"></a>Helppokäyttöisyysvärit PowerAppsissa
-Sovelluksissa käytettävien värien tulisi olla sellaisia, että värisokeat ja näkökyvyltään alentuneen henkilöt voivat käyttää sovelluksia. Kaikki PowerAppsin teemat ovat oletusarvoisesti helppokäyttöisiä. Kun muokkaat sovelluksessa käytettyjä värejä, varmista helppokäyttöisyys seuraavien ohjeiden mukaisesti.
+Sovelluksissa käytettävien värien tulisi olla sellaisia, että värisokeat ja näkökyvyltään alentuneen henkilöt voivat käyttää sovelluksia. Kaikki PowerAppsin teemat ovat oletusarvoisesti helppokäyttöisiä. Kun muokkaat sovelluksessa käytettyjä värejä, varmista helppokäyttöisyys seuraavien ohjeiden mukaisesti. Verkossa on käytettävissä useita työkaluja, mitkä voivat auttaa tunnistamaan värikontrastiongelmia.
 
 ## <a name="minimum-contrast-for-text"></a>Tekstin vähimmäiskontrasti
 * Tekstin ja sen taustan kontrastisuhteen on oltava vähintään 4,5:1
@@ -58,4 +61,4 @@ Varmista, että sovellus välittää tietoa muillakin keinoilla kuin värillä. 
 Voit välittää merkityksen lisäelementeillä, kuten **[kuvakkeilla](controls/control-shapes-icons.md)**, tai tekstityyleillä, kuten **[kursivoinnilla](controls/properties-text.md)** ja **[alleviivauksella](controls/properties-text.md)**.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-[Helppokäyttöisyysominaisuudet](controls/properties-accessibility.md) PowerApps-ohjausobjekteissa.
+Lue lisää [Helppokäyttöisyysasetuksista](controls/properties-accessibility.md) PowerAppsin ohjausobjekteista ja kokeile [helppokäyttöisyyden tarkistusta](accessibility-checker.md).

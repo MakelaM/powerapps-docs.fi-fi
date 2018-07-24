@@ -49,6 +49,11 @@
               href: ./canvas-apps/get-started-create-from-blank.md
         - name: Sovelluksen jakaminen
           href: ./canvas-apps/share-app.md
+          items:
+            - name: Jaa Excel-tiedot
+              href: ./canvas-apps/share-app-data.md
+            - name: Sovelluksen resurssien jakaminen
+              href: ./canvas-apps/share-app-resources.md
         - name: 'Upota sovellus Power BI:ssä'
           href: ./canvas-apps/embed-powerapps-powerbi.md
     - name: Esimerkit
