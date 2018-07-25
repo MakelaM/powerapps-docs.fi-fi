@@ -25,7 +25,7 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
 
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
-    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
+    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
 2. Napsauta tai napauta olemassa olevaa entiteettiä tai [Luo uusi entiteetti](data-platform-create-entity.md)
 
@@ -33,7 +33,7 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
 
 4. Anna kentälle uusi kenttä -ruudussa **Näyttönimi**. **Nimi**-kenttä täyttyy automaattisesti, ja sitä käytetään kentän yksilöivänä nimenä. **Näyttönimi** näkyy kentän käyttäjille, ja **Nimi**-kentän nimeä käytetään sovelluksen luomiseen liittyvissä lausekkeissa ja kaavoissa.
 
-    ![Uusi kenttä] ja (./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttäpaneeli")
 
 5. Valitse avattava **tietotyyppi**-valikko ja valitse **asetusjoukko** tai **monivalinta-asetusjoukko**.
 
@@ -42,15 +42,15 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
     > [!NOTE]
     > Jos entiteetille voidaan käyttää olemassa olevaa asetusjoukkoa, voit valita sen tästä luettelosta luomatta uutta.
 
-    ![Asetusjoukkoluettelo] ja (./media/data-platform-cds-newoptionset/fieldpanel-1.png "Asetusjoukkoluettelo")
+    ![Asetusjoukkoluettelo](./media/data-platform-cds-newoptionset/fieldpanel-1.png "Asetusjoukkoluettelo")
 
 7. Uusi-valikko avautuu asetusjoukon luomista varten. **Näyttönimi** ja **Nimi** määritetään oletusarvoisesti kentän nimen mukaan, mutta niitä voi muuttaa tarvittaessa. Aloita asetusjoukkosi luominen valitsemalla **Lisää uusi kohde**. Toista tätä vaihetta, kunnes kaikki kohteet on luotu.
 
-    ![Uusi asetusjoukko] ja (./media/data-platform-cds-newoptionset/field-optionsetpanel.png "Uusi asetusjoukko")
+    ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "Uusi asetusjoukko")
 
 8. Kun olet lisännyt kohteet, valitse **Tallenna**, jolloin asetusjoukkosi luodaan.
 
-    ![Uusi asetusjoukko] ja (./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Uusi asetusjoukko")
+    ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Uusi asetusjoukko")
 
 9. Sulje kenttäpaneeli napsauttamalla **Valmis**. Tallenna sitten entiteetti Common Data Serviceen napsauttamalla **Tallenna entiteetti**.
 
@@ -63,17 +63,17 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
 
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Asetusjoukot**-kohtaa.
 
-    ![Asetusjoukot] ja (./media/data-platform-cds-newoptionset/optionsetlist.png "Asetusjoukkoluettelo")
+    ![Asetusjoukot](./media/data-platform-cds-newoptionset/optionsetlist.png "Asetusjoukkoluettelo")
 
 2. Napsauta kohtaa **Uusi asetusjoukko**
 
 3. Asetusjoukon luomista varten avautuu uusi paneeli. Kirjoita **Näyttönimi** ja **Nimi**. Aloita asetusjoukkosi luominen valitsemalla **Lisää uusi kohde**. Toista tätä vaihetta, kunnes kaikki kohteet on luotu.
 
-    ![Asetusjoukon luominen] ja (./media/data-platform-cds-newoptionset/optionset-create.png "Asetusjoukon luominen")
+    ![Asetusjoukon luominen](./media/data-platform-cds-newoptionset/optionset-create.png "Asetusjoukon luominen")
 
 4. Kun olet lisännyt kohteet, valitse **Tallenna**, jolloin asetusjoukkosi luodaan.
 
-    ![Uusi asetusjoukko] ja (./media/data-platform-cds-newoptionset/optionset-create-values.png "Uusi asetusjoukko")
+    ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/optionset-create-values.png "Uusi asetusjoukko")
 
 5. Voit nyt käyttää tätä asetusjoukkoa luomalla uuden kentän entiteettiin.
 

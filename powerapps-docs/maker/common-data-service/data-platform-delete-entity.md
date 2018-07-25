@@ -20,7 +20,7 @@ Voit poistaa mukautettuja entiteettejä, mutta et vakioentiteettejä.
 
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
-    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
+    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
 2. Napsauta tai napauta entiteettiluettelossa olevaa poistettavaa entiteettiä ja napsauta tai napauta sitten komentopalkin kohtaa **Poista entiteetti**.
 

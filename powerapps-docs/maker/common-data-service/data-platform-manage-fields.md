@@ -24,7 +24,7 @@ Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun 
 ## <a name="create-a-field"></a>Kentän luominen
 1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
-    ![Entiteetin tiedot] ja (./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
+    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
 2. Napsauta tai napauta olemassa olevaa entiteettiä tai [Luo uusi entiteetti](data-platform-create-entity.md)
 
@@ -35,13 +35,13 @@ Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun 
     > [!NOTE]
     > **Näyttönimi**-kenttiä voi milloin tahansa muokata, niin että sovelluksissa näkyvä nimi vaihtuu. **Nimi**-kenttää ei voi muokata entiteetin tallentamisen jälkeen, sillä se saattaa aiheuttaa olemassa olevan sovelluksen vioittumisen.
 
-    ![Uusi kenttä] ja (./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttäpaneeli")
 
 5. Valitse kentän **tietotyyppi**. Se määrittää tietojen tallennustavan ja sen, miten tiedot näytetään sovelluksissa. Esimerkiksi teksti tallennetaan eri tavoin kuin desimaaliluku tai URL-osoite. Lisätietoja käytettävissä olevista tietotyypeistä on kohdassa [Entiteetin määritteiden metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
 
     Anna pyydettäessä valitsemaasi tietotyyppiin liittyviä lisätietoja. Esiin tulee eri kenttiä tietotyypistä riippuen. Jos olet luomassa kentän, jonka tyyppi on asetusjoukko tai monivalinta-asetusjoukko, voit valita vaihtoehdon **Uusi asetusjoukko** ja luoda uuden asetusjoukon kentän luomisen yhteydessä. Lisätietoja on kohdassa [Asetusjoukon luominen](custom-picklists.md).
 
-    ![Uusi kenttä] ja (./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
 
 
 7. Valitse **Pakollinen**-kohdan valintaruutu, jos haluat suositella tätä kenttää sovelluksissa pakolliseksi. Se ei kuitenkaan tarkoita, että pakollisuus toteutetaan tiukasti kaikkien Common Data Service -yhteyksien kautta. Jos haluat varmistaa, että kenttä varmasti täytetään, luo [liiketoimintasääntö](data-platform-create-business-rule.md).
