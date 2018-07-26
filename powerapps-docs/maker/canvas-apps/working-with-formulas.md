@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: b40abdc4c8d5d8a33a9aec32a1826476500405c8
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 7f9a724b61404ac0947a9c75f91396b35328086b
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017866"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195262"
 ---
 # <a name="get-started-with-formulas"></a>Aloita kaavojen käyttäminen
 Määritä sovellukseesi kaavoja, jotka eivät ainoastaan laske arvoja ja suorita muita tehtäviä (samalla tavoin kuin Excelissä), vaan myös vastaavat käyttäjän syötteeseen (kuten sovellus edellyttää).
@@ -30,7 +30,7 @@ Tässä aiheessa annetaan vain yleiskatsaus kaavojen käsittelemiseen. Saat tark
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 
 ## <a name="show-a-simple-value"></a>Näytä yksinkertainen arvo

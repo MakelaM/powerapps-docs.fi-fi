@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/16/2016
 ms.author: anneta
-ms.openlocfilehash: 625d76af5acc554ff9ab6c20d69f542cf959cd95
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: d6f88534b4839381037243400ef69f292df8fb97
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018050"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195699"
 ---
 # <a name="show-text-and-format-dates-and-times-in-powerapps"></a>Lisää tekstiä ja muotoile päivämääriä ja kellonaikoja PowerAppsissa
 Lisää päivämääriä ja kellonaikoja ja muotoile niitä niin, että ne näyttävät oikean määrän tietoja tai vastaavat sijaintiasi. Laske kahden päivämäärän välinen aika tai laske päivämäärä, joka on tietyn aikaeron verran ennen tai jälkeen määrittämääsi päivämäärää. Muunna päivämäärät erillisiin päivä-, kuukausi- tai vuosiarvoihin tai päin vastoin. Muunna ajat erillisiin tunti-, minuutti- ja sekuntiarvoihin tai päin vastoin.
@@ -23,7 +23,7 @@ Lisää esimerkiksi käyttäjien antamia tietoja pörssikursseista ja asiakastap
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo sovellus tai avaa olemassa oleva sovellus PowerAppsissa.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 

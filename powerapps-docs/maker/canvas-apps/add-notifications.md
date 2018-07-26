@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/08/2017
 ms.author: jamesol
-ms.openlocfilehash: 45311aefca51d8d1a4fc6c8cc6dabc33872842df
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: f9b606246b0b1114aec1bec2fc2767b518215148
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020833"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195561"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Palveluilmoituksen lähettäminen PowerAppsissa
 Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.
@@ -56,7 +56,7 @@ Lisää PowerApps Notification -yhteys sovellukseen, johon sinulla on **Osallist
 ## <a name="send-a-notification-from-an-app"></a>Ilmoituksen lähettäminen sovelluksesta
 Voit lähettää palveluilmoituksen yhdestä sovelluksesta toiseen tai samaan sovellukseen.
 
-1. Siirry [PowerAppsissa](https://web.powerapps.com/) sovellukseen, johon haluat lähettää palveluilmoituksen.
+1. Siirry [PowerAppsissa](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) sovellukseen, johon haluat lähettää palveluilmoituksen.
 2. Kopioi **Tiedot**-välilehdeltä sovelluksen **sovellustunnus**.
 
     ![Sovellustunnuksen hakeminen](./media/add-notifications/grab-id.png)

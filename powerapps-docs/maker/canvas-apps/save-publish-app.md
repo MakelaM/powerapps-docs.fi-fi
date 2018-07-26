@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: a605467b1d7448e3f53cccd49d025cdaca3f8f25
-ms.sourcegitcommit: 0d69781f6f9362ffd4bb0b61aab14371968fbb46
+ms.openlocfilehash: faaf3ef6eefc41ad5b1d7cb2e6e34db57632cfaf
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39119447"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194802"
 ---
 # <a name="save-and-publish-an-app-in-powerapps"></a>Tallenna ja julkaise sovellus PowerAppsissa
 Kun tallennat sovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
@@ -47,7 +47,7 @@ PowerApps voi tallentaa sovelluksen kahden minuutin välein. Jos olet tallentanu
    > Aina kun julkaiset kaaviosovelluksen, sovelluksesi päivitetään PowerAppsin viimeisimpään versioon, mikä tarkoittaa, että se hyötyy kaikista uusimmista ominaisuuksista ja suorituskyvyn päivityksistä, jotka olemme lisänneet viime julkaisusi jälkeen. Jos et ole julkaissut päivitystä useaan kuukauteen, näet todennäköisesti välittömän kasvun suorituskyvyssä uudelleenjulkaisun jälkeen.
 
 ## <a name="identify-the-live-version"></a>Tunnista reaaliaikainen versio
-Siirry osoitteeseen [powerapps.com](https://web.powerapps.com) ja valitse **Tiedosto**-valikosta (vasen reuna) kohta **Sovellukset**. Napsauta tai napauta sitten sovelluksen tietokuvaketta ja valitse **Versiot**-välilehti.
+Siirry osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse **Tiedosto**-valikosta (vasen reuna) kohta **Sovellukset**. Napsauta tai napauta sitten sovelluksen tietokuvaketta ja valitse **Versiot**-välilehti.
 
 **Reaaliaikainen** versio julkaistaan kaikille, joille sovellus on jaettu. Sovelluksen uusinta versiota voivat käyttää vain ne, joilla on käyttöoikeus sen muokkaamiseen.
 

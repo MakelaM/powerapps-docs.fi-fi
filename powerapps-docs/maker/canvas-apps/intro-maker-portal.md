@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/28/2016
 ms.author: litran
-ms.openlocfilehash: 400df9944b21788e08b0a55e3e0a148f2eccb972
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9c1b6bde62f0260dca7eba1d723049aadc3e72c9
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017337"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195331"
 ---
 # <a name="introduction-to-powerappscom"></a>Sivustoon powerapps.com tutustuminen
-PowerApps-tiimi esittelee uudelleen [powerapps.com](http://web.powerapps.com)-sivuston sovellusten tekijöiden uutena kotina. Olemme uudistaneet sivun ja tehneet siitä sovelluskehittäjille ensisijaisen sivuston, jolla he voivat helposti aloittaa sovellusten tekemisen ja Microsoft Common Data Servicen käytön sekä hallita sovelluksiaan samassa paikassa. Tästä artikkelista saat seuraaviin aiheisiin liittyviä ohjeita:
+PowerApps-tiimi esittelee uudelleen [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston sovellusten tekijöiden uutena kotina. Olemme uudistaneet sivun ja tehneet siitä sovelluskehittäjille ensisijaisen sivuston, jolla he voivat helposti aloittaa sovellusten tekemisen ja Microsoft Common Data Servicen käytön sekä hallita sovelluksiaan samassa paikassa. Tästä artikkelista saat seuraaviin aiheisiin liittyviä ohjeita:
 
 * otsikko
 * aloitussivu
@@ -45,7 +45,7 @@ Asetusten vieressä on ohjetta tarkoittava kysymysmerkkikuvake. Napsauta tai nap
 ![Otsikon ohje](./media/intro-maker-portal/help_items2.png)
 
 ## <a name="homepage"></a>Aloitussivu
-Kun olet kirjautunut sivustoon [powerapps.com](http://web.powerapps.com), siirryt oletuksena aloitussivulle. Olemme muuttaneet aloitussivun asettelua, jotta pääset nopeasti alkuun, kun esimerkiksi luot sovelluksia tai haluat tutustua Common Data Serviceen.
+Kun olet kirjautunut sivustoon [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), siirryt oletuksena aloitussivulle. Olemme muuttaneet aloitussivun asettelua, jotta pääset nopeasti alkuun, kun esimerkiksi luot sovelluksia tai haluat tutustua Common Data Serviceen.
 
 Jos olet kirjautunut PowerAppsiin aiemmin ja suorittanut tai luonut sovelluksia, ensimmäinen näkemäsi osio aloitussivulla on luettelo **viimeaikaisista sovelluksista**. Ne on lajiteltu sen päivämäärän mukaan, jolloin ne avattiin viimeksi.
 
@@ -96,7 +96,7 @@ Napsauta tai napauta **Aloittaminen** tässä palkissa, jolloin näkyviin tuleva
     ![Yhdistetyt esimerkkisovellukset](./media/intro-maker-portal/connectedsampleapps2.png)
 
 ## <a name="new-apps-page"></a>Uudet sovellukset -sivu
-Voit käyttää **Sovellukset**-sivua [powerapps.com](http://web.powerapps.com)-sivuston vasemmassa siirtymispalkissa.
+Voit käyttää **Sovellukset**-sivua [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston vasemmassa siirtymispalkissa.
 
 ![Vasemmalle siirtyminen](./media/intro-maker-portal/leftnav2.png)
 

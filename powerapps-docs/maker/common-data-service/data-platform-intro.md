@@ -8,12 +8,12 @@ ms.topic: overview
 ms.component: cds
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: 586750edf476a9145e2822522cc0b4b5ad729539
-ms.sourcegitcommit: 7296649d03ebc33dc5ddb9e7c551869dc781f154
+ms.openlocfilehash: 6a8bc8f24ce0f772f5c98852838095f233c4317f
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250819"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218069"
 ---
 # <a name="what-is-common-data-service-for-apps"></a>Mikä on Microsoft Common Data Service for Apps?
 Common Data Service (CDS) for Apps -palvelussa voit säilyttää ja hallita liiketoimintasovellustesi käyttämiä tietoja turvallisesti. CDS for Appsin tiedot tallennetaan joukkoon entiteettejä. *Entiteetti* on tietuejoukko, jota käytetään tietojen tallentamiseen samoin kuin taulukossa säilytetään tietoja tietokannassa. CDS for Apps sisältää peruskokoelman vakioentiteettejä, jotka kattavat tyypilliset tilanteet, mutta voit lisäksi luoda mukautettuja entiteettejä oman organisaatiosi tarpeisiin ja täyttää ne tiedoilla Power Querya käyttämällä. Sovellusten tekijät voivat sen jälkeen rakentaa PowerAppsissa runsaita sovelluksia tietojen avulla.
@@ -70,7 +70,7 @@ CDS for Appsissa olevat entiteetit voivat hyödyntää monipuolista palvelinpuol
 * **Liiketoimintalogiikan koodi** tukee kehittyneitä kehittelyskenaarioita, joissa sovelluksen toimintaa laajennetaan suoraan koodilla. Lisätietoja on kohdassa [Sovella liiketoimintalogiikkaa koodin avulla](../../developer/common-data-service/apply-business-logic-with-code.md).
 
 ## <a name="developer-capabilities"></a>Kehittäjän mahdollisuudet
-[PowerApps](https://web.powerapps.com)-portaalin kautta käytettävissä olevien ominaisuuksien lisäksi CDC for Apps tarjoaa kehittäjille myös muita toimintoja. Kehittäjät voivat esimerkiksi käyttää metatietoja ja tietoja ohjelmallisesti entiteettien ja liiketoimintalogiikan luomiseen ja tietojen kanssa vuorovaikuttamiseen. Lisätietoja on kohdassa [Common Data Service for Apps Developer -palvelun yleiskatsaus](../../developer/common-data-service/overview.md)
+[PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-portaalin kautta käytettävissä olevien ominaisuuksien lisäksi CDC for Apps tarjoaa kehittäjille myös muita toimintoja. Kehittäjät voivat esimerkiksi käyttää metatietoja ja tietoja ohjelmallisesti entiteettien ja liiketoimintalogiikan luomiseen ja tietojen kanssa vuorovaikuttamiseen. Lisätietoja on kohdassa [Common Data Service for Apps Developer -palvelun yleiskatsaus](../../developer/common-data-service/overview.md)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 CDS for Appsin käytön aloittaminen:

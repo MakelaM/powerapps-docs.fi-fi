@@ -9,12 +9,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 2a393bb2ebedde2a08f1ed1534d815e64325077b
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: b550d5fe7e36c36177fff017adcf9d9034c93dd4
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094744"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218046"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen
 
@@ -52,7 +52,7 @@ Tässä artikkelissa käsitellään seuraavia toimintoja:
 
 CDS for Appsissa ja aiemmassa Common Data Service (CDS) -versiossa on erilliset prosessit henkilötietojen käsittelyyn.
 
-Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com) ja suorittamalla seuraavat vaiheet:
+Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja suorittamalla seuraavat vaiheet:
 
 1. Valitse ympäristösi avattavasta **Ympäristö**-luettelosta.
 2. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
@@ -308,7 +308,7 @@ Voit etsiä aiemman CDS-version käyttäjien henkilötietoja seuraavista resurss
 
 |Resurssi | Tarkoitus | Sivuston käyttö |  Ohjelmallinen käyttö
 | --- | --- | --- | ---
-|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com) |      Ei
+|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) |    Ei
 
 #### <a name="entity-records"></a>Entiteetin tietueet
 Yksityishenkilöiden henkilötietoja voidaan tallentaa mihin tahansa liiketoimintaentiteettiin.

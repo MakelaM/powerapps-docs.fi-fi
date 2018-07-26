@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
 ms.author: sharik
-ms.openlocfilehash: b1e9f514973313a1028aa3b1958bf8e01ff2c167
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b5678437ea1e604ce2932307d897f280f4633fc0
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023777"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194931"
 ---
 # <a name="edit-an-app-in-powerapps"></a>Sovelluksen muokkaaminen PowerAppsissa
 Muokkaa mitä tahansa sovellusta, jonka olet luonut tai johon sinulla on **voi muokata** -käyttöoikeudet. Voit muokata sovellusta PowerApps Studiossa. Jos yrität muokata sovellusta, joka on avoimena muokkausta varten muualla, viesti kertoo, onko se jo sinulla avattuna, vai onko se toisella käyttäjällä.
 
 ## <a name="verify-your-permissions"></a>Tarkista oikeutesi
-1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com) ja napsauta tai napauta kohtaa **Sovellukset** **Tiedosto**-valikossa (vasemmassa reunassa).
+1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja napsauta tai napauta kohtaa **Sovellukset** **Tiedosto**-valikossa (vasemmassa reunassa).
    
     ![Tiedosto-valikon Sovellukset-vaihtoehto](./media/edit-app/file-apps.png)
 

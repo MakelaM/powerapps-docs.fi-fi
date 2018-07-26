@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: d518cbf398d0f29b25da9dafcfa6e9026fcee88e
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 501c5468291041eafd2147c102484ab81cabbe37
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897175"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218782"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen
 
@@ -40,7 +40,7 @@ Mukautettujen yhdistimien käyttöoikeudet |
 
 Manuaalista tarkistusta edellyttäviä tietoja ja resursseja varten PowerApps tarjoaa seuraavat ominaisuudet, joiden avulla tietyn käyttäjän henkilökohtaiset tiedot voidaan (tarvittaessa) määrittää uudelleen tai poistaa:
 
-* Sivustot: [PowerApps-sivusto](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Sivustot: [PowerApps-sivusto](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell: PowerApps-sovellusten cmdlet-komennot [sovelluskehittäjille](https://go.microsoft.com/fwlink/?linkid=871448) sekä [järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804) ja [paikallisten yhdyskäytävien](https://go.microsoft.com/fwlink/?linkid=872238) cmdlet-komennot.
 
@@ -62,7 +62,7 @@ Mukautettujen yhdistimien käyttöoikeudet | | Sovelluksen luoja: käytettäviss
 ## <a name="prerequisites"></a>Edellytykset
 
 ### <a name="for-users"></a>Käyttäjille
-Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps](https://web.powerapps.com) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
+Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
 
 #### <a name="unmanaged-tenant"></a>Muu kuin hallittu vuokraaja
 Jos olet [muun kuin hallitun vuokraajan](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover) jäsen, mikä tarkoittaa, ettei Azure AD -vuokraajallasi ei ole yleistä järjestelmänvalvojaa, pystyt edelleen poistamaan henkilökohtaiset tietosi tässä artikkelissa annettujen ohjeiden mukaisesti.  Kuitenkin koska vuokraajallasi ei ole yleistä järjestelmänvalvojaa, sinun on poistettava oma tilisi vuokraajasta alla olevan [Vaiheen 11: Poista käyttäjä Azure Active Directorysta](#step-11-delete-the-user-from-azure-active-directory) ohjeiden mukaisesti.
@@ -210,7 +210,7 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 ```
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-site"></a>Poista käyttäjän kangassovellus PowerApps-sivuston avulla
-Käyttäjä voi poistaa sovelluksen [PowerApps-sivustolta](https://web.powerapps.com). Täydelliset ohjeet sovelluksen poistamiseen näet Sovelluksen poistaminen -kohdassa.
+Käyttäjä voi poistaa sovelluksen [PowerApps-sivustolta](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Täydelliset ohjeet sovelluksen poistamiseen näet Sovelluksen poistaminen -kohdassa.
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-center"></a>Poista käyttäjän kangassovellus PowerApps-hallintakeskuksen avulla
 Järjestelmänvalvoja voi poistaa käyttäjän luomat sovellukset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:

@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: f1952c2349eb54f2c6348f5abc4dee9a4645348a
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 8562219c373a8880f7cc89f791b6c6373b6df0b3
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168431"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217931"
 ---
 # <a name="create-a-relationship-between-entities"></a>Luo entiteettien välinen suhde
 Yhden entiteetin tiedot liittyvät usein toiseen entiteettiin. Käytössäsi voi olla esimerkiksi **opettajien** entiteetti ja **luokan** entiteetti. **Luokan** entiteetissä saattaa olla hakusuhde **opettajien** entiteettiin näyttämään, kuka opettaja opettaa luokkaa. Voit käyttää hakukenttää näyttämään tietoja **opettajien** entiteetistä. Tätä kutsutaan yleisesti hakukentäksi.
@@ -29,7 +29,7 @@ Voit luoda erityyppisiä suhteita yhdestä entiteetistä toiseen (tai entiteetin
 
 Lisää hakusuhde entiteettiin luomalla suhde **Suhteet**-välilehdessä ja määrittämällä entiteetti, jonka kanssa haluat luoda suhteen.
 
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
     ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
@@ -53,7 +53,7 @@ Lisää hakusuhde entiteettiin luomalla suhde **Suhteet**-välilehdessä ja mä�
 
 Lisää yksi moneen -suhde luomalla suhde **Suhteet**-välilehdessä ja määrittämällä entiteetti, jonka kanssa haluat muodostaa suhteen.
 
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
     ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 

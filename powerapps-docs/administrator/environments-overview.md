@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 4e12faf91b0ce19a4d2ef2ba2e4d9bbca8fb7093
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: b38f0d1b029708e8130363d54ccc1354084b0ae4
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37896301"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218161"
 ---
 # <a name="environments-overview"></a>Ympäristöjen yleiskatsaus
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, sovelluksia ja työnkulkuja. Lisäksi niitä käytetään säilöinä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. Ympäristöjen hyödyntämistapa riippuu organisaatiosta ja kehitettävistä sovelluksista. Esimerkki:
@@ -75,7 +75,7 @@ Oletusympäristö nimetään seuraavasti: ”{Azure AD -vuokraajan nimi} (oletus
 Voit luoda ympäristöjä eri tarkoituksiin. Kokeiluympäristö on tarkoitettu ympäristön ja tietokannan kokeiluun Common Data Service -kokemuksen kanssa. Se vanhentuu tietyn ajan kuluessa. Lisätietoja on [PowerAppsin Ympäristöjen hallinta](environments-administration.md) -osiossa.
 
 ## <a name="choosing-an-environment"></a>Ympäristön valitseminen
-Ympäristöjen myötä näet nyt uuden kokemuksen, kun saavut osoitteeseen [https://web.powerapps.com](https://web.powerapps.com).  Sovellukset, yhteydet ja muut sivustolla näytettävät kohteet suodatetaan nyt nykyisen valittuna olevan ympäristön perusteella.  Nykyinen ympäristö näytetään otsikon oikean reunan lähellä olevassa ympäristövalitsimessa. Jos haluat valita eri ympäristön, napsauta tai napauta valitsinta, jolloin näkyviin tulee luettelo käytettävissä olevista ympäristöistä. Napsauta tai napauta ympäristöä, jonka haluat ottaa käyttöön.
+Ympäristöjen myötä näet nyt uuden kokemuksen, kun saavut osoitteeseen [https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  Sovellukset, yhteydet ja muut sivustolla näytettävät kohteet suodatetaan nyt nykyisen valittuna olevan ympäristön perusteella.  Nykyinen ympäristö näytetään otsikon oikean reunan lähellä olevassa ympäristövalitsimessa. Jos haluat valita eri ympäristön, napsauta tai napauta valitsinta, jolloin näkyviin tulee luettelo käytettävissä olevista ympäristöistä. Napsauta tai napauta ympäristöä, jonka haluat ottaa käyttöön.
 
 Ympäristö näytetään valitsimessa, jos jokin seuraavista ehdoista täyttyy:
 

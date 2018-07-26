@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: 58097eec0bc483d8c38bf354513b70573e43049d
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 342fcc36fb8dba9cfaa42c94089329ad19501af8
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023524"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194929"
 ---
 # <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>SharePoint-luettelojen linkittäminen käyttämällä hakukenttiä
 Tässä opetusohjelmassa näytetään, miten voit yhdistää kaksi SharePoint-luetteloa hakukentillä.
@@ -89,7 +89,7 @@ Tämä tehdään ensin, jotta **RepairShop**-merkinnät ovat valittavissasi *Ass
 ## <a name="create-an-app-from-the-assets-list"></a>Sovelluksen luominen Assets-luettelosta
 Tämän sovelluksen avulla voit lisätä tietoja **Assets**-luetteloon.
 
-1. [Kirjaudu sisään PowerApps Studioon](http://web.powerapps.com). Jos olet uusi PowerApps-käyttäjä, [rekisteröidy ilmaiseksi](https://powerapps.microsoft.com) organisaatiosähköpostiosoitteesi avulla.
+1. [Kirjaudu sisään PowerApps Studioon](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Jos olet uusi PowerApps-käyttäjä, [rekisteröidy ilmaiseksi](https://powerapps.microsoft.com) organisaatiosähköpostiosoitteesi avulla.
 
 2. Napsauta tai napauta **Tiedosto**-valikossa (vasemmassa laidassa) **Uusi** ja napsauta tai napauta **SharePoint**.
 

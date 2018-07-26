@@ -8,16 +8,16 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/17/2018
 ms.author: clwesene
-ms.openlocfilehash: 405cafabd57ea234d5202076060ee0987b6904db
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: e1f361cb2bd0f97e75422ce552ac50ae5c581626
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168454"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218552"
 ---
 # <a name="samples-and-other-resources-for-common-data-service-for-apps"></a>Common Data Service for Appsin malleja ja muita resursseja
 ## <a name="samples"></a>Esimerkit
-Useat mallit käyttävät Common Data Service (CDS) for Appsia. Löydät nämä mallit [powerapps.com](https://web.powerapps.com)-sivustossa valitsemalla siirtymisruudussa **aloitussivun**.
+Useat mallit käyttävät Common Data Service (CDS) for Appsia. Löydät nämä mallit [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa valitsemalla siirtymisruudussa **aloitussivun**.
 
 ## <a name="videos"></a>Videot
 Videoita on YouTube-kanavilla [MS PowerApps](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) ja [Microsoft Ignite](https://www.youtube.com/channel/UCrhJmfAGQ5K81XQ8_od1iTg).

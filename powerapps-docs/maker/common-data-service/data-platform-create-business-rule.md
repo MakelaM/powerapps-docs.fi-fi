@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 13e00081ce01b44feeea6fc1d6fff9556c020298
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 5cf2a312ddba83312805f6b3b517738f1bc1da78
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168270"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218023"
 ---
 # <a name="create-a-business-rule"></a>Luo liiketoimintasääntö
 
@@ -42,7 +42,7 @@ Jotta voit noudattaa tämän aiheen ohjeita, siirry entiteettien luomisen ja muo
 
 ## <a name="create-a-business-rule"></a>Luo liiketoimintasääntö
   
-1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com) ja napsauta tai napauta vasemmassa reunassa olevan **Tiedot**-kohdan alaspäin osoittavaa nuolta.
+1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja napsauta tai napauta vasemmassa reunassa olevan **Tiedot**-kohdan alaspäin osoittavaa nuolta.
 
 2. Napsauta tai napauta näyttöön tulevassa luettelossa **Entiteetti**.
   

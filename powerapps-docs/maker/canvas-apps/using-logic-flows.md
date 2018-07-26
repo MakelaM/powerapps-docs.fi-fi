@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: c395a548d0a920a21e8d4128f75a3b01deb9de3a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9d681cc889a3f39fb0785ab0cba86e37ebe185b3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019361"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195883"
 ---
 # <a name="start-a-flow-in-an-app"></a>Käynnistä työnkulku sovelluksessa
 Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
@@ -25,7 +25,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Luo työnkulku
-1. Kirjaudu [powerapps.com](http://web.powerapps.com):iin ja valitse sitten vasemmassa siirtymispalkissa **Työnkulut**.
+1. Kirjaudu [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc):iin ja valitse sitten vasemmassa siirtymispalkissa **Työnkulut**.
 
 2. Valitse **Omat työnkulut** -sivulla **Luo tyhjästä**.
 

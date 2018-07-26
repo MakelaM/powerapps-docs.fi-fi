@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/11/2018
 ms.author: anneta
-ms.openlocfilehash: 197eb5223c0945a7cb80d8b187aaf44c871e798c
-ms.sourcegitcommit: 79a58f1b6880cbc512b64cde71a4d532cebe5bed
+ms.openlocfilehash: 9c4bdc6e56f84b6724fcbe44cfe1f3e4c065edb3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39137018"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195308"
 ---
 # <a name="share-an-app-in-powerapps"></a>Sovelluksen jakaminen PowerAppsissa
 
@@ -33,7 +33,7 @@ Ennen kuin jaat sovelluksen, tallenna sen pilvipalveluun (ei paikallisesti) ja j
 
 ## <a name="share-an-app"></a>Sovelluksen jakaminen
 
-1. [Kirjaudu](https://web.powerapps.com) PowerAppsiin ja valitse **Sovellukset** lähellä vasenta reunaa.
+1. [Kirjaudu](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerAppsiin ja valitse **Sovellukset** lähellä vasenta reunaa.
 
     ![Näytä sovellusluettelo](./media/share-app/file-apps.png)
 
@@ -59,7 +59,7 @@ Ennen kuin jaat sovelluksen, tallenna sen pilvipalveluun (ei paikallisesti) ja j
 
     Jos annat käyttäjille oikeuden muokata sovellusta, viesti sisältää myös erillisen linkin, joka avaa sovelluksen PowerApps Studiossa muokkaamista varten.
 
-    Riippumatta siitä, lähetätkö kutsun, käyttäjät voivat suorittaa sovelluksen [Dynamics 365:n](http://home.dynamics.com) AppSourcesta. Käyttäjät, joilla oikeus **muokata** sovellusta, voivat tehdä niin myös [Powerappsin](http://web.powerapps.com) kautta.
+    Riippumatta siitä, lähetätkö kutsun, käyttäjät voivat suorittaa sovelluksen [Dynamics 365:n](http://home.dynamics.com) AppSourcesta. Käyttäjät, joilla oikeus **muokata** sovellusta, voivat tehdä niin myös [Powerappsin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kautta.
 
 1. Määritä kunkin käyttäjän tai käyttöoikeusryhmän käyttöoikeudet ja valitse sitten **Tallenna**.
 
@@ -85,7 +85,7 @@ Jos luot Common Data Service for Apps -palveluun perustuvan sovelluksen, sinun o
 
 #### <a name="create-a-security-role"></a>Käyttöoikeusroolin luominen
 
-1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com) ja varmista, että olet samassa ympäristössä kuin sovellus, jonka haluat jakaa.
+1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja varmista, että olet samassa ympäristössä kuin sovellus, jonka haluat jakaa.
 
 1. Valitse oikeasta yläkulmasta hammaspyöräkuvake ja valitse sitten **lisämukautukset**.
 
@@ -107,7 +107,7 @@ Jos luot Common Data Service for Apps -palveluun perustuvan sovelluksen, sinun o
 
 1. Valitse **Tallenna ja sulje**.
 
-#### <a name="assign-a-user-to-a-role"></a>Määritä käyttäjälle rooli
+#### <a name="assign-a-user-to-a-role"></a>Roolin määrittäminen käyttäjälle
 
 1. Avaa **Lisämukautukset**-ruutu edellä kuvatun tavan mukaisesti ja valitse sitten **Käyttäjät**-linkki.
 

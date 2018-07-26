@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
-ms.openlocfilehash: 3d7813280f0d17eca327e86a827da72e33f191e3
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 8e6aa988344c1ac04c2ff11eaa9d828cc8b929bc
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021017"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195653"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Pilvitallennustiliin yhdistäminen PowerAppsista
 PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedoston ja käyttää sen tietoja kaikkialla sovelluksessasi käyttämällä näitä yhteyksiä. Näitä yhteyksiä ovat muun muassa seuraavat:  
@@ -33,7 +33,7 @@ PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedosto
   4. Tallenna muutokset.
 
 ## <a name="connect-to-the-cloud-storage-connection"></a>Yhdistäminen pilvitallennusyhteyteen
-1. Mene osoitteeseen [powerapps.com](https://web.powerapps.com), laajenna **Hallinta** ja valitse **Yhteydet**:  
+1. Mene osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), laajenna **Hallinta** ja valitse **Yhteydet**:  
    
     ![Valitse yhteydet](./media/cloud-storage-blob-connections/connections.png)
 2. Valitse **Uusi yhteys** ja sen jälkeen pilvitallennuspalvelusi yhteys. Valitse esimerkiksi **OneDrive**.

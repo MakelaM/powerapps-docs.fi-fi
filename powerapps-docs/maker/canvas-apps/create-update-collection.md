@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: 27b5a3453c2c0a89239d3e319ee6f39afd034492
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 98407181bc654874d749bb57da22c9fde1259fb6
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023271"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195492"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Luo ja päivitä kokoelma sovelluksessasi
 Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessasi. Kokoelma on joukko kohteita, jotka ovat samankaltaisia. Voit luoda esimerkiksi MyImages-kokoelman, johon tallennat kuvat kaikista tuotteista, joita yrityksesi myy. PowerAppsissa voit lisätä MyImages-kokoelman ja luoda sovelluksen, joka näyttää kuvia kyseisistä tuotteista. Voit myös luoda hinnastokokoelman, joka sisältää luettelon tuotteista ja kunkin tuotteen hinnan.
@@ -22,7 +22,7 @@ Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessas
 Voit luoda ja käyttää kokoelmia PowerAppsissa. Aloitetaan.
 
 ### <a name="prerequisites"></a>Edellytykset
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo sovellus tai avaa olemassa oleva sovellus PowerAppsissa.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 * Näissä ohjeissa käytetään esimerkkisyötetietona [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-tiedostoa. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoa tai tuoda omasi.

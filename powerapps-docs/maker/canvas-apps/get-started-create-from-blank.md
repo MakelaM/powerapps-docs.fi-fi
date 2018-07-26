@@ -8,12 +8,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: 267480158d7e44afd06962779b98c0468436841a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 330751210322190fddefb6c399025578bb9878b5
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022604"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195285"
 ---
 # <a name="create-an-excel-app-from-scratch"></a>Excel-sovelluksen luominen alusta alkaen
 Voit luoda oman, taulukoksi muotoillun sovelluksesi alusta alkaen Excel-tietojen perusteella ja lisätä sitten halutessasi tietoja muista lähteistä. Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdessä näytössä käyttäjät voivat selata tietuejoukkoa. Toisessa näytössä käyttäjät voivat luoda tietueen, päivittää vähintään tietueen yhden kentän tai poistaa koko tietueen. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
@@ -42,7 +42,7 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 > Voit käyttää omaa Excel-tiedostoasi ja katsoa opetusohjelmasta vain yleiset käsitteet. Excel-tiedoston tietojen täytyy kuitenkin olla taulukkomuodossa. Lisätietoja on artikkelissa [Excel-taulukon muotoileminen](how-to-excel-tips.md).
 
 ## <a name="open-a-blank-app"></a>Avaa tyhjä sovellus
-1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com).
+1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerAppsin aloitussivu](./media/get-started-create-from-blank/sign-in.png)
 

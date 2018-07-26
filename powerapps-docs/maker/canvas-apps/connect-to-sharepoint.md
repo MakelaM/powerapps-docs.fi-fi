@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/03/2016
 ms.author: anneta
-ms.openlocfilehash: 1b9ff639e053218c74515be574f92146fc8ced36
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 0e0b98277548d188071bcd29b9e3168de5818321
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020511"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195860"
 ---
 # <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Yhteyden luominen PowerAppsista SharePointiin
 Luo yhteys joko SharePoint Onlineen tai paikalliseen SharePointiin, jotta voit luoda sovelluksen automaattisesti tai alusta alkaen.
@@ -26,7 +26,7 @@ Kirjoittamishetkellä PowerApps tukee mukautettuja luetteloita, mutta ei kirjast
 ## <a name="specify-a-sharepoint-connection"></a>SharePoint-yhteyden määrittäminen
 1. Jos et ole vielä rekisteröitynyt, [rekisteröidy PowerAppsiin](../signup-for-powerapps.md).
 
-2. Kirjaudu sisään osoitteeseen [powerapps.com](https://web.powerapps.com) samoilla tunnistetiedoilla, joilla rekisteröidyit.
+2. Kirjaudu sisään osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joilla rekisteröidyit.
 
 3. Napsauta tai napauta vasemman siirtymispalkin kohtaa **Hallitse** ja napsauta tai napauta kohtaa **Yhteydet**.
 

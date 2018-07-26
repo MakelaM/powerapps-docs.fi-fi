@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/17/2018
 ms.author: anneta
-ms.openlocfilehash: 842e19360c5f1536489f978cf880d941a6dee7d6
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: aefe350c2294f9d8cbae32eee1db1f600c8a65da
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019982"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195101"
 ---
 # <a name="customize-forms-in-powerapps"></a>Lomakkeiden mukauttaminen PowerAppsissa
 Mukauta **Näytä lomake**- ja **Muokkaa lomaketta** -ohjausobjekteja siten, että ne näyttävät merkittävimmät tiedot intuitiivisimmassa järjestyksessä, jotta käyttäjät voivat helposti ymmärtää ja päivittää tietoja.
@@ -27,7 +27,7 @@ Jos et tunne PowerAppsia, katso [PowerAppsin johdanto](getting-started.md).
 [Luo sovellus](data-platform-create-app.md) Common Data Service -palvelussa ja [mukauta sitten valikoimaa](customize-layout-sharepoint.md) kyseisessä sovelluksessa.
 
 ## <a name="show-and-hide-cards"></a>Korttien näyttäminen ja piilottaminen
-1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com).
+1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerApps-sivuston aloitussivu](./media/customize-forms-sharepoint/sign-in.png)
 

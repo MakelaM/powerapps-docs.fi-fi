@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/30/2016
 ms.author: archanan
-ms.openlocfilehash: e7dc9a2386d75a6f03744286b7ed265a8d385370
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: fb561ca5458a22880d93c712aa2e2b2ada884605
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018533"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194877"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Paikallisen tietoyhdyskäytävän hallitseminen PowerAppsissa
 Asenna paikallinen tietoyhdyskäytävä, jonka avulla voit siirtää tietoja nopeasti ja turvallisesti PowerAppsin ja muualla kuin pilvipalvelussa olevan tietolähteen, kuten paikallisella SQL-palvelimella olevan tietokannan tai paikallisen SharePoint-sivuston, välillä. Tarkastele yhdyskäytäviä, joihin sinulla on järjestelmänvalvojan oikeudet, ja hallitse näiden yhdyskäytävien käyttöoikeuksia ja yhteyksiä.
@@ -35,7 +35,7 @@ Yhdyskäytävän avulla voit muodostaa yhteyden paikallisiin tietoihin seuraavie
 * Yhdyskäytäviä ja paikallisia yhteyksiä voi luoda ja käyttää vain käyttäjän [oletusympäristössä](working-with-environments.md).
 
 ## <a name="install-a-gateway"></a>Yhdyskäytävän asentaminen
-1. Napsauta tai napauta [powerapps.com](https://web.powerapps.com)-sivun vasemmassa siirtymispalkissa olevaa kohtaa **Yhdyskäytävät**.
+1. Napsauta tai napauta [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivun vasemmassa siirtymispalkissa olevaa kohtaa **Yhdyskäytävät**.
 
     ![Vasemmassa siirtymispalkissa näkyvät yhdyskäytävät](./media/gateway-management/manage-gateway.png)
 
@@ -46,7 +46,7 @@ Yhdyskäytävän avulla voit muodostaa yhteyden paikallisiin tietoihin seuraavie
     Lisätietoja yhdyskäytävän asentamisesta on kohdassa[Tutustu paikallisiin tietoyhdyskäytäviin](gateway-reference.md).
 
 ## <a name="view-and-manage-gateway-permissions"></a>Tarkastele ja hallitse yhdyskäytävän käyttöoikeuksia
-1. Napsauta tai napauta [powerapps.com](https://web.powerapps.com)-sivun vasemmassa siirtymispalkissa olevaa kohtaa **Yhdyskäytävät**, ja napsauta tai napauta yhdyskäytävää.
+1. Napsauta tai napauta [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivun vasemmassa siirtymispalkissa olevaa kohtaa **Yhdyskäytävät**, ja napsauta tai napauta yhdyskäytävää.
 
 2. Lisää yhdyskäytävään käyttäjä napsauttamalla tai napauttamalla kohtaa **Käyttäjät**, jonka avulla määritetään käyttäjä tai ryhmä sekä käyttöoikeustaso:
 
@@ -57,7 +57,7 @@ Yhdyskäytävän avulla voit muodostaa yhteyden paikallisiin tietoihin seuraavie
 Valitse **Can use**- ja **Can use + share** -käyttöoikeustasoille tietolähteet, joihin käyttäjä voi muodostaa yhteyden yhdyskäytävän kautta.
 
 ## <a name="view-and-manage-gateway-connections"></a>Yhdyskäytävän yhteyksien tarkasteleminen ja hallitseminen
-1. Napsauta tai napauta [powerapps.com](https://web.powerapps.com)-sivun vasemmassa siirtymispalkissa olevaa kohtaa **Yhdyskäytävät**, ja napsauta tai napauta yhdyskäytävää.
+1. Napsauta tai napauta [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivun vasemmassa siirtymispalkissa olevaa kohtaa **Yhdyskäytävät**, ja napsauta tai napauta yhdyskäytävää.
 
 2. Napsauta tai napauta kohtaa **Yhteydet**, ja napsauta tai napauta yhteyttä, jotta voit tarkastella sen tietoja, muokata asetuksia tai poistaa sen.
 

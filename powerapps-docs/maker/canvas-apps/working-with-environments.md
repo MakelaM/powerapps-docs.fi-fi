@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/14/2016
 ms.author: litran
-ms.openlocfilehash: 04ed5dfb76cb26f629f36514a05eda9690669926
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 865e5f419d5ff318ce232fff16b9240039129a29
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020626"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194986"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Microsoft PowerAppsin käyttäminen eri ympäristöissä
 PowerAppsin avulla voit työskennellä eri ympäristöissä ja siirtyä helposti niiden välillä. Lue ympäristöjen yleiskuvaus kohdasta [Ympäristöjen yleiskuvaus](../../administrator/environments-overview.md), jossa selitetään yksityiskohtaisesti, miksi ympäristöjä käytetään ja miten voit luoda ja hallita niitä. Tämä artikkeli kattaa seuraavat ympäristöä koskevat ohjeaiheet:
@@ -39,7 +39,7 @@ Voit luoda sovelluksia itse luomassasi ympäristössä tai ympäristössä, joho
 
 Luo sovellus oikeassa ympäristössä tekemällä jokin seuraavista:
 
-- Jos PowerApps Studio ei ole avoinna, [kirjaudu sisään](http://web.powerapps.com), valitse ympäristö, jossa haluat luoda sovelluksen, valitse **Sovellukset** lähellä vasenta reunaa ja valitse sitten **Luo sovellus**.
+- Jos PowerApps Studio ei ole avoinna, [kirjaudu sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), valitse ympäristö, jossa haluat luoda sovelluksen, valitse **Sovellukset** lähellä vasenta reunaa ja valitse sitten **Luo sovellus**.
 
 - Jos PowerApps Studio on avattu, valitse ympäristö uudelleen oikeassa yläkulmassa.
 
@@ -54,6 +54,6 @@ Luo sovellus oikeassa ympäristössä tekemällä jokin seuraavista:
     ![Ympäristön vaihtaminen Studiossa](./media/working-with-environments/new-app.PNG)
 
 ## <a name="view-apps-in-the-right-environment"></a>Sovelluksen tarkasteleminen oikeassa ympäristössä
-Riippumatta siitä, työskenteletkö [powerapps.comissa](http://web.powerapps.com) tai PowerApps Studiossa, luettelo näkemistäsi sovelluksista, yhteyksistä jne. suodatetaan aina avattavasta valikosta valitun ympäristön perusteella. Jos et näe etsimiäsi sovelluksia, varmista aina, että oikea ympäristö on valittuna.
+Riippumatta siitä, työskenteletkö [powerapps.comissa](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai PowerApps Studiossa, luettelo näkemistäsi sovelluksista, yhteyksistä jne. suodatetaan aina avattavasta valikosta valitun ympäristön perusteella. Jos et näe etsimiäsi sovelluksia, varmista aina, että oikea ympäristö on valittuna.
 
 Katso lisätietoja ympäristöistä [tästä yleiskatsauksesta](../../administrator/environments-overview.md).

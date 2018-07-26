@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: ddbd2f610ecba6d801efde2a00a9cb492e2382e3
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 62afc8fc0ce754ed797683a61c061db16370f904
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021546"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195193"
 ---
 # <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Rekisteröidy, niin saat kokeilla PowerAppsia ilmaiseksi
 Jotta voit luoda sovelluksen PowerAppsissa, tarvitset jonkin erityyppisistä käyttöoikeuksista, jotka tarjoavat eritasoisia toimintoja. Sinulla on jo PowerApps-käyttöoikeus, jos organisaatiosi on ostanut sinulle jonkin useista Office 365- tai Dynamics 365 -versioista tai PowerAppsin palvelupaketin 1 tai 2 käyttöoikeuden.
@@ -74,7 +74,7 @@ Muussa tapauksessa sinua kehotetaan tarkastamaan sähköpostisi.
 
 Valitse sähköpostiviestissä linkki, jolla voit vahvistaa sähköpostiosoitteesi, ja anna lisätietoja (pyydettäessä).
 
-Kun tämä valintaikkuna tulee näkyviin, valitse **Käynnistä** ja aloita [PowerAppsin](http://web.powerapps.com) käyttö.
+Kun tämä valintaikkuna tulee näkyviin, valitse **Käynnistä** ja aloita [PowerAppsin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) käyttö.
 
 ![Napsauta kohtaa Käynnistä](./media/signup-for-powerapps/almost-there.png)
 
@@ -118,7 +118,7 @@ Voit rekisteröityä käyttämään kokeiluversion käyttöoikeutta työpaikan t
 * Jos ainoa PowerApps-käyttöoikeutesi on kokeiluversion kautta (jonka sait [PowerAppsin rekisteröintisivustolla](http://powerapps.microsoft.com/) tai [hinnoittelusivulla](http://powerapps.microsoft.com/pricing)), voit säilyttää PowerAppsin-käyttöoikeuden pyytämällä 30 päivän pidennystä kokeiluversion käyttöoikeuteen.
 
 ### <a name="when-will-my-trial-license-expire"></a>Milloin kokeiluversion käyttöoikeus päättyy?
-Voit selvittää, milloin kokeiluversion käyttöoikeus päättyy, valitsemalla [PowerApps-sivuston](http://web.powerapps.com) oikeassa yläkulmassa rataskuvakkeen ja valitsemalla sitten **Sopimukset**.
+Voit selvittää, milloin kokeiluversion käyttöoikeus päättyy, valitsemalla [PowerApps-sivuston](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) oikeassa yläkulmassa rataskuvakkeen ja valitsemalla sitten **Sopimukset**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
 

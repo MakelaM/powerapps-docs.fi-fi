@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 8dbf6088104270d9251b70eec9adf0642de2f879
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: ad1a2de5491a1725ada2e95c3eccc6513de9e304
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34445853"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218483"
 ---
 # <a name="open-entity-data-in-excel"></a>Entiteettitietojen avaaminen Excelissä
 Kun avaat entiteettitiedot Microsoft Excelissä, voit tarkastella ja muokata niitä nopeasti ja helposti Microsoft PowerAppsin Excel-apuohjelmalla. PowerAppsin Excel-apuohjelma vaatii Microsoft Excel 2016 -ohjelman.
@@ -21,12 +21,12 @@ Kun avaat entiteettitiedot Microsoft Excelissä, voit tarkastella ja muokata nii
 ![Excel-apuohjelma](./media/data-platform-cds-excel-addin/ExcelAddin.png "PowerApps Excel -apuohjelma")
 
 ## <a name="open-entity-data-in-excel"></a>Entiteettitietojen avaaminen Excelissä
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa. Kaikki entiteetit tulevat esiin.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa. Kaikki entiteetit tulevat esiin.
 2. Napsauta sinua kiinnostavan entiteetin oikealla puolella olevaa kolmea pistettä (...).
 3. Valitse **Avaa Excelissä** ja avaa luotu työkirja. Työkirja sisältää entiteetin sidontatiedot sekä ympäristöösi ja PowerAppsin Excel-apuohjelmaan suuntautuvat osoittimet.  
 4. Mahdollista PowerAppsin Excel-apuohjelman suorittaminen napsauttamalla Excelissä kohtaa **Ota muokkaus käyttöön**. Excel-apuohjelma toimii Excel-ikkunan oikealla puolella olevassa ruudussa.
 5. Jos et ole aikaisemmin suorittanut PowerAppsin Excel-apuohjelmaa, salli Excel-apuohjelman suorittaminen napsauttamalla kohtaa **Luota tähän apuohjelmaan**.
-6. Jos sinua pyydetään kirjautumaan sisään, valitse **Kirjaudu sisään** ja kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit [powerapps.com](https://web.powerapps.com)-sivustossa. Excel-apuohjelma kirjaa sinut aina kun mahdollista automaattisesti sisään aikaisemman sisäänkirjautumiskontekstin avulla. Varmista sen vuoksi, että Excel-apuohjelman oikeassa yläkulmassa on oikea käyttäjänimi.
+6. Jos sinua pyydetään kirjautumaan sisään, valitse **Kirjaudu sisään** ja kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa. Excel-apuohjelma kirjaa sinut aina kun mahdollista automaattisesti sisään aikaisemman sisäänkirjautumiskontekstin avulla. Varmista sen vuoksi, että Excel-apuohjelman oikeassa yläkulmassa on oikea käyttäjänimi.
 
 Excel-apuohjelma lukee valitsemasi entiteetin tiedot automaattisesti. Huomaa, että työkirjassa ei ole mitään tietoja, ennen kuin Excel-apuohjelma noutaa ne.
 

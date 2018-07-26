@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 9172c897940a0b8529ff16e09cc8889dec6e3f2a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 5fecc52a5100f2ed0d045fd0ebdc3834f83d5b39
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021730"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195906"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Tietojen näyttäminen viiva-, ympyrä- tai palkkikaavioina PowerAppsissa
 Käytä viiva-, ympyrä- ja palkkikaavioita tietojesi näyttämiseen. Kun käsittelet kaavioita, tuomiesi tietojen jäsentelyn tulee olla seuraavanlainen:
@@ -29,7 +29,7 @@ Tietojesi tulee näyttää esimerkiksi seuraavan kaltaisilta:
 Voit luoda ja käyttää näitä kaavioita PowerAppsissa. Aloitetaan.
 
 ## <a name="prerequisites"></a>Edellytykset
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo sovellus [mallista](get-started-test-drive.md), [tiedoista](get-started-create-from-data.md) tai itse [alusta alkaen](get-started-create-from-blank.md).
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 * Lataa [ChartData.zip](http://pwrappssamples.blob.core.windows.net/samples/ChartData.zip), joka sisältää mallitietoja XML-tiedostomuodossa. Tuo tiedosto suoraan sovellukseesi noudattamalla tämän aiheen vaiheita. Voit vaihtoehtoisesti purkaa .zip-tiedoston, avata XML-tiedoston Excelissä ja tallentaa tiedoston [pilvipalveluun](connections/cloud-storage-blob-connections.md).

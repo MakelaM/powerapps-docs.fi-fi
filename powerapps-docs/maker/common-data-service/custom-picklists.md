@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: 188add46a8e52cfeb75ef1bb670ca3b457963024
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: b2b472ae33bd16761d25fc965f24afc6bb9b957e
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168592"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218414"
 ---
 # <a name="create-an-option-set"></a>Asetusjoukon luominen
 
@@ -23,7 +23,7 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
 
 ## <a name="creating-an-option-set-while-adding-a-field"></a>Asetusjoukon luominen kenttää lisättäessä.
 
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
     ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
@@ -61,7 +61,7 @@ Asetusjoukkoja voi luoda kahdella tavalla: joko portaalin asetusjoukkoluettelost
 
 ## <a name="creating-an-option-set-from-the-option-set-list"></a>Asetusjoukon luominen asetusjoukkoluettelosta
 
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Asetusjoukot**-kohtaa.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Asetusjoukot**-kohtaa.
 
     ![Asetusjoukot](./media/data-platform-cds-newoptionset/optionsetlist.png "Asetusjoukkoluettelo")
 

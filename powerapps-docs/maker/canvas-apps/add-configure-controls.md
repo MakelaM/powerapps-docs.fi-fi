@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 8a2849c32eaf474d1aa5bb981a09a3594cead600
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 24f0479db0707e667263f5b160d6785560fe604b
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020120"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195584"
 ---
 # <a name="add-and-configure-a-control-in-powerapps"></a>Ohjausobjektin lisääminen ja määrittäminen PowerAppsissa
 Lisää käyttöliittymäelementtejä sovellukseesi ja määritä niiden ulkoasua ja toimintaa suoraan työkaluriviltä, **Ominaisuudet**-välilehdestä tai kaavariviltä. Nämä käyttöliittymäelementit ovat nimeltään ohjausobjekteja. Niiden määritettävät osat ovat nimeltään ominaisuuksia.
 
 ## <a name="prerequisites"></a>Edellytykset
-1. [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+1. [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
 2. Napsauta tai napauta PowerApps Studion **Tiedosto-valikon** (lähellä vasenta reunaa) kohtaa **Uusi**.
 

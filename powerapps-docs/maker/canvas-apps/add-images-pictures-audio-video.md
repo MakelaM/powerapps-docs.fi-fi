@@ -9,18 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 8c04681f3d39a6022f8f962e7a76673fb90ad65b
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 5c6c7b2973f85c1ebc3040e41d83653250599717
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017659"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195009"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
 Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
 
 ## <a name="prerequisites"></a>Edellytykset
-[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
 ## <a name="add-media-from-a-file-or-the-cloud"></a>Lisää media tiedostosta tai pilvipalvelusta
 Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ääni).

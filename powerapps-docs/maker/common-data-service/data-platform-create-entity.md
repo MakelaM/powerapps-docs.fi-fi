@@ -7,12 +7,12 @@ ms.component: cds
 ms.topic: quickstart
 ms.date: 05/01/2018
 ms.author: matp
-ms.openlocfilehash: 45a341d28b4138ce03ce50d7325f9daa0f159d1a
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: a7fed26dafcf0b1d73ae6ba362964de5e9fd1ad5
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897428"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218713"
 ---
 # <a name="quickstart-create-a-custom-entity"></a>Pikaopas: Mukautetun entiteetin luominen
 PowerAppsissa *entiteetti* määrittää tiedot, joita haluat seurata sellaisten tietueiden muodossa, jotka yleensä sisältävät ominaisuuksia, kuten yrityksen nimi, sijainti, tuotteet, sähköposti ja puhelinnumero. Voit sitten näyttää tiedot kehittämällä sovelluksen, joka viittaa entiteettiin. PowerApps tarjoaa vakioentiteetit tyypillisiin organisaation skenaarioihin (kuten tapaamisten seuranta), mutta haluat ehkä myös luoda mukautettuja entiteettejä omalle organisaatiollesi ominaisten tietojen tallentamiseen.
@@ -25,7 +25,7 @@ Tämän pikaoppaan noudattamista varten tarvitaan seuraavat kohteet:
 * Järjestelmänvalvoja- tai Järjestelmämukauttaja-käyttöoikeusrooli Common Data Servicessä sovelluksille.
 
 ## <a name="sign-in-to-powerapps"></a>PowerAppsiin kirjautuminen
-Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://web.powerapps.com).
+Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## <a name="create-an-entity"></a>Entiteetin luominen
 1. Laajenna siirtymisruudussa **Tiedot** napsauttamalla tai napauttamalla sitä ja valitse sitten **Entiteetit**.
@@ -63,7 +63,7 @@ Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://w
      
     Lisätietoja on artikkelissa [Entiteetin kenttien hallinta](data-platform-manage-fields.md).
 
-    ![Uusi kenttä ja ](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
 
 6. Lisää kolme kenttää seuraavilla määrityksillä toistamalla edelliset vaiheet:
    * **Näyttönimi** = Tuotteen luokitus; **Tietotyyppi** = Kokonaisluku; Valitse **Pakollinen**-valintaruudun valinta

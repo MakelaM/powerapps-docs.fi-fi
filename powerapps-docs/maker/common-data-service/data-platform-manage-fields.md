@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: a4ec386ef6a7eee02c2ac608bb6e00ed9ee39c19
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: a9fff4cc61f6416ef8dbc3c03d96be7082fe3a51
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168132"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218736"
 ---
 # <a name="manage-custom-fields-in-an-entity"></a>Mukautettujen kenttien hallinta entiteetissä
 Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun entiteetin. Mukautetun kentän luomisen yhteydessä määritetään joukko ominaisuuksia, kuten kentän nimi, näyttönimi ja kentän sisältämien tietojen tyyppi. Lisätietoja on kohdassa [Entiteetin määritteiden metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
@@ -22,7 +22,7 @@ Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun 
 > Jokaisessa entiteetissä on järjestelmäkenttiä, joista ilmenee esimerkiksi tietueen viimeisin päivitysajankohta ja päivittäjä. Lisäksi vakioentiteeteissä on vakiokenttiä (oletuskenttiä). Järjestelmä- ja vakiokenttiä ei voi muokata tai poistaa. Jos luot mukautetun kentän, sen on tarjottava näistä sisäänrakennetuista kentistä poikkeavia lisätoimintoja.
 
 ## <a name="create-a-field"></a>Kentän luominen
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
     ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
 
@@ -71,7 +71,7 @@ Laskettujen kenttien avulla voit automatisoida organisaation liiketoimintaproses
 Lisätietoja tuetuista lauseketyypeistä ja esimerkkejä on kohdassa [Laskettujen kenttien määrittely](/dynamics365/customer-engagement/customize/define-calculated-fields).
 
 ## <a name="update-or-delete-a-field"></a>Päivitä tai poista kenttä
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio, napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa ja valitse entiteetti.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio, napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa ja valitse entiteetti.
 2. Napauta tai napsauta valitun entiteetin kenttäluettelossa olevaa kenttää ja toimi jollain seuraavista tavoista:
    
    * Muuta vähintään yhtä kentän ominaisuutta.

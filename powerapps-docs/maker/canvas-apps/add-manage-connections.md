@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/09/2017
 ms.author: lanced
-ms.openlocfilehash: 40b215e0f7e8d681b5d857d08ce2677f2d271ef1
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: c114b803539c2d64695a0bd8c9d976d2604569eb
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019822"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195216"
 ---
 # <a name="manage-your-connections-in-powerapps"></a>Yhteyksien hallinta PowerAppsissa
-Luo osoitteessa [powerapps.com](https://web.powerapps.com) yhteys PowerAppsista yhteen tai useampaan tietolähteeseen, poista yhteys tai päivitä sen tunnistetietoja.
+Luo osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) yhteys PowerAppsista yhteen tai useampaan tietolähteeseen, poista yhteys tai päivitä sen tunnistetietoja.
 
 Sovelluksesi tietoyhteys voi yhdistää SharePointiin, SQL Serveriin, Office 365:een, OneDrive for Businessiin, Salesforceen, Exceliin ja moniin muihin [tietolähteisiin](connections-list.md).
 
@@ -32,7 +32,7 @@ Tämän artikkelin jälkeen seuraava vaihe on näyttää ja hallita tietoyhteyde
 
 ## <a name="prerequisites"></a>Edellytykset
 1. [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
-2. Kirjaudu sisään osoitteeseen [powerapps.com](https://web.powerapps.com) samoilla tunnistetiedoilla joilla rekisteröidyit.
+2. Kirjaudu sisään osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla joilla rekisteröidyit.
 
 ## <a name="background-on-data-connections"></a>Taustatietoja tietoyhteyksistä
 Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset voivat käyttää näitä tietolähteitä käyttämällä **yhteyksiä**.
@@ -43,17 +43,17 @@ On myös muita tietolähteitä, jotka eivät ole taulukoita, kuten sähköposti,
 
 Käyttämällä **[Valikoima](controls/control-gallery.md)**-, **[Näytä lomake](controls/control-form-detail.md)**- ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekteja on helppoa luoda sovellus, joka lukee ja kirjoittaa tietoa tietolähteestä. Pääset alkuun lukemalla artikkelin [Tutustu tietolomakkeisiin](working-with-forms.md).
 
-Voit luoda ja hallita yhteyksiä osoitteessa [powerapps.com](https://web.powerapps.com). Tämän lisäksi luot yhteyksiä, kun suoritat näitä tehtäviä:
+Voit luoda ja hallita yhteyksiä osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Tämän lisäksi luot yhteyksiä, kun suoritat näitä tehtäviä:
 
 * Sovelluksen automaattinen luominen [tiedoista](app-from-sharepoint.md), kuten mukautetusta SharePoint-luettelosta
 * Olemassa olevan sovelluksen päivittäminen tai uuden luominen alusta alkaen, kuten aiheessa [yhteyden lisääminen](add-data-connection.md) kuvataan.
 * Toisen käyttäjän luoman ja [sinulle jaetun](share-app.md) sovelluksen avaaminen.
 
 > [!NOTE]
-> Jos haluat sen sijaan käyttää PowerApps Studiota, avaa **Tiedosto**-valikko ja napsauta tai napauta kohtaa **Yhteydet**, niin [powerapps.com](https://web.powerapps.com) avautuu ja voit luoda ja hallita yhteyksiä siellä.
+> Jos haluat sen sijaan käyttää PowerApps Studiota, avaa **Tiedosto**-valikko ja napsauta tai napauta kohtaa **Yhteydet**, niin [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avautuu ja voit luoda ja hallita yhteyksiä siellä.
 
 ## <a name="create-a-new-connection"></a>Uuden yhteyden luominen
-1. Kirjaudu sisään osoitteessa [powerapps.com](https://web.powerapps.com), jos et ole jo tehnyt niin.
+1. Kirjaudu sisään osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), jos et ole jo tehnyt niin.
 2. Napsauta tai napauta vasemmassa siirtymispalkissa kohtaa **Yhteydet**.
    
     ![Yhteyksien hallinta](./media/add-manage-connections/open-connections.png)

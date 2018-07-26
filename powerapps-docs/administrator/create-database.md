@@ -9,12 +9,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 3343e8cd81e23d4938466d12ddca2e0a85dc12c8
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: ccd2b03f5f71b2a5037274363ddf9c4082f7071c
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168477"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218690"
 ---
 # <a name="create-a-common-data-service-for-apps-database"></a>Common Data Service for Apps -tietokannan luominen
 Voit luoda tietokannan ja rakentaa sovelluksia käyttämällä Common Data Service (CDS) for Apps -palvelua tietosäilönä. Voit joko luoda omia mukautettuja entiteettejä tai käyttää ennalta määritettyjä entiteettejä. Jotta voit luoda tietokannan, sinun on ensin joko luotava ympäristö tai saatava olemassa olevan ympäristön **Ympäristön järjestelmänvalvoja** -rooli. Lisäksi sinulle on määritettävä sopiva käyttöoikeus. Lisätietoja CDC for Appsin käyttöön tarvittavan palvelupaketin ostamisesta on kohdassa [Hinnoittelutiedot](pricing-billing-skus.md).
@@ -42,7 +42,7 @@ Voit luoda tietokannan eri tavoin:
 
 
 ## <a name="create-a-database-in-the-entities-pane-of-powerapps"></a>Tietokannan luominen PowerAppsin Entiteetit-ruudussa
-1. Suurenna [powerapps.com](https://web.powerapps.com)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
 2. Luo tietokanta napsauttamalla kohtaa **Luo tietokanta**.
 

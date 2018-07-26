@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 05/01/2016
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 533234c7a0ca3cc69e30eb077ff0bd39d1d50a11
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a187e50bd4d1819d1579c6db219588e3582f5c25
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017084"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195676"
 ---
 # <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerAppsin yhteisön palvelupaketti: ilmainen kehitysympäristö yksilökäyttöön
 Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä, PowerAppsin yhteisön palvelupaketti on oikea palvelupaketti sinua varten. PowerAppsin yhteisön palvelupaketti sisältää ilmaisen kehitysympäristö yksilökäyttöön, jonka avulla voit
@@ -33,7 +33,7 @@ Kuka tahansa, jolla on [työ- tai koulutili](signup-for-powerapps.md#faq), voi r
 ## <a name="where-can-i-sign-up-for-the-powerapps-community-plan"></a>Missä voin rekisteröityä PowerAppsin yhteisön palvelupakettiin?
 Rekisteröidy [PowerAppsin yhteisön palvelupakettiin verkkosivustossa](https://powerapps.microsoft.com/communityplan). Jos olet jo PowerApps-käyttäjä Office 365:n tai Dynamics 365:n kautta, voit myös [luoda ympäristön yksilökäyttöä varten](https://web.powerapps.com/community/signup).
 
-Kun olet rekisteröitynyt yhteisön palvelupakettiin, sinut ohjataan [PowerApps-sivustolle](https://web.powerapps.com) omaan ympäristöösi. Ympäristö nimetään oman nimesi mukaan, esimerkiksi ”Jari Kanteen ympäristö”. Jos tämänniminen ympäristö on jo olemassa, ympäristön nimeksi asetetaan ”Jari Kanteen (1) ympäristö”.  Seuraavassa kuvassa näytetään ympäristön ulkoasu.
+Kun olet rekisteröitynyt yhteisön palvelupakettiin, sinut ohjataan [PowerApps-sivustolle](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) omaan ympäristöösi. Ympäristö nimetään oman nimesi mukaan, esimerkiksi ”Jari Kanteen ympäristö”. Jos tämänniminen ympäristö on jo olemassa, ympäristön nimeksi asetetaan ”Jari Kanteen (1) ympäristö”.  Seuraavassa kuvassa näytetään ympäristön ulkoasu.
 
 ![Oma yhteisön palvelupaketin ympäristö](./media/dev-community-plan/individual-environment.png)
 

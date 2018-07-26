@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/28/2016
 ms.author: archanan
-ms.openlocfilehash: 1cf33589937917637e1ca7e67467e2299fa6605e
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 09d4f26139ae33195c666a2eb71d70e02b035f69
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023731"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194884"
 ---
 # <a name="share-app-resources"></a>Sovelluksen resurssien jakaminen
 Ennen kuin voit [jakaa sovelluksen](share-app.md), ota huomioon resurssityypit, joita se hyödyntää, kuten yhtä tai useampia seuraavista:
@@ -32,14 +32,14 @@ Voit jakaa yhteyksiäsi, mukautettuja liittimiä ja paikallisia tietoyhdyskäyt�
 ## <a name="connections"></a>Yhteydet
 Jotkin yhteystyypit, kuten SQL Server, jaetaan automaattisesti, mutta muut edellyttävät, että käyttäjät luovat omia yhteyksiään tietolähteeseen tai sovelluksessa oleviin lähteisiin.
 
-Osoitteessa [powerapps.com](https://web.powerapps.com) voit määrittää, jaetaanko yhteys automaattisesti, ja voit päivittää jakamisoikeudet. Napsauta tai napauta vasemmalla olevassa siirtymispalkissa kohtaa **Hallitse**, napsauta tai napauta kohtaa **Yhteydet** ja napsauta tai napauta yhteyttä. Jos **Jaa**-välilehti tulee näkyviin, yhteys jaetaan automaattisesti.
+Osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) voit määrittää, jaetaanko yhteys automaattisesti, ja voit päivittää jakamisoikeudet. Napsauta tai napauta vasemmalla olevassa siirtymispalkissa kohtaa **Hallitse**, napsauta tai napauta kohtaa **Yhteydet** ja napsauta tai napauta yhteyttä. Jos **Jaa**-välilehti tulee näkyviin, yhteys jaetaan automaattisesti.
 
   ![Jaa-välilehti yhteyden tietosivulla](./media/share-app-resources/shared-connections.png)
 
 ## <a name="on-premises-data-gateways"></a>Paikalliset tietoyhdyskäytävät
 Jos luot ja jaat sovelluksen, joka sisältää tietoja paikallisesta lähteestä, kyseinen [paikallinen tietoyhdyskäytävä](gateway-management.md) sekä tietyntyyppiset yhteydet tähän yhdyskäytävään jaetaan automaattisesti. Voit jakaa manuaalisesti jokaisen yhteyden, jota ei jaeta automaattisesti, kuten edellisessä osiossa näytettiin. Voit myös antaa sovelluksen lähettää sanoman, jossa käyttäjiä kehotetaan luomaan omat yhteydet. Niiden yhteyksien, joilla yhdyskäytävä on määritetty, näyttäminen:
 
-1. Avaa [powerapps.com](https://web.powerapps.com), napsauta tai napauta vasemmalla olevassa siirtymispalkissa **Hallitse** ja napsauta tai napauta **Yhdyskäytävät**.
+1. Avaa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), napsauta tai napauta vasemmalla olevassa siirtymispalkissa **Hallitse** ja napsauta tai napauta **Yhdyskäytävät**.
 2. Napsauta tai napauta yhdyskäytävää ja napsauta tai napauta **Yhteydet**-välilehteä.
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Jos luot ja jaat sovelluksen, joka sisältää tietoja paikallisesta lähteestä
 ## <a name="custom-connectors"></a>Mukautetut liittimet
 Kun jaat sovelluksen, joka käyttää mukautettua liitintä, se jaetaan automaattisesti, mutta käyttäjien täytyy luoda siihen omat yhteytensä.
 
-Osoitteessa [powerapps.com](https://web.powerapps.com) voit tarkastella tai päivittää mukautettujen liittimien käyttöoikeuksia. Napsauta tai napauta vasemmalla olevassa siirtymispalkissa **Hallitse**, napsauta tai napauta **Yhteydet** ja napsauta tai napauta sen jälkeen **Uusi yhteys** (oikeassa yläkulmassa). Napsauta tai napauta kohtaa **Mukautettu**, ja napsauta tai napauta mukautettua liitintä saadaksesi sen tiedot näkyviin.
+Osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) voit tarkastella tai päivittää mukautettujen liittimien käyttöoikeuksia. Napsauta tai napauta vasemmalla olevassa siirtymispalkissa **Hallitse**, napsauta tai napauta **Yhteydet** ja napsauta tai napauta sen jälkeen **Uusi yhteys** (oikeassa yläkulmassa). Napsauta tai napauta kohtaa **Mukautettu**, ja napsauta tai napauta mukautettua liitintä saadaksesi sen tiedot näkyviin.
 
 ## <a name="excel-workbooks"></a>Excel-työkirjat
 Jos jaettu sovellus käyttää tietoja, joihin kaikilla käyttäjillä ei ole pääsyä (esimerkiksi Excel-työkirja pilvitallennuspalvelun tilissä), [jaa tiedot](share-app-data.md).

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: matp
 ms.reviewer: ''
-ms.openlocfilehash: e29688f52da411d57daa920437d1f0708c9f663e
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9bd73487d744f5597f934603bbf1d742ff08baea
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017015"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195400"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Yhdistä Dynamics 365:een PowerAppsista
 PowerAppsin avulla voit nopeasti luoda, mukauttaa, jakaa ja suorittaa mobiilisovelluksia käyttäen vain vähän tai ei lainkaan koodia. Dynamics 365 -liittimen avulla voit luoda hyödyllisiä mobiilisovelluksia organisaatiollesi jaettaviksi vain muutamassa minuutissa.
@@ -25,7 +25,7 @@ Tämän artikkelin ohjeiden mukaisesti luot sovelluksen, jolla käyttäjät voiv
 Jotta voit seurata tätä opetusohjelmaa, tarvitset Microsoft Office 365 -tilin, joka sisältää Dynamics 365 -tilauksen.
 
 ## <a name="create-a-connection"></a>Luo yhteys
-1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com/).
+1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Napsauta vasemmassa siirtymisruudussa **Yhteydet**.
    
     ![Yhteys-vaihtoehto Tiedosto-valikossa](./media/connection-dynamics-crmonline/file-connections.png)
@@ -43,7 +43,7 @@ Jotta voit seurata tätä opetusohjelmaa, tarvitset Microsoft Office 365 -tilin,
     Yhteys on luotu.
 
 ## <a name="generate-an-app-automatically"></a>Luo sovellus automaattisesti
-1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com/) ja valitse sitten **Uusi sovellus** lähellä vasenta alakulmaa.
+1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse sitten **Uusi sovellus** lähellä vasenta alakulmaa.
    
     ![Uusi sovellus](./media/connection-dynamics-crmonline/new-app.png)
 2. Napsauta kohdassa **Aloita tiedoillasi** **Puhelinasettelu** **Dynamics 365** -ruudussa.

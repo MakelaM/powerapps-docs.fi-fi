@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
 ms.reviewer: anneta
-ms.openlocfilehash: e1a07bc9c166ac37ad0efa7ae50dca87332cb3e2
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a3862dbd0210d2975b276d86741709b24d6d08f6
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020896"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195469"
 ---
 # <a name="connect-to-sql-server-from-powerapps"></a>SQL Server -yhteyden luominen PowerAppsista
 ![SQL-palvelimen kuvake](./media/connection-azure-sqldatabase/sqlicon.png)
@@ -23,7 +23,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](http://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Kerää seuraavat tiedot tietokantaan, joka sisältää vähintään yhden taulukon, jossa on perusavain:
   
   * tietokannan nimi
@@ -64,7 +64,7 @@ Muodosta yhteys SQL Serveriin Azuressa tai paikallisessa tietokannassa, jotta vo
 8. Mukauta sovellusta käyttämällä tekniikoita, jotka ovat samanlaisia kuin kohdassa [Sovelluksen luominen Excelistä](../get-started-create-from-data.md) kuvataan, alkaen sovelluksen asettelun muuttamisesta.
 
 ## <a name="build-an-app-from-scratch"></a>Luo sovellus alusta alkaen
-1. Kirjaudu osoitteeseen [powerapps.com](https://web.powerapps.com) samalla tilillä, jota käytit PowerAppsiin rekisteröitymiseen.
+1. Kirjaudu osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samalla tilillä, jota käytit PowerAppsiin rekisteröitymiseen.
 2. Napsauta tai napauta vasemmassa siirtymispalkissa kohtaa **Yhteydet**:  
    
     ![Yhteyksien hallinta](./media/connection-azure-sqldatabase/manage-connections.png)

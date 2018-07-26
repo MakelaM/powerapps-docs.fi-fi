@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/02/2015
 ms.author: lonu
-ms.openlocfilehash: d3a56d146982965eaa07247ef57d3e2d67db2b9a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 51a93009f187b31cd0d3159f97c78ff5bd60ae33
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021845"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195538"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Näytä, lajittele ja suodata tietoja PowerApps-valikoimassa
 Luo valikoima, jonka avulla voit näyttää kuvia ja tekstiä useista tuotteista, ja lajittele ja suodata näitä tietoja.
@@ -27,7 +27,7 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
 > 
 
 ### <a name="prerequisites"></a>Edellytykset
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo tablettisovellus [mallista](get-started-test-drive.md), [tiedoista](get-started-create-from-data.md) tai [tyhjästä](get-started-create-from-blank.md).
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 * Näissä vaiheissa käytetään [CreateFirstApp](http://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip)-sovellusta mallisyötetietoina, jotka sisältävät .jpg-kuvia. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoja tai tuoda omasi.

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/06/2018
 ms.author: lanced
-ms.openlocfilehash: 734e36b00658455198b64317b6f068c0018755a4
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 471f4b69b913236d99e6309c8b8bb4e12f85a7b9
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018487"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195032"
 ---
 # <a name="add-a-data-connection-in-powerapps"></a>Tietoyhteyden lisääminen PowerAppsissa
 Lisää PowerAppsissa tietoyhteys olemassa olevaan sovellukseen tai sovellukseen, jonka olet luonut alusta alkaen. Sovelluksesi voi yhdistää SharePointiin, Salesforceen, OneDriveen ja [moneen muuhun tietolähteeseen](connections-list.md).
@@ -26,7 +26,7 @@ Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja halli
 * Yhdistä SQL Serveriin ja päivitä taulukko sovelluksestasi.
 
 ## <a name="prerequisites"></a>Edellytykset
-[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](http://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+[Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
 ## <a name="add-a-data-source"></a>Lisää tietolähde
 1. **Aloitus**-välilehdellä siirrä osoitin **Aloita tyhjästä**-ruudun päälle ja valitse sitten **Tee tämä sovellus.**

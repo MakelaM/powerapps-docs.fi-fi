@@ -8,12 +8,12 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: bb0bec7cf459eb9084aea4db7264350b7913e578
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 5fffcbcd8f58ae05f3fe5b3b4f871cf39d003321
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898745"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218184"
 ---
 # <a name="create-a-power-bi-report"></a>Luo Power BI -raportti
 Common Data Service for Appsin avulla voit yhdistää suoraan tietoihisi Power BI Desktopin avulla, jolloin voit luoda raportteja ja julkaista ne Power BI:ssä. Power BI -raportteja voidaan käyttää koontinäytöissä, jakaa muille käyttäjille ja käyttää eri ympäristöissä Power BI -mobiilisovelluksissa.
@@ -29,7 +29,7 @@ Jos haluat käyttää Power BI:tä Common Data Service for Appsissa, tarvitset s
 
 ## <a name="finding-your-common-data-service-for-apps-environment-url"></a>Common Data Service for Apps -ympäristön URL-osoitteen löytäminen
 
-1. Avaa [PowerApps](https://web.powerapps.com) ja valitse ympäristö, johon muodostat yhteyden. Napsauta **asetuskuvaketta** oikeassa yläkulmassa ja valitse **Kehittyneet mukautukset**
+1. Avaa [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse ympäristö, johon muodostat yhteyden. Napsauta **asetuskuvaketta** oikeassa yläkulmassa ja valitse **Kehittyneet mukautukset**
 
     ![CDS for Apps -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS for Apps -ympäristö")
 

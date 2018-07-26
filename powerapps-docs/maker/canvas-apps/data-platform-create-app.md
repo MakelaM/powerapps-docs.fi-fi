@@ -9,24 +9,24 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: 50913e593cf279d0d1870cbe88fa1a3703059811
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 3481bd697e29855a075598975e26d14121a49a0a
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016019"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195354"
 ---
 # <a name="quickstart-generate-an-app-from-common-data-service-for-apps-in-powerapps"></a>Pikaopas: sovelluksen luominen PowerAppsin Common Data Service for Apps -palvelussa
 
 Tässä pikaoppaassa käytetään Microsoft PowerAppsia sovelluksen luomiseen [Common Data Service for Apps](../common-data-service/data-platform-intro.md) -palvelun esimerkkitilien luettelon pohjalta. Tässä sovelluksessa voit selata kaikkia tilejä, tarkastella yksittäisen tilin tietoja sekä luoda, päivittää tai poistaa tilin.
 
-Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com) ennen aloittamista.
+Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ennen aloittamista.
 
 ## <a name="prerequisites"></a>Edellytykset
 Tämän pikaoppaan noudattamiseksi sinun tulee siirtyä [ympäristöön](working-with-environments.md), johon on luotu Common Data Service for Apps -tietokanta, joka sisältää tietoja ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](../../administrator/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
 
 ## <a name="generate-an-app"></a>Sovelluksen luominen
-1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com) ja vaihda tarvittaessa ympäristö noudattamalla tässä aiheessa annettuja ohjeita.
+1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja vaihda tarvittaessa ympäristö noudattamalla tässä aiheessa annettuja ohjeita.
 
     ![PowerAppsin aloitussivu](./media/data-platform-create-app/sign-in.png)
 

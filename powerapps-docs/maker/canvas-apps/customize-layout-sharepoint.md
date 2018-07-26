@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: bb02f12bf452d1928408ea7c266469b524607b5f
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: fa5aa70beba25130144c5da9dac4fbaa383dfc67
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016785"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195607"
 ---
 # <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opetusohjelma: Valikoiman mukauttaminen PowerAppsissa
 
@@ -39,7 +39,7 @@ Voit myös lisätä vierityspalkin, jotta käyttäjät, joilla ei ole kosketusn�
 
 Tämä opetusohjelma alkaa sovelluksella, joka luotiin tietystä tietolähteestä. Samat käsitteet koskevat kuitenkin mitä tahansa sovellusta, jonka luot PowerAppsissa SharePoint-luettelosta, Excel-taulukosta tai jostakin muusta tietolähteestä.
 
-Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com) ennen aloittamista.
+Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ennen aloittamista.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -47,7 +47,7 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 ## <a name="open-the-generated-app"></a>Avaa luotu sovellus
 
-1. Kirjaudu [PowerAppsiin](https://web.powerapps.com) ja valitse **Sovellukset** lähellä vasenta reunaa.
+1. Kirjaudu [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse **Sovellukset** lähellä vasenta reunaa.
 
     [![PowerAppsin aloitussivu](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
 

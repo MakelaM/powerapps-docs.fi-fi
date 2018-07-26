@@ -8,12 +8,12 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 14fe0c749a17a1a28ebc7c8680ff55df2392999e
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.openlocfilehash: 5bc3951f767677c2b8b35166d16c089259eec1ce
+ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552940"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39218667"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-powerapps-customer-data"></a>PowerApps-asiakastietojen rekisteröityjen tietopyyntöihin vastaaminen
 
@@ -68,7 +68,7 @@ Mallipohjaiset sovellukset ja mallipohjaisten sovellusten käyttöoikeudet  | Ma
 
 PowerApps tarjoaa seuraavat tavat etsiä tietyn käyttäjän henkilötietoja:
 
-- **Sivustot**: [PowerApps site](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+- **Sivustot**: [PowerApps site](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps Admin center](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 - **PowerShell**: PowerApps-sovellusten cmdlet-komennot ([sovelluskehittäjille](https://go.microsoft.com/fwlink/?linkid=871448) sekä [järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804)) ja [paikallisten yhdyskäytävien cmdlet-komennot.](https://go.microsoft.com/fwlink/?linkid=872238)
 
 Jos haluat tarkemmat ohjeet siihen, miten voit etsiä tietyn käyttäjän henkilötietoja kustakin mainituista resurssityypeistä yllä mainituilla tavoilla, lue ohjeartikkeli [Vastaaminen DSR-pyyntöihin viedä asiakastietoja PowerApps-sovelluksista](powerapps-gdpr-export-dsr.md).

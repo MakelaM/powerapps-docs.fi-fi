@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: ec6526ff4cd690d6bcf5cbf3dcc98c6ee7b8ae28
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: b2eb001ee426dc3449b440a357c67bc47b702d42
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018142"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195745"
 ---
 # <a name="understand-data-forms-in-microsoft-powerapps"></a>Tutustu tietolomakkeisiin Microsoft PowerAppsissa
 Lisää kolmentyyppisiä ohjausobjekteja, jotta käyttäjä voi selata tietueita, näyttää kyseisen tietueen tietoja ja luoda tietueen ja muokata sitä:
@@ -33,7 +33,7 @@ Kuten tässä ohjeaiheessa kuvataan, nämä ohjausobjektit voi yhdistää kaavoj
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 
 ## <a name="explore-a-generated-app"></a>Tutki luotua sovellusta

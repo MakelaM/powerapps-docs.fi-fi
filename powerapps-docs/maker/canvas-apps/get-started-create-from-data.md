@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 4830721ba697f78987abd972dd1122250bacb9e8
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 2af0c39aca43d316e79b4f928e114dcfb88caf31
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020235"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39194848"
 ---
 # <a name="generate-an-app-from-excel-in-powerapps"></a>Sovelluksen luominen Excelistä PowerAppsissa
 Tässä aiheessa luot automaattisesti ensimmäisen sovellukseksi PowerAppsissa käyttämällä Excel-taulukon tietoja. Valitset Excel-tiedoston, luot sovelluksen ja suoritat sitten luomasi sovelluksen. Jokainen luotu sovellus sisältää näytöt tietueiden selaamiseen, tietueiden tietojen näyttämiseen ja tietueiden luomiseen ja päivittämiseen. Luomalla sovelluksen saat luotua nopeasti toimivan, Excel-tietoja käyttävän sovelluksen, ja voit sitten mukauttaa sovellusta omien tarpeidesi mukaan. 
@@ -30,7 +30,7 @@ Jotta voit noudattaa tämän aiheen ohjeita tarkasti, lataa [Flooring Estimates]
 > Voit käyttää omaa Excel-tiedostoasi, jos tiedot on muotoiltu taulukoksi. Lisätietoja on artikkelissa [Taulukon muotoileminen](how-to-excel-tips.md). 
 
 ## <a name="generate-the-app"></a>Luo sovellus
-1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com).
+1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerAppsin aloitussivu](./media/get-started-create-from-data/sign-in.png)
 
