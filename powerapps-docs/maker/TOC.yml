@@ -49,6 +49,11 @@
               href: ./canvas-apps/get-started-create-from-blank.md
         - name: Sovelluksen jakaminen
           href: ./canvas-apps/share-app.md
+          items:
+            - name: Jaa Excel-tiedot
+              href: ./canvas-apps/share-app-data.md
+            - name: Sovelluksen resurssien jakaminen
+              href: ./canvas-apps/share-app-resources.md
         - name: 'Upota sovellus Power BI:ssä'
           href: ./canvas-apps/embed-powerapps-powerbi.md
     - name: Esimerkit
@@ -73,6 +78,8 @@
           href: ./canvas-apps/working-with-variables.md
         - name: Kaavat
           href: ./canvas-apps/working-with-formulas-in-depth.md
+        - name: Kokeelliset ja esikatseluominaisuudet
+          href: ./canvas-apps/working-with-experimental.md
         - name: Päivämäärät ja ajat
           href: ./canvas-apps/show-text-dates-times.md
         - name: Tietolähteet
@@ -134,7 +141,9 @@
             - name: Luo helppokäyttöinen sovellus
               href: ./canvas-apps/accessible-apps.md
               items:
-                - name: Väri
+                - name: Löydä helppokäyttötoimintojen ongelmat
+                  href: ./canvas-apps/accessibility-checker.md
+                - name: Käytä värejä helppokäyttötoiminnoissa
                   href: ./canvas-apps/accessible-apps-color.md
         - name: Hallitse sovellustasi
           items:
@@ -611,16 +620,9 @@
       href: ./model-driven-apps/share-model-driven-app.md
     - name: Kehittäjiä varten
       href: ../developer/model-driven-apps/TOC.yml
-- name: Microsoft Common Data Service for Apps
+- name: Common Data Service sovelluksia varten
   href: ./common-data-service/data-platform-intro.md
   items:
-    - name: Käyttöoikeudet
-      href: ./common-data-service/data-platform-entity-licenses.md
-      items:
-        - name: 'Entiteetit, joilla on monimutkainen liiketoimintalogiikka'
-          href: ./common-data-service/data-platform-complex-entities.md
-        - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'
-          href: ./common-data-service/data-platform-restricted-entities.md
     - name: Pika-aloitukset
       items:
         - name: Entiteetin luominen
@@ -651,6 +653,13 @@
           href: ./common-data-service/data-platform-excel-addin.md
         - name: Luo Power BI -raportti
           href: ./common-data-service/data-platform-powerbi-connector.md
+    - name: Käyttöoikeudet
+      href: ./common-data-service/data-platform-entity-licenses.md
+      items:
+        - name: 'Entiteetit, joilla on monimutkainen liiketoimintalogiikka'
+          href: ./common-data-service/data-platform-complex-entities.md
+        - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'
+          href: ./common-data-service/data-platform-restricted-entities.md
     - name: Kehittäjiä varten
       href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
