@@ -6,20 +6,27 @@ manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 05/01/2018
+ms.date: 07/25/2018
 ms.author: clwesene
-ms.openlocfilehash: 716e1c2b7e670d8a54e1106cd557bb509323ba8d
-ms.sourcegitcommit: b3b6118790d6b7b4285dbcb5736e55f6e450125c
+ms.openlocfilehash: 758d5b5ff2c552a4c4ccbf210062f35d4e53209c
+ms.sourcegitcommit: efea7ed5ad8e80c87ba423fb094fa94b4e864d75
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34167100"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39265506"
 ---
 # <a name="license-requirements-for-entities"></a>Entiteettien käyttöoikeusvaatimukset
-Sovellusten tekijät voivat käyttää useimpia Common Data Service (CDC) for Appsin sisältämiä entiteettejä (mukaan lukien mukautetut entiteetit ja Common Data Modelin mukaiset entiteetit) sovellusten ja työnkulkujen luomiseen käyttäjille, joilla on pelkästään PowerApps Plan 1 tai Microsoft Flow Plan 1. Joissakin tapauksissa monimutkaisia liiketoimintalogiikkaa tai Dynamics 365 -tuotteisiin sidoksissa olevat entiteetit vaativat, että sovelluksen käyttäjällä on tietty käyttöoikeus. Lisätietoja käytettävissä olevista sopimuksista löytyy [PowerAppsin hinnoittelusivulta](https://powerapps.microsoft.com/pricing).
+Sovellusten tekijät voivat käyttää useimpia Common Data Service (CDC) for Appsin sisältämiä entiteettejä (mukaan lukien mukautetut entiteetit ja Common Data Modelin mukaiset entiteetit) sovellusten ja työnkulkujen luomiseen käyttäjille, joilla on PowerApps Plan 1 tai Microsoft Flow Plan 1. Joissakin tapauksissa entiteetit sisältävät monimutkaista liiketoimintalogiikkaa tai ovat sidoksissa Dynamics 365 -sovelluksiin, jotka vaativat, että sovelluksen käyttäjillä on tietty käyttöoikeus. 
+
+
+|Entiteetti  |Kuvaus  |Vaatimus  |
+|---------|---------|---------|
+|Entiteetit, joilla on monimutkainen liiketoimintalogiikka  | Nämä ovat entiteettejä, jotka käyttävät monimutkaista palvelinpuolen liiketoimintalogiikkaa. Esimerkiksi mikä tahansa entiteetti, joka käyttää reaaliaikaista työnkulkua tai koodin laajennusta.     | [Powerappsin palvelupaketti 2](https://powerapps.microsoft.com/pricing/) tai [Työnkulkupalvelupaketti 2](https://flow.microsoft.com/pricing/)  | 
+|Rajoitetut entiteetit    | Nämä ovat entiteettejä, jotka eivät ole vakiona Common Data Service for Appsissa, mutta sisältyvät Dynamics 365 customer engagement -sovellukseen tai kolmannen osapuolen ratkaisuun. Esimerkiksi knowledge article-, goal- ja entitlement-entiteetit.    | [Dynamics 365 -palvelupaketti](https://dynamics.microsoft.com/pricing/)    |
+
 
 > [!NOTE]
-> Sovellukset ja työnkulut, jotka käyttävät näitä entiteettejä, edellyttävät sovelluksen ja työnkulun käyttäjältä asianmukaista käyttöoikeutta, &mdash;eivät sovelluksen tai työnkulun tekijältä tai kehittäjältä.
+> Sovellukset ja työnkulut, jotka käyttävät näitä entiteettejä, edellyttävät sovelluksen ja työnkulun käyttäjältä asianmukaista käyttöoikeutta, eivät sovelluksen tai työnkulun tekijältä tai kehittäjältä.
 
 ## <a name="entities-with-complex-business-logic"></a>Entiteetit, joilla on monimutkainen liiketoimintalogiikka
 Seuraavia monimutkaisia, palvelimen logiikkaa sisältävät entiteetit vaativat näitä entiteettejä käyttävien sovellusten tai työnkulkujen käyttäjillä PowerApps Plan 2- tai Microsoft Flow Plan 2 -sopimuksen:
@@ -30,15 +37,15 @@ Seuraavia monimutkaisia, palvelimen logiikkaa sisältävät entiteetit vaativat 
     > [!NOTE]
     >  Vain työnkulkuja, jotka on muunnettu reaaliaikaisiksi työnkuluiksi, pidetään reaaliaikaisina ja synkronoituina. Työnkulkuja, jotka suoritetaan taustalla, voidaan silti käyttää asianmukaisen PowerApps-palvelupaketin osana, eivätkä ne vaadi muita käyttöoikeuksia.
 
-Jos haluat tietää, onko entiteeteissäsi monitasoista liiketoimintalogiikkaa, tarkista laajennuksen kokoonpanojen ja ympäristössäsi määriteltyjen työnkulkujen luettelo.
+Jos haluat tietää, onko entiteeteissäsi monitasoista liiketoimintalogiikkaa, tarkista laajennuksen kokoonpanojen ja ympäristössäsi määriteltyjen työnkulkujen luettelo. Niiden entiteettien luettelo, jotka saattavat sisältää palvelinpuolen logiikkaa Dynamics 365 -sovelluksen asentamisen jälkeen, on kohdassa [Monimutkaiset entiteetit, jotka vaativat PowerAppsin palvelupaketin 2 käyttöoikeuksia](data-platform-complex-entities.md) 
 
-## <a name="impacting-license-requirements-when-adding-complex-business-logic"></a>Käyttöoikeusvaatimusvaikutukset monitasoista liiketoimintalogiikkaa lisättäessä
+### <a name="impacting-license-requirements-when-adding-complex-business-logic"></a>Käyttöoikeusvaatimusvaikutukset monitasoista liiketoimintalogiikkaa lisättäessä
 Sovellusten tekijät voivat lisätä koodilaajennuksia ja reaaliaikaisia työnkulkuja sisältäviä entiteettejä CDC for Appsiin, mutta tämä saattaa muuta jo kehitettyjen sovellusten käyttäjien käyttöoikeusvaatimuksia. Sovellusten tekijöiden tulee olla varovaisia lisätessään monitasoista liiketoimintalogiikkaa entiteettiin ja tarkistaa ensin, mitkä sovellukset käyttävät entiteettiä ja onko kyseisten sovellusten käyttäjillä tarvittavat käyttöoikeudet.
 
-## <a name="entities-restricted-to-dynamics-365-licenses"></a>Dynamics 365 -käyttöoikeuksiin rajoitetut entiteetit
-Tietyt entiteetit, jotka on sidottu Dynamics 365 -tuotteiden toiminnallisuuteen, vaativat, että sovellusten käyttäjillä on vastaava tuotteen käyttöoikeus, jos he haluavat luoda, päivittää tai poistaa tietueita entiteettien sisältä. Katso lista rajoitetuista entiteeteistä kohdasta [Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia](data-platform-restricted-entities.md).
+## <a name="restricted-entities"></a>Rajoitetut entiteetit
+Tietyt entiteetit, jotka on sidottu Dynamics 365 -sovellusten toiminnallisuuteen, vaativat, että sovellusten käyttäjillä on vastaava sovelluksen käyttöoikeus, jos he haluavat luoda, päivittää tai poistaa tietueita entiteettien sisältä. Katso lista rajoitetuista entiteeteistä kohdasta [Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia](data-platform-restricted-entities.md).
 
-## <a name="licensing-example"></a>Esimerkki käyttöoikeuksista
+## <a name="licensing-examples"></a>Esimerkkejä käyttöoikeuksista
 Paula ja Iisakki luovat sovelluksia PowerAppsissa ja käyttävät CDC for Appsia tietojen tallentamiseen.
 
 Paula luo kaksi pohjaan perustuvaa sovellusta:
@@ -87,5 +94,5 @@ Sovellusten käyttäjät tarvitsevat seuraavat käyttöoikeudet:
 
 Ainoa sovellus, johon tämä muutos vaikuttaa, on sovellus 1, joka vaati aikaisemmin PowerApps Plan 1 -käyttöoikeuden ja nyt vaatii PowerApps Plan 2 -käyttöoikeuden, koska se sisältää entiteetin, joka käyttää monitasoista liiketoimintalogiikkaa. 
 
-## <a name="licensing"></a>Käyttöoikeudet
+## <a name="more-about-licensing"></a>Lisätietoja käyttöoikeuksista
 Katso lisätietoja PowerAppsin ja Dynamics 365 -käyttöoikeuksista kohdasta [Käyttöoikeuksien yleiskuvaus](../../administrator/pricing-billing-skus.md).

@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
 ms.author: anneta
-ms.openlocfilehash: c47ddbbc2d50d05f1d4a913aaf7e9c743d5519e0
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 6175633b2fbec4e9949882c587916adb349290d4
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020649"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195446"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
 Tässä artikkelissa kerrotaan, miten luodaan perussovellus, joka analysoi tekstiä käyttämällä [Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API)](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview). Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda sovelluksen, joka kutsuu API:a.
@@ -71,7 +71,7 @@ Kun tekstianalysoinnin API on valmis ja toimii, voit luoda siihen yhteyden Power
 ### <a name="create-the-app-and-add-a-connection"></a>Luo sovellus ja lisää yhteys
 Ensin sinun täytyy luoda tyhjä puhelinsovellus ja lisätä yhteys **tekstianalyysiyhteyden** avulla. Jos tarvitset lisätietoja näistä tehtävistä, katso kohdat [Sovelluksen luominen alusta alkaen](get-started-create-from-blank.md) ja [Yhteyksien hallinta PowerAppsissa](add-manage-connections.md).
 
-1. Siirry osoitteeseen [web.powerapps.com](https://web.powerapps.com), valitse **Aloita tyhjästä** > ![Sovelluksen puhelinkuvake](./media/cognitive-services-api/icon-phone-app.png) (puhelin) > **Tee tämä sovellus**.
+1. Siirry osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), valitse **Aloita tyhjästä** > ![Sovelluksen puhelinkuvake](./media/cognitive-services-api/icon-phone-app.png) (puhelin) > **Tee tämä sovellus**.
 
     ![Aloita tyhjästä](./media/cognitive-services-api/start-from-blank.png)
 

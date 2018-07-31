@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/10/2018
 ms.author: anneta
-ms.openlocfilehash: 92153c1d7fc72f6905faf55817f7f785ffdaa1ce
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: d5603ffacc0246dcffd1c54ab63b4e404250a7d5
+ms.sourcegitcommit: fc235972d0d4661f55df7a71e2dcedafd42706b0
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016486"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202294"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Yleisiä PowerAppsin ongelmia ja ratkaisuja
 Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttäjät saattavat kohdata PowerAppsia käyttäessään. Tarvittaessa annetaan ratkaisuehdotuksia.
@@ -31,7 +31,7 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 1. **Mukautetun kuvan käyttäminen sovelluksen kuvakkeena**
 
-    PowerApps Studio for Windowsin versiossa 3.18043 mukautettuja kuvia ei voi käyttää sovellusten kuvakkeina. Voit kiertää tämän ongelman käyttämällä [PowerApps Studion verkkoversiota](https://web.powerapps.com) mukautetun kuvan lataamiseen. Voit vaihtoehtoisesti käyttää jotain Windowsin PowerApps Studioon sisältyvää kuvaketta ja mukauttaa sen taustaväriä.
+    PowerApps Studio for Windowsin versiossa 3.18043 mukautettuja kuvia ei voi käyttää sovellusten kuvakkeina. Voit kiertää tämän ongelman käyttämällä [PowerApps Studion verkkoversiota](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) mukautetun kuvan lataamiseen. Voit vaihtoehtoisesti käyttää jotain Windowsin PowerApps Studioon sisältyvää kuvaketta ja mukauttaa sen taustaväriä.
 
 1. **Näyttöjen kopioiminen ja liittäminen sovellusten välillä**
 
@@ -71,11 +71,15 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 6. **Sovelluksen suorittaminen Windows 8.1:ssä** 
 
-    Jos asennat [tämän päivityksen Windows 8.1:een](https://technet.microsoft.com/library/security/ms16-118), et voi suorittaa PowerApps Studiossa avaamiasi sovelluksia tässä käyttöjärjestelmässä. Voit kuitenkin edelleen suorittaa sovelluksia, jotka avaat [powerapps.com](https://web.powerapps.com)-sivulla tai käyttämällä PowerAppsin mobiiliversiota.
+    Jos asennat [tämän päivityksen Windows 8.1:een](https://technet.microsoft.com/library/security/ms16-118), et voi suorittaa PowerApps Studiossa avaamiasi sovelluksia tässä käyttöjärjestelmässä. Voit kuitenkin edelleen suorittaa sovelluksia, jotka avaat [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivulla tai käyttämällä PowerAppsin mobiiliversiota.
 
 7. **Välilyönneillä varustetut sarakenimet**
 
-    Jos käytät SharePoint-luetteloa tai Excel-taulukkoa, jonka sarakenimessä on välilyönti, PowerApps korvaa sen arvolla **”\_x0020\_”**. Esimerkiksi **”Sarakkeen Nimi”** SharePointissa tai Excelissä näkyy muodossa **”Sarakkeen_x0020_Nimi”** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+    Jos käytät SharePoint-luetteloa tai Excel-taulukkoa, jonka sarakenimessä on välilyönti, PowerApps korvaa sen arvolla **”\_x0020\_”**. Esimerkiksi SharePointissa tai Excelissä näkyvä **"Sarakkeen Nimi"** näkyy PowerAppsissa muodossa **"Sarakkeen_x0020_Nimi"**, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+
+8. <a name="out-of-memory"></a>**Selaimen muisti on loppumassa**
+
+    Jos muisti loppuu käytettäessä PowerApps-sovelluksia, harkitse Chromen, Edgen tai Internet Explorerin 64-bittisen version lataamista.
 
 ## <a name="older"></a>Vanhempi
 1. **Työnkulun muuttaminen jaetussa sovelluksessa**

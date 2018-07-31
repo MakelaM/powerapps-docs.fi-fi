@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 6145f321f3a9322433cdc32b779479871ab4dbf1
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: 4ee281e211891dab812c4ae447dff3d967ffeff3
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094767"
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195768"
 ---
 # <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Asenna ja määritä Help Desk PowerApps -malli
 
@@ -36,7 +36,7 @@ Tukipalvelu tarjoaa käyttäjäystävällisen tavan muodostaa yhteys loppukäytt
 
 ## <a name="prerequisites"></a>Edellytykset
 
-- [Rekisteröidy](https://web.powerapps.com/) PowerAppsiin.
+- [Rekisteröidy](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerAppsiin.
 - Kelvollinen SharePoint Online -käyttöoikeus ja luetteloiden luontioikeus tarvitaan.
 
 ## <a name="create-the-helpdesk-sharepoint-list"></a>Luo HelpDeskin SharePoint-luettelo
@@ -140,7 +140,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 ## <a name="create-connections"></a>Yhteyksien luominen
 
-1.  Siirry selaimella osoitteeseen https://web.powerapps.com.
+1.  Siirry selaimella osoitteeseen [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.  Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
 3.  Valitse vasemmasta valikosta **Tiedot** ja **Yhteydet**.
     
