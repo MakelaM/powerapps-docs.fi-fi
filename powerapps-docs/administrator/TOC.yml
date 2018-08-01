@@ -1,46 +1,30 @@
 - name: Hallitse PowerAppsia
-  href: index.md
-- name: Pika-aloitus
+  href: admin-guide.md
   items:
-    - name: Luo ympäristö
-      href: create-environment.md
-    - name: Luo DLP-käytäntö
-      href: create-dlp-policy.md
-    - name: Näytä vuokraajasi aktiiviset käyttäjät
-      href: admin-view-user-licenses.md
-    - name: Näytä sovellukset ympäristöissäsi
-      href: admin-view-apps.md
-- name: Käsitteet
-  items:
-    - name: Käyttöoikeuksien yleiskuvaus
-      href: pricing-billing-skus.md
-    - name: Ympäristöjen yleiskuvaus
-      href: environments-overview.md
-    - name: Tietoryhmiin tutustuminen
-      href: introduction-to-data-groups.md
-    - name: Alueiden yleiskuvaus
-      href: regions-overview.md
-- name: Toimintaohjeet
-  items:
-    - name: Osta PowerApps
-      href: signup-for-powerapps-admin.md
-    - name: Hallinnoi käyttöoikeuksia organisaatiossasi
-      href: signup-question-and-answer.md
-    - name: Hallinnoi DLP-käytäntöjä
-      href: prevent-data-loss.md
-    - name: Luo tietokanta
-      href: create-database.md
-    - name: Hallitse ympäristöjä
-      href: environments-administration.md
-    - name: Konfiguroi ympäristön turvallisuus
-      href: database-security.md
-    - name: Hallinnoi sovelluksia organisaatiossasi
-      href: admin-manage-apps.md
-    - name: Siirrä sovellus vuokraajien tai ympäristöjen välillä
-      href: environment-and-tenant-migration.md
-    - name: Tuo ja vie resursseja
-      href: export-import-packages.md
+    - name: Aloitus
+      items:
+        - name: Mikä tehtävä PowerAppsin järjestelmänvalvojalla on?
+          href: overview-role-powerapps-admin.md
+    - name: Käyttöoikeudet
+      items:
+        - name: Käyttöoikeuksien yleiskatsaus
+          href: pricing-billing-skus.md
+        - name: Hallinnoi käyttöoikeuksia organisaatiossasi
+          href: signup-question-and-answer.md
+        - name: Osta PowerApps
+          href: signup-for-powerapps-admin.md
+    - name: PowerAppsin hallinta
+      items:
+        - name: Näytä sovellukset ympäristöissäsi
+          href: admin-view-apps.md
+        - name: Hallinnoi sovelluksia organisaatiossasi
+          href: admin-manage-apps.md
+        - name: Siirrä sovellus vuokraajien tai ympäristöjen välillä
+          href: environment-and-tenant-migration.md
+        - name: PowerAppsin PowerShell-tuki (esiversio)
+          href: powerapps-powershell.md
     - name: DSR-pyyntöihin vastaaminen
+      href: powerapps-gdpr-dsr-guide-systemlogs.md
       items:
         - name: Järjestelmän luomat lokit
           href: powerapps-gdpr-dsr-guide-systemlogs.md
@@ -53,9 +37,27 @@
               href: powerapps-gdpr-delete-dsr.md
         - name: Apps-asiakastietojen CDS
           href: common-data-service-gdpr-dsr-guide.md
-        - name: CDS for Appsin tietojen integrointi
-          href: data-integration-gdpr-dsr-guide.md
-- name: Lisätietoja
-  items:
-    - name: PowerAppsin PowerShell-tuki (esiversio)
-      href: powerapps-powershell.md
+    - name: Hallitse ympäristöjä
+      href: environments-administration.md
+      items:
+        - name: Ympäristöjen yleiskatsaus
+          href: environments-overview.md
+        - name: Alueiden yleiskuvaus
+          href: regions-overview.md
+        - name: Ympäristön luominen
+          href: create-environment.md
+        - name: Luo tietokanta
+          href: create-database.md
+    - name: Konfiguroi ympäristön turvallisuus
+      href: database-security.md
+      items:
+        - name: Tietoryhmiin tutustuminen
+          href: introduction-to-data-groups.md
+        - name: DLP-käytännön luominen
+          href: create-dlp-policy.md
+        - name: Hallinnoi DLP-käytäntöjä
+          href: prevent-data-loss.md
+    - name: Tilauksien ja käyttäjätilien hallinta
+      items:
+        - name: Näytä vuokraajasi aktiiviset käyttäjät
+          href: admin-view-user-licenses.md
