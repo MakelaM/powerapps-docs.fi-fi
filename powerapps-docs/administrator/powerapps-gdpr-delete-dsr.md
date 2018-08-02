@@ -2,18 +2,18 @@
 title: Asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen | Microsoft Docs
 description: Ohjeet PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaamiseen.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 501c5468291041eafd2147c102484ab81cabbe37
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: 9cde5c7b2127359ab21a9e89aa83841d87cae49e
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218782"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349060"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-delete-powerapps-customer-data"></a>PowerApps-asiakastietojen poistamiseen liittyviin DSR-pyyntöihin vastaaminen
 
@@ -40,7 +40,7 @@ Mukautettujen yhdistimien käyttöoikeudet |
 
 Manuaalista tarkistusta edellyttäviä tietoja ja resursseja varten PowerApps tarjoaa seuraavat ominaisuudet, joiden avulla tietyn käyttäjän henkilökohtaiset tiedot voidaan (tarvittaessa) määrittää uudelleen tai poistaa:
 
-* Sivustot: [PowerApps-sivusto](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Sivustot: [PowerApps-sivusto](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShell: PowerApps-sovellusten cmdlet-komennot [sovelluskehittäjille](https://go.microsoft.com/fwlink/?linkid=871448) sekä [järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804) ja [paikallisten yhdyskäytävien](https://go.microsoft.com/fwlink/?linkid=872238) cmdlet-komennot.
 
@@ -62,7 +62,7 @@ Mukautettujen yhdistimien käyttöoikeudet | | Sovelluksen luoja: käytettäviss
 ## <a name="prerequisites"></a>Edellytykset
 
 ### <a name="for-users"></a>Käyttäjille
-Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
+Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps](https://web.powerapps.com) tai [sovelluksen luojien PowerShellin cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
 
 #### <a name="unmanaged-tenant"></a>Muu kuin hallittu vuokraaja
 Jos olet [muun kuin hallitun vuokraajan](https://docs.microsoft.com/azure/active-directory/domains-admin-takeover) jäsen, mikä tarkoittaa, ettei Azure AD -vuokraajallasi ei ole yleistä järjestelmänvalvojaa, pystyt edelleen poistamaan henkilökohtaiset tietosi tässä artikkelissa annettujen ohjeiden mukaisesti.  Kuitenkin koska vuokraajallasi ei ole yleistä järjestelmänvalvojaa, sinun on poistettava oma tilisi vuokraajasta alla olevan [Vaiheen 11: Poista käyttäjä Azure Active Directorysta](#step-11-delete-the-user-from-azure-active-directory) ohjeiden mukaisesti.
@@ -72,15 +72,15 @@ Voit selvittää, oletko muun kuin hallitun vuokraajan jäsen, toimimalla seuraa
 1. Avaa seuraava URL-osoite selaimessa ja muista korvata sähköpostiosoitteesi URL-osoitteessa: https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1
 
 2. Jos olet **muun kuin hallitun vuokraajan** jäsen, vastauksessa näkyy `"IsViral": true`.
-   ```
-   {
-   ...
-   "Login": "foobar@unmanagedcontoso.com",
-   "DomainName": "unmanagedcontoso.com",
-   "IsViral": true,
-   ...
-   }
-   ```
+```
+{
+  ...
+  "Login": "foobar@unmanagedcontoso.com",
+  "DomainName": "unmanagedcontoso.com",
+  "IsViral": true,
+  ...
+}
+```
 
 3. Muussa tapauksessa kuulut **hallittuun vuokraajaan**.
 
@@ -210,7 +210,7 @@ Get-AdminApp -Owner $deleteDsrUserId | Set-AdminAppOwner -AppOwner $newAppOwnerU
 ```
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-site"></a>Poista käyttäjän kangassovellus PowerApps-sivuston avulla
-Käyttäjä voi poistaa sovelluksen [PowerApps-sivustolta](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Täydelliset ohjeet sovelluksen poistamiseen näet Sovelluksen poistaminen -kohdassa.
+Käyttäjä voi poistaa sovelluksen [PowerApps-sivustolta](https://web.powerapps.com). Täydelliset ohjeet sovelluksen poistamiseen näet Sovelluksen poistaminen -kohdassa.
 
 ### <a name="delete-a-users-canvas-app-using-the-powerapps-admin-center"></a>Poista käyttäjän kangassovellus PowerApps-hallintakeskuksen avulla
 Järjestelmänvalvoja voi poistaa käyttäjän luomat sovellukset alkaen [PowerAppsin hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:

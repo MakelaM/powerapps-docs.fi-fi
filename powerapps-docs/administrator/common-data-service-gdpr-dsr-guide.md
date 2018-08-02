@@ -3,18 +3,18 @@ title: Common Data Service (CDS) for Appsin asiakastietoihin kohdistuviin DSR-py
 description: Ohjeet Common Data Service (CDS) for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaamiseen
 author: jamesol-msft
 ms.reviewer: paulliew
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: b550d5fe7e36c36177fff017adcf9d9034c93dd4
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: de7af5aa10f2f39057806c6ad170dc32e85c9f02
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218046"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349014"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen
 
@@ -52,7 +52,7 @@ Tässä artikkelissa käsitellään seuraavia toimintoja:
 
 CDS for Appsissa ja aiemmassa Common Data Service (CDS) -versiossa on erilliset prosessit henkilötietojen käsittelyyn.
 
-Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja suorittamalla seuraavat vaiheet:
+Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com) ja suorittamalla seuraavat vaiheet:
 
 1. Valitse ympäristösi avattavasta **Ympäristö**-luettelosta.
 2. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
@@ -102,8 +102,8 @@ Voit etsiä henkilötietoja CDS for Appsissa seuraavista resursseista:
 
 |Resurssi | Tarkoitus | Sivuston käyttö | Ohjelmallinen käyttö
 | --- | --- | --- | ---
-| Entiteettitietue | Tämä on järjestelmän käyttäjäentiteetti, johon käyttäjän henkilötietoja tallennetaan. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
-| Seurantahistoria | Tämän avulla asiakkaat voivat tunnistaa resursseja, joita käyttävät ovat luoneet, käyttäneet, muuttaneet tai poistaneet entiteettitasolla. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
+| Entiteettitietue | Tämä on järjestelmän käyttäjäentiteetti, johon käyttäjän henkilötietoja tallennetaan. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
+| Seurantahistoria | Tämän avulla asiakkaat voivat tunnistaa resursseja, joita käyttävät ovat luoneet, käyttäneet, muuttaneet tai poistaneet entiteettitasolla. | [PowerApps-hallintakeskus](https://admin.powerapps.com) | [Verkon ohjelmointirajapinnan](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/webapi/update-delete-entities-using-web-api#basic-update) kautta
 
 #### <a name="user"></a>Käyttäjä
 Käyttäjän henkilötiedot tallennetaan Azure Active Directoryyn ja ne synkronoidaan automaattisesti kaikkiin CDS for Apps -ympäristöihin. Järjestelmänvalvoja ei voi päivittää näitä henkilötietoja suoraan CDS for Appsissa, kun käyttäjä on aktiivinen&mdash;, vaan ne on päivitettävä Office 365 -hallintakeskuksessa. Järjestelmänvalvoja voi lisätä henkilötietoja (esimerkiksi mukautettuja määritteitä) suoraan CDS for Appsiin, mutta kyseisiä tietoja on hallittava manuaalisesti.
@@ -199,7 +199,7 @@ Tee seuraavat toiminnot [PowerApps-hallintakeskuksessa](https://admin.powerapps.
 
 3. Siirry kohtaan **Asetukset** > **Suojaus** > **Käyttäjät**, ja valitse sitten **Käytöstä poistetut käyttäjät -näkymä**.
 
-4. Luo ja lataa Excel-mallitiedosto käyttäjän henkilötiedoista. Vaiheittaiset ohjeet ovat artikkelissa [Uuden Excel-mallin luominen](https://docs.microsoft.com/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
+4. Luo ja lataa Excel-mallitiedosto käyttäjän henkilötiedoista. Vaiheittaiset ohjeet ovat artikkelissa [Uuden Excel-mallin luominen](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/analyze-your-data-with-excel-templates#create-a-new-excel-template).
 
 8. Avaa ladattu Excel-mallitiedosto, poista käyttäjän henkilötiedot ja tallenna sitten tiedosto.
 
@@ -308,7 +308,7 @@ Voit etsiä aiemman CDS-version käyttäjien henkilötietoja seuraavista resurss
 
 |Resurssi | Tarkoitus | Sivuston käyttö |  Ohjelmallinen käyttö
 | --- | --- | --- | ---
-|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) |    Ei
+|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com) |      Ei
 
 #### <a name="entity-records"></a>Entiteetin tietueet
 Yksityishenkilöiden henkilötietoja voidaan tallentaa mihin tahansa liiketoimintaentiteettiin.

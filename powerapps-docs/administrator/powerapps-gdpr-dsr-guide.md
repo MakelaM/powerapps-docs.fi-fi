@@ -2,18 +2,18 @@
 title: PowerApps-asiakastietoihin kohdistuvien Data Subject Rights (DSR) -pyyntöihin vastaaminen | Microsoft Docs
 description: Ohjeet PowerApps-asiakastietoihin liittyviin DSR-pyyntöihin vastaamiseen
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 5bc3951f767677c2b8b35166d16c089259eec1ce
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: ae73d5df51b2656fc4f33e7258078140a180926d
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218667"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349198"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-powerapps-customer-data"></a>PowerApps-asiakastietojen rekisteröityjen tietopyyntöihin vastaaminen
 
@@ -68,7 +68,7 @@ Mallipohjaiset sovellukset ja mallipohjaisten sovellusten käyttöoikeudet  | Ma
 
 PowerApps tarjoaa seuraavat tavat etsiä tietyn käyttäjän henkilötietoja:
 
-- **Sivustot**: [PowerApps site](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps Admin center](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+- **Sivustot**: [PowerApps site](https://web.powerapps.com), [PowerApps Admin center](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 - **PowerShell**: PowerApps-sovellusten cmdlet-komennot ([sovelluskehittäjille](https://go.microsoft.com/fwlink/?linkid=871448) sekä [järjestelmänvalvojille](https://go.microsoft.com/fwlink/?linkid=871804)) ja [paikallisten yhdyskäytävien cmdlet-komennot.](https://go.microsoft.com/fwlink/?linkid=872238)
 
 Jos haluat tarkemmat ohjeet siihen, miten voit etsiä tietyn käyttäjän henkilötietoja kustakin mainituista resurssityypeistä yllä mainituilla tavoilla, lue ohjeartikkeli [Vastaaminen DSR-pyyntöihin viedä asiakastietoja PowerApps-sovelluksista](powerapps-gdpr-export-dsr.md).

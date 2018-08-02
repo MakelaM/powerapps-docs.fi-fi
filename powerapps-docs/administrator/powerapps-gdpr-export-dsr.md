@@ -2,23 +2,23 @@
 title: PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaaminen | Microsoft Docs
 description: Ohjeet PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaamiseen.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 417b44cd992a6ff00cb9a8d17443338825e31d9f
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: cea8cf64a27e8468e9256df4e2e1239c32950df3
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218805"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349474"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-to-export-powerapps-customer-data"></a>PowerApps-asiakastietojen vientiin liittyviin DSR-pyyntöihin vastaaminen
 Oikeus tietojen siirtämiseen antaa rekisteröidylle oikeuden pyytää kopiota henkilötiedoistaan sähköisessä muodossa (yleensä tämä on jäsennelty, yleisesti käytetty, koneluettava ja yhteentoimiva muoto), jossa tiedot voidaan siirtää toiselle rekisterinpitäjälle:
 
-* Sivustot: [PowerApps-portaali](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
+* Sivustot: [PowerApps-portaali](https://web.powerapps.com), [PowerApps-hallintakeskus](https://admin.powerapps.com/) ja [Office 365 Service Trust Portal](https://servicetrust.microsoft.com/)
 
 * PowerShellin käyttö: PowerApps [Sovelluksen luojan cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871448), [Järjestelmänvalvojan cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=871804) ja [Paikalliset yhdyskäytävän cmdlet-komennot](https://go.microsoft.com/fwlink/?linkid=872238)
 
@@ -39,13 +39,13 @@ Yhteyksien oikeudet  | | Sovelluksen luoja: käytettävissä <br> Järjestelmän
 PowerAppsin käyttäjäasetukset, käyttäjäsovelluksen asetukset ja ilmoitukset | | Sovelluksen luoja: käytettävissä <br> Järjestelmänvalvoja: käytettävissä
 
 > ** Kun Common Data Service (CDS) for Apps on käytössä ja tietokanta luodaan ympäristöön, ympäristön käyttöoikeudet ja mallipohjaisten sovellusten käyttöoikeudet tallennetaan tietueina CDS for Apps -tietokannan esiintymään. Saat lisätietoja CDC for Appsia käyttävien käyttäjien DSR-pyyntöihin vastaamisesta ohjeartikkelista [DSR:ien suorittaminen CDC for Appsin asiakastiedoille](common-data-service-gdpr-dsr-guide.md).
-> 
-> *** Järjestelmänvalvoja voi käyttää näitä resursseja [PowerApps-portaalista](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) vain, jos resurssin omistaja on myöntänyt eksplisiittisesti hänelle käyttöoikeuden. Jos näin ei ole, järjestelmänvalvojan on hyödynnettävä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804).
+
+> *** Järjestelmänvalvoja voi käyttää näitä resursseja [PowerApps-portaalista](https://web.powerapps.com) vain, jos resurssin omistaja on myöntänyt eksplisiittisesti hänelle käyttöoikeuden. Jos näin ei ole, järjestelmänvalvojan on hyödynnettävä [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871804).
 
 ## <a name="prerequisites"></a>Edellytykset
 
 ### <a name="for-users"></a>Käyttäjille
-Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps-portaalia](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai [sovelluksen luojien cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
+Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa tässä asiakirjassa kuvattuja toimenpiteitä käyttämällä [PowerApps-portaalia](https://web.powerapps.com) tai [sovelluksen luojien cmdlet-komentoja](https://go.microsoft.com/fwlink/?linkid=871448).
 
 ### <a name="for-admins"></a>Järjestelmänvalvojille
 Tässä asiakirjassa mainittujen hallintatoimintojen suorittaminen PowerAppsin hallintakeskuksen, Microsoft Flow -hallintakeskuksen tai [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) avulla edellyttää seuraavia käyttöoikeuksia:
@@ -126,7 +126,7 @@ Kun Sovellusten CDS on käytössä, jos tietokanta luodaan ympäristöön, rooli
 ## <a name="step-3-export-personal-data-contained-within-canvas-apps-created-by-the-user"></a>Vaihe 3: vie käyttäjän luomiin kaaviosovelluksiin sisältyvät henkilötiedot
 
 ### <a name="powerapps-portal"></a>PowerApps-portaali
-Käyttäjä voi viedä sovelluksen [PowerApps-portaalista](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
+Käyttäjä voi viedä sovelluksen [PowerApps-portaalista](https://web.powerapps.com). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
 
 ### <a name="powerapps-admin-center"></a>PowerApps-hallintakeskus
 Järjestelmänvalvoja voi viedä käyttäjän luomat sovellukset [PowerApps-hallintakeskuksesta](https://admin.powerapps.com/) seuraavasti:
@@ -147,7 +147,7 @@ Järjestelmänvalvoja voi viedä käyttäjän luomat sovellukset [PowerApps-hall
 
     ![Anna käyttäjälle käyttöoikeus](./media/powerapps-gdpr-export-dsr/grant-access.png)
 
-5. Kun sinulla on käyttöoikeus jokaiseen käyttäjän sovellukseen, voit viedä sovelluksen [PowerApps-portaalista](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
+5. Kun sinulla on käyttöoikeus jokaiseen käyttäjän sovellukseen, voit viedä sovelluksen [PowerApps-portaalista](https://web.powerapps.com). Katso vaiheittaiset ohjeet sovelluksen viemiseen kohdasta [Sovelluksen vieminen](environment-and-tenant-migration.md#exporting-an-app).
 
 ### <a name="powershell-cmdlets-for-admins"></a>Järjestelmänvalvojien PowerShellin cmdlet-komennot
 Järjestelmänvalvojat voivat viedä käyttäjän luomat sovellukset [PowerAppsin järjestelmänvalvojan PowerShell-cmdlet-komentojen](https://go.microsoft.com/fwlink/?linkid=871804) **Get-AdminApp**-funktiolla:
@@ -274,7 +274,7 @@ Get-AdminConnectorRoleAssignment -PrincipalObjectId $userId | ConvertTo-Json | O
 ~~~~
  
 ## <a name="step-9-export-powerapps-notifications-user-settings-and-user-app-settings"></a>Vaihe 9: vie PowerAppsin ilmoitukset, käyttäjäasetukset ja käyttäjäsovelluksen asetukset
-PowerApps lähettää käyttäjille useita erilaisia ilmoituksia, esimerkiksi siitä, kun sovellus jaetaan heidän kanssaan tai kun Sovellusten CDS -vientitoiminto on suoritettu. Käyttäjän ilmoitushistoria näkyy hänelle [PowerApps-portaalissa](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+PowerApps lähettää käyttäjille useita erilaisia ilmoituksia, esimerkiksi siitä, kun sovellus jaetaan heidän kanssaan tai kun Sovellusten CDS -vientitoiminto on suoritettu. Käyttäjän ilmoitushistoria näkyy hänelle [PowerApps-portaalissa](https://web.powerapps.com).
 
 PowerApps tallentaa myös useita eri käyttäjäasetuksia ja asetuksia, joiden avulla tarjotaan PowerAppsin suorituspalvelun ja portaalin käyttökokemus, mukaan lukien tiedot siitä, milloin käyttäjä viimeksi avasi sovelluksen, kiinnitti sovelluksen jne.
 
@@ -298,9 +298,9 @@ Get-AdminPowerAppsUserDetails -WriteToFile -OutputFilePath "UserDetails.json" -U
 ## <a name="step-10-export-personal-data-contained-for-a-user-stored-gateway-or-in-the-users-gateway-permissions"></a>Vaihe 10: vie käyttäjän tallentaman yhdyskäytävän tai käyttäjän yhdyskäytävän oikeuksiin sisältyvät henkilötiedot
 
 ### <a name="powerapps-portal"></a>PowerApps-portaali
-Käyttäjät voivat viedä yhdyskäytäväpalveluun tallennetut henkilötiedot [PowerApps-portaalista](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) seuraavasti:
+Käyttäjät voivat viedä yhdyskäytäväpalveluun tallennetut henkilötiedot [PowerApps-portaalista](https://web.powerapps.com) seuraavasti:
 
-1. Valitse [PowerApps-portaalissa](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) vuokraajasi oletusympäristössä **Yhdyskäytävät** ja sitten **Tiedot** kaikkien niiden yhdyskäytävien kohdalla, joihin sinulla on käyttöoikeus.
+1. Valitse [PowerApps-portaalissa](https://web.powerapps.com) vuokraajasi oletusympäristössä **Yhdyskäytävät** ja sitten **Tiedot** kaikkien niiden yhdyskäytävien kohdalla, joihin sinulla on käyttöoikeus.
 
     ![Yhdyskäytävän saapumissivu](./media/powerapps-gdpr-export-dsr/gateway-select-details.png)
 

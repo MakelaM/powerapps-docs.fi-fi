@@ -2,18 +2,18 @@
 title: Ympäristöjen hallinta | Microsoft Docs
 description: Lue lisätietoja ympäristöjen hallinnasta PowerAppsissa, mukaan lukien luominen, nimeäminen uudelleen, poistaminen ja suojaus
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 07/30/2018
 ms.author: manasma
-ms.openlocfilehash: 7fb35c1c59062b892fdd8e3a905d3ee485f6cf61
-ms.sourcegitcommit: 26932abc6fcdc5e6723b64b506532bb182ab3f8d
+ms.openlocfilehash: 02b25dd627e85b638a113c1c0aceee16d7df6275
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37026230"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349083"
 ---
 # <a name="administer-environments-in-powerapps"></a>Ympäristöjen hallinta PowerAppsissa
 [PowerApps-hallintakeskuksessa][1] voit hallita ympäristöjä, jotka olet luonut tai joissa olet ympäristön järjestelmänvalvojan ja järjestelmänvalvojan roolissa. Hallintakeskuksessa voit tehdä seuraavia toimintoja:
@@ -25,6 +25,8 @@ ms.locfileid: "37026230"
 * tietojen menetyksen estämiskäytäntöjen määrittäminen
 * tietokannan suojauskäytäntöjen määrittäminen (avoin tai tietokantarooleilla rajoitettu)
 * Azure AD -vuokraajat, joilla on yleinen järjestelmänvalvoja -rooli (myös yleinen Office 365 -järjestelmänvalvojan rooli), voivat myös hallita kaikkia ympäristöjä, jotka on luotu heidän vuokraajakäytännöissään ja määritetyissä vuokraajan laajuisissa käytännöissä.
+
+Lisätietoja on kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
 
 ## <a name="access-the-powerapps-admin-center"></a>PowerApps-hallintakeskuksen käyttäminen
 Pääset PowerApps-hallintakeskukseen näin:
@@ -47,7 +49,7 @@ Hallintakeskukseen pääsemiseen tarvitaan myös joko PowerAppsin palvelupaketti
 > Kaikki PowerApps-hallintakeskuksessa tehdyt muutokset vaikuttavat [Microsoft Flow -hallintakeskukseen][4] ja päinvastoin.
 
 ## <a name="create-an-environment"></a>Ympäristön luominen
-Ympäristön luomisen ohjeet ovat kohdassa [Pikaopas: ympäristön luominen](create-environment.md).
+Katso ympäristön luomista koskevat ohjeet [Ympäristön luominen](create-environment.md) -osiossa.
 
 ## <a name="view-your-environments"></a>Ympäristöjen tarkasteleminen
 Kun avaat hallintakeskuksen, oletusarvoisesti näkyviin tulee Ympäristöt-välilehti. Välilehdessä on lueteltu kaikki ympäristöt, joiden ympäristön järjestelmänvalvoja olet (kuten alla):
@@ -57,10 +59,6 @@ Kun avaat hallintakeskuksen, oletusarvoisesti näkyviin tulee Ympäristöt-väli
 Jos sinulla on Azure AD- tai Office 365 -vuokraajan yleinen järjestelmänvalvoja -rooli, näet kaikkien vuokraajan käyttäjien luomat ympäristöt, koska olet automaattisesti niiden kaikkien ympäristön järjestelmänvalvoja.
 
 ## <a name="rename-your-environment"></a>Ympäristön nimeäminen uudelleen
-
-> [!IMPORTANT]
-> Tämän osan ohjeiden avulla voit uudelleennimetä tuotantoympäristön, joka ei sisällä tietokantaa. Et voi uudelleennimetä kokeiluympäristöjä, ja sinun on uudelleennimettävä tietokannan sisältävät tuotantoympäristöt Dynamics 365 -hallintakeskuksessa.
-
 1. Avaa [PowerApps-hallintakeskus][1] ja valitse luettelosta ympäristö, jonka nimen haluat muuttaa.
 
     ![](./media/environment-admin/environment-list-updated3.png)
@@ -195,6 +193,10 @@ Voit saada virhesanoman tietokannan luomisen yhteydessä seuraavissa skenaariois
 1. **Oletusympäristö**: vuokraajan oletusympäristö ei tällä hetkellä tue tietokannan luomista. 
 
 2. **Henkilökohtaiseen käyttöön tarkoitettu ympäristö:** saat omaan käyttöön tarkoitetun ympäristön, kun rekisteröidyt PowerAppsin yhteisön palvelupaketissa. Jos et ole vielä luonut tietokantaa, et voi tällä hetkellä valmistella tietokantaa henkilökohtaiseen käyttöön tarkoitetussa ympäristössä. 
+
+3. **Ympäristö on Azure Active Directory -vuokraajan kotialueesta poikkeavalla alueella**: tällä hetkellä voit valmistella tietokannan vain Azure Active Directory -vuokraajan kotialueella luoduissa ympäristöissä. Mahdollisuus valmistella tietokanta muilla alueilla on tulossa pian. Joten muista pitää alue vuokraajan oletussijainnin kanssa samana, jos haluat luoda tietokannan vuokraajan ympäristössä.
+
+4. **Tietokantojen luomista ei tueta tietyillä alueilla**: On tiettyjä alueita, joilla tietokannan luominen ei ole käytettävissä. Esimerkiksi Etelä-Amerikan maat. Joten jos vuokraajan kotisijainti on Etelä-Amerikka, et voi tällä hetkellä valmistella tietokantaa missään ympäristössä. 
     
 Pyrimme siihen, että tietokantoja voisi luoda kaikissa edellä mainituissa skenaarioissa.
 Jos saat muita virhesanomia tai sinulla on kysyttävää, ota meihin yhteyttä [täällä][5].
@@ -222,4 +224,4 @@ Kyllä, mahdollisuus tarkastella ympäristön sovelluksia ja työnkulkuja on kä
 [2]: https://web.powerapps.com
 [3]: https://powerapps.microsoft.com/pricing/
 [4]: https://admin.flow.microsoft.com
-[5]: https://go.microsoft.com/fwlink/?linkid=871628
+[5]: https://go.microsoft.com/fwlink/p/?linkid=871628

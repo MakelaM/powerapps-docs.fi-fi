@@ -2,18 +2,18 @@
 title: Käyttöoikeuksien hallinta organisaatiossa | Microsoft Docs
 description: Yleisiä kysymyksiä ja vastauksia lisensseistä, hallinnasta ja käyttäjien rekisteröitymisestä PowerAppsiin Office 365 -vuokraajassasi
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: jamesol
-ms.openlocfilehash: 8a734ef57a3820e38d52ad2bd87a2ab8979c0348
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 1f46541fcfe485bf497a59d25432ac1dec8d7b3e
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168040"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349773"
 ---
 # <a name="manage-powerapps-licenses-in-your-organization"></a>PowerApps-käyttöoikeuksien hallinta organisaatiossasi
 Tässä artikkelissa kuvataan, miten organisaatiosi käyttäjät voivat saada PowerAppsin käyttöoikeuden ja miten voit hallita pääsyä PowerApps-palveluun.

@@ -2,18 +2,18 @@
 title: Yleiskatsaus käyttöoikeuksiin | Microsoft Docs
 description: Yleiskatsaus käyttöoikeuksiin PowerAppsissa.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: jamesol
-ms.openlocfilehash: 03aa8fc5254529a337f7bbdf40428ab4a1042a92
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 475b1f9b1aace4dc9632379e8a4e3522a90f42b2
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168109"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349037"
 ---
 # <a name="licensing-overview"></a>Käyttöoikeuksien yleiskatsaus
 PowerAppsin käyttöoikeudet myönnetään käyttäjäkohtaisesti. Jokainen käyttäjä, joka luo tai suorittaa sovelluksia palvelun avulla, tarvitsee käyttöoikeuden. Office 365- ja Dynamics 365 -asiakkaat hyötyvät heti PowerApps- ja Microsoft Flow -ominaisuuksista, jotka sisältyvät näihin palveluihin. Asiakkaat, jotka haluavat kehittää sovelluksia ja työnkulkuja, jotka käyttävät Office 365:n ja Dynamics 365:n ulkopuolisia tietolähteitä tai tarvitsevat lisätoimintoja, voivat ostaa erilliset PowerApps- ja Microsoft Flow -tilaukset. Näiden eri käyttöoikeusryhmien välillä on merkittäviä eroja.

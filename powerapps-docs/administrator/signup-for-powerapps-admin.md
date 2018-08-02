@@ -2,18 +2,18 @@
 title: PowerAppsin ostaminen organisaatiollesi | Microsoft Docs
 description: Ohjeet PowerAppsiin rekisteröitymiseen järjestelmänvalvojana.
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 4b26c16259a7699f1178641ead8c1b5908106468
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: bfba09ace77fb0ab62a4c5b4cb6a01e040f07d2f
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168500"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349428"
 ---
 # <a name="purchase-powerapps-for-your-organization"></a>PowerAppsin ostaminen organisaatiollesi
 Tässä artikkelissa kerrotaan, miten voit ostaa PowerAppsin organisaatiollesi järjestelmänvalvojana. Voit ostaa PowerAppsin suoraan PowerApps-sivustolta Office 365 -hallintakeskuksen kautta tai Microsoft-edustajaltasi tai -kumppaniltasi. Tässä artikkelissa käsitellään PowerAppsin kokeiluvaihtoehtoja, joita on saatavilla PowerAppsin palvelupakettia 1 tai palvelupakettia 2 varten, sekä kerrotaan, miten PowerAppsin palvelupaketin 1 tai palvelupaketin 2 voi ostaa organisaationa. Lisätietoja on kohdassa [PowerApps organisaatiossasi, kysymyksiä ja vastauksia](signup-question-and-answer.md).

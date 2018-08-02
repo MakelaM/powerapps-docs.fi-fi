@@ -2,18 +2,18 @@
 title: Konfiguroi ympäristön turvallisuus | Microsoft Docs
 description: Tässä aiheessa kerrotaan, miten ympäristön tietoturva määritetään.
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 620152a684e5bf0399bd938172f328892b137325
-ms.sourcegitcommit: 44ecb3ace4c865bc592dfb7f0b5fffa289d3b035
+ms.openlocfilehash: af7c4bd051d7fd822b74b43bec6e8110df24a450
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306116"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349497"
 ---
 # <a name="configure-environment-security"></a>Konfiguroi ympäristön turvallisuus
 Common Data Service (CDS) for Apps käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
@@ -60,7 +60,7 @@ PowerApps-ympäristö sisältää ennalta määritettyjä käyttöoikeusrooleja,
 |Järjestelmänvalvoja     |  Luominen, lukeminen, kirjoittaminen, poistaminen, mukautukset, käyttöoikeusroolit       | Täydet ympäristön mukauttamis- ja hallintaoikeudet, mukaan lukien käyttöoikeusroolien luominen, muokkaaminen ja määrittäminen. Pystyy tarkastelemaan kaikkia ympäristössä olevia tietoja. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Järjestelmämukauttaja     | Luominen (itse), lukeminen (itse), kirjoittaminen (itse), poistaminen (itse), mukautukset         | Täydet oikeudet ympäristön mukauttamiseen. Voi kuitenkin tarkastella vain itse luotujen ympäristöentiteettien tietueita. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Ympäristön tekijä     |  Ei mitään       | Voi luoda ympäristöön liittyviä uusia resursseja, kuten sovelluksia, yhteyksiä, mukautettuja ohjelmointirajapintoja, yhdyskäytäviä ja työnkulkuja Microsoft Flow -palvelun avulla. Ei kuitenkaan omista mitään oikeuksia ympäristössä olevien tietojen käyttöön. Lisätietoja: [Ympäristöjen yleiskuvaus](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|Common Data Servicen käyttäjä     |  Lukeminen, luominen (itse), kirjoittaminen (itse), poistaminen (itse)       | Voi suorittaa sovelluksen ympäristössä ja suorittaa tavallisia tehtäviä, kuten lue kaikki [sovellus ja Crm Common -entiteetit](https://github.com/Microsoft/CDM/tree/master/schemaDocuments#click-this-image-to-explore-the-cdm-entities-using-the-entity-navigator), paitsi luoda, kirjoittaa ja poistaa omistettuja tietueita näistä entiteeteistä (luukunottamatta tili, yhteystieto ja yhteys -entiteettejä, joissa voidaan kirjoittaa kaikkiin tietueisiin riippumatta siitä, kuka ne omistaa).          |
+|Common Data Servicen käyttäjä     |  Lukeminen, luominen (itse), kirjoittaminen (itse), poistaminen (itse)       | Voi suorittaa sovelluksen ympäristössä ja suorittaa yleisiä tehtäviä omille tietueilleen.        |
 |Edustaja     | Toisen käyttäjän puolesta toimiminen        | Mahdollistaa koodin suorittamisen toisena käyttäjänä tai toiseksi käyttäjäksi tekeytyneenä.  Käytetään yleensä toisen käyttöoikeusroolin yhteydessä, jotta tietueita voidaan käyttää. Lisätietoja: [Toiseksi käyttäjäksi tekeytyminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Oikeuden vaikutusalue on yleinen, ellei toisin määritetä.
@@ -107,6 +107,7 @@ Lisätietoja käyttöoikeuksista ja oikeuksien laajuudesta on kohdassa [Käyttö
 9. Määritä oikeudet **lukemiseen, kirjoittamiseen, lisäämiseen**
 
 10. Valitse **Tallenna ja sulje**.
+
 
 
 <!--Reference links in article-->

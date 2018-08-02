@@ -2,18 +2,18 @@
 title: Tietoryhmät | Microsoft Docs
 description: Ohjeet tietoryhmien käyttämiseen PowerAppsissa.
 author: manasmams
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 8899a77d73f67a1b437a60218b3536d2989d5b8c
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 6a6217c0a344d0501c8a856b0632397044ceb465
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34168316"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349635"
 ---
 # <a name="data-groups"></a>Tietoryhmät
 Tietoryhmät ovat yksinkertainen tapa luokitella palveluita [tietojen menetyksen estämisen (DLP) käytännössä](prevent-data-loss.md). Kaksi käytettävissä olevaa tietoryhmää ovat **vain yritystiedot** -ryhmä ja **yritystietoja ei sallita** -ryhmä. Organisaatiot voivat määrittää vapaasti, mitkä palvelut asetetaan tiettyyn tietoryhmään. Palveluita on hyvä luokitella määrittämällä ne ryhmiin sen perusteella, mikä niiden vaikutus organisaatioon on. Kaikki palvelut asetetaan oletusarvoisesti tietoryhmään **yritystietoja ei sallita**. Voit hallita tietoryhmän palveluita, kun luot tai muokkaat DLP-käytännön ominaisuuksia hallintakeskuksessa.

@@ -2,18 +2,18 @@
 title: Järjestelmän luomia lokeja koskeviin DSR-pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service (CDS) for Apps -palveluissa  | Microsoft Docs
 description: Ohjeet järjestelmän luomia lokeja koskeviin DSR-pyyntöihin vastaamiseen PowerApps-, Microsoft Flow- ja Common Data Service (CDS) for Apps -palveluissa
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 18bba11ce747b1e04be6013bf41419c34232865a
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 0511022621d891a6e45b27f1440e614df8b105a0
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37897244"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349129"
 ---
 # <a name="responding-to-dsr-requests-for-system-generated-logs-in-powerapps-microsoft-flow-and-common-data-service-for-apps"></a>Järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service for Apps -palveluissa
 Microsoft tarjoaa mahdollisuuden käyttää, viedä ja poistaa järjestelmän luomia lokeja, jotka voidaan luokitella henkilötiedoiksi Euroopan Unionin (EU) yleisen tietosuoja-asetuksen (GDPR) *henkilötietojen* laajan määritelmän mukaisesti. Esimerkkejä järjestelmän luomista lokeista, jotka voidaan luokitella henkilötiedoiksi yleisen tietosuoja-asetuksen mukaisesti:
@@ -106,7 +106,7 @@ Voit selvittää, oletko hallitun vai muun vuokraajan käyttäjä, suorittamalla
 1. Avaa seuraava URL-osoite selaimessa ja muista korvata sähköpostiosoitteesi URL-osoitteessa:[ https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1 ](https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1).
 
 2. Jos olet **muun kuin hallitun vuokraajan** jäsen, vastauksessa näkyy `"IsViral": true`.
-   ```
+  ```
       {
       ...
       "Login": "foobar@unmanagedcontoso.com",
@@ -114,6 +114,6 @@ Voit selvittää, oletko hallitun vai muun vuokraajan käyttäjä, suorittamalla
       "IsViral": **true**,
       ...
       }
-   ```
+  ```
 
 3. Muussa tapauksessa kuulut hallittuun vuokraajaan.
