@@ -1,6 +1,6 @@
 ---
-title: Vieritysnäytön lisääminen | Microsoft Docs
-description: Luo näyttö, jota käyttäjät voivat vierittää näyttääkseen enemmän sisältötyyppejä kuin mitä näytölle kerralla mahtuu.
+title: Vieritysnäytön lisääminen pohjaan perustuvaan sovellukseen | Microsoft Docs
+description: Luo PowerAppsissa näyttö, jota käyttäjät voivat vierittää näyttääkseen enemmän sisältötyyppejä kuin mitä näytölle kerralla mahtuu pohjaan perustuvassa sovelluksessa.
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,24 +9,27 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: lonu
-ms.openlocfilehash: 4a8b92e012f9669f2b445ef864d3360ef42fbc01
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 742710a3814c87d9888e70cb50c635dddab904d1
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015980"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471255"
 ---
-# <a name="add-a-scrolling-screen-in-powerapps"></a>Vieritysnäytön lisääminen PowerAppsissa
-Luo näyttö, jossa käyttäjät voivat näyttää eri kohteita vierittämällä sitä. Voit esimerkiksi luoda sovelluksen, joka näyttää tiedot sekä pylväskaaviossa että viivakaaviossa. Lisäämällä vieritysnäytön voit lisätä useita ohjausobjekteja, jotka käyttäjä voi näyttää vierittämällä ruutua.
+# <a name="add-a-scrolling-screen-to-a-canvas-app-in-powerapps"></a>Vieritysnäytön lisääminen pohjaan perustuvaan sovellukseen PowerAppsissa
+
+Luo pohjaan perustuvassa sovelluksessa näyttö, jossa käyttäjät voivat näyttää eri kohteita vierittämällä sitä. Voit esimerkiksi luoda puhelinsovelluksen, joka näyttää tietoja useissa kaavioissa, jotka käyttäjät saavat näkyviin vierittämällä.
 
 Kun lisäät osaan useita ohjausobjekteja, ohjausobjektit säilyttävät suhteellisen sijaintinsa kyseisessä osassa riippumatta siitä, onko kyseessä puhelinsovellus vai tablettisovellus. Huomaa, että näytön koko ja suunta saattavat määrittää osien asettelun.  
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## <a name="create-a-scrolling-screen"></a>Vieritysnäytön luominen
+
 1. Napsauta tai napauta **Aloitus**-välilehdestä **Uusi näyttö**:
-   
+
     ![Asetus, jolla sovellukseen lisätään näyttö][1]
+
 2. Valitse **Aloitus**-välilehti, napsauta tai napauta **Asettelut** ja valitse sitten loputtoman vierityspohjan lisäysvaihtoehto:  
    
     ![Asetus, jolla sovellukseen lisätään loputon vierityspohja][2]
