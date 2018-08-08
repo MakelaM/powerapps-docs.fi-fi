@@ -1,6 +1,6 @@
 ---
-title: Kaavioiden luominen | Microsoft Docs
-description: Tietoluokkien näyttäminen viiva-, ympyrä- tai palkkikaavioina
+title: Kaavion luominen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Tietoluokkien näyttäminen PowerAppsissa viiva-, ympyrä- tai palkkikaavioina pohjaan perustuvassa sovelluksessa
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/23/2016
 ms.author: lonu
-ms.openlocfilehash: 5fecc52a5100f2ed0d045fd0ebdc3834f83d5b39
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 63244a05d81f807609c965892f6a84e30577b490
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195906"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471140"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Tietojen näyttäminen viiva-, ympyrä- tai palkkikaavioina PowerAppsissa
-Käytä viiva-, ympyrä- ja palkkikaavioita tietojesi näyttämiseen. Kun käsittelet kaavioita, tuomiesi tietojen jäsentelyn tulee olla seuraavanlainen:
+
+Käytä viiva-, ympyrä- ja palkkikaavioita tietojesi näyttämiseen pohjaan perustuvassa sovelluksessa. Kun käsittelet kaavioita, tuomiesi tietojen jäsentelyn tulee perustua seuraaviin ehtoihin:
 
 * Jokaisen sarjan tulee olla ensimmäisellä rivillä.
 * Otsikkojen tulee olla vasemmanpuoleisimmassa sarakkeessa.
@@ -29,6 +30,7 @@ Tietojesi tulee näyttää esimerkiksi seuraavan kaltaisilta:
 Voit luoda ja käyttää näitä kaavioita PowerAppsissa. Aloitetaan.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 * [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 * Luo sovellus [mallista](get-started-test-drive.md), [tiedoista](get-started-create-from-data.md) tai itse [alusta alkaen](get-started-create-from-blank.md).
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.

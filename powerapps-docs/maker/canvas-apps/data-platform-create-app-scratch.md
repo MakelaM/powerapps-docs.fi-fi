@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla | Microsoft Docs
-description: Sovelluksen luominen tietueiden lisäämistä, päivitystä ja poistamista varten.
+title: Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla | Microsoft Docs
+description: Luo PowerAppsissa pohjaan perustuva sovellus, jotta voit lisätä, päivittää ja poistaa tietueita Common Data Service for Apps -palvelussa.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: b7506ff3380855c6e3c51b22918366dde9c8549c
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: df2ed422cdfbaf8689dae7c8f3e6b54eba093b74
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195124"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471347"
 ---
-# <a name="create-an-app-from-scratch-using-common-data-service-for-apps"></a>Sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla
+# <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla
 
-Voit rakentaa sovelluksen, jolla hallitaan Common Data Service for Apps -tietokannassa säilytettäviä tietoja käyttämällä (sisäänrakennettuja) vakioentiteettejä, (organisaatiosi luomia) mukautettuja entiteettejä tai kumpiakin.
+Voit rakentaa pohjaan perustuvan sovelluksen, jolla hallitaan Common Data Service for Apps -tietokannassa säilytettäviä tietoja käyttämällä (sisäänrakennettuja) standardientiteettejä, (organisaatiosi luomia) mukautettuja entiteettejä tai kumpiakin.
 
 Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yhteyttä PowerAppsista, kuten on tarpeen tietolähteille SharePoint, Dynamics 365 ja Salesforce. Sinun tarvitsee vain määrittää sovellukselle entiteetit, joita haluat näyttää, hallita tai käyttää kummallekin toiminnalle.
 

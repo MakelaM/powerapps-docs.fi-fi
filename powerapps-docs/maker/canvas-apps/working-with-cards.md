@@ -1,6 +1,6 @@
 ---
 title: Tutustu tietokortteihin | Microsoft Docs
-description: Lomakkeen korttien avulla voit kerätä ja näyttää tietoja tietolähteestä.
+description: Lomakkeen korttien avulla voit kerätä ja näyttää tietoja tietolähteestä PowerAppsissa.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,23 +9,25 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 81e0213caee1d4eed466edebe3d13cbfa1c3e7e2
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a229f77ea569c56e18fd955a66ce48a5e02f84a9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020764"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470933"
 ---
-# <a name="understand-data-cards"></a>Tutustu tietokortteihin
-**[Kortti](controls/control-card.md)**-ohjausobjektit ovat **[Muokkaa lomaketta](controls/control-form-detail.md)**- ja **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjektien rakenneosia. Lomake edustaa koko tietuetta ja jokainen kortti kyseisen tietueen yksittäistä kenttää.
+# <a name="understand-data-cards-in-powerapps"></a>Tietokorttien ymmärtäminen PowerAppsissa
+
+**[Kortti](controls/control-card.md)**-ohjausobjektit ovat **[Muokkaa lomaketta](controls/control-form-detail.md)**- ja **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjektien rakenneosia pohjaan perustuvissa sovelluksissa. Lomake edustaa koko tietuetta ja jokainen kortti kyseisen tietueen yksittäistä kenttää.
 
 Kortteja on kätevintä käsitellä oikeanpuoleisessa ruudussa sen jälkeen, kun olet valinnut lomakkeen ohjausobjektin suunnittelutyötilassa. Tässä ruudussa voit valita, mitä kenttiä näytetään, miten ne näytetään ja missä järjestyksessä ne näytetään. Tässä esimerkissä näkyy **Muokkaa lomaketta** -ohjausobjekti sovelluksessa, joka luotiin SharePoint-luettelosta nimeltä **Assets**.
 
-![](./media/working-with-cards/first-screen.png)
+![Ensimmäinen näyttö](./media/working-with-cards/first-screen.png)
 
 Aloita katsomalla tietoja [lomakkeen lisäämisestä](add-form.md) ja [tutustumalla tietolomakkeisiin](working-with-forms.md). Tämän ohjeaiheen loppuosassa käsittelemme tarkemmin korttien toimintaa ja opimme, miten niitä voidaan mukauttaa ja jopa luoda itse.
 
 ## <a name="predefined-cards"></a>Ennalta määritetyt kortit
+
 PowerApps tarjoaa esimääritettyjä kortteja merkkijonoja, numeroita ja muita tietotyyppejä varten. Oikeanpuoleisessa ruudussa näkyvät käytettävissä olevat muunnelmat ja siellä voit muuttaa kentässä käytettyä korttia:
 
 ![](./media/working-with-cards/selected-card.png)

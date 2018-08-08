@@ -1,26 +1,26 @@
 ---
-title: Pikaohje ympäristöissäsi ladattujen sovellusten luettelon lataamiseksi | Microsoft Docs
+title: Ympäristöissäsi luotujen sovellusten luettelon lataaminen | Microsoft Docs
 description: Tämän pikaoppaan avulla opit lataamaan ympäristöissäsi luotujen sovellusten luettelon.
 author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/21/2018
-ms.author: jimh
-ms.openlocfilehash: d9c379ca95bb299c56639bb01803f45c1744d8f2
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.author: jimholtz
+ms.openlocfilehash: f5bf3cd5e4fb6be96b8b1853390df1ee8f9bd027
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552595"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349819"
 ---
-# <a name="quickstart-download-a-list-of-apps-created-in-your-environments"></a>Pikaopas: lataa ympäristöissäsi luotujen sovellusten luettelo
+# <a name="download-a-list-of-apps-created-in-your-environments"></a>Lataa ympäristöissäsi luotujen sovellusten luettelo
 Jos olet ympäristön järjestelmänvalvoja, voit tarkastella ja ladata luettelon sovelluksista, jotka on luotu ympäristöissä, joita hallitset. Jos olet 365:n yleinen järjestelmänvalvoja tai Azure Active Directory -vuokraajan järjestelmänvalvoja, voit tarkastella ja ladata luettelon sovelluksista, jotka on luotu kaikissa organisaatiosi ympäristöissä.
 
-Tässä pikaoppaassa opetetaan, miten ladataan yhdessä ympäristössä luotujen sovellusten luettelo .csv-tiedostoon ja tarkastellaan tätä luetteloa Excelissä.
+Tässä aiheessa opetetaan, miten ladataan yhdessä ympäristössä luotujen sovellusten luettelo .csv-tiedostoon ja tarkastellaan tätä luetteloa Excelissä.
 
 ## <a name="prerequisites"></a>Edellytykset
- Tämän pikaoppaan noudattamista varten tarvitaan seuraavat kohteet:
+ Näiden vaiheiden noudattamista varten tarvitaan seuraavat kohteet:
  * PowerAppsin palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeus. Vaihtoehtoisesti voit rekisteröityä [ilmaisen PowerAppsin palvelupaketin 2 kokeiluversion](https://web.powerapps.com/signup?redirect=marketing&email=) käyttäjäksi.
  * PowerApps-ympäristön järjestelmänvalvojan, Office 365:n yleisen järjestelmänvalvojan tai Azure Active Directory vuokraajan järjestelmänvalvojan oikeudet. Lisätietoja on kohdassa [Ympäristöjen hallinta PowerAppsissa](environments-administration.md).
 
@@ -43,7 +43,7 @@ Kun .csv-tiedosto on luotu, avaa se Excelissä. Luettelo sisältää sovelluksen
 ![Tiedosto ja jakaminen](./media/admin-view-apps/excel-view.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa sinulle opetettiin, miten lataat organisaatiosi ympäristössä luotujen sovellusten luettelon ja tarkastelet sitä. Seuraavaksi opit hallinnoimaan organisaatiossasi luotuja sovelluksia.
+Tässä aiheessa opetettiin, miten lataat organisaatiosi ympäristössä luotujen sovellusten luettelon ja tarkastelet sitä. Seuraavaksi opit hallinnoimaan organisaatiossasi luotuja sovelluksia.
 
 > [!div class="nextstepaction"]
 > [Hallitse organisaatiossasi luotuja sovelluksia](admin-manage-apps.md)

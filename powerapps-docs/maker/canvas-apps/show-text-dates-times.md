@@ -1,6 +1,6 @@
 ---
-title: Tekstin näyttäminen ja päivämäärän ja kellonajan muotoileminen | Microsoft Docs
-description: Lisää ja muotoile päivämääriä ja kellonaikoja PowerAppsissa
+title: Tekstin, päivämäärien ja kellonaikojen näyttäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Näytä PowerAppsissa tekstiä, päivämääriä ja kellonaikoja pohjaan perustuvassa sovelluksessa
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/16/2016
 ms.author: anneta
-ms.openlocfilehash: d6f88534b4839381037243400ef69f292df8fb97
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 8f4bf8908b8e83fe5976a52356db163cbb3a9813
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195699"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470680"
 ---
-# <a name="show-text-and-format-dates-and-times-in-powerapps"></a>Lisää tekstiä ja muotoile päivämääriä ja kellonaikoja PowerAppsissa
-Lisää päivämääriä ja kellonaikoja ja muotoile niitä niin, että ne näyttävät oikean määrän tietoja tai vastaavat sijaintiasi. Laske kahden päivämäärän välinen aika tai laske päivämäärä, joka on tietyn aikaeron verran ennen tai jälkeen määrittämääsi päivämäärää. Muunna päivämäärät erillisiin päivä-, kuukausi- tai vuosiarvoihin tai päin vastoin. Muunna ajat erillisiin tunti-, minuutti- ja sekuntiarvoihin tai päin vastoin.
+# <a name="show-text-dates-and-times-in-powerapps"></a>Näytä tekstiä, päivämääriä ja kellonaikoja PowerAppsissa
+Lisää PowerAppsissa päivämääriä ja kellonaikoja pohjaan perustuvaan sovellukseen ja muotoile niitä niin, että ne näyttävät oikean määrän tietoja tai vastaavat sijaintiasi. Laske kahden päivämäärän välinen aika tai laske päivämäärä, joka on tietyn aikaeron verran ennen tai jälkeen määrittämääsi päivämäärää. Muunna päivämäärät erillisiin päivä-, kuukausi- tai vuosiarvoihin tai päin vastoin. Muunna ajat erillisiin tunti-, minuutti- ja sekuntiarvoihin tai päin vastoin.
 
 Lisää esimerkiksi käyttäjien antamia tietoja pörssikursseista ja asiakastapaamisista, tietoja ulkoisista tietolähteistä tai tietoja toisesta PowerAppsissa luodusta sovelluksesta. Jos tiedot sisältävät ajan millisekunnin tarkkuudella, pyöristä ne yksinkertaisuuden vuoksi lähimpään minuuttiin. Laske, montako päivää on jäljellä ennen tärkeää hetkeä. Jos haluat ajoittaa asiakastapaamisia viiden päivän välein, laske nämä päivämäärät automaattisesti. Jos 10. toukokuuta 1985 on tallennettu niin, että päivä, kuukausi ja vuosi ovat eri kentissä, yhdistä ne yhdeksi arvoksi. Voit myös toimia päin vastoin ja muuttaa päivämäärän erillisiksi arvoiksi, jos sovelluksesi käsittelee niitä erikseen.
 

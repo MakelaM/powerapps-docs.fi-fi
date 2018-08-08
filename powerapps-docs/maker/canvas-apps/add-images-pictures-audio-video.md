@@ -1,6 +1,6 @@
 ---
-title: Upota multimediatiedostoja sovellukseen ja lataa niitä | Microsoft Docs
-description: Multimediatiedostojen näyttäminen sovelluksessa ja niiden lataaminen tietolähteeseen
+title: Upota multimediatiedostoja pohjaan perustuvaan sovellukseen ja lataa niitä | Microsoft Docs
+description: Multimediatiedostojen näyttäminen pohjaan perustuvassa sovelluksessa ja niiden lataaminen tietolähteeseen
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,20 +9,23 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: sharik
-ms.openlocfilehash: 5c6c7b2973f85c1ebc3040e41d83653250599717
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 1b0c830dd5d0fb625bc8ac407bda47023036ed7f
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195009"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470174"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
-Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään sovelluksessasi. Tässä aiheessa käytetään tietolähteenä Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
+
+Tässä ohjeaiheessa kerrotaan, miten multimediatiedostoja upotetaan pohjaan perustuvaan sovellukseesi, kynäpiirros ladataan tietolähteeseen ja tietolähteessä olevia kuvia näytetään pohjaan perustuvassa sovelluksessasi. Tässä aiheessa käytetään tietolähteenä Excel-tiedostoa, joka sijaitsee OneDrive for Business -palvelussa.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
 ## <a name="add-media-from-a-file-or-the-cloud"></a>Lisää media tiedostosta tai pilvipalvelusta
+
 Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ääni).
 
 1. Valitse **Sisältö**-välilehdessä **Media**.

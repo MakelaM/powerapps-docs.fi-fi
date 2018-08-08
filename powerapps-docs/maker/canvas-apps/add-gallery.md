@@ -1,6 +1,6 @@
 ---
-title: Kohdeluettelon näyttäminen | Microsoft Docs
-description: Näytä kohdeluettelo sovelluksessasi valikoiman avulla ja suodata luetteloa määrittämällä kriteeri.
+title: Kohdeluettelon näyttäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Näytä kohdeluettelo pohjaan perustuvassa sovelluksessasi valikoiman avulla ja suodata luetteloa määrittämällä kriteeri.
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 09/28/2017
 ms.author: sharik
-ms.openlocfilehash: 4806d65416816897542973644da592f7e6b2e252
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 753a4508890f5ab007bef2a1f4d81bb46043a089
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020971"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470496"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
-Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä sovellukseesi **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektissa annettua suodatuskriteeriä.
+
+Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä pohjaan perustuvaan sovellukseesi **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektissa annettua suodatuskriteeriä.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 * Lue, miten [voit lisätä ja määrittää ohjausobjektin](add-configure-controls.md) PowerAppsissa.
 
 * Esimerkkitietojen määrittäminen:

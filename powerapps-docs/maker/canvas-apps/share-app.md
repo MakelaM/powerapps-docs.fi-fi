@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen jakaminen | Microsoft Docs
-description: Jaa sovelluksesi antamalla käyttäjille käyttöoikeus sen suorittamiseen tai muokkaamiseen
+title: Pohjaan perustuvan sovelluksen jakaminen | Microsoft Docs
+description: Jaa pohjaan perustuva sovelluksesi antamalla käyttäjille käyttöoikeus sen suorittamiseen tai muokkaamiseen
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/11/2018
 ms.author: anneta
-ms.openlocfilehash: 9c4bdc6e56f84b6724fcbe44cfe1f3e4c065edb3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: eaea8049b573b619881ae0a2b6ecb2618e4bf192
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195308"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470634"
 ---
-# <a name="share-an-app-in-powerapps"></a>Sovelluksen jakaminen PowerAppsissa
+# <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
-Kun olet luonut sovelluksen, joka vastaa liiketoiminnan tarpeiseen, määritä organisaatiosi käyttäjät, jotka voit suorittaa sovelluksen ja muokata ja jopa uudelleenjakaa sen. Määrittä kukin käyttäjä nimen perusteella tai määritä käyttöoikeusryhmä Azure Active Directoryssä. Jos kaikki hyötyisivät sovelluksestasi, määritä, että koko organisaatio voi suorittaa sen.
+Kun olet luonut pohjaan perustuvan sovelluksen, joka vastaa liiketoiminnan tarpeiseen, määritä organisaatiosi käyttäjät, jotka voivat suorittaa sovelluksen, muokata sitä ja jopa jakaa sen uudelleen. Määrittä kukin käyttäjä nimen perusteella tai määritä käyttöoikeusryhmä Azure Active Directoryssä. Jos kaikki hyötyisivät sovelluksestasi, määritä, että koko organisaatio voi suorittaa sen.
 
 > [!IMPORTANT]
 > Jotta jaettu sovellus toimisi haluamallasi tavalla, sinun on myös hallittava tietolähteiden käyttöoikeuksia tai niiden lähteiden, joihin sovellus perustuu, kuten [Common Data Service for Apps -palvelun](#common-data-service-for-apps) tai [Excelin](share-app-data.md) käyttöoikeuksia. Voit myös joutua jakamaan sovelluksen perustana toimivia [muita resursseja](share-app-resources.md), kuten työnkulkuja, yhdyskäytäviä tai yhteyksiä.

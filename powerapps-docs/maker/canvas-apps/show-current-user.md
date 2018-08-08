@@ -1,6 +1,6 @@
 ---
-title: Nykyisen käyttäjän tietojen näyttäminen | Microsoft Docs
-description: Lisää User-funktio, joka näyttää PowerAppsiin kirjautuneen käyttäjän nimen ja sähköpostiosoitteen
+title: Nykyisen käyttäjän tietojen näyttäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Näytä PowerAppsissa pohjaan perustuvaan sovellukseen kirjautuneen käyttäjän nimen ja sähköpostiosoitteen
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 90a7ca39626e8eec8151bc3d5ced25a5701a126e
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 53d235a54aca1523cf243a315f5309bced1f15a9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016256"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471186"
 ---
-# <a name="show-information-about-a-powerapps-user"></a>Hae tietoa PowerAppsin käyttäjästä
-User-funktio voi näyttää koko nimen, sähköpostiosoitteen ja kuvan, joka on liitetty sisään kirjautuneeseen käyttäjään. Voit käyttää näitä tietoja lomakkeen automaattiseen täyttämiseen.
+# <a name="show-information-about-a-powerapps-user-in-a-canvas-app"></a>Hae tietoa PowerAppsin käyttäjästä pohjaan perustuvassa sovelluksessa
+
+Näytä PowerAppsissa pohjaan perustuvaan sovellukseen kirjautuneen käyttäjän koko nimi, sähköpostiosoite ja kuva. Voit käyttää näitä tietoja esimerkiksi lomakkeen automaattiseen täyttämiseen.
 
 Voit käyttää tätä ominaisuutta esimerkiksi seuraavasti:
 
@@ -30,6 +31,7 @@ Periaatteessa voit käyttää tätä kaikissa tilanteissa, joissa käyttäjä hy
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
 ## <a name="show-user-details"></a>Käyttäjän tietojen näyttäminen
+
 1. Napsauta tai napauta **Lisää**-välilehdeltä **Media** ja napsauta tai napauta **Kuva**.
    
    ![][2]

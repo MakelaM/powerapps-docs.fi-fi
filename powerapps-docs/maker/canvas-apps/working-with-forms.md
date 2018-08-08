@@ -1,6 +1,6 @@
 ---
-title: Tutustu lomakkeisiin | Microsoft Docs
-description: Lomakkeiden avulla voit kerätä ja näyttää tietoja tietolähteestä.
+title: Pohjaan perustuvan sovelluksen lomakkeiden ymmärtäminen | Microsoft Docs
+description: Lisää PowerAppsissa lomake pohjaan perustuvaan sovellukseen, jotta voit kerätä ja näyttää tietoa tietolähteestä.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/27/2016
 ms.author: gregli
-ms.openlocfilehash: b2eb001ee426dc3449b440a357c67bc47b702d42
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: c7bd68f37cc469b054a75012d4166c05375db6ff
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195745"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470243"
 ---
-# <a name="understand-data-forms-in-microsoft-powerapps"></a>Tutustu tietolomakkeisiin Microsoft PowerAppsissa
-Lisää kolmentyyppisiä ohjausobjekteja, jotta käyttäjä voi selata tietueita, näyttää kyseisen tietueen tietoja ja luoda tietueen ja muokata sitä:
+# <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Pohjaan perustuvan sovelluksen lomakkeiden ymmärtäminen Microsoft PowerAppsissa
+
+Lisää pohjaan perustuvaan sovellukseen kolmentyyppisiä ohjausobjekteja, jotta käyttäjä voi selata tietueita, näyttää kyseisen tietueen tietoja ja luoda tietueen ja muokata sitä:
 
 | Toiminta | Ohjausobjekti | Kuvaus |
 | --- | --- | --- |

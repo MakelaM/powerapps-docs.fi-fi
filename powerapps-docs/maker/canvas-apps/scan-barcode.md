@@ -1,5 +1,5 @@
 ---
-title: Viivakoodin skannaaminen | Microsoft Docs
+title: Viivakoodin skannaaminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
 description: Skannaa useita erityyppisiä viivakoodeja, kuten UPC ja Codabar
 author: AFTOwen
 manager: kvivek
@@ -9,19 +9,21 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/23/2016
 ms.author: anneta
-ms.openlocfilehash: befc72b875f7876bc0f9f907a094f0d97314c03c
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 631277dc533d9792f08bf6a94bf9c345889c6795
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023317"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470588"
 ---
 # <a name="scan-a-barcode-in-powerapps"></a>Skannaa viivakoodi PowerAppsissa
-Skannaa useita erityyppisiä viivakoodeja luomalla sovellus ja suorittamalla se kameralla varustetussa laitteessa, kuten puhelimessa. Viivakoodia vastaava numeerinen arvo näkyy **Nimi**-ohjausobjektissa, ja voit ladata nämä tiedot erilaisiin [tietolähteisiin](connections-list.md).
+
+Skannaa useita erityyppisiä viivakoodeja luomalla pohjaan perustuva sovellus ja suorittamalla se kameralla varustetussa laitteessa, kuten puhelimessa. Viivakoodia vastaava numeerinen arvo näkyy **Nimi**-ohjausobjektissa, ja voit ladata nämä tiedot erilaisiin [tietolähteisiin](connections-list.md).
 
 Jos et tunne PowerAppsia, katso [Aloittaminen](getting-started.md).
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
+
 * Viivakoodien on oltava vähintään 2,5 cm korkeita ja 4 cm leveitä.
 * Skannaa viivakoodeja puhelimella: Pidä puhelinta pystysuunnassa ja siirrä sitä hitaasti 18–25 cm:n päähän viivakoodista.
 * Pitkät viivakoodityypit (kuten I2of5, jossa voi olla yli 15 merkkiä) voivat antaa katkaistun tai muun väärän tuloksen etenkin, jos viivakoodin tuloste on epäselvä.

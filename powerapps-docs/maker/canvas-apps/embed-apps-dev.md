@@ -1,6 +1,6 @@
 ---
 title: PowerAppsin integroiminen verkkosivustoihin ja muihin palveluihin | Microsoft Docs
-description: Sovelluksien upottaminen sivustoihin ja muihin palveluihin.
+description: Upota pohjaan perustuvia sovelluksia sivustoihin ja muihin palveluihin.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,15 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: mblythe
-ms.openlocfilehash: ed0863d8d7987e7e7f129a9804b35e00e76aad36
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: e48da773f34eb2abedd65c3ea88aab1bb184da02
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023800"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470772"
 ---
 # <a name="integrate-powerapps-into-websites-and-other-services"></a>PowerAppsin integroiminen verkkosivustoihin ja muihin palveluihin
-Luomasi sovellukset ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä ihmiset työskentelevät. PowerAppsin avulla voit upottaa sovelluksia iframe-kehykseen niin, että ne voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI:hin tai SharePointiin.
+Luomasi sovellukset ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä ihmiset työskentelevät. PowerAppsin avulla voit upottaa pohjaan perustuvia sovelluksia iframe-kehykseen niin, että ne voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI:hin tai SharePointiin.
 
 Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen upottamista varten. Sen jälkeen upotamme verkkosivulle resurssien järjestelysovelluksemme.
 

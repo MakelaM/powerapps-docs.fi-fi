@@ -1,6 +1,6 @@
 ---
-title: Mukautettu liitin -sisältölinkit | Microsoft Docs
-description: Linkit sisältöihin, jotka liittyvät mukautettujen liittimien luomiseen, käyttämiseen, jakamiseen ja sertifioimiseen.
+title: Linkkejä mukautettuja liittimiä käsittelevään sisältöön | Microsoft Docs
+description: Linkit sisältöihin, jotka liittyvät mukautettujen liittimien luomiseen, käyttämiseen, jakamiseen ja sertifioimiseen PowerAppsissa.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/05/2017
 ms.author: mblythe
-ms.openlocfilehash: 411082faef59516d9d6b660e08b5cbaf263da042
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 78a2dd6f9c5772a738ca38e79162be82f3a57139
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471117"
 ---
 # <a name="custom-connectors-in-powerapps"></a>Mukautetut liittimet PowerAppsissa
 
-Voit luoda työnkulkuja ja sovelluksia [Azure Logic Appsin](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow’n](https://flow.microsoft.com) ja [PowerAppsin](https://powerapps.microsoft.com) avulla kirjoittamatta riviäkään koodia. Palvelut tarjoavat [yli 180 liitintä](https://docs.microsoft.com/connectors/), jotka helpottavat tieto- ja liiketoimintaprosessien integrointia. Liittimien käyttö ei rajoitu Microsoft-palveluihin, vaan ne toimivat myös monissa muissa palveluissa, kuten GitHub, Salesforce ja Twitter. 
+Voit luoda työnkulkuja ja pohjaan perustuvia sovelluksia [Azure Logic Appsin](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow’n](https://flow.microsoft.com) ja [PowerAppsin](https://powerapps.microsoft.com) avulla kirjoittamatta riviäkään koodia. Palvelut tarjoavat [yli 180 liitintä](https://docs.microsoft.com/connectors/), jotka helpottavat tieto- ja liiketoimintaprosessien integrointia. Liittimien käyttö ei rajoitu Microsoft-palveluihin, vaan ne toimivat myös monissa muissa palveluissa, kuten GitHubissa, Salesforcessa ja Twitterissä.
 
 Joskus saatat kuitenkin tarvita API-kutsuja, palveluita ja järjestelmiä, jotka eivät ole saatavilla valmiiksi rakennettuina liittiminä. Voit luoda omia *mukautettuja liittimiä*, joilla on omat käynnistimet ja toiminnot räätälöidympiä ratkaisuja varten. Tarjoamme kattavan joukon opetusohjelmia perustasolta aina edistyneelle tasolle. Opetusohjelmat löytyvät Liittimet-ohjesivustolta. Suosittelemme aloittamaan kohdasta [mukautettujen liittimien yleiskatsauksesta](https://docs.microsoft.com/connectors/custom-connectors/). Halutessasi voit myös aloittaa seuraavista aiheista, jotka liittyvät tiettyihin alueisiin:
 

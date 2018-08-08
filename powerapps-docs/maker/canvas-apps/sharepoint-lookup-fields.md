@@ -1,6 +1,6 @@
 ---
-title: Suhteen luominen SharePoint-luettelojen välille hakukentän avulla | Microsoft Docs
-description: Suhteen luominen SharePoint-luettelojen välille käyttämällä hakukenttää.
+title: Suhteen luominen SharePoint-luettelojen välille hakukentän avulla pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Suhteen luominen PowerAppsissa SharePoint-luettelojen välille käyttämällä hakukenttää pohjaan perustuvassa sovelluksessa.
 author: skjerland
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/20/2017
 ms.author: sharik
-ms.openlocfilehash: 342fcc36fb8dba9cfaa42c94089329ad19501af8
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 9ad61bdf115a79fe8284dad520a2e9710a59648b
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194929"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470519"
 ---
-# <a name="how-to-link-sharepoint-lists-using-lookup-fields"></a>SharePoint-luettelojen linkittäminen käyttämällä hakukenttiä
-Tässä opetusohjelmassa näytetään, miten voit yhdistää kaksi SharePoint-luetteloa hakukentillä.
+# <a name="how-to-link-sharepoint-lists-using-a-lookup-field-in-powerapps"></a>SharePoint-luettelojen linkittäminen käyttämällä hakukenttiä PowerAppsissa
+
+Tässä opetusohjelmassa näytetään, miten voit yhdistää kaksi SharePoint-luetteloa hakukentän avulla pohjaan perustuvassa sovelluksessa.
 
 ## <a name="overview"></a>Yleiskatsaus
+
 SharePoint sisältää kahdentyyppisiä hakukenttiä:
 
 * **Haku**: linkittää toiseen luetteloon – esimerkiksi *Tilaukset*-luettelolla voi olla hakukenttä, joka linkittää *Asiakas*-luettelon asiakkaisiin;
@@ -27,7 +29,8 @@ SharePoint sisältää kahdentyyppisiä hakukenttiä:
 
 Tässä opetusohjelmassa luodaan sovellus, joka käyttää tällaisia hakukenttiä.
 
-### <a name="what-do-you-use-lookup-fields-for"></a>Mihin tarkoitukseen käytät hakukenttiä?
+### <a name="why-use-a-lookup-field"></a>Perusteet hakukentän käyttämiselle
+
 Yrityksen tiedot ovat suuria ja monimutkaisia. Yhden SharePoint-luettelon tiedot liittyvät usein toiseen luetteloon. Hakukentät ovat ensisijainen tapa yhdistää tällainen yritystieto.
 
 Sinulla voi olla esimerkiksi **Tilaukset**-luettelo, jossa on **Asiakkaat**-luetteloon linkittävä hakukenttä, jotta näet tilauksen tehneen asiakkaan. **Tilaukset**-luettelon hakukenttä antaa sinun hakea myös muita tietoja **Asiakkaat**-luettelosta. Voit käyttää hakukenttää myös **Tilaukset**-luettelon yhdistämiseksi **Tuote**-luetteloon ja tuoda tietoja, joita tarvitset tilatusta tuotteesta, kuten tuotteen kuvat, määritykset, valmistajan tiedot ja niin edelleen.

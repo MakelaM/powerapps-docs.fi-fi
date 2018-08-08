@@ -1,6 +1,6 @@
 ---
-title: Tutustu muuttujiin | Microsoft Docs
-description: Viitetietoja työskentelyyn tilan, kontekstimuuttujien ja kokoelmien parissa
+title: Muuttujien ymmärtäminen pohjaan perustuvissa sovelluksissa | Microsoft Docs
+description: Viitetietoja työskentelyyn tilan, kontekstimuuttujien ja kokoelmien parissa pohjaan perustuvissa sovelluksissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
 ms.author: gregli
-ms.openlocfilehash: b5986c927b75ed7a6e38af913cbfb9877121d0a5
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: db7e770b2f2e7fa974dbf25a7a7fecf5b8229aa9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017820"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469921"
 ---
-# <a name="understand-variables-in-powerapps"></a>Tutustu PowerAppsin muuttujiin
-Jos olet joskus käyttänyt jotakin toista ohjelmointityökalua, kuten Visual Basicia tai JavaScriptiä, ihmettelet ehkä, **missä muuttujat ovat.** PowerApps on hieman erilainen ja edellyttää erilaista käyttötapaa. Muuttujien etsimisen sijaan mieti, **mitä tekisit Excelissä.**
+# <a name="understand-canvas-app-variables-in-powerapps"></a>Pohjaan perustuvan sovelluksen muuttujien ymmärtäminen PowerAppsissa
+
+Jos olet joskus käyttänyt jotakin toista ohjelmointityökalua, kuten Visual Basicia tai JavaScriptiä, ihmettelet ehkä, **missä muuttujat ovat.** PowerApps on hieman erilainen ja edellyttää erilaista käyttötapaa. Kun luot pohjaan perustuvaa sovellusta, mieti muuttujien etsimisen sijaan, **mitä tekisit Excelissä.**
 
 Muissa työkaluissa olet ehkä eksplisiittisesti suorittanut laskutoimituksen ja tallentanut tuloksen muuttujaan. PowerApps ja Excel laskevat kuitenkin kaavat automaattisesti uudelleen syötetietojen muuttuessa, joten muuttujia ei yleensä tarvitse luoda ja päivittää. Noudattamalla tätä lähestymistapaa aina kun mahdollista, voit helpommin luoda, ymmärtää ja ylläpitää sovelluksia.
 
@@ -26,6 +27,7 @@ Joudut joissakin tapauksissa käyttämään muuttujia PowerAppsissa, joka laajen
 Yleensä kannattaa välttää muuttujien käyttämistä. Toisinaan kuitenkin vain muuttuja pystyy mahdollistamaan halutun ominaisuuden.
 
 ## <a name="translate-excel-into-powerapps"></a>Excel vs. PowerApps
+
 ### <a name="excel"></a>Excel
 Muistellaan, miten Excel toimii. Solu voi sisältää arvon, kuten luvun tai merkkijonon, tai kaavan, joka perustuu muiden solujen arvoihin. Sen jälkeen, kun käyttäjä on lisännyt eri arvon soluun, Excel laskee automaattisesti uudestaan kaavat, jotka ovat riippuvaisia uudesta arvosta. Tätä varten ei tarvitse tehdä mitään ohjelmointia.
 

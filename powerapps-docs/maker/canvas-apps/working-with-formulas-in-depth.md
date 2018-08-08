@@ -1,6 +1,6 @@
 ---
-title: Tutustu toimintakaavioihin | Microsoft Docs
-description: Viitetietoja toimintakaavojen käyttämisestä
+title: Toimintakaavojen ymmärtäminen pohjaan perustuvissa sovelluksissa | Microsoft Docs
+description: Viitetietoja toimintakaavoista, jotka muuttavat pohjaan perustuvan sovelluksen tilan PowerAppsissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,18 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/10/2015
 ms.author: gregli
-ms.openlocfilehash: 8ac9cfc2a949cf059d84b5338220e0366094e24b
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: e0e7aabc06014c69aae640b799463431b6800dad
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015589"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471462"
 ---
-# <a name="understand-behavior-formulas-in-powerapps"></a>Tutustu toimintakaavoihin PowerAppsissa
+# <a name="understand-behavior-formulas-for-canvas-apps-in-powerapps"></a>Toimintakaavojen ymmärtäminen PowerAppsin pohjaan perustuvissa sovelluksissa
 
 Useimmat kaavat laskevat arvon.  Kuten Excel-laskentataulukossakin, uudelleenlaskenta tapahtuu automaattisesti, kun arvot muuttuvat.  Voit esimerkiksi haluta näyttää arvon **[selite](controls/control-text-box.md)**-ohjausobjektissa punaisena, jos arvo on pienempi kuin nolla ja muussa tapauksessa mustana. Voit siis määrittää tämän ohjausobjektin **[Color](controls/properties-color-border.md)**-ominaisuudeksi seuraavan kaavan:
-<br>**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
+
+**If( Value(TextBox1.Text) >= 0, Color.Black, Color.Red )**
 
 Mitä tässä yhteydessä tarkoittaa se, kun käyttäjä valitsee **[painike](controls/control-button.md)**-ohjausobjektin?  Arvo ei ole muuttunut, joten mitään uutta laskettavaa ei ole. Excelissä ei ole mitään **[painike](controls/control-button.md)**-ohjausobjektia vastaavaa.  
 

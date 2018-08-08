@@ -1,6 +1,6 @@
 ---
-title: Asenna ja määritä Help Desk PowerApps -malli | Microsoft Docs
-description: Vaiheittaiset ohjeet Help Desk PowerApps -mallin asentamista ja määrittämistä varten.
+title: Help Desk -mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Help Desk -mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
 author: caburk
 manager: kvivek
 ms.service: powerapps
@@ -9,24 +9,24 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: 4ee281e211891dab812c4ae447dff3d967ffeff3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 3d6b418ac6738071f16ec4cf75c81c2850d67f74
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195768"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470404"
 ---
-# <a name="install-and-configure-the-help-desk-powerapps-sample"></a>Asenna ja määritä Help Desk PowerApps -malli
+# <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Asenna ja määritä Help Desk -malli PowerAppsissa
 
-Vaiheittaiset ohjeet Help Desk PowerApps -mallin asentamista ja määrittämistä varten.
+Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Help Desk -mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
 
 Näiden vaiheiden arvioitu suoritusaika on **10–15 minuuttia**
 
 > [!TIP]
 > Jos haluat nähdä tämän prosessin esittelyn, katso tämä [video](https://youtu.be/z4cdtD6hB_4).
 
+## <a name="overview-of-the-sample"></a>Mallin yleiskatsaus
 
-## <a name="help-desk-powerapps-sample-overview"></a>Help Desk PowerAppsin -mallin yleiskatsaus
 Tukipalvelu tarjoaa käyttäjäystävällisen tavan muodostaa yhteys loppukäyttäjien ja tukiasiantuntijoiden välille. Löydä nopeasti vastauksia tärkeimpiin kysymyksiisi, seuraa avointen tukipyyntöjen edistymistä ja tarkista edellisten pyyntöjen tiedot. Tämä sovellus edellyttää jonkin verran määrittämistä, jotta saat siitä haluamasi kaltaisen.
 
 ![Help Desk PowerAppin aloitusnäyttö](./media/help-desk-install/Login-screen.png)

@@ -1,6 +1,6 @@
 ---
-title: Kuluraportti-PowerApps-mallin asentaminen ja määrittäminen | Microsoft Docs
-description: Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-PowerApps-mallin asentamista ja määrittämistä varten.
+title: Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Kuluraportti-mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
 author: caburk
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: aca695c8c2ae90e0d5d843dcb0dfb562cbef5a05
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: f0fc0d9407511730145002bf109957b0878398bc
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195722"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470036"
 ---
-# <a name="install-and-configure-the-expense-report-powerapps-sample"></a>Kuluraportti-PowerApps-mallin asentaminen ja määrittäminen
+# <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa PowerAppsissa
 
-Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-PowerApps-mallin asentamista ja määrittämistä varten.
+Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-mallin asentamista ja määrittämistä varten.
 
 Näiden vaiheiden arvioitu suoritusaika on **10–15 minuuttia**
 
@@ -26,7 +26,8 @@ Jos haluat nähdä tämän prosessin esittelyn, katso tämä video.
 
 [![Kuluraportti-mallin asennusvideo](./media/expense-report-install/expense-report-install-video.png)](https://youtu.be/DOR28V5kCkw)
 
-## <a name="expense-report-powerapps-sample-overview"></a>Kuluraportti-PowerApps-mallin yleiskatsaus
+## <a name="overview-of-the-sample"></a>Mallin yleiskatsaus
+
 Seuraa kuluraportteja niiden lähettämisestä hyväksymiseen. Kirjaa nimikkeitä yksittäisiksi kulukertymiksi ja lähetä ne hyväksyntään, kun ne ovat valmiita. Tämä sovellus edellyttää jonkin verran määrittämistä, jotta saat siitä haluamasi kaltaisen.
 
 ![Kuluraportti-PowerAppsin näytön avaaminen](./media/expense-report-install/expense-report-powerapp.png)

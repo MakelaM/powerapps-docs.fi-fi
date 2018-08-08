@@ -1,6 +1,6 @@
 ---
-title: InfoPath-lomakkeiden muuntaminen PowerAppsiin | Microsoft Docs
-description: Aloita InfoPath-lomakkeiden muuntaminen PowerAppsiin opettelemalla yleisimmät InfoPath-skenaariot ja miten niitä voi luoda PowerAppsissa.
+title: InfoPath-lomakkeen muuntaminen pohjaan perustuvaan sovellukseen | Microsoft Docs
+description: Aloita InfoPath-lomakkeen muuntaminen PowerAppsiin yleisiä skenaarioita koskevista tiedoista ja ohjeista, joiden avulla näitä luodaan pohjaan perustuvassa sovelluksessa.
 author: richardriley99
 manager: kvivek
 ms.service: powerapps
@@ -9,22 +9,22 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/05/2018
 ms.author: rriley
-ms.openlocfilehash: b57d62d3e64ea08905ddcc8627cf6921d421fb18
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: a249d0a9096117badfe3e4eb7ad9dcf6b75662a1
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094721"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470105"
 ---
-# <a name="transform-your-infopath-forms-to-powerapps"></a>InfoPath-lomakkeiden muuntaminen PowerAppsiin
+# <a name="transform-your-infopath-form-to-powerapps"></a>InfoPath-lomakkeen muuntaminen PowerAppsiin
 
 Rakennatko upeita InfoPath-luomuksia, jotka haluaisit tarjota vankemmassa ympäristössä?
 
 ## <a name="key-advantages-of-powerapps-over-infopath"></a>PowerAppsin tärkeimmät edut InfoPathiin verrattuna
 
-Olet todennäköisesti muiden InfoPath-tehokäyttäjien tapaan hyödyntänyt ainutlaatuista osaamistasi jo jonkin aikaa. Ja tuloksena on ollut hienoja lomakkeita. Vaikka olet erittäin tyytyväinen tuottamiisi lomakkeisiin, tunnet hyvin niiden rajoitukset: &quot;klassinen&quot; tuntuma, mobiililaitteissa takkuileva käyttökokemus, epävarmuus käyttökelpoisuuden jatkumisesta ja laatikkoon jumiutuminen, kun yrität yhdistää muihin palveluihin ilman koodausta.
+Muiden InfoPath-tehokäyttäjien tapaan olet hyödyntänyt ainutlaatuista osaamistasi jo jonkin aikaa. Ja tuloksena on ollut hienoja lomakkeita. Vaikka olet erittäin tyytyväinen tuottamiisi lomakkeisiin, tunnet hyvin niiden rajoitukset: &quot;klassinen&quot; tuntuma, mobiililaitteissa takkuileva käyttökokemus, epävarmuus käyttökelpoisuuden jatkumisesta ja laatikkoon jumiutuminen, kun yrität yhdistää muihin palveluihin ilman koodausta.
 
-Microsoft PowerApps -tiimi kuuli nämä ja monen muun käyttäjä kohtaamat haasteet. Se paiski ankarasti töitä sen eteen, että saat paremman käyttökokemuksen PowerAppsissa. Tavoitteena on, että voit luoda sovelluksia liiketoimintaasi ja nykyistä teknologista osaamistasi hyödyntämällä. PowerAppsilla voit siten luoda ja ottaa käyttöön asianmukaisia liiketoimintaratkaisuja nopeasti ja koodia kirjoittamatta.
+PowerApps-tiimi on kuullut näistä ja monista muista haasteista. Tiimi pyrkii saamaan aikaan paremman käyttökokemuksen ja mahdollistamaan pohjaan perustuvien sovellusten luomisen jo olemassa olevien liiketoiminta- ja teknologiataitojen perusteella. PowerAppsia käyttämällä voit luoda ja ottaa käyttöön asianmukaisia liiketoimintaratkaisuja nopeasti ja koodia kirjoittamatta.
 
 **PowerApps takaa tehokkaan tulevaisuuden**  
 PowerApps on SaaS-pilvipalvelu, jossa voit nopeasti rakentaa erittäin toimivia sovelluksia ja ottaa ne vaivatta käyttöön verkossa, SharePointissa, Dynamics 365:ssä, Teamsissa, Power BI:ssä tai mobiililaitteessa. Ja koska sovellukset on helppo ottaa käyttöön (jakamalla julkaistun sovelluksen URL-osoite), ne on myös helppo päivittää.

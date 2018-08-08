@@ -1,6 +1,6 @@
 ---
-title: Luo sovellus mallin pohjalta | Microsoft Docs
-description: Vaiheittaiset ohjeet sovelluksen luomiseksi automaattisesti PowerAppsin mallin pohjalta.
+title: Pohjaan perustuvan sovelluksen luominen mallin pohjalta | Microsoft Docs
+description: Vaiheittaiset ohjeet pohjaan perustuvan sovelluksen luomiseksi automaattisesti PowerAppsin mallin pohjalta.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,21 +9,23 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/19/2018
 ms.author: anneta
-ms.openlocfilehash: 3827255726be017fe594a2c54389df7c622f7307
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 8b750760ab10c33d17f0e73f8b90a59e6a7b84f7
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195239"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471232"
 ---
-# <a name="create-an-app-from-a-powerapps-template"></a>Luo sovellus PowerAppsin mallin pohjalta
-Luo sovellus automaattisesti tiettyyn skenaarioon, kuten budjetin seurantaan tai lomien ajoittamiseen, sopivalla mallilla, ja suorita sovellus ymmärtääksesi sen oletustoimintaa.
+# <a name="create-a-canvas-app-from-a-template-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen mallin pohjalta PowerAppsissa
+
+Luo pohjaan perustuva sovellus automaattisesti tiettyyn skenaarioon, kuten budjetin seurantaan tai lomien ajoittamiseen, sopivalla mallilla, ja suorita sovellus ymmärtääksesi sen oletustoimintaa.
 
 Jotta voit luoda sovelluksen mallin pohjalta, tarvitset pilvitallennustilan tilin (kuten DropBox, OneDrive tai Google Drive) tallentaaksesi mallin mallitiedot.
 
 Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi](../signup-for-powerapps.md).
 
 ## <a name="create-an-app"></a>Sovelluksen luonti
+
 1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerAppsin aloitussivu](./media/get-started-test-drive/sign-in.png)

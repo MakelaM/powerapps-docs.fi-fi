@@ -1,6 +1,6 @@
 ---
-title: Pikaopas – sovelluksen luominen Common Data Service for Apps -palvelussa | Microsoft Docs
-description: Tämän pikaoppaan avulla luot PowerAppsissa automaattisesti sovelluksen Common Data Service for Apps -palvelun tietojen hallintaan
+title: Pohjaan perustuvan sovelluksen luominen Common Data Service for Apps -palvelussa | Microsoft Docs
+description: Luo PowerAppsissa automaattisesti pohjaan perustuva sovellus Common Data Service for Apps -palvelun tietojen hallintaan
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,23 +9,25 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
 ms.author: anneta
-ms.openlocfilehash: 3481bd697e29855a075598975e26d14121a49a0a
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 1acd93f2580ab583e58020ce9fbabde3c2e6a239
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195354"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470565"
 ---
-# <a name="quickstart-generate-an-app-from-common-data-service-for-apps-in-powerapps"></a>Pikaopas: sovelluksen luominen PowerAppsin Common Data Service for Apps -palvelussa
+# <a name="generate-a-canvas-app-from-common-data-service-for-apps-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Common Data Service for Apps -palvelussa PowerAppsissa
 
-Tässä pikaoppaassa käytetään Microsoft PowerAppsia sovelluksen luomiseen [Common Data Service for Apps](../common-data-service/data-platform-intro.md) -palvelun esimerkkitilien luettelon pohjalta. Tässä sovelluksessa voit selata kaikkia tilejä, tarkastella yksittäisen tilin tietoja sekä luoda, päivittää tai poistaa tilin.
+Luo Microsoft PowerAppsissa automaattisesti pohjaan perustuva sovellus [Common Data Service for Apps](../common-data-service/data-platform-intro.md) -palvelun esimerkkitilien luettelon pohjalta. Tässä sovelluksessa voit selata kaikkia tilejä, tarkastella yksittäisen tilin tietoja sekä luoda, päivittää tai poistaa tilin.
 
 Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ennen aloittamista.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 Tämän pikaoppaan noudattamiseksi sinun tulee siirtyä [ympäristöön](working-with-environments.md), johon on luotu Common Data Service for Apps -tietokanta, joka sisältää tietoja ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](../../administrator/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
 
 ## <a name="generate-an-app"></a>Sovelluksen luominen
+
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja vaihda tarvittaessa ympäristö noudattamalla tässä aiheessa annettuja ohjeita.
 
     ![PowerAppsin aloitussivu](./media/data-platform-create-app/sign-in.png)

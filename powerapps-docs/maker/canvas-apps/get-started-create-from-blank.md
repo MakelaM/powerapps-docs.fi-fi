@@ -1,5 +1,6 @@
 ---
-title: Sovelluksen luominen alusta alkaen | Microsoft Docs
+title: Pohjaan perustuvan sovelluksen luominen alusta alkaen Excel-tietojen perusteella | Microsoft Docs
+description: Tässä opetusohjelmassa luot kahden näytön pohjaan perustuvan sovelluksen, jotta käyttäjät voivat luoda, muokata ja poistaa tietueita Excel-tiedostossa.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -8,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 04/23/2018
 ms.author: anneta
-ms.openlocfilehash: 330751210322190fddefb6c399025578bb9878b5
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: dafd6e4aafdc8f4709d25b9de8e6b997665c3d4a
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195285"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469840"
 ---
-# <a name="create-an-excel-app-from-scratch"></a>Excel-sovelluksen luominen alusta alkaen
-Voit luoda oman, taulukoksi muotoillun sovelluksesi alusta alkaen Excel-tietojen perusteella ja lisätä sitten halutessasi tietoja muista lähteistä. Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdessä näytössä käyttäjät voivat selata tietuejoukkoa. Toisessa näytössä käyttäjät voivat luoda tietueen, päivittää vähintään tietueen yhden kentän tai poistaa koko tietueen. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
+# <a name="create-an-canvas-app-from-scratch-based-on-excel-data"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Excel-tietojen perusteella
+
+Voit luoda oman, taulukoksi muotoillun pohjaan perustuvan sovelluksesi alusta alkaen Excel-tietojen perusteella ja lisätä sitten halutessasi tietoja muista lähteistä. Tässä opetusohjelmassa luodaan sovellus, joka sisältää kaksi näyttöä. Yhdessä näytössä käyttäjät voivat selata tietuejoukkoa. Toisessa näytössä käyttäjät voivat luoda tietueen, päivittää vähintään tietueen yhden kentän tai poistaa koko tietueen. Tämä menetelmä vie enemmän aikaa kuin [sovelluksen muodostaminen automaattisesti](get-started-create-from-data.md), mutta kokeneet käyttäjät voivat näin tehdä parhaiten tarpeitaan vastaavan sovelluksen.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, jossa on nämä mallitiedot.
 
 1. Kopioi nämä tiedot ja liitä ne Excel-tiedostoon.

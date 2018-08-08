@@ -1,26 +1,26 @@
 ---
-title: Pikaopas tietojen menetyksen estämiskäytännön luomiseen | Microsoft Docs
+title: Tietojen menetyksen estämiskäytännön luominen | Microsoft Docs
 description: Tämän pikaoppaan avulla opit luomaan tietojen menetyksen estämiskäytännön PowerAppsissa
 author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
-ms.author: jimh
-ms.openlocfilehash: da4be42ea0374d6cb50da2f9a9b17eef15d5b316
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+ms.author: jimholtz
+ms.openlocfilehash: 49898aed97e2361704c88bcc1cd098a8fc0f101e
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "34552365"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349451"
 ---
-# <a name="quickstart-create-a-data-loss-prevention-dlp-policy"></a>Pikaopas: Tietojen menetyksen estämiskäytännön luominen
+# <a name="create-a-data-loss-prevention-dlp-policy"></a>Tietojen menetyksen estämiskäytännön luominen
 Jotta tietoturva voidaan taata organisaatiossa, PowerApps antaa mahdollisuuden luoda ja valvoa käytäntöjä jotka määrittävät, minkä kuluttajaliitinten kanssa tietyt yritystiedot voidaan jakaa. Näitä tietojen jakamista määrittäviä käytäntöjä kutsutaan tietojen menetyksen estämiskäytännöiksi (DLP-käytännöt). DLP-käytännöt varmistavat, että tietoa hallitaan yhtenäisellä tavalla koko organisaatiossa. Käytännöt estävät tärkeän yritystiedon tahattoman julkaisun liittimiin, kuten sosiaalisen median sivustoihin.
 
-Tässä pikaoppaassa opit luomaan DLP-käytännön yksittäiseen ympäristöön, joka estää Common Data Service- ja SharePoint-tietokantoihin tallennettujen tietojen julkaisun Twitterissä.
+Tässä aiheessa opit luomaan DLP-käytännön yksittäiseen ympäristöön, joka estää Common Data Service- ja SharePoint-tietokantoihin tallennettujen tietojen julkaisun Twitterissä.
 
 ## <a name="prerequisites"></a>Edellytykset
-Tämän pikaoppaan noudattamista varten tarvitaan **yksi** seuraavista kohteista:
+Näiden vaiheiden noudattamista varten tarvitaan **yksi** seuraavista kohteista:
 * Azure Active Directory -vuokraajan järjestelmänvalvojan oikeudet
 * Office 365:n yleisen järjestelmänvalvojan oikeudet
 * PowerApps-ympäristöjärjestelmänvalvojan oikeudet sekä PowerApps-paketti 2, Microsoft Flow -paketti 2 tai [PowerApps-paketin 2 kokeiluversio](https://web.powerapps.com/signup?redirect=marketing&email=)
@@ -41,7 +41,7 @@ Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com]([
 
     ![](./media/create-dlp-policy/select-environment.png)
 
-    Jos olet vuokraajan järjestelmänvalvoja, voit luoda DLP-käytäntöjä, jotka koskevat yhtä tai useampaa ympäristöä tai kaikkia vuokraajan ympäristöjä (mukaan lukien kokeilukäyttöoikeutta käyttämällä luodut ympäristöt). Napsauta tai napauta tässä pikaoppaassa **Käytä VAIN valittuihin ympäristöihin**, valitse ympäristö avattavasta luettelosta ja napsauta tai napauta **Jatka**.
+    Jos olet vuokraajan järjestelmänvalvoja, voit luoda DLP-käytäntöjä, jotka koskevat yhtä tai useampaa ympäristöä tai kaikkia vuokraajan ympäristöjä (mukaan lukien kokeilukäyttöoikeutta käyttämällä luodut ympäristöt). Valitse tässä aiheessa **Käytä VAIN valittuihin ympäristöihin**, valitse ympäristö avattavasta luettelosta ja valitse sitten **Jatka**.
 
     ![](./media/create-dlp-policy/select-environment-tenant.png)
 
@@ -64,7 +64,7 @@ Secure Data Access for Contoso -käytäntö luodaan, ja se näkyy tietojen menet
 Järjestelmänvalvojien kannattaa jakaa luettelo DLP-käytännöistä organisaation kanssa, jotta käyttäjät ovat tietoisia käytännöistä ennen sovellusten luomista.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa olet oppinut luomaan DLP-käytännön yksittäiseen ympäristöön estääksesi tärkeiden yritystietojen tahattoman julkaisun liittimiin, kuten Twitteriin. Saat lisätietoja DLP-käytännöistä tutustumalla niiden hallintaa koskevaan artikkeliin.
+Tämän aiheen ohjeilla olet oppinut luomaan DLP-käytännön yksittäiseen ympäristöön estääksesi tärkeiden yritystietojen tahattoman julkaisun liittimiin, kuten Twitteriin. Saat lisätietoja DLP-käytännöistä tutustumalla niiden hallintaa koskevaan artikkeliin.
 
 > [!div class="nextstepaction"]
 > [Tietojen menetyksen estämiskäytäntöjen hallinta](prevent-data-loss.md)

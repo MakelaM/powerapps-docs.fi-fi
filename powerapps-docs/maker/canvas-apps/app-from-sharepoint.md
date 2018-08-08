@@ -1,6 +1,6 @@
 ---
-title: Pikaopas sovelluksen luomiseen PowerAppsissa SharePointista | Microsoft Docs
-description: Luo sovellus automaattisesti PowerAppsissa SharePoint-luettelon tiedonhallintaa varten
+title: Pohjaan perustuvan sovelluksen luominen PowerAppsissa SharePointista | Microsoft Docs
+description: Luo pohjaan perustuva sovellus automaattisesti PowerAppsissa SharePoint-luettelon tiedonhallintaa varten
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/12/2018
 ms.author: anneta
-ms.openlocfilehash: fd3e1e293b3c10b25351ba3958af46b887447e26
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: cb68c454053a36f49b72afa1718ca0d67ad364af
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195377"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469875"
 ---
-# <a name="quickstart-for-generating-an-app-in-powerapps-from-sharepoint"></a>Pikaopas sovelluksen luomiseen PowerAppsissa SharePointista
+# <a name="generate-a-canvas-app-in-powerapps-from-sharepoint-data"></a>Pohjaan perustuvan sovelluksen luominen PowerAppsissa SharePointista
 
-Tässä pikaoppaassa käytetään PowerAppsia ensimmäisen sovelluksen luomiseen automaattisesti SharePointissa luomasi luettelon pohjalta. Tässä sovelluksessa voit selata luettelon kaikkia kohteita, tarkastella yksittäisen kohteen tietoja sekä luoda, päivittää tai poistaa kohteen.
+Tässä aiheessa käytetään PowerAppsia ensimmäisen pohjaan perustuvan sovelluksen luomiseen automaattisesti SharePointissa luomasi luettelon pohjalta. Tässä sovelluksessa voit selata luettelon kaikkia kohteita, tarkastella yksittäisen kohteen tietoja sekä luoda, päivittää tai poistaa kohteen.
 
 Tässä pikaoppaassa voit tutustua käsitteisiin ja tekniikoihin, jos sinulla on luettelo SharePointissa. Noudata tätä pikaopasta tarkasti ja luo SharePoint Online -sivustossa luettelo nimeltä **SimpleApp**, joka sisältää sarakkeen nimeltä **Otsikko**. Luo luetteloon **Vanilla**-, **Chocolate**- ja **Strawberry**-merkinnät.
 

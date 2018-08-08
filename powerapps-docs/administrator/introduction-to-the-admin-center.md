@@ -1,24 +1,25 @@
 ---
-title: Hallintakeskukseen tutustuminen | Microsoft Docs
+title: Yrityssovellusympäristön hallintakeskuksen esittely | Microsoft Docs
 description: PowerAppsin hallintakeskuksen esittely.
 author: msftman
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: overview
 ms.date: 03/21/2017
 ms.author: deonhe
-ms.openlocfilehash: 1a6fc44ba32d7b6adbf7995221d4232af3e564ea
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
+ms.openlocfilehash: 3639851e3f37f2db794816aa9199018de5a5e7be
+ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34167948"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39349911"
 ---
-# <a name="introduction-to-the-admin-center-for-powerapps"></a>PowerAppsin hallintakeskuksen esittely
+# <a name="introduction-to-the-business-application-platform-admin-center"></a>Yrityssovellusympäristön hallintakeskuksen esittely
+
 ![Yleiskuvaus](./media/introduction-to-the-admin-center/overview.png)  
 
-[Hallintakeskuksessa](https://admin.powerapps.com) voit:
+[Yrityssovellusympäristön hallintakeskuksessa](https://admin.powerapps.com) voit
 
 * Hallinnoida [ympäristöjen](environments-administration.md) käyttäjiä, käyttöoikeuksia ja rooleja. (PowerAppsin palvelupaketti 2 vaaditaan)
 * Hallinnoida [tietojen menetyksen estämiskäytäntöjä](prevent-data-loss.md), joilla ohjataan liiketoimintatietojen jakamista palveluiden kanssa PowerAppsissa. (PowerAppsin palvelupaketti 2 tai Office 365:n Yleisen järjestelmänvalvojan käyttöoikeudet vaaditaan)

@@ -1,6 +1,6 @@
 ---
-title: Tutustu tietolähteisiin | Microsoft Docs
-description: Viitetietoja yhteyksien ja tietolähteiden käyttämiseen Microsoft PowerAppsissa.
+title: Pohjaan perustuvien sovellusten tietolähteiden ymmärtäminen | Microsoft Docs
+description: Viitetietoja yhteyksien ja tietolähteiden käyttämiseen pohjaan perustuvissa sovelluksissa.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,29 +9,33 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/08/2017
 ms.author: gregli
-ms.openlocfilehash: d8fd771d9407d0ca2601471a06c727b16a751f2a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a4dd3d2d21aa8e4f8501c9bc9812ba6658683f03
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39020879"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470381"
 ---
-# <a name="understand-data-sources-in-powerapps"></a>Tutustu tietolähteisiin PowerAppsissa
-Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset käyttävät näitä tietolähteitä käyttämällä **yhteyksiä**.
+# <a name="understand-data-sources-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten tietolähteiden ymmärtäminen PowerAppsissa
+
+PowerAppsissa useimmat pohjaan perustuvat sovellukset käyttävät ulkoisia tietoja eli **tietolähteitä**, jotka on tallennettu pilvipalveluihin. Yleinen esimerkki on taulukko Excel-tiedostossa, joka on tallennettu OneDrive for Businessiin. Sovellukset käyttävät näitä tietolähteitä käyttämällä **yhteyksiä**.
 
 Tässä artikkelissa käsitellään erilaisia tietolähteitä ja taulukkotietolähteiden käyttämistä.
 
 On helppoa luoda sovellus, joka suorittaa perustason lukemisen ja kirjoittamisen tietolähteeseen. Joskus tarvitset kuitenkin parempia hallintakeinoja tiedon kulkuun sovelluksiisi ja sovelluksistasi.  Tässä artikkelissa kuvataan, miten **[Patch](functions/function-patch.md)**-, **[DataSourceInfo](functions/function-datasourceinfo.md)**-, **[Validate](functions/function-validate.md)**- ja **[Errors](functions/function-errors.md)**-funktiot tarjoavat parempaa hallintaa.
 
 ## <a name="kinds-of-data-sources"></a>Tietolähdetyypit
+
 Tietolähteet voidaan yhdistää pilvipalveluun, tai ne voivat olla sovelluksen paikallisia tietolähteitä.
 
 ### <a name="connected-data-sources"></a>Yhdistetyt tietolähteet
-Yleisin tietolähde on **taulukko**, jota voit käyttää tiedon hakemiseen ja tallentamiseen. Voit käyttää **yhteyksiä** tietolähteisiin lukeaksesi ja kirjoittaaksesi tietoa Microsoft Excel -työkirjoihin, SharePoint-luetteloihin, SQL-taulukoihin ja moniin muihin muotoihin, jotka voidaan tallentaa pilvipalveluihin, kuten OneDrive for Business, DropBox, SQL Server ja niin edelleen.
+
+Yleisin tietolähde on **taulukko**, jota voit käyttää tiedon hakemiseen ja tallentamiseen. Voit käyttää tietolähteiden **liitoksia** tietojen lukemiseen ja kirjoittamiseen Microsoft Excel -työkirjoihin, SharePoint-luetteloihin, SQL-taulukoihin ja moniin muihin muotoihin, jotka voidaan tallentaa pilvipalveluihin, kuten OneDrive for Businessiin, DropBoxiin ja SQL Serveriin.
 
 Taulukkojen lisäksi muita tietolähteitä ovat sähköposti, kalenterit, Twitter ja ilmoitukset, mutta tässä artikkelissa ei käsitellä näitä tietolähteitä.
 
 ### <a name="local-data-sources"></a>Paikalliset tietolähteet
+
 Käyttämällä **[Valikoima](controls/control-gallery.md)**-, **[Näytä lomake](controls/control-form-detail.md)**- ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekteja on helppoa luoda sovellus, joka lukee ja kirjoittaa tietoa tietolähteestä.  Pääset alkuun lukemalla artikkelin [Tutustu tietolomakkeisiin](working-with-forms.md).  
 
 Kun pyydät PowerAppsia luomaan sovelluksen tiedoista, näitä ohjausobjekteja käytetään. Sovellus käyttää taustalla sisäistä taulukkoa tietolähteestä tulevien tietojen tallentamiseen ja muokkaamiseen.
@@ -39,6 +43,7 @@ Kun pyydät PowerAppsia luomaan sovelluksen tiedoista, näitä ohjausobjekteja k
 [Kokoelma](working-with-data-sources.md#collections) on erityinen tietolähde. Se tallennetaan paikallisesti sovellukseen eikä sillä ole tukena yhteyttä pilvipalveluun, joten saman käyttäjän tai eri käyttäjien tietoja ei voi jakaa laitteiden välillä. Kokoelmia voidaan ladata ja tallentaa paikallisesti.
 
 ### <a name="kinds-of-tables"></a>Taulukkotyypit
+
 PowerApps-sovelluksen sisäiset taulukot ovat kiinteitä arvoja, kuten numero tai merkkijono on arvo. Sisäisiä taulukoita ei tallenneta mihinkään, ja ne ovat olemassa vain sovelluksen muistissa. Et voi muokata taulukon rakennetta tai tietoa suoraan. Voit sen sijaan luoda uuden taulukon käyttämällä kaavaa. Kaavan avulla voit tehdä muokatun kopion alkuperäisestä taulukosta.
 
 Ulkoiset taulukot tallennetaan tietolähteeseen myöhempää hakemista ja jakamista varten.  PowerApps tarjoaa tallennetun tiedon lukemiseen ja kirjoittamiseen tarkoitettuja yhteyksiä.  Voit käyttää useita tietotaulukoita yhteyden sisällä.  Valitset sovelluksessa käytettävät taulukot, ja niistä jokaisesta tulee erillinen *tietolähde*.  

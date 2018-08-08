@@ -1,6 +1,6 @@
 ---
-title: Lisää ja määritä ohjausobjekti | Microsoft Docs
-description: Vaiheittaiset ohjeet ohjausobjektin lisäämiseen ja määrittämiseen suoraan työkaluriviltä, Ominaisuudet-välilehdestä tai kaavariviltä.
+title: Lisää ja määritä pohjaan perustuvan sovelluksen ohjausobjekti | Microsoft Docs
+description: Vaiheittaiset ohjeet pohjaan perustuvan sovelluksen ohjausobjektin lisäämiseen ja määrittämiseen suoraan työkaluriviltä, Ominaisuudet-välilehdestä tai kaavariviltä.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: 24f0479db0707e667263f5b160d6785560fe604b
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: dca3ec23b436f96013e9f5102c8b63c6c7d44935
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195584"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470358"
 ---
-# <a name="add-and-configure-a-control-in-powerapps"></a>Ohjausobjektin lisääminen ja määrittäminen PowerAppsissa
-Lisää käyttöliittymäelementtejä sovellukseesi ja määritä niiden ulkoasua ja toimintaa suoraan työkaluriviltä, **Ominaisuudet**-välilehdestä tai kaavariviltä. Nämä käyttöliittymäelementit ovat nimeltään ohjausobjekteja. Niiden määritettävät osat ovat nimeltään ominaisuuksia.
+# <a name="add-and-configure-a-canvas-app-control-in-powerapps"></a>Pohjaan perustuvan sovelluksen ohjausobjektin lisääminen ja määrittäminen PowerAppsissa
+
+Lisää käyttöliittymäelementtejä pohjaan perustuvaan sovellukseesi ja määritä niiden ulkoasua ja toimintaa suoraan työkaluriviltä, **Ominaisuudet**-välilehdestä tai kaavariviltä. Nämä käyttöliittymäelementit ovat nimeltään ohjausobjekteja. Niiden määritettävät osat ovat nimeltään ominaisuuksia.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 1. [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
 2. Napsauta tai napauta PowerApps Studion **Tiedosto-valikon** (lähellä vasenta reunaa) kohtaa **Uusi**.

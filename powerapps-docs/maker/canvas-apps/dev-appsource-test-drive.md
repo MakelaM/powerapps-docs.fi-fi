@@ -1,6 +1,6 @@
 ---
-title: Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa | Microsoft Docs
-description: Käytä AppSourcea sovellusten jakamiseen asiakkaille ja liidien luomiseen yrityksellesi.
+title: Anna asiakkaiden koekäyttää pohjaan perustuvia sovelluksiasi AppSourcessa | Microsoft Docs
+description: Käytä AppSourcea pohjaan perustuvien sovellusten jakamiseen asiakkaille ja liidien luomiseen yrityksellesi.
 author: linhtranms
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/08/2017
 ms.author: litran
-ms.openlocfilehash: fb51ab2c671d695350e452dc6fb29efa583adfea
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 6499c0c2a7eb87ff56ec9e248f4a16e8b6c647f9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023685"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470542"
 ---
-# <a name="let-customers-test-drive-your-apps-on-appsource"></a>Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa
-Oletko kiinnostunut sovellusten luomisesta PowerAppsissa? Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisuja osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten jakamiseen asiakkaiden kanssa ja liidien luomiseen yrityksellesi.
+# <a name="let-customers-test-drive-your-canvas-app-on-appsource"></a>Anna asiakkaiden koekäyttää pohjaan perustuvia sovelluksiasi AppSourcessa
+
+Oletko kiinnostunut pohjaan perustuvien sovellusten luomisesta PowerAppsissa? Haluatko jakaa pohjaan perustuvan sovelluksen asiakkaillesi? [AppSource.com](https://appsource.microsoft.com) tukee nyt PowerApps Test Drive -ratkaisuja menetelmänä sovellusten jakamiseen asiakkaiden kanssa ja liidien luomiseen yrityksellesi.
 
 ## <a name="what-is-a-test-drive-solution"></a>Mikä on Test Drive -ratkaisu?
+
 Test Drive -ratkaisun avulla asiakkaasi voivat testata oikeaa sovellusta rekisteröitymättä PowerApps-palvelupakettia varten tai asentamatta sovelluksia. Asiakkaat vain kirjautuvat sisään osoitteessa AppSource.com käyttämällä Azure Active Directory (AAD) -tiliään ja suorittavat sovelluksen verkkoselaimessa. Ilman Test Drivea asiakkaat voivat vain lukea tietoja sovelluksestasi tai katsoa videon, jossa sitä kuvaillaan. Test Driven avulla asiakas saa paremman kuvan ratkaisustasi ja sovelluksesi toiminnallisuudesta. He pääsevät oikeasti käyttämään sovellusta. Asiakkaat eivät voi katsoa konepellin alle ja tarkastella sovelluksen rakennetta, joten immateriaalioikeutesi on suojattu. Keräämme ja jaamme liiditietoja käyttäjistä, jotka käyttävät Test Drive -sovellustasi, mikä auttaa kasvattamaan liiketoimintaasi.
 
 Tässä on esimerkki [sovellussivusta](https://go.microsoft.com/fwlink/?linkid=848867) AppSource.comissa:

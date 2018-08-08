@@ -1,6 +1,6 @@
 ---
-title: Tietoa taulukoista | Microsoft Docs
-description: Tietoa taulukoiden, sarakkeiden ja tietueiden käsittelemisestä
+title: Taulukoiden ymmärtäminen pohjaan perustuvissa sovelluksissa | Microsoft Docs
+description: Viitetietoja pohjaan perustuvan sovelluksen taulukoiden, sarakkeiden ja tietueiden käyttämisestä PowerAppsissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/26/2016
 ms.author: gregli
-ms.openlocfilehash: 6e1a87324c0a004390ceb5d1ce4846325fe18bc7
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: e0fce2e574644f8ec8077e86dc3a5b4ee5f2cd3a
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021178"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469898"
 ---
-# <a name="understand-tables-and-records-in-powerapps"></a>Tutustu PowerAppsissa käytettäviin taulukkoihin ja tietueisiin
-Voit luoda sovelluksen, joka käyttää tietoja Microsoft Excelistä, SharePointista, SQL Serveristä ja useista muista lähteistä, jotka tallentavat tietoja tietueisiin ja taulukkoihin. Jos haluat käsitellä tällaisia tietoja mahdollisimman tehokkaasti, tutustu näiden rakenteiden taustalla oleviin käsitteisiin.
+# <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Pohjaan perustuvan sovelluksen taulukoiden ja tietueiden ymmärtäminen PowerAppsissa
+
+Voit luoda PowerAppsissa pohjaan perustuvan sovelluksen, joka käyttää tietoja Microsoft Excelistä, SharePointista, SQL Serveristä ja useista muista lähteistä, jotka tallentavat tietoja tietueisiin ja taulukkoihin. Jos haluat käsitellä tällaisia tietoja mahdollisimman tehokkaasti, tutustu näiden rakenteiden taustalla oleviin käsitteisiin.
 
 * Tietue sisältää yhden tai useamman tietoluokan, joka koskee henkilöä, paikkaa tai asiaa. Tietue voi esimerkiksi sisältää yksittäisen asiakkaan nimen, sähköpostiosoitteen ja puhelinnumeron. Muut työkalut viittaavat tietueeseen termillä ”rivi” tai ”kohde”.
 * Taulukko sisältää yhden tai useampia tietueita, jotka sisältävät samat tietoluokat. Taulukko saattaa esimerkiksi sisältää 50 asiakkaan nimet, sähköpostiosoitteet ja puhelinnumerot.

@@ -1,6 +1,6 @@
 ---
-title: Kehitä offline-tilassa toimivia sovelluksia | Microsoft Docs
-description: Kehitä offline-tilassa toimivia sovelluksia, niin että käyttäjät voivat työskennellä tehokkaasti myös ilman verkkoyhteyttä.
+title: Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia | Microsoft Docs
+description: Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia, jotta käyttäjät voivat työskennellä tehokkaasti myös ilman verkkoyhteyttä.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,22 +9,24 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: cb2ed2404f7270367b3a26bf8eccb733b09fee23
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9035809f989ad4b0215d4a8eba5d693d145b7f66
+ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023133"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39471209"
 ---
-# <a name="develop-offline-capable-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia sovelluksia PowerAppsissa
-Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia, kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia sovelluksia. Voit:
+# <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia PowerAppsissa
 
-* Käynnistää Powerappsin mobiilisovelluksen offline-tilassa.
+Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia, kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia pohjaan perustuvia sovelluksia. Voit:
+
+* Käynnistää PowerApps Mobilen offline-tilassa.
 * Suorittaa kehittämiäsi sovelluksia offline-tilassa.
 * Määrittää, onko sovellus offline-tilassa, verkossa tai käyttääkö se käytön mukaan laskutettavaa yhteyttä käyttämällä [Connection](../canvas-apps/functions/signals.md#connection)-signaaliobjektia.
 * Käyttää [kokoelmia](../canvas-apps/create-update-collection.md) ja hyödyntää funktioita, kuten [LoadData ja SaveData](../canvas-apps/functions/function-savedata-loaddata.md), perustietojen tallennukseen offline-tilassa.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Offline-tilassa toimivien sovellusten luominen
+
 Ensimmäinen asia mietittäessä offline-tilanteita on se, miten sovelluksesi käsittelevät tietoja. PowerApps-sovellukset käyttävät tietoja pääasiassa käyttöympäristön, kuten SharePointin, Office 365:n ja Common Data Servicen tarjoamien [liittimien](../canvas-apps/connections-list.md) kautta. Voit myös luoda mukautettuja liittimiä, jotka antavat sovelluksille mahdollisuuden käyttää mitä tahansa palvelua, joka tarjoaa RESTful-päätepisteen. Tämä voi olla WWW-ohjelmointirajapinta tai palvelu, kuten Azure Functions. Nämä liittimet toimivat Internetin kautta HTTPS-käytännöllä, minkä vuoksi käyttäjillä on oltava Internet-yhteys, jotta he voivat käyttää palvelun tarjoamia tietoja ja ominaisuuksia.
 
 ![PowerApps-sovellus liittimineen](./media/offline-apps/online-app.png)

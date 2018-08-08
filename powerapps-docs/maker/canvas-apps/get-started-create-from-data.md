@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen luominen Excelistä | Microsoft Docs
-description: PowerAppsin käyttäminen sovelluksen luomiseen automaattisesti käyttämällä pilvitallennustiliin tallennettua Excel-tiedostoa
+title: Pohjaan perustuvan sovelluksen luominen Excelistä | Microsoft Docs
+description: PowerAppsin käyttäminen pohjaan perustuvan sovelluksen luomiseen automaattisesti käyttämällä pilvitallennustiliin tallennettua Excel-tiedostoa
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 2af0c39aca43d316e79b4f928e114dcfb88caf31
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: f6051ca8348e8417302f49261d7ccac56a8aa9c9
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194848"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470082"
 ---
-# <a name="generate-an-app-from-excel-in-powerapps"></a>Sovelluksen luominen Excelistä PowerAppsissa
-Tässä aiheessa luot automaattisesti ensimmäisen sovellukseksi PowerAppsissa käyttämällä Excel-taulukon tietoja. Valitset Excel-tiedoston, luot sovelluksen ja suoritat sitten luomasi sovelluksen. Jokainen luotu sovellus sisältää näytöt tietueiden selaamiseen, tietueiden tietojen näyttämiseen ja tietueiden luomiseen ja päivittämiseen. Luomalla sovelluksen saat luotua nopeasti toimivan, Excel-tietoja käyttävän sovelluksen, ja voit sitten mukauttaa sovellusta omien tarpeidesi mukaan. 
+# <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Excelistä PowerAppsissa
+
+Tämän aiheen avulla luot automaattisesti ensimmäisen pohjaan perustuvan sovelluksesi PowerAppsissa käyttämällä Excel-taulukon tietoja. Valitset Excel-tiedoston, luot sovelluksen ja suoritat sitten luomasi sovelluksen. Jokainen luotu sovellus sisältää näytöt tietueiden selaamiseen, tietueiden tietojen näyttämiseen ja tietueiden luomiseen ja päivittämiseen. Luomalla sovelluksen saat luotua nopeasti toimivan, Excel-tietoja käyttävän sovelluksen, ja voit sitten mukauttaa sovellusta omien tarpeidesi mukaan. 
 
 Excel-tiedoston tulee olla pilvitallennustilissä, kuten OneDrive, Google Drive tai Dropbox. Tässä aiheessa käytetään OneDrive for Businessia.
 

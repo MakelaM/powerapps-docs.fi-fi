@@ -1,6 +1,6 @@
 ---
-title: Tutustu tietolomakkeen asetteluun| Microsoft Docs
-description: Luo näyttäviä lomakeasetteluja rivien ja sarakkeiden avulla.
+title: Pohjaan perustuvien sovellusten tietolomakkeen asettelun ymmärtäminen | Microsoft Docs
+description: Luo PowerAppsissa upeita lomakeasetteluja pohjaan perustuvissa sovelluksissa käyttämällä rivejä ja sarakkeita.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,29 +9,32 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/17/2017
 ms.author: gregli
-ms.openlocfilehash: 050e665a7a5c2a05ab9abfc989134028d303da4d
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 7676c2d93eb5bbf55620a4d36f1f4818d52472d0
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017728"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470611"
 ---
-# <a name="understand-data-form-layout-in-microsoft-powerapps"></a>Tutustu tietolomakkeen asetteluun Microsoft PowerAppsissa
-PowerAppsissa voit helposti luoda lomakkeita, jotka ovat tyylikkäitä ja tehokkaita käyttää. Harkitse esimerkiksi tätä peruslomaketta myyntitilausten tallennusta varten:
+# <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten tietolomakkeen asettelun ymmärtäminen PowerAppsissa
+
+Voida luoda helposti näyttävän ja tehokkaan lomakkeen, kun luot pohjaan perustuvan sovelluksen PowerAppsissa. Harkitse esimerkiksi tätä peruslomaketta myyntitilausten tallennusta varten:
 
 ![Myyntitilausmalli](./media/working-with-form-layout/sales-order.png)
 
 Tässä opetusohjelmassa käymme läpi vaiheet tämän lomakkeen luomiseen. Tarkastelemme myös joitakin edistyneempiä aiheita, kuten kenttien dynaamista koonmuutamista käytettävissä olevan tilan täyttämiseksi.
 
 ## <a name="before-you-start"></a>Ennen aloittamista
+
 Jos olet uusi PowerApps-käyttäjä (tai olet luonut sovelluksia vain automaattisesti), kannattaa [luoda sovellus alusta](get-started-create-from-blank.md), ennen kuin ryhdyt toimimaan tämän ohjeaiheen mukaan. Luomalla sovelluksen alusta opit välttämättömiä käsitteitä, joita mainitaan tässä ohjeaiheessa, mutta ei selitetä, kuten tietolähteiden ja ohjausobjektien lisääminen.
 
 ## <a name="add-a-gallery"></a>Lisää valikoima
+
 1. Luo tablettisovellus alusta alkaen.
-   
+
     Kaikki tässä aiheessa kuvatut asiat koskevat myös puhelinasetteluja, paitsi että puhelinsovelluksissa on usein vain yksi pystysuuntainen sarake.
 2. Lisää **Myyntitilaus**-entiteetti [Common Data Serviceen](../common-data-service/data-platform-intro.md) tietolähteenä sovellukselle.
-   
+
     Voit käyttää tämän opetusohjelman ulkopuolella mitä tahansa tietolähteitä, mukaan lukien SharePoint-luetteloita ja Excel-taulukoita.
 3. Lisää vaakasuuntainen **Valikoima**-ohjausobjekti ja aseta sen **Kohteet**-ominaisuudeksi **Myyntitilaus**.
    

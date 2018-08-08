@@ -1,6 +1,6 @@
 ---
-title: Sovelluksessasi käytettävien resurssien jakaminen | Microsoft Docs
-description: Opi, miten sovelluksesi käyttämät resurssit jaetaan, kun sovellus on jaettu
+title: Pohjaan perustuvassa sovelluksessasi käytettävien resurssien jakaminen | Microsoft Docs
+description: Tietoa pohjaan perustuvan sovelluksesi käyttämien resurssien jakamisesta PowerAppsissa
 author: archnair
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/28/2016
 ms.author: archanan
-ms.openlocfilehash: 09d4f26139ae33195c666a2eb71d70e02b035f69
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 881a0eb85d252131d6249c171c95c0711e4887d4
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194884"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471393"
 ---
-# <a name="share-app-resources"></a>Sovelluksen resurssien jakaminen
-Ennen kuin voit [jakaa sovelluksen](share-app.md), ota huomioon resurssityypit, joita se hyödyntää, kuten yhtä tai useampia seuraavista:
+# <a name="share-canvas-app-resources-in-powerapps"></a>Pohjaan perustuvan sovelluksen resurssien jakaminen PowerAppsissa
+
+Ennen kuin voit [jakaa pohjaan perustuvan sovelluksen](share-app.md), ota huomioon resurssityypit, joita se hyödyntää, kuten yhtä tai useampia seuraavista:
 
 * yhteys tietolähteeseen
 * paikallinen tietoyhdyskäytävä
@@ -30,6 +31,7 @@ Jotkin näistä resursseista jaetaan automaattisesti, kun jaat sovelluksen. Muut
 Voit jakaa yhteyksiäsi, mukautettuja liittimiä ja paikallisia tietoyhdyskäytäviä myös koko organisaation kanssa.
 
 ## <a name="connections"></a>Yhteydet
+
 Jotkin yhteystyypit, kuten SQL Server, jaetaan automaattisesti, mutta muut edellyttävät, että käyttäjät luovat omia yhteyksiään tietolähteeseen tai sovelluksessa oleviin lähteisiin.
 
 Osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) voit määrittää, jaetaanko yhteys automaattisesti, ja voit päivittää jakamisoikeudet. Napsauta tai napauta vasemmalla olevassa siirtymispalkissa kohtaa **Hallitse**, napsauta tai napauta kohtaa **Yhteydet** ja napsauta tai napauta yhteyttä. Jos **Jaa**-välilehti tulee näkyviin, yhteys jaetaan automaattisesti.

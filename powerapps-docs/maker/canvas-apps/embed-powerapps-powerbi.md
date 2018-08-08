@@ -1,6 +1,6 @@
 ---
-title: Uuden sovelluksen upottaminen Power BI -raporttiin | Microsoft Docs
-description: Upota sovellus, joka käyttää samaa tietolähdettä ja voidaan suodattaa samalla tavalla kuin muut raporttikohteet
+title: Uuden pohjaan perustuvan sovelluksen upottaminen Power BI -raporttiin | Microsoft Docs
+description: Upota uusi pohjaan perustuva sovellus, joka käyttää samaa tietolähdettä ja voidaan suodattaa samalla tavalla kuin muut raporttikohteet
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: 05fe624be450dfcce0d16ae2f178c86ddf361201
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: a5239a5d7ca1600b281558461f2a08969cabb633
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018671"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470956"
 ---
-# <a name="tutorial-embed-a-new-app-in-a-power-bi-report"></a>Opetusohjelma: Uuden sovelluksen upottaminen Power BI -raporttiin
+# <a name="embed-a-new-canvas-app-in-a-power-bi-report"></a>Uuden pohjaan perustuvan sovelluksen upottaminen Power BI -raporttiin
 
-Power BI:n avulla voit laajentaa sen ominaisuuksia lisäämällä *mukautettuja visualisointeja* raporttiin. Tässä opetusohjelmassa luomme PowerAppsin mukautetulla visualisoinnilla uuden malliraporttiin upotetun sovelluksen. Tämä sovellus on vuorovaikutuksessa kyseisen raportin muiden kohteiden kanssa.
+Power BI:n avulla voit laajentaa sen ominaisuuksia lisäämällä *mukautettuja visualisointeja* raporttiin. Tässä opetusohjelmassa luomme PowerAppsin mukautetulla visualisoinnilla uuden pohjaan perustuvan sovelluksen, joka on upotettu malliraporttiin. Tämä sovellus on vuorovaikutuksessa kyseisen raportin muiden kohteiden kanssa.
 
 Jos sinulla ei ole PowerApps-tilausta, [luo ilmainen tili](../signup-for-powerapps.md) ennen aloittamista.
 

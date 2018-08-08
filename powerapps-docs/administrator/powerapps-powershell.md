@@ -2,28 +2,28 @@
 title: PowerShell-tuki (esikatselu) | Microsoft Docs
 description: Powershell-cmdlet-komentojen kuvaus ja niiden asennus- ja suoritusohjeet.
 author: jamesol-msft
-manager: kfile
+manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 05/23/2018
+ms.date: 07/31/2018
 ms.author: jamesol
-ms.openlocfilehash: b6ee687fdfe6da8550d76193a7c9219aae5ae291
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+ms.openlocfilehash: e45b23d4efc474bcd48069b9823d1ef80cf5ea4a
+ms.sourcegitcommit: a0a8782d3c8d24cecf0796d405a61f745f0ffd91
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218828"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367611"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerAppsin PowerShell-tuki (esiversio)
-Sovellusten tekijöille ja järjestelmänvalvojille tarkoitetulla PowerShell-cmdlet-komentojen esiversiolla voit automatisoida monia seuranta- ja hallintatehtäviä, jotka on tällä hetkellä mahdollista suorittaa vain manuaalisesti [PowerAppsissa](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai [PowerApps-hallintakeskuksessa](https://admin.powerapps.com).
+Sovellusten tekijöille ja järjestelmänvalvojille tarkoitetulla PowerShell-cmdlet-komentojen esiversiolla voit automatisoida monia seuranta- ja hallintatehtäviä, jotka on tällä hetkellä mahdollista suorittaa vain manuaalisesti [PowerAppsissa](https://web.powerapps.com) tai [PowerApps-hallintakeskuksessa](https://admin.powerapps.com).
 
 ## <a name="installation"></a>Asennus
 Suorita sovellusten luojille tarkoitetut PowerShell-cmdlet-komennot seuraavasti:
 
 1. Lataa[PowerShell-komentosarjatiedosto](https://go.microsoft.com/fwlink/?linkid=2006349).
 
-2. Pura tiedosto kansioon. 
+2. Pura tiedosto kansioon.
 
 3. Avaa PowerShell-komentoikkuna samassa kansiossa järjestelmänvalvojana.
 
@@ -71,7 +71,7 @@ Käyttäjät, joilla on kelvollinen PowerApps-käyttöoikeus, voivat suorittaa t
 | Tarkoitus | Cmdlet-komento |
 | --- | --- |
 | Ympäristöjen luku | Get-PowerAppEnvironment *(aiemmin Get-PowerAppsEnvironment)* <br> Get-FlowEnvironment
-| Kaaviosovelluksen lukeminen, päivittäminen ja poistaminen | Get-App <br> Remove-App <br> Publish-App <br> Set-AppDisplayName <br> Get-AppVersion <br> Restore-AppVersion
+| Kaaviosovelluksen lukeminen, päivittäminen ja poistaminen | Get-PowerApp *(aiemmin Get-App)* <br> Remove-PowerApp *(aiemmin Remove-App)* <br> Publish-PowerApp *(aiemmin Publish-App)* <br> Set-AppDisplayName *(aiemmin Set-PowerAppDisplayName)*<br> Get-PowerAppVersion *(aiemmin Get-AppVersion)* <br> Restore-PowerAppVersion *(aiemmin Restore-AppVersion)*
 | Kaaviosovelluksen käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-PowerAppRoleAssignment *(aiemmin Get-AppRoleAssignment)* <br> Set-PowerAppRoleAssignment *(aiemmin Set-AppRoleAssignment)* <br> Remove-PowerAppRoleAssignment *(aiemmin Remove-AppRoleAssignment)*
 | Työnkulun lukeminen, päivittäminen ja poistaminen | Get-Flow <br> Get-FlowRun <br> Enable-Flow <br> Disable-Flow <br> Remove-Flow
 | Työnkulun käyttöoikeuksien lukeminen, päivittäminen ja poistaminen | Get-FlowOwnerRole <br> Set-FlowOwnerRole <br> Remove-FlowOwnerRole
@@ -122,9 +122,9 @@ Jotta voit suorittaa järjestelmänvalvojan cmdlet-komentojen hallintatoimia, si
 > [!NOTE]
 > Käytä seuraavia komentoja syntaksin ymmärtämiseen ja kunkin cmdlet-komennon esimerkkien tarkasteluun:
 >```
->Get-Help Get-AdminEnvironment
->Get-Help Get-AdminEnvironment -Examples
->Get-Help Get-AdminEnvironment -Detailed
+>Get-Help Get-AdminPowerAppEnvironment
+>Get-Help Get-AdminPowerAppEnvironment -Examples
+>Get-Help Get-AdminPowerAppEnvironment -Detailed
 >```
 
 ## <a name="questions"></a>Onko sinulla kysyttävää?

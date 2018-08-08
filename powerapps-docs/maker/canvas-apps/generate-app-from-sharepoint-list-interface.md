@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen luominen SharePoint-luettelosta | Microsoft Docs
-description: Luo kolmen ruudun sovellus kohteiden hallitsemiseksi SharePoint-luettelosta, oli se sitten paikallinen tai pilvessä.
+title: Pohjaan perustuvan sovelluksen luominen SharePoint-luettelosta | Microsoft Docs
+description: Luo kolmen ruudun pohjaan perustuva sovellus kohteiden hallitsemiseksi SharePoint-luettelosta, oli se sitten paikallinen tai pilvessä.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
 ms.author: anneta
-ms.openlocfilehash: 46cf610351cf00d8d947c4006c31a3d5971951d0
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 9230c96c1b1c5e07ea5129f73a8edd95772aad84
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022452"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471416"
 ---
-# <a name="generate-an-app-from-within-sharepoint-using-powerapps"></a>Sovelluksen luominen SharePointista PowerAppsilla
+# <a name="generate-a-canvas-app-from-within-sharepoint-by-using-powerapps"></a>Pohjaan perustuvan sovelluksen luominen SharePointista PowerAppsilla
 
-Voit luoda PowerAppsissa automaattisesti sovelluksen, jonka kautta käyttäjät voivat hallita mukautetun SharePoint Online -luettelon kohteita. Sovelluksessa on kolme ruutua, joiden kautta käyttäjät voivat
+Voit luoda PowerAppsissa automaattisesti pohjaan perustuvan sovelluksen, jonka kautta käyttäjät voivat hallita mukautetun SharePoint Online -luettelon kohteita. Sovelluksessa on kolme ruutua, joiden kautta käyttäjät voivat
 
 * selata kaikkia luettelon tietueita (**BrowseScreen1**)
 * tarkastella kaikkia tietyn tietueen kenttiä (**DetailsScreen1**)

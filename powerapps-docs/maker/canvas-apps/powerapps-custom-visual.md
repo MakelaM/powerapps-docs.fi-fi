@@ -1,6 +1,6 @@
 ---
 title: PowerAppsin mukautettu visualisointi Power BI:lle | Microsoft Docs
-description: Toimintosarja ja rajoitukset sellaisen sovelluksen upottamiseen, joka käyttää samaa tietolähdettä ja joka voidaan suodattaa muiden Power BI -raporttikohteiden mukaisesti
+description: Toimintosarja ja rajoitukset sellaisen pohjaan perustuvan sovelluksen upottamiseen, joka käyttää samaa tietolähdettä ja joka voidaan suodattaa muiden Power BI -raporttikohteiden mukaisesti
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,16 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/15/2018
 ms.author: mblythe
-ms.openlocfilehash: 8e50763f11d04db4e9c8e0a6a6ae8ff316bc185a
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 0da480a482415ad174f10204f14f31adbd3607f2
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015888"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469990"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
-Power BI mahdollistaa merkityksellisten tietojen saamisen ja paremman päätöksenteon. PowerApps antaa puolestaan kaikkien luoda ja käyttää sovelluksia, jotka muodostavat yhteyden yritystietoihin. Käyttämällä PowerAppsin mukautettua visualisointia voit välittää kontekstin huomioon ottavaa tietoa PowerApps-sovellukseen, joka päivittyy reaaliajassa, kun teet muutoksia raporttiin. Sovelluksesi käyttäjät saavat merkityksellistä liiketoimintatietoa, ja he voivat suorittaa toimintoja suoraan Power BI -raporteista ja koontinäytöltä.
+Power BI mahdollistaa merkityksellisten tietojen saamisen ja paremman päätöksenteon. PowerApps antaa puolestaan kaikkien luoda ja käyttää sovelluksia, jotka muodostavat yhteyden yritystietoihin. Käyttämällä PowerAppsin mukautettua visualisointia voit välittää kontekstin huomioon ottavaa tietoa pohjaan perustuvaan sovellukseen, joka päivittyy reaaliajassa, kun teet muutoksia raporttiin. Sovelluksesi käyttäjät saavat merkityksellistä liiketoimintatietoa, ja he voivat suorittaa toimintoja suoraan Power BI -raporteista ja koontinäytöltä.
 
 ## <a name="using-the-powerapps-custom-visual"></a>PowerAppsin mukautetun visualisoinnin käyttäminen
 

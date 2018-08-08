@@ -1,6 +1,6 @@
 ---
-title: Käynnistä työnkulku sovelluksessa | Microsoft Docs
-description: Luo työnkulku, joka suorittaa yhden tai useamman tehtävän sovelluksessa ilmenneen tapahtuman jälkeen, kuten käyttäjän painettua painiketta.
+title: Käynnistä työnkulku pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Luo työnkulku, joka suorittaa yhden tai useamman tehtävän pohjaan perustuvassa sovelluksessa ilmenneen tapahtuman jälkeen, kuten käyttäjän painettua painiketta.
 author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/05/2017
 ms.author: sharik
-ms.openlocfilehash: 9d681cc889a3f39fb0785ab0cba86e37ebe185b3
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 9096b00b7d1f08ebdb9e767ffcbcd9837aa797cf
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195883"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39470450"
 ---
-# <a name="start-a-flow-in-an-app"></a>Käynnistä työnkulku sovelluksessa
-Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
+# <a name="start-a-flow-in-a-canvas-app"></a>Käynnistä työnkulku pohjaan perustuvassa sovelluksessa
+
+Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun pohjaan perustuvassa sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -25,6 +26,7 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 
 ## <a name="create-a-flow"></a>Luo työnkulku
+
 1. Kirjaudu [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc):iin ja valitse sitten vasemmassa siirtymispalkissa **Työnkulut**.
 
 2. Valitse **Omat työnkulut** -sivulla **Luo tyhjästä**.

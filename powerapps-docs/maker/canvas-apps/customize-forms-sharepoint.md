@@ -1,6 +1,6 @@
 ---
-title: Lomakkeiden muokkaaminen | Microsoft Docs
-description: Määritä, mitä tietoja näytetään, missä järjestyksessä ne näytetään ja missä ohjausobjekteissa ne näytetään.
+title: Lomakkeen mukauttaminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Määritä PowerAppsissa, mitä tietoja näytetään pohjaan perustuvan sovelluksen lomakkeessa, missä järjestyksessä ne näytetään ja missä ohjausobjekteissa ne näytetään.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,24 +9,27 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/17/2018
 ms.author: anneta
-ms.openlocfilehash: aefe350c2294f9d8cbae32eee1db1f600c8a65da
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.openlocfilehash: 14ea731907624f882ae117a09c7f799a25389fe6
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195101"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39471439"
 ---
-# <a name="customize-forms-in-powerapps"></a>Lomakkeiden mukauttaminen PowerAppsissa
-Mukauta **Näytä lomake**- ja **Muokkaa lomaketta** -ohjausobjekteja siten, että ne näyttävät merkittävimmät tiedot intuitiivisimmassa järjestyksessä, jotta käyttäjät voivat helposti ymmärtää ja päivittää tietoja.
+# <a name="customize-a-canvas-app-form-in-powerapps"></a>Pohjaan perustuvan sovelluksen lomakkeen mukauttaminen PowerAppsissa
+
+Mukauta pohjaan perustuvassa sovelluksessa **Näytä lomake**- ja **Muokkaa lomaketta** -ohjausobjekteja siten, että ne näyttävät merkittävimmät tiedot intuitiivisimmassa järjestyksessä, jotta käyttäjät voivat helposti ymmärtää ja päivittää tietoja.
 
 Jokainen lomake käsittää yhden tai useampia kortteja, joista jokainen näyttää tiedot tietolähteen tietystä sarakkeesta. Noudattamalla tämän artikkelin ohjeita voit määrittää, mitkä kortit näkyvät lomakkeessa, ja voit siirtää kortteja ylös ja alas lomakkeessa.
 
 Jos et tunne PowerAppsia, katso [PowerAppsin johdanto](getting-started.md).
 
 ## <a name="prerequisites"></a>Edellytykset
+
 [Luo sovellus](data-platform-create-app.md) Common Data Service -palvelussa ja [mukauta sitten valikoimaa](customize-layout-sharepoint.md) kyseisessä sovelluksessa.
 
 ## <a name="show-and-hide-cards"></a>Korttien näyttäminen ja piilottaminen
+
 1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     ![PowerApps-sivuston aloitussivu](./media/customize-forms-sharepoint/sign-in.png)

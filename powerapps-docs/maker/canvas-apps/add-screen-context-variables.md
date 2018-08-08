@@ -1,7 +1,7 @@
 ---
-title: Näytön lisääminen ja näyttöjen välillä siirtyminen | Microsoft Docs
-description: Lisää sovellukseen näyttö ja siirry näytöstä toiseen eteen- ja taaksepäin osoittavilla nuolilla PowerAppsissa
-author: aftowen
+title: Näytön lisääminen pohjaan perustuvaan sovellukseen ja näyttöjen välillä siirtyminen | Microsoft Docs
+description: Lisää pohjaan perustuvaan sovellukseen näyttö ja siirry näytöstä toiseen eteen- ja taaksepäin osoittavilla nuolilla PowerAppsissa
+author: AFTOwen
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,21 +9,24 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/10/2017
 ms.author: anneta
-ms.openlocfilehash: c7a100b6df278812ea93da8c4f5c503a841d4109
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+ms.openlocfilehash: 17ec7dd0723e219e1eaf9ad3b112faf049cf7d12
+ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39022006"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39469944"
 ---
-# <a name="add-a-screen-and-navigate-between-screens"></a>Lisää näyttö ja siirry näytöstä toiseen
-Luo usean näytön sovellus ja lisää tapoja, joilla käyttäjät voivat siirtyä niiden välillä.
+# <a name="add-a-screen-to-a-canvas-app-and-navigate-between-screens"></a>Näytön lisääminen pohjaan perustuvaan sovellukseen ja näyttöjen välillä siirtyminen
+
+Luo usean näytön pohjaan perustuva sovellus ja lisää tapoja, joilla käyttäjät voivat siirtyä niiden välillä.
 
 ## <a name="prerequisites"></a>Edellytykset
+
 * Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 * Luo tai avaa sovellus.
 
 ## <a name="add-and-rename-a-screen"></a>Lisää ja nimeä näyttö uudelleen
+
 1. Napsauta tai napauta **Aloitus**-välilehdestä **Uusi näyttö**.
 
     ![Lisää Aloitus-välilehteen Näyttö-vaihtoehto](./media/add-screen-context-variables/add-screen.png)
