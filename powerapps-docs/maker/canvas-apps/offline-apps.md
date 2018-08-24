@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: 9035809f989ad4b0215d4a8eba5d693d145b7f66
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+ms.openlocfilehash: 9f02b752444153681e30b39c3fa9d8a8b9e0cd6d
+ms.sourcegitcommit: 521a7b8e6ae72a211045b54d153a8a8c8f59172e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39471209"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40021383"
 ---
 # <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia PowerAppsissa
 
@@ -103,7 +103,7 @@ Tämä kaava tarkistaa, onko laite online-tilassa:
 
 3. Lisää neljä **selite**-ohjausobjektia kunkin twiitin tietojen näyttämiseen ja määritä **Text**-ominaisuudet:
    * **ThisItem.TweetText**
-   * **ThisItem.UserDetails.FullName & " @" & ThisItem.UserDetails.UserName**
+   * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
    * **"RT: " & ThisItem.RetweetCount**
    * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
 4. Lisää **Image**-ohjausobjekti ja määritä **Image**-ominaisuuden arvoksi **ThisItem.UserDetails.ProfileImageUrl**.
