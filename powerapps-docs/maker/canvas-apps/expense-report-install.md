@@ -9,32 +9,32 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
 ms.author: caburk
-ms.openlocfilehash: f0fc0d9407511730145002bf109957b0878398bc
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 5c2d9e2b815d1ff2c3dc80bc6c37f1c2e78364ac
+ms.sourcegitcommit: b35470285b96750d660335284d830b4d0028befb
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39470036"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "42859500"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa PowerAppsissa
 
-Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-mallin asentamista ja määrittämistä varten.
+Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-mallin asentamista ja määrittämistä varten. Voit myös esikatsella mallisovellusta [täältä](https://aka.ms/previewmyexpenses).
 
 Näiden vaiheiden arvioitu suoritusaika on **10–15 minuuttia**
 
-Jos haluat nähdä tämän prosessin esittelyn, katso tämä video.
-
-[![Kuluraportti-mallin asennusvideo](./media/expense-report-install/expense-report-install-video.png)](https://youtu.be/DOR28V5kCkw)
-
-## <a name="overview-of-the-sample"></a>Mallin yleiskatsaus
+> [!TIP]
+> Katso [tästä videosta](https://youtu.be/kJXZPILfbwU) esittely siitä, miten voit käyttää kuluraporttimallisovellusta. 
 
 Seuraa kuluraportteja niiden lähettämisestä hyväksymiseen. Kirjaa nimikkeitä yksittäisiksi kulukertymiksi ja lähetä ne hyväksyntään, kun ne ovat valmiita. Tämä sovellus edellyttää jonkin verran määrittämistä, jotta saat siitä haluamasi kaltaisen.
 
 ![Kuluraportti-PowerAppsin näytön avaaminen](./media/expense-report-install/expense-report-powerapp.png)
 
-Katso tästä videosta, miten Kuluraportti-PowerApps-mallia käytetään.
-
-[![Kuluraportti-mallin asennusvideo](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
+> [!TIP]
+> Katso [tästä](https://youtu.be/h6E9cdrOvMU) videosta, miten voit käyttää kuluraportti-PowerApps-mallia.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -377,9 +377,6 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 2. Napsauta **kolmea pistettä** Kuluraportti-PowerAppsin vieressä.
 3. Napsauta **Avaa**.
 
-Katso tästä videosta, miten Kuluraportti-PowerApps-mallia käytetään.
-
-[![Kuluraportti-mallin asennusvideo](./media/expense-report-install/expense-report-demo-video.png)](https://youtu.be/h6E9cdrOvMU)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 - [SharePoint-luettelolomakkeen mukauttaminen](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
