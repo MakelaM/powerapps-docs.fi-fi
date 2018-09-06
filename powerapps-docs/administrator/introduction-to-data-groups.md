@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: 6a6217c0a344d0501c8a856b0632397044ceb465
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: e2424207cdc70f2f8135fa6ef5559cec2fc637d9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349635"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42833994"
 ---
 # <a name="data-groups"></a>Tietoryhmät
 Tietoryhmät ovat yksinkertainen tapa luokitella palveluita [tietojen menetyksen estämisen (DLP) käytännössä](prevent-data-loss.md). Kaksi käytettävissä olevaa tietoryhmää ovat **vain yritystiedot** -ryhmä ja **yritystietoja ei sallita** -ryhmä. Organisaatiot voivat määrittää vapaasti, mitkä palvelut asetetaan tiettyyn tietoryhmään. Palveluita on hyvä luokitella määrittämällä ne ryhmiin sen perusteella, mikä niiden vaikutus organisaatioon on. Kaikki palvelut asetetaan oletusarvoisesti tietoryhmään **yritystietoja ei sallita**. Voit hallita tietoryhmän palveluita, kun luot tai muokkaat DLP-käytännön ominaisuuksia hallintakeskuksessa.
