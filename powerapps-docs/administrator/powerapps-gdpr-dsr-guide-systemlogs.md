@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 05/23/2018
 ms.author: jamesol
-ms.openlocfilehash: 0511022621d891a6e45b27f1440e614df8b105a0
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: d2edace99a540fae449efb6d5d9badf5251cb33c
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349129"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864875"
 ---
 # <a name="responding-to-dsr-requests-for-system-generated-logs-in-powerapps-microsoft-flow-and-common-data-service-for-apps"></a>Järjestelmän luomia lokeja koskeviin rekisteröidyn henkilön pyyntöihin vastaaminen PowerApps-, Microsoft Flow- ja Common Data Service for Apps -palveluissa
 Microsoft tarjoaa mahdollisuuden käyttää, viedä ja poistaa järjestelmän luomia lokeja, jotka voidaan luokitella henkilötiedoiksi Euroopan Unionin (EU) yleisen tietosuoja-asetuksen (GDPR) *henkilötietojen* laajan määritelmän mukaisesti. Esimerkkejä järjestelmän luomista lokeista, jotka voidaan luokitella henkilötiedoiksi yleisen tietosuoja-asetuksen mukaisesti:
@@ -103,13 +109,13 @@ Jos haluat poistaa järjestelmän luomia lokeja, toimi seuraavasti:
 
 ## <a name="determining-tenant-type"></a>Vuokraajan tyypin määrittäminen
 Voit selvittää, oletko hallitun vai muun vuokraajan käyttäjä, suorittamalla seuraavat toimet:
-1. Avaa seuraava URL-osoite selaimessa ja muista korvata sähköpostiosoitteesi URL-osoitteessa:[ https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1 ](https://login.windows.net/common/userrealm/foobar@contoso.com?api-version=2.1).
+1. Avaa seuraava URL-osoite selaimessa ja muista korvata sähköpostiosoitteesi URL-osoitteessa:[ https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1 ](https://login.windows.net/common/userrealm/name@contoso.com?api-version=2.1).
 
 2. Jos olet **muun kuin hallitun vuokraajan** jäsen, vastauksessa näkyy `"IsViral": true`.
   ```
       {
       ...
-      "Login": "foobar@unmanagedcontoso.com",
+      "Login": "name@unmanagedcontoso.com",
       "DomainName": "unmanagedcontoso.com",
       "IsViral": **true**,
       ...

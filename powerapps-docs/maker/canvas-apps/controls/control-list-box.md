@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 30c55591e410b5526fc85b76b06002c2266e1867
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: a2cb87cf68457771605e78970b8d7a923af61fce
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39016578"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835168"
 ---
 # <a name="list-box-control-in-powerapps"></a>Luetteloruutu-ohjausobjekti PowerAppsissa
 Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
@@ -27,7 +31,7 @@ Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
 
 **[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
+Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät **kohteet** oletusarvoisesti niin, että voit helposti määrittää tiedot, jotka uuden ohjausobjektin on tarkoitus näyttää. Voit esimerkiksi määrittää valikoiman **Kohteet**-ominaisuudeksi **Tili**-taulukon Salesforcessa, taulukon nimeltä **Varasto**, jonka loit Excelissä ja latasit pilveen, tai SharePoint-luettelon nimeltä **ConferenceSpeakers**.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.

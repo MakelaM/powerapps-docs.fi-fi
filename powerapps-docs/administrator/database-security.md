@@ -8,12 +8,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: manasma
-ms.openlocfilehash: af7c4bd051d7fd822b74b43bec6e8110df24a450
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 71358a1c476655ab4e80d94f9e6846b9a35684f4
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349497"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42857632"
 ---
 # <a name="configure-environment-security"></a>Konfiguroi ympäristön turvallisuus
 Common Data Service (CDS) for Apps käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).

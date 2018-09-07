@@ -9,12 +9,18 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 04/23/2018
 ms.author: jamesol
-ms.openlocfilehash: de7af5aa10f2f39057806c6ad170dc32e85c9f02
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: df7ea7bd8a32354191d12d63881988dfd1c8e49e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349014"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42843747"
 ---
 # <a name="responding-to-data-subject-rights-dsr-requests-for-common-data-service-for-apps-customer-data"></a>Common Data Service for Appsin asiakastietoihin kohdistuviin DSR-pyyntöihin vastaaminen
 
@@ -52,7 +58,7 @@ Tässä artikkelissa käsitellään seuraavia toimintoja:
 
 CDS for Appsissa ja aiemmassa Common Data Service (CDS) -versiossa on erilliset prosessit henkilötietojen käsittelyyn.
 
-Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com) ja suorittamalla seuraavat vaiheet:
+Voit tunnistaa käyttämäsi CDS-ympäristön kirjautumalla sisään [PowerAppsiin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja suorittamalla seuraavat vaiheet:
 
 1. Valitse ympäristösi avattavasta **Ympäristö**-luettelosta.
 2. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
@@ -308,12 +314,12 @@ Voit etsiä aiemman CDS-version käyttäjien henkilötietoja seuraavista resurss
 
 |Resurssi | Tarkoitus | Sivuston käyttö |  Ohjelmallinen käyttö
 | --- | --- | --- | ---
-|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com) |      Ei
+|Entiteetin tietueet | Tämän avulla liiketoimintatapahtumat taltioidaan vastaavaan liiketoimintaentiteettiin. | [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) |   Ei
 
 #### <a name="entity-records"></a>Entiteetin tietueet
 Yksityishenkilöiden henkilötietoja voidaan tallentaa mihin tahansa liiketoimintaentiteettiin.
 
-Tämä CDS-versio sisältää oman tietokantarakenteensa ja infrastruktuurinsa. Sillä on oma entiteetit, joita hallitaan [PowerAppsissa](http://web.powerapps.com/).
+Tämä CDS-versio sisältää oman tietokantarakenteensa ja infrastruktuurinsa. Sillä on oma entiteetit, joita hallitaan [PowerAppsissa](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 Näet entiteettiluettelon seuraavasti:
 
@@ -348,7 +354,7 @@ CDS-ympäristössä sijaitsevien henkilötietojen korjaaminen tapahtuu viemäll�
 
 CDS-järjestelmänvalvojan vastuulla on tunnistaa kaikki entiteetit, joihin yksityishenkilöiden henkilötietoja sisältyy, ja toistaa seuraavat vaiheet jokaiselle entiteeteistä.
 
-Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
+Tee [PowerAppsissa](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) seuraavat toiminnot:
 
 1. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
 
@@ -379,7 +385,7 @@ Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
 ### <a name="export"></a>Vieminen
 Voit viedä kunkin entiteetin henkilötiedot Excel-laskentataulukkoon ja tarkastella sitä.
 
-Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
+Tee [PowerAppsissa](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) seuraavat toiminnot:
 
 1. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
 
@@ -404,7 +410,7 @@ Voit poistaa entiteetteihin tallennettuja henkilötietoja käyttämällä tietoj
 
 CDS-järjestelmänvalvojan vastuulla on tunnistaa kaikki entiteetit, joihin yksityishenkilöiden henkilötietoja sisältyy, ja toistaa seuraavat vaiheet jokaiselle entiteeteistä.
 
-Tee [PowerAppsissa](http://web.powerapps.com/) seuraavat toiminnot:
+Tee [PowerAppsissa](http://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) seuraavat toiminnot:
 
 1. Napsauta tai napauta siirtymisruudussa **Tiedot** ja valitse sitten **Entiteetit**.
 

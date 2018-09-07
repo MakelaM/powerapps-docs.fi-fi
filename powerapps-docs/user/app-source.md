@@ -11,12 +11,17 @@ ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: ce7494e136c3cc4e0ff6e841f5145fee8a9185c2
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 512d45a92bf4fe3a8f5acb9d4bd5617bcdbaa4ca
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925474"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42844658"
 ---
 # <a name="discover-apps-via-appsource"></a>Löydä sovelluksia AppSourcen kautta
 PowerAppsilla laatimasi ja jakamasi sovellukset ovat löydettävissä ja niitä käytetään Dynamics 365:ssä Internetissä. Siellä näkyvät kaikki sovelluksesi: sekä ne, jotka olet varta vasten valinnut käyttöön (käynnistämällä ne jakosähköpostiviestin kautta tai avaamalla AppSourcesta), että ne, jotka järjestelmänvalvoja on hankkinut käyttöösi. Näihin sisältyvät kaikki sovelluksesi PowerAppsista ja lisäksi Dynamics 365 -sovelluksia Microsoftilta. Voit etsiä sovelluksia, suodattaa ympäristön perusteella ja kiinnittää useimmin käyttämäsi sovellukset sivun yläreunaan.

@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/07/2015
 ms.author: gregli
-ms.openlocfilehash: 50f69d03df40499c187b7602d66af6e0b362abe2
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 0038a3a5a7f5e23e9777dafeb181dc2cb867c7a2
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019039"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42832141"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijainti-signaalit PowerAppsissa
 Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.  

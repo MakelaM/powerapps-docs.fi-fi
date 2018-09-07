@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: 98a8e22e4101c1c151fa197e967d21942041bef4
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 16065dc29d74655cbede25cea20148b343b790e6
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015152"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42854003"
 ---
 # <a name="core-properties-in-powerapps"></a>Tärkeimmät ominaisuudet PowerAppsissa
 Määritä, voiko käyttäjä nähdä ohjausobjektin ja olla sen kanssa vuorovaikutuksessa.

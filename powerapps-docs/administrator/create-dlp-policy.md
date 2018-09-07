@@ -7,12 +7,18 @@ ms.component: pa-admin
 ms.topic: quickstart
 ms.date: 03/30/2018
 ms.author: jimholtz
-ms.openlocfilehash: 49898aed97e2361704c88bcc1cd098a8fc0f101e
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 2ebacd128846e45cc936e3f66560f6fcf27d50b8
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349451"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42840676"
 ---
 # <a name="create-a-data-loss-prevention-dlp-policy"></a>Tietojen menetyksen estämiskäytännön luominen
 Jotta tietoturva voidaan taata organisaatiossa, PowerApps antaa mahdollisuuden luoda ja valvoa käytäntöjä jotka määrittävät, minkä kuluttajaliitinten kanssa tietyt yritystiedot voidaan jakaa. Näitä tietojen jakamista määrittäviä käytäntöjä kutsutaan tietojen menetyksen estämiskäytännöiksi (DLP-käytännöt). DLP-käytännöt varmistavat, että tietoa hallitaan yhtenäisellä tavalla koko organisaatiossa. Käytännöt estävät tärkeän yritystiedon tahattoman julkaisun liittimiin, kuten sosiaalisen median sivustoihin.

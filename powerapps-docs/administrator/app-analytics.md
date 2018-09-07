@@ -8,17 +8,23 @@ ms.component: pa-admin
 ms.topic: conceptual
 ms.date: 08/29/2017
 ms.author: jamesol
-ms.openlocfilehash: d114630b9716c98079274f30c9b78f02b70576d4
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 0f376d8e6b86a7abf65e744275fc4e90beabde43
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349727"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42850026"
 ---
 # <a name="view-analytics-reports-for-your-app"></a>Sovelluksesi analytiikkaraporttien tarkastelu
 Oletko rakentanut sovelluksen ja jakanut sen organisaatiossasi?  Haluatko tietää, kuinka moni työtoverisi käyttää sovellusta päivittäin?
 
-Esittelyssä ensimmäinen PowerApps-analytiikkaraportti, joka on saatavilla [web.powerapps.com](https://web.powerapps.com)-sivustolla: **Sovelluksen käyttöraportti**.
+Esittelyssä ensimmäinen PowerApps-analytiikkaraportti, joka on saatavilla [web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustolla: **Sovelluksen käyttöraportti**.
 
 Sovelluksen käyttöraportin avulla voit seurata, kuinka moni on käyttänyt sovellustasi viimeisen 30 päivän aikana. Tiedot ovat saatavilla päivän, laitealustan ja sijainnin perusteella.
 
@@ -30,7 +36,7 @@ Kaikki raportit ovat saatavilla kaikille käyttäjille, joilla on sovellukseen m
 ## <a name="where-do-i-find-my-apps-reports"></a>Mistä löydän sovellukseni raportit?
 Voit tarkastella sovelluksesi raportteja seuraavien ohjeiden avulla:
 
-1. Siirry osoitteeseen [web.powerapps.com](https://web.powerapps.com).
+1. Siirry osoitteeseen [web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2. Valitse vasemmasta siirtymispalkista **Sovellukset**
    
     ![Vasen siirtymispalkki](./media/app-analytics/left-nav.png)
