@@ -9,17 +9,21 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/12/2016
 ms.author: lanced
-ms.openlocfilehash: 619085bbc11214fbba308abc7a630a3631cb2ec1
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f639f82e6fc927f693b8f8353cdc125c487e4c1f
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195160"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42829952"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Yhdistä Power BI:hin PowerAppsista
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
 
-Power BI on liiketoiminta-analytiikkatyökalujen ohjelmapaketti, jolla voi analysoida ja jakaa merkityksellisiä tietoja. Runsastoimintoisten koontinäyttöjen avulla on helppo seurata liiketoimintaa ja löytää vastauksia. Ne ovat saatavilla kaikenlaisiin laitteisiin. Sovelluksessa voit myös tarkistaa Power BI -palvelussa määritettyjen tietohälytysten tilan. Lisätietoja Power BI:n tietohälytyksistä saat [ohjesivulta](https://https://docs.microsoft.com/power-bi/service-set-data-alerts).
+Power BI on liiketoiminta-analytiikkatyökalujen ohjelmapaketti, jolla voi analysoida ja jakaa merkityksellisiä tietoja. Runsastoimintoisten koontinäyttöjen avulla on helppo seurata liiketoimintaa ja löytää vastauksia. Ne ovat saatavilla kaikenlaisiin laitteisiin. Sovelluksessa voit myös tarkistaa Power BI -palvelussa määritettyjen tietohälytysten tilan. Lisätietoja Power BI:n tietohälytyksistä saat [ohjesivulta](https:// https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
 Näissä ohjeissa neuvotaan, miten voit käyttää Power BI -yhteyttä sovelluksessa, ja käytettävissä olevat toiminnot luetellaan.
 
