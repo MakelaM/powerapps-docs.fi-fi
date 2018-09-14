@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 09/11/2018
 ms.author: jamesol
 search.audienceType:
 - admin
@@ -14,12 +14,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 4eb1cdb3fb54780c693bb764bdf6d9de1e7088b5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 301592978d483d1b6ff5930a01f6c6c0119c779e
+ms.sourcegitcommit: 87122dba00b4177ef736d87ecdde79581649ba42
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864375"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499541"
 ---
 # <a name="licensing-overview"></a>Käyttöoikeuksien yleiskatsaus
 PowerAppsin käyttöoikeudet myönnetään käyttäjäkohtaisesti. Jokainen käyttäjä, joka luo tai suorittaa sovelluksia palvelun avulla, tarvitsee käyttöoikeuden. Office 365- ja Dynamics 365 -asiakkaat hyötyvät heti PowerApps- ja Microsoft Flow -ominaisuuksista, jotka sisältyvät näihin palveluihin. Asiakkaat, jotka haluavat kehittää sovelluksia ja työnkulkuja, jotka käyttävät Office 365:n ja Dynamics 365:n ulkopuolisia tietolähteitä tai tarvitsevat lisätoimintoja, voivat ostaa erilliset PowerApps- ja Microsoft Flow -tilaukset. Näiden eri käyttöoikeusryhmien välillä on merkittäviä eroja.
@@ -92,7 +92,7 @@ Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow's
 PowerApps-käyttöoikeudet sisältävät aina Microsoft Flow -ominaisuudet.  Sen lisäksi, että Microsoft Flow sisältyy PowerAppsin käyttöoikeuksiin, se on saatavilla myös erillisenä palveluna. Katso [PowerAppsin hinnoittelusivulta][2] lisätietoja tietyistä Microsoft Flow -ominaisuuksista, jotka sisältyvät kuhunkin PowerApps-käyttöoikeuteen.
 
 ## <a name="resource-capacity-is-included-with-each-license"></a>Kuhunkin käyttöoikeuteen sisältyy resurssikapasiteettia
-Yllä esitettyihin käyttäjäkohtaisiin käyttöoikeuksiin sisältyy kapasiteettia resursseille, joita käytetään, kun sovellusta tai työnkulkua suoritetaan. Nämä resurssit sisältävät tietosäiliön, tiedostosäiliön ja työnkulun suoritukset. Käyttäjäkohtaisiin käyttöoikeuksiin sisältyvät kapasiteetit ovat varannossa vuokraajan tasolla. Kun vuokraajan kapasiteetti on lopussa, asiakkaat voivat ostaa lisäkapasiteettia lisäkäyttöoikeuksien kautta. Common Data Servicen enimmäiskapasiteetti on 10 Gt tietokantaa kohti ja 5 Tt tiedostojen tallentamiseen ympäristöä kohti. Jos ostat lisäkapasiteettia ja käytettävissä oleva kapasiteetti (käyttöoikeudet ja lisäkäyttöoikeudet yhteensä) on suurempi kuin enimmäiskapasiteetti, voit käyttää kokonaismäärää useissa ympäristöissä. Katso [PowerAppsin hinnoittelusivulta][2] lisätietoa kapasiteettimääristä, joita kukin PowerApps-käyttöoikeus sisältää.
+Yllä esitettyihin käyttäjäkohtaisiin käyttöoikeuksiin sisältyy kapasiteettia resursseille, joita käytetään, kun sovellusta tai työnkulkua suoritetaan. Nämä resurssit sisältävät tietosäiliön, tiedostosäiliön ja työnkulun suoritukset. Käyttäjäkohtaisiin käyttöoikeuksiin sisältyvät kapasiteetit ovat varannossa vuokraajan tasolla. Kun vuokraajan kapasiteetti on lopussa, asiakkaat voivat ostaa lisäkapasiteettia lisäkäyttöoikeuksien kautta. Jos ostat lisäkapasiteettia ja käytettävissä oleva kapasiteetti (käyttöoikeudet ja lisäkäyttöoikeudet yhteensä) on suurempi kuin enimmäiskapasiteetti, voit käyttää kokonaismäärää useissa ympäristöissä. Katso [PowerAppsin hinnoittelusivulta][2] lisätietoa kapasiteettimääristä, joita kukin PowerApps-käyttöoikeus sisältää.
 
 ## <a name="powerapps-licensing-examples"></a>Esimerkkejä PowerAppsin käyttöoikeuksista
 Tarkastellaan esimerkkiä. ABC Inc.:llä on 1 000 työntekijää, joista 700:lla on Office 365 Enterprise 3:n käyttöoikeus. Tehokäyttäjä luo varhaisessa vaiheessa toimialaa koskevan sovelluksen, joka yksinkertaistaa asiakastilausten seurantaa. Myöhemmin henkilöstöhallinto-osasto tekee IT-osaston kanssa yhteistyötä esitelläkseen sovelluksen vapaa-ajan ja poissaolojen raportointiin. Sovellus on kehitetty Common Data Servicessä.
