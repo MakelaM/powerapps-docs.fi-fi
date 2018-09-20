@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 62afc8fc0ce754ed797683a61c061db16370f904
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+ms.openlocfilehash: cfe9dd8d7a1a1342e7db4fb2786f68942bec7784
+ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39195193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726902"
 ---
 # <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Rekisteröidy, niin saat kokeilla PowerAppsia ilmaiseksi
 Jotta voit luoda sovelluksen PowerAppsissa, tarvitset jonkin erityyppisistä käyttöoikeuksista, jotka tarjoavat eritasoisia toimintoja. Sinulla on jo PowerApps-käyttöoikeus, jos organisaatiosi on ostanut sinulle jonkin useista Office 365- tai Dynamics 365 -versioista tai PowerAppsin palvelupaketin 1 tai 2 käyttöoikeuden.
@@ -93,7 +93,7 @@ Kun tämä valintaikkuna tulee näkyviin, valitse **Käynnistä** ja aloita [Pow
     Premium-liittimet esitetään [liittimien täydellisessä luettelossa](./canvas-apps/connections-list.md) seuraavalla merkillä:
 
     ![](./media/signup-for-powerapps/premium-badge.png)
-* Käyttöoikeus **PowerApps-hallintakeskukseen**, jossa voit hallita ympäristöjä, tietokantoja, käyttöoikeuksia ja tietokäytäntöjä. [Lisätietoja](../administrator/introduction-to-the-admin-center.md)
+* Käyttöoikeus **PowerApps-hallintakeskukseen**, jossa voit hallita ympäristöjä, tietokantoja, käyttöoikeuksia ja tietokäytäntöjä. [Lisätietoja](../administrator/admin-guide.md)
 * **Luo sovelluksia mallipohjaisessa tilassa**, jossa voit lisätä osia sovellukseen ja antaa PowerAppsin luoda asettelun ja muut käyttöliittymän elementit. 
 
 Lisätietoja kokeiluversion käyttöoikeuden toiminnoista ja kapasiteetista on [hinnoittelusivulla](https://powerapps.microsoft.com/pricing/).
