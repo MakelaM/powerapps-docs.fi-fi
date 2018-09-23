@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/16/2018
 ms.author: gregli
-ms.openlocfilehash: d976a81603d48d72ecb2dc7c279b59d0e70800eb
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 741cec402c6a5b5ea30700badd265f5e950203e9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094806"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42858471"
 ---
 # <a name="understand-experimental-and-preview-features-in-powerapps"></a>Ymmärrä PowerAppsin esikatseluominaisuuksia ja kokeellisia ominaisuuksia
 
@@ -51,9 +55,9 @@ Esikatselun lopulla, saatamme ottaa toiminnon käyttöön kaikissa sovelluksissa
 ## <a name="documentation"></a>Dokumentaatio
 
 Mistä voit löytää tietoja näistä ominaisuuksista?  Pidämme esikatselussa olevia ominaisuuksia valmiina, ja voit lukea niistä lisätietoja samalla tavalla kuin tuotteen muista ominaisuuksista: 
-- [PowerApps-dokumentaatio](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/getting-started). Listaamme uuden ominaisuuden perusteet: edut, käytön aloittaminen ja viitetiedot.
+- [PowerApps-dokumentaatio](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). Listaamme uuden ominaisuuden perusteet: edut, käytön aloittaminen ja viitetiedot.
 - [PowerApps-yhteisön keskustelupalsta](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1).  Muut tutkivat uutta ominaisuutta samaan aikaan kanssasi. Lue heidän kokemuksiaan ja jaa omasi.
-- [PowerApps-blogi](https://powerapps.microsoft.com/en-us/blog/).  Blogikirjoituksen mukana on usein uusi ominaisuus.
+- [PowerApps-blogi](https://powerapps.microsoft.com/blog/).  Blogikirjoituksen mukana on usein uusi ominaisuus.
 
 Kokeelliset ominaisuudet ovat erilaisia.  Ne ovat vielä työn alla, emmekä pidä niitä valmiina sovelluksina. Lyhyt kuvaus **sovellusasetukset** -ruudussa (alla) voi olla niitä koskeva ainoa tieto. Kokeellisia ominaisuuksia ei normaalista näy dokumentaatiossa. Yhteisön keskustelupalsta on todennäköisesti paras tietolähteesi.  Joissakin tapauksissa varhainen blogikirjoitus kuvailee toimintoa.  Jos et löydä riittävästi tietoja, kysy keskustelupalstoilta tai odota kunnes ominaisuus on siirretty esikatselu-vaiheeseen.
 

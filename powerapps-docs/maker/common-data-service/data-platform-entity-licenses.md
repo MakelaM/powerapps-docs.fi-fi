@@ -6,23 +6,23 @@ manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 07/25/2018
+ms.date: 05/01/2018
 ms.author: clwesene
-ms.openlocfilehash: 758d5b5ff2c552a4c4ccbf210062f35d4e53209c
-ms.sourcegitcommit: efea7ed5ad8e80c87ba423fb094fa94b4e864d75
+ms.openlocfilehash: 4350f7141adf0fbce3e74271d6aff48c18c857e2
+ms.sourcegitcommit: 2bcc36916f0c591466eb3e007c2d30b99f2315c6
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39265506"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009255"
 ---
 # <a name="license-requirements-for-entities"></a>Entiteettien käyttöoikeusvaatimukset
 Sovellusten tekijät voivat käyttää useimpia Common Data Service (CDC) for Appsin sisältämiä entiteettejä (mukaan lukien mukautetut entiteetit ja Common Data Modelin mukaiset entiteetit) sovellusten ja työnkulkujen luomiseen käyttäjille, joilla on PowerApps Plan 1 tai Microsoft Flow Plan 1. Joissakin tapauksissa entiteetit sisältävät monimutkaista liiketoimintalogiikkaa tai ovat sidoksissa Dynamics 365 -sovelluksiin, jotka vaativat, että sovelluksen käyttäjillä on tietty käyttöoikeus. 
 
 
-|Entiteetti  |Kuvaus  |Vaatimus  |
+|Entiteetti    |Kuvaus    |Vaatimus    |
 |---------|---------|---------|
-|Entiteetit, joilla on monimutkainen liiketoimintalogiikka  | Nämä ovat entiteettejä, jotka käyttävät monimutkaista palvelinpuolen liiketoimintalogiikkaa. Esimerkiksi mikä tahansa entiteetti, joka käyttää reaaliaikaista työnkulkua tai koodin laajennusta.     | [Powerappsin palvelupaketti 2](https://powerapps.microsoft.com/pricing/) tai [Työnkulkupalvelupaketti 2](https://flow.microsoft.com/pricing/)  | 
-|Rajoitetut entiteetit    | Nämä ovat entiteettejä, jotka eivät ole vakiona Common Data Service for Appsissa, mutta sisältyvät Dynamics 365 customer engagement -sovellukseen tai kolmannen osapuolen ratkaisuun. Esimerkiksi knowledge article-, goal- ja entitlement-entiteetit.    | [Dynamics 365 -palvelupaketti](https://dynamics.microsoft.com/pricing/)    |
+|Entiteetit, joilla on monimutkainen liiketoimintalogiikka   | Nämä ovat entiteettejä, jotka käyttävät monimutkaista palvelinpuolen liiketoimintalogiikkaa. Esimerkiksi mikä tahansa entiteetti, joka käyttää reaaliaikaista työnkulkua tai koodin laajennusta.       |  [Powerappsin palvelupaketti 2](https://powerapps.microsoft.com/pricing/) tai [Työnkulkupalvelupaketti 2](https://flow.microsoft.com/pricing/)        |
+|Rajoitetut entiteetit  |  Nämä ovat entiteettejä, jotka eivät ole vakiona Common Data Service for Appsissa, mutta sisältyvät Dynamics 365 customer engagement -sovellukseen tai kolmannen osapuolen ratkaisuun. Esimerkiksi knowledge article-, goal- ja entitlement-entiteetit.     |  [Dynamics 365 -palvelupaketti](https://dynamics.microsoft.com/pricing/)      | 
 
 
 > [!NOTE]
@@ -37,7 +37,7 @@ Seuraavia monimutkaisia, palvelimen logiikkaa sisältävät entiteetit vaativat 
     > [!NOTE]
     >  Vain työnkulkuja, jotka on muunnettu reaaliaikaisiksi työnkuluiksi, pidetään reaaliaikaisina ja synkronoituina. Työnkulkuja, jotka suoritetaan taustalla, voidaan silti käyttää asianmukaisen PowerApps-palvelupaketin osana, eivätkä ne vaadi muita käyttöoikeuksia.
 
-Jos haluat tietää, onko entiteeteissäsi monitasoista liiketoimintalogiikkaa, tarkista laajennuksen kokoonpanojen ja ympäristössäsi määriteltyjen työnkulkujen luettelo. Niiden entiteettien luettelo, jotka saattavat sisältää palvelinpuolen logiikkaa Dynamics 365 -sovelluksen asentamisen jälkeen, on kohdassa [Monimutkaiset entiteetit, jotka vaativat PowerAppsin palvelupaketin 2 käyttöoikeuksia](data-platform-complex-entities.md) 
+Jos haluat tietää, onko entiteeteissäsi monitasoista liiketoimintalogiikkaa, tarkista laajennuksen kokoonpanojen ja ympäristössäsi määriteltyjen työnkulkujen luettelo. Niiden entiteettien luettelo, jotka saattavat sisältää palvelinpuolen logiikkaa Dynamics 365 -sovelluksen asentamisen jälkeen, on kohdassa [Monimutkaiset entiteetit, jotka vaativat PowerAppsin palvelupaketin 2 käyttöoikeuksia](data-platform-complex-entities.md)  
 
 ### <a name="impacting-license-requirements-when-adding-complex-business-logic"></a>Käyttöoikeusvaatimusvaikutukset monitasoista liiketoimintalogiikkaa lisättäessä
 Sovellusten tekijät voivat lisätä koodilaajennuksia ja reaaliaikaisia työnkulkuja sisältäviä entiteettejä CDC for Appsiin, mutta tämä saattaa muuta jo kehitettyjen sovellusten käyttäjien käyttöoikeusvaatimuksia. Sovellusten tekijöiden tulee olla varovaisia lisätessään monitasoista liiketoimintalogiikkaa entiteettiin ja tarkistaa ensin, mitkä sovellukset käyttävät entiteettiä ja onko kyseisten sovellusten käyttäjillä tarvittavat käyttöoikeudet.

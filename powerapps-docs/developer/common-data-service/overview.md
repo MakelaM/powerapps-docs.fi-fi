@@ -15,18 +15,25 @@ ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 03/19/2018
 ms.author: jdaly
-ms.openlocfilehash: c07a6505c0a08eca706c08cc2e4d607cd5322dfe
-ms.sourcegitcommit: 91a102426f1bc37504142cc756884f3670da5110
+search.audienceType:
+- developer
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 3b0e2d70a9295bdf1a8a6d6a71cb6075677bb991
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36949234"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42844050"
 ---
 # <a name="common-data-service-for-apps-developer-overview"></a>Common Data Service for Apps Developer -palvelun yleiskatsaus
+
 PowerApps tarjoaa käyttäjille, yrityksille, itsenäisille ohjelmistovalmistajille sekä laitekokoajille tehokkaan ympäristön liiketoiminta-aluesovellusten rakentamiseen. Common Data Service -palvelun laajennus, jota kutsutaan Common Data Service for Apps -palveluksi, on uusi lisäys PowerAppsiin ja se sisältää Dynamics 365 -ympäristön ydinfunktiot, joita käytetään Dynamics 356 for Sales, Marketing ja Customer Service -palvelujen kanssa.
 
 
 ## <a name="get-started"></a>Aloita
+
 Jos olet jo käyttänyt Dynamics 365 for Sales, Marketing tai Customer Service -sovelluksia, pystyt hyödyntämään näitä kokemuksia mukauttaaksesi ja laajentaaksesi Common Data Service for Apps -palvelua.
 
 Jos et ole käyttänyt Dynamics 365 for Sales, Marketing tai Customer Service -sovelluksia, seuraavat aiheet tarjoavat yleiskatsauksen tärkeimmistä käsitteistä ja auttavat alkuun Common Data Service for Apps -palvelun käytössä.
@@ -52,7 +59,7 @@ Seuraavat työkalut ovat saatavilla NuGet-paketteina. [Kehittäjän opas: lataa 
 |Laajennuksen rekisteröintityökalu `PluginRegistration.exe`|Työkalu, jonka avulla tilataan .NET -kokoonpanolaajennuksien luokkia palvelimen tapahtumiin. <br />Lisätietoja: <br />[Laajennuksen luominen](apply-business-logic-with-code.md#create-a-plug-in)<br />[Dynamics 365 asiakkaan suunnattu kehittäjän opas: laajennuksen rekisteröinti laajennus rekisteröinti -työkalun avulla](/dynamics365/customer-engagement/developer/walkthrough-register-plugin-using-plugin-registration-tool)|
 |Ratkaisun pakkaajatyökalu`SolutionPackager.exe`|Työkalu, jolla voi hajottaa palautuvasti Common Data Service for Apps -palvelun ratkaisutiedoston useiksi XML-tiedostoiksi ja muiksi tiedostoiksi, niin, että näitä tiedostoja voidaan helposti hallittava ohjausobjektin lähdejärjestelmässä.<br /> Lisätietoja: <br />[Ratkaisujen tiimikehitys](introduction-solutions.md#team-development-of-solutions)<br />[Dynamics 365 asiakkaalle suunnattu kehittäjän opas: ratkaisupakkaaja-työkalun käyttäminen ratkaisutiedoston pakkaamiseen ja purkamiseen](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
-### <a name="net-sdk-assemblies"></a>.NET SDK -kokoonpanot 
+### <a name="net-sdk-assemblies"></a>.NET SDK -kokoonpanot
 
 Seuraavassa kokoonpanoja, joita .NET-kehittäjät voivat käyttää. Uusimmat versiot ovat ladattavissa vastaavina NuGet-paketteina.
 

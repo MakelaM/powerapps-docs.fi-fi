@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/21/2018
 ms.author: matp
-ms.openlocfilehash: 134ae4dfb5fe111c4c40e96efa1e79a3993c4a46
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
+ms.openlocfilehash: 5c166f7fffa217a918d690c9176058d8e81b3f99
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37899751"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39663043"
 ---
 # <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opetusohjelma: mallipohjaisen sovelluksen jakaminen PowerAppsilla
 
@@ -56,7 +56,7 @@ Lisätietoja käyttö- ja vaikutusalueoikeuksista on kohdassa [Käyttöoikeusroo
 4. Käyttöoikeusroolien hallintatyökalussa voit valita erilaisia toimintoja, kuten lukeminen, kirjoittaminen tai poistaminen, ja näiden toimintojen vaikutusalueen. Vaikutusalue määrittää, miten pitkälle tai laajalle käyttäjän käynnistämä toiminto vaikuttaa ympäristön hierarkiassa. Kirjoita **Roolin nimi** -kenttään *Lemmikkien trimmaajat*.
 5. Valitse **Mukautetut entiteetit** -välilehti ja etsi haluamasi mukautettu entiteetti. Tässä esimerkissä käytetään mukautettua entiteettiä nimeltä **Pet** (lemmikki). 
 6. Valitse **Pet**-riviltä seuraavat oikeudet neljä kertaa, kunnes ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu: **lukeminen, kirjoittaminen, liittäminen**
-   ![Uusi käyttöoikeusrooli](media/share-model-driven-app/custom-security-role.png)
+![Uusi käyttöoikeusrooli](media/share-model-driven-app/custom-security-role.png)
 7. Koska lemmikkienhoitosovellus on yhteydessä myös tilientiteettiin, valitse **Ydintietueet**-välilehden **Tili**-riviltä **Lukeminen** neljä kertaa, kunnes ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittuna. 
 8. Valitse **Tallenna ja sulje**. 
 9. Kirjoita käyttöoikeusroolin hallintatyökalussa **Roolin nimi** -kenttään *Lemmikkienhoidon varaushenkilökunta*. 
@@ -68,10 +68,6 @@ Lisätietoja käyttö- ja vaikutusalueoikeuksista on kohdassa [Käyttöoikeusroo
 
 ## <a name="assign-security-roles-to-users"></a>Käyttäjien käyttöoikeusroolien määrittäminen
 Käyttöoikeusroolit hallitsevat erilaisilla käyttöoikeustasoilla ja oikeuksilla, mitä tietoja käyttäjä voi käyttää. Käyttöoikeusroolin käyttöoikeustasojen ja oikeuksien yhdistelmä rajoittaa käyttäjän näkemiä tietoja ja vuorovaikutusta tietojen kanssa.
-
-> [!IMPORTANT]
-> Mallipohjaisen sovelluksen käyttäminen edellyttää, että kaikilla ympäristössäsi olevilla sovelluksen käyttäjillä on vähintään Common Data Service -palvelun käyttäjän käyttöoikeusrooli riippumatta siitä, mitä muita käyttöoikeusrooleja määrität. Useimmiten Common Data Service -palvelun käyttäjän käyttöoikeusrooli sisältää riittävät oikeudet sovelluksen perustehtävien suorittamiseen.
-> Huomaa, että käyttäjillä, joilla on Common Data Service -palvelun käyttäjän käyttöoikeusrooli, on myös luku- ja kirjoitusoikeus kaikkiin tili-, yhteystieto- ja yhteysstandardientiteettitietueisiin riippumatta siitä, kuka ne omistaa. Jos et halua, että sovelluksen käyttäjillä on näiden tietueiden käyttöoikeus, luo mukautettu käyttöoikeusrooli. Helpoin tapa on kopioida Common Data Service -palvelun käyttäjän käyttöoikeusrooli ja poistaa asianomaiset käyttöoikeudet. Lisätietoja: [Käyttöoikeusroolin kopioiminen](https://docs.microsoft.com/dynamics365/customer-engagement/admin/copy-security-role)
 
 ### <a name="assign-a-security-role-to-pet-grooming-technicians"></a>Lemmikkien trimmaajien käyttöoikeusroolin määrittäminen
 1. Valitse **Jaa sovellus** -valintaikkunan **Määritä käyttöoikeusroolin käyttäjät** -kohdasta **Security Users** (käyttöoikeuden käyttäjät).
@@ -129,7 +125,7 @@ Nämä ennalta määritetyt roolit ovat käytettävissä ympäristössä [!INCLU
 *Oikeuden vaikutusalue on yleinen, ellei toisin määritetä.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-[Pikaopas: Mallipohjaisen sovelluksen suorittaminen mobiililaitteella](../../user/run-app-client-model-driven.md)
+[Suorita mallipohjainen sovellus mobiililaitteella](../../user/run-app-client-model-driven.md)
 
 
 
