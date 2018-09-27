@@ -1,1 +1,0 @@
-Napsauta **Tallenna**.

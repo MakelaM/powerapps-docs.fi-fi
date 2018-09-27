@@ -1,1 +1,0 @@
-Merkitykselliset tiedot
