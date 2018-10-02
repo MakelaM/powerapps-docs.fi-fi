@@ -1,63 +1,79 @@
+items:
 - name: Hallitse PowerAppsia
   href: admin-guide.md
   items:
-    - name: Aloitus
-      items:
-        - name: Mikä tehtävä PowerAppsin järjestelmänvalvojalla on?
-          href: overview-role-powerapps-admin.md
-    - name: Käyttöoikeudet
-      items:
-        - name: Käyttöoikeuksien yleiskatsaus
-          href: pricing-billing-skus.md
-        - name: Hallinnoi käyttöoikeuksia organisaatiossasi
-          href: signup-question-and-answer.md
-        - name: Osta PowerApps
-          href: signup-for-powerapps-admin.md
-    - name: PowerAppsin hallinta
-      items:
-        - name: Näytä sovellukset ympäristöissäsi
-          href: admin-view-apps.md
-        - name: Hallinnoi sovelluksia organisaatiossasi
-          href: admin-manage-apps.md
-        - name: Siirrä sovellus vuokraajien tai ympäristöjen välillä
-          href: environment-and-tenant-migration.md
-        - name: PowerAppsin PowerShell-tuki (esiversio)
-          href: powerapps-powershell.md
+  - name: Aloitus
+    items:
+    - name: Mikä tehtävä PowerAppsin järjestelmänvalvojalla on?
+      href: overview-role-powerapps-admin.md
+    - name: PowerApps enterprise deployment whitepaper
+      href: admin-powerapps-enterprise-deployment.md
+  - name: Käyttöoikeudet
+    items:
+    - name: Käyttöoikeuksien yleiskatsaus
+      href: pricing-billing-skus.md
+    - name: Hallinnoi käyttöoikeuksia organisaatiossasi
+      href: signup-question-and-answer.md
+    - name: Osta PowerApps
+      href: signup-for-powerapps-admin.md
+  - name: PowerAppsin hallinta
+    items:
+    - name: Näytä sovellukset ympäristöissäsi
+      href: admin-view-apps.md
+    - name: Hallinnoi sovelluksia organisaatiossasi
+      href: admin-manage-apps.md
+    - name: Siirrä sovellus vuokraajien tai ympäristöjen välillä
+      href: environment-and-tenant-migration.md
+    - name: PowerAppsin PowerShell-tuki (esiversio)
+      href: powerapps-powershell.md
+  - name: Tietojen integrointi
+    items:
+    - name: Tietojen integrointi CDS for Appsiin
+      href: data-integrator.md
     - name: DSR-pyyntöihin vastaaminen
-      href: powerapps-gdpr-dsr-guide-systemlogs.md
       items:
-        - name: Järjestelmän luomat lokit
-          href: powerapps-gdpr-dsr-guide-systemlogs.md
-        - name: PowerApps-asiakastiedot
-          href: powerapps-gdpr-dsr-guide.md
-          items:
-            - name: Vie tiedot
-              href: powerapps-gdpr-export-dsr.md
-            - name: Poista tiedot
-              href: powerapps-gdpr-delete-dsr.md
-        - name: Apps-asiakastietojen CDS
-          href: common-data-service-gdpr-dsr-guide.md
-    - name: Hallitse ympäristöjä
-      href: environments-administration.md
-      items:
-        - name: Ympäristöjen yleiskatsaus
-          href: environments-overview.md
-        - name: Alueiden yleiskuvaus
-          href: regions-overview.md
-        - name: Ympäristön luominen
-          href: create-environment.md
-        - name: Luo tietokanta
-          href: create-database.md
-    - name: Konfiguroi ympäristön turvallisuus
-      href: database-security.md
-      items:
-        - name: Tietoryhmiin tutustuminen
-          href: introduction-to-data-groups.md
-        - name: DLP-käytännön luominen
-          href: create-dlp-policy.md
-        - name: Hallinnoi DLP-käytäntöjä
-          href: prevent-data-loss.md
-    - name: Tilauksien ja käyttäjätilien hallinta
-      items:
-        - name: Näytä vuokraajasi aktiiviset käyttäjät
-          href: admin-view-user-licenses.md
+      - name: Järjestelmän luomat lokit
+        href: powerapps-gdpr-dsr-guide-systemlogs.md
+      - name: CDS for Appsin tietojen integroinnit
+        href: data-integration-gdpr-dsr-guide.md
+      - name: PowerApps-asiakastiedot
+        href: powerapps-gdpr-dsr-guide.md
+        items:
+        - name: Vie tiedot
+          href: powerapps-gdpr-export-dsr.md
+        - name: Poista tiedot
+          href: powerapps-gdpr-delete-dsr.md
+      - name: Apps-asiakastietojen CDS
+        href: common-data-service-gdpr-dsr-guide.md
+  - name: Hallitse ympäristöjä
+    href: environments-administration.md
+    items:
+    - name: Ympäristöjen yleiskatsaus
+      href: environments-overview.md
+    - name: Alueiden yleiskuvaus
+      href: regions-overview.md
+    - name: Ympäristön luominen
+      href: create-environment.md
+    - name: Luo tietokanta
+      href: create-database.md
+    - name: Ympäristöjen esikatselu
+      href: preview-environments.md
+  - name: Konfiguroi ympäristön turvallisuus
+    href: database-security.md
+    items:
+    - name: Tietoryhmiin tutustuminen
+      href: introduction-to-data-groups.md
+    - name: DLP-käytännön luominen
+      href: create-dlp-policy.md
+    - name: Hallinnoi DLP-käytäntöjä
+      href: prevent-data-loss.md
+  - name: Tilauksien ja käyttäjätilien hallinta
+    items:
+    - name: Näytä vuokraajasi aktiiviset käyttäjät
+      href: admin-view-user-licenses.md
+ms.openlocfilehash: 555f8872c3aaa5e656dfe3b3ad72004de63d8d7c
+ms.sourcegitcommit: 2bcf40aeaa35420dc43f5803f4e57ff0f6afb57b
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46468831"
