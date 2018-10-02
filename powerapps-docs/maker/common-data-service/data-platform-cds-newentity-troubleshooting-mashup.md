@@ -1,6 +1,6 @@
 ---
 title: Power Queryn vianmääritys | Microsoft Docs
-description: Ratkaise ongelmia Power Queryn avulla, jotta voit luoda mukautetun entiteetin Common Data Service (CDS) for Apps -palvelussa.
+description: Ongelmien ratkaiseminen luomalla Common Data Service sovelluksille -ratkaisulle mukautettu entiteetti Power Queryn avulla.
 author: mllopis
 manager: kfile
 ms.service: powerapps
@@ -8,63 +8,78 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/16/2018
 ms.author: millopis
-ms.openlocfilehash: b89d7a59406d19759b84c34dbda84b98b10d5e58
-ms.sourcegitcommit: 68fc13fdc2c991c499ad6fe9ae1e0f8dab597139
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34445725"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="troubleshooting-power-query"></a>Power Queryn vianmääritys
-Kun käytät Power Queryä laatiaksesi mukautetun kohteen, joka sisältää tietoja ulkoisista lähteistä, esiin saattaa tulla tämä virhe:
 
-`Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf.`
+# <a name="troubleshoot-power-query"></a>Power Query -vianmääritys
+Kun luot ulkoisten lähteiden tietoja mukautetun entiteetin Power Query for Excel -sovelluksella, tämä virhe voi tapahtua:
 
-Virhe tulee näkyviin, jos Power Query ei voi käyttää organisaation tietoja PowerAppsissa tai Common Data Service (CDS) for Apps -palvelussa. Tämä tilanne tulee esiin kahdessa seuraavassa tilanteessa:
+>”Azure Active Directory -järjestelmänvalvoja on määrittänyt käytännön, joka estää tämän toiminnon käyttämisen. Ota yhteyttä järjestelmänvalvojaan, joka voi myöntää tämän toiminnon käyttöoikeudet puolestasi."
 
-* Azure Active Directory (AAD) -vuokraajan järjestelmänvalvoja ei ole sallinut käyttäjien mahdollisuutta antaa suostumusta sovelluksille, jotka käyttävät yrityksen tietoja heidän puolestaan.
-* Hallitsemattoman Active Directory -vuokraajan käyttäminen. Hallitsematon vuokraaja on hakemisto, jolla ei ole yleistä järjestelmänvalvojaa ja joka on luotu täydentämään omatoimisen rekisteröitymisen tarjousta. Tämän skenaarion korjaamiseksi käyttäjien täytyy ensin muuntaa vuokraaja hallituksi vuokraajaksi ja seurata sitten jompaakumpaa seuraavassa osassa kuvatusta kahdesta ratkaisusta ongelmaan.
+Tämä virhe tapahtuu, jos Power Query ei voi käyttää organisaation tietoja PowerAppsissa tai Common Data Service sovelluksille -ratkaisussa. Tämä tapahtuu seuraavissa kahdessa tilanteessa:
 
-Tämän ongelman ratkaisemiseksi Azure Active Directory -järjestelmänvalvojan täytyy noudattaa jommankumman tässä artikkelissa myöhemmin esitetyn toimenpiteen vaiheita.
+* Azure Active Directory (Azure AD) -vuokraajan järjestelmänvalvoja on poistanut käytöstä käyttäjän mahdollisuuden antaa suostumus sovelluksille, jotka käyttävät yrityksen tietoja heidän puolestaan.
+* Hallitsemattoman Active Directory -vuokraajan käyttäminen. Hallitsematon vuokraaja on hakemisto, jolla ei ole yleistä järjestelmänvalvojaa. Se on luotu itsepalvelun rekisteröitymistarjouksen viimeistelemiseksi. Jos käyttäjä haluaa korjata tämän skenaarion, hänen on ensin muunnettava hallittu vuokraaja ja seurattava toista ongelmaan määritettyä ratkaisua. Ratkaisut on kuvattu seuraavassa osassa.
 
-## <a name="allow-users-to-consent-to-apps-that-access-company-data"></a>Salli käyttäjän antaa suostumus sovelluksille, jotka käyttävät yrityksen tietoja
-Tämä lähestymistapa on ehkä helpompi kuin seuraava, mutta se sallii laajemmat käyttöoikeudet.
+Azure Active Directory -järjestelmänvalvojan on seurattava jompaakumpaa tämän artikkelin proseduuria ongelman ratkaisemiseksi.
 
-1. Avaa osoitteessa [https://portal.azure.com](https://portal.azure.com) **Azure Active Directory** -lapa, ja valitse sitten **Käyttäjäasetukset**.
-2. Valitse vaihtoehto **Kyllä** kohdan **Käyttäjät voivat antaa sovellukselle luvan käyttää yrityksen tietoja puolestaan** vierestä ja valitse sitten **Tallenna**.
+## <a name="allow-users-to-consent-to-apps-that-access-company-data"></a>Käyttäjillä on mahdollisuus antaa suostumus yrityksen tietoja käyttäville sovelluksille
+Tämä tapa on ehkä helpompi kuin seuraava, mutta se antaa laajemmat oikeudet.
 
-## <a name="allow-power-query-to-access-company-data"></a>Salli Power Queryn käyttää yrityksen tietoja
-Vaihtoehtoisesti vuokraajan järjestelmänvalvoja voit antaa Power Querylle suostumuksen muokkaamatta vuokraajan laajuisia käyttöoikeuksia.
+1. Avaa [Azure-portaalissa](https://portal.azure.com) **Azure Active Directory** -ruutu ja valitse **Käyttäjän asetukset**.
+2. Valitse **Käyttäjät voivat antaa sovelluksille suostumuksen käyttää yrityksen tietoja heidän puolestaan** -kohdan vieressä **Kyllä** ja valitse sitten **Tallenna**.
+
+## <a name="allow-power-query-to-access-company-data"></a>Yrityksen tietojen käyttöoikeuksien antaminen Power Querylle
+Vaihtoehtoisesti vuokraajan järjestelmänvalvoja voi antaa suostumuksen Power Querylle ilman koko vuokraajaa koskevien oikeuksien muokkaamista.
 
 1. Asenna [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps).
-2. Suorita seuraavat PowerShell-komennot:
-   * Login-AzureRmAccount (ja kirjaudu sisään vuokraajan järjestelmänvalvojana)
-   * New-AzureRmADServicePrincipal -ApplicationId f3b07414-6bf4-46e6-b63f-56941f3f4128
+2. Suorita PowerShell-komennot:
+   * Kirjautuminen sisään AzureRmAccount (ja kirjautuminen sisään vuokraajan järjestelmänvalvojana)
+   * Uusi-AzureRmADServicePrincipal -ApplicationId f3b07414-6bf4-46e6-b63f-56941f3f4128
 
-Tämän tavan etuna vuokraajan laajuiseen ratkaisuun verrattuna on se, että ratkaisu on hyvin kohdennettu. Se täydentää vain **Power Query** -palveluobjektia mutta ei tee muita käyttöoikeusmuutoksia vuokraajaan.
+Tämä tavan etu (koko vuokraajaa koskevaan ratkaisuun verrattuna) on se, että ratkaisu on hyvin kohdistettu. Se valmistelee vain **Power Query** -palvelun päänimen, mutta ei muita vuokraajaan tehtyjä oikeuteen liittyviä muutoksia.
 
-## <a name="updating-personal-data"></a>Henkilökohtaisten tietojen päivittäminen
+## <a name="update-personal-data"></a>Henkilökohtaisten tietojen päivittäminen
 
-Käyttäjät voivat päivittää koosteita ja muita tietoja (kuten kyselyiden nimiä ja koosteen metatietoja) kyselyeditorin ja kyselyeditorin `Options`-valintaikkunan kautta.
+Käyttäjät voivat päivittää koostesovelluksia ja muita tietoja (kuten kyselyjen nimiä ja koostesovelluksen metatietoja) kyselyeditorissa ja **Asetukset**-valintaikkunassa, jota voi käyttää kyselyeditorissa.
 
-PowerAppsissa kyselyeditoria voidaan käyttää siirtymällä tietoruutuun, laajentamalla se ja napsauttamalla sitten Entiteetit-ruudun valikkokohdetta. Napsauta kolmea pistettä ja valitse Muokkaa kyselyitä. Napsauta sitten `Options`-painiketta valintanauhassa ja sitten `Export Diagnostics` -painiketta.
-
-
-## <a name="deleting-personal-data"></a>Henkilökohtaisten tietojen poistaminen
-
-Useimmat tiedot poistetaan automaattisesti 30 päivän kuluessa. Koosteiden tietojen ja metatietojen osalta käyttäjän on poistettava kaikki koosteensa PowerAppsin kautta. Kaikki liittyvät tiedot ja metatiedot poistetaan 30 päivän kuluessa.
-
-Koosteita voidaan poistaa PowerAppsista poistamalla tietojen integrointiprojektit, jotka voidaan poistaa saman nimisestä välilehdestä napsauttamalla ”...”-painiketta ja valitsemalla `Delete`-vaihtoehto.
-
-Jos olet luonut koosteen Uudet entiteetit tiedoista (Technical Preview) -ominaisuuden avulla, voit poistaa sen napsauttamalla ”...”-painiketta, valitsemalla Muokkaa kyselyitä ja valitsemalla sitten Asetukset valintanauhasta ja napsauttamalla lopuksi Poista kaikki kyselyt -painiketta. Kun vahvistat, että haluat poistaa kyselysi, ne poistetaan.
+Voit käyttää kyselyeditoria PowerAppsissa seuraavasti:
+1. Siirry **Tiedot**-ruutuun, laajenna se ja valitse **Entiteetit**. 
+2. Valitse kolme pistettä (...) ja valitse sitten **Muokkaa kyselyjä**.
+3. Valitse valintanauhan **Asetukset**-painike ja valitse sitten **Vie diagnostiikka** -painike.
 
 
-## <a name="exporting-personal-data"></a>Henkilökohtaisten tietojen vieminen
+## <a name="delete-personal-data"></a>Henkilökohtaisten tietojen poistaminen
 
-Käyttäjä voi avata kyselyeditorin napsauttamalla `Options`-painiketta valintanauhassa ja sitten `Export Diagnostics` -painiketta.
+Useimmat tiedot poistetaan automaattisesti 30 päivän kuluessa. Käyttäjien on poistettava kaikki koostesovellusten tiedot ja metatiedot PowerAppsin avulla. Kaikki liitetyt tiedot ja metatiedot poistetaan 30 päivän aikana.
 
-PowerAppsissa kyselyeditoria voidaan käyttää siirtymällä tietoruutuun, laajentamalla se ja napsauttamalla sitten Entiteetit-ruudun valikkokohdetta. Napsauta kolmea pistettä ja valitse Muokkaa kyselyitä. Napsauta sitten `Options`-painiketta valintanauhassa ja sitten `Export Diagnostics` -painiketta.
+Voit poistaa koostesovellukset PowerAppsista seuraavasti:
+1. Poista tietojen integrointiohjelman projektit, jotka voidaan poistaa samannimisestä välilehdestä.
+2. Valitse kolme pistettä (...), ja valitse sitten **Poista**-asetus.
 
-Järjestelmän luomiin lokeihin, jotka koskevat käyttäjän toimintoja käyttöliittymässä, voidaan käyttää Azure-portaalissa.
+Jos olet luonut koostesovelluksen Uudet entiteetit tiedoista (tekninen esikatselu) -toiminnon avulla, voit poistaa sen seuraavasti:
+1. Valitse kolme pistettä (...) ja valitse sitten **Muokkaa kyselyjä**.
+2. Valitse valintanauhan **Asetukset**-painike.
+3. Valitse **Poista kaikki kyselyt** -painike.  
+    Kun olet vahvistanut kyselyjen poistamisen, ne poistetaan.
+
+## <a name="export-personal-data"></a>Henkilökohtaisten tietojen vieminen
+
+Käyttäjät voivat viedä henkilökohtaisia tietoja seuraavasti:
+1. Avaa kyselyeditori.
+2. Valitse valintanauhan **Asetukset**-painike.
+3. Valitse **Vie diagnostiikka** -painike.
+
+Voit käyttää kyselyeditoria PowerAppsissa seuraavasti:
+1. Siirry **Tiedot**-ruutuun, laajenna se ja valitse **Entiteetit**.
+2. Valitse kolme pistettä (...) ja valitse sitten **Muokkaa kyselyjä**. 
+3. Valitse valintanauhan **Asetukset**-painike ja valitse sitten **Vie diagnostiikka** -painike.
+
+Käyttöliittymän järjestelmän luomia käyttäjän toimintojen lokeja voi käyttää Azure-portaalissa.
+
 
 

@@ -1,9 +1,9 @@
 ---
-title: Pikaopas ensimmäisen mallipohjaisen sovelluksesi luomiseen alusta alkaen PowerAppsin avulla | Microsoft Docs
-description: Opi luomaan yksinkertainen mallipohjainen sovellus
+title: Ensimmäisen mallipohjaisen sovelluksen luominen alusta PowerAppsin avulla | Microsoft Docs
+description: Tietoja yksinkertaisen mallipohjaisen sovelluksen luomisesta
 documentationcenter: ''
 author: Mattp123
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
@@ -12,63 +12,66 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 04/18/2018
 ms.author: matp
-ms.openlocfilehash: c1c03202cb95500bb019a3c23a68e0e8d5418cc9
-ms.sourcegitcommit: 79b8842fb0f766a0476dae9a537a342c8d81d3b3
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37898394"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="quickstart-build-your-first-model-driven-app-from-scratch"></a>Pikaopas: Luo ensimmäinen mallipohjainen sovelluksesi alusta alkaen
-Mallipohjainen sovelluskehitys on komponenttikeskeinen sovelluskehitystapa. Tässä pikaoppaassa kerrotaan, miten voit helposti luoda mallipohjaisen sovelluksen käyttämällä [!INCLUDE [powerapps](../../includes/powerapps.md)]-ympäristössäsi saatavilla olevia perusentiteettejä. 
 
-## <a name="sign-in-to-powerapps"></a>PowerAppsiin kirjautuminen
-Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com/). Jos sinulla ei ole vielä [!INCLUDE [powerapps](../../includes/powerapps.md)]-tiliä, napsauta tai napauta **Aloita maksutta** -linkkiä. 
+# <a name="build-your-first-model-driven-app-from-scratch"></a>Ensimmäisen mallipohjaisen sovelluksen luominen alusta
+Mallipohjaisen sovelluksen suunnittelu on sovelluskehityksen osaan perustuva toimintamalli. Tässä ohjeaiheessa luodaan mallipohjainen sovellus yksinkertaisesti käyttämällä yhtä vakioentiteettiä, joka on käytettävissä PowerApps-ympäristössä.
+
+> [!TIP]
+> Lisätietoja mallipohjaisten sovellusten luomisesta on täällä: [Tietoja mallipohjaisen sovelluksen osista](model-driven-app-components.md). 
+
+## <a name="sign-in-to-powerapps"></a>Kirjaudu sisään PowerApps -sovellukseen
+Kirjaudu sisään [PowerApps](https://web.powerapps.com/) -sovellukseen. Jos sinulla ei vielä ole [!INCLUDE [powerapps](../../includes/powerapps.md)]-tiliä, valitse **Aloita ilmaiseksi** -linkki. 
 
 ## <a name="create-your-model-driven-app"></a>Mallipohjaisen sovelluksen luominen
 
-1. Valitse haluamasi ympäristö tai luo uusi siirtymällä [PowerAppsin hallintakeskukseen](https://admin.powerapps.com/).
-2. Valitse vasemmassa siirtymisruudussa **Mallipohjainen**. 
+1.  Valitse haluamasi ympäristö tai siirry [PowerApps-hallintakeskukseen](https://admin.powerapps.com/) ja luo uusi.
+2.  Valitse vasemmanpuoleisessa siirtymisruudussa **Mallipohjainen**. 
 
-   ![Mallipohjainen](media/build-first-model-driven-app/choose-design-mode.png)
+    ![Malliipohjainen](media/build-first-model-driven-app/choose-design-mode.png)
 
-   > [!IMPORTANT]
-   > Jos **mallipohjaista** suunnittelutilaa ei ole käytettävissä, saatat joutua [luomaan ympäristön](https://docs.microsoft.com/powerapps/administrator/create-environment).   
+  > [!IMPORTANT]
+  > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-3. Valitse vasemmassa ruudussa **Sovellukset** ja sitten **Luo sovellus**.
+3. Valitse vasemmanpuoleisessa ruudussa **Sovellukset** ja valitse sitten **Luo sovellus**.
 
-4. Anna **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse sitten **Valmis**: 
-   - **Nimi**: kirjoita sovellukselle nimi, kuten *Ensimmäinen sovellukseni*. 
-   - **Kuvaus**: kirjoita lyhyt kuvaus siitä, mikä sovellus on tai mitä se tekee, kuten *Tämä on ensimmäinen sovellukseni*.
-   Katso lisätietoja sovelluksen muista ominaisuuksista kohdasta [Sovelluksen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
+4.  Kirjoita **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse **Valmis**: 
+  - **Nimi**: Anna sovellukselle nimi, kuten *Ensimmäinensovellukseni*. 
+  - **Kuvaus**: Kirjoita lyhyt kuvaus siitä, mikä sovellus on ja on tai mitä se tekee, kuten *Tämä on ensimmäinen sovellukseni*.
+Lisätietoja sovelluksen lisäominaisuuksista on kohdassa [Sovelluksen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
  
-   ![Uuden-sovelluksen-luominen](media/build-first-model-driven-app/create-new-app.png)
+    ![Uuden sovelluksen luominen](media/build-first-model-driven-app/create-new-app.png)
 
-## <a name="add-components-to-your-app"></a>Komponenttien lisääminen sovellukseen
-Sovellusten suunnitteluohjelmassa voit lisätä sovellukseesi komponentteja.
-1. Avaa sivustokartan suunnitteluohjelma valitsemalla **Avaa sivustokartan suunnitteluohjelma** -nuoli. 
+## <a name="add-components-to-your-app"></a>Osien lisääminen sovellukseen
+Lisää osia sovellukseen sovellusten suunnitteluohjelmassa.
+1.  Valitse **Avaa sivustokartan suunnitteluohjelma** -nuoli, jolloin sivustokartan suunnitteluohjelma avautuu. 
 
-   ![Uuden-sivustokartan-luominen](media/build-first-model-driven-app/new-sitemap.png)
+    ![Uuden sivustokartan luominen](media/build-first-model-driven-app/new-sitemap.png)
 
-2. Valitse sivustokartan suunnitteluohjelmassa **Uusi alialue** ja oikeanpuoleisessa ruudussa **Ominaisuudet**-välilehti ja sen jälkeen seuraavat ominaisuudet.
-   - **Tyyppi**: Entiteetti
-   - **Entiteetti**: Tili
+2.  Valitse sivustokartan suunnitteluohjelmassa **Uusi alialue** ja valitse sitten oikeanpuoleisessa ruudussa **Ominaisuudet**-välilehti. Valitse sitten seuraavat ominaisuudet.
+  - **Tyyppi**: Entiteetti
+  - **Entiteetti**: Asiakas
 
-   ![Komponenttien lisääminen sivustokarttaan](media/build-first-model-driven-app/sitemap.png)
+    ![Osien lisääminen sivustokarttaan](media/build-first-model-driven-app/sitemap.png)
 
-3. Valitse **Tallenna ja sulje**.
-4. Valitse sovellusten suunnitteluohjelman kaaviossa **Lomakkeet** ja sitten oikeanpuoleisen ruudun **Päälomakkeet**-ryhmässä **Tili**-lomake.
+3.  Valitse **Tallenna ja sulje**.
+4.  Valitse sovellusten suunnitteluohjelman kaaviossa **Lomakkeet** ja valitse sitten **Päälomakkeet**-ryhmän oikeanpuoleisessa ruudussa **Asiakas**-lomake.
 
-   ![Tili-päälomake](media/build-first-model-driven-app/main-form.png)
+    ![Asiakkaan päälomake](media/build-first-model-driven-app/main-form.png)
 
-5. Valitse sovellusten suunnitteluohjelman kaaviossa **Näkymät** ja sitten **Aktiiviset tilit**-, **Kaikki tilit**- ja **Omat aktiiviset tilit** -näkymät.
+5.  Valitse sovelluksen suunnitteluohjelman kaaviossa **Näkymät** ja valitse sitten **Aktiiviset asiakkaat**-, **Kaikki asiakkaat**- ja **Omat aktiiviset asiakkaat** -näkymät.
 
-   ![Tili-näkymät](media/build-first-model-driven-app/views.png)
+    ![Asiakasnäkymät](media/build-first-model-driven-app/views.png)
 
-6. Valitse sovellusten suunnitteluohjelman kaaviossa **Kaaviot** ja sitten **Tilit toimialan mukaan** -kaavio.
+6. Valitse sovellusten suunnitteluohjelman kaaviossa **Kaaviot** ja valitse sitten **Asiakkaat toimialan mukaan** -kaavio.
 7. Valitse sovellusten suunnitteluohjelman työkalurivillä **Tallenna**.
 
-    ![Sovellusten suunnitteluohjelman työkalurivi tallenna](media/build-first-model-driven-app/app-designer-toolbar.png)
+    ![Sovellusten suunnitteluohjelman työkalurivin tallentaminen](media/build-first-model-driven-app/app-designer-toolbar.png)
  
 <!-- ##  Validate your app
 This step checks for component dependencies that are required for the app to work, but haven't yet been added to the app. 
@@ -81,12 +84,14 @@ This step checks for component dependencies that are required for the app to wor
 3. On the app designer toolbar, select **Save**.  -->
 
 ## <a name="publish-your-app"></a>Sovelluksen julkaiseminen
-Valitse sovelluksen suunnitteluohjelman työkalurivillä **Julkaise**.
+Valitse sovellusten suunnitteluohjelman työkalurivillä **Julkaise**.
 
-Sovelluksen julkaisemisen jälkeen se on valmis käytettäväksi tai jaettavaksi muille.
+Kun sovellus on julkaistu, se on valmis suoritettavaksi ja jaettavaksi muiden kanssa.
 
-![Yksinkertainen tilientiteettisovellus](media/build-first-model-driven-app/accounts-quickstart-app.png)
+![Yksinkertainen Asiakas-entiteetin sovellus](media/build-first-model-driven-app/accounts-quickstart-app.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tämän pikaoppaan avulla loit yksinkertaisen mallipohjaisen sovelluksen. Jos haluat nähdä, miltä sovelluksesi näyttää käytännössä, katso [Pikaopas: Mallipohjaisen sovelluksen käyttäminen mobiililaitteessa](../../user/run-app-client-model-driven.md).
-Jos haluat oppia jakamaan sovelluksesi, siirry opetusohjelmaan [Mallipohjaisen sovelluksen jakaminen](share-model-driven-app.md).
+Tässä ohjeaiheessa luodaan yksinkertainen mallipohjainen sovellus. 
+- Lisätietoja siitä, miltä sovellus näyttää suorittamisen aikana, on kohdassa [Mallipohjaisen sovelluksen käyttäminen mobiililaitteessa](../../user/run-app-client-model-driven.md).
+- Lisätietoja sovelluksen jakamisesta on kohdassa [Mallipohjaisen sovelluksen jakaminen](share-model-driven-app.md).
+- Lisätietoja mallipohjaisten sovellusten käytön aloittamisesta ja ominaisuuksista on kohdassa [Tietoja mallipohjaisen sovelluksen osista](model-driven-app-components.md)

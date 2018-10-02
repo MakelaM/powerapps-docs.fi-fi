@@ -1,6 +1,6 @@
 ---
 title: Mukautetun entiteetin poistaminen | Microsoft Docs
-description: Vaiheittaiset ohjeet mukautetun entiteetin poistamiseen ja kaikkien PowerAppsin tietojen tyhjentämiseen
+description: PowerAppsissa tapahtuvan mukautetun entiteetin poistamisen ja kaikkien tietojen tyhjentämisen vaiheittaiset ohjeet
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,30 +8,30 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: b17da30916b06b5b76b16cc6bf9758b988549f6f
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218644"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="delete-a-custom-entity"></a>Poista mukautettu entiteetti
-Voit poistaa mukautettuja entiteettejä, mutta et vakioentiteettejä.
 
-1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+# <a name="delete-a-custom-entity"></a>Mukautetun kohteen poistaminen
+Mukautettuja entiteettejä voi poistaa, mutta vakioentiteettejä ei.
 
-    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
+1. Laajenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osa ja napsauta tai napauta **Entiteetit**-kohtaa vasemmanpuoleisessa siirtymisruudussa.
 
-2. Napsauta tai napauta entiteettiluettelossa olevaa poistettavaa entiteettiä ja napsauta tai napauta sitten komentopalkin kohtaa **Poista entiteetti**.
+    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "Entiteettiluettelo")
 
-3. Poista entiteetti napsauttamalla tai napauttamalla esiin tulevassa valintaikkunassa kohtaa **Poista**.
+2. Napsauta tai napauta poistettavaa entiteettiä entiteettiluettelossa. Napsauta tai napauta sitten komentopalkin **Poista entiteetti** -asetusta.
 
->[!NOTE]
->Kun poistat entiteetin, poistat sekä entiteetin määritelmän että kaikki entiteetin sisältämät tiedot. Entiteettejä ja niissä olevia tietoja ei voi palauttaa, jos ne on poistettu.
+3. Napsauta tai napauta näyttöön avautuvassa valintaikkunassa **Poista**, jolloin entiteetti poistetaan.
 
 >[!NOTE]
->Sovelluksen tai työnkulun toiminta saattaa häiriytyä, jos poistat entiteetin, jota tässä sovelluksessa käytetään.
+>Kun poistat entiteetin, voit poistaa sekä entiteetin määrityksen että kaikki sen sisältämät tiedot. Entiteettejä ja niiden tietoja ei voi palauttaa poistamisen jälkeen.
 
 >[!NOTE]
->Jos entiteetissä A on [hakukenttiä](data-platform-entity-lookup.md) entiteettiin B, sinun on ehkä poistettava entiteetti B, ennen kuin voit poistaa entiteetin A.
+>Jos sovelluksessa käytössä oleva entiteetti poistetaan, sovellukseen tai työnkulkuun voi tulla toimintahäiriöitä.
+
+>[!NOTE]
+>Jos entiteetillä A on [valintakenttiä](data-platform-entity-lookup.md) entiteettiin B, ennen entiteetin A poistamista on ehkä poistettava entiteetti B.
 

@@ -1,6 +1,6 @@
 ---
-title: Mallipohjaisia mallisovelluksia
-description: Tutustu mallipohjaisten mallisovellusten hankkimiseen, muokkaamiseen ja poistamiseen.
+title: Mallipohjaiset esimerkkisovellukset
+description: 'Tietoja mallipohjaisten esimerkkisovellusten hakemisesta, mukauttamisesta ja poistamisesta.'
 documentationcenter: na
 author: caburk
 manager: kvivek
@@ -10,77 +10,77 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 03/08/2018
 ms.author: caburk
-ms.openlocfilehash: 0b34a32281fb4f64bc918de81b3920edf5a7000b
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39664423"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="model-driven-sample-apps"></a>Mallipohjaisia mallisovelluksia
 
-Käytä [powerapps.comissa](https://powerapps.com) mallisovellusta suunnittelumahdollisuuksien tutkimiseen ja sellaisten ideoiden löytämiseen, joita voit käyttää omia sovelluksiasi suunnitellessasi. Jokainen mallisovellus käyttää kuvitteellisia tietoja reaalimaailman skenaarion esittämiseen. 
+# <a name="model-driven-sample-apps"></a>Mallipohjaiset esimerkkisovellukset
 
-Katso lisätietoja tarkistamalla kutakin mallisovellusta koskeva dokumentaatio. 
+Käytä sivustossa [powerapps.com](https://powerapps.com) esimerkkisovellusta, kun haluat tutkia suunnittelumahdollisuuksia ja etsiä käsitteitä, jotka haluat ottaa käyttöön omien sovellusten kehittämisessä. Jokaisessa esimerkkisovelluksessa käytetään kuvitteellisia tietoja, joiden avulla esitetään tosielämän skenaario. 
 
-![Varainkeruutapahtuman mallisovellus](media/overview-model-driven-samples/fundraiser-app1.png)
+Varmista, että tarkistat lisätiedot jokaisen esimerkkisovelluksen dokumentaatiosta. 
+
+![Rahankeräyksen esimerkkisovellus](media/overview-model-driven-samples/fundraiser-app1.png)
 
 
-## <a name="get-sample-apps"></a>Hanki mallisovelluksia
+## <a name="get-sample-apps"></a>Esimerkkisovellusten hakeminen
 
-Jotta voit toistaa tai muokata mallipohjaisia mallisovelluksia, sovellukset täytyy ensin valmistella Common Data Service -tietokannassa. Luo ensin kokeiluympäristö ja tietokanta ja tarkista kohta **Sisällytä mallisovellukset ja tiedot**.
+Mallipohjaiset esimerkkisovellukset on ensin valmisteltava Common Data Service -tietokannassa, ennen kuin niitä voidaan toistaa tai muokata. Luo ensin kokeiluympäristö ja -tietokanta ja varmista, että **Sisällytä esimerkkisovellukset ja -tiedot** on valittuna.
 
-![Luo tietokanta](media/overview-model-driven-samples/create-database1.png)
+![Tietokannan luominen](media/overview-model-driven-samples/create-database1.png)
 
 
 > [!IMPORTANT]
-> Tämä vaihtoehto asentaa kaikki käytettävissä olevat mallisovellukset tietokantaan. Mallisovellukset ovat koulutus- ja esittelytarkoituksia varten, emmekä suosittele niiden asentamista tuotantotietokantoihin. 
+> Tämä vaihtoehto asentaa tietokantaan kaikki käytettävissä olevat esimerkkisovellukset. Esimerkkisovelluksia käytetään koulutuksessa ja esittelyssä. Niiden asentamista tuotantotietokantoihin ei suositella. 
 
-## <a name="customize-a-sample-app"></a>Mukauta mallisovellusta
+## <a name="customize-a-sample-app"></a>Esimerkkisovelluksen mukauttaminen
 
-1. Kirjaudu sisään osoitteeseen [powerapps.com](https://powerapps.com) ja valitse suunnittelutilaksi **Malliin perustuva**. 
+1. Kirjaudu sisään [powerapps.com](https://powerapps.com)-sivustoon ja valitse suunnittelutilaksi **Mallipohjainen**. 
 
-    ![Valitse suunnittelutila](media/overview-model-driven-samples/choose-design-mode.png)
+    ![Suunnittelutilan valitseminen](media/overview-model-driven-samples/choose-design-mode.png)
 
-2. Pidä kohdistinta aloitussivulla mallisovelluksen kohdalla ja valitse **Mukauta**.
-3. Sovelluksen suunnittelutoiminto avautuu. Siinä on useita sovelluksen mukautusvaihtoehtoja. 
-4. Saat lisää mukautusasetuksia napsauttamalla portaalin vasemmassa siirtymisruudussa **Lisäasetukset**.
+2. Siirry kotisivulla esimerkkisovelluksen päälle ja valitse **Mukauta**.
+3. Näyttöön avautuu sovellusten suunnitteluohjelma, jossa on useita vaihtoehtoja sovelluksen mukauttamista varten. 
+4. Saat lisätietoja mukauttamisasetuksista, kun valitset portaalin vasemmalla olevassa siirtymistoiminnossa **Lisäasetukset**.
 
-## <a name="remove-sample-apps-and-data"></a>Poista mallisovelluksia ja tietoja 
-- Mallisovelluksen poistaminen edellyttää vastaavan [hallitun ratkaisun](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution) poistamista. 
-- Ratkaisun poistaminen poistaa myös kaikki mallitiedot, jotka koskevat sovelluksen mukautettuja entiteettejä.
-- Jos mallisovellukseen on tehty mukautuksia, on ehkä syntynyt [riippuvuuksia](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), jotka on poistettava, ennen ratkaisun poistamista.
+## <a name="remove-sample-apps-and-data"></a>Esimerkkisovellusten ja -tietojen poistaminen 
+- Esimerkkisovelluksen poistaminen edellyttää, että vastaava [isännöity ratkaisu](https://docs.microsoft.com/dynamics365/customer-engagement/developer/uninstall-delete-solution) poistetaan. 
+- Jos ratkaisu poistetaan, myös sovelluksen mukautettuja entiteettejä koskevat esimerkkitiedot poistetaan.
+- Jos esimerkkisovellukseen on tehty mukautuksia, sillä voi olla [riippuvuuksia](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components). Ne on poistettava ennen sovelluksen poistamista.
 
-### <a name="steps"></a>Vaiheet
-1. Kirjaudu sisään [PowerApps-hallintakeskukseen](https://admin.powerapps.com).
+### <a name="steps"></a>Osavaiheet.
+1. Kirjaudu sisään [PowerAppsin hallintaportaaliin](https://admin.powerapps.com).
 
 2. Valitse ympäristö.
 
-3. Napsauta **Dynamics 365 -hallintakeskus** 
+3. Valitse **Dynamics 365 Administration Center** 
 
-    ![Dynamics 365 -hallintakeskus](media/overview-model-driven-samples/admin-center.png)
+    ![Dynamics 365:n hallintakeskus](media/overview-model-driven-samples/admin-center.png)
 
-4. Valitse tietokanta luettelosta ja valitse **AVAA**.
+4. Valitse tietokanta luettelosta ja valitse sitten **AVAA**.
 
-    ![Valitse tietokanta](media/overview-model-driven-samples/select-database.png)
+    ![Tietokannan valitseminen](media/overview-model-driven-samples/select-database.png)
 
-5. Valitse **Asetukset/Ratkaisut**.
+5. Siirry kohtaan **Asetukset/Ratkaisut**.
 
-6. Valitse poistettavan sovelluksen ratkaisu ja napsauta **Poista**.
+6. Valitse ratkaisu poistettavalle sovellukselle ja valitse sitten **Poista**.
 
-    ![Poista ratkaisu](media/overview-model-driven-samples/delete-solution.png)
+    ![Ratkaisun poistaminen](media/overview-model-driven-samples/delete-solution.png)
 
-*Voit myös siirtyä ratkaisujen luetteloon napsauttamalla tekijän portaalissa **Lisäasetukset** ja poistamalla kaiken URL-osoitteesta tekstin.dynamics.com/ jälkeen*
+*Vaihtoehtoisesti voit siirtyä ratkaisuluetteloon valitsemalla tekijän portaalissa **Lisäasetukset** ja poistamalla URL-osoitteesta kohdan .dynamics.com/ jälkeiset merkit*
 
 > [!IMPORTANT]
-> Älä poista muita järjestelmän ratkaisuja, ellet ole tietoinen niiden vaikutuksesta.
+> Älä poista muita järjestelmäratkaisuja, ellet ole varma poiston vaikutuksesta.
 
-## <a name="install-or-uninstall-sample-data"></a>Asenna mallitietoja tai poista niiden asennus
-1. Noudata edellisiä vaiheita 1–4.
-2. Siirry kohtaan **Asetukset/Tiedonhallinta/Mallitiedot**.
-3. Jos mallitietoja on asennettu, sen poistamisvalinta on käytettävissä. Muussa tapauksessa käytettävissä on asennusvalinta. 
+## <a name="install-or-uninstall-sample-data"></a>Esimerkkitietojen asentaminen tai asennuksen poistaminen
+1. Noudata yllä mainittuja vaiheita 1–4.
+2. Siirry kohtaan **Aseukset / Tietojen hallinta / Esimerkkitiedot**.
+3. Jos esimerkkitiedot on asennettu, poistovalinta on käytettävissä. Muussa tapauksessa käytettävissä on asennusvalinta. 
 
-    ![poista mallitiedot](media/overview-model-driven-samples/remove-sample-data.png)
+    ![esimerkkitietojen poistaminen](media/overview-model-driven-samples/remove-sample-data.png)
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Tietojen lisääminen Common Data Service for Appsissa olevaan entiteettiin Power Queryn avulla | Microsoft Docs
-description: Vaiheittaiset ohjeet tietojen lisäämiseen Common Data Service (CDS) for Appsissa olevaan uuteen tai olemassa olevaan entiteettiin toisesta tietolähteestä Power Queryn avulla.
+title: Tietojen lisääminen Common Data Service sovelluksille -ratkaisun entiteettiin Power Queryn avulla | Microsoft Docs
+description: Vaiheittaiset ohjeet Power Queryn käyttämisestä tietojen lisäämisessä Common Data Service (CDS) sovelluksille -ratkaisun uuteen tai olemassa olevaan entiteettiin toisesta tietolähteestä.
 author: AFTOwen
 manager: kfile
 ms.service: powerapps
@@ -9,81 +9,81 @@ ms.topic: conceptual
 ms.component: cds
 ms.date: 03/21/2018
 ms.author: anneta
-ms.openlocfilehash: c5da71198f33661766d8fc214816c2e714736360
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218759"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Tietojen lisääminen Common Data Service for Appsissa olevaan entiteettiin Power Queryn avulla
-Tässä toimenpiteessä luot entiteetin [Common Data Service (CDS) for Appsissa](data-platform-intro.md) ja täytät entiteetin OData-syötteen tiedoilla Power Queryn avulla. Voit integroida tietoja samalla tavalla muun muassa seuraavista verkon ja lähiverkon lähteistä:
+
+# <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Tietojen lisääminen Common Data Service sovelluksille -ratkaisun entiteettiin Power Queryn avulla
+Tämän toimintosarjan avulla luodaan entiteetti [Common Data Service (CDS) sovelluksille -ratkaisussa](data-platform-intro.md) ja täytetään entiteetin tiedot OData-syötteestä Power Queryn avulla. Voit integroida tiedot esimerkiksi näistä online-lähteistä ja paikallisista lähteistä käyttämällä samoja tekniikoita:
 
 * SQL Server
 * Salesforce
 * IBM DB2
-* Access
+* Käyttö
 * Excel
-* WWW-ohjelmointirajapinnat
+* Web-ohjelmointirajapinnat
 * OData-syötteet
 * Tekstitiedostot
 
-Voit myös suodattaa, muuntaa ja yhdistää tietoja, ennen kuin lisäät ne uuteen tai olemassa olevaan entiteettiin.
+Voit myös suodattaa, muuntaa ja yhdistää tietoja ennen kuin ne ladataan uuteen tai olemassa olevaan entiteettiin.
 
-Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi](../signup-for-powerapps.md).
+Jos sinulla ei ole PowerAppsin käyttöoikeutta, voit [rekisteröityä ilmaiseksi](../signup-for-powerapps.md).
 
 ## <a name="prerequisites"></a>Edellytykset
-Jotta voit noudattaa tämän aiheen ohjeita, siirry entiteettien luomisen mahdollistavaan [ympäristöön](../canvas-apps/working-with-environments.md).
+Voit seurata tätä ohjeaihetta, jos vaihdat [ympäristöön](../canvas-apps/working-with-environments.md), jossa voit luoda entiteettejä.
 
-## <a name="specify-the-source-data"></a>Lähdetietojen määritys
+## <a name="specify-the-source-data"></a>Lähdetietojen määrittäminen
 
-1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja napsauta tai napauta vasemmassa reunassa olevan **Tiedot**-kohdan alaspäin osoittavaa nuolta.
+1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja napsauta tai napauta **Tiedot**-kohdan alanuolta lähellä vasemmanpuoleista reunaa.
 
-    ![PowerAppsin aloitussivu](./media/data-platform-cds-newentity-pq/sign-in.png)
+    ![PowerApps-kotisivu](./media/data-platform-cds-newentity-pq/sign-in.png)
 
-1. Valitse esiin tulevasta luettelosta **Tietojen integrointi** ja sitten valintaikkunan oikeassa yläkulmassa **Uusi projekti**.
+1. Napsauta tai napauta näyttöön tulevassa luettelossa **Tietojen integrointi** -kohtaa. Napsauta tai napauta sitten ikkunan oikeassa yläkulmassa olevaa **Uusi projekti** -kohtaa.
 
-1. Valitse tietolähteiden luettelosta **OData**.
+1. Napsauta tai napauta tietolähdeluettelossa **OData**-kohtaa.
 
-    ![Valitse OAuth-yhdistin](./media/data-platform-cds-newentity-pq/choose-odata.png)
+    ![OAuth-yhdysohjelman valitseminen](./media/data-platform-cds-newentity-pq/choose-odata.png)
 
-1. Kirjoita tai kopioi ja liitä **Yhteysasetukset**-kohtaan seuraava URL-osoite ja valitse sitten **Seuraava**:<br>
+1. Kirjoita **Yhteysasetukset**-kohtaan tämä URL-osoite tai liitä se ja valitse **Seuraava**:<br>
 `http://services.odata.org/V4/Northwind/Northwind.svc/`
 
-1. Valitse taulukkoluettelosta **Customers**-valintaruutu ja napsauta tai napauta sitten **Seuraava**-painiketta.
+1. Valitse taulukkoluettelossa **Asiakkaat**-valintaruutu ja napsauta tai napauta **Seuraava**-kohtaa.
 
-    ![Valitse Customers-taulukko](./media/data-platform-cds-newentity-pq/select-table.png)
+    ![Asiakkaat-taulukon valitseminen](./media/data-platform-cds-newentity-pq/select-table.png)
 
-1. (valinnainen) Muokkaa rakenne omiin tarpeisiin sopivaksi. Voit esimerkiksi valita haluamasi sarakkeet, muuntaa taulukkoa monella tapaa, lisätä hakemiston tai ehdollisen sarakkeen tai tehdä muita muutoksia.
+1. (valinnainen) Muokkaa rakennetta tarpeitasi vastaaviksi valitsemalla sisällytettävät sarakkeet, muuntamalla taulukkoa yhdellä tai usealla tavalla, lisäämällä indeksi tai ehdollinen sarake tai tekemällä muita muutoksia.
 
-1. Napsauta tai napauta oikeassa alakulmassa **Seuraava**.
+1. Napsauta tai napauta oikeassa alakulmassa olevaa **Seuraava**-kohtaa.
 
-## <a name="specify-the-target-entity"></a>Määritä kohde-entiteetti
-1. Valitse **Latausasetukset**-osiossa **Lataa uuteen entiteettiin**.
+## <a name="specify-the-target-entity"></a>Kohde-entiteetin määrittäminen
+1. Valitse **Lataa asetukset** -kohdassa **Lataa uuteen entiteettiin**.
 
-    ![Määritä uuden entiteetin nimi](./media/data-platform-cds-newentity-pq/new-entity-name.png)
+    ![Uuden entiteetin nimen määrittäminen](./media/data-platform-cds-newentity-pq/new-entity-name.png)
 
-    Voit antaa uudelle entiteetille eri nimen tai näyttönimen. Jätä tällä kertaa kuitenkin oletusarvot, jotta voit noudattaa tämän oppaan ohjeita tarkasti.
+    Voit antaa uudelle entiteetille eri nimen tai näyttönimen. Jätä kuitenkin oletusarvot tämän opetusohjelman arvojen mukaisiksi.
 
-1. Valitse **Ensisijainen nimikenttä** -luettelosta **ContactName** ja napsauta tai napauta sitten oikeassa alakulmassa **Seuraava**-painiketta.
+1. Napsauta tai napauta **Ensisijainen nimi -kenttä** -luettelossa **Yhteyshenkilön nimi** ja napsauta tai napauta sitten oikeassa alakulmassa oleva **Seuraava**.
 
-    Voit määrittää eri ensisijaisen nimikentän, yhdistää eri lähdetaulukon sarakkeen jokaiseen luotavan entiteetin kenttään tai valita molemmat vaihtoehdot. Jätä oletusarvoiset sarakkeiden yhdistämismääritykset, jos noudatat tätä opasta tarkasti.
+    Voit määrittää toisen ensisijaisen nimen kentälle, määrittää lähdetaulukon toisen sarakkeen entiteetin jokaiseen kenttään, jotka luot, tai molemmat. Jos haluat noudattaa täysin tätä opetusohjelmaa, jätä sarakkeen oletusvastaavuus.
 
-1. Kun **Lataustila** on **Valmis**, valitse oikeassa alakulmassa **Valmis**.
+1. Kun **Latauksen tila** on **Valmis**, valitse oikeassa alakulmassa oleva **Valmis**.
 
-1. Valitse **Tiedot**-kohdasta (lähellä vasenta reunaa) **Entiteetit**, niin esiin ilmestyy tietokannassasi olevien entiteettien luettelo.
+1. Valitse **Tiedot**-kohdassa (lähellä vasemmanpuoleista reunaa) **Entiteetit**, jolloin näyttöön tulee tietokannan entiteettien luettelo.
 
-    OData-syötteestä luomasi **Customers**-entiteetti näkyy mukautettuna entiteettinä.
+    OData-syötteestä luotu **Asiakkaat**-entiteetti näkyy mukautettuna entiteettinä.
 
     ![Vakioentiteettien ja mukautettujen entiteettien luettelo](./media/data-platform-cds-newentity-pq/entity-list.png)
 
 > [!WARNING]
-> Jos lisäät Power Queryn avulla tietoja olemassa olevaan entiteettiin, kaikki kyseisen entiteetin tiedot korvataan.
+> Jos lisäät tietoja olemassa olevaan entiteettiin Power Queryn avulla, entiteetin kaikki tiedot korvataan.
 
-Jos valitset **Lataa olemassa olevaan entiteettiin**, voit määrittää entiteetin johon **Customers**-taulukon tiedot lisätään. Voit esimerkiksi lisätä tiedot **Accounts**-entiteettiin, jota Common Data Service käyttää lähettämiseen. Kohdassa **Lähdesarake** voit määrittää lisäksi, että **Customers**-taulukon **ContactName**-sarakkeen tiedot lisätään **Accounts**-entiteetin **Name**-sarakkeeseen.
+Jos valitset **Lataa olemassa olevaan entiteettiin** -kohdan, voit määrittää entiteetin, johon tiedot lisätään **Asiakkaat**-taulukosta. Voit esimerkiksi lisätä tietoja **Asiakas**-entiteettiin, jonka mukana toimitetaan Common Data Service. Voit määrittää **Lähdesarake**-kohdassa, että **Yhteyshenkilön nimi**-sarakkeen tiedot **Asiakkaat**-taulukosta on lisättävä **Nimi**-sarakkeeseen **Asiakkaat**-entiteetissä.
 
-![Määritä uuden entiteetin nimi](./media/data-platform-cds-newentity-pq/existing-entity.png)
+![Uuden entiteetin nimen määrittäminen](./media/data-platform-cds-newentity-pq/existing-entity.png)
 
-Olemme innoissamme tästä toiminnosta ja kuulemme mielellään palautteesi. Lähetä meille tähän ominaisuuteen liittyviä [ehdotuksia ja palautetta](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)!
+Olemme innoissamme näistä toiminnoista ja odotamme kuulevamme palautteesi. [Lähetä meille näitä toimintoja koskevia ehdotuksia ja palautetta](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)!
 
-Jos saat [käyttöoikeuksiin liittyvän virheilmoituksen](data-platform-cds-newentity-troubleshooting-mashup.md), ota yhteyttä järjestelmänvalvojaasi.
+Jos näyttöön tulee [oikeuksia koskeva virhesanoma](data-platform-cds-newentity-troubleshooting-mashup.md), ota yhteyttä järjestelmänvalvojaan.

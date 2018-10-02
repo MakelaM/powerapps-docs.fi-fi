@@ -1,6 +1,6 @@
 ---
-title: PowerAppsin palvelupaketin 2 käyttöoikeuksia vaativat monimutkaiset entiteetit | Microsoft Docs
-description: Luettelo Common Data Service (CDS) for Appsin sisältämistä monimutkaisista entiteeteistä, jotka edellyttävät PowerAppsin palvelupaketin 2 käyttöoikeutta.
+title: 'Monimutkaiset entiteetit, jotka vaativat PowerApps-palvelupaketin 2 käyttöoikeudet | Microsoft Docs'
+description: 'Common Data Service (CDS) sovelluksille -ratkaisun niiden monimutkaisten entiteettien luettelo, jotka vaativat PowerApps-palvelupaketin 2 käyttöoikeudet.'
 author: clwesene
 manager: kvivek
 ms.service: powerapps
@@ -8,105 +8,104 @@ ms.component: cds
 ms.topic: reference
 ms.date: 07/17/2018
 ms.author: clwesene
-ms.openlocfilehash: 76c101f35e236ac6bf037d2b5b748ca1b943d61d
-ms.sourcegitcommit: efea7ed5ad8e80c87ba423fb094fa94b4e864d75
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39266253"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="complex-entities-and-licensing"></a>Monimutkaiset entiteetit ja käyttöoikeudet
-Seuraavia monimutkaisia, palvelimen logiikkaa sisältävät entiteetit vaativat näitä entiteettejä käyttävien sovellusten tai työnkulkujen käyttäjillä PowerApps Plan 2- tai Microsoft Flow Plan 2 -sopimuksen:
 
-* Koodin laajennukset. Lisätietoja: [Laajennuksen kehitys](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development))
-* Reaaliaikaiset työnkulut. Lisätietoja: [Työnkulun prosessit](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes))
+# <a name="complex-entities-and-licensing"></a>Monimutkaiset entiteetit ja käyttöoikeudet
+Entiteetit, jotka sisältävät seuraavaa monimutkaista palvelinpään logiikkaa, vaativat näitä entiteettejä käyttäviltä sovelluksen tai työnkulun käyttäjiltä PowerApps-palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeudet:
+
+* Koodilaajennukset. Lisätietoja: [Laajennuskehitys](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development))
+* Reaaliaikaiset työnkulut. Lisätietoja: [Työnkulkuprosessit](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes))
 
     > [!IMPORTANT]
-    >  Vain työnkulkuja, jotka on muunnettu reaaliaikaisiksi työnkuluiksi, pidetään reaaliaikaisina ja synkronoituina. Työnkulkuja, jotka suoritetaan taustalla, voidaan silti käyttää asianmukaisen PowerApps-palvelupaketin osana, eivätkä ne vaadi muita käyttöoikeuksia.
+    >  Vain työnkulkuja, jotka on muunnettu reaaliaikaisiksi työnkuluiksi, käsitellään reaaliaikaisina ja synkronisina. Taustalla suoritettavia työnkulkuja voi yhä käyttää soveltuvan PowerApps-palvelupaketin kanssa. Ne eivät vaadi lisäkäyttöoikeuksia.
 
-Jos haluat tietää, onko entiteeteissäsi monitasoista liiketoimintalogiikkaa, tarkista laajennuksen kokoonpanojen ja ympäristössäsi määriteltyjen työnkulkujen luettelo.
+Ympäristöön määritettyjen laajennuskokoonpanojen ja työnkulkujen luettelossa on lisätietoja entiteetteihin lisätystä monimutkaisesta liiketoimintalogiikasta.
 
-## <a name="complex-entities-installed-with-dynamics-365"></a>Dynamics 365:n mukana asennetut monimutkaiset entiteetit
-Seuraavassa taulukossa on lueteltu entiteettejä, jotka sisältävät monimutkaista palvelinpuolen logiikkaa valmiina Dynamics 365 -sovelluksen asennuksen osana. Tämä luettelo on tarkoitettu ohjeeksi. Monimutkaisten entiteettien luettelo voi vaihdella sen mukaan, mitkä Dynamics 365 -sovellukset ja -versiot on asennettu ympäristöösi.
+## <a name="complex-entities-installed-with-dynamics-365"></a>Dynamics 365:n kanssa asennetut monimutkaiset entiteetit
+Seuraava taulukko sisältää entiteetit, jotka sisältävät valmista monimutkaista palvelinpään logiikkaa, joka on osa Dynamics 365 -sovelluksen asennusta. Tämä luettelo toimii oppaana. Monimutkaisten entiteettien luettelo on erilainen sen mukaan, mitä Dynamics 365 -sovelluksia ja -versioita ympäristöön on asennettu.
 
 > [!NOTE]
->  Jos käytössäsi on Common Data Service etkä ole asentanut Dynamics 365 -sovellusta tai kolmannen osapuolen ratkaisua, ympäristössäsi ei ole monimutkaista palvelinpuolen logiikkaa sisältäviä entiteettejä.
+>  Jos käytössä on Common Data Service, etkä ole asentanut Dynamics 365 -sovellusta tai kolmannen osapuolen ratkaisua, ympäristössä ei ole monimutkaista palvelinpään logiikkaa sisältäviä entiteettejä.
 
-* Tili
+* Asiakas
 * Sopimus
-* Sopimuksen varauksen päivämäärä
+* Sopimuksen varauspäivä
 * Sopimuksen varauksen tapaus
 * Sopimuksen varauksen tuote
-* Sopimuksen varauksen palvelu
+* Sopimuksen varauspalvelu
 * Sopimuksen varauksen palvelutehtävä
-* Sopimuksen varauksen määritys
+* Sopimuksen varauksen asetukset
 * Sopimuksen laskun päivämäärä
-* Sopimuksen laskun tuote
-* Sopimuksen laskun määritys
+* Sopimuksen laskutustuote
+* Sopimuksen laskun asetus
 * Sopimuksen alitila
 * Varattava resurssi
-* Varattavan resurssin varaus
-* Varattavan resurssin varauksen otsikko
-* Varattavan resurssin luokka
-* Varattavan resurssin luokkamääritys
-* Varattavan resurssin ominaisuus
-* Varattavan resurssin ryhmä
+* Varattavissa olevan resurssin varaus
+* Varattavissa olevan resurssin otsikko
+* Varattavissa olevan resurssin luokka
+* Varattavissa olevan resurssin luokkaliitos
+* Varattavissa olevan resurssin ominaisuus
+* Varattavissa oleva resurssiryhmä
 * Varauksen hälytys
 * Varauksen hälytyksen tila
 * Varauksen tila
-* Tapaus
 * Ominaisuus
-* Osaamisen vaatimus (vanhentunut)
+* Osaamisaluetarve (Vanhentunut)
 * Kilpailija
-* Yhteystiedot
-* Asiakkaan resurssi
+* Yhteyshenkilö
+* Asiakasresurssi
 * Delegointi
 * Kulut
 * Kenttälaskenta
-* Kenttäpalvelun hinnastonimike
-* Filter
+* Field Service sovelluksen hinnaston nimike
+* Suodatus
 * Seuraa
-* Tapaustyyppi
-* Tapaustyypin tuote
-* Tapaustyypin palvelu
-* Tapaustyypin palvelutehtävä
+* Tapauksen tyyppi
+* Tapauksen tyypin tuote
+* Tapauksen tyypin palvelu
+* Tapauksen tyypin palvelutehtävä
 * Integrointityö
 * Integrointityön tiedot
 * Varastonmuutos
 * Varastonmuutoksen tuote
-* Varastosiirto
+* Varaston siirto
 * Lasku
 * Laskutustiheys
 * Laskurivi
 * Laskurivin tiedot
-* Kirjausraportti
-* Kirjausraportin rivi
-* Liidi
+* Päivyri
+* Kirjauskansion rivi
+* Lead
 * Huomautus
 * OData v4 -tietolähde
 * Mahdollisuus
 * Mahdollisuusrivi
 * Mahdollisuusrivin tiedot
 * Tilaus
-* Tilauksen laskutuksen tuote
-* Tilauksen laskutuksen määritys
+* Tilauksen laskutustuote
+* Tilauksen laskutusasetus
 * Tilausrivi
 * Maksu
-* Maksun tiedot
-* Julkaise määritys
-* Julkaise sääntömääritys
+* Maksutiedot
+* Viestimääritys
+* Viestisäännön määritys
 * Postinumero
 * Hinnasto
-* Hinnaston nimike
+* Hinnastonimike
 * Tuote
 * Projekti
 * Projektin hyväksyntä
 * Projektin sopimusrivin tiedot
-* Projektin sopimusrivin välitavoite
+* Projektisopimusrivin välitavoite
 * Projektin sopimusrivin resurssiluokka
 * Projektin sopimusrivin tapahtumaluokka
-* Project Parameter
-* Project Stages
+* Projektin parametri
+* Projektin vaiheet
 * Projektitehtävän tilan käyttäjä
 * Projektiryhmän jäsenen rekisteröityminen
 * Ostotilaus
@@ -118,12 +117,12 @@ Seuraavassa taulukossa on lueteltu entiteettejä, jotka sisältävät monimutkai
 * Jonon kohde
 * Tarjous
 * Tarjouksen varauksen tapaus
-* Tarjouksen varauksen tuote
-* Tarjouksen varauksen palvelu
+* Tarjouksen varaustuote
+* Tarjouksen varauspalvelu
 * Tarjouksen varauksen palvelutehtävä
-* Tarjouksen varauksen määritys
-* Tarjouksen laskutuksen tuote
-* Tarjouksen laskutuksen määritys
+* Tarjouksen varausasetus
+* Tarjouksen laskutustuote
+* Tarjouksen laskutusasetus
 * Tarjousrivi
 * Tarjousrivin tiedot
 * Tarjousrivin välitavoite
@@ -132,33 +131,33 @@ Seuraavassa taulukossa on lueteltu entiteettejä, jotka sisältävät monimutkai
 * Tarjouksen projektihinnasto
 * Luokitusmalli
 * Luokitusarvo
-* Vaatimuksen ominaisuus
-* Vaatimuksen resurssiluokka
-* Vaatimuksen resurssin ensisijaisuus
-* Vaatimuksen tila
+* Tarpeen ominaisuus
+* Tarpeen resurssiluokka
+* Tarpeen resurssin ensisijaisuus
+* Tarpeen tila
 * Resurssipyyntö
 * Resurssitarve
 * Resurssitarpeen tiedot
-* RMA
-* RMA-tuote
-* RMA-vastaanotto
-* RMA-vastaanoton tuote
-* RMA-alitila
+* Palautus
+* Tavaran valtuutettu palautustuote
+* Tavaran valtuutettu palautuksen vastaanotto
+* Tavaran valtuutetun palautuksen vastaanoton tuote
+* Palautuksen alitila
 * Roolin osaamistarve
 * Roolin hinta
-* RTV
-* RTV-tuote
-* RTV-alitila
+* Palautus toimittajalle
+* Toimittajalle palautettava tuote
+* Toimittajalle tehtävän palautuksen alitila
 * Verokoodi
 * Verokoodin tiedot
 * Aikamerkintä
 * Aikaryhmä
 * Aikaryhmän tiedot
-* Vapaapyyntö
+* Poissaolopyyntö
 * Tapahtumaluokan hinta
 * Käyttäjä
 * Näkymä
-* Seinän näkymä
+* Seinänäkymä
 * Varasto
 * Työtilaus
 * Työtilauksen tapaus
@@ -169,6 +168,6 @@ Seuraavassa taulukossa on lueteltu entiteettejä, jotka sisältävät monimutkai
 * Työmalli
 
 
-## <a name="licensing"></a>Käyttöoikeudet
-Katso lisätietoja PowerAppsin ja Dynamics 365 -käyttöoikeuksista [Käyttöoikeuksien yleiskuvaus](../../administrator/pricing-billing-skus.md) -sivulta.
+## <a name="licensing"></a>Käyttöoikeuden hankkiminen
+Lisätietoja PowerApps- ja Dynamics 365 -käyttöoikeuksista on [Käyttöoikeuksien yleiskatsaus](../../administrator/pricing-billing-skus.md) -sivulla.
 

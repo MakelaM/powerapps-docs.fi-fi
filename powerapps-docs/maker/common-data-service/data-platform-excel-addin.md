@@ -1,6 +1,6 @@
 ---
-title: Entiteettitietojen avaaminen Excelissä | Microsoft Docs
-description: Avaa entiteettitietoja Excelissä vuorovaikutteiseen tarkasteluun ja muokkaukseen.
+title: Entiteetin tietojen avaaminen Excelissä | Microsoft Docs
+description: Avaa entiteetin tiedot Excelissä vuorovaikutteista tarkastelua ja muokkaamista varten.
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,77 +8,76 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
 ms.author: clwesene
-ms.openlocfilehash: ad1a2de5491a1725ada2e95c3eccc6513de9e304
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218483"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="open-entity-data-in-excel"></a>Entiteettitietojen avaaminen Excelissä
-Kun avaat entiteettitiedot Microsoft Excelissä, voit tarkastella ja muokata niitä nopeasti ja helposti Microsoft PowerAppsin Excel-apuohjelmalla. PowerAppsin Excel-apuohjelma vaatii Microsoft Excel 2016 -ohjelman.
+# <a name="open-entity-data-in-excel"></a>Entiteetin tietojen avaaminen Excelissä
+Kun avaat entiteetin tiedot Microsoft Excelissä, voit nopeasti ja helposti tarkastella ja muokata tietoja Microsoft PowerApps Excel -apuohjelman avulla. PowerAppsin Excel-apuohjelma edellyttää, että käytössä on Microsoft Excel 2016.
 
-![Excel-apuohjelma](./media/data-platform-cds-excel-addin/ExcelAddin.png "PowerApps Excel -apuohjelma")
+![Excel-apuohjelma](./media/data-platform-cds-excel-addin/ExcelAddin.png "PowerAppsin Excel-apuohjelma")
 
-## <a name="open-entity-data-in-excel"></a>Entiteettitietojen avaaminen Excelissä
-1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa. Kaikki entiteetit tulevat esiin.
-2. Napsauta sinua kiinnostavan entiteetin oikealla puolella olevaa kolmea pistettä (...).
-3. Valitse **Avaa Excelissä** ja avaa luotu työkirja. Työkirja sisältää entiteetin sidontatiedot sekä ympäristöösi ja PowerAppsin Excel-apuohjelmaan suuntautuvat osoittimet.  
-4. Mahdollista PowerAppsin Excel-apuohjelman suorittaminen napsauttamalla Excelissä kohtaa **Ota muokkaus käyttöön**. Excel-apuohjelma toimii Excel-ikkunan oikealla puolella olevassa ruudussa.
-5. Jos et ole aikaisemmin suorittanut PowerAppsin Excel-apuohjelmaa, salli Excel-apuohjelman suorittaminen napsauttamalla kohtaa **Luota tähän apuohjelmaan**.
-6. Jos sinua pyydetään kirjautumaan sisään, valitse **Kirjaudu sisään** ja kirjaudu sitten sisään samoilla tunnistetiedoilla, joita käytit [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa. Excel-apuohjelma kirjaa sinut aina kun mahdollista automaattisesti sisään aikaisemman sisäänkirjautumiskontekstin avulla. Varmista sen vuoksi, että Excel-apuohjelman oikeassa yläkulmassa on oikea käyttäjänimi.
+## <a name="open-entity-data-in-excel"></a>Entiteetin tietojen avaaminen Excelissä
+1. Laajenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osa ja napsauta tai napauta **Entiteetit**-kohtaa vasemmanpuoleisessa siirtymisruudussa. Kaikki entiteetit näytetään.
+2. Valitse sen entiteetin oikealla puolella olevat kolme pistettä (...), josta olet kiinnostunut.
+3. Valitse **Avaa Excelissä** ja avaa luotu työkirja. Tämä työkirja sisältää entiteetin sidonnan tietoja, ympäristön osoittimen ja PowerAppsin Excel-apuohjelman osoittimen.  
+4. Valitse Excelissä **Ota muokkaus käyttöön**, jolloin PowerAppsin Excel-apuohjelma voidaan suorittaa. Excel-apuohjelma suoritetaan Excel-ikkunan oikealla puolella olevassa ruudussa.
+5. Jos tämä on ensimmäinen kerta, kun suoritat PowerAppsin Excel-apuohjelman, salli Excel-apuohjelman suoritus valitsemalla **Luota tähän apuohjelmaan**.
+6. Jos sinua pyydetään kirjautumaan sisään, valitse **Kirjaudu sisään** ja anna samat tunnistustiedot kuin [powerapps.com](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa. Excel-apuohjelma käyttää edellistä sisäänkirjauksen kontekstia ja kirjaa sinut automaattisesti sisään, jos se on mahdollista. Tarkista tämän vuoksi käyttäjätunnus Excel-apuohjelman oikeassa yläkulmassa.
 
-Excel-apuohjelma lukee valitsemasi entiteetin tiedot automaattisesti. Huomaa, että työkirjassa ei ole mitään tietoja, ennen kuin Excel-apuohjelma noutaa ne.
+Excel-apuohjelma lukee valitsemasi entiteetin tiedot automaattisesti. Huomaa, että työkirjassa ei ole tietoja ennen kuin Excel-apuohjelma on lukenut ne sinne.
 
 ## <a name="view-and-refresh-data-in-excel"></a>Tietojen tarkasteleminen ja päivittäminen Excelissä
-Kun Excel-apuohjelma on lukenut entiteettitiedot työkirjaan, voit päivittää tietoja milloin tahansa napsauttamalla **Päivitä**-painiketta Excel-apuohjelmassa.
+Kun Excel-apuohjelma on lukenut entiteetin tiedot työkirjaan, voit päivittää tiedot milloin tahansa valitsemalla Excel-apuohjelman **Päivitä**-kohdan.
 
 ## <a name="edit-data-in-excel"></a>Tietojen muokkaaminen Excelissä
-Voit tarvittaessa muuttaa entiteettitietoja ja julkaista ne uudelleen napsauttamalla Excel-apuohjelman **Julkaise**-painiketta.
+Voit muuttaa entiteetin tietoja haluamallasi tavalla ja julkaista ne uudelleen valitsemalla Excel-apuohjelmassa **Julkaise**.
 
-Jos haluat muokata tietuetta, valitse laskentataulukon solu ja muuta sitten solun arvoa.
+Voit muokata tietuetta valitsemalla solun työkirjassa ja muuttamalla sitten solun arvoa.
 
-Uuden tietueen lisäystapoja:
+Voit lisätä uuden tietueen seuraavasti:
 
-* Napsauta laskentataulukkoa ja valitse sitten Excel-apuohjelmassa **Uusi**.
-* Napsauta laskentataulukon viimeistä riviä ja paina sitten sarkainnäppäintä, kunnes kohdistin siirtyy kyseisen rivin viimeisen sarakkeen ulkopuolelle ja uusi rivi luodaan.
-* Napsauta heti taulukon alla olevaa riviä ja ala kirjoittaa tietoja soluun. Kun siirrät kohdistuksen kyseisen solun ulkopuolelle, laskentataulukko laajenee sisältämään uuden rivin.
+* Napsauta työkirjan mitä tahansa kohtaa ja valitse sitten Excel-apuohjelmassa **Uusi**.
+* Valitse työkirjan viimeinen rivi ja paina sarkainnäppäintä niin kauan, kunnes osoitin siirtyy kyseisen rivin viimeiseen sarakkeeseen. Nyt uusi rivi on luotu.
+* Valitse työkirjan alla oleva rivi ja syötä soluun tietoja. Kun siirrät kohdistuksen solusta pois, työkirja laajenee niin, että se sisältää uuden rivin.
 
-Tietueen poistotapoja:
+Voit poistaa tietueen seuraavasti:
 
-* Napsauta hiiren kakkospainikkeella laskentataulukon poistettavan rivin vieressä olevaa rivinumeroa ja valitse sitten **Poista**.
-* Napsauta hiiren kakkospainikkeella poistettavaa taulukon riviä ja valitse sitten **Poista** > **taulukon rivit**.
+* Napsauta hiiren kakkospainikkeella työkirjan poistettavan rivin vieressä olevaa rivinumeroa ja valitse **Poista**.
+* Napsauta hiiren kakkospainikkeella työkirjan poistettavaa riviä ja valitse **Poista** > **Taulukon rivit**.
 
 ## <a name="add-or-remove-columns"></a>Sarakkeiden lisääminen tai poistaminen
-Voit säätää laskentataulukkoon automaattisesti lisättäviä sarakkeita ja entiteettejä suunnittelutyökalulla.
+Voit muokata työkirjaan automaattisesti lisättäviä sarakkeita ja entiteettejä suunnitteluohjelman avulla.
 
-1. Ota tietolähteen suunnittelutyökalu käyttöön Excel-apuohjelmassa napsauttamalla **Asetukset**-painiketta (rataskuvake) ja valitsemalla sitten **Ota suunnittelutila käyttöön**  -valintaruutu.
-2. Valitse Excel-apuohjelmassa **Suunnittele**. Kaikki tietolähteet näkyvät luettelossa.
-3. Napsauta tietolähteen vieressä olevaa **muokkauspainiketta** (kynäkuvake).
-4. Säädä tarvittaessa **Valitut kentät** -kentän luetteloa:
-   * Jos haluat lisätä kentän **Käytettävissä olevat kentät** -kentän **Valitut kentät** -kenttään, napsauta kenttää ja valitse sitten **Lisää**. Vaihtoehtoisesti voit kaksoisnapsauttaa kenttää.
-   * Jos haluat poistaa kentän **Valitut kentät** -kentästä, napsauta kenttää ja valitse sitten **Poista**. Vaihtoehtoisesti voit kaksoisnapsauttaa kenttää.
-   * Jos haluat muuttaa kenttien järjestystä, napsauta kenttää **Valitut kentät** -kentässä ja valitse sitten **ylöspäin** tai **alaspäin**.
-5. Ota tietolähteen muutokset käyttöön napsauttamalla **Päivitä** ja poistu sitten suunnittelutyökalusta valitsemalla **Valmis**. Jos olet lisännyt kentän (sarakkeen), nouda päivitetty tietojoukko napsauttamalla **Päivitä**-painiketta.
-
-> [!NOTE]
-> Varmista aina, että lisäät tunnuksen ja pakolliset kentät työkirjaasi, koska saatat saada virheitä julkaisemisen yhteydessä.
+1. Ota käyttöön Excel-apuohjelman tietolähteen suunnitteluohjelma valitsemalla **Asetukset**-painike (ratassymboli) ja valitsemalla sitten**Ota suunnittelu käyttöön** -valintaruutu.
+2. Valitse Excel-apuohjelmassa **Suunnittelu**. Kaikki tietolähteet luetteloidaan.
+3. Valitse tietolähteen vieressä oleva **Muokkaa**-painike (kynäsymboli).
+4. Muokkaa luetteloa **Valitut kentät** -kentässä haluamallasi tavalla:
+   * Voit lisätä kentän **Käytettävissä olevat kentät** -kentästä **Valitut kentät** -kenttään valitsemalla kentän ja valitsemalla sitten **Lisää**. Vaihtoehtoisesti voit kaksoisnapsauttaa kenttää.
+   * Voit poistaa kentän **Valitut kentät** -kentästä valitsemalla kentän ja valitsemalla sitten **Poista**. Vaihtoehtoisesti voit kaksoisnapsauttaa kenttää.
+   * Voit muuttaa kenttien järjestystä valitsemalla **Valitut kentät** -kentän ja valitsemalla sitten **Ylös** tai **Alas**.
+5. Ota tietolähteen muutokset käyttöön valitsemalla **Päivitä**. Poistu suunnitteluohjelmasta valitsemalla **Valmis**. Jos olet lisännyt kentän (sarakkeen), valitse **Päivitä**, jolloin näkyviin tulee päivitetty tietojoukko.
 
 > [!NOTE]
-> Kun lisäät hakukenttiä, muista lisätä sekä tunnus että näyttökentät.
+> Varmista, että työkirja sisältää aina tunnuksen ja pakolliset kentät, koska niiden vuoksi voi tulla useita virheitä julkaisemisen yhteydessä.
+
+> [!NOTE]
+> Kun hakukenttiä lisätään, varmista, että sekä tunnus että näyttökentät lisätään.
 
 ## <a name="troubleshooting"></a>Vianmääritys
-Osa ongelmista voidaan ratkaista muutamalla helpolla vaiheella.
+Joitakin ongelmia voi ratkaista helppojen vaiheiden avulla.
 
-* Kaikki entiteetit eivät tue muokkaamista ja uusien tietueiden luomista. Nämä entiteetit avautuvat Excelissä, ja niiden avulla voit tarkastella tietoja mutta julkaiseminen on poistettu käytöstä.
-* Hakukenttiä on muokattava apuohjelman avulla, jotta voidaan varmistaa oikeaan tietueeseen viittaaminen. Näiden kenttien päivittämistä kopioimalla ja liittämällä tai suoraan kenttään kirjoittamalla ei tueta.
+* Kaikki entiteetit eivät tue uusien tietueiden muokkaamista ja luomista. Nämä entiteetit avataan Excelissä. Niiden avulla voi tarkastella tietoja, mutta julkaiseminen ei ole käytössä.
+* Hakukenttiä on muokattava apuohjelman avulla. Näin varmistetaan, että viitatut tietueet ovat oikeita. Näiden kenttien päivittämistä kopioimalla ja liittämällä tai kirjoittamalla suoraan kenttään ei tueta.
 
 
-Jos kohtaamaasi ongelmaa ei ole kuvattu tässä, ota yhteyttä meihin [tukisivujen](https://powerapps.microsoft.com/support/) kautta.
+Jos ongelmaa ei ole kuvattu tässä, ota yhteyttä [tukisivujen](https://powerapps.microsoft.com/support/) kautta.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * [Entiteetin kenttien hallinta](data-platform-manage-fields.md)
-* [Entiteettien välisten suhteiden määrittely](data-platform-entity-lookup.md)
-* [Sovelluksen luominen Common Data Service for Apps -palvelun avulla](../canvas-apps/data-platform-create-app.md)
-* [Sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla](../canvas-apps/data-platform-create-app-scratch.md)
+* [Entiteettien välisten suhteiden määrittäminen](data-platform-entity-lookup.md)
+* [Sovelluksen luominen Common Data Service sovelluksille -ratkaisun avulla](../canvas-apps/data-platform-create-app.md)
+* [Sovelluksen luominen alusta Common Data Service sovelluksille -ratkaisun avulla](../canvas-apps/data-platform-create-app-scratch.md)
 

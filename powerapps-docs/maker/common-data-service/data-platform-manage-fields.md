@@ -1,6 +1,6 @@
 ---
-title: Mukautettujen kenttien hallinta entiteetissä | Microsoft Docs
-description: Ohjeet mukautettujen kenttien luomiseen, lukemiseen, päivittämiseen ja poistamiseen Common Data Service (CDS) for Apps -entiteetissä.
+title: Entiteetin mukautettujen kenttien hallinta | Microsoft Docs
+description: 'Common Data Service (CDS) sovelluksille -ratkaisun entiteetin mukautettujen kenttien luomisen, lukemisen, päivittämisen ja poistamisen ohjeet.'
 author: clwesene
 manager: kfile
 ms.service: powerapps
@@ -8,96 +8,96 @@ ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
 ms.author: clwesene
-ms.openlocfilehash: a9fff4cc61f6416ef8dbc3c03d96be7082fe3a51
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218736"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="manage-custom-fields-in-an-entity"></a>Mukautettujen kenttien hallinta entiteetissä
-Kaikissa entiteeteissä voi luoda ja päivittää yhden tai useamman mukautetun entiteetin. Mukautetun kentän luomisen yhteydessä määritetään joukko ominaisuuksia, kuten kentän nimi, näyttönimi ja kentän sisältämien tietojen tyyppi. Lisätietoja on kohdassa [Entiteetin määritteiden metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
+
+# <a name="manage-custom-fields-in-an-entity"></a>Entiteetin mukautettujen kenttien hallinta
+Voit luoda ja päivittää yhden mukautetun kentän tai useita mukautettuja kenttiä entiteetissä. Kun luot mukautetun kentän, määrität ominaisuusjoukon, kuten kentän nimen, sen näyttönimen ja kentän tietojen tyypin. Lisätietoja on kohdassa [Entiteettimääritteen metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
 
 > [!NOTE]
-> Jokaisessa entiteetissä on järjestelmäkenttiä, joista ilmenee esimerkiksi tietueen viimeisin päivitysajankohta ja päivittäjä. Lisäksi vakioentiteeteissä on vakiokenttiä (oletuskenttiä). Järjestelmä- ja vakiokenttiä ei voi muokata tai poistaa. Jos luot mukautetun kentän, sen on tarjottava näistä sisäänrakennetuista kentistä poikkeavia lisätoimintoja.
+> Jokaisessa entiteetissä on järjestelmäkenttiä, kuten kenttiä, jotka osoittavat tietueen edellisen päivitysajankohdan ja edellisen päivittäjän. Lisäksi vakioentiteeteillä on vakiokenttiä (oletuskenttiä). Järjestelmäkenttiä tai vakiokenttiä ei voi muokata tai poistaa. Jos luot mukautetun kentän, sen tulisi sisältää toimintoja näiden vakiokenttien lisäksi.
 
 ## <a name="create-a-field"></a>Kentän luominen
-1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
+1. Laajenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osa ja napsauta tai napauta **Entiteetit**-kohtaa vasemmanpuoleisessa siirtymisruudussa.
 
-    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "entiteettiluettelo")
+    ![Entiteetin tiedot](./media/data-platform-cds-create-entity/entitylist.png "Entiteettiluettelo")
 
-2. Napsauta tai napauta olemassa olevaa entiteettiä tai [Luo uusi entiteetti](data-platform-create-entity.md)
+2. Napsauta tai napauta olemassa olevaan entiteettiä tai [luo uusi entiteetti](data-platform-create-entity.md)
 
-3. Lisää uusi kenttä entiteettiin napsauttamalla kohtaa **Lisää kenttä**.
+3. Lisää uusi kenttä entiteettiin valitsemalla **Lisää kenttä**.
 
-4. Anna Uusi kenttä -ruudussa kentälle **Näyttönimi**. **Nimi**-kenttä täyttyy automaattisesti, ja sitä käytetään kentän yksilöivänä nimenä. **Näyttönimi** näkyy kentän käyttäjille, ja **Nimi**-kentän nimeä käytetään sovelluksen luomiseen liittyvissä lausekkeissa ja kaavoissa.
+4. Anna Uusi kenttä -paneelissa kentän **näyttönimi**. **Nimi** täytetään automaattisesti. Sitä käytetään kentän yksilöllisenä nimenä. **Näyttönimeä** käytetään, kun tämä kenttä esitellään käyttäjille. **Nimeä** käytetään sovelluksen luomisen yhteydessä lausekkeissa ja kaavoissa.
 
     > [!NOTE]
-    > **Näyttönimi**-kenttiä voi milloin tahansa muokata, niin että sovelluksissa näkyvä nimi vaihtuu. **Nimi**-kenttää ei voi muokata entiteetin tallentamisen jälkeen, sillä se saattaa aiheuttaa olemassa olevan sovelluksen vioittumisen.
+    > Sovelluksessa näkyviä **Näyttönimi**-kenttiä voidaan muuttaa milloin tahansa. **Nimi**-kenttää ei voi muuttaa entiteetin tallentamisen jälkeen, koska tämä saattaa johtaa sovelluksen toimintahäiriöön.
 
-    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttä -paneeli")
 
-5. Valitse kentän **tietotyyppi**. Se määrittää tietojen tallennustavan ja sen, miten tiedot näytetään sovelluksissa. Esimerkiksi teksti tallennetaan eri tavoin kuin desimaaliluku tai URL-osoite. Lisätietoja käytettävissä olevista tietotyypeistä on kohdassa [Entiteetin määritteiden metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
+5. Valitse kentän **tietotyyppi**. Se ohjaa tietojen tallennustapaa sekä näkyvyyttä sovelluksissa. Esimerkiksi teksti tallennetaan eri tavalla kuin desimaaliluku tai URL-osoite. Lisätietoja käytettävissä olevista tietotyypeistä on kohdassa [Entiteettimääritteen metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
 
-    Anna pyydettäessä valitsemaasi tietotyyppiin liittyviä lisätietoja. Esiin tulee eri kenttiä tietotyypistä riippuen. Jos olet luomassa kentän, jonka tyyppi on asetusjoukko tai monivalinta-asetusjoukko, voit valita vaihtoehdon **Uusi asetusjoukko** ja luoda uuden asetusjoukon kentän luomisen yhteydessä. Lisätietoja on kohdassa [Asetusjoukon luominen](custom-picklists.md).
+    Määritä pyydettäessä kyseisen tietotyypin lisätiedot. Näkyvissä ovat eri kentät tietotyypin perusteella. Jos olet luomassa kenttää, jonka tyyppi on Asetusjoukko tai Monivalinta-asetusjoukko, voit valita **Uusi asetusjoukko** -kohdan ja luoda uuden asetusjoukon kentän luomisen yhteydessä. Lisätietoja on kohdassa [Asetusjoukon luominen](custom-picklists.md)
 
-    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttäpaneeli")
+    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttä -paneeli")
 
 
-7. Valitse **Pakollinen**-kohdan valintaruutu, jos haluat suositella tätä kenttää sovelluksissa pakolliseksi. Se ei kuitenkaan tarkoita, että pakollisuus toteutetaan tiukasti kaikkien Common Data Service -yhteyksien kautta. Jos haluat varmistaa, että kenttä varmasti täytetään, luo [liiketoimintasääntö](data-platform-create-business-rule.md).
+7. Valitse **Pakollinen**-kohdan valintaruutu, jos haluat suositella tätä kenttää pakolliseksi sovelluksissa. Ei vahvaa täytäntöönpanoa Common Data Service -sovelluksen kaikkiin yhteyksiin. Jos haluat varmistaa, että kenttä on täytetty, luo [liiketoimintasääntö](data-platform-create-business-rule.md)
 
-8. Valitse **Haettavissa**-kohdan valintaruutu, jos haluat, että tämä kenttä on käytettävissä näkymissä, kaavioissa, koontinäytöissä ja erikoishaussa. Yleensä tämä valintaruutu kannattaa valita.
+8. Valitse **Haettavissa**-kohdan valintaruutu, jos haluat, että tämä kenttä on käytettävissä näkymissä, kaavioissa, koontinäytöissä ja erikoishaussa. Useimmissa tapauksissa tämä valintaruutu valitaan.
 
-9. Sulje kenttäpaneeli ja palaa entiteettiin napsauttamalla tai napauttamalla **Valmis**-painiketta. Voit toistaa vaiheet 3–9 jokaisen lisäkentän kohdalla.
+9. Napsauta tai napauta **Valmis**-kohtaa, jos haluat sulkea Kenttä-paneelin ja palata entiteettiin. Voit toistaa vaiheet 3–9 jokaisen lisäkentän kohdalla.
    
     > [!IMPORTANT]
-    > Kenttää ei ole tallennettu tai luotu, ennen kuin tallennat entiteetin muutokset.
+    > Kenttä tallennetaan ja luodaan vasta, kun entiteetin muutokset on tallennettu.
 
-10. Viimeistele muutokset ja tallenna ne Common Data Service -palveluun napsauttamalla tai napauttamalla **Tallenna entiteetti** -kohtaa.
+10. Napsauta tai napauta **Tallenna entiteetti**, jos haluat tehdä muutokset loppuun ja tallentaa ne Common Data Service -sovellukseen.
 
-    Saat ilmoituksen, kun toiminto on suoritettu onnistuneesti. Jos toiminto epäonnistuu, virheilmoitus kertoo ilmenneet ongelmat ja niiden korjauskeinot.
+    Saat ilmoituksen, kun toiminto on valmis. Jos toiminto ei onnistu, virhesanoma sisältää virheet ja niiden korjausehdotukset.
 
-## <a name="create-a-calculated-or-roll-up-field"></a>Lasketun kentän tai koontikentän luominen
-Laskettujen kenttien avulla voit automatisoida organisaation liiketoimintaprosessien manuaalisia laskutoimituksia. Esimerkiksi myyntihenkilö saattaa haluta tietää liiketoimintamahdollisuuden painotetun tuoton, joka lasketaan kertomalla liiketoimintamahdollisuuden tuottoarvio sen todennäköisyydellä. Tai ehkä hän haluaa, että kaikkiin yli 500 euron tilauksiin sovelletaan automaattisesti alennusta. Laskettu kenttä voi sisältää yksinkertaisia laskutoimituksia tai monenlaisia ehdollisia toimintoja, kuten ”suurempi kuin” tai ”tai muuten”. Laskettuja kenttiä voi luoda seuraavilla tietotyypeillä:
+## <a name="create-a-calculated-or-roll-up-field"></a>Laskennallisen kentän tai koontikentän luominen
+Laskennalliset kentät mahdollistavat liiketoimintaprosessien manuaalisten laskutoimitusten automatisoinnin. Myyjä voi esimerkiksi haluta tietää mahdollisuuden painotetun tuoton, joka perustuu mahdollisuuden arvioituun tuottoon kerrottuna todennäköisyydellä. Tai he haluavat kohdistaa automaattisesti alennuksen, jos tilauksen arvo on suurempi kuin 500 €. Laskennallinen kenttä sisältää arvoja, jotka saadaan tuloksena yksinkertaisista laskutoimituksista tai ehdollisista operaattoreista, kuten esimerkiksi suurempi kuin- tai jos-muuten-rakenne. Laskennallisia kenttiä voi luoda seuraavien tietotyyppien avulla:
 
 * Yksi tekstirivi
 * Asetusjoukko
-* Kaksi vaihtoehtoa
+* Kaksi asetusta
 * Kokonaisluku
 * Desimaaliluku
 * Valuutta
 * Päivämäärä ja aika
 
-Lisätietoja tuetuista lauseketyypeistä ja esimerkkejä on kohdassa [Laskettujen kenttien määrittely](/dynamics365/customer-engagement/customize/define-calculated-fields).
+Lisätietoja tuetuista lausekkeista ja esimerkeistä on kohdassa [Laskennallisten kenttien määrittäminen](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
-## <a name="update-or-delete-a-field"></a>Päivitä tai poista kenttä
-1. Suurenna [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston **Tiedot**-osio, napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa ja valitse entiteetti.
-2. Napauta tai napsauta valitun entiteetin kenttäluettelossa olevaa kenttää ja toimi jollain seuraavista tavoista:
+## <a name="update-or-delete-a-field"></a>Kentän päivittäminen tai poistaminen
+1. Laajenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osa ja napsauta tai napauta **Entiteetit**-kohtaa vasemmanpuoleisessa siirtymisruudussa. Napsauta tai napauta sitten entiteettiä.
+2. Napsauta tai napauta entiteetin kenttäluettelossa kenttää ja noudata seuraavia ohjeita:
    
-   * Muuta vähintään yhtä kentän ominaisuutta.
-   * Poista kenttä napsauttamalla tai napauttamalla kentän oikean reunan lähellä olevaa kolmea pistettä (...) ja valitsemalla sitten **Poista**.
+   * Muuta vähintään yksi kentän ominaisuus.
+   * Poista kenttä napsauttamalla tai napauttamalla kentän oikeanpuoleisen reunan lähellä olevaa kolmea pistettä (...). Napsauta tai napauta sitten **Poista**-kohtaa.
 
-3. Lähetä muutoksesi valitsemalla **Tallenna entiteetti**.
+3. Napsauta tai napauta **Tallenna entiteetti** -kohtaa, kun haluat lähettää muutokset.
    
     > [!IMPORTANT]
-    > Menetät kaikki muutokset, jos et tallenna niitä, ennen kuin avaat uuden sivun tai suljet selaimen.
+    > Muutokset menetetään, jos niitä ei tallenneta ennen toisen sivun avaamista selaimessa tai selaimen sulkemista.
 
-    Saat ilmoituksen, kun toiminto on suoritettu onnistuneesti. Jos toiminto epäonnistuu, virheilmoitus kertoo ilmenneet ongelmat ja niiden korjauskeinot.
+    Saat ilmoituksen, kun toiminto on valmis. Jos toiminto ei onnistu, virhesanoma sisältää virheet ja niiden korjausehdotukset.
 
 ## <a name="best-practices-and-restrictions"></a>Parhaat käytännöt ja rajoitukset
-Muista seuraavat asiat, kun luot ja muokkaat kenttiä:
+Kun luot ja muokkaan kenttiä, pidä seuraavat seikat mielessä:
 
-* Järjestelmäkenttiä ja niiden arvoja ei voi muokata tai poistaa.
-* Vakioentiteetissä ei voi muokata eikä poistaa vakiokenttää (oletuskenttä), lisätä tietoja vaativaa kenttää eikä tehdä muita muutoksia, jotka saattavat vioittaa kyseistä entiteettiä käyttävää sovellusta.
-* Mukautetussa entiteetissä kannattaa varmistaa, etteivät muutokset vioita mitään kyseistä entiteettiä käyttävää sovellusta.
-* Jokaiselle mukautetulle kentälle on annettava kyseisessä entiteetissä ainutkertainen nimi. Kenttää ei voi nimetä uudelleen kentän luomisen jälkeen.
+* Järjestelmäkenttiä tai niiden arvoja ei voi muokata tai poistaa.
+* Et voi muokata tai poistaa vakioentiteetin vakiokenttää (oletuskenttää), lisätä tietoja vaativaa kenttää tai tehdä muutoksia, jotka voivat aiheuttaa toimintahäiriön entiteetistä riippuvaisesta sovelluksesta.
+* Varmista, että mukautettuun entiteettiin tehdyt muutokset eivät aiheuta entiteetistä riippuvaiseen sovellukseen toimintahäiriöitä.
+* Anna jokaiselle mukautetulle kentälle nimi, joka on yksilöllinen entiteetissä. Kenttää ei voi nimetä uudelleen luomisen jälkeen.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-* [Entiteettien välisen suhteen määrittely](data-platform-entity-lookup.md)
+* [Entiteettien välisten suhteiden määrittäminen](data-platform-entity-lookup.md)
 * [Liiketoimintasäännön luominen](data-platform-create-business-rule.md)
 * [Sovelluksen luominen entiteettien avulla](../canvas-apps/data-platform-create-app.md)
-* [Sovelluksen luominen alusta alkaen käyttämällä Common Data Service -tietokantaa](../canvas-apps/data-platform-create-app-scratch.md)
+* [Sovelluksen luominen alusta Common Data Service sovelluksille -tietokannan avulla](../canvas-apps/data-platform-create-app-scratch.md)
 
-## <a name="privacy-notice"></a>Tietosuojailmoitus
-Microsoft PowerApps Common Data Model kerää ja tallentaa mukautettuja entiteettejä ja kenttien nimiä diagnostiikkajärjestelmäämme.  Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Tekijöiden luomat entiteettien ja kenttien nimet auttavat meitä ymmärtämään skenaarioita, jotka ovat yleisiä Microsoft PowerApps -yhteisössä, sekä kehittämään palveluja, jos entiteettien vakiotarjonnassa ilmenee puutteita esimerkiksi organisaatioihin liittyvissä rakenteissa. Microsoft ei käytä näihin entiteetteihin liittyvissä tietokantataulukoissa olevia tietoja, eikä jäljennä niitä tietokannan käyttöoikeusalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan jäljentää alueelta toiselle, ja niiden poistamisessa noudatetaan tietojen säilytyskäytäntöjämme. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessamme](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.
+## <a name="privacy-notice"></a>Tietosuojatiedot
+Microsoft PowerAppsin Common Data Model -ratkaisun avulla kerätään ja tallennetaan mukautettuja entiteettejä ja kenttänimiä diagnostiikkajärjestelmiin.  Näiden tietojen avulla parannamme asiakkaiden käytössä olevaa Common Data Model -ratkaisua. Entiteettien ja kenttien nimet, joita tekijät luovat, auttavat meitä ymmärtämään Microsoft PowerApps -yhteisön yleisiä skenaarioita ja saamaan selville palvelun entiteetin vakiokattavuuden puutteita, kuten organisaation liittyvissä malleissa. Microsoft ei käytä näihin entiteetteihin liittyvien tietokantataulukoiden tietoja eikä replikoi niitä sen alueen ulkopuolelle, jossa tietokanta on valmisteltu. Huomaa kuitenkin, että mukautetun entiteetin ja kenttien nimet voidaan replikoida alueilla. Ne poistetaan tietojen säilytyskäytäntöjen mukaisesti. Microsoft pyrkii takaamaan tietoturvasi [valvontakeskuksessa](https://www.microsoft.com/trustcenter/Privacy/default.aspx) esitetyllä tavalla.
 
