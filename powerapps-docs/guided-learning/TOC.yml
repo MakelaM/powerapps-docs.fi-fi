@@ -1,6 +1,0 @@
-- name: Aloitus
-  href: get-started.yml?tutorial-step=1
-- name: Sovelluksen luominen SharePointista
-  href: create-app-sharepoint.yml?tutorial-step=1
-- name: Sovellusten hallitseminen
-  href: manage-apps.yml?tutorial-step=1
