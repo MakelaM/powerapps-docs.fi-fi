@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/03/2018
 ms.author: manasma
 search.audienceType:
 - admin
@@ -15,12 +15,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 9b62d72cf04b56c945d0c85038e2264e9685828b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: c7de26bff38ee0425e8bb3f9bc0da72317f0a6cf
+ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42837581"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48246116"
 ---
 # <a name="create-a-common-data-service-for-apps-database"></a>Common Data Service for Apps -tietokannan luominen
 Voit luoda tietokannan ja rakentaa sovelluksia käyttämällä Common Data Service (CDS) for Apps -palvelua tietosäilönä. Voit joko luoda omia mukautettuja entiteettejä tai käyttää ennalta määritettyjä entiteettejä. Jotta voit luoda tietokannan, sinun on ensin joko luotava ympäristö tai saatava olemassa olevan ympäristön **Ympäristön järjestelmänvalvoja** -rooli. Lisäksi sinulle on määritettävä sopiva käyttöoikeus. Lisätietoja CDC for Appsin käyttöön tarvittavan palvelupaketin ostamisesta on kohdassa [Hinnoittelutiedot](pricing-billing-skus.md).
@@ -68,7 +68,7 @@ Voit määrittää ennalta määritettyihin rooleihin lisää käyttäjiä tai l
 
 
 ## <a name="license-and-security-permissions"></a>Käyttö- ja suojausoikeudet
-Jotta voit luoda tietokannan, sinun on oltava valitun ympäristön järjestelmänvalvoja ja omattava asianmukaiset käyttöoikeudet. Ympäristössä voit lisäksi määrittää **Suojaus**-välilehdellä muiden käyttäjien suojausoikeuksia. Lisätietoa saat kohdasta [Tietokannan suojauksen määritys](database-security.md) ja [Suojausmalli](https://docs.microsoft.c../maker/common-data-service/entity-reference/security-model).
+Jotta voit luoda tietokannan, sinun on oltava valitun ympäristön järjestelmänvalvoja ja omattava asianmukaiset käyttöoikeudet. Ympäristössä voit lisäksi määrittää **Suojaus**-välilehdellä muiden käyttäjien suojausoikeuksia. Lisätietoja on kohdassa [Tietokannan suojauksen määritys](database-security.md).
 
 ## <a name="privacy-notice"></a>Tietosuojailmoitus
 Microsoft PowerApps Common Data Model kerää ja tallentaa mukautettuja entiteettejä ja kenttien nimiä diagnostiikkajärjestelmäämme.  Näiden tietojen avulla parannamme asiakkaille tarjottavaa yleistä tietomallia. Tekijöiden luomat entiteettien ja kenttien nimet auttavat meitä ymmärtämään skenaarioita, jotka ovat yleisiä Microsoft PowerApps -yhteisössä, sekä kehittämään palveluja, jos entiteettien vakiotarjonnassa ilmenee puutteita esimerkiksi organisaatioihin liittyvissä rakenteissa. Microsoft ei käytä näihin entiteetteihin liittyvissä tietokantataulukoissa olevia tietoja, eikä jäljennä niitä tietokannan käyttöoikeusalueen ulkopuolelle. Huomaa kuitenkin, että mukautetut entiteettien nimet ja kentät voidaan jäljentää alueelta toiselle, ja niiden poistamisessa noudatetaan tietojen säilytyskäytäntöjämme. Microsoft on sitoutunut takaamaan käyttäjien tietosuojan [luottamuskeskuksessamme](https://www.microsoft.com/trustcenter/Privacy/default.aspx) kuvaillulla tavalla.
