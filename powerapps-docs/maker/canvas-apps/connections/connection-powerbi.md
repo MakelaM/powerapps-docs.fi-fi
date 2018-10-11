@@ -13,17 +13,17 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f639f82e6fc927f693b8f8353cdc125c487e4c1f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 73ce15ff171ce72b9364844ed77f6e3aed079a64
+ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42829952"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48875803"
 ---
 # <a name="connect-to-power-bi-from-powerapps"></a>Yhdistä Power BI:hin PowerAppsista
 ![Power BI](./media/connection-powerbi/powerbiicon.png)
 
-Power BI on liiketoiminta-analytiikkatyökalujen ohjelmapaketti, jolla voi analysoida ja jakaa merkityksellisiä tietoja. Runsastoimintoisten koontinäyttöjen avulla on helppo seurata liiketoimintaa ja löytää vastauksia. Ne ovat saatavilla kaikenlaisiin laitteisiin. Sovelluksessa voit myös tarkistaa Power BI -palvelussa määritettyjen tietohälytysten tilan. Lisätietoja Power BI:n tietohälytyksistä saat [ohjesivulta](https:// https://docs.microsoft.com/power-bi/service-set-data-alerts).
+Power BI on liiketoiminta-analytiikkatyökalujen ohjelmapaketti, jolla voi analysoida ja jakaa merkityksellisiä tietoja. Runsastoimintoisten koontinäyttöjen avulla on helppo seurata liiketoimintaa ja löytää vastauksia. Ne ovat saatavilla kaikenlaisiin laitteisiin. Sovelluksessa voit myös tarkistaa Power BI -palvelussa määritettyjen tietohälytysten tilan. Lisätietoja Power BI:n tietohälytyksistä saat [ohjesivulta](https://docs.microsoft.com/power-bi/service-set-data-alerts).
 
 Näissä ohjeissa neuvotaan, miten voit käyttää Power BI -yhteyttä sovelluksessa, ja käytettävissä olevat toiminnot luetellaan.
 
