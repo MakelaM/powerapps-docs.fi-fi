@@ -1,6 +1,6 @@
 ---
-title: Entiteetit ja metatiedot Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
-description: Lisätietoja entiteeteistä ja metatiedoista Common Data Service sovelluksille -ratkaisussa
+title: Entiteetit ja metatiedot Common Data Service for Apps -palvelussa | MicrosoftDocs
+description: Lue lisätietoja Common Data Service for Apps -palvelun entiteeteistä ja metatiedoista
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
@@ -9,47 +9,47 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 author: Mattp123
 ms.assetid: 88b18946-474c-4c94-8e4c-27532f930757
 caps.latest.revision: 28
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: ef2f92865205fa7c97ada356edc70ac69a637e0f
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39681657"
 ---
+# <a name="entities-and-metadata-in-common-data-service-for-apps"></a>Common Data Service for Apps -palvelun entiteetit ja metatiedot
 
-# <a name="entities-and-metadata-in-common-data-service-for-apps"></a>Entiteetit ja metatiedot Common Data Service sovelluksille -ratkaisussa
+Common Data Service for Apps on suunniteltu siten, että voit luoda sovelluksellesi tietomallin nopeasti ja helposti. Yleensä sinun ei tarvitse huolehtia metatietojen yksityiskohdista, joita tässä ohjeartikkelissa käsitellään. Jos haluat kuitenkin ymmärtää paremmin, miten Common Data Service for Apps -palvelua käyttävät sovellukset toimivat, tai haluat arvioida mahdollisuuksia, Common Data Service for Apps -palvelun käyttämien metatietojen ymmärtämisestä voi olla hyötyä.
 
-Common Data Service sovelluksille on suunniteltu niin, että voit luoda sovellukselle tietomallin nopeasti ja helposti. Yleensä käyttäjän ei tarvitse ottaa huomioon tämän ohjeaiheen sisältämiä metatietoja koskevat tietoja. Jos kuitenkin haluat ymmärtää enemmän CDS sovelluksille -ratkaisua käyttävien sovellusten toimintaa tai jos olet arvioimassa mahdollisia toimintoja, CDS sovelluksille -ratkaisun käyttämien metatietojen ymmärtäminen voi antaa tärkeitä tietoja.
-
-*Metatiedoilla* tarkoitetaan tietoja koskevia tietoja. CDS sovelluksille on joustavan ympäristö, koska ympäristön käyttämiä tietojen määrityksiä on melko helppo muokata. CDS sovelluksille -ratkaisun metatiedot ovat kokoelma entiteettejä. Entiteetit kuvaavat millaisia tietoja on tallennettu tietokantaan.  Jokainen entiteetti vastaa tietokantataulukkoa ja jokainen kenttä (tunnettu myös määritteenä) entiteetin sisällä vastaa taulukon saraketta. Entiteetin metatiedot määrittävät millaisia tietueita voit luoda ja millaisia toimintoja voidaan suorittaa niissä. Kun käytät mukauttamistyökaluja entiteettien, kenttien ja entiteettisuhteiden luomisessa tai muokkaamisessa, muokkaat näitä metatietoja. 
+*Metatiedot* tarkoittavat tietoja tiedoista. CDS for Apps tarjoaa joustavan palvelun, jossa voit suhteellisen helposti muokata ympäristön käyttämien tietojen määritelmiä. CDS for Apps -palvelussa metatiedot ovat entiteettikokoelmia. Entiteetit kuvaavat sitä, millaisia tietoja tietokantaan tallennetaan.  Jokainen entiteetti vastaa tietokannan taulukkoa ja jokainen entiteetin kenttä (josta käytetään myös nimeä määrite) vastaa tämän taulukon saraketta. Entiteetin metatiedot määräävät sen, millaisia tietueita voit luoda ja millaisia toimintoja niille voi suorittaa. Kun luot tai muokkaat entiteettejä, kenttiä ja entiteettisuhteita mukautustyökaluilla, muokkaat näitä metatietoja. 
   
-Erilaiset asiakasohjelmat, joilla käyttäjät käyttävät ympäristön tietoja, tarvitsevat entiteetin metatietoja ja niiden on muututtava metatietojen mukauttamisen yhteydessä. Mutta nämä asiakkaat ovat riippuvaisia myös muista tiedoista, jotta he voivat hallita sitä, mitä visuaalisia elementtejä näytetään, mitä mukautettua logiikkaa käytetään ja kuinka suojausta käytetään. Nämä järjestelmätiedot on myös tallennettu entiteetteihin mutta itse entiteetit eivät ole mukautettavissa.
+Eri asiakasohjelmat, joilla käyttäjät käyttävät ympäristösi tietoja, luottavat näihin entiteettien metatietoihin ja sopeutuvat metatietojen mukautuksiin. Nämä asiakkaat luottavat myös muihin tietoihin, joiden avulla hallitaan näytettäviä visuaalisia elementtejä, käytettävää mukautettua logiikkaa ja suojauksen toteutusta. Myös nämä järjestelmätiedot tallennetaan entiteetteihin, mutta entiteetit itsessään eivät ole muokattavissa.
 
-Saat lisätietoja CDS sovelluksille -ratkaisun oletusarvoisista vakioentiteeteistä, määritteistä ja entiteettisuhteista kohdasta [Entiteettisuhde](/powerapps/developer/common-data-service/reference/about-entity-reference).
+Voit lukea lisätietoja CDS for Apps -palveluun oletusarvoisesti sisältyvistä vakioentiteeteistä, -määritteistä ja -entiteettisuhteista [entiteettejä käsittelevästä ohjeartikkelista](/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 > [!TIP]
-> Sovelluskehittäjät, jotka voivat muokata metatietoja, eivät voi näyttää kaikkia niiden tietoja. Voit asentaa mallipohjaisen sovelluksen, jonka nimi on **Metadata Browser**. Sen avulla voit tarkastella järjestelmän kaikkien entiteettien ja metatietojen ominaisuuksia. Lisätietoja: [Metatietojen etsiminen selaamalla ympäristössä](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
+> Metatietojen muokkaamiseen käytettävissä olevat suunnittelutyökalut eivät voi näyttää kaikkia metatietoihin sisältyviä yksityiskohtaisia tietoja. Voit asentaa malliin perustuvan **Metadata Browser** -sovelluksen, jolla voit tarkastella kaikkia järjestelmän entiteettejä ja metatieto-ominaisuuksia. Lisätiedot: [Ympäristön metatietojen selaaminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
   
 <a name="BKMK_CreateNewOrUseExistingMetadata"></a>
 
-## <a name="create-new-metadata-or-use-existing-metadata"></a>Luodaanko uusia metatietoja vai käytetäänkö olemassa olevia metatietoja?
+## <a name="create-new-metadata-or-use-existing-metadata"></a>Kannattaako sinun luoda uusia metatietoja vai käyttää olemassa olevia metatietoja?
 
-CDS sovelluksille sisältää lukuisia vakioentiteettejä, jotka tukevat liiketoimintasovelluksen ydinominaisuuksia. Esimerkiksi tietoa asiakkaista tai potentiaalisista asiakkaista on tarkoitus tallentaa käyttäen asiakas- tai yhteyshenkilö-entiteettejä.  
+CDS for Apps sisältää useita vakioentiteettejä, jotka tukevat liiketoimintasovellusten perustoimintoja. Esimerkiksi asiakkaiden ja mahdollisten asiakkaiden tiedot on tarkoitettu tallennetavaksi tilien tai yhteystietojen entiteetteihin.  
   
-Jokainen näistä entiteeteistä sisältää myös useita kenttiä, jotka esittävät yleisiä tietoja, jotka järjestelmän on ehkä tallennettava vastaavan entiteettiin.  
+Kaikki nämä entiteetit sisältävät useita kenttiä: ne edustavat yleisiä tietoja, jotka järjestelmän täytyy ehkä tallentaa entiteeteille.  
   
-Useimmissa organisaatioissa kannattaa hyödyntää vakioentiteettejä ja määritteitä niihin tarkoituksiin, joihin ne on luotu. 
+Useimpien organisaatioiden kannattaa käyttää vakioentiteettejä ja -määritteitä niiden aiottuihin käyttötarkoituksiin. 
   
-Jos asennat ratkaisun, voit olettaa, että ratkaisun kehittäjä on hyödyntänyt vakioentiteettejä ja määritteitä. Uuden mukautetun entiteetin luontia, joka korvaa järjestelmän entiteetin tai määritteen tarkoittaa, että käytettävissä olevat mahdolliset ratkaisut eivät välttämättä toimi organisaatiossasi.  
+Jos asennat ratkaisun, voit olettaa, että sen kehittäjä on hyödyntänyt vakioentiteettejä ja -määritteitä. Jos luot uuden mukautetun entiteetin, joka korvaa järjestelmän entiteetin tai määritteen, käytettävissä olevat ratkaisut eivät ehkä toimi organisaatiollesi.  
   
-Näistä syistä suosittelemme, että etsit ja käytät vakioentiteettejä, kenttiä ja entiteettisuhteita, kun ne sopivat organisaatiosi tarpeisiin. Jos ne eivät sovi, eikä niitä voi muokata vastaamaan tarvetta, on arvioitava, onko uuden entiteetin, kentän tai entiteettisuhteen luonti välttämätöntä. 
+Tästä syystä suosittelemme, että käytät vakioentiteettejä, -kenttiä ja -entiteettisuhteita, kun ne soveltuvat käyttötarkoituksiisi ja organisaatiollesi. Jos ne eivät sovellu tarkoituksiisi eikä niitä voi muokata tarpeisiisi, sinun kannattaa selvittää, täytyykö sinun luoda uusi entiteetti, kenttä tai entiteettisuhde. 
 
 <!--  Can we say this yet? 
     
@@ -58,21 +58,21 @@ Näistä syistä suosittelemme, että etsit ja käytät vakioentiteettejä, kent
 
 -->
 
-Muista, että voit muuttaa entiteetin nimen siten, että se vastaa organisaatiosi nimikkeistöä. On esimerkiksi hyvin yleistä vaihtaa Asiakas-entiteetin näyttönimeksi *Yritys* tai Yhteyshenkilö-entiteetin nimeksi *Yksilö*. Tämä voidaan tehdä entiteeteille tai määritteille muuttamatta entiteetin toimintaa. Saat lisätietoja kohteiden nimeäminen uudelleen kohdasta [entiteetin nimen muuttaminen](edit-entities.md#change-the-name-of-an-entity).
+Muista, että voit muuttaa entiteettien näyttönimiä organisaatiosi nimeämiskäytäntöön sopiviksi. Käyttäjät vaihtavat esimerkiksi Tili-entiteetin nimeksi hyvin usein *Yritys* tai Yhteyshenkilö-entiteetin nimeksi *Yksilö*. Entiteettien ja määritteiden nimiä voi vaihtaa vaikuttamatta niiden toimintaan. Lue lisätietoja [entiteettien nimien vaihtamisesta](edit-entities.md#change-the-name-of-an-entity).
   
-Vakioentiteettejä, kenttiä tai entiteettisuhteita ei voi poistaa. Niitä pidetään osana järjestelmäratkaisua ja jokaisen organisaation on tarkoitus saada ne. Jos haluat piilottaa vakioentiteetin, vaihda organisaation käyttöoikeusrooleja poistaaksesi kyseisen entiteetin lukuoikeuden. Tämä poistaa kohteen sovelluksen useimmissa osissa. Jos et tarvitse järjestelmäkenttää, poista se lomakkeesta ja sitä käyttävät näkymät. Muuta kentän ja entiteettisuhteen **Haettavissa**-arvoa kentän määritelmässä niin, että ne eivät näy erikoishaussa. 
+Et voi poistaa vakioentiteettejä, -kenttiä ja -entiteettisuhteita. Ne katsotaan osaksi järjestelmäratkaisua, joten jokaisella organisaatiolla tulee olla ne. Jos haluat piilottaa vakioentiteetin, muokkaa organisaatiosi käyttöoikeusroolien oikeuksia siten, että kyseisen entiteetin lukuoikeus poistetaan. Tämä poistaa entiteetin sovelluksen useimmista osista. Jos et tarvitse jotain järjestelmäkenttää, poista se lomakkeesta ja kaikista sitä käyttävistä näkymistä. Muokkaa **Haettavissa**-arvoa kentän ja entiteettisuhteen määritelmissä siten, että niitä ei näytetä erikoishaussa. 
   
 <a name="BKMK_LimitationsOnMetadata"></a>   
 
-## <a name="limitations-on-creating-metadata-items"></a>Rajoitukset metatietojen kohteiden luomiseen  
+## <a name="limitations-on-creating-metadata-items"></a>Metatietokohteiden luomisen rajoitukset  
 
-Luotavien entiteettien määrä on rajoitettu: Voit etsiä tietoja enimmäismääristä kohdassa **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Hallinta** > **Käytössä olevat resurssit** -sivu. Jos tarvitset lisää mukautettuja entiteettejä, ota yhteyttä tekniseen tukeen. Tätä ylärajoitusta voi kuitenkin muuttaa.  
+Luotavien entiteettien määrä on rajoitettu. Saat lisätietoja enimmäismäärästä valitsemalla **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Hallinta** > **Käytössä olevat resurssit**. Jos tarvitset lisää mukautettuja entiteettejä, ota yhteyttä tekniseen tukeen. Rajoitusta on mahdollista muuttaa.  
   
-Kunkin kohteen sisällä on yläraja, kuinka monta kenttää voit luoda. Tämä rajoitus perustuu tietomäärän teknisiin rajoituksiin siitä, mitä voidaan tallentaa tietokannan taulukon riville. On vaikeaa antaa tiettyä lukua, koska kunkin kentän tyyppi voi käyttää eri määrän tilaa. Yläraja riippuu entiteetin kaikkien kenttien käyttämästä koko tilasta.  
+Jokaisen entiteetin luotavien kenttien määrää on rajoitettu. Tämä rajoitus perustuu teknisiin rajoituksiin sille, kuinka paljon tietoa yhdelle tietokannan taulukon riville on mahdollista tallentaa. Tarkan rajoituksen antaminen on vaikeaa, koska erityyppiset kentät voivat käyttää eri määrän tilaa. Rajoitus riippuu entiteetin kaikkien kenttien yhteensä käyttämästä tilasta.  
   
-Useimmat ihmiset eivät luo riittävästi mukautettuja kenttiä saavuttaakseen rajan, mutta jos löydät itsesi suunnittelemassa satojen mukautettujen kenttien lisäämistä entiteettiin, kannattaa miettiä onko tämä paras ratkaisu. kuvaavatko kaikki kentät, jotka haluat lisätä, kyseisen entiteetin tietueen ominaisuuksia? Oletatko todella, että organisaatiosi käyttäjät hallitsevat tällaisen suuren määrän kenttiä sisältävän lomakkeen? Lomakkeeseen lisättävien kenttien määrä kasvattaa tietomäärää, joka on siirrettävä aina, kun tietuetta muokataan ja vaikuttaa järjestelmän suorituskykyyn. Ota huomioon nämä tekijät, kun lisäät mukautettuja kenttiä kohteeseen.  
+Useimmat käyttäjät eivät luo niin paljon mukautettuja kenttiä, että rajoitus täyttyisi. Jos kuitenkin aiot lisätä entiteettiin satoja mukautettuja kenttiä, tätä kannattaa harkita uudelleen. Kuvaavatko kaikki suunnittelemasi kentät kyseisen entiteetin tietueen ominaisuuksia? Uskotko tosiaan, että organisaatiosi käyttäjät käyttävät mielellään lomaketta, jossa on näin paljon kenttiä? Lomakkeeseen lisäämiesi kenttien määrä lisää tietomäärää, joka täytyy siirtää aina, kun tietuetta muokataan. Tämä siis vaikuttaa järjestelmän suorituskykyyn. Ota nämä seikat huomioon, kun lisäät mukautettuja kenttiä entiteettiin.  
   
-Asetusjoukkokentät takaavat joukon asetuksia, jotka näkyvät avattavan lomakkeen ohjausobjektissa tai valintaluettelon ohjausobjektissa, kun käytetään erikoishakua. Ympäristö voi tukea tuhansia asetuksia asetusjoukon sisällä, mutta sitä ei kannata pitää ylärajana. Käytettävyystutkimukset ovat osoittaneet, että ihmisillä on ongelmia käyttää järjestelmää, jossa avattava ohjausobjekti tarjoaa runsaasti vaihtoehtoja. Määritä tietoluokat asetusjoukko-kentän avulla. Älä käytä asetusjoukkokenttiä valitsemaan luokkia, jotka todellisuudessa edustavat eri tieto-osia. Esimerkiksi sen sijaan että säilytät asetusjoukkokentän, joka tallentaa jokaisen sadoista mahdollisista laitevalmistajista, kannattaa ehkä luoda entiteetti, joka sisältää viittauksia jokaiseen valmistajaan ja käyttää hakukenttää asetusjoukon sijasta.  
+Asetusjoukkokentät tarjoavat joukon asetuksia, jotka näytetään lomakkeen avattavassa ohjausobjektissa tai valintaluettelo-ohjausobjektissa erikoishakua käytettäessä. Ympäristösi voi tukea tuhansia asetuksia asetusjoukossa, mutta tätä ei tule pitää rajoituksena tai suosituksena. Käytettävyystutkimusten mukaan käyttäjillä on vaikeuksia käyttää järjestelmää, jossa avattavat ohjausobjektit sisältävät suuren määrän vaihtoehtoja. Asetusjoukkoa kannattaa käyttää tietoluokkien määrittämiseen. Älä käytä asetusjoukkoja sellaisten luokkien valitsemiseen, jotka todellisuudessa edustavat erillisiä tietokohteita. Sinun ei kannata esimerkiksi luoda asetusjoukkoa, joka tallentaa sadat mahdolliset laitevalmistajat, vaan luoda entiteetti, joka tallentaa viittaukset kuhunkin valmistajaan ja käyttää sitten hakukenttää asetusjoukon asemesta.  
   
 ## <a name="next-steps"></a>Seuraavat vaiheet 
 

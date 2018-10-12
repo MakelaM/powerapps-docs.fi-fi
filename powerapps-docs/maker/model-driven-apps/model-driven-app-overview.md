@@ -1,6 +1,6 @@
 ---
 title: Yleiskatsaus mallipohjaisen sovelluksen luomisesta PowerAppsin avulla | Microsoft Docs
-description: PowerApps-sovelluksessa käytettävän entiteetin luomisen ja määrittämisen vaiheittaiset ohjeet.
+description: Vaiheittaiset ohjeet entiteetin luomiseen ja määrittämiseen PowerApps-sovelluksessa käyttämistä varten.
 documentationcenter: na
 author: Mattp123
 manager: kvivek
@@ -12,45 +12,46 @@ ms.topic: conceptual
 ms.component: model
 ms.date: 08/09/2018
 ms.author: matp
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: f6434e6a9248586c05fa0b56b8934d910af3087a
+ms.sourcegitcommit: 2a61989be5880fede31510c5dab1593a6f42a741
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723842"
 ---
-# <a name="what-are-model-driven-apps-in-powerapps"></a>Mitä PowerAppsin mallipohjaiset sovellukset ovat?
+# <a name="what-are-model-driven-apps-in-powerapps"></a>Mitä PowerAppsin malliin perustuvat sovellukset ovat?
 
-Mallipohjaisen sovelluksen suunnittelu on sovelluskehityksen osaan perustuva toimintamalli. Mallipohjaisen sovelluksen rakenne ei edellytä koodia. Tekemäsi sovellukset voivat olla yksinkertaisia tai erittäin monimutkaisia.  Mallipohjaisten sovellusten asettelun määrittävät suurelta osin sovellukseen lisättävät komponentit toisin kuin kaaviosovellusten kehitystyö, jossa suunnittelija vastaa kokonaan sovelluksen asettelusta. 
+Mallipohjainen sovelluskehitys on komponenttikeskeinen sovelluskehitystapa. Mallipohjaisessa sovelluskehityksessä ei tarvitse käyttää koodia, ja luodut sovellukset voivat olla joko yksinkertaisia tai sitten hyvin monimutkaista.  Toisin kuin pohjaan perustuvat sovellukset, joissa suunnittelijalla on täydet oikeudet sovelluksen ulkoasuun, mallipohjaisissa sovelluksissa asettelu, jonka määrittävät pitkälti sovellukseen lisäämäsi osat, on määritetty puolestasi. 
 
-![Mallipohjaiset esimerkkisovellus](media/model-driven-app-overview/model-app-sample.png)
+![Mallipohjaisen sovelluksen esimerkki](media/model-driven-app-overview/model-app-sample.png)
 
-Mallipohjaisen sovelluksen rakenne sisältää seuraavat edut:
-- Monipuoliset osaan perustuvat suunnitteluympäristöt, joissa ei tarvita koodia 
-- Samanlaisen käyttöliittymän eri laitteissa (esimerkiksi pöytätietokoneessa ja mobiililaitteessa) sisältävien monimutkaisten responsiivisten sovellusten luominen
-- Samanlainen suunnitteluominaisuus kuin Dynamics 365 Customer Engagement -ympäristössä 
-- Sovellus voidaan jakaa ratkaisuna
+Mallipohjaiset sovellukset tarjoavat seuraavat edut:
+- monipuoliset, komponenttikeskeiset, koodittomat kehitysympäristöt 
+- luo monipuolisia, hyvin reagoivia sovelluksia, joissa on samanlainen käyttöliittymä työpöydältä mobiililaitteisiin
+- kehitysominaisuudet vastaavat Dynamics 365:ssä käytettävissä olevaa asiakkaan osallistumisen ympäristöä 
+- sovellus voidaan jakaa ratkaisuna.
  
-## <a name="the-approach-to-model-driven-app-making"></a>Mallipohjaisen sovelluksen tekemisen toimintamalli
-Perustasolla mallipohjaisen sovelluksen tekeminen sisältää kolme tärkeää aluetta.
+## <a name="the-approach-to-model-driven-app-making"></a>Mallipohjaisten sovellusten tekeminen
+Periaatteessa mallipohjaisten sovellusten tekemisessä on kolme keskeistä aluetta.
 
-- Liiketoimintatietojen mallintaminen 
-- Liiketoimintaprosessien määrittäminen 
-- Sovelluksen luominen
+- yritystietojen mallinnus 
+- liiketoimintaprosessien määrittäminen 
+- sovelluksen muodostaminen.
 
-### <a name="modeling-business-data"></a>Liiketoimintatietojen mallintaminen
-Jos haluat mallintaa liiketoimintatiedot, määritä, mitä tietoja sovelluksessa tarvitaan ja miten tiedot liittyvät muihin tietoihin. Mallipohjaisessa suunnittelussa käytetään metatietoihin perustuvia arkkitehtuureja, joten suunnittelijat voivat mukauttaa sovellusta kirjoittamatta koodia. Metatieto tarkoittaa tietoja koskevia tietoja ja se määrittää rakenteen, jolla tiedot tallennetaan järjestelmään. [Opetusohjelma: Osia sisältävän mukautetun entiteetin luominen PowerAppsissa](../common-data-service/create-custom-entity.md)
+### <a name="modeling-business-data"></a>Yritystietojen mallinnus
+Yritystietojen mallinnuksessa määrität, mitä tietoja sovelluksesi tarvitsee ja miten nämä tiedot liittyvät muihin tietoihin. Mallipohjaisessa suunnittelussa käytetään metatietopohjaista arkkitehtuuria, jotta suunnittelijat voivat mukauttaa sovelluksen koodia kirjoittamatta. Metatiedot tarkoittavat ”tietoja tiedoista”, ja ne määrittävät järjestelmään tallennettujen tietojen rakenteen. [Opetusohjelma: Luo komponentteja sisältävä mukautettu entiteetti PowerAppsissa](../common-data-service/create-custom-entity.md)
 
 ### <a name="defining-business-processes"></a>Liiketoimintaprosessien määrittäminen
-Yhdenmukaisten liiketoimintaprosessien määrittäminen ja käyttäminen on tärkeä osa mallipohjaisen sovelluksen suunnittelua. Yhdenmukaisten prosessien avulla varmistat, että sovelluksen käyttäjät keskittyvät töihinsä eivätkä manuaalisten vaiheiden suorittamisen muistamiseen. Prosessit voivat olla yksinkertaisia tai monimutkaisia. Ne myös usein muuttuvat ajan mittaan. Voit luoda prosessin valitsemalla PowerApps.com-sivuston mallipohjaiselta alueelta ![Asetukset](media/powerapps-gear.png) > **Lisämukautukset** > **Avaa ratkaisunhallinta**. Valitse ratkaisunhallinnan vasemmanpuoleisessa siirtymisruudussa **Prosessit** ja valitse sitten **Uusi**. Lisätietoja: [Liiketoimintaprosessin yleiskatsaus](/flow/business-process-flows-overview) ja [Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisun avulla](../common-data-service/cds-processes.md). 
+Yhdenmukaisten liiketoimintaprosessien määrittäminen ja ottaminen pakotetusti käyttöön on mallipohjaisten sovellusten keskeinen osa. Yhdenmukaiset prosessit auttavat käyttäjiä keskittymään työtehtäviinsä sen sijaan, että he joutuisivat muistelemaan työnkulkuun liittyviä manuaalisia vaiheita. Prosessit voivat olla yksinkertaisia tai monimutkaisia ja muuttua usein ajan myötä. Jos haluat luoda prosessin, valitse PowerApps.comin malliperusteisten alueella ![Asetukset](media/powerapps-gear.png) > **Kehittyneet mukautukset** > **Avaa ratkaisunhallinta**. Valitse sitten ratkaisunhallinnan vasemmanpuoleisesta siirtymisruudusta **Prosessit** ja sitten **Uusi**. Lisätiedot: [Liiketoimintaprosessien yleiskatsaus](/flow/business-process-flows-overview) ja [Liiketoimintalogiikan käyttö Common Data Service for Apps -palvelun avulla](../common-data-service/cds-processes.md). 
 
-### <a name="composing-the-model-driven-app"></a>Mallipohjaisen sovelluksen luominen
-Kun tiedot on mallinnettu ja prosessit määritetty, voit luoda sovelluksen valitsemalla ja määrittämällä tarvittavat osat sovelluksen suunnitteluohjelmassa.
+### <a name="composing-the-model-driven-app"></a>Mallipohjaisen sovelluksen muodostaminen
+Kun tietojen mallinnus ja prosessien määrittäminen on tehty, luo sovelluksesi valitsemalla ja määrittämällä tarvitsemasi osat sovelluksen suunnittelutoiminnolla.
 
-![Sovellusten suunnitteluohjelma](media/model-driven-app-overview/app-designer.png)
+![Sovelluksen suunnittelutoiminto](media/model-driven-app-overview/app-designer.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-[Ensimmäisen mallipohjaisen sovelluksen luominen](build-first-model-driven-app.md)
+[Ensimmäisen malliin perustuvan sovelluksen luominen](build-first-model-driven-app.md)
 
-[Tietoja mallipohjaisen sovelluksen osista](model-driven-app-components.md)
+[Malliin perustuvan sovelluksen osat](model-driven-app-components.md)
 

@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/09/2017
 ms.author: mblythe
-ms.openlocfilehash: 9f02b752444153681e30b39c3fa9d8a8b9e0cd6d
-ms.sourcegitcommit: 521a7b8e6ae72a211045b54d153a8a8c8f59172e
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: a255489f243ca8586f349e617e5af2023e88732b
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40021383"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864398"
 ---
 # <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia PowerAppsissa
 
@@ -24,6 +28,11 @@ Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, mit
 * Suorittaa kehittämiäsi sovelluksia offline-tilassa.
 * Määrittää, onko sovellus offline-tilassa, verkossa tai käyttääkö se käytön mukaan laskutettavaa yhteyttä käyttämällä [Connection](../canvas-apps/functions/signals.md#connection)-signaaliobjektia.
 * Käyttää [kokoelmia](../canvas-apps/create-update-collection.md) ja hyödyntää funktioita, kuten [LoadData ja SaveData](../canvas-apps/functions/function-savedata-loaddata.md), perustietojen tallennukseen offline-tilassa.
+
+> [!NOTE]
+> Tämä ominaisuusalue on vielä kehitteillä, eikä sitä ole optimoitu jokaista nykyistä skenaariota varten. Funktiot SaveData() ja LoadData() tietojen tallentamiseen paikalliseen laitteeseen ja lataamiseen paikallisesta laitteesta toimivat parhaiten niiden nykyisenä toteutuksena, kun tiedon määrä ei yleensä ylitä kahta megatavua. Tietueiden määrän on hyvä olla vain kymmeniä tekstitietueita per taulukko. Tästä on hyötyä joissain perustason offline-skenaarioissa sekä silloin, kun on parannettava pohjaan perustuvien sovellusten käynnistyksen suorituskykyä tallentamalla tietoja paikallisesti välimuistiin. Tämän ominaisuuden käyttö suurten tietomäärien tallentamiseen voi aiheuttaa virheitä tai toimintahäiriöitä nykyisessä käyttöönotossa, joten sitä tulisi välttää. Suurilla tietomäärillä tarkoitetaan tässä esimerkiksi tuhansien taulukkorivien tallentamista tai suurten kuvien tai videoiden tallentamista. Lisäksi funktiot eivät automaattisesti ratkaise yhdistämisristiriitoja, kun laite palaa verkkoyhteyteen offline-tilasta. On lausekkeiden kirjoittajan vastuulla määrittää, mitä tietoja tallennetaan ja miten yhteyden uudelleenmuodostamista käsitellään.
+>
+> Pyrimme laajentamaan offline-sovellusten ominaisuuksia, parantamaan vakautta ja lieventämään kokorajoituksia. Tulevaisuudessa päätökset tallentamisesta ja ristiriitojen ratkaisemisesta on tarkoitus käsitellä automaattisesti. Pidä silmällä tätä ohjeaihetta ja [PowerApps-blogia](https://powerapps.microsoft.com/blog/), niin saat tietää, milloin päivitykset tulevat saataville.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Offline-tilassa toimivien sovellusten luominen
 

@@ -9,17 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 11/30/2015
 ms.author: lonu
-ms.openlocfilehash: 98407181bc654874d749bb57da22c9fde1259fb6
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: c1043d32fc4ab4213d2ac2e690ef69e13fec8ed3
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195492"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42831645"
 ---
 # <a name="create-and-update-a-collection-in-your-app"></a>Luo ja päivitä kokoelma sovelluksessasi
 Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessasi. Kokoelma on joukko kohteita, jotka ovat samankaltaisia. Voit luoda esimerkiksi MyImages-kokoelman, johon tallennat kuvat kaikista tuotteista, joita yrityksesi myy. PowerAppsissa voit lisätä MyImages-kokoelman ja luoda sovelluksen, joka näyttää kuvia kyseisistä tuotteista. Voit myös luoda hinnastokokoelman, joka sisältää luettelon tuotteista ja kunkin tuotteen hinnan.
-
-Voit luoda ja käyttää kokoelmia PowerAppsissa. Aloitetaan.
 
 ### <a name="prerequisites"></a>Edellytykset
 * [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
@@ -28,23 +30,30 @@ Voit luoda ja käyttää kokoelmia PowerAppsissa. Aloitetaan.
 * Näissä ohjeissa käytetään esimerkkisyötetietona [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-tiedostoa. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoa tai tuoda omasi.
 
 ## <a name="create-a-single-column-collection"></a>Luo yksisarakkeinen kokoelma
-Seuraavissa vaiheittaisissa ohjeissa kerrotaan, miten luot Collect-funktiolla kokoelman sovelluksessasi ja miten lisäät kohteita kokoelmaan.
+Luo kokoelma ja lisää siihen kohteita **Collect**-funktion avulla.
 
-1. Avaa sovelluksesi.
-2. Valitse **Lisää**-välilehdeltä **Teksti** ja valitse sitten **Tekstisyöte**:  
-   ![][1]  
-3. Valitse vasemmassa yläkulmassa **Teksti1** ja nimeä ohjausobjekti uudelleen nimellä **Kohde**:  
-   ![][2]  
-4. Lisää suunnittelutyökaluusi painikeohjausobjekti valitsemalla **Lisää**-välilehdeltä **Painike**. Avattavassa luettelossa näkyy **[OnSelect](controls/properties-core.md)**-ominaisuus. Aseta sen arvoksi seuraava funktio:  
+1. Valitse sovelluksessa **Lisää**-välilehdeltä **Teksti** ja valitse sitten **Tekstisyöte**:
+
+   ![][1]
+
+1. Valitse vasemmassa yläkulmassa **Teksti1** ja nimeä ohjausobjekti uudelleen nimellä **Kohde**:
+
+   ![][2]
+
+1. Lisää suunnittelutyökaluusi painikeohjausobjekti valitsemalla **Lisää**-välilehdeltä **Painike**. Avattavassa luettelossa näkyy **[OnSelect](controls/properties-core.md)**-ominaisuus. Aseta sen arvoksi seuraava funktio:  
    
     ```Collect(Destinations, Destination!Text)```
    
-    Sen pitäisi näyttää tältä:  
-    ![][3]  
-5. Valitse painikkeen teksti ja kirjoita **Lisää**:  
-   ![][5]  
-6. Valitse **Lisää**-painike ja siirrä se tekstiohjausobjektisi alle. Voit siirtää sen haluamaasi kohtaan:  
-   ![][6]  
+    Sen pitäisi näyttää tältä:
+
+    ![][3]
+
+5. Valitse painikkeen teksti ja kirjoita **Lisää**:
+
+   ![][5]
+
+1. Valitse **Lisää**-painike ja siirrä se tekstiohjausobjektisi alle. Voit siirtää sen haluamaasi kohtaan:  
+   ![][6]
 
 Loit edellisissä vaiheissa kokoelman nimeltä **Destinations** käyttämällä Collect-funktiota. Lisäsit myös painikeohjausobjektin, jonka valitsemalla voit lisätä uusia kohteita kokoelmaasi. Nyt näet, mitä olet luonut:
 

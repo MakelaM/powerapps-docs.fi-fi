@@ -1,6 +1,6 @@
 ---
-title: Käännettyjen entiteetti- ja kenttätekstin tuominen PowerAppsin avulla | MicrosoftDocs
-description: Opettele käännetyn entiteetti- ja kenttätekstin tuominen
+title: Entiteettien ja kenttien käännettyjen tekstien tuominen PowerAppsissa | MicrosoftDocs
+description: Lue ohjeet entiteettien ja kenttien käännettyjen tekstien tuomiseen
 ms.custom: ''
 ms.date: 06/19/2018
 ms.reviewer: ''
@@ -9,46 +9,47 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 author: Mattp123
 ms.assetid: 3d77d149-819b-45e6-8e70-1fbe54d5c153
 caps.latest.revision: 19
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: e2417f7ad75e327fdfc54d4cd4fdd3f62395326b
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39681559"
 ---
-# <a name="import-translated-entity-and-field-text-back-into-an-app"></a>Käännetyn entiteetti- ja kenttätekstin tuominen takaisin sovellukseen
+# <a name="import-translated-entity-and-field-text-back-into-an-app"></a>Entiteettien ja kenttien käännettyjen tekstien tuominen takaisin sovellukseen
 
-Jos olet mukauttanut entiteetin tai kentän tekstiä, esimerkiksi kentän otsikkoa tai avattavan luettelon arvoja, haluat ehkä tuoda mukauttamasi tekstit myös niiden organisaatioosi kuuluvien henkilöiden käyttöön, jotka eivät käytä oman ympäristösi asennuskielistä versiota. Voit viedä kaikkien tekemiesi mukautusten tekstit ulos järjestelmästä käännettäväksi organisaatiossa käytetyille kielille.  
+Jos olet mukauttanut entiteettien tai kenttien tekstiä, esimerkiksi kenttien selitteitä tai avattavan valikon arvoja, voit tarjota nämä mukautetut tekstit organisaatiosi käyttäjille, jotka eivät käytä ympäristösi peruskieliversiota, heidän omalla kielellään. Tämä edellyttää, että viet ensin kaikkien mukautustesi tekstimerkkijonot, jotta ne voidaan kääntää organisaatiosi käyttäjien kielille.  
   
- Käännöksen jälkeen sinun täytyy tuoda käännetyt tekstimerkkijonot omaan ympäristöösi ennen kuin käyttäjät voivat hyödyntää muutokset.  
+ Kun ne on käännetty, sinun täytyy tuoda käännetyt tekstimerkkijonot ympäristöösi, jotta käyttäjät voivat käyttää niitä.  
   
 > [!IMPORTANT]
-> - Tuotavan tiedoston on oltava pakattu tiedosto, joka sisältää CrmTranslations.xml- ja [Content_Types].xml-tiedoston juuressa.  
-> - Et voi tuoda käännettyä tekstiä, jonka pituus on yli 500 merkkiä. Jos käännöstiedostossa on yli 500 merkin pituisia kohteita, tuonti epäonnistuu. Jos tuonti epäonnistuu, tarkista tiedostosta virheen aiheuttanut rivi, vähennä merkkien määrää ja yritä suorittaa tuonti uudelleen. Huomaa, että kun olet tuonut käännetyn tekstin, julkaise mukautukset uudelleen.  
+> - Tuotavan tiedoston täytyy olla pakattu tiedosto, joka sisältää juuressaan tiedostot CrmTranslations.xml ja [Content_Types].xml.  
+> - Et voi tuoda käännettyjä tekstejä, jotka ovat yli 500 merkkiä pitkiä. Jos käännöstiedostosi sisältää kohteita, jotka ovat yli 500 merkkiä pitkiä, tuontiprosessi epäonnistuu. Jos tuontiprosessi epäonnistuu, tarkista tiedostosta virheen aiheuttanut rivi, pienennä sen merkkimäärää ja yritä sitten tuontia uudelleen. Ota huomioon myös se, että käännettyjen tekstien tuomisen jälkeen sinun täytyy julkaista mukautuksesi uudelleen.  
   
 1. Avaa [ratkaisunhallinta](../model-driven-apps/advanced-navigation.md#solution-explorer).  
   
-2. Valitse ratkaisunhallinnassa Toiminnot-työkaluriviltä **Tuo käännökset**.  
-3.  Määritä **Käännetyn tekstin tuominen** -valintaikkunassa tiedosto, joka sisältää käännetyn tekstin, ja valitse sitten **Tuo**-painiketta.  
+2. Valitse ratkaisunhallinnan Toiminnot-työkaluriviltä **Tuo käännökset**.  
+3.  Määritä **Käännetyn tekstin tuominen** -valintaikkunassa tiedosto, joka sisältää käännetyt teksti, ja valitse sitten **Tuo**.  
   
-4.  Kun tuonti on valmis, napsauta **Sulje**.  
+4.  Kun tuonti on valmis, valitse **Sulje**.  
   
 > [!NOTE]
->  Mukautusten julkaiseminen saattaa häiritä järjestelmän normaalikäyttöä. On suositeltavaa ajoittaa ratkaisun julkaiseminen ajankohtaan, jolloin siitä on vähiten häiriötä käyttäjille.  
+>  Mukautusten julkaiseminen voi häiritä järjestelmän normaalia toimintaa. Suosittelemme, että julkaiset sellaisena ajankohtana, jolloin käyttäjille aiheutuu mahdollisimman vähän häiriöitä.  
 
-## <a name="community-tools"></a>Yhteisön työvälineet
+## <a name="community-tools"></a>Yhteisön työkalut
 
-[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) on XrmToolbox-yhteisön Dynamics 365 Customer Engagement -sovellusta varten kehittämä työkalu. Easy Translatorin avulla voit viedä ja tuoda käännökset järjestelmään tilannekohtaiset tietojen kanssa 
+[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) on XrmToolBox-yhteisön kehittämä työkalu Dynamics 365 Customer Engagementille. Easy Translatorilla voit viedä ja tuoda käännöksiä yhdessä kontekstitiedon kanssa. 
 
 > [!NOTE]
-> Microsoft ei tue yhteisön työkaluja. Jos sinulla on kysymyksiä työkalusta, ota yhteyttä julkaisijaan. Lisätietoja: [XrmToolBox](https://www.xrmtoolbox.com).
+> Microsoft ei tue yhteisön kehittämiä työkaluja. Jos sinulla on kysyttävää työkalusta, ota yhteyttä sen julkaisijaan. Lisätiedot: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet  
- [Mukautetun entiteetti- ja kenttätekstin vieminen käännettäväksi](export-customized-entity-field-text-translation.md)
+ [Mukautettujen entiteettien ja kenttien tekstien vieminen käännettäväksi](export-customized-entity-field-text-translation.md)
