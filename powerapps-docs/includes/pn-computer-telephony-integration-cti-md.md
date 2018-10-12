@@ -1,1 +1,0 @@
-tietokoneen puhelinintegrointi (CTI)
