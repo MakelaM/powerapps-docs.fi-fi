@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
 ms.author: ankitsar
-ms.openlocfilehash: 8019068155c88465f0f4202807fe763f2e4787b6
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 0a13d2602f06f436d4b805669b004f1ee63daeb9
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195515"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42836731"
 ---
 # <a name="connect-to-sharepoint-from-powerapps"></a>Yhdistä PowerAppsista SharePointiin
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
@@ -44,7 +48,7 @@ Voit lisätä tietoa mukautetusta luettelosta mutta et kirjastosta. Kaikentyyppi
 | Hallitut metatiedot |Kyllä (vain luku) | |
 | Luokitus |Ei | |
 
-PowerApps voi lukea sarakkeita, jotka sisältävät välilyöntejä, mutta välilyönnit korvataan heksadesimaalikoodilla **"\_x0020\_"**. Esimerkiksi **Sarakkeen nimi** SharePointissa näkyy muodossa **Sarakkeen_x0020_Nimi** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+PowerApps voi lukea sarakkeita, jotka sisältävät välilyöntejä, mutta välilyönnit korvataan heksadesimaalikoodilla **\_x0020\_**. Esimerkiksi **Sarakkeen nimi** SharePointissa näkyy muodossa **Sarakkeen_x0020_Nimi** PowerAppsissa, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
 
 ## <a name="prerequisites"></a>Edellytykset
 1. [Rekisteröidy](../../signup-for-powerapps.md) PowerAppsiin.
@@ -103,7 +107,7 @@ PowerApps voi lukea sarakkeita, jotka sisältävät välilyöntejä, mutta väli
 
     ![Valitse taulukot SharePointissa](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Kaikkia luettelotyyppejä ei näytetä oletuksena. Jos käytettävän luettelon nimeä ei näy, vieritä näkymä alas ja kirjoita luettelon nimi laatikkoon, jossa lukee **Anna mukautettu luettelon nimi**.
+    Kaikkia luettelotyyppejä ei näytetä oletuksena. PowerApps tukee mukautettuja luetteloita mutta ei mallipohjaisia luetteloita.  Jos käytettävän luettelon nimeä ei näy, vieritä näkymä alas ja kirjoita luettelon nimi laatikkoon, jossa lukee **Anna mukautettu luettelon nimi**.
 
     ![Mukautettu luettelo SharePointissa](./media/connection-sharepoint-online/custom-list.png)
 

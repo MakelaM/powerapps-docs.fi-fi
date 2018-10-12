@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ab5542adb68bbd07e2725197230000bdd02b320f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: ba7d48104d9fdf85573029cc510af2c29d3f6ca0
+ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833757"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640350"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Power BI -ruudun ohjausobjekti PowerAppsissa
 
@@ -61,6 +61,8 @@ Yli kolmen Power BI -ruudun lataamista sovellukseen yhtä aikaa ei suositella. V
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia. Ruutuun liittyvä Power BI -raportti avautuu oletusarvoisesti.
+
+**TileUrl** – URL-osoite, jota käyttämällä ruutu pyydetään Power BI -palvelusta. Voit välittää yksittäisen parametrin Power BI -ruutuun liittämällä parametrin URL-osoitteeseen (Esimerkki: & "&$filter=Town/Province eq '" & ListBox1.Selected.Abbr & "'"). Voit käyttää vain parametrissa vain yhtä suuri kuin -operaattoria.
 
 **[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 

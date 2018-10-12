@@ -1,6 +1,6 @@
 ---
 title: Excel-taulukon muotoilu | Microsoft Docs
-description: Excel-tietoja voi käyttää vain taulukkoon muotoiltuna. Avainsanan ”kuva” lisääminen sarakkeiden nimiin
+description: Excel-tietojen käyttäminen PowerAppsissa edellyttää tietojen muotoilua taulukoksi. Avainsanan ”kuva” lisääminen sarakkeiden nimiin
 author: yifwang
 manager: kvivek
 ms.service: powerapps
@@ -9,31 +9,35 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: yifwang
-ms.openlocfilehash: ddc6b9715a3282dbfcce9ae5f63be50ea1406e69
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: ea4bda4857c89a9e28359f63811e70744f111499
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023662"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42830953"
 ---
 # <a name="format-a-table-in-excel-and-naming-tips"></a>Excel-taulukon muotoileminen ja nimeämisvinkkejä
-Jotta Excel-tietoja voi käyttää PowerAppsissa, ne on muotoiltava taulukoksi. Näiden ohjeiden avulla opit muotoilemaan taulukon Excelissä. Lisäksi saat vinkkejä Excel-sarakkeiden nimeämiseen.
+PowerAppsissa voit luoda pohjaan perustuvan sovelluksen Excel-tiedoista vain, jos tiedot on muotoiltu taulukoksi. Näiden ohjeiden avulla opit muotoilemaan taulukon Excelissä. Lisäksi saat vinkkejä Excel-sarakkeiden nimeämiseen.
 
 ## <a name="how-to-format-a-table-in-excel"></a>Excel-taulukon muotoileminen
-Voit muuntaa tiedot taulukoksi napsauttamalla Excelin**Aloitus**-välilehdessä kohtaa **Muotoile taulukoksi**.
+Voit muuntaa tiedot taulukoksi valitsemalla **Muotoile taulukoksi** -vaihtoehdon Excelin **Aloitus**-välilehdellä.
 
 ![Taulukon muotoilu Excelissä](./media/how-to-excel-tips/format-table.png)
 
-Muotoillun taulukon voi luoda myös **Lisää**-välilehdessä.
+Voit luoda taulukon myös valitsemalla **Taulukko**-vaihtoehdon **Lisää**-välilehdeltä.
 
 ![Taulukon lisääminen Excelissä](./media/how-to-excel-tips/insert-table.png)
 
-Jotta taulukko löytyy helposti, nimeä se uudelleen **Taulukkotyökalut**-osion kohdassa **Ulkoasu**. Taulukolle kannattaa antaa kuvaava nimi. Varsinkin, kun Excel-tiedostossa on useita taulukoita.
+Jotta taulukko löytyy helposti, nimeä se uudelleen **Taulukkotyökalut**-osion kohdassa **Ulkoasu**. Taulukolle kannattaa antaa kuvaava nimi varsinkin silloin, jos samassa Excel-tiedostossa on useita taulukoita.
 
 ![Taulukon nimeäminen Excelissä](./media/how-to-excel-tips/rename-table.png)
 
 ## <a name="naming-tips-in-excel"></a>Excelin nimeämisvinkkejä
-Pyri lisäämään Excel-taulukon kuvasarakkeen nimeen avainsana ”kuva”. Se sitoo kuvasarakkeen kuva-ohjausobjektiin, kun taulukkoa käytetään kuvien ohjausobjekteja sisältävässä valikoimassa.
+Jos taulukon sarake sisältää kuvia, lisää sarakkeen nimeen maininta ”kuva”. Tämä avainsana sitoo kyseisen sarakkeen valikoiman kuvaohjausobjektiin.
 
 ![Excel-taulukon yhdistäminen kuviin](./media/how-to-excel-tips/connect-gallery.png)
 

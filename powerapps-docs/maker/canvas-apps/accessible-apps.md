@@ -1,6 +1,6 @@
 ---
-title: Helppokäyttöisten sovellusten luominen | Microsoft Docs
-description: Sovellusten luominen toimintarajoitteisille ihmisille
+title: Helppokäyttöisten pohjaan perustuvien sovellusten luominen | Microsoft Docs
+description: Pohjaan perustuvien sovellusten luominen toimintarajoitteisille ihmisille
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/03/2018
 ms.author: fikaradz
-ms.openlocfilehash: 909f71a61ca3df73b41eb9e1fe0f3dc3f52d1527
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 119b7e6ff590f63ad938016c5f0127f5d6521d65
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018717"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834378"
 ---
-# <a name="create-accessible-apps"></a>Helppokäyttöisten sovellusten luominen
-Helppokäyttöisen sovelluksen avulla käyttäjät, joilla on näkö-, kuulo- tai muu rajoite, voivat käyttää sovellusta.  Sen lisäksi, että monet valtiot ja organisaatiot edellyttävät näiden sovellusten käyttöä, alla olevien ohjeiden noudattaminen parantaa käytettävyyttä kaikille käyttäjille.
+# <a name="create-accessible-canvas-apps-in-powerapps"></a>Helppokäyttöisten pohjaan perustuvien sovellusten luominen PowerAppsissa
+Helppokäyttöisen pohjaan perustuvan sovelluksen avulla käyttäjät, joilla on näkö-, kuulo- tai muu rajoite, voivat käyttää sovellusta.  Sen lisäksi, että monet valtiot ja organisaatiot edellyttävät näiden sovellusten käyttöä, alla olevien ohjeiden noudattaminen parantaa käytettävyyttä kaikille käyttäjille.
 
 Tarkista **[Helppokäyttöisyyden tarkistuksen](accessibility-checker.md)** avulla mahdolliset helppokäyttötoimintojen ongelmat sovelluksessasi. 
 

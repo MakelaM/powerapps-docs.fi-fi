@@ -1,5 +1,5 @@
 ---
-title: Mallipohjaisten sovellusten suunnitteleminen sovellusten suunnitteluohjelman avulla | MicrosoftDocs
+title: Malliin perustuvien sovellusten suunnittelu sovellusten suunnitteluohjelmalla| MicrosoftDocs
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
@@ -8,48 +8,48 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - PowerApps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- PowerApps
 ms.assetid: aa6aca00-f95a-4f06-bec4-18b427b4618c
 ms.author: matp
 manager: kvivek
 author: Mattp123
 caps.latest.revision: 17
 topic-status: Drafting
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 41d3ce46bbaea3ec50033003a58fe502fbdc6224
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39681211"
 ---
+# <a name="design-model-driven-apps-by-using-the-app-designer"></a>Malliin perustuvien sovellusten suunnittelu sovellusten suunnitteluohjelmalla
 
-# <a name="design-model-driven-apps-by-using-the-app-designer"></a>Mallipohjaisten sovellusten suunnitteleminen sovellusten suunnitteluohjelman avulla
-
-PowerAppsin mallipohjaiset sovellukset sisältävät osia, kuten entiteettejä, koontinäyttöjä, lomakkeita, näkymiä, kaavioita ja liiketoimintaprosesseja.  
+PowerAppsin malliin perustuvat sovellukset koostuvat komponenteista, esimerkiksi entiteeteistä, koontinäytöistä, lomakkeista, näkymistä, kaavioista ja liiketoimintaprosesseista.  
   
- Sovelluksen suunnitteluohjelman avulla saat yhdistettyä kaikki nämä osat nopeasti. Ruutuperusteinen tietorakenne ja yksinkertaistettu liittymä helpottavat sovelluksen luontiprosessia, joten voit luoda liiketoimintorooli- ja toimintokohtaisia sovelluksia koodia kirjoittamatta.  
+ Sovellusten suunnitteluohjelman avulla voit koota kaikki nämä komponentit yhteen nopeasti. Sen ruutupohjaisen tietorakenteen ja yksinkertaisen käyttöliittymän avulla voit luoda sovelluksia entistä helpommin. Lisäksi voit luoda sovelluksia, jotka ovat liiketoimintarooli- ja käyttötarkoituskohtaisia ilman, että sinun täytyy kirjoittaa koodia.  
   
- Jokaisella luomallasi sovelluksella oma sivustokarttansa, jossa on integroitu ja helppokäyttöinen sivustokartan suunnitteluohjelma.  Sinun tarvitsee vain vetää ja pudottaa alueita, ryhmiä ja alialueita pohjaan. Sivustokartassa valitsemasi komponentit lisätään myös sovelluksen suunnitteluohjelmaan entiteetteinä.  
+ Kaikilla luomillasi sovelluksilla voi olla oma sivustokarttansa, jonka voit luoda integroidulla ja helppokäyttöisellä sivustokarttojen suunnitteluohjelmalla.  Voit vetää ja pudottaa alueita, ryhmiä ja ala-alueita pohjalle. Sivustokartassa valitsemasi komponentit lisätään myös entiteeteiksi sovellusten suunnitteluohjelmaan.  
   
- Voit lisätä ja poistaa entiteettejä tarpeen mukaan ja myös lisätä muita osia.  
+ Voit lisätä ja poistaa entiteettejä tarpeiden mukaan sekä lisätä myös muita komponentteja.  
   
- Kun osat on lisätty, voit tarkistaa, onko kaikki pakolliset osat lisätty sovellukseen. Jos osia puuttuu, lisää ne. Tämän jälkeen voit julkaista sovelluksen käyttäjille.  
+ Kun olet lisännyt komponentit, voit tarkistaa sovelluksen nähdäksesi, oletko unohtanut mitään komponentteja. Jos olet, voit lisätä tarvittavat komponentit. Tämän jälkeen voit julkaista sovelluksen käyttäjillesi.  
   
- Seuraava taulukko sisältää sovelluksen luomisessa suoritettavat vaiheet.  
+ Seuraavasta taulukosta näet sovelluksen luomisen vaiheet.  
   
-|Osavaihe|Kuvaus|Asiaan liittyviä aiheita|  
+|Vaihe|Kuvaus|Samankaltaiset ohjeartikkelit|  
 |----------|-----------------|--------------------|  
 |![Vaihe 1](media/walkthrough-green-1.png "Vaihe 1")|Määritä sovelluksen ominaisuudet.|[Sovelluksen luominen tai muokkaaminen](create-edit-app.md)|  
-|![Vaihe 2](media/walkthrough-green-2.png "Vaihe 2")|Määritä sovelluksen siirtymistoiminnot sivustokartan suunnitteluohjelman avulla.|[Sovelluksen sivustokartan luominen](create-site-map-app.md)|  
-|![Vaihe 3](media/walkthrough-green-3.png "Vaihe 3")|Sovellukset muodostuvat komponenteista, kuten koontinäytöistä, entiteeteistä, liiketoimintaprosesseista, lomakkeista, näkymistä ja kaavioista. Sisällytä pakolliset komponentit sovellukseen sovelluksen suunnitteluohjelman avulla.|[Sovelluksen osien lisääminen tai muokkaaminen](add-edit-app-components.md)|  
-|![Vaihe 4](media/walkthrough-green-4.png "Vaihe 4")|Tarkista, sisältääkö sovellus kaikki pakolliset osat. Kun pakolliset osat on lisätty, määritä sovellus käytettäväksi. |[Sovelluksen tarkistaminen ja julkaiseminen](validate-app.md)|  
-|![Vaihe 5](media/walkthrough-green-5.png "Vaihe 5")|Anna käyttäjille sovelluksen käyttöoikeus käyttöoikeusroolien avulla.|[Mallipohjaisen sovelluksen jakaminen](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/share-model-driven-app)|  
+|![Vaihe 2](media/walkthrough-green-2.png "Vaihe 2")|Määritä sovelluksen siirtymistoiminnot sivustokartan suunnitteluohjelmalla.|[Sovelluksen sivustokartan luominen](create-site-map-app.md)|  
+|![Vaihe 3](media/walkthrough-green-3.png "Vaihe 3")|Sovellukset koostuvat komponenteista, joita ovat esimerkiksi koontinäytöt, entiteetit, liiketoimintaprosessit, lomakkeet, näkymät ja kaaviot. Sisällytä haluamasi komponentit sovellukseesi sovellusten suunnitteluohjelmalla.|[Komponenttien lisääminen tai muokkaaminen](add-edit-app-components.md)|  
+|![Vaihe 4](media/walkthrough-green-4.png "Vaihe 4")|Tarkista, puuttuuko sovelluksestasi mitään vaadittuja komponentteja. Kun olet lisännyt kaikki vaaditut komponentit, tarjoa sovellus käytettäväksi. |[Sovelluksen tarkistaminen ja julkaiseminen](validate-app.md)|  
+|![Vaihe 5](media/walkthrough-green-5.png "Vaihe 5")|Anna käyttäjille käyttöoikeudet luomiisi sovelluksiin käyttöoikeusroolien avulla.|[Malliin perustuvan sovelluksen jakaminen](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/share-model-driven-app)|  
   
-## <a name="support-matrix-for-the-app-designer-and-site-map-designer"></a>Sovelluksen suunnitteluohjelman ja sivustokartan suunnitteluohjelman tukimatriisi  
- Seuraava taulukko sisältää tuetut käyttöjärjestelmät ja selaimet.  
+## <a name="support-matrix-for-the-app-designer-and-site-map-designer"></a>Taulukko sovellusten ja sivustokarttojen suunnitteluohjelmien tuesta  
+ Seuraavasta taulukosta näet tuetut käyttöjärjestelmät ja selaimet.  
   
-|Selain/käyttöjärjestelmä|Windows 10|Windows 8.1|Windows 8|Mac OS X|  
+|Selain tai käyttöjärjestelmä|Windows 10|Windows 8.1|Windows 8|Mac OS X|  
 |-----------------|----------------|-----------------|---------------|--------------|  
 | Microsoft Edge |Kyllä||||  
 | Internet Explorer 11 |Kyllä|Kyllä|||  
@@ -61,5 +61,5 @@ PowerAppsin mallipohjaiset sovellukset sisältävät osia, kuten entiteettejä, 
 | Apple Safari ||||Kyllä|  
   
 ## <a name="next-steps"></a>Seuraavat vaiheet  
- [Ensimmäisen mallipohjaisen sovelluksen luominen alusta](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+ [Ensimmäisen malliin perustuvan sovelluksen luominen alusta alkaen](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/build-first-model-driven-app)
 

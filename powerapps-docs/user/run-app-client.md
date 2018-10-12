@@ -1,6 +1,6 @@
 ---
-title: Pikaopas pohjaan perustuvan sovelluksen suorittamiseen mobiililaitteessa | Microsoft Docs
-description: Tässä pikaoppaassa opit suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa.
+title: Pohjaan perustuvan sovelluksen suorittaminen mobiililaitteessa | Microsoft Docs
+description: Opi suorittamaan pohjaan perustuva sovellus mobiililaitteessa.
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
@@ -10,17 +10,22 @@ ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: a80042065a830bb9d34007131cccbd995279e3dd
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: ace1a40e8d7900d93e2ff902705f6f50e1d7a193
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925704"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42851880"
 ---
-# <a name="quickstart-run-a-canvas-app-on-a-mobile-device"></a>Pikaopas: Suorita pohjaan perustuva sovellus mobiililaitteessa
-Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa. Sovellukset, jotka toimivat mobiililaitteessa, voivat hyödyntää laitteen ominaisuuksia, kuten sijaintipalveluja ja kameraa.
+# <a name="run-a-canvas-app-on-a-mobile-device"></a>Pohjaan perustuvan sovelluksen suorittaminen mobiililaitteessa
+Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä ohjeaiheessa opimme suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa. Sovellukset, jotka toimivat mobiililaitteessa, voivat hyödyntää laitteen ominaisuuksia, kuten sijaintipalveluja ja kameraa.
 
-Jotta voit noudattaa tätä pikaopasta, mutta et ole kirjautunut PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com/signup?redirect=marketing&email=) ennen kuin aloitat, ja lataa sitten PowerApps [App Storesta](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) tai [Google Playsta](https://play.google.com/store/apps/details?id=com.microsoft.msapps) iPhoneen, iPadiin tai Android-laitteeseen, jossa on [tuettu käyttöjärjestelmä](../maker/canvas-apps/limits-and-config.md) käytössä. Varmista myös, että sinulla on käyttöoikeus luomaasi pohjaan perustuvaan sovellukseen tai että joku muu loi sen ja jakoi sen kanssasi.
+Jotta voit noudattaa tätä ohjeaihetta, mutta et ole kirjautunut PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com/signup?redirect=marketing&email=) ennen kuin aloitat, ja lataa sitten PowerApps [App Storesta](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) tai [Google Playsta](https://play.google.com/store/apps/details?id=com.microsoft.msapps) iPhoneen, iPadiin tai Android-laitteeseen, jossa on [tuettu käyttöjärjestelmä](../maker/canvas-apps/limits-and-config.md) käytössä. Varmista myös, että sinulla on käyttöoikeus luomaasi pohjaan perustuvaan sovellukseen tai että joku muu loi sen ja jakoi sen kanssasi.
 
 ## <a name="open-powerapps-and-sign-in"></a>Avaa PowerApps ja kirjaudu sisään
 Avaa PowerApps mobiililaitteessa ja kirjaudu sisään Azure Active Directory -tunnistetiedoilla.
@@ -77,7 +82,7 @@ Voit kiinnittää sovelluksen laitteen aloitusnäyttöön, josta se on nopea ava
 Sulje sovellus pyyhkäisemällä sormella sovelluksen vasemmasta reunasta oikealle. Android-laitteissa voit myös painaa Takaisin-painiketta ja sitten vahvistaa, että haluat sulkea sovelluksen.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa. Voit suorittaa myös mallipohjaisia sovelluksia mobiililaitteessa.
+Tässä ohjeaiheessa opit suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa. Voit suorittaa myös mallipohjaisia sovelluksia mobiililaitteessa.
 
 > [!div class="nextstepaction"]
 > [Suorita mallipohjainen sovellus mobiililaitteella](run-app-client-model-driven.md)

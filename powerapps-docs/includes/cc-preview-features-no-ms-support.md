@@ -1,0 +1,1 @@
+Microsoft ei tue tätä esikatselutoimintoa. Microsoft Dynamics 365:n tekninen tuki ei pysty auttamaan sinua ongelmissa tai vastaamaan kysymyksiisi. Esikatselutoimintoja ei ole tarkoitettu tuotantokäyttöön, ja niitä koskevat erilliset [lisäkäyttöehdot](http://go.microsoft.com/fwlink/p/?LinkId=511446).

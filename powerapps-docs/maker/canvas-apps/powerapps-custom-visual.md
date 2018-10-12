@@ -1,20 +1,24 @@
 ---
 title: PowerAppsin mukautettu visualisointi Power BI:lle | Microsoft Docs
 description: Toimintosarja ja rajoitukset sellaisen pohjaan perustuvan sovelluksen upottamiseen, joka käyttää samaa tietolähdettä ja joka voidaan suodattaa muiden Power BI -raporttikohteiden mukaisesti
-author: mgblythe
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/15/2018
-ms.author: mblythe
-ms.openlocfilehash: 0da480a482415ad174f10204f14f31adbd3607f2
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+ms.author: chmoncay
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 4f7a2e4002d3d9c8e38ad43418130d0ed9414361
+ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39469990"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43164321"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -66,12 +70,12 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
 PowerAppsin mukautettu visualisointi on käytettävissä esikatselussa, ja visualisoinnilla on seuraavat rajoitukset:
 
-- Et voi luoda tai muokata sovelluksia, kun käytät PowerAppsin mukautettua visualisointia Power BI Desktopissa, Internet Explorerissa tai Mozilla Firefoxissa. Suosittelemme, että julkaiset raporttisi ensin Power BI -palvelussa. Käytä sitten Microsoft Edgeä tai Google Chromea uusien sovellusten luomiseen ja muutosten tekemiseen sovelluksiin.
+- Et voi luoda tai muokata sovelluksia, kun käytät PowerAppsin mukautettua visualisointia Power BI Desktopissa, Internet Explorerissa tai Mozilla Firefoxissa. Suosittelemme, että julkaiset raporttisi ensin Power BI -palvelussa. Käytä sitten Microsoft Edgeä tai Google Chromea sovellusten luomiseen ja päivittämiseen.
 - Jos muutat visualisointiin liittyviä tietokenttiä, sinun on muokattava sovellusta Power BI -palvelussa valitsemalla kolme pistettä (...) ja **Muokkaa**. Muussa tapauksessa muutoksia ei lisätä PowerAppsiin, ja sovellus käyttäytyy odottamattomasti.
 - PowerAppsin mukautettu visualisointi ei voi käynnistää Power BI -raporttia tai Power BI -tietolähdettä. Jos kirjoitat tietoa takaisin sovelluksesta samaan tietolähteeseen, jossa raportti on, muutoksiasi ei oteta heti käyttöön. Muutokset otetaan käyttöön seuraavassa ajoitetussa päivityksessä.
 - PowerAppsin mukautettu visualisointi ei voi suodattaa tietoa tai lähettää tietoa takaisin raporttiin.
 - Sinun on jaettava PowerApps-sovellus raportistasi erillisenä. Lue lisätietoja [sovellusten jakamisesta PowerAppsissa](share-app.md).
-- Power BI -mobiilisovellus ei tue PowerAppsin mukautettua visualisointia.
+- Power BI -raporttipalvelin ja Power BI -mobiilisovellus eivät tue PowerAppsin mukautettua visualisointia.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

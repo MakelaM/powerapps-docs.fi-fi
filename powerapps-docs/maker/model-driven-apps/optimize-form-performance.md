@@ -1,6 +1,6 @@
 ---
-title: Mallipohjaisen sovelluksen lomakkeen suorituskyvyn optimointi PowerAppsissa | MicrosoftDocs
-description: 'Tietoja siitä, miten voit välttää lomakkeen suunnitteluja, jotka saavat lomakkeen lataamaan hitaasti'
+title: Mallipohjaisen sovelluksen lomakkeiden suorituskyvyn optimointi PowerAppsissa | MicrosoftDocs
+description: Opi välttämään lomakemalleja, jotka hidastavat lomakkeen latautumista.
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
@@ -9,53 +9,54 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 author: Mattp123
 ms.assetid: 59cfa5e6-638a-437f-a462-fddfd26fb07d
 caps.latest.revision: 8
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: c9dd764fe565b59e68411dabf453207c4e01a320
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39674491"
 ---
-# <a name="optimize-model-driven-app-form-performance"></a>Mallipohjaisen sovelluksen lomakkeen suorituskyvyn optimointi
+# <a name="optimize-model-driven-app-form-performance"></a>Mallipohjaisen sovelluksen lomakkeiden suorituskyvyn optimointi
 
-Lomakkeet, joka latautuvat hitaasti, voivat vähentää tuottavuutta ja käyttäjän käyttöönottoa. Seuraavien suositusten avulla suurennat lomakkeiden nopeaa latautumista. Monet näistä suosituksista kertovat siitä, miten sovelluskehittäjä voi toteuttaa lomakkeen komentosarjoja organisaatiossasi. Muista neuvotella näistä suosituksista niiden sovelluskehittäjien kanssa, jotka luovat lomakkeiden komentosarjoja lomakkeisiisi.  
+Hitaasti latautuvat lomakkeet heikentävät tuottavuutta ja sovelluksen käytön omaksumista. Noudata näitä suosituksia, niin saat lomakkeesi latautumaan mahdollisimman nopeasti. Monet suosituksista koskevat sitä, miten kehittäjä voi ottaa lomakkeen komentosarjoja käyttöön organisaatiollesi. Kerro näistä suosituksista kehittäjille, jotka vastaavat lomakkeiden komentosarjojen luomisesta.  
   
 <a name="BKMK_FormDesign"></a>   
-## <a name="form-design"></a>Lomakkeen asettelu  
- Mieti sitä vuorovaikutusta, joka käyttäjällä on lomakkeen kanssa sekä sitä tietomäärää, joka lomakkeen on näytettävä.  
+## <a name="form-design"></a>Lomakkeen rakenne  
+ Ota huomioon ne tavat, joilla käyttäjä käyttää lomaketta, sekä lomakkeessa näytettävien tietojen määrä.  
   
- **Säilytä kenttien määrä vähimmäismäärässä**  
- Mitä enemmän kenttiä sinulla on lomakkeessa, sitä enemmän tietoa täytyy siirtää Internetiin tai intranetiin kunkin tietueen tarkastelua varten.  
+ **Pidä kenttien määrä minimissään**  
+ Mitä enemmän kenttiä lomakkeessa on, sitä enemmän tietoa on siirrettävä Internetissä tai intranetissä jokaisen tietueen näyttämiseksi.  
   
 <a name="BKMK_FormScripts"></a>   
-## <a name="form-scripts"></a>Lomakkeiden komentosarjat  
- Kun sinulla on mukautuksia, jotka käyttävät lomakkeen komentosarjoja, varmista, että kehittäjä ymmärtää näitä strategioita parantaakseen suorituskykyä.  
+## <a name="form-scripts"></a>Lomakkeen komentosarjat  
+ Jos käytät lomakkeiden komentosarjoilla toteutettuja mukautuksia, varmista, että kehittäjä on sisäistänyt nämä strategiat suorituskyvyn parantamiseksi.  
   
- **Vältä tarpeetonta JavaScript WWW-resurssikirjastojen sisällyttämistä**  
- Mitä enemmän komentosarjoja lisäät lomakkeeseen, sitä enemmän aikaa menee niiden lataamiseen. Yleensä komentosarjat tallennetaan välimuistiin selaimessasi, kun ne on ladattu ensimmäisen kerran, mutta suorituskyky ensimmäisen kerran, kun lomaketta tarkastellaan, luo usein merkittävän vaikutelman.  
+ **Vältä tarpeettomia JavaScript-verkkoresurssien kirjastoja**  
+ Mitä enemmän komentosarjoja lomakkeeseen lisätään, sitä kauemmin niiden lataaminen kestää. Yleensä komentosarjat tallennetaan selaimen välimuistiin, kun ne ladataan ensimmäisen kerran. Suurimman vaikutuksen käyttäjätyytyväisyyteen tekee kuitenkin lomakkeen ensimmäinen katselukerta ja sen tehokkuus.  
   
- **Vältä kaikkien komentosarjojen lataamista Onload-tapahtumaan**  
- Jos koodi tukee ainoastaan `OnChange` tapahtumia kentissä tai `OnSave` tapahtumaa, varmista, että voit määrittää komentosarjan kirjaston tapahtuman käsittelijän kanssa niille tapahtumille `OnLoad` -tapahtuman sijaan. Tällä tavoin ladatut kirjastot voidaan lykätä, ja parantaa suorituskykyä, kun lomake latautuu.  
+ **Vältä lataamasta kaikkia komentosarjoja Onload-tapahtumassa**  
+ Jos koodisi tukee kentille vain `OnChange`-tapahtumia tai `OnSave`-tapahtumaa, aseta tapahtumakäsittelijän sisältävä komentosarjakirjasto vain näille tapahtumille `OnLoad`-tapahtuman sijaan. Tällä tavoin näiden kirjastojen lataamista lykätään ja lomakkeen latautumisen suorituskykyä parannetaan.  
   
- **Käytä tiivistettyjä välilehtiä lykätäksesi verkkoresurssien latausta**  
- Kun verkkoresursseja tai IFRAMEja sisältyy osiin tiivistetyssä välilehdessä, niitä ei ladata, jos välilehti on tiivistetty. Ne ladataan, kun välilehti on laajennettu. Välilehti-tilan muuttuessa `TabStateChange` -tapahtuma toteutuu. Mikä tahansa koodi, jota tarvitaan tukemaan WWW-resursseja tai IFRAME-kehystä tiivistettyjen välilehtien sisällä, voi käyttää tapahtumankäsittelijöitä **TabStateChange** -tapahtumaan ja vähentää koodia, joka ehkä muuten ilmenisi `OnLoad` -tapahtumassa.  
+ **Käytä kutistettuja välilehtiä verkkoresurssien lataamisen lykkäämiseen**  
+ Kun verkkoresurssit tai iFrame-kehykset sisältyvät kutistetuilla välilehdillä oleviin osioihin, niitä ei ladata, jos välilehti on kutistettu. Ne ladataan, kun välilehti laajennetaan. Kun välilehden tila muuttuu, tapahtuu `TabStateChange`-tapahtuma. Jos koodin on tuettava kutistetuilla välilehdillä olevia verkkoresursseja tai iFrame-kehyksiä, voidaan käyttää tapahtumakäsittelijöitä **TabStateChange**-tapahtumalle ja vähentää koodia, jonka muuten olisi tapahduttava `OnLoad`-tapahtumassa.  
   
- **Määrittää näkyvyyden oletusasetukset**  
- Vältä käyttämästä lomakkeen komentosarjoja `OnLoad` -tapahtumassa, joka piilottaa lomakkeen osia. Sen sijaan määritä lomake-elementeille näkyvyyden oletusasetukset, jotka saattavat olla piilossa oletusarvoisesti, kun lomake latautuu. Voit käyttää komentosarjoja `OnLoad` -tapahtumassa näyttääksesi ne lomakkeen osat, jotka haluat näyttää.  
+ **Määritä näkyvyyden oletusasetukset**  
+ Vältä lomake-elementtejä piilottavia komentosarjoja `OnLoad`-tapahtumassa. Määritä sen sijaan piilotettavien elementtien oletusarvoiseksi näkyvyydeksi näkymättömissä oleminen, kun lomake latautuu. Voit sen jälkeen näyttää näytettävät elementit käyttämällä `OnLoad`-tapahtuman komentosarjoja.  
   
 <a name="BKMK_CommandBar"></a>   
-## <a name="command-bar-or-ribbon"></a>Työkalurivi tai valintanauha  
- Pidä mielessä nämä suositukset, kun muokkaat työkaluriviä tai valintanauhaa.  
+## <a name="command-bar-or-ribbon"></a>Komentopalkki tai valintanauha  
+ Pidä nämä suositukset mielessä, kun muokkaat komentopalkkia tai valintanauhaa.  
   
- **Säilytä ohjausobjektien määrä vähimmäismäärässä**  
- Komentopalkin tai lomakkeen valintanauhassa arvioi, mitkä ohjausobjektit ovat tarpeen ja piilota kaikki ne, joita et tarvitse. Jokainen ohjausobjekti, joka on näkyvissä, kasvattaa resursseja, jotka pitää ladata selaimeen.  
+ **Pidä ohjausobjektien määrä minimissään**  
+ Mieti tarkkaan, mitä ohjausobjekteja lomakkeen komentopalkissa tai valintanauhassa välttämättä tarvitaan. Piilota tarpeettomat. Jokainen näytettävä ohjausobjekti kasvattaa selaimeen ladattavien resurssien määrää.  
   
 ## <a name="next-steps"></a>Seuraavat vaiheet  
  [Luo ja suunnittele lomakkeita](create-design-forms.md)    

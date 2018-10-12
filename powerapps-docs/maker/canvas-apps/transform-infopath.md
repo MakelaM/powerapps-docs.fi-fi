@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1432ad41b62671267c22d521c7a117e89dfc728c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 3e17015c05d23f4bd9f8a0906e7b1d9d00e2c38f
+ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859442"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48246047"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>InfoPath-lomakkeen muuntaminen PowerAppsiin
 
@@ -31,113 +31,147 @@ Muiden InfoPath-tehokäyttäjien tapaan olet hyödyntänyt ainutlaatuista osaami
 PowerApps-tiimi on kuullut näistä ja monista muista haasteista. Tiimi pyrkii saamaan aikaan paremman käyttökokemuksen ja mahdollistamaan pohjaan perustuvien sovellusten luomisen jo olemassa olevien liiketoiminta- ja teknologiataitojen perusteella. PowerAppsia käyttämällä voit luoda ja ottaa käyttöön asianmukaisia liiketoimintaratkaisuja nopeasti ja koodia kirjoittamatta.
 
 **PowerApps takaa tehokkaan tulevaisuuden**  
-PowerApps on SaaS-pilvipalvelu, jossa voit nopeasti rakentaa erittäin toimivia sovelluksia ja ottaa ne vaivatta käyttöön verkossa, SharePointissa, Dynamics 365:ssä, Teamsissa, Power BI:ssä tai mobiililaitteessa. Ja koska sovellukset on helppo ottaa käyttöön (jakamalla julkaistun sovelluksen URL-osoite), ne on myös helppo päivittää.
+PowerApps on SaaS-pilvipalvelu, jossa voit nopeasti rakentaa tehokkaita sovelluksia ja ottaa ne vaivatta käyttöön verkossa, SharePointissa, Dynamics 365:ssä, Teamsissa, Power BI:ssä tai mobiililaitteessa. Koska sovellusten URL-osoitteen jakaminen tekee sovellusten käyttöönotosta helppoa, ne on myös helppo päivittää.
 
 **Omien sovellusten jakaminen**  
-Oletko koskaan yrittänyt rakentaa sovellusta ja saada sen julkaistuksi Google Play- tai Apple Store -sovelluskaupassa? Se on monimutkaista. Haasteellisuus kasvaa, jos haluat ottaa käyttöön toisen sovelluksen tai päivittää nykyistä. Käyttäjien on käytävä läpi todella monia vaiheita. Mutta ei PowerAppsissa. Käyttäjät asentavat Microsoft PowerApps -sovelluksen omasta sovelluskaupastaan ja kirjautuvat sitten sisään Microsoft-tilin käyttäjätunnuksella ja salasanalla. Voilà, heidän käytössään ovat kaikki erittäin toimivat sovellukset, jotka olet heidän kanssaan jakanut. Jatkossa kaikki sovelluspäivitykset ja käyttäjille jakamasi uudet sovellukset näkyvät käyttäjien laitteissa. Mobiilisovelluksien tarjoaminen ilman laitehallintahässäkkää helpottaa sinun elämääsi ja yrityksesi toimintaa huomattavasti.
+Oletko koskaan yrittänyt luoda sovelluksen ja julkaista sen sitten iOS- tai Android-laitteille? Se on monimutkaista. Toisen sovelluksen käyttöönotto ja jo käytössä olevan sovelluksen päivittäminen vaatii käyttäjiltä paljon vaivaa. Ei PowerAppsissa. Käyttäjät vain asentavat PowerApps Mobilen laitteelleen ja kirjautuvat sisään. Siinä kaikki; käyttäjät voivat sen jälkeen käyttää tehokkaita sovelluksia, jotka olet jakanut heille. Jatkossa kaikki sovelluspäivitykset ja käyttäjille jakamasi uudet sovellukset näkyvät käyttäjien laitteilla. Mobiilisovelluksien tarjoaminen ilman laitehallintahässäkkää helpottaa sekä sinun elämääsi että yrityksesi toimintaa huomattavasti.
 
 **Mobiililaitteista puheen ollen**  
-PowerAppsin avulla voit hyödyntää käyttäjän mobiililaitteen tehon. Voit käyttää kiihdytystä, kameraa, kompassia, yhteystietoja ja sijaintisignaaleja suoraan sovelluksessa. Se tarjoaa todella paljon mahdollisuuksia tehokkaiden ja käytännöllisten sovellusten luomiseen. Lisäksi kosketustoiminto on PowerAppsissa tietenkin automaattisesti käytössä, joten sovelluksen luonti ei vaadi lisäkoodausta.
+PowerAppsin avulla voit hyödyntää käyttäjän mobiililaitteen tehon. Voit käyttää kiihdytystä, kameraa, kompassia, verkkoyhteyden tietoja ja sijaintisignaaleja suoraan sovelluksessa. Se tarjoaa todella paljon mahdollisuuksia tehokkaiden ja käytännöllisten sovellusten luomiseen. Lisäksi kosketustoiminto on PowerAppsissa automaattisesti käytössä, joten sovelluksen luonti ei vaadi lisäkoodausta.
 
 **Karkaa laatikosta**  
-InfoPathissa työstettiin yleensä yhden tietolähteen tietoja. Jos kuitenkin halusit tehdä päivityksiä jossain muualla (esimerkiksi toisen sivustokokoelman SharePoint-luettelossa) tai yhdistää ulkoisiin palveluihin, asiat mutkistuivat ja erillisen koodin kaltaiset konseptit alkoivat valvottaa öisin. Ei PowerAppsissa. Se on suunniteltu niin, että voit työstää useita tietolähteitä ja palveluyhteyksiä yhdessä sovelluksessa. Tällä hetkellä käytössä on [yli 150 liitintä](https://docs.microsoft.com/powerapps/connections-list#all-connectors), joiden avulla voi yhdistää paikallisia ja pilvitietoja, Microsoft Office 365:n ja Azuren palveluja (esim. Flow ja Dynamics 365) ja monia ulkopuolisten palveluntarjoajien palveluja, kuten Dropbox, Google, Salesforce ja Slack. Nyt voit luoda käyttäjien tarpeisiin venyviä ratkaisuja, jotka eivät rajoitu vain alkuperäiseen tiedonlähteeseen.
+InfoPathin avulla käsittelet tavallisesti tietoja, jotka ovat peräisin yhdestä lähteestä. Asiat kuitenkin mutkistuivat, jos haluat päivittää toisesta lähteestä (esimerkiksi toisen sivustokokoelman SharePoint-luettelosta) tai yhdistää ulkoisiin palveluihin. Taustakoodin tapaiset käsitteet voivat aiheuttaa harmaita hiuksia. PowerApps on suunniteltu niin, että voit työstää useita tietolähteitä ja palveluyhteyksiä yhdessä sovelluksessa. Sen [yli 200 liitintä](connections-list.md#all-standard-connectors) tukevat paikallisten ja pilvitietojen yhdistelemistä. Tämä koskee mm. Microsoft Office 365:sta ja Azure-palveluista, kuten Microsoft Flow ja Dynamics 365, peräisin olevia tietoja. Voit myös muodostaa yhteyden useisiin kolmansien osapuolten palveluihin, kuten Dropbox, Google, Salesforce, Slack ja moniin muihin suosittuihin palveluihin.
+
+Nyt voit luoda käyttäjien tarpeisiin venyviä ratkaisuja, jotka eivät rajoitu vain alkuperäiseen tiedonlähteeseen.
 
 ## <a name="powerapps-and-sharepoint-even-better-together"></a>PowerApps ja SharePoint – yhdessä vielä parempia
 
 Erinomaisen PowerApps-työkalun avulla parannat SharePoint-käyttökokemusta kahdella tapaa. Voit joko mukauttaa lomakkeet SharePoint-luetteloa varten tai luoda erillisen sovelluksen SharePoint-tietojen käsittelyyn.
 
-**SharePoint-lomakkeen mukautus** on kätevää, jos käyttäjät käyttävät luetteloa päivittäisessä työssään, mutta haluat myös mukauttaa, miten käyttäjät lisäävät, tarkastelevat ja muokkaavat SharePoint-luettelon kohteita. **Mukauta lomakkeet** -kohdan napsauttaminen luo yhden näytön &quot;lomakesovelluksen&quot;, joka vaihtaa tiloja (uusi/muokkaa/näytä) kontekstista riippuen. SharePoint hallitsee näitä sovelluksia. Niiden oikeudet ovat samat kuin muokkauksen ja tarkastelun luettelo-oikeudet.
+**SharePoint-lomakkeen mukauttamisesta** on hyötyä, jos haluat mukauttaa sitä, miten käyttäjät voivat lisätä, tarkastella tai muokata kohteita luettelossa, joita he käyttävät töissään päivittäin. **Mukauta lomakkeet** -kohdan napsauttaminen luo yhden näytön &quot;lomakesovelluksen&quot;, joka vaihtaa tiloja (uusi/muokkaa/näytä) kontekstista riippuen. SharePoint hallitsee näitä sovelluksia. Niiden oikeudet ovat samat kuin muokkauksen ja tarkastelun luettelo-oikeudet.
 
-Jos **luot PowerApps-alustan sovelluksen SharePointista**, sovellus toimii itsenäisesti mobiililaitteessa. Se voidaan myös upottaa SharePoint-sivuun. Tämän napsauttaminen luo kolmenäyttöisen sovelluksen (luettelonäkymä, uusi lomake / muokkaa lomaketta ja näytä lomake).  Näiden sovellusten käyttöoikeus- ja jakomalli ei ole SharePointiin sidottu, vaan sitä voi hallita PowerAppsista.
+Jos **luot PowerApps-alustan sovelluksen SharePointista**, sovellus toimii itsenäisesti mobiililaitteessa. Voit myös upottaa sovelluksen SharePoint-sivuun. Tämän napsauttaminen luo kolmeruutuisen sovelluksen (selausluettelo, tietojen näyttäminen ja kohteen luominen/päivittäminen). Näiden sovellusten käyttöoikeus- ja jakomalli ei ole SharePointiin sidottu, vaan sitä voi hallita PowerAppsista.
 
 Nyt kun ymmärrät näiden kahden vaihtoehdon erot, seuraava osio antaa yleiskuvan niiden käytöstä.
 
 ## <a name="sharepoint-forms"></a>SharePoint-lomakkeet
 
-PowerApps- ja SharePoint-tiimi ovat luoneet yhteistyönä uuden mukautustavan, jota voit käyttää SharePointissa.  Muiden InfoPath-kehittäjien tavoin opettelit InfoPathin luultavasti SharePointin käyttöä varten. Vaikka SharePoint on kätevä, sen oletuslomakkeet ovat hieman hidasliikkeisiä ja mukautuksia ja liiketoimintalogiikkaa ei voi tehdä ilman InfoPathia. Niin asiat tehtiin ennen vanhaan.
+PowerApps- ja SharePoint-tiimi ovat luoneet yhteistyönä uuden mukautustavan, jota voit käyttää SharePointissa. Muiden InfoPath-kehittäjien tavoin opettelit InfoPathin luultavasti SharePointin käyttöä varten. SharePoint on kätevä, mutta sen oletuslomakkeet ovat hieman hidasliikkeisiä eikä mukautuksia ja liiketoimintalogiikkaa voi tehdä ilman InfoPathia. Niin asiat tehtiin ennen vanhaan.
 
-PowerAppsilla voit nyt mukauttaa luettelolomakkeet natiivitoimintoina. Niin tehdessäsi valjastat kaiken PowerAppsin voiman. Seuraavassa näyttökuvassa on esimerkki PowerApps-lomakkeesta, johon on upotettu Power BI -raportti.  Koko ratkaisu luotiin alle 15 minuutissa.
+PowerAppsilla voit nyt mukauttaa luettelolomakkeet natiivitoimintoina. Niin tehdessäsi valjastat kaiken PowerAppsin voiman. Seuraavassa näyttökuvassa on esimerkki PowerApps-lomakkeesta, johon on upotettu Power BI -raportti. Koko ratkaisu luotiin alle 15 minuutissa.
 
 ![SharePoint-integrointi](./media/transform-infopath/sharepoint-integration.png)
 
-Toinen tärkeä PowerApps-ominaisuus on se, miten samasta lomakkeesta voi helposti yhdistää toiseen SharePoint-sivustokokoelmaan tai eri ympäristöön. Haluatko esimerkiksi luoda lomakkeen, joka näyttää ja päivittää samanaikaisesti sekä SharePoint Onlinen että paikallisen SharePoint-ympäristön tietoja? Ei huolta. Asenna [paikallinen tietoyhdyskäytävä](https://docs.microsoft.com/powerapps/gateway-management), niin voit jo muutaman minuutin kuluttua yhdistää PowerAppsin, Power BI:n, Microsoft Flow’n ja Azure Logic Appsin paikallisiin tietoihisi. Ei vaadi palomuurisääntöjen muuttamista. Voit lisätä toimintoja entisestään yhdistämällä tämän sovelluksen Microsoft Flow’hun.
+Toinen tärkeä PowerApps-ominaisuus on se, miten samasta lomakkeesta voi helposti yhdistää toiseen SharePoint-sivustokokoelmaan tai eri ympäristöön. Haluatko esimerkiksi luoda lomakkeen, joka näyttää ja päivittää samanaikaisesti sekä SharePoint Onlinen että paikallisen SharePoint-ympäristön tietoja? Ei huolta. Jos asennat [paikallisen tietoyhdyskäytävän](gateway-management.md), voit jo muutaman minuutin kuluttua yhdistää PowerAppsin, Power BI:n, Microsoft Flow’n ja Azure Logic Appsin paikallisiin tietoihisi. Palomuurin sääntöihin ei tarvitse tehdä muutoksia. Voit ottaa askeleen pidemmälle yhdistämällä sovelluksen Microsoft Flow’hun.
 
 ## <a name="a-standalone-sharepoint-app"></a>Erillinen SharePoint-sovellus
 
 Käytä tätä tekniikkaa, jos haluat pelkän luettelolomakekokemuksen päivittämisen sijaan luoda SharePoint-tietoihin pohjautuvan kokonaisen, erillisen sovelluksen. Tämä on myös paras tapa päästä alkuun PowerApps-alustan opettelussa ja montaa tiedonlähdettä käyttävien sovellusten luomisessa.
 
-Aloita siirtymällä SharePoint-luetteloon, jota haluat käyttää. Noudata sitten seuraavia ohjeita:
+Aloita seuraavasti:
 
-1. Valitse valikkoriviltä PowerApps.
-2. Valitse Luo sovellus.
-3. Anna nimi.
-4. Valitse Luo.
+1. Avaa SharePoint-luettelo, josta haluat luoda sovelluksen.
+1. Valitse valikkoriviltä **PowerApps** ja valitse sitten **Luo sovellus**.
+1. Anna sovellukselle nimi ja valitse sitten **Luo**.
 
-PowerApps luo oletussovelluksen, jota voit mukauttaa.
+PowerApps luo sovelluksen, jota voit itse mukauttaa.
 
-Aloita yksinkertaisesti. Käytä ensimmäisessä sovelluksessa yksinkertaista mukautettua luetteloa, jossa on vain muutama erityyppinen kenttä. Näin rakennat vahvan pohjan, eikä uuden asian opettelu tunnu ylivoimaisen vaikealta. Ei huolta – pääset pian ammattilaisen tasolle ja voit alkaa luoda monimutkaisia sovelluksia.  Jos tarvitset lisäapua ensimmäisen sovelluksen luomiseen, tutustu näihin [ohjeisiin](https://docs.microsoft.com/powerapps/generate-app-from-sharepoint-list-interface) tai katso tämä yhteisön [video](https://youtu.be/BnYe_7fpZRM). Seuraavat esimerkit esittelevät, miten yleisimmät InfoPath-tehtävät tehdään PowerAppsissa. Ne kaikki perustuvat yksinkertaiseen SharePoint-luettelosovellukseen.
+Käytä ensimmäisessä sovelluksessa yksinkertaista mukautettua luetteloa, jossa on vain muutama erityyppinen kenttä. Näin rakennat vahvan pohjan, eikä uuden asian opettelu tunnu ylivoimaisen vaikealta. Ei huolta – pääset pian ammattilaisen tasolle ja voit alkaa luoda monimutkaisia sovelluksia. Jos tarvitset lisäapua ensimmäisen sovelluksen luomiseen, tutustu näihin [ohjeisiin](generate-app-from-sharepoint-list-interface.md) tai katso tämä yhteisön [video](https://youtu.be/BnYe_7fpZRM). Seuraavat esimerkit esittelevät, miten yleisimmät InfoPath-tehtävät tehdään PowerAppsissa. Ne kaikki perustuvat yksinkertaiseen SharePoint-luettelosovellukseen.
 
-# <a name="how-do-you-do-that-with-powerapps"></a>Sama PowerAppsissa
+## <a name="how-do-you-do-that-with-powerapps"></a>Sama PowerAppsissa
 
-Nyt ymmärrät peruskäsitteet, ja voimme sukeltaa syvemmälle. Olet luonut ensimmäisen sovelluksesi ja seuraava osio neuvoo, miten sovellat joitain yleisiä InfoPath-käsitteitä PowerAppsissa.
+Nyt ymmärrät peruskäsitteet, ja voimme sukeltaa syvemmälle. Olet luonut ensimmäisen sovelluksesi. Tässä osiossa neuvotaan, miten sovellat joitain yleisiä InfoPath-käsitteitä PowerAppsissa.
 
 **Kentän piilottaminen, näyttäminen tai lukitseminen arvon perusteella**  
-Onnistuneen lomakkeen luomiseen tarvitaan yleensä vahvaa liiketoimintalogiikkaa ja sen toteuttamiskykyä. Yksi tapa on muuttaa kentän tilaa arvon tai toiminnon perusteella. PowerAppsissa voit valita ohjausobjektin ja määrittää sen DisplayMode-ominaisuudeksi Muokkaa tai Näytä. Tila ilmaisee, voiko käyttäjä muuttaa kenttää. Toinen tapa on käyttää yksinkertaista, ehdollista If-kaavaa. Valitse ensin muokattava selite ja avaa kortti napsauttamalla lukkokuvaketta, jotta voit muuttaa sen arvoa.
+Onnistuneet lomakkeet toteuttavat usein vahvaa liiketoimintalogiikkaa esimerkiksi muuttamalla kentän tilaa arvon tai toiminnon mukaan. PowerAppsissa voit määrittää ohjausobjektin **DisplayMode**-ominaisuudeksi **Muokkaa** tai **Näytä**. Tila ilmaisee, voiko käyttäjä muuttaa kenttää. Voit myös käyttää yksinkertaista, ehdollista **If**-kaavaa. Valitse ensin kortti, jota haluat muokata, ja valitse sitten lukkokuvake. Tämä vaihe avaa kortin niin, että voit muuttaa arvoa.
 
 ![Tietokorttien piilottaminen, näyttäminen ja lukitseminen](./media/transform-infopath/hide-show-lock.png)
 
-Vieritä kortin oikeassa reunassa kortin loppuun ja muokkaa DefaultMode-ominaisuutta.
+Siirry oikeanpuoleisessa ruudussa **DefaultMode**-ominaisuuteen niin, että voit muokata sitä.
 
 ![If else -lauseilmaisut](./media/transform-infopath/if-else-statement.png)
 
-Käytä tässä esimerkissä If-lausetta. If(ThisItem.Color = &quot;Blue&quot;, DisplayMode.View, DisplayMode.Edit) Tämä lause ilmaisee, että jos nykyisten kohteiden värikenttä on sininen, eläinkenttää voi vain tarkastella. Jos se ei ole sininen, kenttää voi muokata.
+Käytä tässä esimerkissä **If**-kaavaa:
 
-Jos et halua näyttää korttia ollenkaan, voit lisätä samantapaisen funktion DisplayMode-ominaisuuden yläpuolella olevaan Visible-kenttään.
+```If(ThisItem.Color = "Blue", DisplayMode.View, DisplayMode.Edit)```
 
-Tässä tapauksessa voisi myös piilottaa hyväksymispainikkeen, joka näkyy vain, jos käyttäjän sähköpostiosoite on sama kuin hyväksyjän sähköpostiosoite. Vihje: Kaavalla User().Email pääset käsiksi nykyisen käyttäjän sähköpostiosoitteeseen. Joten voit määrittää painikkeen Visible-arvoksi kaavan If(YourDataCard.Text = User().Email, true, false). Siinä DataCard on kortti, jossa hyväksyjän sähköpostiosoitetta säilytetään.
+Tämä kaava ilmoittaa, että jos nykyinen kohteen **väri**-kenttä on **Sininen**, **Eläin**-kenttä on vain luku -tilassa. Muussa tapauksessa kenttää voi muokata.
+
+Jos haluat piilottaa sen sijaan, että se muunnetaan vain luku -tilaan, lisää samanlainen funktio **DisplayMode**-kohdan yllä olevaan **Näkyvissä**-ominaisuuteen.
+
+Voit myös kokeilla esimerkiksi sitä, että hyväksymispainike näytetään vain jos käyttäjän sähköpostiosoite vastaa hyväksyjän sähköpostiosoitetta. (Vihje: Kaavalla **User().Email** pääset käsiksi nykyisen käyttäjän sähköpostiosoitteeseen.) Voit tallentaa hyväksyjän sähköpostiosoitteen **YourDataCard**-kohtaan ja asettaa painikkeen **Näkyvissä**-ominaisuuden arvoksi seuraavan kaavan:
+
+```If(YourDataCard.Text = User().Email, true, false)```
 
 **Ehdollinen muotoilu**  
-Samaan tapaan kuin edellisessä kentän piilottavassa esimerkissä voit antaa käyttäjille visuaalista palautetta. Ehkä haluat korostaa tekstin punaisella, jos annettu arvo ei ole hyväksytyllä alueella, tai ehkä haluat muuttaa latauspainikkeiden tekstin ja värin poistopainikkeeksi, kun tiedosto on ladattu. Kaikki nämä toiminnot voi suorittaa funktioilla (esim. ehdollinen If) värin ja näkyvyyden tapaisissa ominaisuuskentissä.
+Samaan tapaan kuin edellisessä kentän piilottavassa esimerkissä voit antaa käyttäjille visuaalista palautetta. Ehkä haluat korostaa tekstin punaisella, jos annettu arvo ei ole hyväksytyllä alueella, tai ehkä haluat muuttaa latauspainikkeiden tekstin ja värin, kun tiedosto on ladattu. Voit tehdä molemmat käyttämällä **If**-funktiota esim. **Väri**- tai **Näkyvissä**-ominaisuuksissa.
 
-Voit esimerkiksi käyttää If-funktiota yhdessä [IsMatch](https://docs.microsoft.com/powerapps/functions/function-ismatch)-funktion kanssa, kun haluat vaihtaa sähköpostiosoitekentän tekstin värin punaiseksi, jos käyttäjä ei kirjoittanut syöteruutuun kelvollisen muotoista sähköpostiosoitetta. Toteuta se määrittämällä TextInput1:n väriarvoksi If(IsMatch(TextInput1.Text, Email), Black, Red). TextInput1 on tässä tapauksessa kenttä, johon käyttäjä kirjoittaa sähköpostiosoitteen. IsMatch tukee lukuisia erilaisia esimääritettyjä kuvioita, kuten Email, mutta mahdollistaa myös oman kuvion luomisen. Lisätietoja ehdollisesta muotoilusta on tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
+Voit esimerkiksi käyttää **If**-funktiota yhdessä [IsMatch](functions/function-ismatch.md)-funktion kanssa, kun haluat vaihtaa sähköpostiosoitekentän tekstin värin punaiseksi, jos käyttäjä ei kirjoittanut syöteruutuun kelvollisen muotoista sähköpostiosoitetta. Voit tehdä tämän asettamalla **TextInput1**-kohdan (johon käyttäjä kirjoittaa sähköpostiosoitteen) **Väri**-arvoksi seuraavan kaavan:
+
+```If(IsMatch(TextInput1.Text, Email), Black, Red)```
+
+**IsMatch** tukee lukuisia erilaisia esimääritettyjä kuvioita, kuten Email, mutta voit luoda myös oman kuvion. Lisätietoja ehdollisesta muotoilusta on tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
 
 **Roolipohjaisen suojauksen käyttöönotto**  
-Ensimmäiseksi kannattaa harkita [DataSourceInfo](https://docs.microsoft.com/powerapps/functions/function-datasourceinfo)-funktiota. Tietolähteestä saatavat tiedot riippuvat tietolähteestä, mutta usein voit tarkistaa kaavalla DataSourceInfo(YourDataSource, DataSourceInfo.EditPermission), onko käyttäjällä tietojen muokkausoikeutta. Korvaa YourDataSource tietolähteen nimellä. Tällä funktiolla näytät lomakkeen tai painikkeen vain, jos käyttäjällä on muokkausoikeus. DataSourceInfo-funktion ohjeissa on täydellinen luettelo tiedoista, joita siinä voi kysellä.
+Ensimmäiseksi kannattaa harkita [DataSourceInfo](functions/function-datasourceinfo.md)-funktiota. Tietolähteestä saatavat tiedot vaihtelevat, mutta usein voit tarkistaa tällä kaavalla, onko käyttäjällä tietojen muokkausoikeutta (korvaa *YourDataSource* oman tietolähteesi nimellä):
 
-Jos haluat käyttää Active Directory -ryhmiä sovelluksen painikkeiden tai lomakkeiden käytön hallintaan, sinun on perehdyttävä asiaan syvemmin. Teet sen hyödyntämällä PowerAppsin joustavuutta ja luomalla oman liittimen Microsoft Graph -ohjelmointirajapinnan avulla. Tämä saattaa kuulostaa hyvin vaikealta, mutta saatavilla on vaiheittaiset [ohjeet](https://powerapps.microsoft.com/blog/implementing-role-based-permission/).
+```DataSourceInfo(YourDataSource, DataSourceInfo.EditPermission)```
+
+Tällä funktiolla lomake tai painike näytetään vain, jos käyttäjällä on muokkausoikeus. [DataSourceInfo](functions/function-datasourceinfo.md)-funktion ohjeissa on täydellinen luettelo tiedoista, joita siinä voi kysellä.
+
+Jos haluat käyttää ActiveDirectory-ryhmiä sovelluksen painikkeiden tai lomakkeiden käytön hallintaan, sinun on perehdyttävä asiaan syvemmin. Hyödynnä PowerAppsin joustavuutta ja luo oma liittimesi Microsoft Graph -ohjelmointirajapinnan avulla. Jos se kuulostaa vaikealta, katso vaiheittaiset ohjeet tästä [blogikirjoituksesta](https://powerapps.microsoft.com/blog/implementing-role-based-permission/).
 
 **Sähköpostiviestin lähettäminen sovelluksesta**  
-PowerAppsista voi lähettää sähköpostiviestin monella tapaa. Helpointa on käyttää Office 365 Outlook -liitintä. Tämän liittimen avulla voit lähettää sovelluksesta sähköpostiviestin omana itsenäsi. Voit lisäksi vastaanottaa sähköpostiviestejä ja muita sähköpostisi kanssa vuorovaikutuksessa olevia tehtäviä. Lue sähköpostin lähettämisen [ohjeet](https://docs.microsoft.com/powerapps/connections/connection-office365-outlook) tai katso tämä yhteisön [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Send-an-email-from-PowerApps/m-p/74349).
+Voit lähettää sähköpostiviestin PowerAppsista monella tavalla. Helpointa on käyttää Office 365 Outlook -liitintä. Tämän liittimen avulla voit lähettää sovelluksesta viestin omana itsenäsi. Voit lisäksi vastaanottaa sähköpostiviestejä ja muita sähköpostisi kanssa vuorovaikutuksessa olevia tehtäviä. Lue sähköpostin lähettämisen [ohjeet](connections/connection-office365-outlook.md) tai katso tämä yhteisön [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Send-an-email-from-PowerApps/m-p/74349).
 
-Jos haluat lähettää monimutkaisemman sähköpostiviestin, esimerkiksi luomalla SharePointin hyväksymistyönkulun hyväksymisketjun, kannattaa luoda Microsoft Flow -työnkulku ja yhdistää sovellus siihen. Kun yhdistät sovelluksen Microsoft Flow’hun, valjastat käyttöösi työnkulkuohjelman täydet hevosvoimat. Microsoft Flow on PowerAppsin tavoin erittäin hyvin yhteydessä ulkoisiin tietoihin ja palveluihin. Lisätietoja Microsoft PowerAppsin ja Microsoft Flow’n yhdistämisestä on näissä [ohjeissa](https://docs.microsoft.com/powerapps/using-logic-flows).
+Voit lähettää monimutkaisemman viestin (esimerkiksi osana SharePointin hyväksynnän työnkulkua) käyttämällä Microsoft Flow’ta ja yhdistämällä sovelluksen luomaasi työnkulkuun. Kun yhdistät sovelluksen Microsoft Flow’hun, valjastat käyttöösi työnkulkuohjelman täydet hevosvoimat. Microsoft Flow on PowerAppsin tavoin erittäin hyvin yhteydessä ulkoisiin tietoihin ja palveluihin. Lisätietoja Microsoft PowerAppsin ja Microsoft Flow’n yhdistämisestä on näissä [ohjeissa](using-logic-flows.md).
 
-Jos et vieläkään ole löytänyt sopivaa sähköpostivaihtoehtoa, voit hyödyntää PowerApps-liittimiä palveluille Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid tai SMTP. Yhdistettävyyshän kuuluu PowerAppsin parhaisiin puoliin.
+Jos et vieläkään ole löytänyt sopivaa sähköpostivaihtoehtoa, voit hyödyntää PowerApps-liittimiä palveluille Benchmark Email, Gmail, MailChimp, Outlook.com, SendGrid tai SMTP. Yhdistettävyys kuuluu PowerAppsin parhaisiin puoliin.
 
 **Työnkulut**  
-Yrityssovelluksista ja liiketoimintalogiikasta puhuttaessa tulee aina jossain vaiheessa esiin työnkulkuohjelma. Hyvä uutinen on se, että PowerApps-tiimi ei yrittänyt keksiä pyörää uudelleen ja luoda uutta työnkulkuohjelmaa. Sen sijaan he antoivat käyttöösi tehokkaan Microsoft Flow -palveluun yhdistävän liittimen. Nyt voit automatisoida prosesseja ja tehtäviä yli [200 erilaisella palvelulla](https://flow.microsoft.com/connectors/) tämän helppokäyttöisen työnkulkupalvelun kautta. Lisätietoja Microsoft PowerAppsin ja Microsoft Flow’n yhdistämisestä on näissä [ohjeissa](https://docs.microsoft.com/powerapps/using-logic-flows).
+Yrityssovelluksista ja liiketoimintalogiikasta puhuttaessa tulee aina jossain vaiheessa esiin työnkulkuohjelma. Hyvä uutinen on se, että PowerApps-tiimi ei yrittänyt keksiä pyörää uudelleen ja luoda uutta työnkulkuohjelmaa. Sen sijaan he antoivat käyttöösi tehokkaan Microsoft Flow -palveluun yhdistävän liittimen. Nyt voit automatisoida prosesseja ja tehtäviä yli [200 erilaisella palvelulla](https://flow.microsoft.com/connectors/) tämän helppokäyttöisen työnkulkupalvelun kautta. Lisätietoja Microsoft PowerAppsin ja Microsoft Flow’n yhdistämisestä on näissä [ohjeissa](using-logic-flows.md).
 
 **Muuttujat PowerAppsissa**  
-Muuttujien ajatellaan yleensä kuuluvan ratkaisujen luomiseen. Vaikka PowerApps tarjoaa kolmentyyppisiä muuttujia, niitä kannattaa käyttää vain pakkotilanteissa. Ajattele, että tiedon noutamisen, muuttujaan tallentamisen ja siihen muuttujaan viittaamisen sijaan voisit vain viitata suoraan tietoon. Asia on helpoin selittää Excelillä. Excelin summa ei ole muuttuja, vaan muiden kenttien summa. Joten jos haluat käyttää sen arvoa muualla laskentataulukossa, anna kenttä, jossa summa laskettiin. [Ohjeissa](https://docs.microsoft.com/powerapps/working-with-variables) on selitetty tämä kaikki erinomaisella tavalla. Pidä mieli avoinna uusille ajatustavoille.
+Muuttujien ajatellaan yleensä kuuluvan ratkaisujen luomiseen. PowerApps tarjoaa useita muuttujatyyppiä, mutta käyttää niitä vain silloin, kun se on tarpeen. Ajattele, että tiedon noutamisen, muuttujaan tallentamisen ja siihen muuttujaan viittaamisen sijaan voisit vain viitata suoraan tietoon. Ymmärrät mallin paremmin, jos vertaat sitä Exceliin. Excelissä summa ei ole muuttuja, vaan muiden kenttien summa. Joten jos haluat käyttää sen arvoa muualla laskentataulukossa, määrität solun, jossa summa laskettiin. [Ohjeissa](working-with-variables.md) on selitetty tämä kaikki erinomaisella tavalla. Pidä mieli avoinna uusille ajatustavoille.
 
-Jos silti tarvitset muuttujia (tällaisia tilanteita riittää), nämä ohjeet auttavat ymmärtämään erilaisia vaihtoehtoja. Muista, että PowerAppsissa muuttujia ei tarvitse määrittää. Muuttuja on helppo luoda määrittämällä nimi ja tallennettavan arvo jollain funktiolla. Jos haluat tarkastella luomiasi muuttujia, napsauta valikkorivillä Näytä ja valitse sitten Muuttujat. Muuttujat säilytetään muistissa ja niiden arvot häviävät, kun suljet sovelluksen. Muuttujia on kolmentyyppisiä:
+Jos silti tarvitset muuttujaa (tällaisia tilanteita riittää), nämä ohjeet auttavat ymmärtämään erilaisia vaihtoehtoja. Muista, että PowerAppsissa muuttujia ei tarvitse määrittää. Muuttuja on helppo luoda käyttämällä funktiota nimen ja tallennettavan arvon määrittämiseen. Voit tarkastella luomiasi muuttujia valitsemalla **Muuttujat** **Näkymä**-välilehdeltä. Muuttujat säilytetään muistissa ja niiden arvot häviävät, kun suljet sovelluksen. Voit luoda seuraavantyyppisiä muuttujia:
 
-- Yleiset muuttujat ovat tutuimpia. Voit määrittää muuttujan arvon [Set](https://docs.microsoft.com/powerapps/functions/function-set)-funktiolla, minkä jälkeen se on käytettävissä koko sovelluksessa. Tässä käytämme esimerkkitapausta Set(OmaMuuttuja, OmaArvo). Tämän jälkeen voit viitata OmaMuuttuja-muuttujaan sen nimellä kaikkialla sovelluksessasi.
-- Kontekstimuuttujat näkyvät ruudulla vain, jos ne on määritetty. Kun poistut näytöstä, ne nollautuvat. Niillä tallennetaan usein edelliseltä sivulta siirrettyjä tietoja tai seurataan, onko lomake esimerkiksi lähetetty. [UpdatedContext](https://docs.microsoft.com/powerapps/functions/function-updatecontext)-funktion yleinen käyttötapa UpdateContext( { Lähetetty: "true" } ) määrittää Lähetetty-muuttujan arvoksi true. Voit esimerkiksi liittää sen osaksi sivun lähetyspainiketta, jolloin voit varmistaa tietojen lähetyksen ja muuttaa kaikki kentät vain luku -kentiksi. Huomaa: Käytät merkkiä ":". Kokoelmiin tallennetaan tietotaulukoita, joita voi päivittää yksittäin. Tutustu ensimmäiseksi [Collect](https://docs.microsoft.com/powerapps/functions/function-clear-collect-clearcollect)-funktioon. Voit esimerkiksi luoda sillä ostoskorin, jossa käyttäjä merkitsee lähetettäviä SharePoint-kohteita. Katso yhteisön [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Learn-about-PowerApps-Collections/m-p/89180), joka näyttää konseptin käytännön toteutuksen.
+- Yleiset muuttujat ovat tutuimpia. Voit määrittää yleisen muuttujan arvon [Set](functions/function-set.md)-funktiolla ja valitsemalla koko sovelluksen sen käyttöalueeksi:
+
+    ```Set(YourVariable, YourValue)```
+
+    Tämän jälkeen voit viitata *OmaMuuttuja*-muuttujaan sen nimellä kaikkialla sovelluksessasi.
+
+- Kontekstimuuttujat näkyvät vain sillä ruudulla, jolla ne on määritetty. Kun poistut ruudusta, ne nollautuvat. Niillä tallennetaan usein edelliseltä sivulta siirrettyjä tietoja tai seurataan, onko lomake lähetetty. Voit määrittää kontekstimuuttujan [UpdateContext](functions/function-updatecontext.md)-funktiolla, kuten seuraavassa esimerkissä:
+
+    ```UpdateContext( { Submitted: "true" } )```
+
+    Tässä esimerkissä muuttujan arvoksi, jonka nimi on **Lähetetty**, annetaan **tosi**. Voit esimerkiksi liittää tämän kaavan lähetyspainikkeen **OnSelect**-ominaisuuteen, jolloin voit varmistaa tietojen lähetyksen ja muuttaa kaikki kentät vain luku -kentiksi.
+
+- Kokoelmiin tallennetaan tietotaulukoita, joita voi päivittää yksittäin. Käytä [Kerää](functions/function-clear-collect-clearcollect.md)-toimintoa luodaksesi ostoskorin, jossa käyttäjä merkitsee lähetettäviä SharePoint-kohteita. Katso yhteisön [video](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/Learn-about-PowerApps-Collections/m-p/89180), joka näyttää konseptin käytännön toteutuksen.
 
 **Avattavat johdannaisvalikot**  
-Avattavat johdannaisvalikot ovat erittäin hyödyllisiä. Niiden avulla voit suodattaa avattavassa valikossa näytettävät tiedot edellisessä avattavassa valikossa valitun arvon mukaan. PowerAppsissa ne luodaan usein määrittämällä sovellukselle kaksi tietolähdettä. Ensimmäisessä tietolähteessä ovat parhaillaan käsiteltävät ja päivitettävät tiedot ja toisessa säilytetään arvoja, joilla haluttu johdannaistoiminto luodaan. Alla on esimerkki toisesta tietolähteestä ja sen vaihtoehdoista.
+Avattavat johdannaisvalikot ovat erittäin hyödyllisiä, koska voit esimerkiksi suodattaa avattavan valikon vaihtoehdot edellisessä avattavassa valikossa valitun arvon perusteella. PowerAppsissa ne luodaan usein määrittämällä sovellukselle kaksi tietolähdettä. Ensimmäisessä tietolähteessä ovat parhaillaan tarkasteltavat ja päivitettävät tiedot ja toisessa säilytetään arvoja, joilla haluttu johdannaistoiminto luodaan. Tässä kuviossa näytetään esimerkki toisesta tietolähteestä ja sen vaihtoehdoista.
 
 ![Avattavat johdannaisvalikot](./media/transform-infopath/cascading-dropdowns.png)
 
-Nyt loisit ensimmäisen avattavan valikon ohjausobjektin ja käyttäisit sen Items-ominaisuudessa kaavaa Distinct(Impacts, Title). Sillä määrität, että avattavassa valikossa näkyvät vain vaihtoehdot Hinta, Ohjelman vaikutus ja Aikataulu. Sen jälkeen lisäisit toisen avattavan valikon ja määrittäisit sen Items-ominaisuudeksi kaavan Filter(Impacts,ddSelectType.Selected.Value in SCategory), jossa ddSelectType on ensimmäisen avattavan valikkoruudun nimi. Tuloksena on avattavia johdannaisvalikkoja. Lisätietoja on PowerApps-tiimin julkaisussa [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) (SharePoint: Avattavat johdannaisvalikot neljällä helpolla vaiheella!) ja tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Äläkä huoli, voit tehdä sen aivan yhtä helposti ilman SharePointia.
+Tässä esimerkissä voit lisätä avattavan valikon, jonka nimi on **ddSelectType** ja määrittää sen **Kohteet**-ominaisuudeksi seuraavan arvon:
+
+```Distinct(Impacts, Title)```
+
+Avattava valikko näyttää vain Kustannukset-, Ohjelman vaikutus- ja Ajoitus-vaihtoehdot. Sen jälkeen voit lisätä toisen avattavan valikon ja määrittää sen **Kohteet**-ominaisuudeksi seuraavan kaavan:
+
+```Filter(Impacts,ddSelectType.Selected.Value in SCategory)```
+
+Tuloksena on avattavia johdannaisvalikkoja. Lisätietoja on PowerApps-tiimin julkaisussa [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) (SharePoint: Avattavat johdannaisvalikot neljällä helpolla vaiheella!) ja tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Äläkä huoli, voit tehdä sen aivan yhtä helposti ilman SharePointia.
 
 **Älä luo yhtä jättisovellusta**  
-PowerApps voi kutsua sovelluksia toisista sovelluksista. Joten luo ryhmä sovelluksia, jotka kutsuvat toisiaan ja jopa siirtävät tietoa toisilleen. Kehittäminen on siten helpompaa ja voit jättää valtavat, juuri ja juuri koossa pysyvät InfoPath-lomakkeet taaksesi.
+PowerAppsin avulla voit kutsua sovelluksia toisista sovelluksista. Voit siis luoda ryhmän sovelluksia, jotka kutsuvat toisiaan ja jopa siirtävät tietoa toisilleen. Kehittäminen on siten helpompaa ja voit jättää valtavat, juuri ja juuri koossa pysyvät InfoPath-lomakkeet taaksesi.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-Nyt kun olet omaksunut kaikki edellä mainitut tiedot, olet valmis valloittamaan maailman yksi PowerApps-sovellus kerrallaan. Alla on joitain käteviä linkkejä, jotka voivat auttaa matkan varrella. Yksi niistä on PowerAppsin yhteisösivuston linkki. Osallistu yhteisön keskustellun ja kasvata osaamistasi paljon nopeammin kuin yksin puurtamalla.
+Nyt kun olet omaksunut PowerAppsin ja edellä kerrotut tiedot, olet valmis valloittamaan maailman sovellus kerrallaan. Alla on käteviä linkkejä, kuten PowerAppsin yhteisösivuston linkki, jotka auttavat sinua jatkossa. Osallistu yhteisön keskustellun ja kasvata osaamistasi paljon nopeammin kuin yksin puurtamalla.
 
-[**Kaavahakemisto**](https://docs.microsoft.com/powerapps/formula-reference) – Oletusfunktioiden selaaminen on erinomainen tapa hankkia lisäinspiraatiota.
+[**Kaavahakemisto**](formula-reference.md) – Oletusfunktioiden selaaminen on erinomainen tapa hankkia lisäinspiraatiota.
 
 [**PowerAppsin yhteisö**](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1) – Tutustu esimerkkeihin, keskustele muiden kanssa, kysy kysymyksiä ja vastaa muiden kysymyksiin. Auta PowerAppsin yhteisöä kasvamaan.

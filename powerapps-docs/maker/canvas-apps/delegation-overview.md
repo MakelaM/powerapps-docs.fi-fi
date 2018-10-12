@@ -1,6 +1,6 @@
 ---
-title: Tutustu delegointiin | Microsoft Docs
-description: Delegoinnin avulla voidaan käsitellä suuria tietomääriä tehokkaasti.
+title: Tutustu delegointiin pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Delegoinnin avulla voidaan käsitellä suuria tietojoukkoja tehokkaasti pohjaan perustuvassa sovelluksessa.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/05/2018
 ms.author: lanced
-ms.openlocfilehash: 484d7b1149f158840238fc3d54713a1e6e33443b
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 0ac78340f344ce42fd68d18940b1aaca41412a96
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023593"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42829747"
 ---
-# <a name="understand-delegation"></a>Tutustu delegointiin
-PowerApps sisältää tehokkaita funktioita arvotaulukoiden tietojen suodattamiseen, lajittelemiseen ja muotoilemiseen. Näitä funktioita ovat esimerkiksi **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** ja **[AddColumns](functions/function-table-shaping.md)**. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
+# <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
+PowerApps sisältää tehokkaita funktioita tietotaulukoiden suodattamiseen, lajittelemiseen ja muotoilemiseen pohjaan perustuvassa sovelluksessa. Näitä funktioita ovat esimerkiksi **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** ja **[AddColumns](functions/function-table-shaping.md)**. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
 
 Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienentäminen, joka on siirrettävä laitteeseesi. Ehkä tarvitset vain muutaman kourallisen tietueita miljoonien joukosta, ja yksittäinen koostearvo voi edustaa tuhansia tietueita. Tai ehkä vain ensimmäinen tietuejoukko voidaan hakea ja muut tuoda, kun käyttäjä ilmoittaa tarvitsevansa lisää. Keskittyneisyys voi pienentää huomattavasti sovelluksen tarvitsemaa käsittelytehoa, muistia ja verkon kaistanleveyttä. Tämän ansiosta käyttäjiesi kokemat vasteajat lyhenevät jopa matkapuhelinverkon kautta yhdistetyissä puhelimissa. 
 

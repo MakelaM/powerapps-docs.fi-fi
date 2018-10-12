@@ -1,132 +1,133 @@
 ---
-title: Sivustoon powerapps.com tutustuminen | Microsoft Docs
+title: Kirjautuminen sisään ensimmäistä kertaa | Microsoft Docs
 description: Uusi koti kaikille sovellusten tekijöille.
-author: linhtranms
+author: AFTOwen
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/28/2016
-ms.author: litran
-ms.openlocfilehash: 9c1b6bde62f0260dca7eba1d723049aadc3e72c9
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.reviewer: ''
+ms.date: 08/06/2018
+ms.author: anneta
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 3ecf468f8c1b15d20b144aa127fe31c13dba484e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195331"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42849745"
 ---
-# <a name="introduction-to-powerappscom"></a>Sivustoon powerapps.com tutustuminen
-PowerApps-tiimi esittelee uudelleen [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston sovellusten tekijöiden uutena kotina. Olemme uudistaneet sivun ja tehneet siitä sovelluskehittäjille ensisijaisen sivuston, jolla he voivat helposti aloittaa sovellusten tekemisen ja Microsoft Common Data Servicen käytön sekä hallita sovelluksiaan samassa paikassa. Tästä artikkelista saat seuraaviin aiheisiin liittyviä ohjeita:
+# <a name="sign-in-to-powerapps-for-the-first-time"></a>Kirjautuminen sisään PowerAppsiin ensimmäistä kertaa
 
-* otsikko
-* aloitussivu
-* **Sovellukset**-sivu
+Kun kirjaudut sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), sivusto tarjoaa monenlaisia vaihtoehtoja omien sovellusten luomiseen, itsesi tai muiden luomien sovellusten avaamiseen ja erilaisten tehtävien suorittamiseen. Tehtävät voivat olla hyvin yksinkertaisia, kuten oikeuksia antavien käyttöoikeuksien tunnistaminen, mutta voit suorittaa myös kehittyneempiä toimintoja, kuten luoda mukautettuja yhteyksiä tiettyihin tietolähteisiin.
 
-## <a name="header"></a>Otsikko
-Kun rekisteröidyt ja kirjaudut ensimmäisen kerran powerapps.comiin, huomaat sivuston uuden otsikon. Office-ruudukko on otsikon vasemman reunan vieressä. Täältä voit käyttää nopeasti kaikkia muita Office-tuotteita, kuten PowerPointia, OneNotea ja Wordia sekä Microsoft Flow'ta ja Dynamics 365:tä.
+Vaihtoehdot jakautuvat kolmelle yleiselle alueelle:
 
-![Otsikkoruudukko](./media/intro-maker-portal/waffle.png)
+- sivun yläosan otsikko
 
-Näet otsikon oikean laidan vieressä avattavan ympäristövalikon, jossa voit nopeasti vaihtaa ympäristöjen välillä. **Oletusympäristö** on todennäköisesti valittu oletuksena. [Lue lisätietoja ympäristöistä](../../administrator/environments-overview.md).
+    ![Otsikko](media/intro-maker-portal/header.png)
 
-![Otsikkoympäristö](./media/intro-maker-portal/environment.png)
+- sivun vasemman laidan siirtymispalkki
 
-Avattavan ympäristöluettelon vieressä on latauskuvake. Napsauta tai napauta tätä kuvaketta, jolloin avautuu valintaikkuna, jossa on linkit PowerApps Mobilen lataamiseksi (iOS- tai Android-laitteisiin).
+    ![Siirtymispalkki](media/intro-maker-portal/nav-bar.png)
 
-![Otsikon lataaminen](./media/intro-maker-portal/downloads2.png)
+- sivun keskiosan suuret kuvakkeet
 
-Lataa-kuvakkeen vieressä on rataskuvake asetuksia varten. Napsauttamalla tai napauttamalla kuvaketta näet yhteyksien, yhdyskäytävien ja hallintakeskuksen linkit.
+    ![Aloitussivun keskialue](media/intro-maker-portal/center-area.png)
 
-![Otsikon asetukset](./media/intro-maker-portal/settings_items2.png)
+Aloita varmistamalla, että aloitussivu on määritetty oikealle ympäristölle.
 
-Asetusten vieressä on ohjetta tarkoittava kysymysmerkkikuvake. Napsauta tai napauta tätä kuvaketta, niin saat näkyviin linkit ohjattuun oppimiseen, dokumentaatioon, tukeen, blogeihin, juridisiin tietoihin ja tietosuojaan.
+## <a name="choose-an-environment"></a>Ympäristön valitseminen
 
-![Otsikon ohje](./media/intro-maker-portal/help_items2.png)
+Kun luot sovelluksen, työnkulun, tietoyhteyden tai entiteetin Common Data Service for Appsissa, suurin osa PowerAppsissa tehtävistä toimista rajoittuu tiettyyn ympäristöön. Ympäristöt luovat rajoja erityyppisille töille. Esimerkiksi organisaatiolla voi olla erilliset ympäristöt eri osastoille. Monet organisaatiot käyttävät ympäristöjä vielä kehitteillä olevien sovellusten erottamiseen jo laajaan käyttöön valmiista sovelluksista. Sinulla voi olla käyttöoikeus useisiin ympäristöihin tai esimerkiksi vain yhteen. Voit luoda omia ympäristöjäsi, jos sinulla on siihen asianmukaiset oikeudet.
 
-## <a name="homepage"></a>Aloitussivu
-Kun olet kirjautunut sivustoon [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), siirryt oletuksena aloitussivulle. Olemme muuttaneet aloitussivun asettelua, jotta pääset nopeasti alkuun, kun esimerkiksi luot sovelluksia tai haluat tutustua Common Data Serviceen.
+Otsikon oikealla puolella oleva ympäristövalitsin näyttää nykyisen ympäristön.
 
-Jos olet kirjautunut PowerAppsiin aiemmin ja suorittanut tai luonut sovelluksia, ensimmäinen näkemäsi osio aloitussivulla on luettelo **viimeaikaisista sovelluksista**. Ne on lajiteltu sen päivämäärän mukaan, jolloin ne avattiin viimeksi.
+![Ympäristövalitsin](media/intro-maker-portal/environment-switcher.png)
 
-![Viimeaikaiset sovellukset](./media/intro-maker-portal/recentapps2.png)
+Jos luot sovelluksen tietyssä ympäristöstä, et voi nähdä sitä toisesta ympäristöstä käsin. Lisäksi henkilöt, jotka haluavat suorittaa sovelluksesi, tarvitsevat käyttöoikeuden ympäristöön, jossa sen loit.
 
-Oikean yläkulman vieressä on suoraan **Sovellukset**-sivuun linkittävä **Sovellukset**-nuoli, jotta näet kaikki sovelluksesi.
+> [!IMPORTANT]
+> Varmista, että olet oikeassa ympäristössä, *ennen* kuin luot sovelluksen, työnkulun tai vastaavan osan. Osia ei voi helposti siirtää yhdestä ympäristöstä toiseen.
 
-Jos et ole koskaan kirjautunut sisään, luonut sovellusta tai suorittanut sovellusta, et näe **Viimeaikaiset sovellukset** -osiota. Näkyviin tulee sen sijaan **Luo sovellus** -palkki.
+Lisätietoja on kohdassa [Ympäristöjen yleiskatsaus](../../administrator/environments-overview.md).
 
-![Sovelluksen luominen](./media/intro-maker-portal/createapp.png)
+## <a name="choose-an-app-type"></a>Sovelluksen tyypin valitseminen
 
-Napsauta tai napauta **Aloittaminen** tässä palkissa, jolloin näkyviin tulevat vaihtoehdot sovelluksen luomiseen **PowerApps Studion** avulla.
+PowerAppsissa voit luoda ja suorittaa seuraavantyyppisiä sovelluksia:
 
-![Luo modaalinen sovellus](./media/intro-maker-portal/createmodal2.png)
+- **Pohjaan perustuvat sovellukset** tukevat mukautetun käyttöliittymän suunnittelua ja yhteyden muodostamista useissa lähteissä oleviin tietoihin.
+- **Mallipohjaisissa sovelluksissa** on vakiokäyttöliittymä ja ne muodostavat yhteyden vain Common Data Service (CDS) for Appsissa oleviin tietoihin. Niissä voit kuitenkin helpommin luoda muita elementtejä, kuten näkymiä, koontinäyttöjä ja erityyppisiä liiketoimintalogiikkoja.
 
-**Aloittaminen**-kohdan vieressä on linkkejä opetusvideoihimme, joiden avulla luot sovelluksen tiedoista nopeasti (SharePointissa tai PowerAppsissa) ja voit sitten jakaa sen. **Lisätietoja**-nuolilinkki vie sinut aiheeseen, joka liittyy sovelluksen luomiseen olemassa olevista tiedoista.
+Oletusarvoisesti **aloitussivulla** näytetään pohjaan perustuvien sovellusten luomisen ja suorittamiseen tarvittavat valinnat. Jos haluat nähdä sen sijaan mallipohjaisten sovellusten valinnat, valitse ympäristö, jossa on CDS for Apps -tietokanta. Avaa sitten vasemman alakulman valikko.
 
-**Luo sovellus** -bannerin alla on **Käytä Microsoft Common Data Serviceä** -palkki.
+![Pohjaan perustuvien ja mallipohjaisten sovellusten välillä vaihtaminen](media/intro-maker-portal/mode-switcher.png)
 
-![Microsoft Common Data Service](./media/intro-maker-portal/cds2.png)
+## <a name="play-or-edit-an-app"></a>Sovelluksen toistaminen tai muokkaaminen
 
-**Common Data Service** -kohdassa näkyvä painike vaihtelee käyttöoikeutesi tai käyttölupasi mukaan.
+Jos olet jo luonut sovelluksen (tai sen on luonut joku muu ja jakanut sinulle), voit toistaa tai muokata sitä **Sovellukset**-sivulla.
 
-* Jos **Aloita kokeilu** -painike tulee näkyviin, sinulla ei ole PowerApps P2 -käyttöoikeutta, jota Common Data Service edellyttää. Napsauta tai napauta painiketta avataksesi sivun, jolla voit rekisteröityä tämän käyttöoikeuden ilmaiseen 90 päivän kokeiluversioon. [Lue lisätietoja PowerAppsin käyttöoikeuksista](../signup-for-powerapps.md).
-* Jos **Aloittaminen**-painike on näkyvissä, olet ympäristössä, jossa ei ole Common Data Service -tietokantaa, tai sinulla ei ole käyttöoikeutta siihen. Napsauta tai napauta tätä painiketta luodaksesi ympäristön ja tietokannan heti, jotta voit aloittaa Common Data Servicen käytön sovelluksissasi. [Lue lisätietoja ympäristöjen luomisesta](../../administrator/environments-administration.md).
-  
-    ![Ympäristön ja tietokannan luominen](./media/intro-maker-portal/createenvanddb2.png)
-  
-    Jos et halua luoda ympäristöä, voit vaihtaa ympäristöön, johon sinulla on käyttöoikeus.
-* Jos **Luo tietokanta** -painike on näkyvissä, olet ympäristössä, jossa ei ole Common Data Service -tietokantaa, mutta sinulla on oikeus luoda sellainen.
-  
-    ![Luo tietokanta](./media/intro-maker-portal/cds-createdb2.png)
-  
-    Tämän painikkeen napsauttaminen tai napauttaminen valmistelee tietokannan tätä ympäristöä varten.
-  
-    ![Luo tietokanta](./media/intro-maker-portal/cds_createdb22.png)
-* Jos **Selaa entiteettejä** -painike on näkyvissä, olet ympäristössä, johon on jo valmisteltu Common Data Service -tietokanta, johon sinulla on käyttöoikeus. Avaa **Entiteetit**-sivu napsauttamalla tai napauttamalla kyseistä painiketta.
-  
-    ![Luo tietokanta](./media/intro-maker-portal/cds_browseentities2.png)
+- Voit etsiä pohjaan perustuvan sovelluksen käyttämällä suodatusehtoja, kuten äskettäin avatut sovellukset.
 
-**Käytä Microsoft Common Data Serviceä** -palkin alla näet esimerkkisovelluksia ja yhdistettyjä esimerkkisovelluksia, jotka olemme luoneet käyttöösi.
+    ![Luettelo pohjaan perustuvista sovelluksista](media/intro-maker-portal/org-apps.png)
 
-* **Esimerkkisovellukset** – esimerkkisovellukset on luotu erilaisia yrityskäyttötilanteita varten puhelin- tai tablet-asettelulle. Napsauttamalla sovellusta näet nopeasti kuvauksen sovelluksen toiminnasta, mille asettelulle sovellus on luotu ja mitä ominaisuuksia sovellus sisältää (esimerkiksi kamera, GPS tai valintanapit). Tämä on uusille käyttäjille nopea tapa oppia PowerAppsin ominaisuudet. Voit myös käyttää mallia samanlaisen sovelluksen luomiseksi PowerApps Studiossa.
-  
-    ![Esimerkkisovellukset](./media/intro-maker-portal/sampleapps2.png)
-* **Yhdistetyt esimerkkisovellukset** – Nämä sovellukset muodostavat tietoihisi yhteyden tietoyhteyden, kuten Office 365:n, Salesforcen, Trellon tai Wunderlistin, kautta. Tämä sovellussarja eroaa yllä olevista esimerkkisovelluksista. Kun napsautat tai napautat yhdistettyä esimerkkisovellusta, valmistelet itse asiassa uuden esiintymän sovelluksesta (voit ajatella sitä mallina). Se pyytää antamaan tunnistetiedot tietoihisi yhdistämistä varten. Yhdistetyn esimerkkisovelluksen paras ominaisuus on se, että esiintymä valmistellaan tässä. Tämän jälkeen voit avata sen PowerApps Studiossa oppiaksesi, miten vastaava sovellus luotiin. Huono puoli on se, että luominen voi kestää kauan (jopa minuutin). Ole kärsivällinen ja anna selaimen avautua, kun napsautat tai napautat yhdistettyä esimerkkisovellusta.
-  
-    ![Yhdistetyt esimerkkisovellukset](./media/intro-maker-portal/connectedsampleapps2.png)
+    Voit myös etsiä sovellusta kirjoittamalla yhden tai useamman merkin hakukenttään oikean yläkulman lähellä. Kun löydät haluamasi sovelluksen, ellipsikuvaketta napsauttamalla näet vaihtoehdot sovelluksen toistamiseen tai muokkaamiseen.
 
-## <a name="new-apps-page"></a>Uudet sovellukset -sivu
-Voit käyttää **Sovellukset**-sivua [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivuston vasemmassa siirtymispalkissa.
+    ![Ellipsivalikko](media/intro-maker-portal/ellipsis-menu.png)
 
-![Vasemmalle siirtyminen](./media/intro-maker-portal/leftnav2.png)
+- Et voi suodattaa mallipohjaisten sovellusten luetteloa, mutta voit myös etsiä sovellusta kirjoittamalla yhden tai useamman merkin hakukenttään oikean yläkulman lähellä. Kun löydät haluamasi sovelluksen, ellipsikuvaketta napsauttamalla näet vaihtoehdot sovelluksen toistamiseen tai muokkaamiseen.
 
-**Sovellukset**-sivu antoi aiemmin sinun vaihdella ruutunäkymän ja luettelonäkymän välillä. 26.10.2016 jälkeen se tukee vain luettelonäkymää.
+    ![Mallipohjaisten sovellusten luettelo ja avoin ellipsivalikko](media/intro-maker-portal/model-driven-list.png)
 
-![Sovellukset-luettelonäkymä](./media/intro-maker-portal/listview2.png)
+## <a name="create-an-app"></a>Sovelluksen luominen
 
-Huomaa, että luettelonäkymä näyttää vain valitun ympäristön sovellukset. Näet sovellukset eri ympäristössä vaihtamalla ympäristöä otsikossa olevan vaihtotoiminnon avulla. [Lue lisätietoja ympäristöjen vaihtamisesta](working-with-environments.md).
+**Aloitussivulla** voit luoda sovelluksia useilla eri tavoilla:
 
-## <a name="whats-new"></a>Uudet ominaisuudet
+- [luo pohjaan perustuva sovellus automaattisesti tietojoukosta](data-platform-create-app.md)
+- [mukauta pohjaan perustuvan sovelluksen valmiiksi luotua mallia](open-and-run-a-sample-app.md)
+- [luo pohjaan perustuva sovellus tyhjästä näytöstä lähtien](data-platform-create-app-scratch.md)
+- [luo oma mallipohjainen sovellus](../model-driven-apps/overview-model-driven-samples.md)
+- [mukauta mallipohjaisen sovelluksen valmiiksi luotua mallia.](../model-driven-apps/build-first-model-driven-app.md)
 
-* Sovelluksen napsauttaminen tai napauttaminen avaa sen nyt PowerApps Studiossa uudessa välilehdessä.
-* Oletusarvoisesti **Sovellukset**-sivu näyttää kaikki sovellukset, joihin sinulla on muokkausoikeus. Näet **Kaikki sovellukset** (myös sovellukset, joita voit vain käyttää) valitsemalla **Kaikki sovellukset** -suodattimen.
-  
-   ![Sovellukset-suodatin](./media/intro-maker-portal/allapps_filter.png)
+## <a name="learn-more"></a>Lue lisätietoja
 
-Tarjoamme myös seuraavat:
+Saat lisätietoja joko pohjaan perustuvista tai mallipohjaisista sovelluksista kahdella tavalla:
 
-* **Sovellukset joita voin käyttää** listaa kaikki Käyttäjä-käyttöoikeudella kanssasi jaetut sovellukset (sovellus voidaan vain suorittaa). Huomaa, että voit hankkia nämä sovellukset myös [Dynamics 365:ssä](http://home.dynamics.com).
-* **Omistamani sovellukset** listaa kaikki luomasi sovellukset.
-* **Sovellukset joihin osallistun** listaa kaikki Osallistuja-käyttöoikeudella kanssasi jaetut sovellukset.
-* **Esimerkkisovellukset** listaa kaikki esimerkkisovellukset (ei yhdistettyjä esimerkkisovelluksia).
+- Valitse vasemmassa siirtymispalkissa **Lisätietoja**.
+- Valitse otsikon kysymysmerkkikuvake.
 
-Jos napsautat tai napautat tietoympyrää, sovelluksen tietosivu avautuu.
+    ![Mallipohjaisten sovellusten luettelo ja avoin ellipsivalikko](media/intro-maker-portal/help-icon.png)
 
-![Sovelluksen tiedot](./media/intro-maker-portal/ibubble.png)
+Molemmilla tavoilla näet linkkejä tähän dokumentaatioon, PowerApps-yhteisöön (jossa voit jakaa tietoja muiden organisaatioiden käyttäjien kanssa) ja PowerApps-blogiin (jossa ilmoitetaan uusimmista ominaisuuksista).
 
-Jos napsautat sovelluksen kolmea pistettä, näet vaihtoehdot, kuten Toista, Muokkaa, Jaa ja Tiedot.
+## <a name="other-common-tasks"></a>Muita yleisiä tehtäviä
 
-![Sovelluksen asetukset](./media/intro-maker-portal/ellipsis.png)
+Otsikon ja vasemman siirtymispalkin vaihtoehdoilla voit tehdä paljon muutakin kuin luoda ja avata sovelluksia.
 
-Tässä olivat tärkeimmät uudet ominaisuudet sovellusten tekijöille suunnatussa powerapps.com-sivustossa. Toivomme, että tästä on sinulle hyötyä. Jätä kommentteja siitä, mistä pidät tähän mennessä ja mitä haluaisit nähdä. Otamme palautteesi mielellämme vastaan!
+### <a name="from-the-header"></a>Otsikon kautta
 
+- Valitsemalla alanuolen voit ladata mobiili- ja muita asiakasohjelmia, joissa voit suorittaa sovelluksia.
+
+    Lisätietoja on ohjeaiheessa [Etsi ja suorita sovelluksia](../../user/index.md).
+
+- Valitsemalla rataskuvakkeen voit esimerkiksi muodostaa yhteyden tietolähteisiin, tarkastella PowerApps-käyttöoikeuksia ja avata sivun, jolla voit suorittaa hallintatehtäviä.
+
+    Lisätietoja saat näistä ohjeaiheista:
+
+  - [Pohjaan perustuvien sovellusten liittimien yleiskatsaus](connections-list.md)
+  - [Pohjaan perustuvien sovellusten mukautettujen liittimien luominen ja sertifiointi](register-custom-api.md)
+  - [Paikallisen tietoyhdyskäytävän hallitseminen](gateway-management.md)
+  - [PowerAppsin hallitseminen](../../administrator/index.md)
+  - [Käyttöoikeuksien yleiskatsaus](../../administrator/pricing-billing-skus.md)
+  - [Yleiskatsaus mallipohjaisen sovelluksen luomiseen](../model-driven-apps/model-driven-app-overview.md)
+
+### <a name="from-the-left-navigation-bar"></a>Vasemman siirtymispalkin kautta
+
+Laajentaa sovellustesi toimintoja suorittamalla seuraavia tehtäviä:
+
+- Hallitse entiteettejä, asetusjoukkoja ja tietojen integrointia [Common Data Service for Appsissa](../common-data-service/data-platform-intro.md).
+- Määritä liiketoimintalogiikka [Microsoft Flow’ssa](https://docs.microsoft.com/flow/getting-started).
+- Kehitä, paketoi ja ylläpidä [ratkaisuja](../../developer/common-data-service/introduction-solutions.md).

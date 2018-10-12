@@ -1,6 +1,6 @@
 ---
-title: Yhteyden luominen PowerAppsista SharePointiin | Microsoft Docs
-description: Luo powerapps.comissa yhteys SharePointiin sovelluksen automaattista luontia varten tai luomiseen alusta alkaen.
+title: Yhteyden muodostaminen pohjaan perustuvasta sovelluksesta SharePointiin | Microsoft Docs
+description: Muodosta PowerAppsissa yhteys SharePointiin pohjaan perustuvan sovelluksen automaattista luontia varten tai luomiseen alusta alkaen.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/03/2016
 ms.author: anneta
-ms.openlocfilehash: 0e0b98277548d188071bcd29b9e3168de5818321
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 170115f07da57878c553a1776fc26a9cd27a8258
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195860"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42844151"
 ---
 # <a name="create-a-connection-to-sharepoint-from-powerapps"></a>Yhteyden luominen PowerAppsista SharePointiin
-Luo yhteys joko SharePoint Onlineen tai paikalliseen SharePointiin, jotta voit luoda sovelluksen automaattisesti tai alusta alkaen.
+Luo yhteys joko SharePoint Onlineen tai paikalliseen SharePointiin, jotta voit luoda pohjaan perustuvan sovelluksen automaattisesti tai alusta alkaen.
 
 Jos et tunne PowerAppsia, katso [PowerAppsin esittely](getting-started.md).
 

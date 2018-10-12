@@ -1,6 +1,6 @@
 ---
 title: Mallipohjaisten sovellusten lokalisoitavan tekstin kääntäminen | MicrosoftDocs
-description: 'Tietoja lokalisoitavan tekstin kääntämisestä niin, että se tukee useita kieliä'
+description: Ota selvää, miten voit käännättää lokalisoitavan tekstin useiden kielten tukemiseksi.
 ms.custom: ''
 ms.date: 06/03/2018
 ms.reviewer: ''
@@ -9,126 +9,127 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 author: Mattp123
 ms.assetid: 3d77d149-819b-45e6-8e70-1fbe54d5c153
 caps.latest.revision: 19
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: e2e305313f3b86be2ea410f6668676b56aa79d95
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39674616"
 ---
 # <a name="translate-localizable-text-for-model-driven-apps"></a>Mallipohjaisten sovellusten lokalisoitavan tekstin kääntäminen
 
-Jos olet mukauttanut entiteetin tai kentän tekstiä, esimerkiksi kentän otsikkoa tai avattavan luettelon arvoja, voit antaa käyttäjille mahdollisuuden käyttää mukautettuja tekstejä heidän ensisijaisella kielellään ympäristön asennuskielen sijaan. 
+Jos olet mukauttanut entiteettien tai kenttien tekstiä, kuten kenttien otsikoita tai avattavan valikon arvoja, voit tarjota nämä mukautetut tekstit sellaisten käyttäjien omilla kielillä, jotka eivät käytä ympäristösi peruskieliversiota. 
 
-Prosessi sisältää seuraavat vaiheet:
-1. Muiden kielten ottaminen käyttöön ympäristössä
-2. Lokalisoitavan tekstin vieminen
-3. Lokalisoitavan tekstin kääntäminen
-4. Lokalisoidun tekstin tuominen
+Prosessissa on seuraavat vaiheet:
+1. Ota muita kieliä käyttöön ympäristössäsi
+2. Vie lokalisoitava teksti
+3. Käännätä lokalisoitava teksti
+4. Tuo lokalisoitu teksti
 
-## <a name="enable-other-languages-for-your-environment"></a>Muiden kielten ottaminen käyttöön ympäristössä
+## <a name="enable-other-languages-for-your-environment"></a>Ota muita kieliä käyttöön ympäristössäsi
 
-Jos et ole vielä ottanut kieliä käyttöön ympäristössä, voit ottaa ne käyttöön kohdan [Kielen käyttöönotto](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) vaiheiden avulla.
+Jos et ole vielä ottanut kieliä käyttöön ympäristössäsi, se tapahtuu ohjeaiheessa [Kielen ottaminen käyttöön](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) kuvatulla tavalla.
 
 > [!IMPORTANT]
-> Kunkin kielen käyttöönotto voi kestää useita minuutteja. Tänä aikana ympäristön muut käyttäjät eivät voi käyttää sovellusta. Ota kielet käyttöön silloin, kun siitä on vähiten haittaa muille käyttäjille.
+> Kunkin kielen käyttöönotossa voi kestää useita minuutteja. Tänä aikana ympäristön muut käyttäjät eivät ehkä voi käyttää sovellustasi. Kieliä tulisi ottaa käyttöön sellaisina aikoina, kun siitä on vähiten haittaa käyttäjille.
 
 > [!TIP]
-> Kun otat käyttöön kieliä, ota huomioon kunkin kielen käytössä olevat LCID-arvot. Arvo näyttää lokalisoitavan tekstin vietyjen tietojen kielen. Kielikoodit ovat neli- tai viisinumeroisia aluekohtaisten asetusten tunnuksia. Kelvolliset aluekohtaisten asetusten tunnusten arvot löytyvät [Locale ID (LCID) -kaaviosta)](http://go.microsoft.com/fwlink/?LinkId=122128).
+> Kun otat kieliä käyttöön, ota ylös jokaiselle kielelle käytetyt LCID-arvot. Tämä arvo merkitsee kieltä lokalisoitavan tekstin viedyissä tiedoissa. Kielikoodit ovat neli- tai viisinumeroisia aluekohtaisten asetusten tunnuksia. Kelvolliset aluetunnukset löydät ohjeaiheesta [Aluekohtaisten asetusten tunnusten (LCID) kaavio](http://go.microsoft.com/fwlink/?LinkId=122128).
 
-## <a name="export-the-localizable-text"></a>Lokalisoitavan tekstin vieminen
+## <a name="export-the-localizable-text"></a>Vie lokalisoitava teksti
 
-Vietävän lokalisoitavan tekstin vaikutusalue on hallitsematon ratkaisu, joka sisältää lokalisoitavan tekstin. Tämä voidaan tehdä vain ratkaisunhallinnan avulla
+Vietävän lokalisoitavan tekstin alueen muodostaa hallitsematon ratkaisu, joka sisältää lokalisoitavan tekstin. Tämän voi tehdä vain Ratkaisunhallinnassa.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-Avaa hallitsematon ratkaisu, joka sisältää lokalisoitavan tekstin. Valitse valikkorivillä **Käännökset** > **Vie käännökset**. 
+Avaa lokalisoitavan tekstin sisältävä hallitsematon ratkaisu valikkoriviltä valitsemalla **Käännökset** > **Vie käännökset**. 
 
-![Käännösten vieminen](media/export-localizable-text.png)
+![Vie käännökset](media/export-localizable-text.png)
 
-Näkyviin tulee seuraavat tiedot sisältävä ilmoitus:
-> Käännöksen mukautettujen otsikoiden vieminen voi kestää useita minuutteja. Valitse vientilinkki uudelleen vasta sitten, kun ensimmäinen vienti on valmis. Haluatko varmasti suorittaa viennin nyt? 
+Näet seuraavan ilmoituksen:
+> Mukautettujen otsikoiden vieminen käännettäväksi voi kestää useita minuutteja. Älä napsauta vientilinkkiä uudelleen, ennen kuin ensimmäinen vientitoiminto on päättynyt. Haluatko varmasti suorittaa viennin nyt? 
 
 Valitse **OK**, jos haluat jatkaa.
 
-Kun vienti on tehty, latauskansiossa on tiedosto, jonka nimi on `CrmTranslations_{0}_{1}.zip` tai vastaava. `{0}` on ratkaisun yksilöllinen nimi ja `{1}` ratkaisun version numero.
+Kun vienti on valmis, löydät Ladatut tiedostot -kansiostasi tiedoston, joka on muotoa `CrmTranslations_{0}_{1}.zip`. Nimessä `{0}` on ratkaisun yksilöivä nimi ja `{1}` ratkaisun versionumero.
 
-## <a name="get-the-localizable-text-translated"></a>Lokalisoitavan tekstin kääntäminen
+## <a name="get-the-localizable-text-translated"></a>Käännätä lokalisoitava teksti
 
-Voit lähettää tämän tiedoston kääntäjälle, käännöstoimistoon tai lokalisointiyritykseen.
+Voit lähettää tämän tiedoston kääntäjälle, käännöstoimistolle tai lokalisointiyritykselle.
 
-Jos osaat kääntää teksti tai jos haluat vain nähdä muodon, voit purkaa viedyn zip-tiedoston. Se sisältää kaksi XML-tiedostoa. 
+Jos pystyt kääntämään tekstin itse tai haluat vain tarkastella sen muotoa, voit purkaa viemäsi tiedoston. Se sisältää kaksi XML-tiedostoa. 
  - `[Content_Types].xml`
  - `CrmTranslations.xml`
 
-Voit avata CrmTranslations.xml-tiedoston Microsoft Office Excelissä.
+CrmTranslations.xml-tiedoston voi avata Microsoft Office Excelissä.
 
 > [!TIP]
-> Jos et yleensä avaa XML-tiedostoja Excelissä, voi olla helpoin avata Excel ja avata tiedosto liittämällä puretun CrmTranslations.xml-tiedoston polku.
+> Jos et normaalisti avaa XML-tiedostoja Excelissä, avaa ensin Excel ja avaa sitten tiedosto liittämällä polku purettuun CrmTranslations.xml-tiedostoon.
 
 > [!IMPORTANT]
-> Varmista, että tiedostomuotoa ei muuteta. Jos tallennat tiedoston jossakin toisessa muodossa, et voi tuoda sitä takaisin.
+> Älä muuta tiedostomuotoa. Jos tallennat tiedoston toisessa muodossa, sitä ei voi tuoda takaisin.
 
-Kun tarkastelet tietoja Excelissä, valitse **Lokalisoidut otsikot** -välilehti.
+Kun tiedosto on avoinna Excelissä, tutustu **Lokalisoidut otsikot** -välilehteen.
 
 ![Lokalisointia varten viety teksti](media/localized-labels-tab-exported-languages.png)
 
-Kaikissa mukautetuissa entiteeteissä ja kentissä on tyhjiä soluja lokalisoitavaa tekstiä varten. Lisää näihin kohteisiin lokalisoidut arvot.
+Mukautettuja entiteettien tai kenttien lokalisoitavia tekstejä edustavat tyhjät solut. Lisää lokalisoidun arvot näille kohteille.
 
 > [!NOTE]
-> Jos olet muuttanut vakioentiteetin tai entiteettikentän näyttönimeä tai kuvausta, lokalisoidut merkkijonot vastaavat yhä alkuperäisen arvon käännöksiä. Nämä tulee lokalisoida uutta arvoa vastaaviksi.
+> Jos olet muuttanut jonkin vakioentiteetin tai entiteettikentän näyttönimeä tai kuvausta, lokalisoidut merkkijonot ovat edelleen alkuperäisten arvojen käännöksiä. Ne tulisi lokalisoida vastaamaan uusia arvoja.
 
-**Näyttömerkkijonot**-välilehti sisältää tekstin, joka näytetään muissa käyttöliittymäelementeissä, kuten valintanauhan komennoissa, virhesanomissa ja lomakkeen otsikoissa.
+**Näyttömerkkijonot**-välilehti sisältää tekstin, joka näytetään muille käyttöliittymän elementeille, kuten valintanauhan komennoille, virhesanomille ja lomakkeen otsikoille.
 
-### <a name="updating-localizable-text-in-the-base-language"></a>Lokalisoitavan tekstin päivittäminen asennuskielellä
+### <a name="updating-localizable-text-in-the-base-language"></a>Peruskielen lokalisoitavan tekstin päivittäminen
 
-Jos muutat minkä tahansa erityissanoman osana olevan vakioentiteetin tai entiteettikentän näyttönimeä, voit päivittää **Näyttömerkkijonot**-välilehden tiedot käyttämään mukautettua nimeä.
+Jos muutat sellaisen vakioentiteetin tai entiteettikentän näyttönimeä, joka sisältyy erikoisviestiin, voit käyttää mukauttamaasi nimeä päivittämällä **Näyttömerkkijonot**-välilehden tiedot.
 
 > [!TIP]
-> Vaikka järjestelmäentiteettisanomien muokkauksessa käytettävä käyttöliittymä sisältää useita viittauksia entiteettien nimiin, se ei sisällä niitä kaikkia. Tämän tekniikan avulla voit löytää niitä lisää. Lisätietoja: [Järjestelmän entiteettisanomien muokkaaminen](../common-data-service/edit-system-entity-messages.md)
+> Järjestelmän entiteettiviestien muokkaamista varten näytetty käyttöliittymä sisältää lukuisia viittauksia entiteettinimiin, mutta se ei sisällä niitä kaikkia. Käyttämällä tätä tekniikkaa saatat löytää niitä enemmän. Lisätietoja: [Järjestelmän entiteettiviestien muokkaaminen](../common-data-service/edit-system-entity-messages.md)
 
-Jos esimerkiksi muutat Asiakas-entiteetin näyttönimeksi *Yritys*, voit hakea **Näyttömerkkijonot**-kohdan asennuskielen sarakkeesta seuraavia vastaavuuksia: `account`, `accounts`, `Account` ja `Accounts`. Tämän jälkeen voit korvata vastaavat soveltuvat kohdat seuraavista: `company`, `companies`, `Company` ja `Companies`.
+Jos esimerkiksi muutat Account-entiteetin näyttönimeksi *Company*, hae **Näyttömerkkijonot**-välilehden peruskielisarakkeesta osumat `account`, `accounts`, `Account` ja `Accounts`. Muuta ne samassa järjestyksessä arvoiksi `company`, `companies`, `Company` ja `Companies`.
 
 > [!IMPORTANT]
-> Älä tee tiedostossa yleistä etsi ja korvaa -toimintoa. Varmista, että vastaavat teksti todella viittaa muutettuihin nimiin.
+> Älä tee tätä yleisellä Etsi ja korvaa -toiminnolla. Varmista, että vastaava teksti todella viittaa muuttamiisi nimiin.
 
 
-## <a name="import-the-localized-text"></a>Lokalisoidun tekstin tuominen
-Tekstin tuominen vaatii tiedostojen pakkaamisen ja niiden tuomisen järjestelmään.
+## <a name="import-the-localized-text"></a>Tuo lokalisoitu teksti
+Tekstin tuominen edellyttää tiedostojen pakkaamista ja tuomista järjestelmään.
 
-### <a name="compress-the-files"></a>Tiedostojen pakkaaminen
+### <a name="compress-the-files"></a>Pakkaa tiedostot
 
-Kun `CrmTranslations.xml`-tiedostoon on tehty muutokset, se on pakattava yhdessä `[Content_Types].xml`-tiedoston kanssa zip-muotoon. Valitse *molemmat tiedostot* ja valitse sitten hiiren oikeanpuoleinen painike. Näyttöön avautuu pikavalikko. Valitse pikavalikosta **Lähetä kohteeseen** > **Pakattu kansio (zip-tiedosto)**.
+Kun muutokset on tehty tiedoston `CrmTranslations.xml`, se on pakattava zip-muotoon yhdessä tiedoston `[Content_Types].xml` kanssa. Valitse *molemmat tiedostot* ja avaa sitten pikavalikko hiiren kakkospainikkeella. Valitse pikavalikosta **Lähetä kohteeseen** > **Pakattu kansio (zip-tiedosto)**.
 
-### <a name="import-the-files"></a>Tiedostojen tuominen
+### <a name="import-the-files"></a>Tuo tiedostot
 
-Siirry samaan hallitsemattomaan ratkaisuun, josta veit käännökset, ja valitse pikavalikossa **Käännökset** > **Tuo käännökset**. 
+Valitse **Käännökset** > **Tuo käännökset** saman hallitsemattoman ratkaisun valikosta, josta veit käännökset. 
 
-![Käännösten tuominen](media/import-translations.png)
+![Tuo käännökset](media/import-translations.png)
 
-Valitse pakatun käännetyn tekstin sisältävä tiedosto ja valitse sitten **Tuo**.
+Valitse tiedosto, joka sisältää pakatun käännetyn tekstin, ja valitse **Tuo**.
 
-![Valitun tiedoston tuominen](media/import-translated-text-dialog.png)
+![Tuo valittu tiedosto](media/import-translated-text-dialog.png)
 
-Kun käännetty teksti on tuotu, voit julkaista kaikki mukautukset ja tarkistaa sovelluksiin tehdyt muutokset.
+Kun käännetty teksti on tuotu, julkaise kaikki mukautukset, niin näet sovellukseen tai sovelluksiin tehdyt muutokset.
 
-## <a name="community-tools"></a>Yhteisön työvälineet
+## <a name="community-tools"></a>Yhteisötyökalut
 
-[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) on työkalu, jonka on kehittänyt XrmToolbox-yhteisö. Easy Translatorin avulla voit viedä ja tuoda käännökset järjestelmään tilannekohtaiset tietojen kanssa 
+[Easy Translator](https://www.xrmtoolbox.com/plugins/MsCrmTools.Translator/) on XrmToolBox-yhteisön kehittämä työkalu. Easy Translatorilla voit viedä ja tuoda käännöksiä yhdessä kontekstitiedon kanssa. 
 
 > [!NOTE]
-> Microsoft ei tue yhteisön työkaluja.
-> Jos sinulla on kysymyksiä työkalusta, ota yhteyttä julkaisijaan. Lisätietoja: [XrmToolBox](https://www.xrmtoolbox.com).
+> Microsoft ei tue yhteisön kehittämiä työkaluja.
+> Jos sinulla on kysyttävää työkalusta, ota yhteyttä sen julkaisijaan. Lisätietoja: [XrmToolBox](https://www.xrmtoolbox.com).
 
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 [Organisaation alue- ja kieliasetukset](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
-[Järjestelmäentiteetin sanomien muokkaaminen](../common-data-service/edit-system-entity-messages.md)
+[Järjestelmän entiteettiviestien muokkaaminen](../common-data-service/edit-system-entity-messages.md)
 

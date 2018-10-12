@@ -6,14 +6,20 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 08/29/2018
 ms.author: manasma
-ms.openlocfilehash: 3e954db3ed224afa100d89be6aa03d7a2139a9d7
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: e160098075b78a0a4de98da9c9915d0bef26d183
+ms.sourcegitcommit: b8eee36e680036accb0e7d9fc7a434906af1c4d2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349934"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297324"
 ---
 # <a name="environments-overview"></a>Ympäristöjen yleiskatsaus
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, sovelluksia ja työnkulkuja. Lisäksi niitä käytetään säilöinä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. Ympäristöjen hyödyntämistapa riippuu organisaatiosta ja kehitettävistä sovelluksista. Esimerkki:
@@ -22,6 +28,7 @@ Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yrity
 * Voit luoda erillisiä ympäristöjä, joihin sovellusten testi- ja tuoteversiot ryhmitellään.
 * Voit luoda erillisiä ympäristöjä, jotka vastaavat yrityksesi tiettyjä ryhmiä tai osastoja. Kukin ympäristö sisältää kullekin käyttäjäryhmälle olennaiset tiedot ja sovellukset.
 * Voit myös luoda erillisiä ympäristöjä yrityksen yleisille haaroille.  
+* Ota tulevat PowerApps-toiminnot käyttöön ennen virallista julkaisua liittymällä [PowerAppsin esiversio-ohjelmaan](preview-environments.md).
 
 ## <a name="environment-scope"></a>Ympäristön vaikutusalue
 Jokainen ympäristö luodaan Azure AD -vuokraajan alaisuudessa. Ympäristön resursseihin pääsevät käsiksi vain kyseisessä vuokraajassa olevat käyttäjät. Ympäristö sidotaan myös maantieteelliseen sijaintiin, kuten Yhdysvaltoihin. Tietyssä ympäristössä luotu sovellus reititetään vain kyseisen maantieteellisen alueen palvelinkeskuksiin. Myös ympäristössä luodut kohteet (esimerkiksi yhteydet, yhdyskäytävät ja Microsoft Flow -työnkulut) sidotaan ympäristön sijaintiin.
@@ -75,7 +82,7 @@ Oletusympäristö nimetään seuraavasti: ”{Azure AD -vuokraajan nimi} (oletus
 Voit luoda ympäristöjä eri tarkoituksiin. Kokeiluympäristö on tarkoitettu ympäristön ja tietokannan kokeiluun Common Data Service -kokemuksen kanssa. Se vanhentuu tietyn ajan kuluessa. Lisätietoja on [PowerAppsin Ympäristöjen hallinta](environments-administration.md) -osiossa.
 
 ## <a name="choosing-an-environment"></a>Ympäristön valitseminen
-Ympäristöjen myötä näet nyt uuden kokemuksen, kun saavut osoitteeseen [https://web.powerapps.com](https://web.powerapps.com).  Sovellukset, yhteydet ja muut sivustolla näytettävät kohteet suodatetaan nyt nykyisen valittuna olevan ympäristön perusteella.  Nykyinen ympäristö näytetään otsikon oikean reunan lähellä olevassa ympäristövalitsimessa. Jos haluat valita eri ympäristön, napsauta tai napauta valitsinta, jolloin näkyviin tulee luettelo käytettävissä olevista ympäristöistä. Napsauta tai napauta ympäristöä, jonka haluat ottaa käyttöön.
+Ympäristöjen myötä näet nyt uuden kokemuksen, kun saavut osoitteeseen [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  Sovellukset, yhteydet ja muut sivustolla näytettävät kohteet suodatetaan nyt nykyisen valittuna olevan ympäristön perusteella.  Nykyinen ympäristö näytetään otsikon oikean reunan lähellä olevassa ympäristövalitsimessa. Jos haluat valita eri ympäristön, napsauta tai napauta valitsinta, jolloin näkyviin tulee luettelo käytettävissä olevista ympäristöistä. Napsauta tai napauta ympäristöä, jonka haluat ottaa käyttöön.
 
 Ympäristö näytetään valitsimessa, jos jokin seuraavista ehdoista täyttyy:
 

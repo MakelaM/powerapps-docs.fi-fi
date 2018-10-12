@@ -1,6 +1,6 @@
 ---
-title: Pilvipalveluiden tietolähteiden yhteyksien lisääminen ja hallinta | Microsoft Docs
-description: Lisää, poista ja päivitä yhteyksiä tietolähteisiin, kuten SharePoint, SQL Server, OneDrive for Business, Salesforce ja Office 365
+title: Pohjaan perustuvien sovellusten yhteyksien lisääminen ja hallinta | Microsoft Docs
+description: Lisää, poista ja päivitä yhteyksiä pohjaan perustuvista sovelluksista tietolähteisiin, kuten SharePoint, SQL Server ja OneDrive for Business
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,21 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/09/2017
 ms.author: lanced
-ms.openlocfilehash: c114b803539c2d64695a0bd8c9d976d2604569eb
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: d2a7da93835e5fbe588a8683bbdb0393d5b76ee5
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39195216"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834039"
 ---
-# <a name="manage-your-connections-in-powerapps"></a>Yhteyksien hallinta PowerAppsissa
-Luo osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) yhteys PowerAppsista yhteen tai useampaan tietolähteeseen, poista yhteys tai päivitä sen tunnistetietoja.
+# <a name="manage-canvas-app-connections-in-powerapps"></a>Pohjaan perustuvien sovellusten yhteyksien hallinta PowerAppsissa
+[Powerapps.comissa](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) voit luoda yhteyden yhteen tai useampaan tietolähteeseen, poistaa yhteyden tai päivittää sen tunnistetietoja.
 
-Sovelluksesi tietoyhteys voi yhdistää SharePointiin, SQL Serveriin, Office 365:een, OneDrive for Businessiin, Salesforceen, Exceliin ja moniin muihin [tietolähteisiin](connections-list.md).
+Pohjaan perustuvan sovelluksesi tietoyhteys voi yhdistää SharePointiin, SQL Serveriin, Office 365:een, OneDrive for Businessiin, Salesforceen, Exceliin ja moniin muihin [tietolähteisiin](connections-list.md).
 
 Tämän artikkelin jälkeen seuraava vaihe on näyttää ja hallita tietoyhteydestä saatuja tietoja sovelluksessasi, kuten näissä esimerkeissä:
 

@@ -1,46 +1,46 @@
 ---
-title: Mallipohjaisen sovelluksen lomakkeen ominaisuudet PowerAppsissa | MicrosoftDocs
-description: Tietoja päälomakkeiden ominaisuuksista
+title: Mallipohjaisen sovelluksen lomakeominaisuudet PowerAppsissa | MicrosoftDocs
+description: Tutustu päälomakeominaisuuksiin
 Keywords: Main form properties; Dynamics 365
 author: Mattp123
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
 ms.assetid: 4ed30bb7-dca1-4de8-80f3-842152ea921a
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 4aec7fd8a117257d4f21ac2f692643785fd21791
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39677104"
 ---
+# <a name="model-driven-app-form-properties"></a>Mallipohjaisen sovelluksen lomakeominaisuudet 
 
-# <a name="model-driven-app-form-properties"></a>Mallipohjaisen sovelluksen lomakkeen ominaisuudet 
+Voit käyttää **lomakeominaisuuksia** ratkaisunhallinnassa. Kun olet **Osat**-kohdassa, laajenna **Entiteetit**, laajenna haluamasi entiteetti ja valitse **Lomakkeet**. Avaa lomakeluettelosta lomake, jonka tyyppi on **Pää**. Valitse sitten **Aloitus**-välilehdeltä **Lomakeominaisuudet**.
 
-Voit käyttää **lomakkeen ominaisuuksia** ratkaisunhallinnassa. Laajenna ensin **Osat**-kohdassa **Entiteetit**, sitten haluamasi entiteetti ja napsauta **Lomakkeet**. Avaa lomakeluettelosta lomake, joka tyyppi on **Pää**. Valitse sitten **Koti**-välilehdessä **Lomakkeen ominaisuudet**.
+![lomakeominaisuudet](media/form-properties.png)
 
-![form-properties](media/form-properties.png)
-
-Taulukossa on esitetty lomakeominaisuudet:  
+Lomakeominaisuudet on lueteltu seuraavassa taulukossa:  
   
-|Sarkain|Ominaisuus|Kuvaus|  
+|Välilehti|Ominaisuus|Kuvaus|  
 |---------|--------------|-----------------|  
-|**Tapahtumat**|**Lomakekirjastot**|Hallitse lomakkeessa käytettävissä olevia JavaScript-WWW-resursseja ja niiden latausjärjestystä.|  
-||**Tapahtumakäsittelijät**|Määritä, mitkä lomakekirjaston JavaScript-toiminnot suoritetaan `OnLoad`- ja `OnSave`-lomaketapahtumissa ja missä järjestyksessä ne suoritetaan.|  
-|**Näyttö**|**Lomakkeen nimi**|Kirjoita nimi, jolla on merkitystä käyttäjille. Käyttäjät näkevät tämän nimen lomaketta käytettäessä. Jos he käyttävät useita entiteettiin määritettyjä lomakkeita, lomakkeet erotetaan toisistaan tämän nimen avulla.|  
-||**Kuvaus**|Kirjoita kuvaus, joka selittää, miten tämä lomake eroaa muista päälomakkeista. Kuvaus näkyy vain ratkaisunhallinnassa entiteetin lomakeluettelossa.|  
-||**Lomakeavustaja**|Valitse valintaruutu, jos haluat ottaa lomakeavustajan käyttöön tai tarkastella lomaketta oletusarvoisesti laajennettuna.|
-||**Sivussa siirtyminen**|Voit halutessasi olla näyttämättä siirtymiskohteita.<br /><br /> Päivitettyjen entiteettien lomakkeissa tämä tarkoittaa sitä, että näytettävän tietueen arvon ensisijainen nimi ei näy siirtymispalkissa, joten sen avulla ei voi siirtyä liittyviin näkymiin.<br /><br /> Perinteistä esitystä käyttävissä lomakkeissa lomakkeen vasemmalla puolella olevat siirtymisasetukset, joilla voi valita liittyvät näkymät, eivät näy.|  
-||**Kuva**|Kun entiteetissä on kuvakenttä ja entiteetin **Ensisijainen kuva** -asetus on valittu, asetus mahdollistaa kuvakentän näyttämisen lomakkeen ylätunnisteessa.<br /><br /> Katso [Entiteetin asetusten ottaminen käyttöön tai poistaminen käytöstä](../common-data-service/edit-entities.md#enable-or-disable-entity-options), jos haluat lisätietoja entiteetin asetuksista.|  ||**Näytä**|**Määritä enimmäisleveys (kuvapisteinä)** rajoittaa lomakkeen leveyttä. Oletusarvo on 1 900.|  
-||**Näytä**|Anna tässä lomakkeen suurin leveys kuvapisteinä.|
-|**Parametrit**|**Parametrit**|Kukin lomake voidaan avata koodilla (URL-osoitteella). URL-osoite voi sisältää myös tietoja, jotka voidaan välittää lomakkeeseen käyttämällä URL-osoitteeseen liitettyä kyselymerkkijonoa. Kyselymerkkijono voi olla esimerkiksi tällainen:<br />`?p_firstName=Jim&p_lastName=Daly`<br /><br /> Tietoturvasyistä lomakkeet eivät hyväksy tuntemattomia kyselymerkkijonoparametreja. Tällä parametriluettelolla voit määrittää parametrit, jotka lomake hyväksyy tukemaan koodia, jolla tiedot välitetään lomakkeisiin kyselymerkkijonolla.<br /><br /> Tietojen nimi ja tyyppi tarkistetaan eikä lomake avaudu, jos siihen välitetään virheellisiä kyselymerkkijonon parametreja.<br /><br />**Huomautus:** Nimi ei voi alkaa alaviivalla (_) tai merkkijonolla crm\_. Nimen alussa on oltava aakkosnumeerisia merkkejä ja alaviiva (\_). Esimerkiksi: parametri_1 tai 1_parametri. Nimessä ei voi olla yhdysmerkkejä (-), kaksoispistettä (:), puolipistettä (;), pilkkuja (,) tai pisteitä (.). <br /><br />|  
-|**Muut kuin tapahtumariippuvuudet**|**Alisteiset kentät**|Kaikissa tapahtumakäsittelijöissä on samankaltainen **Alisteiset kentät** -ominaisuus, jotta kaikki komentosarjan tarvitsemat kentät voidaan rekisteröidä. Alisteisia kenttiä ei voi poistaa kuka tahansa.<br /><br /> Jotkin komentosarjat toimivat lomakkeessa, mutta niitä ei ole määritetty tapahtumakäsittelijässä. Komentopalkista käynnistetyillä komentosarjoilla ei ole paikkaa, johon alisteiset kentät voidaan rekisteröidä. Tämä lomakkeen ominaisuus mahdollistaa kyseisten komentosarjojen alisteisten kenttien rekisteröinnin.|  
+|**Tapahtumat**|**Lomakekirjastot**|Hallitse, mitkä JavaScript-verkkoresurssit ovat käytettävissä lomakkeessa ja missä järjestyksessä ne ladataan.|  
+||**Tapahtumakäsittelijät**|Määritä, mitkä lomakekirjastojen JavaScript-funktiot suoritetaan lomaketapahtumille `OnLoad` ja `OnSave`, ja missä järjestyksessä ne suoritetaan.|  
+|**Näyttö**|**Lomakkeen nimi**|Anna nimi, joka on käyttäjille merkityksellinen. Tämä nimi näytetään ihmisille, kun he käyttävät lomaketta. Jos he voivat käyttää useita lomakkeita, jotka on määritetty entiteetille, he käyttävät tätä nimeä lomakkeiden erotteluun.|  
+||**Kuvaus**|Anna kuvaus, jossa kerrotaan, miten tämän lomake eroaa muista päälomakkeista. Tämä kuvaus näkyy vain entiteetin lomakeluettelossa ratkaisunhallinnassa.|  
+||**Lomakeavustaja**|Valitse valintaruutu, jos haluat ottaa käyttöön lomakeavustajan tai näyttää lomakkeen laajennettuna oletusarvon mukaan.|
+||**Sivulla siirtyminen**|Voit poistaa siirtymiskohteet näkyvistä.<br /><br /> Päivitettyjen entiteettien lomakkeissa tämä tarkoittaa, että näkyvän tietueen ensisijaista nimiarvoa ei näytetä siirtymispalkissa liittyviin näkymiin pääsemiseksi.<br /><br /> Klassisen esitystavan lomakkeissa ei näytetä siirtymisvalintoja, joilla voidaan valita liittyviä näkymiä.|  
+||**Kuva**|Kun entiteetillä on kuvakenttä ja entiteettien **Ensisijainen kuva** -asetus on määritetty, tämä asetus ottaa käyttöön tämän kuvakentän lomakkeen otsikossa.<br /><br /> Katso lisätietoja entiteetin asetuksista kohdasta [Entiteetin asetuksien ottaminen käyttöön tai pois käytöstä](../common-data-service/edit-entities.md#enable-or-disable-entity-options).|  ||**Näyttö**|**Määritä enimmäisleveys (kuvapisteinä)** lomakkeen leveyden rajoittamiseksi. Oletusarvo on 1900.|  
+||**Näyttö**|Kirjoita tähän lomakkeen leveyden enimmäisarvo kuvapisteinä.|
+|**Parametrit**|**Parametrit**|Jokainen lomake voidaan avata koodilla URL-osoitteen kautta. URL-osoite voi sisältää myös tietoja, jotka voidaan välittää lomakkeeseen käyttämällä kyselymerkkijonoa, joka liitetään URL-osoitteeseen. Kyselymerkkijono voi näyttää esimerkiksi seuraavalta:<br />`?p_firstName=Jim&p_lastName=Daly`<br /><br /> Suojaussyistä lomakkeet eivät hyväksy mitään tuntemattomia kyselymerkkijonon parametreja. Käytä tätä parametriluetteloa määrittääksesi parametrit, jotka tämän lomakkeen tulee hyväksyä tukeakseen koodia, joka lähettää tiedot lomakkeisiin kyselymerkkijonon avulla.<br /><br /> Tietojen nimi ja tyyppi tarkistetaan eikä lomake avaudu, jos siihen toimitetaan virheellisiä kyselymerkkijonon parametreja.<br /><br />**Huomautus:** nimen alussa ei voi olla alaviiva (_) tai crm\_. Nimen alussa on oltava aakkosnumeerisia merkkejä ja niiden jälkeen alaviiva (\_). Esimerkiksi: parametri_1 tai 1_parametri. Nimi ei voi sisältää yhdysmerkkejä (-), kaksoispisteitä (:), puolipisteitä (;), pilkkuja (,) tai pisteitä (.). <br /><br />|  
+|**Muut kuin tapahtumapohjaiset riippuvuudet**|**Riippuvaiset kentät**|Kullakin tapahtumakäsittelijällä on vastaava **Riippuvaiset kentät** -ominaisuus, jotta kaikki komentosarjan tarvitsemat kentät voidaan rekisteröidä. Riippuvaisia kenttiä ei voi poistaa.<br /><br /> Jotkin komentosarjat toimivat lomakkeessa, mutta niitä ei ole määritetty tapahtumakäsittelijässä. Komentopalkista aloitetuissa komentosarjoissa ei ole paikkaa riippuvaisten kenttien rekisteröintiä varten. Tämä lomakeominaisuus tarjoaa paikan näiden riippuvaisten kenttien rekisteröinnille.|  
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-[Päälomakkeen ja osien käyttäminen](use-main-form-and-components.md)
+[Päälomakkeen ja sen osien käyttäminen](use-main-form-and-components.md)

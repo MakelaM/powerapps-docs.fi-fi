@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/26/2018
 ms.author: gregli
-ms.openlocfilehash: 19eb6a11749ad6119fcc3812be9307da30080dc7
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: a0fdddcf906a04914ea9ba9a8572798ea5d55378
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021086"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834815"
 ---
 # <a name="concurrent-function-in-powerapps"></a>PowerAppsin Concurrent-funktio
 Arvioi useita kaavoja keskenään samanaikaisesti.
@@ -53,7 +57,7 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
     **ClearCollect( Product, '[SalesLT].[Product]' );<br> ClearCollect( Customer, '[SalesLT].[Customer]' );<br> ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );<br> ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )**
 
-3. Ota [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/network)- tai [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) -selaimessa kehitystyökalut käyttöön, jotta voit tarkkailla verkkoliikennettä sovelluksen ollessa käynnissä.
+3. Ota [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network)- tai [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) -selaimessa kehitystyökalut käyttöön, jotta voit tarkkailla verkkoliikennettä sovelluksen ollessa käynnissä.
 
 1. (valinnainen) Ota verkon rajoittaminen käyttöön tämän vertailun vaikutuksen liioittelemista varten.
 

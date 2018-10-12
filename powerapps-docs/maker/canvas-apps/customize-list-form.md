@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fc2940f726c23c79bcf894bb61c3e6b884ca7112
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 218fb97f6cd523275c0ba296ea120d487cf67e4c
+ms.sourcegitcommit: c26976af24a3e510e4eced78cf5c48cc2f71cae2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025667"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>SharePoint-luettelolomakkeen mukauttaminen PowerAppsin avulla
 
@@ -31,7 +31,7 @@ Tämän artikkelin ohjeita noudattamalla luot yksinkertaisen luettelon, jonka av
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Luo SharePoint-sivustossa luettelo, joka sisältää nämä sarakkeet:
+Luo SharePoint-sivustossa luettelo, johon lisäät seuraavat sarakkeet:
 
 - **Tuotenimi** (yksi tekstirivi)
 - **Tiedot** (kyllä/ei)
@@ -53,18 +53,11 @@ Luo SharePoint-sivustossa luettelo, joka sisältää nämä sarakkeet:
 
 ## <a name="hide-extra-fields"></a>Ylimääräisten kenttien piilottaminen
 
-Näytön keskellä PowerApps näyttää lomakkeesi, mutta se sisältää joitakin kenttiä, joiden et ehkä halua näkyvän.
+Näytön keskellä PowerApps näyttää lomakkeesi, mutta se sisältää joitakin kenttiä, joiden et tarvitse.
 
-- Tyhjennä **Tiedot**-ruudussa näiden kenttien valintaruudut.
+- Tyhjennä **Tiedot**-ruudussa **Otsikko**- ja **Liitteet**-kenttien valintaruudut.
 
-  - **Otsikko**
-  - **Muokattu**
-  - **Luotu**
-  - **Luonut**
-  - **Muokannut**
-  - **Tunnus**
-
-    Nämä kentät katoavat lomakkeesta, ja vain sinun luomasi kentät jäävät jäljelle.
+    Nämä kentät katoavat lomakkeesta, ja vain sinun lisäämäsi kentät jäävät jäljelle.
 
     ![Kenttäluettelo](./media/customize-list-form/field-list.png)
 
@@ -109,6 +102,8 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 1. Voit piilottaa ja näyttää kolme viimeistä kenttää valitsemalla **Tiedot**-valintapainikkeen useita kertoja.
 
 Jos haluat [mukauttaa lomaketta lisää](sharepoint-form-integration.md), avaa se, valitse **Mukauta** lähellä lomakkeen yläreunaa ja tee, tallenna ja julkaise haluamasi muutokset.
+
+Jos luot vähintään yhden kohteen tällä lomakkeella, **Otsikko**-kenttä on tyhjä. Voit piilottaa tämän kentän muokkaamalla oletusnäkymää.
 
 ## <a name="use-the-default-form"></a>Oletuslomakkeen käyttäminen
 

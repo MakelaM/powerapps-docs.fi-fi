@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 992529f50ba14f3578c4f6ffe0ba7ba27d2d3661
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 4c81288b27d1dc2f5cccf966e4de9d7a043789d0
+ms.sourcegitcommit: 382b3b0e1760aa3124c04d84b59605a1fe16be72
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42838128"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46563607"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -32,6 +32,8 @@ Jos lisäät **[Valikoima](control-gallery.md)**-ohjausobjektin, voit määritt�
 
 ### <a name="record-selection"></a>Tietueen valitseminen
 Määritä kumman tahansa lomaketyypin **DataSource**-ominaisuudeksi taulukon tietueet ja määritä lomakkeen **Item**-ominaisuus näyttämään tietty tietue kyseisessä taulukossa. Voit esimerkiksi määrittää lomakkeen **Item**-ominaisuudeksi **[Valikoima](control-gallery.md)**-ohjausobjektin **SelectedItem**-ominaisuuden. Kun käyttäjä valitsee valikoimasta tietueen, sama tietue näytetään myös lomakkeessa, mutta siinä voidaan näyttää enemmän kenttiä. Jos käyttäjä palaa valikoimaan ja valitsee toisen tietueen, valikoiman **SelectedItem**-ominaisuus muuttuu. Tämä muutos päivittää lomakkeen **Item**-ominaisuuden, jonka jälkeen lomakkeessa näytetään juuri valittu tietue.
+
+Lisätietoja siitä, miten voi asettaa lomakkeen **Kohde**-ominaisuuden esimerkiksi käyttämällä **Avattava luettelo** -ohjausobjektia **Valikoima**-ohjausobjektin sijaan, on ohjeaiheessa [Tietueen näyttäminen, muokkaaminen tai lisääminen](../add-form.md).
 
 Jokainen Lomake-ohjausobjekti sisältää vähintään yhden **[Kortti](control-card.md)**-ohjausobjektin. Voit [määrittää, minkä kentän kortti näyttää ja muita tietoja](../add-form.md) määrittämällä kortin **[DataField](control-card.md)**-ominaisuuden.
 

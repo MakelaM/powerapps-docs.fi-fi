@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.openlocfilehash: 9b26af9a2a1fb9b187023ec3ccc9cd86580aa4cf
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 5fc53e4bfc302819a7899395af4f8f269d6754ef
+ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39017912"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640373"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Avattava luettelo -ohjausobjekti PowerAppsissa
 Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luettelon.
@@ -23,13 +27,13 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 **Avattava luettelo** -ohjausobjekti säästää näyttötilaa erityisesti, kun luettelo sisältää paljon vaihtoehtoja. Ohjausobjekti käyttää vain yhden rivin, kunnes käyttäjä valitsee nuolenkärjen ja avaa näin lisää vaihtoehtoja.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
-**[Oletus](properties-core.md)** – Alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
+**[Oletus](properties-core.md)**  – Ohjausobjektin alkuarvo, ellei käyttäjä määritä eri arvoa.
 
-**[Items](properties-core.md)** – Ohjausobjektiin, kuten valikoimaan, luetteloon tai kaavioon, näkyviin tulevan tiedon lähde.
+**[Kohteet](properties-core.md)**  – Tietolähde, joka sisältää ohjausobjektissa näkyvät kohteet. Jos lähteessä on useita sarakkeita, määritä ohjausobjektin **Arvo**-ominaisuudeksi näytettävien tietojen sarake.
+  
+**Arvo** – Ohjausobjektissa näytettävien tietojen sarake, jos esimerkiksi tietolähteessä on useita sarakkeita.
 
-[!INCLUDE [long-items](../../../includes/long-items.md)]
-
-**Selected** – Valittu kohde.
+**Valittu** – Valittu kohde.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
@@ -117,24 +121,33 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **[Painike](control-button.md)**-ohjausobjekti ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi **Kerää**.
-   
-    Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Määritä **[painikkeen](control-button.md)** **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**ClearCollect(KaupunkienVäkiluvut, {Kaupunki:"Lontoo", Maa:"Yhdistynyt kuningaskunta", Väkiluku:8615000}, {Kaupunki:"Berliini", Maa:"Saksa", Väkiluku:3562000}, {Kaupunki:"Madrid", Maa:"Espanja", Väkiluku:3165000}, {Kaupunki:"Rooma", Maa:"Italia", Väkiluku:2874000}, {Kaupunki:"Pariisi", Maa:"Ranska", Väkiluku:2273000}, {Kaupunki:"Hampuri", Maa:"Saksa", Väkiluku:1760000}, {Maa:"Barcelona", Maa:"Espanja", Väkiluku:1602000}, {Kaupunki:"München", Maa:"Saksa", Väkiluku:1494000}, {Kaupunki:"Milano", Maa:"Italia", Väkiluku:1344000})**
-   
-    Haluatko lisätietoja **[ClearCollect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-3. Paina F5-näppäintä, napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia ja paina ESC-näppäintä.
-4. Lisää **Avattava luettelo** -ohjausobjekti, anna sille nimeksi **Maat** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä arvo:
-   <br>**Distinct(KaupunkienVäkiluvut, Maa)**
-5. Lisää pystysuuntainen **Tekstivalikoima** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Filter(KaupunkienVäkiluvut, Maat.Selected.Value in Maa)**
-6. Aseta **Tekstivalikoima**-ohjausobjektin ensimmäisessä kohteessa ylemmän **[Otsikko](control-text-box.md)**-ohjausobjektin **[Text](properties-core.md)**-ominaisuudeksi **ThisItem.Kaupunki** ja poista alempi **[Otsikko](control-text-box.md)**-ohjausobjekti.
-7. Aseta **Tekstivalikoima**-ohjausobjektin **[TemplateSize](control-gallery.md)**-ominaisuudeksi **80**.
-8. Paina F5, napsauta tai napauta **Maat**-luettelon alaspäin osoittavaa nuolta ja valitse luettelosta jokin vaihtoehto.
-   
-    **Tekstivalikoima**-ohjausobjekti näyttää vain valitsemasi maan kaupungit.
 
+### <a name="simple-list"></a>Yksinkertainen luettelo
+
+1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä lauseke:
+
+    ```["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]```
+
+    Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
+
+1. Näytä luettelon kohteet valitsemalla ohjausobjektin alanuoli samalla, kun painat Alt-näppäintä.
+
+### <a name="list-from-a-data-source"></a>Luettelo tietolähteestä
+Tämän toimenpiteen periaatteet pätevät mihin tahansa [tietolähteeseen, joka tarjoaa taulukoita](../connections-list.md#tables). Jotta voit kuitenkin noudattaa seuraavia ohjeita tarkasti, sinun on avattava ympäristö, jolle on luotu Common Data Service for Apps -tietokanta ja lisätty mallitietoja.
+
+1. [Avaa tyhjä sovellus](../data-platform-create-app-scratch.md#open-a-blank-app) ja [määritä **Tilit**-entiteetti](../data-platform-create-app-scratch.md#specify-an-entity).
+
+1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:
+
+    ```Distinct(Accounts, address1_city)```
+
+    Tämä kaava näyttää kaikki **Tilit**-entiteetin kaupungit. Jos sama kaupunki on useassa tietueessa, **[Distinct](../functions/function-distinct.md)**-funktio piilottaa kaksoiskappaleen avattavan valikon ohjausobjektissa.
+
+1. (valinnainen) Vaihda **Avattava luettelo** -ohjausobjektin nimeksi **Kaupungit** ja lisää pystysuora **Valikoima**-ohjausobjekti. Aseta valikoiman **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:
+
+    ```Filter(Accounts, address1_city = Cities.Selected.Value)```
+
+    Tämä **[suodatinfunktio](../functions/function-filter-lookup.md)** näyttää vain ne **Tilit**-entiteetin tietueet, joissa kaupunki vastaa **Kaupungit**-ohjausobjektissa valittua arvoa.
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 ### <a name="color-contrast"></a>Värikontrasti

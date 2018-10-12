@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 73279ba8fc0b640c24deb179a3737874bc0a55bf
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 8a7c52962c23df5f2efcf76c04aeba528e94217c
+ms.sourcegitcommit: 464ee88a958dda11c5de5603c608deab6c9cdcab
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835750"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48578738"
 ---
 # <a name="collect-clear-and-clearcollect-functions-in-powerapps"></a>Collect-, Clear- ja ClearCollect-funktiot PowerAppsissa
 Luo ja tyhjentää [kokoelmat](../working-with-data-sources.md#collections) ja lisää [tietueita](../working-with-tables.md#records) mihin tahansa [tietolähteeseen](../working-with-data-sources.md).
@@ -82,10 +82,27 @@ Näissä esimerkeissä poistetaan ja lisätään kohteita kokoelmaan, jonka nimi
 | **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Lisää kaksi tietuetta **IceCream**-kokoelmaan. Ne sisältävät pistaasi- ja appelsiinijäätelön määrät. |![](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>**IceCream**-tietolähdettä on myös muokattu. |
 | **Clear( IceCream )** |Poistaa kaikki tietueet **IceCream**-kokoelmasta. |![](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>**IceCream**-tietolähdettä on myös muokattu. |
 
-### <a name="step-by-step"></a>Vaihe vaiheelta
+### <a name="collect-a-static-list"></a>Staattisen luettelon kerääminen
+
 1. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>**Collect(Tuotteet, &quot;Europa&quot;, &quot;Ganymede&quot;, &quot;Callisto&quot;)**
    
     Tämä funktio luo kokoelman, jonka nimi on **Tuotteet** ja joka sisältää rivin kullekin kolmelle tuotteen nimelle.
-2. Palaa suunnittelutyötilaan painamalla F5-näppäintä, napsauttamalla painiketta ja painamalla sitten Esc-näppäintä.
-3. (valinnainen) Saat esiin luomasi kokoelman esikatselun napsauttamalla kohtaa **Kokoelmat** **Sisältö**-välilehdessä.
+    
+1. Pidä Alt-näppäintä painettuna ja valitse painike.
 
+1. (valinnainen) Jos haluat esikatsella luomaasi kokoelmaa, valitse **Tiedosto-valikosta** **Kokoelmat**.
+
+### <a name="put-a-sharepoint-list-into-a-collection"></a>SharePoint-luettelon asettaminen kokoelmaan
+
+1. [Yhdistä SharePoint-luetteloon](../connect-to-sharepoint.md). 
+
+1. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
+**Kerää**(**MySPCollection**, *ListName*)
+
+    Tämä funktio luo kokoelman, jonka nimi on **MySPCollection** ja joka sisältää samat tiedot kuin SharePoint-luettelokin.
+    
+1. Pidä Alt-näppäintä painettuna ja valitse painike.
+
+1. (valinnainen) Jos haluat esikatsella luomaasi kokoelmaa, valitse **Tiedosto-valikosta** **Kokoelmat**.
+
+Artikkelista [Tietojen näyttäminen galleriassa](../connections/connection-sharepoint-online.md#show-data-in-a-gallery) saat lisätietoja siitä, miten voit esittää tietoja SharePoint-luettelossa (esimerkiksi päivämäärät, vaihtoehdot ja henkilöt). Artikkelista [Lomakkeen ja muokkaaminen ja lomakkeen ohjausobjektien näyttäminen](../controls/control-form-detail.md) saat lisätietoa siitä, miten voit esittää tietoja lomakkeessa (avattavat luettelot, päivämäärävalitsimet ja henkilövalitsimet).

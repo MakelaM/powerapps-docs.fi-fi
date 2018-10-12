@@ -1,6 +1,6 @@
 ---
-title: Delegoitavat tietolähteet | Microsoft Docs
-description: Luettelo kaikista tuetuista delegoitavista tietolähteistä
+title: Delegoitavat tietolähteet pohjaan perustuvissa sovelluksissa | Microsoft Docs
+description: Luettelo kaikista tuetuista delegoitavista tietolähteistä pohjaan perustuvissa sovelluksissa
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/15/2017
 ms.author: lanced
-ms.openlocfilehash: e8863d8e260ecaafd407e93d710917848ce184ad
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 98931d4692a61839e0530682bd2d40258c07b7df
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39018602"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42825759"
 ---
-# <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
-[Tutustu delegointiin](delegation-overview.md) -artikkelin mukaisesti delegointi on toimintaa, jossa PowerApps delegoi tiedonkäsittelyn tietolähteelle sen sijaan, että siirtäisi tiedot sovellukseen käsiteltäväksi paikallisesti.
+# <a name="delegable-data-sources-in-canvas-apps"></a>Delegoitavat tietolähteet pohjaan perustuvissa sovelluksissa
+[Tutustu delegointiin](delegation-overview.md) -artikkelin mukaisesti delegointi on toimintaa, jossa PowerApps delegoi tiedonkäsittelyn tietolähteelle sen sijaan, että siirtäisi tiedot pohjaan perustuvaan sovellukseen käsiteltäväksi paikallisesti.
 
 Delegointia tuetaan vain taulukkomuotoisissa tietolähteissä. Luettelossa esitetään taulukkomuotoiset tietolähteet ja tieto siitä, tukevatko ne delegointia. Tietoja tästä on seuraavassa osiossa.
 

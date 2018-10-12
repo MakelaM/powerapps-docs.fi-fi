@@ -1,6 +1,6 @@
 ---
-title: Pikaopas mallipohjaisen sovelluksen suorittamiseen mobiililaitteessa PowerAppsin avulla | Microsoft Docs
-description: Tässä pikaoppaassa opit suorittamaan mallipohjaisen sovelluksen mobiililaitteessa.
+title: Mallipohjaisen sovelluksen suorittaminen mobiililaitteella PowerAppsin avulla | Microsoft Docs
+description: Opi suorittamaan mallipohjainen sovellus mobiililaitteessa.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
@@ -11,18 +11,23 @@ ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: e8369d7816bfdf81126affd7c63c9e897e680546
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 316df7e4876a74ee779e85e54291579dcc9f7cb1
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925612"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42830709"
 ---
-# <a name="quickstart-run-a-model-driven-app-on-a-mobile-device"></a>Pikaopas: Mallipohjaisen sovelluksen suorittaminen mobiililaitteessa
+# <a name="run-a-model-driven-app-on-a-mobile-device"></a>Suorita mallipohjainen sovellus mobiililaitteessa
 
-Kun sovellus on luotu ja jaettu, voit käyttää sitä useissa tavallisissa mobiililaitteissa, kuten Windows-, iOS- tai Android-laitteessa tai selaimessa. Tässä pikaoppaassa opimme suorittamaan mallipohjaisen sovelluksen mobiililaitteessa. 
+Kun sovellus on luotu ja jaettu, voit käyttää sitä useissa tavallisissa mobiililaitteissa, kuten Windows-, iOS- tai Android-laitteessa tai selaimessa. Tässä ohjeaiheessa opimme suorittamaan mallipohjaisen sovelluksen mobiililaitteessa. 
 
-Jotta voit seurata tätä pikaopasta, [rekisteröidy ennen aloittamista ilmaiseksi PowerAppsiin](https://web.powerapps.com/signup?redirect=marketing&email=), jos et ole jo tehnyt sitä. Varmista myös, että sinulla on käyttöoikeus luomaasi tai jonkun muun luomaan ja jakamaan sovellukseen.
+Jotta voit noudattaa tätä prosessia, [rekisteröidy ennen aloittamista ilmaiseksi PowerAppsiin](https://web.powerapps.com/signup?redirect=marketing&email=), jos et ole jo tehnyt sitä. Varmista myös, että sinulla on käyttöoikeus luomaasi tai jonkun muun luomaan ja jakamaan sovellukseen.
 
 ## <a name="run-the-model-driven-app"></a>Suorita mallipohjainen sovellus
 
@@ -34,13 +39,13 @@ Asenna puhelimia varten tarkoitettu Dynamics 365 tai Dynamics 365 -tablettisovel
  ![Mobiilisovellus puhelimille](media/run-app-client-model-driven/mobile-app-for-phone.png)
 
 ### <a name="run-in-your-phones-browser"></a>Suorita puhelimen selaimessa
-Siirry [Dynamics 365 -aloitussivulle](https://home.dynamics.com) tai kirjoita sovelluksen URL-osoite suoraan puhelimen selaimeen ja lataa sovellus noudattamalla näytön ohjeita. Lisätietoja: [Pikaopas: Suorita sovellus verkkoselaimessa](run-app-browser.md)
+Siirry [Dynamics 365 -aloitussivulle](https://home.dynamics.com) tai kirjoita sovelluksen URL-osoite suoraan puhelimen selaimeen ja lataa sovellus noudattamalla näytön ohjeita. Lisätietoja: [Sovelluksen suorittaminen verkkoselaimessa](run-app-browser.md)
 
 ![Suorita sovellus puhelimen selaimessa](media/run-app-client-model-driven/web-browser-on-phone.png)
 
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa opimme suorittamaan mallipohjaisen sovelluksen mobiililaitteessa. Voit suorittaa myös pohjaan perustuvia sovelluksia mobiililaitteessa.
+Tässä ohjeaiheessa opit suorittamaan mallipohjaisen sovelluksen mobiililaitteessa. Voit suorittaa myös pohjaan perustuvia sovelluksia mobiililaitteessa.
 
 > [!div class="nextstepaction"]
 > [Suorita pohjaan perustuva sovellus mobiililaitteella](run-app-client.md)

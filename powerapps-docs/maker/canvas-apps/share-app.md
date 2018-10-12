@@ -9,12 +9,16 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 07/11/2018
 ms.author: anneta
-ms.openlocfilehash: eaea8049b573b619881ae0a2b6ecb2618e4bf192
-ms.sourcegitcommit: e3f5a2bef64085d02aec82e62ff94ae8a4d01d24
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 926d2b4b0d24f07a9a4cd42216e7d737db57308c
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39470634"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42853838"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
@@ -81,7 +85,11 @@ Ennen kuin jaat sovelluksen, tallenna sen pilvipalveluun (ei paikallisesti) ja j
 
 ### <a name="common-data-service-for-apps"></a>Microsoft Common Data Service for Apps
 
-Jos luot Common Data Service for Apps -palveluun perustuvan sovelluksen, sinun on varmistettava, että sitä suorittavilla käyttäjille on sovelluksen hyödyntämälle entiteetille tai entiteeteille tarvittavat käyttöoikeudet. Kyseisten käyttäjien on siis kuuluttava käyttöoikeusrooliin, joka voi suorittaa sellaisia tehtäviä kuin luominen, lukeminen, kirjoittaminen ja/tai asianmukaisten tietueiden poistaminen. Jos sinulla on kyseisen ympäristön tietokannan **järjestelmänvalvojan** tai **järjestelmämukauttajan** käyttöoikeudet, voit luoda mukautetun roolin ja lisätä siihen käyttäjiä.
+Jos luot Common Data Service (CDS) for Apps -palveluun perustuvan sovelluksen, sinun on varmistettava, että sitä suorittavilla käyttäjillä on sovelluksen hyödyntämälle entiteetille tai entiteeteille tarvittavat käyttöoikeudet. Kyseisten käyttäjien on siis kuuluttava käyttöoikeusrooliin, joka voi suorittaa sellaisia tehtäviä kuin luominen, lukeminen, kirjoittaminen ja/tai asianmukaisten tietueiden poistaminen. Monissa tapauksissa kannattaa luoda yksi tai useampia käyttöoikeusrooleja, jotka sisältävät tarkat oikeudet, joita sovellustesi käyttämiseen tarvitaan. Voit sitten määrittää näitä rooleja käyttäjille tarpeen mukaan. 
+
+#### <a name="prerequisite"></a>Edellytys
+
+Seuraavat kaksi toimenpidettä edellyttävät, että sinulla on CDS for Apps -tietokannan **järjestelmänvalvojan** oikeudet.
 
 #### <a name="create-a-security-role"></a>Käyttöoikeusroolin luominen
 

@@ -1,6 +1,6 @@
 ---
-title: Pikaopas sovelluksen lisäämiseen Microsoft Teamsiin | Microsoft Docs
-description: Tässä pikaoppaassa opit lisäämään sovelluksen Microsoft Teams -kanavaan, jotta ihmiset, joiden kanssa olet jakanut sovelluksen, voivat avata sen kyseisessä kanavassa.
+title: Sovelluksen lisääminen Microsoft Teamsiin | Microsoft Docs
+description: Opi lisäämään sovellus Microsoft Teams -kanavaan, jotta ihmiset, joiden kanssa olet jakanut sovelluksen, voivat avata sen kyseisessä kanavassa.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -11,16 +11,21 @@ ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: a5adb035fdde271ffe07cb6d0a46f332ae55c43f
-ms.sourcegitcommit: 0b051bba173353d7ceda3b60921e7e009eb00709
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: 0e98f22c3dc0f66893e0cc027488ced5d1dd3535
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39218368"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42850457"
 ---
-# <a name="quickstart-add-an-app-to-microsoft-teams"></a>Pikaopas: Sovelluksen lisääminen Microsoft Teamsiin
+# <a name="add-an-app-to-microsoft-teams"></a>Sovelluksen lisääminen Microsoft Teamsiin
 
-Microsoft Teams on keskustelupohjainen yhteistyöalusta, joka perustuu Office 365 -teknologioihin. Voit mukauttaa Teams-käyttökokemusta lisäämällä pohjaan perustuvia PowerApps-sovelluksia Teams-kanavoihisi. Tässä pikaoppaassa kerrotaan, miten voit lisätä tuote-esittelyn esimerkkisovellukset Teams-kanavaan ja avata sitten sovelluksen siitä kanavasta. 
+Microsoft Teams on keskustelupohjainen yhteistyöalusta, joka perustuu Office 365 -teknologioihin. Voit mukauttaa Teams-käyttökokemusta lisäämällä pohjaan perustuvia PowerApps-sovelluksia Teams-kanavoihisi. Tässä ohjeaiheessa kerrotaan, miten voit lisätä tuote-esittelyn esimerkkisovellukset Teams-kanavaan ja avata sitten sovelluksen siitä kanavasta. 
 
 ![Microsoft Teamsissa upotettu sovellus](./media/open-app-embedded-in-teams/embedded-app.png)
 
@@ -28,9 +33,9 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Jotta voit suorittaa tämän pikaoppaan vaiheet, sinulla on oltava [Office 365 -tilaus](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) ja [Teams-kanava](https://www.youtube.com/watch?v=he2f1quaR7M).
+Jotta voit suorittaa tämän ohjeaiheen vaiheet, sinulla on oltava [Office 365 -tilaus](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) ja [Teams-kanava](https://www.youtube.com/watch?v=he2f1quaR7M).
 
-## <a name="sign-in-to-powerapps"></a>Kirjautuminen PowerAppsiin
+## <a name="sign-in-to-powerapps"></a>PowerAppsiin kirjautuminen
 
 Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -87,7 +92,7 @@ Jos haluat poistaa sovelluksen kanavasta, valitse **Tuote-esittely** -välilehti
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-Tässä pikaoppaassa käytiin läpi, miten voit lisätä tuote-esittelyn esimerkkisovellukset Teams-kanavaan ja avata sitten sovelluksen siitä kanavasta. Lue lisää PowerAppsista jatkamalla PowerApps-opetusohjelmiin.
+Tässä ohjeaiheessa käytiin läpi sitä, miten voit lisätä tuote-esittelyn esimerkkisovellukset Teams-kanavaan ja avata sitten sovelluksen siitä kanavasta. Lue lisää PowerAppsista jatkamalla PowerApps-opetusohjelmiin.
 
 > [!div class="nextstepaction"]
 > [PowerApps-opetusohjelmat](../maker/canvas-apps/get-started-create-from-blank.md)

@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen nimen ja ruudun muuttaminen | Microsoft Docs
-description: Vaiheittaiset ohjeet asetusten, kuten sovelluksen nimen ja kuvakkeen muuttamiseen
+title: Pohjaan perustuvan sovelluksen nimen ja kuvakkeen muuttaminen | Microsoft Docs
+description: Vaiheittaiset ohjeet pohjaan perustuvien sovellusten asetusten, kuten nimen ja kuvakkeen, muuttamiseen PowerAppsissa
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: ae78a86578032d5110a5558d60274fd6728438b9
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 74e56e5819ff4171f5f16a4ebc8b5da39c8c0c8a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39014922"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42825322"
 ---
-# <a name="change-app-name-and-icon-in-powerapps"></a>Sovelluksen nimen ja kuvakkeen muuttaminen PowerAppsissa
-Mukauta sovellusta muuttamalla sen nimeä ja ruutua.
+# <a name="change-app-name-and-icon-for-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen nimen ja kuvakkeen muuttaminen PowerAppsissa
+Mukauta pohjaan perustuvaa sovellusta muuttamalla sen nimeä ja kuvaketta.
 
 ## <a name="prerequisites"></a>Edellytykset
 1. Luo sovellus tai avaa sovellus muokkaamista varten.

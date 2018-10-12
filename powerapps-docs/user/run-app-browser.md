@@ -1,6 +1,6 @@
 ---
-title: Pikaopas sovellusten käyttöön selaimessa | Microsoft Docs
-description: Tässä pikaoppaassa opimme suorittamaan sovelluksia selaimessa
+title: Sovelluksien suorittaminen selaimessa | Microsoft Docs
+description: Tässä ohjeaiheessa opimme suorittamaan sovelluksia selaimessa
 author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
@@ -11,15 +11,20 @@ manager: kvivek
 ms.custom: ''
 ms.reviewer: ''
 ms.assetid: ''
-ms.openlocfilehash: b0b0cb39cf0a7d49ca24d31c2803ae463df2f97e
-ms.sourcegitcommit: bcfefb30b12cf94815dd9a0fd8cad29a8272d96e
+search.audienceType:
+- enduser
+search.app:
+- PowerApps
+- D365CE
+ms.openlocfilehash: f72d4b5192bd30da676e65e232bc2a3090cb77bb
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37925635"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42832421"
 ---
-# <a name="quickstart-run-an-app-in-a-web-browser"></a>Pikaopas: Suorita sovellus verkkoselaimessa
-Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä pikaoppaassa opimme suorittamaan kaaviosovelluksen tai mallipohjaisen sovelluksen verkkoselaimessa [Dynamics 365 -aloitussivulta](https://home.dynamics.com).
+# <a name="run-an-app-in-a-web-browser"></a>Sovelluksen suorittaminen selaimessa
+Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä ohjeaiheessa opimme suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa [Dynamics 365 -aloitussivulta](https://home.dynamics.com).
 
 Tarvitset tämän pikaoppaan seuraamisessa seuraavat:
 - PowerApps-käyttöoikeus. Tämä on saatavissa PowerApps-palvelupaketissa, kuten [PowerApps-palvelupaketin 2 kokeiluversiossa](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps) tai missä tahansa [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1)- tai [Dynamics 365](https://dynamics.microsoft.com/pricing/) -palvelupaketissa, joka sisältää PowerAppsin. 
@@ -62,7 +67,7 @@ Jos sovellus vaatii yhteyden tietolähteeseen tai luvan käyttää laitteen omin
 Sulje sovellus kirjautumalla ulos Dynamics 365 -aloitussivulta tai avaamalla toinen sovellus.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa opimme suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa. Tutustu pohjaan perustuvan sovelluksen suorittamiseen mobiililaitteessa jatkamalla seuraavaan pikaoppaaseen.
+Tässä ohjeaiheessa opit suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa. Tutustu pohjaan perustuvan sovelluksen suorittamiseen mobiililaitteessa jatkamalla seuraavaan ohjeaiheeseen.
 
 > [!div class="nextstepaction"]
 > [Suorita pohjaan perustuva sovellus mobiililaitteella](run-app-client.md)

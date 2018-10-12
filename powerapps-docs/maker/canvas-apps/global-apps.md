@@ -1,6 +1,6 @@
 ---
-title: Yleinen tuki | Microsoft Docs
-description: Luo sovelluksia, joita käytetään maailmanlaajuisesti.
+title: Globaalin tuen kehittäminen pohjaan perustuville sovelluksille | Microsoft Docs
+description: PowerAppsilla voit luoda sovelluksia, joita käytetään maailmanlaajuisesti.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
 ms.author: gregli
-ms.openlocfilehash: dbca12ff3acc4327f88269a2333fe066c7f2fbec
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 7ccd505d53377617bd13cda775cce489c554bc64
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019798"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42862572"
 ---
-# <a name="global-support"></a>Yleinen tuki
-PowerApps on maailmanlaajuinen tuote.  Voit luoda ja käyttää sovelluksia useilla eri kielillä ja alueilla.
+# <a name="build-global-support-into-canvas-apps"></a>Globaalin tuen kehittäminen pohjaan perustuville sovelluksille
+PowerApps on maailmanlaajuinen tuote. Pohjaan perustuvia sovelluksia voi kehittää käytettäväksi monilla kielillä ja alueilla.
 
 Sovelluksia luotaessa ja käytettäessä PowerAppsin näyttämä teksti on käännetty useille eri kielille.  Näet valikkokohtia, valintaikkunoita, valintanauhan välilehtiä ja muuta tekstiä omalla kielelläsi.  Päivämäärien ja numeroiden kirjoittaminen ja näyttäminen on myös sovitettu omaan kieleesi ja alueeseesi.  Esimerkiksi pistettä "." käytetään desimaalierottimena joillain alueilla, kun taas toisilla alueilla käytetään pilkkua ",".  
 

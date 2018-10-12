@@ -1,96 +1,97 @@
 ---
-title: Tietoja mallipohjaisen sovelluksen osista PowerAppsissa | MicrosoftDocs
-description: 'Tietoja mallipohjaisen sovelluksen eri osista, kuten tiedoista, käyttöliittymästä, logiikasta ja visualisoinnista.'
-Keywords: 'fields, attributes, model-driven app'
+title: Mallipohjaisen sovelluksen osat PowerAppsissa | MicrosoftDocs
+description: Tutustu mallipohjaisen sovelluksen eri osiin, kuten tietoihin, käyttöliittymään, logiikkaan ja visualisointiin.
+Keywords: fields, attributes, model-driven app
 author: Mattp123
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 249f0d35ce9eb466303ef16658aa01198632875e
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39674744"
 ---
-# <a name="understand-model-driven-app-components"></a>Tietoja mallipohjaisen sovelluksen osista
-Hyvin suunniteltu mallipohjainen sovellus sisältää useita osia, jotka valitaan suunnitteluohjelman avulla. Lopullisen sovelluksen ulkonäkö ja toiminnot muodostuvat näistä osista. Osista ja osien ominaisuuksista, joita suunnittelijat käyttävät sovelluksen muodostamisessa, tulee metatietoja. 
+# <a name="understand-model-driven-app-components"></a>Mallipohjaisen sovelluksen osat
+Hyvin suunniteltu mallipohjainen sovellus koostuu useista suunnittelijaohjelmalla valitsemistasi osista, joilla luodaan lopullisen sovelluksen ulkoasu ja toiminnallisuus. Osista ja niiden ominaisuuksista, joita suunnittelijat käyttävät sovelluksen muodostamiseen, tulee sovelluksen metatietoja. 
 
-Osat jaotellaan tässä *tietojen*, *käyttöliittymän*, *logiikan* ja *visualisoinnin* luokkiin. Tällöin on helpompi ymmärtää, miten osat liittyvät sovelluksen suunnitteluun. 
+Niiden kunkin osan yhteys sovelluksen suunnitteluun käy selväksi alla olevasta taulukosta, jossa ne on jaettu *tietojen*, *käyttöliittymän*, *logiikan* ja *visualisoinnin* luokkiin. 
 
 ## <a name="data"></a>Tiedot
 Nämä osat määrittävät, mihin tietoihin sovellus perustuu.
 
 
-|Osa  |Kuvaus  |Suunnittelija  |
+|Osa  |Kuvaus  |Suunnittelutyökalu  |
 |---------|---------|---------|
-|Entiteetti     |Kohde, jolla on seurattavia ominaisuuksia, kuten yhteyshenkilö tai asiakas. Käytettävissä on useita vakioentiteettejä. Voit mukauttaa muun kuin järjestelmän vakioentiteetin (tuotantoentiteetin) tai luoda mukautetun entiteetin alusta alkaen.     | [!INCLUDE [powerapps](../../includes/powerapps.md)]in entiteetin suunnitteluohjelma        |
-|Kenttä     | Ominaisuus, joka on liitetty entiteettiin. Kenttä määritetään tietotyypin mukaan. Tietotyyppi määrittää annettavien tai valittavien tietojen tyypin. Esimerkkejä ovat teksti, numero, päivämäärä ja aika, valuutta ja haku (luo suhteen toisen entiteetin kanssa). Kenttiä käytetään yleensä lomakkeiden, näkymien ja hakujen kanssa.        | [!INCLUDE [powerapps](../../includes/powerapps.md)]in entiteetin suunnitteluohjelma   |
-|Suhde     | Entiteettisuhteet määrittävät, millaisia entiteettien väliset suhteet voivat olla. Suhdetyyppejä ovat 1:N (yksi moneen), N:1 (monta yhteen) ja N:N (monta moneen). Esimerkiksi valintakentän lisääminen entiteetille luo uuden 1:N-suhteen kahden entiteetin välille ja mahdollistaa kentän laittamisen lomakkeeseen.   | [!INCLUDE [powerapps](../../includes/powerapps.md)]in entiteetin suunnitteluohjelma        |
-|Asetusjoukkokenttä     | Tämä on erityinen kenttä, joka sisältää ennalta määritettyjen asetusten joukon. Kullakin asetuksella on numeerinen arvo ja otsikko. Lomakkeeseen lisättynä kenttä näyttää ohjausobjektin, jonka avulla käyttäjä voi valita asetuksen.  Asetusjoukkoja on kaksi. Toisessa käyttäjä voi valita vain yhden asetuksen. Monivalinta-asetusjoukoissa käyttäjä voi valita useita kohtia.  | [!INCLUDE [powerapps](../../includes/powerapps.md)]in asetusjoukon suunnitteluohjelma     |
+|Entiteetti     |Kohde, jossa on ominaisuuksia, joita seurataan, kuten yhteyshenkilö tai tili. Monet vakioentiteetit ovat käytettävissä. Voit mukauttaa järjestelmään kuulumatonta vakioentiteettiä (tuotantoentiteettiä) tai luoda mukautetun entiteetin alusta.     | [!INCLUDE [powerapps](../../includes/powerapps.md)]-entiteettisuunnittelutyökalu        |
+|Kenttä     | Ominaisuus, joka liittyy entiteettiin. Kentän määrittää tietotyyppi, joka määrittää tietotyypin, joka voidaan lisätä tai valita. Esimerkkejä ovat teksti, luku, päivämäärä ja aika, valuutta tai haku (luo yhteyden toisen entiteetin kanssa). Kenttiä käytetään yleensä lomakkeiden, näkymien ja hakujen yhteydessä.        | [!INCLUDE [powerapps](../../includes/powerapps.md)]-entiteettisuunnittelutyökalu   |
+|Yhteydet     | Entiteettiyhteydet määrittävät, miten entiteetit voivat liittyä toisiinsa. Yhteystyyppejä ovat 1:N (yksi moneen), N:1 (monta yhteen) ja N:N (monta moneen). Esimerkiksi hakukentän lisääminen entiteettiin luo uuden 1:N-yhteyden kahden entiteetin välille, ja sen avulla voit sijoittaa kyseisen hakukentän lomakkeeseen.   | [!INCLUDE [powerapps](../../includes/powerapps.md)]-entiteettisuunnittelutyökalu        |
+|Asetusjoukko-kenttä     | Tämä on erityinen kenttä, jossa annetaan käyttäjän käyttöön joukko esimääritettyjä asetuksia. Kussakin asetuksessa on numeroarvo ja otsikko. Kun kenttä lisätään lomakkeeseen, siinä näkyy ohjausobjekti, jonka avulla käyttäjä voi valita asetuksen.  Asetusjoukkoja on kahdenlaisia: joukkoja, joista käyttäjä voi valita vain yhden asetuksen, ja monivalintaisia joukkoja, joista voidaan valita useita asetuksia.  | [!INCLUDE [powerapps](../../includes/powerapps.md)]-asetusjoukkosuunnittelutyökalu     |
 
 Lisätietoja: [Mallipohjaisen sovelluksen tietojen määrittäminen](define-data-model-driven-app.md) 
 
 ## <a name="ui"></a>Käyttöliittymä
-Nämä osat määrittävät, miten käyttäjät käyttävät sovellusta. 
+Nämä osat määrittävät, miten käyttäjät ovat yhteydessä sovellukseen. 
 
-|Osa  |Kuvaus  |Suunnittelija  |
+|Osa  |Kuvaus  |Suunnittelutyökalu  |
 |---------|---------|---------|
-|Sovellus     | Määrittää sovelluksen perustiedot, kuten osat, ominaisuudet, asiakasohjelman tyypin ja sovelluksen URL-osoitteen.      | Sovellusten suunnitteluohjelma   |
-|Sivustokartta     | Määrittää sovelluksessa siirtymisen.        | Sivustokartan suunnitteluohjelma        |
-|Lomake     | Sen annetun entiteetin tietojen syöttökenttien joukko, joka vastaa organisaation seuraaman entiteetin kohteita. Esimerkiksi tietojen syöttökenttien joukko, joihin käyttäjä syöttää tärkeitä tietoja, joiden avulla asiakkaan edellisiä tilauksia ja tiettyjä pyydettyjä uudelleentilauspäivämääriä seurataan.        | Lomakkeiden suunnitteluohjelma        |
-|Näkymä     | Näkymät määrittävät, miten tietyn entiteetin tietueluettelo näytetään sovelluksessa. Näkymä määrittää näytettävät sarakkeet, kunkin sarakkeen leveyden, lajittelutoiminnan ja oletussuodattimet.   |  Näkymän suunnitteluohjelma       |
+|Sovellus     | Määrittää sovelluksen perustoiminnot, kuten sovelluksen osat, ominaisuudet, asiakastyypin ja URL-osoitteen.      | Sovelluksen suunnittelutoiminto   |
+|Sivustokartta     | Määrittää navigoinnin sovelluksessa.        | Sivustokartan suunnitteluohjelma        |
+|Lomake     | Tiedonsyötön kenttiä tietylle entiteetille, joka vastaa entiteetin kohteita, joita organisaatiosi seuraa. Tiedonsyöttökenttiä ovat esimerkiksi kentät, joihin käyttäjät lisäävät tarvittavia tietoja seuratakseen asiakkaan aiempia tilauksia ja pyydettyjen uusintatilausten päivämääriä.        | Lomakkeiden suunnitteluohjelma        |
+|Näkymä     | Näkymät määrittävät, miten tietyn entiteetin tietueluettelo näytetään sovelluksessa. Näkymä määrittää näytettävät sarakkeet, niiden leveyden, lajittelutoiminnan ja oletussuodattimet.   |  Näkymän suunnitteluohjelma       |
 
-![Sovellusten suunnitteluohjelma ja lomakkeen suunnitteluohjelma](media/model-driven-app-overview/app-and-form-designers.png)
+![Sovelluksen suunnittelutoiminto ja lomakkeiden suunnitteluohjelma](media/model-driven-app-overview/app-and-form-designers.png)
 
 ## <a name="logic"></a>Logiikka
-Määrittää sovelluksen liiketoimintaprosessit, -säännöt ja automatisoinnin. [!INCLUDE [powerapps](../../includes/powerapps.md)]in tekijät käyttävät suunnitteluohjelmaa, joka koskee tiettyä prosessi- tai sääntötyyppiä. 
+Määrittää sovelluksen liiketoimintaprosessit, säännöt ja automaation. [!INCLUDE [powerapps](../../includes/powerapps.md)]-käyttäjät voivat käyttää suunnittelutoimintoa, joka liittyy prosessin tai säännön tyyppiin. 
 
 
-|Logiikan tyyppi  |Kuvaus  |Suunnittelija  |
+|Logiikkatyyppi  |Kuvaus  |Suunnittelutyökalu  |
 |---------|---------|---------|
-|Liiketoimintaprosessi     | Online-tilan prosessi, joka auttaa käyttäjiä kulkemaan tavanomaisen yritysprosessin läpi. Voit käyttää esimerkiksi liiketoimintaprosessin kulkua, jos haluat kaikkia asiakaspalvelupyyntöjä käsiteltävän samalla tavalla tai vaatia henkilöstöä hankkimaan laskun hyväksyntä ennen tilauksen lähettämistä.        | Liiketoimintaprosessin suunnitteluohjelma        |
-|Työnkulku     |  Työnkulut automatisoivat liiketoimintaprosessit ilman käyttöliittymää. Suunnittelijat käyttävät työnkulkuja sellaisten automaattisten prosessien käynnistämiseksi, jotka eivät vaadi käyttäjän toimia.       | Työnkulkujen suunnitteluohjelma        |
-|Toiminnot    |  Toiminnot ovat prosessityyppejä, joiden avulla voit manuaalisesti suoraan työnkulusta käynnistää toimintoja, kuten mukautettuja toimintoja.       |  Prosessin suunnittelija       |
-|Liiketoimintasääntö     | Käytetään, kun säännön tai suosituksen logiikka kohdistetaan lomakkeeseen, kuten kentän vaatimusten määrittämiseen, kenttien piilottamiseen tai tietojen vahvistamiseen. Sovellusten suunnittelijat käyttävät yksinkertaista käyttöliittymää, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä.         |  Liiketoimintasäännön suunnitteluohjelma       |
-|Työnkulku     | Työnkulku on pilvipohjainen palvelu, jonka avulla voit luoda automaattisia työnkulkuja sovellusten ja palveluiden välille. Tämä mahdollistaa esimerkiksi ilmoitusten saamisen, tiedostojen synkronoimisen ja tietojen keräämisen.        | Microsoft Flow        |
+|Liiketoimintaprosessin työnkulku     | Verkkopohjainen prosessi, joka ohjaa käyttäjät vakioliiketoimintaprosessin läpi. Käytä liiketoimintaprosessin työnkulkua esimerkiksi silloin, kun haluat kaikkien käsittelevän asiakaspalvelupyyntöjä samalla tavalla tai henkilökunnan hankkivan hyväksynnän laskulle ennen tilauksen lähettämistä.        | Liiketoimintaprosessin työnkulun suunnittelutyökalu        |
+|Työnkulku     |  Työnkulkujen avulla automatisoidaan liiketoimintaprosesseja ilman käyttöliittymää. Työnkulkujen avulla suunnittelutyökalut käynnistävät automaatioita, jotka eivät edellytä käyttäjän toimia.       | Työnkulun suunnittelutyökalu        |
+|Toiminnot    |  Toiminnot ovat prosessityyppi, joiden avulla voit manuaalisesti käynnistää toimintoja, kuten mukautettuja toimintoja, suoraan työnkulusta.       |  Prosessin suunnittelutyökalu       |
+|Liiketoimintasääntö     | Käytetään sääntö- tai suosituslogiikan soveltamiseen lomakkeessa, kuten määritettyihin kentän vaatimuksiin, kenttien piilottamiseen tai tietojen varmistamiseen. Sovellussuunnittelijat käyttävät yksinkertaista käyttöliittymää toteuttamaan ja ylläpitämään nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä.         |  Liiketoimintasäännön suunnittelutyökalu       |
+|Työnkulku     | Työnkulku on pilvipohjainen palvelu, jonka avulla voidaan luoda automatisoituja työnkulkuja sovellusten ja palveluiden välille esimerkiksi ilmoitusten saamiseksi, tiedostojen synkronoimiseksi ja tietojen keräämiseksi.        | Microsoft Flow        |
 
-![Työnkulun, toiminnon ja liiketoimintaprosessin suunnitteluohjelmat](media/model-driven-app-overview/designer-mash.png)
+![Työnkulun, toiminnon ja liiketoiminnan prosessin kulun suunnittelutyökalut](media/model-driven-app-overview/designer-mash.png)
 
 Lisätietoja: [Liiketoimintalogiikan käyttäminen mallipohjaisessa sovelluksessa](guide-staff-through-common-tasks-processes.md)
 
 ## <a name="visualizations"></a>Visualisoinnit
-Määrittää sovelluksen tietojen visualisointien ja raportoinnin tyypin.
+Määrittää, millaisia tietojen visualisointeja ja raportointeja sovelluksella on käytettävissään.
 
 
-|Osa  |Kuvaus  |Suunnittelija  |
+|Osa  |Kuvaus  |Suunnittelutyökalu  |
 |---------|---------|---------|
-|Kaavio     | Yksi graafinen visualisointi, joka voidaan näyttää näkymässä tai lomakkeessa tai lisätä koontinäyttöön.        | Kaavion suunnitteluohjelma        |
-|Koontinäyttö     | Vähintään yhden toimintaan johtavien tietojen graafisen visualisoinnin yleiskuvauksen sisältävä toiminto.        | Koontinäytön suunnitteluohjelma        |
-|Upotettu Power BI     | Lisää sovellukseen upotetut Power BI -ruudut ja -koontinäytöt. Power BI on pilvipohjainen palvelu, joka sisältää liiketoimintatietoja.        |  Kaavion suunnitteluohjelman, koontinäytön suunnitteluohjelman ja Power BI:n yhdistelmä       |
+|Kaavio     | Yksittäinen graafinen visualisointi, joka voidaan näyttää näkymässä tai lomakkeessa tai lisätä koontinäyttöön.        | Kaavion suunnitteluohjelma        |
+|Koontinäyttö     | Toimii yhden tai usean graafisen visualisoinnin palettina, joka näyttää yleiskatsauksen toimintoa vaativista yritystiedoista.        | Raporttinäkymät-ikkunan suunnittelusovellus        |
+|Upotettu Power BI     | Lisää sovellukseen upotettuja Power BI -ruutuja ja koontinäyttöjä. Power BI on pilvipohjainen palvelu, joka tarjoaa liiketoimintatietoa.        |  Kaavion suunnitteluohjelman, raporttinäkymät-ikkunan suunnittelusovelluksen ja Power BI:n yhdistelmä       |
 
 ![Esimerkkikoontinäyttö](media/model-driven-app-overview/dashboard-designer.png)
 
-## <a name="advanced-model-driven-app-making"></a>Mallipohjaisen edistyneen sovelluksen tekeminen
-Ratkaisunhallinta on kattava työkalu, jota voi käyttää mallipohjaisen edistyneen sovelluksen luomisessa. Ratkaisunhallinnassa avulla voi siirtyä työkalun vasemmalla puolella olevan siirtymisruudun avulla hierarkiassa, joka sisältää kaikki sovelluksen osat.
+## <a name="advanced-model-driven-app-making"></a>Kehittynyttä mallipohjaisten sovellusten suunnittelua
+Ratkaisunhallinta on kattava työkalu, jota käytetään mallipohjaisten sovellusten kehittyneeseen muodostamiseen. Ratkaisunhallinnassa voi liikkua työkalun vasemmalla puolella olevan siirtymisruudun avulla hierarkiassa, joka koostuu kaikista sovelluksen osista.
 
 ![Ratkaisunhallinta](media/model-driven-app-overview/solutionexplorer-entitiescollapsed.png)
 
-Voit avata ratkaisunhallinnan valitsemalla [!INCLUDE [powerapps](../../includes/powerapps.md)]in vasemmassa ruudussa **Mallipohjainen**.
+Avaa ratkaisunhallinta valitsemalla [!INCLUDE [powerapps](../../includes/powerapps.md)]vasemmanpuoleisessa ruudussa **Malliin perustuva**.
 
-  ![Mallipohjaisen valitseminen](media/model-driven-app-overview/app-type-picker-mod.png)
+  ![Valitse Malliin perustuva](media/model-driven-app-overview/app-type-picker-mod.png)
 
 Valitse sitten **Lisäasetukset**-välilehti.
 
-Lisätietoja: [Edistyneen sovelluksen tekeminen ja mukauttaminen](advanced-navigation.md)
+Lisätietoja: [Kehittyneiden sovellusten luominen ja mukauttaminen ](advanced-navigation.md)
 
-## <a name="related-topics"></a>Asiaan liittyviä aiheita
+## <a name="related-topics"></a>Aiheeseen liittyviä ohjeaiheita
 
-[Mallipohjaisen sovelluksen tarkistaminen ja julkaiseminen](validate-app.md)
+[Mallipohjaisen sovelluksen vahvistaminen ja julkaiseminen](validate-app.md)
 
 [Mallipohjaisen sovelluksen jakaminen](share-model-driven-app.md)

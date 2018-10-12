@@ -5,14 +5,20 @@ author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: quickstart
-ms.date: 03/21/2018
+ms.date: 08/29/2018
 ms.author: jimholtz
-ms.openlocfilehash: eefcd30e4f5e6ec7441147c157cbb46864ebf718
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 9d7a2093c938658d6717157fc6bd683aa3a55bb6
+ms.sourcegitcommit: b8eee36e680036accb0e7d9fc7a434906af1c4d2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349244"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297470"
 ---
 # <a name="create-an-environment"></a>Ympäristön luominen
 Ympäristö on tila, jossa voit tallentaa, hallita ja jakaa organisaatiosi yritystietoja, sovelluksia ja työnkulkuja. Lisäksi sitä käytetään säilönä erillisille sovelluksille, joilla voi olla eri rooleja, suojausvaatimuksia tai kohdekäyttäjäryhmiä. PowerApps luo jokaiselle vuokraajalle automaattisesti yhden oletusympäristön, joka jaetaan kaikille käyttäjille kyseisessä vuokraajassa.
@@ -36,6 +42,8 @@ Kirjaudu sisään hallintakeskukseen osoitteessa [https://admin.powerapps.com](h
 2. Anna **Uusi ympäristö** -valintaruudussa ympäristön nimi ja valitse sitten avattavista luetteloista alue ja ympäristön tyyppi. Alueen oletuksena Azure Active Directory -vuokraajan kotialue, mutta voit valita avattavasta luettelosta minkä tahansa alueen. Aluetta ei voi muuttaa, kun ympäristö on luotu. Kun olet valmis, valitse **Luo ympäristö**.
 
     ![Tiedosto ja jakaminen](./media/create-environment/new-environment-dialog.png)
+
+    Valitse **Esikatselu (Yhdysvallat)**, jos haluat ottaa tulevat PowerApps-toiminnot käyttöön ennen virallista julkaisua. Lue lisätietoja [PowerAppsin esiversio-ohjelmasta](preview-environments.md).
 3. Kun ympäristö on luotu, näyttöön tulee vahvistusviestin sisältävä valintaikkuna ja sinua pyydetään luomaan tietokanta. Valitse **Luo tietokanta**, jotta voit jatkossa käyttää Common Data Serviceä.
 
     **Huomautus:** tällä hetkellä voit luoda tietokannan vain Azure Active Directory -vuokraajan kotialueella.

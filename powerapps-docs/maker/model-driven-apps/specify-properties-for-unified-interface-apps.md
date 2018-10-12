@@ -1,87 +1,87 @@
 ---
 title: Mallipohjaisten Unified Interface -sovellusten ominaisuuksien määrittäminen PowerAppsissa | MicrosoftDocs
-description: Tietoja sovelluksen ruudukko-ohjausobjektin määrittämisestä
+description: Opi määrittämään sovelluksen ruudukko-ohjausobjekti
 keywords: ''
 ms.date: 06/06/2018
 ms.service: crm-online
-ms.custom: null
+ms.custom: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 author: Mattp123
 ms.assetid: 3ecea4a7-0d18-4ccd-9609-3a62179e9e1b
 ms.author: matp
 manager: kvivek
-ms.reviewer: null
-ms.suite: null
-ms.tgt_pltfrm: null
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 caps.latest.revision: 0
 topic-status: Drafting
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 007ac566e317ee99bd85ab0675e5a53839800bb4
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39675419"
 ---
-
 # <a name="specify-properties-for-model-driven-unified-interface-apps"></a>Mallipohjaisten Unified Interface -sovellusten ominaisuuksien määrittäminen
 
-Lisäksi Unified Interface -sovelluskehys käyttää responsiivisia suunnitteluperiaatteita voidakseen antaa optimaalisen katselu- ja vuorovaikutuskokemuksen näytön koosta tai suunnasta riippumatta. Mallin perustuva sovellukset, jotka käyttävät Unified Interface -sovelluskehystä ruudukon (näkymä) ohjausobjekti vastaa. Säilön koon pienentyessä – esimerkiksi puhelimilla ja pienemmissä näyttöikkunoissa, ruudukko muuttuu luetteloksi. 
+Unified Interface -kehys käyttää reagoivan suunnittelun periaatteita optimaalisen katselu- ja käyttökokemuksen tarjoamiseksi, olipa näytön koko tai suunta mikä tahansa. Mallipohjaisissa sovelluksissa, jotka käyttävät Unified Interface -kehystä, ruudukon (näkymän) ohjausobjekti on reagoiva. Säilön koon pienentyessä – esimerkiksi-puhelimissa ja pienemmissä näyttölaitteissa – ruudukko muutetaan luetteloksi. 
 
-Vain luku -ruudukon ohjausobjekti määrittää, miten ruudukon tulisi toimia näytön kokojen muuttuessa. Sovelluksen tekijänä jos käsittelet Unified Interface -sovelluksia, voit määrittää vain luku -ruudukon ohjausobjektin ja sen ominaisuuksia mukautettuja ruudukkoja ja luetteloita varten.
-- **Korttilomake**-ominaisuus: Käytä luettelon oletusmallin sijaan luetteloiden korttilomaketta. Korttilomakkeet tarjoavat enemmän tietoja luettelonimikkeistä kuin oletusmalliluettelo.
-- **Käyttäytymisen muuttuminen** -ominaisuus: Tämän parametrin avulla voit määrittää, muuttuuko ruudukon ulkonäkö luettelossa vai ei.
+Vain luku -ruudukko -ohjausobjekti määrittää, miten ruudukko mukautuu eri näyttökokoihin. Jos olet tekemässä Unified Interface -sovellusta, voit määrittää Vain lukuruudukko -ohjausobjektin ja sen ominaisuudet mukautettuja ruudukoita ja luetteloita varten.
+- **Kortin muoto** -ominaisuus: käytä kortin muotoa luetteloille oletusluettelomallin sijaan. Kortin muoto näyttää enemmän tietoja luettelokohteille kuin oletusluettelomalli.
+- **Juoksutus**-ominaisuus: tämän parametrin avulla voit määrittää, juoksutetaanko ruudukko luetteloon.
 
-## <a name="allow-grid-to-reflow-into-list"></a>Salli ruudukon ulkonäön muuttua luetteloon
+## <a name="allow-grid-to-reflow-into-list"></a>Salli ruudukon juoksutus luetteloon
 
-Vain luku -ruudukon ohjausobjektien lisäämisen avulla voit määrittää seuraavat ominaisuudet: 
-- Salli ruudukon muuttua luetteloon pienillä näytöillä, kuten esimerkiksi mobiililaitteilla.
-- Määritä värien tila vain ruudukoksi tai vain luetteloksi.  
+Lisäämällä Vain luku -ruudukko -ohjausobjektin ohjausobjektien luetteloon voit määrittää seuraavat ominaisuudet: 
+- Salli ruudukon juoksutus luetteloon pienissä näytöissä, kuten matkapuhelimissa.
+- Määritä hahmontamistilaksi vain ruudukko tai vain luettelo.  
 
 1. Avaa [ratkaisunhallinta](advanced-navigation.md#solution-explorer).
-2. Laajenna siirtymisruudussa **Entiteetit** -ruudussa haluamasi entiteetti (esimerkiksi **asiakas** tai **yhteyshenkilö**) ja valitse sitten **ohjausobjektit** -välilehdessä **Lisää ohjausobjekti**.
+2. Laajenna siirtymisruudussa **Entiteetit**, valitse asianmukainen entiteetti (kuten **Tili** tai **Yhteyshenkilö**), ja valitse sitten **Ohjausobjektit**-välilehdeltä **Lisää ohjausobjekti**.
 
     ![Avaa Lisää ohjausobjekti](media/UnifiedInterface_ReadOnlyGrid_AddControl.png "Avaa Lisää ohjausobjekti")
 
-3. Valitse **vain luku-ruudukko** ohjausobjektien luettelosta ja valitse sitten **Lisää**.
+3. Valitse **Vain luku -ruudukko** ohjausobjektien luettelosta, ja valitse sitten **Lisää**.
 
-    Ohjausobjekti on lisätty käytettävissä olevien ohjausobjekti luetteloon.
+    Ohjausobjekti lisätään käytettävissä olevien ohjausobjektien luetteloon.
    
-    ![ohjausobjektin valitseminen](media/UnifiedInterface_ReadOnlyGrid_SelectControl.png "ohjausobjektin valitseminen")
+    ![Valitse ohjausobjekti](media/UnifiedInterface_ReadOnlyGrid_SelectControl.png "valittu ohjausobjekti")
     
-4. Valitse laitteet (**Web**, **Puhelin**, tai **tabletti**), jota varten haluat määrittää vain luku-ruudukon.
+4. Valitse laitteet (**Verkko**, **Puhelin** tai **Tabletti**), joissa haluat ruudukon olevan Vain luku -tilassa.
 
-    ![Valitse laitetyyppi](media/UnifiedInterface_ReadOnlyGrid_SelectDevice.png "Valitse laitteet")
+    ![Valitse laitteen tyyppi](media/UnifiedInterface_ReadOnlyGrid_SelectDevice.png "Valitse laitteet")
 
-5. Määritä **Korttilomake** -ominaisuus.
+5. Määritä **Kortin muoto** -ominaisuus.
 
-    Voit käyttää korttilomake-ominaisuutta luettelon oletusmallin sijaan luettelonimikkeitä varten. Korttilomakkeet tarjoavat enemmän tietoja luettelonimikkeistä kuin oletusmalliluettelo.    
+    Kortin muoto -ominaisuuden avulla voit näyttää luettelokohteet oletusluettelomallin sijaan. Kortin muoto näyttää enemmän tietoja luettelokohteille kuin oletusluettelomalli.    
 
-    a. Valitse kynäkuvake **Korttilomakkeen** vieressä.
+    a. Valitse kynäkuvake kohdan **Kortin muoto** vieressä.
 
-    ![Muokkaa korttilomake](media/UnifiedInterface_ReadOnlyGrid_CardForm.png "Muokkaa korttilomake")
+    ![Muokkaa kortin muotoa](media/UnifiedInterface_ReadOnlyGrid_CardForm.png "Muokkaa kortin muotoa")
 
-    b.  Valitse **entiteetin** ja **Korttilomake**-tyypit.
+    b.  Valitse **Entiteetti** ja **Kortin muoto** -tyypit.
 
-    ![korttilomakkeen ominaisuudet](media/UnifiedInterface_ReadOnlyGrid_CardFormProperties.png "korttilomakkeen ominaisuudet")
+    ![Kortin muodon ominaisuudet](media/UnifiedInterface_ReadOnlyGrid_CardFormProperties.png "Kortin muodon ominaisuudet")
 
     c. Valitse **OK**.
-6. Määritä **Käyttäytymisen muuttuminen** -ominaisuus. 
+6. Määritä **Juoksutus**-ominaisuus. 
     
-    a. Valitse kynäkuvake **Käyttäytymisen muuttumisen** vieressä.
+    a. Valitse kynäkuvake kohdan **Juoksutus** vieressä.
 
-    ![Muokkaa käyttäytymisen muuttumista](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Muokkaa käyttäytymisen muuttumista")
+    ![Muokkaa juoksutusta](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Muokkaa juoksutusta")
 
-    b. Valitse ruudukon muutostyyppi **staattiseen asetukseen sitominen** avattavasta luettelosta.
-    |Muutostyyppi|Kuvaus|
+    b. Valitse ruudukon juoksutustyyppi avattavasta **Sido staattisiin asetuksiin** -luettelosta.
+    |Työnkulun tyyppi|Kuvaus|
     |--------------|--------------------|
-    |**Suorita työnkulku uudelleen**|Toiminnolla voi tehdä ruudukosta luettelotilan sen mukaan, kun ei ole riittävästi näyttötilaa.|
-    |**Vain ruudukko**|Toiminnolla voi rajoittaa ruudukon muutosta luetteloksi silloinkin, kun ei ole riittävästi näyttötilaa.|
-    |**Vain luettelo**|Näyttää vain luettelona silloinkin, kun tilaa on näyttämään sen ruudukossa.|
+    |**Juoksutus**|Sallii ruudukon hahmontamisen luetteloon, jos näytössä ei ole riittävästi tilaa.|
+    |**Vain ruudukko**|Ei salli ruudukon hahmontamista luetteloon, vaikka näytössä ei ole riittävästi tilaa.|
+    |**Vain luettelo**|Näyttää sisällön luettelona, vaikka näytössä olisi riittävästi tilaa ruudukon näyttämiseksi.|
     
-     ![Käyttäytymisen ominaisuuksien muuttuminen](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Käyttäytymisen ominaisuuksien muuttuminen")
+     ![Juoksutuksen ominaisuudet](media/UnifiedInterface_ReadOnlyGrid_ReflowProperties.png "Juoksutuksen ominaisuudet")
 
     c. Valitse **OK**.
 
@@ -90,7 +90,7 @@ Vain luku -ruudukon ohjausobjektien lisäämisen avulla voit määrittää seura
 
 
 ## <a name="conditional-image"></a>Ehdollinen kuva
-Voit näyttää mukautetun kuvakkeen luettelossa arvon sijaan ja määrittää logiikan, jonka avulla voit valita ne JavaScriptin avulla sarakkeen arvojen perusteella. Saat lisätietoja ehdollisista kuvista aiheesta [Mukauta kuvakkeet sen sijaan, että arvot näkyvät luettelonäkyminä](../common-data-service/display-custom-icons-instead.md).
+Voit näyttää luettelossa mukautetun kuvakkeen arvon sijaan ja määrittää niiden valintaan käytettävän logiikan käyttämällä sarakkeiden arvoja ja JavaScriptiä. Katso lisätietoja ehdollisista kuvista kohdasta [Mukautettujen kuvakkeiden näyttäminen arvojen sijaan luettelonäkymissä](../common-data-service/display-custom-icons-instead.md).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 [Näkymän luominen tai muokkaaminen](create-edit-views.md)

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9497d257372181323a920bd2c1098601021e4f79
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 934ab9bddfb429ae3ed96706420af002a87697fb
+ms.sourcegitcommit: 87122dba00b4177ef736d87ecdde79581649ba42
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863663"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499518"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -36,11 +36,11 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 **Toista** – Käynnistyykö ajastin automaattisesti uudelleen, kun sen toiminta pysähtyy.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
-**[Align](properties-text.md)**  – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.
+**[Align](properties-text.md)** – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.
 
-**AutoPause** – Keskeytetäänkö ääni- tai videoleike automaattisesti, jos käyttäjä siirtyy eri näyttöön.
+**AutoPause** – Keskeytetäänkö ajastimen ohjausobjekti automaattisesti, jos käyttäjä siirtyy eri näyttöön.
 
-**AutoStart** – Alkaako ääni- tai video-ohjausobjekti toistaa leikettä automaattisesti, kun käyttäjä siirtyy tämän ohjausobjektin sisältävään näyttöön.
+**AutoStart** – Alkaako ajastimen ohjausobjekti toistaa automaattisesti, kun käyttäjä siirtyy tämän ohjausobjektin sisältävään näyttöön.
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
@@ -90,9 +90,9 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 
 **[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**[Koko](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
+**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
-**Start** – Toistetaanko ääni- tai videoleike.
+**Start** – Käynnistyykö ajastin.
 
 **[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 

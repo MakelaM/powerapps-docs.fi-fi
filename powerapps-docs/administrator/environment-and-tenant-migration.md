@@ -8,12 +8,18 @@ ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
 ms.author: jamesol
-ms.openlocfilehash: 3a4aeda30f8d4f01e2a85e186a769fa19ac29883
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 651301dafa17c6ec159d462f018d6ec1984485ba
+ms.sourcegitcommit: 7403ea7f103564fa7d1ae73a08a7dbdfeba7d999
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349589"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43263440"
 ---
 # <a name="environment-and-tenant-app-migration-through-packaging"></a>Sovellusten siirtäminen ympäristöjen ja vuokraajien välillä paketoinnin avulla
 Lue, miten resursseja voidaan siirtää yhdestä ympäristöstä toiseen paketoinnin avulla. Nämä ympäristöt voivat olla samassa vuokraajassa tai eri vuokraajissa.
@@ -112,11 +118,11 @@ CDS-ratkaisupaketin tuominen vaatii valitettavasti manuaalisen ratkaisun, jota p
 
 3. Kopioi osoite selaimestasi, tee siihen seuraavat muutokset ja siirry uuteen osoitteeseen selaimessasi:
 
-    * Osoitteen alkuperäinen rakenne: https://{organisaationyksilöivänimi}.crm.dynamics.com/tools/solution/edit.aspx?id={ratkaisunnimi}
+    * Nykyinen URL-osoitteen rakenne: `https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}`
 
         ![URL-osoitteen muokkaus](./media/environment-and-tenant-migration/edit-url.png)
 
-    * Osoitteen uusi rakenne: https://{organisaationyksilöivänimi}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx
+    * Uusi URL-osoitteen rakenne: `https://{orguniquename}.crm.dynamics.com/tools/solution/SolutionImportWizard.aspx`
 
         ![Paketin valinta](./media/environment-and-tenant-migration/select-package.png)
 

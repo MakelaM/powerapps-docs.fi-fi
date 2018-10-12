@@ -1,6 +1,6 @@
 ---
 title: PowerAppsin, Microsoft Flow'n ja Power BI:n integroiminen SharePoint Onlinen kanssa (johdanto) | Microsoft Docs
-description: 'Tässä opetusohjelmasarjassa tutkitaan, miten laaditaan yksinkertainen projektinhallintaohjelma, joka perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI.'
+description: 'Tässä opetusohjelmasarjassa näytetään, miten laaditaan projektinhallintaa varten yksinkertainen pohjaan perustuva sovellus. Se perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI.'
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/19/2017
 ms.author: mblythe
-ms.openlocfilehash: e8a7860920f25572ec899ee93d501ed553ee62f9
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: fa2631d065425ab57e47dccbb470f577d6474f23
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39019568"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42831019"
 ---
 # <a name="integrate-powerapps-microsoft-flow-and-power-bi-with-sharepoint-online"></a>PowerAppsin, Microsoft Flow'n ja Power BI:n integroiminen SharePoint Onlinen kanssa
-Onko käytössäsi SharePoint Online ja haluatko automatisoida ja virtaviivaistaa liiketoimintaprosessejasi paremmin? Oletko työskennellyt PowerAppsin, Microsoft Flow'n tai Power BI:n kanssa, muttet ole varma, miten näitä käytetään SharePoint Onlinen kanssa? Olet tullut oikeaan paikkaan! Tässä opetusohjelmasarjassa tutkitaan, miten laaditaan yksinkertainen projektinhallintaohjelma, joka perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI. Nämä tekniikat toimivat yhdessä, mikä helpottaa liiketoimintasi *mittaamista*, *toimimista* tulosten perusteella ja työnkulkujen *automatisoimista*. Kun olet käynyt läpi tämän sarjan, käytössäsi on hieno skenaario, kuten tämä:
+Onko käytössäsi SharePoint Online ja haluatko automatisoida ja virtaviivaistaa liiketoimintaprosessejasi paremmin? Oletko työskennellyt PowerAppsin, Microsoft Flow'n tai Power BI:n kanssa, muttet ole varma, miten näitä käytetään SharePoint Onlinen kanssa? Olet tullut oikeaan paikkaan! Tässä opetusohjelmasarjassa näytetään, miten laaditaan projektinhallintaa varten yksinkertainen pohjaan perustuva sovellus. Se perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI. Nämä tekniikat toimivat yhdessä, mikä helpottaa liiketoimintasi *mittaamista*, *toimimista* tulosten perusteella ja työnkulkujen *automatisoimista*. Kun olet käynyt läpi tämän sarjan, käytössäsi on hieno skenaario, kuten tämä:
 
 ![Valmiin skenaarion kaavio](./media/sharepoint-scenario-intro/composite-with-background.png)
 

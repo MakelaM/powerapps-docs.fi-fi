@@ -1,6 +1,6 @@
 ---
 title: Ratkaisun luominen | MicrosoftDocs
-description: Ratkaisun luominen
+description: Lue ohjeet ratkaisun luomiseen
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
@@ -9,55 +9,56 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - PowerApps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- PowerApps
 author: Mattp123
 ms.assetid: e21a4876-08b4-417a-a644-c577a27c5cf1
 caps.latest.revision: 12
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 26ecc9b2f83375ba10e6b32dfc12d6cc37342cf4
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39681206"
 ---
 # <a name="create-a-solution"></a>Ratkaisun luominen
 
-Koska oletusratkaisu sisältää kaikki ratkaisun osat, mukauttamiesi ratkaisun osien etsiminen voi helpottua, jos luot erillisen ratkaisun ja mukautat vain sitä. Tämä helpottaa myös ratkaisun varmuuskopion viemistä, sillä tiedosto on pienikokoisempi. Jos päätät toimia näin, muista aina lisätä myös kaikki muokkaamasi ratkaisun osat tähän ratkaisuun. Kun luot uusia ratkaisun osia, sinun on aina luotava ne tässä ratkaisukontekstissa. Tällä tavoin ratkaisujulkaisijan mukautuksen etuliitettä käytetään johdonmukaisesti. Kun olet luonut ratkaisun osat ratkaisussasi tai lisännyt aiemmin luodut ratkaisun osat kyseiseen ratkaisuun, voit muokata niitä halutessasi myös oletusratkaisussa.  
+Jos olet luomassa erillistä ratkaisua, sinulle voi olla helpompaa etsiä vain mukauttamasi ratkaisukomponentit, ja tehdä sitten kaikki mukautuksesi tässä erillisessä ratkaisussa, koska oletusratkaisu sisältää kaikki ratkaisukomponentit. Tämän ansiosta voit myös viedä ratkaisusi varmuuskopion pienempänä tiedostona. Jos teet näin, sinun täytyy muistaa aina lisätä kaikki muokkaamasi ratkaisukomponentit tähän ratkaisuun. Kun luot uusia ratkaisukomponentteja, luo ne aina tämän ratkaisun kontekstissa. Tällä tavalla käytetty ratkaisujulkaisijan etuliite pysyy johdonmukaisena. Kun olet luonut ratkaisukomponentteja ratkaisuusi tai lisännyt olemassa olevia ratkaisukomponentteja tähän ratkaisuun, voit muokata niitä halutessasi myös oletusratkaisussa.  
   
- Lisätietoja ratkaisun käsitteistä on aiheessa [Ratkaisujen käsitteleminen](solutions-overview.md).  
+ Lue lisätietoja [ratkaisujen käytöstä](solutions-overview.md).  
   
-1.  Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**. 
+1.  Valitse **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**. 
   
-2.  Valitse **Uusi** ja lisää tiedot ratkaisun pakollisiin kenttiin.  
+2.  Valitse **Uusi** ja anna tiedot ratkaisun pakollisiin kenttiin.  
   
     |Kenttä|Kuvaus|  
     |-----------|-----------------|  
-    |**Näyttönimi**|Ratkaisuluettelossa näkyvä nimi. Voit muuttaa tätä nimeä myöhemmin.|  
-    |**Nimi**|Ratkaisun yksilöivä nimi. Se luodaan Näyttönimi-kentässä ilmoitetun arvon perusteella. Voit muokata sitä ennen ratkaisun tallennusta, mutta sitä ei voi muuttaa tallennuksen jälkeen.|  
-    |**Julkaisija**|Voit valita oletusjulkaisijan tai luoda uuden julkaisijan. Käytä organisaation oletusjulkaisijaa, jos et aio jakaa ratkaisua.|  
-    |**Versio**|Kirjoita ratkaisun versionumero. Tämä on tärkeää vain siinä tapauksessa, että viet ratkaisun. Versionumero on vietäessä osa ratkaisun tiedostonimeä.|  
+    |**Näyttönimi**|Tämä on nimi, joka näytetään ratkaisuluettelossa. Voit vaihtaa tätä myöhemmin.|  
+    |**Nimi**|Tämä on ratkaisun yksilöivä nimi. Se luodaan Näyttönimi-kentässä antamasi nimen pohjalta. Voit muokata tätä ennen ratkaisun tallentamista, mutta et tallentamisen jälkeen.|  
+    |**Julkaisija**|Voit valita oletusjulkaisijan tai luoda uuden julkaisijan. Jos et aio jaella ratkaisuasi, käytä organisaatiosi oletusjulkaisijaa.|  
+    |**Versio**|Anna tähän ratkaisusi versionumero. Tällä on merkitystä vain, jos viet ratkaisun. Versionumero sisällytetään tiedostonimeen, kun viet ratkaisun.|  
   
 3.  Valitse **Tallenna**.  
   
- Haluat ehkä lisätä ratkaisun tallennuksen jälkeen tietoja kenttiin, jotka eivät ole pakollisia. Seuraavat vaiheet ovat valinnaisia. Kirjoita **Kuvaus**-kenttään ratkaisun kuvaus ja valitse HTML-verkkoresurssi ratkaisun **määrityssivuksi**. Määrityssivua käyttävät yleensä ratkaisua jakavat riippumattomat ohjelmistotoimittajat. Kun se on määritetty, uusi **Määritys**-solmu näkyy **Tiedot**-solmun alapuolella ja verkkoresurssi näkyy siinä. Kehittäjät lisäävät tällä sivulla ohjeita tai ohjausobjekteja, joilla voit määrittää määritystietoja tai käynnistää ratkaisun.  
+ Kun olet tallentanut ratkaisun, voit lisätä tietoja myös vapaaehtoisiin kenttiin. Tämä ei ole pakollista. **Kuvaus**-kenttään voit antaa kuvauksen ratkaisustasi. Voit myös valita verkkoresurssin, jota käytetään ratkaisun **määrityssivuna**. Määrityssivua käyttävät yleensä itsenäiset ohjelmistokehittäjät, jotka jakelevat ratkaisuja. Kun olet määrittänyt nämä, näet **tietosolmun** alla **määrityssolmun**, jossa tämä verkkoresurssi näytetään. Kehittäjät voivat lisätä tälle sivulle ohjeita tai ohjausobjekteja, joilla voidaan määrittää määritystietoja tai käynnistää ratkaisu.  
   
 <a name="BKMK_AddSolutionComponents"></a>   
 
-## <a name="add-solution-components"></a>Ratkaisun osien lisääminen  
- Luotu ratkaisu ei sisällä ratkaisun osia. Voit luoda uusia ratkaisun osia tai lisätä oletusratkaisun ratkaisun osia luettelovalikon **Lisää aiemmin luotu** -painikkeella.  
+## <a name="add-solution-components"></a>Ratkaisukomponenttien lisääminen  
+ Kun olet luonut ratkaisun, se ei sisällä mitään ratkaisukomponentteja. Voit luoda uusia ratkaisukomponentteja tai lisätä oletusratkaisun ratkaisukomponentteja luettelovalikon **Lisää aiemmin luotu** -painikkeella.  
   
- Kun teet tämän, **Pakollisia osia puuttuu** -dialogi voi avautua.  
+ Jos teet näin, saatat nähdä **Pakollisia osia puuttuu** -valintaikkunan.  
    
- ![Lisää Pakolliset osat -valintaikkuna](media/crm-itpro-cust-addrequiredcomponents.PNG "Lisää Pakolliset osat -valintaikkuna")  
+ ![Lisää pakolliset osat -valintaikkuna](media/crm-itpro-cust-addrequiredcomponents.PNG "Lisää pakolliset osat -valintaikkuna")  
   
- Dialogi varoittaa, että ratkaisun osa on riippuvainen muista ratkaisun osista. Jos valitset **Ei, älä lisää pakollisia osia**, ratkaisu ei ehkä toimi, jos viet sen toiseen organisaatioon, jossa ei ole kaikkia pakollisia osia. Jos ratkaisun tuonti onnistuu, ratkaisu ei ehkä toimi samoin kuin alkuperäisessä organisaatiossa, koska osat on määritetty eri tavalla kuin lähderatkaisun osat.  
+ Tässä valintaikkunassa saat varoituksen, jos ratkaisukomponentilla on riippuvuuksia muihin ratkaisukomponentteihin. Jos valitset toiminnon, joka **ei sisällytä pakollisia komponentteja**, ratkaisu saattaa epäonnistua, jos tuot sen toiseen organisaatioon, jossa näitä pakollisia komponentteja ei ole olemassa. Jos ratkaisun tuominen onnistuu, se ei ehkä toimi täysin samalla tavalla kuin alkuperäisessä organisaatiossa, koska komponentit on määritetty eri tavalla kuin lähderatkaisussa.  
   
- Yleensä on turvallisempaa lisätä pakolliset osat, jos aiot viedä ratkaisun toiseen organisaatioon. Jos et lisää näitä osia, kun lisäät yksittäisen ratkaisun osan, voit palata myöhemmin takaisin, valita lisätyn ratkaisun osan ja valita sitten valikossa **Lisää pakolliset osat**.  
+ Yleensä pakolliset komponentit kannattaa sisällyttää, jos aiot viedä ratkaisun toiseen organisaatioon. Jos et lisää näitä komponentteja, kun lisäät yksittäisen ratkaisukomponentin, voit palata myöhemmin, valita lisäämäsi ratkaisukomponentin ja valitse valikosta **Lisää pakolliset osat**.  
   
- Jos et aio viedä ratkaisua tai jos aiot viedä sen vain ei-hallittuna ratkaisuna ja tuoda sen takaisin samaan organisaatioon, pakollisia osia ei tarvitse lisätä. Jos joskus viet ratkaisun, sama puuttuvista pakollista osista ilmoittava varoitus avautuu. Jos aiot tuoda ratkaisun vain takaisin samaan organisaatioon, tästä varoituksesta ei tarvitse välittää. Ohjeissa, jotka koskevat sovelluksen siirtymisruudun tai valintanauhan muokkaamista ilman kolmannen osapuolen työkalua, oletetaan, että viet ratkaisun takaisin samaan organisaatioon.  
+ Jos et aio viedä ratkaisua tai jos aiot ainoastaan viedä sen hallitsemattomana ratkaisuna ja tuoda sen sitten takaisin samaan organisaatioon, pakollisia komponentteja ei ole tarpeen sisällyttää. Jos joskus viet ratkaisun, saat uuden varoituksen siitä, että joitain pakollisia komponentteja puuttuu. Jos aiot ainoastaan tuoda tämän ratkaisun takaisin samaan organisaatioon, voit ohittaa tämän varoituksen. Toimenpiteet sovelluksen siirtymistoimintojen tai valintanauhan muokkaamiseksi ilman ulkopuolisen palveluntarjoajan työkalua toimivat sillä oletuksella, että viet ratkaisun takaisin samaan organisaatioon.  
 
 > [!IMPORTANT]
->  Jos aiot lisätä ratkaisuihin tapaamisia, on erittäin suositeltavaa, ettet lisää erillisiin ratkaisuihin pelkästään tapaamisia tai pelkästään toistuvia tapaamisia. Jos asennat ja poistat erilaisia tapaamistyyppejä sisältäviä erillisiä ratkaisuja, järjestelmässä tapahtuu SQL Server -virhe ja tapaamiset täytyy luoda uudelleen. 
+>  Jos aiot sisällyttää tapaamisia ratkaisuihin, suosittelemme vahvasti, että et sisällytä vain tapaamisia ja vain toistuvia tapaamisia erillisiin ratkaisuihin. Jos asennat ja poistat erilliset ratkaisut erilaisilla tapaamistyypeillä, saat SQL Serverin virheen. Lisäksi sinun täytyy luoda tapaamiset uudelleen. 

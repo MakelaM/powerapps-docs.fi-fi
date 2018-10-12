@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/03/2018
 ms.author: manasma
 search.audienceType:
 - admin
@@ -14,12 +14,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 71358a1c476655ab4e80d94f9e6846b9a35684f4
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: c5199488f3250d131f42665dfc6f9ad1fc1ae221
+ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42857632"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48246070"
 ---
 # <a name="configure-environment-security"></a>Konfiguroi ympäristön turvallisuus
 Common Data Service (CDS) for Apps käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
@@ -66,7 +66,7 @@ PowerApps-ympäristö sisältää ennalta määritettyjä käyttöoikeusrooleja,
 |Järjestelmänvalvoja     |  Luominen, lukeminen, kirjoittaminen, poistaminen, mukautukset, käyttöoikeusroolit       | Täydet ympäristön mukauttamis- ja hallintaoikeudet, mukaan lukien käyttöoikeusroolien luominen, muokkaaminen ja määrittäminen. Pystyy tarkastelemaan kaikkia ympäristössä olevia tietoja. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Järjestelmämukauttaja     | Luominen (itse), lukeminen (itse), kirjoittaminen (itse), poistaminen (itse), mukautukset         | Täydet oikeudet ympäristön mukauttamiseen. Voi kuitenkin tarkastella vain itse luotujen ympäristöentiteettien tietueita. Lisätietoja: [Mukauttamiseen tarvittavat oikeudet](https://docs.microsoft.com/dynamics365/customer-engagement/customize/privileges-required-customization)        |
 |Ympäristön tekijä     |  Ei mitään       | Voi luoda ympäristöön liittyviä uusia resursseja, kuten sovelluksia, yhteyksiä, mukautettuja ohjelmointirajapintoja, yhdyskäytäviä ja työnkulkuja Microsoft Flow -palvelun avulla. Ei kuitenkaan omista mitään oikeuksia ympäristössä olevien tietojen käyttöön. Lisätietoja: [Ympäristöjen yleiskuvaus](https://powerapps.microsoft.com/blog/powerapps-environments/)        |
-|Common Data Servicen käyttäjä     |  Lukeminen, luominen (itse), kirjoittaminen (itse), poistaminen (itse)       | Voi suorittaa sovelluksen ympäristössä ja suorittaa yleisiä tehtäviä omille tietueilleen.        |
+|Common Data Servicen käyttäjä     |  Lukeminen (itse), luominen (itse), kirjoittaminen (itse), poistaminen (itse)       | Voi suorittaa sovelluksen ympäristössä ja suorittaa yleisiä tehtäviä omille tietueilleen.        |
 |Edustaja     | Toisen käyttäjän puolesta toimiminen        | Mahdollistaa koodin suorittamisen toisena käyttäjänä tai toiseksi käyttäjäksi tekeytyneenä.  Käytetään yleensä toisen käyttöoikeusroolin yhteydessä, jotta tietueita voidaan käyttää. Lisätietoja: [Toiseksi käyttäjäksi tekeytyminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/impersonate-another-user)        |
 
 *Oikeuden vaikutusalue on yleinen, ellei toisin määritetä.

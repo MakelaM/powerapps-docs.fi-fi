@@ -6,17 +6,23 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: reference
-ms.date: 07/31/2018
+ms.date: 08/23/2018
 ms.author: jamesol
-ms.openlocfilehash: e45b23d4efc474bcd48069b9823d1ef80cf5ea4a
-ms.sourcegitcommit: a0a8782d3c8d24cecf0796d405a61f745f0ffd91
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 0d5d2cee770e03c4e587db0bff624f34395ed92c
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367611"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864424"
 ---
 # <a name="powershell-support-for-powerapps-preview"></a>PowerAppsin PowerShell-tuki (esiversio)
-Sovellusten tekijöille ja järjestelmänvalvojille tarkoitetulla PowerShell-cmdlet-komentojen esiversiolla voit automatisoida monia seuranta- ja hallintatehtäviä, jotka on tällä hetkellä mahdollista suorittaa vain manuaalisesti [PowerAppsissa](https://web.powerapps.com) tai [PowerApps-hallintakeskuksessa](https://admin.powerapps.com).
+Sovellusten tekijöille ja järjestelmänvalvojille tarkoitetulla PowerShell-cmdlet-komentojen esiversiolla voit automatisoida monia seuranta- ja hallintatehtäviä, jotka on tällä hetkellä mahdollista suorittaa vain manuaalisesti [PowerAppsissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai [PowerApps-hallintakeskuksessa](https://admin.powerapps.com).
 
 ## <a name="installation"></a>Asennus
 Suorita sovellusten luojille tarkoitetut PowerShell-cmdlet-komennot seuraavasti:
@@ -126,6 +132,15 @@ Jotta voit suorittaa järjestelmänvalvojan cmdlet-komentojen hallintatoimia, si
 >Get-Help Get-AdminPowerAppEnvironment -Examples
 >Get-Help Get-AdminPowerAppEnvironment -Detailed
 >```
+
+## <a name="version-history"></a>Versiohistoria
+| Versio | Päivämäärä | Päivitykset |
+| --- | --- | --- |
+| 1.0 | 23.4.2018 | <ol> <li> PowerAppsin cmdlet-komentojen ensijulkaisu sovelluskehittäjille (esiversio) sisältää cmdlet-hallintakomennot ympäristöille, sovelluksille, työnkuluille, työnkulun hyväksynnille, yhteyksille ja mukautetuille liittimille </li> <li> PowerAppsin cmdlet-komentojen ensijulkaisu järjestelmänvalvojille (esiversio) sisältää cmdlet-hallintakomennot ympäristöille, sovelluksille ja työnkuluille </li></ol>|
+| 2.0 | 24.5.2018 | <ol> <li> Pieniä ohjelmavirhekorjauksia sovelluskehittäjien ja järjestelmänvalvojien cmdlet-komentoihin </li> <li> Seuraavat uudet cmdlet-hallintakomennot on lisätty: <br> Get-AdminConnection <br> Remove-AdminConnection <br> Get-AdminConnectionRoleAssignment <br> Set-AdminConnectionRoleAssignment <br>Remove-AdminConnectionRoleAssignment <br>Get-AdminConnector  <br>Remove-AdminConnector <br>Set-AdminConnectorRoleAssignment  <br>Get-AdminConnectorRoleAssignment  <br>Remove-AdminConnectorRoleAssignment <br>Get-AdminPowerAppsUserDetails <br>Get-AdminFlowUserDetails <br>Remove-AdminFlowUserDetails <br>Get-AdminApiPolicy  <br>Add-AdminApiPolicy <br>Remove-AdminApiPolicy <br>Set-AdminApiPolicy <br>Add-ConnectorToBusinessDataGroup  <br>Remove-ConnectorFromBusinessDataGroup </li> </ol>
+| 3.0 | 30.7.2018 | <ol> <li> Lisätty mahdollisuus välittää tunnistetiedot Add-PowerAppsAccount-komentoon (toistuvien komentosarjojen mahdollistamiseksi) </li> <li>  Pieniä ohjelmavirhekorjauksia sovelluskehittäjien ja järjestelmänvalvojien cmdlet-komentoihin </li> <li> Lisätty etuliite PowerApp tai Flow jokaiseen cmdlet-komentoon sovelluskehittäjiä varten </li> <li>  Lisätty etuliite AdminPowerApp tai AdminFlow jokaiseen cmdlet-komentoon järjestelmänvalvojia varten </li> <li> Seuraavat uudet cmdlet-hallintakomennot on lisätty: <br> New-AdminPowerAppEnvironment <br> Set-AdminPowerAppEnvironmentDisplayName <br> New-AdminPowerAppCdsDatabase <br> Get-AdminPowerAppCdsDatabaseLanguages <br> Get-AdminPowerAppCdsDatabaseCurrencies <br> Get-AdminPowerAppEnvironmentLocations <br> Get-AdminPowerAppConnectionReferences <br> Set-AdminPowerAppAsFeatured <br> Clear-AdminPowerAppAsFeatured <br> Set-AdminPowerAppAsHero <br> Clear-AdminPowerAppAsHero <br> Set-AdminPowerAppApisToBypassConsent <br> Clear-AdminPowerAppApisToBypassConsent <br> Remove-AdminFlowApprovals </li></ol>
+| 4.0 | 15.8.2018 | Lisätty valinnainen parametri New-AdminPowerAppCdsDatabase-komentoon, jotta funktio on synkroninen oletusarvoisesti (eli se ei palaudu ennen kuin tietokanta on valmisteltu)
+| 5.0 | 24.8.2018 | Korjattu ongelma, jossa Flow-järjestelmänvalvojan cdmlet-komennot eivät palauttaneet tietoja suojausasetusten perusteella
 
 ## <a name="questions"></a>Onko sinulla kysyttävää?
 

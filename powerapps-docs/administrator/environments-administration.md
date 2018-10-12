@@ -6,14 +6,20 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 07/30/2018
+ms.date: 08/15/2018
 ms.author: manasma
-ms.openlocfilehash: 02b25dd627e85b638a113c1c0aceee16d7df6275
-ms.sourcegitcommit: 2e7b621066cdc3e7be329d5213ecfee0b4223641
+search.audienceType:
+- admin
+search.app:
+- D365CE
+- PowerApps
+- Powerplatform
+ms.openlocfilehash: 976ecbd9eeaff0ee5a274b943d4d35c21568201d
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349083"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42864264"
 ---
 # <a name="administer-environments-in-powerapps"></a>Ympäristöjen hallinta PowerAppsissa
 [PowerApps-hallintakeskuksessa][1] voit hallita ympäristöjä, jotka olet luonut tai joissa olet ympäristön järjestelmänvalvojan ja järjestelmänvalvojan roolissa. Hallintakeskuksessa voit tehdä seuraavia toimintoja:
@@ -190,14 +196,8 @@ Jos saat muita virhesanomia tai sinulla on kysyttävää, ota meihin yhteyttä [
 ### <a name="while-trying-to-create-a-database-in-an-environment-i-am-getting-an-error-how-should-i-resolve-it"></a>Saan virhesanoman, kun yritän luoda tietokannan ympäristössä. Miten voin ratkaista ongelman?
 Voit saada virhesanoman tietokannan luomisen yhteydessä seuraavissa skenaarioissa:
 
-1. **Oletusympäristö**: vuokraajan oletusympäristö ei tällä hetkellä tue tietokannan luomista. 
-
-2. **Henkilökohtaiseen käyttöön tarkoitettu ympäristö:** saat omaan käyttöön tarkoitetun ympäristön, kun rekisteröidyt PowerAppsin yhteisön palvelupaketissa. Jos et ole vielä luonut tietokantaa, et voi tällä hetkellä valmistella tietokantaa henkilökohtaiseen käyttöön tarkoitetussa ympäristössä. 
-
-3. **Ympäristö on Azure Active Directory -vuokraajan kotialueesta poikkeavalla alueella**: tällä hetkellä voit valmistella tietokannan vain Azure Active Directory -vuokraajan kotialueella luoduissa ympäristöissä. Mahdollisuus valmistella tietokanta muilla alueilla on tulossa pian. Joten muista pitää alue vuokraajan oletussijainnin kanssa samana, jos haluat luoda tietokannan vuokraajan ympäristössä.
-
-4. **Tietokantojen luomista ei tueta tietyillä alueilla**: On tiettyjä alueita, joilla tietokannan luominen ei ole käytettävissä. Esimerkiksi Etelä-Amerikan maat. Joten jos vuokraajan kotisijainti on Etelä-Amerikka, et voi tällä hetkellä valmistella tietokantaa missään ympäristössä. 
-    
+**Oletusympäristö**: vuokraajan oletusympäristö ei tällä hetkellä tue tietokannan luomista. 
+  
 Pyrimme siihen, että tietokantoja voisi luoda kaikissa edellä mainituissa skenaarioissa.
 Jos saat muita virhesanomia tai sinulla on kysyttävää, ota meihin yhteyttä [täällä][5].
 
