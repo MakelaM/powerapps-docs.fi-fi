@@ -1,6 +1,6 @@
 ---
-title: Tallenna ja julkaise sovellus| Microsoft Docs
-description: Vaiheittaiset ohjeet sovelluksen tallentamiseen ja julkaisemiseen sovelluksen tekijöille
+title: Kangassovelluksen tallentaminen ja julkaiseminen| Microsoft Docs
+description: Vaiheittaiset ohjeet kangassovellusten tallentamiseen ja julkaisemiseen sovellusten tekijöille
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/14/2017
 ms.author: anneta
-ms.openlocfilehash: faaf3ef6eefc41ad5b1d7cb2e6e34db57632cfaf
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f52338d4eed8942259e7ae15a8df3b05c45a703d
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194802"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42837008"
 ---
-# <a name="save-and-publish-an-app-in-powerapps"></a>Tallenna ja julkaise sovellus PowerAppsissa
-Kun tallennat sovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
+# <a name="save-and-publish-a-canvas-app-in-powerapps"></a>Kangassovelluksen tallentaminen ja julkaiseminen PowerAppsissa
+Kun tallennat kangassovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
 
 Saat lisätietoa sovelluksen jakamisesta kohdasta [Jaa sovellus](share-app.md).
 

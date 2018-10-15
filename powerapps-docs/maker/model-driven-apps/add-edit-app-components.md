@@ -1,197 +1,194 @@
 ---
-title: 'Opastusohjelma, jossa kerrotaan mallipohjaisen sovelluksen osien lisäämisestä ja muokkaamisesta PowerAppsin avulla | MicrosoftDocs'
-description: Osien lisääminen tai muokkaaminen PowerAppsin sovellusten suunnitteluohjelmassa
+title: Opetusohjelma malliin perustuvan sovelluksen osien lisäämiseen tai muokkaamiseen PowerAppsilla | MicrosoftDocs
+description: PowerAppsin sovellusten suunnitteluohjelman avulla voit lisätä tai muokata osia
 keywords: ''
 ms.date: 03/30/2018
 ms.service: crm-online
-ms.custom: null
+ms.custom: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - PowerApps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- PowerApps
 author: Mattp123
 ms.assetid: be93b9d7-f1c2-4ee7-8d7c-0f5c34dfa5f7
 ms.author: matp
-ms.reviewer: null
-ms.suite: null
-ms.tgt_pltfrm: null
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 caps.latest.revision: 17
 topic-status: Drafting
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 87fec3bff3ad21a5c0474b67f001cca5c902d609
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39679939"
 ---
+# <a name="tutorial-add-or-edit-model-driven-app-components-in-the-powerapps-app-designer"></a>Opetusohjelma: Malliin perustuvan sovelluksen osien lisääminen tai muokkaaminen PowerAppsin sovellusten suunnitteluohjelmassa
 
-# <a name="tutorial-add-or-edit-model-driven-app-components-in-the-powerapps-app-designer"></a>Opastusohjelma: Mallipohjaisen sovelluksen osien lisääminen ja muokkaaminen PowerAppsin avulla sovellusten suunnitteluohjelmassa
+Tässä opetusohjelmassa opit lisäämään osia sekä poistamaan niitä malliin perustuvasta sovelluksesta. 
 
-Tässä opetusohjelmassa kerrotaan, miten mallipohjaisessa sovellukseen lisätään ja poistetaan osia. 
-
-Mallipohjainen sovellus koostuu eri osista. Sovellukseen voi lisätä kahden tyyppisiä osia: artefakteja ja entiteettiresursseja. Sovelluksen suunnitteluohjelmassa entiteetit, koontinäytöt ja liiketoimintaprosessit ovat sovelluksen artefakteja. Entiteettiresurssit koostuvat lomakkeista, näkymistä, kaavioista ja koontinäkymistä.  
+Malliin perustuva sovellus koostuu eri osista. Voit lisätä sovellukseen kahdenlaisia osia: artefakteja ja entiteettiresursseja. Sovellusten suunnitteluohjelmassa entiteetit, koontinäyttö ja liiketoimintaprosessit ovat kaikki sovelluksen artefakteja. Entiteettiresurssit koostuvat lomakkeista, näkymistä, kaavioista ja koontinäytöistä.  
   
-Sovelluksen suunnitteluohjelma viittaa aiemmin määritettyihin metatietoihin oletusratkaisussa. Sen avulla voi luoda komponentteja, kuten lomakkeita, näkymiä, kaavioita ja koontinäyttöjä  
+Sovellusten suunnitteluohjelma viittaa oletusratkaisujen olemassa oleviin metatietoihin. Sen avulla voit luoda osia, kuten lomakkeita, näkymiä, kaavioita ja koontinäyttöjä.  
   
-## <a name="app-designer-layout"></a>Sovelluksen suunnitteluohjelman asettelu  
- Sovelluksen suunnitteluohjelmassa on kaksi pääaluetta. Vasemmalla puolella on alusta, johon sovelluksen komponentit lisätään.  
+## <a name="app-designer-layout"></a>Sovellusten suunnitteluohjelman asettelu  
+ Sovellusten suunnitteluohjelmassa on kaksi pääaluetta. Vasemmalla puolella on pohja, johon voit lisätä sovelluksen osia.  
   
-![Sovelluksen suunnitteluohjelman kaavio](../model-driven-apps/media/app-designer-canvas-pane.png)
+![Sovellusten suunnitteluohjelman pohja](../model-driven-apps/media/app-designer-canvas-pane.png)
 
- Oikealla puolella ovat välilehdet, joita käytetään komponenttien valitsemisessa ja niiden ominaisuuksien määrittämisessä.  
+ Oikealla puolella ovat välilehdet, joissa voit valita osia ja määrittää osien ominaisuuksia.  
+  
+ ![Sovellusten suunnitteluohjelman osat](../model-driven-apps/media/app-designer-canvas-components-tab.png "Sovellusten suunnitteluohjelman osat")  
+  
+ Pohjassa on näkyvissä sivustokartan, liiketoimintaprosessin, koontinäytön ja entiteettien alueet. Kun valitset koontinäytön tai liiketoimintaprosessin tai määrität sivustokartan, sovellusten suunnitteluohjelma lisää automaattisesti pohjaan entiteetit, joita käytetään näissä osissa. Kun entiteetit ovat paikallaan, sinun tarvitsee vain valita kukin entiteetti ja lisätä vaadittuja entiteettiresursseja, kuten lomakkeita, näkymiä ja kaavioita.
  
- > [!div class="mx-imgBorder"]
- > ![Sovellusten suunnitteluohjelman komponentit](../model-driven-apps/media/app-designer-canvas-components-tab.png "Sovellusten suunnitteluohjelman komponentit")  
+ Voit myös etsiä osia pohjasta **Hae pohjasta** -toiminnolla. Kun valitset **Hae pohjasta** -toiminnon, välilehtien oikealle puolelle oikeanpuolimmaiseen ruutuun aukeaa uusi hakuvälilehti.   
   
- Alustalla on sivustokartan, liiketoimintaprosessin, koontinäytön ja entiteettien alue. Kun valitset koontinäytön tai liiketoimintaprosessin tai määrität sivustokartan, sovelluksen suunnitteluohjelma lisää näissä komponenteissa käytettävät entiteetit automaattisesti. Kun entiteetit ovat paikoillaan, sinun on vain valittava kukin entiteetti ja lisättävä pakolliset entiteetin resurssit, kuten lomakkeet, näkymät ja kaaviot.
- 
- Voit myös käyttää **Hae kaaviosta** hakeaksesi komponentteja kaaviosta. Kun valitset **Hae kaaviosta**, ponnahdusikkunahaku avautuu uuteen välilehteen oikealla puolella välilehden oikeanpuoleisessa ruudussa.   
- 
- > [!div class="mx-imgBorder"]
- > ![Kaavion hakuvaihtoehto](media/app-designer-search-tab.png "Kaavion hakuvaihtoehto")
+ ![Pohjan hakutoimintoa](media/app-designer-search-tab.png "Pohjan haku")
 
 ## <a name="open-an-app"></a>Sovelluksen avaaminen
-1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/) -sovellukseen. 
+1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com/). 
 
-2. Valitse **Mallipohjainen** > **Sovellukset** ja valitse sitten olemassa oleva sovellus tai **Luo sovellus** -kohta. Lisätietoja sovelluksen luomisesta on kohdassa [Mallipohjaisen sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla](create-edit-app.md#create-an-app).
+2. Valitse **Malliin perustuvat** > **sovellukset** ja valitse sitten olemassa oleva sovellus tai valitse **Luo sovellus**. Lisätietoja sovelluksen luomisesta on kohdassa [Malliin perustuvan sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla](create-edit-app.md#create-an-app).
 
-## <a name="add-an-artifact-entity-dashboard-or-business-process-flow"></a>Artefaktin (entiteetti, koontinäyttö tai liiketoimintaprosessi) lisääminen  
- Kun lisäät sovellukseen koontinäytön tai liiketoimintaprosessin, niiden käyttämät entiteetit lisätään automaattisesti sovellukseen. Kun lisäät entiteetin, sen resurssien ruudut lisätään automaattisesti. Artefaktit voidaan lisätä suunnitteluohjelman pohjaan kahdella tavalla: komentopalkin **Lisää**-painikkeella ![Lisää suunnitteluohjelman painike](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Lisää suunnitteluohjelman painike") tai **Osat**-välilehden ruutujen avulla.  
+## <a name="add-an-artifact-entity-dashboard-or-business-process-flow"></a>Lisää artefakti (entiteetti, koontinäyttö tai liiketoimintaprosessi)  
+ Kun lisäät koontinäytön tai liiketoimintaprosessin sovellukseen, niiden käyttämät entiteetit lisätään automaattisesti sovellukseen. Kun entiteetti lisätään, sen resurssien ruudut lisätään automaattisesti. Voit lisätä artefakteja suunnittelutoiminnon pohjaan kahdella tavalla: käyttämällä **Lisää**-painiketta ![Suunnittelutoiminnon Lisää-painike](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Suunnittelutoiminnon Lisää-painike") komentopalkissa tai käyttämällä **Osat**-välilehden ruutuja.  
   
- Koontinäyttö lisätään sovellukseen seuraavasti. Liiketoimintasovellus tai entiteetti lisätään samalla tavalla.  
+ Seuraavassa ovat ohjeet koontinäytön lisäämiseksi sovellukseen. Käytä samoja vaiheita liiketoimintaprosessin tai entiteetin lisäämiseen.  
   
-1.  Napsauta sovelluksen suunnitteluohjelman pohjassa **Koontinäytöt**-ruutua.  
+1.  Valitse sovellusten suunnitteluohjelman pohjassa **Koontinäytöt**-ruutu.  
   
-     Suunnitteluohjelman pohjan oikeassa ruudussa näkyvät ne koontinäytöt, jotka ovat käytettävissä oletusratkaisussa.  
+     Sovellusten suunnitteluohjelman pohjan oikeanpuolimmaisessa ruudussa ovat näkyvissä koontinäytöt, jotka ovat käytettävissä oletusratkaisussa.  
   
     > [!TIP]
-    >  Vaihtoehtoisesti voit toimia myös seuraavasti:  
+    >  Vaihtoehtoisesti voit myös tehdä jonkin seuraavista:  
     >   
-    > - Valitse **Lisää** ![Lisää-painike suunnitteluohjelmassa](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Lisää-painike suunnitteluohjelmassa") ja valitse sitten **Koontinäytöt**.  
-    > - Valitse **Komponentit**-välilehdessä **Artefaktit**-kohdassa **Koontinäytöt**.  
+    > - Valitse **Lisää** ![Suunnittelutoiminnon Lisää-painike](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Suunnittelutoiminnon Lisää-painike") ja valitse sitten **Koontinäytöt**.  
+    > - Valitse **Osat**-välilehdessä **Artefaktit**-kohdassa **Koontinäytöt**.  
   
-2.  Kirjoita **hakuruutuun** joitakin avainsanoja, jotka liittyvät etsittävään koontinäyttöön.  
+2.  Kirjoita **haku**ruutuun muutama avainsana etsimäsi koontinäytön nimestä.  
   
-     Koontinäyttöluettelo suodatetaan niin, että vain avainsanaa vastaavat tulokset näkyvät.  
+     Koontinäytön luettelo suodatetaan näyttämään avainsanoja vastaavat tulokset.  
   
-3.  Jos haluat, että käyttäjät näkevät vain valitut koontinäytöt, valitse lisättävien koontinäyttöjen valintaruudut Voit valita seuraavista koontinäyttötyypeistä:
-    - **Perinteiset koontinäytöt** näkyvät sekä Unified Interface -sovelluksessa että verkkosovelluksessa.
-    - **Vuorovaikutteiset koontinäytöt** näkyvät vain Unified Interface -sovelluksessa. Jos olet valinnut asiakasohjelmatyypin sovellukseen verkkosovelluksena **vuorovaikutteisen koontinäytön** vaihtoehtoa ei näytetä.
+3.  Jos haluat käyttäjiesi käyttävän vain valittuja koontinäyttöjä, valitse valintaruutu lisättävien koontinäyttöjen kohdalla. Voit valita seuraavista koontinäyttöjen tyypeistä:
+    - **Perinteiset koontinäytöt** näkyvät sekä verkkosovelluksessa että Unified Interface -sovelluksessa.
+    - **Vuorovaikutteiset koontinäytöt** näkyvät vain Unified Interface -sovelluksessa. Jos olet valinnut sovelluksen asiakastyypiksi verkkosovellus, **Vuorovaikutteiset koontinäytöt** -vaihtoehto ei ole näkyvissä.
 
-     Kyseiset koontinäytöt lisätään sovelluksen suunnitteluohjelman pohjan **koontinäyttöruutuun**. **Koontinäyttöruudussa** näkyy myös sovellukseen lisättyjen koontinäyttöjen määrä. Jos et valitse koontinäyttöä, koontinäytön määrän sijaan näkyvissä on **kaikki** ja kaikki koontinäytöt ovat sovelluksen käyttäjien käytettävissä.  
+     Nämä koontinäytöt lisätään **Koontinäyttö**-ruutuun sovellusten suunnitteluohjelman pohjassa. **Koontinäyttö**-ruudussa näkyy myös sovellukseen lisättyjen koontinäyttöjen määrä. Jos et valitse koontinäyttöä, näkyvissä on **Kaikki** koontinäytön määrän sijaan, ja kaikki koontinäytöt ovat käytettävissä käyttäjille, kun he käyttävät sovellusta.  
   
-     Kaikki entiteetit, jotka ovat koontinäytön käytössä, lisätään myös **Entiteettinäkymä**-alueelle. Jos lisäät esimerkiksi asiakaspalvelupäällikön koontinäytön, palvelupyyntö-, oikeus- ja jonokohde-entiteetti lisätään myös Entiteettinäkymä-alueelle. Lisäksi kunkin entiteetin resursseille lisätään ruudut. Voit käyttää näitä ruutuja lomakkeiden, näkymien ja kaavioiden lisäämiseen. Lisätietoja: [Sovelluksen osien lisääminen tai muokkaaminen PowerAppsin sovellusten suunnitteluohjelmassa](add-edit-app-components.md#bkmk_AddEntityAssets)   
+     Kaikki koontinäytön käyttämät entiteetit lisätään myös **Entiteettinäkymä**-alueelle. Esimerkiksi jos lisäät Asiakaspalvelupäällikkö-koontinäytön, Palvelupyyntö-, Oikeudet- ja Jono-entiteetit lisätään Entiteettinäkymä-alueelle. Jokaista entiteettiä kohden lisätään myös sen resurssiruudut. Näiden ruutujen avulla voit lisätä lomakkeita, näkymiä ja kaavioita. Lisätietoja: [Sovelluksen osien lisääminen tai muokkaaminen PowerAppsin sovellusten suunnitteluohjelmassa](add-edit-app-components.md#bkmk_AddEntityAssets)   
   
-    ![kohteen lisääminen sovellusten suunnitteluohjelman pohjaan](../model-driven-apps/media/add-entity-app-designer-canvas.png "kohteen lisääminen sovellusten suunnitteluohjelman pohjaan")  
+    ![Entiteetin lisääminen sovellusten suunnitteluohjelman pohjaan](../model-driven-apps/media/add-entity-app-designer-canvas.png "Entiteetin lisääminen sovellusten suunnitteluohjelman pohjaan")  
   
-4.  Jos oletusratkaisussa ei ole koontinäyttöä, jota haluat käyttää, luo koontinäyttö valitsemalla **Luo uusi** oikealla olevassa **Osat**-välilehdessä.  
+4.  Jos haluamasi koontinäyttö ei ole oletusratkaisussa, voit luoda koontinäytön valitsemalla **Luo uusi** **Osat**-välilehdessä pohjan oikealla puolella.  
   
-     > [!div class="mx-imgBorder"]
-     > ![Luo uusi sovellusten suunnitteluohjelman komponentit-välilehden linkki](../model-driven-apps/media/app-designer-components-tab-create-new.png "Luo uusi sovellusten suunnitteluohjelman komponentit-välilehden linkki")  
+     ![Luo uusi -linkki sovellusten suunnitteluohjelman Osat-välilehdessä](../model-driven-apps/media/app-designer-components-tab-create-new.png "Luo uusi -linkki sovellusten suunnitteluohjelman Osat-välilehdessä")  
   
-     Koontinäytön suunnitteluohjelma avautuu. Lisätietoja: [Koontinäyttöjen luominen ja muokkaaminen](create-edit-dashboards.md)  
+     Raporttinäkymät-ikkunan suunnittelusovellus avautuu. Lisätietoja: [Koontinäyttöjen luominen ja muokkaaminen](create-edit-dashboards.md)  
   
     > [!NOTE]
-    > - Kun lisäät uutta liiketoimintaprosessia tai entiteettiä, **Luo uusi** -vaihtoehto avautuu vastaavassa suunnitteluohjelmassa. Lisätietoja liiketoimintaprosessien ja entiteettien luomisesta on kohdissa [Liiketoimintaprosessin luominen](/flow/create-business-process-flow) ja [Mukautetun entiteetin luominen](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-entity).  
+    > - Kun lisäät liiketoimintaprosessia tai entiteettiä, **Luo uusi** -vaihtoehto avaa vastaavan suunnittelusovelluksen. Lisätietoja liiketoimintaprosessien tai entiteettien luomisesta on kohdissa [Liiketoimintaprosessin luominen](/flow/create-business-process-flow) ja [Mukautetun entiteetin luominen](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-entity).  
       
   
-5.  Kun olet lisännyt tarvittavat artefaktit, valitse komentopalkissa **Tallenna**.  
+5.  Kun olet lisännyt haluamasi artefaktit, valitse komentopalkissa **Tallenna**.  
   
 <a name="bkmk_AddEntityAssets"></a>   
-## <a name="add-entity-assets-forms-views-charts-or-dashboards"></a>Entiteetin resurssien (lomakkeiden, näkymien, kaavioiden tai koontinäyttöjen lisääminen)  
- Kun artefaktit ovat paikoillaan, voit lisätä sovellukseen entiteettien resursseja, kuten lomakkeita, näkymiä, kaavioita ja koontinäyttöjä.
-Lisäksi käytettäessä Unified Interface -asiakasta voit myös lisätä koontinäytön entiteettiresurssit sovellukseen.  
+## <a name="add-entity-assets-forms-views-charts-or-dashboards"></a>Lisää entiteettiresursseja (lomakkeita, näkymiä, kaavioita tai koontinäyttöjä)  
+ Kun artefaktit ovat paikoillaan, voit alkaa lisätä sovellukseen entiteettiresursseja, kuten lomakkeita, näkymiä, kaavioita ja koontinäyttöjä.
+Lisäksi jos käytät Unified Interface -asiakasta, voit myös lisätä sovellukseen entiteetin koontinäyttöresursseja.  
   
- Tässä osassa kerrotaan, miten lomake lisätään sovellukseen. Samalla tavalla sovellukseen lisätään näkymä tai kaavio.  
+ Tässä osassa kuvataan vaiheet lomakkeen lisäämiseksi sovellukseen. Samoja vaiheita käyttämällä voit lisätä sovellukseen näkymän tai kaavion.  
   
-1.  Napsauta sovelluksen suunnitteluohjelman pohjassa lomakkeeseen lisättävän entiteetin **Lomakkeet**-ruutua.  
+1.  Valitse sovellusten suunnitteluohjelman pohjassa **Lomakkeet**-ruutu sen entiteetin kohdalla, johon haluat lisätä lomakkeen.  
   
-     Entiteetin koko rivi valitaan sovelluksen suunnitteluohjelman pohjassa. Oikealla puolella näkyvät valitun entiteetin kaikki aiemmin luodut lomakkeet.  
+     Sovellusten suunnitteluohjelman pohjassa entiteetin koko rivi on valittuna. Näet kaikki valitun entiteetin olemassa olevat lomakkeet oikealla puolella.  
   
     > [!NOTE]
-    >  Vaihtoehtoisesti voit toimia myös seuraavasti:  
+    >  Vaihtoehtoisesti voit myös tehdä jonkin seuraavista:  
     >   
-    > - Valitse **Lisää** ![Lisää-painike suunnitteluohjelmassa](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Lisää-painike suunnitteluohjelmassa") ja valitse sitten **Lomakkeet**.  
-    > - Valitse **Komponentit**-välilehdessä **Entiteetin resurssit**-kohdassa **Lomakkeet**.  
+    > - Valitse **Lisää** ![Suunnittelutoiminnon Lisää-painike](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Suunnittelutoiminnon Lisää-painike") ja valitse sitten **Lomakkeet**.  
+    > - Valitse **Osat**-välilehdessä **Entiteettiresurssit**-kohdassa **Lomakkeet**.  
   
     > [!TIP]
-    >  Kaikilla valituilla entiteeteillä on **lisäasetukset**-painike (**...**), joka näkyy **Valitse entiteetit** -luettelossa **osat**-välilehdessä. Jos haluat lisätä kaikki valitun entiteetin resurssit, valitse **lisäasetukset** (**...**) ja valitse sitten **lisää kaikki resurssit**.  
+    >  Kaikkien sovellukselle valittujen entiteettien kohdalla on näkyvissä **Lisää vaihtoehtoja** -painike (**...**) **Valitse entiteetit** -luettelossa **Osat**-välilehdessä. Jos haluat lisätä kaikki resurssit valitulle entiteetille, valitse **Lisää vaihtoehtoja** (**...**) ja valitse sitten **Lisää kaikki resurssit**.  
   
-2.  Jos haluat, että sovelluksen käyttäjät näkevät vain valitut lomakkeet, valitse lisättävien lomakkeiden valintaruudut. Lomakkeet määrittävät, miten käyttäjät näkevät sovelluksen tiedot ja käsittelevät niitä. 
+2.  Jos haluat sovelluksen käyttäjien käyttävän vain valittuja lomakkeita, valitse valintaruudut lisättävien lomakkeiden kohdalla. Lomakkeet määrittävät, miten käyttäjät voivat tarkastella ja käsitellä tietoja sovelluksessa. 
  
-     Valitun entiteetin lomakeruudussa näkyy lisättyjen lomakkeiden määrä.  
+     Valitun entiteetin lomakeruutu näyttää lisättyjen lomakkeiden määrän.  
   
-     ![Palvelupyyntöentiteetin lomakkeen toimintoruutu](../model-driven-apps/media/add-forms-entity.png "Palvelupyyntöentiteetin lomakkeen toimintoruutu")  
+     ![Palvelupyyntöentiteetin lomakeruutu](../model-driven-apps/media/add-forms-entity.png "Palvelupyyntöentiteetin lomakeruutu")  
   
-     Jos et valitse entiteetille lomaketta, kyseisen entiteetin kaikki lomakkeet näkyvät käyttäjille, kun he käyttävät sovellusta. Tämä toiminto on vastaava näkymille ja kaavioille myös, jos ei näkymää tai kaaviota ole valittuna. Näin voit luoda sovelluksia nopeasti, kun käsittelet kaikkia käytettävissä olevia komponentteja. Kutakin komponenttia ei siis tarvitse valita sovelluksen suunnitteluohjelmassa.  
+     Esimerkiksi, jos et valitse entiteetille yhtään lomaketta, kaikki kyseisen entiteetin lomakkeet näytetään käyttäjille, kun he käyttävät sovellusta. Toiminta on sama myös näkymien ja kaavioiden kohdalla, jos yhtään näkymää tai kaaviota ei valita. Tämän avulla voit luoda sovelluksia nopeasti, kun haluat käyttää kaikkia käytettävissä olevia osia. Jokaista osaa ei tarvitse valita sovelluksen suunnittelun aikana.  
 
-     Jos koontinäyttöjä tai liiketoimintaprosesseja ei ole valittu, kaikki koontinäytöt ja liiketoimintaprosessit ovat käyttäjien käytettävissä, kun he käyttävät sovellusta.
+     Jos yhtään koontinäyttöä tai liiketoimintaprosessia ei valita, kaikki koontinäytöt ja liiketoimintaprosessit ovat saatavana käyttäjille, kun he käyttävät sovellusta.
   
     > [!NOTE]
-    > Suoritettavan sovelluksen jokaisella lisätyllä entiteetillä on oltava vähintään yksi aktiivinen lomake. Jos olet valinnut useita lomakkeita, käytetään oletusratkaisussa ensimmäisenä näkyvää aktiivista lomaketta, kun käyttäjät suorittavat sovelluksen.  
+    > Jotta sovellus suoritetaan, jokaisella lisätyllä entiteetillä on oltava vähintään yksi aktiivinen lomake. Jos olet valinnut useita lomakkeita, ensimmäistä aktiivista oletusratkaisussa näkyvää lomaketta käytetään, kun käyttäjät suorittavat sovelluksen.  
   
-3.  Jos haluat lisätä uuden lomakkeen, joka ei ole luettelossa, valitse **Luo uusi**.  
+3.  Jos haluat lisätä uuden lomakkeen, jota ei ole luettelossa, valitse **Luo uusi**.  
   
      Valitse avattavasta luettelosta luotavan lomakkeen tyyppi.  
   
     > [!NOTE]
-    >  Avattava luettelo on käytettävissä vain lomakkeiden lisäämisen yhteydessä. Se ei ole käytettävissä näkymien ja kaavioiden lisäämisen yhteydessä.  
+    >  Avattava luettelo on käytettävissä vain lomakkeiden lisäämisen aikana. Se ei ole käytettävissä näkymissä tai kaavioissa.  
   
-     Lomakkeen suunnitteluohjelma avautuu. Lisätietoja: [Lomakkeiden luominen ja suunnittelu](create-design-forms.md)  
+     Lomakkeen suunnitteluohjelma avautuu. Lisätietoja: [Lomakkeiden luonti ja suunnittelu](create-design-forms.md)  
   
-     Kun lisäät näkymää tai kaaviota, **Luo uusi** -vaihtoehto avautuu vastaavassa suunnitteluohjelmassa. Lisätietoja: [Tietoja näkymistä](create-edit-views.md) ja [Järjestelmäkaavion luominen ja muokkaaminen](create-edit-system-chart.md)  
+     Kun lisäät näkymää tai kaaviota, **Luo uusi** -vaihtoehto avaa vastaavan suunnittelusovelluksen. Lisätietoja: [Tutustu näkymiin](create-edit-views.md) ja [Järjestelmäkaavioiden luonti tai muokkaus](create-edit-system-chart.md)  
   
     > [!NOTE]
-    >  Kun lisäät näkymän, voit viitata vain julkisiin näkymiin, jotka sijaitsevat ratkaisunhallinnan **Näkymät**-solmussa.  
+    >  Kun lisäät näkymän, voit viitata vain julkisiin näkymiin, jotka on lueteltu **Näkymät**-solmussa ratkaisunhallinnassa.  
   
-4. Valitse alanuoli ![avattava kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") ja laajenna ruutu ja nähdäksesi luettelo lomakkeista, jotka on lisätty.  
+4. Napsauttamalla alanuolta ![Avattavan luettelon kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") voit laajentaa ruudun ja tarkastella lisättyjen lomakkeiden luetteloa.  
   
-     ![Sovellusten suunnitteluohjelmassa laajennetaan lomakkeen komponenttiruutu](../model-driven-apps/media/app-designer-expanded-form-tile.png "Sovellusten suunnitteluohjelmassa laajennetaan lomakkeen komponenttiruutu")  
+     ![Lomakeruutu laajennettuna suunnitteluohjelmassa](../model-driven-apps/media/app-designer-expanded-form-tile.png "Lomakeruutu laajennettuna suunnitteluohjelmassa")  
   
-5.  Toista nämä vaiheet, kun haluat lisätä sovellukseen entiteetin näkymiä ja kaavioita.  
+5.  Voit lisätä sovellukseen entiteettinäkymiä ja kaavioita toistamalla nämä vaiheet.  
   
 6.  Valitse **Tallenna**.  
   
 ## <a name="edit-or-remove-artifacts"></a>Artefaktien muokkaaminen tai poistaminen  
   
-- Voit muokata koontinäyttöä tai yrityksen prosessin työnkulkua valitsemalla alanuolen ![avattava kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") laajentaaksesi ruutua ja valitse sitten sivustokartan suunnitteluohjelman painike ![Avaa sivustokartan suunnitteluohjelma painike](../model-driven-apps/media/dynamics365-open-designer.PNG "Avaa sivustokartan suunnitteluohjelman painike"), joka vastaavat koontinäyttöä tai työprosessin työnkulkua, jota haluat muokata.  
+- Voit muokata koontinäyttöä tai liiketoimintaprosessia laajentamalla ruudun alanuolta ![Avattavan luettelon kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") napsauttamalla. Valitse sitten sivustokartan suunnitteluohjelman painike ![Avaa sivustokartan suunnitteluohjelma -painike](../model-driven-apps/media/dynamics365-open-designer.PNG "Avaa sivustokartan suunnitteluohjelma -painike"), joka vastaa muokattavaa koontinäyttöä tai liiketoimintaprosessia.  
   
      Valitun artefaktin suunnitteluohjelma avautuu.  
   
-- Voit poistaa koontinäytön tai yrityksen prosessityönkulun valitsemalla alanuolen ![avattava kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") laajentaaksesi ruudun ja valitsemalla sitten koontinäytön tai yrityksen prosessin työnkulun, jonka haluat poistaa. Valitse komentopalkissa **Poista**.  
+- Voit poistaa koontinäytön tai liiketoimintaprosessin laajentamalla ruudun alanuolta ![Avattavan luettelon kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") napsauttamalla. Valitse sitten poistettava koontinäyttö tai liiketoimintaprosessi. Valitse komentopalkissa **Poista**.  
 
-    Toinen tapa poistaa koontinäyttö tai työ liiketoimintaprosessin työnkulkuja on poistaa valinta **osia** välilehden vastaavasta valintaruudusta.
+    Toinen tapa poistaa koontinäyttö tai liiketoimintaprosessi on poistaa vastaavan valintaruudun valinta **Osat**-välilehdessä.
   
-- Voit muokata entiteettiä tai poistaa sen valitsemalla entiteettiruudun ja valitsemalla sitten komentopalkissa **Muokkaa** tai **Poista**. Kun muokkaat entiteettiä, ratkaisunhallinta avautuu. Voit muuttaa entiteettiä siellä.  
+- Voit muokata tai poistaa entiteetin valitsemalla entiteettiruudun ja valitsemalla sitten komentopalkissa **Muokkaa** tai **Poista**. Kun muokkaat entiteettiä, ratkaisunhallinta avautuu, jossa voit tehdä muutoksia entiteettiin.  
   
-     Voit vaihtoehtoisesti poistaa osan valitsemalla koontinäytön tai liiketoimintaprosessin tai entiteetin ruudun Poista suunnitteluohjelmasta poistettavan artefaktin valintaruudun valinta **Komponentit**-väliehdestä.  
+     Toinen tapa poistaa osa on valita koontinäyttö, liiketoimintaprosessi tai entiteettiruutu. **Osat**-välilehdessä poista valintaruudun valinta niiden artefaktien kohdalla, jotka haluat poistaa suunnitteluohjelmasta.  
   
     > [!NOTE]
-    >  Kun teet muutoksia entiteettiin, vaikkapa muutat entiteetin näyttönimeä tai kuvausta, muutokset eivät sovelluksen suunnitteluohjelmassa, ellei muutoksia julkaista ratkaisunhallinnassa.  
+    >  Kun teet muutoksia entiteettiin,&mdash;kuten muutat entiteetin näyttönimeä tai kuvausta&mdash;, muutokset eivät näy sovellusten suunnitteluohjelmassa, ellei muutoksia julkaista ratkaisunhallinnassa.  
   
-## <a name="edit-or-remove-entity-assets"></a>Entiteetin resurssien muokkaaminen tai poistaminen  
+## <a name="edit-or-remove-entity-assets"></a>Entiteettiresurssien muokkaaminen tai poistaminen  
 
-### <a name="edit-entity-assets"></a>Entiteetin resurssien muokkaaminen
+### <a name="edit-entity-assets"></a>Entiteettiresurssien muokkaaminen
   
-1. Valitse alanuolta ![avattava kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") Laajenna komponenttiruutu lomakkeita, näkymiä, kaavioita tai koontinäyttöjä varten.  
+1. Laajenna ruutu napsauttamalla alanuolta ![Avattavan luettelon kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") tuodaksesi näkyviin lomakkeet, näkymät, kaaviot tai koontinäytöt.  
   
-2. Valitse muokattava lomake, näkymä, kaavio tai koontinäyttö.  
+2. Valitse lomake, näkymä, kaavio tai koontinäyttö, jota haluat muokata.  
   
 3. Valitse komentopalkissa **Muokkaa**.
 
    tai
 
-   Valitsemalla sivuston suunnitteluohjelman painikkeen ![Avaa sivustokartan suunnitteluohjelma -painike](../model-driven-apps/media/dynamics365-open-designer.PNG "Avaa sivustokartan suunnitteluohjelma -painike"), joka vastaa lomaketta, näkymää, kaaviota tai koontinäyttöä.  
+   Valitse sivustokartan suunnitteluohjelman painike ![Avaa sivustokartan suunnitteluohjelma -painike](../model-driven-apps/media/dynamics365-open-designer.PNG "Avaa sivustokartan suunnitteluohjelma -painike"), joka vastaa lomaketta, näkymää, kaaviota tai koontinäyttöä.  
 
-### <a name="remove-entity-assets"></a>Entiteetin resurssien poistaminen  
+### <a name="remove-entity-assets"></a>Entiteettiresurssien poistaminen  
 
-1. Valitse alanuolta ![avattava kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") Laajenna komponenttiruutu lomakkeita, näkymiä, kaavioita tai koontinäyttöjä varten.  
+1. Laajenna ruutu napsauttamalla alanuolta ![Avattavan luettelon kuvake](../model-driven-apps/media/drop-down-icon.png "alanuoli") tuodaksesi näkyviin lomakkeet, näkymät, kaaviot tai koontinäytöt.  
   
-2. Valitse muokattava lomake, näkymä, kaavio tai koontinäyttö.
+2. Valitse lomake, näkymä, kaavio tai koontinäyttö, jota haluat muokata.
 
 3. Valitse komentopalkissa **Poista**. 
 
-Vaihtoehtoisesti voit valita lomakkeet, näkymät, kaaviot tai koontinäyttöruudun ja valita **Osat**-valintaruudussa poistaa valinnat resursseilta, jotka haluat poistaa suunnitteluohjelmasta.  
+Vaihtoehtoisesti voit valita lomakkeiden, näkymien, kaavioiden tai koontinäyttöjen ruudun ja sitten **Osat**-välilehdessä poistaa niiden resurssien valintaruutujen valinnan, jotka haluat poistaa suunnitteluohjelmasta.  
   
 ## <a name="next-steps"></a>Seuraavat vaiheet  
  [Sovelluksen sivustokartan luominen](create-site-map-app.md) </br>  

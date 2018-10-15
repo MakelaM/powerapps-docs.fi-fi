@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 19199ade5c7f89f9d3d113b41ac9651a9b007ef6
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 38745810321807e69d5eba8e1f2c281dafa73ae5
+ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42847892"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45640442"
 ---
 # <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Pohjaan perustuvan sovelluksen taulukoiden ja tietueiden ymmärtäminen PowerAppsissa
 
@@ -40,7 +40,7 @@ Voit luoda erilaisia kaavoja, joille taulukon nimi annetaan argumenttina samalla
 ### <a name="records"></a>Tietueet
 Kukin tietue sisältää vähintään yhden henkilön, sijainnin tai asian tietoluokan. Edellä olevassa esimerkissä näkyy tietue kullekin tuotteelle (**Suklaa**, **Leipä** ja **Vesi**) ja sarakkeet kullekin tietoluokalle (**Hinta**, **Saatavilla oleva määrä** ja **Tilattu määrä**).
 
-Jos haluat viitata kaavassa johonkin tietueeseen yksinään taulukon kontekstin ulkopuolella, voit käyttää aaltosulkeita. Esimerkiksi tietuetta **{ Nimi: "Mansikat", Hinta: 7.99 }** ei ole liitetty taulukkoon.
+Jos haluat viitata kaavassa johonkin tietueeseen yksinään taulukon kontekstin ulkopuolella, voit käyttää aaltosulkeita. Esimerkiksi tietuetta **{ Nimi: "Mansikat", Hinta: 7.99 }** ei ole liitetty taulukkoon. Huomaa, että kyseisessä esimerkissä olevat kenttien nimet, kuten **Nimi** ja **Hinta**, eivät ole lainausmerkeissä.
 
 ### <a name="fields"></a>Kentät
 Kenttä on yksittäinen tieto-osio tietueessa. Voit määrittää tämän tyyppisen kentän näkymään arvona tietyssä tietueessa olevassa sarakkeessa.

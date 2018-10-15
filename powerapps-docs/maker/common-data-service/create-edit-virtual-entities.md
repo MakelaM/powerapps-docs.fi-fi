@@ -1,6 +1,6 @@
 ---
-title: Virtuaalisten entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisun avulla | MicrosoftDocs
-description: Tietoja virtuaalisten entiteettien luomisesta
+title: Virtuaalisten entiteettien luominen ja muokkaaminen Common Data Service for Appsilla| MicrosoftDocs
+description: Opettele luomaan virtuaalisia entiteettejä
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
@@ -9,144 +9,142 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 ms.assetid: 44834893-0bf6-4a64-8f06-7583fe08330d
 caps.latest.revision: 11
 author: Mattp123
 ms.author: matp
 manager: kvivek
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 675c0ac5763698c82a7d13bfc75f8b7357d6cf0b
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39674872"
 ---
-# <a name="create-and-edit-virtual-entities-that-contain-data-from-an-external-data-source"></a>Virtuaalisten entiteettien, jotka sisältävät ulkoisen tietolähteen tietoja, luominen ja muokkaaminen
+# <a name="create-and-edit-virtual-entities-that-contain-data-from-an-external-data-source"></a>Ulkoisesta tietolähteestä peräisin olevia tietoja sisältävien virtuaalisten entiteettien luominen ja muokkaaminen
 
-Virtuaalinen entiteetti on Common Data Service sovelluksille -ratkaisun mukautettu entiteetti, jonka kentät sisältävät tietoja ulkoisesta tietolähteestä. Virtuaaliset entiteetit näkyvät sovelluksen käyttäjille tavallisina entiteettitietueina, mutta ne sisältävät tietoja, jotka on noudettu ulkoisesta tietokannasta (esimerkiksi Azure SQL Databasesta). Virtuaalisiin entiteetteihin perustuvat tietueet ovat käytettävissä kaikissa asiakasohjelmissa, CDS sovelluksille -ratkaisun WWW-palvelun avulla kehitetyt mukautetut asiakasohjelmat mukaan lukien.  
+Virtuaalinen entiteetti on Common Data Service for Appsissa oleva mukautettu entiteetti, joka sisältää tietoja ulkoisesta tietolähteestä. Virtuaaliset entiteetit näkyvät sovelluksessa käyttäjille tavallisina entiteettitietueina, mutta ne sisältävät ulkoisesta tietokannasta, kuten Microsoft Azuren SQL-tietokannasta, lähtöisin olevia tietoja. Virtuaalisiin entiteetteihin perustuvat tietueet ovat käytettävissä kaikissa asiakkaissa, mukaan lukien mukautetuissa asiakkaissa, jotka on kehitetty käyttämällä CDS for Apps -verkkopalveluita.  
   
-Menneisyydessä voidakseen integroida eri tietolähteitä niitä varten piti kehittää yhdysohjelma tietojen liikuttamiseen tai luoda mukautettu laajennus joko asiakas- tai palvelinpuolelle. Kuitenkin virtuaalientiteetteihin voi yhdistää suoraan ulkoisen tietolähteen suorituksen yhteydessä niin, että ulkoisesta lähteestä vaaditut tiedot ovat käytettävissä ympäristössä ilman tarvetta tietojen replikointiin.  
+Aiemmin erillisten tietolähteiden integroimiseksi piti luoda liitin tietojen siirtämiseksi tai kehittää mukautettu laajennus joko asiakas- tai palvelinpuolelle. Kuitenkin virtuaalisten entiteettien avulla voit yhdistää suoraan ulkoiseen tietolähteeseen suoritusaikana niin, että tietyt tiedot ulkoisesta tietolähteestä ovat käytettävissä ympäristössä ilman tarvetta tietojen replikoinnille.  
 
-Virtuaalientiteetit koostuvat kolmesta tärkeimästä osasta *tietopalvelu*, *tietolähde* tietue ja *näennäisentiteetti*. Tietojen toimittaja koostuu laajennuksista ja tietojen lähde-entiteetistä. Tietojen lähde on entiteettitietue CDS sovelluksille -ratkaisussa, joka sisältää metatiedot, joka vastaa yhteyden parametrien rakennetta. Kukin näennäisentiteetti viittaa tietolähteeseen kohdemäärityksessä.  
+Virtuaaliset entiteetit koostuvat kolmesta pääosasta, jotka ovat *tietopalvelu*, *tietolähde*tietue ja *virtuaalinen entiteetti*. Tietopalvelu koostuu laajennuksista ja tietolähde-entiteetistä. Tietolähde on CDS for Appsissa oleva entiteettitietue, joka sisältää metatietoja, jotka edustavat yhteysparametrien rakennetta. Jokainen virtuaalinen entiteetti viittaa tietolähteeseen entiteetin määritelmässä.  
   
-CDS sovelluksille sisältää OData-tietojen toimittajan, jonka avulla voi yhteyden muodostaa OData v4 -WWW-palveluun, joka käyttää ulkoisia tietoja. 
+CDS for Apps sisältää OData-tietopalvelun, jonka avulla voit muodostaa yhteyden OData v4 -verkkopalveluun, joka käyttää ulkoisia tietoja. 
   
-Sovelluskehittäjät voivat myös muodostaa omat tietopalvelut. Tietopalvelut asennetaan ympäristöön ratkaisuna. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
+Vaihtoehtoisesti kehittäjät voivat luoda omia tietopalveluita. Tietopalvelut asennetaan ympäristöön ratkaisuna. Lisätietoja: [Kehitysdokumentaatio: Aloita virtuaalisten entiteettien käyttäminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
   
  ![Virtuaalisen entiteetin kaavio](media/virtual-entity-diagram.png "Virtuaalisen entiteetin kaavio")  
   
 <a name="benefits"></a> 
   
-## <a name="virtual-entity-benefits"></a>Näennäisentiteettiin edut  
+## <a name="virtual-entity-benefits"></a>Virtuaalisen entiteetin edut  
   
-- Sovelluskehittäjät voivat ottaa käyttöön ulkoisia tietoja lukevia laajennuksia käyttämällä CDS sovelluksille -ratkaisun WWW-palveluita ja laajennusten rekisteröintityökalua.  
-- Järjestelmän mukauttajat valitsevat PowerAppsin ratkaisunhallinnan tietolähdetietueen määrittämistä ja virtuaalientiteettien luomista varten. Niitä voidaan käyttää ulkoisten tietojen näkemiseen kirjoittamatta yhtään koodia.  
-- Loppukäyttäjät tarkastelevat kenttien, ruudukkojen, hakutulosten sekä Fetch XML -pohjaisten raporttien ja koontinäyttöjen tietoja virtuaalisen entiteetin luomissa tietueissa.  
+- Kehittäjät voit toteuttaa laajennuksia lukeakseen ulkoisia tietoja CDS for Apps -verkkopalveluita ja laajennuksen rekisteröintityökalua käyttämällä.  
+- Järjestelmän mukauttajat käyttävät PowerApps-ratkaisunhallintaa tietolähdetietueen määrittämisessä ja virtuaalisten entiteettien luomisessa, joiden avulla voidaan käyttää ulkoisia tietoja ilman koodin kirjoittamista.  
+- Virtuaalisen entiteetin luomia tietueita käsittelemällä käyttäjät voivat tarkastella kenttien, ruudukoiden ja hakutulosten tietoja ja noutaa XML-pohjaisia raportteja ja koontinäyttöjä.  
   
 <a name="AddDataSource"></a> 
   
-## <a name="add-a-data-source-to-use-for-virtual-entities"></a>Lisää tietolähde käyttämään virtuaalientiteettiä 
+## <a name="add-a-data-source-to-use-for-virtual-entities"></a>Tietolähteen lisääminen käytettäväksi virtuaalisille entiteeteille 
  
- Kehittäjät voivat luoda mukautettuja laajennuksia, jota käytetään virtuaalisen entiteetin tietolähteenä.  Vaihtoehtoisesti voit käyttää annettua OData v4 -tietojen tarjoajaa. Lisätietoja: [OData v4 -tietojen tarjoajan määritys, vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)  
+ Kehittäjät luovat mukautetun laajennuksen, jota käytetään tietopalveluna virtuaaliselle entiteetille. Vaihtoehtoisesti voit käyttää annettua OData v4 -tietopalvelua. Lisätietoja: [OData v4 -tietopalvelun määrittäminen, vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)  
   
-1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Administration** > **Virtuaalisten entiteettien tietolähteet**.  
-1. Valitse Toiminnot-työkalurivillä  **Uusi**.  
-1. Valitse seuraavista tietolähteistä **Valitse tietopalvelu**-valintaikkunassa ja valitse sitten **OK**.
+1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Hallinta** > **Virtuaalisen entiteetin tietolähteet**.  
+1. Valitse Toiminnot-työkaluriviltä **Uusi**.  
+1. Valitse **Valitse tietopalvelu** -valintaikkunassa jokin seuraavista tietolähteistä ja valitse sitten **OK**.
  
-    |Tietojen tarjoaja|Kuvaus|
+    |Tietopalvelu|Kuvaus|
     |--|--|
-    |*Mukautettujen tietojen tarjoaja*|Jos olet tuonut tietopalvelulaajennuksen, tietopalvelu tulee näkyviin tähän. Lisätietoja on kohdassa [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)|
-    |**OData v4 -tietojen tarjoaja**|CDS sovelluksille sisältää OData -tietojen tarjoajan, jota voi käyttää OData v4 -WWW-palveluissa. Lisätietoja on kohdassa [OData v4 -tietojen tarjoajan määritys, vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)|
+    |*Mukautettu tietopalvelu*|Jos olet tuonut tietopalvelun laajennuksen, tietopalvelu näkyy tässä. Lisätietoja [Kehitysdokumentaatio: Aloita virtuaalisten entiteettien käyttäminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)|
+    |**OData v4 -tietopalvelu**|CDS for Apps sisältää OData-tietopalvelun, jota voidaan käyttää OData v4 w-verkkopalveluiden kanssa. Lisätietoja [OData v4 -tietopalvelun määrittäminen, vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)|
 
   
 ### <a name="add-a-secured-field-to-a-data-source"></a>Suojatun kentän lisääminen tietolähteeseen
 
-Voit luoda tietolähteelle kenttiä samalla tavalla kuin mille tahansa entiteetille. Ota salatuille tai arkaluontoisille tiedoille käyttöön tietolähteen salainen määrite tietolähteen mukautetun kentässä. Voit esimerkiksi suojata kentän, joka sisältää tietokannan yhteysmerkkijonon. 
+Voit luoda kenttiä tietolähteeseen samalla tavalla kuin muihinkin entiteetteihin. Jos tiedot ovat salattuja tai luottamuksellisia, ota käyttöön Tietolähteen salasana -määrite tietolähteen mukautetussa kentässä. Näin voit esimerkiksi suojata kentän, joka sisältää tietokannan yhteysmerkkijonon. 
 
 > [!NOTE]
-> Tietolähteen salainen määrite on käytettävissä vain tietolähdelomakkeeseen lisätyissä kentissä.
+> Tietolähteen salasana -määrite on käytettävissä vain kentissä, jotka lisätään tietolähteen lomakkeeseen.
 
-> [!div class="mx-imgBorder"] 
-> ![Tietolähteen salainen määrite](media/datasourcesecret.png)
+![Tietolähteen salasana -määrite](media/datasourcesecret.png)
   
 <a name="createVirtualEntity"></a> 
   
-## <a name="create-a-virtual-entity"></a>Virtuaalikohteen luominen
+## <a name="create-a-virtual-entity"></a>Virtuaalisen entiteetin luominen
   
-Voit luoda virtuaalisen entiteetin samalla tavalla kuin minkä tahansa muun CDS sovelluksille -ratkaisun entiteetin. Voit luoda myös joitakin ylimääräisiä määritteitä tässä kuvatulla tavalla. Virtuaaliset entiteetit on luotava ratkaisunhallinnan avulla.
+Voit luoda virtuaalisen entiteetin samaan tapaan kuin muutkin CDS for Appsin entiteetit muutaman tässä kuvatun lisämääritteen lisäksi. Virtuaaliset entiteetit on luotava ratkaisunhallintaa käyttämällä.
 
 > [!NOTE]
->  Vaikka voit luoda virtuaalisen entiteetin valitsemalla tietolähteeksi **Ei mitään**, virtuaalisen entiteetin hankkiminen edellyttää, että tietolähde määritetään. Lisätietoja on kohdassa [Tietolähteen lisääminen virtuaalisissa entiteeteissä käyttämistä varten](#AddDataSource)
+>  Vaikka voit luoda virtuaalisen entiteetin valitsemalla tietolähteeksi **Ei mitään**, virtuaalinen entiteetti edellyttää tietolähdettä, jotta se voi hankkia tietoja. Lisätietoja [Tietolähteen lisääminen käytettäväksi virtuaalisille entiteeteille](#AddDataSource)
 
 ### <a name="open-solution-explorer"></a>Ratkaisunhallinnan avaaminen
 
-Jokaisen luomasi virtuaalisen entiteetin nimeen sisältyy mukautuksen etuliite. Tämä määritetään työn alla olevan ratkaisun ratkaisujulkaisijassa. Jos haluat käyttää mukautuksen etuliitettä, varmista, että käsittelyssä on hallitsematon ratkaisu, jonka mukautuksen etuliitteen haluat tälle virtuaaliselle entiteetille. Lisätietoja: [Ratkaisujulkaisijan etuliitteen muuttaminen](change-solution-publisher-prefix.md) 
+Luomasi virtuaalisen entiteetin nimeen sisältyy mukautusetuliite. Etuliite määräytyy käytössäsi olevan ratkaisun julkaisijan mukaan. Jos mukautusetuliitteellä on sinulle merkitystä, varmista, että käytät hallitsematonta ratkaisua, jossa mukautusetuliite on se, jota haluat käyttää kyseiselle virtuaaliselle entiteetille. Lisätietoja: [Ratkaisun julkaisijan etuliitteen muuttaminen](change-solution-publisher-prefix.md) 
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-### <a name="create-a-virtual-entity"></a>Virtuaalikohteen luominen
+### <a name="create-a-virtual-entity"></a>Virtuaalisen entiteetin luominen
   
-1. Luo uusi entiteetti ratkaisunhallinnassa. Valitse vasemmasta siirtymisruudusta **Entiteetit** ja valitse **Uusi**.  
-2. **Yleiset** -välilehdessä **entiteetin määritykset** valitse **näennäisentiteetti** ja valitse sitten **Tietolähde** -pudotusvalikosta tietolähde, jonka haluat.  
-
-    > [!div class="mx-imgBorder"] 
-    > ![Virtuaalisen entiteetin asetus entiteetin määrityksessä](media/virtual-entity-click-option.png)  
+1. Luo uusi entiteetti ratkaisunhallinnassa. Voit tehdä sen valitsemalla vasemmassa siirtymisruudussa **Entiteetit** ja valitsemalla sitten **Uusi**.  
+2. **Entiteetin määritelmä** -kohdan **Yleistä**-välilehdessä valitse **Virtuaalinen entiteetti** ja valitse sitten avattavassa **Tietolähde**-luettelossa haluamasi tietolähde.  
   
-1. Entiteetin määrityksessä täytä seuraavat pakolliset kentät.
+    ![Virtuaalisen entiteetin vaihtoehto entiteetin määritelmässä](media/virtual-entity-click-option.png)  
+  
+1. Täytä entiteetin määritelmässä seuraavat pakolliset kentät.
   
     |Kenttä|Kuvaus|
     |--|--|
-    |**Ulkoinen nimi**|Anna sen ulkoisen tietolähteen taulukon nimi, johon tämä entiteetti on yhdistetty.|
-    |**Ulkoinen kokoelman nimi**|Anna sen ulkoisen tietolähteen taulukon monikkonimi, johon tämä entiteetti on yhdistetty.|
+    |**Ulkoinen nimi**|Anna ulkoisessa tietolähteessä olevan taulukon nimi, johon tämä entiteetti yhdistää.|
+    |**Ulkoisen kokoelman nimi**|Anna ulkoisessa tietolähteessä olevan taulukon monikkomuotoinen nimi, johon tämä entiteetti yhdistää.|
       
-    Seuraavassa on esimerkki virtuaalientiteetistä, jonka nimi on *elokuva*, joka käyttää Cosmos Azure-tietokannan tietojen tarjoajaa tiedostoihin pääsemiseksi.  
+    Tässä on esimerkki *Movie*-nimisestä virtuaalisesta entiteetistä, joka käyttää tiedostoja Azure Cosmos DB -tietopalvelun avulla.  
       
-    > [!div class="mx-imgBorder"] 
-    > ![Virtuaalisen entiteetin määritys Azure Cosmos DB -tietojen tarjoajan avulla](media/virtual-entity-definition.PNG)  
+    ![Virtuaalisen entiteetin määritelmä, joka käyttää Azure Cosmos DB -tietopalveluja](media/virtual-entity-definition.PNG)  
       
     > [!IMPORTANT]
-    > Virtuaalientiteettien kanssa ei voi käyttää useita vaihtoehtoja, kuten ryhmien käyttöoikeuksia, työjonoja ja pikaluontia. Lisätietoja on kohdassa [Huomioon otettavia seikkoja virtuaalisten entiteettien käyttämisen yhteydessä](#considerations)  
+    > Useat vaihtoehdot, kuten käyttöoikeusryhmät, jonot ja pikaluonti, eivät ole käytettävissä virtuaalisten entiteettien kanssa. Lisätietoja [Huomioon otettavia seikkoja virtuaalisten entiteettien käyttämisessä](#considerations)  
       
-    Täytä pakollisista ja valinnaisista lisäominaisuudet, kuten näyttäminen ja monikkomuotoinen nimi, tarpeen mukaan. Lisätietoja näistä ominaisuuksista on artikkelissa [Entiteettien luominen ja muokkaaminen](create-edit-entities.md).  
+    Täytä muut pakolliset ja valinnaiset ominaisuudet, kuten näyttö- ja monikkomuotoiset nimet, tarpeen mukaan. Katso lisätietoja näistä ominaisuuksista kohdasta [Entiteettien luominen ja muokkaaminen](create-edit-entities.md).  
   
-1. Luo ja Lisää yksi tai useampi kenttä virtuaalientiteettiin. Standardikenttäominaisuuksien lisäksi, joita tarvitsee voidakseen luoda mukautetun kentän, voi näitä valinnaisia ominaisuuksia käyttää kaikille mukautetuille kentille, joita luodaan virtuaalista entiteettieä varten.
+1. Luo ja lisää yksi tai useampi kenttä virtuaaliselle entiteetille. Kentän vakio-ominaisuuksien lisäksi, joita mukautetun kentän luominen edellyttää, nämä valinnaiset ominaisuudet ovat käytettävissä jokaiselle mukautetulle kentälle, jonka luot virtuaaliselle entiteetille.
 
     |Kenttä|Kuvaus|
     |--|--|
-    |**Ulkoinen nimi**|Tämä on yleensä yksilöllinen nimi, jolla tunnistetaan kentässä näytettävät tiedot.|
-    |**Ulkoisen tyypin nimi**|Jos luotu kenttätyyppi on OptionSet: Tämä ominaisuus on yhdistetty asetusjoukon ulkoisen palvelun arvojoukon ulkoiseen nimeen.  Yleensä tämä voi olla luettelointi tai merkkijonon arvoluokan nimi. Ulkoista tyyppinimi voidaan käyttää, kun täydellinen nimi on pakollinen.  Esimerkiksi *tyyppinimi* ja OData, jolla on kyselyn parametreja, vaativat täydellisen nimen, kuten [*Tyyppinimi*].[*Arvo*].|
-    |**Ulkoinen arvo**|Jos luotu kenttätyyppi on OptionSet: Tämä ominaisuus on yhdistetty asetusjoukon nimikkeen ulkoisen tietolähteen vastaavaan arvoon.  Tämä annettu arvo käytetään määrittämään, mikä asetusjoukkokohde näytetään sovelluksessa.  |
+    |**Ulkoinen nimi**|Tämä on yleensä yksilöivä nimi niiden tietojen tunnistamiselle, jotka haluat näyttää kentässä.|
+    |**Ulkoisen tyypin nimi**|Jos luomasi kenttätyyppi on asetusjoukko: Tämä ominaisuus yhdistää arvojoukon ulkoiseen nimeen asetusjoukon ulkoisessa palvelussa.  Yleensä tämä voi olla valintalista tai merkkijonon arvoluokan nimi. Ulkoisen tyypin nimeä voidaan käyttää, kun täydellinen nimi vaaditaan.  Esimerkiksi *Tyyppinimi* OData-tiedoilla, joissa kyselyn parametrit edellyttävät täydellistä nimeä, kuten [*Tyyppinimi*].[*Arvo*].|
+    |**Ulkoinen arvo**|Jos luomasi kenttätyyppi on asetusjoukko: Tämä ominaisuus yhdistää vastaavaan arvoon asetusjoukon ulkoisessa tietolähteessä.  Tämän arvon avulla määritetään, mikä asetusjoukko sovelluksessa näytetään.  |
 
-    Täytä lisäominaisuudet tarpeen mukaan. Lisätietoja näistä ominaisuuksista on artikkelissa [Kenttien luominen ja muokkaaminen](create-edit-fields.md).  
+    Viimeistele lisäominaisuudet tarpeen mukaan. Katso lisätietoja näistä ominaisuuksista kohdasta [Luo ja muokkaa kenttiä](create-edit-fields.md).  
   
-1. Valitse **Tallenna ja sulje** - **kentän** ominaisuudet -sivulla.  
-1. Valitse ratkaisunhallintatyökaluriviltä **Tallenna**.  
-1. Valitse ratkaisunhallintatyökaluriviltä **Julkaise**.  
+1. Valitse **Tallenna ja sulje** **Kentän** ominaisuudet -sivulla.  
+1. Valitse ratkaisunhallinnan työkalurivillä **Tallenna**.  
+1. Valitse ratkaisunhallinnan työkalurivillä **Julkaise**.  
 1. Sulje ratkaisunhallinta.  
 
 <a name="considerations"></a>
    
-## <a name="considerations-when-you-use-virtual-entities"></a>Kun käyttää virtuaalientiteettejä, huomioon otettavia seikkoja  
+## <a name="considerations-when-you-use-virtual-entities"></a>Huomioon otettavia seikkoja virtuaalisten entiteettien käyttämisessä  
 
-Virtuaalientiteeteillä on rajoitukset.  
+Virtuaalisissa entiteeteissä on seuraavat rajoitukset.  
   
 - Kaikki virtuaaliset entiteetit ovat vain luku -tilassa.  
-- Aiemmin luotuja entiteettejä ei voi muuntaa virtuaalisiksi entiteeteiksi.  
-- Virtuaalientiteeteissä on oletusarvoisesti vain Nimi- ja Tunnus-kenttä.  Mitään muita järjestelmän hallitsemia kenttiä, Tila tai Luotu/Muokattu, ei tueta.
-- Virtuaalientiteetit eivät tue mukautettuja kenttiä, joiden tietotyyppi on valuutta, kuva tai asiakas.
-- Virtuaalientiteetit eivät tue seurannan.  
-- Päivityskokoelmissa tai laskettujen kentissä virtuaalientiteettien kenttiä ei voi käyttää.
-- Virtuaalientiteetti ei voi olla entiteetin aktiviteetin tyyppi.  
-- Virtuaalisissa entiteeteissä ei voi ottaa käyttöön useita entiteettitaulukon riveihin vaikuttavia ominaisuuksia.  Esimerkkejä ovat jonot, tietämyksenhallinta, SLA-sopimukset, kaksoiskappaleiden tunnistus, muutosten seuranta, Mobile Offline -ominaisuus, kenttien suojaus, osuvuushaku, Dynamics 365:n verkkoportaalin ratkaisujen portaalit ja virtuaalientiteettien väliset N:N-suhteet.  
-- Organisaatiot omistavat virtuaaliset entiteetit. Niissä ei tueta rivitason Commond Data Service for Apps -suojaukseen liittyviä käsitteitä. Suosittelemme, että ulkoisen tietolähde oma suojausmalli otetaan käyttöön.  
-- On suositeltavaa käyttää kohteena yksi tietolähde Erikoishaussa kun käyttää virtuaalientiteettejä. Esimerkiksi sellaisen Erikoishaku-toiminnon luontia, joka luo lopulta liitoksen Common Data Service for Apps alkuperäisien tietojen ja virtuaalientiteetin ulkoisien tietojen välille, ei suositella.  
-- Päivityksen yhteydessä tarkistettavat kentän metatietojen ominaisuudet eivät koske virtuaalisia entiteettejä. Esimerkiksi virtuaalisen entiteetin Kokonaisluku-kenttä voidaan määrittää niin, että pienin mahdollinen arvo on nolla. Koska arvo saadaan ulkopuolisesta tietolähteestä, kysely kuitenkin palauttaa nollaa pienemmät arvot, kun arvot haetaan virtuaalisesta entiteetistä.  Vähimmäisarvon ominaisuutta ei oteta huomioon kyselyssä.  Arvot on kuitenkin suodatettava, jotta saadaan haluttu nollaa suurempi arvo.
-- Virtuaaliset entiteetit eivät tue muutosten seurantaa. Niitä ei voi synkronoida käyttämällä CDS sovelluksille -toimintoa, kuten tietojen vientipalvelua.
+- Olemassa olevia entiteettejä ei voi muuntaa virtuaalisiksi entiteeteiksi.  
+- Oletusarvon mukaan virtuaaliset entiteetit sisältävät vain Nimi- ja Tunnus-kentän.  Muita järjestelmän hallitsemia kenttiä, kuten Tila tai Luotu/Muokattu, ei tueta.
+- Virtuaaliset entiteetit eivät tue mukautettuja kenttiä, joissa on Valuutta-, Kuva- tai Asiakas-tietotyyppejä.
+- Virtual entiteetit eivät tue seurantaa.  
+- Virtuaalisten entiteettien kenttiä ei voi käyttää koonti- tai lasketuissa kentissä.
+- Virtuaalinen entiteetti ei voi olla aktiviteettityyppinen entiteetti.  
+- Monia ominaisuuksia, jotka vaikuttavat entiteetin taulukon riveihin, ei voi ottaa käyttöön virtuaalisten entiteettien kanssa.  Tällaisia ovat esimerkiksi jonot, tietämyksenhallinta, palvelutasosopimukset, kaksoiskappaleiden tunnistus, muutosten seuranta, mobile offline -ominaisuus, kentän suojaus, osuvuushaku, portaalit Dynamics 365 -verkkoportaaliratkaisuille ja N:N-suhteet virtuaalisten entiteettien välillä.  
+- Virtuaaliset entiteetit ovat organisaation omistamia, ja ne eivät tue rivitason Commond Data Service for Appsin suojauskäsitteitä. Suosittelemme, että toteutat oman suojausmallin ulkoiselle tietolähteelle.  
+- Suosittelemme, että otat kohteeksi yksittäisen tietolähteen, kun käytät virtuaalisia entiteettejä erikoishauissa. Esimerkiksi erikoishaun luomista, joka luo lopulta liitoksen Common Data Service for Appsin alkuperäisten tietojen ja virtuaalisen entiteetin ulkoisten tietojen välille, ei tueta.  
+- Kentän metatieto-ominaisuudet, jotka vahvistetaan päivityksen yhteydessä, eivät koske virtuaalisia entiteettejä. Esimerkiksi Kokonaisluku-kenttä virtuaalisen entiteetin kentässä on saatettu määrittää niin, että sen pienin arvo on nolla. Kuitenkin koska arvo on peräisin ulkoisesta tietolähteestä, kysely palauttaa arvoja, jotka ovat pienempiä kuin nolla, kun ne noudetaan virtuaalisesta entiteetistä.  Vähimmäisarvo-ominaisuutta ei ilmaista kyselyssä.  Arvot täytyy silti suodattaa niin, että ne ovat suurempia kuin 0, jos haluat tuloksen olevan sellainen.
+- Virtuaaliset entiteetit eivät tue muutosten seurantaa eikä niitä voi synkronoida CDS for Apps -ominaisuuden, kuten tietojen vientipalvelun, avulla.
   
 ### <a name="see-also"></a>Katso myös  
 
-[OData v4 -tietojen tarjoajan vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)</br> 
+[OData v4 -tietopalvelun vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)</br> 
 [Entiteettien luominen ja muokkaaminen](create-edit-entities.md)</br>
-[Kenttien luominen ja muokkaaminen](create-edit-fields.md)
+[Luo ja muokkaa kenttiä](create-edit-fields.md)

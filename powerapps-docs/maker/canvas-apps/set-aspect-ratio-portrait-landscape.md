@@ -1,6 +1,6 @@
 ---
-title: Näytön koon ja suunnan muuttaminen | Microsoft Docs
-description: Vaiheittaiset ohjeet näytön koko- ja suunta-asetusten muuttamiseen
+title: Kangassovelluksen näytön koon ja suunnan muuttaminen | Microsoft Docs
+description: Vaiheittaiset ohjeet kangassovelluksen näytön koon ja suunnan muuttamiseen PowerAppsissa
 author: lonu
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: lonu
-ms.openlocfilehash: 0f68fa188dd58b276dce4009cdb37fed33d81d69
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: ab41707c06faa11dd2e1d519b72fb35ff6b9914a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39015911"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835579"
 ---
-# <a name="change-screen-size-and-orientation-in-powerapps"></a>Näytön koon ja suunnan muuttaminen PowerAppsissa
-Mukauta sovellusta muuttamalla sen näytön kokoa ja suuntaa.
+# <a name="change-screen-size-and-orientation-of-a-canvas-app-in-powerapps"></a>Kangassovelluksen näytön koon ja suunnan muuttaminen PowerAppsissa
+Mukauta kangassovellusta muuttamalla sen näytön kokoa ja suuntaa.
 
 ## <a name="prerequisites"></a>Edellytykset
 1. Luo sovellus tai avaa sovellus muokkaamista varten.

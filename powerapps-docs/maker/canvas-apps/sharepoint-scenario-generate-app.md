@@ -1,6 +1,6 @@
 ---
-title: Projektipyyntöjä käsittelevän sovelluksen laatiminen| Microsoft Docs
-description: Tässä tehtävässä luomme tavallisen *kolmen näytön sovelluksen* suoraan SharePoint-luettelosta.
+title: Projektipyyntöjä käsittelevän kangassovelluksen laatiminen| Microsoft Docs
+description: Tässä tehtävässä luomme tavallisen kolmen näytön kangassovelluksen suoraan SharePoint-luettelosta.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,14 +9,18 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 7072d78b79adff65aac33c888bf0f980f953ef84
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 4466d8f42a0ba9c9a162353bc214abf6d9d9ef83
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39023938"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834255"
 ---
-# <a name="generate-an-app-to-handle-project-requests"></a>Sovelluksen luominen projektipyyntöjen hallintaa varten
+# <a name="generate-a-canvas-app-to-handle-project-requests"></a>Kangassovelluksen luominen projektipyyntöjen hallintaa varten
 > [!NOTE]
 > Tämä artikkeli on osa opetusohjelmasarjaa, joka käsittelee PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämistä SharePoint Onlinen kanssa. Lukemalla [sarjan esittelyn](sharepoint-scenario-intro.md) saat paremman käsityksen kokonaiskuvasta sekä aiheeseen liittyvät ladattavat tiedostot.
 

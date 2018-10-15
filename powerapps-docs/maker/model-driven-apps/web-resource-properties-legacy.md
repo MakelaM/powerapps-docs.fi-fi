@@ -1,117 +1,118 @@
 ---
-title: Mallipohjaisen sovelluksen päälomakkeiden WWW-resurssin ominaisuudet PowerAppsissa | MicrosoftDocs
-description: Tietoja päälomakkeiden WWW-resurssin ominaisuuksista
+title: 'Verkkoresurssiominaisuudet mallipohjaisten sovellusten päälomakkeille: PowerApps | MicrosoftDocs'
+description: Tutustu päälomakkeiden verkkoresurssiominaisuuksien ominaisuuksiin
 Keywords: Main form; Web resource properties; Dynamics 365
 author: Mattp123
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: a08ca32b1d300d4302064940e65fd1d067c3ade6
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39679392"
 ---
-# <a name="web-resource-properties-for-model-driven-app-forms"></a>Mallipohjaisten sovellusten lomakkeiden WWW-resurssien ominaisuudet
+# <a name="web-resource-properties-for-model-driven-app-forms"></a>Verkkoresurssiominaisuudet mallipohjaisten sovellusten lomakkeille
 
-Voit lisätä tai muokata lomakkeen verkkoresursseja niin, että se on kiinnostavampi tai hyödyllisempi sovelluskäyttäjille. Lomakkeessa käyttöön otetut verkkoresurssit ovat kuvia tai HTML-tiedostojen ohjausobjekteja.
+Voit lisätä tai muokata verkkoresursseja lomakkeella, jotta se olisi kiinnostavampi tai hyödyllisempi sovelluksen käyttäjien kannalta. Lomakkeen mahdollistamia verkkoresursseja ovat kuvat tai HTML-tiedostojen ohjausobjektit.
 
 > [!NOTE]
-> Silverlightin WWW-resurssit ovat vanhentuneet. Ne eivät toimi Unified Interface -asiakasohjelmassa.
+> Silverlight-verkkoresurssit ovat vanhentuneita, eivätkä ne toimi Unified Interface -asiakasohjelmassa.
 
-## <a name="access-web-resource-properties"></a>WWW-resurssin ominaisuuksien käyttäminen
+## <a name="access-web-resource-properties"></a>Verkkoresurssin ominaisuuksiin pääsy
 
-Lomakkeen tarkastelemisen yhteydessä:
-- **WWW-resurssin lisääminen:**: Valitse välilehti (esimerkiksi **Yleinen** tai **Huomautukset**), johon haluat sen lisätä, ja valitse **Lisää**-välilehdessä **WWW-resurssit**.<br />![WWW-resurssin lisääminen](media/insert-web-resource.png)
-- **WWW-resurssin muokkaaminen**: Valitse lomakkeen välilehti ja muokattava WWW-resurssi. Valitse sitten **Koti**-välilehdessä **Muuta ominaisuuksia**. <br />![WWW-resurssin ominaisuuksien muuttaminen](media/web-resource-change-properties.png)
+Kun tarkastelet lomaketta:
+- **Verkkoresurssin lisääminen:**: Valitse välilehti (esimerkiksi **Yleistä** tai **Huomautuksia**), jonka haluat lisätä, ja valitse sitten **Lisää**-välilehdestä  **Verkkoresurssi**.<br />![Lisää verkkoresurssi](media/insert-web-resource.png)
+- **Verkkoresurssin muokkaaminen**: Valitse lomake-välilehti ja verkkoresurssi, jota haluat muokata, ja valitse sitten **Koti** -välilehdeltä **Ominaisuuksien muuttaminen**. <br />![Verkkoresurssin ominaisuuksien muuttaminen](media/web-resource-change-properties.png)
 
-**Lisää WWW-resurssi**- tai **WWW-resurssin ominaisuudet** -valintaikkuna avautuu.
+Tämä avaa **Lisää verkkoresurssi** tai **Verkkoresurssin ominaisuudet** -valintaikkunan.
 
-![Lisää WWW-resurssi -valintaikkuna](media/add-web-resource-dialog.png)
+![Lisää verkkoresurssi -valintaikkuna](media/add-web-resource-dialog.png)
 
 
 ## <a name="web-resource-properties"></a>Verkkoresurssin ominaisuudet
 
- **Lisää WWW-resurssi**- tai **WWW-resurssin ominaisuudet** -valintaikkunassa on kaksi tai joskus kolme välilehteä WWW-resurssin tyypistä riippuen.
+ **Lisää verkkoresurssi** tai **Verkkoresurssin ominaisuudet** -valintaikkunassa on kaksi, joskus kolme välilehteä verkkoresurssin tyypin mukaan.
 
-### <a name="general-tab"></a>Yleiset-välilehti
+### <a name="general-tab"></a>Yleinen välilehti
 
-Nämä ominaisuudet määrittävät käytettävän WWW-resurssin ja sen toimintatavat.
-
-|Kenttä|Kuvaus|
-|--|--|
-|**WWW-resurssi**|*Pakollinen.* Etsi olemassa oleva WWW-resurssi tai luo uusi. Sisällytä vain HTML:n tai kuvan WWW-resurssit, jotka lisätään lomakkeeseen visuaalisina elementteinä, käyttämällä **Lomakkeessa käytössä olevat WWW-resurssit** -näkymää.|
-|**Nimi**|*Pakollinen.* Määritä lomakkeeseen lisättävän WWW-resurssin ohjausobjektin nimi. Tämä arvo yksilöi lomakkeen ohjausobjektin.|
-|**Otsikko**|*Pakollinen.* Automaattisesti luotu peruste **Nimi**-kentän arvolle. Määritä lomakkeeseen lisättävän WWW-resurssin lokalisoitava teksti. Valitse **Näytä otsikko lomakkeessa**, jos haluat tehdä tästä näkyvän.|
-|**Oletusarvoisesti näkyvissä**|Jos tämä on käytössä, WWW-resurssi näkyy lomakkeen latautuessa. Jos käytössä on liiketoimintasääntö tai lomakkeen komentosarja, joka näyttää WWW-resurssin tarvittaessa, poista tämän kentän valinta. Lisätietoja: [Lomake-elementtien näyttäminen tai piilottaminen](visibility-options-legacy.md)|
-|**Ota käyttöön mobiililaitteissa**|Valitse tämä asetus, jos tämä WWW-resurssi saa näkyä mobiilisovelluksissa.|
-
-Määritä lisäominaisuudet valitun WWW-resurssin tyypin mukaan.
-
-HTML:n WWW-resursseilla näkyvät seuraavat kohdat:
-
-![HTML:n WWW-resurssin ominaisuudet](media/web-resource-general-html-properties.png)
+Nämä ominaisuudet määrittävät käytettävän verkkoresurssin sekä sen, miten se tulee toimia.
 
 |Kenttä|Kuvaus|
 |--|--|
-|**Mukautettu parametri (tiedot)**|Yleensä määritystietoja, jotka välitetään HTML:n WWW-resurssille `data`-kyselymerkkijonon parametrina. HTML-sivuun liitetyt komentosarjat voivat käyttää näitä tietoja sivun toimintatavan muuttamiseksi.|
-|**Rajoita kehysten väliset komentosarjat silloin, kun sitä tuetaan**|Käytä tätä, jos et halua täysin luottaa HTML:n WWW-resurssin sisältöön. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Kehysten välisten komentosarjojen rajoittamisen määrittäminen](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#select-whether-to-restrict-cross-frame-scripting)|
-|**Siirrä tietueen objektilajikoodi ja yksilöllinen tunnus parametreina**|Lomakkeessa näkyvän nykyisen tietueen tiedot voidaan välittää HTML:n WWW-resurssin sivulle niin, että sivulla suoritettavat komentosarjat voivat käyttää tietueen tietoja. Lisätietoja: <br />[Parametrien välittäminen verkkoresursseihin](#pass-parameters-to-web-resources)<br />[Sovelluskehittäjän dokumentaatio: Tietueen tilannekohtaisten tietojen välittäminen](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#pass-contextual-information-about-the-record)|
+|**Verkkoresurssi**|*Pakollinen.* Etsi aiemmin luotu verkkoresurssi tai luo uusi. Käytä **Lomaketta käyttävä verkkoresurssi** -näkymää sisältämään vain HTML- ja kuvaverkkoresurssit, jotka voidaan lisätä lomakkeeseen visuaalisina elementteinä.|
+|**Nimi**|*Pakollinen.* Määritä nimi verkkoresurssin ohjausobjektille, joka lisätään lomakkeeseen. Tämä arvo yksilöi lomakkeen ohjausobjektin.|
+|**Selite**|*Pakollinen.* Luodaan automaattisesti **Nimi**-kentän arvon perusteella. Määritä lokalisoitava teksti verkkoresurssin ohjausobjektille, joka lisätään lomakkeeseen. Valitse **Näytä selite lomakkeessa**, jos haluat tämän näkyviin.|
+|**Oletusarvoisesti näkyvissä**|Kun tämä on käytössä, verkkoresurssi tulee näkyviin, kun lomake latautuu. Jos sinulla on liiketoimintasääntö tai lomakkeen komentosarja, joka näyttää verkkoresurssin tarvittaessa, poista valinta tästä kentästä. Lisätietoja: [Näytä tai piilota lomake-elementit](visibility-options-legacy.md)|
+|**Ota käyttöön mobiililaitteille**|Valitse tämä vaihtoehto, jotta tämä verkkoresurssi näkyy mobiilisovelluksissa.|
 
-Voit määrittää kuvan WWW-resursseille **vaihtoehtoisen tekstin**, joka on tärkeä käyttöä helpottavissa toiminnoissa, joiden avulla sivu on kaikkien käytettävissä.
+Lisäominaisuudet valitaan ja määritetään verkkoresurssin tyypistä riippuen.
+
+HTML-verkkoresurssien kohdalla näet nämä:
+
+![HTML-verkkoresurssin ominaisuudet](media/web-resource-general-html-properties.png)
+
+|Kenttä|Kuvaus|
+|--|--|
+|**Mukautettu parametri (tiedot)**|Ovat yleensä määritystietoja, jotka lähetetään HTML-verkkoresurssiin `data` kyselymerkkijonoparametrina. HTML-sivuun liittyviä komentosarjoja voidaan käyttää näihin tietoihin pääsemiseksi, ja niiden avulla voidaan muuttaa sivun toimintaa.|
+|**Rajoita kehysten komentosarjat, jos tuettu**|Käytä tätä vaihtoehtoa, jos et luota täysin HTML-verkkoresurssin sisältöön. Lisätietoja: [Kehittäjän dokumentaatio: Valitse, haluatko rajoittaa kehysten komentosarjoja](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#select-whether-to-restrict-cross-frame-scripting)|
+|**Siirrä tietueen objektityyppinen koodi ja yksilöllinen tunniste parametreina**|Lomakkeella näkyvät tiedot nykyisestä tietueesta voidaan välittää HTML-verkkoresurssisivulle niin, että sivun komentosarjalla voidaan päästä tietueen tietoihin. Lisätietoja: <br />[Parametrien välittäminen verkkoresursseihin](#pass-parameters-to-web-resources)<br />[Kehittäjän dokumentaatio: välitä tilannekohtaisia tietueen tietoja](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#pass-contextual-information-about-the-record)|
+
+Kuvan verkkoresursseja varten sinulla on mahdollisuus määrittää **Vaihtoehtoinen teksti**, joka on tärkeä käyttöä helpottavien toimintojen kanssa ja jonka avulla sivu on kaikkien käyttäjien käytettävissä.
 
 <!-- TODO: Why are Custom Parameters available to pass to image web resources? -->
 
 ### <a name="formatting-tab"></a>Muotoilu-välilehti
 
-**Muotoilu**-välilehdellä näkyvät asetukset vaihtelevat lisätyn WWW-resurssin lajin ja mahdollisen kontekstin mukaan. Asetuksia ovat esimerkiksi näytettävien sarakkeiden ja rivien määrittäminen, näytetäänkö reuna sekä vieritystoiminto.
+**Muotoilu**-välilehdellä näkyviin tulevat asetukset vaihtelevat lisätyn verkkoresurssin tyypin ja kontekstin mukaan. Näihin vaihtoehtoihin kuuluu näkyviin tulevien sarakkeiden ja rivien määrä, onko reuna näkyvissä sekä vieritysasetukset.
 
-![WWW-resurssin muotoiluominaisuudet](media/web-resource-formatting-properties.png)
+![Verkkoresurssin muotoilun ominaisuudet](media/web-resource-formatting-properties.png)
 
 |Ominaisuus|Kuvaus|  
 |--------------|-----------------|
-|**Valitse sarakkeiden määrä ohjausobjektia varten**|Kun verkkoresurssin sisältävässä osassa on useita sarakkeita, voit määrittää kentän käyttämään enintään saman määrän sarakkeita kuin osassa on.|  
-|**Valitse ohjausobjektin viemien rivien määrä**|Voit ohjata WWW-resurssin korkeutta määrittämällä rivien määrän tai valitsemalla **Laajenna automaattisesti käytettävissä olevaan tilaan** -kohdan, jolloin WWW-resurssin korkeus on sama kuin käytettävissä oleva tila.|  
-|**Valitse IFRAME-kehyksen selaustapa**|HTML-verkkoresurssi lisätään lomakkeeseen IFRAME-kehyksen avulla.<br /><br /> - **Tarpeen mukaan**: näytä vierityspalkit, kun verkkoresurssi on suurempi kuin käytettävissä oleva tila.<br />- **Aina**: näytä vierityspalkit aina.<br />- **Ei koskaan**: älä näytä vierityspalkkeja koskaan.|  
-|**Näytä reunaviiva**|Näytä reunaviivat verkkoresurssin ympärillä.|  
+|**Valitse ohjausobjekti kattamien sarakkeiden määrä**|Kun verkkoresurssin sisältävässä osassa on useampi kuin yksi sarake, voit määrittää kentän käsittämään sarakkeiden määrän, jotka osa sisältää.|  
+|**Valitse ohjausobjekti kattamien rivien määrä**|Voit hallita verkkoresurssin korkeutta määrittämällä rivien määrän tai valitsemalla **Laajenna automaattisesti käytettävissä olevaan tilaan**, jolloin verkkoresurssin korkeutta voidaan laajentaa käytettävissä olevaan tilaan.|  
+|**Valitse IFRAME-vieritystyyppi**|HTML-verkkoresurssi lisätään lomakkeeseen IFRAMEn avulla.<br /><br /> - **Tarvittaessa**: Näytä vierityspalkit, kun verkkoresurssin koko on suurempi kuin käytettävissä oleva tila.<br />- **Aina**: Näytä aina vierityspalkit.<br />- **Ei koskaan**: Älä koskaan näytä vierityspalkkeja.|  
+|**Näytä reunus**|Näyttää verkkoresurssin reunuksen.|  
 
 
 ### <a name="dependencies-tab"></a>Riippuvuudet-välilehti
 
-Verkkoresurssi voi olla yhteydessä lomakkeen kenttiin komentosarjojen avulla. Jos kenttä poistetaan lomakkeesta, verkkoresurssin komentosarja voi katketa. Lisää kentät, joihin komentosarjat viittaavat verkkoresurssissa, **alisteisiin kenttiin**, jotta niitä ei voi poistaa vahingossa.
+Verkkoresurssi voi olla vuorovaikutuksessa kenttien kanssa lomakkeella komentosarjan avulla. Jos kenttä poistetaan lomakkeesta, verkkoresurssin komentosarja voi lakata toimimasta. Lisää verkkoresurssin komentosarjojen viittaamat kentät kohtaan **Riippuvaiset kentät** niin, että niitä ei voi poistaa vahingossa.
 
-![WWW-resurssin riippuvuuksien ominaisuudet](media/web-resource-dependency-properties.png)
+![Verkkoresurssin riippuvuusominaisuudet](media/web-resource-dependency-properties.png)
   
 <a name="BKMK_PassingParametersToWebResource"></a> 
  
 ## <a name="pass-parameters-to-web-resources"></a>Parametrien välittäminen verkkoresursseihin 
 
-HTML-verkkoresurssi voi hyväksyä kyselymerkkijonon parametreina välitettävät parametrit.  
+HTML-verkkoresurssi voi hyväksyä parametrit välitettäviksi kuin kyselymerkkijonon parametreina.  
   
-Tietuetta koskevat tiedot voidaan välittää ottamalla **Siirrä tietueen objektityyppikoodi ja yksilöllinen tunnus parametreina** -asetus käyttöön. Jos tiedot on kirjoitettu **Mukautettu parametri (tiedot)** -kenttään, ne välitetään tietoparametrin avulla. Välitetyt arvot:  
+Tietueen tietoja voidaan välittää ottamalla käyttöön **Siirrä tietueen objektityypin koodi ja yksilöivät tunnisteet parametreina** -vaihtoehto. Jos tiedot on kirjoitettu **Mukautettu parametri (tiedot)** -kenttään, ne välitetään dataparametrin avulla. Välitetty arvoja ovat:  
   
 |Parametri|Kuvaus|  
 |---------------|-----------------|  
-|`data`|Tämä parametri välitetään vain, kyse on **Mukautettu parametri (tiedot)** -tekstistä.|  
-|`orglcid`|Organisaation oletuskielen LCID-tunnus.|  
+|`data`|Tämä parametri välitetään vain, kun teksti annetaan **Mukautettu parametri (tiedot)** -kenttään.|  
+|`orglcid`|Organisaation oletuskieli on LCID.|  
 |`orgname`|Organisaation nimi.|  
-|`userlcid`|Käyttäjän ensisijaisen kielen LCID-tunnus|  
-|`type`|**Älä käytä tätä.** Entiteetin tyyppikoodi. Tämä numeerinen arvo voi olla erilainen eri organisaatioiden mukautetuissa entiteeteissä. Käytä sen sijaan entiteettityypin nimeä|  
+|`userlcid`|Käyttäjän ensisijainen kieli on LCID|  
+|`type`|**Älä käytä tätä.** Entiteettityypin koodi. Tämä numeerinen arvo voi olla toinen kuin eri organisaatioiden mukautetut entiteetit. Käytä sen sijaan entiteetin nimeä.|  
 |`typename`|Entiteettityypin nimi.|  
-|`id`|Tietueen tunnusarvo. Tällä parametrilla ei ole arvoa, ennen kuin entiteettitietue on tallennettu.|  
+|`id`|Tietueen tunnusarvo. Tällä parametrilla ei ole arvoa, ennen kuin sen entiteettitietue on tallennettu.|  
   
-Muita parametreja ei sallita eikä verkkoresurssi avaudu muita parametreja käytettäessä. Jos välitettäviä arvoja on useita, tietoparametriin voidaan kuormittaa lisää parametreja.
+Muita parametreja ei sallita eikä verkkoresurssi avaudu, jos muita parametreja käytetään. Jos haluat välittää useita arvoja, dataparametria voit ylikuormittaa sisältämään enemmän parametreja.
 
-Lisätietoja: [Sovelluskehittäjän dokumentaatio: Tietueen tilannekohtaisten tietojen välittäminen](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#pass-contextual-information-about-the-record)
+Lisätietoja: [Kehittäjän dokumentaatio: välitä tilannekohtaisia tietueen tietoja](/dynamics365/customer-engagement/developer/use-iframe-and-web-resource-controls-on-a-form#pass-contextual-information-about-the-record)
 
 ### <a name="see-also"></a>Katso myös
 
-[Sovelluksen laajentaminen verkkoresursseja luomalla tai muokkaamalla](create-edit-web-resources.md)<br />
-[Päälomakkeen ja osien käyttäminen](use-main-form-and-components.md)
+[Luo tai muokkaa verkkoresursseja sovelluksen laajentamiseksi](create-edit-web-resources.md)<br />
+[Päälomakkeen ja sen osien käyttäminen](use-main-form-and-components.md)

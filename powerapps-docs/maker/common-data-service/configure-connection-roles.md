@@ -8,124 +8,125 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - PowerApps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- PowerApps
 ms.author: matp
 manager: brycho
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: 4faf195f1c751e3796267d52725c1cb753c4889d
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39679915"
 ---
 # <a name="configure-connection-roles"></a>Yhteysroolien määrittäminen
 
-Common Data Service sovelluksille -ratkaisun avulla voit määrittää **yhteydet** entiteettitietueiden välille ilman entiteettisuhteen luomista. Mallipohjaisissa sovelluksissa tietueiden välille voidaan muodostaa nimetty linkki. Näin muodostetaan vähemmän muodollinen suhde, joka ei anna aihetta todellisen entiteettisuhteen luomiselle. Esimerkkejä ovat *ystävä*, *sisarus*, *puoliso*, *osallistuja* ja *sidosryhmän jäsen*. Jotkin yhteydet voivat olla myös kaksisuuntaisia, kuten *lapsi* ja *vanhempi*, *aviomies* ja *aviovaimo* ja *lääkäri* ja *potilas*.
+Common Data Service for Appsin avulla voit määrittää entiteettitietueiden väliset **yhteydet** ilman, että sinun tarvitsee luoda entiteettisuhdetta. Mallipohjaisten sovellusten käyttäjä voi muodostaa nimetyn linkin tietueiden välille, kun hän haluaa luoda vähemmän virallisen suhteen, joka ei vaadi oikean entiteettisuhteen käyttämistä. Joitakin esimerkkejä tästä ovat *ystävä*, *sisarus*, *puoliso*, *osallistuja* ja *sidosryhmä*. Jotkin yhteydet voivat olla myös vastavuoroisia, kuten *alikohde* ja *pääkohde*, *aviomies* ja *vaimo* tai *lääkäri* ja *potilas*.
 
-Kun kahden tietueen välille määritetään yhteys, sille voidaan lisätä myös kuvaus ja lisätietoja, kuten suhteen alku- ja loppupäivämäärät. Lisätietoja: [Yhteyksien luominen tietueiden välisten suhteiden määrittämistä ja tarkastelemista varten](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
+Kun käyttäjä muodostaa yhteyden kahden tietueen välille, hän voi myös lisätä kuvauksen sekä muita tietoja, kuten suhteen alkamis- ja päättymispäivämäärän. Lisätietoja: [Yhteyksien luominen tietueiden välisten suhteiden määrittämiseksi ja tarkastelemiseksi](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 
-Kuka tahansa, jolla on **Yhteysrooli**-entiteetin kirjoitusoikeus, voi määrittää, mitkä yhteydet ovat henkilöiden käytettävissä.
+Kaikki käyttäjät, joilla on kirjoitusoikeudet **Yhteysrooli**-entiteettiin, voivat määrittää ne yhteydet, joita muut käyttäjät voivat käyttää.
 
 ## <a name="view-connection-roles"></a>Yhteysroolien tarkasteleminen
 
-CDS sovelluksille-ratkaisuun on jo määritetty useita vakioyhteyksiä. Voit tarkastella niitä siirtymällä asetusten alueeseen. 
+CDS for Appsiin on määritetty useita vakioyhteysrooleja. Voit tarkastella niitä siirtymällä asetukset-alueeseen. 
 
-### <a name="navigate-to-the-settings-area"></a>Asetusten alueeseen siirtyminen
+### <a name="navigate-to-the-settings-area"></a>Asetukset-alueelle siirtyminen
 
-1. Kun tarkastelet mallipohjaista sovellusta, muokkaa URL-osoitetta ja poista kaikki kohdan `dynamics.com` jälkeiset merkit. Päivitä sitten sivu.
-1. Siirry kohtaan **Asetukset** > **Yritys** > **Yrityksen hallinta** ja valitse **Yhteysroolit**.
+1. Tarkastellessasi mallipohjaista sovellusta poista URL-osoitteesta kaikki `dynamics.com` -kohdan jälkeen ja päivitä sivu.
+1. Siirry kohtaan **Asetukset** > **Liiketoiminta** > **Liiketoiminnan hallinta** ja valitse sitten **yhteysroolit**.
 
-![Yhteysroolit yrityksen hallinnan asetuksissa](media/navigate-settings-connection-roles.png)
+![Liiketoiminnan hallinta -asetusnäkymän yhteysroolit](media/navigate-settings-connection-roles.png)
 
-Tässä näkymässä ovat kaikki tämän ympäristön käytettävissä olevat yhteysroolit. Voit muokata niitä täällä.
+Tässä näkymässä näet kaikki yhteysroolit, jotka ovat käytettävissä tässä ympäristössä, ja voit myös muokata niitä tässä.
 
 > [!NOTE]
-> Jos haluat jakaa yhteysroolit ratkaisun kanssa, varmista, että ne sisältyvät jaettavaan ratkaisuun. Lisätietoja [Yhteysroolien lisääminen ratkaisuun](#add-connection-roles-to-a-solution)
+> Jos haluat jakaa yhteysrooleja ratkaisun yhteydessä, varmista, että ne sisältyvät ratkaisuun, jonka haluat jakaa. Lisätietoja: [Yhteysroolien lisääminen ratkaisuun](#add-connection-roles-to-a-solution)
 
-## <a name="view-connection-roles-in-the-solution-explorer"></a>Tarkastele yhteysrooleja ratkaisunhallinnassa.
+## <a name="view-connection-roles-in-the-solution-explorer"></a>Yhteysroolien tarkasteleminen ratkaisunhallinnassa.
 
-Koska yhteysroolit ovat *ratkaisukohtaisia*, eli ne voidaan sisällyttää ratkaisuun, voit lisätä yhteysrooleja myös jaettavaan ratkaisuun.
+Koska yhteysroolit ovat *ratkaisun tunnistavia* – mikä tarkoittaa sitä, että ne voidaan sisällyttää ratkaisuun – voit myös lisätä yhteysrooleja jakamasi ratkaisuun.
 
 [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
 
-Suurin osa **Asetukset**-alueessa nähtävistä yhteysrooleista määritetään *sisäisiksi* **oletusratkaisuiksi** (joita ei pidä sekoittaa **Common Data Services -oletusratkaisuun**). Tämä sisäinen **oletusratkaisu** sisältää järjestelmän kaikki mukautukset. Voit tarkastella **oletusratkaisua** valitsemalla **Kaikki ratkaisut - sisäinen** -näkymän.
+Useimmat **Asetukset**-alueella näkyvistä yhteysrooleista määritetään *sisäisen* **Oletusratkaisun** sisällä (jota ei tule sekoittaa **Common Data Servicesin oletusratkaisuun**). Tämä sisäinen **Oletusratkaisu** sisältää kaikki järjestelmän mukautukset. Jos haluat tarkastella **Oletusratkaisua**, valitse **Kaikki ratkaisut - sisäinen** -näkymä.
 
 ## <a name="add-connection-roles-to-a-solution"></a>Yhteysroolien lisääminen ratkaisuun
 
-Yleensä sisäisen **oletusratkaisun** osien muokkausta ei suositella. Voit käyttää **Common Data Services -oletusratkaisussa** tai luomassasi ratkaisussa **Lisää aiemmin luotu** -komentoa, kun haluat tuoda oletusyhteysrooleja ratkaisuusi.
+Osien muokkaamista sisäisessä **Oletusratkaisussa** ei yleensä suositella. Voit käyttää **Lisää olemassa oleva** -komentoa **Common Data Servicesin oletusratkaisun** tai minkä tahansa luomasi ratkaisun sisällä tuodaksesi minkä tahansa oletusyhteysroolin ratkaisuusi.
 
 ![Olemassa olevan yhteysroolin lisääminen](media/add-existing-connection-role.png)
 
-Kun olet lisännyt ratkaisuun yhteysroolin, voit muokata sitä aina yhteysroolin ollessa näkyvillä.
+Kun lisäät yhteysroolin ratkaisuusi, voit muokata sitä missä tahansa, missä se on näkyvissä.
 
-## <a name="create-or-edit-connection-roles"></a>Luo tai muokkaa yhteysrooleja.
+## <a name="create-or-edit-connection-roles"></a>Yhteysroolien luominen tai muokkaaminen.
 
 > [!IMPORTANT]
-> Jos haluat jakaa ratkaisun, joka sisältää uusia yhteysrooleja, tai muutettuja olemassa olevia yhteysrooleja, lisää ne jaettavaan ratkaisuun. Uusien yhteysroolien muokkaaminen tai lisääminen **Asetukset**-alueella lisää yhteysroolit sisäiseen **oletusratkaisuun**. Ne sisällytetään jaettavaan ratkaisuun vasta, kun olet lisännyt ne ratkaisuun. Lisätietoja: [Yhteysroolien lisääminen ratkaisuun](#add-connection-roles-to-a-solution)
+> Jos aiot jakaa ratkaisun, joka sisältää uusia yhteysrooleja tai muutoksia aiemmin luotuihin yhteysrooleihin, sinun on lisättävä ne kyseiseen ratkaisuun. Kun muokkaat tai lisäät uusia yhteysrooleja **Asetukset**-alueessa, nämä yhteysroolit lisätään sisäiseen **Oletusratkaisuun** eikä niitä lisätä jakamaasi ratkaisuun ennen kuin lisäät ne sinne itse. Lisätietoja [Yhteysroolien lisääminen ratkaisuun](#add-connection-roles-to-a-solution)
 
-Valitse **Yhteysroolit**-luettelossa muokattava yhteysrooli.
-Yhteysroolin määrittäminen sisältää kolme lomakkeessa selvästi erottuvaa vaihetta.
+Valitse **Yhteysroolit**-luettelosta yhteysrooli, jonka sisällä haluat tehdä muokkauksia.
+Yhteysroolin määrittämiseen sisältyy kolme vaihetta, jotka näkyvät selvästi lomakkeessa.
 
-![Yhteysroolilomakkeen luominen](media/create-connection-role-form.png)
+![Luo yhteysrooli -lomake](media/create-connection-role-form.png)
 
-### <a name="describe-the-connection-role"></a>Yhteysroolin määrittäminen
+### <a name="describe-the-connection-role"></a>Yhteysroolin kuvaileminen
 
 Määritä seuraavat kentät:
 
 |Kenttä|Kuvaus|
 |--|--|
-|**Nimi**|(Pakollinen) Yhteyttä kuvaileva teksti.|
-|**Yhteysrooliluokka**|Yhteyden luokkaa kuvaileva ryhmä. Lisätietoja: [Yhteysroolin luokan arvot](#connection-role-category-values)|
-|**Kuvaus**|Anna roolille määritys.|
+|**Nimi**|(Pakollinen) Yhteyttä kuvaava teksti.|
+|**Yhteysrooliluokka**|Ryhmä, joka kuvaa yhteyden luokkaa. Lisätietoja: [Yhteysrooliluokan arvot](#connection-role-category-values)|
+|**Kuvaus**|Kirjoita roolin määritelmä.|
 
-#### <a name="connection-role-category-values"></a>Yhteysroolin luokan arvot
+#### <a name="connection-role-category-values"></a>Yhteysrooliluokan arvot
 
-**Yhteysroolin luokan** oletusarvot ovat seuraavat:
-- Yritys
-- Perhe
-- Yhteisöpalvelu
-- Sales
+Oletusarvoiset **Yhteysrooliluokan** arvot ovat:
+- Liiketoiminta
+- Perheenjäsenet
+- Yhteisöpalvelut
+- Myynti
 - Muu
-- Sidosryhmän jäsen
-- MYYNTIRYHMÄ
+- Sidosryhmä
+- Myyntitiimi
 - Palvelu
 
-Voit lisätä uusia luokkia tai muokata olemassa olevia luokkia muokkaamalla **luokan** yleistä asetusjoukkoa. Lisätietoja: [Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)
+Voit lisätä uusia luokkia tai muokata olemassa olevia luokkia muokkaamalla **Luokan** yleistä asetusjoukkoa. Lisätietoja: [Yleisten asetusjoukkojen luominen ja muokkaaminen Common Data Service for Appsissa (valintaluettelot)](create-edit-global-option-sets.md)
 
 ### <a name="select-record-types"></a>Tietuetyyppien valitseminen
 
-Määritä, mitkä tietuetyypit ovat käytettävissä yhteyttä varten.
+Valitse tietuetyypit, joihin voidaan muodostaa yhteys.
 
 > [!NOTE]
-> Vaikka **Kaikki** on valittuna oletusarvoisesti, varmista, että pohdit lisättävälle yhteysroolille sopivia tyyppejä.
+> Vaikka oletusarvoinen valinta on **Kaikki**, mieti, mitkä tyypit ovat asianmukaisia yhteysroolille, jota olet lisäämässä.
 
-### <a name="matching-connection-roles"></a>Toisiaan vastaavat yhteysroolit
+### <a name="matching-connection-roles"></a>Vastaavat yhteysroolit
 
-Tässä valinnaisessa vaiheessa voit määrittää mitkä tahansa kaksisuuntaisesti kohdistettavat roolit. Tämä ei ole pakollinen vaihe. Yhteydet ovat kuitenkin merkityksellisempiä, jos vastavuoroiset yhteydet määritetään.
+Tässä valinnaisessa vaiheessa voit määrittää ne roolit, joita sovelletaan vastavuoroisesti. Tämä ei ole pakollista, mutta yhteydet ovat merkityksellisempiä, jos nämä ovat määritetty.
 
-Käyttäjä voi esimerkiksi määrittää, että Glen on Maryn *ystävä*. Mutta tarkoittaako tämä sitä, että Mary on Glenin *ystävä*? Toivomme, että tarkoittaa. Mutta jos Glen on Maryn *isä*, se ei tarkoita sitä, että Mary olisi Glenin *isä*. Kaksisuuntaisuuden määrittäminen oikein vaatii tämän ylimääräisen vaiheen.
+Voit esimerkiksi määrittää, että Jaakko on Marjan *Ystävä*, mutta tarkoittaako tämä myös sitä, että Marja on Jaakon *Ystävä*? Toivottavasti asia on näin. Mutta jos Jaakko on Marjan *Isä*, tämä ei tarkoita sitä, että Marja olisi myös Jaakon *Isä*. Oikean vastavuoroisuuden määrittäminen edellyttää tätä ylimääräistä vaihetta.
 
-Kun käyttäjä määrittää yhteysroolin, jolla ei ole vastaavaa yhteysroolia, rooli näytetään vain kun yhteyttä tarkastellaan tietueessa, jossa yhteyttä käytetään. Kun roolia tarkastellaan yhteystietueessa, se on tyhjä, ellei vastaavaa roolia määritetä.
+Kun luot yhteysroolin, jolla ei ole vastaavaa yhteysroolia, rooli näytetään vain tarkasteltaessa yhteyttä tietueesta, jossa yhteys on käytössä. Tarkasteltaessa yhdistettyä tietuetta, rooli on tyhjä, ellei vastaavaa roolia ole määritetty.
 
-Määrityksille, kuten *ystävä*, *puoliso*, *työtoveri* tai *sisarus*, kannattaa delegoida vastaava rooli itselleen. Jos yhden vastaavuuden yhteysrooli on määritetty, yhden vastaavuuden yhteysroolia käytetään molemmissa suunnissa.
+Kun kyseessä on sellainen roolimääritys kuten *Ystävä*, *Puoliso*, *Työtoveri* tai *Sisarus*, kannattaa vastaava rooli määrittää itselleen. Jos yksi vastaava yhteysrooli on määritetty, otetaan tämä yksi vastaava yhteysrooli käyttöön molempisuuntaisesti.
 
 > [!IMPORTANT]
-> Tallenna uusi yhteysrooli ilman tätä vastaavaa yhteysroolia, ennen kuin määrität vastaavan yhteysroolin itseensä.
+> Sinun tulee tallentaa uusi yhteysrooli ilman tätä vastaavaa yhteysroolia, ennen kuin voit määrittää vastaavan yhteysroolin itselleen.
 
-Osa yhteysrooleista on jo määritetty niin, että niillä on vastaavat yhteysroolit. Määritetään *entisen työntekijän* vastaavuus *entiseen työnantajaan* ja päinvastoin. Tällainen yksi yhteen -vastaavuuden yhteysrooli on yleisin.
+Tulet huomaamaan, että joillekin yhteysrooleille on jo määritetty vastaavia yhteysrooleja. *Entinen työntekijä* vastaa roolia *Entinen työnantaja* ja päinvastoin. Tällaiset yksi yhteen -tyyppiset vastaavat yhteysroolit ovat yleisimmin käytettyjä.
 
-Voit määrittää useita vastaavia yhteysrooleja monimutkaisia suhteita kuvaamaan. Jos luot yhteysroolin, joka on esimerkiksi *Isä*, voit määrittää kaksi lisäroolia, esimerkiksi *Tytär* ja *Poika*, ja käyttää niitä molempia *Isä*-roolin vastaavina yhteysrooleina. Vastaavasti *Tytär*- ja *Poika*-yhteysroolit tulee määrittää vastaamaan *Isä*-roolia. Samoin myös *Äiti*-roolille tulee määrittää vastaavuudet *Tytär*- ja *Poika*-rooleille.
+Voit määrittää useita vastaavia yhteysrooleja kuvaamaan monimutkaisia suhteita. Jos olet luonut yhteysroolin kuten *Isä*, voit määrittää kaksi lisäroolia kuten *Tytär* ja *Poika* ja sitten määrittää nämä molemmat *Isä*-roolin vastaaviksi yhteysrooleiksi. Sinun tulee samalla myös määrittää, että *Tytär*- ja *Poika*-yhteysroolit vastaavat *Isä*-roolia. Ja muista tietysti myös määrittää samankaltainen *Äiti*-rooli, joka vastaa *Tytär*- ja *Poika*-rooleja.
 
 > [!TIP]
-> Ennen kuin luot monimutkaisia yhteysroolijoukkoja, kannattaa varmistaa, ovat yksinkertaisemmat roolijoukot riittäviä. Esimerkiksi monimutkaisten yhteysroolien, kuten *Isä*, *Äiti*, *Poika* ja *Tytär*, sijaan voit käyttää yksinkertaisesti *Vanhempi*- ja *Lapsi*-rooleja.
+> Ennen kuin luot monimutkaisen yhteysroolien joukon, harkitse, riittäisikö yksinkertaisempi joukko rooleja. Esimerkiksi sen sijaan, että loisit monimutkaisen yhteysroolien joukon kuten *Isä*, *Äiti*, *Poika* ja *Tytär*, voisit harkita, riittäisikö pelkästään *Vanhempi* ja *Lapsi*.
 
-Jos vastaavia yhteysrooleja on määritetty useita, yhteysroolit edustavat vain sallittuja kaksisuuntaisia rooleja. Ensimmäistä käytetään automaattisesti oletusarvona. Jos oletusarvo ei ole oikea, yhteyttä täytyy muokata manuaalisesti. Tällöin valitaan määritykselle sallittuja asetuksia.
+Jos useampi kuin yksi vastaava yhteysrooli on määritetty, kyseiset yhteysroolit edustavat ainoita kelvollisia vastavuoroisia rooleja. Ensimmäinen asetetaan automaattisesti oletusarvoksi. Jos oletusarvo ei ole oikea, käyttäjien tulee muokata yhteyttä manuaalisesti ja valita kelvollisten, asetukseen määritettyjen vaihtoehtojen joukosta.
 
 ### <a name="see-also"></a>Katso myös
 <!-- This is in the basics guide. It needs to be migrated -->
-[Tietueiden välisten suhteiden määrittäminen ja näyttäminen yhteyksiä luomalla](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)<br />
+[Yhteyksien luominen tietueiden välisten suhteiden määrittämiseksi ja tarkastelemiseksi](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
+[Yleisten asetusjoukkojen luominen ja muokkaaminen Common Data Service for Appsissa (valintaluettelot)](create-edit-global-option-sets.md)<br />
 [Entiteettien välisten suhteiden luominen ja muokkaaminen](create-edit-entity-relationships.md)
 
 

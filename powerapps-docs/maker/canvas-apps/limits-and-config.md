@@ -1,6 +1,6 @@
 ---
-title: Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot | Microsoft Docs
-description: PowerAppsin järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
+title: Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot | Microsoft Docs
+description: PowerAppsissa rakennettujen kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,21 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/07/2018
 ms.author: anneta
-ms.openlocfilehash: 3c334baf876c64085621520daef9a0f153d54107
-ms.sourcegitcommit: 0f6d7bb9e524202c065b9a7ef92a7f54bdc4bc7c
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: f8df0b9c4d2dc186a4b583b1f61da33a97ae4010
+ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39476871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43163723"
 ---
-# <a name="system-requirements-limits-and-configuration-values"></a>Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
+# <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
 
-## <a name="supported-platforms-for-running-apps-using-the-powerapps-app"></a>Tuetut ympäristöt sovellusten suorittamiseksi PowerApps-sovelluksen avulla
+## <a name="supported-platforms-for-running-canvas-apps-using-the-powerapps-app"></a>Tuetut ympäristöt kangassovellusten suorittamiseksi PowerApps-sovelluksen avulla
 
 | **Vähimmäisvaatimus** | **Suositus** |
 | --- | --- |
@@ -27,7 +31,7 @@ Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaati
 | Android 5 tai uudempi |Android 7 tai uudempi sekä vähintään 4 gigatavua RAM-muistia |
 | Windows 8.1 tai uudempi (ainoastaan PC) |Windows 10 Fall Creators -päivitys sekä vähintään 8 gigatavua RAM-muistia|
 
-## <a name="supported-browsers-for-running-apps"></a>Tuetut selaimet sovellusten suorittamista varten
+## <a name="supported-browsers-for-running-canvas-apps"></a>Tuetut selaimet kangassovellusten suorittamista varten
 
 | **Selain** | **Käyttöjärjestelmä** |
 | --- | --- |
@@ -64,7 +68,7 @@ Sovelluksen kautta yhdistetystä ohjelmointirajapinnoista tehdyt kutsut (esimerk
 Käytä näitä osoitteita esimerkiksi, jos sinun täytyy lisätä IP-osoitteita sallittujen osoitteiden luetteloon Azure SQL -tietokantaa varten.
 
 > [!IMPORTANT]
->   Päivitä aiemmin määritetyt asetukset mahdollisimman pian ennen syyskuun 1. 2018 siten, että ne sisältävät ja vastaavat tämän luettelon alueiden IP-osoitteita, joissa PowerApps-sovelluksesi ovat.
+>   Päivitä aiemmin määritetyt asetukset mahdollisimman pian ennen 30.9.2018 siten, että ne sisältävät ja vastaavat tämän luettelon alueiden IP-osoitteita, joissa PowerApps-sovelluksesi ovat.
 
 | Alue | Lähtevä IP-osoite |
 | --- | --- |

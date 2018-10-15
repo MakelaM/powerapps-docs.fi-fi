@@ -1,6 +1,6 @@
 ---
-title: Liitinten yleiskatsaus | Microsoft Docs
-description: Yleiskatsaus kaikista yhteyksistä, joita voit käyttää sovellusten rakentamiseen
+title: Kangassovellusten liitinten yleiskatsaus | Microsoft Docs
+description: Yleiskatsaus kaikista yhteyksistä, joita voit käyttää kangassovellusten rakentamiseen
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -9,17 +9,57 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/28/2017
 ms.author: lanced
-ms.openlocfilehash: 15da6ed2ce6b44c17645ac11d1b049b95e157703
-ms.sourcegitcommit: 47be38a23c96ba7478fd777065f5db41181af40b
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 20a725ff417ad1a36b83b6a24ca1aaecc667da14
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164744"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834558"
 ---
-# <a name="overview-of-connectors-for-powerapps"></a>PowerAppsin liittimien yleiskatsaus
-Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteeseen* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerAppsissa on liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi sovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).
+# <a name="overview-of-canvas-app-connectors-for-powerapps"></a>PowerAppsin kangassovellusten liitinten yleiskatsaus
+Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteeseen* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerApps sisältää liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi kangassovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).
 
-Seuraavassa taulukossa on linkit suosituimpien liitinten lisätietoihin. Katso luettelo kaikista liittimistä kohdasta [Kaikki liittimet](#all-connectors).
+Liitin voi tarjota tieto**taulukoita** tai **toimintoja**. Jotkin liittimet tarjoavat vain taulukoita, jotkin vain toimintoja ja jotkin molempia. Lisäksi liitin voi olla joko vakio- tai mukautettu liitin.
+
+## <a name="tables"></a>Taulukot
+
+Jos liitin tarjoaa taulukoita, voit lisätä tietolähteesi ja valita sitten tietolähteen taulukon, jota haluat hallita. PowerApps sekä noutaa taulukkotiedot sovellukseesi että päivittää tietolähteessä olevat tiedot puolestasi. Voit esimerkiksi lisätä taulukon sisältävän tietolähteen nimeltä **Oppitunnit** ja sitten määrittää ohjausobjektin, kuten gallerian tai lomakkeen, **Kohteet**-ominaisuudeksi tämän arvon kaavarivillä:
+
+ ![Tavallisen tietolähteen Kohteet-ominaisuus](./media/connections-list/ItemPropertyPlain.png)
+
+Voit määrittää, mitä tietoja sovelluksesi noutaa muokkaamalla tietojasi näyttävän ohjausobjektin **Kohteet**-ominaisuutta. Edellisen esimerkin perusteella voisit siis lajitella tai suodattaa **Oppitunnit**-taulukon tietoja käyttämällä kyseistä nimeä argumenttina **Hae**- ja **SortByColumn**-funktioissa. Tässä kuvassa kaava, johon **Kohteet**-ominaisuus on asetettu, määrittää ne tiedot, jotka lajitellaan ja suodatetaan **TextSearchBox1**:ssä olevan tekstin perusteella. 
+
+ ![Laajennetun tietolähteen Kohteet-ominaisuus](./media/connections-list/ItemPropertyExpanded.png)
+
+Saat lisätietoja kaavojen muokkaamisesta taulukoiden avulla näistä ohjeaiheista:
+
+  [Tutustu tietolähteisiin PowerAppsissa](working-with-data-sources.md)<br> 
+  [Sovelluksen luominen Excel-tiedoista](get-started-create-from-data.md)<br> 
+  [Sovelluksen luominen alusta alkaen](get-started-create-from-blank.md)<br>
+  [Tutustu taulukkoihin ja tietueisiin PowerAppsissa](working-with-tables.md)
+
+  > [!NOTE]
+  > Jos haluat muodostaa yhteyden Excel-työkirjassa oleviin tietoihin, työkirjan tulee olla isännöity pilvipohjaisessa palvelussa, kuten OneDrivessa. Katso lisätietoja aiheesta [Pilvitallennustiliin yhdistäminen PowerAppsista](connections/cloud-storage-blob-connections.md).
+
+## <a name="actions"></a>Toiminnot
+
+Jos liittimesi tarjoaa toimintoja, sinun on silti valittava tietolähde kuten aiemminkin. Mutta sen sijaan, että valitsisit taulukon seuraavassa vaiheessa, sinun tuleekin manuaalisesti yhdistää ohjausobjekti toimintoon muokkaamalla tietoja näyttävän ohjausobjektin **Kohteet**-ominaisuutta. Kaava, johon määrität **Kohteet**-ominaisuuden, määrittää toiminnon, joka noutaa tietoja. Sovellus ei esimerkiksi nouda yhtään tietoja, jos muodostat yhteyden Yammeriin ja määrität sitten **Kohteet**-ominaisuudeksi tietolähteen nimen. Täyttääksesi ohjausobjektin tiedoilla määritä toiminto kuten **GetMessagesInGroup(5033622).messages**.
+
+![Toiminnon tietolähteen Kohteet-ominaisuus](./media/connections-list/ItemPropertyAction.png)
+
+Jos haluat käsitellä mukautettuja tietopäivityksiä toimintoliittimissä, luo **Patch**-funktion sisältävän kaavan. Määritä kaavassa toiminto ja kentät, jotka sidotaan toimintoon.  
+
+Saat lisätietoja kaavojen mukauttamisesta mukautettuja päivityksiä varten seuraavista ohjeaiheista:
+
+[Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Päivitä](functions/function-update-updateif.md)
+
+## <a name="popular-connectors"></a>Suositut liittimet
+
+Tämä taulukko sisältää linkit suosituimpien liitinten lisätietoihin. Katso luettelo kaikista liittimistä kohdasta [Kaikki liittimet](#all-connectors).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
@@ -29,26 +69,10 @@ Seuraavassa taulukossa on linkit suosituimpien liitinten lisätietoihin. Katso l
 | ![Dynamics 365](./media/connections-list/dynamics-365.png) |[**Dynamics 365**](connections/connection-dynamics-crmonline.md) |&nbsp; |![OneDrive](./media/connections-list/onedrive.png) |[**OneDrive**](connections/cloud-storage-blob-connections.md) |
 | ![Office 365 -käyttäjät](./media/connections-list/office365.png) |[**Office 365 -käyttäjät**](connections/connection-office365-users.md) |&nbsp; |![Dropbox](./media/connections-list/dropbox.png) |[**Dropbox**](connections/cloud-storage-blob-connections.md) |
 
-## <a name="types-of-connectors"></a>Liitintyypit
-PowerAppsissa on kahden eri tyypin liittimiä: *vakioliittimet*, kuten yllä luetellut, sekä *mukautetut liittimet*. Jos aiot luoda yhteyden tietolähteeseen, jota PowerApps tukee vakioliittimellä, käytä kyseistä liitintä. Jos tarvitset yhteyden eri lähteeseen, kuten itse rakentamaasi palveluun, katso [Mukautettujen liitinten rekisteröinti ja käyttö](../canvas-apps/register-custom-api.md).
+## <a name="standard-and-custom-connectors"></a>Vakio- ja mukautetut liittimet
+PowerApps tarjoaa *vakio*liittimiä moniin yleisesti käytettyihin tietolähteisiin, kuten esimerkiksi yllä esitettyihin lähteisiin. Jos PowerApps sisältää vakioliittimen tietolähteeseen, jota haluat käyttää, suosittelemme käyttämään kyseistä liitintä. Jos haluat muodostaa yhteyden muuntyyppisiin tietolähteisiin, kuten itse rakentamaasi palveluun, katso [Mukautettujen liittimien rekisteröiminen ja käyttäminen](../canvas-apps/register-custom-api.md).
 
-Vakioliittimet toimivat eri tavoin riippuen niiden käyttämästä tietolähteestä ja siitä, kuinka kyseinen tietolähde palauttaa tietoja:
+## <a name="all-standard-connectors"></a>Kaikki vakioliittimet
+Luettelo kaikista vakioliittimistä löytyy [Microsoft Connectorin viitteestä](https://docs.microsoft.com/connectors/). Premium-liittimet vaativat PowerAppsin palvelupaketin 1 tai 2. Lisätietoja saat [PowerAppsin palvelupakettisivulta](https://powerapps.microsoft.com/pricing/).
 
-* Jotkin liittimet toimivat taulukkomuotoisten tietolähteiden, kuten SharePointin, SQL Serverin ja Excelin, kanssa. Kun näitä tietolähteitä käytetään, tiedot palautetaan PowerAppsille taulukkona. PowerApps käyttää omia funktioitaan, kuten [Patch()](functions/function-patch.md), [Collect()](functions/function-clear-collect-clearcollect.md), [Update()](functions/function-update-updateif.md) ja niin edelleen tietojen kanssa työskentelyyn. Taulukkomuotoisia tietoja voidaan myös käyttää helposti lomakkeissa ja valikoimissa, joissa taulukon kenttä näytetään valikoiman tai lomakkeen kenttänä. Katso lisätietoja seuraavista artikkeleista:
-
-    [Tutustu tietolähteisiin PowerAppsissa](working-with-data-sources.md)
-
-    [Sovelluksen luominen Excel-tiedoista](get-started-create-from-data.md)
-
-    [Sovelluksen luominen alusta alkaen](get-started-create-from-blank.md)
-
-    > [!NOTE]
-  > Exceliin yhdistämistä varten tarvitaan pilvipohjaisessa palvelussa, kuten OneDrivessa, isännöity työkirja. Katso lisätietoja aiheesta [Pilvitallennustiliin yhdistäminen PowerAppsista](connections/cloud-storage-blob-connections.md).
-
-* Muut liittimet toimivat funktiopohjaisten tietolähteiden kanssa, kuten Twitter, Facebook ja Office 365 Outlook. Kun työskentelet näiden tietolähteiden kanssa, PowerAppsiin palautettavat tiedot pohjautuvat palvelun tiettyjen funktioiden kutsumiseen. Esimerkiksi Twitter-liittimellä voit kutsua funktion `Twitter.MyFollowers()`, jolloin saat paluuarvona luettelon seuraajistasi. Voit edelleen käyttää näitä tietoja lomakkeessa tai valikoimassa, mutta se on hieman monimutkaisempaa kuin taulukkomuotoisten tietojen käyttäminen. Katso lisätietoja aiheesta [Twitteriin yhdistäminen PowerAppsista](connections/connection-twitter.md).
-
-## <a name="all-connectors"></a>Kaikki liittimet
-Luettelo kaikista liittimistämme löytyy [Microsoft Connectorin viitteestä](https://docs.microsoft.com/connectors/). Premium-liittimet vaativat PowerAppsin palvelupaketin 1 tai 2. Lisätietoja saat [PowerAppsin palvelupakettisivulta](https://powerapps.microsoft.com/pricing/).
-
-
-Jos sinulla on kysyttävää tietystä liittimestä, käytä [PowerApps-keskustelupalstoja](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). Jos sinulla on uusi liitinehdotus tai parannusehdotuksia, käytä [PowerApps Ideas -keskustelupalstaa](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
+Jos sinulla tiettyyn liittimeen liittyviä kysymyksiä, tutustu [PowerApps-keskustelupalstoihin](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1). Voit myös antaa ehdotuksesi uusista liittimistä tai muista parannuksista [PowerApps-ideasivulla](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).

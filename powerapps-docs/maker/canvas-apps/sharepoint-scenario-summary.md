@@ -9,18 +9,22 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: 6c362c39aa99490c8c2043b36a05e107b94e0a26
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: df3c186bb41621e7ec6087a9da55fc037e286b1a
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39014945"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42850186"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Käydään läpi valmis SharePoint Onlinen integrointiskenaario alusta loppuun
 > [!NOTE]
-> Tämä artikkeli on osa opetusohjelmasarjaa, joka käsittelee PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämistä SharePoint Onlinen kanssa. Varmista, että luet [sarjan esittelyn](sharepoint-scenario-intro.md), jotta saat paremman käsityksen kokonaiskuvasta, sekä aiheeseen liittyvät ladattavat tiedostot.
+> Tämä artikkeli on osa opetusohjelmasarjaa, joka käsittelee PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämistä SharePoint Onlinen kanssa. Lukemalla [sarjan esittelyn](sharepoint-scenario-intro.md) saat paremman käsityksen kokonaiskuvasta sekä aiheeseen liittyvät ladattavat tiedostot.
 
-Tämän sarjan opetusohjelmissa on käsitelty valtava määrä asioita sovellusten ja työnkulkujen laatimisesta raporttien luomiseen ja liittämiseen SharePointiin. Toivottavasti olet oppinut paljon ja olet nähnyt tarpeeksi, miten nämä tekniikat integroituvat toisiinsa, jotta voit integroida sovelluksia, työnkulkuja ja raportteja SharePointiin omien tarpeidesi mukaan. Ennen kuin lopetamme, haluamme käydä skenaarion läpi alusta loppuun ja nähdä, miten kaikki osat toimivat yhdessä.
+Tämän sarjan opetusohjelmissa on käsitelty valtava määrä asioita kangassovellusten ja työnkulkujen laatimisesta raporttien luomiseen ja liittämiseen SharePointiin. Toivottavasti olet oppinut paljon ja olet nähnyt tarpeeksi, miten nämä tekniikat integroituvat toisiinsa, jotta voit integroida kangassovelluksia, työnkulkuja ja raportteja SharePointiin omien tarpeidesi mukaan. Ennen kuin lopetamme, haluamme käydä skenaarion läpi alusta loppuun ja nähdä, miten kaikki osat toimivat yhdessä.
 
 ## <a name="step-1-add-a-project-to-the-project-requests-list"></a>Vaihe 1: Lisää projekti Projektipyynnöt-luetteloon
 1. Napsauta tai napauta **Projektipyynnöt**-luettelossa kohtaa **Kaikki kohteet** ja sen jälkeen kohtaa **Projektipyyntöjen sovellus**.

@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen poistaminen | Microsoft Docs
-description: Olemassa olevan sovelluksen poistaminen PowerAppsissa
+title: Kangassovelluksen poistaminen | Microsoft Docs
+description: Olemassa olevan kangassovelluksen poistaminen PowerAppsissa
 author: jamesol-msft
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
 ms.author: jamesol
-ms.openlocfilehash: c8d5d5f5fbb9453ad9afeffda8383be0dae4eebc
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 5fd2551ff0fac40acf54c77d6750ab983ee5819e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194934"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42834752"
 ---
-# <a name="delete-an-app-from-powerapps"></a>Sovelluksen poistaminen PowerAppsista
-Tässä aiheessa näytetään, kuinka voit poistaa sovelluksen PowerApps-tililtäsi ja niiden käyttäjien tileiltä, joille sovellus jaettiin.
+# <a name="delete-a-canvas-app-from-powerapps"></a>Kangassovelluksen poistaminen PowerAppsista
+Tässä aiheessa näytetään, kuinka voit poistaa kangassovelluksen PowerApps-tililtäsi ja niiden käyttäjien tileiltä, joille sovellus jaettiin.
 
 ## <a name="delete-an-app-from-your-account"></a>Sovelluksen poistaminen tililtäsi
 1. Avaa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja napsauta tai napauta **Sovellukset** vasemmassa siirtymispalkissa.

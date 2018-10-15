@@ -1,6 +1,6 @@
 ---
-title: Luo sovellus ja hallitse projekteja | Microsoft Docs
-description: Tässä tehtävässä rakennamme sovelluksen alusta alkaen. Tämä sovellus sallii käyttäjän määrittää esimiehen projekteihin ja päivittää projektin tietoja.
+title: Kangassovelluksen luominen projektien hallitsemista varten | Microsoft Docs
+description: Tässä tehtävässä rakennamme kangassovelluksen alusta alkaen. Tämä sovellus sallii käyttäjän määrittää esimiehen projekteihin ja päivittää projektin tietoja.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -9,18 +9,22 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
 ms.author: mblythe
-ms.openlocfilehash: b4daabf019236a4245db324121a6745290c8b3ab
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 6b55fe94e7d781147e3e3511769c4d72ca3d90de
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39021615"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42842367"
 ---
-# <a name="create-an-app-to-manage-projects"></a>Luo sovellus ja hallitse projekteja
+# <a name="create-a-canvas-app-to-manage-projects"></a>Kangassovelluksen luominen projektien hallitsemista varten
 > [!NOTE]
-> Tämä artikkeli on osa opetusohjelmasarjaa PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämisestä SharePoint Onlinen kanssa. Varmista, että luet [sarjan esittelyn](sharepoint-scenario-intro.md), jotta saat paremman käsityksen kokonaiskuvasta. Lue myös aiheeseen liittyvät ladattavat tiedostot.
+> Tämä artikkeli on osa opetusohjelmasarjaa, joka käsittelee PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämistä SharePoint Onlinen kanssa. Lukemalla [sarjan esittelyn](sharepoint-scenario-intro.md) saat paremman käsityksen kokonaiskuvasta sekä aiheeseen liittyvät ladattavat tiedostot.
 
-Tässä tehtävässä rakennamme sovelluksen alusta alkaen. Tämä sovellus sallii käyttäjän määrittää esimiehen projekteihin ja päivittää projektin tietoja. Näkyviin tulee joitakin samoja ohjausobjekteja ja kaavoja, joita näimme ensimmäisessä sovelluksessa, mutta tällä kertaa rakennamme enemmän sovellusta itse. Prosessi on monimutkaisempi, mutta opit lisää, joten uskomme, että tämä kannattaa.
+Tässä tehtävässä rakennamme kangassovelluksen alusta alkaen. Tämä sovellus sallii käyttäjän määrittää esimiehen projekteihin ja päivittää projektin tietoja. Näkyviin tulee joitakin samoja ohjausobjekteja ja kaavoja, joita näimme ensimmäisessä sovelluksessa, mutta tällä kertaa rakennamme enemmän sovellusta itse. Prosessi on monimutkaisempi, mutta opit lisää, joten uskomme, että tämä kannattaa.
 
 > [!TIP]
 > Tämän skenaarion [latauspaketti](https://aka.ms/o4ia0f) sisältää viimeistellyn version tästä sovelluksesta: project-details-app.msapp.

@@ -1,6 +1,6 @@
 ---
-title: Tutustu paikallisiin tietoyhdyskäytäviin | Microsoft Docs
-description: Paikallisten tietoyhdyskäytävien viitetietoja, kuten asennus ja vianmääritys
+title: Tutustu kangassovellusten paikallisiin tietoyhdyskäytäviin | Microsoft Docs
+description: Paikallisten tietoyhdyskäytävien viitetietoja, kuten asennus PowerAppsissa ja vianmääritys
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -9,14 +9,18 @@ ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
 ms.author: anneta
-ms.openlocfilehash: f39bebd27aad378a5bbf8bff592fa50ea44db679
-ms.sourcegitcommit: dfa0e1a7981814e15e6ca4720e2a5f930e859db1
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 5dcc07f3ba9b9b4baca39cf2090a2c57cb7e67b7
+ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39017751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726925"
 ---
-# <a name="understand-on-premises-data-gateways-for-microsoft-powerapps"></a>Tutustu Microsoft PowerAppsin paikallisiin tietoyhdyskäytäviin
+# <a name="understand-on-premises-data-gateways-for-canvas-apps"></a>Tutustu kangassovellusten paikallisiin tietoyhdyskäytäviin
 ## <a name="installation-and-configuration"></a>Asennus ja määritys
 **Edellytykset**
 
@@ -26,7 +30,6 @@ Vähintään:
 * Windows 7:n tai Windows Server 2008 R2:n (tai uudemman) 64-bittinen versio
 
 Suositus:
-
 * 8 ytimen suoritin
 * 8 Gt muistia
 * Windows 2012 R2:n (tai uudemman) 64-bittinen versio
@@ -50,7 +53,7 @@ Aiheeseen liittyviä tietoja:
 
 4. Jatka napsauttamalla tai napauttamalla **Käyttäjätilien valvonta** -valintaikkunoissa **Kyllä**.
 
-5. Napsauta tai napauta ohjatun toiminnon seuraavassa näytössä **Kirjaudu sisään**.
+5. Napsauta tai napauta ohjatun toiminnon seuraavassa näytössä **Kirjaudu sisään** ja anna sitten samat tunnistetiedot, joita käytät kirjautuessasi sisään PowerAppsiin.
 
     ![Kirjaudu sisään](./media/gateway-reference/sign-in.png)
 
@@ -190,7 +193,7 @@ Voit käyttää kolmannen osapuolen työkalua, [Azure Speed Test -sovellusta](ht
 
 #### <a name="high-availabilitydisaster-recovery"></a>Korkea käytettävyys / järjestelmäpalautus
 **Kysymys:** Onko suunnitteilla korkean käytettävyyden skenaarioiden ottamista käyttöön yhdyskäytävän kanssa?  
-**Vastaus:** Tämä on suunnitelmissa, mutta meillä ei ole vielä aikataulua.
+**Vastaus:** Voit ottaa korkean käytettävyyden käyttöön yhdistämällä vähintään 2 yhdyskäytävää saman klusteriin.  Korkean käytettävyyden yhdyskäytäväklusterit edellyttävät, että tietoyhdyskäytävään on asennettu marraskuun 2017 päivitys tai uudempi.  Lisätietoja saat [ilmoitukseen liittyvästä blogikirjoituksesta](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow).
 
 **Kysymys:** Mitä vaihtoehtoja järjestelmäpalautukseen on saatavilla?  
 **Vastaus:** Voit käyttää palautusavainta yhdyskäytävän palauttamiseen tai siirtämiseen. Määritä palautusavain, kun asennat yhdyskäytävän.

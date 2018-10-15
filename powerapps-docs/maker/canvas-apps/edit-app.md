@@ -1,6 +1,6 @@
 ---
-title: Sovelluksen muokkaaminen | Microsoft Docs
-description: Vaiheittaiset ohjeet sovellusten muokkaamiseen ja istunnon lukitustilanteisiin.
+title: Kangassovelluksen muokkaaminen | Microsoft Docs
+description: Vaiheittaiset ohjeet kangassovellusten muokkaamiseen ja istunnon lukitustilanteisiin PowerAppsissa.
 author: karthik-1
 manager: kvivek
 ms.service: powerapps
@@ -9,15 +9,19 @@ ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
 ms.author: sharik
-ms.openlocfilehash: b5678437ea1e604ce2932307d897f280f4633fc0
-ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+search.audienceType:
+- maker
+search.app:
+- PowerApps
+ms.openlocfilehash: 97dc8b245da9dc48a67f22243f11cf26b7bd6d8e
+ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/22/2018
-ms.locfileid: "39194931"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42835071"
 ---
-# <a name="edit-an-app-in-powerapps"></a>Sovelluksen muokkaaminen PowerAppsissa
-Muokkaa mitä tahansa sovellusta, jonka olet luonut tai johon sinulla on **voi muokata** -käyttöoikeudet. Voit muokata sovellusta PowerApps Studiossa. Jos yrität muokata sovellusta, joka on avoimena muokkausta varten muualla, viesti kertoo, onko se jo sinulla avattuna, vai onko se toisella käyttäjällä.
+# <a name="edit-a-canvas-app-in-powerapps"></a>Kangassovelluksen muokkaaminen PowerAppsissa
+Muokkaa mitä tahansa kangassovellusta, jonka olet luonut tai johon sinulla on **voi muokata** -käyttöoikeudet. Voit muokata sovellusta PowerApps Studiossa. Jos yrität muokata sovellusta, joka on avoimena muokkausta varten muualla, viesti kertoo, onko se jo sinulla avattuna, vai onko se toisella käyttäjällä.
 
 ## <a name="verify-your-permissions"></a>Tarkista oikeutesi
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja napsauta tai napauta kohtaa **Sovellukset** **Tiedosto**-valikossa (vasemmassa reunassa).

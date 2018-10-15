@@ -1,0 +1,1 @@
+Ottamalla ratkaisun käyttöön suostut jakamaan tietojasi ulkoisen järjestelmän kanssa. Ulkoisista järjestelmistä Microsoft Dynamics 365 Onlineen tuotuihin tietoihin sovelletaan [Microsoftin tietosuoja- ja eväste-ehtoja](http://go.microsoft.com/fwlink/p/?LinkID=521839).

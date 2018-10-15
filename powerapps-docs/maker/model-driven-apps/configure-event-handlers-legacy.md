@@ -1,108 +1,109 @@
 ---
-title: Mallipohjaisen sovelluksen päälomakkeiden tapahtumakäsittelijöiden määrittäminen PowerAppsissa | MicrosoftDocs
-description: Tapahtumakäsittelijöiden määrittäminen Dynamics 365 for Customer Engagementissa
+title: Tapahtumakäsittelijöiden määrittäminen mallipohjaisten sovellusten päälomakkeille PowerAppsissa | MicrosoftDocs
+description: Tutustu tapahtumakäsittelijöiden määrittämiseen Dynamics 365 for Customer Engagementissa
 Keywords: Main form; Configure event handlers; Dynamics 365
 author: Mattp123
 applies_to:
-  - Dynamics 365 (online)
-  - Dynamics 365 Version 9.x
-  - powerapps
+- Dynamics 365 (online)
+- Dynamics 365 Version 9.x
+- powerapps
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
 ms.service: crm-online
 ms.topic: article
 ms.assetid: dc0ebb3f-0c00-413a-968f-9cfd107055c0
-search.audienceType:
-  - maker
-search.app:
-  - PowerApps
-  - D365CE
+ms.openlocfilehash: e05e9d840a2b3ad7d8d5c74e8e3b670504f739b0
+ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39678648"
 ---
-# <a name="configure-model-driven-app-form-event-handlers"></a>Mallipohjaisen sovelluksen lomakkeen tapahtumakäsittelijöiden määrittäminen
+# <a name="configure-model-driven-app-form-event-handlers"></a>Mallipohjaisten sovellusten lomakkeiden tapahtumakäsittelijöiden määrittäminen
 
- PowerApps-lomakkeiden tapahtumakäsittelijät voidaan määrittää seuraavilla lomakkeen alueilla:  
+ PowerApps-lomakkeiden tapahtumakäsittelijöitä voidaan määrittää seuraaville lomakealueille:  
   
 |Elementti|Tapahtuma|Kuvaus|  
 |-------------|-----------|-----------------|  
-|Lomake|`OnLoad`|Tapahtuu, kun lomake latautuu.|  
-||`OnSave`|Tapahtuu, kun tiedot tallennetaan.|  
-|Välilehti|`TabStateChange`|Tapahtuu, kun välilehti laajennetaan tai tiivistetään.|  
-|Kenttä|`OnChange`|Tapahtuu, kun kentän tiedot muuttuvat eikä ohjausobjekti ole enää aktiivinen.|  
-|IFRAME|`OnReadyStateComplete`|Tapahtuu, kun IFRAME-kehyksen sisältö latautuu.|  
+|Lomake|`OnLoad`|Toteutuu, kun lomake latautuu.|  
+||`OnSave`|Toteutuu, kun tietoja tallennetaan.|  
+|Välilehti|`TabStateChange`|Toteutuu, kun välilehti laajennetaan tai kutistetaan.|  
+|Kenttä|`OnChange`|Tapahtuu, kun kentässä oleva tieto muuttuu ja ohjausobjekti menettää kohdistuksen.|  
+|IFRAME-kehys|`OnReadyStateComplete`|Toteutuu, kun IFRAME-kehyksen sisältö latautuu.|  
   
- Tapahtumakäsittelijä sisältää viittauksen JavaScript-WWW-resurssiin ja toimintoon, joka on määritetty kyseisessä verkkoresurssissa ja joka suoritetaan tapahtuman tapahtuessa. Kussakin elementissä voi olla määritettynä enintään 50 tapahtumakäsittelijää.  
+ Tapahtumakäsittelijä sisältää viittauksen JavaScript-verkkoresurssiin ja funktioon, joka on määritetty kyseisessä verkkoresurssissa ja joka suoritetaan, kun tapahtuma tapahtuu. Jokaiselle elementille voidaan määrittää enintään 50 erillistä tapahtumakäsittelijää.  
   
 > [!IMPORTANT]
->  Tapahtumakäsittelijän virheellinen määritys voi johtaa komentosarjavirheisiin, jotka voivat aiheuttaa lomakkeen latausvirheen tai virheellisen toiminnan. Jos et ole komentosarjan kehittäjä, varmista, että tiedät täsmälleen, miten komentosarjan asetukset on määritettävä.  
+>  Virheellisesti määritetty tapahtumakäsittelijä voi aiheuttaa komentosarjavirheitä, jotka voivat estää lomaketta latautumasta tai toimimasta oikein. Jos et ole komentosarjan kehittäjä, muista tarkistaa komentosarjan vaatimat määritysvaihtoehdot.  
 >   
->  Älä määritä komentosarjan tapahtumakäsittelijää kirjastolla, joka ei ole peräisin luotettavasta lähteestä. Komentosarjoilla voidaan suorittaa mikä tahansa toiminto, jonka käyttäjä voi suorittaa. Niinpä huonosti laadittu komentosarja voi heikentää merkittävästi lomakkeen toimintaa.  
+>  Kun määrität komentosarjan tapahtumakäsittelijää, käytä vain sellaista kirjastoa, joka on peräisin luotetusta lähteestä. Komentosarjojen avulla voit suorittaa kaikkia samoja toimintoja kuin käyttäjäsikin, ja huonosti kirjoitettu komentosarja voi alentaa lomakkeen suorituskykyä huomattavasti.  
 >   
->  Varmista aina tapahtumakäsittelijän asianmukainen toiminta testaamalla se määrittämisen jälkeen.  
+>  Kun olet määrittänyt tapahtumakäsittelijän, muista aina tarkistaa sen toimivuus.  
   
 ### <a name="to-configure-an-event-handler"></a>Tapahtumakäsittelijän määrittäminen 
   
-1.  Valitse lomake-editorissa elementti, jonka tapahtumalle haluat määrittää käsittelijän.  
+1.  Valitse lomake-editorissa elementti, joka sisältää tapahtuman, jolle haluat määrittää käsittelijän.  
   
-2.  Valitse ensin [Koti-välilehti](form-editor-user-interface-legacy.md#home-tab), sitten **Muokkaa**-ryhmä ja lopuksi **Muuta ominaisuuksia** tai vain kaksoisnapsauta elementtiä.  
+2.  Valitse [Aloitus-välilehden](form-editor-user-interface-legacy.md#home-tab) **Muokkaa**-ryhmästä **Muuta ominaisuuksia** tai kaksoisnapsauta elementtiä.  
   
-3.  Valitse elementin ominaisuuksien valintaikkunassa **Tapahtumat**-välilehti.  
+3.  Valitse elementin ominaisuudet -valintaikkunassa **Tapahtumat**-välilehti.  
   
-4.  Laajenna **Lomakekirjastot**-alue. Jos kirjasto, jonka toiminnon haluat määrittää tapahtumakäsittelijäksi, ei ole vielä luettelossa, lisää se.  
+4.  Laajenna **Lomakekirjastot**-alue. Jos et löydä luettelosta sitä kirjastoa, joka sisältää tapahtumakäsittelijäksi asetettavan toiminnon, lisää kyseinen kirjasto.  
   
 5.  Lomakekirjaston lisääminen tapahtumakäsittelijään:  
-    1.  Valitse **Tapahtumaluettelo**-kohdan **Lomakekirjastot**-osassa **Lisää**.  
+    1.  Valitse **Tapahtumaluettelon** **Lomakekirjastot**-osiossa **Lisää**.  
   
-    2.  Etsi JavaScript-WWW-resurssi käytettävissä olevien verkkoresurssien luettelosta. Valitse ensin se ja sitten **Lisää**.  
+    2.  Etsi haluamasi JavaScript-verkkoresurssi käytettävissä olevien verkkoresurssien luettelosta. Valitse se ja valitse sitten **Lisää**.  
   
-         Jos tarvitsemaasi JavaScript-WWW-resurssia ei ole olemassa, avaa uusi verkkoresurssilomake valitsemalla **Uusi** ja luo lomake.  
+         Jos tarvitsemaasi JavaScript-verkkoresurssia ei ole olemassa, valitse **Uusi** avataksesi uuden verkkoresurssilomakkeen, jossa voit luoda sen.  
   
     3.  JavaScript-verkkoresurssin luominen:  
-        1.  Määritä verkkoresurssilomakkeessa seuraavat ominaisuudet:  
+        1.  Määritä seuraavat ominaisuudet verkkoresurssilomakkeessa:  
   
             |Ominaisuus|Arvo|  
             |--------------|-----------|  
             |Nimi|**Pakollinen**. Kirjoita verkkoresurssin nimi.|  
-            |Näyttönimi|**Pakollinen**. Kirjoita verkkoresurssiluettelossa näkyvä nimi.|  
+            |Näyttönimi|**Pakollinen**. Kirjoita nimi, joka näytetään verkkoresurssiluettelossa.|  
             |Kuvaus|Valinnainen. Kirjoita verkkoresurssin kuvaus.|  
             |Tyyppi|**Pakollinen**. Valitse **Komentosarja (JScript)**.|  
-            |Kieli|Valinnainen. Valitse jokin organisaatiossa käytettävissä olevista kielistä.|  
+            |Kieli|Valinnainen. Valitse jokin organisaatiollesi käytettävissä olevista kielistä.|  
   
-        2.  Jos sinulle on toimitettu komentosarja, on suositeltavaa etsiä se **Selaa**-painikkeella ja ladata se.  
+        2.  Jos ole saanut komentosarjan, suosittelemme, että etsit saamasi tiedoston **Selaa**-painikkeen avulla ja lataat sen.  
   
-             Voit vaihtoehtoisesti valita **Tekstieditori**-painikkeen ja liittää tai kirjoittaa **Muokkaa sisältöä** -valintaikkunan komentosarjan sisällön.  
+             Vaihtoehtoisesti voit napsauttaa **Tekstieditori**-painiketta ja liittää tai kirjoittaa komentosarjan sisällön **Muokkaa sisältöä** -valintaikkunaan.  
   
             > [!NOTE]
-            >  Koska yksinkertaisessa tekstieditorissa ei ole ominaisuuksia, joilla komentosarjan oikeellisuuden voi tarkistaa, komentosarjojen muokkaamiseen on yleensä syytä käyttää erillistä sovellusta, kuten Visual Studiota, jonka jälkeen voit ladata ne.  
+            >  Koska tämä yksinkertainen tekstieditori ei sisällä mitään komentosarjan tarkistukseen liittyviä ominaisuuksia, suosittelemme aina käyttämään erillistä sovellusta kuten Visual Studiota komentosarjojen muokkaamiseen ennen kuin lataat ne.  
   
         3.  Valitse **Tallenna** ja sulje verkkoresurssin valintaikkuna.  
   
-        4.  Luomasi verkkoresurssi on nyt valittuna **Valitse tietue** -valintaikkunassa. Sulje valintaikkuna valitsemalla **Lisää**.  
+        4.  Luomasi verkkoresurssi on nyt valittuna **Hae tietue** -valintaikkunassa. Valitse **Lisää** sulkeaksesi valintaikkunan.  
 6.  Valitse **Tapahtumakäsittelijät**-osassa tapahtuma, jolle haluat määrittää tapahtumakäsittelijän.  
   
-7.  Avaa **Käsittelijän ominaisuudet** -valintaikkuna valitsemalla **Lisää**.  
+7.  Valitse **Lisää** avataksesi **Käsittelijän ominaisuudet** -valintaikkunan.  
   
-8. Valitse **Tiedot**-välilehdessä sopiva kirjasto ja kirjoita sen funktio nimi, joka tapahtumalle on suoritettava.  
+8. Valitse **Tiedot** välilehdessä haluamasi kirjasto ja kirjoita tapahtumalle suoritettavan funktion nimi.  
   
-9. Tapahtumakäsittelijä on oletusarvoisesti otettu käyttöön. Poista **Käytössä**-valintaruudun valinta, jos et halua ottaa käyttöön tätä tapahtumaa.  
+9. Tapahtumakäsittelijä on käytössä oletusarvoisesti. Jos et halua ottaa tätä tapahtumaa käyttöön, poista **Käytössä**-valintaruudun valinta.  
   
-     Jotkin funktiot edellyttävät, että funktiolle välitetään suorituskonteksti. Valitse tarvittaessa **Välitä suorituskonteksti ensimmäisenä parametrina**.  
+     Jotkin funktiot edellyttävät suorittamiskontekstin välittämistä funktiolle. Valitse **Välitä suorituskonteksti ensimmäisenä parametrina**, jos sitä vaaditaan.  
   
-     Jotkin funktiot voivat hyväksyä parametrijoukon hallitsemaan funktion toimintaa. Jos niitä tarvitaan, kirjoita ne **Luetteloerottimella erotettujen parametrien luettelo, joka siirretään funktioon** -vaihtoehtoon.  
+     Jotkin funktiot voivat hyväksyä joukon parametreja, joilla ohjataan funktion käyttäytymistä. Jos näitä vaaditaan, syötä ne **Pilkuin eroteltuun funktiolle välitettävien parametrien luetteloon**.  
   
-10. Lisää **Riippuvuudet**-välilehdessä komentosarjalle välttämättömät kentät **Alisteiset kentät** -alueella.  
+10. **Riippuvuudet**-välilehdessä voit lisätä kaikki komentosarjan tarvitsemat kentät **Riippuvaiset kentät** -alueeseen.  
   
-11. Sulje **Käsittelijän ominaisuudet** -valintaikkuna valitsemalla **OK**.  
+11. Valitse **OK** sulkeaksesi **Käsittelijän ominaisuudet** -valintaikkunan.  
   
-12. Kun tapahtumakäsittelijä on lisätty, voit muokata funktion suoritusjärjestystä suhteessa muihin funktioihin siirtämällä sitä ylös- tai alaspäin vihreillä nuolilla.  
+12. Kun tapahtumakäsittelijä on syötetty, voit muuttaa funktion suoritusjärjestystä suhteessa muihin funktioihin siirtämällä sitä vihreiden nuolien avulla ylöspäin tai alaspäin.  
   
-13. Sulje elementin ominaisuusikkuna valitsemalla **OK**.  
+13. Valitse **OK** sulkeaksesi elementin ominaisuudet -valintaikkunan.  
   
-14. Tallenna muutokset valitsemalla **Tallenna**. Julkaise lomake valitsemalla **Julkaise**.  
+14. Tallenna muutoksesi valitsemalla **Tallenna**. Valitse **Julkaise** julkaistaksesi lomakkeen.  
   
 > [!NOTE]
->  Vaikka voit muokata käyttöliittymässä komentosarjojen latausjärjestystä vihreiden ylä- ja alanuolten avulla, komentosarjoja ei tosiasiassa ladata peräkkäisessä järjestyksessä.   
+>  Vaikka voit muuttaa komentosarjojen latausjärjestystä käyttöliittymässä vihreiden ylöspäin ja alaspäin osoittavien nuolien avulla, komentosarjoja ei kuitenkaan ladata järjestyksessä.   
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-[Päälomakkeen ja osien käyttäminen](use-main-form-and-components.md)
+[Päälomakkeen ja sen osien käyttäminen](use-main-form-and-components.md)
