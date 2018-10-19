@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5d4e88ca0a1e683d2f72e02625e6228d1063352f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 09d2bc10d465510887b546df8341c8798df136c1
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831803"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316812"
 ---
 # <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Pikaopas: Luo kangas-sovellus mallin perusteella PowerAppsissa
 Tässä pikaoppaassa luot kangas-sovelluksen mallin perusteella, jolloin voit tutkia suunnittelumahdollisuuksia ja löytää ideoita, joita voit käyttää kehittäessäsi omia kangas-sovelluksiasi.
@@ -30,11 +30,9 @@ Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi]
 ## <a name="open-a-sample-app"></a>Avaa mallisovellus
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![](./media/open-and-run-a-sample-app/sign-in.png)
-
 1. Siirrä mallisovelluksien luettelossa hiiren osoitin mallisovelluksen (kuten **Cost Estimator**) päälle.
 
-    ![](./media/open-and-run-a-sample-app/sample-tile.png)
+    ![](./media/open-and-run-a-sample-app/cost-estimator.png)
 
 1. Luo sovelluksesta mobiililaitteille sopiva versio napsauttamalla tai napauttamalla puhelinkuvaketta (tai jätä tablettikuvake valituksi) ja napsauta tai napauta sitten kohtaa **Luo tämä sovellus**.
 
