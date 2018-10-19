@@ -1,80 +1,80 @@
 ---
-title: Malliin perustuvan sovelluksen vahvistaminen ja julkaiseminen sovellusten suunnitteluohjelmalla| MicrosoftDocs
-description: Opi vahvistamaan ja julkaisemaan malliin perustuva sovellus
+title: Tarkistaa ja julkaista mallin perustuva sovellus sovellusten suunnitteluohjelman avulla | MicrosoftDocs
+description: 'Tietoja siitä, miten voit tarkistaa ja julkaista malliin perustuva sovelluksen'
 keywords: ''
 ms.date: 06/08/2018
 ms.service: crm-online
-ms.custom: ''
+ms.custom: null
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 5a9ec120-9ddc-4d92-b48c-0fee8c57d3c3
 ms.author: matp
 manager: kvivek
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
+ms.reviewer: null
+ms.suite: null
+ms.tgt_pltfrm: null
 caps.latest.revision: 10
 topic-status: Drafting
-ms.openlocfilehash: e3802ef423e7012974c24311c36b78cd56f8ed06
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39677544"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="validate-and-publish-a-model-driven-app-using-the-app-designer"></a>Malliin perustuvan sovelluksen vahvistaminen ja julkaiseminen sovellusten suunnitteluohjelmalla
 
-Vahvista sovellus tarkistaaksesi sen riippuvuussuhteet, joita sovelluksen käyttö edellyttää, mutta joita ei ole vielä lisätty sovellukseen. Onnistuneen vahvistuksen jälkeen julkaiset sovelluksen. 
+# <a name="validate-and-publish-a-model-driven-app-using-the-app-designer"></a>Mallipohjaisen sovelluksen tarkistaminen ja julkaiseminen sovellusten suunnitteluohjelman avulla
+
+Sovellusta tarkistettaessa tarkistetaan sovelluksen toiminnan kannalta välttämättömät resurssien riippuvuudet, joita ei ole vielä lisätty sovellukseen. Kun tarkistus on tehty, voit julkaista sovelluksen. 
   
-Jos olet esimerkiksi lisännyt sovellukseen asiakaspalvelun suorituskyvyn koontinäytön, joka käyttää kaavioita, kuten Yhdistelmä (prioriteetin mukaan) tai Palvelupyynnön ratkaisutrendi (päivän mukaan), joita et ole vielä lisännyt. Kun vahvistat tämän sovelluksen, saat luettelon kaikista puuttuvista pakollisista resursseista.  
+Ajatellaan, että olet lisännyt sovellukseen Customer Service -suorituskyvyn koontinäytön, joka käyttää Palvelupyyntöyhdistelmä (prioriteetin mukaan)- tai Palvelupyyntöjen ratkaisutrendi (päivän mukaan) -kaavioita, joita et ole lisännyt. Kun tarkistat tämän sovelluksen, saat tuloksena puuttuvien ja pakollisten resurssien luettelon.  
   
-Kun vahvistat sovelluksen, sovellusten suunnitteluohjelman pohja näyttää tiedot puuttuvista resursseista.  
+Kun tarkistat sovelluksen, sovelluksen suunnitteluohjelman pohja sisältää tiedot puuttuvista resursseista.  
   
-1.  Valitse sovellusten suunnitteluohjelmassa **Vahvista**.  
+1.  Valitse sovelluksen suunnitteluohjelmassa **Tarkista**.  
   
-     Ilmoituspalkki tule näkyviin ja näyttää, onko sovelluksessa virheitä tai varoituksia. Ilmoituspalkkia näyttää varoituksia, jos esimerkiksi entiteetissä ei ole lomakkeita tai näkymiä tai sovellus ei sisällä mitään osia. Virhe saattaa tulla näkyviin, jos sovellukselle ei ole määritetty sivustokarttaa. Voit julkaista sovelluksen ilman varoitusten korjaamista, mutta virheet on korjattava ennen kuin voit julkaista sovelluksen.  
+     Näyttöön tulee ilmoituspalkki, jossa näkyvät sovelluksen virheet ja varoitukset. Ilmoituspalkissa näkyvät varoitukset esimerkiksi tilanteista, joissa entiteetillä ei ole lomakkeita tai näkymiä tai sovelluksella ei ole yhtään komponentteja. Virhesanoma voi tulla näkyviin, jos sovellukselle ei ole määritetty sivustokarttaa. Voit julkaista sovelluksen, vaikka varoituksia ei käsiteltäisi, mutta virheet on korjattava ennen julkaisua.  
   
-     ![Ilmoituspalkki, joka näyttää varoitukset sovelluksessa](media/app-designer-warning-notification.png "Ilmoituspalkki, joka näyttää varoitukset sovelluksessa")  
+     ![Ilmoituspalkki, joka näyttää varoituksia sovelluksessa](media/app-designer-warning-notification.png "Ilmoituspalkki, joka näyttää varoituksia sovelluksessa")  
   
-     Sovellusten suunnitteluohjelma näyttää varoitusmerkin ja lukumäärän riippuvuuksista jokaiselle artefaktille tai resurssiruudulle, josta puuttuu pakollinen resurssi.  
+     Sovelluksen suunnitteluohjelmassa näkyy myös varoituskuvake ja kunkin sellaisen artefaktin tai resurssiruudun riippuvuuksien määrä, joista puuttuu pakollinen resurssi.  
   
-     ![Puuttuvan osan varoitus sovellusten suunnitteluohjelman ruudussa](media/warning--button-on-app-designer-tile.png "Puuttuvan osan varoitus sovellusten suunnitteluohjelman ruudussa")  
+     ![Puuttuvan komponentin varoitus suunnitteluohjelman ruudussa](media/warning--button-on-app-designer-tile.png "Puuttuvan komponentin varoitus suunnitteluohjelman ruudussa")  
   
-2.  Voit lisätä tarvittavat resurssit valitsemalla **Pakollinen**-välilehden pohjan oikeassa reunassa. **Pakollinen**-välilehti näkyy, kun vähintään yksi pakollinen resurssi puuttuu sovelluksesta.  
+2.  Voit lisätä pakolliset resurssit valitsemalla kaavion oikealla puolella olevan **Pakollinen**-välilehden. **Pakollinen**-välilehti on näkyvissä, kun sovelluksesta puuttuu vähintään yksi pakollinen resurssi.  
   
-     Välilehti näyttää luettelon pakollisista osista.  
+     Välilehti sisältää pakollisten komponenttien luettelon.  
   
-     ![Pakollinen-välilehti, jossa näkyy luettelo sovelluksen puuttuvista osista](media/app-designer-required-components-tab.png "Pakollinen-välilehti, jossa näkyy luettelo sovelluksen puuttuvista osista")  
+     ![Pakollinen välilehti, jossa näkyy puuttuvien sovellusten luettelo](media/app-designer-required-components-tab.png "Pakollinen välilehti, jossa näkyy puuttuvien sovellusten luettelo")  
   
-3.  Valitse lisättävät resurssit ja valitse **Lisää riippuvuussuhteet**. Kun lisäät vaaditun resurssin, kyseisessä ruudussa näkyvä lukema pienenee.  
+3.  Valitse resurssit, jotka haluat lisätä, ja valitse sitten **Lisää riippuvuudet**. Kun pakollinen resurssi on lisätty ruutuun, ruudun määrää pienennetään.  
   
     > [!NOTE]
-    >  Jos sovelluksen eri osissa vaaditaan yhteistä resurssia (esimerkiksi lomake vaaditaan sekä koontinäyttöä että entiteettiä varten) ja lisäät kyseisen resurssin vain kerran koontinäytön riippuvuuspuusta, riippuvuuden lukema pienenee vain koontinäytön ruudussa, mutta ei entiteetin ruudussa. Riippuvuussuhde on kuitenkin ratkaistu kummallekin.  
+    >  Jos erilaisissa sovellusosissa tarvitaan yhteistä resurssia, kun vaikkapa lomake tarvitaan että koontinäytössä että entiteetissä, ja lisäät kyseisen resurssin vain kerran koontinäytön riippuvuuspuusta, riippuvuusmäärä vähenee vain koontinäytön ruudussa mutta ei entiteetin ruudussa. Riippuvuus kuitenkin ratkaistaan molempien ruutujen osalta.  
     >   
-    >  Valitse **Hae uusimmat riippuvuudet** ![Hae uusimmat riippuvuudet -painike sovellusten suunnitteluohjelmassa](media/app-designer-get-latest-dependencies.png "Hae uusimmat riippuvuudet -painike sovellusten suunnitteluohjelmassa") tai valitse **Vahvista** uudelleen, jotta saat uusimmat riippuvuudet. Nämä painikkeet näkyvät vasta, kun olet tallentanut sovelluksen.  
+    >  Valitse **Hae viimeisimmät riippuvuudet** -painike ![Hae viimeisimmät riippuvuudet -painike sovellusten suunnitteluohjelmassa](media/app-designer-get-latest-dependencies.png "Hae viimeisimmät riippuvuudet -painike sovellusten suunnitteluohjelmassa") tai valitse **Vahvista** uudelleen, jos haluat riippuvuuksien uusimman joukon. Sovelluksen tallentamisen jälkeen näkyvissä ovat vain nämä painikkeet.  
   
-     Valitse **Piilota riippuvuudet**, jos et halua lisätä ehdotettuja vaadittuja osia. Kaikki ratkaisemattomat varoitukset tulevat uudelleen näkyviin, kun avaat sovelluksen sovellusten suunnitteluohjelmassa ja valitset **Vahvista** tai **Hae uusimmat riippuvuudet** ![Hae uusimmat riippuvuudet -painike sovellusten suunnitteluohjelmassa](media/app-designer-get-latest-dependencies.png "Hae uusimmat riippuvuudet -painike sovellusten suunnitteluohjelmassa").  
+     Valitse**Piilota riippuvuudet**, jos et halua lisätä ehdotettuja pakollisia komponentteja. Kaikki ratkaisemattomat varoitukset näkyvät uudelleen, kun avaat sovelluksen sovelluksen suunnitteluohjelmassa ja painat **Vahvista** tai **Hae viimeisimmät riippuvuudet** painiketta ![Hae viimeisimmät riippuvuudet -painike sovelluksen suunnitteluohjelmassa](media/app-designer-get-latest-dependencies.png "Hae viimeisimmät riippuvuudet -painike sovelluksen suunnitteluohjelmassa").  
   
     > [!NOTE]
-    >  Jos piilota riippuvuudet nyt ja haluat viedä tämän sovelluksen myöhemmin, kaikki nämä riippuvuudet tulevat näkyviin uudelleen.  
+    >  Jos piilotat riippuvuudet nyt ja haluat myöhemmin viedä tämän sovelluksen, kaikki kyseiset riippuvuudet tulevat uudelleen näkyviin.  
   
-## <a name="publish-an-app-using-the-app-designer"></a>Sovelluksen julkaiseminen sovellusten suunnitteluohjelmalla
+## <a name="publish-an-app-using-the-app-designer"></a>Julkaise sovellus sovellusten suunnitteluohjelman avulla
 
-Julkaise sovellus, jotta se on käyttäjien käytettävissä.  
+Julkaise sovellus, jotta se on muiden käyttäjien käytettävissä.  
   
- Kun olet lisännyt osat sekä vahvistanut ja tallentanut sovelluksen, valitse komentopalkissa **Julkaise**. Voit myös julkaista sovelluksen [Omat sovellukset](advanced-navigation.md#my-apps) -sivun sovellusruudusta. **Muokattavat sovellukset** -näkymässä, julkaistavan sovelluksen sovellusruudun oikeassa alakulmassa, valitse **Lisäasetukset**-painike (**...** ) ja valitse sitten **Julkaise**.  
+ Kun olet lisännyt komponentit sekä tarkistanut ja tallentanut sovelluksen, valitse komentopalkissa **Julkaise**. Voit julkaista sovelluksen myös [Omat sovellukset](advanced-navigation.md#my-apps) -sivun sovellusruudusta. Valitse **Muokattavat sovellukset** -näkymän julkaistava sovelluksen ruudun oikeasta alakulmasta **Lisää vaihtoehtoja** -painike (**...**). Valitse sitten **Julkaise.**.  
   
- Sovelluksen tilaksi muuttuu Julkaistu. Näet tämän sovellusten suunnitteluohjelman oikeassa yläkulmassa. Sovellus siirtyy **Muokattavat sovellukset** -näkymästä **Julkaistut sovellukset** -näkymään ja julkaisupäivämäärä näkyy sovellusruudussa.  
+ Sovelluksen tilaksi tulee Julkaistu. Tila näkyy sovelluksen suunnitteluohjelman oikeassa yläkulmassa. Sovellus siirtyy **Muokattavat sovellukset** -näkymästä **Julkaistut sovellukset** -näkymään. Julkaisupäivämäärä näkyy sovellusruudussa.  
   
 > [!NOTE]
-> - Jos sovelluksessasi on vahvistusvirhe, virhe näkyy ilmoituspalkissa. Et voi julkaista sovellusta, ennen kuin olet ratkaissut tämän ongelman.  
-> - Et voi julkaista sovellusta, ennen kuin tallennat sen.  
+> - Jos sovelluksessa on tarkistusvirheitä, virhe näkyy ilmoituspalkissa. Sovelluksen voi julkaista vasta sitten, kun virhe on ratkaistu.  
+> - Sovellus on tallennettava ennen julkaisemista.  
 
 ## <a name="next-steps"></a>Seuraavat vaiheet  
-[Mallipohjaisen sovelluksen jakaminen PowerAppsilla](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app) <br/>
- [Suorita mallipohjainen sovellus mobiililaitteella](https://docs.microsoft.com/powerapps/user/run-app-client-model-driven)   
+[Mallipohjaisen sovelluksen jakaminen PowerAppsin avulla](https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app) <br/>
+ [Mallipohjaisen sovelluksen käyttäminen mobiililaitteessa](https://docs.microsoft.com/powerapps/user/run-app-client-model-driven)   
  

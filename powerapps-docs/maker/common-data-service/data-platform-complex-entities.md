@@ -18,8 +18,8 @@ search.app:
 # <a name="complex-entities-and-licensing"></a>Monimutkaiset entiteetit ja käyttöoikeudet
 Entiteetit, jotka sisältävät seuraavaa monimutkaista palvelinpään logiikkaa, vaativat näitä entiteettejä käyttäviltä sovelluksen tai työnkulun käyttäjiltä PowerApps-palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeudet:
 
-* Koodilaajennukset. Lisätietoja: [Laajennuskehitys](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development))
-* Reaaliaikaiset työnkulut. Lisätietoja: [Työnkulkuprosessit](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes))
+* Koodilaajennukset. Lisätietoja: [Laajennuskehitys](https://docs.microsoft.com/dynamics365/customer-engagement/developer/plugin-development)
+* Reaaliaikaiset työnkulut. Lisätietoja: [Työnkulkuprosessit](https://docs.microsoft.com/dynamics365/customer-engagement/customize/workflow-processes)
 
     > [!IMPORTANT]
     >  Vain työnkulkuja, jotka on muunnettu reaaliaikaisiksi työnkuluiksi, käsitellään reaaliaikaisina ja synkronisina. Taustalla suoritettavia työnkulkuja voi yhä käyttää soveltuvan PowerApps-palvelupaketin kanssa. Ne eivät vaadi lisäkäyttöoikeuksia.

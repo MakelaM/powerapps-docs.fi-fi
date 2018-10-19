@@ -1,10 +1,10 @@
-### <a name="navigate-to-an-unmanaged-solution"></a>Hallitsemattomaan ratkaisuun siirtyminen
+### <a name="navigate-to-an-unmanaged-solution"></a>Siirry ei-hallittuun ratkaisuun
 
-1. Valitse PowerApps-portaalissa ![Asetukset-painike](../administrator/media/settings-button-nav-bar.png) Asetukset-painike ja valitse sitten **Kehittyneet mukautukset**.
+1. Valitse PowerApps-portaalissa ![Asetukset-painike](../administrator/media/settings-button-nav-bar.png) Asetukset-painike ja valitse **Lisämukautukset**.
 
-    ![Kehittyneet mukautukset](../maker/common-data-service/media/advanced-customizations-menu.png)
+    ![Lisämukautukset](../maker/common-data-service/media/advanced-customizations-menu.png)
 
-1. Valitse **Kehittyneet mukautukset** -paneelin sisällä jokin seuraavista vaihtoehdoista:
+1. Valitse **Lisämukautukset**-paneelissa jokin seuraavista vaihtoehdoista:
 
- - Jos haluat käsitellä **Common Data Servicen oletusratkaisua**, valitse **Avaa ratkaisunhallinta** **Mukauta**-kohdan alla.
- - Jos haluat valita tai luoda toisen hallitsemattoman ratkaisun, valitse **Kaikki ratkaisut** **Ratkaisut**-kohdan alla. Valitse sitten hallitsematon ratkaisu, jota haluat käsitellä.
+ - Jos haluat työskennellä **Common Data Service -oletusratkaisussa**, valitse **Avaa ratkaisunhallinta** kohdan **Mukauta** alla.
+ - Voit valita tai luoda toisen ei-hallitun ratkaisun valitsemalla **Kaikki ratkaisut** **Ratkaisut**-kohdassa. Valitse sitten haluamasi ei-hallittu ratkaisu.

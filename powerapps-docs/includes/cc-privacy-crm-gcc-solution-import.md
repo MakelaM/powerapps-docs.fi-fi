@@ -1,1 +1,1 @@
-Ottamalla ratkaisun käyttöön suostut jakamaan tietojasi ulkoisen järjestelmän kanssa. Ulkoisista järjestelmistä Microsoft Dynamics 365 Onlineen tuotuihin tietoihin sovelletaan [Microsoftin tietosuoja- ja eväste-ehtoja](http://go.microsoft.com/fwlink/p/?LinkID=521839).
+Ottamalla ratkaisun käyttöön hyväksyt tietojesi jakamisen ulkoisen järjestelmän kanssa. Ulkoisista järjestelmistä Microsoft Dynamics 365 (online) -palveluun tuotaviin tietoihin sovelletaan [Microsoftin Tietosuoja ja evästeet -käytäntöä](http://go.microsoft.com/fwlink/p/?LinkID=521839).

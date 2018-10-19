@@ -1,6 +1,6 @@
 ---
-title: Aloita ilmainen kokeilu | Microsoft Docs
-description: Rekisteröidy ja hanki yksityishenkilön 30 päivän maksuton PowerApps-käyttöoikeus.
+title: Rekisteröityminen ilmaiseen kokeilukäyttöoikeuteen | Microsoft Docs
+description: Rekisteröidy ja kokeile PowerAppsia ilmaiseksi 30 päivän ajan henkilökäyttäjänä.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -8,128 +8,122 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.date: 03/12/2018
 ms.author: anneta
-ms.reviewer: ''
-ms.openlocfilehash: cfe9dd8d7a1a1342e7db4fb2786f68942bec7784
-ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726902"
+ms.reviewer: null
 ---
-# <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Rekisteröidy, niin saat kokeilla PowerAppsia ilmaiseksi
-Jotta voit luoda sovelluksen PowerAppsissa, tarvitset jonkin erityyppisistä käyttöoikeuksista, jotka tarjoavat eritasoisia toimintoja. Sinulla on jo PowerApps-käyttöoikeus, jos organisaatiosi on ostanut sinulle jonkin useista Office 365- tai Dynamics 365 -versioista tai PowerAppsin palvelupaketin 1 tai 2 käyttöoikeuden.
+# <a name="sign-up-for-a-free-license-to-try-powerapps"></a>Rekisteröidy ja ja kokeile PowerAppsia ilmaiseksi
+Jos haluat luoda sovelluksen PowerAppsissa, sinulla on oltava monista käyttöoikeustyypeistä yksi, joka sisältää eri tasoisia toimintoja. Sinulla on jo PowerApps-käyttöoikeus, jos organisaatio on ostanut sinulle jonkin useista Office 365- tai Dynamics 365 -versioista tai jos organisaatio on ostanut sinulle käyttöoikeuden PowerApps-palvelupakettiin 1 tai 2.
 
 > [!NOTE]
-> Jos olet järjestelmänvalvoja, katso [Osta PowerApps organisaatiollesi](../administrator/signup-for-powerapps-admin.md) tai [PowerApps organisaatiosi kysymyksiä ja vastauksia varten](../administrator/signup-question-and-answer.md).
+> Jos olet järjestelmänvalvoja, katso [PowerApps-sovelluksen ostaminen organisaatiolle](../administrator/signup-for-powerapps-admin.md) tai [PowerApps organisaation kysymyksissä ja vastauksissa](../administrator/signup-question-and-answer.md).
 
-Voit selvittää, [mihin käyttöoikeuksiin PowerApps sisältyy](https://powerapps.microsoft.com/pricing/) ja mitä ne tarjoavat. Jos et edelleenkään ole varma, onko sinulla on jo käyttöoikeus, Avaa [PowerApps-sivusto](http://powerapps.microsoft.com) ja valitse **kirjautuminen**.
+Saat tietoja siitä, [mitkä käyttöoikeudet sisältävät PowerAppsin](https://powerapps.microsoft.com/pricing/) ja mitä ne tarjoavat. Jos et vieläkään ole varma, onko sinulla käyttöoikeus, avaa [PowerApps-sivusto](http://powerapps.microsoft.com) ja valitse **Kirjaudu sisään**.
 
-![PowerAppsin kirjautumisvaihtoehto](./media/signup-for-powerapps/sign-in.png)
+![PowerAppsin Kirjaudu sisään -vaihtoehto](./media/signup-for-powerapps/sign-in.png)
 
-Jos sinulla ei ole käyttöoikeutta tai haluat enemmän toimintoja kuin nykyinen käyttöoikeutesi tarjoaa, voit rekisteröitymällä hankkia PowerAppsin palvelupaketin 2 maksuttoman kokeiluversion. Tämä käyttöoikeus tarjoaa kaikki PowerApps-toiminnot mutta on voimassa vain 30 päivää.
+Jos sinulla ei ole käyttöoikeutta tai tarvitset nykyisen käyttöoikeuden tarjontaa laajempia toimintoja, voit rekisteröityä PowerApps-palvelupaketin 2 ilmaiseen kokeiluversioon. Tämä käyttöoikeus sisältää kaikki PowerApps-toiminnot, mutta se vanhenee 30 päivän kuluttua.
 
-## <a name="upgrade-an-existing-license"></a>Päivitä nykyinen käyttöoikeus 
-Voit aloittaa PowerAppsin palvelupaketin 2 maksuttoman 30 päivän kokeiluversion kirjautumalla PowerAppsiin olemassa olevalla käyttöoikeudella ja kokeilemalla jotakin seuraavista ominaisuuksista:
+## <a name="upgrade-an-existing-license"></a>Olemassa olevan käyttöoikeuden päivittäminen 
+Voit aloittaa PowerApps-palvelupaketin 2 ilmaisen 30 päivän kokeiluversion kirjautumalla PowerAppsiin olemassa olevan käyttöoikeuden avulla. Kokeile sitten seuraavia toimintoja:
 
-* Luo Common Data Servicen [esiintymä ja hallitse sitä](../administrator/signup-for-powerapps-admin.md).
-* [Mallinna tietojasi](./common-data-service/data-platform-intro.md) käyttämällä Common Data Serviceä.
-* [Luo ja hallitse ympäristöjä](../administrator/environments-administration.md) PowerAppsin hallintakeskuksesta käsin.
-* [Hallitse paikallista tietoyhdyskäytävää](./canvas-apps/gateway-management.md) PowerAppsissa.  
+* [Luo ja hallinnoi Common Data Service -esiintymää](../administrator/signup-for-powerapps-admin.md).
+* [Mallinna tietoja](./common-data-service/data-platform-intro.md) Common Data Service -palvelun avulla.
+* [Luo ja hallinnoi ympäristöjä](../administrator/environments-administration.md) PowerApps-hallintakeskuksessa.
+* [Hallinnoi paikallisten tietojen yhdyskäytävää](./canvas-apps/gateway-management.md) PowerAppsissa.  
 
-Jos kokeilet jotakin näistä ominaisuuksista ilman PowerAppsin palvelupaketin 2 käyttöoikeutta, saat kehotuksen käynnistää maksuton 30 päivän kokeiluversio. Valitse **Aloita kokeiluni** ja hyväksy käyttöehdot avautuvassa valintaikkunassa.
+Jos kokeilet näitä toimintoja ilman PowerApps-palvelupaketin 2 käyttöoikeutta, sinua pyydetään aloittamaan ilmainen 30 päivän kokeiluversio. Valitse **Aloita kokeiluversio** ja hyväksy käyttöehdot näyttöön tulevassa ikkunassa.
 
-![Hyväksy käyttöehdot](./media/signup-for-powerapps/trial-consent.png)
+![Käyttöehtojen hyväksyminen](./media/signup-for-powerapps/trial-consent.png)
 
-## <a name="get-a-license-from-scratch"></a>Hanki käyttöoikeus alusta alkaen
-Jos sinulla ei ole PowerApps-käyttöoikeutta, rekisteröitymällä saat 30 päivän maksuttoman PowerAppsin palvelupaketin 2 kokeiluversion [PowerAppsin sivustolta](http://powerapps.microsoft.com).
+## <a name="get-a-license-from-scratch"></a>Käyttöoikeuden hakeminen alusta alkaen
+Jos sinulla ei ole PowerApps-käyttöoikeutta, voit rekisteröityä PowerApps-palvelupaketin 2 ilmaisen 30 päivän kokeiluversion käyttäjäksi [PowerApps-sivustossa](http://powerapps.microsoft.com).
 
-* Jos käytät selainta puhelimessa, napauta oikeassa yläkulmassa olevaa valikkokuvaketta ja valitse sitten **Rekisteröidy ilmaiseksi**.
-* Jos käytät selainta jossakin toisentyyppisessä laitteessa, valitse oikeassa yläkulmassa **Rekisteröidy ilmaiseksi**.
+* Jos käytät puhelimen selainta, napauta oikeassa yläkulmassa olevaa valikkokuvaketta ja napauta sitten **Rekisteröidy ilmaiseksi** -kohtaa.
+* Jos käytät selainta jollakin muulla laitteella, valitse oikeassa yläkulmassa oleva **Rekisteröidy ilmaiseksi**.
 
-    ![Ilmainen rekisteröityminen](./media/signup-for-powerapps/sign-up-browser.png)
+    ![Rekisteröityminen ilmaiseksi](./media/signup-for-powerapps/sign-up-browser.png)
 
-Valitse läheltä näytön keskiosaa **Hinnoittelu** ja valitse sitten **Aloita maksuton kokeilujakso**.
+Valitse näytön keskiosassa **Hinnoittelu** ja valitse sitten **Aloita ilmainen kokeiluversio**.
 
-![Ilmaisen kokeilujakson käytön aloittaminen](./media/signup-for-powerapps/start-free-trial.png)
+![Ilmaisen kokeiluversion aloittaminen](./media/signup-for-powerapps/start-free-trial.png)
 
-Kirjoita tai liitä näyttöön avautuvaan valintaikkunaan työpaikan tai koulun sähköpostiosoite ja napsauta tai napauta sitten **Lähetä**.
+Kirjoita tai liitä näyttöön tulevaan valintaikkunaan työpaikan tai oppilaitoksen sähköpostiosoite ja napsauta tai napauta **Lähetä**-kohtaa.
 
 > [!IMPORTANT]
-> Sähköpostin kuluttajapalvelujen, tietoliikenteen palveluntarjoajien, julkishallinnon ja sotilaallisten organisaatioiden osoitteita ei tueta mukaan lukien:  
+> Kuluttajien sähköpostipalveluiden, tietoliikennepalveluiden tarjoajien, julkishallinnon ja armeijan osoitteita ei tueta. Näitä ovat esimerkiksi seuraavat:  
 > 
 > * outlook.com, hotmail.com, gmail.com ja niin edelleen  
 > * .gov ja .mil
 >
-> Jos yrität rekisteröityä henkilökohtaisella sähköpostiosoitteella, näyttöön tulee viesti, jossa ilmoitetaan, että sinun täytyy käyttää työpaikan tai koulun sähköpostiosoitetta.
+> Jos yrität rekisteröityä henkilökohtaisella sähköpostiosoitteella, näyttöön tulevassa sanomassa kerrotaan, että osoitteen on oltava työpaikan tai oppilaitoksen sähköpostiosoite.
 
 ![Sähköpostiosoitteen kirjoittaminen](./media/signup-for-powerapps/get-started-old.png)
 
-Jos PowerApps tunnistaa organisaatiosi, voit kirjautua sisään kyseisen organisaation tunnistetiedoilla (ja ohittaa loput tässä annetut ohjeet).
+Jos PowerApps tunnistaa organisaatiosi, voit kirjautua kyseisen organisaation tunnistetiedoilla (ja ohittaa loput ohjeet).
 
-![Kirjaudu sisään työtililläsi](./media/signup-for-powerapps/we-know-you.png)
+![Kirjautuminen sisään työpaikan tilillä](./media/signup-for-powerapps/we-know-you.png)
 
-Muussa tapauksessa sinua kehotetaan tarkastamaan sähköpostisi. 
+Muussa tapauksessa pyydämme tarkistamaan sähköpostin. 
 
-![Tarkasta sähköpostisi -viesti](./media/signup-for-powerapps/check-email.png)
+![Sanoma, jossa pyydetään tarkistamaan sähköposti](./media/signup-for-powerapps/check-email.png)
 
-Valitse sähköpostiviestissä linkki, jolla voit vahvistaa sähköpostiosoitteesi, ja anna lisätietoja (pyydettäessä).
+Sähköpostiviestin, valitse-linkki tarkistamaan, osoitteen (Jos ohjelma kysyy sitä) ja antaa lisätietoja.
 
-Kun tämä valintaikkuna tulee näkyviin, valitse **Käynnistä** ja aloita [PowerAppsin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) käyttö.
+Kun tämä valintaikkuna tulee näkyviin, valitse **Aloita** ja aloita [PowerAppsin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) käyttäminen.
 
-![Napsauta kohtaa Käynnistä](./media/signup-for-powerapps/almost-there.png)
+![Valitse Aloita.](./media/signup-for-powerapps/almost-there.png)
 
 > [!NOTE]
-> Jos haluat enemmän aikaa PowerAppsin arvioimiseen, voit pyytää kokeilujakson pidentämistä 30 lisäpäivän ajaksi.
+> Jos haluat jatkaa PowerAppsin arvioimista, voit pyytää 30 päivän lisäaikaa kokeiluversion käyttämiseen.
 
-## <a name="faq"></a>UKK
+## <a name="faq"></a>Usein kysytyt kysymykset
 
-### <a name="what-premium-features-does-the-trial-license-include"></a>Mitä lisäominaisuuksia kokeiluversion käyttöoikeus sisältää?
+### <a name="what-premium-features-does-the-trial-license-include"></a>Mitä Premium-toimintoja kokeilukäyttöoikeus sisältää?
 
-* Käyttöoikeus **Common Data Serviceen**, joka on PowerAppsin turvallinen oletustietoympäristö yrityksille. [Common Data Servicen](./common-data-service/data-platform-intro.md) mukana toimitetaan satoja perusliiketoimintakohteita, jolloin kaikki sovelluksesi voivat jakaa mm. termien ”asiakas”, ”tuote” ja ”liidi” saman määrityksen.
-* **Käyttöoikeus Premium-yhteyksiin**, kuten Salesforce, DB2, Zendesk ja Common Data Service. Useilla Office 365- ja Dynamics 365 -palvelupaketeilla voit muodostaa yhteyden tietolähteisiin, kuten Office 365, Dynamics 365, Dropbox ja Twitter. Kokeiluversion käyttöoikeudella voit myös muodostaa yhteyden tietoihin mm. näiden premium-liittimien kautta:
+* **Käyttöoikeus Common Data Service -palveluun**, joka on PowerAppsiin luotu suojattu yritystietojen ympäristö. [Common Data Service](./common-data-service/data-platform-intro.md) sisältää satoja vakioliiketoimintatapahtumia, joten sovelluksesi voivat jakaa samat määritykset esimerkiksi asiakkaasta, tuotteesta ja liidistä.
+* **Käyttöoikeus Premium-yhteyksiin**, kuten Salesforce, DB2, Zendesk ja Common Data Service. Voit muodostaa yhteyden tietolähteisiin, kuten Office 365:een, Dynamics 365:een, Dropboxiin ja Twitteriin useilla eri Office 365- ja Dynamics 365 -palvelupaketeilla. Kokeilukäyttöoikeuden avulla voit muodostaa yhteyden myös näiden Premium-yhdysohjelmien ja seuraavien ohjelmien kautta:
 
     ![](./media/signup-for-powerapps/premium-connectors.png)
 
-    Premium-liittimet esitetään [liittimien täydellisessä luettelossa](./canvas-apps/connections-list.md) seuraavalla merkillä:
+    Premium-yhdysohjelmien kohdalla on merkki [yhdysohjelmien täydellisessä luettelossa](./canvas-apps/connections-list.md):
 
     ![](./media/signup-for-powerapps/premium-badge.png)
-* Käyttöoikeus **PowerApps-hallintakeskukseen**, jossa voit hallita ympäristöjä, tietokantoja, käyttöoikeuksia ja tietokäytäntöjä. [Lisätietoja](../administrator/admin-guide.md)
-* **Luo sovelluksia mallipohjaisessa tilassa**, jossa voit lisätä osia sovellukseen ja antaa PowerAppsin luoda asettelun ja muut käyttöliittymän elementit. 
+* **Käyttöoikeus PowerApps-hallintakeskukseen**, jossa voi hallinnoida ympäristöjä, tietokantoja, käyttöoikeuksia ja tietokäytäntöjä. [Lisätietoja](../administrator/admin-guide.md)
+* **Luo sovelluksia mallipohjaisessa tilassa**, jossa voit lisätä komponentteja sovellukseen ja antaa PowerAppsin luoda sen asettelun ja muut liittymäelementit. 
 
-Lisätietoja kokeiluversion käyttöoikeuden toiminnoista ja kapasiteetista on [hinnoittelusivulla](https://powerapps.microsoft.com/pricing/).
+Lisätietoja kokeilukäyttöoikeuden toiminnoista ja kapasiteetista on [hinnoittelusivulla](https://powerapps.microsoft.com/pricing/).
 
 ### <a name="what-email-address-can-i-use"></a>Mitä sähköpostiosoitetta voin käyttää?
-Voit rekisteröityä käyttämään kokeiluversion käyttöoikeutta työpaikan tai oppilaitoksen osoitteella. Jos käytät muunlaista osoitetta, joitakin tässä taulukossa esitettyjä ongelmia saattaa esiintyä.
+Voit käyttää työpaikan tai oppilaitoksen sähköpostiosoitetta rekisteröityessäsi kokeilukäyttöoikeuteen. Jos käytät jotain toista sähköpostiosoitetta, voit kohdata jonkin taulukossa mainituista ongelmista.
 
 
-|                                                                                                                                                                                                                             Oire/virhesanoma                                                                                                                                                                                                                             |                                                                                                                                                                                                     Syy ja vaihtoehtoinen menetelmä                                                                                                                                                                                                      |
+|                                                                                                                                                                                                                             Ongelma/virhesanoma                                                                                                                                                                                                                             |                                                                                                                                                                                                     Syy ja ratkaisu                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <strong>Henkilökohtaiset sähköpostiosoitteet (esimerkiksi nancy@gmail.com)</strong> <br> <br> Näyttöön tulee kirjautumisen aikana seuraavankaltainen ilmoitus: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> tai <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` |                                                                                                        PowerApps ei tue sähköpostin kuluttajapalvelujen tai tietoliikenteen palveluntarjoajien sähköpostiosoitteita. <br> <br> Viimeistele rekisteröinti yrittämällä uudelleen käyttämällä työpaikkasi tai oppilaitoksesi antamaa sähköpostiosoitetta.                                                                                                        |
-|                             **.gov- tai .mil-osoitteet** <br> <br> Näyttöön tulee kirjautumisen aikana seuraavankaltainen ilmoitus: <br> <br> `PowerApps unavailable: PowerApps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> tai <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.`                              |                                                                                                                                                                                PowerApps ei tue .gov- tai .mil-osoitteita tällä hetkellä.                                                                                                                                                                                |
-|                                                                                             **Sähköpostiosoite ei ole Office 365 -tunnus** <br> <br>  Näyttöön tulee kirjautumisen aikana seuraavankaltainen ilmoitus: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.`                                                                                              | Organisaatiosi kirjautuu Office 365:een ja muihin Microsoftin palveluihin muilla tunnuksilla kuin sähköpostiosoitteilla. Sähköpostiosoitteesi saattaa esimerkiksi olla Nancy.Smith@contoso.com, mutta tunnuksesi on nancys@contoso.com. <br> <br> Viimeistele rekisteröinti käyttämällä tunnusta, jonka organisaatiosi on myöntänyt sinulle Office 365:een tai muihin Microsoft-palveluihin kirjautumista varten.  Jos et tiedä, mistä tässä on kysymys, ota yhteyttä IT-järjestelmänvalvojaan. |
+| <strong>Henkilökohtaiset sähköpostiosoitteet (esimerkiksi nancy@gmail.com)</strong> <br> <br> Näet rekisteröitymisen yhteydessä seuraavan sanoman: <br> <br> `You entered a personal email address: Please enter your work email address so we can securely store your company's data.` <br> <br> tai <br> <br> `That looks like a personal email address. Enter your work address so we can connect you with others in your company. And don’t worry. We won’t share your address with anyone.` |                                                                                                        PowerApps ei tue kuluttajien sähköpostipalveluiden ja tietoliikennepalveluiden tarjoajien sähköpostiosoitteita. <br> <br> Jos haluat tehdä rekisteröitymisen loppuun, yritä uudelleen työpaikan tai oppilaitoksen sähköpostiosoitteella.                                                                                                        |
+|                             **.gov- tai .mil-osoitteet** <br> <br> Näet rekisteröitymisen yhteydessä seuraavan sanoman: <br> <br> `PowerApps unavailable: PowerApps is not available for users with .gov or .mil email addresses at this time. Use another work email address or check back later.` <br> <br> tai <br> <br> `We can't finish signing you up. It looks like Microsoft PowerApps isn't currently available for your work or school.`                              |                                                                                                                                                                                PowerApps ei tue tällä hetkellä .gov- ja .mil-osoitteita.                                                                                                                                                                                |
+|                                                                                             **Sähköpostiosoite ei ole Office 365 -tunnus** <br> <br>  Näet rekisteröitymisen yhteydessä seuraavan sanoman: <br> <br> `We can't find you at contoso.com.  Do you use a different ID at work or school? Try signing in with that, and if it doesn't work, contact your IT department.`                                                                                              | Organisaatio kirjautuu sisään Office 365:een ja muihin Microsoft-palveluihin tunnuksella, joka ei ole sähköpostiosoite. Sähköpostiosoite voi olla esimerkiksi Nancy.Smith@contoso.com, mutta tunnus on nancys@contoso.com. <br> <br> Voit viimeistellä rekisteröitymisen käyttämällä organisaation antamaa tunnusta, jonka avulla voit kirjautua Office 365:een ja muihin Microsoft-palveluihin.  Jos et tiedä, mikä se on, ota yhteyttä IT-järjestelmänvalvojaan. |
 
-### <a name="what-happens-when-my-trial-expires"></a>Mitä tapahtuu, kun ilmaisen kokeiluversion käyttöaika päättyy?
-30 päivän jälkeen sinua kehotetaan pyytämään pidennystä kokeiluversioon tai ostamaan palvelupaketti. Löydät lisätietoja kaikista palvelupaketeista [hinnoittelusivulta](https://powerapps.microsoft.com/pricing/).
+### <a name="what-happens-when-my-trial-expires"></a>Mitä tapahtuu, kun kokeiluversioni vanhenee?
+30 päivän kuluttua sinua pyydetään tekemään jatkoa koskeva pyyntö tai ostamaan palvelupaketti. Kaikkia palvelupaketteja koskevat tiedot ovat [hinnoittelusivulla](https://powerapps.microsoft.com/pricing/).
 
-* Jos käytät PowerAppsia Office 365:n, Dynamics 365:n tai PowerAppsin palvelupaketin 1 käyttöoikeuden kautta, voit edelleen käyttää PowerAppsia, mutta et ehkä pääse enää Common Data Serviceen, premium-liittimiin, PowerApps-hallintakeskukseen ja muihin PowerAppsin palvelupaketin 2 ominaisuuksiin. Esimerkiksi tämä näyttö saattaa tulla näkyviin, jos yrität luoda premium-yhteyden:
+* Jos sinulla on PowerAppsin käyttöoikeus Office 365:n, Dynamics 365:n tai PowerApps-palvelupaketin 1 käyttöoikeuden kautta, voit silti käyttää PowerApps, mutta saatat menettää Common Data Service -palvelun, Premium-yhdysohjelmien, PowerApps-hallintakeskuksen ja muiden PowerApps-palvelupaketin 2 toimintojen käyttöoikeuden. Esimerkiksi tämä näyttö voi tulla esiin, jos yrität luoda Premium-yhteyden:
 
     ![](./media/signup-for-powerapps/premium-trial-expired.png)
 
-* Jos ainoa PowerApps-käyttöoikeutesi on kokeiluversion kautta (jonka sait [PowerAppsin rekisteröintisivustolla](http://powerapps.microsoft.com/) tai [hinnoittelusivulla](http://powerapps.microsoft.com/pricing)), voit säilyttää PowerAppsin-käyttöoikeuden pyytämällä 30 päivän pidennystä kokeiluversion käyttöoikeuteen.
+* Jos ainoa PowerApps-käyttöoikeutesi on kokeiluversio (johon rekisteröidyit [PowerApps-sivustossa](http://powerapps.microsoft.com/) tai [hinnoittelusivulla](http://powerapps.microsoft.com/pricing)), voit pyytää kokeiluversioon 30 päivän jatkoaikaa, jotta voit käyttää PowerAppsia.
 
-### <a name="when-will-my-trial-license-expire"></a>Milloin kokeiluversion käyttöoikeus päättyy?
-Voit selvittää, milloin kokeiluversion käyttöoikeus päättyy, valitsemalla [PowerApps-sivuston](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) oikeassa yläkulmassa rataskuvakkeen ja valitsemalla sitten **Sopimukset**.
+### <a name="when-will-my-trial-license-expire"></a>Milloin kokeilukäyttöoikeuteni vanhenee?
+Jos haluat määrittää, milloin kokeilukäyttöoikeutesi vanhenee, valitse [PowerApps-sivuston](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) oikeassa yläkulmassa rataskuvake ja valitse sitten **Palvelupaketit**.
 
 ![](./media/signup-for-powerapps/show-duration.png)
 
-### <a name="what-happens-to-my-data-if-my-trial-license-expires"></a>Mitä tapahtuu tiedoilleni, jos kokeiluversion käyttöoikeus päättyy?
-Jos sinulla on edelleen PowerApps-käyttöoikeus, voit jatkaa sen käyttämistä. Tiedot Common Data Servicessä säilyvät sellaisenaan, ja kaikki sovellukset ja työnkulut, jotka käyttivät Common Data Serviceä tietolähteenä, toimivat samalla tavalla kuin ennenkin. Et kuitenkaan voi käyttää kyseistä sovellusta tai työnkulkua, ja sinua kehotetaan pyytämään 30 päivän pidennys kokeiluversioon tai ostamaan palvelupaketti, jos yrität muokata rakennetta tai kohteita Common Data Servicessä.
+### <a name="what-happens-to-my-data-if-my-trial-license-expires"></a>Mitä tapahtuu tiedoilleni, kun kokeilukäyttöoikeuteni vanhenee?
+Jos sinulla on yhä PowerAppsin käyttöoikeus, voit jatkaa tietojen käyttämistä. Kaikki Common Data Service -palvelun tiedot säilyvät sellaisenaan. Kaikki sovellukset ja työnkulut, jotka käyttivät Common Data Service -palvelua tietolähteenä, toimivat kuten ennenkin. Et kuitenkaan voi käyttää sovellusta tai työnkulkua. Sinua pyydetään tekemään kokeiluversion käyttöä koskeva 30 päivän jatkopyyntö tai ostamaan palvelupaketti, jos yrität muuttaa Common Data Service -palvelun rakennetta tai entiteettejä.
 
-### <a name="what-should-i-do-next"></a>Mitä minun pitää tehdä seuraavaksi?
-Voit säilyttää PowerApps-käyttöoikeuden ja sen ominaisuudet tekemällä jommankumman seuraavista toimista:
+### <a name="what-should-i-do-next"></a>Mitä minun tulisi tehdä seuraavaksi?
+Voit säilyttää PowerAppsin ja sen toimintojen käyttöoikeuden, kun teet jommankumman seuraavista toiminnoista:
 
-* Pidennä kokeiluversion käyttöoikeutta 30 päivällä pyydettäessä.
-* Tarkista PowerAppsin [hinnoittelusivulta](https://powerapps.microsoft.com/pricing/) saatavilla olevat palvelupaketit ja [osta jokin niistä](../administrator/signup-for-powerapps-admin.md).
+* Jatka kokeilukäyttöoikeutta 30 päivällä pyydettäessä.
+* Tarkista käytettävissä olevat PowerApps-palvelupaketit [hinnoittelusivulta](https://powerapps.microsoft.com/pricing/) ja [osta jokin niistä](../administrator/signup-for-powerapps-admin.md).
 
-## <a name="more-questions"></a>Muita kysymyksiä?
-Kokeile PowerApps-[yhteisöä](https://community.powerapps.com).
+## <a name="more-questions"></a>Onko sinulla lisää kysymyksiä?
+Kokeile PowerAppsin [yhteisöä](https://community.powerapps.com).

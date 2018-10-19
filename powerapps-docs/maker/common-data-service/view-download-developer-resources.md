@@ -1,103 +1,102 @@
 ---
 title: Kehittäjien resurssien tarkasteleminen tai lataaminen | MicrosoftDocs
-description: Etsi kehittäjien resursseja ja palvelun päätepisteen URL-osoitteita
+description: Etsi Kehittäjien resurssit ja palvelun päätepiste-URL-osoitteet
 keywords: ''
 ms.date: 06/06/2018
 ms.service: crm-online
-ms.custom: ''
+ms.custom: null
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 ms.assetid: e200d242-ff3f-48e5-af32-aed050e02441
 author: Mattp123
 ms.author: matp
 manager: kvivek
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.openlocfilehash: ae93b57d9ead3a62fb538ae986eb524367259545
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39680008"
+ms.reviewer: null
+ms.suite: null
+ms.tgt_pltfrm: null
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
 <!-- TODO: The Developer Resources page have to be updated to match this page -->
 
 # <a name="view-or-download-developer-resources"></a>Kehittäjien resurssien tarkasteleminen tai lataaminen
 
-Tällä sivulla on resursseja kehittäjille ja tietoja tietystä esiintymästä, jota käsittelet. 
+Tällä sivulla on tietoja sovelluskehittäjien resursseista ja käsiteltävänä olevasta tietystä ilmentymästä. 
 
-## <a name="view-the-developer-resources-page-for-your-environment"></a>Näytä ympäristön Kehittäjien resurssit -sivu
+## <a name="view-the-developer-resources-page-for-your-environment"></a>Sovelluskehittäjän resurssit -sivun tarkasteleminen ympäristössä
 
-1. Valitse PowerApps-portaalissa valitsemalla ![Asetukset-painike](../../administrator/media/settings-button-nav-bar.png) Asetukset-painike ja valitse **Kehittyneet mukautukset**.
+1. Valitse PowerApps-portaalissa ![Asetukset-painike](../../administrator/media/settings-button-nav-bar.png) Asetukset-painike ja valitse **Lisämukautukset**.
 
-    ![Kehittyneet mukautukset](media/advanced-customizations-menu.png)
+    ![Lisämukautukset](media/advanced-customizations-menu.png)
 
-1. **Kehittyneet mukautukset** -paneelissa valitse **Kehittäjien resurssit** -linkki:<br />![Kehittäjien resurssit -linkki](media/developer-resources-link.png)
+1. Valitse **Lisämukautukset**-paneelissa **Sovelluskehittäjän resurssit** -linkki:<br />![Sovelluskehittäjän resurssit -linkki](media/developer-resources-link.png)
 
-## <a name="getting-started"></a>Aloittaminen 
+## <a name="getting-started"></a>Alkutoimet 
 
-Tässä osassa on linkkejä kehittäjille resurssien löytämiseksi. Seuraavat resurssit ovat käytettävissä:
+Tässä osassa on linkkejä, joiden avulla sovelluskehittäjät voivat etsiä resursseja. Käytettävissä ovat seuraavat resurssit:
 
 
-|Linkki |Kuvaus|
+|Linkitä |Kuvaus|
 |---------|---------|
-|[Kehittäjäkeskus](https://go.microsoft.com/fwlink/?LinkId=551006)|Kehittäjien dokumentaation tärkein aloituskohta.|
-|[Kehittäjien keskustelupalstat](https://go.microsoft.com/fwlink/?LinkId=550993)|Kysy kysymyksiä ja vastaa niihin muiden kehittäjien kanssa.|
-|[NuGet-paketit](https://go.microsoft.com/fwlink/?LinkId=550994)|Tutustu NuGet-paketteihin lisätäksesi SDK-kokoonpanoja projektiisi.|
-|[Lataa työkalut](https://go.microsoft.com/fwlink/?LinkID=512122)|Työkalut, joita tarvitset, ovat ladattavissa NuGetista. Saat uusimmat versiot tällä sivulla olevan PowerShell-komentosarjan avulla.|
-|[Esimerkkikoodi](https://go.microsoft.com/fwlink/?LinkId=553007)|Luettelo saatavilla olevista esimerkeistä.|
-|[Yleiskatsaus kehittäjille](https://go.microsoft.com/fwlink/?LinkId=550995)|Linkki aiheeseen, joissa on yleiskatsaus kehittäjille.|
+|[Kehittäjäkeskus](https://go.microsoft.com/fwlink/?LinkId=551006)|Sovelluskehittäjän dokumentaation tärkein aloituskohta.|
+|[Sovelluskehittäjien keskustelupalstat](https://go.microsoft.com/fwlink/?LinkId=550993)|Esitä kysymyksiä muille sovelluskehittäjille ja vastaa heidän kysymyksiinsä.|
+|[NuGet-paketit](https://go.microsoft.com/fwlink/?LinkId=550994)|Tutustu NuGet-paketteihin, jotta voit lisätä SDK-kokoonpanoja projekteihin.|
+|[Työkalujen lataaminen](https://go.microsoft.com/fwlink/?LinkID=512122)|Tarvittavat työkalut ovat ladattavissa NuGet-ohjelmasta. Hae uusimmat versiot tämän sivun PowerShell-komentosarjan avulla.|
+|[Esimerkkikoodi](https://go.microsoft.com/fwlink/?LinkId=553007)|Käytettävissä olevien esimerkkien luettelo.|
+|[Kehittäjäkatsaus](https://go.microsoft.com/fwlink/?LinkId=550995)|Linkki ohjeaiheeseen, joka sisältää sovelluskehittäjien yleiskatsauksen.|
 
 <!-- TODO update 512122 to go to https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget -->
 
 
-## <a name="connect-your-apps-to-this-instance-of-common-data-service-for-apps"></a>Yhdistä sovelluksesi tähän Common Data Service for Apps -esiintymään
+## <a name="connect-your-apps-to-this-instance-of-common-data-service-for-apps"></a>Yhteyden muodostaminen sovelluksista Common Data Service sovelluksille -ratkaisun tähän ilmentymään
 
-Tässä osassa on tietoja, joita tarvitset muodostaaksesi yhteyden tähän Common Data Service for Apps -esiintymään.
+Tässä osassa on tietoja, joiden avulla voit muodostaa yhteyden Common Data Service sovelluksille -ilmentymään.
 
-### <a name="instance-web-api"></a>Esiintymän WWW-ohjelmointirajapinta
+### <a name="instance-web-api"></a>Esiintymän Web-ohjelmointirajapinta
 
-Tämä on esiintymän WWW-ohjelmointirajapinnan URL-osoite. The WWW-ohjelmointirajapinta on OData v4 RESTful -ohjelmointirajapinta. Voit myös ladata palveluasiakirjan, joka kuvaa esiintymässä käytettävissä olevia metatietoja ja toimintoja. Lisätietoja: [Kehittäjien dokumentaatio: Dynamics 365 Customer Engagement -WWW-ohjelmointirajapinnan käyttäminen](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
+Tämä on ilmentymän Web-ohjelmointirajapinnan URL-osoite. Web-ohjelmointirajapinta on OData v4 RESTful -ohjelmointirajapinta. Voit ladata myös palveluasiakirjan, jossa kerrotaan ilmentymän käytettävissä olevista metatiedoista ja toiminnoista.. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Dynamics 365 Customer Engagement -sovelluksen Web -ohjelmointirajapinnan käyttäminen](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)
 
-### <a name="organization-service"></a>Organisaatiopalvelut
+### <a name="organization-service"></a>Organisaation palvelu
 
-Tämä on esiintymän organisaatiopalvelujen SOAP-päätepisteen URL-osoite.
-Voit ladata tämän palvelun WSDL:n täällä, mutta yleensä entiteettiluokkien luomisessa .NET-projekteille käytetään CrmSvcUtil.exe-koodinmuodostustyökalua. Lisätietoja: 
-- [Kehittäjien dokumentaatio: aikaisin sidottujen entiteettiluokkien luominen koodin muodostus -työkalun avulla (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
-- [Kehittäjien dokumentaatio: Organisaatiopalvelujen käyttö tietojen tai metatietojen lukemiseen ja kirjoittamiseen](/dynamics365/customer-engagement/developer/org-service/use-organization-service-read-write-data-metadata)
+Tämä on ilmentymän organisaation palvelun SOAP-päätepisteen URL-osoite.
+Voit ladata tämän palvelun WSDL:n täältä, mutta yleensä käytössä on CrmSvcUtil.exe-koodin luontityökalu. Sen avulla luodaan entiteetin luokat .NET-projekteissa. Lisätietoja: 
+- [Sovelluskehittäjän dokumentaatio: Varhaisen sidotun entiteetin luokkien luominen koodin luontityökalun avulla (CrmSvcUtil.exe)](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)
+- [Sovelluskehittäjän dokumentaatio: Organisaation palvelun käyttäminen tietojen tai metatietojen lukemisessa tai kirjoittamisessa](/dynamics365/customer-engagement/developer/org-service/use-organization-service-read-write-data-metadata)
 
-### <a name="instance-reference-information"></a>Esiintymän viitetiedot
+### <a name="instance-reference-information"></a>Ilmentymän viitetiedot
 
-Nämä tiedot kuvaavat esiintymää yksilöllisesti. Saatavana on GUID-**tunnus** ja **Yksilöllinen nimi**.
-Näitä tietoja tarvitaan, kun käytät Azure-laajennuksia esiintymän kanssa.
-Lisätietoja: [Kehittäjien dokumentaatio: Azure-laajennukset Dynamics 365 Customer Engagementille](/dynamics365/customer-engagement/developer/azure-extensions)
+Nämä tiedot yksilöivät ilmentymän. Tiedot sisältävät GUID-**tunnuksen** ja **yksilöllisen nimen**.
+Näitä tietoja tarvitaan ilmentymän Azure-laajennusten käytössä.
+Lisätietoja: [Sovelluskehittäjän dokumentaatio: Dynamics 365 Customer Engagement -sovelluksen Azure-laajennukset](/dynamics365/customer-engagement/developer/azure-extensions)
 
-## <a name="connect-your-apps-to-the-common-data-service-for-apps-discovery-service"></a>Yhdistä sovelluksesi Common Data Service for Apps -etsintäpalveluun
+## <a name="connect-your-apps-to-the-common-data-service-for-apps-discovery-service"></a>Yhteyden muodostaminen sovelluksista Common Data Service sovelluksille -ratkaisun etsintäpalveluun
 
-Koska käyttäjillä voi olla oikeus useisiin CDS for Apps -ympäristöihin, etsintäpalveluiden avulla voidaan noutaa saatavilla olevia ympäristöjä, jotka ovat henkilön käytettävissä tunnistetietojen perusteella.
+Käyttäjillä voi olla useita CDS sovelluksille -ympäristöjen käyttöoikeuksia. Tämän vuoksi etsintäpalvelu hakee käyttäjien käytettävissä olevat ympäristöt käyttäjien tunnistetietojen avulla.
 
 ### <a name="discovery-web-api"></a>Verkkoetsintäpalvelun ohjelmointirajapinta
 
-Tämä on päätepisteosoite etsintäpalvelun RESTful OData v4 -versiolle esiintymän kanssa käytettäväksi. Voit myös ladata palveluasiakirjan täältä.
-Lisätietoja: [Kehittäjien dokumentaatio: organisaation URL-osoitteen etsiminen WWW-ohjelmointirajapinnan avulla](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
+Tämä on ilmentymän etsintäpalvelussa käytettävä RESTful OData v4 -version päätepisteen osoite. Voit ladata myös palveluasiakirjan täältä.
+Lisätietoja: [Sovelluskehittäjän dokumentaatio: Organisaation URL-osoitteen haku Web-ohjelmointirajapinnan avulla](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)
 
 
 ### <a name="discovery-service"></a>Etsintäpalvelu
 
-Tämä on päätepisteosoite esiintymässä käytettävälle etsintäpalvelun SOAP-versiolle. Voit myös ladata palveluasiakirjan täältä.
-Lisätietoja: [Kehittäjien dokumentaatio: organisaation URL-osoitteen etsiminen etsintäpalvelun avulla](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
+Tämä on ilmentymän etsintäpalvelussa käytettävä SOAP-version päätepisteen osoite. Voit ladata myös palveluasiakirjan täältä.
+Lisätietoja: [Sovelluskehittäjän dokumentaatio: Organisaation URL-osoitteen haku etsintäpalvelun](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
   
 ### <a name="more-information"></a>Lisätietoja
 
-[Kehittäjien dokumentaatio: Kehittäjien resurssit -sivu](/dynamics365/customer-engagement/developer/developer-resources-page)<br />
-[Kehittäjien dokumentaatio: Dynamics 365 Customer Engagement -WWW-ohjelmointirajapinnan käyttäminen](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)<br />
-[Kehittäjien dokumentaatio: Organisaatiopalvelujen käyttö tietojen tai metatietojen lukemiseen ja kirjoittamiseen](/dynamics365/customer-engagement/developer/org-service/use-organization-service-read-write-data-metadata)<br />
-[Kehittäjien dokumentaatio: Azure-laajennukset Dynamics 365 Customer Engagementille](/dynamics365/customer-engagement/developer/azure-extensions)<br />
-[Kehittäjien dokumentaatio: organisaation URL-osoitteen etsiminen WWW-ohjelmointirajapinnan avulla](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)<br />
-[Kehittäjien dokumentaatio: organisaation URL-osoitteen etsiminen etsintäpalvelun avulla](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
+[Sovelluskehittäjän dokumentaatio: Sovelluskehittäjän resurssit -sivu](/dynamics365/customer-engagement/developer/developer-resources-page)<br />
+[Sovelluskehittäjän dokumentaatio: Dynamics 365 Customer Engagement -sovelluksen Web -ohjelmointirajapinnan käyttäminen](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-web-api)<br />
+[Sovelluskehittäjän dokumentaatio: Organisaation palvelun käyttäminen tietojen tai metatietojen lukemisessa tai kirjoittamisessa](/dynamics365/customer-engagement/developer/org-service/use-organization-service-read-write-data-metadata)<br />
+[Sovelluskehittäjän dokumentaatio: Dynamics 365 Customer Engagement -sovelluksen Azure-laajennukset](/dynamics365/customer-engagement/developer/azure-extensions)<br />
+[Sovelluskehittäjän dokumentaatio: Organisaation URL-osoitteen haku Web-ohjelmointirajapinnan avulla](/dynamics365/customer-engagement/developer/webapi/discover-url-organization-web-api)<br />
+[Sovelluskehittäjän dokumentaatio: Organisaation URL-osoitteen haku etsintäpalvelun](/dynamics365/customer-engagement/developer/org-service/discover-url-organization-organization-service)
   
 

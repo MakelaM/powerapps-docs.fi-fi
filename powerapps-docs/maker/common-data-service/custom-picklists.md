@@ -33,7 +33,8 @@ Asetusjoukkoja voidaan luoda kahdella eri tavalla: asetusjoukkoluettelosta porta
 
 4. Anna Uusi kenttä -paneelissa kentän **näyttönimi**. **Nimi** täytetään automaattisesti. Sitä käytetään kentän yksilöllisenä nimenä. **Näyttönimeä** käytetään, kun tämä kenttä esitellään käyttäjille. **Nimeä** käytetään sovelluksen luomisen yhteydessä lausekkeissa ja kaavoissa.
 
-    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttä -paneeli")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttä -paneeli")
 
 5. Valitse avattava **Tietotyyppi**-luettelo ja valitse sitten **Asetusjoukko** tai **Monivalinta-asetusjoukko**.
 
@@ -46,34 +47,40 @@ Asetusjoukkoja voidaan luoda kahdella eri tavalla: asetusjoukkoluettelosta porta
 
 7. Näyttöön avautuu paneeli, jossa voi luoda asetusjoukon. **Näyttönimi** ja **nimi** saadaan kentän nimestä, mutta arvoja voi muuttaa tarvittaessa. Valitse **Lisää uusi kohde**, kun haluat aloittaa asetusluettelon luomisen. Toista tätä vaihetta, kunnes kaikki kohteet on luotu.
 
-    ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "Uusi asetusjoukko")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/field-optionsetpanel.png "Uusi asetusjoukko")
 
 8. Kun olet syöttänyt kohteet, valitse **Tallenna** ja luo asetusjoukko.
 
-    ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Uusi asetusjoukko")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/field-optionsetpanel-values.png "Uusi asetusjoukko")
 
 9. Valitse **Valmis**, kun haluat sulkea kenttäpaneelin. Valitse sitten **Tallenna entiteetti**, kun haluat tallentaa entiteetin Common Data Service -sovellukseen.
 
     > [!NOTE]
     > Voit valita jonkin kohteista tämän kentän **oletusarvoksi**. Se valitaan oletusarvoksi, kun käyttäjät luovat entiteetille uusia tietueita.
 
-    ![Uusi kenttä](./media/data-platform-cds-newoptionset/fieldpanel-2.png "Uusi kenttä -paneeli")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi kenttä](./media/data-platform-cds-newoptionset/fieldpanel-2.png "Uusi kenttä -paneeli")
 
 ## <a name="creating-an-option-set-from-the-option-set-list"></a>Asetusjoukon luominen asetusjoukkoluettelosta
 
 1. Laajenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osa ja napsauta tai napauta **Asetusjoukot**-kohtaa vasemmanpuoleisessa siirtymisruudussa.
 
-    ![Asetusjoukot](./media/data-platform-cds-newoptionset/optionsetlist.png "Asetusjoukkoluettelo")
+    > [!div class="mx-imgBorder"] 
+    > ![Asetusjoukot](./media/data-platform-cds-newoptionset/optionsetlist.png "Asetusjoukkoluettelo")
 
 2. Valitse **Uusi asetusjoukko**
 
 3. Uudessa näyttöön avautuvassa paneelissa luodaan asetusjoukko. Anna **näyttönimi** ja **nimi**. Valitse **Lisää uusi kohde**, kun haluat aloittaa asetusluettelon luomisen. Toista tätä vaihetta, kunnes kaikki kohteet on luotu.
 
-    ![Asetusjoukon luominen](./media/data-platform-cds-newoptionset/optionset-create.png "Asetusjoukon luominen")
+    > [!div class="mx-imgBorder"] 
+    > ![Asetusjoukon luominen](./media/data-platform-cds-newoptionset/optionset-create.png "Asetusjoukon luominen")
 
 4. Kun olet syöttänyt kohteet, valitse **Tallenna** ja luo asetusjoukko.
 
-    ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/optionset-create-values.png "Uusi asetusjoukko")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi asetusjoukko](./media/data-platform-cds-newoptionset/optionset-create-values.png "Uusi asetusjoukko")
 
 5. Nyt voit käyttää tätä asetusjoukkoa luomalla entiteetille uuden kentän.
 

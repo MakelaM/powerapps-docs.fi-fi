@@ -1,4 +1,4 @@
 > [!WARNING]
-> Jos poistat entiteettitietueen käyttämän vaihtoehdon, kyseisen tietueen tiedot muuttuvat virheellisiksi, kun olet tallentanut muutoksesi yleiseen asetusjoukkoon.
+> Jos poistat asetuksen, jota entiteettitietue on käyttänyt, tietueen tiedot lakkaavat toimimasta sen jälkeen, kun tallennat muutokset yleiseen asetusjoukkoon.
 >
->Ennen kuin poistat vaihtoehdon, jota on käytetty, sinun kannattaa muuttaa kaikkien niiden entiteettitietueiden arvot, jotka käyttävät kyseistä vaihtoehtoa, kelvollisiksi arvoiksi.
+>Ennen kuin poistat asetuksen, jota on käytetty, arvot kaikissa liittyvissä entiteettitietueissa on muutettava kelvollisiksi arvoiksi.

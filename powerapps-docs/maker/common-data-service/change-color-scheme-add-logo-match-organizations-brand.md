@@ -82,18 +82,21 @@ Voit luoda sovelluksellesi mukautetun ulkoasun (teeman) muuttamalla mukauttamatt
 5. Valitse **CRM-oletusteema**. 
 
 Seuraavassa näyttökuvassa on osa oletusteeman asetuksista.  
-  
-![Oletusteema](media/default-theme.png) 
+
+> [!div class="mx-imgBorder"] 
+> ![Oletusteema](media/default-theme.png) 
   
  Olemme kopioineet oletusteeman ja muuttaneet värejä. Seuraavissa näyttökuvissa näkyvät uudet siirtymisen ja korostamisen värit. Voit myös valita tuotteelle uuden logon.  
   
  Seuraavassa näyttökuvassa näkyy uusi siirtymisen väri.  
-  
- ![Hellävaraisen vihreät teemavärit](media/theme-gentle-green.png "Hellävaraisen vihreät teemavärit")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Hellävaraisen vihreät teemavärit](media/theme-gentle-green.png "Hellävaraisen vihreät teemavärit")  
   
  Seuraavassa näyttökuvassa näkyvät asiakkaan entiteetin ruudukko ja uusi korostusväri.  
-  
- ![Hellävaraisen vihreä teeman tiliruutu](media/themes-gentle-green-account-grid.png "Hellävaraisen vihreä teeman tiliruutu")  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Hellävaraisen vihreä teeman tiliruutu](media/themes-gentle-green-account-grid.png "Hellävaraisen vihreä teeman tiliruutu")  
   
 <a name="Publish"></a>   
 ## <a name="preview-and-publish-a-theme"></a>Teeman esikatseleminen ja julkaiseminen  

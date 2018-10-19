@@ -1,6 +1,6 @@
 ---
-title: Koontikenttien määrittäminen PowerAppseilla | MicrosoftDocs
-description: Opettele määrittämään koontikenttiä
+title: Koontikenttien määrittäminen PowerAppsissa | MicrosoftDocs
+description: Koontikenttien määrittäminen
 ms.custom: ''
 ms.date: 05/23/2018
 ms.reviewer: ''
@@ -9,208 +9,208 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: ff0504a1-01bd-4f9b-b884-7f84911d86c3
 caps.latest.revision: 58
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: c76162747ac2bda27c46895290e5943b7f46739f
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39674432"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="define-rollup-fields-that-aggregate-values"></a>Arvoja koostavien koontikenttien määrittäminen
 
-Koontikenttien avulla käyttäjät voivat saada merkityksellisiä tietoja valvomalla tärkeitä liiketoiminnan arvoja. Koontikenttä sisältää koostearvon, joka on laskettu tiettyyn tietueeseen liittyvistä tietueista. Tämä sisältää säännönmukaisia entiteettejä ja aktiviteettientiteettejä, kuten sähköpostiviestejä ja tapaamisia.
+# <a name="define-rollup-fields-that-aggregate-values"></a>Määritä koontikenttiä, jotka kokoavat arvoja
 
-Monimutkaisemmissa tilanteissa voit koostaa tietoja tietueiden hierarkiasta. Järjestelmänvalvojana tai mukauttajana voit määrittää koontikenttiä mukauttamistyökalujen avulla PowerAppsissa kirjoittamatta koodia.  
+Koontikentät auttavat käyttäjiä tärkeiden liiketoiminnan mittareiden seuraamisessa. Koontikenttä sisältää tiettyyn tietueeseen liittyvistä tietueista lasketun koontiarvon. Tämä sisältää tavallisia entiteettejä ja aktiviteettientiteettejä, kuten sähköposteja ja tapaamisia.
+
+Monimutkaisissa tilanteissa voit koostaa tietoja tietuehierarkiasta. Järjestelmänvalvojana tai mukauttajana voit määrittää koontikenttiä käyttämällä mukautustyökaluja PowerAppsissa ilman koodin kirjoittamista.  
   
 <a name="BKMK_benefitsandcapabilities"></a> 
  
 ## <a name="rollup-fields-benefits-and-capabilities"></a>Koontikenttien edut ja ominaisuudet  
 
-Koontikenttien etuja ja ominaisuuksia ovat seuraavat asiat:  
+Koontikentillä on seuraavia etuja ja ominaisuuksia:  
   
-- Visualisoinnin muokkaaminen on helppoa. Voit luoda koontikenttiä kenttäeditorilla tavallisten kenttien tapaan.  
-- Laaja valikoima koostefunktioita. Voit koostaa tietoja käyttämällä seuraavia funktioita: `SUM`, `COUNT`, `MIN`, `MAX` ja `AVG`.  
-- Täysi suodatintuki koosteelle. Voit määrittää eri suodattimia lähde-entiteetille tai liittyvälle entiteetille määritettäessä useita ehtoja.  
-- Käyttöliittymän saumaton integrointi. Voit sisällyttää koontikenttiä lomakkeisiin, näkymiin, kaavioihin ja raportteihin.  
-- Koontikentät ovat ratkaisun osia. Voit siirtää koontikenttiä helposti osina ympäristöjen välillä ja jakaa ne ratkaisuihin.  
-- Koontikentät ja lasketut kentät täydentävät toisiaan. Voit käyttää koontikenttää lasketun kentän osana ja päinvastoin.  
-- Voit määrittää koontikenttiä käyttämään mukautettuja ohjausobjekteja.  
+- Visuaalinen muokkaaminen on helppoa. Voit luoda koontikenttiä käyttämällä kenttäeditoria vastaavalla tavalla kuin tavallisten kenttien luonnissa.  
+- Laaja valikoima koostefunktioita. Voit koostaa tiedot käyttämällä seuraavia toimintoja: `SUM`, `COUNT`, `MIN`, `MAX` ja `AVG`.  
+- Täysi suodatinten tuki koostamiselle. Voit määrittää erilaisia suodattimia lähde-entiteetille tai liittyvälle entiteetille asettamalla useita ehtoja.  
+- Saumaton integraatio käyttöliittymän kanssa. Voit sisällyttää koontikenttiä lomakkeille, näkymiin, kaavioihin ja raportteihin.  
+- Koontikentät ovat ratkaisun osia. Voit siirtää helposti koontikenttiä osina ympäristöjen välillä ja jakaa niitä ratkaisuissa.  
+- Koontikentät ja lasketut kentät ovat toisiaan täydentäviä. Voit käyttää koontikenttää osana laskettua kenttää ja päinvastoin.  
+- Voit määrittää koontikentät niin, että ne käyttävät mukautettuja ohjausobjekteja.  
   
- Esimerkkejä koontikentistä:  
+ Koontikenttäesimerkkejä:  
   
 - Tilin avointen mahdollisuuksien arvioitu kokonaistuotto  
-- Avointen mahdollisuuksien arvioitu kokonaistuotto kaikilla hierarkian tileillä  
-- Mahdollisuuden arvioitu kokonaistuotto alimahdollisuudet mukaan lukien  
-- Kampanjan luomien liidien arvioitu kokonaisarvo  
-- Suuren prioriteetin avointen palvelupyyntöjen määrä kaikilla hierarkian tileillä  
-- Kaikkien suuren prioriteetin avointen palvelupyyntöjen aikaisin luontiaika tilille  
+- Hierarkian kaikkien tilien avointen mahdollisuuksien arvioitu kokonaistuotto  
+- Mahdollisuuden arvioitu kokonaistuotto alatason mahdollisuudet mukaan lukien  
+- Kampanjan luomien hyväksyttyjen liidien arvioitu kokonaistuotto  
+- Korkean prioriteetin avointen tapausten määrä hierarkian kaikissa tileissä  
+- Tilin kaikkien tärkeiden avointen palvelupyyntöjen aikaisin luontiaika  
   
-Kukin koostekenttä luo kaksi lisävarustekenttää, joissa on  *&lt;fieldname&gt;*`_date`- ja *&lt;fieldname&gt;*`_state`-jälkiliitemalli. `_date`-kentässä on päivämäärä-/aikatietoja ja `_state`-kentässä on kokonaislukutietoja. `_state`-kentässä on seuraavat arvot:  
+Jokainen koontikenttä luo kaksi apukenttää, joilla on jälkiliitteet *&lt;fieldname&gt;*`_date` ja *&lt;fieldname&gt;*`_state`. `_date`-kenttä sisältää päivämäärän ja ajan tiedot. `_state`-kenttä sisältää kokonaislukutiedot. `_state`-kentällä on seuraavat arvot ja niihin liittyvät kuvaukset:  
   
-|Arvo|Tila|Kuvaus|  
+|Arvo|Osavaltio|Kuvaus|  
 |-|-|-|  
-|0|NotCalculated|Kenttäarvo on vielä laskematta.|  
-|1|Laskettu|Kenttäarvo on laskettu viimeisimmän päivitysajan mukaan _päivämäärä-kentässä.|  
-|2|OverflowError|Kentän arvon laskutoimitus aiheutti ylivuotovirheen.|  
-|3|OtherError|Kentän arvon laskutoimitus epäonnistui sisäisen virheen vuoksi. Laskutoimituksen seuraava suorittaminen todennäköisesti korjaa sen.|  
-|4|RetryLimitExceeded|Kentän arvon laskutoimitus epäonnistui, koska arvon laskennan uudelleenyritysten enimmäismäärä ylitettiin samanaikaisuuden ja lukitusristiriitojen suuren määrän vuoksi.|  
-|5|HierarchicalRecursionLimitReached|Kentän arvon laskutoimitus epäonnistui, koska laskutoimituksen enimmäishierarkiasyvyyden raja saavutettiin.|  
-|6|LoopDetected|Kentän arvon laskutoimitus epäonnistui, koska tietueen hierarkiassa havaittiin rekursiivinen silmukka.|  
+|0|NotCalculated|Kentän arvoa ei ole vielä laskettu.|  
+|1|Laskettu|Kentän arvo on laskettu viimeisen _päivämäärä-kentän päivitysajan mukaisesti.|  
+|2|OverflowError|Kentän arvon laskenta aiheutti ylivuotovirheen.|  
+|3|OtherError|Kentän arvon laskenta epäonnistui sisäisen virheen vuoksi. Seuraava laskentatyön suoritus voi korjata sen.|  
+|4|RetryLimitExceeded|Kentän arvon laskenta epäonnistui, koska uudelleenyritysten enimmäismäärä arvon laskemiseksi ylittyi suuren yhdenaikaisuus- ja lukitusristiriitojen määrän vuoksi.|  
+|5|HierarchicalRecursionLimitReached|Kentän arvon laskenta epäonnistui, koska laskentahierarkian enimmäissyvyys on saavutettu.|  
+|6|LoopDetected|Kentän arvon laskenta epäonnistui, koska tietueen hierarkiassa havaittiin rekursiivinen silmukka.|  
   
 <a name="BKMK_calculations"></a>  
  
-## <a name="rollup-calculations"></a>Koonnin laskutoimitukset  
+## <a name="rollup-calculations"></a>Koostelaskennat  
 
-Koonnit laskevat ajoitetut järjestelmätyöt, jotka suoritetaan asynkronisesti taustalla. Vain järjestelmänvalvojat voivat tarkastella ja hallita koontitöitä. 
+Taustalla asynkronisesti suoritettavat ajastetut järjestelmätyöt laskevat koosteet. Vain järjestelmänvalvoja voi tarkastella ja hallita koostetöitä. 
 
-### <a name="view-rollup-jobs"></a>Koontitöiden tarkasteleminen
+### <a name="view-rollup-jobs"></a>Koostetöiden tarkasteleminen
 
-Voit tarkastella koontitöitä seuraavasti:
+Voit tarkastella koostetöitä seuraavasti:
 
-1. Tarkastellessasi **Common Data Servicesin oletusratkaisua** muokkaa URL-osoitetta poistaen kaiken kohdan `dynamics.com` jälkeen ja päivitä sivu.
-2. Valitse **Asetukset**-alueella **Järjestelmä** > **Järjestelmätyöt**.<br />![Siirry järjestelmätöihin](media/navigate-system-jobs.png)
+1. Muokkaa **Common Data Services -oletusratkaisun** tarkastelemisen yhteydessä URL-osoitetta. Poista kaikki osoitteen `dynamics.com` jälkeiset merkit ja päivitä sivu.
+2. Valitse **Asetukset**-alue ja valitse sitten **Järjestelmä** > **Järjestelmätyöt**.<br />![Järjestelmätöihin siirtyminen](media/navigate-system-jobs.png)
 1. Valitse näkymävalitsimessa **Toistuvat järjestelmätyöt**.
-2. Löydät nopeasti asianmukaisen työn suodattamalla järjestelmätyön tyypin mukaan: **Koontikentän joukkolaskenta** tai **Laske koontikenttä**.
+2. Löydät nopeasti haluamasi projektin suodattamalla järjestelmätyön tyypin perusteella: **Koontikentän joukkolaskenta** tai **Koontikentän laskenta**.
  
 ### <a name="mass-calculate-rollup-field"></a>Koontikentän joukkolaskenta
 
-**Koontikentän joukkolaskenta** on toistuva työ, joka luodaan koontikenttää kohden. Se suoritetaan kerran koontikentän luomisen tai päivittämisen jälkeen. Työ laskee määritetyn koontikentän arvon kaikissa olemassa olevissa tietueissa, jotka sisältävät tämän kentän. Oletusarvon mukaan työ suoritetaan 12 tuntia kentän luomisen tai päivittämisen jälkeen. Kun työ on valmis, se ajoitetaan automaattisesti suoritettavaksi kaukaisessa tulevaisuudessa noin 10 vuoden kuluttua. Jos kenttää on muokattu, työ nollautuu suoritettavaksi uudelleen 12 tunnin kuluttua päivityksen jälkeen. 12 tunnin viive on tarpeen, jotta **Koontikentän joukkolaskenta** suoritetaan ympäristön ei-toiminnallisena aikana. On suositeltavaa, että järjestelmänvalvoja säätää **Koontikentän joukkolaskenta** -työn alkamisaikaa koontikentän luomisen tai muokkaamisen jälkeen siten, että se suoritetaan ei-toiminnallisena aikana. Esimerkiksi keskiyö olisi hyvä aika työn suorittamiselle koontikenttien tehokkaan käsittelyn varmistamiseksi.  
+**Koontikentän joukkolaskenta** on koontikenttäkohtaisesti luotu toistuva työ. Se suoritetaan kerran, kun olet luonut koontikentän tai päivittänyt sitä. Työ laskee tietyn koontikentän arvon kaikissa olemassa olevissa tietueissa, jotka sisältävät tämän kentän. Oletusarvoisesti työ suoritetaan 12 tuntia sen jälkeen, kun olet luonut tai päivittänyt kentän. Kun työ on valmis, se ajoitetaan automaattisesti suoritettavaksi tulevaisuudessa noin 10 vuoden kuluessa. Jos kenttää on muokattu, työ asettaa sen suoritettavaksi uudelleen 12 tuntia päivityksen jälkeen. 12 tunnin viive tarvitaan, jotta voidaan taata, että **koontikentän joukkolaskenta** suoritetaan ympäristön työajan ulkopuolella. On suositeltavaa järjestelmänvalvoja säätää **koontikentän joukkolaskennan** aloitusaika luonnin tai muutoksen jälkeen siten, että se suoritetaan työajan ulkopuolella. Hyvä työn suoritusaika on esimerkiksi keskiyö, jotta koontikentät käsitellään tehokkaasti.  
 
-### <a name="calculate-rollup-field"></a>Laske koontikenttä 
+### <a name="calculate-rollup-field"></a>Koontikentän laskenta 
 
-**Laske koontikenttä** on toistuva työ, joka tekee lisääviä laskutoimituksia kaikille koontikentille määritetyn entiteetin olemassa olevissa tietueissa. Entiteettiä kohden on vain yksi **Laske koontikenttä** -työ. Lisäävät laskutoimitukset tarkoittavat sitä, että **Laske koontikenttä** -työ käsittelee tietueet, jotka on luotu, päivitetty tai poistettu viimeisen **Koontikentän joukkolaskenta** -työn suorittamisen jälkeen. Suurimman toistuvuuden oletusasetus on yksi tunti. Työ luodaan automaattisesti, kun entiteetin ensimmäinen koontikenttä luodaan, ja poistetaan, kun viimeinen koontikenttä poistetaan.  
+**Koontikentän laskenta** on toistuvan työ, joka suorittaa tietyn entiteetin olemassa olevien tietueiden kaikkien koontikenttien lisääviä laskelmia. Jokaisella entiteetillä on vain yksi **Koontikentän laskenta** -työ. Lisäävä laskeminen tarkoittaa, että **Koontikentän laskenta** -työ käsittelee tietueet, jotka luotiin, päivitettiin tai poistettiin viimeisen **Koontikentän joukkolaskenta** -työnsuorituksen jälkeen. Suurin toistumisen oletusasetus on yksi tunti. Työ luodaan automaattisesti, kun entiteetin ensimmäinen koontikenttä luodaan ja poistetaan, kun viimeinen koontikenttä poistetaan.  
 
-## <a name="online-recalculation-option"></a>Online-uudelleenlaskenta-asetus
-Jos viet kohdistimen lomakkeen koontikentän päälle, näet viimeisen koonnin ajan ja voit päivittää koontiarvon valitsemalla kentän vieressä olevan Päivitä-kuvakkeen alla kuvatulla:  
+## <a name="online-recalculation-option"></a>Uudelleenlaskenta verkossa -vaihtoehto
+Jos viet osoittimen lomakkeen koontikentän päälle, näet viimeisen koosteen ajan ja voit päivittää koosteen arvoa napsauttamalla Päivitä-kuvaketta kentän vieressä alla olevan kuvan mukaisesti:  
 
-![Tililomakkeen koontikenttä](media/rollup-field-on-account-form.png)
+![Asiakaslomakkeen koontikenttä](media/rollup-field-on-account-form.png)
   
 
-Muutamia seikkoja kannattaa ottaa huomioon Online-uudelleenlaskenta-asetusta käytettäessä (lomakkeen manuaalinen päivitys):  
+Uudelleenlaskenta verkossa -vaihtoehtoa käytettäessä on pidettävä mielessä muutamia asioita (lomakkeen manuaalinen päivitys):  
   
-- Sinulla on oltava entiteetin kirjoitusoikeudet ja kirjoittamisen käyttöoikeudet sille lähdetietueelle, jolle pyydät päivitystä. Jos esimerkiksi lasket arvioitua tuottoa tilin avoimista mahdollisuuksista, sinulla ei tarvitse olla kirjoitusoikeuksia mahdollisuusentiteetille, ainoastaan tilientiteetille.  
-- Tämä vaihtoehto on käytettävissä vain online-tilassa. Et voi käyttää sitä offline-tilassa.  
-- Koontipäivityksen aikana tietueiden enimmäismäärä on rajoitettu 50 000 tietueeseen. Jos kyseessä on hierarkkinen koonti, tämä koskee koko hierarkian liittyviä tietueita. Jos raja ylitetään, näyttöön tulee virhesanoma: *Laskutoimituksia ei voida suorittaa online-tilassa, koska 50 000 liittyvän tietueen laskentaraja saavutettiin.* Tätä rajaa ei sovelleta, kun järjestelmätyöt laskevat koonnin uudelleen automaattisesti.  
-- Lähdetietueen hierarkian enimmäissyvyytenä on 10. Jos raja ylitetään, näyttöön tulee virhesanoma: *Laskutoimituksia ei voida suorittaa online-tilassa, koska lähdetietueen hierarkian enimmäissyvyyden raja 10 saavutettiin.* Tätä rajaa ei sovelleta, kun järjestelmätyöt laskevat koonnin uudelleen automaattisesti.  
+- Sinulla on oltava sen entiteetin ja lähdetietueen kirjoitusoikeudet, jolle pyydät päivitystä. Jos lasket esimerkiksi tilin avointen mahdollisuuksien arvioitua myyntituottoa, sinulla ei tarvitse olla kirjoitusoikeuksia mahdollisuus-entiteettiin, vain tili-entiteettiin.  
+- Tämä asetus on käytettävissä vain online-tilassa. Sitä ei voi käyttää offline-tilassa.  
+- Tietueiden enimmäismäärä on rajoitettu koosteen päivityksen 50 000 tietueeseen. Hierarkkisen koosteen tapauksessa tämä koskee liittyviin tietueisiin hierarkiassa. Jos aikarajoitus ylittyy, näet virheilmoituksen: *Laskelmia ei voi tehdä online-tilassa, koska on saavutettu liittyvien tietueiden laskennan enimmäisraja 50 000 liittyvää tietuetta.* Tätä rajaa ei sovelleta, kun järjestelmätyöt laskee koosteen automaattisesti.  
+- Hierarkian enimmäissyvyys on rajoitettu arvoon 10 lähdetietueelle. Jos raja ylittyy, näet virheilmoituksen: *Laskelmia ei voi tehdä online-tilassa, koska on saavutettu hierarkian syvyysrajoitus 10 lähdetietueelle.* Tätä rajaa ei sovelleta, kun järjestelmätyöt laskee koosteen automaattisesti.  
 
-## <a name="modify-rollup-job-recurrence"></a>Koontityön toistumisen muokkaaminen
+## <a name="modify-rollup-job-recurrence"></a>Koostetyön toiston muokkaaminen
 
-Järjestelmänvalvojana voit muokata koontityön toistumiskaavaa sekä lykätä, keskeyttää tai jatkaa koontityötä. Et kuitenkaan voi peruuttaa tai poistaa koontityötä. 
+Järjestelmänvalvojana voit muokata koostetyön toistuvuutta, lykätä, keskeyttää tai jatkaa koostetyön suorittamista. Et voi kuitenkaan peruuttaa tai poistaa koostetyötä. 
 
-Jos haluat keskeyttää, lykätä, jatkaa tai muokata toistumiskaavaa, sinun on tarkasteltava järjestelmätöitä. Lisätietoja on kohdassa [Koontitöiden tarkasteleminen](#view-rollup-jobs) 
+Voit keskeyttää toistuvuuden tai lykätä, jatkaa tai muokata sitä tarkastelemalla järjestelmätöitä. Lisätietoja on kohdassa [Koostetöiden tarkasteleminen](#view-rollup-jobs) 
 
 Valitse siirtymispalkissa **Toiminnot** ja valitse haluamasi toiminto. 
 
-**Koontikentän joukkolaskenta** -työlle valittavissa olevat vaihtoehdot ovat **Jatka**, **Lykkää** ja **Keskeytä**. 
+**Koontikenttien joukkolaskenta** -työlle käytettävissä olevat valinnat ovat: **Jatka**, **Lykkää** ja **Keskeytä**. 
 
-**Laske koontikenttä** -työlle valittavissa olevat vaihtoehdot ovat **Muokkaa toistoa**, **Jatka**, **Lykkää** ja **Keskeytä**.  
+**Koontikentän laskenta** -työlle käytettävissä olevat valinnat ovat: **Muokkaa toistoa**, **Jatka**, **Lykkää** ja **Keskeytä**.  
   
 <a name="BKMK_businessscenarios"></a>  
  
-## <a name="examples"></a>Esimerkkejä 
+## <a name="examples"></a>Esimerkit 
 
-Katsotaanpa useita esimerkkejä koontikentistä. Koostamme tietoja tietueelle liittyvistä tietueista sekä hierarkian kanssa että ilman sitä. Koostamme tietoja tietueelle myös liittyvistä aktiviteeteistä sekä epäsuorasti tietueeseen liittyvistä aktiviteeteistä Aktiviteetin osapuoli -entiteetin kautta. Kussakin esimerkissä määritämme koontikentän kenttäeditoria käyttämällä. Avaa kenttäeditori avaamalla ratkaisunhallinta ja laajentamalla **Osat** > **Entiteetit**. Valitse haluamasi entiteetti ja valitse **Kentät**. Valitse **Uusi**. Anna editorissa tarvittavat tiedot kentälle, mukaan lukien **Kenttätyyppi** ja **Tietotyyppi**. **Kenttätyyppi**-kohdassa valitse **Koonti**, kun olet valinnut tietotyypin. Tietotyyppeihin sisältyvät desimaali- tai kokonaisluvut, valuutta sekä päivämäärä ja aika. Valitse **Muokkaa**-painike **Kenttätyyppi**-kohdan vieressä. Tämä vie sinut koontikentän määrityksen editoriin. Koontikentän määritys sisältää kolme osaa: **Lähde-entiteetti**, **Liittyvä entiteetti** ja **Kooste**.  
+Seuraavassa on joitakin koontikenttäesimerkkejä. Esimerkissä yhdistämme tietueen tietoja liittyvistä tietueista hierarkian avulla ja hierarkiaa käyttämättä. Koostamme tietueen tiedot liittyvistä aktiviteeteista ja epäsuorasti tietueeseen liittyvistä aktiviteeteista ActivityParty-entiteetin kautta. Määritämme jokaisessa esimerkissä koontikentän kenttäeditorin avulla. Avaa kenttäeditori avaamalla ratkaisunhallinta ja laajentamalla **Osat** > **Entiteetit**. Valitse ensin haluamasi entiteetti ja sitten **Kentät**. Valitse **Uusi**. Anna editorissa vaadittavat kentän tiedot, mukaan lukien **Kentän tyyppi** ja **Tietotyyppi**. Valitse **Kentän tyyppi** kohdassa **Kooste**, kun olet valinnut tietotyypin. Tietotyyppejä ovat desimaali- tai kokonaisluvut, valuutta ja päivämäärä/kellonaika. Napsauta **Muokkaa**-painiketta **Kentän tyyppi** -kentän vieressä. Tämä avaa koontikentän määritys -editorin. Koontikentän määritys muodostuu kolmesta osasta: **Lähde-entiteetti**, **Liittyvä entiteetti** ja **Kooste**.  
   
--   **Lähde-entiteetti**-osassa voit määrittää entiteetin, jolle koontikenttä määritetään, sekä sen, teetkö koostamisen hierarkian kautta. Voit lisätä useita ehtoja sisältäviä suodattimia määrittääksesi hierarkian tietueet, joita haluat käyttää koonnissa.  
+-   **Lähde-entiteetti** -osassa määrität entiteetin jolle koontikenttä on määritetty ja koostetaanko hierarkian kautta. Voit lisätä suodattimia useilla ehdoilla määrittääksesi hierarkian tietueet joita haluat käyttää koosteeseen.  
   
--   **Liittyvät entiteetit** -osassa voit määrittää entiteetin, jonka kautta teet koostamisen. Tämä osa on valinnainen, kun valitset koonnin lähde-entiteetin hierarkian kautta. Voit lisätä useita ehtoja sisältäviä suodattimia määrittääksesi, mitä liittyviä tietueita käytät laskutoimituksessa. Esimerkiksi sisällytät tuoton avoimista mahdollisuuksista, joiden vuosittainen tuotto on suurempi kuin 1 000 $.  
+-   **Liittyvä entiteetti** -osassa voit määrittää entiteetin jonka kautta koostetaan. Tämä osa on valinnainen, kun valitset koostamisen lähde-entiteetin hierarkian kautta. Voit lisätä suodattimia useilla ehdoilla määrittääksesi mitä liittyviä tietueita laskennassa käytetään. Jos esimerkiksi sisällytät sellaisten avointen mahdollisuuksien tuoton joiden vuosituotto on suurempi kuin 1000 €.  
   
--   **Kooste**-osassa voit määrittää arvon, jonka haluat laskea. Voit valita käytettävissä olevista koostefunktioista, kuten SUM, COUNT, MIN, MAX tai AVG.  
+-   **Kooste** -osassa voit määrittää mittarin, jonka haluat laskea. Voit valita käytettävissä olevista koostefunktioista, kuten SUM, COUNT, MIN, MAX tai AVG.  
   
-### <a name="aggregate-data-for-a-record-from-related-records"></a>Tietojen koostaminen tietueelle liittyvistä tietueista  
+### <a name="aggregate-data-for-a-record-from-related-records"></a>koontitiedot tietueelle liittyvistä tietueista  
 
-Tässä esimerkissä hierarkiaa ei käytetä. Arvioitu kokonaistuotto lasketaan tiliä kohden liittyvistä avoimista mahdollisuuksista.  
+Tässä esimerkissä ei käytetä hierarkiaa. Tilille lasketaan arvioitu kokonaistuotto liittyvistä avoimista mahdollisuuksista.  
 
-![Arvioidun tuoton koostaminen tilille](media/rollup-field-no-hierarchy.png)
+![Tilin arvioitujen tulojen kokoaminen](media/rollup-field-no-hierarchy.png)
   
-### <a name="aggregate-data-for-a-record-from-the-child-records-over-the-hierarchy"></a>Tietojen koostaminen tietueelle alitietueista hierarkian kautta 
+### <a name="aggregate-data-for-a-record-from-the-child-records-over-the-hierarchy"></a>Koontitiedot tietueelle alitietueista hierarkian kautta. 
  
-Tässä esimerkissä laskemme mahdollisuuden arvioidun kokonaistuoton, alimahdollisuudet mukaan lukien, hierarkian kautta.  
+Tässä esimerkissä laskemme mahdollisuuden arvioidun kokonaistuoton mukaan lukien alatason mahdollisuudet hierarkiassa.  
   
-![Arvioidun tuoton koostaminen, mahdollisuuden hierarkia](media/rollup-field-hierarchy-self.png)
+![Kooste arvioidusta myyntituotosta, mahdollisuushierarkia](media/rollup-field-hierarchy-self.png)
   
-### <a name="aggregate-data-for-a-record-from-the-related-records-over-the-hierarchy"></a>Tietojen koostaminen tietueelle liittyvistä tietueista hierarkian kautta
+### <a name="aggregate-data-for-a-record-from-the-related-records-over-the-hierarchy"></a>Koontitiedot tietueelle liittyvistä tietueista hierarkian kautta.
 
-Tässä esimerkissä laskemme avoimien mahdollisuuksien arvioidun kokonaistuoton kaikilla tileillä hierarkian kautta.  
+Tässä esimerkissä laskemme mahdollisuuden arvioidun kokonaistuoton kaikkien tilien osalta hierarkian kautta.  
   
-![Arvioidun tuoton koostaminen tilin hierarkian kautta](media/rollup-field-hierarchy.png)  
+![Kooste arvioidusta myyntituotosta tilihierarkian yllä](media/rollup-field-hierarchy.png)  
   
-### <a name="aggregate-data-for-a-record-from-all-related-activities"></a>Tietojen koostaminen tietueelle kaikista liittyvistä aktiviteeteistä
+### <a name="aggregate-data-for-a-record-from-all-related-activities"></a>Koostetiedot tietueelle kaikista liittyvistä aktiviteeteista
   
-Tässä esimerkissä laskemme käytetyn ja laskutetun kokonaisajan kaikista tiliin liittyvistä aktiviteeteistä. Tähän voi kuulua puhelimessa, tapaamisissa tai mukautettujen aktiviteettien parissa käytetty aika.  
+Tässä esimerkissä laskemme käytetyn ja lasketun kokonaisajan kaikista asiakkaaseen liittyvistä aktiviteeteista. Tähän voi sisältää puhelimessa, tapaamisissa tai mukautetuissa toiminnoissa käytetyn ajan.  
   
-Aiemmissa versioissa oli mahdollista määrittää koontikenttä yksittäiselle aktiviteetille, kuten puhelulle, faksille tai tapaamiselle. Mutta alla olevan esimerkin tuloksen saamiseksi tiedot oli laskettava yhteen laskettuja kenttiä käyttämällä. Nyt voit tehdä kaiken yhdessä vaiheessa määrittämällä yhden koontikentän aktiviteettientiteetille.  
+Aiemmissa versioissa pystyit määrittämään koontikentän yksittäiselle aktiviteetille, kuten puhelulle, faksille tai tapaamiselle. Mutta alla olevan esimerkin saavuttamiseksi sinun oli luotava kokonaissumma laskennallisten kenttien avulla. Nyt voit tehdä kaiken yhdessä vaiheessa määrittämällä koontikentän aktiviteettientiteetille.  
   
-![Kaikkien tilin aktiviteettien koonti](media/rollup-enhancements-activities.png)  
+![Kaikkien tilin aktiviteettien kooste](media/rollup-enhancements-activities.png)  
   
-### <a name="aggregate-data-for-a-record-from-all-related-activities-and-activities-indirectly-related-via-the-activity-party-entity"></a>Tietojen koostaminen tietueelle kaikista liittyvistä aktiviteeteistä sekä epäsuorasti liittyvistä aktiviteeteistä Aktiviteetin osapuoli -entiteetin kautta  
+### <a name="aggregate-data-for-a-record-from-all-related-activities-and-activities-indirectly-related-via-the-activity-party-entity"></a>Tietueen tietojen koostaminen kaikista liittyvistä aktiviteeteista ja epäsuorasti tietueeseen liittyvistä aktiviteeteista Activity Party -entiteetin kautta.  
 
-Tässä esimerkissä laskemme niiden tilille lähetettyjen sähköpostiviestien kokonaismäärän, joissa tili on merkitty viestin Vastaanottaja- tai Kopion vastaanottaja -riville. Tämä tehdään määrittämällä **Osallistumistapa** **Suodattimet**-kohdassa Aktiviteetin osapuoli -entiteetille koontikentän määrityksessä. Jos et käytä suodatusta, aktiviteetin kaikkia saatavilla olevia osallistumistapoja käytetään laskutoimituksessa. 
+Tässä esimerkissä laskemme asiakkaalle lähetettyjen sähköpostiviestien kokonaismäärän, jossa asiakas on "Vastaanottaja"- tai "Kopio"-rivillä. Tämä tehdään määrittämällä **Osallistumistapa** kohdassa **SUODATTIMET**-aktiviteettiosapuolelle koontikentän määrityksessä. Jos et käytä suodatusta, laskennassa käytetään kaikkia aktiviteetin käytettävissä olevia osallistumistyyppejä. 
  
-Katso lisätietoja Aktiviteetin osapuoli -entiteetistä ja tietylle aktiviteetille saatavilla olevista osallistumistavoista kohdasta [Aktiviteetin osapuoli -entiteetti](/dynamics365/customer-engagement/developer/activityparty-entity).
+Lisätietoja tietyn aktiviteetin aktiviteetin osapuolientiteetistä ja käytettävissä olevista osallistumistyypeistä on kohdassa [ActivityParty-entiteetti](/dynamics365/customer-engagement/developer/activityparty-entity).
 
   
-![Liittyvien aktiviteettien ja aktiviteetin osapuolen koonti](media/rollup-enhancements-indirect-activities.png)  
+![Koosta liittyvät aktiviteetit ja aktiviteetin osapuolet](media/rollup-enhancements-indirect-activities.png)  
   
-### <a name="aggregate-data-for-a-record-from-related-records-using-the-avg-operator"></a>Tietojen koostaminen tietueelle liittyvistä tietueista AVG-operaattoria käyttämällä
+### <a name="aggregate-data-for-a-record-from-related-records-using-the-avg-operator"></a>Koostetiedot tietueelle liittyvistä tietueista käyttämällä AVG-operaattoria
 
-Tässä esimerkissä laskemme keskimääräisen arvioidun tuoton kaikista tiliin liittyvistä mahdollisuuksista.  
+Tässä esimerkissä laskemme keskimääräisen arvioidun tuoton kaikista asiakkaaseen liittyvistä mahdollisuuksista.  
   
 ![Keskimääräinen arvioitu tuotto Dynamics 365:ssä](media/rollup-enhancements-average.PNG)  
   
-Seuraavassa esimerkissä näytetään, miten voit laskea keskimääräisen arvioidun tuoton liittyvistä mahdollisuuksista tilihierarkian kautta. Keskimääräinen arvioitu tuotto on nähtävissä kullakin tasolla hierarkiassa.  
+Seuraavasta esimerkistä näkyy, kuinka liittyvien mahdollisuuksien keskimääräinen arvioitu tuotto lasketaan asiakashierarkian kautta. Keskimäärin arvioitu tuotto voidaan nähdä hierarkian jokaisella tasolla.  
   
 ![Keskimääräinen arvioitu tuotto Dynamics 365:ssä](media/cust-rollup-enhancements-avg-over-hierarchy.png)  
   
 <a name="BKMK_considerations"></a> 
 
-## <a name="rollup-field-considerations"></a>Koontikentän huomioon otettavia seikkoja 
+## <a name="rollup-field-considerations"></a>Koontikenttään liittyviä huomioita 
 
-Ota huomioon tietyt ehdot ja rajoitukset, kun työskentelet koontikenttien kanssa:  
+Sinun tulisi huomioida tietyt ehdot ja rajoitukset, kun työskentelet koontikenttien kanssa:  
   
-- Voit määrittää enintään 100 koontikenttää organisaatiolle ja enintään 10 koontikenttää entiteettiä kohden.  
-- Koontikenttien päivitykset eivät voi käynnistää työnkulkua.  
+- Voit määrittää enintään 100 koontikenttää organisaatiossa ja enintään 10 koontikenttää yhdelle entiteetille.  
+- Työnkulkua ei voi käynnistää koontikentän päivityksillä.  
 - Työnkulun odotusehto ei voi käyttää koontikenttää.  
-- Koontikentän koontia ei tueta.  
-- Koonti ei voi viitata laskettuun kenttään, joka käyttää toista laskettua kenttää, vaikka toisen lasketun kentän kaikki muut kentät olisivat nykyisessä entiteetissä.  
-- Koonti käyttää suodattimia vain lähde-entiteetissä tai liittyvissä entiteeteissä, yksinkertaisissa kentissä tai ei-monimutkaisissa lasketuissa kentissä.  
-- Koonti voidaan tehdä vain sellaisten liittyvien entiteettien kautta, joissa on 1:N-suhde. Koontia ei voi tehdä N:N-suhteen kautta.  
-- Koontia ei voi tehdä 1:N-suhteen kautta aktiviteettientiteetille tai Aktiviteetin osapuoli -entiteetille.  
-- Liiketoimintasäännöissä, työnkuluissa ja lasketuissa kentissä käytetään aina koontikentän viimeistä laskettua arvoa.  
-- Koontikenttä koostetaan järjestelmän käyttäjän kontekstissa. Kaikki käyttäjät voivat nähdä saman koontikentän arvon. Voit hallita koontikentän näkyvyyttä kenttätason suojauksella (FLS) rajoittamalla koontikentän käyttöoikeuksia. Lisätietoja  [Käyttöoikeuksien hallinta kenttätason suojausta käyttämällä](/dynamics365/customer-engagement/admin/field-level-security). 
+- Koontikentän koostetta ei tueta.  
+- Koonti ei voi viitata laskennalliseen kenttään, joka käyttää toista laskennallista kenttää, vaikka kaikki toisen laskennallisen kentän kentät kuuluisivat nykyiseen entiteettiin.  
+- Kooste voi käyttää suodattimia vain lähde-entiteettiin tai liittyviin entiteetteihin, yksinkertaisiin kenttiin tai ei monimutkaisiin laskennallisiin kenttiin.  
+- Kooste voidaan suorittaa vain liittyville entiteeteille suhteella 1:N. Koostetta ei voida suorittaa N:N-suhteiden kautta.  
+- Koostetta ei voida suorittaa 1:N-suhteessa aktiviteettientiteetille tai aktiviteetin osapuolen entiteetille.  
+- Liiketoimintasäännöt, työnkulut tai laskennalliset kentät käyttävät aina koontikentän viimeistä laskettua arvoa.  
+- Koontikenttä yhdistetään järjestelmän käyttäjän kontekstissa. Kaikki käyttäjät näkevät saman koontikentän arvon. Voit hallita koontikentän näkyvyyttä kenttätason suojauksella (FLS) rajoittamalla koontikentänkäyttöoikeuksia. Lisätietoja: [Käytön hallinta kenttätason suojauksen avulla](/dynamics365/customer-engagement/admin/field-level-security). 
 
-### <a name="precision-rounding"></a>Tarkkuuden pyöristys
+### <a name="precision-rounding"></a>Tarkkuuden pyöristäminen
  
-Jos koostamiskentän tarkkuus on suurempi kuin koontikentän tarkkuus, koostamiskentän tarkkuus pyöristetään alaspäin koontikentän tarkkuuteen, ennen kuin koostaminen suoritetaan. Seuraava esimerkki kuvaa tätä toimintaa. Oletetaan, että tilientiteetin koontikentällä, joka on liittyvien mahdollisuuksien arvioidun kokonaistuoton laskemista varten, on kahden desimaalin tarkkuus. Arvioitu tuotto -kenttä mahdollisuusentiteetissä on koostamiskenttä, jonka tarkkuus on neljä desimaalia. Tässä esimerkissä tilillä on kaksi liittyvää mahdollisuutta. Arvioidun tuoton koostettu summa lasketaan seuraavasti:  
+Jos koostamiskentän tarkkuus on korkeampi kuin koontikentän tarkkuus, koostamiskentän tarkkuus pyöristetään alaspäin koontikentän tarkkuuteen ennen koostamista. Toimintaa valaisee seuraava esimerkki. Oletetaan, että Asiakas-entiteetin koontikentän tarkkuus on liittyvien mahdollisuuksien kokonaistuloksen arvion laskennassa kahden desimaalin tarkkuudella. Arvioitu myyntituotto -kenttä mahdollisuusentiteetissä on koostamiskenttä, jonka tarkkuus on neljä desimaalia. Esimerkkitilillämme on kaksi liittyvää mahdollisuutta. Arvioidun myyntituoton koostettu summa lasketaan seuraavasti:  
   
-1. Arvioitu tuotto ensimmäiselle mahdollisuudelle: 1000,0041 $  
-1. Arvioitu tuotto toiselle mahdollisuudelle: 2000,0044 $  
-1. Arvioidun tuoton koostettu summa: 1000,00 $ + 2000,00 $ = 3000,00 $
+1. Arvioitu Ensimmäisen mahdollisuuden myyntituotto: 1000,0041 €  
+1. Arvioitu Toisen mahdollisuuden myyntituotto: 2000,0044 €  
+1. Koostettu summa arvioidusta Myyntituotto: 1000,00 $ + 2000,00 $ = 3000,00 $
 
-Kuten näet, tarkkuuden pyöristys kahteen desimaaliin koostamiskentässä tehdään ennen kuin koostaminen suoritetaan.  
+Kuten näet, pyöristys kahteen desimaaliin koostamiskenttään tehdään ennen koostamista.  
   
-### <a name="different-behavior-from-associated-grids"></a>Eri toiminta liittyvistä ruudukoista
+### <a name="different-behavior-from-associated-grids"></a>Liittyvien ruudukkojen erilainen toimintatapa
  
-Tietyt entiteettilomakkeet, kuten Tili tai Yhteyshenkilö, sisältävät valmiina liittyviä ruudukoita. Esimerkiksi Tili-lomake sisältää Yhteystiedot-, Palvelupyynnöt-, Mahdollisuudet- sekä muita ruudukoita. Jotkin Tili-lomakkeen ruudukoissa näkyvistä tietueista liittyvät suoraan tilitietueeseen ja toiset epäsuorasti suhteidensa kautta muihin tietueisiin. Koontikentän kooste taas käyttää ainoastaan suoria suhteita, jotka on nimenomaisesti määritetty koontikentän määrityksessä. Muita suhteita ei oteta huomioon. Toiminnan eroja havainnollistetaan seuraavassa esimerkissä.  
+Tiettyjen entiteettien lomakkeet, kuten Tili tai Yhteyshenkilö, sisältävät valmiiksi liitetyt ruudut. Esimerkiksi Asiakkuus-lomake sisältää Yhteyshenkilö-, Tapaus-, Mahdollisuus- ja muita ruudukoita. Jotkin Tili-lomakkeen ruuduissa näytettävät tietueet ovat suoraan liitoksissa tilin tietueen kanssa; muiden tietueiden liitos muodostuu epäsuorasti suhteista muiden tietueiden kanssa. Vertailun vuoksi koontikentän kooste käyttää ainoastaan erikseen koontikentälle määritettyjä suoria yhteyksiä. Muita yhteyksiä ei oteta huomioon. Toiminnallisuuden eroa valaisee seuraava esimerkki.  
   
-1. Tilillä A1 on ensisijainen yhteyshenkilö P1. Palvelupyyntö C1 liittyy tiliin A1 (C1.Asiakaskenttä = A1) ja palvelupyyntö C2 liittyy yhteyshenkilöön P1 (C2. Asiakaskenttä = P1).  
-1. **Palvelupyynnöt**-ruudukko **Tili**-ruudukossa A1-tietueelle näyttää kaksi palvelupyyntöä: C1:n ja C2:n.  
-1. Tilientiteetin Palvelupyyntöjen kokonaismäärä -koontikenttää käytetään tiliin liittyvien palvelupyyntöjen laskennassa.  
-1. Tilin koontikentän määrityksessä määritämme palvelupyynnöt, joilla on asiakassuhde tiliin. Koostamisen jälkeen Palvelupyyntöjen kokonaismäärä on yhtä suuri kuin 1 (palvelupyyntö C1). Palvelupyyntö C2 ei sisälly kokonaismäärään, koska sillä on suora suhde yhteyshenkilöön, ei tiliin, eikä sitä voida erikseen määrittää tilin koontikentän määrityksessä. Näin ollen koontitoiminnon palauttamien palvelupyyntöjen kokonaismäärä ei vastaa **Palvelupyynnöt**-ruudukossa näkyvien palvelupyyntöjen määrää.  
+1. Tilillä A1 on liitetty pääkontakti P1. Tapaus C1 on liitetty tiliin A1 (C1.Asiakas -kenttä = A1) ja tapaus C2 on liitetty yhteyshenkilöön P1 (C2.Asiakas -kenttä = P1).  
+1. A1-tietueen **Tili**-lomakkeen **Tapaukset**-ruudukko näyttää kaksi tapausta, C1 ja C2.  
+1. Asiakas-entiteetin koontikentän nimi on Tapausten kokonaismäärä, ja sitä käytetään asiakkaaseen liitettyjen tapausten laskemiseen.  
+1. Asiakkaan koontikentälle on määritelty tapaukset, joilla on asiakkaan kanssa asiakassuhde. Koostamisen jälkeen Tapausten kokonaismäärä on 1 (tapaus C1) Tapausta C2 ei lasketa mukaan, koska se liittyy suoraan yhteystietoon asiakkaan sijaan, eikä sitä voi määrittää suoraan asiakkaan koontikentän määrityksessä. Tämän vuoksi koontikentässä näkyvä tapausten kokonaismäärä ei vastaa **Tapaukset**-ruudulla näkyvää määrää.  
   
 ### <a name="see-also"></a>Katso myös  
 
-[Luo ja muokkaa kenttiä](create-edit-fields.md)<br />
-[Laskettujen kenttien määrittäminen](define-calculated-fields.md)<br />
-[Päivämäärä ja aika -kentän toiminta ja muoto](behavior-format-date-time-field.md)<br />
-[Hierarkkisten tietojen määrittäminen ja kyselyjen tekeminen](define-query-hierarchical-data.md)<br />
-[Video: Koontikentät ja lasketut kentät](http://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
-[Video: Power BI:n käyttäminen](http://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)
+[Kenttien luominen ja muokkaaminen](create-edit-fields.md)<br />
+[Laskennallisten kenttien määrittäminen](define-calculated-fields.md)<br />
+[Päivämäärän ja kellonajan kentän toimintatapa ja muoto](behavior-format-date-time-field.md)<br />
+[Hierarkkisesti järjestettyjen tietojen määrittäminen ja kysely](define-query-hierarchical-data.md)<br />
+[Video: Koontikentät ja laskennalliset kentät](http://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
+[Video: Power BI:n käyttäminen CRM 2015:n kanssa](http://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)

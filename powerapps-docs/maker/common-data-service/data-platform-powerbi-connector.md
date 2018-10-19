@@ -38,7 +38,8 @@ Jos haluat käyttää Power BI:tä Common Data Service sovelluksille -ratkaisuss
 
 3. Kopioi URL-osoitteen juuri uuteen välilehteen. Tämä on ympäristön yksilöllinen URL-osoite. URL-osoitteen muoto on **https://yourenvironmentid.crm.dynamics.com/**. Varmista, että et kopioi URL-osoitteen loppuosaa. Talleta osoite niin, että saat sen käyttöösi, kun luot PowerBI-raportin.
 
-    ![CDS sovelluksille -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS sovelluksille -ympäristö")
+    > [!div class="mx-imgBorder"] 
+    > ![CDS sovelluksille -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS sovelluksille -ympäristö")
 
 ## <a name="connecting-to-common-data-service-for-apps-from-power-bi-desktop"></a>Yhteyden muodostaminen Common Data Service sovelluksille -ratkaisuun Power BI Desktop -sovelluksesta
 

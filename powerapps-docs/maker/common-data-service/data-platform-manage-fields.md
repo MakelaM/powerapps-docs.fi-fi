@@ -35,13 +35,15 @@ Voit luoda ja päivittää yhden mukautetun kentän tai useita mukautettuja kent
     > [!NOTE]
     > Sovelluksessa näkyviä **Näyttönimi**-kenttiä voidaan muuttaa milloin tahansa. **Nimi**-kenttää ei voi muuttaa entiteetin tallentamisen jälkeen, koska tämä saattaa johtaa sovelluksen toimintahäiriöön.
 
-    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttä -paneeli")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel.png "Uusi kenttä -paneeli")
 
 5. Valitse kentän **tietotyyppi**. Se ohjaa tietojen tallennustapaa sekä näkyvyyttä sovelluksissa. Esimerkiksi teksti tallennetaan eri tavalla kuin desimaaliluku tai URL-osoite. Lisätietoja käytettävissä olevista tietotyypeistä on kohdassa [Entiteettimääritteen metatiedot](../../developer/common-data-service/entity-attribute-metadata.md).
 
     Määritä pyydettäessä kyseisen tietotyypin lisätiedot. Näkyvissä ovat eri kentät tietotyypin perusteella. Jos olet luomassa kenttää, jonka tyyppi on Asetusjoukko tai Monivalinta-asetusjoukko, voit valita **Uusi asetusjoukko** -kohdan ja luoda uuden asetusjoukon kentän luomisen yhteydessä. Lisätietoja on kohdassa [Asetusjoukon luominen](custom-picklists.md)
 
-    ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttä -paneeli")
+    > [!div class="mx-imgBorder"] 
+    > ![Uusi kenttä](./media/data-platform-cds-create-entity/newfieldpanel-2.png "Uusi kenttä -paneeli")
 
 
 7. Valitse **Pakollinen**-kohdan valintaruutu, jos haluat suositella tätä kenttää pakolliseksi sovelluksissa. Ei vahvaa täytäntöönpanoa Common Data Service -sovelluksen kaikkiin yhteyksiin. Jos haluat varmistaa, että kenttä on täytetty, luo [liiketoimintasääntö](data-platform-create-business-rule.md)

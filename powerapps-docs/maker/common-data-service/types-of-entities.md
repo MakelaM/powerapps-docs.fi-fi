@@ -1,5 +1,5 @@
 ---
-title: Entiteettityypit | MicrosoftDocs
+title: Entiteettien tyypit | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
@@ -8,68 +8,67 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 2f3f6053-0b9e-41e7-bd94-2239351e9f4b
 caps.latest.revision: 41
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: 60e16ff8cb5c40a37cf0a5243b420f77c4a695bb
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39681625"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="types-of-entities"></a>Entiteettityypit
+# <a name="types-of-entities"></a>Entiteettien tyypit
 
-Ennen kuin aloitat entiteettien luomisen tai muokkaamisen Common Data Service for Apps -palvelussa, sinun on syytä tuntea eri entiteettityypit. Kun luot mukautetun entiteetin, et voi enää vaihtaa sen tyyppiä. Kaksi merkittävää eroa perustuvat entiteetin omistajuuteen ja siihen, ovatko entiteetit aktiviteettientiteettejä.  
+Ennen entiteettien luomista ja muokkaamista Common Data Service sovelluksille -ratkaisussa on tiedettävä, että olemassa on erityyppisiä entiteettejä. Kun mukautettu entiteetti on luotu, näitä tyyppejä ei voi muuttaa. Kaksi tärkeintä divisioonaa perustuvat entiteetin omistukseen ja siihen, ovatko entiteetit aktiviteettientiteettejä.  
   
 <a name="BKMK_EntityOwnership"></a>
 
-## <a name="entity-ownership"></a>Entiteetin omistajuus  
+## <a name="entity-ownership"></a>Entiteetin omistus  
 
-Entiteeteillä on neljä eri omistajuustyyppiä. Kun luot mukautetun entiteetin, se voi olla vain **käyttäjän tai tiimin omistama** tai **organisaation omistama**. Muilla entiteeteillä on kuitenkin erilaisia omistajuustyyppejä.  
+Entiteetin omistuksella on neljä eri tyyppiä. Kun luot mukautetun entiteetin, ainoat vaihtoehdot ovat **käyttäjän tai ryhmän omistama** tai **organisaation omistama**. Muista, että muilla entiteeteillä on erilaisia omistustyyppejä.  
   
-|Omistajuus|Kuvaus|  
+|Omistus|Kuvaus|  
 |---------------|-----------------|  
-|**Yrityksen omistama**|Näiden entiteettien tiedot kuuluvat liiketoimintayksikölle. Tietojen käyttöä voidaan hallita liiketoimintayksikön tasolla.|  
-|**Ei mitään**|Toinen entiteetti ei omista tietoja.|  
-|**Organisaation omistama**|Tiedot kuuluvat organisaatiolle. Tietojen käyttöä hallitaan organisaation tasolla.|  
-|**Käyttäjän tai tiimin omistama**|Tiedot kuuluvat käyttäjälle tai tiimille. Näille tietueille suoritettavia toimintoja hallitaan käyttäjätasolla.|  
+|**Liiketoiminnan omistama**|Näiden entiteettien tiedot kuuluvat liiketoimintayksikölle. Tietojen käyttämistä voidaan hallita liiketoimintayksikön tasolla.|  
+|**Ei mikään**|Tiedot, joita toinen entiteetti ei omista.|  
+|**Organisaation omistama**|Tiedot kuuluvat organisaatiolle. Tietojen käyttämistä hallitaan organisaation tasolla.|  
+|**Käyttäjän tai ryhmän omistama**|Tiedot kuuluvat käyttäjälle tai ryhmälle. Näille tietueille suoritettavia toimintoja voidaan hallita käyttäjän tasolla.|  
   
   
 > [!IMPORTANT]
->  Kun entiteetti on luotu, sen omistajuutta ei voi enää muuttaa. Ennen kuin luot entiteetin, varmista, että valitset oikean omistajuustyypin. Jos myöhemmin päätät, että mukautetun entiteetin täytyy olla erityyppinen, sinun täytyy poistaa se ja luoda uusi.
+>  Omistusta ei voi muuttaa entiteetin luonnin jälkeen. Varmista ennen entiteetin luontia, että olet valinnut oikean omistustyypin. Jos huomaat myöhemmin, että mukautetun entiteetin tyyppiä on muutettava, entiteetti on poistettava ja sen tilalle on luotava uusi entiteetti.
   
 <a name="BKMK_ActivityEntities"></a>
 
 ## <a name="activity-entities"></a>Aktiviteettientiteetit
 
-Aktiviteetiksi voidaan katsoa tahansa toiminto, josta voidaan tehdä merkintä kalenteriin. Aktiviteetilla on aikadimensiot (alkamis- ja päättymisaika, määräpäivä ja kesto), joiden avulla määritetään, milloin toiminto tapahtui tai tapahtuu. Aktiviteetit sisältävät myös tietoja, joiden avulla määritetään, mitä toiminto edustaa. Tällaisia tietoja ovat esimerkiksi aihe ja kuvaus. Aktiviteetin voi avata, peruuttaa tai suorittaa. Aktiviteetin suoritustilalla on useita alatila-arvoja, joiden avulla voidaan selkeyttää tapaa, jolla aktiviteetti suoritettiin.  
+Aktiviteetin voidaan ajatella olevan mikä tahansa toiminto, jolle voidaan tehdä merkintä kalenteriin. Aktiviteetillä on aikadimensiot (alkamisaika, päättymisaika, määräpäivä ja kesto), joiden avulla toiminnon suoritusajankohta voidaan määrittää. Aktiviteetit sisältävät myös tietoja, joiden avulla voidaan määrittää aktiviteetin edustama toiminto, esimerkiksi aihe tai kuvaus. Aktiviteetti voidaan avata, peruuttaa tai suorittaa valmiiksi. Aktiviteetin Valmis-tilalla on useita alitilan arvoja. Näiden avulla voidaan määrittää, miten aktiviteetti suoritettiin valmiiksi.  
   
-Aktiviteettientiteettejä voivat omistaa vain käyttäjät ja tiimit, organisaatiot eivät voi omistaa niitä.  
+Aktiviteettientiteetin omistaja voi olla vain käyttäjä tai ryhmä. Organisaatio ei voi omistaa aktiviteettientiteettiä.  
   
-Seuraavassa taulukossa luetellaan aktiviteettientiteetit, jotka ovat oletusarvoisesti käytettävissä CDS for Apps -ympäristössä.
+Seuraavassa taulukossa on CDS sovelluksille -oletusympäristön käytettävissä olevien aktiviteettientiteettien luettelo.
   
-|Nimi|Kuvaus|Näytetään aktiviteettivalikoissa|Viittaus|
+|Nimi|Kuvaus|Näytä aktiviteettivalikoissa|Viite|
 |----------|-----------------|----------------|---------------|  
-|**Tapaaminen**|Tämä on sitoumus, joka edustaa aikaväliä, jolle on määritetty alkamis- ja päättymisajat sekä kesto.|Kyllä|[Appointment](/powerapps/developer/common-data-service/reference/entities/appointment)|
-|**Sähköposti**|Tämä on aktiviteetti, joka suoritetaan sähköpostiprotokollien välityksellä.|Kyllä|[Email ](/powerapps/developer/common-data-service/reference/entities/email)|
-|**Faksi**|Tämä on aktiviteetti, joka seuraa faksin lopputulosta ja sivumäärää ja valinnaisesti tallentaa tiedoston sähköisen kopion.|Kyllä|[Fax](/powerapps/developer/common-data-service/reference/entities/fax)|
-|**Kirje**|Tämä on aktiviteetti, joka seuraa kirjeen toimitusta perille. Aktiviteetti voi sisältää kirjeen sähköisen kopion.|Kyllä|[Letter](/powerapps/developer/common-data-service/reference/entities/letter)|
-|**Puhelu**|Tämä aktiviteetti seuraa puhelua.|Kyllä|[PhoneCall ](/powerapps/developer/common-data-service/reference/entities/phonecall)|
-|**Toistuva tapaaminen**|Tämä on toistuvien tapaamisten sarjan päätapaaminen.|Kyllä|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/entities/recurringappointmentmaster)|
-|**Tehtävä**|Tämä on yleinen aktiviteetti, joka edustaa tehtäviä töitä.|Kyllä|[Task](/powerapps/developer/common-data-service/reference/entities/task)|
+|**Tapaaminen**|Sitoutuminen, jolle on määritetty aikaväli aloitus- ja päättymisaikoineen sekä kestoineen.|Kyllä|[Tapaaminen](/powerapps/developer/common-data-service/reference/entities/appointment)|
+|**Sähköposti**|Sähköpostiprotokollia käyttämällä toimitettava aktiviteetti.|Kyllä|[Sähköposti ](/powerapps/developer/common-data-service/reference/entities/email)|
+|**Faksi**|Aktiviteetti, joka seuraa puhelun tulosta ja faksin sivumäärää sekä tallentaa haluttaessa tiedostosta sähköisen kopion.|Kyllä|[Faksi](/powerapps/developer/common-data-service/reference/entities/fax)|
+|**Kirje**|Kirjeen toimittamista seuraava aktiviteetti. Aktiviteetti voi sisältää kirjeen sähköisen kopion.|Kyllä|[Kirje](/powerapps/developer/common-data-service/reference/entities/letter)|
+|**Phone Call**|Aktiviteetti, jolla seurataan puhelua.|Kyllä|[PhoneCall ](/powerapps/developer/common-data-service/reference/entities/phonecall)|
+|**Toistuva tapaaminen**|Toistuvien tapaamisten sarjan pääkohde.|Kyllä|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/entities/recurringappointmentmaster)|
+|**Tehtävä**|Yleinen aktiviteetti, joka tarkoittaa tehtävää työtä.|Kyllä|[Tehtävä](/powerapps/developer/common-data-service/reference/entities/task)|
   
-Voit luoda uusia mukautettuja aktiviteettientiteettejä. Voit esimerkiksi luoda mukautetun aktiviteettientiteetin, jolla tallennat pikaviestit. Aktiviteettientiteetin luominen eroaa muiden entiteettien luomisesta, koska et määritä ensisijaista kenttää. Kaikilla aktiviteeteilla on **ensisijainen kenttä**, jonka arvoksi on määritetty **Aihe**, sekä muita yleisiä kenttiä, jotka määritetään aktiviteettientiteetillä. Tämän ansiosta kaikentyyppiset aktiviteetit voidaan näyttää näkymässä, jossa näytetään vain yleiset kentät.  
+Voit luoda uusia mukautettuja aktiviteettientiteettejä. Voit esimerkiksi luoda mukautetun aktiviteettientiteetin pikaviestien tallentamista varten. Aktiviteettientiteetin luominen on erilaista kuin muun kuin aktiviteettientiteetin luominen, koska ensisijaista kenttää ei määritetä. Kaikkien aktiviteettientiteettien **Ensisijainen kenttä** -kohdan ja muiden aktiviteettientiteetin määrittämien yleisten kenttien arvoksi on määritetty **Aihe**. Tällöin kaiken tyyppiset aktiviteetit ovat näkymässä, jossa näytetään vain yleiset kentät.  
 
 > [!NOTE]
-> Et voi luoda mukautettua aktiviteettia PowerApps-portaalissa. Sinun täytyy avata ratkaisunhallinta **lisäasetusten** painikkeella.
+> Et voi luoda mukautettua aktiviteettia PowerApps-portaalin avulla. Avaa ratkaisunhallinta **Lisäasetukset**-painikkeen avulla.
   
-Jos haluat luoda mukautetun aktiviteettientiteetin, valitse **Määritä aktiviteettientiteetiksi**. Kun valitset tämän, **Näytä aktiviteettivalikoissa** on valittuna. Tämän asetuksen avulla ihmiset voivat luoda tällaisen aktiviteetin aktiviteettivalikoissa. Tämä ei ole valittuna aktiviteeteille, jotka on yleensä liitetty tiettyihin tapahtumiin ja jotka luodaan taustalla koodin tai työnkulun avulla. Kun tallennat entiteetin, et voi enää muokata näitä asetuksia.  
+Voit luoda mukautetun aktiviteettientiteetin valitsemalla **Määritä aktiviteettientiteetiksi**. Tämän jälkeen **Näytä aktiviteettivalikoissa** näkyy valittuna. Tämän asetuksen avulla voi luoda tämän tyyppisen aktiviteetin aktiviteettivalikoissa. Tätä ei valita aktiviteeteille, jotka liitetään yleensä tiettyihin tapahtumiin ja jotka on luotu koodin tai työnkulun avulla. Näitä asetuksia ei voi muuttaa entiteetin tallennuksen jälkeen.  
 
 ### <a name="see-also"></a>Katso myös
-[Luo tai muokkaa entiteettejä](create-edit-entities.md)
+[Entiteettien luominen tai muokkaaminen](create-edit-entities.md)

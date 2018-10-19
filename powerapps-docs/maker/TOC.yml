@@ -193,7 +193,7 @@
                   href: ./canvas-apps/controls/control-shapes-icons.md
                 - name: Liukusäädin
                   href: ./canvas-apps/controls/control-slider.md
-                - name: Selite
+                - name: Otsikko
                   href: ./canvas-apps/controls/control-text-box.md
                 - name: Tekstisyöte
                   href: ./canvas-apps/controls/control-text-input.md
@@ -854,8 +854,6 @@
           href: ./common-data-service/set-managed-properties-relationships.md
         - name: Hierarkkisten tietojen visualisoiminen
           href: ./common-data-service/visualize-hierarchical-data.md
-        - name: Hierarkkisesti järjestettyjen tietojen kysely ja tietojen visualisoiminen
-          href: ./common-data-service/query-visualize-hierarchical-data.md
         - name: Hierarkkisesti järjestettyjen tietojen määrittäminen ja kysely
           href: ./common-data-service/define-query-hierarchical-data.md
         - name: Yhteysroolien määrittäminen
@@ -868,8 +866,6 @@
               href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md
             - name: Suhteiden hallittujen ominaisuuksien määrittäminen
               href: ./common-data-service/set-managed-properties-relationships.md
-            - name: Hierarkkisten tietojen visualisoiminen
-              href: ./common-data-service/visualize-hierarchical-data.md
             - name: Hierarkkisesti järjestettyjen tietojen kysely ja tietojen visualisoiminen
               href: ./common-data-service/query-visualize-hierarchical-data.md
             - name: Hierarkkisesti järjestettyjen tietojen määrittäminen ja kysely
@@ -917,8 +913,6 @@
     - name: Ratkaisujen käsitteleminen
       href: ./common-data-service/solutions-overview.md
       items:
-        - name: Ratkaisujen yleiskatsaus
-          href: ./common-data-service/solutions-overview.md
         - name: Ratkaisunhallinnan käyttäminen
           href: ./common-data-service/use-solution-explorer.md
         - name: Common Data Service -oletusratkaisun käyttäminen
@@ -967,8 +961,10 @@
       href: 'https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1'
 - name: Vianmääritys
   items:
-    - name: 'Järjestelmävaatimukset, rajoitukset määrittäminen'
+    - name: 'Järjestelmävaatimukset, rajoitukset ja määrittäminen'
       href: ./canvas-apps/limits-and-config.md
+    - name: Suorituskykyvihjeitä kaaviosovelluksille
+      href: ./canvas-apps/performance-tips.md
     - name: Yleiset ongelmat ja ratkaisut
       href: ./canvas-apps/common-issues-and-resolutions.md
     - name: Istunnon tai sovelluksen tunnuksen noutaminen

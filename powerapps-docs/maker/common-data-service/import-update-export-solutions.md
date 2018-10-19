@@ -1,6 +1,6 @@
 ---
-title: Ratkaisujen tuominen, päivittäminen ja vieminen | MicrosoftDocs
-description: Opi tuomaan, päivittämään ja viemään ratkaisuja
+title: Ratkaisujen tuominen. päivittäminen ja vieminen | MicrosoftDocs
+description: 'Opettele ratkaisun tuominen, päivittäminen tai vieminen'
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
@@ -9,159 +9,158 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: 89907e80085fe2bfcf3c38972724a0f9b55836c7
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39675523"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="import-update-and-export-solutions"></a>Ratkaisujen tuominen, päivittäminen ja vieminen 
+# <a name="import-update-and-export-solutions"></a>Ratkaisujen tuominen. päivittäminen ja vieminen 
 
- Voit tuoda ratkaisuja manuaalisesti noudattamalla alla olevia ohjeita. Tuo vain ratkaisuja, jotka olet hankkinut luotetusta lähteestä. Mukautukset voivat sisältää koodia, joka lähettää tietoja ulkoisiin lähteisiin. Voit tuoda oletusratkaisun vain organisaatioon, josta veit sen, et muuhun organisaatioon.  
+ Voit tuoda ratkaisuja manuaalisesti seuraavien ohjeiden mukaisesti. Tuo vain luotettavasta lähteestä saatuja ratkaisuja. Mukautukset voivat sisältää koodia, joka voi lähettää tietoja ulkoisiin lähteisiin. Voit tuoda oletusratkaisun vain organisaatioon, josta olet vienyt sen, mutta sitä ei liitetä toiseen organisaatioon.  
   
 1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.  
   
-2.  Valitse ratkaisuluettelovalikosta **Tuo**.  
+2.  Valitse ratkaisuluettelon valikosta **Tuo**.  
   
-3.  Valitse **Tuo ratkaisu** -valintaikkunassa **Valitse ratkaisupaketti**, ja siirry sen pakatun (.zip tai .cab) tiedoston kohdalle, joka sisältää tuotavan ratkaisun. 
+3.  Siirry **Tuo ratkaisu** -valintaikkunan **Valitse ratkaisupaketti** -kohdassa tuotavan ratkaisun sisältävään pakattuun tiedostoon (.zip tai .cab). 
   
 4.  Valitse **Seuraava**.  
   
 5.  Voit tarkastella ratkaisun tietoja, ennen kuin valitset **Tuo**.  
   
-6.  Voit joutua odottamaan hetken, kunnes ratkaisun tuonti on valmis. Jos tuonti onnistuu, voit tarkastella tuloksia ja valita sitten **Sulje**.  
+6.  Ratkaisun tuonti voi kestää hetken. Jos tuonti onnistuu, voit tarkastella tuloksia ja valita **Sulje**.  
   
- Jos olet tuonut muutoksia, jotka edellyttävät julkaisemista, sinun täytyy julkaista mukautukset, ennen kuin ne ovat käytettävissä. 
+ Jos olet tuonut julkaistavia muutoksia, mukautuksia ei voi käyttää, ennen kuin ne on julkaistu. 
   
- Jos tuonti ei onnistu, näet raportin, jossa on havaitut virheet tai varoitukset. Voit valita **Lataa lokitiedosto** tallentaaksesi tiedot tuonnin epäonnistumisen syystä. Yleisin syy ratkaisun tuonnin epäonnistumiseen on, että ratkaisu ei sisällä joitakin vaadittuja ratkaisun osia.  
+ Jos tuonti ei onnistunut, avautuva raportti sisältää mahdolliset virheet tai varoitukset. Jos haluat nähdä tarkempia tietoja tuonnin epäonnistumisesta, valitse **Lataa lokitiedosto**. Ratkaisun tuonti epäonnistuu useimmin siksi, että ratkaisu ei sisältänyt pakollisia ratkaisun osia.  
   
- Kun lataat lokitiedoston, voit avata sen (XML-muodossa) Office Excelissä sisällön katselua varten.  
+ Ladattu lokitiedosto sisältää XML-tiedoston, jonka sisältöä voit tarkastella avaamalla sen Office Excelissä.  
   
 > [!NOTE]
->  Et voi muokata aktiivista reitityssääntöjoukkoa. Tämän vuoksi, jos olet tuomassa aktiivisen reitityssääntöjoukon sisältävää ratkaisua organisaatioon, jossa sama sääntö on jo olemassa samalla tunnuksella, ratkaisun tuonti epäonnistuu. Lisätietoja: [Luo sääntöjä tapausten automaattista reititystä varten](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
+>  Aktiivista reitityssääntöjoukkoa ei voi muokata. Jos siis tuot ratkaisun, jonka aktiivinen reitityssääntöjoukko on määritetty organisaatioon, jossa on jo samalla tunnuksella luotu sääntö, ratkaisun tuonti epäonnistuu. Lisätietoja: [Palvelupyyntöjen automaattisten reitityssääntöjen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
   
 <a name="BKMK_UpdateSolutions"></a>   
 
-## <a name="update-solutions"></a>Päivitä ratkaisut  
- Joskus haluat ehkä asentaa päivityksen nykyiseen hallittuun ratkaisuun. Menettely on vastaava kuin uutta hallittua ratkaisua asennettaessa, mutta käytettävissä on joitakin eri asetuksia. Jos olet päivittämässä joltakulta muulta saatua ratkaisu, pyydä ratkaisun julkaisijalta ohjeita siitä, mitä asetuksia sinun pitää valita.  
+## <a name="update-solutions"></a>Ratkaisujen päivittäminen  
+ Haluat ehkä joskus asentaa päivityksen nykyiseen hallittuun ratkaisuun. Asennus muistuttaa uuden hallitun ratkaisun asentamista, myös käytettävät asetukset ovat hieman erilaiset. Jos päivität muualta saatua ratkaisua, kysy ratkaisujulkaisulta lisätietoja käytettävistä asetuksista.  
   
 1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.   
   
-2.  Valitse ratkaisuluettelovalikosta **Tuo**.  
+2.  Valitse ratkaisuluettelon valikossa **Tuo**.  
   
-3.  Valitse **Tuo ratkaisu** -valintaikkunassa **Valitse ratkaisupaketti**, ja siirry sen pakatun (.zip tai .cab) tiedoston kohdalle, joka sisältää päivitettävän ratkaisun.  
+3.  Siirry **Tuo ratkaisu** -valintaikkunan **Valitse ratkaisupaketti** -kohdassa päivitettävän ratkaisun sisältävään pakattuun tiedostoon (.zip tai .cab).  
 4.  Valitse **Seuraava**.  
   
-5.  Voit tarkastella ratkaisun tietoja, ennen kuin valitset **Seuraava**. Tällä sivulla näkyy keltainen palkki, jossa on ilmoitus **Tämä ratkaisupaketti sisältää päivityksen ratkaisuun, joka on jo asennettu**.  
+5.  Voit tarkastella ratkaisun tietoja, ennen kuin valitset **Seuraava**. Sivulla on keltainen palkki, jossa lukee **Tämä ratkaisupaketti sisältää jo asennetun ratkaisun päivityksen**.  
   
 6.  Käytettävissä on seuraavat vaihtoehdot:  
   
-    - **Säilytä mukautukset (suositus)**  
+    - **Säilytä mukautukset (suositellaan)**  
   
-         Jos valitset tämän vaihtoehdon, kaikki osille suoritetut hallitsemattomat mukautukset säilytetään, mutta kaikki ratkaisun päivitykset eivät tule voimaan.  
+         Jos tämä vaihtoehto valitaan, osille tehdyt ei-hallitut mukautukset säilyvät, mutta jotkin ratkaisuun sisältyvistä päivityksistä eivät tule voimaan.  
   
     - **Korvaa mukautukset**  
   
-         Jos valitset tämän vaihtoehdon, kaikki tämän ratkaisun osille suoritetut hallitsemattomat mukautukset korvataan. Kaikki tämän ratkaisun sisältämät päivitykset tulevat voimaan.  
+         Jos tämä vaihtoehto valitaan, tähän ratkaisuun sisältyville osille aiemmin suoritetut ei-hallitut mukautukset korvataan. Kaikki ratkaisuun sisältyvät päivitykset tulevat voimaan.  
   
-     Valitse sopiva vaihtoehto ja valitse sitten **Seuraava**.  
+     Valitse ensin sopiva vaihtoehto ja sitten **Seuraava**.  
   
-7.  Voit joutua odottamaan hetken, kunnes ratkaisun tuonti on valmis. Jos tuonti onnistuu, voit tarkastella tuloksia ja valita sitten **Sulje**.  
+7.  Ratkaisun tuonti voi kestää hetken. Jos tuonti onnistuu, voit tarkastella tuloksia ja valita **Sulje**.  
   
- Jos olet tuonut muutoksia, jotka edellyttävät julkaisemista, sinun täytyy julkaista mukautukset, ennen kuin ne ovat käytettävissä. 
+ Jos olet tuonut julkaistavia muutoksia, mukautuksia ei voi käyttää, ennen kuin ne on julkaistu. 
   
- Ratkaisun julkaisijat saattavat pyytää sinua viemään olemassa olevat hallitsemattomat mukautuksesi, päivittämään niiden hallitun ratkaisun käyttämällä Korvaa mukautukset -vaihtoehtoa ja tuomaan sitten hallitsemattomat mukautuksesi uudelleen. Tämä auttaa varmistamaan, että odotetut muutokset tulevat voimaan ja mukautuksesi säilytetään.  
+ Ratkaisujulkaisijat voivat pyytää sinua viemään nykyiset ei-hallitut mukautukset, päivittämään hallitut ratkaisut mukautusten korvausvaihtoehdolla ja tuomaan sitten ei-hallitut mukautukset uudelleen. Tällä tavoin varmistetaan, että odotetut muutokset otetaan käyttöön samalla, kun mukautukset säilyvät.  
   
 <a name="BKMK_ExportSolutions"></a>   
 
-## <a name="export-solutions"></a>Vie ratkaisut  
- Suosittelemme, että viet hallitsemattomat mukautuksesi säännöllisesti, jotta sinulla on niistä varmuuskopio pahan päivän varalta. Et voi viedä hallittuja ratkaisuja.  
+## <a name="export-solutions"></a>Ratkaisujen vieminen  
+ On suositeltavaa viedä ei-hallitut mukautukset säännöllisesti varmuuskopioiksi mahdollisia ongelmatilanteita varten. Hallittuja ratkaisuja ei voi viedä.  
   
 1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.   
   
-2.  Valitse luettelosta ratkaisu, jonka haluat viedä, ja valitse sitten **Vie**.  
+2.  Valitse ensin luettelosta vietävä ratkaisu ja sitten **Vie**.  
   
-3.  **Julkaise mukautukset** -vaiheessa sinua muistutetaan siitä, että vain julkaistut mukautukset viedään ja sinulla on mahdollisuus **julkaista kaikki mukautukset** ennen kuin valitset  **Seuraava**.  
+3.  **Julkaise mukautukset** -vaiheessa sinua muistutetaan, että vain julkaistut mukautukset viedään ja että voit valita **Julkaise kaikki mukautukset**, ennen kuin valitset **Seuraava**.  
   
-4.  Jos ratkaisusi sisältää puuttuvia vaadittuja osia, näkyviin tulee **Puuttuvat vaaditut osat** -vaihe. Voit ohittaa tämän varoituksen vain, jos aiot tuoda tämän hallitsemattoman ratkaisun takaisin alkuperäiseen organisaation. Muussa tapauksessa peruuta vienti noudattamalla valintaikkunassa annettuja ohjeita ja lisää vaaditut osat.  
+4.  Jos ratkaisu sisältää puuttuvia pakollisia osia, näet **Pakollisia osia puuttuu** -vaiheen. Jätä tämä varoitus huomioimatta vain, jos aiot tuoda ratkaisun ei-hallittuna ratkaisuna takaisin alkuperäiseen organisaation. Peruuta muussa tapauksessa vienti valintaikkunan ohjeiden mukaisesti ja lisää pakolliset osat.  
   
-5.  **Vie järjestelmäasetukset (Lisäasetukset)** -vaiheessa voit valita ratkaisuusi sisällytettävät tietyt järjestelmäasetukset. Jos ratkaisusi on riippuvainen mistä tahansa järjestelmäasetusryhmistä, valitse ne ja valitse **Seuraava**.  
+5.  Voit sisällyttää tiettyjä järjestelmäasetuksia ratkaisuun **Vie järjestelmäasetukset (lisäasetukset)** -vaiheessa. Jos ratkaisu tarvitsee jotakin järjestelmäasetusten ryhmää, valitse ensin se ja sitten **Seuraava**.  
   
-     Katso lisätietoja kunkin vaihtoehdon asetuksista alla olevasta kohdasta **Ratkaisun vientiasetukset**.  
+     Katso alla olevasta **Ratkaisun viennin asetusvaihtoehdot** -kohdasta lisätietoja asetuksista, jotka ovat mukana vaihtoehdoissa.  
   
-6.  **Paketin tyyppi** -vaiheessa sinun täytyy valita, haluatko viedä ratkaisun **hallitsemattomana** vai **hallittuna** ratkaisuna.  
+6.  Sinun on valittava **Paketin tyyppi**-vaiheessa, viedäänkö ratkaisu **ei-hallittuna** vai **hallittuna** ratkaisuna.  
   
-7.  Seuraavassa vaiheessa voit valita kohderatkaisun tiettyä Dynamics 365 -versiota varten. Tätä asetusta käyttävät yleensä itsenäiset ohjelmistotoimittajat, jotka haluavat viedä aiemman version kanssa yhteensopivan ratkaisun. Ellet ole tuomassa ratkaisua organisaatioon, jota ei ole päivitetty samaan versioon kuin käyttämäsi organisaatio, käytä oletusarvoa.   
+7.  Voit valita seuraavassa vaiheessa tietyn Dynamics 365 -version kohderatkaisun. Yleensä tätä asetusta käyttävät riippumattomat ohjelmistovalmistajat, jotka haluavat viedä edellisen version kanssa yhteensopivan ratkaisun. Hyväksy oletusasetus, ellet aio tuoda ratkaisua organisaatioon, jota ei ole päivitetty käyttämääsi organisaatioversioon.   
   
 8.  Lataa ratkaisutiedosto valitsemalla **Vie**.  
   
- Tiedostojen lataustapa vaihtelee selainten välillä.  
+ Lataustapahtuma määräytyy selaimen mukaan.  
 
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
-## <a name="settings-options-for-solution-export"></a>Ratkaisun vientiasetukset  
- Seuraavassa taulukossa on käytettävissä olevat vaihtoehdot, kun viet ratkaisua:  
+## <a name="settings-options-for-solution-export"></a>Ratkaisun viennin asetusvaihtoehdot  
+ Seuraavassa taulukossa on ratkaisun viennissä käytettävissä olevat vaihtoehdot:  
   
-|Ryhmä|Asetus|Kuvaus|  
+|Ryhmä|Asetukset|Kuvaus|  
 |-----------|-------------|-----------------|  
-|Automaattinen numerointi|Kampanjan etuliite|Kampanjan numeroinnin etuliite.|  
-|Tapauksen etuliite|Etuliite, jota käytetään kaikissa tapauksissa koko sovelluksessa.|  
-|Sopimuksen etuliite|Etuliite, jota käytetään kaikissa sopimuksissa koko sovelluksessa.|  
-|Laskun etuliite|Etuliite, jota käytetään kaikissa laskunumeroissa koko sovelluksessa.|  
-|Artikkelin etuliite|Etuliite, jota käytetään kaikissa artikkeleissa koko sovelluksessa.|  
-|Tilauksen etuliite|Etuliite, jota käytetään kaikissa tilauksissa koko sovelluksessa.|  
-|Yksilöllinen merkkijonon pituus|Laskun, tarjouksen ja tilausnumeroiden merkkimäärä.|  
-|Kalenteri|Kalenterin tyyppi|Järjestelmän kalenterityyppi. Oletusarvoisesti Gregoriaaninen (US)|  
-|Päivämäärämuodon koodi|Tieto siitä, miten päivämäärä näytetään Dynamics 365:ssä.|  
-|Päivämääräerotin|Merkki, jolla erotetaan kuukauden, päivän ja vuoden päivämäärät koko sovelluksessa.|  
-|Tapaamisen enimmäiskesto|Tapaamisen pisin kesto päivinä.|  
-|Näytä viikkonumero|Tieto, joka määrittää, näytetäänkö viikkonumero kalenterissa koko sovelluksessa.|  
-|Aikamuodon koodi|Tieto, joka määrittää, miten aika näytetään koko sovelluksessa.|  
-|Viikon aloituspäivän koodi|Viikon ensimmäinen päivä koko sovelluksessa.|  
-|Mukauttaminen|Onko sovellustila käytössä|Ilmaisee, onko sovelluksen lataus selainikkunassa ilman osoite-, työkalu- ja valikkorivejä käytettävissä.|  
-|Sähköpostiseuranta|Salli sähköpostiviestin lähetys selvittämättömään osoitteeseen|Ilmaisee, voivatko käyttäjät lähettää sähköpostia selvittämättömille osapuolille (osapuolilla on silti oltava sähköpostiosoite).|  
-|Ohita sisäinen sähköposti|Ilmaisee, seurataanko sovelluksen käyttäjien tai jonojen lähettämiä sähköpostiviestejä.|  
+|Automaattinen numerointi|Kampanjan etuliite|Kampanjoiden numeroinnin etuliite.|  
+|Palvelupyynnön etuliite|Etuliite, jota käytetään kaikissa sovelluksen palvelupyynnöissä.|  
+|Palvelusopimuksen etuliite|Etuliite, jota käytetään kaikissa palvelusopimuksissa sovelluksessa.|  
+|Laskun etuliite|Etuliite, jota käytetään kaikissa laskunumeroissa sovelluksessa.|  
+|Artikkelin etuliite|Etuliite, jota käytetään kaikissa artikkeleissa sovelluksessa.|  
+|Tilauksen etuliite|Etuliite, jota käytetään kaikissa tilauksissa sovelluksessa.|  
+|Yksilöllinen merkkijonon pituus|Laskun, tarjouksen ja tilauksen numeroihin liitettävä merkkimäärä.|  
+|Kalenteri|Kalenterityyppi|Järjestelmän kalenterityyppi. Oletusarvo on gregoriaaninen (USA).|  
+|Päivämäärän muotokoodi|Tietoja siitä, miten päivämäärät näytetään Dynamics 365:ssä.|  
+|Päivämääräerotin|Merkki, joka erottaa päivämäärien kuukausi-, päivä- ja vuosiarvot sovelluksessa.|  
+|Tapaamisen enimmäiskesto|Tapaamisen enimmäiskesto päivinä.|  
+|Näytä viikon numero|Tieto siitä, näytetäänkö sovelluksessa kalenterinäytöissä viikon numero.|  
+|Aikamuodon koodi|Tieto siitä, miten kellonaika näytetään sovelluksessa.|  
+|Viikon aloituspäivän koodi|Määritetty viikon ensimmäinen päivä sovelluksessa.|  
+|Mukauttaminen|Sovelluksen tila on käytössä|Osoittaa, voiko sovelluksen ladata selainikkunaan, jossa ei ole käytössä osoite-, työkalu- ja valikkoriviä.|  
+|Sähköpostiseuranta|Salli sähköpostin lähettäminen selvittämättömään osoitteeseen|Osoittaa, voivatko käyttäjät lähettää sähköpostia selvittämättömille osapuolille (osapuolilla on kuitenkin oltava sähköpostiosoite).|  
+|Ohita sisäinen sähköposti|Osoittaa, seurataanko sovelluksen käyttäjien tai jonojen lähettämää saapuvaa sähköpostia.|  
 |Suurin seurantanumero|Suurin mahdollinen seurantanumero ennen kierrätystä.|  
-|Hahmonna suojattu kehys sähköpostille|Merkintä, joka hahmontaa sähköpostiviestin leipätekstin IFRAMEssa määritteellä-= 'restricted'. Tämä on lisäsuojaustapa, mutta se saattaa tuoda näyttöön tunnistetietojen kehotteen.|  
-|Seurannan etuliite|Historialuettelo seurantatunnusten etuliitteistä.|  
-|Seurantatunnuskanta|Kantaluku, jolla erotellaan eri käyttöönottojen käyttäjien seurantatunnusten tunnisteet.|  
-|Seurantatunnusnumerot|Seurantatunnuksen tunnisteen numeromäärä.|  
-|Yleistä|Estä liitteet|Estä tietynlaisten vaaralliseksi katsottujen liitetiedostojen lähetys ja lataus.|  
-|Valuuttamuotokoodi|Tieto siitä, miten valuuttasymbolit sijoitetaan koko sovelluksessa.|  
-|Valuuttasymboli|Valuuttasymboli|  
-|Koko nimen näyttöjärjestys|Järjestys, jossa nimet näytetään koko sovelluksessa.|  
-|Tavoitettavuus käytössä|Tieto siitä, onko pikaviestillä tavoitettavuus käytössä.|  
-|Negatiivinen muoto|Tieto, joka määrittää, miten negatiiviset luvut näytetään koko sovelluksessa.|  
-|Lukumuotoilu|Lukujen näyttötavan määritystapa koko sovelluksessa.|  
-|Hinnoittelussa käytettävä desimaalien määrä|Hinnoissa käytettävien desimaalien paikkamäärä.|  
-|Jaa edelliselle omistajalle määritettäessä|Määrittää, jaetaanko kohde edelliselle omistajalle määritettäessä.|  
-|Markkinointi|Salli automaattinen vastauksen luonti|Ilmaisee, onko automaattisen vastauksen luonti sallittu|  
-|Salli automaattinen tilauksen peruutus|Ilmaisee, onko automaattinen tilauksen peruutus sallittu.|  
-|Salli automaattinen tilauksen peruutuksen kuittaus|Ilmaisee, onko automaattinen tilauksen peruutuksen kuittaussähköpostin lähetys sallittu.|  
-|Salli markkinointisähköpostin suorittaminen|Ilmaisee, onko markkinointisähköpostiviestien suorittaminen sallittu.|  
-| Outlook-synkronointi|Salli osoitekirjan synkronointi|Ilmaisee, onko osoitekirjan synkronointi taustalla sallittu Microsoft Office Outlookissa.|  
-|Salli ajoitettu offline-synkronointi|Ilmaisee, onko offline-synkronointi taustalla sallittu Outlookissa.|  
-|Salli ajoitettu synkronointi|Ilmaisee, onko ajoitetut synkronoinnit Outlookiin sallittuja.|  
-|Sähköpostin lähettämisen kyselytiheys|Normaali kyselytiheys, jota käytetään sähköpostin lähettämiseen Outlookissa.|  
-|Pienin osoitteen synkronointitiheys|Normaali kyselytiheys osoitekirjan synkronointiin Outlookissa.|  
-|Pienin offline-synkronointitiheys|Normaali kyselytiheys osoitekirjan offline-taustasynkronointiin Outlookissa.|  
-|Pienin synkronointitiheys|Pienin sallittu aika ajoitettujen [! INCLUDEOutlooksynchronizations välillä.|  
-|Automaattisten tunnisteiden enimmäisjaksot|Suurin aggressiivisten kyselyjaksojen suoritusmäärä sähköpostien automaattiseen merkintään, kun uusi sähköposti vastaanotetaan.|  
-|Automaattisten tunnisteiden väli|Normaali kyselytiheys, jota käytetään sähköpostin automaattiseen merkintään Outlookissa.|  
-|ISV-määritys|Palvelukalenterin ulkoasun määritys|Voit määrittää palvelunkalentereiden visuaaliset tyylit.
+|Hahmonna suojattu kehys sähköpostille|Valitse tämä, jos haluat muuntaa sähköpostiviestin tekstin verkkolomakkeessa IFRAME-kehykseksi, jossa on määrite security='restricted'. Tämä lisäsuojaus voi johtaa siihen, että järjestelmä pyytää käyttäjän tunnistetietoja.|  
+|Seurantaetuliite|Seurantatunnusten etuliitteiden historialuettelo.|  
+|Seurantatunnuksen perusnumero|Perusnumero, jolla annetaan eri käyttöympäristöihin kuuluville käyttäjille erilliset seurantatunnukset.|  
+|Seurantatunnuksen numerot|Seurantatunnuksessa käytettävä numeroiden määrä.|  
+|Yleiset|Estä liitteet|Vaarallisiksi katsottujen liitetyyppien latauksen estäminen.|  
+|Rahasumman muotokoodi|Tieto siitä, miten rahayksiköiden tunnukset sijoitetaan sovelluksessa.|  
+|Rahayksikön tunnus|Rahayksikön tunnus|  
+|Koko nimen näyttöjärjestys|Nimien näyttöjärjestys sovelluksessa.|  
+|Tavoitettavuus otettu käyttöön|Tietoja siitä, onko IM-tavoitettavuus otettu käyttöön.|  
+|Negatiivinen muoto|Osoittaa, miten negatiiviset valuutta-arvot näytetään sovelluksessa.|  
+|Luvun muoto|Määrittää, miten luvut näytetään sovelluksessa.|  
+|Hinnoittelussa käytettävä desimaalien määrä|Hintojen desimaalipaikkojen määrä.|  
+|Jaa edelliselle omistajalle delegoitaessa|Tieto siitä, jaetaanko kohde edelliselle omistajalle delegoinnin yhteydessä.|  
+|Markkinointi|Salli automaattisen vastauksen luonti|Osoittaa, sallitaanko automaattisen vastauksen luonti.|  
+|Salli automaattinen tilaamisen lopettaminen|Osoittaa, sallitaanko automaattinen tilaamisen lopettaminen.|  
+|Salli automaattinen tilaamisen lopettamisen kuittaus|Osoittaa, sallitaanko automaattisen tilaamisen lopettamisen kuittaussähköpostiviestin lähettäminen.|  
+|Salli markkinointisähköpostiviestien suorittaminen|Osoittaa, sallitaanko markkinointisähköpostiviestien suorittaminen.|  
+| Outlook-synkronointi|Salli osoitteiston synkronointi|Osoittaa, sallitaanko Microsoft Office Outlook -osoitteiston synkronointi taustalla.|  
+|Salli aikataulutettu offline-synkronointi|Osoittaa, sallitaanko Outlookin offline-synkronointi taustalla.|  
+|Salli aikataulutettu synkronointi|Osoittaa, sallitaanko aikataulutetut synkronoinnit Outlookiin.|  
+|Sähköpostilähetyksen kyselyväli|Normaali kyselytiheys, jota käytetään lähetettäessä sähköpostia Outlookissa.|  
+|Pienin osoitteen synkronointiväli|Normaali kyselytiheys osoitteiston synkronoinnissa Outlookissa.|  
+|Pienin offline-synkronointiväli|Normaali kyselytiheys Outlookin offline-taustasynkronoinnissa.|  
+|Pienin synkronointiväli|Pienin sallittu aika aikataulutettujen Outlook-synkronointien välillä.|  
+|Enimmäiskierrot automaattisessa tunnisteiden luonnissa|Enimmäismäärä aggressiivisia kyselykiertoja, jotka suoritetaan sähköpostin automaattiselle tunnisteiden luonnille, kun uusi sähköpostiviesti vastaanotetaan.|  
+|Automaattisen tunnisteiden luonnon väli|Normaali kyselytiheys sähköpostiviestien automaattisessa tunnisteiden luonnissa Outlookissa.|  
+|Riippumattoman ohjelmistotoimittajan määritys|Palvelukalenterin ulkoasumääritys|Voit määrittää visuaalisia tyylejä palvelukalentereille.
 
-Lisätietoja: [Palvelukalenterin ulkoasun määritys](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)|
+Lisätietoja: [Palvelukalenterin ulkoasumääritys](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)|
 
   
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-[Ratkaisujen ja korjausten jakelu](use-segmented-solutions-patches-simplify-updates.md)
+[Ratkaisujen ja korjaustiedostojen jakaminen](use-segmented-solutions-patches-simplify-updates.md)

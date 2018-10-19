@@ -1,5 +1,5 @@
 ---
-title: Malliin perustuvan sovelluksen huomautusohjausobjektin määrittäminen julkaisujen tietojen tarkistamiseksi PowerAppsissa | MicrosoftDocs
+title: Mallipohjaisen sovelluksen muistiinpano-ohjausobjektin määrittäminen viestejä koskevien tietojen käyttämistä varten PowerAppsissa | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/06/2018
 ms.reviewer: ''
@@ -8,50 +8,49 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: f10cdf1c-3540-439c-a171-27a10e72da45
 caps.latest.revision: 63
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: 014f0c2516813b7cbcaa8e44a188455b07056c71
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39681217"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="set-up-the-model-driven-app-notes-control-to-access-information-about-posts"></a>Malliin perustuvan sovelluksen huomautusohjausobjektin määrittäminen julkaisujen tietojen tarkistamiseksi
+# <a name="set-up-the-model-driven-app-notes-control-to-access-information-about-posts"></a>Mallipohjaisen sovelluksen muistiinpano-ohjausobjektin määrittäminen viestejä koskevien tietojen käyttämistä varten
 
- Tiettyjen [päivitettyjä lomakkeita](main-form-presentations.md#updated-forms) käyttävien järjestelmäentiteettien PowerApps-lomakkeiden huomautusohjausobjektin avulla voit tarkistaa tietoja **julkaisuista**, **aktiviteeteista** ja **huomautuksista**. Mukautetuissa entiteeteissä, joissa olet ottanut käyttöön huomautukset ja aktiviteetit, näet vain **huomautukset** ja **entiteetit**. Jos haluat sisällyttää myös **julkaisut**, sinun täytyy ottaa ne käyttöön mukautetulle entiteetille.  
+ Tiettyjen PowerApps-lomakkeissa, joissa on käytössä [päivitetyt lomakkeet](main-form-presentations.md#updated-forms), muistiinpano-ohjausobjektilla voidaan käyttää **viestejä**, **aktiviteetteja** ja **muistiinpanoja** koskevia tietoja. Mukautetuissa entiteeteissä, joissa muistiinpanot ja aktiviteetit on otettu käyttöön, vain **muistiinpanot** ja **aktiviteetit** näkyvät. Jos haluat myös **viestien** näkyvän, ne on otettava käyttöön mukautetussa entiteetissä.  
   
-## <a name="enable-posts-for-a-custom-entity"></a>Mukautetun entiteetin julkaisujen käyttöönotto  
+## <a name="enable-posts-for-a-custom-entity"></a>Viestien ottaminen käyttöön mukautetussa entiteetissä  
   
-1.  Valitse **[Asetukset](advanced-navigation.md#settings)** > **Toimintasyötteiden määritys**. 
+1.  Siirry kohtaan **[Asetukset](advanced-navigation.md#settings)** > **Toimintasyötteiden määrittäminen**. 
   
-2.  Avaa mukautetun entiteettisi tietue.  
+2.  Avaa tietue mukautettua entiteettiä varten.  
   
-3.  Tarkista, että asetus, jolla **otetaan käyttöön seinät tälle tietuelomaketyypille** on käytössä. Tallenna sitten tietue.  
+3.  Varmista, että **Ota seinät käyttöön tälle tietuelomakkeen tyypille** on valittu ja tallenna tietue.  
   
 4.  Valitse komentopalkista **Aktivoi**.  
   
-5.  Jos sinun piti ottaa seinät käyttöön, sinun täytyy julkaista entiteetti.  
+5.  Jos seinät on otettava käyttöön, entiteetti on julkaistava.  
   
- Järjestelmäentiteeteissä huomautusohjausobjekti sijoitetaan oletusarvoisesti yhteisöosioon, joka sijaitsee kolmisarakkeisen välilehden keskellä lomakkeen yläreunassa. Se voidaan näyttää lomakkeessa vain kerran. Voit siirtää huomautusohjausobjektia ja poistaa sen. Jos haluat lisätä sen uudelleen, napsauta **Lisää**-välilehden **Ohjausobjekti**-ryhmän **Huomautukset**-painiketta.  
+ Muistiinpano-ohjausobjekti on sijoitettu järjestelmäentiteeteissä yhteisöruutuosaan, joka on kolmisarakkeisen välilehden keskellä lomakkeen yläosassa. Se voi olla lomakkeessa vain kerran. Voit siirtää tai poistaa muistiinpano-ohjausobjektin. Voit lisätä sen takaisin **Lisää**-välilehden **Ohjausobjekti**-ryhmän **Muistiinpanot**-painikkeella.  
   
- Seuraavassa taulukossa kuvataan huomautusohjausobjektin ominaisuudet.  
+ Seuraavassa taulukossa käsitellään muistiinpano-ohjausobjektin ominaisuuksia.  
   
 |Välilehti|Ominaisuus|Kuvaus|  
 |---------|--------------|-----------------|  
-|**Näyttö**|**Selite**|**Pakollinen**: vaikka selitettä ei oletusarvoisesti näytetä, se on pakollinen.|  
-||**Näytä selite lomakkeessa**|Voit valita, näytetäänkö selite vai ei.|  
-||**Lukitse kenttä lomakkeessa**|Tämä estää huomautusohjausobjektin poistamisen lomakkeesta vahingossa.|  
-||**Oletusvälilehti**|Valitse, mikä välilehti näytetään oletusarvoisesti. Vaihtoehtoja ovat seuraavat:<br /><br /> - **Aktiviteetit**<br />- **Julkaisut**<br />- **Huomautukset**.|  
-|**Muotoilu**|**Valitse ohjausobjektin kattamien sarakkeiden määrä**|Kun huomautusohjausobjektin sisältävässä osiossa on useita sarakkeita, voit määrittää kentän käyttämään enintään saman määrän sarakkeita kuin osiossa on.|  
-||**Rivien määrä**|Voit määrittää huomautusohjausobjektin korkeuden valitsemalla sen rivien määrän.|  
-||**Laajenna automaattisesti käytettävissä olevaan tilaan**|Sen sijaan, että määrittäisit korkeuden rivimäärän avulla, voit sallia huomautusohjausobjektin laajentamisen käytettävissä olevaan tilaan.|  
+|**Näyttö**|**Otsikko**|**Pakollinen**: vaikka otsikko ei näy oletusarvoisesti, se on pakollinen.|  
+||**Näytä otsikko lomakkeessa**|Voit valita otsikon näyttämisen.|  
+||**Lukitse kenttä lomakkeessa**|Tämä estää sen, että muistiinpanot poistettaisiin vahingossa lomakkeesta.|  
+||**Oletusvälilehti**|Valitse oletusarvoisesti näytettävä välilehti. Vaihtoehdot ovat seuraavat:<br /><br /> - **Aktiviteetit**<br />- **Viestit**<br />- **Muistiinpanot**|  
+|**Muotoilu**|**Valitse sarakkeiden määrä ohjausobjektia varten**|Kun muistiinpano-ohjausobjektin sisältävässä osassa on useita sarakkeita, voit määrittää kentän käyttämään enintään saman määrän sarakkeita kuin osassa on.|  
+||**Rivien lukumäärä**|Voit hallita muistiinpano-ohjausobjektin korkeutta valitsemalla, kuinka monta riviä ohjausobjektia käyttää.|  
+||**Laajenna automaattisesti käytettävissä olevaan tilaan**|Sen sijaan että korkeus määritettäisiin rivien määrän perusteella, voit sallia muistiinpano-ohjausobjektin laajentumisen käytettävissä olevaan tilaan.|  
   
 ## <a name="next-steps"></a>Seuraavat vaiheet
 [Lomake-editorin avaaminen](open-form-editor.md)

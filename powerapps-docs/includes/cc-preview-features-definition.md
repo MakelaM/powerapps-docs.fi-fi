@@ -1,1 +1,1 @@
-Esikatselutoimintoja ei ole tarkoitettu tuotantokäyttöön ja ne saattavat käyttää rajoitettua toiminnallisuutta. Nämä ominaisuudet ovat käytettävissä ennen virallista julkaisua, jotta asiakkaat voivat saada pääsyn etukäteen ja antaa palautetta.
+Esiversion ominaisuuksia ei ole tarkoitettu tuotantokäyttöön, ja niiden toiminnallisuus voi olla rajoitettu. Nämä toiminnot ovat käytettävissä ennen virallista julkaisua, jotta asiakkaat voivat käyttää niitä aikaisessa vaiheessa ja antaa palautetta.

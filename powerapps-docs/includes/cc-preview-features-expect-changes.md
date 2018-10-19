@@ -1,1 +1,1 @@
-Odotamme muutoksia tähän ominaisuuteen, joten sitä ei tule käyttää tuotantoympäristössä. Käytä sitä vain testaus- ja kehitysympäristöissä.
+Tähän toimintoon on odotettavissa muutoksia, joten sitä ei pitäisi käyttää tuotannossa. Käytä sitä vain testi- ja kehitysympäristöissä.

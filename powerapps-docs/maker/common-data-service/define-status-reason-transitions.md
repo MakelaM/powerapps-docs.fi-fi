@@ -1,6 +1,6 @@
 ---
-title: Tilan syyn siirtymien määrittäminen PowerAppsissa | MicrosoftDocs
-description: Lue, miten voit määrittää tilan syyn siirtymiä
+title: Tilan syyn siirtymien määrittäminen PowerAppsin avulla | MicrosoftDocs
+description: Tilan syyn siirtymien määrittäminen
 ms.custom: ''
 ms.date: 05/25/2018
 ms.reviewer: ''
@@ -9,79 +9,79 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: dbc4f436-0b23-42f9-8079-b0de482aaebe
 caps.latest.revision: 11
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: e21069a86d2ef21e8209fea6ea4a4b05e604cda4
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39678547"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="define-status-reason-transitions-for-the-case-or-custom-entities"></a>Tilan syyn siirtymien määrittäminen Tapaukselle tai mukautetuille entiteeteille
 
-Voit määrittää tilan syyn siirtymät Incident (**Tapaus**) -entiteetille tai mukautetulle entiteetille.
+# <a name="define-status-reason-transitions-for-the-case-or-custom-entities"></a>Palvelupyyntöjen tai muokattujen entiteetien tilan syyn siirtojen määrittäminen
+
+Voit määrittää tilan syyn siirtymät Esiintymä (**Palvelupyyntö**) -entiteetille tai mukautetuille entiteeteille.
 
 > [!NOTE]
-> Vaikka Incident (tapaus) -entiteetti ei sisälly oletusarvoiseen Common Data Service for Apps -ympäristöön, [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) käyttää sitä, ja se on määritetty [Common Data Modelin](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json) sisällä
+> Vaikka tapauksen (palvelupyynnön) entiteetti ei kuulu Common Data Service sovelluksille -oletusratkaisuun, [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) käyttää sitä ja se on määritetty [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json) -palvelussa
   
-Tilan syyn siirtymät ovat valinnaisia lisätason suodattimia, joiden avulla voit määrittää, mikä tilan syyn arvo voidaan määrittää kullekin tilan syylle. Voit helpottaa muiden käyttäjien työtä rajoittamalla kelvollisten vaihtoehtojen määrää, jolloin sopivimman seuraavan tietueen tilan syyn valitseminen on yksinkertaisempaa, erityisesti jos käytettävissä on suuri määrä kelvollisia tilan syy -arvojen yhdistelmiä.  
+Tilan syyn siirtymät ovat valinnainen, ylimääräinen suodatustaso, jolla määritetään, mitä tilan syyn arvoa voidaan muuttaa kussakin tilan syyssä. Kun rajallinen arvovaihtoehtojen luettelo on määritetty, käyttäjien on helpompi valita tietueelle oikea seuraava tilan syy, kun valittavana on runsaasti kelvollisia tilan syyn arvoyhdistelmiä.  
   
 <a name="BKMK_StatusAndStatusReasons"></a>
 
-## <a name="what-is-the-connection-between-status-and-status-reason-fields"></a>Mikä on Tila ja Tilan syy -kenttien välinen yhteys?  
+## <a name="what-is-the-connection-between-status-and-status-reason-fields"></a>Tila- ja Tilan syy-kenttien välinen yhteys  
 
-Entiteeteillä, joilla voi olla eri tila-arvoja, on kaksi kenttää, jotka sieppaavat näitä tietoja:  
+Entiteeteillä jolla voi olla eri tila-arvoja on kaksi kenttää näiden tietojen keräämiseksi:  
   
 |Näyttönimi|Kuvaus|  
 |------------------|-----------------|  
-|**Tila**|Esittää tietueen tilan. Yleensä **Aktiivinen** tai **Passiivinen**. Et voi lisätä uusia tila-asetuksia.|  
-|**Tilan syy**|Esittää syyn, joka on yhdistetty tiettyyn tilaan. Jokaisella tilalla on oltava vähintään yksi mahdollinen tilan syy. Voit lisätä muita tilan syyn asetuksia.|  
+|**Tila**|Ilmaisee tietueen aktiivisuustilan. Yleensä **Aktiivinen** tai **Passiivinen**. Et voi lisätä uusia tilavaihtoehtoja.|  
+|**Tilan syy**|Ilmaisee tiettyyn tilaan linkitetyn syyn. Kullakin tilalla on oltava vähintään yksi mahdollinen tilan syy. Voit lisätä uusia tilan syy -vaihtoehtoja.|  
   
-Kentän metatiedot määrittävät ne tila-arvot, jotka kelpaavat kussakin tilassa. Esimerkiksi Incident (**Tapaus**) -entiteetin oletustila ja tilan syyn asetukset ovat:  
+Kentän metatiedot määrittävät, mitä tilan arvoja voi käyttää tietyssä tilassa. Esimerkiksi (**Palvelupyyntö**)-entiteetillä on seuraavat oletustila- ja tilan syy -vaihtoehdot:  
   
 |Tila|Tilan syy|  
 |------------|-------------------|  
-|**Aktiivinen**|<li>**Keskeneräinen**</li><li>**Pidossa**</li><li>**Odotetaan tietoja**</li><li>**Tutkittavana**</li>| 
-|**Ratkaistu**|<li>**Ongelma selvitetty**</li><li>**Tiedot annettu**</li>|
+|**Aktiivinen**|<li>**Kesken**</li><li>**Pidossa**</li><li>**Odotetaan tietoja**</li><li>**Tutkittavana**</li>| 
+|**Ratkaistu**|<li>**Ongelma ratkaistu**</li><li>**Annetut tiedot**</li>|
 |**Peruutettu**|<li>**Peruutettu**</li><li>**Yhdistetty**</li>|
   
   
 <a name="BKMK_EditStatusReasonTransitions"></a>   
 
-## <a name="edit-status-reason-transitions"></a>Tila syyn siirtymien muokkaaminen
+## <a name="edit-status-reason-transitions"></a>Tilan syyn siirtymien muokkaaminen
  
-Voit muokata tilan syy -kentän asetuksia Tapaus-entiteetin ja mukautettujen entiteettien osalta, jolloin voit määrittää, mitä muita tilan syy -asetuksia käyttäjät saavat valita. Ainoa rajoitus on, että jokainen tilan syy -asetus aktiiviselle tilalle tulee sisältää ainakin yksi polku, joka johtaa passiiviseen tilaan. Muussa tapauksessa voisit luoda ehdon, joka ei antaisi ratkaista tai peruuttaa tapausta.  
+Voit muokata Tapaus-entiteetin ja mukautettujen entiteettien tilan syy -kenttäasetuksia määrittääksesi, mitä muita tilan syy -vaihtoehtoja käyttäjät voivat valita. Ainoa rajoitus on, että kullekin tilan syy -vaihtoehdon aktiiviselle tilalle on sallittava vähintään yksi polku passiiviseen tilaan. Muussa tapauksessa voitaisiin luoda ehto, jossa palvelupyyntöä ei voi ratkaista eikä peruuttaa.  
 
 > [!NOTE]
-> Tilan syyn siirtymien muokkaaminen edellyttää ratkaisunhallinnan käyttöä. Saat lisätietoja kenttien muokkaamisesta kohdasta [Common Data Service for Appsin kenttien luominen ja muokkaaminen PowerAppsin ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md).
+> Tilan syyn siirtojen muokkaaminen edellyttää ratkaisunhallintaa. Lisätietoja kenttien muokkaamisesta on kohdassa [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md).
   
- Kun muokkaat tilan syy -kenttää, **Muokkaa tilan syyn siirtymiä** -painike näkyy valikossa. 
+ Tilan syy -kenttää muokatessa **Muokkaa tilan syyn siirtymiä** -painike näkyy valikossa. 
 
-![Muokkaa tilan syyn siirtymiä -komento](media/status-reason-transitions-command.png)
+![Muokkaa tilan syyn siirtoja -komento](media/status-reason-transitions-command.png)
 
-Kun napsautat tätä painiketta, **Tilan syyn siirtymät** -valintaikkuna mahdollistaa **Ota käyttöön tilan syyn siirtymät** -asetuksen valitsemisen. Kun tämä asetus on valittuna, sinun tulee määrittää mitkä *muut* tilan syy -arvot sallitaan kullekin tilan syylle. Jos haluat lopettaa suodatuksen, poista **Ota käyttöön tilan syyn siirtymät** -asetuksen valinta. Määrittämäsi siirtymät säilytetään, mutta niitä ei käytetä.  
+Kun napsautat painiketta, voit valita **Tilan syyn siirrot** -valintaikkunassa **Ota tilan syyn siirrot käyttöön**. Kun tämä vaihtoehto on valittu, sinun on määritettävä kunkin tilan syyn käytössä olevat *muut* tilan syyn arvot. Voit poistaa käytetyn suodatuksen poistamalla **Ota tilan syyn siirtymät käyttöön** -vaihtoehdon valinta. Määritetyt siirtymät säilytetään, mutta niitä ei käytetä.  
   
-Alla olevassa näyttökuvassa on esimerkki, joka täyttää seuraavat vaatimukset: 
+Seuraavassa näyttökuvassa on esimerkki, joka täyttää seuraavat vaatimukset: 
  
-- Tapaus voidaan yhdistää milloin tahansa. Et voi yhdistää tapauksia, jos tilan syyn siirtymä ei salli sitä.  
-- Aktiivisen tapauksen voi peruuttaa milloin tahansa.  
-- Ratkaistua tai peruutettua tapausta ei voi aktivoida uudelleen.  
-- Kaikkien tapauksien on käytävä läpi seuraavat vaiheet: **Keskeneräinen** > **Pidossa** > **Odotetaan tietoja** > **Tutkittavana** ennen kuin ne voidaan ratkaista. Tätä kokoonpanoa käytettäessä tapausta ei voi asettaa aiempaan tilaan.  
+- Palvelupyyntö voidaan yhdistää milloin tahansa. Et voi yhdistää palvelupyyntöjä, jos tilan syyn siirtymä ei salli sitä.  
+- Aktiivinen palvelupyyntö voidaan peruuttaa milloin tahansa.  
+- Ratkaistua tai peruutettua palvelupyyntöä ei voi aktivoida uudelleen.  
+- Kaikki palvelupyynnöt on käsiteltävä seuraavissa vaiheissa, ennen kuin ne voidaan ratkaista: **Kesken** > **Pidossa** > **Odotetaan tietoja** > **Tutkittavana**. Tässä määrityksessä palvelupyyntöä ei voitu määrittää aiempaan tilaan.  
   > [!NOTE]
-  >  Tämä ei ole hyvä esimerkki todellisesta työtilanteesta, mutta se osoittaa, miten eri tilan vaiheet voidaan pakottaa tilan syyn siirtymien kautta.  
+  >  Tämä ei kuvaa hyvin todellisia töitä mutta se osoittaa, miten tilan vaiheet voidaan pakottaa käyttöön tilan syyn siirtymien avulla.  
   
- ![Esimerkki tapauksen tilan syyn siirtymistä](media/status-reason-transitions-example.PNG)  
+ ![Esimerkki palvelupyynnön tilan syyn siirrolle](media/status-reason-transitions-example.PNG)  
   
 ### <a name="see-also"></a>Katso myös  
 
-[Common Data Service for Appsin kenttien luominen ja muokkaaminen PowerAppsin ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
+[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
 [Entiteetin metatiedot > Entiteetin tilat](/powerapps/developer/common-data-service/entity-metadata#entity-states)<br />
-[Mukautetun tilamallin siirrosten määrittäminen](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
+[Mukautetun tilan mallisiirtojen määrittäminen](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

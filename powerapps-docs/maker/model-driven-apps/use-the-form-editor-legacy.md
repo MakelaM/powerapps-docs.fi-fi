@@ -1,6 +1,6 @@
 ---
-title: Siirtymisen muuttaminen malliin perustuvan sovelluksen lomakkeessa PowerAppsissa | MicrosoftDocs
-description: Opi muuttamaan siirtymistä lomakkeessa
+title: Mallipohjaisen sovelluksen lomakkeen siirtymistoiminnon muuttaminen PowerAppsissa | MicrosoftDocs
+description: 'Tietoja siitä, miten voit muuttaa siirtymistä lomakkeessa'
 ms.custom: ''
 ms.date: 06/06/2018
 ms.reviewer: ''
@@ -9,42 +9,43 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 4c379202-9f0e-4003-a49c-efff53e7f79f
 caps.latest.revision: 63
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: 5a8156875f669854a4ba4649e50a23e340f3ceff
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39673872"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="change-navigation-within-a-model-driven-app-form"></a>Siirtymisen muuttaminen malliin perustuvan sovelluksen lomakkeessa
+# <a name="change-navigation-within-a-model-driven-app-form"></a>Mallipohjaisen sovelluksen lomakkeen siirtymistoiminnon muuttaminen
 
- Siirtyminen lomakkeessa mahdollistaa sovelluksen käyttäjille lomakkeeseen liittyvien tietueiden luettelojen tarkastelemisen. Jokaisessa entiteettisuhteessa on ominaisuuksia sen hallintaan, näytetäänkö suhde. Lisätietoja: [Ensisijaisen entiteetin siirtymisruutukohde](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)  
+ Koska lomakkeessa voi siirtyä, sovelluksen käyttäjät voivat tarkastella liittyvien tietojen luetteloita. Kussakin entiteettisuhteessa on ominaisuuksia, joilla hallitaan sen näyttämistä. Lisätietoja: [Ensisijaisen entiteetin siirtymisruudun kohde](../common-data-service/create-edit-1n-relationships-solution-explorer.md#navigation-pane-item-for-primary-entity)  
   
- Näytettäviksi määritetyt entiteettisuhteet voidaan ohittaa lomake-editorissa. Voit myös sisällyttää siirtymislinkkejä, jotka näyttävät verkkoresursseja tai muita verkkosivustoja lomakkeen siirtymistoimintojen kautta.  
+ Näytettäviksi määritetyt entiteettisuhteet voidaan ohittaa lomake-editorissa. Voit lisätä lomakkeen siirtymisosaan linkkejä, joilla näytetään verkkoresursseja tai muita sivustoja.  
   
- Saat vaiheittaiset ohjeet artikkelista [Common Data Service for Appsin entiteettisuhteiden luominen ja muokkaaminen](../common-data-service/create-edit-entity-relationships.md)  
+ Vaiheittaiset ohjeet ovat kohdassa [Common Data Service sovelluksille -ratkaisun entiteettisuhteiden luominen ja muokkaaminen](../common-data-service/create-edit-entity-relationships.md)  
   
- Siirtymisen muokkaamisen ottamiseksi käyttöön sinun täytyy ensin valita **Siirtyminen**-vaihtoehto lomakkeiden suunnitteluohjelman **Aloitus**-välilehden **Valitse**-ryhmästä.  
+ Jos haluat ottaa siirtymisen muokkaamisen käyttöön, sinun on ensin valittava **Siirtyminen** lomakkeen suunnitteluohjelman **Koti**-välilehden **Valitse**-ryhmässä.  
  
- ![Siirtymiskomento](media/navigation-command.png)
+> [!div class="mx-imgBorder"] 
+> ![Siirtymiskomento](media/navigation-command.png)
  
- Oikeanpuoleisen ruudun **Suhteidenhallinta**-kohdassa voit suodattaa näkyviin 1:N (yksi-moneen)- tai N:N (monta moneen) -suhteet tai näyttää kaikki käytettävissä olevat suhteet. **Näytä vain käyttämättömät suhteet -valintaruutu** on poistettu käytöstä ja valittuna. Voit siis lisätä kunkin suhteen vain kerran.  
-  
- ![Suhteidenhallinta](media/relationship-explorer.png)
+ Voit käyttää oikeanpuoleisen ruudun **suhteiden hallinnassa** suodatukseen 1:N (yksi moneen)- tai N:N (monta moneen) -suhteita tai näyttää kaikki käytettävissä olevat suhteet. **Näytä vain käyttämättömät suhteet** -valintaruutu on poistettu käytöstä ja valittu. Niinpä voit lisätä kunkin suhteen vain kerran.  
+ 
+ > [!div class="mx-imgBorder"] 
+ > ![Suhteiden hallinta](media/relationship-explorer.png)
 
- Voit lisätä suhteen **Suhteidenhallinta**-kohdasta kaksoisnapsauttamalla suhdetta, jolloin se lisätään valittuna olevan suhteen alapuolelle siirtymisalueella. Kaksoisnapsauta suhdetta siirtymisalueella. Voit muuttaa suhteen nimeä **Näytä**-välilehdellä. **Nimi**-välilehdellä näet suhdetta koskevia tietoja. Voit avata entiteetin määrityksen käyttämällä **Muokkaa**-painiketta.  
+ Jos haluat lisätä suhteen **suhteiden hallinnassa**, kaksoisnapsauta suhdetta, jolloin se lisätään siirtymisalueella valittuna olevan suhteen alapuolelle. Kaksoisnapsauta suhdetta siirtymisalueella. Voit nyt muuttaa otsikon **Näytä**-välilehdessä. **Nimi**-välilehdessä on tietoja suhteesta. Voit avata entiteetin määritelmän **Muokkaa**-painikkeella.  
   
- Siirtymisalueella on viisi ryhmää. Voit siirtää ryhmiä vetämällä niitä tai muuttaa niiden otsikkoa kaksoisnapsauttamalla sitä, mutta et voi poistaa niitä. Nämä ryhmät näkyvät vain, jos ne sisältävät jotain. Jos siis et halua ryhmän näkyvän, älä lisää siihen mitään.  
+ Siirtymisalueella on viisi ryhmää. Voit muuttaa niiden sijaintia vetämällä ja vaihtaa niiden otsikon kaksoisnapsauttamalla. Et voi kuitenkaan poistaa niitä. Nämä ryhmät näkyvät vain, kun niissä on sisältöä. Jos et halua ryhmän näkyvän, älä lisää siihen mitään.  
   
- Voit lisätä linkin verkkoresurssiin tai ulkoiseen URL-osoitteeseen käyttämällä **Siirtymislinkki**-painiketta **Ohjausobjekti**-ryhmässä **Lisää**-välilehdellä.  
+ Voit lisätä linkin verkkoresurssiin tai ulkoiseen URL-osoitteeseen **Lisää**-välilehden **Ohjausobjekti**-ryhmän **Siirtymislinkki**-painikkeella.  
  
  ![Siirtymislinkki](media/navigation-link.png)
  
@@ -54,14 +55,14 @@ ms.locfileid: "39673872"
   
 |Ominaisuus|Kuvaus|  
 |--------------|-----------------|  
-|Nimi|**Pakollinen**: otsikkona näytettävä teksti.|  
-|Kuvake|Käytä 32x32 kuvapisteen verkkoresurssia. On suositeltavaa käyttää PNG-kuvaa, jolla on läpinäkyvä tausta.|  
-|Verkkoresurssi|Määritä lomakkeen pääruudussa näytettävä verkkoresurssi.|  
+|Nimi|**Pakollinen**: Otsikkona näytettävä teksti.|  
+|Kuvake|Käytä 32 x 32 kuvapisteen verkkoresurssia. PNG-kuvan ja läpinäkyvän taustan käyttöä suositellaan.|  
+|WWW-resurssi|Määritä lomakkeen pääruudussa näytettävä verkkoresurssi.|  
 |Ulkoinen URL|Määritä lomakkeen pääruudussa näytettävän sivun URL-osoite.|  
 
 <a name="BKMK_PrivacyNotices"></a>   
 
-## <a name="privacy-notices"></a>Tietosuojailmoitukset  
+## <a name="privacy-notices"></a>Tietosuojatiedot  
  [!INCLUDE[cc_privacy_crm_website_preview_control](../../includes/cc-privacy-crm-website-preview-control.md)]    
   
  [!INCLUDE[cc_privacy_multimedia_control](../../includes/cc-privacy-multimedia-control.md)]  

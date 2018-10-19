@@ -1,6 +1,6 @@
 ---
 title: Kenttien poistaminen PowerAppsissa | MicrosoftDocs
-description: Opi poistamaan kenttiä
+description: Kenttien poistaminen
 ms.custom: ''
 ms.date: 06/20/2018
 ms.reviewer: ''
@@ -9,32 +9,31 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: 578ac950-da16-4ec6-a0a4-25f3aaa3b96e
 caps.latest.revision: 33
 ms.author: matp
 manager: kvivek
-tags: ''
-ms.openlocfilehash: 82e560f063f2e46190420b6be5cef4cc55d9ab4f
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39676483"
+tags: null
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="delete-fields"></a>Poista kenttiä
+# <a name="delete-fields"></a>Kenttien poistaminen
 
 <a name="BKMK_DeletingFields"></a>   
  
- Jos sinulla on järjestelmän järjestelmänvalvojan rooli, voit poistaa mukautettuja kenttiä, jotka eivät ole osa hallittua ratkaisua. Kun poistat kentän, kentän tallennetut tiedot menetetään. Ainoa tapa palauttaa poistetun kentän tietoja on palauttaa tietokanta kentän poistamista edeltävästä kohdasta.  
+ Koska sinulla on järjestelmänvalvojan käyttöoikeusrooli, voit poistaa minkä tahansa mukautetun kentän, joka ei sisälly hallittuun ratkaisuun. Kun kenttä poistetaan, kaikki kenttään tallennetut tiedot menetetään. Poistetun kentät tiedot voidaan palauttaa vain palauttamalla tietokanta hetkeen ennen kentän poistamista.  
   
- Ennen kuin voit poistaa mukautetun kentän, sinun on poistettava kaikki riippuvuussuhteet muissa ratkaisun osissa. Avaa kenttä ja paina **Näytä riippuvuudet** -painiketta valikkorivillä, niin **Riippuvaiset osat** tulee näkyviin. Jos kenttää käytetään esimerkiksi lomakkeessa tai näkymässä, sinun on ensin poistettava kentän viittauksen kyseisistä ratkaisun osista.  
+ Ennen mukautetun entiteetin poistamista sinun on poistettava muissa ratkaisun osissa mahdollisesti olevat riippuvuudet. Avaa kenttä, jonka jälkeen voit tarkastella mitä tahansa **riippuvaista osaa** valikkorivin **Näytä riippuvuudet** -painikkeella. Jos kenttää esimerkiksi käytetään lomakkeessa tai näkymässä, sinun on poistettava ensin viittaukset kenttään kyseisissä ratkaisun osissa.  
   
- Jos poistat hakukentän, sen 1:N-entiteettisuhde poistetaan automaattisesti.  
+ Jos poistat valintakentän, sen 1:N-entiteettisuhde poistetaan automaattisesti.  
 
  ## <a name="next-steps"></a>Seuraavat vaiheet
 
- [Poista mukautettu entiteetti](data-platform-delete-entity.md)
+ [Mukautetun entiteetin poistaminen](data-platform-delete-entity.md)

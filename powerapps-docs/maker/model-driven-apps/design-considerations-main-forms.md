@@ -1,6 +1,6 @@
 ---
-title: Malliin perustuvien sovellusten päälomakkeiden suunnittelussa huomioitavat seikat PowerAppsissa | MicrosoftDocs
-description: Lue ohjeet päälomakkeiden suunnitteluun
+title: Mallipohjaisen sovelluksen päälomakkeiden suunnittelunäkökohtia PowerAppsissa | MicrosoftDocs
+description: Tietoja päälomakkeiden suunnittelusta
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
@@ -9,58 +9,57 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
-- Dynamics 365 (online)
-- Dynamics 365 Version 9.x
-- powerapps
+  - Dynamics 365 (online)
+  - Dynamics 365 Version 9.x
+  - powerapps
 author: Mattp123
 ms.assetid: a83872f4-9e36-413b-8561-41a1e5ffe5dd
 caps.latest.revision: 17
 ms.author: matp
 manager: kvivek
-ms.openlocfilehash: 68915af214b86511f7fba4bbb05ee59f598340b0
-ms.sourcegitcommit: aba996b1773ecdf62758e06b34eaf57bede29e08
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39681681"
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
-# <a name="design-considerations-for-model-driven-app-main-forms"></a>Malliin perustuvien sovellusten päälomakkeiden suunnittelussa huomioitavat seikat
+# <a name="design-considerations-for-model-driven-app-main-forms"></a>Mallipohjaisen sovelluksen päälomakkeiden suunnittelunäkökohtia
 
-Päälomakkeet muodostavat ensisijaisen käyttöliittymän, jossa ihmiset käyttävät tietojaan. Päälomakkeet tarjoavat laajimmat mahdolliset toiminnot. Ne ovat käytettävissä malliin perustuvissa sovelluksissa Dynamics 365 for Phones -sovellusta lukuun ottamatta.  
+Lomakkeet ovat ensisijainen käyttöliittymä, jossa henkilöt tarkastelevat ja käsittelevät tietojaan. Päälomakkeet tarjoavat laajimmat vaihtoehdot ja ovat käytettävissä mallipohjaisissa sovelluksissa. Dynamics 365 for phones on kuitenkin poikkeus.  
   
- Päälomakkeiden suunnittelun pääperiaate on se, että ne suunnitellaan kerran, minkä jälkeen niitä voi ottaa käyttöön kaikkialla. Samaa päälomaketta, jonka suunnittelet malliin perustuvalle sovellukselle tai Dynamics 365 Customer Engagement -verkkosovellukselle, käytetään myös Dynamics 365 for Outlookissa ja Dynamics 365 for Tablets -sovelluksessa. Tämän ansiosta sinun ei tarvitse integroida muutoksia useisiin lomakkeisiin. Näiden lomakkeiden suunnittelussa täytyy kuitenkin huomioida useita tärkeitä seikkoja.  
+ Yksi tärkeimmistä suunnittelun tavoitteista päälomakkeille on, että ne suunnitellaan kerran ja otetaan käyttöön kaikkialla. Samaa mallipohjaiselle sovellukselle tai Dynamics 365 customer engagement -WWW-sovelluksen suunniteltua päälomaketta käytetään myös Dynamics 365 for Outlook- ja Dynamics 365 for tablets -sovelluksissa. Tämän lähestymistavan etu on, että sinun ei tarvitse integroida muutoksia useisiin lomakkeisiin. On kuitenkin useita tärkeitä seikkoja, joita on syytä harkita näiden lomakkeiden suunnittelussa.  
   
 <a name="BKMK_CustomFormsForGroups"></a>   
 
-## <a name="custom-forms-for-different-groups"></a>Eri ryhmien mukautetut lomakkeet  
- Koska voit luoda useita päälomakkeita ja määrittää kullekin lomakkeelle erilaisia käyttöoikeusrooleja, voit näyttää organisaatiosi eri ryhmille lomakkeen, joka on optimoitu juuri sille tavalle, jolla kukin ryhmä käyttää sovellusta. Voit jopa tarjota kullekin ryhmälle eri vaihtoehtoja, jotta heillä on valittavissaan erilaisia lomakkeita. Lisätiedot: [Lomakkeiden käyttöoikeuksien hallinta](control-access-forms.md)  
+## <a name="custom-forms-for-different-groups"></a>Mukautetut lomakkeet eri käyttäjäryhmille  
+ Koska voit luoda useita päälomakkeita ja antaa eri käyttöoikeusrooleja kullekin lomakkeelle, voit tarjota organisaation eri ryhmille lomakkeen, joka on optimoitu kullekin ryhmälle sovelluksen käyttötarkoituksen mukaan. Voit jopa tarjota erilaisia vaihtoehtoja kullekin ryhmälle siten, että niillä on valittavana erilaisia lomakkeita. Lisätietoja: [Lomakkeiden käytön hallinta](control-access-forms.md)  
   
- Voit olettaa, että esimiehet ja päätöksentekijät haluavat lomakkeita, jotka on optimoitu tarjoamaan tärkeät tiedot nopeasti. He haluavat luultavasti nähdä mieluummin kaavioita kuin luetteloita. He eivät myöskään luultavasti lisää paljoakaan tietoja.  
+ Voit olettaa, että päälliköt ja päätöksentekijät haluavat lomakkeita, jotka on optimoitu viittaamaan nopeasti päätöksenteon avaintietoihin. He haluavat nähdä kaavioita mieluummin kuin luetteloita, eivätkä he mahdollisesti suorita paljon tietojen syöttämistä.  
   
- Käyttäjät, jotka ovat suoraan tekemisissä asiakkaiden kanssa, saattavat tarvita lomakkeita, jotka on räätälöity heidän eniten tekemilleen tehtäville. He haluavat luultavasti lomakkeita, joissa voi antaa tietoja tehokkaasti.  
+ Henkilöt, jotka ovat suoraan asiakkaiden kanssa tekemisissä, tarvitsevat ehkä lomakkeita, jotka on suunniteltu erityisesti heidän useimmin suorittamia tehtäviä varten. He haluavat ehkä lomakkeita, joiden avulla tietojen syöttäminen on kaikkein tehokkainta.  
   
- Sinun täytyy kartoittaa organisaatiosi käyttäjien tarpeet ja toiveet. Tämä on usein luonteeltaan toisteinen prosessi, jossa keräät palautetta, kokeilet eri asioita ja luot lomakkeita käyttäjien käyttöön. Muista, että käytettävissäsi on runsaasti työkaluja ja että kaikkea ei tarvitse tehdä lomakkeessa. Kun käytät yhdessä lomakkeiden kanssa liiketoimintasääntöjä, työnkulkuprosesseja, valintaikkunoita ja liiketoimintaprosesseja, voit tarjota organisaatiollesi toimivan ratkaisun.  
+ Sinun täytyy tietää, mitä ihmiset organisaatiossa haluavat ja tarvitsevat. Tämä on usein toistuva prosessi, jossa kerätään palautetta, kokeillaan eri asioita ja rakennetaan lomakkeita, joita käyttäjät voivat käyttää. Muista, että sinulla on erilaisia työkaluja käytettävissäsi, eikä kaikkea tarvitse tehdä lomakkeessa. Käytä liiketoimintasääntöjä, työnkulkuprosesseja, dialogeja ja liiketoimintaprosessivuota yhdessä lomakkeiden kanssa tarjotaksesi ratkaisun, joka toimii organisaatiossasi.  
   
- Sinun täytyy tasapainottaa tämä sen kanssa, paljonko aikaa haluat käyttää lomakkeiden hallintaan. Lomakkeiden luominen ja muokkaaminen on suhteellisen helppoa, mutta mitä enemmän lomakkeita luot, sitä enemmän niitä täytyy myös hallita.  
+ Sinun on tasapainoteltava tämä ajan kanssa, jonka haluat käyttää lomakkeiden hallintaan. Lomakkeiden luominen ja muokkaaminen on suhteellisen helppoa, mutta samalla, kun luot lisää lomakkeita, sinun on hallittava useampia lomakkeita.  
   
 <a name="BKMK_PresentationDifferences"></a>   
-## <a name="presentation-differences"></a>Erilaiset esitystavat  
- Vaikka sinun ei tarvitsekaan hallita useita lomakkeita kullekin esitykselle, sinun täytyy huomioida erot siinä, miten esitystapa voidaan huomioida päälomakkeessa. [Päälomakkeen esitysten](main-form-presentations.md) ohjeartikkelista saat kuvauksen eri tavoista, joilla päälomake voidaan esittää. Tärkeimpiä huomioitavia seikkoja ovat seuraavat:  
+## <a name="presentation-differences"></a>Esityksen erot  
+ Vaikka sinun ei tarvitse hallita useita lomakkeita kutakin esitystä varten, sinun täytyy miettiä, miten esityksen erot voidaan ottaa huomioon päälomakkeessa. Aiheessa [Päälomakkeen esitystavat](main-form-presentations.md) kerrotaan eri tavoista, joilla päälomake voidaan esittää. Ensisijaisia asioita, jotka otetaan huomioon, ovat:  
   
-- Dynamics 365 for Tablets ei tue lomakkeisiin lisättyjä kuvia, HTML-resursseja tai Silverlight-verkkoresursseja.  
+- Dynamics 365 for tablets ei tue kuvan, HTML-koodin tai Silverlight-WWW-resurssien lisäämistä lomakkeisiin.  
   
--   Dynamics 365 for Tablets -lomakkeet luodaan automaattisesti päälomakkeen pohjalta. Dynamics 365 for Tablets -lomakkeille ei ole mitään erikoislomake-editoria. Sinun täytyy varmistaa, että lomakkeen esittäminen toimii hyvin kaikissa asiakasohjelmissa.  
+-   Dynamics 365 for tablets -lomakkeiden asettelu on luotu automaattisesti päälomakkeen perusteella. Dynamics 365 for tablets -lomakkeille ei ole erityistä lomake-editoria. Sinun täytyy varmistaa, että lomake-esitys soveltuu hyvin molemmille asiakkaille.  
   
--   Jos sinulla on tukemattomia komentosarjoja, jotka toimivat yhdessä verkkosovelluksen DOM-elementtien kanssa, nämä komentosarjat eivät toimi Dynamics 365 for Tablets -lomakkeissa, koska samoja DOM-elementtejä ei ole saatavilla.  
+-   Jos sinulla on tukemattomia komentosarjoja, jotka käsittelevät verkkosovellukseen sisältyviä DOM-elementtejä, nämä komentosarjat eivät toimi Dynamics 365 for tablets -lomakkeissa, koska samat DOM-elementit eivät ole käytettävissä.  
   
-- Dynamics 365 for Outlookin lukuruutu ei salli komentosarjoja. Lomake-elementtien näkyvyys riippuu oletusasetuksista. Muuttaminen ei ole mahdollista suorituksen yhteydessä komentosarjoilla.  
+- Dynamics 365 for Outlookin lukuruutu ei salli komentosarjoja. Lomake-elementtien näkyvyyden oletusasetukset määräytyvät oletusarvojen mukaan, eikä niitä voi muuttaa suorituksen komentosarjojen avulla.  
   
 <a name="BKMK_FormPerformance"></a>   
-## <a name="form-performance"></a>Lomakkeiden suorituskyky  
- Hitaasti latautuvat tai reagoivat lomakkeet vaikuttavat varmasti tuottavuuteen ja siihen, kuinka halukkaasti käyttäjät niitä käyttävät. [Lomakkeiden suorituskyvyn optimoinnin](optimize-form-performance.md) artikkelista saat useita suosituksia lomakkeiden suunnitteluun siten, että mukautukset eivät heikennä lomakkeiden suorituskykyä.  
+## <a name="form-performance"></a>Lomakkeen suorituskyky  
+ Lomakkeet, jotka latautuvat hitaasti tai eivät vastaa nopeasti vaikuttavat varmasti tuottavuuteen ja sovelluksen käyttöönottoon. [Lomakkeen suorituskyvyn optimointi](optimize-form-performance.md) sisältää joukon suosituksia, jotka on otettava huomioon lomakkeiden suunnittelussa, jotta mukautukset eivät vaikuta haitallisesti lomakkeen suorituskykyyn.  
   
 ### <a name="next-steps"></a>Seuraavat vaiheet 
- [Lomakkeiden suunnitteleminen ja luominen](create-design-forms.md)    
- [Pikaluontilomakkeiden luominen ja muokkaaminen](create-edit-quick-create-forms.md)   
+ [Luo ja suunnittele lomakkeita](create-design-forms.md)    
+ [Luo ja muokkaa pikaluontilomakkeita nopeasti](create-edit-quick-create-forms.md)   
 
  

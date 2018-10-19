@@ -1,9 +1,9 @@
-|Vaihtoehto   |Kuvaus  |
+|Asetus   |Kuvaus  |
 |---------|---------|
-|**Toiminnot**|Liitä toiminnot tämän entiteetin tietueisiin.|
-|**Liiketoimintaprosessin työnkulut**|Luo tämän entiteetin liiketoimintaprosessien työnkulkuja. Lisätietoja: [Liiketoimintaprosessin työnkulun luominen prosessien yhdenmukaistamiseksi](/flow/create-business-process-flow)|
-|**Yhteydet**|Yhteydet-ominaisuuden avulla voit näyttää, miten tämän entiteetin tietueet on yhteydessä muiden entiteettien tietueisiin, joissa yhteydet ovat käytössä.|
-|**Palaute**|Anna asiakkaiden kirjoittaa palautetta mistä tahansa entiteetin tietueesta tai luokittele entiteetin tietueet määritettyjen luokitusten avulla. Lisätietoja: [Entiteetin ottaminen käyttöön palautetta tai luokitusta varten](../maker/common-data-service/configure-entity-feedback.md)|
-|**Muistiinpanot**|Liittää huomautuksia tämän entiteetin tietueisiin. Huomautukset sisältävät mahdollisuuden lisätä liitteitä.|
-|**Jonot**|Käyttää entiteettiä jonoina. Jonot parantavat työn reititystä ja jakamista antamalla tämän entiteetin tietueet käytettäviksi keskitettyyn paikkaan, johon jokainen pääsee.|
-|**Sähköpostiviestin lähettäminen**|Lähetä sähköpostiviestejä käyttämällä osoitteita, jotka on tallennettu johonkin tämän entiteetin kentistä. Jos **Yksi tekstirivi** -kenttä ja muotoilun asetus kohdassa **Sähköposti** ei ole jo olemassa tälle entiteetille, uusi luodaan, kun otat sähköpostin lähettämisen käyttöön.|
+|**Aktiviteetit**|Liitä tämän entiteetin tietueisiin aktiviteetteja.|
+|**Liiketoimintaprosessit**|Luo tälle entiteetille liiketoimintaprosesseja. Lisätietoja [Yhdenmukaista prosessit luomalla liiketoimintaprosessi](/flow/create-business-process-flow)|
+|**Yhteydet**|Yhteysominaisuuden avulla näet, millaisia yhteyksiä tämän entiteetin tietueilla on muiden entiteettien tietueisiin, joiden yhteydet on otettu myös käyttöön.|
+|**Palaute**|Anna asiakkaiden kirjoittaa palautetta mistä tahansa entiteettitietueesta tai arvioida entiteettitietueita määritetyllä arviointiasteikolla. Lisätietoja: [Entiteetin palautteen/arvioinnin käyttöönotto](../maker/common-data-service/configure-entity-feedback.md)|
+|**Muistiinpanot**|Liitä tämän entiteetin tietueisiin muistiinpanoja. Muistiinpanoihin voi lisätä liitteitä.|
+|**Jonot**|Käytä entiteettiä jonojen kanssa. Jonot tuovat entiteetin tietueet keskitettyyn paikkaan, jota kaikki järjestelmän käyttäjät voivat käyttää. Siten ne tehostavat töiden reitittämistä ja jakamista.|
+|**Sähköpostin lähettäminen**|Lähetä sähköpostiviestejä entiteetin kenttään tallennetun sähköpostiosoitteen avulla. Jos entiteetissä ei ole jo **Yksi tekstirivi** -kenttää, jonka muoto on **Sähköposti**, kenttä luodaan, kun otat sähköpostin lähetystoiminnon käyttöön.|
