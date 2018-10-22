@@ -1,6 +1,6 @@
 ---
-title: PowerApps-yhteisöpaketti -- ilmainen kehitysympäristö henkilökohtaista käyttöä varten | Microsoft Docs
-description: 'Rekisteröitymällä voit kehittää osaamistasi ja oppia lisää PowerApps-, Microsoft Flow- ja Common Data Service -sovelluksista.'
+title: PowerAppsin yhteisön palvelupaketti – ilmainen kehitysympäristö yksilökäyttöön | Microsoft Docs
+description: Rekisteröidy, niin voit kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -8,118 +8,124 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.date: 05/01/2016
 ms.author: anneta
-ms.reviewer: null
+ms.reviewer: ''
+ms.openlocfilehash: a187e50bd4d1819d1579c6db219588e3582f5c25
+ms.sourcegitcommit: 0e9af8cace2bdc04750f4c5a70a3c4af8e3d2292
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 07/22/2018
+ms.locfileid: "39195676"
 ---
-# <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerApps-yhteisöpaketti: ilmainen kehitysympäristö henkilökohtaista käyttöä varten
-Jos haluat kehittää taitojasi ja oppia lisää PowerApps-, Microsoft Flow- ja Common Data Service -sovelluksista, PowerApps-yhteisöpaketti on oikea valinta. PowerApps-yhteisöpaketti mahdollistaa ilmaisen kehitysympäristön henkilökohtaista käyttöä varten. Paketin avulla voit tehdä seuraavaa:
+# <a name="powerapps-community-plan-a-free-development-environment-for-individual-use"></a>PowerAppsin yhteisön palvelupaketti: ilmainen kehitysympäristö yksilökäyttöön
+Jos haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä, PowerAppsin yhteisön palvelupaketti on oikea palvelupaketti sinua varten. PowerAppsin yhteisön palvelupaketti sisältää ilmaisen kehitysympäristö yksilökäyttöön, jonka avulla voit
 
-* Saat lisätietoja yrityssovellusten ja työnkulkujen luomisesta PowerApps- ja Microsoft Flow -sovellusten toimintojen avulla.
-* Voit muodostaa yhteyden mihin tahansa tietolähteeseen käyttämällä jotain yli sadasta [valmiista yhdysohjelmasta](./canvas-apps/connections-list.md) tai luomalla omia [mukautettuja yhdysohjelmia](./canvas-apps/register-custom-api.md).
-* Voit tutkia, miten [Common Data Service](https://docs.microsoft.com/common-data-service/entity-reference/introduction) -palvelulla luodaan tehokkaita yrityssovelluksia Common Data Model -ratkaisun ja [SDK:n](https://aka.ms/eek20s) avulla.
-* Voit viedä luomiasi ratkaisuja henkilökohtaiseen ympäristöösi ja [luetteloida ne AppSourcessa](./canvas-apps/dev-appsource-test-drive.md) niin, että asiakkaat voivat koekäyttää niitä.
+* oppia yrityssovellusten ja työnkulkujen tekemisestä PowerAppsin ja Microsoft Flow'n täydellä toiminnallisuudella
+* luoda yhteyden mihin tahansa tietolähteeseen käyttämällä yli sataa [valmista liitintä](./canvas-apps/connections-list.md) tai luomalla omia [mukautettuja liittimiä](./canvas-apps/register-custom-api.md)
+* tutustua [Common Data Servicen](https://docs.microsoft.com/common-data-service/entity-reference/introduction) käyttöön tehokkaiden yrityssovellusten luomiseksi Common Data Modelin ja [SDK:n](https://aka.ms/eek20s) avulla
+* viedä luomasi ratkaisut omaan ympäristöösi ja [lisätä ne AppSource-luetteloon](./canvas-apps/dev-appsource-test-drive.md), jotta asiakkaasi voivat testata niitä.
 
-## <a name="who-can-sign-up-for-the-powerapps-community-plan"></a>Kuka voi rekisteröityä PowerApps-yhteisöpaketin käyttäjäksi?
-Kuka tahansa, jolla on [työpaikan tai oppilaitoksen tili](signup-for-powerapps.md#faq), voi rekisteröityä PowerApps-yhteisöpaketin käyttäjäksi. Tätä pakettia suositellaan erityisesti, jos
+## <a name="who-can-sign-up-for-the-powerapps-community-plan"></a>Kuka voi rekisteröityä PowerAppsin yhteisön palvelupakettiin?
+Kuka tahansa, jolla on [työ- tai koulutili](signup-for-powerapps.md#faq), voi rekisteröityä PowerAppsin yhteisön palvelupakettiin. Suosittelemme tätä erityisesti, jos:
 
-* haluat kehittää osaamistasi ja oppia lisää PowerApps-, Microsoft Flow- ja Common Data Service -sovelluksista
-* olet kiinnostunut luomaan yrityssovelluksia ja työnkulkuja ja jakamaan niitä AppSourcessa.
+* Haluat kehittää taitojasi ja oppia lisää PowerAppsista, Microsoft Flow’sta ja Common Data Servicestä.
+* Olet kiinnostunut AppSourcen kautta levitettävien yrityssovellusten ja työnkulkujen rakentamisesta.
 
-## <a name="where-can-i-sign-up-for-the-powerapps-community-plan"></a>Missä voin rekisteröityä PowerApps-yhteisöpaketin käyttäjäksi?
-Rekisteröidy [PowerApps-yhteisöpaketin sivustossa](https://powerapps.microsoft.com/communityplan). Jos olet jo PowerApps with Office 365:n tai Dynamics 365:n käyttäjä, voit myös [luoda ympäristön henkilökohtaista käyttöä varten](https://web.powerapps.com/community/signup).
+## <a name="where-can-i-sign-up-for-the-powerapps-community-plan"></a>Missä voin rekisteröityä PowerAppsin yhteisön palvelupakettiin?
+Rekisteröidy [PowerAppsin yhteisön palvelupakettiin verkkosivustossa](https://powerapps.microsoft.com/communityplan). Jos olet jo PowerApps-käyttäjä Office 365:n tai Dynamics 365:n kautta, voit myös [luoda ympäristön yksilökäyttöä varten](https://web.powerapps.com/community/signup).
 
-Kun olet rekisteröitynyt yhteisöpakettiin, sinut ohjataan [PowerApps-sivuston](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) henkilökohtaiseen ympäristöösi. Ympäristö saa nimensä sinun mukaasi, esimerkiksi Matti Meikäläisen ympäristö. Jos samanniminen ympäristö on jo määritetty, nimeksi annetaan Matti Meikäläisen (1) ympäristö.  Seuraavassa kuvassa esitetään, miltä ympäristö näyttää.
+Kun olet rekisteröitynyt yhteisön palvelupakettiin, sinut ohjataan [PowerApps-sivustolle](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) omaan ympäristöösi. Ympäristö nimetään oman nimesi mukaan, esimerkiksi ”Jari Kanteen ympäristö”. Jos tämänniminen ympäristö on jo olemassa, ympäristön nimeksi asetetaan ”Jari Kanteen (1) ympäristö”.  Seuraavassa kuvassa näytetään ympäristön ulkoasu.
 
-![Yhteisöpaketin henkilökohtainen ympäristö](./media/dev-community-plan/individual-environment.png)
+![Oma yhteisön palvelupaketin ympäristö](./media/dev-community-plan/individual-environment.png)
 
-### <a name="get-the-community-plan-with-visual-studio-dev-essentials"></a>Yhteisöpaketin ja Visual Studio Dev Essentials -sovelluksen hakeminen
-Jos olet Visual Studio Dev Essentials -käyttäjä, PowerApps sisältyy etuihisi. Siirry [Omat edut](https://my.visualstudio.com/benefits) -sivulle ja rekisteröidy PowerApps-yhteisöpakettiin napsauttamalla tai napauttamalla PowerApps-ruutua.
+### <a name="get-the-community-plan-with-visual-studio-dev-essentials"></a>Yhteisön palvelupaketin saaminen Visual Studio Dev Essentialsin avulla
+Jos olet Visual Studio Dev Essentials -käyttäjä, PowerApps kuuluu etuihisi. Siirry kohtaan [Omat edut](https://my.visualstudio.com/benefits) ja napsauta tai napauta PowerApps-ruutua ja rekisteröidy PowerAppsin yhteisön palvelupakettiin.
 
-![Visual Studion yhteisöpaketti](./media/dev-community-plan/visual-studio.png)
+![Yhteisön palvelupaketti Visual Studiossa](./media/dev-community-plan/visual-studio.png)
 
-## <a name="which-features-are-included-in-the-powerapps-community-plan"></a>Mitä toimintoja PowerApps-yhteisöpaketti sisältää?
-Henkilökohtainen ympäristö sisältää seuraavat toiminnot:
+## <a name="which-features-are-included-in-the-powerapps-community-plan"></a>Mitä ominaisuuksia PowerAppsin yhteisön palvelupakettiin kuuluu?
+Saat oman ympäristön kautta seuraavat toiminnallisuudet:
 
-| **Toiminnot** | **Ympäristö henkilökohtaista käyttöä varten** |
+| **Toiminnallisuudet** | **Ympäristö yksilökäyttöön** |
 | --- | --- |
 | **Tärkeimmät ominaisuudet** | |
-| Sovellusten luominen ja suorittaminen |Kyllä. Voit luoda rajoittamattoman määrän sovelluksia |
+| Sovellusten luominen ja suorittaminen |Kyllä. Voit luoda sovelluksia rajoituksetta |
 | Sovellusten jakaminen\* |Ei |
-| Common Data Service -palvelun käyttäminen |Kyllä** |
-| Tietojen mallintaminen Common Data Service -palvelun avulla |Kyllä** |
-| Ympäristön hallinta yrityksessä ja käyttäjäkäytännöt |Kyllä |
+| Common Data Servicen käyttö |Kyllä** |
+| Tietojesi mallintaminen käyttämällä Common Data Serviceä |Kyllä** |
+| Ympäristön enterprise-luokan järjestelmänvalvonta ja käyttäjäkäytännöt |Kyllä |
 | **Yhteydet** | |
-| Yhteyden muodostaminen Office 365:een, Dynamics 365:een ja muihin yhdysohjelmiin |Kyllä |
-| Yhteyden muodostaminen pilviperustaisiin palveluihin, esimerkiksi Azure SQL:ään, Dropboxiin ja Twitteriin |Kyllä |
-| Premium-yhdysohjelmien, esimerkiksi Salesforcen ja DB2:n, käyttäminen |Kyllä |
+| Yhdistäminen Office 365:een, Dynamics 365:een ja muihin liittimiin |Kyllä |
+| Yhteyden muodostaminen pilvipalveluihin, kuten Azure SQL Server, Dropbox, Twitter ja monia muita |Kyllä |
+| Premium-liitinten, kuten Salesforcen, DB2:n ja muiden käyttö |Kyllä |
 | Paikallisten tietojen käyttäminen paikallisen yhdyskäytävän avulla |Kyllä |
-| Mukautettujen yhdyskäytävien luominen omien järjestelmien yhteyksiä varten |Kyllä. Voit luoda rajoittamattoman määrän mukautettuja yhdysohjelmia |
+| Mukautettujen liitinten luominen omiin järjestelmiisi yhdistämistä varten |Kyllä. Voit luoda mukautettuja liittimiä rajoituksetta |
 | **Common Data Service** | |
-| Sovellusten luominen ja suorittaminen Common Data Service -palvelussa |Kyllä** |
-| Tietojen mallintaminen Common Data Service -palvelussa |Kyllä** |
-| Tietokannan luominen Common Data Service -palveluun |Kyllä** |
+| Sovellusten luominen ja suorittaminen Common Data Servicessä |Kyllä** |
+| Mallinna tietojasi Common Data Servicessä |Kyllä** |
+| Luo tietokanta Common Data Servicessä |Kyllä** |
 | **Hallinta** | |
-| Työtovereiden lisääminen ympäristön tekijöinä ja järjestelmänvalvojina |Ei |
-| Työtovereiden lisääminen tietokannan rooleihin |Ei |
-| Tukee Office 365 -järjestelmänvalvojan muodostamia tietokäytäntöjä |Kyllä |
-| Henkilökohtaisen ympäristön tietokäytäntöjen muodostaminen |Kyllä |
+| Lisää työtovereita ympäristön tekijöiksi ja järjestelmänvalvojiksi |Ei |
+| Lisää työtovereita tietokantarooleihin |Ei |
+| Tuki Office 365:n järjestelmänvalvojan muodostamille tietokäytännöille |Kyllä |
+| Oman ympäristön tietokäytäntöjen muodostaminen |Kyllä |
 
-*Et voi jakaa esimerkiksi sovelluksia, työnkulkuja ja yhdysohjelmia vuokraajassa yhdenkään käyttäjän kanssa. Et voi myöskään lisätä käyttäjiä ympäristön järjestelmänvalvojaksi tai tekijäksi etkä hallintakeskuksen tietokannan rooleihin.
+*Et voi jakaa sovelluksia, työnkulkuja, yhteyksiä jne. vuokraajasi muiden käyttäjien kanssa. Et voi myöskään lisätä muita käyttäjiä ympäristön järjestelmänvalvojiksi tai tekijöiksi tai hallintakeskuksen tietokantarooleiksi.
 
-\*\*Tietokantaa ei voi tällä hetkellä luoda Common Data Service -palvelun avulla henkilökohtaisessa ympäristössä. Se on kuitenkin taas mahdollista pian. Jos olet luonut tietokannan aiemmin, voit jatkaa sen käyttämistä. 
+\*\*Tietokantaa ei voi nykyisin luoda Common Data Servicen avulla omassa ympäristössä, mutta tämä toiminto on käytettävissä taas pian uudelleen. Jos olet luonut tietokannan aiemmin, voit jatkaa sen käyttöä ongelmitta. 
 
-## <a name="what-are-the-capacity-limits-for-the-individual-environment"></a>Mitkä ovat henkilökohtaisen ympäristön kapasiteettirajoitukset?
+## <a name="what-are-the-capacity-limits-for-the-individual-environment"></a>Mitkä ovat oman ympäristön kapasiteettirajat?
 
 | **Kapasiteetti** |  |
 | --- | --- |
-| Työnkulkujen suorituksia/kk |750 |
-| Tietokannan koko |200 Mt |
-| Tiedostotallennustila |2 Gt |
+| Työnkulkujen suorituksia/kuukausi |750 |
+| Tietokannan koko |200 Mt |
+| Tallennustila |2 Gt |
 
-Et voi käyttää lisäosia sisällytettävissä määrissä. Jos kapasiteetti ei riitä, suosittelemme PowerApps-palvelupaketin 2 ostamista. Lisätietoja siitä on [PowerAppsin hinnoittelusivulla](https://powerapps.microsoft.com/pricing/).
+Et voi käyttää lisäosia näihin määriin. Jos kapasiteettirajat eivät riitä, suosittelemme ostamaan PowerAppsin palvelupaketin 2. Lue tästä lisätietoja [PowerAppsin hinnoittelusivulta](https://powerapps.microsoft.com/pricing/).
 
 > [!NOTE]
-> Henkilökohtaisen ympäristön kapasiteetti ei vaikuta yrityksen kokonaiskiintiöön siitä huolimatta, onko se käytössä vai ei.
+> Oman ympäristön kapasiteetti, käytettynä tai ei, ei vaikuta yrityksesi kokonaiskiintiöön.
 
-## <a name="publishing-to-appsource"></a>Julkaiseminen AppSourceen
-Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Nyt tuetaan myös PowerAppsin kokeiluratkaisua [AppSource.com](https://appsource.microsoft.com)-sivustossa. Sen avulla voi jakaa sovelluksia ja työnkulkuja asiakkaille ja luoda liidejä yritykselle. Lisätietoja on kohdassa [Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa](./canvas-apps/dev-appsource-test-drive.md).
+## <a name="publishing-to-appsource"></a>Julkaisu AppSourceen
+Onko sinulla sovellus, jonka haluat jakaa asiakkaille? Tuemme nyt PowerApps Test Drive -ratkaisua osoitteessa [AppSource.com](https://appsource.microsoft.com) menetelmänä sovellusten ja työnkulkujen jakamiseksi asiakkaiden kanssa ja liidien luomiseksi yrityksellesi. Katso lisätietoja kohdasta [Anna asiakkaiden koekäyttää sovelluksiasi AppSourcessa](./canvas-apps/dev-appsource-test-drive.md).
 
-## <a name="frequently-asked-questions"></a>Usein kysyttyjä kysymyksiä
-**K:** Mitä teen, jos ympäristön kapasiteetti loppuu?
+## <a name="frequently-asked-questions"></a>Usein kysytyt kysymykset
+**K:** Mitä minun kannattaa tehdä, jos saavutan ympäristön kapasiteettirajat?
 
-**V:** Rajoitettu kapasiteetti johtuu siitä, että ympäristö on tarkoitettu henkilökohtaista käyttöä varten, ei ryhmän käytettäväksi tai tuotantokäyttöön. Kapasiteetin tiedot:
+**V:** Tarjoamme rajatun määrän kapasiteettia, koska tämä ympäristö on tarkoitettu yksilökäyttöön eikä tiimi- tai tuotantokäyttöön. Tarjoamamme kapasiteetti:
 
 | **Kapasiteetti** |  |
 | --- | --- |
-| Työnkulkujen suorituksia/kk |750 |
-| Tietokannan koko |200 Mt |
-| Tiedostotallennustila |2 Gt |
+| Työnkulkujen suorituksia/kuukausi |750 |
+| Tietokannan koko |200 Mt |
+| Tallennustila |2 Gt |
 
-Jos saavutat yhden kapasiteettirajoituksen tai useita kapasiteettirajoituksia, suosittelemme ostamaan tuotantokäyttöä tukevan palvelupaketin. Lisätietoja palvelupaketeista ja niiden rajoituksista on [PowerAppsin hinnoittelusivulla](https://powerapps.microsoft.com/pricing/).
+Jos saavutat yhden tai useamman kapasiteettirajan, suosittelemme ostamaan palvelupaketin, joka tukee tuotantokäyttöä. Lue lisätietoja palvelupaketeista ja niiden rajoista [PowerAppsin hinnoittelusivulta](https://powerapps.microsoft.com/pricing/).
 
-**K:** Voinko siirtää henkilökohtaisessa ympäristössä luotuja sovelluksia, työnkulkuja ja muita resursseja toiseen ympäristöön?
+**K:** Voinko siirtää omassa ympäristössä luodut sovellukset, työnkulut ja muut resurssit toiseen ympäristöön?
 
-**A:** Kyllä, resurssien viemisen tästä ympäristöstä toisiin ympäristöihin tulisi olla mahdollista. Lisätietoja on kohdassa [Ympäristön ja vuokraajan sovelluksen siirtäminen](../administrator/environment-and-tenant-migration.md).
+**V:** Kyllä, tässä ympäristössä luotujen resurssien vieminen muihin ympäristöihin on mahdollista. Katso lisätietoja kohdasta [Ympäristön ja vuokraajan sovellusten siirto](../administrator/environment-and-tenant-migration.md).
 
-**K:** Päättyykö PowerApps-yhteisöpaketin tilaus joskus?
+**K:** Vanheneeko PowerAppsin yhteisön palvelupakettini koskaan?
 
-**V:** Voit käyttää PowerApps-yhteisöpaketin tilausta ilmaiseksi jatkuvasti. Jos käytät henkilökohtaista ympäristöä aktiivisesti, et menetä ympäristön resurssien tai toimintojen käyttöoikeutta. Jos ympäristö on pitkään käyttämättä, Common Data Service -tietokannan käyttämisen aloittamisessa tauon jälkeen voi olla viivettä.  Tämä viive ei vaikuta Common Data Service -palveluun tallennettuihin tietoihin ja entiteetteihin.
+**V:** Voit käyttää PowerAppsin yhteisön palvelupakettia pysyvästi ilmaiseksi. Jos käytät omaa ympäristöä aktiivisesti, et menetä pääsyä mihinkään ympäristön resursseihin tai toiminnallisuuteen. Saatat kuitenkin havaita viiveen, kun käytät Common Data Service -tietokantaa ensimmäisen kerran pitkän tauon jälkeen.  Tämä viive ei vaikuta Common Data Serviceen tallennettuihin tietoihin tai entiteetteihin.
 
-**K:** Voinko hakea tai luoda useita henkilökohtaisia ympäristöjä?
+**K:** Voinko saada tai luoda useita omia ympäristöjä?
 
-**V:** Et. Henkilökohtaisia PowerAppsin luomia ympäristöjä voi olla vain yksi, joka on luotu yhteisöpakettiin rekisteröitymisen yhteydessä.
+**V:** Et. Sinulla voi olla vain yksi oma ympäristö, jonka PowerApps luo sinulle, kun rekisteröidyt yhteisön palvelupakettiin.
 
-**K:** Mikä on PowerApps-palvelupaketin 2 kokeiluversion ja PowerApps-yhteisöpaketin ero ja kumpaan minun kannattaa rekisteröityä?
+**K:** Mitä eroa on PowerAppsin palvelupaketin 2 kokeiluversiolla ja PowerAppsin yhteisön palvelupaketilla ja kumpaan minun kannattaa rekisteröityä?
 
-**V:** Sekä PowerApps-palvelupaketin 2 kokeiluversio että PowerApps-yhteisöpaketti ovat ilmaisia, mutta ne on luotu eri tarkoituksia varten.
+**V:** Sekä PowerAppsin palvelupaketin 2 kokeiluversio että PowerAppsin yhteisön palvelupaketti ovat ilmaisia, mutta ne on luotu eri tarkoituksiin:
 
-**PowerApps-palvelupaketin 2 kokeiluversio** sisältää PowerApps-palvelupaketin 2 käyttöoikeuden 30 päivän ajalle. Kokeiluversio on tarkoitettu PowerApps-, Common Data Service- ja Microsoft Flow -sovellusten koekäyttöä varten. Kun kokeilu päättyy, voit ostaa palvelupaketin. Jos olet jo PowerApps with Office 365:n tai Dynamics 365:n käyttäjä, tämä on oikea palvelupaketti, kun haluat kokeilla PowerApps-palvelupaketin 2 PowerApps Premium -toimintoja.
+**PowerAppsin palvelupaketin 2 kokeiluversio** antaa PowerAppsin palvelupaketin 2 käyttöösi 30 päivän ajaksi. Tarkoituksena on antaa mahdollisuus testata PowerAppsia, Common Data Serviceä ja Microsoft Flow’ta. Kun kokeilujakso loppuu, voit ostaa palvelupaketin. Jos käytät jo PowerAppsia Office 365:n tai Dynamics 365:n kautta, tämä on oikea paketti PowerAppsin premium-toiminnallisuuksien testaamiseen. Nämä toiminnallisuudet ovat osa PowerAppsin palvelupakettia 2.
 
-**PowerApps-yhteisöpaketti** sisältää PowerApps Premium -toimintojen, Common Data Service -palvelun ja Microsoft Flow -sovelluksen käyttöoikeuden henkilökohtaista käyttöä varten. Tämä palvelupaketti on tarkoitettu ensisijaisesti opiskelua tai [AppSourcen testikäyttöön](./canvas-apps/dev-appsource-test-drive.md) jaettavien yrityssovellusten luomista varten. Tämä palvelupaketti on käytettävissä jatkuvasti. Se on kuitenkin tarkoitettu vain opiskelua ja PowerAppsin, Common Data Service -palveluiden sekä Microsoft Flow -sovelluksen käytön harjoittelua varten.
+**PowerAppsin yhteisön palvelupaketti** mahdollistaa pääsyn PowerAppsin premium-toiminnallisuuksiin, Common Data Serviceen ja Microsoft Flow’hun yksilökäyttöä varten. Tämä palvelupaketti on tarkoitettu ensisijaisesti oppimistarkoituksiin tai [AppSource Test Driven](./canvas-apps/dev-appsource-test-drive.md) kautta levitettävien liiketoimintaratkaisujen luomiseen. Tämä palvelupaketti on saatavilla pysyvästi, mutta vain PowerAppsin, Common Data Servicen ja Microsoft Flow’n oppimista ja taitojen kehittämistä varten.
 
-**K:** Voinko rekisteröityä käyttämällä henkilökohtaista tiliäni?
+**K:** Voinko rekisteröityä henkilökohtaisella tililläni?
 
-**V:** Et. Voit rekisteröityä vain käyttämällä [työpaikan tai oppilaitoksen tiliä](signup-for-powerapps.md#faq). Tällä hetkellä henkilökohtaisen tilin avulla rekisteröitymistä ei tueta.
+**V:** Et, mutta voit rekisteröityä [työ- tai koulutililläsi](signup-for-powerapps.md#faq). Tällä hetkellä emme tue rekisteröitymistä henkilökohtaisella tilillä.
 
-**K:** Voinko poistaa henkilökohtaisen ympäristön?
+**K:** Voinko poistaa oman ympäristöni?
 
-**V:** Et voi poistaa tätä ympäristöä itse. Vuokraajan järjestelmänvalvojalla on ympäristön poisto-oikeus.
+**V:** Et voi poistaa tätä ympäristöä itse. Vuokralaisen järjestelmänvalvojallasi on käyttöoikeudet ympäristön poistoon.
