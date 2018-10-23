@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bf19983217afad23b75a0f0dbd1e307e6539d3f5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: c8b24c9064e5012ff1ddb15d13dc338ed9565bef
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42825944"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316765"
 ---
 # <a name="generate-a-canvas-app-from-common-data-service-for-apps-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Common Data Service for Apps -palvelussa PowerAppsissa
 
@@ -34,11 +34,9 @@ Tämän pikaoppaan noudattamiseksi sinun tulee siirtyä [ympäristöön](working
 
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja vaihda tarvittaessa ympäristö noudattamalla tässä aiheessa annettuja ohjeita.
 
-    ![PowerAppsin aloitussivu](./media/data-platform-create-app/sign-in.png)
+1. Vie hiiren osoitin **Tee oma sovelluksesi** -osiossa **Aloita tiedoista** -kohdan päälle ja valitse **Tee tämä sovellus**.
 
-1. Vie osoitin kohdan **Tee tämän kaltaisia sovelluksia** kohtaan **Aloita tiedoista** ja valitse **Tee tämä sovellus**.
-
-    ![Sovelluksen luontiasetus](./media/data-platform-create-app/make-this-app.png)
+    ![Sovelluksen luontiasetus](./media/data-platform-create-app/start-from-data.png)
 
 1. Valitse **Common Data Service** -ruudussa **Puhelinasettelu**.
 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 965c779a752d0bfd864a06d5fa886b0187839123
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: d41ef04d3cd070373f6772bdfced029a7d09e244
+ms.sourcegitcommit: ebd39753e2a0b60c1d8c016e38c00dd1accf5d0c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836889"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49307857"
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstin ohjausobjekti PowerAppsissa
 Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
@@ -80,7 +80,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 ## <a name="example"></a>Esimerkki
 1. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, anna sille nimi **Source** ja määritä sen **[Text](properties-core.md)**-ominaisuudeksi tämä merkkijono:
 
-\<p> Olemme suorittaneet erittäin \&nbsp; \&quot; perusteellisen \&quot; globalisoinnin ja lokalisoinnin. \<p>
+"\<p>Olemme\&nbsp;suorittaneet erittäin \&quot;perusteellisen\&quot; globalisoinnin ja lokalisoinnin.\<p>"
 
 Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 

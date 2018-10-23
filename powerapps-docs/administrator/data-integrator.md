@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 09/19/2018
+ms.date: 10/15/2018
 ms.author: sabinn
 search.audienceType:
 - admin
@@ -13,12 +13,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: b8cebc6f9db8a1a7c1a060aad461f4f32fcee05b
-ms.sourcegitcommit: 2bcf40aeaa35420dc43f5803f4e57ff0f6afb57b
+ms.openlocfilehash: dfbc420dfb4945cdda635e3cbaadb1acb446753b
+ms.sourcegitcommit: ebd39753e2a0b60c1d8c016e38c00dd1accf5d0c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46469351"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328690"
 ---
 # <a name="integrate-data-into-common-data-service-for-apps"></a>Tietojen integrointi Common Data Service for Appsiin
 
@@ -88,6 +88,9 @@ Ennen tietojen integrointiprojektin luomista sinun on valmisteltava yhteys jokai
 
     > [!div class="mx-imgBorder"] 
     > ![Yhteysluettelo](media/data-integrator/CreateConnection1780.png "Yhteysluettelo")
+
+> [!NOTE]
+> Varmista, että kullekin yhteydelle määrittämälläsi tilillä on oikeus käyttää vastaavien sovellusten entiteettejä. Lisäksi kunkin yhteyden tili voi olla eri vuokraajassa. 
 
 ### <a name="how-to-create-a-connection-set"></a>Yhteysjoukon luominen
 
@@ -169,8 +172,6 @@ Projektit mahdollistavat tietovuon järjestelmien välillä. Projektin sisältä
 
 ### <a name="execution-history"></a>Suoritushistoria
 
-<!--note from editor: Do you think most people reading this will know what "upsert" means?-->
-
 Suoritushistoriassa näkyvät kaikki projektisuoritukset projektin nimellä, projektin suorituksen aikaleima ja suorituksen tila sekä päivityslisäysten ja/tai virheiden määrä.
 
 -   Esimerkki projektin suoritushistoriasta
@@ -228,6 +229,12 @@ Huomaa myös, että Ilmoitukset-kohdassa voit halutessasi asettaa sähköpostipo
 
 > [!div class="mx-imgBorder"] 
 > ![Sähköposti-ilmoitus](media/data-integrator/EmailNotification780.png "Sähköposti-ilmoitus")
+
+> [!NOTE]
+> - Tällä hetkellä tuetaan samanaikaisesti 50 integrointiprojektin ajoittamista kutakin maksettua vuokraajaa kohden. Voit kuitenkin luoda enemmänkin projekteja ja suorittaa ne vuorovaikutteisesti.
+Kokeiluversion vuokraajia koskee lisärajoitus: ajoitettu projekti suorittaa vain 50 ensimmäistä suoritusta.
+> - Vaikka projektien suorittamisen ajoittamista minuutin välein tuetaan, kannattaa muistaa, että tämä voi rasittaa sovelluksia ja vaikuttaa yleiseen suorituskykyyn. Käyttäjien on suositeltavaa testata projektien suorittamista todellisissa kuormitusolosuhteissa ja harventaa päivitysväliä suorituskyvyn optimoimiseksi.
+Tuotantoympäristöissä ei ole suositeltavaa suorittaa yli viittä projektia minuutissa vuokraajaa kohden.
 
 ## <a name="customizing-projects-templates-and-mappings"></a>Projektien, mallien ja yhdistämismääritysten mukauttaminen 
 

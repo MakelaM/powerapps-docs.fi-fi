@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3ecf468f8c1b15d20b144aa127fe31c13dba484e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 02aaaf7fd149ca0d9f3e1325b98e5287c90bebec
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849745"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316995"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>Kirjautuminen sisään PowerAppsiin ensimmäistä kertaa
 
@@ -62,25 +62,17 @@ PowerAppsissa voit luoda ja suorittaa seuraavantyyppisiä sovelluksia:
 - **Pohjaan perustuvat sovellukset** tukevat mukautetun käyttöliittymän suunnittelua ja yhteyden muodostamista useissa lähteissä oleviin tietoihin.
 - **Mallipohjaisissa sovelluksissa** on vakiokäyttöliittymä ja ne muodostavat yhteyden vain Common Data Service (CDS) for Appsissa oleviin tietoihin. Niissä voit kuitenkin helpommin luoda muita elementtejä, kuten näkymiä, koontinäyttöjä ja erityyppisiä liiketoimintalogiikkoja.
 
-Oletusarvoisesti **aloitussivulla** näytetään pohjaan perustuvien sovellusten luomisen ja suorittamiseen tarvittavat valinnat. Jos haluat nähdä sen sijaan mallipohjaisten sovellusten valinnat, valitse ympäristö, jossa on CDS for Apps -tietokanta. Avaa sitten vasemman alakulman valikko.
-
-![Pohjaan perustuvien ja mallipohjaisten sovellusten välillä vaihtaminen](media/intro-maker-portal/mode-switcher.png)
+Jos valitset ympäristön, jossa on CDS for Apps -tietokanta, voit laatia pohjaan perustuvia tai mallipohjaisia sovelluksia samalta **aloitussivulta**.
 
 ## <a name="play-or-edit-an-app"></a>Sovelluksen toistaminen tai muokkaaminen
 
-Jos olet jo luonut sovelluksen (tai sen on luonut joku muu ja jakanut sinulle), voit toistaa tai muokata sitä **Sovellukset**-sivulla.
+Jos olet luonut sovelluksen (tai sen on luonut joku muu ja jakanut sinulle), voit toistaa sen tai muokata sitä **aloitussivulla** tai **Sovellukset**-sivulla.
 
-- Voit etsiä pohjaan perustuvan sovelluksen käyttämällä suodatusehtoja, kuten äskettäin avatut sovellukset.
+**Sovellukset**-sivulla voit ehtojen avulla suodattaa sovellusluettelosta haluamasi kohteet, kuten äskettäin avatut sovellukset.
 
-    ![Luettelo pohjaan perustuvista sovelluksista](media/intro-maker-portal/org-apps.png)
+![sovellusluettelo](./media/intro-maker-portal/find-apps.png)
 
-    Voit myös etsiä sovellusta kirjoittamalla yhden tai useamman merkin hakukenttään oikean yläkulman lähellä. Kun löydät haluamasi sovelluksen, ellipsikuvaketta napsauttamalla näet vaihtoehdot sovelluksen toistamiseen tai muokkaamiseen.
-
-    ![Ellipsivalikko](media/intro-maker-portal/ellipsis-menu.png)
-
-- Et voi suodattaa mallipohjaisten sovellusten luetteloa, mutta voit myös etsiä sovellusta kirjoittamalla yhden tai useamman merkin hakukenttään oikean yläkulman lähellä. Kun löydät haluamasi sovelluksen, ellipsikuvaketta napsauttamalla näet vaihtoehdot sovelluksen toistamiseen tai muokkaamiseen.
-
-    ![Mallipohjaisten sovellusten luettelo ja avoin ellipsivalikko](media/intro-maker-portal/model-driven-list.png)
+Voit myös etsiä sovellusta kirjoittamalla yhden tai useamman merkin hakukenttään, joka sijaitsee oikean yläkulman lähellä. Kun löydät haluamasi sovelluksen, voit toistaa sen tai muokata sitä valitsemalla palkkikuvakkeen.
 
 ## <a name="create-an-app"></a>Sovelluksen luominen
 

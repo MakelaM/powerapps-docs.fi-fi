@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b668e8ae118bea5f288e1b3806854e4621295984
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 302c2fad419146f03fe47e25b8a7563564ee7e2d
+ms.sourcegitcommit: 5a1864d1531b55b332749437674fd1378e1f55ca
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42852132"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307811"
 ---
 # <a name="microphone-control-in-powerapps"></a>Mikrofoni-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla sovelluksen käyttäjät voivat tallentaa ääniä laitteestaan.
@@ -26,7 +26,7 @@ Ohjausobjekti, jonka avulla sovelluksen käyttäjät voivat tallentaa ääniä l
 ## <a name="description"></a>Kuvaus
 Sovelluksen käyttäjät voivat tehdä äänitallenteita, jos laitteessa, jossa sovellus on käynnissä, on mikrofoni.
 
-Ääni tallennetaan 3GP-muodossa Androidissa ja AAC-muodossa iOS-käyttöjärjestelmässä.
+Äänen tallennukseen käytetään Androidissa 3GP-muotoa, iOS-käyttöjärjestelmässä AAC-muotoa ja verkkoselaimissa OGG-muotoa.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **Mikrofoni** – Sovelluksen käyttämän mikrofonin numerotunnus, jos laitteessa on useampi kuin yksi mikrofoni.

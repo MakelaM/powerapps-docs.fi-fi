@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bec00071d1b354872bf3b140e5c879fe8857ffec
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: d92236d630005b4608719efaadef4537984bc3d6
+ms.sourcegitcommit: 5a1864d1531b55b332749437674fd1378e1f55ca
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865666"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307834"
 ---
 # <a name="validate-function-in-powerapps"></a>Vahvista-funktio PowerAppsissa
 **Vahvista**-funktio tarkistaa, onko yksittäisen [sarakkeen](../working-with-tables.md#columns) tai täydellisen [tietueen](../working-with-tables.md#records) arvo kelvollinen [tietolähteelle](../working-with-data-sources.md).  
@@ -66,6 +66,6 @@ Näissä esimerkeissä arvojen **Pisteet**-tietolähteen **Prosenttiosuus**-sara
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, onko **10** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |*tyhjä* |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, onko **120** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |”Arvojen on oltava alueella 0–100.” |
+| **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Pisteet**-tietolähteen kannalta. Tässä esimerkissä **Prosenttiosuus**-sarakkeen arvo on **10**. |*tyhjä* |
+| **Validate( Scores, EditRecord, Gallery.Updates )** | Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Pisteet**-tietolähteen kannalta. Tässä esimerkissä **Prosenttiosuus**-sarakkeen arvo on **120**. |”Arvojen on oltava alueella 0–100.” |
 

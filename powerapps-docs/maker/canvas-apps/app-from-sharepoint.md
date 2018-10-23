@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3a229715d1041ca7d695c5c45f72631f2b4c67e9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 15aa49787d6b2c3d3981e374aeb43c54a2d7a7ec
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42861542"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49317087"
 ---
 # <a name="generate-a-canvas-app-in-powerapps-from-a-sharepoint-list"></a>Pohjaan perustuvan sovelluksen luominen PowerAppsissa SharePoint-luettelosta
 
@@ -44,9 +44,9 @@ Sovelluksen luomisen periaatteet pysyvät samana, vaikka tekisit paljon monimutk
 
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Vie osoitin kohdan **Tee tämän kaltaisia sovelluksia** kohtaan **Aloita tiedoista** ja valitse **Tee tämä sovellus**.
+1. Vie hiiren osoitin **Tee oma sovelluksesi** -osiossa **Aloita tiedoista** -kohdan päälle ja valitse **Tee tämä sovellus**.
 
-    ![Asetus sovelluksen luomiseksi](./media/app-from-sharepoint/make-this-app.png)
+    ![Sovelluksen luontiasetus](./media/app-from-sharepoint/start-from-data.png)
 
 1. Valitse SharePoint-ruudusta **Puhelinasettelu**.
 

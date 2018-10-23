@@ -13,32 +13,28 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ad52396eda0c8db46dd38cb7176524df5feb7416
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: da9c8f85844e37d6af8e1063b36496c820fbfa07
+ms.sourcegitcommit: e2a9d1a6090cdd8aa78515b49f38ed2365217ea6
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834654"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384244"
 ---
 # <a name="attachments-control-in-powerapps"></a>Liiteohjausobjekti PowerAppsissa
-Ohjausobjekti, jolla käyttäjät voivat ladata tiedostoja laitteeseen sekä ladata ja poistaa tiedostoja SharePoint-luettelosta.
+Ohjausobjekti, jolla käyttäjät voivat ladata tiedostoja laitteeseen sekä ladata ja poistaa tiedostoja SharePoint-luettelosta tai Common Data Service for Apps -entiteetistä.
 
 ## <a name="limitations"></a>Rajoitukset
-Liiteohjausobjektia koskevat tilapäisesti seuraavat rajoitukset:
-1. Liitteiden lataamista tuetaan Internet Explorerissa vain SharePointin mukautetuissa luettelolomakkeissa.
+Liiteohjausobjektilla on seuraavat rajoitukset:
+1. Liitteitä tuetaan SharePoint-luetteloissa ja CDS for Apps -entiteeteissä.
 
-1. Liitteen lataaminen toimii vain SharePoint-luettelon tietolähteiden kanssa.  Muiden tietolähteiden tuki lisätään asteittain, alkaen CDS:stä.
-
-1. Lataaminen ja poistaminen toimivat vain lomakkeen sisällä.  Liiteohjausobjekti näyttää käytöstä poistetulta, kun käyttäjä on Muokkaa-tilassa eikä lomakkeen sisällä.   Huomaa, että loppukäyttäjän on tallennettava lomake, jos tiedoston lisäykset ja poistot halutaan tallentaa taustatietokantaan.
+1. Lataaminen ja poistaminen toimivat vain lomakkeen sisällä.  Liiteohjausobjekti näyttää käytöstä poistetulta, kun käyttäjä on Muokkaa-tilassa eikä lomakkeen sisällä. Huomaa, että loppukäyttäjän on tallennettava lomake, jos tiedoston lisäykset ja poistot halutaan tallentaa taustatietokantaan.
 
 1. Voit ladata enintään 10 Mt:n kokoisia tiedostoja.  
 
-1. Tällä hetkellä iOS-laitteilla voi ladata palvelimeen ainoastaan tiedostoista ja pilvipalvelutileistä. Suorita sovellus iOS-laitteen selaimen kautta jos haluat liittää kuvia/videoita.
-
 ## <a name="description"></a>Kuvaus
-**Liite**ohjausobjektin avulla voit avata tietolähteeseen tallennettuja tiedostoja sekä lisätä ja poistaa tiedostoja SharePoint-luettelosta.
+**Liitteet**-ohjausobjektin avulla voit avata, lisätä ja poistaa tiedostoja SharePoint-luettelosta tai CDS for Apps -entiteetistä.
 
-## <a name="key-properties"></a>Keskeiset ominaisuudet
+## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **[Items](properties-core.md)**  – Ladattavia tiedostoja kuvaava lähde.
 
 **MaxAttachments** – Ohjausobjektin hyväksymien tiedostojen enimmäismäärä.
@@ -86,7 +82,7 @@ Liiteohjausobjektia koskevat tilapäisesti seuraavat rajoitukset:
 
 
 ## <a name="example"></a>Esimerkki
-1. Luo sovellus tiedoista käyttämällä SharePoint-luetteloa tietolähteenä.  Vaihtoehtoisesti voit lisätä lomakkeen sovellukseesi ja määrittää SharePoint-luettelon sen tietolähteeksi.
+1. Luo sovellus tiedoista käyttämällä SharePoint-luetteloa tietolähteenä. Vaihtoehtoisesti voit lisätä sovellukseesi lomakkeen ja määrittää SharePoint-luettelon sen tietolähteeksi.
 
 2. Valitse **lomake**ohjausobjekti vasemmassa reunassa olevasta puunäkymästä.
 

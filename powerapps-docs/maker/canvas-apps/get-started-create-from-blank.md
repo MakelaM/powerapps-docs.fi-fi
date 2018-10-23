@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a1ee0b02465853306881ca4379182aef42bffd84
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 3128d284d5b03da9a7c8b5798365b60f7092988b
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833535"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316903"
 ---
 # <a name="create-an-canvas-app-from-scratch-based-on-excel-data"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Excel-tietojen perusteella
 
@@ -51,13 +51,11 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 ## <a name="open-a-blank-app"></a>Avaa tyhjä sovellus
 1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![PowerAppsin aloitussivu](./media/get-started-create-from-blank/sign-in.png)
-
     Voit suunnitella sovelluksen alusta alkaen puhelimia tai muita laitteita (kuten tabletteja) varten. Tässä artikkelissa keskitytään sovelluksen suunnittelemiseen puhelinta varten.
 
-1. Vie **Tee tämän kaltaisia sovelluksia** -kohdassa hiiren osoitin **Aloita tyhjästä** -ruudun kohdalle, valitse puhelinkuvake ja sitten valitse sitten **Tee tämä sovellus**.
+1. Vie hiiren osoitin **Tee oma sovelluksesi** -osiossa pohjaan perustuvien sovellusten **Aloita tyhjästä** -ruudun päälle. Valitse puhelinkuvake ja valitse sitten **Tee tämä sovellus**.
 
-    ![Tyhjän sovelluksen ruutu](./media/get-started-create-from-blank/blank-app.png)
+    ![Tyhjän sovelluksen ruutu](./media/get-started-create-from-blank/start-from-blank.png)
 
     PowerApps Studio luo tyhjän sovelluksen puhelimia varten.
 

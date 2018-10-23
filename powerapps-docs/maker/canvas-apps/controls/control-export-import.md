@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1dde9367fe06b1bd2242fe0ac755f5eeedb71bba
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: b78f88941fce85b9e63427635cb946f944aa120a
+ms.sourcegitcommit: e2a9d1a6090cdd8aa78515b49f38ed2365217ea6
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851836"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384267"
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Vienti- ja tuonti-ohjausobjektit PowerAppsissa
 Ohjausobjektit tietojen viemiseen paikalliseen tiedostoon ja sen jälkeen näiden tietojen tuomiseen toiseen sovellukseen PowerAppsissa.
@@ -28,6 +28,9 @@ Jos haluat luoda useamman kuin yhden sovelluksen, joka käyttää samoja tietoja
 
 ## <a name="warning"></a>Varoitus
 Näiden toimintojen käyttöön ottaminen sovelluksessa saattaa altistaa sen tietoturvauhkille ja tietovuodoille.  On suositeltavaa ilmoittaa käyttäjille, että he voivat tuoda vain tunnistettuja ja luotettuja tiedostoja ja viedä vain tietoja, jotka eivät ole luottamuksellisia tai arkaluontoisia.
+
+## <a name="limitations"></a>Rajoitukset
+Vientitoimintoa ei tueta verkkoselaimissa.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **Data** – Sen kokoelman nimi, jonka haluat viedä paikalliseen tiedostoon.

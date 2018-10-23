@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 738ec650827cf24e793c0bfda1a71f962cdc2d15
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: ea5912a043dc00fa197a2070c11610c358c3201d
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859898"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316719"
 ---
 # <a name="create-a-canvas-app-from-a-template-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen mallin pohjalta PowerAppsissa
 
@@ -32,9 +32,7 @@ Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi]
 
 1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    ![PowerAppsin aloitussivu](./media/get-started-test-drive/sign-in.png)
-
-1. Vie hiiren osoitin kohdan **Tee tämän kaltaisia sovelluksia** kohtaan **Aloita tiedoista** ja napsauta tai napauta **Tee tämä sovellus**.
+1. Vie hiiren osoitin **Tee oma sovelluksesi** -osiossa **Aloita tiedoista** -kohdan päälle ja napsauta tai napauta **Tee tämä sovellus**.
 
     ![Tee tämä sovellusruutu](./media/get-started-test-drive/make-this-app.png)
 

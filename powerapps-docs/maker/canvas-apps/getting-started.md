@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 93d29f0a49a70077f975bed659203b4fb7d66489
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: a9f85907da60e836c1a1115f31c6faf9ea05da9b
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833461"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49317064"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
 Voit suunnitella ja rakentaa liiketoimintasovelluksen pohjan avulla Microsoft PowerAppsissa kirjoittamatta perinteistä ohjelmointikieltä, kuten C#. Suunnittele sovellus vetämällä ja pudottamalla elementtejä pohjalle, kuten PowerPoint-esitystä suunnitellessasi. Luo Excel-tyyppisiä lausekkeita logiikan määrittelemiseksi ja tietojen työstämiseksi. Voit rakentaa sovelluksia, jotka integroivat liiketoimintatietoja [useista erilaisista Microsoftin ja kolmannen osapuolen lähteistä](connections-list.md). Jaettuasi sovelluksesi se on käytettävissä selaimessa tai mobiililaitteilla, ja upotettuasi sen sitä voidaan käyttää SharePointissa, Power BI:ssä tai Teamsissa.
@@ -33,9 +33,9 @@ Pääset alkuun luomalla sovelluksen automaattisesti esimerkiksi jostakin seuraa
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
-Valitse PowerApps-sivustossa **Aloita tiedoista** tai valitse mallisovellus, kuten **Service Desk** tai **Budget Tracker**.
+[Kirjaudu](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) PowerAppsiin ja valitse sitten **Aloita tiedoista** tai valitse mallisovellus, kuten **Service Desk** tai **Budget Tracker**.
 
-![PowerApps-sivusto](./media/getting-started/sample-apps.png)
+![PowerApps-sivusto](./media/getting-started/create-page-samples.png)
 
 Kun olet luonut sovelluksen automaattisesti, mukauta sen ulkoasu ja toiminta käyttäjien työnkulkujen perusteella. Muuta esimerkiksi näytettävien tietojen tyyppiä, niiden lajittelutapaa tai sitä, voivatko käyttäjät määrittää numeron kirjoittamalla sen vai valitsemalla sen liukusäätimellä. Lisää ja mukauta [näyttöjä](add-screen-context-variables.md), [valikoimia](customize-layout-sharepoint.md), [lomakkeita](customize-forms-sharepoint.md) ja muita ohjausobjekteja.
 
