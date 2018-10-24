@@ -9,12 +9,12 @@ ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: bcba4a6142299d253c484c0af46afad091735e80
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: c3e40df2d2ecc13e2c466aa91178ccb5d23548fe
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49636367"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806084"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Yleiskuvaus sovellusten luomisesta PowerAppsissa
 
@@ -32,7 +32,7 @@ Pohjaan perustuvissa sovelluksissa voit järjestellä käyttöympäristön ja -l
 
 Voit aloittaa sovelluksen kehittämisen Microsoft-työkaluilla, joissa on jo tietojasi, kuten
 
-- [SharePoint-luettelo](canvas-apps/generate-app-from-sharepoint-list-interface.md)
+- [SharePoint-luettelo](canvas-apps/app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online)
 - [Power BI -koontinäyttö](canvas-apps/embed-powerapps-powerbi.md)
 
 Pohjaan perustuvien sovellusten etsiminen ja luominen PowerAppsilla on helppoa. Tarjolla on useita vaihtoehtoja:
