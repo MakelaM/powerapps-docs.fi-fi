@@ -9,14 +9,15 @@ ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 3d95f017b064f61a539906268ebb73fff1e1d04f
-ms.sourcegitcommit: b9fa569153924af9815db45d52c04e764ddb7fa2
+ms.openlocfilehash: bcba4a6142299d253c484c0af46afad091735e80
+ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094606"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49636367"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Yleiskuvaus sovellusten luomisesta PowerAppsissa
+
 PowerApps on erittäin tehokas liiketoimintasovellusten kehitysalusta, johon kuuluu kolme keskeistä osaa:
 
 - [Pohjaan perustuvien sovellusten](canvas-apps/getting-started.md) lähtökohta on käyttökokemuksessa. Tyhjiin pohjiin laaditaan erittäin mukautettu rajapinta, joka voidaan yhdistää 200 tietolähteen valikoimaan. Voit käyttää pohjia verkko-, mobiili- ja tablettisovellusten luomiseen.
@@ -26,6 +27,7 @@ PowerApps on erittäin tehokas liiketoimintasovellusten kehitysalusta, johon kuu
 Ensimmäisen sovelluksesi luominen on helppoa ja yksinkertaista. Tarjoamme 30 päivän kokeiluversion ja ilmaisen yhteisöversion. Tutki, mikä sopii sinulle parhaiten, ja aloita käyttö.
 
 ## <a name="canvas-apps"></a>Pohjaan perustuvat sovellukset
+
 Pohjaan perustuvissa sovelluksissa voit järjestellä käyttöympäristön ja -liittymän mielesi mukaan. Päästä luovuutesi ja liiketoimintavainusi valloilleen ja valitse, miltä sovelluksen tulee näyttää ja tuntua.
 
 Voit aloittaa sovelluksen kehittämisen Microsoft-työkaluilla, joissa on jo tietojasi, kuten
@@ -42,6 +44,7 @@ Pohjaan perustuvien sovellusten etsiminen ja luominen PowerAppsilla on helppoa. 
 - [AppSourcella](../user/app-source.md)
 
 ## <a name="model-driven-apps"></a>Mallipohjaiset sovellukset
+
 Kun luot mallipohjaisia sovelluksia, voit hyödyntää kaikkia Common Data Servicen monipuolisia ominaisuuksia lomakkeiden, liiketoimintasääntöjen ja prosessien työnkulun nopeaan konfigurointiin. Mallipohjaiset sovellukset luodaan PowerApps-sivustolla.
 
 Mallipohjaisten sovellusten aloittaminen on helppoa, ja voit lähteä liikkeelle näistä aihealueista:
@@ -55,16 +58,28 @@ Mallipohjaisten sovellusten aloittaminen on helppoa, ja voit lähteä liikkeelle
 - [lisää liiketoimintalogiikka](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
 ## <a name="common-data-service-for-apps"></a>Common Data Service sovelluksia varten
+
 Common Data Servicen avulla voit varastoida ja hallita turvallisesti tietoja, jotka on tallennettu määritettyyn joukkoon vakiokohteita ja mukautettuja kohteita. Voit myös tarvittaessa lisätä näihin kohteisiin kenttiä.
 
 Common Data Servicen käyttöönotto on helppoa. Voit lähteä liikkeelle esimerkiksi näistä aihealueista:
+
 - [luo mukautettu kohde](common-data-service/data-platform-create-entity.md)
 - [hallitse kenttiä](common-data-service/data-platform-manage-fields.md)
 - [luo mukautettuja asetusjoukkoja](common-data-service/custom-picklists.md)
-- [luo liiketoimintasääntö](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+- [Liiketoimintasäännön luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-business-rules-recommendations-apply-logic-form)
+
+## <a name="canvas-and-model-driven-artifacts"></a>Pohjaan perustuvat ja mallipohjaiset artefaktit
+
+Kun yhdistät pohjaan perustuvien ja mallipohjaisten sovellusten kokemuksia, nämä artefaktit sopivat sekä pohjaan perustuville sovelluksille että mallipohjaisille sovelluksille.
+
+| Artefakti            | Sovelluksen tyyppi     |
+|---------------------|--------------|
+| Entiteetti > Näkymät      | Mallipohjainen |
+| Entiteetti > Lomakkeet      | Mallipohjainen |
+| Entiteetti > Koontinäytöt | Mallipohjainen |
+| Yhteydet         | Pohja       |
+| Yhdyskäytävät            | Pohja       |
+| Mukautetut liittimet   | Pohja       |
+| Sovellukset > Tuo       | Pohja       |
 
 Kun olet luonut sovelluksesi, voit [jakaa sen](canvas-apps/share-app.md) tiimisi jäsenten kanssa.
-
-
-
-

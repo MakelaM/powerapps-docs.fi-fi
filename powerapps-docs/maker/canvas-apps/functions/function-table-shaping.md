@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 08/24/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6a7d511143a0b16e04ae31263dec9f6a4e04689e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 056c5e1142b3a34776e72f788f5b2cef9e3b2a27
+ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864352"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48875895"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>AddColumns-, DropColumns-, RenameColumns- ja ShowColumns-funktiot PowerAppsissa
 Muokkaa [taulukkoa](../working-with-tables.md) lisäämällä, poistamalla, nimeämällä uudelleen ja valitsemalla sen [sarakkeita](../working-with-tables.md#columns).
@@ -42,7 +42,7 @@ Kaava lasketaan taulukon jokaiselle tietueelle.
 
 **DropColumns**-funktio jättää sarakkeita pois taulukosta.  Mitään muita sarakkeita ei muokata. **DropColumns** jättää pois sarakkeet, **ShowColumns** sisällyttää sarakkeet.
 
-**RenameColumns**-funktio nimeää taulukon sarakkeet uudelleen. Kaikki muut sarakkeet säilyttävät alkuperäiset nimensä.
+**RenameColumns**-funktiolla voit nimetä vähintään yhden taulukon sarakkeet uudelleen antamalla vähintään yhden argumenttiparin, joka määrittää sarakkeen nimen, jonka taulukko sisältää (vanha nimi, jonka haluat korvata), sekä sarakkeen nimen, jota taulukko ei sisällä (uusi nimi, jota haluat käyttää). Vanhan nimen on jo oltava olemassa taulukossa ja uutta nimeä ei saa olla olemassa. Jokainen sarakkeen nimi voi olla vain kerran argumenttiluettelossa joko vanhana sarakkeen nimenä tai uutena sarakkeen nimenä. Jos haluat antaa sarakkeelle jo olemassa olevan nimen, jätä ensin olemassa oleva sarake pois **DropColumns**-funktiolla tai nimeä se uudelleen laittamalla yksi **RenameColumns**-funktio sisäkkäin toisen kanssa.
 
 **ShowColumns**-funktio sisällyttää taulukon sarakkeet ja jättää pois kaikki muut sarakkeet. Voit käyttää **ShowColumns**-funktiota yksisarakkeisen taulukon luomiseen usean sarakkeen taulukosta.  **ShowColumns** sisällyttää sarakkeet, **DropColumns** jättää pois sarakkeet.  
 
@@ -62,11 +62,11 @@ Kaikkien näiden funktioiden tuloksena on uusi taulukko, johon on tehty muunnos.
 * *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
 * *ColumnName(s)* – Pakollinen. Pois jätettävien sarakkeiden nimet. Sinun on määritettävä merkkijono (esimerkiksi **"Nimi"** lainausmerkeissä) tähän argumenttiin.
 
-**RenameColumns**( *Table*, *OldColumneName*, *NewColumnName* )
+**RenameColumns**( *Table*, *OldColumneName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*, ... ] )
 
-* *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
-* *OldColumnName* – Pakollinen. Uudelleennimettävän sarakkeen nimi. Tämän nimen on oltava merkkijono (esimerkiksi **"Nimi"** lainausmerkeissä).
-* *NewColumnName* – Pakollinen. Korvaava nimi. Sinun on määritettävä merkkijono (esimerkiksi **"Asiakkaan nimi"** lainausmerkeissä) tähän argumenttiin.
+* *Taulukko* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
+* *OldColumnName* – Pakollinen. Alkuperäisen taulukon uudelleennimettävän sarakkeen nimi. Tämä elementti näkyy ensimmäisenä argumenttiparissa (tai ensimmäisenä kussakin argumenttiparissa, jos kaava sisältää useamman kuin yhden parin). Tämän nimen on oltava merkkijono (esimerkiksi **"Nimi"** lainausmerkeissä).
+* *NewColumnName* – Pakollinen. Korvaava nimi. Tämä elementti näkyy viimeisenä argumenttiparissa (tai viimeisenä kussakin argumenttiparissa, jos kaava sisältää useamman kuin yhden parin). Sinun on määritettävä merkkijono (esimerkiksi **"Asiakkaan nimi"** lainausmerkeissä) tähän argumenttiin.
 
 **ShowColumns**( *Table*, *ColumnName1* [, *ColumnName2*, ... ] )
 
@@ -86,6 +86,7 @@ Mikään näistä esimerkeistä ei muokkaa **IceCreamSales**-tietolähdettä. Jo
 | **DropColumns( IceCreamSales, "UnitPrice" )** |Sulkee pois **UnitPrice**-sarakkeen tuloksesta. Tällä funktiolla voit sulkea pois sarakkeita, ja **ShowColumns**-funktiolla voit sisällyttää niitä. |![](media/function-table-shaping/icecream-drop-price.png) |
 | **ShowColumns( IceCreamSales, "Flavor" )** |Sisältää vain tuloksen **Flavor**-sarakkeen. Tällä funktiolla voit sisällyttää sarakkeita, ja **DropColumns**-funktiolla voit sulkea niitä pois. |![](media/function-table-shaping/icecream-select-flavor.png) |
 | **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Nimeää uudelleen **UnitPrice**-sarakkeen tuloksessa. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Nimeää uudelleen **UnitPrice**- ja **QuantitySold**-sarakkeet tuloksessa. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
 | **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Suorittaa seuraavan taulukkomuunnoksen järjestyksessä alkaen kaavan sisältä: <ol><li>Lisää **Revenue**-sarakkeen tietuekohtaisen **UnitPrice * Quantity** -laskutoimituksen perusteella.<li>Muuttaa **UnitPrice**-sarakkeen nimeksi **Price**.<li>Jättää pois **Quantity**-sarakkeen.</ol>  Huomaa, että järjestys on tärkeä. Emme voi esimerkiksi laskea sarakkeella **UnitPrice**, kun sen nimi on muutettu. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta

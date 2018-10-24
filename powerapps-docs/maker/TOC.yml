@@ -1,669 +1,981 @@
-- name: Luo sovelluksia
-  href: index.md
-  expanded: true
+items:
+- name: Etsi ja suorita sovelluksia
+  href: ../user/index.md
   items:
-    - name: Rekisteröidy 30 päivän kokeiluversiota varten
+  - name: selaimessa
+    href: ../user/run-app-browser.md
+  - name: puhelimessa (pohjaan perustuvat)
+    href: ../user/run-app-client.md
+  - name: puhelimessa (mallipohjaiset)
+    href: ../user/run-app-client-model-driven.md
+  - name: SharePoint Online -sivulla
+    href: ../user/powerapps-web-part.md
+  - name: Microsoft-ryhmissä
+    href: ../user/open-app-embedded-in-teams.md
+  - name: AppSourcesta
+    href: ../user/app-source.md
+- name: Sovellusten luominen
+  href: index.md
+  items:
+  - name: Kokeile PowerAppsia ilmaiseksi
+    items:
+    - name: 30 päivän kokeiluversio
       href: signup-for-powerapps.md
-    - name: Rekisteröidy PowerApps-yhteisösuunnitelmaa varten
+    - name: PowerAppsin yhteisön palvelupaketti
       href: dev-community-plan.md
-    - name: Uudet ominaisuudet
-      href: ./canvas-apps/release-notes.md
-    - name: Yleisiä ongelmia ja ratkaisuja
-      href: ./canvas-apps/common-issues-and-resolutions.md
-    - name: Tulevat ja viimeisimmät verkkoseminaarit
-      href: ./canvas-apps/webinars-listing.md
+  - name: PowerAppsiin kirjautuminen
+    href: ./canvas-apps/intro-maker-portal.md
+  - name: Uudet ominaisuudet
+    href: ./canvas-apps/release-notes.md
 - name: Pohjaan perustuvat sovellukset
   href: ./canvas-apps/getting-started.md
   items:
-    - name: Pika-aloitukset
+  - name: Tutustu mallisovelluksiin
+    href: ./canvas-apps/open-and-run-a-sample-app.md
+    items:
+    - name: Kuluraporttisovellus
+      href: ./canvas-apps/expense-report-install.md
+    - name: Tukipalvelusovellus
+      href: ./canvas-apps/help-desk-install.md
+    - name: Meeting Capture -sovellus
+      href: ./canvas-apps/sample-meeting-capture.md
+  - name: Luo ensimmäinen sovelluksesi
+    items:
+    - name: 1 - Luo sovellus tiedoista
       items:
-        - name: Avaa esimerkkisovellus
-          href: ./canvas-apps/open-and-run-a-sample-app.md
-        - name: Luo sovellus mallin pohjalta
-          href: ./canvas-apps/get-started-test-drive.md
-        - name: Luo sovellus SharePointista
-          href: ./canvas-apps/generate-app-from-sharepoint-list-interface.md
-        - name: Luo sovellus
-          items:
-            - name: Common Data Servicesta sovelluksia varten
-              href: ./canvas-apps/data-platform-create-app.md
-            - name: SharePoint-luettelosta
-              href: ./canvas-apps/app-from-sharepoint.md
-            - name: Excelistä
-              href: ./canvas-apps/get-started-create-from-data.md
-    - name: Opetusohjelmat
+      - name: Common Data Service for Appsista
+        href: ./canvas-apps/data-platform-create-app.md
+      - name: SharePoint-luettelosta
+        href: ./canvas-apps/app-from-sharepoint.md
+      - name: Excelistä
+        href: ./canvas-apps/get-started-create-from-data.md
+    - name: 2 - Tee perustason mukautuksia
       items:
-        - name: Mukauta luotua sovellusta
-          items:
-            - name: 1 – Valikoimat
-              href: ./canvas-apps/customize-layout-sharepoint.md
-            - name: 2 – Lomakkeet
-              href: ./canvas-apps/customize-forms-sharepoint.md
-            - name: 3 – Kortit
-              href: ./canvas-apps/customize-card.md
-        - name: Sovelluksen luominen alusta alkaen
-          items:
-            - name: Microsoft Common Data Service for Apps
-              href: ./canvas-apps/data-platform-create-app-scratch.md
-            - name: Excel
-              href: ./canvas-apps/get-started-create-from-blank.md
-        - name: Sovelluksen jakaminen
-          href: ./canvas-apps/share-app.md
-          items:
-            - name: Jaa Excel-tiedot
-              href: ./canvas-apps/share-app-data.md
-            - name: Sovelluksen resurssien jakaminen
-              href: ./canvas-apps/share-app-resources.md
-        - name: 'Upota sovellus Power BI:ssä'
-          href: ./canvas-apps/embed-powerapps-powerbi.md
-    - name: Esimerkit
+      - name: 1 – Valikoimat
+        href: ./canvas-apps/customize-layout-sharepoint.md
+      - name: 2 – Lomakkeet
+        href: ./canvas-apps/customize-forms-sharepoint.md
+      - name: 3 – Kortit
+        href: ./canvas-apps/customize-card.md
+    - name: 3 - Luo sovellus itse
       items:
-        - name: Kuluraporttisovellus
-          href: ./canvas-apps/expense-report-install.md
-        - name: Tukipalvelusovellus
-          href: ./canvas-apps/help-desk-install.md
-    - name: Käsitteet
+      - name: Common Data Service for Appsista
+        href: ./canvas-apps/data-platform-create-app-scratch.md
+      - name: Excelistä
+        href: ./canvas-apps/get-started-create-from-blank.md
+    - name: Sovelluksen luominen mallin pohjalta
+      href: ./canvas-apps/get-started-test-drive.md
+  - name: Sovelluksen suunnitteleminen ja rakentaminen
+    items:
+    - name: Yhdistä tietoihin
+      href: ./canvas-apps/connections-list.md
       items:
-        - name: Aloita kaavojen käyttäminen
-          href: ./canvas-apps/working-with-formulas.md
-        - name: Taulukot ja tietueet
-          href: ./canvas-apps/working-with-tables.md
-        - name: Tietolomakkeet
+      - name: Yhteyden lisääminen
+        href: ./canvas-apps/add-data-connection.md
+      - name: Yhteyksien hallinta
+        href: ./canvas-apps/add-manage-connections.md
+      - name: Yhdistä SharePointiin
+        href: ./canvas-apps/connect-to-sharepoint.md
+      - name: Valmistele Excel-tiedot
+        href: ./canvas-apps/how-to-excel-tips.md
+      - name: Delegointi
+        href: ./canvas-apps/delegation-overview.md
+      - name: Delegoitavat tietolähteet
+        href: ./canvas-apps/delegation-list.md
+      - name: Hallitse yhdyskäytäviä
+        href: ./canvas-apps/gateway-management.md
+      - name: Tutustu yhdyskäytäviin
+        href: ./canvas-apps/gateway-reference.md
+      - name: Tutustu tietolähteisiin
+        href: ./canvas-apps/working-with-data-sources.md
+      - name: Tutustu taulukkoihin ja tietueisiin
+        href: ./canvas-apps/working-with-tables.md
+    - name: Käyttöliittymän suunnitteleminen
+      href: ./canvas-apps/add-configure-controls.md
+      items:
+      - name: Lisää näyttö
+        href: ./canvas-apps/add-screen-context-variables.md
+      - name: Näytä kohteiden taulukko
+        href: ./canvas-apps/add-gallery.md
+      - name: Näytä erikorkuisia kohteita
+        href: ./canvas-apps/gallery-dynamic-sizing.md
+      - name: Lomakkeen lisääminen
+        href: ./canvas-apps/add-form.md
+        items:
+        - name: Tutustu lomakkeisiin
           href: ./canvas-apps/working-with-forms.md
-        - name: Tietolomakkeiden asettelu
+        - name: Tutustu lomakkeiden asetteluun
           href: ./canvas-apps/working-with-form-layout.md
-        - name: Yhteyskortit
+        - name: Tutustu kortteihin
           href: ./canvas-apps/working-with-cards.md
-        - name: Muuttujat
-          href: ./canvas-apps/working-with-variables.md
-        - name: Kaavat
-          href: ./canvas-apps/working-with-formulas-in-depth.md
-        - name: Kokeelliset ja esikatseluominaisuudet
-          href: ./canvas-apps/working-with-experimental.md
-        - name: Päivämäärät ja ajat
-          href: ./canvas-apps/show-text-dates-times.md
-        - name: Tietolähteet
-          href: ./canvas-apps/working-with-data-sources.md
-        - name: Tutustu SharePoint-lomakkeiden integrointiin
-          href: ./canvas-apps/sharepoint-form-integration.md
-        - name: PowerAppsin mukautettu visualisointi
-          href: ./canvas-apps/powerapps-custom-visual.md
-        - name: Muunna InfoPath-lomakkeesi PowerApps-muotoon
-          href: ./canvas-apps/transform-infopath.md
-        - name: Pohjaan perustuvien sovellusten kehittäminen
-          items:
-            - name: 'PowerApps yritysten kehittäjille, kumppaneille ja ohjelmistontoimittajille'
-              href: ./canvas-apps/dev-enterprise-intro.md
-            - name: Luo ja sertifioi mukautettuja liittimiä
-              href: ./canvas-apps/register-custom-api.md
-            - name: Integroi verkkosivustojen ja muiden tekniikoiden kanssa
-              href: ./canvas-apps/embed-apps-dev.md
-            - name: Kehitä offline-tilassa toimivia sovelluksia
-              href: ./canvas-apps/offline-apps.md
-            - name: Anna asiakkaiden koekäyttää sovelluksiasi
-              href: ./canvas-apps/dev-appsource-test-drive.md
-    - name: Toimintaohjeet
+      - name: Luettelon lisääminen
+        href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
+      - name: Lisää kaavio
+        href: ./canvas-apps/use-line-pie-bar-chart.md
+      - name: Lisää multimediaa
+        href: ./canvas-apps/add-images-pictures-audio-video.md
+      - name: Skannaa viivakoodi
+        href: ./canvas-apps/scan-barcode.md
+      - name: Lisää vieritysnäyttö
+        href: ./canvas-apps/add-scrolling-screen.md
+      - name: Lisää Power BI -tietoja
+        href: ./canvas-apps/powerapps-custom-visual.md
+      - name: Ohjausobjektiviittaus
+        href: ./canvas-apps/reference-properties.md
+        items:
+        - name: Lisää kuva
+          href: ./canvas-apps/controls/control-add-picture.md
+        - name: Liitteet
+          href: ./canvas-apps/controls/control-attachments.md
+        - name: Ääni
+          href: ./canvas-apps/controls/control-audio-video.md
+        - name: Viivakoodiskanneri (kokeellinen)
+          href: ./canvas-apps/controls/control-barcodescanner.md
+        - name: Painike
+          href: ./canvas-apps/controls/control-button.md
+        - name: Kamera
+          href: ./canvas-apps/controls/control-camera.md
+        - name: Kortti
+          href: ./canvas-apps/controls/control-card.md
+        - name: Valintaruutu
+          href: ./canvas-apps/controls/control-check-box.md
+        - name: Pylväskaavio
+          href: ./canvas-apps/controls/control-column-line-chart.md
+        - name: Sarake
+          href: ./canvas-apps/controls/control-column.md
+        - name: Yhdistelmäruutu
+          href: ./canvas-apps/controls/control-combo-box.md
+        - name: Tietotaulukko
+          href: ./canvas-apps/controls/control-data-table.md
+        - name: Päivämäärän valitsin
+          href: ./canvas-apps/controls/control-date-picker.md
+        - name: Näytä lomake
+          href: ./canvas-apps/controls/control-form-detail.md
+        - name: Avattava luettelo
+          href: ./canvas-apps/controls/control-drop-down.md
+        - name: Muokkaa lomaketta
+          href: ./canvas-apps/controls/control-form-detail.md
+        - name: Vieminen
+          href: ./canvas-apps/controls/control-export-import.md
+        - name: Galleria
+          href: ./canvas-apps/controls/control-gallery.md
+        - name: HTML-teksti
+          href: ./canvas-apps/controls/control-html-text.md
+        - name: Kuvake
+          href: ./canvas-apps/controls/control-shapes-icons.md
+        - name: Kuva
+          href: ./canvas-apps/controls/control-image.md
+        - name: Tuo
+          href: ./canvas-apps/controls/control-export-import.md
+        - name: Viivakaavio
+          href: ./canvas-apps/controls/control-column-line-chart.md
+        - name: Luetteloruutu
+          href: ./canvas-apps/controls/control-list-box.md
+        - name: Mikrofoni
+          href: ./canvas-apps/controls/control-microphone.md
+        - name: PDF-katseluohjelma (kokeellinen)
+          href: ./canvas-apps/controls/control-pdf-viewer.md
+        - name: Kynän syöte
+          href: ./canvas-apps/controls/control-pen-input.md
+        - name: Ympyräkaavio
+          href: ./canvas-apps/controls/control-pie-chart.md
+        - name: Power BI -ruutu
+          href: ./canvas-apps/controls/control-power-bi-tile.md
+        - name: Radio
+          href: ./canvas-apps/controls/control-radio.md
+        - name: Luokitus
+          href: ./canvas-apps/controls/control-rating.md
+        - name: RTF-editori (kokeellinen)
+          href: ./canvas-apps/controls/control-richtexteditor.md
+        - name: Näyttö
+          href: ./canvas-apps/controls/control-screen.md
+        - name: Muoto
+          href: ./canvas-apps/controls/control-shapes-icons.md
+        - name: Liukusäädin
+          href: ./canvas-apps/controls/control-slider.md
+        - name: Selite
+          href: ./canvas-apps/controls/control-text-box.md
+        - name: Tekstisyöte
+          href: ./canvas-apps/controls/control-text-input.md
+        - name: Ajastin
+          href: ./canvas-apps/controls/control-timer.md
+        - name: Vaihda
+          href: ./canvas-apps/controls/control-toggle.md
+        - name: Video
+          href: ./canvas-apps/controls/control-audio-video.md
+    - name: Määritä sovelluksen toiminnot
+      href: ./canvas-apps/working-with-formulas.md
       items:
-        - name: Mukauta SharePointin luettelolomake
-          href: ./canvas-apps/customize-list-form.md
-        - name: Mukauta sovellus
-          items:
-            - name: Lisää ja määritä komponentti
-              href: ./canvas-apps/add-configure-controls.md
-            - name: Lisää näyttö
-              href: ./canvas-apps/add-screen-context-variables.md
-            - name: Lisää tietoyhteys
-              href: ./canvas-apps/add-data-connection.md
-            - name: Näytä kohdeluettelo
-              href: ./canvas-apps/add-gallery.md
-            - name: Näytä erikorkuisia kohteita
-              href: ./canvas-apps/gallery-dynamic-sizing.md
-            - name: Lisää lomake
-              href: ./canvas-apps/add-form.md
-            - name: Näytä nykyinen käyttäjä
-              href: ./canvas-apps/show-current-user.md
-            - name: Lisää luettelon komponentti
-              href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
-            - name: Yhdistä luetteloita käyttämällä hakua
-              href: ./canvas-apps/sharepoint-lookup-fields.md
-            - name: Lisää kaavio
-              href: ./canvas-apps/use-line-pie-bar-chart.md
-            - name: Lisää multimediaa
-              href: ./canvas-apps/add-images-pictures-audio-video.md
-            - name: Skannaa viivakoodi
-              href: ./canvas-apps/scan-barcode.md
-            - name: Lisää työnkulku
-              href: ./canvas-apps/using-logic-flows.md
-            - name: Lisää vieritysnäyttö
-              href: ./canvas-apps/add-scrolling-screen.md
-            - name: Luo yleinen sovellus
-              href: ./canvas-apps/global-apps.md
-            - name: Luo helppokäyttöinen sovellus
-              href: ./canvas-apps/accessible-apps.md
-              items:
-                - name: Löydä helppokäyttötoimintojen ongelmat
-                  href: ./canvas-apps/accessibility-checker.md
-                - name: Käytä värejä helppokäyttötoiminnoissa
-                  href: ./canvas-apps/accessible-apps-color.md
-        - name: Hallitse sovellustasi
-          items:
-            - name: Sivustoon powerapps.com tutustuminen
-              href: ./canvas-apps/intro-maker-portal.md
-            - name: Työskentele ympäristöissä
-              href: ./canvas-apps/working-with-environments.md
-            - name: Muokkaa sovellusta
-              href: ./canvas-apps/edit-app.md
-            - name: Muuta näytön kokoa ja suuntaa
-              href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
-            - name: Muuta sovelluksen nimeä ja sovellusruutua
-              href: ./canvas-apps/set-name-tile.md
-            - name: Tallenna ja julkaise sovellus
-              href: ./canvas-apps/save-publish-app.md
-            - name: Poista sovellus
-              href: ./canvas-apps/delete-app.md
-            - name: Palauta sovellus edelliseen versioon
-              href: ./canvas-apps/restore-an-app.md
-        - name: Yhdistä tietoihin
-          items:
-            - name: Hallitse tietoyhteyksiä
-              href: ./canvas-apps/add-manage-connections.md
-            - name: Yhdistä SharePointiin
-              href: ./canvas-apps/connect-to-sharepoint.md
-            - name: Valmistele Excel-tiedot
-              href: ./canvas-apps/how-to-excel-tips.md
-            - name: Delegointi
-              href: ./canvas-apps/delegation-overview.md
-            - name: Delegoitavat tietolähteet
-              href: ./canvas-apps/delegation-list.md
-            - name: Hallitse yhdyskäytäviä
-              href: ./canvas-apps/gateway-management.md
-            - name: Tutustu yhdyskäytäviin
-              href: ./canvas-apps/gateway-reference.md
-            - name: Tee Power Query -vianmääritys
-              href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
-        - name: Integroi muiden tekniikoiden kanssa
-          items:
-            - name: SharePoint Online
-              items:
-                - name: SharePoint Onlinen integroinnin yleiskuvaus
-                  href: ./canvas-apps/sharepoint-scenario-intro.md
-                - name: Määritä SharePoint Online -luetteloita
-                  href: ./canvas-apps/sharepoint-scenario-setup.md
-                - name: Luo sovellus
-                  href: ./canvas-apps/sharepoint-scenario-generate-app.md
-                - name: Luo työnkulku hyväksymisiä varten
-                  href: ./canvas-apps/sharepoint-scenario-approval-flow.md
-                - name: Luo sovellus alusta alkaen
-                  href: ./canvas-apps/sharepoint-scenario-build-app.md
-                - name: Luo Power BI -raportti
-                  href: ./canvas-apps/sharepoint-scenario-build-report.md
-                - name: Julkaise Power BI -raportti
-                  href: ./canvas-apps/sharepoint-scenario-publish-report.md
-                - name: Upota Power BI -raportti
-                  href: ./canvas-apps/sharepoint-scenario-embed-report.md
-                - name: Luo työnkulku ilmoituksia varten
-                  href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
-                - name: Käy läpi valmis skenaario
-                  href: ./canvas-apps/sharepoint-scenario-summary.md
-            - name: Kognitiiviset palvelut
-              href: ./canvas-apps/cognitive-services-api.md
-    - name: Lisätietoja
+      - name: Tutustu muuttujiin
+        href: ./canvas-apps/working-with-variables.md
+      - name: Tutustu toimintakaavoihin
+        href: ./canvas-apps/working-with-formulas-in-depth.md
+      - name: Näytä päivämäärät ja ajat
+        href: ./canvas-apps/show-text-dates-times.md
+      - name: Luo kokoelma
+        href: ./canvas-apps/create-update-collection.md
+      - name: Näytä nykyinen käyttäjä
+        href: ./canvas-apps/show-current-user.md
+      - name: Yhdistä luetteloita käyttämällä hakua
+        href: ./canvas-apps/sharepoint-lookup-fields.md
+      - name: Lisää työnkulku
+        href: ./canvas-apps/using-logic-flows.md
+      - name: Lisätietoja kaavasta
+        href: ./canvas-apps/formula-reference.md
+        items:
+        - name: Abs
+          href: ./canvas-apps/functions/function-numericals.md
+        - name: Acceleration
+          href: ./canvas-apps/functions/signals.md
+        - name: Acos
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Acot
+          href: ./canvas-apps/functions/function-trig.md
+        - name: AddColumns
+          href: ./canvas-apps/functions/function-table-shaping.md
+        - name: Ja
+          href: ./canvas-apps/functions/function-logicals.md
+        - name: Sovellus
+          href: ./canvas-apps/functions/signals.md
+        - name: Asin
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Atan
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Atan2
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Average
+          href: ./canvas-apps/functions/function-aggregates.md
+        - name: Back
+          href: ./canvas-apps/functions/function-navigate.md
+        - name: Blank
+          href: ./canvas-apps/functions/function-isblank-isempty.md
+        - name: Kalenteri
+          href: ./canvas-apps/functions/function-clock-calendar.md
+        - name: Char
+          href: ./canvas-apps/functions/function-char.md
+        - name: Valinnat
+          href: ./canvas-apps/functions/function-choices.md
+        - name: Clear
+          href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+        - name: ClearCollect
+          href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+        - name: Kello
+          href: ./canvas-apps/functions/function-clock-calendar.md
+        - name: Coalesce
+          href: ./canvas-apps/functions/function-isblank-isempty.md
+        - name: Collect
+          href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
+        - name: Väri
+          href: ./canvas-apps/functions/function-colors.md
+        - name: ColorFade
+          href: ./canvas-apps/functions/function-colors.md
+        - name: ColorValue
+          href: ./canvas-apps/functions/function-colors.md
+        - name: Compass
+          href: ./canvas-apps/functions/signals.md
+        - name: Concat
+          href: ./canvas-apps/functions/function-concatenate.md
+        - name: Concatenate
+          href: ./canvas-apps/functions/function-concatenate.md
+        - name: Samanaikainen
+          href: ./canvas-apps/functions/function-concurrent.md
+        - name: Yhteys
+          href: ./canvas-apps/functions/signals.md
+        - name: Määrä
+          href: ./canvas-apps/functions/function-table-counts.md
+        - name: Cos
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Cot
+          href: ./canvas-apps/functions/function-trig.md
+        - name: CountA
+          href: ./canvas-apps/functions/function-table-counts.md
+        - name: CountIf
+          href: ./canvas-apps/functions/function-table-counts.md
+        - name: CountRows
+          href: ./canvas-apps/functions/function-table-counts.md
+        - name: DataSourceInfo
+          href: ./canvas-apps/functions/function-datasourceinfo.md
+        - name: Päivämäärä
+          href: ./canvas-apps/functions/function-date-time.md
+        - name: DateAdd
+          href: ./canvas-apps/functions/function-dateadd-datediff.md
+        - name: DateDiff
+          href: ./canvas-apps/functions/function-dateadd-datediff.md
+        - name: DateTimeValue
+          href: ./canvas-apps/functions/function-datevalue-timevalue.md
+        - name: DateValue
+          href: ./canvas-apps/functions/function-datevalue-timevalue.md
+        - name: Päivä
+          href: ./canvas-apps/functions/function-datetime-parts.md
+        - name: Oletukset
+          href: ./canvas-apps/functions/function-defaults.md
+        - name: Asteet
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Poista käytöstä
+          href: ./canvas-apps/functions/function-enable-disable.md
+        - name: Erota
+          href: ./canvas-apps/functions/function-distinct.md
+        - name: Lataa
+          href: ./canvas-apps/functions/function-param.md
+        - name: DropColumns
+          href: ./canvas-apps/functions/function-table-shaping.md
+        - name: EditForm
+          href: ./canvas-apps/functions/function-form.md
+        - name: Ota käyttöön
+          href: ./canvas-apps/functions/function-enable-disable.md
+        - name: EndsWith
+          href: ./canvas-apps/functions/function-startswith.md
+        - name: Virheet
+          href: ./canvas-apps/functions/function-errors.md
+        - name: EncodeUrl
+          href: ./canvas-apps/functions/function-encode-decode.md
+        - name: Lopeta
+          href: ./canvas-apps/functions/function-exit.md
+        - name: Exp
+          href: ./canvas-apps/functions/function-numericals.md
+        - name: Filter
+          href: ./canvas-apps/functions/function-filter-lookup.md
+        - name: Etsi
+          href: ./canvas-apps/functions/function-find.md
+        - name: Ensimmäinen
+          href: ./canvas-apps/functions/function-first-last.md
+        - name: FirstN
+          href: ./canvas-apps/functions/function-first-last.md
+        - name: ForAll
+          href: ./canvas-apps/functions/function-forall.md
+        - name: GroupBy
+          href: ./canvas-apps/functions/function-groupby.md
+        - name: GUID-tunnus
+          href: ./canvas-apps/functions/function-guid.md
+        - name: HashTags
+          href: ./canvas-apps/functions/function-hashtags.md
+        - name: Tunti
+          href: ./canvas-apps/functions/function-datetime-parts.md
+        - name: Jos
+          href: ./canvas-apps/functions/function-if.md
+        - name: IfError
+          href: ./canvas-apps/functions/function-iferror.md
+        - name: IsBlank
+          href: ./canvas-apps/functions/function-isblank-isempty.md
+        - name: IsEmpty
+          href: ./canvas-apps/functions/function-isblank-isempty.md
+        - name: IsMatch
+          href: ./canvas-apps/functions/function-ismatch.md
+        - name: IsNumeric
+          href: ./canvas-apps/functions/function-isnumeric.md
+        - name: IsToday
+          href: ./canvas-apps/functions/function-now-today-istoday.md
+        - name: Kieli
+          href: ./canvas-apps/functions/function-language.md
+        - name: Viimeinen
+          href: ./canvas-apps/functions/function-first-last.md
+        - name: LastN
+          href: ./canvas-apps/functions/function-first-last.md
+        - name: Käynnistä
+          href: ./canvas-apps/functions/function-param.md
+        - name: Vasen
+          href: ./canvas-apps/functions/function-left-mid-right.md
+        - name: Len
+          href: ./canvas-apps/functions/function-len.md
+        - name: Ln
+          href: ./canvas-apps/functions/function-numericals.md
+        - name: LoadData
+          href: ./canvas-apps/functions/function-savedata-loaddata.md
+        - name: Sijainti
+          href: ./canvas-apps/functions/signals.md
+        - name: LookUp
+          href: ./canvas-apps/functions/function-filter-lookup.md
+        - name: Alempi
+          href: ./canvas-apps/functions/function-lower-upper-proper.md
+        - name: Max
+          href: ./canvas-apps/functions/function-aggregates.md
+        - name: Keski
+          href: ./canvas-apps/functions/function-left-mid-right.md
+        - name: Min
+          href: ./canvas-apps/functions/function-aggregates.md
+        - name: Minuutti
+          href: ./canvas-apps/functions/function-datetime-parts.md
+        - name: Mod
+          href: ./canvas-apps/functions/function-mod.md
+        - name: Kuukausi
+          href: ./canvas-apps/functions/function-datetime-parts.md
+        - name: Navigate
+          href: ./canvas-apps/functions/function-navigate.md
+        - name: NewForm
+          href: ./canvas-apps/functions/function-form.md
+        - name: Ei
+          href: ./canvas-apps/functions/function-logicals.md
+        - name: Ilmoita
+          href: ./canvas-apps/functions/function-showerror.md
+        - name: Nyt
+          href: ./canvas-apps/functions/function-now-today-istoday.md
+        - name: Operaattorit
+          href: ./canvas-apps/functions/operators.md
+        - name: Tai
+          href: ./canvas-apps/functions/function-logicals.md
+        - name: Param
+          href: ./canvas-apps/functions/function-param.md
+        - name: Patch
+          href: ./canvas-apps/functions/function-patch.md
+        - name: Pi
+          href: ./canvas-apps/functions/function-trig.md
+        - name: PlainText
+          href: ./canvas-apps/functions/function-encode-decode.md
+        - name: Power
+          href: ./canvas-apps/functions/function-numericals.md
+        - name: Proper
+          href: ./canvas-apps/functions/function-lower-upper-proper.md
+        - name: Radiaanit
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Rand
+          href: ./canvas-apps/functions/function-rand.md
+        - name: Päivitä
+          href: ./canvas-apps/functions/function-refresh.md
+        - name: Poista
+          href: ./canvas-apps/functions/function-remove-removeif.md
+        - name: RemoveIf
+          href: ./canvas-apps/functions/function-remove-removeif.md
+        - name: RenameColumns
+          href: ./canvas-apps/functions/function-table-shaping.md
+        - name: Korvaa
+          href: ./canvas-apps/functions/function-replace-substitute.md
+        - name: Palauta
+          href: ./canvas-apps/functions/function-reset.md
+        - name: ResetForm
+          href: ./canvas-apps/functions/function-form.md
+        - name: Kumoa
+          href: ./canvas-apps/functions/function-revert.md
+        - name: RGBA
+          href: ./canvas-apps/functions/function-colors.md
+        - name: Oikea
+          href: ./canvas-apps/functions/function-left-mid-right.md
+        - name: Pyöristä
+          href: ./canvas-apps/functions/function-round.md
+        - name: RoundDown
+          href: ./canvas-apps/functions/function-round.md
+        - name: RoundUp
+          href: ./canvas-apps/functions/function-round.md
+        - name: SaveData
+          href: ./canvas-apps/functions/function-savedata-loaddata.md
+        - name: Haku
+          href: ./canvas-apps/functions/function-filter-lookup.md
+        - name: Sekunti
+          href: ./canvas-apps/functions/function-datetime-parts.md
+        - name: Valitse
+          href: ./canvas-apps/functions/function-select.md
+        - name: Määritä
+          href: ./canvas-apps/functions/function-set.md
+        - name: ShowColumns
+          href: ./canvas-apps/functions/function-table-shaping.md
+        - name: Sekoita
+          href: ./canvas-apps/functions/function-shuffle.md
+        - name: Sin
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Sort
+          href: ./canvas-apps/functions/function-sort.md
+        - name: SortByColumns
+          href: ./canvas-apps/functions/function-sort.md
+        - name: Jaa
+          href: ./canvas-apps/functions/function-split.md
+        - name: Sqrt
+          href: ./canvas-apps/functions/function-numericals.md
+        - name: StartsWith
+          href: ./canvas-apps/functions/function-startswith.md
+        - name: StdevP
+          href: ./canvas-apps/functions/function-aggregates.md
+        - name: Korvaava
+          href: ./canvas-apps/functions/function-replace-substitute.md
+        - name: SubmitForm
+          href: ./canvas-apps/functions/function-form.md
+        - name: Sum
+          href: ./canvas-apps/functions/function-aggregates.md
+        - name: Valitsin
+          href: ./canvas-apps/functions/function-if.md
+        - name: Taulukko
+          href: ./canvas-apps/functions/function-table.md
+        - name: Tan
+          href: ./canvas-apps/functions/function-trig.md
+        - name: Teksti
+          href: ./canvas-apps/functions/function-text.md
+        - name: Time
+          href: ./canvas-apps/functions/function-date-time.md
+        - name: TimeValue
+          href: ./canvas-apps/functions/function-datevalue-timevalue.md
+        - name: TimeZoneOffset
+          href: ./canvas-apps/functions/function-dateadd-datediff.md
+        - name: Tänään
+          href: ./canvas-apps/functions/function-now-today-istoday.md
+        - name: Tasoita
+          href: ./canvas-apps/functions/function-trim.md
+        - name: TrimEnds
+          href: ./canvas-apps/functions/function-trim.md
+        - name: Ungroup
+          href: ./canvas-apps/functions/function-groupby.md
+        - name: Päivitä
+          href: ./canvas-apps/functions/function-update-updateif.md
+        - name: UpdateContext
+          href: ./canvas-apps/functions/function-updatecontext.md
+        - name: UpdateIf
+          href: ./canvas-apps/functions/function-update-updateif.md
+        - name: Ylempi
+          href: ./canvas-apps/functions/function-lower-upper-proper.md
+        - name: Käyttäjä
+          href: ./canvas-apps/functions/function-user.md
+        - name: Vahvista
+          href: ./canvas-apps/functions/function-validate.md
+        - name: Arvo
+          href: ./canvas-apps/functions/function-value.md
+        - name: VarP
+          href: ./canvas-apps/functions/function-aggregates.md
+        - name: ViewForm
+          href: ./canvas-apps/functions/function-form.md
+        - name: Viikonpäivä
+          href: ./canvas-apps/functions/function-datetime-parts.md
+        - name: Vuosi
+          href: ./canvas-apps/functions/function-datetime-parts.md
+    - name: Luo yleinen sovellus
+      href: ./canvas-apps/global-apps.md
+    - name: Tee sovelluksesta helppokäyttöinen
+      href: ./canvas-apps/accessible-apps.md
       items:
-        - name: Lisätietoja kaavasta
-          href: ./canvas-apps/formula-reference.md
-          items:
-            - name: Abs
-              href: ./canvas-apps/functions/function-numericals.md
-            - name: Acceleration
-              href: ./canvas-apps/functions/signals.md
-            - name: Acos
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Acot
-              href: ./canvas-apps/functions/function-trig.md
-            - name: AddColumns
-              href: ./canvas-apps/functions/function-table-shaping.md
-            - name: Ja
-              href: ./canvas-apps/functions/function-logicals.md
-            - name: Sovellus
-              href: ./canvas-apps/functions/signals.md
-            - name: Asin
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Atan
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Atan2
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Average
-              href: ./canvas-apps/functions/function-aggregates.md
-            - name: Back
-              href: ./canvas-apps/functions/function-navigate.md
-            - name: Blank
-              href: ./canvas-apps/functions/function-isblank-isempty.md
-            - name: Kalenteri
-              href: ./canvas-apps/functions/function-clock-calendar.md
-            - name: Char
-              href: ./canvas-apps/functions/function-char.md
-            - name: Valinnat
-              href: ./canvas-apps/functions/function-choices.md
-            - name: Clear
-              href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
-            - name: ClearCollect
-              href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
-            - name: Kello
-              href: ./canvas-apps/functions/function-clock-calendar.md
-            - name: Coalesce
-              href: ./canvas-apps/functions/function-isblank-isempty.md
-            - name: Collect
-              href: ./canvas-apps/functions/function-clear-collect-clearcollect.md
-            - name: Väri
-              href: ./canvas-apps/functions/function-colors.md
-            - name: ColorFade
-              href: ./canvas-apps/functions/function-colors.md
-            - name: ColorValue
-              href: ./canvas-apps/functions/function-colors.md
-            - name: Compass
-              href: ./canvas-apps/functions/signals.md
-            - name: Concat
-              href: ./canvas-apps/functions/function-concatenate.md
-            - name: Concatenate
-              href: ./canvas-apps/functions/function-concatenate.md
-            - name: Samanaikainen
-              href: ./canvas-apps/functions/function-concurrent.md
-            - name: Yhteys
-              href: ./canvas-apps/functions/signals.md
-            - name: Määrä
-              href: ./canvas-apps/functions/function-table-counts.md
-            - name: Cos
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Cot
-              href: ./canvas-apps/functions/function-trig.md
-            - name: CountA
-              href: ./canvas-apps/functions/function-table-counts.md
-            - name: CountIf
-              href: ./canvas-apps/functions/function-table-counts.md
-            - name: CountRows
-              href: ./canvas-apps/functions/function-table-counts.md
-            - name: DataSourceInfo
-              href: ./canvas-apps/functions/function-datasourceinfo.md
-            - name: Päivämäärä
-              href: ./canvas-apps/functions/function-date-time.md
-            - name: DateAdd
-              href: ./canvas-apps/functions/function-dateadd-datediff.md
-            - name: DateDiff
-              href: ./canvas-apps/functions/function-dateadd-datediff.md
-            - name: DateTimeValue
-              href: ./canvas-apps/functions/function-datevalue-timevalue.md
-            - name: DateValue
-              href: ./canvas-apps/functions/function-datevalue-timevalue.md
-            - name: Päivä
-              href: ./canvas-apps/functions/function-datetime-parts.md
-            - name: Oletukset
-              href: ./canvas-apps/functions/function-defaults.md
-            - name: Asteet
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Poista käytöstä
-              href: ./canvas-apps/functions/function-enable-disable.md
-            - name: Erota
-              href: ./canvas-apps/functions/function-distinct.md
-            - name: Lataa
-              href: ./canvas-apps/functions/function-param.md
-            - name: DropColumns
-              href: ./canvas-apps/functions/function-table-shaping.md
-            - name: EditForm
-              href: ./canvas-apps/functions/function-form.md
-            - name: Ota käyttöön
-              href: ./canvas-apps/functions/function-enable-disable.md
-            - name: EndsWith
-              href: ./canvas-apps/functions/function-startswith.md
-            - name: Virheet
-              href: ./canvas-apps/functions/function-errors.md
-            - name: EncodeUrl
-              href: ./canvas-apps/functions/function-encode-decode.md
-            - name: Lopeta
-              href: ./canvas-apps/functions/function-exit.md
-            - name: Exp
-              href: ./canvas-apps/functions/function-numericals.md
-            - name: Filter
-              href: ./canvas-apps/functions/function-filter-lookup.md
-            - name: Etsi
-              href: ./canvas-apps/functions/function-find.md
-            - name: Ensimmäinen
-              href: ./canvas-apps/functions/function-first-last.md
-            - name: FirstN
-              href: ./canvas-apps/functions/function-first-last.md
-            - name: ForAll
-              href: ./canvas-apps/functions/function-forall.md
-            - name: GroupBy
-              href: ./canvas-apps/functions/function-groupby.md
-            - name: HashTags
-              href: ./canvas-apps/functions/function-hashtags.md
-            - name: Tunti
-              href: ./canvas-apps/functions/function-datetime-parts.md
-            - name: Jos
-              href: ./canvas-apps/functions/function-if.md
-            - name: IfError
-              href: ./canvas-apps/functions/function-iferror.md
-            - name: IsBlank
-              href: ./canvas-apps/functions/function-isblank-isempty.md
-            - name: IsEmpty
-              href: ./canvas-apps/functions/function-isblank-isempty.md
-            - name: IsMatch
-              href: ./canvas-apps/functions/function-ismatch.md
-            - name: IsNumeric
-              href: ./canvas-apps/functions/function-isnumeric.md
-            - name: IsToday
-              href: ./canvas-apps/functions/function-now-today-istoday.md
-            - name: Kieli
-              href: ./canvas-apps/functions/function-language.md
-            - name: Viimeinen
-              href: ./canvas-apps/functions/function-first-last.md
-            - name: LastN
-              href: ./canvas-apps/functions/function-first-last.md
-            - name: Käynnistä
-              href: ./canvas-apps/functions/function-param.md
-            - name: Vasen
-              href: ./canvas-apps/functions/function-left-mid-right.md
-            - name: Len
-              href: ./canvas-apps/functions/function-len.md
-            - name: Ln
-              href: ./canvas-apps/functions/function-numericals.md
-            - name: LoadData
-              href: ./canvas-apps/functions/function-savedata-loaddata.md
-            - name: Sijainti
-              href: ./canvas-apps/functions/signals.md
-            - name: LookUp
-              href: ./canvas-apps/functions/function-filter-lookup.md
-            - name: Alempi
-              href: ./canvas-apps/functions/function-lower-upper-proper.md
-            - name: Max
-              href: ./canvas-apps/functions/function-aggregates.md
-            - name: Keski
-              href: ./canvas-apps/functions/function-left-mid-right.md
-            - name: Min
-              href: ./canvas-apps/functions/function-aggregates.md
-            - name: Minuutti
-              href: ./canvas-apps/functions/function-datetime-parts.md
-            - name: Mod
-              href: ./canvas-apps/functions/function-mod.md
-            - name: Kuukausi
-              href: ./canvas-apps/functions/function-datetime-parts.md
-            - name: Navigate
-              href: ./canvas-apps/functions/function-navigate.md
-            - name: NewForm
-              href: ./canvas-apps/functions/function-form.md
-            - name: Ei
-              href: ./canvas-apps/functions/function-logicals.md
-            - name: Ilmoita
-              href: ./canvas-apps/functions/function-showerror.md
-            - name: Nyt
-              href: ./canvas-apps/functions/function-now-today-istoday.md
-            - name: Operaattorit
-              href: ./canvas-apps/functions/operators.md
-            - name: Tai
-              href: ./canvas-apps/functions/function-logicals.md
-            - name: Param
-              href: ./canvas-apps/functions/function-param.md
-            - name: Patch
-              href: ./canvas-apps/functions/function-patch.md
-            - name: Pi
-              href: ./canvas-apps/functions/function-trig.md
-            - name: PlainText
-              href: ./canvas-apps/functions/function-encode-decode.md
-            - name: Power
-              href: ./canvas-apps/functions/function-numericals.md
-            - name: Proper
-              href: ./canvas-apps/functions/function-lower-upper-proper.md
-            - name: Radiaanit
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Rand
-              href: ./canvas-apps/functions/function-rand.md
-            - name: Päivitä
-              href: ./canvas-apps/functions/function-refresh.md
-            - name: Poista
-              href: ./canvas-apps/functions/function-remove-removeif.md
-            - name: RemoveIf
-              href: ./canvas-apps/functions/function-remove-removeif.md
-            - name: RenameColumns
-              href: ./canvas-apps/functions/function-table-shaping.md
-            - name: Korvaa
-              href: ./canvas-apps/functions/function-replace-substitute.md
-            - name: Palauta
-              href: ./canvas-apps/functions/function-reset.md
-            - name: ResetForm
-              href: ./canvas-apps/functions/function-form.md
-            - name: Kumoa
-              href: ./canvas-apps/functions/function-revert.md
-            - name: RGBA
-              href: ./canvas-apps/functions/function-colors.md
-            - name: Oikea
-              href: ./canvas-apps/functions/function-left-mid-right.md
-            - name: Pyöristä
-              href: ./canvas-apps/functions/function-round.md
-            - name: RoundDown
-              href: ./canvas-apps/functions/function-round.md
-            - name: RoundUp
-              href: ./canvas-apps/functions/function-round.md
-            - name: SaveData
-              href: ./canvas-apps/functions/function-savedata-loaddata.md
-            - name: Haku
-              href: ./canvas-apps/functions/function-filter-lookup.md
-            - name: Sekunti
-              href: ./canvas-apps/functions/function-datetime-parts.md
-            - name: Valitse
-              href: ./canvas-apps/functions/function-select.md
-            - name: Määritä
-              href: ./canvas-apps/functions/function-set.md
-            - name: ShowColumns
-              href: ./canvas-apps/functions/function-table-shaping.md
-            - name: Sekoita
-              href: ./canvas-apps/functions/function-shuffle.md
-            - name: Sin
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Sort
-              href: ./canvas-apps/functions/function-sort.md
-            - name: SortByColumns
-              href: ./canvas-apps/functions/function-sort.md
-            - name: Jaa
-              href: ./canvas-apps/functions/function-split.md
-            - name: Sqrt
-              href: ./canvas-apps/functions/function-numericals.md
-            - name: StartsWith
-              href: ./canvas-apps/functions/function-startswith.md
-            - name: StdevP
-              href: ./canvas-apps/functions/function-aggregates.md
-            - name: Korvaava
-              href: ./canvas-apps/functions/function-replace-substitute.md
-            - name: SubmitForm
-              href: ./canvas-apps/functions/function-form.md
-            - name: Sum
-              href: ./canvas-apps/functions/function-aggregates.md
-            - name: Valitsin
-              href: ./canvas-apps/functions/function-if.md
-            - name: Taulukko
-              href: ./canvas-apps/functions/function-table.md
-            - name: Tan
-              href: ./canvas-apps/functions/function-trig.md
-            - name: Teksti
-              href: ./canvas-apps/functions/function-text.md
-            - name: Time
-              href: ./canvas-apps/functions/function-date-time.md
-            - name: TimeValue
-              href: ./canvas-apps/functions/function-datevalue-timevalue.md
-            - name: TimeZoneOffset
-              href: ./canvas-apps/functions/function-dateadd-datediff.md
-            - name: Tänään
-              href: ./canvas-apps/functions/function-now-today-istoday.md
-            - name: Tasoita
-              href: ./canvas-apps/functions/function-trim.md
-            - name: TrimEnds
-              href: ./canvas-apps/functions/function-trim.md
-            - name: Ungroup
-              href: ./canvas-apps/functions/function-groupby.md
-            - name: Päivitä
-              href: ./canvas-apps/functions/function-update-updateif.md
-            - name: UpdateContext
-              href: ./canvas-apps/functions/function-updatecontext.md
-            - name: UpdateIf
-              href: ./canvas-apps/functions/function-update-updateif.md
-            - name: Ylempi
-              href: ./canvas-apps/functions/function-lower-upper-proper.md
-            - name: Käyttäjä
-              href: ./canvas-apps/functions/function-user.md
-            - name: Vahvista
-              href: ./canvas-apps/functions/function-validate.md
-            - name: Arvo
-              href: ./canvas-apps/functions/function-value.md
-            - name: VarP
-              href: ./canvas-apps/functions/function-aggregates.md
-            - name: ViewForm
-              href: ./canvas-apps/functions/function-form.md
-            - name: Viikonpäivä
-              href: ./canvas-apps/functions/function-datetime-parts.md
-            - name: Vuosi
-              href: ./canvas-apps/functions/function-datetime-parts.md
-        - name: Lisätietoja komponenteista
-          href: ./canvas-apps/reference-properties.md
-          items:
-            - name: Lisää kuva
-              href: ./canvas-apps/controls/control-add-picture.md
-            - name: Liitteet
-              href: ./canvas-apps/controls/control-attachments.md
-            - name: Ääni
-              href: ./canvas-apps/controls/control-audio-video.md
-            - name: Viivakoodiskanneri (kokeellinen)
-              href: ./canvas-apps/controls/control-barcodescanner.md
-            - name: Painike
-              href: ./canvas-apps/controls/control-button.md
-            - name: Kamera
-              href: ./canvas-apps/controls/control-camera.md
-            - name: Kortti
-              href: ./canvas-apps/controls/control-card.md
-            - name: Valintaruutu
-              href: ./canvas-apps/controls/control-check-box.md
-            - name: Pylväskaavio
-              href: ./canvas-apps/controls/control-column-line-chart.md
-            - name: Sarake
-              href: ./canvas-apps/controls/control-column.md
-            - name: Yhdistelmäruutu
-              href: ./canvas-apps/controls/control-combo-box.md
-            - name: Tietotaulukko
-              href: ./canvas-apps/controls/control-data-table.md
-            - name: Päivämäärän valitsin
-              href: ./canvas-apps/controls/control-date-picker.md
-            - name: Näytä lomake
-              href: ./canvas-apps/controls/control-form-detail.md
-            - name: Avattava luettelo
-              href: ./canvas-apps/controls/control-drop-down.md
-            - name: Muokkaa lomaketta
-              href: ./canvas-apps/controls/control-form-detail.md
-            - name: Vieminen
-              href: ./canvas-apps/controls/control-export-import.md
-            - name: Galleria
-              href: ./canvas-apps/controls/control-gallery.md
-            - name: HTML-teksti
-              href: ./canvas-apps/controls/control-html-text.md
-            - name: Kuvake
-              href: ./canvas-apps/controls/control-shapes-icons.md
-            - name: Kuva
-              href: ./canvas-apps/controls/control-image.md
-            - name: Tuo
-              href: ./canvas-apps/controls/control-export-import.md
-            - name: Viivakaavio
-              href: ./canvas-apps/controls/control-column-line-chart.md
-            - name: Luetteloruutu
-              href: ./canvas-apps/controls/control-list-box.md
-            - name: Mikrofoni
-              href: ./canvas-apps/controls/control-microphone.md
-            - name: PDF-katseluohjelma (kokeellinen)
-              href: ./canvas-apps/controls/control-pdf-viewer.md
-            - name: Kynän syöte
-              href: ./canvas-apps/controls/control-pen-input.md
-            - name: Ympyräkaavio
-              href: ./canvas-apps/controls/control-pie-chart.md
-            - name: Power BI -ruutu
-              href: ./canvas-apps/controls/control-power-bi-tile.md
-            - name: Radio
-              href: ./canvas-apps/controls/control-radio.md
-            - name: Luokitus
-              href: ./canvas-apps/controls/control-rating.md
-            - name: RTF-editori (kokeellinen)
-              href: ./canvas-apps/controls/control-richtexteditor.md
-            - name: Näyttö
-              href: ./canvas-apps/controls/control-screen.md
-            - name: Muoto
-              href: ./canvas-apps/controls/control-shapes-icons.md
-            - name: Liukusäädin
-              href: ./canvas-apps/controls/control-slider.md
-            - name: Selite
-              href: ./canvas-apps/controls/control-text-box.md
-            - name: Tekstisyöte
-              href: ./canvas-apps/controls/control-text-input.md
-            - name: Ajastin
-              href: ./canvas-apps/controls/control-timer.md
-            - name: Vaihda
-              href: ./canvas-apps/controls/control-toggle.md
-            - name: Video
-              href: ./canvas-apps/controls/control-audio-video.md
-        - name: Lisätietoa liittimistä
-          href: ./canvas-apps/connections-list.md
-        - name: 'Järjestelmävaatimukset, rajoitukset ja konfigurointi'
-          href: ./canvas-apps/limits-and-config.md
-        - name: Hae istunto- tai sovellustunnus
-          href: ./canvas-apps/get-sessionid.md
+      - name: Löydä helppokäyttötoimintojen ongelmat
+        href: ./canvas-apps/accessibility-checker.md
+      - name: Käytä värejä helppokäyttötoiminnoissa
+        href: ./canvas-apps/accessible-apps-color.md
+    - name: Kokeelliset ja esikatseluominaisuudet
+      href: ./canvas-apps/working-with-experimental.md
+  - name: Tallenna ja julkaise sovellus
+    href: ./canvas-apps/save-publish-app.md
+  - name: Sovelluksen jakaminen
+    href: ./canvas-apps/share-app.md
+    items:
+    - name: Jaa Excel-tiedot
+      href: ./canvas-apps/share-app-data.md
+    - name: Sovelluksen resurssien jakaminen
+      href: ./canvas-apps/share-app-resources.md
+    - name: Upota sovellus Power BI:ssä
+      href: ./canvas-apps/embed-powerapps-powerbi.md
+  - name: Sovelluksen hallinta
+    items:
+    - name: Muokkaa sovellusta
+      href: ./canvas-apps/edit-app.md
+    - name: Poista sovellus
+      href: ./canvas-apps/delete-app.md
+    - name: Palauta edellinen versio
+      href: ./canvas-apps/restore-an-app.md
+    - name: Muuta sovelluksen nimeä ja sovellusruutua
+      href: ./canvas-apps/set-name-tile.md
+    - name: Muuta näytön kokoa ja suuntaa
+      href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+  - name: Mukauta SharePointin luettelolomake
+    href: ./canvas-apps/customize-list-form.md
+    items:
+    - name: Tutustu SharePoint-lomakkeiden integrointiin
+      href: ./canvas-apps/sharepoint-form-integration.md
+  - name: Integroi muiden tekniikoiden kanssa
+    items:
+    - name: SharePoint Online
+      items:
+      - name: SharePoint Onlinen integroinnin yleiskuvaus
+        href: ./canvas-apps/sharepoint-scenario-intro.md
+      - name: Määritä SharePoint Online -luetteloita
+        href: ./canvas-apps/sharepoint-scenario-setup.md
+      - name: Luo sovellus
+        href: ./canvas-apps/sharepoint-scenario-generate-app.md
+      - name: Luo työnkulku hyväksymisiä varten
+        href: ./canvas-apps/sharepoint-scenario-approval-flow.md
+      - name: Luo sovellus alusta alkaen
+        href: ./canvas-apps/sharepoint-scenario-build-app.md
+      - name: Luo Power BI -raportti
+        href: ./canvas-apps/sharepoint-scenario-build-report.md
+      - name: Julkaise Power BI -raportti
+        href: ./canvas-apps/sharepoint-scenario-publish-report.md
+      - name: Upota Power BI -raportti
+        href: ./canvas-apps/sharepoint-scenario-embed-report.md
+      - name: Luo työnkulku ilmoituksia varten
+        href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
+      - name: Käy läpi valmis skenaario
+        href: ./canvas-apps/sharepoint-scenario-summary.md
+    - name: Kognitiiviset palvelut
+      href: ./canvas-apps/cognitive-services-api.md
+    - name: InfoPath-lomakkeiden muuntaminen PowerAppsiin
+      href: ./canvas-apps/transform-infopath.md
+  - name: Kehittäjiä varten
+    href: ./canvas-apps/dev-enterprise-intro.md
+    items:
+    - name: Luo ja sertifioi mukautettuja liittimiä
+      href: ./canvas-apps/register-custom-api.md
+    - name: Integroi verkkosivustojen ja muiden tekniikoiden kanssa
+      href: ./canvas-apps/embed-apps-dev.md
+    - name: Kehitä offline-tilassa toimivia sovelluksia
+      href: ./canvas-apps/offline-apps.md
+    - name: Anna asiakkaiden koekäyttää sovelluksiasi
+      href: ./canvas-apps/dev-appsource-test-drive.md
 - name: Mallipohjaiset sovellukset
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
-    - name: Mallipohjaisten sovellusten yleiskuvaus
-      href: ./model-driven-apps/overview-model-driven-samples.md
-    - name: Luo ensimmäinen mallipohjainen sovelluksesi
-      href: .//model-driven-apps/build-first-model-driven-app.md
-    - name: Jaa mallipohjainen sovellus
-      href: ./model-driven-apps/share-model-driven-app.md
-    - name: Kehittäjiä varten
-      href: ../developer/model-driven-apps/TOC.yml
-- name: Common Data Service sovelluksia varten
+  - name: Tutustu mallisovelluksiin
+    href: ./model-driven-apps/overview-model-driven-samples.md
+  - name: Luo ensimmäinen sovelluksesi
+    href: ./model-driven-apps/build-first-model-driven-app.md
+  - name: Sovelluksen suunnitteleminen ja rakentaminen
+    items:
+    - name: Mallipohjaisen sovelluksen osat
+      href: ./model-driven-apps/model-driven-app-components.md
+    - name: Sovelluksen tietojen määrittäminen
+      href: ./model-driven-apps/define-data-model-driven-app.md
+      items:
+      - name: Yleisen kentän ominaisuudet
+        href: ./model-driven-apps/common-field-properties-legacy.md
+      - name: Erikoiskentän ominaisuuksien yleiskatsaus
+        href: ./model-driven-apps/special-field-properties-legacy.md
+      - name: Lokalisoitavan tekstin kääntäminen
+        href: ./model-driven-apps/translate-localizable-text.md
+    - name: Käyttöliittymän suunnitteleminen
+      items:
+      - name: Sovelluksen luominen sovellusten suunnittelutoiminnolla
+        href: ./model-driven-apps/design-custom-business-apps-using-app-designer.md
+        items:
+        - name: Sovelluksen luominen
+          href: ./model-driven-apps/create-edit-app.md
+        - name: Sovelluksen sivustokartan luominen
+          href: ./model-driven-apps/create-site-map-app.md
+        - name: Sovelluksen osien lisääminen tai muokkaaminen
+          href: ./model-driven-apps/add-edit-app-components.md
+      - name: Lomakkeiden käsitteleminen
+        href: ./model-driven-apps/create-design-forms.md
+        items:
+        - name: Lomaketyypit
+          href: ./model-driven-apps/types-forms.md
+          items:
+          - name: Päälomakkeen luominen tai muokkaaminen
+            href: ./model-driven-apps/create-edit-main-forms.md
+          - name: Pikaluontilomakkeiden luominen tai muokkaaminen
+            href: ./model-driven-apps/create-edit-quick-create-forms.md
+          - name: Pikalomakkeen luominen
+            href: ./model-driven-apps/create-edit-quick-view-forms.md
+        - name: Lomake-editorin yleiskatsaus
+          href: ./model-driven-apps/form-editor-user-interface-legacy.md
+          items:
+          - name: Lomakkeen ominaisuuksien yleiskatsaus
+            href: ./model-driven-apps/form-properties-legacy.md
+          - name: Aliruudukon ominaisuuksien yleiskatsaus
+            href: ./model-driven-apps/sub-grid-properties-legacy.md
+          - name: Välilehden ominaisuuksien yleiskatsaus
+            href: ./model-driven-apps/tab-properties-legacy.md
+        - name: Päälomakkeiden suunnittelussa huomioitavat asiat
+          href: ./model-driven-apps/design-considerations-main-forms.md
+        - name: Miltä päälomakkeet näyttävät
+          href: ./model-driven-apps/main-form-presentations.md
+        - name: Lomakkeiden käyttöoikeuksien hallinta
+          href: ./model-driven-apps/control-access-forms.md
+        - name: Kentän lisääminen lomakkeeseen
+          href: ./model-driven-apps/add-field-form.md
+        - name: Lomake-elementtien näyttäminen tai piilottaminen
+          href: ./model-driven-apps/visibility-options-legacy.md
+        - name: Lomakkeen siirtymisasetusten muuttaminen
+          href: ./model-driven-apps/use-the-form-editor-legacy.md
+          items:
+          - name: Lomakkeen siirtymisosan lisääminen liittyviin entiteetteihin
+            href: ./model-driven-apps/add-edit-form-navigation-related-entities.md
+        - name: 'Toimintaohjeet: Lomakkeet'
+          items:
+          - name: Päälomakkeen ja sen osien käyttäminen
+            href: ./model-driven-apps/use-main-form-and-components.md
+          - name: Lomake-editorin avaaminen
+            href: ./model-driven-apps/open-form-editor.md
+          - name: iFrame-kehyksien lisääminen lomakkeisiin
+            href: ./model-driven-apps/iframe-properties-legacy.md
+          - name: Lomakkeiden suorituskyvyn optimointi
+            href: ./model-driven-apps/optimize-form-performance.md
+          - name: Lomakkeen osien käsitteleminen
+            href: ./model-driven-apps/section-properties-legacy.md
+          - name: Bing Mapsin määrittäminen lomakkeessa
+            href: ./model-driven-apps/configure-bing-maps-legacy.md
+          - name: Lomakejärjestyksen määrittäminen
+            href: ./model-driven-apps/assign-form-order.md
+          - name: Tapahtumakäsittelijöiden määrittäminen lomakkeessa
+            href: ./model-driven-apps/configure-event-handlers-legacy.md
+          - name: Automaattisen tallennuksen poistaminen käytöstä lomakkeessa
+            href: ./model-driven-apps/manage-auto-save.md
+      - name: Näkymien käsitteleminen
+        href: ./model-driven-apps/create-edit-views.md
+        items:
+        - name: Näkymän luominen tai muokkaaminen
+          href: ./model-driven-apps/create-and-edit-views.md
+        - name: Näkymämääritelmän käyttäminen
+          href: ./model-driven-apps/accessing-view-definitions.md
+        - name: Näkymien luominen ja muokkaaminen
+          href: ./model-driven-apps/create-edit-views-app-designer.md
+        - name: Sarakkeiden valitseminen ja määrittäminen näkymissä
+          href: ./model-driven-apps/choose-and-configure-columns.md
+        - name: 'Toimintaohjeet: Näkymät'
+          items:
+          - name: Ruudukoiden muuttaminen muokattaviksi
+            href: ./model-driven-apps/make-grids-lists-editable-custom-control.md
+          - name: Tietueiden lajitteleminen näkymässä
+            href: ./model-driven-apps/configure-sorting.md
+          - name: Suodatusehtojen ja lajittelujärjestyksen muokkaaminen
+            href: ./model-driven-apps/edit-filter-criteria.md
+          - name: Hallittujen ominaisuuksien määrittäminen näkymissä
+            href: ./model-driven-apps/managed-properties-views.md
+          - name: Oletusnäkymän määrittäminen
+            href: ./model-driven-apps/specify-default-views.md
+        - name: Näkymän poistaminen tai käytöstä poistaminen
+          href: ./model-driven-apps/remove-views.md
+    - name: Liiketoimintalogiikan soveltaminen sovelluksessa
+      href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
+      items:
+      - name: Liiketoimintasäännön luominen sovellukselle
+        href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
+    - name: Tietojen visualisointien käyttäminen sovelluksessa
+      items:
+      - name: Järjestelmäkaavion luominen
+        href: ./model-driven-apps/create-edit-system-chart.md
+      - name: Koontinäyttöjen luominen tai muokkaaminen
+        href: ./model-driven-apps/create-edit-dashboards.md
+      - name: Vuorovaikutteisten kokemusten koontinäyttöjen määrittäminen
+        href: ./model-driven-apps/configure-interactive-experience-dashboards.md
+      - name: Kaavion tai luettelon ominaisuuksien määrittäminen
+        href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
+      - name: Järjestelmän ohjausobjektien käyttäminen tietojen visualisointiin
+        items:
+        - name: Muistiinpanot-ohjausobjektin määrittäminen
+          href: ./model-driven-apps/notes-control-legacy.md
+        - name: Pikanäkymän ohjausobjektin ominaisuudet
+          href: ./model-driven-apps/quick-view-control-properties-legacy.md
+        - name: Lisäohjausobjektit Dynamics 365:n puhelin- ja tablettisovellukselle
+          href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
+        - name: Ajastimen ohjausobjektin yleiskatsaus
+          href: ./model-driven-apps/timer-control-legacy.md
+      - name: Mukautettujen ohjausobjektien käyttäminen tietojen visualisointiin
+        href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+  - name: Sovelluksen tarkistaminen ja julkaiseminen
+    href: ./model-driven-apps/validate-app.md
+  - name: Sovelluksen jakaminen
+    href: ./model-driven-apps/share-model-driven-app.md
+  - name: Sovelluksen hallinta
+    items:
+    - name: Sovelluksen ominaisuuksien hallinta
+      href: ./model-driven-apps/manage-app-properties.md
+    - name: Unified Interface -sovellusten ominaisuuksien määrittäminen
+      href: ./model-driven-apps/specify-properties-for-unified-interface-apps.md
+    - name: Poista sovellus
+      href: ./model-driven-apps/delete-model-driven-app.md
+  - name: Kehittyneiden sovellusten luominen ja mukauttaminen
+    href: ./model-driven-apps/advanced-navigation.md
+    items:
+    - name: Oikeudet mukauttamiseen
+      href: ./model-driven-apps/privileges-required-customization.md
+    - name: Luo tai muokkaa verkkoresursseja
+      href: ./model-driven-apps/create-edit-web-resources.md
+    - name: Verkkoresurssin ominaisuudet
+      href: ./model-driven-apps/web-resource-properties-legacy.md
+    - name: Mukautettujen entiteettien kuvakkeiden muuttaminen
+      href: ./model-driven-apps/change-custom-entity-icons.md
+    - name: Sovelluksen jakaminen ratkaisujen avulla
+      href: ./model-driven-apps/distribute-model-driven-app.md
+  - name: PowerAppsin sovellusten suunnitteluohjelman helppokäyttötoiminnot
+    href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+  - name: Kehittäjiä varten
+    href: ../developer/model-driven-apps/TOC.yml
+- name: Microsoft Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
-    - name: Pika-aloitukset
+  - name: Entiteettien käsitteleminen
+    href: ./common-data-service/entity-overview.md
+    items:
+    - name: Entiteetin luominen
+      href: ./common-data-service/data-platform-create-entity.md
+    - name: Luo mukautettu kohde, jossa on osia
+      href: ./common-data-service/create-custom-entity.md
+    - name: Tietojen lisääminen entiteettiin Power Queryn avulla
+      href: ./common-data-service/data-platform-cds-newentity-pq.md
+    - name: Entiteetit ja metatiedot
+      href: ./common-data-service/create-edit-metadata.md
+    - name: Entiteettityypit
+      href: ./common-data-service/types-of-entities.md
+    - name: Entiteettien luominen ja muokkaaminen
+      href: ./common-data-service/create-edit-entities.md
+    - name: Entiteetin muokkaaminen
+      href: ./common-data-service/edit-entities.md
+    - name: Virtuaalisten entiteettien luominen ja muokkaaminen
+      href: ./common-data-service/create-edit-virtual-entities.md
+    - name: Virtuaalisen entiteetin OData v4 -tietopalvelu
+      href: ./common-data-service/virtual-entity-odata-provider-requirements.md
+    - name: Vaihtoehtoisten avaimien määrittäminen PowerApps-portaalin avulla
+      href: ./common-data-service/define-alternate-keys-portal.md
+    - name: Vaihtoehtoisten avaimien määrittäminen ratkaisunhallinnan avulla
+      href: ./common-data-service/define-alternate-keys-solution-explorer.md
+    - name: 'Toimintaohjeet: Entiteetti'
       items:
-        - name: Entiteetin luominen
-          href: ./common-data-service/data-platform-create-entity.md
-    - name: Opetusohjelmat
+      - name: Entiteettien luominen PowerApps-portaalin avulla
+        href: ./common-data-service/create-edit-entities-portal.md
+      - name: Entiteettien luominen ratkaisunhallinnan avulla
+        href: ./common-data-service/create-edit-entities-solution-explorer.md
+      - name: Tietojen tuominen tai vieminen
+        href: ./common-data-service/data-platform-import-export.md
+      - name: Entiteettitietojen avaaminen Excelissä
+        href: ./common-data-service/data-platform-excel-addin.md
+      - name: Vaihtoehtoisten avaimien määrittäminen
+        href: ./common-data-service/define-alternate-keys-reference-records.md
+      - name: Tilan syyn siirtymien määrittäminen
+        href: ./common-data-service/define-status-reason-transitions.md
+      - name: Mukautetun entiteetin poistaminen
+        href: ./common-data-service/data-platform-delete-entity.md
+      - name: Mukautettujen kuvakkeiden näyttäminen
+        href: ./common-data-service/display-custom-icons-instead.md
+      - name: Järjestelmän entiteettiviestien muokkaaminen
+        href: ./common-data-service/edit-system-entity-messages.md
+      - name: Entiteetin määrittäminen palautetta/luokituksia varten
+        href: ./common-data-service/configure-entity-feedback.md
+      - name: Azure Cosmos DB SQL -ohjelmointirajapinnan tietopalvelu
+        href: ./common-data-service/virtual-entity-documentdb-provider-requirements.md
+      - name: Virtuaalisten entiteettien käsitteleminen
+        href: ./common-data-service/virtual-entity-walkthrough-using-odata-provider.md
+  - name: Entiteettisuhteiden käsitteleminen
+    href: ./common-data-service/relationships-overview.md
+    items:
+    - name: Entiteettisuhteiden yleiskatsaus
+      href: ./common-data-service/create-edit-entity-relationships.md
+    - name: Yleiskatsaus yksi moneen -entiteettisuhteiden luomiseen
+      href: ./common-data-service/create-edit-1n-relationships.md
+    - name: Yleiskatsaus monta moneen -entiteettisuhteiden luomiseen
+      href: ./common-data-service/create-edit-nn-relationships.md
+    - name: Entiteettisuhteen luominen
+      href: ./common-data-service/data-platform-entity-lookup.md
+    - name: Yksi moneen -entiteettisuhteiden luominen
+      href: ./common-data-service/create-edit-1n-relationships-portal.md
+    - name: Yksi moneen -entiteettisuhteiden luominen ratkaisunhallinnan avulla
+      href: ./common-data-service/create-edit-1n-relationships-solution-explorer.md
+    - name: Monta moneen -entiteettisuhteiden luominen PowerApps-portaalin avulla
+      href: ./common-data-service/create-edit-nn-relationships-portal.md
+    - name: Hallittujen ominaisuuksien määrittäminen entiteettisuhteille
+      href: ./common-data-service/set-managed-properties-relationships.md
+    - name: Hierarkkisten tietojen visualisoiminen
+      href: ./common-data-service/visualize-hierarchical-data.md
+    - name: Hierarkkisten tietojen määrittäminen ja kyselyjen tekeminen
+      href: ./common-data-service/define-query-hierarchical-data.md
+    - name: Yhteysroolien määrittäminen
+      href: ./common-data-service/configure-connection-roles.md
+    - name: 'Toimintaohjeet: Suhteet'
       items:
-        - name: 'Luo mukautettu kohde, jossa on osia'
-          href: ./common-data-service/create-custom-entity.md
-    - name: Esimerkit ja resurssit
-      href: ./common-data-service/samples-resources.md
-    - name: Toimintaohjeet
+      - name: Monta moneen -suhteiden luominen PowerApps-portaalin avulla
+        href: ./common-data-service/create-edit-nn-relationships-portal.md
+      - name: Monta moneen -suhteiden luominen PowerAppsin ratkaisunhallinnan avulla
+        href: ./common-data-service/create-edit-nn-relationships-solution-explorer.md
+      - name: Hallittujen ominaisuuksien määrittäminen suhteille
+        href: ./common-data-service/set-managed-properties-relationships.md
+      - name: Kyselyn tekeminen hierarkkisista tiedoista ja tietojen visualisoiminen
+        href: ./common-data-service/query-visualize-hierarchical-data.md
+      - name: Hierarkkisten tietojen määrittäminen ja kyselyjen tekeminen
+        href: ./common-data-service/define-query-hierarchical-data.md
+      - name: Yhteysroolien määrittäminen
+        href: ./common-data-service/configure-connection-roles.md
+  - name: Kenttien käsitteleminen
+    href: ./common-data-service/fields-overview.md
+    items:
+    - name: Kenttätyypit
+      href: ./common-data-service/types-of-fields.md
+    - name: Yleisten asetusjoukkojen yleiskatsaus
+      href: ./common-data-service/create-edit-global-option-sets.md
+    - name: Kenttien hallittujen ominaisuuksien määrittäminen PowerAppsissa
+      href: ./common-data-service/set-managed-properties-for-field.md
+    - name: Päivämäärä ja aika -kentän toiminta ja muoto
+      href: ./common-data-service/behavior-format-date-time-field.md
+    - name: 'Toimintaohjeet: Kentät'
       items:
-        - name: Mukautettujen kenttien hallinta entiteetissä
-          href: ./common-data-service/data-platform-manage-fields.md
-        - name: Luo mukautettu kohde tiedoista
-          href: ./common-data-service/data-platform-cds-newentity-pq.md
-        - name: Luo asetusjoukko
-          href: ./common-data-service/custom-picklists.md
-        - name: Luo entiteettien välinen suhde
-          href: ./common-data-service/data-platform-entity-lookup.md
-        - name: Luo liiketoimintasääntö
-          href: ./common-data-service/data-platform-create-business-rule.md
-        - name: Poista mukautettu entiteetti
-          href: ./common-data-service/data-platform-delete-entity.md
-        - name: Tuo tai vie tietoja entiteetistä
-          href: ./common-data-service/data-platform-import-export.md
-        - name: Entiteettitietojen avaaminen Excelissä
-          href: ./common-data-service/data-platform-excel-addin.md
-        - name: Luo Power BI -raportti
-          href: ./common-data-service/data-platform-powerbi-connector.md
-    - name: Käyttöoikeudet
-      href: ./common-data-service/data-platform-entity-licenses.md
-      items:
-        - name: 'Entiteetit, joilla on monimutkainen liiketoimintalogiikka'
-          href: ./common-data-service/data-platform-complex-entities.md
-        - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'
-          href: ./common-data-service/data-platform-restricted-entities.md
-    - name: Kehittäjiä varten
-      href: ../developer/common-data-service/TOC.yml
+      - name: Kenttien luominen
+        href: ./common-data-service/create-edit-fields.md
+      - name: Kenttien hallinta
+        href: ./common-data-service/data-platform-manage-fields.md
+      - name: Kenttien luominen PowerApps-portaalin avulla
+        href: ./common-data-service/create-edit-field-portal.md
+      - name: Kenttien luominen PowerAppsin ratkaisunhallinnan avulla
+        href: ./common-data-service/create-edit-field-solution-explorer.md
+      - name: Asetusjoukon luominen PowerApps-portaalin avulla
+        href: ./common-data-service/custom-picklists.md
+      - name: Yleisten asetusjoukkojen luominen ratkaisunhallinnan avulla
+        href: ./common-data-service/create-edit-global-option-sets-solution-explorer.md
+      - name: Laskettujen kenttien määrittäminen
+        href: ./common-data-service/define-calculated-fields.md
+      - name: Koontikenttien määrittäminen
+        href: ./common-data-service/define-rollup-fields.md
+      - name: Entiteettikenttien yhdistäminen
+        href: ./common-data-service/map-entity-fields.md
+      - name: Kenttien poistaminen
+        href: ./common-data-service/delete-fields.md
+  - name: Liiketoimintalogiikan soveltaminen
+    href: ./common-data-service/cds-processes.md
+    items:
+    - name: Liiketoimintasäännön luominen entiteetille
+      href: ./common-data-service/data-platform-create-business-rule.md
+  - name: Ratkaisujen käsitteleminen
+    href: ./common-data-service/solutions-overview.md
+    items:
+    - name: Ratkaisunhallinnan käyttäminen
+      href: ./common-data-service/use-solution-explorer.md
+    - name: Common Data Services -oletusratkaisun käyttäminen
+      href: ./common-data-service/use-solutions-for-your-customizations.md
+    - name: Ratkaisujen tuominen, päivittäminen ja vieminen
+      href: ./common-data-service/import-update-export-solutions.md
+    - name: Tiettyyn ratkaisuun siirtyminen
+      href: ./common-data-service/navigate-specific-solution.md
+    - name: Segmentoitujen ratkaisujen käyttäminen
+      href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
+    - name: Ratkaisun julkaisijan etuliitteen muuttaminen
+      href: ./common-data-service/change-solution-publisher-prefix.md
+    - name: Hallittujen ominaisuuksien määrittäminen metatiedoissa
+      href: ./common-data-service/set-managed-properties-metadata.md
+    - name: Julkaise muutokset
+      href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+  - name: Entiteettien käyttöoikeusvaatimukset
+    href: ./common-data-service/data-platform-entity-licenses.md
+    items:
+    - name: Monimutkaiset entiteetit ja käyttöoikeudet
+      href: ./common-data-service/data-platform-complex-entities.md
+    - name: Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia
+      href: ./common-data-service/data-platform-restricted-entities.md
+  - name: Luo Power BI -raportti
+    href: ./common-data-service/data-platform-powerbi-connector.md
+  - name: Teeman luominen
+    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
+  - name: Mukautettujen entiteettien ja kenttien tekstien kääntäminen
+    href: ./common-data-service/export-customized-entity-field-text-translation.md
+  - name: Entiteettien ja kenttien käännettyjen tekstien tuominen sovellukseen
+    href: ./common-data-service/import-translated-entity-field-text.md
+  - name: Kehittäjiä varten
+    href: ../developer/common-data-service/TOC.yml
 - name: Common Data Model
   href: ../common-data-model/overview.md
   items:
-    - name: Common Data Modelin käyttö
-      href: ../common-data-model/use-common-data-model.md
+  - name: Common Data Modelin käyttö
+    href: ../common-data-model/use-common-data-model.md
+- name: Opi muilta
+  items:
+  - name: Verkkoseminaarit
+    href: ./canvas-apps/webinars-listing.md
+  - name: Blogi
+    href: https://powerapps.microsoft.com/blog/
+  - name: Keskustelupalstat
+    href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
+- name: Vianmääritys
+  items:
+  - name: Järjestelmävaatimukset, rajoitukset ja konfigurointi
+    href: ./canvas-apps/limits-and-config.md
+  - name: Suorituskykyvihjeitä pohjaan perustuville sovelluksille
+    href: ./canvas-apps/performance-tips.md
+  - name: Yleisiä ongelmia ja ratkaisuja
+    href: ./canvas-apps/common-issues-and-resolutions.md
+  - name: Hae istunto- tai sovellustunnus
+    href: ./canvas-apps/get-sessionid.md
+  - name: Tee Power Query -vianmääritys
+    href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
+  - name: Tuki
+    href: https://powerapps.microsoft.com/support/
+ms.openlocfilehash: 3fbbedc26086c39f8e42bf14bea969ac9e81614c
+ms.sourcegitcommit: 2bcf40aeaa35420dc43f5803f4e57ff0f6afb57b
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "49454078"

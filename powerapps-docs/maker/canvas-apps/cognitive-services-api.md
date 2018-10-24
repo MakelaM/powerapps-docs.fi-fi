@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: daaea74ede5f9818453b1d4ff32f3c46ef87b0fb
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: df823f68842ad3c7a7497e6dce9cc3540520527e
+ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859578"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48875872"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
 Tässä artikkelissa kerrotaan, miten luodaan tavallinen kangassovellus, joka analysoi tekstiä käyttämällä [Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API)](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview). Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda kangassovelluksen, joka kutsuu API:a.
@@ -88,7 +88,7 @@ Ensin sinun täytyy luoda tyhjä puhelinsovellus ja lisätä yhteys **tekstianal
     ![Tekstianalyysiliitin](./media/cognitive-services-api/create-connection-ta.png)
 
 ### <a name="add-controls-to-the-app"></a>Ohjausobjektien lisääminen sovellukseen
-Seuraavaksi lisäät sovellukseen ohjausobjektit. Itse yleensä lisään ohjausobjekteihin kaavoja samalla kun kehitän sovellusta, mutta tässä tapauksessa keskitymme ensin ohjausobjekteihin ja lisäämme muutaman kaavan seuraavassa osiossa. Sovellus ja kaikki sen ohjausobjektit näkyvät seuraavassa kuvassa.
+Seuraavaksi lisäät sovellukseen ohjausobjektit. Yleensä ohjausobjekteihin lisätään kaavoja samalla kun sovellusta kehitetään, mutta tässä tapauksessa keskitymme ensin ohjausobjekteihin ja lisäämme muutaman kaavan seuraavassa osiossa. Sovellus ja kaikki sen ohjausobjektit näkyvät seuraavassa kuvassa.
 
 ![Valmis sovellus](./media/cognitive-services-api/finished-app-no-data.png)
 

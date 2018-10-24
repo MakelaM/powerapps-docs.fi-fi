@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 10/10/2018
 ms.author: manasma
 search.audienceType:
 - admin
@@ -14,12 +14,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: c5199488f3250d131f42665dfc6f9ad1fc1ae221
-ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
+ms.openlocfilehash: 3c8bdcb855b1e15cbebeb2a51fedf8aea7684286
+ms.sourcegitcommit: c4369e5f31bb08716f1af1416f3f7510a4b926d5
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48246070"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072515"
 ---
 # <a name="configure-environment-security"></a>Konfiguroi ympäristön turvallisuus
 Common Data Service (CDS) for Apps käyttää roolipohjaista tietoturvamallia tietokantaan pääsyn suojaamiseksi. Tässä ohjeaiheessa kerrotaan, miten luodaan suojausartefaktit, jotka ovat sovelluksen suojaamisen kannalta välttämättömiä. Käyttäjäroolit hallitsevat käytönaikaista tietojen käyttöä ja eroavat ympäristörooleista, jotka ohjaavat ympäristön järjestelmänvalvojia ja ympäristön tekijöitä. Katso ympäristöjen yleiskatsaus kohdassa [Ympäristöjen yleiskatsaus](environments-overview.md).
@@ -76,9 +76,10 @@ PowerApps-ympäristö sisältää ennalta määritettyjä käyttöoikeusrooleja,
 - Käyttäjille, jotka tekevät tietokantaan yhteydessä olevia sovelluksia ja luovat tai päivittävät entiteettejä ja käyttöoikeusrooleja, on määritettävä sekä järjestelmänmukauttajan että ympäristön tekijän rooli, sillä ympäristön tekijällä ei ole tietokannan käyttöoikeutta.
 
 ## <a name="create-or-configure-a-custom-security-role"></a>Mukautetun käyttöoikeusroolin luominen tai määrittäminen
-Jos sovellus perustuu mukautettuun entiteettiin, käyttöoikeudet on määritettävä erikseen, ennen kuin käyttäjät voivat työstää sovellusta. Se voidaan tehdä jollain seuraavista tavoista.
-- Laajenna olemassa olevaa, ennalta määritettyä käyttöoikeusroolia niin, että se sisältää mukautettuun entiteettiin pohjautuvien tietueiden käyttöoikeudet.
-- Luo mukautettu käyttöoikeusrooli sovelluksen käyttäjien käyttöoikeuksien hallintaa varten.
+Jos sovelluksessasi käytetään mukautettua entiteettiä, sen oikeudet täytyy nimenomaisesti myöntää käyttöoikeusroolissa, ennen kuin sovellustasi voidaan käyttää.  Voit lisätä nämä oikeudet olemassa olevassa käyttöoikeusroolissa tai luoda mukautetun käyttöoikeusroolin. Käytössä on oltava vähimmäisoikeudet, jotta uutta käyttöoikeusroolia voidaan käyttää – katso [Vähimmäisoikeudet sovelluksen suorittamiseen](#minimum-privileges-to-run-app).
+
+> [!TIP]
+> Jos haluat luoda mukautetun käyttöoikeusroolin sovelluksen suorittamisen edellyttämillä vähimmäisoikeuksilla, tutustu alla olevaa osioon: [Vähimmäisoikeudet sovelluksen suorittamiseen](#minimum-privileges-to-run-app).
 
 Ympäristö saattaa ylläpitää tietueita, joita useat sovellukset voivat käyttää. Tarvitset ehkä useita käyttöoikeusrooleja käyttämään tietoja, joihin tarvitaan eri käyttöoikeudet. esim.
 - Joidenkin käyttäjien (tyyppi A) tarvitsee vain lukea, päivittää ja liittää muita tietueita, joten heidän käyttöoikeusroolinsa sisältää lukemisen, kirjoittamisen ja liittämisen oikeudet.
@@ -114,7 +115,17 @@ Lisätietoja käyttöoikeuksista ja oikeuksien laajuudesta on kohdassa [Käyttö
 
 10. Valitse **Tallenna ja sulje**.
 
+## <a name="minimum-privileges-to-run-app"></a>Vähimmäisoikeudet sovelluksen suorittamiseen
+Kun luot mukautetun käyttöoikeusroolin, siihen pitää sisällyttää vähimmäisoikeudet, jotta käyttäjä voi suorittaa sovelluksen. Olemme luoneet ratkaisun, jonka voit tuoda ja joka tarjoaa vähimmäisoikeudet sisältävän käyttöoikeusroolin.  
 
+Aloita lataamalla ratkaisu Download Centeristä: [CDS for Appsin vähimmäisoikeudet sisältävä käyttöoikeusrooli](http://download.microsoft.com/download/6/5/5/6552A30E-05F4-45F0-AEE3-9BB01E13118A/MinprivilegeSecRole_1_0_0_0.zip).
+
+Tuo sitten ratkaisu noudattamalla ohjeita: [Ratkaisujen tuominen, päivittäminen ja vieminen](../maker/common-data-service/import-update-export-solutions.md).
+
+Kun tuot ratkaisun, se luo **sovellusten käyttö väh.oikeuksilla** -roolin, jonka voit kopioida (katso: [Käyttöoikeusroolin luominen Kopioi rooli -toiminnolla](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/create-edit-security-role#create-a-security-role-by-copy-role)). Kun roolin kopioiminen on valmis, siirry jokaiseen välilehteen - Ydintietueet, Yrityksen hallinta, Mukauttaminen jne. - ja määritä tarvittavat oikeudet. 
+
+> [!IMPORTANT]
+> Kokeile ratkaisua kehitysympäristössä ennen tuomista tuotantoympäristöön. 
 
 <!--Reference links in article-->
 [1]: https://admin.powerapps.com

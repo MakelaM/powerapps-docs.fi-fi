@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4f7a2e4002d3d9c8e38ad43418130d0ed9414361
-ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
+ms.openlocfilehash: f4654c12c860496cd0e2b44bbd33c956b7385460
+ms.sourcegitcommit: 0269766ee598f75a4d2459824128f031f68ca042
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43164321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860606"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -36,7 +36,9 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
     ![Raporttitietojen valitseminen](./media/powerapps-custom-visual/add-visual-set-data.png)
 
-3. Voit valita olemassa olevan sovelluksen tai luoda uuden. Jos päätät luoda sovelluksen, voit valita missä ympäristössä se luodaan.
+    Voit valita olemassa olevan sovelluksen tai luo uuden, mutta raportti on julkaistava Power BI -palvelussa ja avattava Microsoft Edgessä tai Google Chromessa.
+
+3.  Jos päätät luoda sovelluksen, voit valita missä ympäristössä se luodaan.
 
     ![Uusi tai olemassa oleva sovellus](./media/powerapps-custom-visual/create-new-or-choose-app.png)
 

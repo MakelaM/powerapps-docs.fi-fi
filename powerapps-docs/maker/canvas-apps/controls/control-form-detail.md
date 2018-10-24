@@ -1,24 +1,24 @@
 ---
 title: 'Näytetty lomake- ja Muokattu lomake -ohjausobjektit: viittaus | Microsoft Docs'
 description: Näytetty lomake- ja Muokattu lomake -ohjausobjekteja koskevaa tietoa, kuten ominaisuuksia ja esimerkkejä
-author: gregli-msft
+author: aneesmsft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/06/2017
-ms.author: gregli
+ms.author: aneesa
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4c81288b27d1dc2f5cccf966e4de9d7a043789d0
-ms.sourcegitcommit: 382b3b0e1760aa3124c04d84b59605a1fe16be72
+ms.openlocfilehash: 91f84ebbec83c5734e910680f4ab3a79077164df
+ms.sourcegitcommit: ce621966a34061dda2f75232403847e21816ffa9
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46563607"
+ms.lasthandoff: 09/30/2018
+ms.locfileid: "47459451"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -33,7 +33,11 @@ Jos lisäät **[Valikoima](control-gallery.md)**-ohjausobjektin, voit määritt�
 ### <a name="record-selection"></a>Tietueen valitseminen
 Määritä kumman tahansa lomaketyypin **DataSource**-ominaisuudeksi taulukon tietueet ja määritä lomakkeen **Item**-ominaisuus näyttämään tietty tietue kyseisessä taulukossa. Voit esimerkiksi määrittää lomakkeen **Item**-ominaisuudeksi **[Valikoima](control-gallery.md)**-ohjausobjektin **SelectedItem**-ominaisuuden. Kun käyttäjä valitsee valikoimasta tietueen, sama tietue näytetään myös lomakkeessa, mutta siinä voidaan näyttää enemmän kenttiä. Jos käyttäjä palaa valikoimaan ja valitsee toisen tietueen, valikoiman **SelectedItem**-ominaisuus muuttuu. Tämä muutos päivittää lomakkeen **Item**-ominaisuuden, jonka jälkeen lomakkeessa näytetään juuri valittu tietue.
 
-Lisätietoja siitä, miten voi asettaa lomakkeen **Kohde**-ominaisuuden esimerkiksi käyttämällä **Avattava luettelo** -ohjausobjektia **Valikoima**-ohjausobjektin sijaan, on ohjeaiheessa [Tietueen näyttäminen, muokkaaminen tai lisääminen](../add-form.md).
+Voit myös määrittää lomakkeen **Item**-ominaisuus käyttämällä **avattavan luettelon** ohjausobjektia [Tietueen tarkasteleminen, muokkaaminen tai lisääminen](../add-form.md) -kohdassa kuvatulla tavalla, tai funktiota, kuten **Haku** tai **Ensimmäinen**. Voit esimerkiksi määrittää **Item**-ominaisuuden jompaankumpaan näistä kaavoista näyttääksesi Fabrikam-merkinnän Common Data Service for Appsin **Tilit**-entiteetissä:
+
+```First(Accounts)```
+
+```Lookup(Accounts, "Fabrikam" in name)```
 
 Jokainen Lomake-ohjausobjekti sisältää vähintään yhden **[Kortti](control-card.md)**-ohjausobjektin. Voit [määrittää, minkä kentän kortti näyttää ja muita tietoja](../add-form.md) määrittämällä kortin **[DataField](control-card.md)**-ominaisuuden.
 

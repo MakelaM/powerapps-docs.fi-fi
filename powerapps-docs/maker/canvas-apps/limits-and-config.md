@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f8df0b9c4d2dc186a4b583b1f61da33a97ae4010
-ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
+ms.openlocfilehash: 5ba279e361dfe450de1187cf6aca87bc026178ba
+ms.sourcegitcommit: 60006ce9cb21c59e588c00f2ba5c41ffebbbba09
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43163723"
+ms.lasthandoff: 09/30/2018
+ms.locfileid: "47456294"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -99,3 +99,6 @@ Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studio
 | *.azureedge.net |https |WebAuth |
 | *.blob.core.windows.net |https |Blob-objektisäilö |
 | vortex.data.microsoft.com |https |Telemetria |
+
+> [!NOTE]
+> Jos käytät VPN:ää, se on määritettävä niin, että se ei sisällä PowerApps Mobilen tunneloinnin localhostia.

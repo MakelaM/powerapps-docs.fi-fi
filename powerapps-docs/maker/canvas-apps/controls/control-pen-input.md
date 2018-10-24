@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 37e5a701bb21d6454699b449f34629746d1547d1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: bad3dcf3b0268a8bb08036fec709281b2cbba253
+ms.sourcegitcommit: e4fe4b27651b62edb67e5995fc5955577d8ac5b8
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42860153"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075353"
 ---
 # <a name="pen-input-control-in-powerapps"></a>PowerAppsin Kynän syöte -ohjausobjekti
 Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan alueita.
@@ -27,6 +27,8 @@ Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan aluei
 Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää kaavioita ja kirjoittaa sanoja, jotka voidaan muuntaa kirjoitetuksi tekstiksi.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
+**Kuva** – Tuloksen ominaisuus, joka edustaa käyttäjän piirtämää kuvaa.
+
 **[Väri](properties-color-border.md)** – Syötettyjen vetojen väri.
 
 **Tila** – Ohjausobjekti on joko **Piirrä**- tai **Poista**-tilassa.  Tilan valinta on vanhentunut.
@@ -44,9 +46,9 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
 
 **[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[Korkeus](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
+**[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**Syöte** – Syöte.
+**Syöte** – **Vanhentunut.** Tukeeko syöte hiiren, kynän tai kosketuksen syötteitä.  Oletusarvo (7) tukee kaikkia kolmea.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
