@@ -5,7 +5,7 @@ author: jimholtz
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 03/21/2018
+ms.date: 10/24/2018
 ms.author: jimholtz
 search.audienceType:
 - admin
@@ -13,12 +13,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: ac0ae8032ea64734030bf95ff9b473553e462b3b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: f4dd7ddb4eaaef56b5720287842a2b84cd10d345
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835145"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991811"
 ---
 # <a name="manage-apps-created-in-your-organization"></a>Organisaatiossa luotujen sovellusten hallinta 
 Jos olet ympäristön järjestelmänvalvoja, 365:n yleinen järjestelmänvalvoja tai Azure Active Directory -vuokraajan järjestelmänvalvoja, voit tarkastella organisaatiossasi luotuja sovelluksia.
@@ -49,7 +49,6 @@ Järjestelmänvalvojien käytössä on seuraavat PowerApps-hallintakeskuksen toi
 4. Toimi jollain seuraavista tavoista:
 
     * Poista sovellus napsauttamalla tai napauttamalla roskakorikuvaketta.
-    * Vaihda sovelluksen omistaja.
     * Tarkastele tietoyhteyksiä, työnkulkuja ja muita sovelluksen liittyviä tietoja.
     * Tarkastele tai muokkaa käyttäjiä, joiden kanssa sovellus on jaettu, napsauttamalla tai napauttamalla kohtaa **Jaa**.
 

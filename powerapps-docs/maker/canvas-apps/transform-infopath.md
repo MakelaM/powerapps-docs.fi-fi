@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3e17015c05d23f4bd9f8a0906e7b1d9d00e2c38f
-ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
+ms.openlocfilehash: c2d72368b36f2de854a0aa575f9ef44f2f966ace
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48246047"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806221"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>InfoPath-lomakkeen muuntaminen PowerAppsiin
 
@@ -76,7 +76,7 @@ Aloita seuraavasti:
 
 PowerApps luo sovelluksen, jota voit itse mukauttaa.
 
-Käytä ensimmäisessä sovelluksessa yksinkertaista mukautettua luetteloa, jossa on vain muutama erityyppinen kenttä. Näin rakennat vahvan pohjan, eikä uuden asian opettelu tunnu ylivoimaisen vaikealta. Ei huolta – pääset pian ammattilaisen tasolle ja voit alkaa luoda monimutkaisia sovelluksia. Jos tarvitset lisäapua ensimmäisen sovelluksen luomiseen, tutustu näihin [ohjeisiin](generate-app-from-sharepoint-list-interface.md) tai katso tämä yhteisön [video](https://youtu.be/BnYe_7fpZRM). Seuraavat esimerkit esittelevät, miten yleisimmät InfoPath-tehtävät tehdään PowerAppsissa. Ne kaikki perustuvat yksinkertaiseen SharePoint-luettelosovellukseen.
+Käytä ensimmäisessä sovelluksessa yksinkertaista mukautettua luetteloa, jossa on vain muutama erityyppinen kenttä. Näin rakennat vahvan pohjan, eikä uuden asian opettelu tunnu ylivoimaisen vaikealta. Ei huolta – pääset pian ammattilaisen tasolle ja voit alkaa luoda monimutkaisia sovelluksia. Jos tarvitset lisäapua ensimmäisen sovelluksen luomiseen, tutustu näihin [ohjeisiin](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online) tai katso tämä yhteisön [video](https://youtu.be/BnYe_7fpZRM). Seuraavat esimerkit esittelevät, miten yleisimmät InfoPath-tehtävät tehdään PowerAppsissa. Ne kaikki perustuvat yksinkertaiseen SharePoint-luettelosovellukseen.
 
 ## <a name="how-do-you-do-that-with-powerapps"></a>Sama PowerAppsissa
 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fa2631d065425ab57e47dccbb470f577d6474f23
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: afbb6211ee947abd59e74a0712dd080f6911ec65
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831019"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806175"
 ---
 # <a name="integrate-powerapps-microsoft-flow-and-power-bi-with-sharepoint-online"></a>PowerAppsin, Microsoft Flow'n ja Power BI:n integroiminen SharePoint Onlinen kanssa
 Onko käytössäsi SharePoint Online ja haluatko automatisoida ja virtaviivaistaa liiketoimintaprosessejasi paremmin? Oletko työskennellyt PowerAppsin, Microsoft Flow'n tai Power BI:n kanssa, muttet ole varma, miten näitä käytetään SharePoint Onlinen kanssa? Olet tullut oikeaan paikkaan! Tässä opetusohjelmasarjassa näytetään, miten laaditaan projektinhallintaa varten yksinkertainen pohjaan perustuva sovellus. Se perustuu SharePoint-luetteloihin ja kolmeen tärkeään tekniikkaan, jotka voidaan integroida SharePoint Onlinen kanssa: PowerApps, Microsoft Flow ja Power BI. Nämä tekniikat toimivat yhdessä, mikä helpottaa liiketoimintasi *mittaamista*, *toimimista* tulosten perusteella ja työnkulkujen *automatisoimista*. Kun olet käynyt läpi tämän sarjan, käytössäsi on hieno skenaario, kuten tämä:
@@ -31,7 +31,7 @@ Tässä opetusohjelmasarjassa yrityksellä Contoso on SharePoint Online -sivusto
 ## <a name="getting-started-quickly"></a>Nopeasti alkuun pääseminen
 Tässä opetusohjelmasarjassa esittämämme skenaario on yksinkertainen verrattuna täysimittaiseen projektihallinta- ja analyysisovellukseen, mutta kestää silti jonkun aikaa. Jos haluat vain nopean esittelyn PowerAppsin, Microsoft Flow'n ja Power BI:n käytöstä SharePointin kanssa, tutustu seuraaviin artikkeleihin:
 
-* **PowerApps**: [Sovelluksen luominen SharePointista PowerAppsilla](generate-app-from-sharepoint-list-interface.md) ja [Luo sovellus SharePoint-luettelon tiedonhallintaa varten](app-from-sharepoint.md)
+* **PowerApps**: [Sovelluksen luominen SharePointista PowerAppsilla](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online) ja [Luo sovellus SharePoint-luettelon tiedonhallintaa varten](app-from-sharepoint.md)
 * **Microsoft Flow**: [Odota hyväksyntää Microsoft Flow'ssa](https://docs.microsoft.com/flow/wait-for-approvals)
 * **Power BI**: [Upota raportin verkko-osa SharePoint Onlinessä](https://docs.microsoft.com/power-bi/service-embed-report-spo)
 

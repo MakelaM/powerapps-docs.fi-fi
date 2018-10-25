@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b1531289c55772aaa9ee521c92cc8b5dbfe16ad4
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: 3d29387c907808f90225f1ff67257d289de2b0a9
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317018"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806129"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Excelistä PowerAppsissa
 
@@ -28,13 +28,15 @@ Excel-tiedoston tulee olla pilvitallennustilissä, kuten OneDrive, Google Drive 
 
 Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi](../signup-for-powerapps.md).
 
-## <a name="prerequisites"></a>Edellytykset ##
+## <a name="prerequisites"></a>Edellytykset
+
 Jotta voit noudattaa tämän aiheen ohjeita tarkasti, lataa [Flooring Estimates](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx) -tiedosto Excelissä ja tallenna se [pilvitallennustiliisi](connections/cloud-storage-blob-connections.md).
 
 > [!IMPORTANT]
 > Voit käyttää omaa Excel-tiedostoasi, jos tiedot on muotoiltu taulukoksi. Lisätietoja on artikkelissa [Taulukon muotoileminen](how-to-excel-tips.md). 
 
 ## <a name="generate-the-app"></a>Luo sovellus
+
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 1. Vie hiiren osoitin **Tee oma sovelluksesi** -osiossa **Aloita tiedoista** -kohdan päälle ja valitse **Tee tämä sovellus**.
@@ -54,6 +56,7 @@ Jotta voit noudattaa tämän aiheen ohjeita tarkasti, lataa [Flooring Estimates]
     ![Sovelluksen luontiasetus](./media/get-started-create-from-data/choose-table.png)
 
 ## <a name="run-the-app"></a>Sovelluksen suorittaminen
+
 1. Avaa esikatselu painamalla F5-näppäintä (tai napsauttamalla tai napauttamalla toistokuvaketta oikean yläkulman läheltä).
 
     ![Esikatselun avaaminen](./media/get-started-create-from-data/open-preview.png)
@@ -73,6 +76,7 @@ Jotta voit noudattaa tämän aiheen ohjeita tarkasti, lataa [Flooring Estimates]
 1. Napsauta tai napauta lisäämäsi tietueen seuraava-nuolta ja poista tietue napsauttamalla tai napauttamalla roskakorin kuvaketta.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
+
 Mukauta oletusselausnäyttö sopimaan paremmin tarpeisiisi. Voit esimerkiksi lajitella ja suodattaa luettelon tuotenimen mukaan luokan sijaan.
 
 > [!div class="nextstepaction"]
