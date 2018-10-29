@@ -1,53 +1,52 @@
 ---
-title: Lisää luetteloruutu, avattava luettelo ja valintanapit pohjaan perustuvaan sovellukseen | Microsoft Docs
+title: Lisää luetteloruutu, avattava luettelo tai valintanappeja pohjaan perustuvaan sovellukseen | Microsoft Docs
 description: Luo tai määritä PowerAppsissa monivalintoja pohjaan perustuvassa sovelluksessa
-author: lonu
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/23/2016
-ms.author: lonu
+ms.date: 10/24/2018
+ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 71beefdb0c937d69e621d6b02fa000b96c5a3e73
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 293c850c5af980a480a56cb9fb3b8c7866950580
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42861501"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991742"
 ---
-# <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app-in-powerapps"></a>Lisää luetteloruutu, avattava luettelo tai valintanapit pohjaan perustuvaan sovellukseen PowerAppsissa
+# <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app"></a>Lisää luetteloruutu, avattava luettelo tai valintanappeja pohjaan perustuvaan sovellukseen
 
-PowerApps sisältää pohjaan perustuvissa sovelluksissa moni- ja yksittäisvalintavaihtoehtoja, kuten luetteloruudun, avattavan luettelon ja valintanapit. Tässä aiheessa lisäämme nämä ohjausobjektit ja käytämme **Taulukko**-kaavaa luetteloiden rakentamiseen. Kun jokin luettelon kohde on valittuna, muut ohjausobjektit päivitetään.
+Näytä yksi tietosarake (esimerkiksi usean sarakkeen taulukosta) pohjaan perustuvassa sovelluksessa, jotta käyttäjät voivat valita luettelosta yhden tai useamman kohteen.
+
+- Lisää luetteloruutu, jotta käyttäjät voivat valita useamman kuin yhden vaihtoehdon.
+- Lisää vähemmän näyttötilaa vievä avattava luettelo.
+- Lisää joukko valintanappeja halutun ulkoasun luomiseksi.
+
+Tässä artikkelissa käsitellään erityisesti luetteloruutuja ja valintanappeja, mutta samat käytännöt koskevat myös avattavia luetteloita.
 
 [!INCLUDE [app-customization-requirements](../../includes/app-customization-requirements.md)]
 
-## <a name="add-a-list-box"></a>Luetteloruudun lisääminen
+## <a name="create-a-simple-list"></a>Yksinkertaisen luettelon luominen
 
-1. Valitse **Lisää**-välilehdeltä **Ohjausobjektit** ja valitse sitten **Luetteloruutu**:  
+1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **MyListBox** ja aseta sen **Kohteet**-ominaisuudeksi tämä lauseke:
 
-    ![][2]  
-
-2. Anna **Luetteloruutu**-ohjausobjektille nimi **MyListBox**:  
-
-    ![][3]
-
-3. Määritä sen **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-   ```["circle","triangle","rectangle"]```  <br/>
+    ```["circle","triangle","rectangle"]```  <br/>
 
     Suunnittelutyökalusi näyttää jotakuinkin seuraavalta:
 
     ![][4]
 
-4. Valitse **Lisää**-välilehdeltä **Kuvakkeet**, valitse ympyrä ja siirrä se **Luetteloruutu**-ohjausobjektin alle:
+4. Valitse **Lisää**-välilehdestä **Kuvakkeet**, valitse ympyrä ja siirrä se **MyListBox**-ohjausobjektin alle:
 
     ![][5]  
 
-5. Lisää kolmio ja suorakulmio ja järjestele muodot riviksi **Luetteloruutu**-ohjausobjektin alle:
+5. Lisää kolmio ja suorakulmio ja järjestele muodot riviksi **MyListBox**-ohjausobjektin alle:
 
     ![][6]  
 
@@ -59,12 +58,14 @@ PowerApps sisältää pohjaan perustuvissa sovelluksissa moni- ja yksittäisvali
    | triangle |```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
    | rectangle |```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
 
-7. Esikatsele luomustasi ![][1]. Valitse eri muodot **Luetteloruutu**-ohjausobjektissa. Vain valitsemasi muoto tai muodot näytetään. Palaa näyttöösi painamalla ESC-näppäintä tai valitsemalla **X**.
+7. Pidä Alt-näppäintä painettuna ja valitse yksi tai useampia muotoja **MyListBox**-ohjausobjektista.
 
-Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohjausobjektiin. **Luetteloruutu**-ohjausobjektissa tehdyn valinnan mukaan näytetään eri muotoja. Voit käyttää tätä muihinkin elementteihin liiketoiminnassa. Voit esimerkiksi käyttää **Luetteloruutu**-ohjausobjektia esimerkiksi tuotekuvien tai -kuvausten näyttämiseen.
+    Vain valitsemasi muoto tai muodot näytetään.
+
+Näissä vaiheissa käytit lauseketta luettelon luomiseen. Voit käyttää tätä muihinkin elementteihin liiketoiminnassa. Voit käyttää **Avattava luettelo** -ohjausobjektia esimerkiksi tuotekuvien tai -kuvausten näyttämiseen.
 
 ## <a name="add-radio-buttons"></a>Valintanappien lisääminen
-1. Valitse **Aloitus**-välilehdeltä **Uusi näyttö**.
+1. Valitse **Aloitus**-välilehdestä **Uusi näyttö** ja valitse sitten **Tyhjä**.
 
 2. Valitse **Lisää**-välilehdeltä **Ohjausobjektit** ja valitse sitten **Valintanappi**.
 
@@ -80,7 +81,7 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohj
 4. Valitse **Lisää**-välilehdeltä **Kuvakkeet** ja valitse ympyrä.
 
 5. Määritä ympyrän **[Fill](controls/properties-color-border.md)**-ominaisuudeksi seuraava funktio:  
-   ```If(Choices.Selected.Value = "red", RGBA(192, 0, 0, 1), Choices.Selected.Value = "green", RGBA(0, 176, 80, 1), Choices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```  
+   ```If(Choices.Selected.Value = "red", Red, Choices.Selected.Value = "green", Green, Choices.Selected.Value = "blue", Blue)```  
 
     Tällä kaavalla ympyrä vaihtaa väriään valitun valintanapin mukaan.
 
@@ -88,20 +89,7 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseksi **Luetteloruutu**-ohj
 
     ![][14]  
 
-7. Esikatsele luomustasi: ![][1]. Valitse eri valintanappi ympyrän värin muuttamiseksi. Palaa näyttöösi painamalla ESC-näppäintä tai valitsemalla **X**.
-
-## <a name="add-a-drop-down-list"></a>Avattavan luettelon lisääminen
-1. Lisää näyttö ja lisää sitten **Avattava luettelo** -ohjausobjekti.
-
-    ![][15]  
-
-2. Anna ohjausobjektille nimi **DDChoices** ja aseta sen **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **["red","green","blue"]**
-
-3. Lisää ympyrä, siirrä se **Avattava luettelo** -ohjausobjektin alle ja aseta ympyrän **[Fill](controls/properties-color-border.md)**-ominaisuudeksi tämä kaava:  
-   ```If(DDChoices.Selected.Value = "red", RGBA(192, 0, 0, 1), DDChoices.Selected.Value = "green", RGBA(0, 176, 80, 1), DDChoices.Selected.Value = "blue", RGBA(0, 32, 96, 1))```
-
-4. Esikatsele luomustasi: ![][1]. Valitse eri vaihtoehtoja ympyrän värin muuttamiseksi.
+7. Pidä Alt-näppäintä painettuna ja valitse eri valintanappi ympyrän värin muuttamiseksi.
 
 [1]: ./media/add-list-box-drop-down-list-radio-button/preview.png
 [2]: ./media/add-list-box-drop-down-list-radio-button/listbox.png

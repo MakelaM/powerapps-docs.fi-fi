@@ -1,5 +1,5 @@
 ---
-title: PowerAppsin integroiminen verkkosivustoihin ja muihin palveluihin | Microsoft Docs
+title: Pohjaan perustuvien sovellusten integroiminen verkkosivustoihin ja muihin palveluihin | Microsoft Docs
 description: Upota pohjaan perustuvia sovelluksia sivustoihin ja muihin palveluihin.
 author: mgblythe
 manager: kvivek
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c9cd4008bcb93e05d696fec082e400ee9661785b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 254d127237cff58728f208d62c30bf7aeb456a80
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835391"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991834"
 ---
-# <a name="integrate-powerapps-into-websites-and-other-services"></a>PowerAppsin integroiminen verkkosivustoihin ja muihin palveluihin
+# <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Pohjaan perustuvien sovellusten integroiminen verkkosivustoihin ja muihin palveluihin
 Luomasi sovellukset ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä ihmiset työskentelevät. PowerAppsin avulla voit upottaa pohjaan perustuvia sovelluksia iframe-kehykseen niin, että ne voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI:hin tai SharePointiin.
 
 Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen upottamista varten. Sen jälkeen upotamme verkkosivulle resurssien järjestelysovelluksemme.
@@ -32,7 +32,7 @@ Ota huomioon seuraavat rajoitukset:
 * Vain saman vuokraajan PowerApps-käyttäjät voivat käyttää upotettua sovellusta.
 * Jos käytät PowerAppsia Internet Explorer 11 -selaimella, sinun on poistettava yhteensopivuusnäkymä käytöstä.
 
-Voit integroida PowerAppsin myös SharePoint Onlineen (käyttämättä iframe-kehystä). Lisää tietoa on kohdassa [Sovelluksen luominen SharePointin sisältä PowerAppsilla](../canvas-apps/generate-app-from-sharepoint-list-interface.md).
+Voit integroida PowerAppsin myös SharePoint Onlineen (käyttämättä iframe-kehystä). Lisää tietoa on kohdassa [Sovelluksen luominen SharePointin sisältä PowerAppsilla](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online).
 
 ## <a name="set-uri-parameters-for-your-app"></a>Sovelluksen URI-parametrien määrittäminen
 Jos haluat upottaa sovelluksen, ensimmäinen vaihe on määrittää parametrit Uniform Resource Identifierille (URI) niin, että iframe-kehys tietää, mistä sovellus löytyy. URI on seuraavassa muodossa:

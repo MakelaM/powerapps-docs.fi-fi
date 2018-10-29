@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a255489f243ca8586f349e617e5af2023e88732b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: f081369d75ec6f8fc29e6177b8173734d2462e03
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864398"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991765"
 ---
-# <a name="develop-offline-capable-canvas-apps-with-powerapps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia PowerAppsissa
+# <a name="develop-offline-capable-canvas-apps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia
 
 Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, miten käyttäjäsi voivat olla tuottavia, kun yhteydet ovat rajallisia tai niitä ei ole lainkaan. PowerAppsissa on joukko ominaisuuksia ja toimintatapoja, joiden avulla voit kehittää offline-tilassa toimivia pohjaan perustuvia sovelluksia. Voit:
 

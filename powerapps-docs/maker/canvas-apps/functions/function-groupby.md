@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e0bdab9bcd45f456c00f933dfa7f1a8936e3fa85
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 0ac3f0549e89153d9362d6a8a040833608d4e287
+ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865409"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806198"
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>GroupBy- ja Ungroup-funktiot PowerAppsissa
 [Taulukon](../working-with-tables.md) [tietueiden](../working-with-tables.md#records) ryhmittely ja ryhmittelyn purku.
@@ -68,7 +68,7 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
 2. Määritä **Alkuperäinen**-painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
     **ClearCollect(KaupunkienVäkiluvut, {Kaupunki:"Lontoo", Maa:"Yhdistynyt kuningaskunta", Väkiluku:8615000}, {Kaupunki:"Berliini", Maa:"Saksa", Väkiluku:3562000}, {Kaupunki:"Madrid", Maa:"Espanja", Väkiluku:3165000}, {Kaupunki:"Rooma", Maa:"Italia", Väkiluku:2874000}, {Kaupunki:"Pariisi", Maa:"Ranska", Väkiluku:2273000}, {Kaupunki:"Hampuri", Maa:"Saksa", Väkiluku:1760000}, {Maa:"Barcelona", Maa:"Espanja", Väkiluku:1602000}, {Kaupunki:"München", Maa:"Saksa", Väkiluku:1494000}, {Kaupunki:"Milano", Maa:"Italia", Väkiluku:1344000})**
-3. Paina F5, valitse **Alkuperäinen**-painike ja paina sitten Esc.
+3. Pidä Alt-näppäintä painettuna ja valitse **Alkuperäinen**-painike.
    
     Juuri luomasi [kokoelman](../working-with-data-sources.md#collections) nimi on **KaupunkienVäkiluvut**, ja se sisältää nämä tiedot:
    
@@ -82,7 +82,7 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
     **ClearCollect( KaupungitMaittain, GroupBy( KaupunkienVäkiluvut, "Maa", "Kaupungit" ) )**
-3. Paina F5, valitse **Group**-painike ja paina sitten Esc.
+3. Pidä Alt-näppäintä painettuna ja valitse **Ryhmä**-painike.
    
     Juuri luomasi kokoelman nimi on **KaupungitMaittain**. Kokoelmassa edellisen kokoelman tietueet on ryhmitelty **Maa**-sarakkeen mukaan.
    
@@ -99,7 +99,7 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
     **ClearCollect (KaupungitMaittainSuodatettu, Filter(KaupungitMaittain, "e" in Maa))**
-3. Paina F5, valitse lisäämäsi painike ja paina Esc-näppäintä.
+3. Pidä Alt-näppäintä painettuna ja valitse lisäämäsi painike.
    
     Loit juuri kolmannen kokoelman nimeltä **KaupungitMaittainSuodatettu**, joka sisältää vain ne maat, joiden nimessä ”e” (eli ei Saksaa tai Italiaa).
    
@@ -126,8 +126,12 @@ Ryhmitetyn taulukon avulla voidaan myös koostaa tuloksia.  Tässä esimerkissä
     ![](media/function-groupby/cities-sum.png)
    
     **[AddColumns](function-table-shaping.md)** aloittaa **KaupungitMaittain**-kokoelmasta ja lisää uuden sarakkeen **Kaupunkien väkilukujen summa**.  Sarakkeen arvot lasketaan riveittäin perustuen kaavaan **Sum( Kaupungit, Väkiluku)**.  **AddColumns** antaa **Kaupungit**-sarakkeen arvon (taulukko) jokaiselle riville, ja **[Sum](function-aggregates.md)** laskee yhteen jokaisen alataulukon rivin **väkiluvun**.
-3. Kun meillä on nyt haluamamme summa, voimme käyttää **[DropColumns](function-table-shaping.md)**-funktiota alataulukoiden poistamiseen.  Muokkaa **[OnSelect](../controls/properties-core.md)**-ominaisuutta käyttämään seuraavaa kaavaa:
-   
+
+    Kun meillä on nyt haluamamme summa, voimme käyttää **[DropColumns](function-table-shaping.md)**-funktiota alataulukoiden poistamiseen.
+  
+3. Lisää painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuus niin, että painikkeessa lukee **"SumOnly"**.
+4. Määritä **"SumOnly"**-painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+
     **ClearCollect( KaupunkienVäkiluvutVainSumma, DropColumns( KaupunkienVäkiluvutSumma, "Kaupungit" ) )**
    
     Jonka tuloksena saadaan:

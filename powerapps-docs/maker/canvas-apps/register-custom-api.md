@@ -1,6 +1,6 @@
 ---
-title: Linkkejä mukautettuja liittimiä käsittelevään sisältöön | Microsoft Docs
-description: Linkit sisältöihin, jotka liittyvät mukautettujen liittimien luomiseen, käyttämiseen, jakamiseen ja sertifioimiseen PowerAppsissa.
+title: Linkkejä pohjaan perustuvien sovellusten mukautettuja liittimiä käsittelevään sisältöön | Microsoft Docs
+description: Linkkejä sisältöihin, jotka liittyvät mukautettujen liittimien luomiseen, käyttämiseen, jakamiseen ja sertifioimiseen pohjaan perustuvissa sovelluksissa PowerAppsissa.
 author: mgblythe
 manager: kvivek
 ms.service: powerapps
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dd07dbc90900e4690e677823d2303b96e57472f5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: 6975c19a973b90de0db7dfbc7ecb8e5e504f39a4
+ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859319"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991788"
 ---
-# <a name="custom-connectors-in-powerapps"></a>Mukautetut liittimet PowerAppsissa
+# <a name="custom-connectors-for-canvas-apps"></a>Pohjaan perustuvien sovellusten mukautetut liittimet
 
 Voit luoda työnkulkuja ja pohjaan perustuvia sovelluksia [Azure Logic Appsin](https://azure.microsoft.com/services/logic-apps), [Microsoft Flow’n](https://flow.microsoft.com) ja [PowerAppsin](https://powerapps.microsoft.com) avulla kirjoittamatta riviäkään koodia. Palvelut tarjoavat [yli 180 liitintä](https://docs.microsoft.com/connectors/), jotka helpottavat tieto- ja liiketoimintaprosessien integrointia. Liittimien käyttö ei rajoitu Microsoft-palveluihin, vaan ne toimivat myös monissa muissa palveluissa, kuten GitHubissa, Salesforcessa ja Twitterissä.
 
