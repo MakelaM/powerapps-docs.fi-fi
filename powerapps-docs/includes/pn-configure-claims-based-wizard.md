@@ -1,0 +1,1 @@
+Määritä ohjattu väitepohjainen todentaminen

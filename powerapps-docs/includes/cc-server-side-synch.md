@@ -1,0 +1,1 @@
+palvelinpuolen synkronointi

@@ -1,0 +1,1 @@
+Varmista, että sinulla on Järjestelmänvalvoja- tai Järjestelmän mukauttaja -käyttöoikeusrooli tai vastaavat käyttöoikeudet.

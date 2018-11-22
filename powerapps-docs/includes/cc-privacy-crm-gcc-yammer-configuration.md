@@ -1,0 +1,1 @@
+Ottamalla Yammerin käyttöön hyväksyt tietojesi jakamisen ulkoisen järjestelmän kanssa. Ulkoisista järjestelmistä Microsoft Dynamics 365 (online) -palveluun tuotaviin tietoihin sovelletaan [Microsoftin Tietosuoja ja evästeet -käytäntöä](http://go.microsoft.com/fwlink/p/?LinkID=521839).

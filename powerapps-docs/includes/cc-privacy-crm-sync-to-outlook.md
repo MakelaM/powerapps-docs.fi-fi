@@ -1,0 +1,3 @@
+Jos käytät Dynamics 365 (online) -sovellusta ja käytössä on Synkronoi Outlookiin -toiminto, synkronoitavat Dynamics 365 -tiedot viedään Outlookiin. Tiedot pidetään ajan tasalla Outlookin ja Dynamics 365:n (online) välillä linkin avulla. Synkronoi Outlookiin -toiminto lataa vain asiaankuuluvat käytettävät Dynamics 365 -tietuetunnukset, kun käyttäjä yrittää seurata Outlook-kohdetta ja asettaa sen liittyväksi. Yrityksen tietoja ei ole tallennettu laitteeseen.  
+  
+ Järjestelmänvalvoja määrittää käyttöoikeusroolien avulla, onko organisaatioon kuuluvilla käyttäjillä oikeus synkronoida Dynamics 365 -tietoja Outlookiin.

@@ -1,0 +1,1 @@
+**Asetukset** tulee näkyviin siirtymispalkkiin.

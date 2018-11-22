@@ -1,0 +1,1 @@
+TLS (Transport Layer Security) tai SSL (Secure Sockets Layer) -suojaus

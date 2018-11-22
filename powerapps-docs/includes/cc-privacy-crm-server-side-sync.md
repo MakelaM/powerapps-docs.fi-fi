@@ -1,0 +1,3 @@
+Jos käytät Dynamics 365 -sovellusta ja käytössä on palvelinpään synkronointi, Dynamics 365 -yhteyshenkilöt ja -aktiviteetit (mukaan lukien sähköpostiviestit, tapaamiset, yhteyshenkilöt ja tehtävät) synkronoidaan määritettyyn sähköpostijärjestelmään (esimerkiksi Exchangeen).  
+  
+ Järjestelmänvalvoja voi määrittää palvelinpään synkronointitoiminnon määrittämään, ketkä käyttäjät voivat lähettää sähköpostiviestejä tai tapaamisia Dynamics 365:stä tai synkronoida aktiviteetteja ja yhteyshenkilöitä Dynamics 365:n ja käyttäjän postilaatikon välillä. Järjestelmänvalvojat ja käyttäjät voivat mukauttaa suodatusehtoja, ja järjestelmänvalvojat voivat jopa määrittää synkronoitavat entiteettikentät.

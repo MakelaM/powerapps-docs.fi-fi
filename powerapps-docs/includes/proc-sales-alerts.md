@@ -1,0 +1,1 @@
+Siirry kohtaan **Myynti** > **Hälytykset**.

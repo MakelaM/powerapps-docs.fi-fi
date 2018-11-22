@@ -1,0 +1,1 @@
+Määrittää säännön, joka havaitsee, näkyykö lomakkeen valintanauha tietyn entiteetin yhteydessä.

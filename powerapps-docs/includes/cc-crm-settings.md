@@ -1,0 +1,1 @@
+Valitse siirtymispalkissa **Microsoft Dynamics CRM** > **Asetukset**.

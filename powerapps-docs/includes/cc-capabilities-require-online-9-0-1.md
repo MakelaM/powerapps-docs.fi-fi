@@ -1,0 +1,1 @@
+Tämän ratkaisun ominaisuuksia varten tarvitaan [!INCLUDE [pn-crm-9-0-1-online](../includes/pn-crm-9-0-1-online.md)].

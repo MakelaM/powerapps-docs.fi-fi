@@ -1,0 +1,1 @@
+Ilmenee ennen järjestelmän päätoimintoa ja tietokantatapahtuman sisällä.<br /><br />Jos haluat muuttaa viestiin sisällytetyn entiteetin arvoja, tee se tässä.<br /><br />Vältä toiminnon peruuttamista. Peruuttaminen käynnistää tapahtuman peruutuksen, millä on merkittävä vaikutus suorituskykyyn.

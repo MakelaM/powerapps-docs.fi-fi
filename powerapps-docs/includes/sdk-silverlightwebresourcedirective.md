@@ -1,0 +1,1 @@
+Kun haluat näyttää Silverlight-WWW-resurssin entiteettilomakkeen tai -kaavion ulkopuolella, luo HTML-WWW-resurssi Silverlight-WWW-resurssin isäntäsivuksi. Avaa sen jälkeen HTML-WWW-resurssi käyttämällä **$webresource:**-direktiiviä.

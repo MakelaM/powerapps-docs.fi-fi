@@ -1,0 +1,1 @@
+Määrittää säännön, joka palauttaa arvon epätosi, kun WWW-sovellusta tarkastellaan taulutietokonelaitteen mobiiliselaimella.

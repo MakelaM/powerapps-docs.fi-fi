@@ -1,0 +1,1 @@
+Jos määrität Microsoft-kumppanin (esimerkiksi kokeilemalla Microsoft Social Engagementiä tai ostamalla sen vastauksena kumppanin pyyntöön tai tarjoukseen tai määrittämällä kumppanin avustamaan Social Engagementin käytössä tai hallinnassa), Microsoft saattaa tietosi kumppanin käytettäväksi määrittämälläsi tavalla.

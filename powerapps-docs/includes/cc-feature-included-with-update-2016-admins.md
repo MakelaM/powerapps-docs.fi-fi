@@ -1,0 +1,1 @@
+Tämä ominaisuus julkaistiin CRM Online 2016 -päivityksessä ja CRM 2016 (paikallinen) -versiossa.

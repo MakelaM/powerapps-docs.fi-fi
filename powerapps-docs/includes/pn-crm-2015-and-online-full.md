@@ -1,0 +1,1 @@
+Microsoft Dynamics CRM 2015- ja Microsoft Dynamics CRM Online 2015 -päivitys

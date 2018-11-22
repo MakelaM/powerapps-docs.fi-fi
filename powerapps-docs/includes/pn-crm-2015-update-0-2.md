@@ -1,0 +1,1 @@
+Microsoft Dynamics CRM 2015 -päivitys 0.2

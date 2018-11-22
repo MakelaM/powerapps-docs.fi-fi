@@ -1,0 +1,1 @@
+Lisätietoja tämän näytekoodin suorittamiseen liittyvistä vaatimuksista on ohjeaiheessa [Näyte- ja apukoodin käyttäminen](../developer/org-service/use-sample-helper-code.md).

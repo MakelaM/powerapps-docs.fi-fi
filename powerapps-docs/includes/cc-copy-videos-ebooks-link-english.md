@@ -1,0 +1,1 @@
+Videot ja e-kirjat voivat olla vain englanninkielisiä. Jos napsautat linkkejä, sinut voidaan lisäksi ohjata yhdysvaltalaiseen sivustoon, jonka sisältö on englanninkielistä.

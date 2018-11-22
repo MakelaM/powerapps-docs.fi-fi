@@ -1,0 +1,1 @@
+Valitse **Hallintakeskukset** > **Dynamics 365**.

@@ -1,0 +1,1 @@
+Valitse **Asetukset** > **Palveluiden hallinta**.

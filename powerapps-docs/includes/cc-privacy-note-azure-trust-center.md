@@ -1,0 +1,1 @@
+**Huomautus:** Katso lisätietoja muista [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-palveluista [Microsoft Azure Trust Centerissä](https://azure.microsoft.com/support/trust-center/).

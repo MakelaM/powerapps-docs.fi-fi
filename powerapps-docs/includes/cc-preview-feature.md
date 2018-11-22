@@ -1,0 +1,1 @@
+Ennen kuin tätä toimintoa voi käyttää, se pitää ottaa käyttöön ja käyttöoikeussopimuksen ehdot on hyväksyttävä. [Mitä ovat esiversion ominaisuudet ja miten ne otetaan käyttöön?](../admin/what-are-preview-features-how-do-i-enable-them.md)

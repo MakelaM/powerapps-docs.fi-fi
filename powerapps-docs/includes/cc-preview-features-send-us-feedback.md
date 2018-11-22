@@ -1,0 +1,1 @@
+Tämä esiversio on käytettävissä, jotta voit kokeilla sitä ja kertoa mielipiteesi. Palautteesi avulla voimme valita tärkeimmät toiminnot, joita tarvitset eniten. Pyydämme, että annat meille ehdotuksia ja kerrot ongelmista käyttämällä julkista palautesivustoamme:

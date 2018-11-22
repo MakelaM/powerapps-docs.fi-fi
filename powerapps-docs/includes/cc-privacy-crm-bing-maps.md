@@ -1,0 +1,5 @@
+Jos käytät Microsoft Dynamics 365:tä, Bing Maps -ominaisuus lähettää osoitteen automaattisesti Internetin kautta Bing Maps -palveluun ja käyttäjälle näytetään kyseinen osoite online-kartassa Dynamics 365:ssä.  Jos valitset Dynamics 365:ssä Bing Maps, sinut ohjataan osoitteeseen [www.bing.com/maps](http://www.bing.com/maps). Bing Mapsin käyttöä säätelevät myös [Bing Mapsin käyttöehdot](http://go.microsoft.com/?linkid=9710837).  
+  
+ Järjestelmänvalvoja voi ottaa Bing Maps -ominaisuuden käyttöön tai poistaa sen käytöstä **Asetukset** > **Hallinto** > **Järjestelmäasetukset**-alueella. Bing Maps -sovelluksen poistaminen käytöstä poistaa ominaisuuden käytöstä Dynamics 365:ssä.  
+  
+ Bing Mapsiin lähetettyihin tietoihin sovelletaan [Microsoftin Tietosuoja ja evästeet -käytäntöä](http://go.microsoft.com/fwlink/p/?linkid=521839).

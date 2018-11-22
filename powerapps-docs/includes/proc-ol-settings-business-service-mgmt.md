@@ -1,0 +1,1 @@
+Valitse siirtymisruudussa **Asetukset** > **Yritys** > **Palveluiden hallinta**.

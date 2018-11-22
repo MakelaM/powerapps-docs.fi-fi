@@ -1,0 +1,1 @@
+Tämä ominaisuus edellyttää Office 365 -tilausta tai online-palvelun, kuten SharePoint Onlinen tai Exchange Onlinen, tilausta. Lisätietoja on ohjeaiheessa [Mikä Office 365 on ja miten se liittyy Dynamics 365:een (online-versioon)?](https://docs.microsoft.com/dynamics365/customer-engagement/admin/what-office-365-how-does-relate)

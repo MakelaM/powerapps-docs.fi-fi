@@ -1,0 +1,1 @@
+Ajantasaiset CRM 2013:n yhteensopivuustiedot ovat [Microsoft Dynamics CRM 2013 -yhteensopivuutta käsittelevällä sivulla](https://support.microsoft.com/en-us/kb/3005167).

@@ -1,0 +1,1 @@
+Varmista, että sinulla on käyttöoikeusroolina esimies, myyntijohtaja, toimitusjohtaja, järjestelmänvalvoja tai järjestelmän mukauttaja tai että sinulla on vastaavat oikeudet.

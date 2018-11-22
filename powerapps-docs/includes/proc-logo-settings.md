@@ -1,0 +1,1 @@
+Valitse siirtymispalkissa **Microsoft Dynamics 365** > **Asetukset**.

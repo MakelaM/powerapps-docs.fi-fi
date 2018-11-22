@@ -1,0 +1,1 @@
+Tämä asiakirja toimitetaan sellaisenaan. Asiakirjan tietoja ja siinä esitettyjä näkemyksiä, kuten URL-osoitteita ja muita Internetin sivustoviittauksia, saatetaan muuttaa asiasta erikseen ilmoittamatta.

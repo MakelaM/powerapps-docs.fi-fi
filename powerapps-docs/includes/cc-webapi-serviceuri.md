@@ -1,0 +1,1 @@
+*[Organisaation URI-osoite]*/api/data/v9.0

@@ -1,0 +1,1 @@
+Tarvitset tämän tehtävän suorittamiseen Social Engagementin järjestelmänvalvojan oikeudet.

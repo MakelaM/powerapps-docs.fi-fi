@@ -1,0 +1,5 @@
+Jos käytät Microsoft Dynamics 365 for Outlookia siirtyessäsi offline-tilaan, käsiteltävinä olevista tiedoista luodaan kopio, joka tallennetaan paikalliseen tietokoneeseesi. Tiedot siirretään Dynamics 365:stä (online-versiosta) tietokoneeseen käyttämällä suojattua yhteyttä, ja paikallisen kopion ja Dynamics 365 Onlinen välillä ylläpidetään linkkiä. Kun seuraavan kerran kirjaudut Dynamics 365:een (online-versioon), paikalliset tiedot synkronoidaan Dynamics 365:n (online-version) kanssa.  
+  
+ Järjestelmänvalvoja määrittää käyttöoikeusroolien avulla, onko organisaatioon kuuluvilla käyttäjillä oikeus siirtyä offline-tilaan Microsoft Dynamics 365 for Outlookilla.  
+  
+ Käyttäjät ja järjestelmänvalvojat voivat määrittää offline-synkronoinnin kautta ladattavat entiteetit **Asetukset**-valintaikkunan **Synkronointisuodattimet**-asetuksen avulla. Vaihtoehtoisesti käyttäjät ja järjestelmänvalvojat voivat määrittää ladattavat kentät **Synkronointisuodattimet**-valintaikkunan **Lisäasetukset**-kohdassa.

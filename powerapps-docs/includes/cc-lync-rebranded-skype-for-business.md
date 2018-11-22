@@ -1,0 +1,1 @@
+Lyncin nimi on nyt Skype for Business. Tällä hetkellä Microsoft Dynamics 365:ssä näkyy vielä viittauksia Lynciin, mutta Dynamics 365 toimii Skype for Businessin kanssa.

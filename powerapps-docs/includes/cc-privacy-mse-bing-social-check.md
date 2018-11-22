@@ -1,0 +1,1 @@
+Jokaiselle uudelle hakumääritykselle tai muutetulle aiheelle tehdään ensin arvio kolmannen osapuolen yhteisöpalvelusisällön tarjoajien kanssa siitä, kuinka monta viestiä määritetty haku tuottaa. Tästä syystä antamasi avainsanat, sisällytykset, poissulkemiset ja käytetyt kielisuodattimet lähetetään kolmannen osapuolen yhteisöpalvelusisällön tarjoajille.

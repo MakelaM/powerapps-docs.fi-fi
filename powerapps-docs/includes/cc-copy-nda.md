@@ -1,0 +1,1 @@
+Tämä asiakirja on luottamuksellinen ja Microsoftin omaisuutta. Se on ilmoitettu ja sitä voidaan käyttää vain salassapitosopimuksen mukaisesti.

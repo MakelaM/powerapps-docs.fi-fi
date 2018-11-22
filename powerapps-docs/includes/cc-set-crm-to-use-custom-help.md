@@ -1,0 +1,1 @@
+Jotta käyttäjät saisivat varmasti oikeat tiedot valitessaan **Ohje**-painikkeen, määritä [!INCLUDE[pn_crm_shortest](pn-crm-shortest.md)] käyttämään mukautettua Ohjetta. Siirry kohtaan **Asetukset** > **Hallinta**, valitse **Järjestelmäasetukset**, valitse **Yleiset**-välilehti ja valitse sitten **Kyllä** **Käytä mukautettua ohjetta mukautettuihin entiteetteihin** -kohdan arvoksi.

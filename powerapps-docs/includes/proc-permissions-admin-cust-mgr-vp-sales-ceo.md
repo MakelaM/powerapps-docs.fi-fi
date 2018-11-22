@@ -1,0 +1,1 @@
+Varmista, että sinulla on jokin seuraavista käyttöoikeusrooleista tai vastaavat käyttöoikeuksista: Järjestelmänvalvoja, Järjestelmän mukauttaja, Myyntipäällikkö, Myyntijohtaja, Markkinointijohtaja tai Toimitusjohtaja.

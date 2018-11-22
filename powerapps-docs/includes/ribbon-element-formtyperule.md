@@ -1,0 +1,1 @@
+Määrittää säännön, joka tunnistaa Microsoft Dynamics 365 -lomakkeen tyypin.

@@ -1,0 +1,1 @@
+Esimerkkiprojektin lataaminen ja siinä käytettävien NuGet-pakettien tallentaminen edellyttää Internet-yhteyttä.

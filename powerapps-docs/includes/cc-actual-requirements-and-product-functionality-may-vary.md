@@ -1,0 +1,1 @@
+Vaatimukset ja tuotteen toiminnot voivat vaihdella järjestelmämääritysten ja käyttöjärjestelmän mukaan.

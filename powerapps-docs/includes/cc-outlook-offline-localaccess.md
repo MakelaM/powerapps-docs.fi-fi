@@ -1,0 +1,1 @@
+Käyttäjät, jotka kirjautuvat paikallisesti laitteeseen, jossa on asennettuna Microsoft Dynamics 365 for Outlook, voivat mahdollisesti käyttää paikallisesti tallennettuja Dynamics 365 -tietoja. Dynamics 365 for Outlookin käyttöä ei tueta jaetussa laitteessa.

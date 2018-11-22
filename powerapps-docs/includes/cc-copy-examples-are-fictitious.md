@@ -1,0 +1,1 @@
+Joissakin esimerkeissä esitetyt tapahtumat ovat kuvitteellisia, eikä niitä pidä liittää mihinkään oikeaan tapahtumaan.

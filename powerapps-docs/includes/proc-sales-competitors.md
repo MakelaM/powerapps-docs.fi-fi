@@ -1,0 +1,1 @@
+Valitse **Myynti** > **Kilpailijat**.

@@ -1,0 +1,1 @@
+Microsoft Dynamics CRM:n luettelo-osa

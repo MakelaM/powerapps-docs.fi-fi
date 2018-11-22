@@ -1,0 +1,1 @@
+Jos haluat tarkastella organisaatiosi entiteettien metatietoja, asenna aiheessa [Organisaatiosi metatietojen selaaminen](../developer/browse-your-metadata.md) kuvailtu Metadata Browser -ratkaisu. Myös kohdassa [Entiteettiviittaus](../developer/about-entity-reference.md) on entiteettien viiteasiakirjoja.

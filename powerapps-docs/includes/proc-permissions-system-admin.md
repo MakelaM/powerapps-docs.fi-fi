@@ -1,0 +1,1 @@
+Varmista, että sinulla on Microsoft Dynamics 365:ssä Järjestelmänvalvoja-käyttöoikeusrooli tai sitä vastaavat käyttöoikeudet.

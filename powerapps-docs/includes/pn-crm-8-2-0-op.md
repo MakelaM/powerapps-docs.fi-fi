@@ -1,0 +1,1 @@
+Microsoft Dynamics 365:n joulukuun 2016 Service Pack (paikallinen)

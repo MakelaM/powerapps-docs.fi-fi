@@ -1,0 +1,1 @@
+Microsoftin kognitiiviset palvelut

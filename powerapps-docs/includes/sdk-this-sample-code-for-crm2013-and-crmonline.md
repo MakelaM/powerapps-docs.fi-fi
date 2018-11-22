@@ -1,0 +1,1 @@
+Tämä mallikoodi on Microsoft Dynamics CRM 2013:lle ja Microsoft Dynamics CRM Onlinelle.

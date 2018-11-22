@@ -1,0 +1,1 @@
+Ottaakseen Valmistelu- ja Analyysi-skenaariot käyttöön Microsoft Social Engagement muodostaa joissakin tapauksissa yhteyden kolmannen osapuolen Twitter- ja Facebook-palveluihin sosiaalisen sisällön hakua varten. Tietyt tiedot, kuten IP-osoite, saatetaan jakaa kyseisten palveluiden kanssa yhteyksien muodostamisen yhteydessä.

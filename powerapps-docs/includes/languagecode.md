@@ -1,0 +1,1 @@
+Kielikoodit ovat neli- tai viisinumeroisia aluekohtaisten asetusten tunnuksia. Kelvolliset aluekohtaisten asetusten tunnusten arvot löytyvät [Locale ID (LCID) -kaaviosta)](http://go.microsoft.com/fwlink/?LinkId=122128).

@@ -1,0 +1,3 @@
+Kun Dynamics 365 (online) -käyttäjät tulostavat Dynamics 365 -tietoja, he vievät tiedot suojatusta Dynamics 365 (online) -ympäristöstä heikommin suojattuun ympäristöön eli tässä tapauksessa paperille.  
+  
+ Järjestelmänvalvojalla on purettavien tietojen täydet hallintaoikeudet (käyttöoikeusroolitasolla ja entiteettitasolla). Tietojen purkamisen jälkeen tiedot eivät kuitenkaan enää ole suojatussa Dynamics 365 (online) -ympäristössä vaan suoraan asiakkaan hallittavissa.

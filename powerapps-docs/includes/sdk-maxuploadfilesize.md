@@ -1,0 +1,1 @@
+**Organization.MaxUploadFileSize**-ominaisuus määrittää ladattavien tiedostojen enimmäiskoon. Tämä ominaisuus määritetään Dynamics 365 -sovelluksen **Järjestelmäasetusten** **Sähköposti**-välilehdessä. Tällä asetuksella rajoitetaan sähköpostiviesteihin, muistiinpanoihin ja verkkoresursseihin liitettävien tiedostojen kokoa. Oletusasetus on viisi megatavua.

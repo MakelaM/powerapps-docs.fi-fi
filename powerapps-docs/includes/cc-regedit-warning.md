@@ -1,0 +1,1 @@
+Jos muokkaat rekisteriä virheellisesti käyttämällä Rekisterieditoria tai jotakin muuta menetelmää, seurauksena voi olla vakavia ongelmia. Tällaiset ongelmat voivat edellyttää käyttöjärjestelmän ja Microsoft Dynamics 365 -järjestelmän asentamista uudelleen. Ongelmia ei voi välttämättä ratkaista. Rekisterin muokkaaminen tapahtuu omalla riskillä.

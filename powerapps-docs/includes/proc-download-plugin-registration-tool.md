@@ -1,0 +1,1 @@
+Lisätietoja laajennusten rekisteröintityökalun hankkimisesta on kohdassa [Työkalujen lataaminen NuGetista](../developer/common-data-service/download-tools-nuget.md).

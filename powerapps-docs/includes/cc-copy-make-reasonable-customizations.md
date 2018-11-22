@@ -1,0 +1,1 @@
+Voit tehdä tähän dokumentaatioon kohtuullisiksi katsottavia mukautuksia vain sisäistä käyttöä varten. Olet yksin vastuussa tekemistäsi mukautuksista. Tämä koskee esimerkiksi haitallisia vaikutuksia, joita mukautuksilla voi olla liittyvän lisensoidun ohjelmiston toimintaan tai dokumentaation käyttöön, sekä muita mukautusten käyttöön liittyviä seikkoja.

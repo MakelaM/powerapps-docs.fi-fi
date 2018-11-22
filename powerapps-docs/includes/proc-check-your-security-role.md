@@ -1,0 +1,1 @@
+Noudata kohdan [Käyttäjäprofiilin tarkasteleminen](../basics/view-your-user-profile.md) ohjeita.

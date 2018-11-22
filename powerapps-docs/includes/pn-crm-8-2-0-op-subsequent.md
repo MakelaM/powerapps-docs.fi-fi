@@ -1,0 +1,1 @@
+Dynamics 365:n (paikallinen) joulukuun 2016 Service Pack

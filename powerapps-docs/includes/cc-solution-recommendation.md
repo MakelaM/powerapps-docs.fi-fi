@@ -1,0 +1,1 @@
+Ratkaisun asentaminen tai mukautusten julkaiseminen saattaa häiritä järjestelmän normaalikäyttöä. Suosittelemme, että ajoitat ratkaisun tuonnin ajankohtaan, jolloin siitä on vähiten häiriötä käyttäjille.

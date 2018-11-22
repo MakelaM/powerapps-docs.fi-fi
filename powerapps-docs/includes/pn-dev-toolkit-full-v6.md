@@ -1,0 +1,1 @@
+Developer Toolkit for Microsoft Dynamics CRM 2013 ja Microsoft Dynamics CRM Online

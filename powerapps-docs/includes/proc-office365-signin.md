@@ -1,0 +1,1 @@
+Siirry [Office 365 -hallintakeskukseen](https://portal.office.com) ja kirjaudu Office 365 Global -järjestelmänvalvojan tunnistetiedoilla.

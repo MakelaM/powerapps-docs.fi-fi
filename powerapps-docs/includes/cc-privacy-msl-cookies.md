@@ -1,0 +1,2 @@
+Microsoft Social Engagement käyttää istuntokohtaisia evästeitä, jotta käyttäjät voivat siirtyä sivulta toiselle kirjautumatta joka sivulle erikseen. Käyttäjän niin määrittäessä voidaan evästeitä käyttää tunnistetietojen tallentamiseen ja todennuksen helpottamiseen tulevissa istunnoissa.   
+ Istuntokohtaiset evästeet ovat olennaisia Microsoft Social Engagementin käytön kannalta, eikä niitä voi jättää käyttämättä. Kirjautumisevästeet tallennetaan kuitenkin vain käyttäjän pyynnöstä.

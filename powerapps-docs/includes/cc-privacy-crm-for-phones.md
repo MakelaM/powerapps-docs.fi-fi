@@ -1,0 +1,5 @@
+Dynamics 365 Online -käyttäjillä, joilla on käyttöoikeudet ja joille on määritetty tietyt käyttöoikeusroolit (toimitusjohtaja, myyntipäällikkö, myyjä, järjestelmänvalvoja, järjestelmän mukauttaja ja myyntijohtaja), on automaattisesti oikeus käyttää palvelua Dynamics 365 puhelimille -sovelluksella sekä muilla asiakasohjelmilla.  
+  
+ Järjestelmänvalvojalla on puhelimen asiakasohjelmaan liitettyjen käyttöoikeuksien ja käyttöoikeustasojen täydet hallintaoikeudet (käyttöoikeusroolitasolla ja entiteettitasolla). Käyttäjät voivat tällöin käyttää Dynamics 365:tä (online-versiota) Dynamics 365 puhelimille -sovelluksella, ja asiakastiedot tallennetaan sen laitteen välimuistiin, jossa kyseistä asiakasta käytetään.  
+  
+ Tiettyjen käyttöoikeusrooli- ja entiteettitason asetusten perusteella Dynamics 365:stä (online-versiosta) vietävät ja käyttäjän laitteen välimuistiin tallennettavat asiakastiedot voivat olla tyypiltään tietueen tietoja tai metatietoja, entiteetin tietoja tai metatietoja ja liiketoimintalogiikkaa.

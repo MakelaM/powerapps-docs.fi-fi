@@ -1,0 +1,1 @@
+[Lataa Microsoft Dynamics CRM SDK -paketti.](http://go.microsoft.com/fwlink/?LinkID=627298)

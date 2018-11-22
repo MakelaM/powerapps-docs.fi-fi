@@ -1,0 +1,1 @@
+Tätä toimintoa tuetaan Dynamics CRM Online 2016 -päivityksessä 1. Haluatko tämän ominaisuuden käyttöösi? [Dynamics 365 -järjestelmänvalvojan tai -tukihenkilön etsiminen](http://../basics/find-administrator-support.md)

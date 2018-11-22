@@ -1,0 +1,1 @@
+Dynamics CRM 2016 (online) ja Dynamics CRM 2016 (paikallinen)

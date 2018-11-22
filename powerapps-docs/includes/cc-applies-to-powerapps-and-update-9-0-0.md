@@ -1,0 +1,1 @@
+Koskee PowerApps-sovellusta ja Dynamics 365 (online) -versiota 9.x

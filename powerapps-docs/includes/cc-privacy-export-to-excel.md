@@ -1,0 +1,5 @@
+Jos käytät Microsoft Dynamics 365:tä (online-versiota) tietojen vieminen *staattiseen* laskentataulukkoon luo viedyistä tiedoista paikallisen kopion, joka tallennetaan tietokoneeseesi. Tiedot siirretään Dynamics 365:stä (online-versiosta) tietokoneeseen käyttämällä suojattua yhteyttä, ja paikallisen kopion ja Dynamics 365:n (online-version) välillä ylläpidetään linkkiä.  
+  
+ Kun viet tietoja *dynaamiseen* laskentataulukkoon tai Pivot-taulukkoon, Excel-laskentataulukon ja Dynamics 365 (online-version) välillä ylläpidetään linkkiä. Aina kun dynaaminen laskentataulukko tai Pivot-taulukko päivitetään, käyttäjä todennetaan Dynamics 365:ssä (online-versiossa) käyttäjän tunnistetiedoilla. Käyttäjä näkee vain ne tiedot, joiden tarkasteluoikeus hänellä on.  
+  
+ Järjestelmänvalvoja määrittää käyttöoikeusroolien avulla, onko organisaatioon kuuluvilla käyttäjillä oikeus viedä tietoja Exceliin.

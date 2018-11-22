@@ -1,0 +1,2 @@
+Tämä ominaisuus julkaistiin CRM Online 2015 -päivityksessä ja CRM 2015 (paikallinen) -versiossa.   
+ Haluatko tämän ominaisuuden käyttöösi? [Dynamics 365 -järjestelmänvalvojan tai -tukihenkilön etsiminen.](../basics/find-administrator-support.md)

@@ -1,0 +1,1 @@
+Tämä asiakirja ei anna käyttäjälle mitään juridisia oikeuksia Microsoftin tuotteisiin liittyviin immateriaalioikeuksiin. Asiakirjaa voi kopioida sisäiseen käyttöön.

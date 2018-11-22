@@ -1,0 +1,1 @@
+Ajantasaiset CRM 2015:n yhteensopivuustiedot ovat [Microsoft Dynamics CRM 2015 -yhteensopivuutta käsittelevällä sivulla](https://support.microsoft.com/en-us/kb/3018360).

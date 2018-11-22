@@ -1,0 +1,7 @@
+Microsoft Social Engagement tarjoaa isännöityjä verkkopalveluja, jotka ovat monenlaisten asiakkaiden käytettävissä ja koostuvat seuraavista sovelluksen sisältämistä yhteisöpalveluominaisuuksien komponenteista:  
+  
+**Yhteisöpalveluseuranta** – mahdollisuus seurata julkisesti saatavilla olevia yhteisöpalvelujen viestejä julkisissa ja kolmansien osapuolten hallitsemissa verkoissa.  
+  
+**Yhteisöpalveluanalyysit** – mahdollisuus tunnistaa, laskea ja ennustaa kyselyitä, jotka liittyvät julkisesti saatavilla oleviin asiakirjoihin ja viesteihin.  
+  
+ Huomaa, että Microsoft Social Engagementin kautta voi käyttää kolmansien osapuolten palveluita, kuten Twitteriä, Facebookia, Tumblria, YouTubea ja blogeja, joiden tietosuojakäytännöt voivat poiketa Social Engagementin käytännöistä. Tällaisten palvelujen käyttöön ja niille antamiisi tietoihin sovelletaan kyseisten palvelujen tietosuojatietoja. Tietyt tiedot, kuten yhteisöpalvelun sisällön ja IP-osoitteen noutamisessa käytettävä hakukysely, saatetaan jakaa kyseisten palveluiden kanssa yhteyksien muodostamisen yhteydessä. Suosittelemme näiden muiden tietosuojatietojen lukemista. Suosittelemme lukemaan myös Microsoft Online Services -palveluiden käyttöehdot.

@@ -1,0 +1,1 @@
+Kaikki muut tavaramerkit ovat haltijoidensa omaisuutta.

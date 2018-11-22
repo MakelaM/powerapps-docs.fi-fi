@@ -1,0 +1,1 @@
+Ilmenee järjestelmän päätoiminnon jälkeen ja tietokantatapahtuman sisällä.<br /><br />Tätä vaihetta voi käyttää sanoman ominaisuuksien muokkaamiseen ennen sanoman palauttamista kutsujalle.<br /><br />Vältä kohdistamasta muutoksia sanomaan sisällytettyyn entiteettiin, koska tämä käynnistää uuden päivitystapahtuman.

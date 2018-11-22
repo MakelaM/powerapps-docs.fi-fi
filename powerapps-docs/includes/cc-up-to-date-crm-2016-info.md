@@ -1,0 +1,1 @@
+Ajantasaiset Dynamics 365:n yhteensopivuustiedot ovat [Microsoft Dynamics CRM 2016 -yhteensopivuutta käsittelevällä sivulla](https://support.microsoft.com/en-us/kb/3124955).

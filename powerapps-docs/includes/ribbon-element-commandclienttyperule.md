@@ -1,0 +1,1 @@
+Määrittää säännön, joka tunnistaa käytössä olevan esityksen.

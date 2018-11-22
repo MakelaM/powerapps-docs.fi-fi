@@ -1,0 +1,1 @@
+Noudata kohdan [Käyttäjäprofiilin tarkasteleminen](https://docs.microsoft.com/dynamics365/customer-engagement/basics/view-your-user-profile) ohjeita.

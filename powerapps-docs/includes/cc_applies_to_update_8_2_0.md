@@ -1,0 +1,1 @@
+Koskee Dynamics 365 (online) -versiota 8.x
