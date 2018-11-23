@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3128d284d5b03da9a7c8b5798365b60f7092988b
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
+ms.openlocfilehash: 8c398bb7a916c98aa769e39477fe889a74fce32c
+ms.sourcegitcommit: c1f58a16f8dcd309a1d5fc4658ca16d82c615994
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316903"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "51333992"
 ---
 # <a name="create-an-canvas-app-from-scratch-based-on-excel-data"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Excel-tietojen perusteella
 
@@ -242,6 +242,8 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 1. Sulje esikatselutila painamalla Esc-näppäintä (tai valitsemalla sulkemiskuvake oikeassa yläkulmassa).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-* Tallenna sovelluksesi pilveen painamalla Ctrl+S, jotta voit suorittaa sen muissa laitteissa.
-* [Jaa sovellus](share-app.md), jotta muut voivat suorittaa sen.
-* Lue lisätietoja [funktioista](working-with-formulas.md), kuten **Patch**, joiden avulla voit hallita tietoja luomatta vakiolomaketta.
+
+- Tallenna sovelluksesi pilveen painamalla Ctrl+S, jotta voit suorittaa sen muissa laitteissa.
+- [Jaa sovellus](share-app.md), jotta muut voivat suorittaa sen.
+- Lue lisätietoja [funktioista](working-with-formulas.md), kuten **Patch**, joiden avulla voit hallita tietoja luomatta vakiolomaketta.
+- [Linkitä tämä sovellus ratkaisuun](add-app-solution.md), jotta voit esimerkiksi ottaa sen käyttöön toisessa ympäristössä tai julkaista sen AppSourceen.
