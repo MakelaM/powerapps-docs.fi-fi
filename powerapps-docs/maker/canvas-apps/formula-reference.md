@@ -227,7 +227,7 @@ Muita elementtejä ovat:
 
 **[Not](functions/function-logicals.md)** – totuusarvoehdon NOT-operaattori.  Palauttaa arvon **tosi**, jos sen argumentti on **epätosi**, ja palauttaa arvon **epätosi**, jos sen argumentti on **tosi**.  Voit myös käyttää [**!**-operaattoria](functions/operators.md).
 
-**[Ilmoita](functions/function-showerror.md)** – Näyttää ilmoitussanoman käyttäjälle.
+**[Notify](functions/function-showerror.md)** – Näyttää ilmoitussanoman käyttäjälle.
 
 **[Now](functions/function-now-today-istoday.md)** – Palauttaa nykyisen päivämäärä- ja aika-arvon.
 
