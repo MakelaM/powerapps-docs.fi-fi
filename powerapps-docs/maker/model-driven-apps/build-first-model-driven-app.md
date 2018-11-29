@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 04/18/2018
+ms.date: 10/15/2018
 ms.author: matp
 search.audienceType:
   - maker
@@ -31,16 +31,14 @@ Kirjaudu sisään [PowerApps](https://web.powerapps.com/) -sovellukseen. Jos sin
 ## <a name="create-your-model-driven-app"></a>Mallipohjaisen sovelluksen luominen
 
 1.  Valitse haluamasi ympäristö tai siirry [PowerApps-hallintakeskukseen](https://admin.powerapps.com/) ja luo uusi.
-2.  Valitse vasemmanpuoleisessa siirtymisruudussa **Mallipohjainen**. 
-
-    ![Malliipohjainen](media/build-first-model-driven-app/choose-design-mode.png)
 
   > [!IMPORTANT]
   > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-3. Valitse vasemmanpuoleisessa ruudussa **Sovellukset** ja valitse sitten **Luo sovellus**.
+2. Valitse **aloitussivulla** mallipohjaisen sovelluksen **Aloita tyhjästä** -asetus.
+![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png)
 
-4.  Kirjoita **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse **Valmis**: 
+3.  Kirjoita **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse **Valmis**: 
   - **Nimi**: Anna sovellukselle nimi, kuten *Ensimmäinensovellukseni*. 
   - **Kuvaus**: Kirjoita lyhyt kuvaus siitä, mikä sovellus on ja on tai mitä se tekee, kuten *Tämä on ensimmäinen sovellukseni*.
 Lisätietoja sovelluksen lisäominaisuuksista on kohdassa [Sovelluksen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).

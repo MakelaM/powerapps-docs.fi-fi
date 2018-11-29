@@ -28,9 +28,7 @@ CRM:ssä on kaksi koontinäyttötyyppiä: käyttäjän koontinäytöt ja järjes
 <a name="BKMK_createdashboard"></a>   
 ## <a name="create-a-new-dashboard"></a>Luo uusi koontinäyttö  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).
-
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).   
@@ -52,7 +50,7 @@ CRM:ssä on kaksi koontinäyttötyyppiä: käyttäjän koontinäytöt ja järjes
 <a name="BKMK_editdashboard"></a>   
 ## <a name="edit-an-existing-dashboard"></a>Aiemmin luodun koontinäytön muokkaaminen  
   
-1. Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).    

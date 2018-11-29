@@ -26,9 +26,8 @@ search.app:
 
  Kun luot näkymän tai muokkaat sitä, voit määrittää sille joko laskevan tai nousevan lajittelujärjestyksen.   
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti, esimerkiksi **Asiakkaat**.   
 3.  Valitse **Näkymät**-välilehti ja valitse **Poista suodatin**, jos se on näkyvissä. Avaa haluamasi näkymä, esimerkiksi **Aktiiviset asiakkaat**.

@@ -28,9 +28,7 @@ search.app:
  Ylä- ja alatunnisteet muistuttavat otsikoita, mutta niitä ei voi poistaa. Jos ne ovat tyhjiä, niitä ei näytetä. 
 
 Voit käyttää **Osan ominaisuudet** -kohtaa PowerApps-sivustossa. 
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti. Valitse **Lomakkeet**-välilehti. 
 

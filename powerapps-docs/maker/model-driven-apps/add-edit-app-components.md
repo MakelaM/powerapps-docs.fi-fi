@@ -2,7 +2,7 @@
 title: 'Opastusohjelma, jossa kerrotaan mallipohjaisen sovelluksen osien lisäämisestä ja muokkaamisesta PowerAppsin avulla | MicrosoftDocs'
 description: Osien lisääminen tai muokkaaminen PowerAppsin sovellusten suunnitteluohjelmassa
 keywords: ''
-ms.date: 03/30/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -53,7 +53,7 @@ Sovelluksen suunnitteluohjelma viittaa aiemmin määritettyihin metatietoihin ol
 ## <a name="open-an-app"></a>Sovelluksen avaaminen
 1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/) -sovellukseen. 
 
-2. Valitse **Mallipohjainen** > **Sovellukset** ja valitse sitten olemassa oleva sovellus tai **Luo sovellus** -kohta. Lisätietoja sovelluksen luomisesta on kohdassa [Mallipohjaisen sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla](create-edit-app.md#create-an-app).
+2. Valitse aiemmin luotu mallipohjainen sovellus tai valitse **Aloita tyhjästä**. Lisätietoja sovelluksen luomisesta on kohdassa [Mallipohjaisen sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla](create-edit-app.md#create-an-app).
 
 ## <a name="add-an-artifact-entity-dashboard-or-business-process-flow"></a>Artefaktin (entiteetti, koontinäyttö tai liiketoimintaprosessi) lisääminen  
  Kun lisäät sovellukseen koontinäytön tai liiketoimintaprosessin, niiden käyttämät entiteetit lisätään automaattisesti sovellukseen. Kun lisäät entiteetin, sen resurssien ruudut lisätään automaattisesti. Artefaktit voidaan lisätä suunnitteluohjelman pohjaan kahdella tavalla: komentopalkin **Lisää**-painikkeella ![Lisää suunnitteluohjelman painike](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Lisää suunnitteluohjelman painike") tai **Osat**-välilehden ruutujen avulla.  

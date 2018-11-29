@@ -2,7 +2,7 @@
 title: Ratkaisujen kanssa työskentely PowerAppsissa | MicrosoftDocs
 description: 'Tietoja siitä, miten ratkaisut jaetaan'
 ms.custom: ''
-ms.date: 06/21/2018
+ms.date: 10/29/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -27,32 +27,32 @@ search.app:
 <a name="BKMK_Solutions"></a>   
 # <a name="solutions-overview"></a>Ratkaisujen yleiskatsaus  
 
- Ratkaisut on luotu sen vuoksi, että malliin perustuva sovellus voidaan ostaa, jakaa tai muutoin siirtää organisaatiosta toiseen. Saat [AppSource](https://appsource.microsoft.com/)-ratkaisuja tai riippumattoman ohjelmistotoimittajan ratkaisuja (ISV: HEN). Ratkaisu on tiedosto, jonka voit tuoda ympäristöön sovelluksena tai käyttää mukautuksia aiemmin luotuun sovellukseen.  
+  PowerAppsissa ratkaisuja käytetään siirtämään sovelluksia ja komponentteja ympäristöstä toiseen tai käyttämään mukautussarjoja aiemmin luoduissa sovelluksissa. Ratkaisuun sisältyy vähintään yksi sovellus ja muita osia, kuten entiteettejä ja asetusjoukkoja. Voit hankkia ratkaisun [AppSourcesta](https://appsource.microsoft.com/) tai riippumattomalta ohjelmistotoimittajalta.
   
 Lisätietoja: [Julkaisu: Ratkaisun konfiguraattorien mallit ja käytännöt](http://go.microsoft.com/fwlink/p/?LinkID=533946)  
   
 > [!NOTE]
 >  Jos olet riippumaton ohjelmistotoimittaja ja luot sovelluksen jaettavaksi, sinun on käytettävä ratkaisuja. Lisätietoja ratkaisujen käyttämisestä on ohjeaiheessa [Ratkaisuja käyttävät paketit ja jaettavat laajennukset](https://msdn.microsoft.com/library/gg334530.aspx).  
   
- Seuraavassa on lisätietoja ratkaisuista, jos olet kiinnostunut luomaan PowerApps-sovelluksia organisaatiota varten tai muokkaamaan Dynamics 365:ttä:  
+ Seuraavassa on lisätietoja ratkaisuista, jos olet kiinnostunut luomaan PowerApps-sovelluksia organisaatiota varten tai muokkaamaan Dynamics 365:tä:  
   
 -   Ratkaisujen luominen on valinnaista. Voit luoda kaikki PowerApps-ympäristön sovellukset tai mukauttaa niitä suoraan ilman ratkaisun luomista.  
   
--   Kun mukautat PowerApps-ympäristöä suoraan, käsittelet erityisratkaisua, jonka nimi on **Common Data Services -oletusratkaisu**. Tämä ratkaisu sisältää kaikki järjestelmän komponentit.  
+-   Kun mukautat PowerApps-ympäristöä suoraan ratkaisua luomatta, käsittelet erityisratkaisua, jonka nimi on **Common Data Services -oletusratkaisu**. Tämä ratkaisu sisältää kaikki PowerApps-ympäristössä tekemäsi mukautukset.  
   
--   Voit viedä oletusratkaisun ja luoda varmuuskopion organisaatiossa määritetyistä mukautuksista. Se on hyvä olla olemassa varmuuden vuoksi.  
+-   Käytössä on myös toinen erityisratkaisu, **Oletusratkaisu**. Tämä ratkaisu sisältää järjestelmän kaikki osat riippumatta siitä, kuka ne on luonut. Voit viedä **oletusratkaisun** ja luoda varmuuskopion organisaatiossa määritetyistä mukautuksista. Muutosten varmuuskopiointi varmuuden vuoksi on hyvä käytäntö.  
   
 <a name="BKMK_SolutionComponents"></a>   
-### <a name="solution-components"></a>Ratkaisun osat  
- Ratkaisun osa viittaa mukautettavaan osaan. Kaikki, mitä voidaan ottaa mukaan ratkaisuun, ovat ratkaisun osia. Seuraavassa luettelossa ratkaisun osia, joita voi tarkastella ratkaisussa:  
+### <a name="components"></a>Osat  
+ Osa viittaa mukautettavaan osaan. Osia ovat kaikki, mitä voidaan ottaa mukaan ratkaisuun. Seuraavassa luettelossa on osia, joita voi tarkastella ratkaisussa:  
   
 -   Sovelluksen valintanauha  
-
--   Sovellus 
   
 -   Artikkelimalli  
   
 -   Liiketoimintasääntö  
+
+-   Kaaviosovellus 
   
 -   Kaavio  
   
@@ -66,19 +66,23 @@ Lisätietoja: [Julkaisu: Ratkaisun konfiguraattorien mallit ja käytännöt](htt
   
 -   Sähköpostimalli  
   
--   Entity  
+-   Entiteetti  
   
 -   Entiteettisuhde  
   
 -   Kenttä  
   
--   Kentänsuojausprofiili  
+-   Kentän suojausprofiili  
+
+-   Työnkulku
   
 -   Lomake  
   
 -   Yhdistämismalli  
   
 -   Viesti  
+
+-   Malliin perustuva sovellus
   
 -   Asetusjoukko  
   
@@ -98,48 +102,48 @@ Lisätietoja: [Julkaisu: Ratkaisun konfiguraattorien mallit ja käytännöt](htt
 
 -   Virtuaalisen entiteetin tietolähde
   
--   Verkkoresurssi  
+-   WWW-resurssi  
   
- Useimmat ratkaisun osat ovat sisäkkäin ratkaisun muissa osissa. Esimerkiksi entiteetti sisältää lomakkeita, näkymiä, kaavioita, kenttiä, entiteettisuhteita, viestejä ja liiketoimintasääntöjä. Kukin ratkaisun osa edellyttää entiteettiä. Kenttää ei ole olemassa entiteetin ulkopuolella. Kenttä on siis riippuvainen entiteetistä. Ratkaisun osia on itse asiassa kaksi kertaa enemmän kuin edellä olevassa luettelossa on mainittu, mutta useimmat niistä eivät näy sovelluksessa.  
+ Jotkin osat ovat muiden osien sisällä. Esimerkiksi entiteetti sisältää lomakkeita, näkymiä, kaavioita, kenttiä, entiteettisuhteita, viestejä ja liiketoimintasääntöjä. Kukin osa edellyttää entiteettiä. Kenttää ei ole olemassa entiteetin ulkopuolella. Kenttä on siis riippuvainen entiteetistä. Osia on itse asiassa kaksi kertaa enemmän kuin edellä olevassa luettelossa on mainittu, mutta useimmat niistä eivät ole sisäkkäisiä osia eivätkä näy sovelluksessa.  
   
- Ratkaisun osien tarkoitus on seurata mahdollisia rajoituksia siitä, mitä voi mukauttaa hallituissa ratkaisuissa ja mitä kaikki Ratkaisujen riippuvuudet ovat, jotta se voidaan viedä, tuoda ja (hallituissa ratkaisuissa) poistaa niin, ettei mitään jätetä pois.  
+ Osien tarkoitus on seurata mahdollisia rajoituksia siitä, mitä voi mukauttaa hallituissa ratkaisuissa ja mitä kaikki riippuvuudet ovat, jotta se voidaan viedä, tuoda ja (hallituissa ratkaisuissa) poistaa niin, ettei mitään jätetä pois.  
   
 <a name="BKMK_ManagedAndUnmanagedSolutions"></a>   
 ### <a name="managed-and-unmanaged-solutions"></a>Hallitut ja ei-hallitut ratkaisut  
- **Hallitun** ratkaisun asennus voidaan poistaa, kun se on tuotu. Ratkaisun asennuksen poistaminen poistaa kaikki kyseisen ratkaisun osat.  
+ Ratkaisut ovat joko **hallittuja** tai **ei-hallittuja**. **Hallittua** ratkaisua ei voi muokata, mutta sen asennus voidaan poistaa, kun se on tuotu. Ratkaisun asennuksen poistaminen poistaa kaikki kyseisen ratkaisun osat.  
   
- **Ei-hallittua** ratkaisua tuotaessa lisäät kyseisen ratkaisun osat oletusratkaisuun. Ratkaisun asennuksen poistaminen ei poista osia.  
+ **Ei-hallittua** ratkaisua tuotaessa kyseisen ratkaisun kaikki osat lisätään ympäristöön. Ratkaisun asennuksen poistaminen ei poista osia.  
   
- Kun tuot **ei-hallitun** ratkaisun, joka sisältää mukautettuja ratkaisun osia, ei-hallitun ratkaisun mukautukset korvaavat aiemmat mukautukset. Sitä ei voi kumota.  
+ Kun tuot **ei-hallitun** ratkaisun, joka sisältää mukautettuja osia, ei-hallitun ratkaisun mukautukset korvaavat aiemmat mukautukset. Sitä ei voi kumota.  
   
 > [!IMPORTANT]
->  Asenna ei-hallittu ratkaisu vain, jos haluat lisätä kaikki oletusratkaisun osat ja korvata kaikki aiemmin luodut mukautukset.  
+>  Asenna ei-hallittu ratkaisu vain, jos haluat lisätä kaikki osat ympäristöön ja korvata kaikki aiemmin luodut mukautukset.  
   
- Vaikka et aikoisi jakaa ratkaisua, luomalla ja käyttämällä ei-hallittua ratkaisua saat erillisen näkymän, joka sisältää vain mukauttamasi sovelluksen osat. Aina kun mukautat jotakin, lisää se luomaasi ei-hallittuun ratkaisuun.  
+ Vaikka et aikoisi jakaa sovelluksia tai mukautuksia, ei-hallitun luomalla ja sitä käyttämällä saat erillisen näkymän, joka sisältää vain mukauttamasi sovelluksen osat. Aina kun mukautat jotakin, lisää se luomaasi ei-hallittuun ratkaisuun.  
   
- Voit viedä oletusratkaisun vain ei-hallittuna ratkaisuna.  
+ Voit viedä **oletusratkaisun** vain ei-hallittuna ratkaisuna.  
   
- Luo **hallittu** ratkaisu valitsemalla ratkaisun vientiasetukseksi hallittu ratkaisu. Jos luot hallitun ratkaisun, et voi tuoda sitä takaisin organisaatioon, jossa loit sen. Voit tuoda sen vain eri organisaatioon.  
+ Luo **hallittu** ratkaisu valitsemalla ratkaisun vientiasetukseksi **Hallittuna**. Jos luot hallitun ratkaisun, et voi tuoda sitä takaisin siihen ympäristöön, jossa loit sen. Voit tuoda sen vain eri ympäristöön.  
   
 <a name="BKMK_HowSolutionsAreApplied"></a>   
 ### <a name="how-solutions-are-applied"></a>Ratkaisujen käyttäminen  
- Kaikki ratkaisut arvioidaan kerroksina. Tällä tavoin voidaan selvittää, miten sovellus tulee toimimaan. Seuraavasta kaaviosta selviää, miten hallittuja ja ei-hallittuja ratkaisuja arvioidaan ja miten niissä tehdyt muutokset näkyvät organisaatiossa.  
+ Kaikki ratkaisut arvioidaan kerroksina. Tällä tavoin voidaan selvittää, miten sovellus tulee toimimaan. Seuraava kaavio osoittaa, miten hallittuja ja ei-hallittuja ratkaisuja arvioidaan ja miten niissä tehdyt muutokset näkyvät ympäristössä.  
   
  ![Ratkaisun pinoaminen](media/solution-layering.png "Ratkaisun pinoaminen")  
   
  Kaavio käsitellään alhaalta ylöspäin:  
   
  **Järjestelmäratkaisu**  
- Järjestelmäratkaisu on eräänlainen jokaisessa organisaatiossa oleva hallittu ratkaisu. Järjestelmäratkaisu koostuu järjestelmän kaikista heti käytettävissä olevista osista.  
+ Järjestelmäratkaisu on eräänlainen jokaisessa ympäristössä oleva hallittu ratkaisu. Järjestelmäratkaisu koostuu järjestelmän kaikista heti käytettävissä olevista osista.  
   
  **Hallitut ratkaisut**  
  Hallituilla ratkaisuilla voidaan muokata järjestelmäratkaisun osia ja lisätä uusia osia. Jos asennettuja hallittuja ratkaisuja on useita, ensimmäiseksi asennettu ratkaisu sijaitsee myöhemmin asennetun hallitun ratkaisun alapuolella. Käytännössä tämä tarkoittaa sitä, että toinen asennettu ratkaisu voi mukauttaa sitä ennen asennettua ratkaisua. Jos kahdessa hallitussa ratkaisussa on keskenään ristiriitaisia määritelmä, yleensä jälkimmäistä noudatetaan. Jos poistat hallitun ratkaisun asennuksen, sen alapuolella olevaa hallittua ratkaisua käytetään. Jos poistat kaikkien hallittujen ratkaisujen asennuksen, järjestelmäratkaisussa määritetty oletustoiminta otetaan käyttöön.  
   
  **Ei-hallitut mukautukset**  
- Ei-hallitut mukautukset ovat muutoksia, joita on tehty organisaatioon ei-hallitulla ratkaisulla. Järjestelmäratkaisu määrittää, mitä voidaan mukauttaa ja mitä ei käyttäen hallittuja ominaisuuksia. Hallittujen ratkaisujen julkaisijat voivat rajoittaa samalla tavoin ratkaisuun lisäämiensä ratkaisun osien mukauttamismahdollisuuksia. Voit mukauttaa kaikkia ratkaisun osia, joissa ei ole hallittuja ominaisuuksia, jotka estävät niiden mukauttamisen.  
+ Ei-hallitut mukautukset ovat muutoksia, joita on tehty ympäristöön ei-hallitulla ratkaisulla. Järjestelmäratkaisu määrittää, mitä voidaan mukauttaa ja mitä ei käyttäen hallittuja ominaisuuksia. Hallittujen ratkaisujen julkaisijat voivat rajoittaa samalla tavoin ratkaisuun lisäämiensä ratkaisun osien mukauttamismahdollisuuksia. Voit mukauttaa kaikkia ratkaisun osia, joissa ei ole hallittuja ominaisuuksia, jotka estävät niiden mukauttamisen.  
   
  **Sovelluksen toimintatapa**  
- Tämä on se, minkä näet organisaatiossa. Oletusjärjestelmäratkaisu ja mahdolliset hallitut ratkaisut sekä mahdolliset käyttöönotetut ei-hallitut mukautukset.  
+ Tämä on se, mitä näet ympäristössä. Oletusjärjestelmäratkaisu ja mahdolliset hallitut ratkaisut sekä mahdolliset käyttöönotetut ei-hallitut mukautukset.  
   
 <a name="BKMK_ManagedProperties"></a>   
 ### <a name="managed-properties"></a>Hallitut ominaisuudet  

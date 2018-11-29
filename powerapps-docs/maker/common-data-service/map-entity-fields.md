@@ -88,7 +88,7 @@ Sulje sitten valintaikkuna valitsemalla **OK**.
 
 Seuraavat säännöt määrittävät, minkälaisia tietoja voi yhdistää.  
   
-- Kenttien on oltava samantyyppiset ja &#8209;muotoiset.  
+- Kenttien on oltava samantyyppiset ja-muotoiset.  
 - Kohdekentän on oltava vähintään yhtä pitkä kuin lähdekenttä.  
 - Kohdekenttä ei saa olla yhdistettynä toiseen kenttään.  
 - Lähdekentän on oltava näkyvissä lomakkeessa.  

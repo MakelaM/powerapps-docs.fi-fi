@@ -2,7 +2,7 @@
 title: Mallipohjaisen sovelluksen pikaluontilomakkeiden luominen tai muokkaaminen PowerAppsissa | MicrosoftDocs
 description: Tietoja pikaluontilomakkeen luomisesta tai muokkaamisesta
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/15/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -53,9 +53,8 @@ Voit ottaa käyttöön mukautettuja aktiviteettientiteettejä tukemaan pikaluont
   
 ### <a name="how-to-create-a-quick-create-form"></a>Pikaluontilomakkeen luominen  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
 
 > [!IMPORTANT]
 > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).     
@@ -92,7 +91,7 @@ Jos lisäät yhdistelmäkentän pikaluontilomakkeeseen, se näytetään erillisi
   
 ### <a name="to-edit-a-quick-create-form"></a>Muokkaa pikaluontilomake  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 > [!IMPORTANT]
 > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).    

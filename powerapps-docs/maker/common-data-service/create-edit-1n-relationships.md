@@ -43,7 +43,7 @@ Arvioi ennen mukautetun entiteettisuhteen luomista, vastaako jokin aiemmin luotu
 > - Luo liittyvälle entiteetille uusi hakukenttä. <br />Lisätietoja: [Kenttien luominen ja muokkaaminen](create-edit-fields.md)
 > - Tuo ratkaisu, joka sisältää entiteettisuhteen määrityksen. <br />Lisätietoja: [Ratkaisujen tuominen. päivittäminen ja vieminen](import-update-export-solutions.md)
 > - Luo uusia entiteettejä Power Queryn avulla ja anna niiden tiedot. <br />Lisätietoja: [Tietojen lisääminen Common Data Service sovelluksille -ratkaisun entiteettiin Power Queryn avulla](data-platform-cds-newentity-pq.md).
-> - Sovelluskehittäjä voi käyttää [WWW-palveluita](../../developer/common-data-service/use-web-services.md#metadata-services) ohjelman kirjoittamisessa entiteettisuhteiden luomista ja päivittämistä varten. <br />Lisätietoja: [Entiteettisuhteen metatietojen mukauttaminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - Sovelluskehittäjä voi käyttää [metatietopalveluita](../../developer/common-data-service/metadata-services.md) ohjelman kirjoittamisessa entiteettisuhteiden luomista ja päivittämistä varten. <br />Lisätietoja: [Entiteettisuhteen metatietojen mukauttaminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Tämän ohjeaiheen tietojen avulla voit valita käytettävän suunnitteluohjelman. 
 

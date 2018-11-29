@@ -33,7 +33,7 @@ Virtuaalientiteetit koostuvat kolmesta tärkeimästä osasta *tietopalvelu*, *ti
   
 CDS sovelluksille sisältää OData-tietojen toimittajan, jonka avulla voi yhteyden muodostaa OData v4 -WWW-palveluun, joka käyttää ulkoisia tietoja. 
   
-Sovelluskehittäjät voivat myös muodostaa omat tietopalvelut. Tietopalvelut asennetaan ympäristöön ratkaisuna. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)
+Sovelluskehittäjät voivat myös muodostaa omat tietopalvelut. Tietopalvelut asennetaan ympäristöön ratkaisuna. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
  ![Virtuaalisen entiteetin kaavio](media/virtual-entity-diagram.png "Virtuaalisen entiteetin kaavio")  
   

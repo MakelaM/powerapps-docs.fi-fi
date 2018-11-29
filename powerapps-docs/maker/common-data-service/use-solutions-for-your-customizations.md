@@ -2,7 +2,7 @@
 title: Mukauta PowerApps oletusratkaisun avulla | MicrosoftDocs
 description: Opettele oletusratkaisun mukauttaminen
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 10/29/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -24,26 +24,23 @@ search.app:
   - D365CE
 ---
 
-# <a name="use-the-common-data-services-default-solution"></a>Common Data Service -oletusratkaisun käyttäminen  
+# <a name="use-the-common-data-services-default-solution"></a>Common Data Services -oletusratkaisun käyttäminen  
+  
+ Kaikki PowerApps-ympäristöt sisältävät seuraavat sovellukset.
+-   **Common Data Services -oletusratkaisu** – Valmistajat voivat oletusarvoisesti käyttää tätä perusratkaisua ympäristönsä mukautuksissa.
+-   **Oletusratkaisu** – Tämä erikoisratkaisu sisältää ympäristön kaikkien ratkaisujen kaikki mukautukset. 
+<!-- **Base Custom Controls Core** - This solution includes a core set of controls. Controls are used in user interface elements, such as fields, lists, and views. -->
 
-Kaikki PowerApps-ympäristöt sisältävät seuraavat sovellukset.
--   Common Data Service -oletusratkaisu. Tämä on perussovellus, jota tekijät käyttävät ympäristön oletusratkaisuna.
--   Oletusratkaisu. Tämä on vanha ratkaisu, joka sisältää kaikki ympäristössä käytettävissä olevat ratkaisut. 
--   Mukautettujen perusohjausobjektien ydintoiminnot. Tämä ratkaisu sisältää ohjausobjektien perusjoukon. Ohjausobjekteja käytetään liittymäelementeissä, kuten kentissä, luetteloissa ja näkymissä. 
+Huomaa, että jos olet asentanut tai tuonut muita sovelluksia tai ratkaisuja, ratkaisuluettelossa voi olla lisäratkaisuja. 
 
-Huomaa, että jos olet asentanut tai tuonut muita sovelluksia tai ratkaisuja, ratkaisuluettelossa voi olla lisäratkaisuja.  
-
-Kun luot mallipohjaisen sovelluksen tai mukautat sitä, käytät oletusarvoisesti Common Data Services -oletusratkaisua. Voit avata Common Data Services -oletusratkaisun, kun haluat tarkastella ja muokata ratkaisun osia. Voit tehdä tämän seuraavassa kuvatulla tavalla.
+Kun luot mallipohjaisen sovelluksen tai mukautat sitä, käytät ratkaisua, jonka nimi on Common Data Services -oletusratkaisu. Voit avata Common Data Services -oletusratkaisun, kun haluat tarkastella ja muokata siinä olevia osia. Voit tehdä tämän seuraavassa kuvatulla tavalla.
  
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Valitse vasemmassa siirtymisruudussa **Ratkaisut**.
 
-    ![Mallipohjainen suunnittelutila](../model-driven-apps/media/model-driven-switch.png)
-
-2. Valitse vasemmassa siirtymisruudussa **Ratkaisut**.
-3. Valitse ratkaisuluettelossa **Common Data Services -oletusratkaisu**.
+2.  Valitse ratkaisuluettelossa **Common Data Services -oletusratkaisu**.
   
 > [!TIP]
->  Jos aiot jakaa tekemäsi sovellukset, ratkaisunjulkaisijan mukautusetuliite kannattaa vaihtaa. Lisätietoja: [Ratkaisujulkaisijan etuliite](change-solution-publisher-prefix.md).  
+>  Jos aiot jakaa tekemäsi sovellukset, julkaisijan mukautusetuliite kannattaa vaihtaa. Lisätietoja: [Ratkaisujulkaisijan etuliite](change-solution-publisher-prefix.md).  
   
 <a name="BKMK_PrivacyNotice"></a>   
 

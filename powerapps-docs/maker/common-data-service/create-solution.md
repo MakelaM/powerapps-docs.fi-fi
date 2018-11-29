@@ -2,7 +2,7 @@
 title: Ratkaisun luominen | MicrosoftDocs
 description: Ratkaisun luominen
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 10/30/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -29,9 +29,9 @@ Koska oletusratkaisu sisältää kaikki ratkaisun osat, mukauttamiesi ratkaisun 
   
  Lisätietoja ratkaisun käsitteistä on aiheessa [Ratkaisujen käsitteleminen](solutions-overview.md).  
   
-1.  Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**. 
+1.  Kirjaudu [PowerAppsiin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse vasemmassa siirtymisruudussa **Ratkaisut**. 
   
-2.  Valitse **Uusi** ja lisää tiedot ratkaisun pakollisiin kenttiin.  
+2.  Valitse **Uusi ratkaisu** ja lisää sitten tiedot ratkaisun pakollisiin kenttiin.
   
     |Kenttä|Kuvaus|  
     |-----------|-----------------|  
@@ -61,3 +61,6 @@ Koska oletusratkaisu sisältää kaikki ratkaisun osat, mukauttamiesi ratkaisun 
 
 > [!IMPORTANT]
 >  Jos aiot lisätä ratkaisuihin tapaamisia, on erittäin suositeltavaa, ettet lisää erillisiin ratkaisuihin pelkästään tapaamisia tai pelkästään toistuvia tapaamisia. Jos asennat ja poistat erilaisia tapaamistyyppejä sisältäviä erillisiä ratkaisuja, järjestelmässä tapahtuu SQL Server -virhe ja tapaamiset täytyy luoda uudelleen. 
+
+## <a name="see-also"></a>Katso myös
+ [Ratkaisujen käyttäminen](use-solution-explorer.md)

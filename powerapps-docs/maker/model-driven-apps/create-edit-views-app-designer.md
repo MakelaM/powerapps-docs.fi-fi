@@ -45,9 +45,8 @@ Lisätietoja: [Tietoja näkymistä](create-edit-views.md).
 
 ## <a name="create-a-public-view-in-powerapps"></a>Julkisen näkymän luominen PowerAppsissa
 Sovelluksen tekijänä voit luoda tai muokata julkisia näkymiä PowerAppsin avulla.
-1. Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).   

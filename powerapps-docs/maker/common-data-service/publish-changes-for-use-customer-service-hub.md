@@ -2,7 +2,7 @@
 title: Julkaise muutokset PowerAppsissa | MicrosoftDocs
 description: 'Tietoja siitä, miten voit julkaista sovelluksen muutokset'
 ms.custom: ''
-ms.date: 06/20/2018
+ms.date: 10/29/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -30,7 +30,13 @@ search.app:
  
 ## <a name="publish-your-customizations"></a>Mukautusten julkaiseminen
 
-- Valitse [ratkaisunhallinnassa](../model-driven-apps/advanced-navigation.md#solution-explorer) **Julkaise kaikki mukautukset**.  
+1.  Valitse vasemmassa siirtymisruudussa **Ratkaisut**.
+
+2.  Valitse ratkaisu, jonka haluat julkaista, ja avaa se.
+
+3.  Valitse komentoluettelossa **Julkaise kaikki mukautukset**.  
+
+![Kaikkien mukauttamisten julkaiseminen](media/publish-all-customizations.PNG "Kaikkien mukauttamisten julkaiseminen")  
   
 > [!IMPORTANT]
 >  Mukautusten valmistelu saattaa kestää jonkin aikaa. Jos näyttöön tulee sanoma, että selaimen sivu ei vastaa, odota, että sivu vastaa. Älä sulje sitä.  

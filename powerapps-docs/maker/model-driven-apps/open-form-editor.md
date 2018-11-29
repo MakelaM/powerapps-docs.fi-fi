@@ -32,7 +32,7 @@ Jos haluat luoda lomaketta muokattaessa ratkaisun osia, kuten verkkoresursseja, 
 
 1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/) -sovellukseen. 
 
-2. Valitse **Mallipohjainen** > **Tiedot** > **Entiteetit** > ja valitse sitten haluamasi entiteetti, esimerkiksi asiakasentiteetti. 
+2. Valitse **Tiedot** > **Entiteetit** ja valitse sitten haluamasi entiteetti, esimerkiksi asiakasentiteetti. 
 
 3. Valitse **Lomakkeet**-välilehti ja avaa sitten haluamasi lomake, esimerkiksi **Asiakas**-päälomake.
 

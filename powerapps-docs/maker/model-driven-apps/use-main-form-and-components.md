@@ -37,9 +37,7 @@ Käytä lomake-editoria seuraavien ohjeiden mukaisesti.
 
 ### <a name="access-the-form-editor-through-app-designer-in-powerapps"></a>Lomake-editorin käyttäminen PowerAppsin sovellusten suunnitteluohjelmassa
 
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 2.  Valitse vasemmanpuoleisessa siirtymisruudussa **Sovellukset** ja valitse sitten haluamasi sovellus. Valitse työkaluriviltä **Muokkaa**.  
 
@@ -60,9 +58,7 @@ Käytä lomake-editoria seuraavien ohjeiden mukaisesti.
 
 ### <a name="access-the-form-editor-through-the-default-solution"></a>Lomake-editorin käyttö oletusratkaisussa
 
-1.  Valitse [PowerApps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1.  Kirjaudu sisään [PowerApps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti. Valitse **Lomakkeet**-välilehti.  
 

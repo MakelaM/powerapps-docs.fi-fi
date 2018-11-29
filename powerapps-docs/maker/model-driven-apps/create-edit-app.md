@@ -2,7 +2,7 @@
 title: Mallipohjaisen sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla PowerAppsissa | MicrosoftDocs
 description: Tietoja sovellusten luomisesta tai muokkaamisesta sovellusten suunnitteluohjelmalla
 keywords: ''
-ms.date: 05/23/2018
+ms.date: 10/15/2018
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -38,14 +38,14 @@ Tarkista seuraavat edellytykset, ennen kuin alat luoda sovellusta:
 <a name="createApp"></a>   
 ## <a name="create-an-app"></a>Sovelluksen luominen  
 
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Valitse [PowerAppsin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **aloitussivulla** mallipohjaisen sovelluksen **Aloita tyhjästä** -asetus.  
 
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+    ![Mallipohjainen aloitus tyhjästä](media/start-from-blank-model-driven.png)
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Valitse **Sovellukset** ja valitse sitten **Luo sovellus**.
+2. Valitse **Luo tämä sovellus**.
 
 3. Syötä **Luo uusi sovellus** -sivulla seuraavat tiedot: 
 
@@ -96,12 +96,12 @@ Tarkista seuraavat edellytykset, ennen kuin alat luoda sovellusta:
 <a name="editApp"></a>   
 ## <a name="edit-an-app"></a>Sovelluksen muokkaaminen  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 > [!IMPORTANT]
 > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Valitse vasemmanpuoleisessa siirtymisruudussa **Sovellukset** ja valitse sitten sovellus. Valitse työkaluriviltä **Muokkaa**.   
+2. Valitse vasemmanpuoleisessa siirtymisruudussa **Sovellukset** ja valitse sitten mallipohjainen. Valitse lopuksi työkaluriviltä **Muokkaa**.   
 
 3. Lisää tai muokkaa osia sovelluksen suunnitteluohjelmassa tarvittaessa. Lisätiedot: [Sovelluksen osien lisääminen tai muokkaaminen](add-edit-app-components.md)  
  

@@ -27,9 +27,7 @@ search.app:
 
 Tässä ohjeaiheessa on tietoja järjestelmäkaavion luomisesta. Järjestelmäkaaviot ovat organisaation omistamia kaavioita. Tämän vuoksi niitä voivat käyttää kaikki, joilla on sovelluksen tietojen lukuoikeus. Järjestelmäkaavioita ei voi delegoida tai jakaa tietyille sovelluksen käyttäjille.  
   
-1. Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).     

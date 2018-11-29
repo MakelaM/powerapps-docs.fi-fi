@@ -40,6 +40,9 @@ Kirjaudu sisään PowerApps -sovellukseen osoitteessa [https://web.powerapps.com
 
     * **Monikollinen näyttönimi** - Tämä kenttä täytetään automaattisesti, kun annat näyttönimen. Voit kuitenkin muuttaa arvoa halutessasi. Monikollinen näyttönimi on Common Data Service -sovelluksen WebAPI. Sitä käytetään, kun tämä entiteetti on käytössä PowerApps- tai Flow-sovelluksessa.
     * **Nimi** - Tämä kenttä täytetään myös automaattisesti, kun annat näyttönimen. Etuliite määritettiin, kun ympäristö luotiin. Se varmistaa, että luotuja entiteettejä voidaan viedä muihin ympäristöihin ja tuoda niistä ilman, että entiteettien nimet ovat ristiriidassa toistensa kanssa. Voit muuttaa tätä etuliitettä päivittämällä Common Data Service -oletusratkaisun julkaisijan etuliitteen. Et voi muuttaa nimeä entiteetin tallentamisen jälkeen. Näin vältetään olemassa olevien sovellusten toimintahäiriöt.
+
+       > [!NOTE]
+       > Jotta entiteetin nimi toimisi [Dynamics 365 for Customer Servicen upotetussa tietoartikkelihaussa](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), entiteetin nimen enimmäispituus on 24 merkkiä, mihin sisältyy myös julkaisijan etuliite.
      
     ![Uusi entiteetti](./media/data-platform-cds-create-entity/newentitypanel.png "Uusi entiteetti -paneeli")
 

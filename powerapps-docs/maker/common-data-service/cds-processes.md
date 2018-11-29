@@ -23,9 +23,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="apply-business-logic-with-common-data-service-for-apps"></a>Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisussa
+# <a name="apply-business-logic-in-common-data-service-for-apps"></a>Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisussa
 
-Dynamics 365 Customer Engagement -sovelluksen mukauttajat voivat jo tuntea perinteisen Common Data Service sovelluksille -ratkaisun prosessit. Ne ovat työnkulkuja ja toimintoja. Lisätietoja: [Työnkulun prosessien käyttäminen](/flow/workflow-processes) ja [Toimintojen yleiskatsaus](/flow/actions)
-  
-## <a name="see-also"></a>Katso myös  
-[Opetusohjelma: Liiketoimintasääntöjen ja suositusten luominen mallipohjaisen sovelluksen lomakkeen logiikan käyttämiseksi](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+Määritä entiteetille *liiketoimintasäännöt*, joita käytetään kaikissa entiteettilomakkeissa ja palvelintasolla. Entiteetille määritettyjä liiketoimintasääntöjä käytetään sekä *kaaviosovelluksissa* ja *mallipohjaisissa sovelluksissa*, jos entiteettiä käytetään sovelluksessa. Lisätietoja:a [Entiteetin liiketoimintasäännön luominen](data-platform-create-business-rule.md).
+
+> [!NOTE]
+> Lisätietoja mallipohjaisen sovelluksen lomakkeessa käytettävän liiketoimintasäännön luomisesta on kohdassa [Liiketoimintasääntöjen luominen mallipohjaisen sovelluksen lomakkeeseen](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+
+Voit käyttää myös perinteisiä Common Data Service (CDS) sovelluksille -ratkaisun prosesseja eli työnkulkuja ja toimintoja. Lisätietoja: [Microsoft Flow: Työnkulkuprosessien käyttäminen](/flow/workflow-processes) ja [Microsoft Flow: Toimintojen yleiskatsaus](/flow/actions).
+
+## <a name="see-also"></a>Katso myös
+
+[Liiketoimintalogiikan käyttäminen mallipohjaisissa sovelluksissa](../model-driven-apps/guide-staff-through-common-tasks-processes.md)

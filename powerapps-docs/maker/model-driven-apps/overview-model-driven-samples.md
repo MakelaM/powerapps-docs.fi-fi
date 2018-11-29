@@ -38,11 +38,14 @@ Mallipohjaiset esimerkkisovellukset on ensin valmisteltava Common Data Service -
 
 ## <a name="customize-a-sample-app"></a>Esimerkkisovelluksen mukauttaminen
 
-1. Kirjaudu sisään [powerapps.com](https://powerapps.com)-sivustoon ja valitse suunnittelutilaksi **Mallipohjainen**. 
+1. [Powerapps.comiin](https://powerapps.com) kirjautuminen  
 
-    ![Suunnittelutilan valitseminen](media/overview-model-driven-samples/choose-design-mode.png)
+    
 
-2. Siirry kotisivulla esimerkkisovelluksen päälle ja valitse **Mukauta**.
+2. Siirrä osoitin **Luo**-sivulla näytesovelluksen päälle ja valitse **Luo tämä sovellus**.
+
+![Näytemallisovellus](media/overview-model-driven-samples/model-driven-create-page-sample.png)
+
 3. Näyttöön avautuu sovellusten suunnitteluohjelma, jossa on useita vaihtoehtoja sovelluksen mukauttamista varten. 
 4. Saat lisätietoja mukauttamisasetuksista, kun valitset portaalin vasemmalla olevassa siirtymistoiminnossa **Lisäasetukset**.
 

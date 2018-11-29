@@ -2,7 +2,7 @@
 title: Siirry tiettyyn ratkaisuun PowerAppsin avulla | MicrosoftDocs
 description: 'Tietoja siitä, miten voit etsiä ja avata tietyn ratkaisun ympäristössäsi'
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 10/29/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -28,13 +28,11 @@ search.app:
 
 Ohjeet käsiteltävän, organisaatiossa jo olevan ratkaisun etsimiseen. Jos haluat luoda uuden ratkaisun [luo oma ratkaisu](create-solution.md).  
   
-## <a name="open-an-unmanaged-solution"></a>Ei-hallitun ratkaisun avaaminen  
+## <a name="open-a-solution"></a>Ratkaisun avaaminen  
   
-1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.  
+1. Valitse vasemmassa siirtymisruudussa **Ratkaisut**, jos haluat nähdä ympäristön ratkaisuluettelon.
   
-2. Avaa käsiteltävä hallitsematon ratkaisu kaksoisnapsauttamalla sitä.  
-  
- Kun olet avannut ratkaisun, näet ratkaisun osat. Lisätietoja: [Ratkaisun osien lisääminen](solutions-overview.md)  
+2. Valitse ratkaisu, jota haluat käyttää, tai tarkastele kaikkia siinä olevia osia. Lisätietoja: [Osien lisääminen](solutions-overview.md)  
 
  ## <a name="next-steps"></a>Seuraavat vaiheet
 [Työnkulkuprosessien valvonta ja hallinta](/flow/monitor-manage-processes)

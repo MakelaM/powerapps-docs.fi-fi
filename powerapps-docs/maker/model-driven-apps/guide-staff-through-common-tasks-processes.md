@@ -1,5 +1,5 @@
 ---
-title: Mukautetun liiketoimintalogiikan luominen työnkulkujen avulla Flow-sovelluksessa | MicrosoftDocs
+title: Liiketoimintasääntöjä ja työnkulkuja sisältävän mukautetun liiketoimintalogiikan käyttäminen mallipohjaisissa sovelluksissa | MicrosoftDocs
 description: 'Lue, miten voit käyttää sovelluksessa erilaisia liiketoimintalogiikkoja'
 ms.custom: ''
 ms.date: 08/02/2018
@@ -23,11 +23,29 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-custom-business-logic-with-flows"></a>Mukautetun liiketoimintalogiikan luominen työnkulkujen avulla
+# <a name="apply-custom-business-logic-with-business-rules-and-flows-in-model-driven-apps"></a>Liiketoimintasääntöjä ja työnkulkuja sisältävän mukautetun liiketoimintalogiikan käyttäminen mallipohjaisissa sovelluksissa
 
-Liiketoimintaprosessien yhdenmukaistamisen määrittäminen ja pakottaminen on yksi tärkeimmistä syistä siihen, että ihmiset käyttävät malliin perustuvia sovelluksia. Yhdenmukaisten prosessien avulla varmistat, että henkilöt voivat keskittyä PowerApps-sovelluksen avulla töihinsä manuaalisten vaiheiden suorittamisen muistamisen sijaan. Työnkulut voivat olla yksinkertaisia tai monimutkaisia, ja ne voivat muuttua ajan mittaan.  
+Liiketoimintaprosessien yhdenmukaistamisen määrittäminen ja pakottaminen on yksi tärkeimmistä syistä siihen, että ihmiset käyttävät malliin perustuvia sovelluksia. Yhdenmukaisten prosessien avulla varmistat, että henkilöt voivat keskittyä mallipohjaisen sovelluksen avulla töihinsä manuaalisten vaiheiden suorittamisen muistamisen sijaan. 
+
+## <a name="business-rules"></a>Liiketoimintasäännöt
+
+Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Liiketoimintasäännön *vaikutusalue* määrittää, missä liiketoimintasääntö suoritetaan:
+
+|||  
+|-|-|  
+|**Jos valitset tämän...**|**Vaikutusalueeksi määritetään...**|  
+|**Entiteetti**|Kaikki lomakkeet ja palvelin|  
+|**Kaikki lomakkeet**|Kaikki lomakkeet|  
+|Tietty lomake (esimerkiksi **Asiakas**-lomake)|Kyseinen lomake| 
+
+Lisätietoja lomakkeen liiketoimintasäännön luomisesta mallipohjaisessa sovelluksessa on kohdassa [Liiketoimintasääntöjen luomisen käyttämään logiikkaa mallipohjaisen sovelluksen lomakkeessa](create-business-rules-recommendations-apply-logic-form.md)
+
+> [!NOTE]
+> Lisätietoa entiteetin liiketoimintasäännön määrittämisestä siten, että sittä käytetään palvelintasolla sekä *kaaviosovelluksissa* että *mallipohjaisissa sovelluksissa* on kohdassa [Entiteetin liiketoimintasäännön luominen](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+
+## <a name="flows"></a>Työnkulut  
   
-Microsoft Flow sisältää useita erilaisia prosesseja, joista jokainen on suunniteltu eri tarkoitukseen seuraavasti:  
+Microsoft Flow sisältää useita erilaisia prosesseja, joista jokainen on suunniteltu eri tarkoitukseen:  
 
 -   Automaattiset työnkulut. Luo työnkulku, joka suorittaa vähintään yhden tehtävän automaattisesti sen jälkeen, kun tapahtuma on käynnistänyt sen. Lisätietoja: [Työnkulun luominen](/flow/get-started-logic-flow)
     
@@ -37,7 +55,12 @@ Microsoft Flow sisältää useita erilaisia prosesseja, joista jokainen on suunn
   
 -   Liiketoimintaprosessit.  Luo liiketoimintaprosessi ja varmista sen avulla, että käyttäjät kirjoittavat tietoja yhdenmukaisesti ja suorittavat samat vaiheet aina, kun he käyttävät sovellusta. Lisätietoja: [Liiketoimintaprosessien yleiskatsaus](/flow/business-process-flows-overview)
 
--   Common Data Service sovelluksille. Dynamics 365 Customer Engagement -sovelluksen mukauttajat voivat jo tuntea perinteisen Common Data Service sovelluksille -ratkaisun prosessit. Ne ovat työnkulkuja ja toimintoja. Lisätietoja: [Työnkulun prosessien käyttäminen](/flow/workflow-processes) ja [Toimintojen yleiskatsaus](/flow/actions)
+-   Työnkulut ja toiminnot. Dynamics 365 Customer Engagementin mukauttajat voivat jo tuntea perinteisen CDS sovelluksille -ratkaisun prosessit. Ne ovat työnkulkuja ja toimintoja. Lisätietoja: [Työnkulun prosessien käyttäminen](/flow/workflow-processes) ja [Toimintojen yleiskatsaus](/flow/actions)
   
-## <a name="see-also"></a>Katso myös  
-[Opetusohjelma: Liiketoimintasääntöjen ja suositusten luominen mallipohjaisen sovelluksen lomakkeen logiikan käyttämiseksi](create-business-rules-recommendations-apply-logic-form.md)
+## <a name="next-step"></a>Seuraava vaihe
+
+[Liiketoimintasääntöjen luominen käyttämään logiikkaa mallipohjaisen sovelluksen lomakkeessa](create-business-rules-recommendations-apply-logic-form.md)
+
+### <a name="see-also"></a>Katso myös
+
+[Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisussa](../common-data-service/cds-processes.md)

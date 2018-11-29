@@ -157,17 +157,15 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
   
 ### <a name="configure-a-multi-stream-interactive-dashboard-using-the-4-column-layout"></a>Määritä usean viestivirran koontinäytön 4 sarakkeen asettelua käyttäen.  
  
-1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen. 
+  
+2.  Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. 
 
-2.  Valitse **mallin perustuva** (alavasemmalla).  
+3.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**.  
   
-3.  Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. 
-
-4.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**.  
+4.  Valitse asettelu, 2, 3 tai 4 sarakeleveyttä.  
   
-5.  Valitse asettelu, 2, 3 tai 4 sarakeleveyttä.  
-  
-6.  Kun koontinäyttölomake avautuu, täytä suodattamista tiedot lomakkeen yläosassa seuraavasti.  
+5.  Kun koontinäyttölomake avautuu, täytä suodattamista tiedot lomakkeen yläosassa seuraavasti.  
  
  > [!div class="mx-imgBorder"] 
  > ![Lisää visuaaliset suodattimet](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Lisää visuaaliset suodattimet")  
@@ -220,7 +218,7 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
   
 1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.   
   
-2. Valitse **mallin perustuva** (alhaalla vasemmalla), **data** > **entiteetit** > haluamasi entiteetti. Valitse **Koontinäytöt**-välilehti.  
+2. Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. Valitse **Koontinäytöt**-välilehti.  
   
      -TAI-  
    
@@ -241,15 +239,13 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
   
 1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
-2.  Valitse **mallin perustuva** (alavasemmalla).  
-  
-3.  Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. 
+2.  Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. 
 
-4.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**.  
+3.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**.  
   
-5.  Valitse asettelu, 2, 3 tai 4 sarakeleveyttä.    
+4.  Valitse asettelu, 2, 3 tai 4 sarakeleveyttä.    
   
-6.  Kun koontinäyttölomake avautuu, **Suodata entiteetti** on valmiiksi asetettu entiteettiin, jolle olet luomassa koontinäytön. **Entiteettinäkymän** avattava luettelo sisältää entiteetin käytettävissä olevat näkymät. Valitse näkymä ja Täytä loput tarvittavat tiedot sivulla.  
+5.  Kun koontinäyttölomake avautuu, **Suodata entiteetti** on valmiiksi asetettu entiteettiin, jolle olet luomassa koontinäytön. **Entiteettinäkymän** avattava luettelo sisältää entiteetin käytettävissä olevat näkymät. Valitse näkymä ja Täytä loput tarvittavat tiedot sivulla.  
   
  Loput asetukset on hyvin samankaltainen kuin edellisessä kohdassa kuvatut kotisivun Monen virran koontinäyttö asetukset.  
   

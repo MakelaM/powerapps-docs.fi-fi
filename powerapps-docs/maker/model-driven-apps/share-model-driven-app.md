@@ -49,7 +49,7 @@ Koska trimmaustietueita ylläpitävää ympäristöä käytetään myös muissa 
 Lisätietoja käyttöoikeuksista ja vaikutusalueen oikeuksista on kohdassa [Käyttöoikeusroolit](https://docs.microsoft.com/dynamics365/customer-engagement/admin/security-roles-privileges#security-roles).
 
 ## <a name="create-a-custom-security-role"></a>Mukautetun käyttöoikeusroolin luominen
-1. Valitse [!INCLUDE [powerapps](../../includes/powerapps.md)]-sivustossa **Mallipohjaiset** > **sovellukset** > **…**> **Jaa linkki**.
+1. Valitse [!INCLUDE [powerapps](../../includes/powerapps.md)] -sivustossa **Sovellukset** > **…**> **Jaa linkki**.
 2. Valitse **Luo käyttöoikeusrooli** -kohdan **Jaa tämä sovellus** -valintaikkunassa **Käyttöoikeusasetus**.
 3. Valitse **Asetukset**-sivulla **Uusi**.  
 

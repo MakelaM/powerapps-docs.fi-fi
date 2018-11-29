@@ -48,9 +48,7 @@ search.app:
 
 ### <a name="open-the-view-editor"></a>Näkymäeditorin avaaminen
 
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-    ![Mallipohjainen suunnittelutila](../model-driven-apps/media/model-driven-switch.png)
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti. Valitse **Näkymät**-välilehti. 
 

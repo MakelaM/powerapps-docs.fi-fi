@@ -38,9 +38,8 @@ Pikalomake voidaan lisätä toiseen lomakkeeseen pikanäkymän ohjausobjektina. 
 ## <a name="create-a-quick-view-form"></a>Luo pikalomake  
  Voit luoda pikalomakkeet lomake-editorilla samoin kuin luot muita lomakkeita. Pikalomakkeet ovat vain luku -tilassa. Voit luoda niiden avulla lomakkeita, jotka on tarkoitettu vain lukemista varten.  
   
-1. Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).     
@@ -75,7 +74,7 @@ Pikalomake voidaan lisätä toiseen lomakkeeseen pikanäkymän ohjausobjektina. 
 ## <a name="add-a-quick-view-control-to-a-main-form"></a>Lisää päälomakkeeseen pikanäkymän ohjausobjekti  
  Pikalomakkeita voi lisätä vain päälomakkeeseen, jossa hakukenttä on olemassa, ja joka on suunnattu pikalomakkeen entiteetille.  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).     

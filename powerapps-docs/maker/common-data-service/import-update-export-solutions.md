@@ -1,8 +1,8 @@
 ---
 title: Ratkaisujen tuominen. päivittäminen ja vieminen | MicrosoftDocs
-description: 'Opettele ratkaisun tuominen, päivittäminen tai vieminen'
+description: 'Lisätietoja ratkaisun tuomisesta, päivittämisestä ja viemisestä PowerAppsissa'
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 11/06/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -25,42 +25,46 @@ search.app:
 ---
 # <a name="import-update-and-export-solutions"></a>Ratkaisujen tuominen. päivittäminen ja vieminen 
 
- Voit tuoda ratkaisuja manuaalisesti seuraavien ohjeiden mukaisesti. Tuo vain luotettavasta lähteestä saatuja ratkaisuja. Mukautukset voivat sisältää koodia, joka voi lähettää tietoja ulkoisiin lähteisiin. Voit tuoda oletusratkaisun vain organisaatioon, josta olet vienyt sen, mutta sitä ei liitetä toiseen organisaatioon.  
+ Voit tuoda ratkaisuja manuaalisesti seuraavien ohjeiden mukaisesti. Tuo vain luotettavasta lähteestä saatuja ratkaisuja. Mukautukset voivat sisältää koodia, joka voi lähettää tietoja ulkoisiin lähteisiin. Voit tuoda **oletusratkaisun** vain ympäristöön, josta olet vienyt sen, mutta et eri ympäristöön.  
   
-1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.  
+1.  Valitse vasemmassa siirtymisruudussa **Ratkaisut**.  
   
-2.  Valitse ratkaisuluettelon valikosta **Tuo**.  
+2.  Valitse ratkaisuluettelon valikossa **Tuo**.  
+
+    > [!div class="mx-imgBorder"]  
+    > ![Ratkaisun tuominen](media/solution-import.png "Ratkaisun tuominen") 
   
-3.  Siirry **Tuo ratkaisu** -valintaikkunan **Valitse ratkaisupaketti** -kohdassa tuotavan ratkaisun sisältävään pakattuun tiedostoon (.zip tai .cab). 
+3.  Valitse **Tuo ratkaisu** -valintaikkunan **Valitse ratkaisupaketti** -vaiheessa **Valitse tiedosto** ja siirry tuotavan ratkaisun sisältävään pakattuun tiedostoon (.zip tai .cab). 
   
 4.  Valitse **Seuraava**.  
   
-5.  Voit tarkastella ratkaisun tietoja, ennen kuin valitset **Tuo**.  
+5.  Tarkastele ratkaisun tietoja. Valitse **Tuo**.  
   
-6.  Ratkaisun tuonti voi kestää hetken. Jos tuonti onnistuu, voit tarkastella tuloksia ja valita **Sulje**.  
+6. Tuonti voi kestää hetken. Tarkastele tuloksia ja valitse **Sulje**.  
   
  Jos olet tuonut julkaistavia muutoksia, mukautuksia ei voi käyttää, ennen kuin ne on julkaistu. 
   
- Jos tuonti ei onnistunut, avautuva raportti sisältää mahdolliset virheet tai varoitukset. Jos haluat nähdä tarkempia tietoja tuonnin epäonnistumisesta, valitse **Lataa lokitiedosto**. Ratkaisun tuonti epäonnistuu useimmin siksi, että ratkaisu ei sisältänyt pakollisia ratkaisun osia.  
+ Jos tuonti ei onnistunut, avautuva raportti sisältää mahdolliset virheet tai varoitukset. Jos haluat nähdä tarkempia tietoja tuonnin epäonnistumisesta, valitse **Lataa lokitiedosto**. Tuonti epäonnistuu useimmin siksi, että ratkaisu ei sisältänyt pakollisia osia.  
   
  Ladattu lokitiedosto sisältää XML-tiedoston, jonka sisältöä voit tarkastella avaamalla sen Office Excelissä.  
   
 > [!NOTE]
->  Aktiivista reitityssääntöjoukkoa ei voi muokata. Jos siis tuot ratkaisun, jonka aktiivinen reitityssääntöjoukko on määritetty organisaatioon, jossa on jo samalla tunnuksella luotu sääntö, ratkaisun tuonti epäonnistuu. Lisätietoja: [Palvelupyyntöjen automaattisten reitityssääntöjen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
+>  Aktiivista reitityssääntöjoukkoa ei voi muokata. Jos siis tuot ratkaisun, jonka aktiivinen reitityssääntöjoukko on määritetty ympäristöön, jossa on jo samalla tunnuksella luotu sääntö, tuonti epäonnistuu. Lisätietoja: [Palvelupyyntöjen automaattisten reitityssääntöjen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  
   
 <a name="BKMK_UpdateSolutions"></a>   
 
 ## <a name="update-solutions"></a>Ratkaisujen päivittäminen  
  Haluat ehkä joskus asentaa päivityksen nykyiseen hallittuun ratkaisuun. Asennus muistuttaa uuden hallitun ratkaisun asentamista, myös käytettävät asetukset ovat hieman erilaiset. Jos päivität muualta saatua ratkaisua, kysy ratkaisujulkaisulta lisätietoja käytettävistä asetuksista.  
   
-1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.   
+1.  Valitse vasemmassa siirtymisruudussa **Ratkaisut**.
   
 2.  Valitse ratkaisuluettelon valikossa **Tuo**.  
   
-3.  Siirry **Tuo ratkaisu** -valintaikkunan **Valitse ratkaisupaketti** -kohdassa päivitettävän ratkaisun sisältävään pakattuun tiedostoon (.zip tai .cab).  
+3.  Valitse **Tuo ratkaisu** -valintaikkunan **Valitse ratkaisupaketti** -vaiheessa **Valitse tiedosto** ja siirry päivitettävän ratkaisun sisältävään pakattuun tiedostoon (.zip tai .cab).
+
 4.  Valitse **Seuraava**.  
   
-5.  Voit tarkastella ratkaisun tietoja, ennen kuin valitset **Seuraava**. Sivulla on keltainen palkki, jossa lukee **Tämä ratkaisupaketti sisältää jo asennetun ratkaisun päivityksen**.  
+5.  Tarkastele ratkaisun tietoja ja valitse sitten **Seuraava**. Sivulla on keltainen palkki, jossa lukee **Tämä ratkaisupaketti sisältää jo asennetun ratkaisun päivityksen**.  
   
 6.  Käytettävissä on seuraavat vaihtoehdot:  
   
@@ -74,7 +78,7 @@ search.app:
   
      Valitse ensin sopiva vaihtoehto ja sitten **Seuraava**.  
   
-7.  Ratkaisun tuonti voi kestää hetken. Jos tuonti onnistuu, voit tarkastella tuloksia ja valita **Sulje**.  
+7.  Tuonti voi kestää hetken. Tarkastele tuloksia ja valitse **Sulje**.  
   
  Jos olet tuonut julkaistavia muutoksia, mukautuksia ei voi käyttää, ennen kuin ne on julkaistu. 
   
@@ -83,15 +87,28 @@ search.app:
 <a name="BKMK_ExportSolutions"></a>   
 
 ## <a name="export-solutions"></a>Ratkaisujen vieminen  
- On suositeltavaa viedä ei-hallitut mukautukset säännöllisesti varmuuskopioiksi mahdollisia ongelmatilanteita varten. Hallittuja ratkaisuja ei voi viedä.  
+ On suositeltavaa viedä ei-hallitut mukautukset säännöllisesti varmuuskopioiksi mahdollisia ongelmatilanteita varten. Hallittuja ratkaisuja ei voi viedä. Voit viedä ratkaisut joko PowerAppsista tai perinteisellä menetelmällä. 
+ 
+### <a name="export-from-powerapps"></a>Vienti PowerAppsista
   
-1. Siirry kohtaan **[Asetukset](../model-driven-apps/advanced-navigation.md#settings)** > **Ratkaisut**.   
+1.  Valitse vasemmassa siirtymisruudussa **Ratkaisut**.   
   
-2.  Valitse ensin luettelosta vietävä ratkaisu ja sitten **Vie**.  
+2.  Valitse ensin vietävä ratkaisu luettelossa ja sitten **Vie**. 
+
+3.  Valitse paketin tyypiksi **Ei-hallittuna** tai **Hallittuna**. Vienti käynnistyy. Se voi kestää useita minuutteja. Kun vienti on valmis, .zip-tiedosto on selaimen määrittämässä latauskansiossa.
+
+> [!div class="mx-imgBorder"]  
+> ![Ratkaisun vieminen](media/solution-export.PNG "Ratkaisun vieminen") 
+
+### <a name="export-from-the-classic-experience"></a>Vienti perinteisellä menetelmällä
+
+1.  Valitse ensin vasemmassa siirtymisruudussa **Ratkaisut** ja sitten **Siirry perinteiseen**. 
+  
+2.  Valitse ensin vietävä ratkaisu luettelossa ja sitten **Vie**. 
   
 3.  **Julkaise mukautukset** -vaiheessa sinua muistutetaan, että vain julkaistut mukautukset viedään ja että voit valita **Julkaise kaikki mukautukset**, ennen kuin valitset **Seuraava**.  
   
-4.  Jos ratkaisu sisältää puuttuvia pakollisia osia, näet **Pakollisia osia puuttuu** -vaiheen. Jätä tämä varoitus huomioimatta vain, jos aiot tuoda ratkaisun ei-hallittuna ratkaisuna takaisin alkuperäiseen organisaation. Peruuta muussa tapauksessa vienti valintaikkunan ohjeiden mukaisesti ja lisää pakolliset osat.  
+4.  Jos ratkaisu sisältää puuttuvia pakollisia osia, näet **Pakollisia osia puuttuu** -vaiheen. Jätä tämä varoitus huomioimatta vain, jos aiot tuoda ratkaisun ei-hallittuna ratkaisuna takaisin alkuperäiseen ympäristöön. Peruuta muussa tapauksessa vienti valintaikkunan ohjeiden mukaisesti ja lisää pakolliset osat.  
   
 5.  Voit sisällyttää tiettyjä järjestelmäasetuksia ratkaisuun **Vie järjestelmäasetukset (lisäasetukset)** -vaiheessa. Jos ratkaisu tarvitsee jotakin järjestelmäasetusten ryhmää, valitse ensin se ja sitten **Seuraava**.  
   
@@ -99,7 +116,7 @@ search.app:
   
 6.  Sinun on valittava **Paketin tyyppi**-vaiheessa, viedäänkö ratkaisu **ei-hallittuna** vai **hallittuna** ratkaisuna.  
   
-7.  Voit valita seuraavassa vaiheessa tietyn Dynamics 365 -version kohderatkaisun. Yleensä tätä asetusta käyttävät riippumattomat ohjelmistovalmistajat, jotka haluavat viedä edellisen version kanssa yhteensopivan ratkaisun. Hyväksy oletusasetus, ellet aio tuoda ratkaisua organisaatioon, jota ei ole päivitetty käyttämääsi organisaatioversioon.   
+7.  Voit valita seuraavassa vaiheessa tietyn Dynamics 365 for Customer Engagement -version kohderatkaisun. Yleensä tätä asetusta käyttävät riippumattomat ohjelmistovalmistajat, jotka haluavat viedä edellisen version kanssa yhteensopivan ratkaisun. Hyväksy oletusasetus, ellet aio tuoda ratkaisua ympäristöön, jota ei ole päivitetty käyttämääsi ympäristöversioon.   
   
 8.  Lataa ratkaisutiedosto valitsemalla **Vie**.  
   
@@ -108,9 +125,9 @@ search.app:
 <a name="BKMK_SettingsOptionsOnSolutionExport"></a>  
  
 ## <a name="settings-options-for-solution-export"></a>Ratkaisun viennin asetusvaihtoehdot  
- Seuraavassa taulukossa on ratkaisun viennissä käytettävissä olevat vaihtoehdot:  
+ Jos viet ratkaisun PowerAppsista, ohita tämä osa. Seuraavassa taulukossa on ratkaisun perinteisellä tavalla tehtävässä viennissä käytettävissä olevat vaihtoehdot:  
   
-|Ryhmä|Asetukset|Kuvaus|  
+|Ryhmä|Asetus|Kuvaus|  
 |-----------|-------------|-----------------|  
 |Automaattinen numerointi|Kampanjan etuliite|Kampanjoiden numeroinnin etuliite.|  
 |Palvelupyynnön etuliite|Etuliite, jota käytetään kaikissa sovelluksen palvelupyynnöissä.|  
@@ -120,7 +137,7 @@ search.app:
 |Tilauksen etuliite|Etuliite, jota käytetään kaikissa tilauksissa sovelluksessa.|  
 |Yksilöllinen merkkijonon pituus|Laskun, tarjouksen ja tilauksen numeroihin liitettävä merkkimäärä.|  
 |Kalenteri|Kalenterityyppi|Järjestelmän kalenterityyppi. Oletusarvo on gregoriaaninen (USA).|  
-|Päivämäärän muotokoodi|Tietoja siitä, miten päivämäärät näytetään Dynamics 365:ssä.|  
+|Päivämäärän muotokoodi|Tietoja siitä, miten päivämäärät näytetään Dynamics 365 for Customer Engagementissä|  
 |Päivämääräerotin|Merkki, joka erottaa päivämäärien kuukausi-, päivä- ja vuosiarvot sovelluksessa.|  
 |Tapaamisen enimmäiskesto|Tapaamisen enimmäiskesto päivinä.|  
 |Näytä viikon numero|Tieto siitä, näytetäänkö sovelluksessa kalenterinäytöissä viikon numero.|  

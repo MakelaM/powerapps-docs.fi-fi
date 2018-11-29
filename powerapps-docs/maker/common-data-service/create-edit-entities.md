@@ -78,17 +78,17 @@ Removed these:
   |**Käyttöoikeusryhmät**|Entiteetin ryhmän mallien luominen |
   |**Salli pikaluonti**|Sen jälkeen, kun olet luonut ja julkaissut tälle entiteetille **Pikaluontilomakkeen**, käyttäjät voivat luoda uuden tietueen siirtymisruudun **Luo**-painikkeen avulla. Lisätietoja: [Lomakkeiden luominen ja suunnittelu](../model-driven-apps/create-design-forms.md)<br /><br /> Kun tämä otetaan käyttöön mukautetussa aktiviteettientiteetissä, mukautettu aktiviteetti näkyy aktiviteettientiteettien ryhmässä, kun käyttäjät käyttävät siirtymisruudun **Luo**-painiketta. Koska aktiviteetit eivät tue pikaluontilomakkeita, mukautetun entiteetin kuvakkeen napsautuksen jälkeen käytetään päälomaketta.|
   |**Alueet, joissa tämä entiteetti näkyy**|Valitse WWW-sovelluksessa jokin käytettävissä olevista sivustokartan alueista, jolla tämä entiteetti näytetään. Tämä ei koske mallipohjaisia sovelluksia.|
-  |**Seuranta**|Jos seuranta on käytössä organisaatiossa, voit tallentaa eri aikoina tehtävät entiteettitietueiden muutokset. Kun otat käyttöön entiteetin seurannan, järjestelmä alkaa seurata myös kaikkien entiteetin sisältämiä kenttiä. Voit valita tai poistaa kentät, joiden seurannan haluat ottaa käyttöön.|
-  |**Muuta seurantaa**|Mahdollistaa tietojen synkronoinnin tehokkaasti määrittämällä tiedot, joita on muutettu tietojen ensimmäisen purkamisen tai edellisen synkronoinnin jälkeen.  |
+  |**Seuranta**|Jos seuranta on käytössä organisaatiossa, voit tallentaa eri aikoina tehtävät entiteettitietueiden muutokset. Kun otat käyttöön entiteetin seurannan, järjestelmä alkaa seurata myös kaikkia entiteetin kenttiä. Voit valita tai poistaa kenttiä, joiden seurannan haluat ottaa käyttöön.|
+  |**Muutosten seuranta**|Mahdollistaa tietojen synkronoinnin tehokkaasti havaitsemalla tiedot, joita on muutettu tietojen ensimmäisen purkamisen tai edellisen synkronoinnin jälkeen.  |
   |**Väri**|Määritä mallipohjaisten sovellusten entiteetissä käytettävä väri.|
   |**Tiedostojen hallinta**|Kun organisaation tiedostojen hallinnan käyttöönottoon liittyvät tehtävät on suoritettu, voit ottaa tämän ominaisuuden käyttöön. Sen avulla entiteetti ottaa osaa integrointiin SharePointin kanssa. |
   |**Kaksoiskappaleiden tunnistus**|Jos kaksoiskappaleiden tunnistaminen on käytössä organisaatiossa, tämän ominaisuuden ottaminen käyttöön mahdollistaa kaksoiskappaleiden tunnistussääntöjen luomisen entiteetille.|
-  |**Ota käyttöön mobiililaitteissa**|Määritä tämä entiteetti Dynamics 365 puhelimille ja tableteille -sovelluksen käytettäväksi. Voit määrittää tämän entiteetin myös **vain luku -tilaan mobiililaitteessa**.<br /><br /> Jos entiteetin lomakkeet vaativat tunnistetiedon, jota Dynamics 365 for phones- ja Dynamics 365 for tablets -sovellukset eivät tue, tämän asetuksen avulla voit määrittää, että mobiilisovelluksen käyttäjät eivät voi muokata näitä entiteettejä.|
-  |**Ota käyttöön Phone Expressissä**|Määritä tämä entiteetti Dynamics 365 for phones- ja Dynamics 365 for tablets -sovellusten käytettäväksi.|
+  |**Ota käyttöön mobiililaitteissa**|Määritä tämä entiteetti Dynamics 365 for phones- ja Dynamics 365 for tablets -sovellusten käytettäväksi. Voit määrittää tämän entiteetin myös **vain luku -tilaan mobiililaitteessa**.<br /><br /> Jos entiteetin lomakkeet vaativat laajennuksen, jota Dynamics 365 for phones- ja Dynamics 365 for tablets -sovellukset eivät tue, tämän asetuksen avulla voit määrittää, että mobiilisovelluksen käyttäjät eivät voi muokata näitä entiteettejä.|
+  |**Ota käyttöön Phone Expressissä**|Määritä tämä entiteetti Dynamics 365 for phones -sovellusten käytettäväksi.|
   |**Yhdistäminen**|Tätä entiteettiä voi käyttää yhdistämistoiminnon kanssa.|
   |**Dynamics 365 for Outlookin offline-ominaisuudet**|Määrittää, ovatko tämän entiteetin tiedot käytettävissä silloin, kun Dynamics 365 for Outlook -sovelluksessa ei ole Internet-yhteyttä.|
   |**Outlookin lukuruutu Dynamics 365 for Outlookissa**|Määrittää, näytetäänkö entiteetti Dynamics 365 for Outlook -sovelluksen lukuruudussa.|
-  |**Käytä mukautettua ohjetta**|Kun tämä on käytössä, määritä ohjeen URL-osoite, joka ohjaa käyttäjille näytettäviä sivuja käyttäjien valitessa sovelluksen ohjepainikkeen. Tämän avulla saat yrityksen prosessikohtaisia ohjeita entiteetille.|
+  |**Käytä mukautettua ohjetta**|Kun tämä on käytössä, voit määrittää ohjeen URL-osoitteen, joka määrittää, minkä sivun käyttäjät näkevät valitessaan ohjepainikkeen sovelluksessa. Tämän avulla saat yrityksen prosessikohtaisia ohjeita entiteetille.|
 
 
 ### <a name="see-also"></a>Katso myös

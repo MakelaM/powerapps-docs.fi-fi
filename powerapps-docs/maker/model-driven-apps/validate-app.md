@@ -66,7 +66,7 @@ Kun tarkistat sovelluksen, sovelluksen suunnitteluohjelman pohja sisältää tie
 
 Julkaise sovellus, jotta se on muiden käyttäjien käytettävissä.  
   
- Kun olet lisännyt komponentit sekä tarkistanut ja tallentanut sovelluksen, valitse komentopalkissa **Julkaise**. Voit julkaista sovelluksen myös [Omat sovellukset](advanced-navigation.md#my-apps) -sivun sovellusruudusta. Valitse **Muokattavat sovellukset** -näkymän julkaistava sovelluksen ruudun oikeasta alakulmasta **Lisää vaihtoehtoja** -painike (**...**). Valitse sitten **Julkaise.**.  
+ Kun olet lisännyt komponentit sekä tarkistanut ja tallentanut sovelluksen, valitse komentopalkissa **Julkaise**. Voit julkaista sovelluksen myös [Omat sovellukset](advanced-navigation.md#apps) -sivun sovellusruudusta. Valitse **Muokattavat sovellukset** -näkymän julkaistava sovelluksen ruudun oikeasta alakulmasta **Lisää vaihtoehtoja** -painike (**...**). Valitse sitten **Julkaise.**.  
   
  Sovelluksen tilaksi tulee Julkaistu. Tila näkyy sovelluksen suunnitteluohjelman oikeassa yläkulmassa. Sovellus siirtyy **Muokattavat sovellukset** -näkymästä **Julkaistut sovellukset** -näkymään. Julkaisupäivämäärä näkyy sovellusruudussa.  
   

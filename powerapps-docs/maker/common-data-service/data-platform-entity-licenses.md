@@ -50,13 +50,13 @@ Barb ja Isaac luovat sovelluksia tietojen tallentamiseksi PowerAppsissa CDS sove
 
 Barb luo kaksi kaaviosovellusta:
 
-* Sovellus 1 &ndash; käyttää Yhteyshenkilö-entiteettiä ja mukautettua entiteettiä, jotka tallentavat liittyvät tiedot
-* Sovellus 2 &ndash; käyttää Yhteyshenkilö-entiteettiä ja Tapaus-entiteettiä, joka on rajoitettu entiteetti
+* Sovellus 1 &ndash; käyttää Tapaaminen-entiteettiä ja mukautettua entiteettiä, jotka tallentavat liittyvät tiedot
+* Sovellus 2 &ndash; käyttää Tapaaminen-entiteettiä ja Tapaus-entiteettiä, joka on rajoitettu entiteetti
 
 Isaac luo mallipohjaisia sovelluksia:
 
-* Sovellus 3 &ndash; käyttää Yhteyshenkilö-entiteettiä ja mukautettua entiteettiä, jotka tallentavat liittyvät tiedot
-* Sovellus 4 &ndash; käyttää Yhteyshenkilö-entiteettiä ja Tapaus-entiteettiä, joka on rajoitettu entiteetti
+* Sovellus 3 &ndash; käyttää Tapaaminen-entiteettiä ja mukautettua entiteettiä, jotka tallentavat liittyvät tiedot
+* Sovellus 4 &ndash; käyttää Tapaaminen-entiteettiä ja Tapaus-entiteettiä, joka on rajoitettu entiteetti
 
 Barb ja Isaac tarvitsevat seuraavat käyttöoikeudet:
 * Barb tarvitsee PowerApps-palvelupaketin 1 käyttöoikeuden kaaviosovellusten luomiseksi CDS sovelluksille -ratkaisulla Jos hänen on luotava tietokanta tai mukautettu entiteetti, hän tarvitsee PowerApps-palvelupaketin 2 käyttöoikeuden.

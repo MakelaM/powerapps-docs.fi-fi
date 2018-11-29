@@ -42,9 +42,9 @@ Voit määrittää yhden mukautetun ohjausobjektityypin näkymään WWW-selainas
 ## <a name="use-a-custom-control-to-add-visualizations-to-a-field"></a>Mukautetun ohjausobjektin avulla voit lisätä visualisointeja kenttään  
  Seuraavien vaiheiden mukaisesti muuttuu oletusotsikko ja **budjettisumma**-kentän tekstiruutukenttä liukusäädinohjausobjektiksi mahdollisuusentiteetissä. Samanlaisten vaiheiden mukaisesti voit korvata mukautetun ohjausobjektin aiemmin luodun kentän tai määrittää mukautetun kentän mukautetun ohjausobjektin.  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+     
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti. Valitse **Lomakkeet**-välilehti.  
   

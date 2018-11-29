@@ -43,7 +43,7 @@ Kaikki entiteetit eivät ole sopivia monta moneen--suhteisiin. Jos entiteettiä 
 > [!NOTE]
 > Voit luoda myös uuden monta moneen (N:N) -entiteettisuhteen ympäristössä seuraavasti:
 > - Tuo ratkaisu, joka sisältää suhteiden määrityksen. Lisätietoja: [Ratkaisujen tuominen. päivittäminen ja vieminen](import-update-export-solutions.md)
-> - Sovelluskehittäjä voi käyttää [metatietopalveluita](../../developer/common-data-service/use-web-services.md#metadata-services) ohjelman kirjoittamisessa entiteettisuhteiden luomista ja päivittämistä varten. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Entiteettisuhteen metatietojen mukauttaminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
+> - Sovelluskehittäjä voi käyttää [metatietopalveluita](../../developer/common-data-service/metadata-services.md) ohjelman kirjoittamisessa entiteettisuhteiden luomista ja päivittämistä varten. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Entiteettisuhteen metatietojen mukauttaminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Tämän ohjeaiheen tietojen avulla voit valita käytettävän suunnitteluohjelman. 
 

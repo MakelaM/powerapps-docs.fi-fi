@@ -26,7 +26,10 @@ search.app:
 ---
 # <a name="tutorial-create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Opetusohjelma: Liiketoimintasääntöjen ja suositusten luominen mallipohjaisen sovelluksen lomakkeen logiikan käyttämiseksi
 
-Tässä opetusohjelmassa kerrotaan, miten liiketoimintasääntöjä ja -suosituksia luodaan käyttämällä lomakelogiikka ilman, että on kirjoitettava JavaScript-koodia tai luotava laajennuksia. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Niitä voidaan käyttää pää- ja pikalomakkeissa. Ne toimivat PowerApp-sovelluksissa, Dynamics 365 Customer Engagement -verkkosovelluksissa, Dynamics 365 for tablets- ja Dynamics 365 for Outlook (online ja offline-tila) -sovelluksissa.  
+Tässä opetusohjelmassa kerrotaan, miten liiketoimintasääntöjä ja -suosituksia luodaan käyttämällä lomakelogiikka mallipohjaisessa sovelluksessa ilman, että on kirjoitettava JavaScript-koodia tai luotava laajennuksia. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Niitä voidaan käyttää pää- ja pikalomakkeissa. Ne toimivat mallipohjaisissa sovelluksissa, Dynamics 365 Customer Engagement -verkkosovelluksissa, Dynamics 365 for tablets- ja Dynamics 365 for Outlook (online ja offline-tila) -sovelluksissa.
+
+> [!NOTE]
+> Lisätietoja entiteetin liiketoimintasäännön määrittämisestä siten, että sittä käytetään kaikissa lomakkeissa ja palvelimessa on kohdassa [Entiteetin liiketoimintasäännön luominen](/powerapps/maker/common-data-service/data-platform-create-business-rule).
   
  Seuraavat ovat mahdollisia liiketoimintasääntöjen avulla, kun ehdot ja toiminnot yhdistetään:  
   

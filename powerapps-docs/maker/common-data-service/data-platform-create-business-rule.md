@@ -17,8 +17,12 @@ search.app:
 
 # <a name="create-a-business-rule-for-an-entity"></a>Liiketoimintasäännön luominen entiteetille
 
-Voit luoda liiketoimintasääntöjä ja -suosituksia käyttämällä logiikkaa ja tarkistuksia ilman koodin kirjoittamista ja laajennusten luomista. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. 
-  
+Voit luoda liiketoimintasääntöjä ja -suosituksia käyttämällä logiikkaa ja tarkistuksia ilman koodin kirjoittamista ja laajennusten luomista. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä.
+
+> [!IMPORTANT]
+> Entiteetille määritettyjä liiketoimintasääntöjä käytetään sekä *kaaviosovelluksissa* ja *mallipohjaisissa sovelluksissa*, jos entiteettiä käytetään sovelluksessa. Kaikki liiketoimintasääntöjen toiminnot eivät ole tällä hetkellä käytettävissä kaaviosovelluksessa. Lisätietoja: [Kaaviosovellusten ja mallipohjaisten sovellusten väliset erot](#differences-between-canvas-and-model-driven-apps)<br/><br/>
+> Lisätietoja mallipohjaisen sovelluksen lomakkeessa käytettävän liiketoimintasäännön luomisesta on kohdassa [Liiketoimintasääntöjen luominen käyttämään logiikkaa mallipohjaisen sovelluksen lomakkeessa](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+
 Seuraavat ovat mahdollisia liiketoimintasääntöjen avulla, kun ehdot ja toiminnot yhdistetään:  
   
 * Määritä kentän arvot  

@@ -27,9 +27,8 @@ Malliin perustuvan sovelluslomakkeen pikanäkymän ohjausobjekti näyttää loma
 > ![Yhteyshenkilön pikalomake tililomakkeessa](media/quick-view-form-contact.png "Yhteyshenkilön pikalomake tililomakkeessa")  
 
 Voit käyttää **Pikanäkymä-ohjausobjektin ominaisuudet** -kohtaa PowerApps-sivustossa. 
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
-     ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti. Valitse **Lomakkeet**-välilehti. 
 

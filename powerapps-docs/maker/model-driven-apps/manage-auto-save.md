@@ -57,9 +57,7 @@ Automaattisen tallentamisen avulla sovelluksen käyttäjät voivat keskittyä ty
 > [!NOTE]
 >  Automaattinen tallentaminen poistetaan käytöstä lomakkeessa, mutta tiedot tallennetaan yhä, kun käyttäjä valitsee oikeassa alakulmassa olevan ![Automaattinen tallennus](media/auto-save-icon.png "Automaattinen tallennus") -painikkeen. Jos käyttäjä yrittää siirtyä pois lomakkeesta tai sulkea lomakkeen tietojen muuttamisen jälkeen, hän saa kehotuksen tallentaa muutokset ennen lomakkeesta poistumista tai sen sulkemista.  
   
-1.  Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-    ![Mallipohjainen suunnittelutila](../model-driven-apps/media/model-driven-switch.png)
+1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 
 2.  Laajenna **Tiedot**, valitse **Entiteetit** ja valitse sitten haluamasi entiteetti. Valitse **Lomakkeet**-välilehti.  
   

@@ -33,9 +33,7 @@ Mallin perustuvat sovellukset jaetaan ratkaisun osana. Kun mallipohjainen sovell
 ## <a name="add-an-app-to-a-solution"></a>Sovelluksen lisääminen ratkaisuun
 Luo ratkaisu, jotta voit jakaa sovelluksen. Tällöin sovellus voidaan pakata vientiä varten.
 
-1. Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
 2. Valitse **Ratkaisut** ja valitse sitten **Uusi ratkaisu**.
 3. Tee kentät valmiiksi **Uusi ratkaisu** -sivulla ja valitse **Tallenna**. Lisätietoja: [Ratkaisun luominen](../common-data-service/create-solution.md)
@@ -63,9 +61,7 @@ Voit jakaa sovelluksen niin, että se voidaan tuoda toiseen ympäristöön tai o
 ## <a name="import-a-solution"></a>Ratkaisun tuominen  
 Kun saat ratkaisun zip-tiedoston, joka sisältää sovelluksen, jonka haluat tuoda, avaa Ratkaisujen osat -sivu ja tuo ratkaisu. Kun ratkaisu on tuotu onnistuneesti, sovellus on käytettävissä ympäristössä.
 
-1. Valitse [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Mallipohjainen** (siirtymisruudun alaosassa vasemmalla).  
-
-    ![Mallipohjainen suunnittelutila](media/model-driven-switch.png)
+1. Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
 2. Valitse **Ratkaisut** ja valitse työkaluriviltä **Tuo**.
 3. Etsi tuotava tiedosto selaamalla ja valitse **Seuraava**.
