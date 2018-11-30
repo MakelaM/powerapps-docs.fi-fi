@@ -50,7 +50,7 @@ Jos haluat muuntaa numeroita, tutustu **[Value](function-value.md)**-funktioon.
 ## <a name="syntax"></a>Syntaksi
 **DateValue**( *String* [, *Language* ])<br>**DateTimeValue**( *String* [, *Language* ])<br>**TimeValue**( *String* [, *Language* ])
 
-* *String* – pakollinen.  Tekstimerkkijono, joka sisältää päivämäärän, kellonajan tai niiden yhdistelmän.
+* *String* – Pakollinen.  Tekstimerkkijono, joka sisältää päivämäärän, kellonajan tai niiden yhdistelmän.
 * *Language* – valinnainen.  Kielimerkkijono, vastaa **[Language](function-language.md)**-funktion kahta ensimmäistä merkkiä.  Jos kieltä ei syötetä, käytetään nykyisen käyttäjän asiakkaan kieltä.  
 
 ## <a name="examples"></a>Esimerkkejä
