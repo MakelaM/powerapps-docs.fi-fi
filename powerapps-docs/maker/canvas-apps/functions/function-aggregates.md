@@ -48,14 +48,14 @@ Nämä funktiot toimivat vain numeroarvojen kanssa. Muut arvotyypit, kuten merkk
 **Average**-, **Max**-, **Min**- ja **Sum**-funktiot voidaan delegoida, kun niitä käytetään [näiden funktioiden delegointia tukevan tietolähteen kanssa](../delegation-list.md).  **StdevP**- ja **VarP**-funktioita ei kuitenkaan voi delegoida minkään tietolähteen osalta.  Jos delegointia ei tueta, vain tietojen ensimmäinen osa noudetaan ja sen jälkeen funktio otetaan käyttöön paikallisesti.  Tulos ei ehkä vastaa koko tarinaa.  Muokkaamisen aikana näyttöön tulee delegointivaroitus, joka muistuttaa tästä rajoituksesta ja ehdottaa mahdollisia delegoitavia vaihtoehtoja. Lisätietoja on kohdassa [Delegoinnin yleiskatsaus](../delegation-overview.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Average**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**Max**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**Max**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**Sum**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**StdevP**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )<br>**VarP**( *NumeroKaava1*, [ *NumeroKaava2*, ... ] )
+**Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**StdevP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**VarP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
 
-* *NumeroKaava(t)* – Pakollinen.  Käsiteltävät numeeriset arvot.
+* *NumericalFormula(s)* – Pakollinen.  Käsiteltävät numeeriset arvot.
 
-**Average**( *Taulukko*, *NumeroKaava* )<br>**Max**( *Taulukko*, *NumeroKaava* )<br>**Min**( *Taulukko*, *NumeroKaava* )<br>**Sum**( *Taulukko*, *NumeroKaava* )<br>**StdevP**( *Taulukko*, *NumeroKaava* )<br>**VarP**( *Taulukko*, *NumeroKaava* )
+**Average**( *Table*, *NumericalFormula* )<br>**Max**( *Table*, *NumericalFormula* )<br>**Min**( *Table*, *NumericalFormula* )<br>**Sum**( *Table*, *NumericalFormula* )<br>**StdevP**( *Table*, *NumericalFormula* )<br>**VarP**( *Table*, *NumericalFormula* )
 
-* *Taulukko* – Pakollinen.  Käsiteltävä taulukko.
-* *NumeroKaava* – Pakollinen. Kullekin tietueelle laskettava kaava. Tämän kaavan tulosta käytetään koostamiseen. Voit käyttää taulukon sarakkeita kaavassa.
+* *Table* – Pakollinen.  Käsiteltävä taulukko.
+* *NumericalFormula* – Pakollinen. Kullekin tietueelle laskettava kaava. Tämän kaavan tulosta käytetään koostamiseen. Voit käyttää taulukon sarakkeita kaavassa.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="step-by-step"></a>Vaihe vaiheelta

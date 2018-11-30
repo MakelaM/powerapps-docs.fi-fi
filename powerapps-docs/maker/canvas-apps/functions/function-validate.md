@@ -1,6 +1,6 @@
 ---
-title: Vahvista-funktio | Microsoft Docs
-description: Vahvista-funktion viitetietoja, kuten syntaksi ja esimerkit, PowerAppsissa
+title: Validate-funktio | Microsoft Docs
+description: Validate-funktion viitetietoja, kuten syntaksi ja esimerkit, PowerAppsissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -20,8 +20,8 @@ ms.contentlocale: fi-FI
 ms.lasthandoff: 10/12/2018
 ms.locfileid: "49307834"
 ---
-# <a name="validate-function-in-powerapps"></a>Vahvista-funktio PowerAppsissa
-**Vahvista**-funktio tarkistaa, onko yksittäisen [sarakkeen](../working-with-tables.md#columns) tai täydellisen [tietueen](../working-with-tables.md#records) arvo kelvollinen [tietolähteelle](../working-with-data-sources.md).  
+# <a name="validate-function-in-powerapps"></a>Validate-funktio PowerAppsissa
+**Validate**-funktio tarkistaa, onko yksittäisen [sarakkeen](../working-with-tables.md#columns) tai täydellisen [tietueen](../working-with-tables.md#records) arvo kelvollinen [tietolähteelle](../working-with-data-sources.md).  
 
 ## <a name="description"></a>Kuvaus
 Ennen kuin käyttäjä lähettää tietojen muutoksen, voit antaa välitöntä palautetta kyseisen lähetyksen kelpoisuudesta, mikä parantaa käyttökokemusta.
@@ -33,24 +33,24 @@ Tietolähteet voivat antaa tietoa siitä, mitä kelvolliset arvot tietueessa ova
 * miten suuri ja pieni numero voi olla
 * miten aikainen ja myöhäinen päivämäärä voi olla.
 
-**Vahvista**-funktio käyttää näitä tietoja määrittämään, onko arvo kelvollinen, ja palauttamaan asianmukaisen virhesanoman, jos se ei ole. **[DataSourceInfo](function-datasourceinfo.md)**-funktiolla voit tarkastella samoja tietoja, joita **Vahvista** käyttää.
+**Validate**-funktio käyttää näitä tietoja määrittämään, onko arvo kelvollinen, ja palauttamaan asianmukaisen virhesanoman, jos se ei ole. **[DataSourceInfo](function-datasourceinfo.md)**-funktiolla voit tarkastella samoja tietoja, joita **Validate** käyttää.
 
-Tietolähteet vaihtelevat sen mukaan, kuinka paljon vahvistustietoja ne antavat tai eivät ehkä anna lainkaan. **Vahvista** voi vahvistaa vain näihin tietoihin perustuvia arvoja. Vaikka **Vahvista** ei löytäisi ongelmia, tietojen muutoksen soveltaminen saattaa silti epäonnistua. Voit hankkia tietoja virheestä **[Virheet](function-errors.md)**-funktiolla.
+Tietolähteet vaihtelevat sen mukaan, kuinka paljon vahvistustietoja ne antavat tai eivät ehkä anna lainkaan. **Validate** voi vahvistaa vain näihin tietoihin perustuvia arvoja. Vaikka **Validate** ei löytäisi ongelmia, tietojen muutoksen soveltaminen saattaa silti epäonnistua. Voit hankkia tietoja virheestä **[Errors](function-errors.md)**-funktiolla.
 
-Jos **Vahvista** löytää ongelman, funktio palauttaa virhesanoman, jonka voit näyttää sovelluksen käyttäjälle. Jos kaikki arvot ovat kelvollisia, **Vahvista** palauttaa [tyhjän](function-isblank-isempty.md) arvon. Kun käsittelet [kokoelmaa](../working-with-data-sources.md#collections), jossa ei ole vahvistustietoja, arvot ovat aina kelvollisia.
+Jos **Validate** löytää ongelman, funktio palauttaa virhesanoman, jonka voit näyttää sovelluksen käyttäjälle. Jos kaikki arvot ovat kelvollisia, **Validate** palauttaa [tyhjän](function-isblank-isempty.md) arvon. Kun käsittelet [kokoelmaa](../working-with-data-sources.md#collections), jossa ei ole vahvistustietoja, arvot ovat aina kelvollisia.
 
 ## <a name="syntax"></a>Syntaksi
 **Validate**( *DataSource*, *Column*, *Value* )
 
-* *Tietolähde* – Pakollinen. Tietolähde, jonka kanssa vahvistetaan.
-* *Sarake* – Pakollinen. Vahvistettava sarake.
-* *Arvo* – Pakollinen. Valitun sarakkeen vahvistettava arvo.
+* *DataSource* – Pakollinen. Tietolähde, jonka kanssa vahvistetaan.
+* *Column* – Pakollinen. Vahvistettava sarake.
+* *Value* – pakollinen. Valitun sarakkeen vahvistettava arvo.
 
 **Validate**( *DataSource*, *OriginalRecord*, *Updates* )
 
-* *Tietolähde* – Pakollinen. Tietolähde, jonka kanssa vahvistetaan.
+* *DataSource* – Pakollinen. Tietolähde, jonka kanssa vahvistetaan.
 * *OriginalRecord* – Pakollinen.  Tietue, jonka mukaan päivityksiä vahvistetaan.
-* *Päivitykset* – Pakollinen.  Alkuperäiseen tietueeseen sovellettavat muutokset.
+* *Updates* – Pakollinen.  Alkuperäiseen tietueeseen sovellettavat muutokset.
 
 ## <a name="examples"></a>Esimerkkejä
 Näissä esimerkeissä arvojen **Pisteet**-tietolähteen **Prosenttiosuus**-sarakkeessa on oltava alueella 0–100 (nämä luvut mukaan lukien). Jos tiedot läpäisevät vahvistuksen, funktio palauttaa *tyhjä*n arvon. Muussa tapauksessa funktio palauttaa virhesanoman.
@@ -59,13 +59,13 @@ Näissä esimerkeissä arvojen **Pisteet**-tietolähteen **Prosenttiosuus**-sara
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Validate( Scores, Percentage, 10 )** |Tarkistaa, onko **10** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |*tyhjä* |
-| **Validate( Scores, Percentage, 120 )** |Tarkistaa, onko **120** kelvollinen arvo **Prosenttiosuus**-sarakkeelle **Pisteet**-tietolähteessä. |”Arvojen on oltava alueella 0–100.” |
+| **Validate( Scores, Percentage, 10 )** |Tarkistaa, onko **10** kelvollinen arvo **Percentage**-sarakkeelle **Scores**-tietolähteessä. |*tyhjä* |
+| **Validate( Scores, Percentage, 120 )** |Tarkistaa, onko **120** kelvollinen arvo **Percentage**-sarakkeelle **Scores**-tietolähteessä. |”Arvojen on oltava alueella 0–100.” |
 
 ### <a name="validate-with-a-complete-record"></a>Vahvista täydellisen tietueen kanssa
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Pisteet**-tietolähteen kannalta. Tässä esimerkissä **Prosenttiosuus**-sarakkeen arvo on **10**. |*tyhjä* |
-| **Validate( Scores, EditRecord, Gallery.Updates )** | Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Pisteet**-tietolähteen kannalta. Tässä esimerkissä **Prosenttiosuus**-sarakkeen arvo on **120**. |”Arvojen on oltava alueella 0–100.” |
+| **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Scores**-tietolähteen kannalta. Tässä esimerkissä **Percentage**-sarakkeen arvo on **10**. |*tyhjä* |
+| **Validate( Scores, EditRecord, Gallery.Updates )** | Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Scores**-tietolähteen kannalta. Tässä esimerkissä **Percentage**-sarakkeen arvo on **120**. |”Arvojen on oltava alueella 0–100.” |
 

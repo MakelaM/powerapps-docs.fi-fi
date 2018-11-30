@@ -41,9 +41,9 @@ Sarakeviittausten on viitattava suoraan tietolähteeseen. Jos tietolähde on esi
 Tällä hetkellä hakusarakkeita voi käyttää vain SharePointin ja Common Data Service for Apps -palvelun kanssa.
 
 ## <a name="syntax"></a>Syntaksi
-**Choices**( *sarakeviittaus* )
+**Choices**( *column-reference* )
 
-* *sarakeviittaus* – pakollinen.  Tietolähteen hakusarake. Älä kirjoita sarakkeen nimeä lainausmerkkeihin. Viittauksen on viitattava suoraan tietolähteen sarakkeeseen; se ei voi kulkea funktion tai ohjausobjektin kautta.
+* *column-reference* – Pakollinen.  Tietolähteen hakusarake. Älä kirjoita sarakkeen nimeä lainausmerkkeihin. Viittauksen on viitattava suoraan tietolähteen sarakkeeseen; se ei voi kulkea funktion tai ohjausobjektin kautta.
 
 ## <a name="examples"></a>Esimerkkejä
 
@@ -90,7 +90,7 @@ Tällä hetkellä hakusarakkeita voi käyttää vain SharePointin ja Common Data
 
      ![Kaavionäyttö ja lomakeohjausobjekti. **Yhdistelmäruutu**-ohjausobjekti **Ensisijainen yhteyshenkilö** -kortissa on valittuna, ja Items-ominaisuus kaavassa Choices( Accounts.'Primary Contact' ) on näkyvissä](media/function-choices/accounts-primary-contact.png)
 
-9. Valitse **Aloitus**-välilehdessä **Uusi näyttö** ja valitse sitten **Tyhjä**.
+9. Valitse **Aloitus**-välilehdessä **Uusi näyttö** ja valitse sitten **Blank**.
 
 10. Valitse **Lisää**-välilehdestä **Arvotaulukko**.
 

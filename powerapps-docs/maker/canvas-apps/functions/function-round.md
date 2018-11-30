@@ -35,6 +35,6 @@ Jos välität yksittäisen luvun, palautusarvo on tämän luvun pyöristetty ver
 ## <a name="syntax"></a>Syntaksi
 **Round**( *numero*, *Desimaalipaikat* )<br>**RoundDown**( *numero*, *Desimaalipaikat* )<br>**RoundUp**( *numero*, *Desimaalipaikat* )
 
-* *Numero* – pakollinen. Pyöristettävä luku.
+* *Number* – pakollinen. Pyöristettävä luku.
 * *Desimaalipaikat* – pakollinen.  Desimaalipilkun oikealla puolella olevien paikkojen määrä, joiden tarkkuudella luku pyöristetään.  Käytä arvoa 0, jos haluat pyöristää kokonaislukuun.  
 

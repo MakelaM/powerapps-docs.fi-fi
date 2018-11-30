@@ -27,9 +27,9 @@ Muuntaa merkkikoodin merkkijonoksi.
 **Char**-funktio palauttaa merkkijonon, joka sisältää haluamasi ASCII-merkin käyttöympäristössäsi.
 
 ## <a name="syntax"></a>Syntaksi
-**Char**( *merkkikoodi* )
+**Char**( *CharacterCode* )
 
-* *Merkkikoodi* – pakollinen. ASCII-merkkikoodi, joka muunnetaan.
+* *CharacterCode* – pakollinen. ASCII-merkkikoodi, joka muunnetaan.
 
 ## <a name="examples"></a>Esimerkkejä
 

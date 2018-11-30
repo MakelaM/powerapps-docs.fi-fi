@@ -31,17 +31,17 @@ Lataa tai avaa verkkosivun tai sovelluksen parametreilla.
 **Param**-funktio noutaa sovellukselle avaamisen yhteydessä välitetyn parametrin.  Jos nimettyä parametria ei välitetty, **Param** palauttaa *tyhjän*.
 
 ## <a name="syntax"></a>Syntaksi
-**Download**( *Osoite* )
+**Download**( *Address* )
 
-* *Osoite* – Pakollinen.  Ladattavan verkkoresurssin osoite.
+* *Address* – Pakollinen.  Ladattavan verkkoresurssin osoite.
 
-**Launch**( *Osoite* [, *ParametrinNimi1*, *ParametrinArvo1*, ... ] )
+**Launch**( *Address* [, *ParameterName1*, *ParameterValue1*, ... ] )
 
-* *Osoite* – Pakollinen.  Avattavan verkkosivun osoite tai sovelluksen tunnus.
-* *ParametrinNimet* – Valinnaisia.  Parametrin nimi.
-* *ParametrinArvot* – Valinnaisia.  Vastaavat parametriarvot, jotka välitetään sovellukselle tai verkkosivulle.
+* *Address* – Pakollinen.  Avattavan verkkosivun osoite tai sovelluksen tunnus.
+* *ParameterName(s)* – Valinnaisia.  Parametrin nimi.
+* *ParameterValue(s)* – Valinnaisia.  Vastaavat parametriarvot, jotka välitetään sovellukselle tai verkkosivulle.
 
-**Param**( *ParametrinNimi* )
+**Param**( *ParameterName* )
 
-* *ParametrinNimi* – Pakollinen.  Sovellukselle välitettävän parametrin nimi.
+* *ParameterName* – Pakollinen.  Sovellukselle välitettävän parametrin nimi.
 

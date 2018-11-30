@@ -24,7 +24,7 @@ ms.locfileid: "42864612"
 Näyttää ilmoitussanoman käyttäjälle.
 
 ## <a name="description"></a>Kuvaus
-**Ilmoita**-funktio näyttää käyttäjälle ilmoitussanoman näytön yläreunassa parhaillaan näytettävän sisällön päällä.  
+**Notify**-funktio näyttää käyttäjälle ilmoitussanoman näytön yläreunassa parhaillaan näytettävän sisällön päällä.  
 
 Sopivaa väriä ja kuvaketta käytetään sanoman tyypin mukaan.   Funktion toinen argumentti määrittää tyypin:
 

@@ -29,8 +29,8 @@ Palauttaa jakolaskun jakojäännöksen.
 Tuloksen merkki on sama kuin jakajalla.
 
 ## <a name="syntax"></a>Syntaksi
-**Mod**( *Luku*, *Jakaja* )
+**Mod**( *Number*, *Divisor* )
 
-* *Luku* – Pakollinen. Jaettava luku.
-* *Jakaja* – Pakollinen.  Luku, jolla jaetaan.
+* *Number* – pakollinen. Jaettava luku.
+* *Divisor* – Pakollinen.  Luku, jolla jaetaan.
 

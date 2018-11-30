@@ -138,13 +138,13 @@ Oletusmuotoisesti **Text**-funktio käyttää sitä kieltä, jota sovelluksessa 
 ## <a name="syntax"></a>Syntaksi
 **Text**( *Number*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
 
-* *Number* – Pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
+* *Number* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *DateTimeFormat* – Pakollinen.  **DateTimeFormat** – Luetteloinnin osa.
 * *ResultLanguageTag* – Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
 
 **Text**( *Number*, *CustomFormat* [, *ResultLanguageTag* ] )
 
-* *Number* – Pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
+* *Number* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *CustomFormat* – pakollinen. Yksi tai useampi paikkamerkki lainausmerkkien sisällä.
 * *ResultLanguageTag* – Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
 
@@ -156,7 +156,7 @@ Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinn
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Muotoilee luvun yhden desimaalin tarkkuudella. |"1234.6" |
-| **Teksti (&nbsp;8.9,&nbsp;”#. 000”&nbsp;)** |Lisää tarvittaessa nollat numeron desimaaliosan loppuun. |"8.900" |
+| **Text(&nbsp;8.9,&nbsp;"#.000"&nbsp;)** |Lisää tarvittaessa nollat numeron desimaaliosan loppuun. |"8.900" |
 | **Text(&nbsp;0.631,&nbsp;"0.#"&nbsp;)** |Lisää tarvittaessa kokonaislukuun nollan. |"0.6" |
 | **Text(&nbsp;12,&nbsp;"#.0#"&nbsp;)**<br>**Text(&nbsp;1234.568,&nbsp;"#.0#"&nbsp;)** |Lisää numeroon nollan yhden desimaalin tarkkuudella ja lisää toisen desimaalin, jos se syötetään. |"12.0"<br>"1234.57" |
 | **Text(&nbsp;12000,&nbsp;"$ #,###"&nbsp;)**<br>**Text(&nbsp;1200000,&nbsp;"$&nbsp;#,###"&nbsp;)** |Sijoittaa lukuun kolmen numeron välein tuhaterottimen ja lisää valuuttasymbolin. |"$&nbsp;12,000"<br>"$&nbsp;1,200,000" |

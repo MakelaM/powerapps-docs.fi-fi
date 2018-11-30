@@ -39,18 +39,18 @@ Jos välität yhden numeron, paluuarvo on yksi tulos, joka perustuu kutsuttuun f
 Jos argumentti tuottaa määrittämättömän arvon, tulos on *tyhjä*.  Näin voi tapahtua esimerkiksi, jos yritetään saada negatiivisen numeron neliöjuuri tai logaritmi.
 
 ## <a name="syntax"></a>Syntaksi
-**Abs**( *Numero* )<br>**Exp**( *Numero* )<br>**Ln**( *Numero* )<br>**Sqrt**( *Numero* )
+**Abs**( *Number* )<br>**Exp**( *Number* )<br>**Ln**( *Number* )<br>**Sqrt**( *Number* )
 
-* *Number* – Pakollinen. Numero, jolle toiminto suoritetaan.
+* *Number* – pakollinen. Numero, jolle toiminto suoritetaan.
 
-**Power**( *Kantaluku*, *Eksponentti* )
+**Power**( *Base*, *Exponent* )
 
-* *Kantaluku* – Pakollinen. Kantaluku, joka korotetaan potenssiin.
-* *Eksponentti* – Pakollinen. Eksponentti, johon kantaluku korotetaan.
+* *Base* – Pakollinen. Kantaluku, joka korotetaan potenssiin.
+* *Exponent* – Pakollinen. Eksponentti, johon kantaluku korotetaan.
 
-**Abs**( *YksisarakkeinenTaulukko* )<br>**Exp**( *YksisarakkeinenTaulukko* )<br>**Ln**( *YksisarakkeinenTaulukko* )<br>**Sqrt**( *YksisarakkeinenTaulukko* )
+**Abs**( *SingleColumnTable* )<br>**Exp**( *SingleColumnTable* )<br>**Ln**( *SingleColumnTable* )<br>**Sqrt**( *SingleColumnTable* )
 
-* *Yksisarakkeinen taulukko* – Pakollinen. Yhden sarakkeen numeroita sisältävä taulukko, jolle toiminto suoritetaan.
+* *SingleColumnTable* – Pakollinen. Yhden sarakkeen numeroita sisältävä taulukko, jolle toiminto suoritetaan.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-number"></a>Yksittäinen luku

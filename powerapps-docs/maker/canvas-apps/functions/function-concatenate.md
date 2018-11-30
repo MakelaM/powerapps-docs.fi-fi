@@ -24,23 +24,23 @@ ms.locfileid: "42865114"
 Yhdistää yksittäisiä tekstimerkkijonoja ja merkkijonoja [taulukoiksi](../working-with-tables.md).
 
 ## <a name="description"></a>Kuvaus
-**Concat**-funktio yhdistää kaikkiin taulukon [tietueisiin](../working-with-tables.md#records) käytetyn kaavan tulokset. Tuloksena on yksi merkkijono. Käytä tätä funktiota taulukon merkkijonojen laskemiseen yhteen aivan samalla tavalla kuin **[Summa](function-aggregates.md)**-funktiota luvuille.
+**Concat**-funktio yhdistää kaikkiin taulukon [tietueisiin](../working-with-tables.md#records) käytetyn kaavan tulokset. Tuloksena on yksi merkkijono. Käytä tätä funktiota taulukon merkkijonojen laskemiseen yhteen aivan samalla tavalla kuin **[Sum](function-aggregates.md)**-funktiota luvuille.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Käytä **[Jaa osiin](function-split.md)** -funktiota merkkijonon jakamiseen osamerkkijonojen taulukoksi.
+Käytä **[Split](function-split.md)**-funktiota merkkijonon jakamiseen osamerkkijonojen taulukoksi.
 
 **Concatenate**-funktio yhdistää kokoelman yksittäisiä merkkijonoja ja yksisarakkeisen merkkijonotaulukon. Yksittäisten merkkijonojen kanssa käytettynä tämä funktio vastaa **&**[-operaattorin käyttöä](operators.md). Voit käyttää **[ShowColumns](function-table-shaping.md)**-funktion sisältävää kaavaa yksisarakkeisen taulukon luomiseen useita sarakkeita sisältävästä taulukosta.
 
 ## <a name="syntax"></a>Syntaksi
 **Concat**( *Table*, *Formula* )
 
-* *Taulukko* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
-* *Kaava* – Pakollinen.  Kaikkiin taulukon tietueisiin käytettävä kaava.
+* *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
+* *Formula* – Pakollinen.  Kaikkiin taulukon tietueisiin käytettävä kaava.
 
 **Concatenate**( *String1* [, *String2*, ...] )
 
-* *Merkkijono(t)* – Pakollinen.  Yksittäisten merkkijonojen tai yksisarakkeisen taulukon merkkijonojen yhdistelmä.
+* *String(s)* – Pakollinen.  Yksittäisten merkkijonojen tai yksisarakkeisen taulukon merkkijonojen yhdistelmä.
 
 ## <a name="examples"></a>Esimerkkejä
 #### <a name="concat"></a>Concat

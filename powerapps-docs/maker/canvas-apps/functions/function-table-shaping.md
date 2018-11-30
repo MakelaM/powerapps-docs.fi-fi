@@ -64,7 +64,7 @@ Kaikkien näiden funktioiden tuloksena on uusi taulukko, johon on tehty muunnos.
 
 **RenameColumns**( *Table*, *OldColumneName1*, *NewColumnName1* [, *OldColumnName2*, *NewColumnName2*, ... ] )
 
-* *Taulukko* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
+* *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
 * *OldColumnName* – Pakollinen. Alkuperäisen taulukon uudelleennimettävän sarakkeen nimi. Tämä elementti näkyy ensimmäisenä argumenttiparissa (tai ensimmäisenä kussakin argumenttiparissa, jos kaava sisältää useamman kuin yhden parin). Tämän nimen on oltava merkkijono (esimerkiksi **"Nimi"** lainausmerkeissä).
 * *NewColumnName* – Pakollinen. Korvaava nimi. Tämä elementti näkyy viimeisenä argumenttiparissa (tai viimeisenä kussakin argumenttiparissa, jos kaava sisältää useamman kuin yhden parin). Sinun on määritettävä merkkijono (esimerkiksi **"Asiakkaan nimi"** lainausmerkeissä) tähän argumenttiin.
 

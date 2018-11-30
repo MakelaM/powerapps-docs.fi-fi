@@ -37,14 +37,14 @@ Palauttaa taulukon ensimmäiset tai viimeiset [tietueet](../working-with-tables.
 [!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## <a name="syntax"></a>Syntaksi
-**First**( *Taulukko* )<br>**Last**( *Taulukko* )
+**First**( *Table* )<br>**Last**( *Table* )
 
-* *Taulukko* – Pakollinen. Taulukko, jolle toiminto suoritetaan.
+* *Table* – Pakollinen. Taulukko, jolle toiminto suoritetaan.
 
-**FirstN**( *Taulukko* [, *TietueidenMäärä* ] )<br>**LastN**( *Taulukko* [, *TietueidenMäärä* ] )
+**FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
 
-* *Taulukko* – pakollinen. Taulukko, jolle toiminto suoritetaan.
-* *TietueidenMäärä* – Valinnainen.  Palautettavien tietueiden määrä. Jos et määritä tätä argumenttia, funktio palauttaa yhden tietueen.
+* *Table* – Pakollinen. Taulukko, jolle toiminto suoritetaan.
+* *NumberOfRecords* – Valinnainen.  Palautettavien tietueiden määrä. Jos et määritä tätä argumenttia, funktio palauttaa yhden tietueen.
 
 ## <a name="examples"></a>Esimerkkejä
 Tämä taulukko palauttaa ensimmäisen tietueen taulukosta nimeltä **Työntekijät**:<br>

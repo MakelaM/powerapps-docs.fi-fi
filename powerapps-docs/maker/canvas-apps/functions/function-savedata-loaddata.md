@@ -33,10 +33,10 @@ Tallentaa ja lataa uudelleen [kokoelman](../working-with-data-sources.md#collect
 Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muilta käyttäjiltä ja muilta sovelluksilta.  
 
 ## <a name="syntax"></a>Syntaksi
-**SaveData**( *Kokoelma*, *Nimi* )<br>**LoadData**( *Kokoelma*, *Nimi* [, *IgnoreNonexistentFile* ])
+**SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
 
-* *Kokoelma* – Pakollinen.  Tallennettava tai ladattava kokoelma.
-* *Nimi* – Pakollinen.  Tallennustilan nimi. Käytä samaa nimeä saman tietojoukon tallentamiseen ja lataamiseen. Nimi-tilaa ei jaeta muiden sovellusten tai käyttäjien kanssa.
+* *Collection* – Pakollinen.  Tallennettava tai ladattava kokoelma.
+* *Name* – Pakollinen.  Tallennustilan nimi. Käytä samaa nimeä saman tietojoukon tallentamiseen ja lataamiseen. Nimi-tilaa ei jaeta muiden sovellusten tai käyttäjien kanssa.
 * *IgnoreNonexistentFile* – Valinnainen. Totuusarvo (**true**/**false**), joka ilmaisee, näyttääkö vai ohittaako **LoadData**-funktio virheitä, kun se ei löydä vastaavaa tiedostoa. Jos määrität **false**, virheet näytetään. Jos määrität **true**, virheet ohitetaan, mikä on hyödyllistä offline-tilassa tapahtuvia tilanteita varten. **SaveData** voi luoda tiedoston, jos laite on offline-tilassa (toisin sanoen, jos **Connection.Connected**-tila on **false**).
 
 ## <a name="examples"></a>Esimerkkejä

@@ -44,12 +44,12 @@ Kaikki nämä funktiot palauttavat luvun.
 
 **CountIf**( *Table*, *LogicalFormula* )
 
-* *Taulukko* – Pakollinen.  Laskettava tietuetaulukko.
+* *Table* – Pakollinen.  Laskettava tietuetaulukko.
 * *LogicalFormula* – Pakollinen.  Kullekin taulukon tietueelle arvioitava kaava.  Tietueet, jotka palauttavat arvon **tosi** tälle kaavalle, lasketaan.  Kaava voi viitata taulukon sarakkeisiin.
 
 **CountRows**( *Taulukko* )
 
-* *Taulukko* – Pakollinen.  Laskettava tietuetaulukko.
+* *Table* – Pakollinen.  Laskettava tietuetaulukko.
 
 ## <a name="example"></a>Esimerkki
 1. Tuo tai luo [kokoelma](../working-with-data-sources.md#collections), jonka nimi on **Inventory** (katso kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäinen alitoimintosarja).

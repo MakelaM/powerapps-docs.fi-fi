@@ -1,6 +1,6 @@
 ---
-title: Valitsin-funktio | Microsoft Docs
-description: PowerAppsin Valitsin-funktion viitetiedot, mukaan lukien syntaksi
+title: Select-funktio | Microsoft Docs
+description: PowerAppsin Select-funktion viitetiedot, mukaan lukien syntaksi
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -20,28 +20,28 @@ ms.contentlocale: fi-FI
 ms.lasthandoff: 08/24/2018
 ms.locfileid: "42850721"
 ---
-# <a name="select-function-in-powerapps"></a>PowerAppsin Valitsin-funktio
+# <a name="select-function-in-powerapps"></a>PowerAppsin Select-funktio
 Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**-kaavan laskennan.
 
 ## <a name="description"></a>Kuvaus
-**Valitsin** -funktio simuloi ohjausobjektin valittua toimintoa aivan kuin käyttäjä olisi klikannut tai napauttanut ohjausobjektia. Tämän vuoksi kohdeohjausobjektin **OnSelect**-kaava lasketaan.
+**Select**-funktio simuloi ohjausobjektin valittua toimintoa aivan kuin käyttäjä olisi klikannut tai napauttanut ohjausobjektia. Tämän vuoksi kohdeohjausobjektin **OnSelect**-kaava lasketaan.
 
-Käytä **Valitsinta** levittääksesi valittu toiminto pääohjausobjektiin. Tämän tyyppinen välitys on oletusarvon mukaista esimerkiksi valikoimissa. Oletuksena kaikkien **[Valikoima](../controls/control-gallery.md)** -ohjausobjektien **OnSelect**-ominaisuus arvoksi on määritetty **Select( Pääkohde )**. Näin voit määrittää valikoima-ohjausobjektin **OnSelect**-ominaisuuden arvon itse, ja kyseinen kaava lasketaan riippumatta siitä, missä kohtaa valikoimaa käyttäjä on klikannut tai napauttanut.
+Käytä **Select**-funktiota levittääksesi valittu toiminto pääohjausobjektiin. Tämän tyyppinen välitys on oletusarvon mukaista esimerkiksi valikoimissa. Oletuksena kaikkien **[Valikoima](../controls/control-gallery.md)** -ohjausobjektien **OnSelect**-ominaisuus arvoksi on määritetty **Select( Parent )**. Näin voit määrittää valikoima-ohjausobjektin **OnSelect**-ominaisuuden arvon itse, ja kyseinen kaava lasketaan riippumatta siitä, missä kohtaa valikoimaa käyttäjä on klikannut tai napauttanut.
 
 Jos haluat yhden tai useamman valikoima-ohjausobjektin suorittavan eri toimintoja itse valikoimasta, aseta niiden **OnSelect** -ominaisuuden arvoksi muu kuin oletusarvo. Voit jättää useimpien valikoima-ohjausobjektien **OnSelect**-ominaisuuden arvoksi oletusarvon, jos haluat niiden suorittavan saman toiminnon kuin itse valikoima.
 
-**Valitsin** laittaa **OnSelect**-kohteen jonoon myöhempää käsittelyä varten, joka voi tapahtua sen jälkeen, kun nykyisen kaavan laskeminen on lopetettu. **Valitsin** ei aiheuta **OnSelect**-kohteen välitöntä laskemista, eikä **Valitsin** myöskään odota, että **OnSelect** lopettaa laskemisen.
+**Select** laittaa **OnSelect**-kohteen jonoon myöhempää käsittelyä varten, joka voi tapahtua sen jälkeen, kun nykyisen kaavan laskeminen on lopetettu. **Select** ei aiheuta **OnSelect**-kohteen välitöntä laskemista, eikä **Select** myöskään odota, että **OnSelect** lopettaa laskemisen.
 
-**Valitsin** ei voi ylittää säilöohjausobjektin, kuten valikoiman tai muodon, rajoja. Säilöohjausobjektin ohjausobjektit voivat olla vain **Valitsin**-funktion aihe kaavoissa, jotka ovat saman säilöohjausobjektin sisällä. Et voi käyttää **Valitsinta** kaikissa näytöissä.
+**Select** ei voi ylittää säilöohjausobjektin, kuten valikoiman tai muodon, rajoja. Säilöohjausobjektin ohjausobjektit voivat olla vain **Select**-funktion aihe kaavoissa, jotka ovat saman säilöohjausobjektin sisällä. Et voi käyttää **Select**-funktiota kaikissa näytöissä.
 
-Voit käyttää **Valitsinta** vain ohjausobjekteissa, joissa on **OnSelect**-ominaisuus.
+Voit käyttää **Select**-funktiota vain ohjausobjekteissa, joissa on **OnSelect**-ominaisuus.
 
-Voit käyttää **Valitsinta** vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
+Voit käyttää **Select**-funktiota vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
 
 Ohjausobjekti ei voi **Valita** itseään suoraan tai epäsuorasti muiden ohjausobjektien kautta.
 
 ## <a name="syntax"></a>Syntaksi
-**Valitse**( *ohjausobjekti* )
+**Select**( *Control* )
 
 * *Control* – Pakollinen.  Ohjausobjektin valinta käyttäjän puolesta.
 

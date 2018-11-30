@@ -29,7 +29,7 @@ Testaa, onko arvo numeerinen.
 Palautusarvo on totuusarvo **true** tai **false**.
 
 ## <a name="syntax"></a>Syntaksi
-**IsNumeric**( *arvo* )
+**IsNumeric**( *Value* )
 
-* *Arvo* – pakollinen. Testattava arvo.
+* *Value* – pakollinen. Testattava arvo.
 

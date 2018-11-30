@@ -45,22 +45,22 @@ Voit myös koostaa tulokset ryhmittelyn perusteella:
 PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit määrittää taulukon funktion argumenttina ja funktio voi palauttaa taulukon. **GroupBy** ja **Ungroup** eivät muokkaa taulukkoa. Ne kohtelevat taulukkoa argumenttina ja palauttavat eri taulukon. Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
 
 ## <a name="syntax"></a>Syntaksi
-**GroupBy**( *Taulukko*, *SarakkeenNimi1* [, *SarakkeenNimi2*, ... ], *RyhmitteleSarakkeenNimi* )
+**GroupBy**( *Table*, *ColumnName1* [, *ColumnName2*, ... ], *GroupColumnName* )
 
-* *Taulukko* – pakollinen. Ryhmiteltävä taulukko.
-* *SarakkeenNimet* – pakollinen.  Sarakkeiden nimet *Taulukossa*, jonka perusteella tietueet ryhmitellään.  Näistä sarakkeista tulee sarakkeita lopputuloksena saatavaan taulukkoon.
-* *RyhmitteleSarakkeenNimi* – pakollinen.  Sarakenimi, johon tallennetaan tietuetiedot, jotka eivät sisälly kohtaan *SarakkeenNimet*.
+* *Table* – Pakollinen. Ryhmiteltävä taulukko.
+* *ColumnName(s)* – Pakollinen.  Sarakkeiden nimet *Taulukossa*, jonka perusteella tietueet ryhmitellään.  Näistä sarakkeista tulee sarakkeita lopputuloksena saatavaan taulukkoon.
+* *GroupColumnName* – Pakollinen.  Sarakenimi, johon tallennetaan tietuetiedot, jotka eivät sisälly kohtaan *ColumnName(s)*.
   
     > [!NOTE]
-  > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
-**Ungroup**( *Taulukko*, *RyhmitteleSarakkeenNimi* )
+**Ungroup**( *Table*, *GroupColumnName* )
 
-* *Taulukko* – pakollinen. Taulukko, jonka ryhmitys puretaan.
-* *RyhmitteleSarakkeenNimi* – pakollinen. Sarake, joka sisältää tietueen asetustiedot **GroupBy**-funktiolla.
+* *Table* – Pakollinen. Taulukko, jonka ryhmitys puretaan.
+* *GroupColumnName* – Pakollinen. Sarake, joka sisältää tietueen asetustiedot **GroupBy**-funktiolla.
   
     > [!NOTE]
-  > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="create-a-collection"></a>Kokoelman luominen

@@ -35,7 +35,7 @@ Voit [luoda tietueen](../working-with-data-sources.md) yhdistämällä **Default
 ## <a name="syntax"></a>Syntaksi
 **Defaults**( *DataSource* )
 
-* *Tietolähde* – Pakollinen. Tietolähde, jonka oletusarvot haluat.
+* *DataSource* – Pakollinen. Tietolähde, jonka oletusarvot haluat.
 
 ## <a name="examples"></a>Esimerkkejä
 

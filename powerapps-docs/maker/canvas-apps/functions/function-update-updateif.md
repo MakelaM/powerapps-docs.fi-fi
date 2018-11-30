@@ -44,18 +44,18 @@ Sekä **Update** että **UpdateIf** palauttavat muokatun tietolähteen [taulukko
 [!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## <a name="syntax"></a>Syntaksi
-**Update**( *Tietolähde*, *VanhaTietue*, *UusiTietue* [, **All** ] )
+**Update**( *DataSource*, *OldRecord*, *NewRecord* [, **All** ] )
 
-* *Tietolähde* – Pakollinen. Tietolähde, joka sisältää korvattavan tietueen.
-* *VanhaTietue* – Pakollinen. Korvattava tietue.
-* *UusiTietue* – Pakollinen. Korvaava tietue. Tämä ei ole muutostietue. Koko tietue korvataan, ja puuttuvat ominaisuudet sisältävät arvon *tyhjä*.
+* *DataSource* – Pakollinen. Tietolähde, joka sisältää korvattavan tietueen.
+* *OldRecord* – Pakollinen. Korvattava tietue.
+* *NewRecord* – Pakollinen. Korvaava tietue. Tämä ei ole muutostietue. Koko tietue korvataan, ja puuttuvat ominaisuudet sisältävät arvon *tyhjä*.
 * **All** – Valinnainen. Sama tietue voi näkyä kokoelmassa useamman kerran. Määritä **All**-argumentti tietueen kaikkien kopioiden poistamiseksi.
 
-**UpdateIf**( *Tietolähde*, *Ehto1*, *Muutostietue1* [, *Ehto2*, *Muutostietue2* , ... ] )
+**UpdateIf**( *DataSource*, *Condition1*, *ChangeRecord1* [, *Condition2*, *ChangeRecord2*, ... ] )
 
-* *Tietolähde* – Pakollinen. Tietolähde, joka sisältää muokattavan tietueen tai tietueet.
-* *Ehto* – Pakollinen. Kaava, joka palauttaa tuloksen **tosi** muokattavalle tietueelle tai tietueille.  Voit käyttää *Tietolähteen* sarakkeiden nimiä kaavassa.  
-* *Muutostietue* – Pakollinen.  Muutostietue uusista ominaisuusarvoista jokaista vastaavaa ehtoa varten. Käytetään ehtoa vastaavan *tietolähteen* tietueissa. Jos lisäät tietueen sisäisesti käyttämällä kaarisulkeita, olemassa olevan tietueen ominaisuusarvoja voidaan käyttää ominaisuuskaavoissa.
+* *DataSource* – Pakollinen. Tietolähde, joka sisältää muokattavan tietueen tai tietueet.
+* *Condition(s)* – Pakollinen. Kaava, joka palauttaa tuloksen **tosi** muokattavalle tietueelle tai tietueille.  Voit käyttää *DataSource*-sarakkeiden nimiä kaavassa.  
+* *ChangeRecord(s)* – Pakollinen.  Muutostietue uusista ominaisuusarvoista jokaista vastaavaa ehtoa varten. Käytetään ehtoa vastaavan *DataSourcen* tietueissa. Jos lisäät tietueen sisäisesti käyttämällä kaarisulkeita, olemassa olevan tietueen ominaisuusarvoja voidaan käyttää ominaisuuskaavoissa.
 
 ## <a name="examples"></a>Esimerkkejä
 Näissä esimerkeissä korvataan tai muokataan tietueita tietolähteessä, jonka nimi on **IceCream** ja joka alkaa seuraavan taulukon tiedoilla:
@@ -72,8 +72,8 @@ Näissä esimerkeissä korvataan tai muokataan tietueita tietolähteessä, jonka
 ### <a name="step-by-step"></a>Ohjeet vaihe vaiheelta
 1. Tuo tai luo kokoelma, jonka nimi on **Luettelo**, ja näytä se valikoimassa artikkelin [Tietojen näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) mukaan.
 2. Anna valikoiman nimeksi **Tuotevalikoima**.
-3. Lisää liukusäädin, jonka nimi on **MyydytKappaleet**, ja määritä sen **Suurin**-ominaisuudeksi tämä lauseke:<br>**Tuotevalikoima.Valittu.KappalettaVarastossa**
-4. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>**UpdateIf(Luettelo, Tuotenimi = Tuotevalikoima.Valittu.Tuotenimi, {KappalettaVarastossa:KappalettaVarastossa-MyydytKappaleet.Arvo})**
+3. Lisää liukusäädin, jonka nimi on **UnitsSold**, ja määritä sen **Max**-ominaisuudeksi tämä lauseke:<br>**ProductGallery.Selected.UnitsInStock**
+4. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>**UpdateIf(Inventory, ProductName = ProductGallery.Selected.ProductName, {UnitsInStock:UnitsInStock-UnitsSold.Value})**
 5. Paina F5-näppäintä, valitse tuote valikoimasta, määritä arvo liukusäätimellä ja valitse painike.
    
     Määrittämäsi tuotteen varastossa olevien kappaleiden lukumäärästä vähennetään määrittämäsi määrä.

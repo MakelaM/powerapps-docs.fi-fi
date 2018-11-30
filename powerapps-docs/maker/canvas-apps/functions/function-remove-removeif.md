@@ -49,7 +49,7 @@ Jos haluat poistaa kaikki tietolähteen tietueet, voit käyttää myös **[Clear
 **Remove**( *DataSource*, *Table* [, **All** ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen tai tietueet, jotka haluat poistaa.
-* *Taulukko* – Pakollinen. Taulukko, joka sisältää poistettavat tietueet.
+* *Table* – Pakollinen. Taulukko, joka sisältää poistettavat tietueet.
 * **All** – Valinnainen. Sama tietue voi näkyä kokoelmassa useamman kerran.  Voit lisätä **All**-argumentin, jos haluat poistaa kaikki tietueen kopiot.
 
 **RemoveIf**( *DataSource*, *Condition* [, ... ] )

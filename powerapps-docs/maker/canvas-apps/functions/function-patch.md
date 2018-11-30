@@ -71,21 +71,21 @@ Määritä kaksi tai useampaa tietuetta, jotka haluat yhdistää. Tietueet käsi
 #### <a name="modify-or-create-a-record-in-a-data-source"></a>Tietueen luominen tai muokkaaminen tietolähteessä
 **Patch**( *DataSource*, *BaseRecord*, *ChangeRecord1* [, *ChangeRecord2*, … ])
 
-* *Tietolähde* – Pakollinen. Tietolähde, joka sisältää tietueen, jota haluat muokata tai tulee sisältämään tietueen, jonka haluat luoda.
+* *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen, jota haluat muokata tai tulee sisältämään tietueen, jonka haluat luoda.
 * *BaseRecord* – Pakollinen. Muokattava tai luotava tietue.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.
-* *Muutostietue(et)* – Pakollinen.  Yksi tai useampi tietue, jotka sisältävät *BaseRecord*in muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
+* *ChangeRecord(s)* – Pakollinen.  Yksi tai useampi tietue, jotka sisältävät *BaseRecord*in muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
 
 #### <a name="modify-or-create-a-set-of-records-in-a-data-source"></a>Tietueiden joukon luominen tai muokkaaminen tietolähteessä
 **Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueet, joita haluat muokata tai tulee sisältämään tietueet, jotka haluat luoda.
-* *Perustietuetaulukko* – Pakollinen. Muokattavien tai luotavien tietueiden taulukko.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.
-* *Muutostietuetaulukko* – Pakollinen.  Yksi tai useampi tietueiden taulukko, jotka sisältävät *Perustietuetaulukon* tietueiden muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
+* *BaseRecordTable* – Pakollinen. Muokattavien tai luotavien tietueiden taulukko.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.
+* *ChangeRecordTable(s)* – Pakollinen.  Yksi tai useampi tietueiden taulukko, jotka sisältävät *BaseRecordTable*-tietueiden muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
 
 #### <a name="merge-records"></a>Tietueiden yhdistäminen
-**Patch**( *Tietue1*, *Tietue2* [, …] )
+**Patch**( *Record1*, *Record2* [, …] )
 
-* *Tietue(et)* – Pakollinen.  Vähintään kaksi tietuetta, jotka haluat yhdistää. Tietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
+* *Record(s)* – Pakollinen.  Vähintään kaksi tietuetta, jotka haluat yhdistää. Tietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
 
 ## <a name="examples"></a>Esimerkkejä
 #### <a name="modify-or-create-a-record-in-a-data-source"></a>Tietueen luominen tai muokkaaminen (tietolähteessä)

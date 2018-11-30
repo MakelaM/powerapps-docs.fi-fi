@@ -40,34 +40,34 @@ Voit yhdistää **SortByColumns**-funktion **[avattava luettelo](../controls/con
 
 Nousevan ja laskevan lajittelun lisäksi **SortByColumns** voi lajitella arvoja yksittäisen saraketaulukon mukaan.  Voit esimerkiksi lajitella tietueen viikonpäivän nimen mukaan lisäämällä lajittelujärjestykseksi **[ "Maanantai", "Tiistai", "Keskiviikko", "Torstai", "Perjantai", "Lauantai", "Sunnuntai" ]**.  Kaikki tietueet, joissa on **Maanantai**, tulevat ensin, tämän jälkeen **Tiistai** ja niin edelleen.  Löydetyt tietueet, jotka eivät näy lajittelutaulukossa, sijoitetaan luettelon loppuun.
 
-[Taulukot](../working-with-tables.md) on arvo PowerAppsissa, samaan tapaan kuin merkkijono tai numero.  Ne voidaan välittää funktioihin ja niitä voidaan palauttaa funktioista.  **Sort** ja **SortByColumn** eivät muokkaa taulukkoa. Ne käsittelevät sen sijaan taulukkoa argumenttina ja palauttavat uuden, lajitellun taulukon.  Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
+[Tables](../working-with-tables.md) on arvo PowerAppsissa, samaan tapaan kuin merkkijono tai numero.  Ne voidaan välittää funktioihin ja niitä voidaan palauttaa funktioista.  **Sort** ja **SortByColumn** eivät muokkaa taulukkoa. Ne käsittelevät sen sijaan taulukkoa argumenttina ja palauttavat uuden, lajitellun taulukon.  Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
 
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 
 ## <a name="syntax"></a>Syntaksi
-**Sort**( *Taulukko*, *Kaava* [, *SortOrder* ] )
+**Sort**( *Table*, *Formula* [, *SortOrder* ] )
 
-* *Taulukko* – Pakollinen. Lajiteltava taulukko.
-* *Kaava* – Pakollinen. Kaava lasketaan taulukon jokaisen tietueen kohdalla, ja tuloksia käytetään taulukon lajittelemiseen.  Voit viitata sarakkeisiin taulukon sisällä.
+* *Table* – Pakollinen. Lajiteltava taulukko.
+* *Formula* – Pakollinen. Kaava lasketaan taulukon jokaisen tietueen kohdalla, ja tuloksia käytetään taulukon lajittelemiseen.  Voit viitata sarakkeisiin taulukon sisällä.
 * *SortOrder* – Valinnainen. Määritä **SortOrder.Descending** lajitellaksesi taulukon laskevassa järjestyksessä. **SortOrder.Ascending** on oletusarvo.
 
-**SortByColumns**( *Taulukko*, *SarakkeenNimi1* [, *SortOrder1*, *SarakkeenNimi2*, *SortOrder2*, ... ] )
+**SortByColumns**( *Table*, *ColumnName1* [, *SortOrder1*, *ColumnName2*, *SortOrder2*, ... ] )
 
-* *Taulukko* – Pakollinen. Lajiteltava taulukko.
-* *SarakkeenNimet* – Pakollinen. Lajiteltavien sarakkeiden nimet merkkijonoina.
-* *SortOrder(s)* – Valinnainen.  **SortOrder.Ascending** tai **SortOrder.Descending**.  **SortOrder.Ascending** on oletusarvo.  Jos useita *SarakkeenNimiä* annetaan, kaikkien paitsi viimeisen sarakkeen tulee sisältää *Lajittelujärjestys*.
+* *Table* – Pakollinen. Lajiteltava taulukko.
+* *ColumnName(s)* – Pakollinen. Lajiteltavien sarakkeiden nimet merkkijonoina.
+* *SortOrder(s)* – Valinnainen.  **SortOrder.Ascending** tai **SortOrder.Descending**.  **SortOrder.Ascending** on oletusarvo.  Jos useita *ColumnName(s)*-arvoja annetaan, kaikkien paitsi viimeisen sarakkeen tulee sisältää *SortOrder*.
   
     > [!NOTE]
-  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **"Sarakkeen_x0020_Nimi"**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
-**SortByColumns**( *Taulukko*, *SarakkeenNimi*, *SortOrderTable* )
+**SortByColumns**( *Table*, *ColumnName*, *SortOrderTable* )
 
-* *Taulukko* – Pakollinen. Lajiteltava taulukko.
-* *SarakkeenNimi* – Pakollinen. Lajiteltavan sarakkeen nimi merkkijonoina.
+* *Table* – Pakollinen. Lajiteltava taulukko.
+* *ColumnName* – Pakollinen. Lajiteltavan sarakkeen nimi merkkijonoina.
 * *SortOrderTable* – Pakollinen.  Yksisarakkeinen arvotaulukko, jonka mukaan lajitellaan.
   
     > [!NOTE]
-  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
 ## <a name="examples"></a>Esimerkkejä
 Seuraavissa esimerkeissä käytämme **IceCream**-[tietolähdettä](../working-with-data-sources.md), joka sisältää tämän taulukon tiedot:

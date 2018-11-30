@@ -69,7 +69,7 @@ Jos argumentti tuottaisi määrittämättömän arvon, tulos on *tyhjä*.  Näin
 ### <a name="inverse-functions"></a>Käänteiset funktiot
 **Acos**( *Number* )<br>**Acot**( *Number* )<br>**Asin**( *Number* )<br>**Atan**( *Number* )
 
-* *Number* – Pakollinen. Käsittelyn kohteena oleva numero.
+* *Number* – pakollinen. Käsittelyn kohteena oleva numero.
 
 **Acos**( *SingleColumnTable* )<br>**Acot**( *SingleColumnTable* )<br>**Asin**( *SingleColumnTable* )<br>**Atan**( *SingleColumnTable* )
 
@@ -121,7 +121,7 @@ Tämän osion esimerkeissä käytetään [tietolähdettä](../working-with-data-
 | **Cot(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen kotangentin. |<style> img { max-width: none } </style> ![](media/function-trig/values-cot.png) |
 | **Sin(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen sinin. |<style> img { max-width: none } </style> ![](media/function-trig/values-sin.png) |
 | **Tan(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen tangentin. |<style> img { max-width: none } </style> ![](media/function-trig/values-tan.png) |
-| **Tan(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen arkussinin. |<style> img { max-width: none } </style> ![](media/function-trig/values-acos.png) |
+| **Acos(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen arkussinin. |<style> img { max-width: none } </style> ![](media/function-trig/values-acos.png) |
 | **Acot(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen arkustangentin. |<style> img { max-width: none } </style> ![](media/function-trig/values-acot.png) |
 | **Asin(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen arkussinin. |<style> img { max-width: none } </style> ![](media/function-trig/values-asin.png) |
 | **Atan(&nbsp;ValueTable&nbsp;)** |Palauttaa taulukon lukujen arkustangentin. |<style> img { max-width: none } </style> ![](media/function-trig/values-atan.png) |

@@ -39,7 +39,7 @@ Sanojen välisiä välilyöntejä poistava **Trim**-funktio on yhdenmukainen sam
 
 **Trim**( *SingleColumnTable* )<br>**TrimEnds**( *SingleColumnTable* )
 
-* *SingleColumnTable* – pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista poistetaan välilyöntejä.
+* *SingleColumnTable* – Pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista poistetaan välilyöntejä.
 
 ## <a name="example"></a>Esimerkki
 

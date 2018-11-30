@@ -35,7 +35,7 @@ Voit myös luoda yhden sarakkeen taulukon syntaksilla **[ value1, value2, ... ]*
 ## <a name="syntax"></a>Syntaksi
 **Table**( *Record1* [, *Record2*, ... ] )
 
-* *Record* (yksi tai useampi) – Pakollinen. Taulukkoon lisättävät tietueet.
+* *Record(s)* – Pakollinen. Taulukkoon lisättävät tietueet.
 
 ## <a name="examples"></a>Esimerkkejä
 * Määritä luetteloruudun **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:

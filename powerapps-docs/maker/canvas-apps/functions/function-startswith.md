@@ -36,12 +36,12 @@ Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suo
 **EndsWith**( *Text*, *EndText* )
 
 * *Teksti* – Pakollinen.  Testattava teksti.
-* *EndText* – Pakollinen.  Teksti, jota haetaan *Tekstin* lopusta.  Jos *EndText* on tyhjä merkkijono, **EndsWith** palauttaa arvon *true*.
+* *EndText* – Pakollinen.  Teksti, jota haetaan *Text*-kohdan lopusta.  Jos *EndText* on tyhjä merkkijono, **EndsWith** palauttaa arvon *true*.
 
 **StartsWith**( *Text*, *StartText* )
 
-* *Teksti* – Pakollinen.  Testattava teksti.
-* *StartText* – Pakollinen.  Teksti, jota haetaan *Tekstin* alusta.  Jos *StartText* on tyhjä merkkijono, **StartsWith** palauttaa arvon *true*.
+* *Text* – Pakollinen.  Testattava teksti.
+* *StartText* – Pakollinen.  Teksti, jota haetaan *Text*-kohdan alusta.  Jos *StartText* on tyhjä merkkijono, **StartsWith** palauttaa arvon *true*.
 
 ## <a name="examples"></a>Esimerkkejä
 

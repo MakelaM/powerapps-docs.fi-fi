@@ -36,7 +36,7 @@ Poimii aihetunnisteet (#merkkijonot) merkkijonosta.
 ## <a name="syntax"></a>Syntaksi
 **HashTags**( *Merkkijono* )
 
-* *Merkkijono* – pakollinen.  Merkkijono, josta etsitään aihetunnisteet.
+* *String* – Pakollinen.  Merkkijono, josta etsitään aihetunnisteet.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="step-by-step"></a>Vaihe vaiheelta

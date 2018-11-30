@@ -61,7 +61,7 @@ Voit käyttää **DataSourceInfo**-funktiota hakemaan tietoja tietolähteestä k
 **DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
 
 * *DataSource* – Pakollinen. Käytettävä tietolähde.
-* *Tiedot* – Pakollinen. Haettavan tiedon tyyppi.
+* *Information* – Pakollinen. Haettavan tiedon tyyppi.
 * *ColumnName* – Valinnainen. Saraketason tiedoille sarakkeen nimi merkkijonona. Sarake **Puhelin** välitettäisiin muodossa **"Puhelin"**, mukaan lukien lainausmerkit. *ColumnName*-argumenttia ei voi käyttää tietolähdetason tietoja varten.
   
     > [!NOTE]
@@ -74,21 +74,21 @@ Tämän osion esimerkeissä käytetään tietolähdettä nimeltä **IceCream**:
 
 Tietolähde on antanut myös nämä tiedot:
 
-* Kohdan **Määrä** näyttönimi on "Quantity on Hand".
+* Kohdan **Quantity** näyttönimi on "Quantity on Hand".
 * Kohdan **Flavor** enimmäispituus on 30 merkkiä.
-* **Flavor**-sarakkeen täytyy sisältää arvo. **Määrä**-sarake ei ole pakollinen.
-* **Määrä**-kohdan vähimmäisarvo on 0.
-* **Määrä**-kohdan enimmäisarvo on 100.
+* **Flavor**-sarakkeen täytyy sisältää arvo. **Quantity**-sarake ei ole pakollinen.
+* **Quantity**-kohdan vähimmäisarvo on 0.
+* **Quantity**-kohdan enimmäisarvo on 100.
 * Nykyinen käyttäjä voi lukea ja muokata **IceCream**-tietolähteen tietueita, mutta ei luoda tai poistaa tietueita.
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DisplayName,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Määrä**-sarakkeen näyttönimen. |"Quantity on Hand" |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DisplayName,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen näyttönimen. |"Quantity on Hand" |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxLength,&nbsp;"Flavor"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Flavor**-sarakkeen merkkijonon enimmäispituuden. |30 |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Flavor"&nbsp;)** |Onko **IceCream**-tietolähteen **Flavor**-sarake pakollinen? |**true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Quantity"&nbsp;)** |Onko **IceCream**-tietolähteen **Määrä**-sarake pakollinen? |**false** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxValue,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Määrä**-sarakkeen enimmäisnumeroarvon. |100 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MinValue,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Määrä**-sarakkeen vähimmäisnumeroarvon. |0 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Quantity"&nbsp;)** |Onko **IceCream**-tietolähteen **Quantity**-sarake pakollinen? |**false** |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxValue,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen enimmäisnumeroarvon. |100 |
+| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MinValue,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen vähimmäisnumeroarvon. |0 |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.ReadPermission)** |Voiko nykyinen käyttäjä lukea **IceCream**-tietolähteen tietueita? |**true** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.EditPermission)** |Voiko nykyinen käyttäjä muokata **IceCream**-tietolähteen tietueita? |**true** |
 | **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** |Voiko nykyinen käyttäjä luoda **IceCream**-tietolähteen tietueita? |**false** |

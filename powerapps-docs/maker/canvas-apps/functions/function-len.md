@@ -29,9 +29,9 @@ Jos määrität yhden merkkijonon argumentiksi, paluuarvo on pituus numerona.  J
 Jos määrität [tyhjän](function-isblank-isempty.md) merkkijonon, **Len** palauttaa arvon 0.
 
 ## <a name="syntax"></a>Syntaksi
-**Len**( *merkkijono* )
+**Len**( *String* )
 
-* *Merkkijono* – vaaditaan. Mitattava merkkijono.
+* *String* – Pakollinen. Mitattava merkkijono.
 
 **Len**( *SingleColumnTable* )
 
@@ -39,20 +39,20 @@ Jos määrität [tyhjän](function-isblank-isempty.md) merkkijonon, **Len** pala
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-string"></a>Yksittäinen merkkijono
-Tämän osion esimerkkejä varten [tietolähde](../working-with-data-sources.md) on tekstinsyötön hallinta, jonka nimi on **Tekijä** ja joka sisältää merkkijonon "E. E. Cummings".
+Tämän osion esimerkkejä varten [tietolähde](../working-with-data-sources.md) on tekstinsyöttöohjausobjekti, jonka nimi on **Author** ja joka sisältää merkkijonon "E. E. Cummings".
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Len( Author.Text )** |Mittaa merkkijonon pituuden **Tekijän** hallinnassa. |14 |
+| **Len( Author.Text )** |Mittaa merkkijonon pituuden **Author**-ohjausobjektissa. |14 |
 | **Len( "" )** |Mittaa tyhjän merkkijonon pituuden. |0 |
 
 ### <a name="single-column-table"></a>Yksisarakkeinen taulukko
-Tämän osion ensimmäisessä esimerkissä tietolähteen nimi on **Ihmiset** ja se sisältää seuraavat tiedot:
+Tämän osion ensimmäisessä esimerkissä tietolähteen nimi on **People** ja se sisältää seuraavat tiedot:
 
 ![](media/function-len/people-table.png)
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |**Ihmiset**-taulukon **Osoite**[-sarakkeessa](../working-with-tables.md#columns):<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
-| **Len( [ "Hello", "to the", "World", "" ] )** |Sisäisen taulukon **[Arvo](function-value.md)**-sarakkeessa:<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |![](media/function-len/people-table-len-inline.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |**People**-taulukon **Address**[-sarakkeessa](../working-with-tables.md#columns):<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
+| **Len( [ "Hello", "to the", "World", "" ] )** |Sisäisen taulukon **[Value](function-value.md)**-sarakkeessa:<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |![](media/function-len/people-table-len-inline.png) |
 

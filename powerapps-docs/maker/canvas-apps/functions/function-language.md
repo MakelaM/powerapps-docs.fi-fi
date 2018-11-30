@@ -44,7 +44,7 @@ Voit tarkastella tuettujen kielitunnisteiden luetteloa kirjoittamalla kaavarivil
 Myös **[Teksti](function-text.md)**- ja **[Arvo](function-value.md)**-funktiot käyttävät kielen tunnisteita.  Näiden funktioiden avulla voit kääntää merkkijonoja globaalisti toimivalla tavalla.  Kun välität näihin funktioihin kielitunnisteen, mutta alueella ei ole merkitystä, voit käyttää tunnisteen pelkkää kieliosaa.
 
 ## <a name="syntax"></a>Syntaksi
-**Kieli**()
+**Language**()
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="users-locale"></a>Käyttäjän aluekohtaiset asetukset

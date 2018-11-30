@@ -34,22 +34,22 @@ Jos välität yksittäisen merkkijonon, palautusarvo on muunnettu merkkijono.  J
 **Replace**( *String*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
 
 * *String* – Pakollinen. Käsiteltävä merkkijono.
-* *StartingPosition* – Pakollinen.  Merkin sijainti, josta korvaus aloitetaan. *Merkkijono*n ensimmäinen merkki on sijainnissa 1.
-* *NumberOfCharacters* – Pakollinen.  Korvattavien merkkien määrä kohdassa *Merkkijono*.
+* *StartingPosition* – Pakollinen.  Merkin sijainti, josta korvaus aloitetaan. *String*-arvon ensimmäinen merkki on sijainnissa 1.
+* *NumberOfCharacters*  – Pakollinen.  Korvattavien merkkien määrä kohdassa *String*.
 * *NewString* – Pakollinen.  Korvaava merkkijono. Tämän argumentin merkkien määrä voi olla eri kuin *NumberOfCharacters*-argumentin.
 
 **Substitute**( *String*, *OldString*, *NewString* [, *InstanceNumber* ] )
 
-* *Merkkijono* – Pakollinen. Käsiteltävä merkkijono.
+* *String* – Pakollinen. Käsiteltävä merkkijono.
 * *OldString* – Pakollinen.  Korvattava merkkijono.
 * *NewString* – Pakollinen.  Korvaava merkkijono. *OldString* ja *NewString* voivat olla eri pituisia.
-* *InstanceNumber* – Valinnainen. Oletusarvoisesti ensimmäinen *OldString*-esiintymä korvataan. Jos *Merkkijono* sisältää useamman kuin yhden esiintymän, voit määrittää, mikä esiintymä korvataan.
+* *InstanceNumber* – Valinnainen. Oletusarvoisesti ensimmäinen *OldString*-esiintymä korvataan. Jos *String* sisältää useamman kuin yhden esiintymän, voit määrittää, mikä esiintymä korvataan.
 
 **Replace**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters*, *NewString* )
 
 * *SingleColumnTable* – Pakollinen. Käsiteltävä yksisarakkeinen merkkijonotaulukko.
 * *StartingPosition* – Pakollinen.  Merkin sijainti, josta korvaus aloitetaan.  Taulukon jokaisen merkkijonon ensimmäinen merkki on vastaa sijaintia 1.
-* *NumberOfCharacters* – Pakollinen.  Korvattavien merkkien määrä kussakin merkkijonossa.
+* *NumberOfCharacters*  – Pakollinen.  Korvattavien merkkien määrä kussakin merkkijonossa.
 * *NewString* – Pakollinen.  Korvaava merkkijono. Tämän argumentin merkkien määrä voi olla eri kuin *NumberOfCharacters*-argumentin.
 
 **Substitute**( *SingleColumnTable*, *OldString*, *NewString* [, *InstanceNumber* ] )

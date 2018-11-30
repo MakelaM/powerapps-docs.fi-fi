@@ -1,6 +1,6 @@
 ---
-title: Kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijaintisignaalit | Microsoft Docs
-description: Viitetietoja kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijainti-tunnistimista, mukaan lukien syntaksi ja esimerkkejä
+title: Acceleration-, App-, Compass-, Connection- ja Location-signaalit | Microsoft Docs
+description: Viitetietoja Acceleration-, App-, Compass-, Connection- ja Location-tunnistimista, mukaan lukien syntaksi ja esimerkkejä
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -20,7 +20,7 @@ ms.contentlocale: fi-FI
 ms.lasthandoff: 08/24/2018
 ms.locfileid: "42832141"
 ---
-# <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Kiihtyvyys-, sovellus-, kompassi-, yhteys- ja sijainti-signaalit PowerAppsissa
+# <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Acceleration-, App-, Compass-, Connection- ja Location-signaalit PowerAppsissa
 Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.  
 
 ## <a name="description-and-syntax"></a>Kuvaus ja syntaksi

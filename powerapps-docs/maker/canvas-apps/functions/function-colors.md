@@ -1,6 +1,6 @@
 ---
 title: Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot | Microsoft Docs
-description: Tietoa väriluetteloinnista, värien häivyttämisestä, väriarvoista ja RGBA-asetuksista, sekä syntakseja ja muutamia esimerkkejä
+description: Tietoa PowerAppsin Color-luetteloinnista ja ColorFade-, ColorValue- ja RGBA-funktioista, sekä syntakseja ja muutamia esimerkkejä
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -24,7 +24,7 @@ ms.locfileid: "49401339"
 Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituksen määrittäminen.
 
 ## <a name="description"></a>Kuvaus
-**Väriluettelointi** on helppo tapa käyttää värejä, jotka on määritetty HTML:n CSS-tyylimäärityksillä.  Esimerkiksi **Color.Red** palauttaa puhtaan punaisen värin.  Tämän artikkelin lopussa on luettelo näistä väreistä.   
+**Color**-luettelointi on helppo tapa käyttää värejä, jotka on määritetty HTML:n CSS-tyylimäärityksillä.  Esimerkiksi **Color.Red** palauttaa puhtaan punaisen värin.  Tämän artikkelin lopussa on luettelo näistä väreistä.   
 
 **ColorValue**-funktio palauttaa CSS-värimerkkijonon mukaisen värin.  Voit käyttää sekä CSS-värien nimiä, kuten ”RosyBrown”, että heksadesimaaleja, kuten ”#bc8f8f”.
 
@@ -53,7 +53,7 @@ Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituk
 
 ## <a name="built-in-colors"></a>Valmiit värit
 
-| Väriluettelointi | ColorValue esitettynä heksadesimaaleina | RGBA | Väriruutu |
+| Color-luettelointi | ColorValue esitettynä heksadesimaaleina | RGBA | Väriruutu |
 | --- | --- | --- | --- |
 | **Color.AliceBlue** |**ColorValue( "#f0f8ff" )** |**RGBA( 240, 248, 255, 1 )** |![erittäin vaalea sininen](./media/function-colors/color-aliceblue.png) |
 | **Color.AntiqueWhite** |**ColorValue( "#faebd7" )** |**RGBA( 250, 235, 215, 1 )** |![antiikinvalkoinen](./media/function-colors/color-antiquewhite.png) |

@@ -115,11 +115,11 @@ Voit muokata **IsMatch**-funktion toimintaa määrittämällä yhden tai useamma
 | **Multiline** |Etsii vastaavuutta useilta riveiltä. |Ei muokkaa säännönmukaista lauseketta. |
 
 ## <a name="syntax"></a>Syntaksi
-**IsMatch**( *Teksti*, *Malli* [, *Valinnat* ] )
+**IsMatch**( *Text*, *Pattern* [, *Options* ] )
 
-* *Teksti* – vaaditaan.  Testattava merkkijono.
-* *Malli* – vaaditaan.  Testattava malli merkkijonona.  Yhdistele **Match**-luetteloinnin määrittelemiä malleja tai anna säännönmukainen lauseke.
-* *Valinnat* – Valinnainen.  Merkkijonoyhdistelmä **MatchOptions**-luetteloinnin arvoista.  Oletuksena käytetään valintaa **MatchOptions.Complete**.
+* *Text* – Pakollinen.  Testattava merkkijono.
+* *Pattern* – Pakollinen.  Testattava malli merkkijonona.  Yhdistele **Match**-luetteloinnin määrittelemiä malleja tai anna säännönmukainen lauseke.
+* *Options* – Valinnainen.  Merkkijonoyhdistelmä **MatchOptions**-luetteloinnin arvoista.  Oletuksena käytetään valintaa **MatchOptions.Complete**.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="ordinary-characters"></a>Tavalliset merkit

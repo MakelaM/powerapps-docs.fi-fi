@@ -25,19 +25,19 @@ ms.locfileid: "42848979"
 Testaa, onko arvo tyhjä tai sisältääkö [taulukko](../working-with-tables.md) nolla [tietuetta](../working-with-tables.md#records), ja mahdollistaa *tyhjien* arvojen luomisen.
 
 ## <a name="overview"></a>Yleiskatsaus
-*Tyhjä* merkitsee ”ei arvoa” tai ”tuntematon arvo”. **[Tekstisyöte](../controls/control-text-input.md)**-ohjausobjekti on *tyhjä*, jos käyttäjä ei ole syöttänyt siihen yhtään merkkiä. Tämä ohjausobjekti ei ole enää *tyhjä*, kun käyttäjä on kirjoittanut siihen merkkejä.  Jotkin tietolähteet voivat varastoida ja palauttaa NULL-arvoja, jotka esitetään PowerAppsissa *tyhjinä*.
+*Blank* merkitsee ”ei arvoa” tai ”tuntematon arvo”. **[Tekstisyöte](../controls/control-text-input.md)**-ohjausobjekti on *tyhjä*, jos käyttäjä ei ole syöttänyt siihen yhtään merkkiä. Tämä ohjausobjekti ei ole enää *tyhjä*, kun käyttäjä on kirjoittanut siihen merkkejä.  Jotkin tietolähteet voivat varastoida ja palauttaa NULL-arvoja, jotka esitetään PowerAppsissa *tyhjinä*.
 
 > [!NOTE]
 > Tällä hetkellä *tyhjän* arvon varastointia tuetaan vain paikallisille kokoelmille. Tiedämme, että monet tietolähteet tukevat *tyhjiä* arvoja (NULL), ja pyrimme poistamaan tämän rajoituksen.
 
 Mikä tahansa ominaisuus tai laskettu arvo voi olla *tyhjä*.  Esimerkiksi totuusarvolla on yleensä kaksi arvoa: **tosi** tai **epätosi**.  Mutta näiden kahden lisäksi se voi olla myös *tyhjä*.  Tämä muistuttaa Microsoft Exceliä, missä laskentataulukon solu on ensin tyhjä, mutta voi muun muassa sisältää arvot **TOSI** tai **EPÄTOSI**. Solun sisältö voidaan milloin tahansa poistaa, jolloin se palautuu *tyhjä*-tilaan.
 
-*Tyhjä* (Empty) viittaa erityisesti taulukoihin, jotka eivät sisällä tietueita. Taulukon rakenne voi olla kokonainen ja sisältää [sarakkeiden](../working-with-tables.md#columns) nimet, mutta taulukossa ei ole tietoja. Taulukko voi olla aluksi tyhjä, se voi ottaa vastaan tietueita, jolloin se ei ole enää tyhjä, ja siitä voidaan poistaa tietueet, jolloin se on jälleen tyhjä.
+*Empty* viittaa erityisesti taulukoihin, jotka eivät sisällä tietueita. Taulukon rakenne voi olla kokonainen ja sisältää [sarakkeiden](../working-with-tables.md#columns) nimet, mutta taulukossa ei ole tietoja. Taulukko voi olla aluksi tyhjä, se voi ottaa vastaan tietueita, jolloin se ei ole enää tyhjä, ja siitä voidaan poistaa tietueet, jolloin se on jälleen tyhjä.
 
 ## <a name="description"></a>Kuvaus
 **Blank**-funktio palauttaa *tyhjän* arvon. Käytä tätä näitä arvoja tukevan tietolähteen NULL-arvon tallentamiseen, jolloin käytännössä poistetaan kentän arvo.
 
-**IsBlank**-funktio testaa, onko arvo *tyhjä*. *Tyhjiä* arvoja esiintyy esimerkiksi seuraavissa tilanteissa:
+**IsBlank**-funktio testaa, onko arvo *tyhjä*. *Blank*-arvoja esiintyy esimerkiksi seuraavissa tilanteissa:
 
 * **Blank**-funktion paluuarvo.
 * Ohjausobjektin ominaisuudelle ei ole asetettu kaavaa.

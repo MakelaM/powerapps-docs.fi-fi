@@ -31,10 +31,10 @@ Merkkijono jaetaan osiin käyttämällä erotinta.  Erotin voi muodostua nollast
 Voit koota merkkijonon uudelleen käyttämällä **[Concat](function-concatenate.md)**-funktiota (ilman erottimia).  
 
 ## <a name="syntax"></a>Syntaksi
-**Split**( *teksti*, *erotin* )
+**Split**( *Text*, *Separator* )
 
-* *Teksti* – Pakollinen.  Jaettava teksti.
-* *Erotin* – Pakollinen.  Merkkijonon jakamiseen käytettävä erotin.  Voi olla nolla, yksi tai useampia merkkejä.
+* *Text* – Pakollinen.  Jaettava teksti.
+* *Separator* – Pakollinen.  Merkkijonon jakamiseen käytettävä erotin.  Voi olla nolla, yksi tai useampia merkkejä.
 
 ## <a name="examples"></a>Esimerkkejä
 

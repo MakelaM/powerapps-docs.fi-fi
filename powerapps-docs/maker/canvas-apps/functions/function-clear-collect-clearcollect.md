@@ -58,7 +58,7 @@ Voit käyttää **[Remove](function-remove-removeif.md)**-funktiota tietueiden p
 ## <a name="syntax"></a>Syntaksi
 **Collect**( *DataSource*, *Item*, ... )
 
-* *DataSource* – pakollinen. Tietolähde, johon haluat lisätä tiedot.  Jos sitä ei vielä ole olemassa, luodaan uusi kokoelma.
+* *DataSource* – Pakollinen. Tietolähde, johon haluat lisätä tiedot.  Jos sitä ei vielä ole olemassa, luodaan uusi kokoelma.
 * *Item* – pakollinen.  Yksi tai useampia tietueita tai taulukoita tietolähteeseen lisättäväksi.  
 
 **Clear**( *Collection* )
@@ -97,7 +97,7 @@ Näissä esimerkeissä poistetaan ja lisätään kohteita kokoelmaan, jonka nimi
 1. [Yhdistä SharePoint-luetteloon](../connect-to-sharepoint.md). 
 
 1. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
-**Kerää**(**MySPCollection**, *ListName*)
+**Collect**(**MySPCollection**, *ListName*)
 
     Tämä funktio luo kokoelman, jonka nimi on **MySPCollection** ja joka sisältää samat tiedot kuin SharePoint-luettelokin.
     

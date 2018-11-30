@@ -39,9 +39,9 @@ Jos otat **kaavatason virheiden hallinnan** käyttöön (lisäasetuksissa), ensi
 Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Concurrent**( *Kaava1*, *Kaava2* [, ...] )
+**Concurrent**( *Formula1*, *Formula2* [, ...] )
 
-* *Kaavat* – Pakollinen. Samanaikaisesti arvioitavat kaavat. Vähintään kaksi kaavaa on annettava.
+* *Formula(s)* – Pakollinen. Samanaikaisesti arvioitavat kaavat. Vähintään kaksi kaavaa on annettava.
 
 ## <a name="examples"></a>Esimerkkejä
 

@@ -58,31 +58,31 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 **UpdateContext**-funktiolla ei ole palautusarvoa, ja voit käyttää sitä vain [toimintakaavan](../working-with-formulas-in-depth.md) sisällä.
 
 ## <a name="syntax"></a>Syntaksi
-**UpdateContext**( *PäivitysTietue* )
+**UpdateContext**( *UpdateRecord* )
 
-* *PäivitysTietue* vaaditaan. Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon tälle sarakkeelle. Kontekstimuuttuja luodaan tai päivitetään jokaiselle sarakkeelle ja arvolle, jonka määrität.
+* *UpdateRecord*  – Pakollinen. Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon tälle sarakkeelle. Kontekstimuuttuja luodaan tai päivitetään jokaiselle sarakkeelle ja arvolle, jonka määrität.
 
-**UpdateContext**( { *Kontekstimuuttuja1*: *Arvo1* [, *Kontekstimuuttuja2*: *Arvo2* [, ... ] ] } )
+**UpdateContext**( { *ContextVariable1*: *Value1* [, *ContextVariable2*: *Value2* [, ... ] ] } )
 
-* *Kontekstimuuttuja1* vaaditaan.  Luotavan tai päivitettävän kontekstimuuttujan nimi.
-* *Arvo1* vaaditaan.  Arvo, joka määritetään kontekstimuuttujalle.
-* *Kontekstimuuttuja2*: *Arvo2*,... – valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
+* *ContextVariable1*  – Pakollinen.  Luotavan tai päivitettävän kontekstimuuttujan nimi.
+* *Value1*  – Pakollinen.  Arvo, joka määritetään kontekstimuuttujalle.
+* *ContextVariable2*: *Value2*, ...  – Valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
 
 ## <a name="examples"></a>Esimerkkejä
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **UpdateContext( {&nbsp;Laskuri:&nbsp;1&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Laskuri** ja asettaa sen arvoksi **1**. |Muuttujan **Laskuri** arvo on **1**. Voit viitata kyseisen muuttujan nimeen **Laskuri** kaavassa. |
-| **UpdateContext( {&nbsp;Laskuri:&nbsp;2&nbsp;} )** |Määrittää kontekstimuuttujan **Laskuri** arvoksi edellisessä esimerkissä **2**. |Muuttujan **Laskuri** arvo on **2**. |
-| **UpdateContext( {&nbsp;Nimi:&nbsp;”Lily”,&nbsp;Pistemäärä:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Nimi** ja **Pistemäärä** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Nimi** arvo on **Lily** ja muuttujan **Pistemäärä** arvo on **10**. |
-| **UpdateContext( {&nbsp;Henkilö:&nbsp;{&nbsp;Nimi:&nbsp;”Milton”, Osoite:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Henkilö** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Nimi** ja **Osoite**. Sarakkeen **Nimi** arvo on **Milton** ja sarakkeen **Osoite** arvo on **1 Main St**. |Muuttujan **Henkilö** arvo on tietue **{&nbsp;Nimi:&nbsp;”Milton”, Osoite:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**.<br><br>Viittaus tähän tietueeseen kokonaisuutena nimellä **Henkilö** tai viittaus tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Henkilö.Nimi** tai **Henkilö.Osoite**. |
-| **UpdateContext( {&nbsp;Henkilö: Patch(&nbsp;Henkilö,&nbsp;{Osoite:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;) }&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Henkilö** päivittämiseksi ja asettaa sarakkeen **Osoite** arvoksi **2 Main St**. |Muuttujan **Henkilö** arvo on nyt tietue **{&nbsp;Henkilö:&nbsp;”Milton”, Osoite:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
+| **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Counter** ja asettaa sen arvoksi **1**. |**Counter**-arvo on **1**. Voit viitata kyseisen muuttujan nimeen **Counter** kaavassa. |
+| **UpdateContext( {&nbsp;Counter:&nbsp;2&nbsp;} )** |Määrittää kontekstimuuttujan **Counter** arvoksi edellisessä esimerkissä **2**. |**Counter**-arvo on **2**. |
+| **UpdateContext( {&nbsp;Name:&nbsp;"Lily",&nbsp;Score:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Name** ja **Score** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Name** arvo on **Lily** ja muuttujan **Score** arvo on **10**. |
+| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Person** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |Muuttujan **Person** arvo on tietue **{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
+| **UpdateContext( {&nbsp;Person: Patch(&nbsp;Person,&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;) }&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”, Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
 
 ### <a name="step-by-step-example"></a>Vaiheittainen esimerkki
 1. Anna oletusnäytön nimeksi **Lähde**, lisää toinen näyttö ja anna sille nimeksi **Kohde**.
 2. Lisää näytössä **Lähde** kaksi painiketta ja määritä niiden **[Text](../controls/properties-core.md)**-ominaisuudet niin, että toisessa lukee **Englanti** ja toisessa lukee **Espanja**.
-3. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Englanti**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Kieli:”Englanti”})**
-4. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Espanja**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Kieli:”Espanja”})**
+3. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Englanti**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Englanti"})**
+4. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Espanja**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Espanja"})**
 5. Lisää näytössä **Kohde** otsikko ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**If(Kieli=”Englanti”, ”Hello!”, ”Hola!”)**
 6. Valitse **Kohde**-näytössä **Shapes** **Lisää**-välilehdeltä ja valitse sitten taaksepäin osoittava nuoli.
 7. Määritä taaksepäin osoittavan nuolen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate(Source, ScreenTransition.Fade)**

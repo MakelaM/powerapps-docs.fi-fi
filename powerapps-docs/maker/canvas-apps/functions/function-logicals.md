@@ -33,11 +33,11 @@ Totuusarvon logiikkafunktiot, joita käytetään yleensä muokkaamaan vertailuje
 Nämä funktiot toimivat loogisten arvojen kanssa. Niille ei voida suoraan välittää numeroa tai merkkijonoa. Sen sijaan täytyy suorittaa vertaus tai testaus. Esimerkiksi vertailu **x > 1** on looginen kaava, joka saa totuusarvon **tosi**, jos **x** on suurempi kuin **1**. Jos **x** on pienempi kuin **1**, kaava saa arvon **epätosi**.
 
 ## <a name="syntax"></a>Syntaksi
-**And**( *LooginenKaava1*, *LooginenKaava2* [, *LooginenKaava3*, ... ] )<br>
-**Or**( *LooginenKaava1*, *LooginenKaava2* [, *LooginenKaava3*, ... ] )<br>
-**Not**( *LooginenKaava* )
+**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**Not**( *LogicalFormula* )
 
-* *LooginenKaava* – Pakollinen.  Loogiset kaavat, jotka arvioidaan ja joille toiminto suoritetaan.
+* *LogicalFormula(s)* – Pakollinen.  Loogiset kaavat, jotka arvioidaan ja joille toiminto suoritetaan.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="step-by-step"></a>Vaihe vaiheelta

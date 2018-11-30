@@ -35,17 +35,17 @@ Jos määrität yhden merkkijonon argumenttina, funktio palauttaa pyytämäsi me
 Jos aloituskohta on negatiivinen tai suurempi kuin merkkijonon loppukohta, **Mid** palauttaa *tyhjän*.  Voit tarkistaa merkkijonon pituuden **[Len](function-len.md)**-funktiolla. Jos pyydät enemmän merkkejä kuin merkkijono sisältää, funktio palauttaa mahdollisimman monta merkkiä.
 
 ## <a name="syntax"></a>Syntaksi
-**Left**( *Merkkijono*, *MerkkienMäärä* )<br>**Mid**( *Merkkijono*, *AloitusKohta*, *MerkkienMäärä* )<br>**Right**( *Merkkijono*, *MerkkienMäärä* )
+**Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *String*, *NumberOfCharacters* )
 
-* *Merkkijono* vaaditaan. Merkkijono, josta tulos poimitaan.
-* *AloitusKohta* vaaditaan (vain **Mid**).  Aloituskohta.  Merkkijonon ensimmäinen merkki on kohta 1.
-* *MerkkienMäärä* vaaditaan.  Palautettavien merkkien määrä.
+* *String* – Pakollinen. Merkkijono, josta tulos poimitaan.
+* *StartingPosition*  – Pakollinen (vain **Mid**).  Aloituskohta.  Merkkijonon ensimmäinen merkki on kohta 1.
+* *NumberOfCharacters*  – Pakollinen.  Palautettavien merkkien määrä.
 
-**Left**( *YksisarakkeinenTaulukko*, *MerkkienMäärä* )<br>**Mid**( *YksisarakkeinenTaulukko*, *AloitusKohta*, *MerkkienMäärä* )<br>**Right**( *YksisarakkeinenTaulukko*, *MerkkienMäärä* )
+**Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
 
-* *YksisarakkeinenTaulukko* vaaditaan. Yksisarakkeinen taulukko merkkijonoista, joista haluat poimia tulokset.
-* *AloitusKohta* vaaditaan (vain **Mid**).  Aloituskohta.  Merkkijonon ensimmäinen merkki on kohta 1.
-* *MerkkienMäärä* vaaditaan.  Palautettavien merkkien määrä.
+* *SingleColumnTable* – Pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista haluat poimia tulokset.
+* *StartingPosition*  – Pakollinen (vain**Mid**).  Aloituskohta.  Merkkijonon ensimmäinen merkki on kohta 1.
+* *NumberOfCharacters*  – Pakollinen.  Palautettavien merkkien määrä.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-string"></a>Yksittäinen merkkijono

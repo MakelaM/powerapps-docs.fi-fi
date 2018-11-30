@@ -26,17 +26,17 @@ Antaa [tietolähteen](../working-with-data-sources.md) edellisiin muutoksiin lii
 ## <a name="overview"></a>Yleiskatsaus
 Virheitä voi tapahtua, kun tietolähteen [tietuetta](../working-with-tables.md#records) muutetaan.  Tähän voi olla useita syitä, kuten verkkokatkokset, riittämättömät käyttöoikeudet ja muokkausristiriidat.  
 
-**[Patch](function-patch.md)**-funktio ja muut datafunktiot eivät suoraan palauta virheitä. Sen sijaan ne palauttavat niiden toiminnon tuloksen. Kun datafunktio suoritetaan, voit käyttää **Virheet**-funktiota virheiden tietojen hankkimiseen.  Voit tarkistaa virheiden olemassaolon kaavan **IsEmpty( Errors ( ... ) )** funktiolla **[IsEmpty]**.
+**[Patch](function-patch.md)**-funktio ja muut datafunktiot eivät suoraan palauta virheitä. Sen sijaan ne palauttavat niiden toiminnon tuloksen. Kun datafunktio suoritetaan, voit käyttää **Errors**-funktiota virheiden tietojen hankkimiseen.  Voit tarkistaa virheiden olemassaolon kaavan **IsEmpty( Errors ( ... ) )** funktiolla **[IsEmpty]**.
 
-Voit välttää joitakin virheitä, ennen kuin ne tapahtuvat, käyttämällä **[Vahvista](function-validate.md)**- ja **[DataSourceInfo](function-datasourceinfo.md)**-funktioita.  Katso lisäehdotuksia siitä, miten virheitä käsitellään ja vältetään, aiheesta [tietolähteiden käsitteleminen](../working-with-data-sources.md).
+Voit välttää joitakin virheitä, ennen kuin ne tapahtuvat, käyttämällä **[Validate](function-validate.md)**- ja **[DataSourceInfo](function-datasourceinfo.md)**-funktioita.  Katso lisäehdotuksia siitä, miten virheitä käsitellään ja vältetään, aiheesta [tietolähteiden käsitteleminen](../working-with-data-sources.md).
 
 ## <a name="description"></a>Kuvaus
 **Errors**-funktio palauttaa virheiden [taulukon](../working-with-tables.md), joka sisältää seuraavat [sarakkeet](../working-with-tables.md#columns):
 
-* **Tietue**.  Tietolähteessä oleva tietue, jossa virhe ilmeni.  Jos virhe ilmeni tietueen luonnin aikana, tämä sarake on *tyhjä*.
-* **Sarake**.  Sarake, joka aiheutti virheen, jos virheen voidaan katsoa johtuneen yhdestä sarakkeesta. Jos ei, tämä on *tyhjä*.
-* **Viesti**.  Virheen kuvaus.  Tämä virhemerkkijono voidaan näyttää loppukäyttäjälle.  Huomioi, että tietolähde saattaa muodostaa tämän viestin ja se voi olla pitkä ja sisältää raakoja sarakkeiden nimiä, jotka eivät ehkä merkitse käyttäjälle mitään.
-* **Virhe**.  Virhekoodi, jota voidaan käyttää kaavoissa ratkaisemaan virhe:
+* **Record**.  Tietolähteessä oleva tietue, jossa virhe ilmeni.  Jos virhe ilmeni tietueen luonnin aikana, tämä sarake on *tyhjä*.
+* **Column**.  Sarake, joka aiheutti virheen, jos virheen voidaan katsoa johtuneen yhdestä sarakkeesta. Jos ei, tämä on *tyhjä*.
+* **Message**.  Virheen kuvaus.  Tämä virhemerkkijono voidaan näyttää loppukäyttäjälle.  Huomioi, että tietolähde saattaa muodostaa tämän viestin ja se voi olla pitkä ja sisältää raakoja sarakkeiden nimiä, jotka eivät ehkä merkitse käyttäjälle mitään.
+* **Error**.  Virhekoodi, jota voidaan käyttää kaavoissa ratkaisemaan virhe:
 
 | ErrorKind | Kuvaus |
 | --- | --- |
@@ -56,15 +56,15 @@ Voit välttää joitakin virheitä, ennen kuin ne tapahtuvat, käyttämällä **
 
 Virheitä voidaan palauttaa koko tietolähteestä tai vain valitusta rivistä antamalla funktiolle *Tietue*-argumentti.  
 
-**[Korjaustiedosto](function-patch.md)** tai jokin toinen datafunktio saattaa palauttaa *tyhjän* arvon, jos esimerkiksi tietuetta ei voitu luoda. Voit välittää *tyhjän* arvon **Errors**-funktiolle, ja se palauttaa asianmukaiset virhetiedot näissä tapauksissa.  Datafunktioiden seuraava käyttökerta samalla tietolähteellä tyhjentää nämä virhetiedot.
+**[Patch](function-patch.md)** tai jokin toinen datafunktio saattaa palauttaa *tyhjän* arvon, jos esimerkiksi tietuetta ei voitu luoda. Voit välittää *tyhjän* arvon **Errors**-funktiolle, ja se palauttaa asianmukaiset virhetiedot näissä tapauksissa.  Datafunktioiden seuraava käyttökerta samalla tietolähteellä tyhjentää nämä virhetiedot.
 
 Jos virheitä ei ole, taulukko, jonka **Errors** palauttaa, on [tyhjä](function-isblank-isempty.md) ja sitä voidaan testata **[IsEmpty](function-isblank-isempty.md)**-funktiolla.
 
 ## <a name="syntax"></a>Syntaksi
-**Errors**( *Tietolähde* [, *Tietue* ] )
+**Errors**( *DataSource* [, *Record* ] )
 
-* *Tietolähde* – pakollinen. Tietolähde, jolle haluat palauttaa virheitä.
-* *Tietue* – valinnainen.  Tietty tietue, jolle haluat palauttaa virheitä. Jos et määritä tätä argumenttia, funktio palauttaa virheitä koko tietolähteelle.
+* *DataSource* – Pakollinen. Tietolähde, jolle haluat palauttaa virheitä.
+* *Record* – Valinnainen.  Tietty tietue, jolle haluat palauttaa virheitä. Jos et määritä tätä argumenttia, funktio palauttaa virheitä koko tietolähteelle.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="step-by-step"></a>Vaihe vaiheelta
@@ -82,7 +82,7 @@ Tämä muutos tehdään tietolähteeseen **[Patch](function-patch.md)**-funktiol
 
 jossa **Gallery.Updates** saa arvon **{ Quantity: 90 }**, koska vain **Quantity**-ominaisuutta on muokattu.
 
-Valitettavasti, juuri ennen kuin **[Korjaustiedosto](function-patch.md)**-funktio käynnistettiin, joku muu muutti Chocolate-tietueen **Quantity**-arvoksi luvun 80.  PowerApps tunnistaa tämän eikä salli ristiriitaista muutosta.  Voit tarkistaa tällaisen tilanteen seuraavalla kaavalla:
+Valitettavasti, juuri ennen kuin **[Patch](function-patch.md)**-funktio käynnistettiin, joku muu muutti Chocolate-tietueen **Quantity**-arvoksi luvun 80.  PowerApps tunnistaa tämän eikä salli ristiriitaista muutosta.  Voit tarkistaa tällaisen tilanteen seuraavalla kaavalla:
 
 * **IsEmpty( Errors( IceCream, EditRecord ) )**
 

@@ -33,21 +33,21 @@ Nämä funktiot muuttavat **Muokkaa lomaketta** -ohjausobjektin tilaa.  Lomakeoh
 | **FormMode.View** |Lomake on täytetty olemassa olevalla tietueella, mutta käyttäjä ei voi muokata kenttien arvoja. |
 
 ## <a name="description"></a>Kuvaus
-Nämä funktiot käynnistetään usein **[Painike](../controls/control-button.md)**- tai **[Kuva](../controls/control-image.md)** ohjausobjektin **[OnSelect](../controls/properties-core.md)**-kaavalla, jolloin käyttäjä voi tallentaa tai hylätä muutokset tai luoda tietueen. Voit myös luoda kokonaisvaltaisen ratkaisun [käyttämällä ohjausobjekteja ja funktioita yhdessä](../working-with-forms.md).
+Nämä funktiot käynnistetään usein **[Painike](../controls/control-button.md)**- tai **[Kuva](../controls/control-image.md)**-ohjausobjektin **[OnSelect](../controls/properties-core.md)**-kaavalla, jolloin käyttäjä voi tallentaa tai hylätä muutokset tai luoda tietueen. Voit myös luoda kokonaisvaltaisen ratkaisun [käyttämällä ohjausobjekteja ja funktioita yhdessä](../working-with-forms.md).
 
 Nämä funktiot eivät palauta arvoja.
 
 ### <a name="submitform"></a>SubmitForm
 Tallenna Lomake-ohjausobjektiin tehdyt muutokset tietolähteeseen käyttämällä **SubmitForm**-funktiota Painike-ohjausobjektin **[OnSelect](../controls/properties-core.md)**-ominaisuudessa.
 
-Ennen kuin funktio lähettää muutokset, se tarkistaa mahdolliset vahvistusongelmat pakolliseksi merkityissä kentissä ja kentissä, joiden arvolla on vähintään yksi rajoitus. Toiminta vastaa **[Vahvista](function-validate.md)**-funktiota.
+Ennen kuin funktio lähettää muutokset, se tarkistaa mahdolliset vahvistusongelmat pakolliseksi merkityissä kentissä ja kentissä, joiden arvolla on vähintään yksi rajoitus. Toiminta vastaa **[Validate](function-validate.md)**-funktiota.
 
-**SubmitForm** tarkistaa myös lomakkeen **[Valid](../controls/control-form-detail.md)**-ominaisuuden. Se on kooste kaikista **[Kortti](../controls/control-card.md)**-ohjausobjektien **[Valid](../controls/control-card.md)**-ominaisuuksista, jotka Lomake-ohjausobjekti sisältää. Jos ongelma ilmenee, tietoja ei lähetetä ja Lomake-ohjausobjektin **[Virhe](../controls/control-form-detail.md)**- ja **[ErrorKind](../controls/control-form-detail.md)**-ominaisuudet määritetään vastaavasti.
+**SubmitForm** tarkistaa myös lomakkeen **[Valid](../controls/control-form-detail.md)**-ominaisuuden. Se on kooste kaikista **[Kortti](../controls/control-card.md)**-ohjausobjektien **[Valid](../controls/control-card.md)**-ominaisuuksista, jotka Lomake-ohjausobjekti sisältää. Jos ongelma ilmenee, tietoja ei lähetetä ja Lomake-ohjausobjektin **[Error](../controls/control-form-detail.md)**- ja **[ErrorKind](../controls/control-form-detail.md)**-ominaisuudet määritetään vastaavasti.
 
 Jos vahvistus menee läpi, **SubmitForm** lähettää muutoksen tietolähteeseen.
 
-* Jos tämä onnistuu, lomakkeen **[OnSuccess](../controls/control-form-detail.md)**-toiminta suoritetaan ja **[Virhe](../controls/control-form-detail.md)**- sekä **[ErrorKind](../controls/control-form-detail.md)**-ominaisuudet tyhjennetään.  Jos lomake oli **FormMode.New**-tilassa, se palautetaan **FormMode.Edit**-tilaan.
-* Jos muutoksen tallentaminen ei onnistu, lomakkeen **[OnFailure](../controls/control-form-detail.md)**-toiminta suoritetaan ja **[Virhe](../controls/control-form-detail.md)**- sekä **[ErrorKind](../controls/control-form-detail.md)**-ominaisuudet määritetään vastaavasti.  Lomakkeen tila ei muutu.  
+* Jos tämä onnistuu, lomakkeen **[OnSuccess](../controls/control-form-detail.md)**-toiminta suoritetaan ja **[Error](../controls/control-form-detail.md)**- sekä **[ErrorKind](../controls/control-form-detail.md)**-ominaisuudet tyhjennetään.  Jos lomake oli **FormMode.New**-tilassa, se palautetaan **FormMode.Edit**-tilaan.
+* Jos muutoksen tallentaminen ei onnistu, lomakkeen **[OnFailure](../controls/control-form-detail.md)**-toiminta suoritetaan ja **[Error](../controls/control-form-detail.md)**- sekä **[ErrorKind](../controls/control-form-detail.md)**-ominaisuudet määritetään vastaavasti.  Lomakkeen tila ei muutu.  
 
 ### <a name="editform"></a>EditForm
 **EditForm**-funktio muuttaa lomakeohjausobjektin tilaksi **FormMode.Edit**. Tässä tilassa lomake täytetään Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)**-ominaisuuden sisällöllä.  Jos **SubmitForm**-funktio suoritetaan, kun lomake on tässä tilassa, tietuetta muutetaan, ei luoda.  Lomake-ohjausobjektin oletusarvo on **FormMode.Edit**.
@@ -56,7 +56,7 @@ Jos vahvistus menee läpi, **SubmitForm** lähettää muutoksen tietolähteeseen
 **NewForm**-funktio muuttaa Lomake-ohjausobjektin tilaksi **FormMode.New**. Tässä tilassa Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)**-ominaisuuden sisältö ohitetaan. Lomake täytetään sen **[DataSource](../controls/control-form-detail.md)**-ominaisuuden oletusarvoilla. Jos **SubmitForm**-funktio suoritetaan, kun lomake on tässä tilassa, tietue luodaan, sitä ei muuteta.
 
 ### <a name="resetform"></a>ResetForm
-**ResetForm**-funktio palauttaa lomakkeen sisällön sen alkuarvoihin, jotka edelsivät käyttäjän tekemiä muutoksia. Jos lomake on **FormMode.New**-tilassa, se palautetaan **FormMode.Edit**-tilaan. Myös Lomake-ohjausobjektin **[OnReset](../controls/control-form-detail.md)**-toiminta suoritetaan.  Voit myös palauttaa yksittäisiä ohjausobjekteja **[Palauta](function-reset.md)**-funktiolla, mutta vain lomakkeen kautta.
+**ResetForm**-funktio palauttaa lomakkeen sisällön sen alkuarvoihin, jotka edelsivät käyttäjän tekemiä muutoksia. Jos lomake on **FormMode.New**-tilassa, se palautetaan **FormMode.Edit**-tilaan. Myös Lomake-ohjausobjektin **[OnReset](../controls/control-form-detail.md)**-toiminta suoritetaan.  Voit myös palauttaa yksittäisiä ohjausobjekteja **[Reset](function-reset.md)**-funktiolla, mutta vain lomakkeen kautta.
 
 ### <a name="viewform"></a>ViewForm
 **ViewForm**-funktio muuttaa lomakeohjausobjektin tilaksi **FormMode.View**. Tässä tilassa lomake täytetään Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)**-ominaisuuden sisällöllä.  **SubmitForm**- ja **RestForm**-funktioilla ei ole tässä tilassa vaikutusta.

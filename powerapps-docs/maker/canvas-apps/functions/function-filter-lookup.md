@@ -36,29 +36,29 @@ Kumpikin kaava lasketaan taulukon jokaiselle tietueelle.  Tulokseen sisällytet�
 
 **Filter** ja **Search** palauttavat taulukon, joka sisältää samat sarakkeet kuin alkuperäinen taulukko sekä tietueet, jotka vastaavat ehtoja. **LookUp** palauttaa vain ensimmäisen löydetyn tietueen, jonka se on supistanut yhdeksi arvoksi kaavan avulla. Jos tietueita ei löydy, **Filter** ja **Search** palauttavat [tyhjän](function-isblank-isempty.md) taulukon, ja **LookUp** palauttaa arvon *tyhjä*.  
 
-[Taulukot](../working-with-tables.md) on arvo PowerAppsissa, samaan tapaan kuin merkkijono tai numero. Ne voidaan välittää funktioihin ja palauttaa niistä.  **Filter**, **Search** ja **LookUp** eivät muokkaa taulukkoa. Sen sijaan ne kohtelevat taulukkoa argumenttina, josta ne palauttavat taulukon, tietueen tai yksittäisen arvon. Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
+[Tables](../working-with-tables.md) on arvo PowerAppsissa, samaan tapaan kuin merkkijono tai numero. Ne voidaan välittää funktioihin ja palauttaa niistä.  **Filter**, **Search** ja **LookUp** eivät muokkaa taulukkoa. Sen sijaan ne kohtelevat taulukkoa argumenttina, josta ne palauttavat taulukon, tietueen tai yksittäisen arvon. Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
 
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 
 ## <a name="syntax"></a>Syntaksi
 **Filter**( *Table*, *Formula1* [, *Formula2*, ... ] )
 
-* *Taulukko* – Pakollinen. Taulukko, josta haetaan.
-* *Kaavat* – Pakollinen. Kaava, jonka mukaan jokaista taulukon tietuetta arvioidaan. Funktio palauttaa kaikki tietueet, jotka palauttavat arvon **true**. Voit viitata sarakkeisiin taulukon sisällä. Jos annat useamman kuin yhden kaavan, kaikkien kaavojen tulokset yhdistetään **[And](function-logicals.md)**-funktiolla.
+* *Table* – Pakollinen. Taulukko, josta haetaan.
+* *Formula(s)* – Pakollinen. Kaava, jonka mukaan jokaista taulukon tietuetta arvioidaan. Funktio palauttaa kaikki tietueet, jotka palauttavat arvon **true**. Voit viitata sarakkeisiin taulukon sisällä. Jos annat useamman kuin yhden kaavan, kaikkien kaavojen tulokset yhdistetään **[And](function-logicals.md)**-funktiolla.
 
 **Search**( *Table*, *SearchString*, *Column1* [, *Column2*, ... ] )
 
-* *Taulukko* – Pakollinen. Taulukko, josta haetaan.
+* *Table* – Pakollinen. Taulukko, josta haetaan.
 * *SearchString* – Pakollinen. Haettava merkkijono. Jos arvo on *tyhjä* tai tyhjä merkkijono, kaikki tietueet palautetaan.
-* *Sarakkeet* – Pakollinen. *Taulukon* sarakkeiden nimet, joista haetaan. Sarakkeiden, joista haetaan, on sisällettävä tekstiä. Sarakkeiden nimien on oltava merkkijonoja, jotka ovat lainausmerkeissä. Sarakkeiden nimien on kuitenkin oltava staattisia, eikä niitä voi laskea kaavalla. Jos jonkin haettavan sarakkeen tiedoista löytyy *SearchString*in osittainen vastaavuus, koko tietue palautetaan.
+* *Column(s)* – Pakollinen. *Taulukon* sarakkeiden nimet, joista haetaan. Sarakkeiden, joista haetaan, on sisällettävä tekstiä. Sarakkeiden nimien on oltava merkkijonoja, jotka ovat lainausmerkeissä. Sarakkeiden nimien on kuitenkin oltava staattisia, eikä niitä voi laskea kaavalla. Jos jonkin haettavan sarakkeen tiedoista löytyy *SearchString*in osittainen vastaavuus, koko tietue palautetaan.
 
 > [!NOTE]
-> Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **"Sarakkeen_x0020_Nimi"**.
+> Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
 **LookUp**( *Table*, *Formula* [, *ReductionFormula* ] )
 
-* *Taulukko* – Pakollinen. Taulukko, josta haetaan. Syntaksi näytetään käyttöliittymässä *lähteenä* funktioruudun yläpuolella.
-* *Kaava* – Pakollinen.
+* *Table* – Pakollinen. Taulukko, josta haetaan. Syntaksi näytetään käyttöliittymässä *lähteenä* funktioruudun yläpuolella.
+* *Formula* – Pakollinen.
   Kaava, jonka mukaan jokaista taulukon tietuetta arvioidaan. Funktio palauttaa ensimmäisen tietueen, jonka tulos on **true**. Voit viitata sarakkeisiin taulukon sisällä. Syntaksi näytetään käyttöliittymässä *ehtona* funktioruudun yläpuolella.
 * *ReductionFormula* – Valinnainen. Tämä kaava lasketaan löydetylle tietueelle, ja se supistaa tietueen yksittäiseksi arvoksi. Voit viitata sarakkeisiin taulukon sisällä. Jos et käytä tätä parametria, funktio palauttaa koko tietueen taulukosta. Syntaksi näytetään käyttöliittymässä *tuloksena* funktioruudun yläpuolella.
 
@@ -112,6 +112,6 @@ Voit laajentaa haun sisältämään sekä **Company**-sarakkeen että **Name**-s
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarake tai **Company**-sarake alkaa hakumerkkijonolla (esimerkiksi **co**).  [**&#124;&#124;**-operaattori ](operators.md) on *true*, jos jompikumpi **StartsWith**-funktio on *true*. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-startswith.png) |
-| **Filter( Asiakkaat, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
-| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Suodatin**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
+| **Filter( Customers, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Filter**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-filter-lookup/customers-all-co-contains.png) |
 

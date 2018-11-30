@@ -40,14 +40,14 @@ Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](..
 **DateAdd**( *DateTime*, *Addition* [, *Units* ] )
 
 * *DateTime* – Pakollinen. Käytettävä päivämäärä/aika-arvo.
-* *Lisäys* – Pakollinen. *Yksikköinä* annettu luku, joka lisätään *DateTime*en.
-* *Yksiköt* – Valinnainen. Lisättävien *Yksiköiden* tyyppi: **millisekuntia**, **sekunnit**, **minuutit**, **tunnit**, **päivät**, **kuukausia**, **vuosineljännestä** tai **vuodet**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
+* *Addition* – Pakollinen. *Yksikköinä (units)* annettu luku, joka lisätään *DateTime*en.
+* *Units* – Valinnainen. Lisättävien *Yksiköiden* tyyppi: **millisekuntia**, **sekunnit**, **minuutit**, **tunnit**, **päivät**, **kuukausia**, **vuosineljännestä** tai **vuodet**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
 
 **DateDiff**( *StartDateTime*, *EndDateTime* [, *Units* ] )
 
 * *StartDateTime* – Pakollinen. Alkupäivämäärä/aika-arvo.
 * *EndDateTime* – Pakollinen. Loppupäivämäärä/aika-arvo.
-* *Yksiköt* – Valinnainen. Lisättävien *Yksiköiden* tyyppi: **millisekuntia**, **sekunnit**, **minuutit**, **tunnit**, **päivät**, **kuukausia**, **vuosineljännestä** tai **vuodet**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
+* *Units* – Valinnainen. Lisättävien *Yksiköiden* tyyppi: **millisekuntia**, **sekunnit**, **minuutit**, **tunnit**, **päivät**, **kuukausia**, **vuosineljännestä** tai **vuodet**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
 
 **TimeZoneOffset**( [ *DateTime* ] )
 
@@ -71,7 +71,7 @@ Kaikissa näissä esimerkeissä oletetaan, että nykyinen päivämäärä ja aik
 | --- | --- | --- |
 | **DateDiff( Now(), DateValue("1/1/2014") )** |Palauttaa kahden arvon eron oletusyksikkönä **Päivät** |170 |
 | **DateDiff( Now(), DateValue("1/1/2014"), Months )** |Palauttaa kahden arvon eron yksikkönä **kuukausia** |6 |
-| **DateDiff( Now(), Today(), Minutes )** |Palauttaa eron nykyisen päivämäärä/aika-arvon ja nykyisen päivämäärän (ei aikaa) välillä minuutteina.  Koska **Nyt** on myöhäisempi kuin **Tänään**, tulos on negatiivinen. |-782 |
+| **DateDiff( Now(), Today(), Minutes )** |Palauttaa eron nykyisen päivämäärä/aika-arvon ja nykyisen päivämäärän (ei aikaa) välillä minuutteina.  Koska **Now** on myöhäisempi kuin **Today**, tulos on negatiivinen. |-782 |
 
 ### <a name="converting-to-utc"></a>Muuntaminen UTC-aikaan
 Voit muuntaa UTC-aikaan (Coordinated Universal Time) lisäämällä **TimeZoneOffset**-funktion tiettyyn aikaan.  
@@ -82,7 +82,7 @@ Kuvitellaan esimerkiksi, että nykyinen päivämäärä ja aika on **15. heinäk
 
 **TimeZoneOffset**in oletusarvo on nykyinen aika, jolloin sinun ei tarvitse välittää sitä argumenttina.
 
-Jotta näet tuloksen, käytä **Teksti**-funktiota muodossa *dd-mm-yyyy hh:mm*, jolloin tuloksena palautetaan **15-07-2013 20:02**.
+Jotta näet tuloksen, käytä **Text**-funktiota muodossa *dd-mm-yyyy hh:mm*, jolloin tuloksena palautetaan **15-07-2013 20:02**.
 
 ### <a name="converting-from-utc"></a>Muuntaminen UTC-ajasta
 Muunna UTC-ajasta vähentämällä **TimeZoneOffset** mistä tahansa ajasta (lisäämällä negatiivisen arvon).
@@ -93,5 +93,5 @@ Kuvitellaan esimerkiksi, että UTC-päivämäärä ja -aika **15. heinäkuuta 20
 
 Huomaa negatiivinen etumerkki ennen **TimeZoneOffset**-funktiota, mikä saa aikaan aikaeron vähentämisen lisäämisen sijaan.
 
-Jotta näet tuloksen, käytä **Teksti**-funktiota muodossa *dd-mm-yyyy hh:mm*, jolloin tuloksena palautetaan **15-07-2013 13:02**, jos olet Tyynenmeren kesäajan aikavyöhykkeellä.
+Jotta näet tuloksen, käytä **Text**-funktiota muodossa *dd-mm-yyyy hh:mm*, jolloin tuloksena palautetaan **15-07-2013 13:02**, jos olet Tyynenmeren kesäajan aikavyöhykkeellä.
 

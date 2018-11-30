@@ -33,10 +33,10 @@ Jos **[Errors](function-errors.md)**-funktio ilmoittaa ristiriidasta **[Patch](f
 **Revert**-funktiolla ei ole paluuarvoa. Sitä voidaan käyttää vain [toimintakaavassa](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Revert**( *Tietolähde* [, *Tietue* ] )
+**Revert**( *DataSource* [, *Record* ] )
 
-* *Tietolähde* – pakollinen. Tietolähde, jonka haluat palauttaa.
-* *Tietue* – Valinnainen.  Tietue, jonka haluat palauttaa.  Jos et määritä tietuetta, koko tietolähde palautetaan.
+* *DataSource* – Pakollinen. Tietolähde, jonka haluat palauttaa.
+* *Record* – Valinnainen.  Tietue, jonka haluat palauttaa.  Jos et määritä tietuetta, koko tietolähde palautetaan.
 
 ## <a name="example"></a>Esimerkki
 Tässä esimerkissä palautetaan tietolähde nimeltä **IceCream**, jolla on aluksi tämän taulukon tiedot:
