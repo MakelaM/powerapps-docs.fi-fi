@@ -46,7 +46,7 @@ Ohjausobjektin nykyinen versio on kokeellinen seuraavien tilapäisten rajoituste
 
 - Ohjausobjekti on ensisijaisesti tarkoitettu käytettäväksi selaimissa suurilla näytöillä.  Ohjausobjektin käyttäminen matkapuhelimella voi olla turhauttava kokemus.
 
-- Tunnettuja ongelmia luomisessa, kun käytetään Windows Studiota tai Edge-selainta.  Nykyinen suositus on käyttää Web Studiota Chromessa.
+- Tunnettuja ongelmia luomisessa, kun käytetään Windows Studiota tai Microsoft Edge -selainta.   Nykyinen suositus on käyttää Web Studiota Chromessa.
 
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
