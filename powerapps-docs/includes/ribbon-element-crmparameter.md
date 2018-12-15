@@ -1,1 +1,1 @@
-Esittää Microsoft Dynamics 365 -sovelluksesta noudetut tiedot, jotka voidaan välittää parametrina.
+Edustaa Microsoft Dynamics 365 -sovelluksesta noudettuja tietoja, jotka voidaan välittää parametrina.
