@@ -1,1 +1,1 @@
-Palvelurakenne
+Service Fabric

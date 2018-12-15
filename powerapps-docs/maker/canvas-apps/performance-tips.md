@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0fa6a8f741ed0e771eeefbbee82a23e876363e55
-ms.sourcegitcommit: 469be99b762cd62289a98f058c498ac25ff8801b
+ms.openlocfilehash: 9d86bcaf02050da1b3cd0364e28bc4ec05a6407d
+ms.sourcegitcommit: 6e579014ebb1f801985b8b4b68b7b768a09559c7
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44327741"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247582"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Kangassovellusten suorituskyvyn optimointi PowerAppsissa
 Microsoft tekee kaikkensa parantaakseen kaikkien PowerApps-ympäristössä toimivien sovellusten suorituskykyä. Tämän aiheen parhaiden käytäntöjen avulla voit myös tehostaa luomiesi sovellusten suorituskykyä.
@@ -58,9 +58,9 @@ Voit varmistaa tämän toiminnan selaimesi kehittäjätyökalujen avulla:
 Voit sisällyttää saman kaavan **Concurrent**-funktioon vähentääksesi toiminnon vaatiman kokonaisajan:
 
     Concurrent( 
-        ClearCollect( Product, '[SalesLT].[Product]' );
-        ClearCollect( Customer, '[SalesLT].[Customer]' );
-        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+        ClearCollect( Product, '[SalesLT].[Product]' ),
+        ClearCollect( Customer, '[SalesLT].[Customer]' ),
+        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
         ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
         
 Tämän muutoksen jälkeen sovellus noutaa taulukot rinnakkain: 

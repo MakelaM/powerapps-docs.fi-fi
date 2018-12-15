@@ -1,1 +1,1 @@
-Office 365 -ryhmät
+Office 365 Groups

@@ -1,1 +1,1 @@
-Microsoft System Center 2012 -määritysten hallinta
+Microsoft System Center 2012 Configuration Manager

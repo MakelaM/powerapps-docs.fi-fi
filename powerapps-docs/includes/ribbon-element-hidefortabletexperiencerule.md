@@ -1,1 +1,1 @@
-Määrittää säännön, joka palauttaa arvon epätosi, kun WWW-sovellusta tarkastellaan taulutietokonelaitteen mobiiliselaimella.
+Määrittää säännön, joka palauttaa false-arvon, kun verkkosovellusta katsellaan mobiiliselaimessa tai tabletissa.

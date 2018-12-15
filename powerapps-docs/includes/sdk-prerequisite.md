@@ -1,1 +1,1 @@
-Esimerkkiprojektin lataaminen ja siinä käytettävien NuGet-pakettien tallentaminen edellyttää Internet-yhteyttä.
+Internet-yhteyttä vaaditaan malliprojektin lataamiseen ja malliprojektissa käytettyjen NuGet-pakettien palauttamiseen.

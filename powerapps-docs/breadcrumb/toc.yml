@@ -1,42 +1,56 @@
+items:
 - name: Docs
   href: /
   topicHref: /
   items:
-    - name: PowerApps
-      tocHref: /powerapps/
-      topicHref: /powerapps/
+  - name: PowerApps
+    tocHref: /powerapps/
+    topicHref: /powerapps/
+    items:
+    - name: Sovellusten luominen
+      tocHref: /powerapps/maker/common-data-service/
+      topicHref: /powerapps/maker/index
+    - name: Sovellusten luominen
+      tocHref: /powerapps/maker/model-driven-apps/
+      topicHref: /powerapps/maker/index
+    - name: Sovellusten luominen
+      tocHref: /powerapps/maker/canvas-apps/
+      topicHref: /powerapps/maker/index
+    - name: Sovellusten luominen
+      tocHref: /powerapps/developer/common-data-service/
+      topicHref: /powerapps/maker/index
       items:
-        - name: Luo sovelluksia
-          tocHref: /powerapps/maker/common-data-service/
-          topicHref: /powerapps/maker/index
-        - name: Luo sovelluksia
-          tocHref: /powerapps/maker/model-driven-apps/
-          topicHref: /powerapps/maker/index
-        - name: Luo sovelluksia
-          tocHref: /powerapps/maker/canvas-apps/
-          topicHref: /powerapps/maker/index
-        - name: Luo sovelluksia
+      - name: Microsoft Common Data Service for Apps
+        tocHref: /powerapps/developer/common-data-service/
+        topicHref: /powerapps/maker/common-data-service/index
+        items:
+        - name: Kehittäjä
           tocHref: /powerapps/developer/common-data-service/
-          topicHref: /powerapps/maker/index
+          topicHref: /powerapps/developer/common-data-service/index
           items:
-            - name: Common Data Service sovelluksille
-              tocHref: /powerapps/developer/common-data-service/
-              topicHref: /powerapps/maker/common-data-service/index
-              items:
-                - name: Kehittäjä
-                  tocHref: /powerapps/developer/common-data-service/
-                  topicHref: /powerapps/developer/common-data-service/index
-        - name: Luo sovelluksia
+          - name: Organisaatiopalvelut
+            tocHref: /powerapps/developer/common-data-service/org-service/
+            topicHref: /powerapps/developer/common-data-service/org-service/index
+          - name: WWW-ohjelmointirajapinta
+            tocHref: /powerapps/developer/common-data-service/webapi/
+            topicHref: /powerapps/developer/common-data-service/webapi/index
+    - name: Sovellusten luominen
+      tocHref: /powerapps/developer/model-driven-apps/
+      topicHref: /powerapps/maker/index
+      items:
+      - name: Mallipohjaiset sovellukset
+        tocHref: /powerapps/developer/model-driven-apps/
+        topicHref: /powerapps/maker/model-driven-apps/index
+        items:
+        - name: Kehittäjä
           tocHref: /powerapps/developer/model-driven-apps/
-          topicHref: /powerapps/maker/index
-          items:
-            - name: Mallipohjaiset sovellukset
-              tocHref: /powerapps/developer/model-driven-apps/
-              topicHref: /powerapps/maker/model-driven-apps/index
-              items:
-                - name: Kehittäjä
-                  tocHref: /powerapps/developer/model-driven-apps/
-                  topicHref: /powerapps/developer/model-driven-apps/index
-        - name: Ohjattu oppiminen
-          tocHref: /powerapps/guided-learning/
-          topicHref: /powerapps/guided-learning/index
+          topicHref: /powerapps/developer/model-driven-apps/index
+    - name: Opastettu oppiminen
+      tocHref: /powerapps/guided-learning/
+      topicHref: /powerapps/guided-learning/index
+ms.openlocfilehash: 2644352beb08998cad2c80678ab8abead5e6a596
+ms.sourcegitcommit: 90d3d4e2f2c8070443ff05424f3f46f4a8cdec81
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50681727"

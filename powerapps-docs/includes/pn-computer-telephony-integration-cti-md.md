@@ -1,1 +1,1 @@
-tietokone-puhelinintegraatio (CTI)
+tietokoneen puhelinintegrointi (CTI)

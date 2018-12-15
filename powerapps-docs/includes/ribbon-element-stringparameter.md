@@ -1,1 +1,1 @@
-Määrittää merkkijonotietotyyppiä (string) olevan arvon, joka voidaan välittää parametrina.
+Määrittää arvon merkkijonotietotyyppinä, joka voidaan välittää parametrina.

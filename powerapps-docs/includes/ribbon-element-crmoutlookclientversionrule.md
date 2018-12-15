@@ -1,1 +1,1 @@
-Tunnistaa Microsoft Dynamics 365 for Microsoft Office Outlookin version.
+Tunnistaa Microsoft Dynamics 365 for Microsoft Office Outlook -version.
