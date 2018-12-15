@@ -1,1 +1,1 @@
-Määrittää toiminnon, jolla lisätään tai korvataan valintanauhan kohteita.
+Määrittää toiminnot valintanauhan kohteiden lisäämiseksi tai vaihtamiseksi.

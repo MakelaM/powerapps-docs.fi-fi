@@ -1,1 +1,1 @@
-Tämä ominaisuus julkaistiin Dynamics CRM Online 2015 -päivitys 1:ssä ja CRM 2016 (paikallinen) -versiossa.
+Tämä toiminto otettiin käyttöön Dynamics CRM Online 2015 -päivityksessä 1 ja CRM 2016:ssa (paikallinen).

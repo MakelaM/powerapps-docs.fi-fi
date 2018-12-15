@@ -1,1 +1,1 @@
-Dynamics 365:n hallintakeskus
+Dynamics 365 -hallintakeskus

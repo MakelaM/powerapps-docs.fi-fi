@@ -1,1 +1,1 @@
-Valitse **Tallenna**.
+Napsauta **Tallenna**.

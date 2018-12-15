@@ -1,1 +1,1 @@
-Määrittää totuusarvotietotyyppiä (Boolean) olevan arvon, joka voidaan välittää parametrina.
+Määrittää arvon loogisena tietotyyppinä, joka voidaan välittää parametrina.
