@@ -1,1 +1,1 @@
-Microsoft-tili
+Microsoft-asiakkuus

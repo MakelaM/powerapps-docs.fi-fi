@@ -1,1 +1,1 @@
-Azuren tapahtumatoiminnot
+Azure Tapahtumatoiminnot

@@ -1,1 +1,1 @@
-SQL Server -integrointipalvelut
+SQL Server Integration Services

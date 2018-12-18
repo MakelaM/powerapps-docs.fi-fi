@@ -1,1 +1,1 @@
-Composite UI Application Block
+Yhdistelmäsovelluslohko

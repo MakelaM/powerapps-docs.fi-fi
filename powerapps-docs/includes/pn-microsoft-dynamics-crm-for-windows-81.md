@@ -1,1 +1,1 @@
-Dynamics 365 for Windows 8.1
+Dynamics 365 Windows 8.1 -käyttöjärjestelmälle

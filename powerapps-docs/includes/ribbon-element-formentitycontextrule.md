@@ -1,1 +1,1 @@
-Määrittää säännön, joka tunnistaa, näkyykö lomakkeen valintanauha tietyn entiteetin kontekstissa.
+Määrittää säännön, joka havaitsee, näkyykö lomakkeen valintanauha tietyn entiteetin yhteydessä.

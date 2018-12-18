@@ -1,1 +1,1 @@
-Poistaa olemassa olevan valintanauhan elementin valintanauhan käsittelystä.
+Poistaa olemassa olevan valintanauhaelementin käsittelyn valintanauhan osalta.

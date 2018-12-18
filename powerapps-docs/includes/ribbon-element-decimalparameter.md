@@ -1,1 +1,1 @@
-Määrittää arvon desimaalitietotyyppinä, joka voidaan välittää parametrina.
+Määrittää desimaalitietotyyppiä olevan arvon, joka voidaan välittää parametrina.

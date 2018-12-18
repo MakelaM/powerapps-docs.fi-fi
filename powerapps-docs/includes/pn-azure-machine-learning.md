@@ -1,1 +1,1 @@
-Azure Automaattianalyysipalvelut
+Azuren automaattianalyysipalvelut

@@ -1,1 +1,1 @@
-Määrittää säännön, joka tunnistaa käytössä olevan esityksen tyypin.
+Määrittää säännön, joka tunnistaa käytössä olevan esityksen.

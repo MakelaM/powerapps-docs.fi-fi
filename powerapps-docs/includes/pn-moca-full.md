@@ -1,1 +1,1 @@
-Dynamics 365 tableteille
+Dynamics 365 taulutietokoneille

@@ -1,1 +1,1 @@
-Määrittää arvon kokonaislukutietotyyppinä, joka voidaan välittää parametrina.
+Määrittää kokonaislukutietotyyppiä (integer) olevan arvon, joka voidaan välittää parametrina.

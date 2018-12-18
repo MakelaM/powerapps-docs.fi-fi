@@ -1,1 +1,1 @@
-Myynti
+Sales

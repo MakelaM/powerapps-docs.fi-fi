@@ -1,1 +1,1 @@
-Dynamics 365 iPadille
+Dynamics 365 for iPad
