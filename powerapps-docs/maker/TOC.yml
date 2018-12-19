@@ -1,4 +1,11 @@
 items:
+- name: 'Aloita: Mikä on PowerApps?'
+  href: ../powerapps-overview.md
+  items:
+  - name: Rekisteröidy 30 päivän kokeiluversiota varten
+    href: signup-for-powerapps.md
+  - name: Rekisteröidy yhteisösuunnitelmaa varten
+    href: dev-community-plan.md
 - name: Etsi ja suorita sovelluksia
   href: ../user/index.md
   items:
@@ -8,21 +15,71 @@ items:
     href: ../user/run-app-client.md
   - name: puhelimessa (mallipohjaiset)
     href: ../user/run-app-client-model-driven.md
-  - name: SharePoint Online -sivulla
+  - name: SharePoint Online -sivulla (pohjaan perustuvat)
     href: ../user/powerapps-web-part.md
-  - name: Microsoft-ryhmissä
+  - name: Microsoft Teamsissa (pohjaan perustuvat)
     href: ../user/open-app-embedded-in-teams.md
   - name: AppSourcesta
     href: ../user/app-source.md
+  - name: Mallipohjaisten sovellusten käyttäminen
+    href: ../user/use-model-driven-apps.md
+    items:
+    - name: Unified Interface
+      href: ../user/unified-interface.md
+    - name: Siirtyminen ja perusteet
+      href: ../user/navigation.md
+      items:
+      - name: Profiilin näyttäminen
+        href: ../user/view-your-user-profile.md
+      - name: Omien asetusten määrittäminen
+        href: ../user/set-personal-options.md
+      - name: Näytönlukuohjelman käyttäminen
+        href: ../user/screen-reader.md
+      - name: Näppäimistön pikanäppäimet
+        href: ../user/keyboard-shortcuts.md
+    - name: Tietueiden käsitteleminen
+      items:
+      - name: Tietueen luominen
+        href: ../user/create-a-record.md
+      - name: Toimien lisääminen aikajanaan
+        href: ../user/add-activities.md
+      - name: Tietueiden määrittäminen tai jakaminen
+        href: ../user/assign-or-share-records.md
+      - name: Tietueiden jakaminen käyttämällä käyttöoikeusryhmää
+        href: ../user/Access-team.md
+      - name: Tilien tai yhteystietojen poistaminen käytöstä
+        href: ../user/deactivate-activate-account-contact.md
+      - name: Oman edistymisen seuraaminen kaavioilla ja koontinäytöillä
+        href: ../user/track-your-progress-with-dashboard-and-charts.md
+    - name: Tietueista hakeminen
+      items:
+      - name: Tietueiden hakeminen
+        href: ../user/search-records.md
+      - name: Erikoishaun käyttäminen
+        href: ../user/create-edit-or-save-advanced-find-search.md
+    - name: Tietojen tuominen ja vieminen
+      items:
+      - name: Tietojen tuominen
+        href: ../user/import-data.md
+      - name: Tietojen vieminen Excel Onlineen
+        href: ../user/export-to-excel-online.md
+      - name: Tietojen vieminen Exceliin
+        href: ../user/export-data-excel.md
+      - name: Vieminen dynaamiseen laskentataulukkoon
+        href: ../user/export-excel-dynamic-worksheet.md
+      - name: Vieminen staattiseen laskentataulukkoon
+        href: ../user/export-excel-static-worksheet.md
+      - name: Vieminen Excelin pivot-taulukkoon
+        href: ../user/export-excel-pivottable.md
+    - name: Prosessien automatisoiminen
+      items:
+      - name: Liiketoimintaprosessien käsitteleminen
+        href: ../user/work-with-business-processes.md
+      - name: Työnkulkujen käyttäminen
+        href: ../user/use-flows.md
 - name: Sovellusten luominen
   href: index.md
   items:
-  - name: Kokeile PowerAppsia ilmaiseksi
-    items:
-    - name: 30 päivän kokeiluversio
-      href: signup-for-powerapps.md
-    - name: PowerAppsin yhteisön palvelupaketti
-      href: dev-community-plan.md
   - name: PowerAppsiin kirjautuminen
     href: ./canvas-apps/intro-maker-portal.md
   - name: Uudet ominaisuudet
@@ -30,6 +87,8 @@ items:
 - name: Pohjaan perustuvat sovellukset
   href: ./canvas-apps/getting-started.md
   items:
+  - name: Järjestelmävaatimukset, rajoitukset ja konfigurointi
+    href: ./canvas-apps/limits-and-config.md
   - name: Tutustu mallisovelluksiin
     href: ./canvas-apps/open-and-run-a-sample-app.md
     items:
@@ -95,6 +154,27 @@ items:
       items:
       - name: Lisää näyttö
         href: ./canvas-apps/add-screen-context-variables.md
+        items:
+        - name: Määritä Office 365 -näytöt
+          items:
+          - name: Kalenterinäytön yleiskatsaus
+            href: ./canvas-apps/screen-templates/calendar-screen-overview.md
+          - name: Kalenterinäytön viittaus
+            href: ./canvas-apps/screen-templates/calendar-screen-reference.md
+          - name: Sähköpostinäytön yleiskatsaus
+            href: ./canvas-apps/screen-templates/email-screen-overview.md
+          - name: Sähköpostinäytön viittaus
+            href: ./canvas-apps/screen-templates/email-screen-reference.md
+          - name: Kokousnäytön yleiskatsaus
+            href: ./canvas-apps/screen-templates/meeting-screen-overview.md
+          - name: Kokousnäytön viittaus
+            href: ./canvas-apps/screen-templates/meeting-screen-reference.md
+          - name: Henkilönäytön yleiskatsaus
+            href: ./canvas-apps/screen-templates/people-screen-overview.md
+          - name: Henkilönäytön viittaus
+            href: ./canvas-apps/screen-templates/people-screen-reference.md
+        - name: Lisää vieritysnäyttö
+          href: ./canvas-apps/add-scrolling-screen.md
       - name: Näytä kohteiden taulukko
         href: ./canvas-apps/add-gallery.md
       - name: Näytä erikorkuisia kohteita
@@ -116,8 +196,6 @@ items:
         href: ./canvas-apps/add-images-pictures-audio-video.md
       - name: Skannaa viivakoodi
         href: ./canvas-apps/scan-barcode.md
-      - name: Lisää vieritysnäyttö
-        href: ./canvas-apps/add-scrolling-screen.md
       - name: Lisää Power BI -tietoja
         href: ./canvas-apps/powerapps-custom-visual.md
       - name: Ohjausobjektiviittaus
@@ -533,6 +611,8 @@ items:
           href: ./canvas-apps/functions/function-datetime-parts.md
         - name: Year
           href: ./canvas-apps/functions/function-datetime-parts.md
+    - name: Luo sovellus ratkaisussa
+      href: ./canvas-apps/add-app-solution.md
     - name: Luo yleinen sovellus
       href: ./canvas-apps/global-apps.md
     - name: Tee sovelluksesta helppokäyttöinen
@@ -542,6 +622,10 @@ items:
         href: ./canvas-apps/accessibility-checker.md
       - name: Käytä värejä helppokäyttötoiminnoissa
         href: ./canvas-apps/accessible-apps-color.md
+      - name: Näytä tai piilota käyttöä helpottavien toimintojen sisältö
+        href: ./canvas-apps/accessible-apps-content-visibility.md
+      - name: Ilmoita dynaamisista muutoksista dynaamisilla alueilla
+        href: ./canvas-apps/accessible-apps-live-regions.md
     - name: Kokeelliset ja esikatseluominaisuudet
       href: ./canvas-apps/working-with-experimental.md
   - name: Tallenna ja julkaise sovellus
@@ -645,6 +729,11 @@ items:
       - name: Lomakkeiden käsitteleminen
         href: ./model-driven-apps/create-design-forms.md
         items:
+        - name: Uuden lomakkeiden suunnitteluohjelman käyttäminen
+          href: ./model-driven-apps/form-designer-overview.md
+          items:
+          - name: Lomakkeiden luominen tai muokkaaminen
+            href: ./model-driven-apps/create-and-edit-forms.md
         - name: Lomaketyypit
           href: ./model-driven-apps/types-forms.md
           items:
@@ -698,6 +787,13 @@ items:
             href: ./model-driven-apps/configure-event-handlers-legacy.md
           - name: Automaattisen tallennuksen poistaminen käytöstä lomakkeessa
             href: ./model-driven-apps/manage-auto-save.md
+      - name: Pohjaan perustuvan sovelluksen upottaminen lomakkeeseen
+        href: ./model-driven-apps/embed-canvas-app-in-form.md
+        items:
+        - name: Nykyisen tietueen välittäminen upotettuun pohjaan perustuvaan sovellukseen
+          href: ./model-driven-apps/pass-current-embedded-canvas-app.md
+        - name: Liittyvien tietueiden välittäminen upotettuun pohjaan perustuvaan sovellukseen
+          href: ./model-driven-apps/pass-related-embedded-canvas-app.md
       - name: Näkymien käsitteleminen
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -750,6 +846,8 @@ items:
           href: ./model-driven-apps/timer-control-legacy.md
       - name: Mukautettujen ohjausobjektien käyttäminen tietojen visualisointiin
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+    - name: Teemojen käyttäminen organisaation tuotemukauttamiseen
+      href: ./model-driven-apps/create-themes-organization-branding.md
   - name: Sovelluksen tarkistaminen ja julkaiseminen
     href: ./model-driven-apps/validate-app.md
   - name: Sovelluksen jakaminen
@@ -778,7 +876,7 @@ items:
   - name: PowerAppsin sovellusten suunnitteluohjelman helppokäyttötoiminnot
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Kehittäjiä varten
-    href: ../developer/model-driven-apps/TOC.yml
+    href: ../developer/model-driven-apps/overview.md
 - name: Microsoft Common Data Service for Apps
   href: ./common-data-service/data-platform-intro.md
   items:
@@ -913,7 +1011,7 @@ items:
   - name: Ratkaisujen käsitteleminen
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Ratkaisunhallinnan käyttäminen
+    - name: Ratkaisujen käyttäminen
       href: ./common-data-service/use-solution-explorer.md
     - name: Common Data Services -oletusratkaisun käyttäminen
       href: ./common-data-service/use-solutions-for-your-customizations.md
@@ -921,6 +1019,10 @@ items:
       href: ./common-data-service/import-update-export-solutions.md
     - name: Tiettyyn ratkaisuun siirtyminen
       href: ./common-data-service/navigate-specific-solution.md
+    - name: Ratkaisun luominen
+      href: ./common-data-service/create-solution.md
+    - name: Ratkaisun tarkistustoiminnon käyttäminen
+      href: ./common-data-service/use-powerapps-checker.md
     - name: Segmentoitujen ratkaisujen käyttäminen
       href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Ratkaisun julkaisijan etuliitteen muuttaminen
@@ -938,19 +1040,12 @@ items:
       href: ./common-data-service/data-platform-restricted-entities.md
   - name: Luo Power BI -raportti
     href: ./common-data-service/data-platform-powerbi-connector.md
-  - name: Teeman luominen
-    href: ./common-data-service/change-color-scheme-add-logo-match-organizations-brand.md
   - name: Mukautettujen entiteettien ja kenttien tekstien kääntäminen
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Entiteettien ja kenttien käännettyjen tekstien tuominen sovellukseen
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Kehittäjiä varten
-    href: ../developer/common-data-service/TOC.yml
-- name: Common Data Model
-  href: ../common-data-model/overview.md
-  items:
-  - name: Common Data Modelin käyttö
-    href: ../common-data-model/use-common-data-model.md
+    href: ../developer/common-data-service/overview.md
 - name: Opi muilta
   items:
   - name: Verkkoseminaarit
@@ -961,8 +1056,6 @@ items:
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
 - name: Vianmääritys
   items:
-  - name: Järjestelmävaatimukset, rajoitukset ja konfigurointi
-    href: ./canvas-apps/limits-and-config.md
   - name: Suorituskykyvihjeitä pohjaan perustuville sovelluksille
     href: ./canvas-apps/performance-tips.md
   - name: Yleisiä ongelmia ja ratkaisuja
@@ -973,9 +1066,9 @@ items:
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Tuki
     href: https://powerapps.microsoft.com/support/
-ms.openlocfilehash: 3fbbedc26086c39f8e42bf14bea969ac9e81614c
-ms.sourcegitcommit: 2bcf40aeaa35420dc43f5803f4e57ff0f6afb57b
+ms.openlocfilehash: 57d63b8a8530fdf225f17fddfa5cb8c00cbb0ef9
+ms.sourcegitcommit: e0845b95cc969cff13d469e26ce30b62c56dc59a
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "49454078"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587759"
