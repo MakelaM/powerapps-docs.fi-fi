@@ -1,24 +1,24 @@
 ---
 title: 'Screen-ohjausobjekti: viittaus | Microsoft Docs'
 description: Tietoja Screen-ohjausobjektista (näytön ohjausobjektista), kuten ominaisuudet ja esimerkkejä
-author: fikaradz
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 15264a783922891a84e805cea211f2945bca3f3e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: d90c82b29ebc77b67731903d7a950790e13661e1
+ms.sourcegitcommit: 6851486b8a44d76b6d87837952b7a7f38a8752b6
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863893"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570393"
 ---
 # <a name="screen-control-in-powerapps"></a>Screen-ohjausobjekti PowerAppsissa
 Käyttöliittymän elementti, joka sisältää yhden tai useamman muun ohjausobjektin sovelluksessa.
