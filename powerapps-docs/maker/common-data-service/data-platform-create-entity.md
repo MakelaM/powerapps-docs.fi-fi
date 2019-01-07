@@ -32,7 +32,7 @@ Kirjaudu sisään PowerApps -sovellukseen osoitteessa [https://web.powerapps.com
 
     ![Entiteettiluettelo ja entiteettien tiedot](./media/data-platform-cds-create-entity/entitylist.png "Entiteettiluettelo")
 
-2. napsauta tai napauta komentopalkissa **Uusi entiteetti** -kohtaa.
+2. valitse komentopalkissa **Uusi entiteetti**.
 
     Tarkista ennen entiteetin luomista [entiteettiviittaus](../../developer/common-data-service/reference/about-entity-reference.md) ja käytettävissä olevien vakioentiteettien kuvaus. Nämä entiteetit kattavat tavalliset skenaariot. Jos jokin näistä entiteeteistä vastaa vaatimuksiasi sellaisenaan tai pienten muutosten jälkeen, voit aloittaa käyttämällä kyseistä entiteettiä. Näin säästät aikaa. 
 

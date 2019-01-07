@@ -97,8 +97,8 @@ search.app:
 
 3.  Valitse paketin tyypiksi **Ei-hallittuna** tai **Hallittuna**. Vienti käynnistyy. Se voi kestää useita minuutteja. Kun vienti on valmis, .zip-tiedosto on selaimen määrittämässä latauskansiossa.
 
-> [!div class="mx-imgBorder"]  
-> ![Ratkaisun vieminen](media/solution-export.PNG "Ratkaisun vieminen") 
+    > [!div class="mx-imgBorder"]  
+    > ![Ratkaisun vieminen](media/solution-export.png "Ratkaisun vieminen") 
 
 ### <a name="export-from-the-classic-experience"></a>Vienti perinteisellä menetelmällä
 

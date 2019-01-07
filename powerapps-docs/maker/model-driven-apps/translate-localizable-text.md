@@ -64,7 +64,7 @@ Kun vienti on tehty, latauskansiossa on tiedosto, jonka nimi on `CrmTranslations
 
 Voit lähettää tämän tiedoston kääntäjälle, käännöstoimistoon tai lokalisointiyritykseen.
 
-Jos osaat kääntää teksti tai jos haluat vain nähdä muodon, voit purkaa viedyn zip-tiedoston. Se sisältää kaksi XML-tiedostoa. 
+Jos osaat kääntää tekstiä tai jos haluat vain nähdä muodon, voit purkaa viedyn zip-tiedoston. Se sisältää kaksi XML-tiedostoa. 
  - `[Content_Types].xml`
  - `CrmTranslations.xml`
 
