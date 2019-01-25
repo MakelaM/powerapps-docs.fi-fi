@@ -6,6 +6,8 @@ items:
     href: signup-for-powerapps.md
   - name: Rekisteröidy yhteisösuunnitelmaa varten
     href: dev-community-plan.md
+  - name: Uudet ominaisuudet
+    href: ../whats-new.md
 - name: Etsi ja suorita sovelluksia
   href: ../user/index.md
   items:
@@ -82,8 +84,6 @@ items:
   items:
   - name: PowerAppsiin kirjautuminen
     href: ./canvas-apps/intro-maker-portal.md
-  - name: Uudet ominaisuudet
-    href: ./canvas-apps/release-notes.md
 - name: Pohjaan perustuvat sovellukset
   href: ./canvas-apps/getting-started.md
   items:
@@ -695,6 +695,8 @@ items:
       href: ./canvas-apps/offline-apps.md
     - name: Anna asiakkaiden koekäyttää sovelluksiasi
       href: ./canvas-apps/dev-appsource-test-drive.md
+    - name: Luo komponentti
+      href: ./canvas-apps/create-component.md
 - name: Mallipohjaiset sovellukset
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
@@ -794,6 +796,10 @@ items:
           href: ./model-driven-apps/pass-current-embedded-canvas-app.md
         - name: Liittyvien tietueiden välittäminen upotettuun pohjaan perustuvaan sovellukseen
           href: ./model-driven-apps/pass-related-embedded-canvas-app.md
+        - name: Upotetun pohjan sovelluksen jakaminen
+          href: ./model-driven-apps/share-embedded-canvas-app.md
+        - name: Upotetun pohjan sovelluksen ohjeet
+          href: ./model-driven-apps/embedded-canvas-app-guidelines.md
       - name: Näkymien käsitteleminen
         href: ./model-driven-apps/create-edit-views.md
         items:
@@ -1066,9 +1072,9 @@ items:
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Tuki
     href: https://powerapps.microsoft.com/support/
-ms.openlocfilehash: 57d63b8a8530fdf225f17fddfa5cb8c00cbb0ef9
-ms.sourcegitcommit: e0845b95cc969cff13d469e26ce30b62c56dc59a
+ms.openlocfilehash: fdf353f31bfdd4e49c069f827c509fbd0603deab
+ms.sourcegitcommit: 8b7ef26f5ae782c73f0ae986e5575c39eaeb90ce
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53587759"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54202661"

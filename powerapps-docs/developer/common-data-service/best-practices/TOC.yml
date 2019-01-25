@@ -1,0 +1,41 @@
+items:
+- name: Parhaat käytännöt ja ohjeita Common Data Service for Appsille
+  href: index.md
+  items:
+  - name: Koodia käyttävän liiketoimintalogiikan käyttäminen
+    href: business-logic/index.md
+    items:
+    - name: Vältä eräpyyntötyyppien käyttämistä laajennuksissa ja työnkulun toimissa
+      href: business-logic/avoid-batch-requests-plugin.md
+    - name: Kehitä IPlugin-toteutukset tilattomiksi
+      href: business-logic/develop-iplugin-implementations-stateless.md
+    - name: Älä tee kaksoiskappaletta laajennusvaiheen rekisteröinnistä
+      href: business-logic/do-not-duplicate-plugin-step-registration.md
+    - name: Sisällytä suodatusmääritteet laajennuksen rekisteröintiin
+      href: business-logic/include-filtering-attributes-plugin-registration.md
+    - name: Rajoita laajennusten rekisteröintejä Retrieve- ja RetrieveMultiple-sanomille
+      href: business-logic/limit-registration-plugins-retrieve-retrievemultiple.md
+    - name: Optimoi mukautetun kokoonpanon kehitys
+      href: business-logic/optimize-assembly-development.md
+    - name: Määritä KeepAlive-asetukseksi epätosi, kun käytetään ulkoisia isäntiä laajennuksessa
+      href: business-logic/set-keepalive-false-interacting-external-hosts-plugin.md
+    - name: Käytä InvalidPluginExecutionException-kohdetta laajennuksissa ja työnkulkutoimissa
+      href: business-logic/use-invalidpluginexecutionexception-plugin-workflow-activities.md
+  - name: Tietoja käyttävän koodin käsitteleminen
+    href: work-with-data/index.md
+    items:
+    - name: Ohjelmointirajapinnan rajoitukset
+      href: ../api-limits.md
+  - name: Tietoja käyttävien metatietojen käsitteleminen
+    href: work-with-metadata/index.md
+    items:
+    - name: Nouda julkaistut metatiedot
+      href: work-with-metadata/retrieve-published-metadata.md
+    - name: Nouda tietyt sarakkeet entiteetille kyselyiden ohjelmointirajapintojen kautta
+      href: work-with-metadata/retrieve-specific-columns-entity-via-query-apis.md
+ms.openlocfilehash: b7bdf6cb3f03f7af742b99558920a06be1c770c0
+ms.sourcegitcommit: 72c97378e96fb54e5d92ec087a59dd0fb1444f99
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334059"
