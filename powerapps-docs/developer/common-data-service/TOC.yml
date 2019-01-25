@@ -1,28 +1,401 @@
 items:
-- name: Yleiskatsaus
+- name: Microsoft Common Data Service for Apps
+  href: ../../maker/common-data-service/data-platform-intro.md
+- name: Yleiskatsaus kehittäjille
   href: overview.md
-- name: Ratkaisuihin tutustuminen
-  href: introduction-solutions.md
-- name: Tuetut sovellusten luontikäytännöt
-  href: customization-support.md
-- name: Common Data Service sovellusten tietokohteita varten
+- name: Aloittaminen
+  href: get-started-CDS-developers.md
+  items:
+  - name: Tuetut mukautukset
+    href: supported-customizations.md
+- name: Tietoja käyttävän koodin käsitteleminen
+  href: work-with-data-cds.md
+  items:
+  - name: Verkon ohjelmointirajapinta
+    href: webapi/index.md
+  - name: Organisaatiopalveluiden käyttäminen
+    href: org-service/index.md
+  - name: Mallitietojen lisääminen ja poistaminen
+    href: sample-data.md
+  - name: Tietojen kyseleminen FetchXML:n avulla
+    href: use-fetchxml-construct-query.md
+    items:
+    - name: FetchXML-koosteen käyttäminen
+      href: use-fetchxml-aggregation.md
+    - name: Tilikauden päivämäärä- ja vanhempi kuin- päivämäärän ja ajan kyselytoiminnot FetchXML:ssä
+      href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
+    - name: Käytä vasenta ulkoliitosta FetchXML:ssä ”ei sisälly” -tietueiden kyselyssä
+      href: use-fetchxml-left-outer-join-query-records-not-in.md
+  - name: Tallennetut kyselyt
+    href: saved-queries.md
+  - name: Kyselyn tekeminen hierarkkisista tiedoista
+    href: query-hierarchical-data.md
+  - name: Tarkista tietojen muutokset
+    href: auditing-overview.md
+    items:
+    - name: Määritä entiteetit ja määritteet valvontaa varten
+      href: configure-entities-attributes-auditing.md
+    - name: Valvottujen tietojen muutosten historian hakeminen ja poistaminen
+      href: retrieve-and-delete-the-history-of-audited-data-changes.md
+    - name: Käyttäjän käyttöoikeuden valvominen
+      href: audit-user-access.md
+    - name: Automaattisesti numeroitujen määritteiden luominen
+      href: create-auto-number-attributes.md
+  - name: Tietojen kaksoiskappaleen tunnistaminen
+    href: detect-duplicate-data-with-code.md
+    items:
+    - name: Ota kaksoiskappaleiden tunnistaminen käyttöön ja poista se käytöstä
+      href: enable-disable-duplicate-detection.md
+    - name: Suorita kaksoiskappaleiden tunnistus
+      href: run-duplicate-detection.md
+    - name: Kaksoiskappaleiden tunnistuksen viestit
+      href: duplicate-detection-messages.md
+    - name: Sääntöentiteettien kaksoiskappaleet
+      href: duplicaterule-entities.md
+  - name: Tietojen poistaminen joukkona
+    href: delete-data-bulk.md
+  - name: Pienennä mahdollista tietojen menettämistä optimistisen samanaikaisuuden avulla
+    href: optimistic-concurrency.md
+  - name: Toiseksi käyttäjäksi tekeytyminen
+    href: impersonate-another-user.md
+  - name: Parhaat käytännöt
+    href: best-practices/work-with-data/index.md
+- name: Koodia käyttävän liiketoimintalogiikan käyttäminen
+  href: apply-business-logic-with-code.md
+  items:
+  - name: Tapahtumakehys
+    href: event-framework.md
+    items:
+    - name: Erikoistuneiden päivitystoimintojen toiminta
+      href: special-update-operation-behavior.md
+  - name: Asynkroninen palvelu
+    href: asynchronous-service.md
+  - name: Laajennukset
+    href: plug-ins.md
+    items:
+    - name: Laajennuksen kirjoittaminen
+      href: write-plug-in.md
+    - name: Laajennuksen rekisteröiminen
+      href: register-plug-in.md
+    - name: Laajennuksen virheenkorjaus
+      href: debug-plug-in.md
+    - name: Opetusohjelmat
+      items:
+      - name: Laajennuksen kirjoittaminen ja rekisteröiminen
+        href: tutorial-write-plug-in.md
+      - name: Laajennuksen virheenkorjaus
+        href: tutorial-debug-plug-in.md
+      - name: Laajennuksen päivittäminen
+        href: tutorial-update-plug-in.md
+  - name: Työnkulun laajennukset
+    href: workflow/workflow-extensions.md
+  - name: Skaalattava mukauttamisrakenne
+    href: scalable-customization-design/overview.md
+  - name: Parhaat käytännöt
+    href: best-practices/business-logic/index.md
+- name: Tietoja käyttävän koodin integroiminen
+  items:
+  - name: Tietojen tuominen
+    href: import-data.md
+    items:
+    - name: Lähdetiedostojen valmisteleminen tuontia varten
+      href: prepare-source-files-import.md
+    - name: Tietokarttojen luominen tuontia varten
+      href: create-data-maps-for-import.md
+    - name: Yhdistämismääritysten lisääminen tuontia varten
+      href: add-transformation-mappings-import.md
+    - name: Tietotuonnin määrittäminen
+      href: configure-data-import.md
+    - name: Tietojen tuonnin suorittaminen
+      href: run-data-import.md
+    - name: Tietojen tuontientiteetit
+      href: data-import-entities.md
+  - name: Data Export Service
+    href: data-export-service.md
+  - name: Tietojen synkronoiminen
+    href: data-synchronization.md
+    items:
+    - name: Tietueen luominen vaihtoehtoisen avaimen avulla
+      href: use-alternate-key-create-record.md
+    - name: Muutosten seurannan käyttäminen tietojen synkronoimiseen ulkoisten järjestelmien kanssa
+      href: use-change-tracking-synchronize-data-external-systems.md
+    - name: Tietojen lisääminen tai päivittäminen Upsertin avulla
+      href: use-upsert-insert-update-record.md
+  - name: Palvelinpään synkronointi
+    href: server-side-synchronization-entities.md
+    items:
+    - name: Exchangen kansiotason seurantasääntöjen määrittäminen
+      href: configure-exchange-folder-level-tracking-rules.md
+  - name: Virtuaaliset entiteetit
+    href: virtual-entities/
+  - name: Azure-integrointi
+    href: azure-integration.md
+    items:
+    - name: Tietojen käsitteleminen Azure-ratkaisussasi
+      href: work-data-azure-solution.md
+    - name: Tapahtuman tietojen käsitteleminen Azure-tapahtumatoimintoratkaisulla
+      href: work-event-data-azure-event-hub-solution.md
+    - name: Azure-integroinnin määrittäminen sovelluksen Common Data Servicellä
+      href: configure-azure-integration.md
+    - name: Mukautetun Azurea tukevan laajennuksen kirjoittaminen
+      href: write-custom-azure-aware-plugin.md
+    - name: Azure-ratkaisun kuuntelutoimintosovelluksen kirjoittaminen
+      href: write-listener-application-azure-solution.md
+    - name: 'Opetusohjelma: Määritä Azure (SAS) Customer Engagement -integrointi'
+      href: walkthrough-configure-azure-sas-integration.md
+    - name: 'Opetusohjelma: Rekisteröi Azurea tukeva laajennus laajennuksen rekisteröintityökalun avulla'
+      href: walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool.md
+    - name: 'Opetusohjelma: Päivitä ratkaisusta tuotu palvelun päätepiste'
+      href: walkthrough-update-service-endpoint-imported-solution.md
+  - name: Web hookien käyttäminen
+    href: use-webhooks.md
+    items:
+    - name: Ulkoisten käsittelytoimintojen luominen palvelintapahtumiin web hookien avulla
+      href: use-webhooks.md
+    - name: Web hookin rekisteröiminen
+      href: register-web-hook.md
+    - name: Web hook -rekisteröinnin testaaminen
+      href: test-webhook-registration.md
+- name: CDS for Apps -entiteettien käyttäminen
   href: entities.md
   items:
+  - name: Asiakasentiteetit
+    href: customer-entities-account-contact.md
+  - name: Aktiviteettientiteetit
+    href: activity-entities.md
+    items:
+    - name: Mukautetut toiminnat
+      href: custom-activities.md
+    - name: Sähköpostiaktiviteettientiteetit
+      href: email-activity-entities.md
+    - name: Tehtävän, faksin, puhelun ja kirjeen aktiviteettientiteetit
+      href: task-fax-phone-call-letter-activity-entities.md
+    - name: ActivityParty-entiteetti
+      href: activityparty-entity.md
+    - name: ActivityPointer (aktiviteetti) -entiteetti
+      href: activitypointer-activity-entity.md
+    - name: Toistuvat tapaamiset
+      items:
+      - name: Toistuvan tapaamisen osittainen laajennusmalli
+        href: recurring-appointment-partial-expansion-model.md
+      - name: Toistuvien tapaamisten sarjan, esiintymän tai poikkeuksen luominen
+        href: create-recurring-appointment-series-instance-exception.md
+      - name: Toistuvan tapaamisen päivittäminen
+        href: update-recurring-appointment.md
+      - name: Toistuvien tapaamisten pääkohteen mukautettujen määritteiden ja tapaamisen entiteettien linkittäminen
+        href: link-custom-attributes-recurring-master-appointment-entities.md
+  - name: Huomautuksen (muistiinpanon) entiteetti
+    href: annotation-note-entity.md
+  - name: Kalenterin entiteetit
+    href: calendar-entities.md
+    items:
+    - name: Kalentereiden tyypit
+      href: types-calendars.md
+  - name: Jonoentiteetit
+    href: queue-entities.md
+  - name: Aihe-entiteetti
+    href: subject-entity.md
+  - name: Palvelutasosopimusten käyttäminen
+    href: apply-slas-entities.md
+  - name: Tapahtuman valuutta (valuutta) -entiteetti
+    href: transaction-currency-currency-entity.md
+  - name: Luokkaentiteetti
+    href: use-category-entity.md
+  - name: Palaute-entiteetti
+    href: use-feedback-entity-manage-feedback-ratings-records.md
+  - name: Suojausentiteetit
+    href: security-model.md
+    items:
+    - name: Käyttäjän ja ryhmän entiteetit
+      href: user-team-entities.md
+      items:
+      - name: Käyttäjän aikavyöhykkeen asetusten määrittäminen
+        href: specify-time-zone-settings-user.md
+      - name: Aikavyöhyke-entiteetit
+        href: time-zone-entities.md
+      - name: BusinessUnit-entiteetti
+        href: businessunit-entity.md
+      - name: Kentän suojausentiteetit
+        href: field-security-entities.md
+      - name: Käyttöoikeusryhmien ja omistajaryhmien käyttäminen tietojen yhteiskäyttöä ja jakamista varten
+        href: use-access-teams-owner-teams-collaborate-share-information.md
+  - name: Mallientiteetit
+    href: upload-manage-document-templates.md
+- name: Tietoja käyttävien metatietojen käsitteleminen
+  href: metadata-services.md
+  items:
+  - name: Ympäristön metatietojen selaaminen
+    href: browse-your-metadata.md
   - name: Kohteiden metatiedot
     href: entity-metadata.md
+    items:
+    - name: Entiteetin metatietojen mukauttaminen
+      href: customize-entity-metadata.md
+    - name: Entiteetin vaihtoehtoisten avainten määrittäminen
+      href: define-alternate-keys-entity.md
   - name: Määritteiden metatiedot
     href: entity-attribute-metadata.md
+    items:
+    - name: Entiteetin määritteen metatietoviestit
+      href: entity-attribute-metadata-messages.md
+    - name: Päivämäärä ja aika -määritteen toiminta ja muoto
+      href: behavior-format-date-time-attribute.md
+    - name: Lasketut ja koostetut määritteet
+      href: calculated-rollup-attributes.md
+    - name: Monivalintaisen valintaluettelon määritteet
+      href: multi-select-picklist.md
+    - name: Kuvamääritteet
+      href: image-attributes.md
+    - name: Mukautetun tilamallin siirrosten määrittäminen
+      href: define-custom-state-model-transitions.md
   - name: Määritesuhteen metatiedot
     href: entity-relationship-metadata.md
+    items:
+    - name: Entiteettisuhteiden oikeutus
+      href: entity-relationship-eligibility.md
+    - name: Entiteettisuhteiden metatietoviestit
+      href: entity-relationship-metadata-messages.md
+    - name: Entiteettisuhteen johdannaistoiminta
+      href: configure-entity-relationship-cascading-behavior.md
+  - name: Entiteettien ja määritteiden yhdistämismääritysten mukauttaminen
+    href: customize-entity-attribute-mappings.md
+  - name: Tietueiden linkittäminen toisiinsa yhteyksien avulla
+    href: connection-entities.md
+    items:
+    - name: Entiteettien välisen suhteen kuvaileminen yhteysroolien avulla
+      href: describe-relationship-entities-connection-roles.md
+  - name: Otsikoiden mukauttaminen tukemaan useita kieliä
+    href: customize-labels-support-multiple-languages.md
+  - name: Parhaat käytännöt
+    href: best-practices/work-with-metadata/index.md
+- name: Laajennusten pakkaaminen ja jakaminen ratkaisujen avulla
+  items:
+  - name: Ratkaisuihin tutustuminen
+    href: introduction-solutions.md
+    items:
+    - name: Ratkaisun osien riippuvuussuhteen seuranta
+      href: dependency-tracking-solution-components.md
+    - name: Hallittujen ratkaisujen ylläpito
+      href: maintain-managed-solutions.md
+    - name: Ratkaisujen järjesteleminen
+      href: organize-solutions.md
+    - name: Tiimisi järjesteleminen kehittämään ratkaisuja
+      href: organize-team-develop-solutions.md
+    - name: Hallittujen ominaisuuksien käyttäminen
+      href: use-managed-properties.md
+    - name: Tutustu siihen, miten hallitut ratkaisut yhdistetään
+      href: understand-managed-solutions-merged.md
+    - name: Useita kieliä tukevien ratkaisujen luominen
+      href: create-solutions-support-multiple-languages.md
+    - name: Ratkaisujen hallintatavat
+      items:
+      - name: Hallitsemattoman ratkaisun luominen, vieminen tai tuominen
+        href: create-export-import-unmanaged-solution.md
+      - name: Ratkaisun poistaminen tai sen asennuksen poistaminen
+        href: uninstall-delete-solution.md
+      - name: Ratkaisujen käsitteleminen
+        href: work-solutions.md
+      - name: Hallitun ratkaisun luominen, asentaminen ja päivittäminen
+        href: create-install-update-managed-solution.md
+      - name: Ratkaisupäivitysten yksinkertaistaminen luomalla korjaustiedostoja
+        href: create-patches-simplify-solution-updates.md
+      - name: Milloin muokata mukautustiedostoa
+        href: when-edit-customization-file.md
+  - name: Ratkaisun pakkaajatyökalu
+    href: compress-extract-solution-file-solutionpackager.md
+    items:
+    - name: Lähteen hallinta ratkaisutiedostojen avulla
+      href: use-source-control-solution-files.md
+  - name: Package Deployer -työkalu
+    href: package-deployer/create-packages-package-deployer.md
+  - name: Sovelluksesi julkaiseminen AppSourceen
+    href: publish-app-appsource.md
+    items:
+    - name: 'Vaihe 1: Täytä sovelluksen lähetyslomake AppSourcessa'
+      href: fill-app-submission-form-appsource.md
+    - name: 'Vaihe 2: Rekisteröi Microsoft-kumppaniverkostotili'
+      href: register-microsoft-partner-network.md
+    - name: 'Vaihe 3: Luo hallittu ratkaisu sovelluksellesi'
+      href: create-solution-app-appsource.md
+    - name: 'Vaihe 4: Luo AppSource-paketti sovelluksellesi'
+      href: create-package-app-appsource.md
+    - name: 'Vaihe 5: Tallenna AppSource-pakettisi Microsoft Azure -tallennukseen ja luo URL-osoite SAS-avaimella'
+      href: store-appsource-package-azure-storage.md
+    - name: 'Seuraavat vaiheet: Sovelluksen lähettäminen pilvipalvelukumppaniportaaliin'
+      href: next-steps-submit-app-cloud-partner-portal.md
+- name: Asiakassovellusten luominen
+  href: connect-cds.md
+  items:
+  - name: Todentaminen
+    href: authentication.md
+    items:
+    - name: .NET Framework -sovellukset
+      href: authenticate-dot-net-framework.md
+    - name: OAuthin käyttäminen
+      href: authenticate-oauth.md
+  - name: 'Opetusohjelma: Sovelluksen rekisteröiminen Microsoft Azure Active Directorylla'
+    href: walkthrough-register-app-azure-active-directory.md
+  - name: WWW-sovellusten luominen palvelimesta-palvelimeen (S2S) -todennuksella
+    href: build-web-applications-server-server-s2s-authentication.md
+    items:
+    - name: Käytä usean palveltavan palvelimesta-palvelimeen-todennusta
+      href: use-multi-tenant-server-server-authentication.md
+    - name: Käytä yhden palveltavan palvelimesta-palvelimeen-todennusta
+      href: use-single-tenant-server-server-authentication.md
+  - name: OAuthin käyttäminen usean lähteen resurssinjakamisen kanssa yhden sivun sovelluksen yhdistämiseen
+    href: oauth-cross-origin-resource-sharing-connect-single-page-application.md
+  - name: 'Opetusohjelma: SPA-sovelluksen rekisteröiminen ja määrittäminen adal.js-tiedoston avulla'
+    href: walkthrough-registering-configuring-simplespa-application-adal-js.md
+  - name: Windows-asiakassovellusten luominen XRM-työkaluilla
+    href: xrm-tooling/
+  - name: Käyttäjäorganisaatioihin tutustuminen
+    href: discovery-service.md
+- name: Parhaat käytännöt
+  href: best-practices/index.md
+- name: Esimerkit
+  items:
+  - name: WWW-ohjelmointirajapinta
+    href: webapi/samples/toc.yml
+  - name: Organisaatiopalvelut
+    href: org-service/samples/toc.yml
+- name: Resurssit
+  items:
+  - name: Kehittäjien resurssit -sivu
+    href: developer-resources-page.md
+  - name: Kehittäjien työkalut
+    href: developer-tools.md
+    items:
+    - name: Työkalujen lataaminen NuGetista
+      href: download-tools-nuget.md
+  - name: Yhteisötyökalut
+    href: community-tools.md
+  - name: Testaustyökalut
+    href: testing-tools-server.md
+- name: Lisätietoja
+  items:
   - name: Lisätiedot kohteista
     href: reference/entities/toc.yml
-- name: Sovella liiketoimintalogiikkaa koodin avulla
-  href: apply-business-logic-with-code.md
-- name: Käytä Common Data Servicea sovellusten verkkopalveluita varten
-  href: use-web-services.md
-ms.openlocfilehash: eaae08e6521e3324d58234e0e6af91e331e804b8
-ms.sourcegitcommit: d927af337a829a329a4e971f886849dcea82deac
+  - name: WWW-ohjelmointirajapinnan viittaus
+    href: /dynamics365/customer-engagement/web-api/about
+  - name: Organisaatiopalvelut
+    href: /dotnet/api/?view=dynamics-general-ce-9
+  - name: XRM-työkalut
+    href: /dotnet/api/?view=dynamics-xrmtooling-ce-9
+  - name: Virtuaalinen entiteetti
+    href: /dotnet/api/?view=dynamics-virtualentity-ce-9
+  - name: Työnkulku
+    href: /dotnet/api/?view=dynamics-workflow-ce-9
+  - name: Pakettien käyttöönottaja
+    href: /dotnet/api/?view=dynamics-deployer-ce-9
+  - name: Mukautusratkaisujen tiedostorakenne
+    href: customization-solutions-file-schema.md
+  - name: Ratkaisuosan tiedostoviittaus (SolutionPackager)
+    href: solution-component-file-reference-solutionpackager.md
+  - name: FetchXML-rakenne
+    href: fetchxml-schema.md
+ms.openlocfilehash: 4d22298f104f83f0482503c7ddea55b7cdd8a6cf
+ms.sourcegitcommit: 72c97378e96fb54e5d92ec087a59dd0fb1444f99
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42826389"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334105"
