@@ -23,9 +23,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="tutorial-use-custom-controls-for-model-driven-app-data-visualizations"></a>Opetusohjelma: Mallipohjaisen sovelluksen tietojen visualisointien mukautettujen ohjausobjektien käyttäminen
+# <a name="use-custom-controls-for-model-driven-app-data-visualizations"></a>Mallipohjaisen sovelluksen tietojen visualisointien mukautettujen ohjausobjektien käyttäminen
 
-Tässä opetusohjelmassa on tietoja kentän mukautetun ohjausobjektin määrittämisestä. 
+Tässä ohjeaiheessa on tietoja kentän mukautetun ohjausobjektin määrittämisestä. 
 
 Mukautettujen ohjausobjektien avulla voi muuntaa visualisoinneiksi sovelluksen käyttöliittymäosia, kuten kenttiä ja perinteisesti tekstiä sisältäviä näkymiä. Mukautettuja ohjausobjekteja voidaan määrittää kentille, lomakkeille, koontinäytöille, näkymille ja ruudukoille. Esimerkiksi liukusäädinohjausobjekti voidaan määrittää useille kentille.
 

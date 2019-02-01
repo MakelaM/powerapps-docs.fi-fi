@@ -1,8 +1,8 @@
 ---
-title: Julkisten näkymien tai järjestelmän mallipohjaisten sovellusten näkymien luominen tai muokkaaminen sovelluksen suunnitteluohjelmalla PowerAppsissa | MicrosoftDocs
+title: Julkisten näkymien tai järjestelmän mallipohjaisten sovellusten näkymien luominen tai muokkaaminen PowerAppsissa | MicrosoftDocs
 description: Tietoja näkymien luomisesta tai muokkaamisesta sovelluksen suunnitteluohjelmalla
 keywords: ''
-ms.date: 05/24/2018
+ms.date: 11/27/2018
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -26,9 +26,9 @@ search.app:
   - D365CE
 ---
 
-# <a name="tutorial-create-and-edit-public-or-system-model-driven-app-views-by-using-the-app-designer"></a>Opetusohjelma: Julkisten näkymien tai järjestelmän mallipohjaisten sovellusten näkymien luominen tai muokkaaminen sovelluksen suunnitteluohjelmalla
+# <a name="create-and-edit-public-or-system-model-driven-app-views"></a>Julkisten näkymien tai järjestelmän mallipohjaisten sovellusten näkymien luominen tai muokkaaminen
 
-Tässä opetusohjelmassa suoritetaan useita tehtäviä, jotka ovat pakollisia näkymiä käsiteltäessä. Näitä ovat esimerkiksi julkisen näkymän luominen, olemassa olevan näkymän lisääminen sovellukseen ja näkymän sarakkeiden, suodattimien ja lajittelujärjestyksen muuttaminen.
+Tässä ohjeaiheessa suoritetaan useita tehtäviä, jotka ovat pakollisia näkymiä käsiteltäessä. Näitä ovat esimerkiksi julkisen näkymän luominen, olemassa olevan näkymän lisääminen sovellukseen ja näkymän sarakkeiden, suodattimien ja lajittelujärjestyksen muuttaminen.
 
 Näkymät määrittävät PowerAppsissa, miten tietyn entiteetin tietueet näytetään. Näkymä määrittää
 -  näytettävät sarakkeet (määritteet)
@@ -55,40 +55,33 @@ Sovelluksen tekijänä voit luoda tai muokata julkisia näkymiä PowerAppsin avu
 
 3. Valitse työkaluriviltä **Lisää näkymä**. 
 
-4. Anna **Näkymän ominaisuudet** -valintaikkunaan nimi ja halutessasi kuvaus. Valitse sitten **OK**. 
+4. Anna **Luo näkymä** -valintaikkunaan nimi ja halutessasi kuvaus. Valitse sitten **Luo**. 
     
-5. Valitse näkymän suunnitteluohjelmassa **Lisää sarakkeet** ja lisää näkymässä näytettävät lisäsarakkeet. Lisätietoja: [Sarakkeen lisääminen näkymään](#add-a-column-to-your-view)
-6. Valitse **Muokkaa suodatusehtoja** ja muuta suodatusta seuraavalla tavalla: 
-    -  Voit ottaa käyttöön suodatusehdot ja tarkentaa näkymässä näytettäviä tietoja. Lisätietoja: [Suodatinehtojen määrittäminen](#define-filter-criteria). 
-    - Tarkenna näkymässä näkyviä tietoja ryhmittelemällä suodattimia **JA**- tai **TAI**-vaihtoehdoilla. Lisätietoja: [Useiden suodattimien ryhmitteleminen](#group-multiple-filters)
-7. Valitse **Määritä lajittelu**, kun haluat muuttaa tietojen järjestystä määrittämällä sarakkeiden ensi- ja toissijaisen lajittelujärjestyksen. Lisätietoja: [Sarakkeiden ensi- ja toissijaisen lajittelujärjestyksen määrittäminen](#set-primary-and-secondary-sort-order-for-columns)
-8. (Valinnainen) Sarakkeen leveyden määrittäminen: 
-  
-    a. Valitse sarake. **Ominaisuudet**-välilehti avautuu.
-    
-    b. Määritä haluamasi sarakkeen leveys **Valitse leveys** -asetuksella.
-    
-    > [!NOTE]
-    > Sarakkeen leveyden arvo voi olla 25–300 pikseliä.
-9. (Valinnainen) Muuta sarakkeiden järjestystä vetämällä sarake paikkaan, johon haluat siirtää sen. 
+5. Valitse näkymän suunnitteluohjelmassa pluspainike ja lisää näkymässä näytettävät lisäsarakkeet. Lisätietoja: [Sarakkeen lisääminen näkymään](#add-a-column-to-your-view)
 
-    Visuaalinen ilmaisin tulee näkyviin, kun pidät saraketta paikassa, johon haluat siirtää sen.
+   ![Sarakkeen lisääminen](../common-data-service/media/add-column-to-view.png)
 
-    ![Sarakkeiden järjestäminen uudelleen](media/ViewAppDesigner_ReorderColumn.png "Näkymän sarakkeiden järjestäminen uudelleen")
+6. Näkymän suunnitteluohjelmassa voit suorittaa seuraavat tehtävät: 
+   - Jos haluat muuttaa sarakkeen suodatusta, valitse suodatettavan sarakkeen otsikko ja valitse sitten avattavasta luettelosta **Suodatusperuste**.
+   - Jos haluat muuttaa sarakkeen lajittelua, valitse suodatettavan sarakkeen otsikko ja valitse sitten **Lajittele A–Ö** tai **Lajittele Ö–A**.
+   - Määritä sarakkeen leveys valitsemalla sarake ja vetämällä se haluttuun kohtaan.
+   - Muuta sarakkeiden järjestystä vetämällä sarake paikkaan, johon haluat siirtää sen. 
 
     > [!NOTE]
-    > Voit muuttaa sarakkeiden järjestystä myös pikanäppäimillä. Leikkaa sarake Ctrl + X -näppäinyhdistelmällä, valitse sarake ja liitä se Ctrl + V -näppäinyhdistelmällä. Sarake siirretään valitun sarakkeen oikealle puolelle.
-10. (Valinnainen) Liitä sarakkeeseen kuvake tai tiedosto erottamaan se muista sarakkeista suorituksen aikana. Lisätietoja: [WWW-resurssin määrittäminen](#define-a-web-resource)
-11. **Tallenna ja sulje** näkymä. 
-12. Valitse **Julkaise**, jos haluat, että näkymä on organisaation muiden käyttäjien käytettävissä. 
+    > Voit myös muuttaa sarakejärjestystä napsauttamalla sarakkeen otsikkoa ja valitsemalla **Siirrä oikealle** tai **Siirrä vasemmalle**.
+
+10. Valitse **Julkaise**, jos haluat tallentaa näkymän niin, että se on organisaation muiden käyttäjien käytettävissä. 
    
 
-## <a name="open-and-add-a-view-in-the-app-designer"></a>Näkymän avaaminen ja lisääminen sovellusten suunnitteluohjelmassa
+## <a name="work-with-views-in-app-designer"></a>Sovellusten suunnitteluohjelman näkymien käsitteleminen
+Seuraavissa osissa kerrotaan, miten näkymiä luodaan ja muokataan sovellusten suunnitteluohjelmassa.
+
+### <a name="open-and-add-a-view-in-the-app-designer"></a>Näkymän avaaminen ja lisääminen sovellusten suunnitteluohjelmassa
 
 Seuraavissa ohjeissa selitetään, miten näkymä avataan ja lisätään sovellusten suunnitteluohjelmassa.
-1. Valitse ratkaisunhallinnassa **Sovellukset** ja valitse sitten muokattava sovellus avattavaksi sovelluksen suunnitteluohjelmassa. 
+1. Valitse PowerAppsin vasemmanpuoleisessa siirtymisruudussa **Sovellukset**. Valitse haluamasi sovelluksen vieressä oleva **...**-kohta ja valitse sitten **Muokkaa**. 
 
-2. Valitse **Entiteettinäkymä**-osassa **Näkymät**.
+2. Valitse sovellusten suunnitteluohjelman **Entiteettinäkymä**-osassa **Näkymät**.
 
     Tässä esimerkissä **Asiakas**-entiteetissä on valittu **Näkymät**.
 
@@ -102,20 +95,21 @@ Seuraavissa ohjeissa selitetään, miten näkymä avataan ja lisätään sovellu
 Lisätietoja sovellusten suunnitteluohjelmasta: [Mukautettujen liiketoimintasovellusten suunnittelu sovellusten suunnitteluohjelmalla](design-custom-business-apps-using-app-designer.md)
 
 
-## <a name="add-a-column-to-your-view"></a>Sarakkeen lisääminen näkymään
+### <a name="add-a-column-to-your-view-in-app-designer"></a>Sarakkeen lisääminen näkymään sovellusten suunnitteluohjelmassa
 Näkymät näyttävät rivejä ja sarakkeita sisältävän taulukon tietueet. Kukin rivi on tietue, ja tietueesta näytettävät kentät määräytyvät näkymään lisättyjen sarakkeiden perusteella.
 
-1. Valitse sovelluksen suunnitteluohjelmassa **Osat**-välilehdessä joko **Ensisijainen entiteetti**- tai **Liittyvä entiteetti** -kohdassa **Sarakkeen määritteet**.
+1. Valitse sovellusten suunnitteluohjelmassa haluamasi entiteettinäkymä ja valitse sitten näkymän oikeanpuoleisessa ruudussa Muokkaa (kynäpainike).  
+2. Valitse **Osat**-välilehdessä joko **Ensisijainen entiteetti**- tai **Liittyvä entiteetti** -kohdassa **Sarakkeen määritteet**.
 
     ![Sarakkeen lisääminen](media/ViewAppDesigner_AddColumn.png "Sarakkeen lisääminen näkymään") 
 
-2. Valitse luettelossa määrite ja vedä se tämän sarakkeen otsikkoon. Voit lisätä määritteen myös kaksoisnapsauttamalla sitä.
-3. Toista vaihe 2, kunnes olet lisännyt kaikki näytettävät määritteet näkymään.
+3. Valitse luettelossa määrite ja vedä se tämän sarakkeen otsikkoon. Voit lisätä määritteen myös kaksoisnapsauttamalla sitä.
+4. Toista vaihe 3, kunnes olet lisännyt kaikki näytettävät määritteet näkymään.
 
 Kun lisäät määritteitä, voit vetää ne mihin tahansa aiemmin luotuun sarakeotsikkoon. Voit siirtää sarakkeita myös sen jälkeen, kun olet lisännyt ne näkymään.
 
 
-## <a name="define-filter-criteria"></a>Suodatusehtojen määrittäminen
+### <a name="define-filter-criteria-in-app-designer"></a>Suodatusehtojen määrittäminen sovellusten suunnitteluohjelmassa
 Voit määrittää suodatinehdot niin, että vain tietueiden alijoukko näkyy näkymässä. Kun käyttäjä avaa näkymän, vain määritettyjä tietue-ehtoja vastaavat tietueet näkyvät. Voit valita suodatettavaksi sekä ensisijaisten ja liittyvien entiteettien kenttiä.
 1. Laajenna sovelluksen suunnitteluohjelman **Suodatusehdot**-osa.
    
@@ -139,7 +133,7 @@ Voit suodattaa tietoja ensisijaisen entiteetin lisäksi myös liittyvien entitee
 
 Lisätietoja: [Suhteiden luominen ja niiden muokkaaminen entiteettien välillä](../common-data-service/create-edit-entity-relationships.md)
 
-## <a name="group-multiple-filters"></a>Useiden suodattimien ryhmittely
+#### <a name="group-multiple-filters-in-app-designer"></a>Useiden suodattimien ryhmitteleminen sovellusten suunnitteluohjelmassa
 Voit lisätä näkymään useita suodattimia näkymään, jos haluat käyttää suodatusperusteena useita kenttiä. 
 
 1. Valitse ryhmiteltävät suodattimet.
@@ -149,7 +143,7 @@ Voit lisätä näkymään useita suodattimia näkymään, jos haluat käyttää 
 
 Voit poistaa ryhmän suodattimen valitsemalla ensin ryhmän ja siten **Pura ryhmittely**. 
 
-## <a name="set-primary-and-secondary-sort-order-for-columns"></a>Sarakkeiden ensi- ja toissijaisen lajittelujärjestyksen määrittäminen
+### <a name="set-primary-and-secondary-sort-order-for-columns-in-app-designer"></a>Sarakkeiden ensisijaisen ja toissijaisen lajittelujärjestyksen määrittäminen sovellusten suunnitteluohjelmassa
 Kun näkymä avataan, näkymän tietueet lajitellaan näkymän luonnin yhteydessä luodun järjestyksen mukaan.   Tietueet lajitellaan oletusarvoisesti näkymän ensimmäisen sarakkeen mukaan, jos mitään lajittelujärjestystä ei ole valittu. Voit valita lajittelun yhden sarakkeen mukaan. Voit valita lajitteluperusteeksi myös kaksi saraketta, joista toinen on ensisijainen ja toissijainen. Kun näkymä avataan, tietueet lajitellaan ensimmäiseksi ensisijaisena lajittelujärjestyksenä käytettävän sarakkeen mukaan ja sitten sen sarakkeen mukaan, jota käytetään toissijaisena lajittelujärjestyksenä. 
 
 > [!NOTE]
@@ -162,7 +156,7 @@ Kun näkymä avataan, näkymän tietueet lajitellaan näkymän luonnin yhteydess
 
 Jos poistat ensisijaiseksi lajittelujärjestykseksi valitun sarakkeen, toissijaiseksi lajittelujärjestykseksi valitusta sarakkeesta tulee ensisijainen lajitteluperuste.
 
-## <a name="define-a-web-resource"></a>Verkkoresurssin määrittäminen
+### <a name="define-a-web-resource-in-app-designer"></a>WWW-resurssin määrittäminen sovellusten suunnitteluohjelmassa
 Määritä näkymässä sarakkeeseen liitettävän komentosarjatyypin verkkoresurssi. Nämä komentosarjat auttavat näyttämään sarakkeiden kuvakkeet.
 
 1. Valitse sarake, johon verkkoresurssi lisätään.
@@ -170,7 +164,7 @@ Määritä näkymässä sarakkeeseen liitettävän komentosarjatyypin verkkoresu
 3. Valitse avattavasta **Verkkoresurssi**-luettelosta käytettävä verkkoresurssi.
 4. Kirjoita toiminnon nimi **Toiminnon nimi** -ruutuun.
 
-## <a name="edit-a-public-or-system-view"></a>Julkisen näkymän tai järjestelmänäkymän muokkaaminen
+### <a name="edit-a-public-or-system-view-in-app-designer"></a>Julkisen näkymän tai järjestelmänäkymän muokkaaminen sovellusten suunnitteluohjelmassa
 Voit muuttaa tapaa, jolla julkinen näkymä tai järjestelmänäkymä näytetään, lisäämällä, määrittämällä tai poistamalla sarakkeita.
 1. Valitse entiteetin **Näkymät**-luettelossa **Näytä viittausluettelo** -alanuoli ![Avattava luettelo](media/DownArrow.png "Avattava luettelo -nuoli").
     ![Näkymän muokkaaminen](media/ViewAppDesigner_EditView.png "Julkisen näkymän tai järjestelmänäkymän muokkaaminen")

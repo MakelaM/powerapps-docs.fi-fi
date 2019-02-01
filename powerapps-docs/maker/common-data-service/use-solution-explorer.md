@@ -27,12 +27,11 @@ search.app:
 
  Voit tarkastella ratkaisuluetteloja PowerAppsissa valitsemalla vasemmassa siirtymisruudussa **Ratkaisut**. Voit sitten valita ratkaisun ja tarkastella sen kaikkia osia. 
  
-> [!NOTE]
->  Ratkaisukokemus on käytettävissä vain verkossa, kun ympäristöversio on vähintään 9.1.0.267. Voit tarkistaa version valitsemalla [PowerAppsin hallintakeskuksessa](https://admin.powerapps.com/) Ympäristöt > ympäristön valinta > Tiedot-välilehti. Jos ratkaisun valitsee aiemmassa ympäristössä, se avautuu perinteisenä käyttökokemuksena. 
-
 > [!div class="mx-imgBorder"]  
 > ![Kaikki osat sisältävä esittelyratkaisu](media/solution-all-items-list.PNG "Kaikki osat sisältävä esittelyratkaisu")  
-  
+ 
+> [!NOTE]
+>  Ratkaisukokemus on käytettävissä vain verkossa, kun ympäristöversio on vähintään 9.1.0.267. Voit tarkistaa version valitsemalla [PowerAppsin hallintakeskus](https://admin.powerapps.com/)> **Ympäristöt** > ympäristön valinta > **Tiedot**-välilehti. Jos ratkaisun valitsee aiemmassa ympäristössä, se avautuu perinteisenä käyttökokemuksena.  
  
  Voit selata ratkaisun kaikkia osia kohteita vierittämällä. Jos luettelossa on yli 100 kohdetta, näet lisää kohteita valitsemalla **100 seuraavan kohteen lataaminen**. 
  
@@ -44,7 +43,7 @@ search.app:
  Voit myös hakea tiettyä osaa osan nimellä. 
  
 > [!div class="mx-imgBorder"]  
-> ![Osan haku](media/solution-search-box.PNG "Osan haku")  
+> ![Osan haku](media/solution-search-box.png "Osan haku")  
  
  Voit lisäksi suodattaa luettelon kaikkia kohteita osan tyypin mukaan.
   
@@ -56,7 +55,7 @@ search.app:
  Kun valitset osan, komentopalkissa olevat toiminnot muuttuvat valitun osan tyypin mukaan. Toimintoihin vaikuttaa myös se, onko kyse oletusratkaisusta vai hallitusta ratkaisusta. 
  
 > [!div class="mx-imgBorder"]  
-> ![Osakohtaiset komennot](media/component-commands.PNG "Osakohtaiset komennot")  
+> ![Osakohtaiset komennot](media/component-commands.png "Osakohtaiset komennot")  
  
  Jos et valitse mitään osaa, komentopalkin toiminnot liittyvät ratkaisuun. 
  
@@ -87,7 +86,7 @@ search.app:
 >  Kun tällä hetkellä lisäät aiemmin luodun entiteetin ratkaisuun, järjestelmä lisää automaattisesti entiteettiin kuuluvat osat ratkaisuun. Jos et halua, että näin tapahtuu, siirry perinteiseen käyttökokemukseen valitsemalla **Siirry perinteiseen** ja lisää vain haluamasi osat. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
   
 > [!div class="mx-imgBorder"]  
-> ![Esittelyratkaisu, jossa näkyy laajennettu asiakasentiteetti](media/solution-entity-account.PNG "Esittelyratkaisu, jossa näkyy laajennettu asiakasentiteetti")  
+> ![Esittelyratkaisu, jossa näkyy laajennettu asiakasentiteetti](media/solution-entity-account.png "Esittelyratkaisu, jossa näkyy laajennettu asiakasentiteetti")  
 
 ## <a name="classic-solution-explorer"></a>Perinteiden ratkaisunhallinta
 
@@ -97,15 +96,15 @@ Voit avata PowerAppsissa perinteisen ratkaisunhallinnan valitsemalla vasemmassa 
 
 - Hallitun ratkaisun poistaminen ei poista kaaviosovellusta PowerAppsista.
 - Ratkaisussa ei voi käyttää mukautettuja yhdysohjelmia.
-- Kaaviosovellus on avattava ratkaisun tuonnin jälkeen, jotta yhteyden päivittyvät.
+- Kaaviosovellukset on avattava ratkaisun tuonnin jälkeen, jotta yhteyden päivittyvät.
 - Lisätty aiemmin luotu SDK-kokoonpano ei näy ratkaisussa. 
-- Jos kaaviosovellukset on pakattu hallittuun ratkaisuun, järjestelmänvalvojat voivat edelleen muokata niitä uudessa ympäristössä.
+- Vaikka kaaviosovellus olisi pakattu hallittuna ratkaisuna, sitä voi silti muokata kohdeympäristössä.
 - Riippuvuuksia ei voi käyttää kaaviosovelluksissa.
 - Hallitun ratkaisun poistaminen ei johda palautumiseen toiseen kaaviosovelluksen versioon. 
--   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service -tietokannasta.
+-   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service (CDS) sovelluksille -tietokannasta.
 -   CDS-ohjelmointirajapinnat, joilla kaaviosovelluksia kutsutaan, on estetty eikä niiden kautta palauteta mitään. 
--   Ratkaisussa luotua kaaviosovellusta ei voi vielä jakaa rinnakkaisomistajana AAD-käyttöoikeusryhmälle.
--   Kaaviosovellukset eivät näy perinteisessä ratkaisunhallinnassa. 
+-   Ratkaisussa luotua kaaviosovellusta ei voi jakaa rinnakkaisomistajana AAD-käyttöoikeusryhmälle.
+-   Kaaviosovellukset eivät näy perinteisessä ratkaisunhallinnassa.
 -   Aiemmin luodut kaaviosovellukset eivät ole ratkaisukohtaisia. 
 
  Lisätietoja ratkaisun yksittäisten osien mukauttamisesta on seuraavissa ohjeaiheissa:  

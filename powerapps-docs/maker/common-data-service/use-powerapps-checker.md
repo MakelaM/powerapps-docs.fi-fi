@@ -19,34 +19,39 @@ search.app:
 
 Kun mallipohjaisten sovellusten kehittäjät luovat yrityksen toiveita vastaavan ratkaisun, tuloksena on usein erittäin kehittyneitä ratkaisuja, jotka mukauttavat ja laajentavat Common Data Service (CDS) sovelluksille -ympäristöä. Tällaisiin toteutuksiin liittyy usein riski, että ratkaisun suorituskyky, vakaus ja luotettavuus kärsivät, mikä voi vaikuttaa kielteisesti käyttäjäkokemukseen. Tällaisten ongelmien havaitseminen ja niiden ratkaiseminen voi olla hankalaa ja viedä paljon aikaa. Ratkaisun tarkistustoiminnon avulla voi tehdä monipuolisen staattisen analyysin, jossa ratkaisun käyttöä verrataan parhaiden käytäntöjen mukaisiin sääntöihin. Tällä tavoin ongelmalliset kohdat havaitaan nopeasti. Saat tarkistuksen valmistumien jälkeen yksityiskohtaisen raportin havaituista ongelmista, osista ja koodista, joihin nämä ongelmat vaikuttavat, sekä linkin kunkin ongelman ratkaisuohjeisiin.
 
-Ratkaisun tarkistustoimintoa analysoi seuraavat ratkaisun osat. 
+Ratkaisun tarkistustoimintoa analysoidaan seuraavilla ratkaisun osilla: 
 - CDS sovelluksille -laajennukset
 - Mukautetut CDS sovelluksille -työnkulkuaktiviteetit 
 - CDS -sovelluksille verkkoresurssit (HTML ja JavaScript)
 - CDS sovelluksille -määritykset, kuten SDK-viestin osavaiheet 
 
-Ratkaisun tarkistustoimintoa voi käyttää sellaisissa hallitsemattomissa ratkaisuissa, jotka voidaan viedä ympäristöstä. Ratkaisun tarkistustoimintoa ei voi käyttää seuraavissa ratkaisuissa: 
+Ratkaisun tarkistustoimintoa voi käyttää sellaisissa hallitsemattomissa ratkaisuissa, jotka voidaan viedä ympäristöstä. Ratkaisun tarkistustoimintoa *ei* voi käyttää seuraavissa ratkaisuissa: 
+
+
+<!--from editor: Should it be Common Data Service (singular) below, rather than Services? -->
+
 - Järjestelmän oletusratkaisut (oletusratkaisu ja Common Data Services -oletusratkaisu).
 - Ratkaisut, joissa JavaScript käyttää versiota ECMAScript 6 (2015) tai sitä uudempaa versiota. Jos havaitaan, että JavaScript käyttää jotakin näistä versioista, verkkoresurssin JS001-syntaksiongelma ilmoitetaan.
 
-> [!NOTE]
-> Ominaisuus on tällä hetkellä esiversiossa ja käytössä vain Pohjois-Amerikan alueella. 
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-
 
 ## <a name="enable-the-solution-checker"></a>Ratkaisun tarkistustoiminnon ottaminen käyttöön
-Ratkaisun tarkistustoiminto on käytettävissä PowerAppsin Ratkaisut-alueella sen jälkeen, kun PowerAppsin tarkistustoimintoratkaisu on asennettu. Huomaa, että se ei löydy selaamalla eikä hakemalla Microsoft Appsourcesta. Se on asennettava seuraavasti:  
+Ratkaisun tarkistustoiminto on käytettävissä PowerAppsin Ratkaisut-alueella sen jälkeen, kun PowerAppsin tarkistustoimintoratkaisu on asennettu. Huomaa, että se ei löydy selaamalla eikä hakemalla Microsoft Appsourcesta. Voit asentaa sen seuraavasti:  
 
 1. Kirjaudu [PowerAppsiin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse Common Data Service -ympäristö, jossa haluat ottaa ratkaisun tarkistustoiminnon käyttöön. 
 2. Valitse vasemmassa siirtymisruudussa **Ratkaisut**.
 3. Valitse työkalurivillä ensin **Ratkaisun tarkistustoiminto** ja sitten **Asenna**. Microsoft AppSource -sivu avautuu. Ponnahdusikkunat on sallittava, jos selain estää sivun avautumisen. 
 
-   ![Ratkaisun tarkistustoiminnon asentaminen](media/solution-checker-install.png)
+   > [!div class="mx-imgBorder"]
+   > ![Ratkaisun tarkistustoiminnon asentaminen](media/solution-checker-install.png "Ratkaisun tarkistustoiminnon asentaminen")
 
 4. Valitse **Ilmainen kokeiluversio** AppSource-sivulla. 
-5. Hyväksy ehdot ja valitse ympäristö, johon PowerAppsin tarkistustoimintoratkaisu asennetaan. 
-6.  Kun asennus on valmis, päivitä **Ratkaisu**-luettelo PowerApps-sivustossa. Tällä tavoin voit varmistaa, että ratkaisun tarkistustoiminto on käytettävissä.  
-7. Tarkista ratkaisu [suorittamalla ratkaisun tarkistustoiminto](#run-the-solution-checker).
+
+
+<!--from editor: Should it be "solution checker" rather than "checker solution" in the following step?
+
+5. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
+6. When the installation is complete, refresh the **Solution** list on the PowerApps site to verify that the solution checker is available.  
+7. To check a solution, [Run the solution checker](#run-the-solution-checker).
 
 
 <!-- ### Components created with the PowerApps checker
@@ -66,20 +71,22 @@ Kun PowerAppsin tarkistustoiminto on asennettu ympäristöön, **Ratkaisun tarki
 2. Valitse vasemmassa ruudussa **Ratkaisut**. 
 3. Valitse sen hallitsemattoman ratkaisun vieressä, jonka haluat analysoida, **...**, osoita**Ratkaisun tarkistustoiminto** -kohtaa ja valitse **Suorita**. 
 
-   ![Ratkaisun tarkistustoimintokomennon suorittaminen](media/solution-checker-run.png)
+   > [!div class="mx-imgBorder"]
+   > ![Ratkaisun tarkistustoiminnon suorituskomento](media/solution-checker-run.png "Ratkaisun tarkistustoiminnon suorituskomento")
 
 4.  **Ratkaisut**-sivun oikeassa yläkulmassa on tilaruutu, jossa on teksti **Ratkaisun tarkistus on käynnissä**. 
 
-    ![Ratkaisun tarkistustoiminnon tila](media/solution-checker-status.png)
+    > [!div class="mx-imgBorder"]
+    > ![Ratkaisun tarkistustoiminnon tila](media/solution-checker-status.png "Ratkaisun tarkistustoiminnon tila")
    
-     Huomaa seuraavat asiat:
-       - Voi kestää muutamia minuutteja, kun ratkaisun tarkistustoiminto viimeistelee analyysin. 
+    Huomaa seuraavat asiat:
+    - Voi kestää muutamia minuutteja, kun ratkaisun tarkistustoiminto viimeistelee analyysin. 
     
-       - Tänä aikana **Käynnissä…**-tila näkyy **Ratkaisu**-luettelon **Ratkaisun tarkistus** -sarakkeessa. 
+    - Tänä aikana **Käynnissä…**-tila näkyy **Ratkaisu**-luettelon **Ratkaisun tarkistus** -sarakkeessa. 
     
-       - Kun tarkistus on valmis, saat siitä sähköposti-ilmoituksen. Lisäksi PowerApps-sivuston **Ilmoitukset**-alueella on ilmoitus.  
+    - Kun tarkistus on valmis, saat siitä sähköposti-ilmoituksen. Lisäksi PowerApps-sivuston **Ilmoitukset**-alueella on ilmoitus.  
 
-5.  [Tarkastele raporttia,](#reviewing-the-solution-checker-report) kun tarkistus on valmis.
+5.  [Tarkastele raporttia,](#review-the-solution-checker-report) kun tarkistus on valmis.
 
 ## <a name="cancel-a-check"></a>Tarkistuksen peruuttaminen
 
@@ -96,9 +103,9 @@ Kun ratkaisun tarkistustoiminto asennetaan ympäristöön, **Ratkaisun tarkistus
 |Käynnissä     | Ratkaisua analysoidaan.       |
 |Ei voitu suorittaa loppuun     |  Ratkaisun analysointia pyydettiin mutta analyysia ei onnistunut.       |
 |Tulokset alkaen *päivämäärä ja aika*   | Ratkaisun analysointi on tehty ja tulokset voi ladata.      |
-| Ei voitu suorittaa loppuun. Tulos alkaen *päivämäärä ja aika*     | Viimeisintä analyysipyyntöä ei voitu suorittaa loppuun. Viimeiset onnistuneet tulokset voidaan ladata.         |
+|Ei voitu suorittaa loppuun. Tulos alkaen *päivämäärä ja aika*     | Viimeisintä analyysipyyntöä ei voitu suorittaa loppuun. Viimeiset onnistuneet tulokset voidaan ladata.         |
 |Microsoft tarkistanut     | Tämä on Microsoftin hallittu ratkaisu. Ratkaisun analyysia ei voi tehdä näissä ratkaisuissa.         |
-|Julkaisija tarkistanut     |  Tämä on kolmannen osapuolen hallittu ratkaisu. Ratkaisun analyysia ei voi tällä hetkellä käyttää näissä ratkaisuissa.        |
+|Julkaisija tarkistanut     | Tämä on kolmannen osapuolen hallittu ratkaisu. Ratkaisun analyysia ei voi tällä hetkellä käyttää näissä ratkaisuissa.        |
 
 
 ## <a name="review-the-solution-checker-report"></a>Ratkaisun tarkistustoiminnon raportin tarkasteleminen
@@ -113,9 +120,9 @@ Yhteenveto raportin sarakkeista:
 |Raporttikenttä |Kuvaus  |Koskee osia   |
 |---------|---------|---------|
 |Ongelma     |   Ratkaisun havaitseman ongelman otsikko.      | Kaikki        |
-|Luokka     | Havaitun ongelman luokitus, kuten **suorituskyky**, **käyttö** tai **tuettavuus**.      |  Kaikki       |
-|Vakavuusaste     | Osoittaa havaitun ongelman mahdollisen vaikutuksen. Käytettävissä on seuraavat vaikutustyypit: **Korkea**, **Keskisuuri**, **Alhainen**, **Tiedoksi**.         |  Kaikki       |
-|Ohjeet     |  Linkki artikkeliin, jossa käsitellään ongelmaa, sen vaikutusta ja suositeltua ratkaisua. toimintoja.       |  Kaikki       |
+|Luokka     | Havaitun ongelman luokitus, kuten **suorituskyky**, **käyttö** tai **tuettavuus**.      |  Kaikki     |
+|Vakavuusaste     | Osoittaa havaitun ongelman mahdollisen vaikutuksen. Käytettävissä on seuraavat vaikutustyypit: **Korkea**, **Keskisuuri**, **Alhainen** ja **Tiedoksi**.         |  Kaikki       |
+|Ohjeet     |  Linkki artikkeliin, jossa käsitellään ongelmaa, sen vaikutusta ja suositeltua toimintoa.       |  Kaikki       |
 |Osa     |  Ratkaisun osa, jossa ongelma havaittiin.        |   Kaikki      |
 |Location     |  Sen osan sijainti ja/tai lähdetiedosto, jossa havaittu ongelma tapahtui. Se voi olla esimerkiksi kokoonpano tai JavaScript-tiedoston nimi.        |  Kaikki       |
 |Rivinumero     |  Ongelman rivinumeroviittaus siinä verkkoresurssiosassa, jota ongelma koskee.       |  WWW-resurssit       |
@@ -126,9 +133,7 @@ Yhteenveto raportin sarakkeista:
 |Kommentit     | Tietoja ongelmasta mukaan lukien tarkasta ratkaisuohjeet.         |  Kaikki       |
 
 
-
 ## <a name="best-practice-rules-used-by-solution-checker"></a>Ratkaisun tarkistustoiminnon käyttämät parhaiden käytäntöjen säännöt
-
 
 |Ratkaisun osa  |Säännön nimi  |Säännön kuvaus  |
 |---------|---------|---------|
@@ -162,5 +167,4 @@ Yhteenveto raportin sarakkeista:
 
 
 ## <a name="see-also"></a>Katso myös
-[PowerAppsin kokeellisten ja esiversion ominaisuuksien esittely](../canvas-apps/working-with-experimental.md) <br/>
 [PowerApps-ratkaisujen ohjeet ja parhaat käytännöt](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)

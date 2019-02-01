@@ -1,7 +1,7 @@
 ---
 title: Mallipohjaisen sovelluksen liiketoimintasääntöjen ja suositusten luominen | MicrosoftDocs
 ms.custom: ''
-ms.date: 06/27/2018
+ms.date: 12/06/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -128,7 +128,22 @@ Tässä opetusohjelmassa kerrotaan, miten liiketoimintasääntöjä ja -suosituk
 <a name="BKMK_LocalizingErrorMessages"></a>   
 ## <a name="localize-error-messages-used-in-business-rules"></a>Liiketoimintasäännöissä käytettävien virhesanomien lokalisoiminen  
  Jos organisaatiossa on käytössä useita kieliä, määritetyt virhesanomat kannattaa lokalisoida. Järjestelmä määrittää sanomalle otsikon sanoman luonnin yhteydessä. Jos viet käännökset organisaatioon, voit lisätä sanomien lokalisoidut versiot ja tuoda otsikot takaisin järjestelmään. Tällöin muuta kuin asennuskieltä käyttävät käyttäjät näkevät käännetyt sanomat.  
-  
+
+## <a name="is-your-business-rule-not-firing-for-a-form"></a>Jääkö lomakkeen liiketoimintasääntö käynnistymättä?
+Liiketoimintasääntö saattaa jäädä suorittamatta, koska sääntö, johon kenttä viittaa, ei sisälly lomakkeeseen. 
+1.  Avaa ratkaisunhallinta. Laajenna haluamasi entiteetti ja valitse **Lomakkeet**. 
+2.  Avaa haluamasi lomake ja valitse lomakkeiden suunnitteluohjelman valintanauhasta **Liiketoimintasäännöt**. 
+3.  Avaa liiketoimintasääntö lomakkeiden suunnitteluohjelmassa. 
+4.  Valitse liiketoimintasäännön suunnitteluohjelmassa jokainen sääntö ja toiminto, joiden avulla niissä viitatut kentät vahvistetaan. 
+
+     > [!div class="mx-imgBorder"] 
+     > ![](media/business-rule-field.png "Liiketoimintasäännössä viitattu kenttä on entiteetissä")
+
+ 5. Vahvista, että jokainen liiketoimintasäännössä viitattu kenttä sisältyy myös lomakkeeseen. Jos näin ei ole, lisää puuttuva kenttä lomakkeeseen.
+
+     > [!div class="mx-imgBorder"] 
+     > ![](media/account-name-on-form.png "Asiakkaan nimi -kenttä lomakkeessa")
+
 ## <a name="next-steps"></a>Seuraavat vaiheet  
  [Mukautetun liiketoimintalogiikan luominen prosessien avulla](guide-staff-through-common-tasks-processes.md)   
  [Liiketoimintaprosessin luominen](/flow/create-business-process-flow)   

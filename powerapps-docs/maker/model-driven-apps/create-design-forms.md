@@ -1,7 +1,7 @@
 ---
 title: Mallipohjaisen sovelluksen lomakkeiden luominen ja suunnittelu | MicrosoftDocs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 12/06/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -51,6 +51,39 @@ Järjestelmässä on vielä useita entiteettejä (perinteiset entiteetit), joill
 |Tallennettu näkymä|Palvelu|Palveluaktiviteetti|SharePoint-sivusto|Sijainti|  
 |Alue|Yksikkö|Yksikköryhmä|||  
   
+## <a name="form-display-faq"></a>Lomakkeen näytön usein kysytyt kysymykset
+
+### <a name="why-is-my-form-not-visible-in-the-form-selector-drop-down-in-my-app"></a>Miksi lomakkeeni ei näy sovelluksen lomakkeiden valinnan avattavassa luettelossa?
+Lomake ei ehkä ole saatavissa, koska sitä ei ole lisätty sovellukseen.
+1. Avaa sovellus sovellusten suunnitteluohjelmassa.
+2. Valitse **Entiteettinäkymä**-alueella entiteetin vieressä oleva **Lomakkeet**-kohta.
+3. Vahvista **Komponentit**-välilehden avulla, että sovellus sisältää päälomakkeet. Varmista, että näytettävä lomake on valittu. Jos sitä ei ole valittu, valitse se ja tallenna. Julkaise sovellus lopuksi.
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/forms-included-in-app.png "Sovellukseen lisätyt lomakkeet")
+   
+### <a name="why-isnt-my-form-displayed-as-the-default-form-in-the-app"></a>Miksi lomakkeeni ei näy sovelluksessa oletuslomakkeena?
+Lomake voidaan määrittää oletuslomakkeeksi lomakkeiden järjestyksen määrityksessä tai silloin, kun käyttäjä määrittää oletuslomakkeen mukautusasetuksena.
+1. Avaa ratkaisunhallinta. Laajenna entiteetti, joka sisältää järjestettävät lomakkeet, ja valitse sitten **Lomakkeet**.
+2. Valitse työkalurivillä **Lomakejärjestys** > **Päälomakejoukko**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/form-order-toolbar.png "Lomakejärjestyksen työkalurivin komento")
+   
+3. Lomakejärjestys tulee esille. Valitse lomake ja siirrä lomaketta ylä- ja alanuolien avulla lomakejärjestyksessä. Luettelon yläosassa oleva lomake on oletuslomake. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/form-order-dialog.png "Lomakejärjestys-valintaikkuna")
+   
+4. Valitse **OK**, kun haluat tallentaa lomakejärjestyksen muutokset.
+5. Valitse lomakkeen suunnitteluohjelman työkalurivillä **Julkaise**, kun haluat lomakejärjestyksen olevan sovellusten käytettävissä.
+ 
+#### <a name="form-order-user-personalization-setting"></a>Lomakejärjestyksen käyttäjän mukautusasetus
+Huomaa, että kun sovelluksen käyttäjä muuttaa lomakevalintaa sovelluksen lomakkeiden valinnan avattavassa luettelossa, kyseisestä lomakkeesta tulee käyttäjän oletuslomake. Mukauttaminen korvaa oletuslomakkeen, joka on määritetty entiteetille sovelluksessa.
+
+   > [!div class="mx-imgBorder"] 
+   > ![](media/change-form-user-setting.png "Käyttäjän asetus oletuslomakkeen muuttamista varten")
+   
 ### <a name="related-topics"></a>Asiaan liittyviä aiheita  
     
 [Delegoi lomaketilaus](assign-form-order.md) <br />
