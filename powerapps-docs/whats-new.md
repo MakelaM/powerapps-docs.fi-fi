@@ -16,12 +16,12 @@ search.audienceType:
 - developer
 search.app:
 - PowerApps
-ms.openlocfilehash: 6cb500e681be7a3be6a1ac0e0dc54caa2981893c
-ms.sourcegitcommit: 5198d7d99f157cd42830f833712175a2228aae5e
+ms.openlocfilehash: 088804f429e23a8824c3c132c3011308935a5b66
+ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069369"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290830"
 ---
 # <a name="whats-new-in-powerapps"></a>PowerAppsin uudet ominaisuudet
 
@@ -38,7 +38,9 @@ Jos haluat lisätietoja viikoittaisten julkaisutietojen selaamisesta, lue tämä
 
 ## <a name="release-notes"></a>Julkaisutiedot
 
-[Lokakuun 2018 julkaisutiedoissa](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features) on lisätietoja tulevien kuukausien aikana julkaistavista ominaisuuksista. Voit käyttää näitä tietoja suunnitteluun.
+Suunnittelun kannalta hyödyllisiä lisätietoja tulevien kuukausien aikana julkaistavista ominaisuuksista on seuraavissa artikkeleissa:
+- [Lokakuun 2018 julkaisutiedot](https://docs.microsoft.com/business-applications-release-notes/October18/powerapps/planned-features)
+- [Huhtikuun 2019 julkaisutiedot](https://docs.microsoft.com/business-applications-release-notes/April19/microsoft-powerapps/planned-features)
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 
