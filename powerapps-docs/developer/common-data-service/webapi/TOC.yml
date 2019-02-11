@@ -1,0 +1,94 @@
+items:
+- name: Tietoja käyttävän koodin käsitteleminen
+  href: ../work-with-data-cds.md
+- name: Verkon ohjelmointirajapinta
+  href: overview.md
+- name: Aloittaminen
+  items:
+  - name: (C#)
+    href: get-started-dynamics-365-web-api-csharp.md
+    items:
+    - name: 'Pika-aloitus: Verkon ohjelmointirajapinnan esimerkki (C#)'
+      href: quick-start-console-app-csharp.md
+    - name: Parannettu pika-aloitus (C#)
+      href: enhanced-quick-start.md
+- name: Client-side JavaScript
+  href: get-started-web-api-client-side-javascript.md
+- name: Todentaminen
+  href: authenticate-web-api.md
+- name: Tyypit ja toiminnot
+  href: web-api-types-operations.md
+- name: Toimintojen suorittaminen
+  href: perform-operations-web-api.md
+  items:
+  - name: HTTP-pyyntöjen laatiminen ja virheiden käsitteleminen
+    href: compose-http-requests-handle-errors.md
+  - name: Tietojen pyytäminen
+    href: query-data-web-api.md
+  - name: Ennalta määritettyjen kyselyiden noutaminen ja suorittaminen
+    href: retrieve-and-execute-predefined-queries.md
+  - name: Entiteetin luominen
+    href: create-entity-web-api.md
+  - name: Entiteetin noutaminen
+    href: retrieve-entity-using-web-api.md
+  - name: Entiteettien päivittäminen ja poistaminen
+    href: update-delete-entities-using-web-api.md
+  - name: Entiteettien yhdistäminen ja erottaminen
+    href: associate-disassociate-entities-using-web-api.md
+  - name: Funktioiden käyttäminen
+    href: use-web-api-functions.md
+  - name: Toimintojen käyttäminen
+    href: use-web-api-actions.md
+  - name: Erätoimintojen suorittaminen
+    href: execute-batch-operations-using-web-api.md
+  - name: Toiseksi käyttäjäksi tekeytyminen
+    href: impersonate-another-user-web-api.md
+  - name: Ehdollisten toimintojen suorittaminen
+    href: perform-conditional-operations-using-web-api.md
+  - name: Tietojen kaksoiskappaleen tunnistaminen
+    href: manage-duplicate-detection-create-update.md
+- name: Versioerot
+  href: web-api-versions.md
+- name: Metatietojen käsitteleminen
+  href: use-web-api-metadata.md
+  items:
+  - name: Metatietojen pyytäminen
+    href: query-metadata-web-api.md
+  - name: Metatietojen noutaminen nimen tai metatietojen tunnuksen mukaan
+    href: retrieve-metadata-name-metadataid.md
+  - name: Entiteetin määritelmien luominen ja päivittäminen
+    href: create-update-entity-definitions-using-web-api.md
+  - name: Entiteetin suhteiden luominen ja päivittäminen
+    href: create-update-entity-relationships-using-web-api.md
+  - name: Asetusjoukkojen käyttäminen
+    href: create-update-optionsets.md
+- name: Organisaation URL-osoitteeseen tutustuminen
+  href: discover-url-organization-web-api.md
+  items:
+  - name: Yleinen Discovery-palvelumalli (C#)
+    href: samples/global-discovery-service-csharp.md
+- name: Tietojen tuominen
+  href: ../import-data.md
+- name: Mallitiedot
+  href: ../sample-data.md
+- name: Esimerkit
+  items:
+  - name: Tietotoimintojen esimerkkimallit
+    href: web-api-samples.md
+    items:
+    - name: Perustoiminnot
+      href: web-api-basic-operations-sample.md
+    - name: Tietojen pyytäminen
+      href: web-api-query-data-sample.md
+    - name: Ehdolliset toiminnot
+      href: web-api-conditional-operations-sample.md
+    - name: Funktiot ja toiminnot
+      href: web-api-functions-actions-sample.md
+    - name: Esimerkit
+      href: samples/toc.yml
+ms.openlocfilehash: 237ead719746e18fcea31901a43385806b099f58
+ms.sourcegitcommit: fe47ad47873a37fbe17b30d39fb2ca6035b7d152
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55854552"

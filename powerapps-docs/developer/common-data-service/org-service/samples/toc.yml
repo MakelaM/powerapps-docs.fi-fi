@@ -1,0 +1,207 @@
+items:
+- name: Aktiviteetit
+  items:
+  - name: Faksin muuntaminen tehtäväksi
+    href: convert-fax-task.md
+  - name: Sähköpostin luominen mallista
+    href: create-email-template.md
+  - name: Sähköpostin liitteen luominen, noutaminen, päivittäminen ja poistaminen
+    href: create-retrieve-update-delete-email-attachment.md
+  - name: Sähköpostiviestin korottaminen
+    href: promote-email-message.md
+  - name: Sähköpostimallin liitteiden noutaminen
+    href: retrieve-email-attachments-email-template.md
+  - name: Sähköpostin lähettäminen mallin avulla
+    href: send-email-template.md
+  - name: Sähköpostin lähettäminen
+    href: send-email.md
+  - name: Sähköpostin joukkolähettäminen ja tulosten seuraaminen
+    href: send-bulk-email-monitor-results.md
+  - name: Aktiviteetin osapuoli -tietueiden käsittely
+    href: work-activity-party-records.md
+- name: Tapaamiset
+  items:
+  - name: Tapaamisajan varaaminen
+    href: book-appointment.md
+  - name: Tapaamisen muuntaminen toistuvaksi tapaamiseksi
+    href: convert-appointment-recurring-appointment.md
+  - name: Toistuvan tapaamisen luominen, noutaminen, päivittäminen ja poistaminen
+    href: create-retrieve-update-delete-recurring-appointment.md
+  - name: Toistuvien tapaamisten sarjan päättäminen
+    href: end-recurring-appointment-series.md
+  - name: Sarjojen ja esiintymien välisten mukautettujen attribuuttien linkittäminen
+    href: link-custom-attributes-between-series-instances.md
+  - name: Kyselyn tekeminen käyttäjän työajoista
+    href: query-working-hours-user.md
+  - name: Kyselyn tekeminen useiden käyttäjien työajoista
+    href: query-working-hours-multiple-users.md
+  - name: Toistuvan tapaamisen uudelleenajoittaminen ja peruuttaminen
+    href: reschedule-cancel-recurring-appointment.md
+  - name: Tapaamisen vahvistaminen
+    href: validate-appointment.md
+- name: Valvonta
+  items:
+  - name: Entiteettitietojen muutosten valvonta
+    href: audit-entity-data-changes.md
+  - name: Käyttäjän käyttöoikeuden valvominen
+    href: audit-user-access.md
+- name: Azure-integrointi
+  items:
+  - name: Azuren huomioiva mukautettu laajennus
+    href: azure-aware-custom-plugin.md
+  - name: Azuren huomioivan mukautetun työnkulun aktiviteetti
+    href: azure-aware-custom-workflow-activity.md
+  - name: Yksisuuntainen kuuntelutoiminto
+    href: one-way-listener.md
+  - name: Pysyvän jonon kuuntelutoiminto
+    href: persistent-queue-listener.md
+  - name: REST-kuuntelutoiminto
+    href: rest-listener.md
+  - name: Kaksisuuntainen kuuntelutoiminto
+    href: two-way-listener.md
+- name: Joukkopoistaminen
+  items:
+  - name: Vietyjen tietueiden joukkopoistaminen
+    href: bulk-delete-exported-records.md
+  - name: Yleisiä ehtoja vastaavien tietueiden joukkopoistaminen
+    href: bulk-delete-records-match-common-criteria.md
+- name: Muutosten seuranta
+  items:
+  - name: Tietojen synkronoiminen ulkoisten järjestelmien kanssa muutosten seurannan avulla
+    href: synchronize-data-external-systems-using-change-tracking.md
+- name: Yhteydet
+  items:
+  - name: Luo yhteys
+    href: create-connection-early-bound.md
+  - name: Yhteysroolin luominen
+    href: create-connection-role-early-bound.md
+  - name: Vastavuoroisen yhteysroolin luominen
+    href: create-reciprocal-connection-role-early-bound.md
+  - name: Kyselyjen tekeminen yhteyksistä tietueiden mukaan
+    href: query-connections-record-early-bound.md
+  - name: Kyselyjen tekeminen yhteysrooleista entiteettityypin koodin mukaan
+    href: query-connection-roles-entity-type-code-early-bound.md
+  - name: Kyselyjen tekeminen yhteyksistä vastavuoroisten roolien mukaan
+    href: query-connections-reciprocal-roles-early-bound.md
+- name: Valuutta
+  items:
+  - name: Valuutan vaihtokurssin noutaminen
+    href: retrieve-currency-exchange-rate.md
+- name: Mukauttaminen ja metatiedot
+  items:
+  - name: Mukautetun aktiviteetin luominen
+    href: create-custom-activity.md
+  - name: Vedostiedoston tekeminen entiteetin metatiedoista
+    href: dump-entity-metadata-file.md
+  - name: Kelvollisten tilasiirtojen noutaminen
+    href: retrieve-valid-status-transitions.md
+- name: Kaksoiskappaleiden tunnistus
+  items:
+  - name: Useiden tietueiden kaksoiskappaleiden tunnistus
+    href: detect-multiple-duplicate-records.md
+  - name: Kaksoiskappaleiden tunnistuksen käyttöönotto ja kaksoiskappaleiden noutaminen
+    href: enable-duplicate-detection-and-retrieve-duplicates.md
+  - name: Kaksoiskappaleiden tunnistuksen käyttö tietueiden luomisessa ja päivittämisessä
+    href: use-duplicate-detection-when-creating-and-updating-records.md
+- name: Entiteetin tietueet
+  items:
+  - name: Aikaisin sidottavat entiteettitoiminnot
+    href: early-bound-entity-operations.md
+  - name: Myöhään sidottavat entiteettitoiminnot
+    href: late-bound-entity-operations.md
+  - name: Optimistisen samanaikaisuuden käyttö toimintojen päivittämiseen ja poistamiseen
+    href: use-optimistic-concurrency-update-delete-operations.md
+  - name: Tietueen jakaminen käyttöoikeusryhmän avulla
+    href: share-record-using-access-team.md
+  - name: Tietueiden jakaminen GrantAccess-, ModifyAccess- ja RevokeAccess-viestien avulla
+    href: share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md
+  - name: Liitteen noutaminen tai lataaminen palvelimeen tai laitteeseen
+    href: upload-retrieve-download-attachment.md
+  - name: Tietueen lisääminen tai päivittäminen Upsertin avulla
+    href: insert-update-record-upsert.md
+- name: Kenttätason suojaus
+  items:
+  - name: Kentän käyttöoikeuksien noutaminen
+    href: retrieve-field-permissions.md
+  - name: Kentän jakamistietueiden noutaminen
+    href: retrieve-field-sharing-records.md
+  - name: Entiteetin kentän suojauksen ottaminen käyttöön
+    href: enable-field-security-entity.md
+- name: Tavoitteiden hallinta
+  items:
+  - name: Kootut tavoitetiedot määrätyltä ajanjaksolta tavoitetuottoon verrattuna
+    href: rollup-goal-data-custom-period-target-revenue.md
+  - name: Kootut tavoitetiedot tilikaudelta venyvään tavoitteeseen verrattuna
+    href: rollup-goal-data-fiscal-period-stretch-target-count.md
+  - name: Koontikyselyjen käyttö tavoitteiden seurannassa
+    href: use-rollup-queries-track-goals.md
+  - name: Tavoitteen kokonaismäärän ohittaminen ja tavoitteen sulkeminen
+    href: override-goal-total-count-close-goal.md
+- name: Tietojen tuominen
+  items:
+  - name: Tietokartan vieminen ja tuominen
+    href: export-import-data-map.md
+  - name: Tietojen tuominen monimutkaisen tietokartan avulla
+    href: import-data-complex-data-map.md
+- name: Laajennukset
+  items:
+  - name: Verkkokäyttö laajennuksen kautta
+    href: web-access-plugin.md
+  - name: Peruslaajennuksen luominen
+    href: basic-followup-plugin.md
+- name: Jonot
+  items:
+  - name: Tietueen lisääminen jonoon
+    href: add-record-queue-early-bound.md
+  - name: Suojausobjektin (käyttäjän tai tiimin) lisääminen jonoon
+    href: add-security-principal-user-team-queue-early-bound.md
+  - name: Jonon historian puhdistaminen
+    href: clean-up-history-queue-early-bound.md
+  - name: Jonokohteen vapauttaminen jonoon
+    href: release-queue-item-queue-early-bound.md
+  - name: Työstettävän jonokohteen määrittäminen
+    href: specify-queue-item-work-early-bound.md
+- name: SharePoint
+  items:
+  - name: Sijaintitietueen absoluuttisen URL-osoitteen ja sivustokokoelman URL-osoitteen noutaminen
+    href: retrieve-absolute-url-and-site-collection-url-of-a-location-record.md
+- name: Erityistoiminnot
+  items:
+  - name: Useiden pyyntöjen suorittaminen
+    href: execute-multiple-requests.md
+- name: Ratkaisut
+  items:
+  - name: Ratkaisujen käsitteleminen
+    href: work-solutions.md
+  - name: Ratkaisujen riippuvuuksien havaitseminen
+    href: detect-solution-dependencies.md
+- name: Aikavyöhykkeet
+  items:
+  - name: Aikavyöhyketietojen noutaminen
+    href: retrieve-time-zone-information.md
+- name: Kyselytiedot
+  items:
+  - name: QueryExpression-luokan käyttö sivutusevästeen kanssa
+    href: use-queryexpression-with-a-paging-cookie.md
+  - name: Usean kohteen noutaminen QueryExpression-luokan avulla
+    href: retrieve-multiple-queryexpression-class.md
+  - name: Usean kohteen noutaminen QueryByAttribute-luokan avulla
+    href: retrieve-multiple-querybyattribute-class.md
+  - name: Kyselyjen muuntaminen Fetch-kielen ja QueryExprsession-luokan välillä
+    href: convert-queries-fetch-queryexpression.md
+  - name: Tietueiden noutaminen leikkaavasta taulukosta
+    href: retrieve-records-intersect-table.md
+  - name: Tallennetun kyselyn vahvistaminen ja suorittaminen
+    href: validate-execute-saved-query.md
+  - name: Koostaminen FetchXML-kielellä
+    href: use-aggregation-fetchxml.md
+  - name: FetchXML-kielen käyttö sivutusevästeen kanssa
+    href: use-fetchxml-paging-cookie.md
+- name: Resurssienetsintäpalvelun käyttö
+  href: access-discovery-service.md
+ms.openlocfilehash: d1820c44cca47682ebfcf25d1fde37fa13bee634
+ms.sourcegitcommit: 9192f6aff2782f980a34a60df9aca420f1ba29ce
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55958073"

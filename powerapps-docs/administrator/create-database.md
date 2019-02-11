@@ -7,7 +7,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-admin
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 02/01/2019
 ms.author: manasma
 search.audienceType:
 - admin
@@ -15,12 +15,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: c7de26bff38ee0425e8bb3f9bc0da72317f0a6cf
-ms.sourcegitcommit: 6e2fa2665ded6ac6fd271e1a12f4e3227ebc8865
+ms.openlocfilehash: f7b5fb27e5b135239e1fe2306f7c431d6d1e6aae
+ms.sourcegitcommit: 676cfa415f67e2e8fcfcf30fab83fc118a6f3210
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48246116"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55558745"
 ---
 # <a name="create-a-common-data-service-for-apps-database"></a>Common Data Service for Apps -tietokannan luominen
 Voit luoda tietokannan ja rakentaa sovelluksia käyttämällä Common Data Service (CDS) for Apps -palvelua tietosäilönä. Voit joko luoda omia mukautettuja entiteettejä tai käyttää ennalta määritettyjä entiteettejä. Jotta voit luoda tietokannan, sinun on ensin joko luotava ympäristö tai saatava olemassa olevan ympäristön **Ympäristön järjestelmänvalvoja** -rooli. Lisäksi sinulle on määritettävä sopiva käyttöoikeus. Lisätietoja CDC for Appsin käyttöön tarvittavan palvelupaketin ostamisesta on kohdassa [Hinnoittelutiedot](pricing-billing-skus.md).
@@ -45,8 +45,6 @@ Voit luoda tietokannan eri tavoin:
     
     ![](./media/create-database/DB-Choose-options.png)
 
-
-
 ## <a name="create-a-database-in-the-entities-pane-of-powerapps"></a>Tietokannan luominen PowerAppsin Entiteetit-ruudussa
 1. Suurenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osio ja napsauta tai napauta vasemman siirtymisruudun **Entiteetit**-kohtaa.
 
@@ -54,11 +52,8 @@ Voit luoda tietokannan eri tavoin:
 
     ![](./media/create-database/Create-DB-From-Entities.png)
 
-> [!NOTE]
-> Tällä hetkellä ei ole mahdollista luoda tietokantaa Azure AD-alueen ulkopuolella. Tietokannan luominen eri alueella kuin Azure AD -kotialueesi tulee pian mahdolliseksi, mutta toistaiseksi varmista, että luot tietokannan ympäristössä, jonka alue on sama kuin Azure AD -kotialueesi.
-
 ## <a name="security-model-for-the-databases"></a>Tietokantojen suojausmalli
-Käyttäjät, joille on määritetty ympäristörooleja, säilyttävät kaikki samat oikeudet tietokannan luomisen yhteydessä.  
+Kun tietokanta luodaan, käyttäjät, joille on määritetty ympäristöroolit, säilyttävät edelleen nämä oikeudet.  
     **Ympäristön järjestelmänvalvojan** roolissa olevat käyttäjät määritetään nyt **järjestelmänvalvojan** rooliin. **Ympäristön tekijä** -rooliin kuuluvat käyttäjät jatkavat samassa roolissa.
 
 Voit määrittää ennalta määritettyihin rooleihin lisää käyttäjiä tai luoda [mukautettuja rooleja][1]. Lisätietoja saat kohdasta [Tietokannan suojaus](database-security.md).

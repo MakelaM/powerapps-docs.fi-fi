@@ -5,7 +5,7 @@ author: sabinn-msft
 ms.service: powerapps
 ms.topic: how-to
 ms.component: cds
-ms.date: 10/15/2018
+ms.date: 1/31/2019
 ms.author: sabinn
 search.audienceType:
 - admin
@@ -13,12 +13,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: dfbc420dfb4945cdda635e3cbaadb1acb446753b
-ms.sourcegitcommit: ebd39753e2a0b60c1d8c016e38c00dd1accf5d0c
+ms.openlocfilehash: 8723021a59ca1ecbbdff41ddfa793684fe1ee970
+ms.sourcegitcommit: 47a4218445e5715bc1f7bf7bd8735b2a42c33935
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328690"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55514026"
 ---
 # <a name="integrate-data-into-common-data-service-for-apps"></a>Tietojen integrointi Common Data Service for Appsiin
 
@@ -30,6 +30,9 @@ Aloitimme ensimmäisen osapuolen sovelluksista, kuten Dynamics 365 for Finance a
 
 > [!div class="mx-imgBorder"]
 > ![Tietolähde kohteeseen](media/data-integrator/DataIntegratorP2P-new.PNG "Tietolähde kohteeseen")
+
+> [!TIP]
+> Katso blogi: [Tietojen integroinnin päivitykset – Uusia ominaisuuksia ja sulavan kokemuksen takaava intuitiivinen käyttöliittymä](https://powerapps.microsoft.com/blog/data-integrator-updates-new-features-with-an-intuitive-user-interface-providing-a-fluent-experience/).
 
 ## <a name="how-can-you-use-the-data-integrator-for-your-business"></a>Miten tietojen integrointia voi käyttää yrityksessä?
 
@@ -73,7 +76,7 @@ Ennen tietojen integrointiprojektin luomista sinun on valmisteltava yhteys jokai
 
 **Yhteyden luominen**
 
-1. Siirry [PowerApps-hallintakeskukseen](https://admin.powerapps.com).
+1. Siirry [PowerAppsiin](https://web.powerapps.com).
 
 2. Valitse Tiedot-kohdasta **Yhteydet** ja valitse sitten **Uusi yhteys**.
 
@@ -130,6 +133,8 @@ Yhteysjoukkosi on valmis käytettäväksi integrointiprojekteissa.
 ### <a name="how-to-create-a-data-integration-project"></a>Tietojen integrointiprojektin luominen
 
 Projektit mahdollistavat tietovuon järjestelmien välillä. Projektin sisältää vähintään yhden entiteetin yhdistämismääritykset. Yhdistämismääritykset ilmaisevat, mikä kenttä vastaa mitäkin.
+
+<a name="CreateProject">
 
 **Tietojen integrointiprojektin luominen**
 
@@ -197,6 +202,10 @@ Suoritushistoriassa näkyvät kaikki projektisuoritukset projektin nimellä, pro
 
     Kummassakin tapauksessa voit myös suorittaa projektin suorittamisen uudelleen manuaalisesti.
 
+> [!NOTE]
+> Aina kun suoritat projektin manuaalisesti tai aikataulun mukaan, se luo yksityiskohtaisen lokin, joka näyttää projektin nimen, viimeisen päivitetyn aikaleiman sekä tilan. Voit tarkastella tätä jokaisen projektin suoritushistoriassa. Projektin suoritushistoriaa ylläpidetään 45 päivää, jonka jälkeen se tyhjennetään automaattisesti.
+
+
 ### <a name="how-to-set-up-a-schedule-based-refresh"></a>Aikatauluun perustuvan päivityksen määrittäminen
 
 Tuemme nykyisin kahta suoritusten/kirjoitusten tyyppiä:
@@ -235,6 +244,7 @@ Huomaa myös, että Ilmoitukset-kohdassa voit halutessasi asettaa sähköpostipo
 Kokeiluversion vuokraajia koskee lisärajoitus: ajoitettu projekti suorittaa vain 50 ensimmäistä suoritusta.
 > - Vaikka projektien suorittamisen ajoittamista minuutin välein tuetaan, kannattaa muistaa, että tämä voi rasittaa sovelluksia ja vaikuttaa yleiseen suorituskykyyn. Käyttäjien on suositeltavaa testata projektien suorittamista todellisissa kuormitusolosuhteissa ja harventaa päivitysväliä suorituskyvyn optimoimiseksi.
 Tuotantoympäristöissä ei ole suositeltavaa suorittaa yli viittä projektia minuutissa vuokraajaa kohden.
+> - Aina kun suoritat projektin manuaalisesti tai aikataulun mukaan, se luo yksityiskohtaisen lokin, joka näyttää projektin nimen, viimeksi päivitetyn aikaleiman sekä tilan. Voit tarkastella tätä jokaisen projektin suoritushistoriassa. Projektin suoritushistoriaa ylläpidetään 45 päivää, jonka jälkeen se tyhjennetään automaattisesti.
 
 ## <a name="customizing-projects-templates-and-mappings"></a>Projektien, mallien ja yhdistämismääritysten mukauttaminen 
 
@@ -266,9 +276,9 @@ Voit mukauttaa projekteja ja malleja seuraavilla tavoilla:
 
 4. Kun olet mukauttanut kenttien yhdistämismäärityksiä, valitse **Tallenna**.
 
-### <a name="how-to-customize-or-create-your-own-template"></a>Oman mallin mukauttaminen tai luominen 
+### <a name="how-to-create-your-own-template"></a>Oman mallin luominen 
 
-**Oman mallin luominen**
+**Luo oma mallisi muokkaamalla aiemmin luotuja malleja**
 
 1. Siirry [PowerApps-hallintakeskukseen](https://admin.powerapps.com).
 
@@ -318,6 +328,51 @@ Voit mukauttaa projekteja ja malleja seuraavilla tavoilla:
 
     > [!div class="mx-imgBorder"] 
     > ![Mukauta mallia tallentamalla nimellä malliksi](media/data-integrator/CustomizeTemplateSaveAsTemplate175.png "Mukauta mallia tallentamalla nimellä malliksi")
+
+**Luo oma mallisi tyhjistä malleista**
+
+1. Siirry [PowerApps-hallintakeskukseen](https://admin.powerapps.com).
+2. Luo tietojen integrointiprojekti. Valitse **Tietojen integrointi** -välilehti vasemmassa siirtymisruudussa.
+3. Valitse **Uusi projekti** ja anna projektille nimi. Esimerkiksi ”Demo_CreateYourOwnTemplate -projekti”.
+4. Poimi **Valitse malli** -luettelosivulta yleinen tyhjä malli. 
+   Valitse tälle esimerkille **Sales to Fin and Ops** -malli, koska haluamme siirtää tietoja Dynamics 365 for Finance and Operationsista Dynamics 365 for Salesiin.
+    
+    > [!div class="mx-imgBorder"] 
+    > ![](media/create-data-integration-project.png "Luo tietojen integrointiprojekti")
+
+4. Viimeistele tietojen integrointiprojektin luonti noudattamalla <a href="#CreateProject">tässä</a> olevia ohjeita 6–9. Valitse **Tallenna**.
+
+5. Näet Tehtävät-sivun, joka on tyhjä, koska kyse on tyhjästä mallista ilman tehtäviä. Valitse **Lisää tehtävä**, jotta voit poimia entiteetin avattavasta luettelosta ja lisätä uuden tehtävän.
+   Tässä tapauksessa luomme esittelytarkoituksiin **Activities Sales to Fin and Ops** -tehtävän poimimalla **Activites**-entiteetin Dynamics 365 for Finance and Operationsille ja Dynamics 365 for Salesille. Valitse **Luo**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/activities-sales-fin-opps-task.png "ActivitiesSales to Fin and Ops -tehtävä")
+
+6. Näet uuden lisätyn **Activities Sales to Fin and Ops** -tehtävän. Tallenna muutoksesi valitsemalla **Tallenna**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/new-task-added.png "Uusi tehtävä lisätty")
+
+7. Projekti luodaan. Valitse **Tallenna mallina** **Projektit**-luettelosivulta.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/save-as-template.png "Tallenna mallina")
+
+8. Anna nimi ja kuvaus, ja valitse sitten **Tallenna**. Voit myös jakaa tämän mallin valitsemalla **Jaa kaikkien kanssa organisaatiossani**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/save-describe-share.png "Tallenna projekti mallina")
+
+Näet äskettäin luodun mallin, joka on lueteltu **Mallit**-luettelosivulla.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/newly-created-template.png "Äskettäin luotu malli")
+
+Lisäksi kun valitset **Valitse malli** uuden integrointiprojektin luomisen jälkeen, näet juuri luodun mallin osana **Valitse malli** -luetteloa.
+
+> [!div class="mx-imgBorder"] 
+> ![](media/new-data-integration-project.png "Uusi tietojen integrointiprojekti")
+
 
 ## <a name="advanced-data-transformation-and-filtering"></a>Kehittynyt tietojen muuntaminen ja suodattaminen 
 
