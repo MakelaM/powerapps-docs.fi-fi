@@ -1,1 +1,1 @@
-Azure-palvelurakenne
+Azure Service Fabric
