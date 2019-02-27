@@ -320,11 +320,12 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Ympäristö ja suojaus</h3>
+                                    <h3 style="font-size: 1.15rem">Power Platform Admin -keskus</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/environments-administration">Ympäristöjen hallinnoiminen</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/database-security">Ympäristön turvallisuuden määrittäminen</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-view-apps">Ympäristösi sovellusten näyttäminen</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-guide">Power Platformin hallinnoiminen</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Ohjeen ja tuen hakeminen</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Tilaa huhtikuun 2019 päivitykset</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-settings">Asetusten hallinta</a></p>
                                  </div>
                               </div>
                            </div>
@@ -379,12 +380,11 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Power Platform Admin -keskus</h3>
+                                    <h3 style="font-size: 1.15rem">Ympäristö ja suojaus</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-guide">Power Platformin hallinnoiminen</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Ohjeen ja tuen hakeminen</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Tilaa huhtikuun 2019 päivitykset</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/manage-environments">Ympäristöjen hallinnointi</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/environments-administration">Ympäristöjen hallinnointi</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/database-security">Ympäristön turvallisuuden määrittäminen</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-view-apps">Ympäristösi sovellusten näyttäminen</a></p>
                                  </div>
                               </div>
                            </div>
