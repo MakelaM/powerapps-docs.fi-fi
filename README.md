@@ -1,13 +1,13 @@
-# Microsoft PowerApps Documentation
+# <a name="microsoft-powerapps-documentation"></a>Microsoft PowerApps -dokumentaatio
 
-This is the GitHub repository for the technical product documentation for **PowerApps**. This documentation is published to  [https://docs.microsoft.com/powerapps](https://docs.microsoft.com/powerapps).
+Tämä on **PowerApps**-tuotteen teknisen dokumentaation GitHub-säilö. Ohjeet on julkaistu kohteeseen [ https://docs.microsoft.com/powerapps ](https://docs.microsoft.com/powerapps).
 
-## How to contribute
+## <a name="how-to-contribute"></a>Osallistumisohjeet
 
-Thanks for your interest in contributing to [Docs.microsoft.com](https://docs.microsoft.com/), home of technical content for Microsoft products and services.
+Kiitos, että haluat osallistua toimintaan sivustolla [Docs.microsoft.com](https://docs.microsoft.com/), joka on Microsoft-tuotteisiin ja -palveluihin liittyvän teknisen sisällön tyyssija.
 
-To learn how to make contributions to the content in this repository, start with our [Docs contributor guide](https://docs.microsoft.com/contribute). If you are a Microsoft employee, please visit the [internal version](https://aka.ms/docsguidescontribute) of this guide.
+Aloita Microsoftin [Docs-sisällöntuottajan oppaasta](https://docs.microsoft.com/contribute), niin opit, miten voit lisätä uusia kohteita tämän säilön sisältöön. Jos olet Microsoftin työntekijä, tutustu tämän oppaan [sisäiseen versioon](https://aka.ms/docsguidescontribute).
 
-## Code of conduct
+## <a name="code-of-conduct"></a>Käytännesäännöt
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Projektin yhteydessä on otettu käyttöön [Microsoftin avoimen lähdekoodin käytännesäännöt](https://opensource.microsoft.com/codeofconduct/). Jos haluat lisätietoja, tutustu [Käytännesääntöjen usein kysyttyihin kysymyksiin ](https://opensource.microsoft.com/codeofconduct/faq/) tai lähetä kysymyksiä tai kommentteja osoitteeseen [ opencode@microsoft.com ](mailto:opencode@microsoft.com).
