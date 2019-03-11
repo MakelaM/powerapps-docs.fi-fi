@@ -6,15 +6,15 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ''
-ms.date: 12/21/2018
+ms.date: 02/28/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: 4000a9c60410a8ea2e4f1205d8ca815d67976d23
-ms.sourcegitcommit: 4a27a2fa3d06296c88cd85c638dc075f7ed6f1f9
+ms.openlocfilehash: 3a314ee6fabc5d3891a19610bfc4cf8aebdd6dcf
+ms.sourcegitcommit: edd4b1029b7085bb3849d87b0c94e0d8cb5758aa
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54099643"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251543"
 ---
 # <a name="what-is-powerapps"></a>Mikä on PowerApps?
 
@@ -42,9 +42,11 @@ Voit suorittaa itse luomiasi tai muiden luomia ja sinulle jakamia sovelluksia se
 
 PowerApps-järjestelmänvalvojat voivat käyttää:
 
-- **PowerApps-hallintakeskusta** ([admin.powerapps.com](https://admin.powerapps.com)) ympäristöjen, käyttäjien, roolien ja tietojen menetyksen estokäytäntöjen luomiseen ja hallinnointiin. Lisätietoja: [PowerAppsin hallitseminen](administrator/admin-guide.md)
+- **PowerApps-hallintakeskusta** ([admin.powerapps.com](https://admin.powerapps.com)) ympäristöjen, käyttäjien, roolien ja tietojen menetyksen estokäytäntöjen luomiseen ja hallinnointiin. 
 
-- **Power Platform -hallintakeskusta** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) ympäristöjen hallinnointiin, Dynamics 365 for Customer Engagement -sovellusten, PowerAppsin ja Microsoft Flow -ohjelman käyttöä koskevien reaaliaikaisten ja omatoimisten suositusten ja tukiartikkeleiden lukemiseen sekä CDS for Apps -analyysien tarkasteluun. Lisätietoja: [Power Platformin hallinnointi](https://docs.microsoft.com/power-platform/admin/admin-guide)
+- **Power Platform -hallintakeskusta** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) ympäristöjen hallinnointiin, Dynamics 365 for Customer Engagement -sovellusten, PowerAppsin ja Microsoft Flow -ohjelman käyttöä koskevien reaaliaikaisten ja omatoimisten suositusten ja tukiartikkeleiden lukemiseen sekä CDS for Apps -analyysien tarkasteluun. 
+
+Lisätietoja: [PowerAppsin hallitseminen](/power-platform/admin/admin-guide)
 
 ## <a name="powerapps-for-developers"></a>PowerApps kehittäjille
 
