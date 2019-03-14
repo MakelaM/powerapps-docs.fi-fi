@@ -1,24 +1,24 @@
 ---
 title: Kuvien tallentaminen Excel-tiedostoon | Microsoft Docs
 description: Kuvan tallentaminen Excel-taulukkoon pilvipalvelutilille
-author: AFTOwen
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/15/2016
-ms.author: anneta
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 48b8da1fbe328eb8834a58b7c052e8d4bd6a8151
-ms.sourcegitcommit: c1f58a16f8dcd309a1d5fc4658ca16d82c615994
+ms.openlocfilehash: f201d1fbad574174e4427698ae28439f26419514
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "42852363"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072717"
 ---
 # <a name="how-to-save-images-in-an-excel-file-and-then-add-these-images-to-your-app"></a>Kuvien tallentaminen Excel-tiedostoon ja lisääminen sovellukseen
 
@@ -97,7 +97,7 @@ Kun määrität Kohteet-ominaisuuden, sarake, jonka nimi on **PowerAppsId**, lis
 
 Excel-taulukon kuvan polku voi olla myös kuvan URL-osoite. Lataa [Flooring Estimates](http://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) -mallitiedosto pilvitallennuspalveluusi, lisää `FlooringEstimates` taulukko tietolähteeksi sovellukseesi ja määritä sitten valikoiman ohjausobjektiksi `FlooringEstimates`. Kuvat päivitetään automaattisesti valikoimaan.
 
-## <a name="learn-more"></a>Lue lisätietoja
+## <a name="learn-more"></a>Lisätietoja
 [Kuvan, videon tai äänen lisääminen](add-images-pictures-audio-video.md)  
 [Tietojen näyttäminen viiva-, ympyrä- tai palkkikaaviona sovelluksessasi](use-line-pie-bar-chart.md)  
 [Tutustu taulukkoihin ja tietueisiin PowerAppsissa](working-with-tables.md)
