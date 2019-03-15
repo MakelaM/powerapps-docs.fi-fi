@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 710df8899fa11e46a83e4ba670c4081b04fa7bde
-ms.sourcegitcommit: c1f58a16f8dcd309a1d5fc4658ca16d82c615994
+ms.openlocfilehash: dab8caea5679701735685a5c4383c77cd7ed44f6
+ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "51333954"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091219"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla
 
@@ -30,8 +30,9 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 
 - Ennen sovelluksen luomista alusta alkaen tutustu PowerAppsin perusteisiin [luomalla sovellus](data-platform-create-app.md) ja mukauttamalla sovelluksen [valikoimaa](customize-layout-sharepoint.md), [lomakkeita](customize-forms-sharepoint.md) ja [kortteja](customize-card.md).
 - [Vaihda ympäristöön](working-with-environments.md), jossa on luotu tietokanta näytetiedoilla. Jos sinulla on asianmukainen käyttöoikeus, voit [luoda ympäristön](../../administrator/create-environment.md), joka täyttää tämän tarpeen.
+- Sovelluksen luominen edellyttää, että käyttöoikeusroolisi on [Ympäristön tekijä](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles).
 
-## <a name="open-a-blank-app"></a>Tyhjän sovelluksen avaaminen
+## <a name="open-a-blank-app"></a>Avaa tyhjä sovellus
 
 1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
@@ -94,8 +95,8 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 1. Napsauta tai napauta oikeanpuoleisen ruudun **Ominaisuudet**-välilehteä, napsauta tai napauta **Accounts**, niin **Tiedot**-ruutu avautuu, ja valitse seuraavien kenttien valintaruudut:
 
     - Tilin nimi
-    - Osoite 1: Katu 1
-    - Osoite 1: Kaupunki
+    - Osoite 1: Katuosoite 1
+    - Osoite 1: Postitoimipaikka
     - Osoite 1: Postinumero
     - Työntekijöiden määrä
     - Vuosittainen tuotto

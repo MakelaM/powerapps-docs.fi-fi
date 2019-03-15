@@ -1,30 +1,30 @@
 ---
 title: Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
 description: Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Kuluraportti-mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
-author: caburk
+author: mr-dang-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
-ms.author: caburk
+ms.author: brdang
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 43d1dc6ef2d264dd60b6a9f3de0f5c0fed633283
-ms.sourcegitcommit: d3d665500b9c49c14657d044b084bdd64c52c5a3
+ms.openlocfilehash: 2cfad6a3cadbd2154e582163dc4f55ee6d010b96
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44124471"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072740"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa PowerAppsissa
 
 Tässä artikkelissa annetaan vaiheittaiset ohjeet Kuluraportti-mallin asentamista ja määrittämistä varten. Voit myös esikatsella mallisovellusta [täältä](https://aka.ms/previewmyexpenses).
 
-Näiden vaiheiden arvioitu suoritusaika on **10–15 minuuttia**
+Vaiheiden arvioitu kesto: **10‒15 minuuttia**
 
 > [!TIP]
 > Katso [tästä videosta](https://youtu.be/kJXZPILfbwU) esittely siitä, miten voit käyttää kuluraporttimallisovellusta. 
