@@ -210,8 +210,6 @@ items:
           href: ./canvas-apps/controls/control-attachments.md
         - name: Ääni
           href: ./canvas-apps/controls/control-audio-video.md
-        - name: Verkossa käytettävä viivakoodiskanneri (kokeellinen)
-          href: ./canvas-apps/controls/control-barcodescanner.md
         - name: Viivakoodiskanneri
           href: ./canvas-apps/controls/control-new-barcode-scanner.md
         - name: Painike
@@ -268,7 +266,7 @@ items:
           href: ./canvas-apps/controls/control-radio.md
         - name: Luokitus
           href: ./canvas-apps/controls/control-rating.md
-        - name: RTF-editori (kokeellinen)
+        - name: Tekstimuotoilueditori
           href: ./canvas-apps/controls/control-richtexteditor.md
         - name: Näyttö
           href: ./canvas-apps/controls/control-screen.md
@@ -286,6 +284,8 @@ items:
           href: ./canvas-apps/controls/control-toggle.md
         - name: Video
           href: ./canvas-apps/controls/control-audio-video.md
+        - name: Verkossa käytettävä viivakoodiskanneri (kokeellinen)
+          href: ./canvas-apps/controls/control-barcodescanner.md
     - name: Määritä sovelluksen toiminnot
       href: ./canvas-apps/working-with-formulas.md
       items:
@@ -1093,9 +1093,9 @@ items:
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Tuki
     href: https://powerapps.microsoft.com/support/
-ms.openlocfilehash: c4cda0af7a907e3c82aaa7e864fa50701dbb9929
-ms.sourcegitcommit: 32b33d1325acc2c84ffd35c4084c652f417617e3
+ms.openlocfilehash: af4a7b775ecbaec902c188325b2474ad3209a85c
+ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57528433"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58073690"
