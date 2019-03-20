@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 12d13ecfb8c60a1c1ccb23496dd9dc7f8cf42814
-ms.sourcegitcommit: a1568c9a09d83efe50c032b73eaa18c7db723e86
-ms.translationtype: HT
+ms.openlocfilehash: ca97583948a289240bfb051fa8cac36a39e2ffee
+ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57804443"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198632"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>SharePoint-luettelolomakkeen mukauttaminen PowerAppsin avulla
 
@@ -98,7 +98,7 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 1. Mukauta lomakettasi eri tavoin, kuten, jotka kuvaavat aiheet:
 
     - Muuta sen kokoa, suuntaa tai molempia (esimerkiksi [lomakkeen leventämistä varten](set-aspect-ratio-portrait-landscape.md)).
-    - Lisää ohjausobjekti, jonka avulla käyttäjät voivat [ladata liitteitä](controls/properties-text.md).
+    - [Mukauta yhdelle tai useammalle](working-with-cards.md) (esimerkiksi muuttaa kortin Näytä teksti- tai syöte-ohjausobjekti).
     - Luo [hakukenttä](sharepoint-lookup-fields.md).
 
     Lisätietoja: [SharePoint-lomakkeiden integrointi](sharepoint-form-integration.md)

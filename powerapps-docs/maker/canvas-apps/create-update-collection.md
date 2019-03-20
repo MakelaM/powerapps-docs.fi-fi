@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: aca1b78262ac359689d66f687f902103740fa3a6
-ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
-ms.translationtype: HT
+ms.openlocfilehash: 04ef7924ce3f6945a666fe06bdc6091159bc44c4
+ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "57800303"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198540"
 ---
 # <a name="create-and-update-a-collection-in-a-canvas-app"></a>Luo ja Päivitä kokoelma pohjaan perustuva sovellus
 
@@ -116,7 +116,7 @@ Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovel
 
 ## <a name="put-a-sharepoint-list-into-a-collection"></a>SharePoint-luettelon asettaminen kokoelmaan
 
-1. [Yhdistä SharePoint-luetteloon](connect-to-sharepoint.md).
+1. [Yhdistä SharePoint-luetteloon](connections/connection-sharepoint-online.md#create-a-connection).
 
 1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
 
@@ -128,7 +128,7 @@ Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovel
 
 1. (valinnainen) Jos haluat esikatsella luomasi kokoelman, valitse **kokoelmat** - **tiedoston** valikosta.
 
-Lisätietoja SharePoint-luettelosta (esimerkiksi päivämäärät, vaihtoehtoja ja henkilöt) tietojen näyttäminen valikoimassa: [Tietojen näyttäminen valikoimassa](connections/connection-sharepoint-online.md#show-data-in-a-gallery). Lisätietoja siitä, miten voit näyttää lomakkeen (avattavia luetteloita, päivämäärävalitsimia ja ihmisten keräilijät): [Muokattu lomake- ja näytetty lomake-ohjausobjektit](controls/control-form-detail.md).
+Lisätietoja SharePoint-luettelosta (esimerkiksi päivämäärät, vaihtoehtoja ja henkilöt) tietojen näyttäminen valikoimassa: [Näytä luettelon sarakkeet valikoimassa](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). Lisätietoja siitä, miten voit näyttää lomakkeen (avattavia luetteloita, päivämäärävalitsimia ja ihmisten keräilijät): [Muokattu lomake- ja näytetty lomake-ohjausobjektit](controls/control-form-detail.md).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
