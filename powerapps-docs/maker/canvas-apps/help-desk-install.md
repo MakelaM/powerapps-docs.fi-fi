@@ -1,30 +1,30 @@
 ---
 title: Help Desk -mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
 description: Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Help Desk -mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
-author: caburk
+author: mr-dang-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
-ms.author: caburk
+ms.author: brdang
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3945bc2e164d9fa88ee122910d3e15371b9e239e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1be6055a2b8f42d8d4194653417313b29ab5610d
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834620"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799843"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Asenna ja määritä Help Desk -malli PowerAppsissa
 
 Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Help Desk -mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
 
-Näiden vaiheiden arvioitu suoritusaika on **10–15 minuuttia**
+Vaiheiden arvioitu kesto: **10‒15 minuuttia**
 
 > [!TIP]
 > Jos haluat nähdä tämän prosessin esittelyn, katso tämä [video](https://youtu.be/z4cdtD6hB_4).

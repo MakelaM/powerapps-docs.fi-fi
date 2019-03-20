@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 96a04cdda99f379c799ccd68e2442572ac929d39
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 586c82804380846ef400f020c4ce55c07262730f
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862906"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802028"
 ---
 # <a name="accessible-colors-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten helppokäyttöisyysvärit PowerAppsissa
 Pohjaan perustuvissa sovelluksissa käytettävien värien tulisi olla sellaisia, että värisokeat ja näkökyvyltään alentuneen henkilöt voivat käyttää sovelluksia. Kaikki PowerAppsin teemat ovat oletusarvoisesti helppokäyttöisiä. Kun muokkaat sovelluksessa käytettyjä värejä, varmista helppokäyttöisyys seuraavien ohjeiden mukaisesti. Verkossa on käytettävissä useita työkaluja, mitkä voivat auttaa tunnistamaan värikontrastiongelmia.
@@ -36,7 +36,7 @@ Vuorovaikutteisten ohjausobjektien seuraavien osien välillä on oltava riittäv
 ## <a name="minimum-contrast-for-non-text"></a>Ei-tekstisisällön vähimmäiskontrasti
 
 > [!NOTE]
-> [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) -standardin kontrastivaatimukset koskevat vain tekstiä. Huomioi helppokäyttöisyyttä suunnitellessasi tulevaisuudessa käyttöön otettavat [WCAG 2.1 kontrastiohjeet](https://www.w3.org/TR/WCAG21/#non-text-contrast), jotka koskevat käyttöliittymän osia, kuten kuvakkeita. Näiden osien suositeltava vähimmäiskontrastisuhde on 3:1. Tässä osiossa kuvaillut ohjeet ovat WCAG 2.0:n noudattamisen kannalta **valinnaisia**.
+> [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) -standardin kontrastivaatimukset koskevat vain tekstiä. Huomioi helppokäyttöisyyttä suunnitellessasi tulevaisuudessa käyttöön otettavat [WCAG 2.1 kontrastiohjeet](https://www.w3.org/TR/WCAG21/#non-text-contrast), jotka koskevat käyttöliittymän osia, kuten kuvakkeita. Näiden osien suositeltava vähimmäiskontrastisuhde on 3:1. Tässä osassa kuvataan koskevat ohjeet ovat **valinnainen** WCAG 2.0 yhteensopivuutta.
 
 ### <a name="user-interface-components"></a>Käyttöliittymän osat
 Vuorovaikutteisten ohjausobjektien seuraavien osien välillä on oltava riittävä värikontrasti:
@@ -55,7 +55,7 @@ Jos tällaisilla ohjausobjekteilla ei ole reunaa, seuraavien värikontrastien pi
 * **[HoverFill](controls/properties-color-border.md)**-täyttö ja ohjausobjektin ulkopuolinen väri
 
 ### <a name="graphical-objects"></a>Graafiset objektit
-Jos kuva välittää tärkeitä tietoja, tarkista, esiintyykö siinä kontrastiongelmia. Tämä koskee ohjausobjekteja, joissa voidaan näyttää kuva: **[ääni](controls/control-audio-video.md)**, **[kuva](controls/control-image.md)**, **[mikrofoni ](controls/control-microphone.md)** ja **[video](controls/control-audio-video.md)**.
+Jos kuva välittää tärkeitä tietoja, tarkista, esiintyykö siinä kontrastiongelmia. Tämä koskee ohjausobjekteja, joissa voidaan näyttää kuva: **[Ääni](controls/control-audio-video.md)**,  **[kuvan](controls/control-image.md)**,  **[mikrofoni](controls/control-microphone.md)**, ja **[videon](controls/control-audio-video.md)**.
 
 Tarkista, esiintyykö videosisällössä kontrastiongelmia. Voit vaihtoehtoisesti tai lisäksi lisätä videota kuvaavan [tekstityksen](controls/control-audio-video.md).
 

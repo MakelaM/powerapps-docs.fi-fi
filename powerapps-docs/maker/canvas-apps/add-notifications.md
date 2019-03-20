@@ -1,24 +1,24 @@
 ---
 title: Palveluilmoituksen lähettäminen | Microsoft Docs
 description: Lue, kuinka voit lähettää sovellukselle natiiveja palveluilmoituksia PowerAppsissa.
-author: jamesol-msft
+author: kavishi
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 08/08/2017
-ms.author: jamesol
+ms.author: kaagar
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 031a481cda2a6f51aa5c455bd03c0fe5b79f7c60
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: f5ee975343afc16faaca52194b16cedff57e7e9f
+ms.sourcegitcommit: fe47ad47873a37fbe17b30d39fb2ca6035b7d152
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830167"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "57800855"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Palveluilmoituksen lähettäminen PowerAppsissa
 Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a9f85907da60e836c1a1115f31c6faf9ea05da9b
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: aa46510cdd46cf8d9fb64694e7b6306b255b1157
+ms.sourcegitcommit: fa0ad3f81efd41671dd8e118ce936acb274cfd7c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49317064"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54079606"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
 Voit suunnitella ja rakentaa liiketoimintasovelluksen pohjan avulla Microsoft PowerAppsissa kirjoittamatta perinteistä ohjelmointikieltä, kuten C#. Suunnittele sovellus vetämällä ja pudottamalla elementtejä pohjalle, kuten PowerPoint-esitystä suunnitellessasi. Luo Excel-tyyppisiä lausekkeita logiikan määrittelemiseksi ja tietojen työstämiseksi. Voit rakentaa sovelluksia, jotka integroivat liiketoimintatietoja [useista erilaisista Microsoftin ja kolmannen osapuolen lähteistä](connections-list.md). Jaettuasi sovelluksesi se on käytettävissä selaimessa tai mobiililaitteilla, ja upotettuasi sen sitä voidaan käyttää SharePointissa, Power BI:ssä tai Teamsissa.
@@ -46,10 +46,10 @@ Kun sovellus on valmis ja tallennat sen pilveen, [voit jakaa sen muiden kanssa](
 
 Voit suorittaa omia sovelluksiasi – ja kanssasi jaettuja sovelluksia – Windowsissa, [verkkoselaimessa](../../user/run-app-browser.md) tai [iOS- tai Android-laitteessa](../../user/run-app-client.md).
 
-## <a name="learn-more"></a>Lue lisätietoja
+## <a name="learn-more"></a>Opi lisää
 * Tutustu vaiheittaisiin, käsitteellisiin ja viiteaiheisiin vasemmassa siirtymisruudussa.
-* Käy omassa tahdissa läpi [ohjatun oppimisen kursseja](https://docs.microsoft.com/powerapps/guided-learning/).
 * Tarkista [verkkoseminaarit](webinars-listing.md), joihin sinulla on tarvittaessa pääsy opetellessasi käyttämään PowerAppsin ominaisuuksia ja toimintoja.
+* Tarkista [koodausstandardeja](https://aka.ms/powerappscanvasguidelines) maksimoida sovellusta ja pitämällä sovellukset ylläpitämistä.
 
 ## <a name="share-your-experience"></a>Jaa kokemuksesi
 * Lue julkaisuja ja julkaise itse [PowerAppsin yhteisössä](https://aka.ms/powerapps-community), missä kuka tahansa PowerAppsin käyttäjä voi esittää kysymyksiä, joihin toiset voivat vastata. Ennen kuin julkaiset kysymyksen, katso yhteisöstä, onko kysymykseesi jo ehkä vastattu.

@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6f89887d05f4b4885e66335457357a089ceaf90f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 20e06f7c03d0aca18b8351e546ccee3fff528f56
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865505"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803569"
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funktio PowerAppsissa
-Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) nykyisessä näytössä.
+Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#use-a-context-variable) nykyisessä näytössä.
 
 ## <a name="overview"></a>Yleiskatsaus
 Käytä **UpdateContext** funktiota kontekstimuuttujan luomiseen. Kontekstimuuttuja säilyttää tilapäisesti tietoja, kuten montako kertaa käyttäjä on valinnut painikkeen tai tietotoiminnon tuloksen.
@@ -62,11 +62,11 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 
 * *UpdateRecord*  – Pakollinen. Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon tälle sarakkeelle. Kontekstimuuttuja luodaan tai päivitetään jokaiselle sarakkeelle ja arvolle, jonka määrität.
 
-**UpdateContext**( { *ContextVariable1*: *Value1* [, *ContextVariable2*: *Value2* [, ... ] ] } )
+**UpdateContext**({ *Kontekstimuuttuja1*: *Arvo1* [, *Kontekstimuuttuja2*: *Arvo2* [,...]]} )
 
 * *ContextVariable1*  – Pakollinen.  Luotavan tai päivitettävän kontekstimuuttujan nimi.
 * *Value1*  – Pakollinen.  Arvo, joka määritetään kontekstimuuttujalle.
-* *ContextVariable2*: *Value2*, ...  – Valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
+* *Kontekstimuuttuja2*: *Arvo2*,... – valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
 
 ## <a name="examples"></a>Esimerkkejä
 
@@ -76,7 +76,7 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 | **UpdateContext( {&nbsp;Counter:&nbsp;2&nbsp;} )** |Määrittää kontekstimuuttujan **Counter** arvoksi edellisessä esimerkissä **2**. |**Counter**-arvo on **2**. |
 | **UpdateContext( {&nbsp;Name:&nbsp;"Lily",&nbsp;Score:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Name** ja **Score** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Name** arvo on **Lily** ja muuttujan **Score** arvo on **10**. |
 | **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Person** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |Muuttujan **Person** arvo on tietue **{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
-| **UpdateContext( {&nbsp;Person: Patch(&nbsp;Person,&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;) }&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”, Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
+| **UpdateContext ({&nbsp;henkilö: Patch (&nbsp;henkilö,&nbsp;{osoite:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;)}&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”, Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
 
 ### <a name="step-by-step-example"></a>Vaiheittainen esimerkki
 1. Anna oletusnäytön nimeksi **Lähde**, lisää toinen näyttö ja anna sille nimeksi **Kohde**.

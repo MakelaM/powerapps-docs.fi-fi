@@ -1,53 +1,67 @@
 ---
 title: Kangassovelluksen näytön koon ja suunnan muuttaminen | Microsoft Docs
 description: Vaiheittaiset ohjeet kangassovelluksen näytön koon ja suunnan muuttamiseen PowerAppsissa
-author: lonu
+author: evchaki
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/16/2016
-ms.author: lonu
+ms.date: 11/07/2018
+ms.author: evchaki
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ab41707c06faa11dd2e1d519b72fb35ff6b9914a
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c4d9f648a4519ef30887d8d0739d7dc3d940555b
+ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835579"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172675"
 ---
 # <a name="change-screen-size-and-orientation-of-a-canvas-app-in-powerapps"></a>Kangassovelluksen näytön koon ja suunnan muuttaminen PowerAppsissa
 Mukauta kangassovellusta muuttamalla sen näytön kokoa ja suuntaa.
 
 ## <a name="prerequisites"></a>Edellytykset
-1. Luo sovellus tai avaa sovellus muokkaamista varten.
 
-2. Napsauta tai napauta **Tiedosto**-valikossa kohtaa **Sovelluksen asetukset**.
+Luo sovellus tai avaa sovellus muokkaamista varten ja valitse sitten **sovellusasetukset** - **tiedoston** valikosta.
 
 ## <a name="change-screen-size-and-orientation"></a>Muuta näytön kokoa ja suuntaa
-1. Napsauta tai napauta **Sovelluksen asetuksissa** kohtaa **Näytön koko + suunta**.
+1. Valitse **sovellusasetukset**, valitse **näytön koko + suunta**.
 
     ![Tämän vaihtoehdon avulla voit muuttaa sovelluksen näytön kokoa tai suuntaa](./media/set-aspect-ratio-portrait-landscape/size-orientation.png)
 
-2. Napsauta tai napauta **Suunta**-luettelossa kohtaa **Pysty** tai **Vaaka**.
+1. Tässä **suunta** luettelosta **pysty** tai **vaaka**.
 
-3. (Vain tablettisovellukset) Napsauta tai napauta kohdassa **Kuvasuhde** sitä kuvasuhdetta, joka vastaa tämän sovelluksen kohdelaitetta.
+1. (Vain tablettisovellukset) Valitse **kuvasuhde**, suorita jompikumpi seuraavista vaiheista:
+
+    - Valitse suhde, joka vastaa tämän sovelluksen kohdelaitetta.
+    - Valitse **mukautettu** määrittää oman koon ja määritä leveydeksi 50 3840 ja korkeus 50 2160 välillä.
 
     ![Tablet-sovelluksen kuvasuhteen muuttaminen](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
+    
+1. Valitse **Sovita**, joko **-** tai **käytöstä**.
 
-4. Valitse kohdassa **Lukitse kuvasuhde**joko **Käytössä** tai **Ei käytössä**.
+    Tämä asetus on oletusarvoisesti niin, että sovelluksen näytöt kokoa sopimaan laitteen tilaa. Kun tämä asetus on käytössä, sovelluksen **leveys** ominaisuuden vastaavuudet sen **DesignWidth**, ja sovelluksen **korkeus** vastaa sen **DesignHeight**.
 
-    Jos lukitset kuvasuhteen, sovellus säilyttää puhelimelle sopivan kuvasuhteen. Jos sovellus on käynnissä muunlaisessa laitteessa, sovellus näkyy väärin ja tulos voi olla ei-toivottu. Jos vapautat kuvasuhteen lukituksen, sovellus säätää kuvasuhteen sen laitteen mukaan, jossa se toimii.
+    Jos poistat tämän asetuksen käytöstä, sovellus säätää kuvasuhteen sen laitteen, johon se on käynnissä ja käyttää kaikki käytettävissä olevan tilan. Sovellus ei Skaalaa ja siksi näyttöjä näyttää enemmän tietoja.
 
-5. Määritä kohdassa **Lukitse kuvasuhde** joko **Käytössä** tai **Ei käytössä**.
+    Kun tämä asetus on poistettu käytöstä, **lukitse kuvasuhde** on automaattisesti poistettu käytöstä ja poistettu käytöstä. Lisäksi **leveys** kaikki näytöt asetuksena on `Max(App.Width, App.DesignWidth)`, ja niiden **korkeus** asetuksena on `Max(App.Height, App.DesignHeight)` niin, että he seurata dimensiot-ikkunan, jossa sovellus on käynnissä. Muutos voit luoda sovelluksia, jotka vastaavat eri laitteille ja ikkunan dimensioita. Lisätietoja: [Luo reagoiva asettelu](create-responsive-layout.md)
 
-    Jos lukitset sovelluksen suunnan, sovellus säilyttää määrittämäsi suunnan. Jos sovellus suoritetaan laitteessa, jonka näyttö on eri asennossa, sovellus näkyy väärin ja tulos voi olla vääränlainen. Jos vapautat sovelluksen suunnan lukituksen, sovellus säätää näytön suunnan sen laitteen mukaan, jossa se toimii.
+1. Valitse kohdassa **Lukitse kuvasuhde**joko **Käytössä** tai **Ei käytössä**.
 
-6. Tallenna muutoksesi valitsemalla **Käytä**.
+    Jos tämä asetus on käytössä, sovellus säilyttää näytön suunnan ja kuvasuhdetta, jonka määritit vaiheet 2 ja 3, olipa laite. Esimerkiksi puhelinsovellus, jossa on käytössä selaimella säilyttää puhelimelle, näytetään Tumma palkin kummallakin puolella täyttämisen ikkunan sijaan suhde.
+
+    Jos tämä asetus on poistettu käytöstä, sovellus säätää kuvasuhteen sen laitteen, johon se on käynnissä (ja vääristää Käyttöliittymän tarvittaessa).
+
+1. Määritä kohdassa **Lukitse kuvasuhde** joko **Käytössä** tai **Ei käytössä**.
+
+    Jos lukitset sovelluksen suunnan, sovellus säilyttää määrittämäsi suunnan määrität. Jos sovellus suoritetaan laitteessa, jonka näyttö on eri asennossa, sovellus näkyy väärin ja voi olla Vääränlainen. Jos vapautat sovelluksen suunnan, se säätää näytön suunnan laitteen, jossa se toimii.
+
+    Voit muokata sovelluksen suunnan ottamalla **Ota käyttöön sovelluksen upottamisen käyttäjäkokemus** - **lisäasetukset**. Tämä ominaisuus vasemmassa Tasaa sovelluksen, kun se on upotettu ja muuttaa isännöinnin pohjan taustavärin valkoiseksi.
+
+1. Tallenna muutoksesi valitsemalla **Käytä**.
 
 ## <a name="next-step"></a>Seuraava vaihe
 Julkaise sovelluksesi uudelleen käyttäen uusia sovelluksia valitsemalla **Tiedosto**-valikossa kohta **Tallenna**.

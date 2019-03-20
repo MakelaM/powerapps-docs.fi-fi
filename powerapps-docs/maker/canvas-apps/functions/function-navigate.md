@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bf656c33bcfdc0114c1ff44936dd38fc7145158e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: f0bd11881dc0999cada58f65d7ed8d7f9df68c5a
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42857081"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803615"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 Nämä funktiot vaihtavat näytettävää näyttöä.
@@ -28,7 +28,7 @@ Useimmissa sovelluksissa on useita näyttöjä.  Voit vaihtaa näytettävää n�
 
 **Back** ja **Navigate** vaihtavat vain näytettävää näyttöä. Näytöt, joita ei näytetä, toimivat edelleen taustalla. Voit rakentaa kaavoja, jotka viittaavat toisella näytöllä olevien ohjausobjektien ominaisuuksiin. Käyttäjä voi esimerkiksi muuttaa liukusäätimen arvoa yhdellä näytöllä, siirtyä sen jälkeen toiselle näytölle, joka käyttää kyseistä arvoa jossakin kaavassa, ja nähdä, kuinka tämä vaikuttaa uuteen näyttöön.  Sen jälkeen käyttäjä voi siirtyä takaisin alkuperäiseen näyttöön ja nähdä, että liukusäädin säilyttää arvonsa.
 
-Myös [kontekstimuuttujat](../working-with-variables.md#create-a-context-variable) säilytetään, kun käyttäjä siirtyy näyttöjen välillä. **Navigate**-funktiolla voit asettaa näytölle yhden tai useamman kontekstimuuttujan, jotka kaava näyttää – tämä on ainoa tapa asettaa kontekstimuuttuja näytön ulkopuolelta. Tällä menetelmällä voit välittää näytölle parametrejä. Jos olet käyttänyt jotakin toista ohjelmointityökalua, tämä menetelmä vastaa parametrien välittämistä toimintosarjoille.
+Myös [kontekstimuuttujat](../working-with-variables.md#use-a-context-variable) säilytetään, kun käyttäjä siirtyy näyttöjen välillä. **Navigate**-funktiolla voit asettaa näytölle yhden tai useamman kontekstimuuttujan, jotka kaava näyttää – tämä on ainoa tapa asettaa kontekstimuuttuja näytön ulkopuolelta. Tällä menetelmällä voit välittää näytölle parametrejä. Jos olet käyttänyt jotakin toista ohjelmointityökalua, tämä menetelmä vastaa parametrien välittämistä toimintosarjoille.
 
 ## <a name="description"></a>Kuvaus
 ### <a name="back"></a>Back

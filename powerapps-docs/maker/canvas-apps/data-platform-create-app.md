@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c8b24c9064e5012ff1ddb15d13dc338ed9565bef
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 1393d6dcdd9b88f4bca9e536a776b8601ae4c1c1
+ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316765"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "57801775"
 ---
 # <a name="generate-a-canvas-app-from-common-data-service-for-apps-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Common Data Service for Apps -palvelussa PowerAppsissa
 
@@ -28,9 +28,9 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Tämän pikaoppaan noudattamiseksi sinun tulee siirtyä [ympäristöön](working-with-environments.md), johon on luotu Common Data Service for Apps -tietokanta, joka sisältää tietoja ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](../../administrator/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
+Tämän pikaoppaan noudattamiseksi sinun on määritettävä [ympäristön tekijän](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) käyttöoikeusrooli ja on [Vaihda ympäristöön](working-with-environments.md) , joka CDS for Apps-tietokanta on luotu, sisältää tietoja, ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
 
-## <a name="generate-an-app"></a>Sovelluksen luominen
+## <a name="generate-an-app"></a>Luo sovellus
 
 1. Kirjaudu sisään [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja vaihda tarvittaessa ympäristö noudattamalla tässä aiheessa annettuja ohjeita.
 

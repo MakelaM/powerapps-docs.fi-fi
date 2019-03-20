@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b51b7cde36a70001ff8545c497da7c4b4d5d1fa3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 9e31ae7600663daa694b46376008161502c9c428
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803408"
 ---
 # <a name="understand-data-sources-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten tietolähteiden ymmärtäminen PowerAppsissa
 
@@ -80,13 +80,13 @@ Kokoelmatietolähteitä *voidaan* myös luoda ja muokata sovelluksen sisällä, 
 * Tiedot tallennetaan ja jaetaan tallennuspalvelun kautta (tässä tapauksessa Office 365 -sivuston SharePoint-luettelo).
 * Yhteys asettaa nämä tiedot sovelluksen käytettäväksi.  Yhteys suorittaa käyttäjän todentamisen, jotta tietoja voidaan käyttää.
 * Kun sovellus käynnistetään tai **[Refresh](functions/function-refresh.md)**-funktiota painetaan, tiedot haetaan paikallista käyttöä varten yhteydestä sovelluksen tietolähteeseen.
-* Kaavoja käytetään tietojen lukemiseen ja niiden paljastamiseen käyttäjän näkemissä ohjausobjekteissa. Voit näyttää tietolähteen tietueet käyttämällä valikoimaa näytöllä ja liittämällä **[Items](controls/properties-core.md)**-ominaisuuden tietolähteeseen: **Gallery.Items = DataSource**.  Ohjausobjekteja liitetään valikoiman sisällä ja valikoimaan käyttämällä ohjausobjektien **[Default](controls/properties-core.md)**-ominaisuutta.  
+* Kaavoja käytetään tietojen lukemiseen ja niiden paljastamiseen käyttäjän näkemissä ohjausobjekteissa. Voit näyttää tietolähteen tietueet käyttämällä valikoimaa näytöllä ja liittämällä **[kohteet](controls/properties-core.md)** ominaisuuden tietolähteeseen: **Gallery.Items = DataSource**.  Ohjausobjekteja liitetään valikoiman sisällä ja valikoimaan käyttämällä ohjausobjektien **[Default](controls/properties-core.md)**-ominaisuutta.  
 * Tietolähde on myös taulukko.  Voit siis käyttää **[Filter](functions/function-filter-lookup.md)**-, **[Sort](functions/function-sort.md)**-, **[AddColumns](functions/function-table-shaping.md)**-funktioita ja muita funktioita tietolähteen säätämiseen ja täydentämiseen ennen sen käyttämistä kokonaisuudessaan.  Voit myös käyttää **[Lookup](functions/function-filter-lookup.md)**-, **[First](functions/function-first-last.md)**-, **[Last](functions/function-first-last.md)**-funktioita ja muita funktioita yksittäisten tietueiden käsittelemiseen.
 
 ### <a name="modify-a-record"></a>Tietueen muokkaaminen
-Edellisessä osiossa sait tietää, miten tietolähdettä luetaan.  Huomaa, että yllä olevassa kaaviossa olevat nuolet ovat yksi tapa.  Muutoksia tietolähteeseen ei siirretä takaisin samojen kaavojen kautta, joilla tieto haettiin.  Niiden sijaan käytetään uusia kaavoja.  Usein tietueen muokkaamiseen käytetään eri näyttöä kuin tietueiden selaamiseen, erityisesti mobiililaitteessa.
+Edellisessä osiossa sait tietää miten tietolähdettä luetaan.  Huomaa, että yllä olevassa kaaviossa olevat nuolet ovat yksi tapa.  Muutoksia tietolähteeseen ei siirretä takaisin samojen kaavojen kautta, joilla tieto haettiin.  Niiden sijaan käytetään uusia kaavoja.  Usein tietueen muokkaamiseen käytetään eri näyttöä kuin tietueiden selaamiseen, erityisesti mobiililaitteessa.
 
-Huomaa: jotta voit muokata tietolähteen olemassa olevaa tietuetta, tietueen on oltava peräisin tietolähteestä.  Tietue on voinut kulkea valikoiman, [kontekstimuuttujan](working-with-variables.md#create-a-context-variable) ja useiden kaavojen läpi, mutta sen alkuperän tulisi olla jäljitettävissä takaisin tietolähteeseen.  Tämä on tärkeää, koska tietueen mukana kulkee lisätietoa, joka yksilöi sen ja varmistaa, että muokkaat oikeaa tietuetta.    
+Huomaa: jotta voit muokata tietolähteen olemassa olevaa tietuetta, tietueen on oltava peräisin tietolähteestä.  Tietue on voinut kulkea valikoiman, [kontekstimuuttujan](working-with-variables.md#use-a-context-variable) ja useiden kaavojen läpi, mutta sen alkuperän tulisi olla jäljitettävissä takaisin tietolähteeseen.  Tämä on tärkeää, koska tietueen mukana kulkee lisätietoa, joka yksilöi sen ja varmistaa, että muokkaat oikeaa tietuetta.    
 
 ![](media/working-with-data-sources/writing-to-a-datasource.png) Yllä olevassa kaaviossa näkyy tiedonkulku tietolähteen päivittämisessä:
 

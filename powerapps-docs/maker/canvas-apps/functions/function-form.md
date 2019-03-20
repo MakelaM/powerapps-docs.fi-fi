@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 55df8d30509720478c1594406865986ddc9a95c4
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 930439325b60b60fefed18b66c22d9d4f97f55b7
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865804"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802097"
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>PowerAppsin funktiot EditForm, NewForm, SubmitForm, ResetForm ja ViewForm
 Tarkastele ja muokkaa kohdetta, luo kohde, tallenna sisältö ja palauta ohjausobjektit **[Muokkaa lomaketta](../controls/control-form-detail.md)** -ohjausobjektissa.
@@ -59,10 +59,10 @@ Jos vahvistus menee läpi, **SubmitForm** lähettää muutoksen tietolähteeseen
 **ResetForm**-funktio palauttaa lomakkeen sisällön sen alkuarvoihin, jotka edelsivät käyttäjän tekemiä muutoksia. Jos lomake on **FormMode.New**-tilassa, se palautetaan **FormMode.Edit**-tilaan. Myös Lomake-ohjausobjektin **[OnReset](../controls/control-form-detail.md)**-toiminta suoritetaan.  Voit myös palauttaa yksittäisiä ohjausobjekteja **[Reset](function-reset.md)**-funktiolla, mutta vain lomakkeen kautta.
 
 ### <a name="viewform"></a>ViewForm
-**ViewForm**-funktio muuttaa lomakeohjausobjektin tilaksi **FormMode.View**. Tässä tilassa lomake täytetään Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)**-ominaisuuden sisällöllä.  **SubmitForm**- ja **RestForm**-funktioilla ei ole tässä tilassa vaikutusta.
+**ViewForm**-funktio muuttaa lomakeohjausobjektin tilaksi **FormMode.View**. Tässä tilassa lomake täytetään Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)**-ominaisuuden sisällöllä.  **SubmitForm** ja **ResetForm** funktioilla ei ole tässä tilassa.
 
-### <a name="displaymode-poperty"></a>DisplayMode-ominaisuus
-Nykyinen tila voidaan lukea **Mode**-ominaisuuden kautta.  Tila myös määrittää **DisplayMode**-ominaisuuden arvon, jota tietokortit ja ohjausobjektit voivat käyttää Lomake-ohjausobjektissa.  Usein tietokortin **DisplayMode**-ominaisuuden arvoksi määritetään **Parent.DisplayMode** (viittaa lomakkeeseen), samoin kuin ohjausobjektin **DisplayMode**-ominaisuus (viittaa tietokorttiin): 
+### <a name="displaymode-property"></a>DisplayMode-ominaisuus
+Nykyinen tila voidaan lukea **Mode**-ominaisuuden kautta.  Tila myös määrittää **DisplayMode**-ominaisuuden arvon, jota tietokortit ja ohjausobjektit voivat käyttää Lomake-ohjausobjektissa.  Usein tietokortin **DisplayMode** ominaisuuden arvoksi **Parent.DisplayMode** (viittaa lomakkeeseen) samoin kuin ohjausobjektin **DisplayMode** ominaisuus (viittaa tietokortti): 
 
 | Tila | DisplayMode | Kuvaus |
 | --- | --- | --- |

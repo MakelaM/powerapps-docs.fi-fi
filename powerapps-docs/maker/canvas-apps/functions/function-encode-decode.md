@@ -13,25 +13,25 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 30d3378f46e587e45314c30be1fce3c36b2bb120
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 9956332c35b4df2773b2634cb7f66d2ea96469e4
+ms.sourcegitcommit: 1b8578e38a09220ac66c5123644714139fc3c9e5
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42832993"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "57800441"
 ---
 # <a name="encodeurl-and-plaintext-functions-in-powerapps"></a>PowerAppsin EncodeUrl- ja PlainText-funktiot
 Koodaa merkkijonoja ja poistaa niiden koodauksia.
 
 ## <a name="description"></a>Kuvaus
-**EncodeUrl**-funktio koodaa URL-osoitemerkkijonon ja korvaa ei-aakkosnumeeriset merkit %:llä ja heksadesimaalinumerolla.  
+**EncodeUrl** funktio koodaa URL-osoitemerkkijonon ja korvaa tietyt ei-aakkosnumeeriset merkit %: llä ja heksadesimaalinumerolla.  
 
-**PlainText**-funktio poistaa HTML- ja XML-tunnisteet ja muuntaa esimerkiksi seuraavat tunnisteet asianmukaisiksi merkeiksi:
+**PlainText** -funktio poistaa HTML- ja XML-tunnisteet ja muuntaa esimerkiksi seuraavat asianmukaisiksi merkeiksi tietyt tunnisteet:
 
 * **&amp;nbsp;**
 * **&amp;quot;**
 
-Näiden funktioiden paluuarvo on koodattu merkkijono tai merkkijono, jonka koodaus on poistettu.   
+Näiden funktioiden paluuarvo on koodattu merkkijono tai merkkijono, jonka koodaus on poistettu. Tämä funktio ei poista kaikki HTML- ja XML-tunnisteet. 
 
 ## <a name="syntax"></a>Syntaksi
 **EncodeUrl**( *Merkkijono* )

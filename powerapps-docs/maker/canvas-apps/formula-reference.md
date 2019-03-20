@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/05/2018
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 752bb630c1ecd1e86f37a1a063bcc5ee192431f0
-ms.sourcegitcommit: 3aeb9381fbeb66cf08355d9a3d0f00ce2737e256
-ms.translationtype: HT
+ms.openlocfilehash: 9796cf6c668818110cd6910311ab5b5f61a745df
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43163633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803776"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -208,6 +208,10 @@ Muita elementtejä ovat:
 **[Lower](functions/function-lower-upper-proper.md)** – muuntaa tekstimerkkijonon kirjaimet pieniksi kirjaimiksi.
 
 ## <a name="m"></a>M
+**[Vastaavuus](functions/function-ismatch.md)**  – poimii perusteella, alimerkkijonon.  Säännönmukaisia lausekkeita voidaan käyttää.
+
+**[MatchAll](functions/function-ismatch.md)**  – poimii perusteella, useita alimerkkijonoja.  Säännönmukaisia lausekkeita voidaan käyttää.
+
 **[Max](functions/function-aggregates.md)** – taulukon lausekkeen tai argumenttijoukon suurin arvo.
 
 **[Mid](functions/function-left-mid-right.md)** – palauttaa merkkijonon keskiosan.
@@ -255,6 +259,8 @@ Muita elementtejä ovat:
 **[Rand](functions/function-rand.md)** – palauttaa näennäissatunnaisluvun.
 
 **[Refresh](functions/function-refresh.md)** – päivittää tietolähteen tietueita.
+
+**[Liittyvät](functions/function-relate-unrelate.md)**  – liittyy kautta yksi-moneen- tai monta-moneen-suhteen kahden entiteetin tietueet.
 
 **[Remove](functions/function-remove-removeif.md)** – poistaa yhden tai useita määrättyjä tietueita tietolähteestä.
 
@@ -322,7 +328,7 @@ Muita elementtejä ovat:
 
 **[Tan](functions/function-trig.md)** – palauttaa radiaaneina määritetyn kulman tangentin.
 
-**[Text](functions/function-text.md)** – muotoilee luvun merkkijonoksi näyttämistä varten.
+**[Tekstin](functions/function-text.md)**  – muuntaa mitään arvoa ja alustaa tekstimerkkijonon numeron tai päivämäärän/ajan arvo.
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – jos ollaan valikoimassa tai lomakkeessa, palauttaa nykyisen kohteen tiedot säilöstä.
 
@@ -341,9 +347,11 @@ Muita elementtejä ovat:
 ## <a name="u"></a>U
 **[Ungroup](functions/function-groupby.md)** – poistaa ryhmittelyn.
 
+**[Unrelate](functions/function-relate-unrelate.md)**  – Unrelates kahden entiteetin tietueiden yksi-moneen- tai monta-moneen-suhde.
+
 **[Update](functions/function-update-updateif.md)** – korvaa tietolähteen tietueen.
 
-**[UpdateContext](functions/function-updatecontext.md)** – määrittää nykyisen näytön yhden tai useamman [kontekstimuuttujan](working-with-variables.md#create-a-context-variable) arvon.
+**[UpdateContext](functions/function-updatecontext.md)** – määrittää nykyisen näytön yhden tai useamman [kontekstimuuttujan](working-with-variables.md#use-a-context-variable) arvon.
 
 **[UpdateIf](functions/function-update-updateif.md)** – muokkaa tietolähteen tietuejoukon ehdon perusteella.
 

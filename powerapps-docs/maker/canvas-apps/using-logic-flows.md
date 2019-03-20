@@ -7,102 +7,101 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 06/05/2017
-ms.author: sharik
+ms.date: 12/07/2018
+ms.author: stepsic
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 05d633b20038ad61215a8e898b1ec7afa044b574
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 5439399a22b47fcf4195cf878208e0e0bd4e0764
+ms.sourcegitcommit: 6858f3786e960ca53a400e04734561400dcac5b1
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42840765"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "57802580"
 ---
 # <a name="start-a-flow-in-a-canvas-app"></a>Käynnistä työnkulku pohjaan perustuvassa sovelluksessa
 
 Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman tehtävän, kun pohjaan perustuvassa sovelluksessa ilmenee tapahtuma. Voit esimerkiksi määrittää painikkeen siten, että kun käyttäjä valitsee sen, kohde luodaan SharePoint-luetteloon, sähköpostiviesti tai kokouspyyntö lähetetään, tiedosto lisätään pilveen tai jokaisen näistä. Voit määrittää minkä tahansa ohjausobjektin sovelluksessa aloittamaan työnkulun, joka jatkaa suorittamista, vaikka sulkisit PowerAppsin.
 
+> [!NOTE]
+> Kun käyttäjä suorittaa työnkulku sovellukseen, että käyttäjällä on oltava oikeuksia suorittaa tehtäviä, jotka on määritetty työnkulussa. Muussa tapauksessa työnkulku epäonnistuu.
+
 ## <a name="prerequisites"></a>Edellytykset
 
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
-* Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
+- [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
+- Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
 
-## <a name="create-a-flow"></a>Luo työnkulku
+## <a name="create-a-flow"></a>Työnkulun luominen
 
-1. Kirjaudu [powerapps.com](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc):iin ja valitse sitten vasemmassa siirtymispalkissa **Työnkulut**.
+1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. Valitse **Omat työnkulut** -sivulla **Luo tyhjästä**.
+1. Valitse vasemmassa siirtymispalkissa **liiketoimintalogiikkaa**, ja valitse sitten **työnkulut**.
+
+1. Vasemmassa yläkulmassa **omat työnkulut** sivulla **uusi**, ja valitse sitten **Luo tyhjästä**.
 
     ![Vaihtoehto työnkulun luomiseen ilman mallia](./media/using-logic-flows/create-from-blank.png)
 
-    **PowerApps** lisätään oletusarvoisena käynnistimenä.
+1. Valitse näkyviin tulevan sivun alareunan **Hae sadoista yhteyksiä ja käynnistimet**.
 
-    ![PowerApps käynnistimenä, joka käynnistää työnkulun](./media/using-logic-flows/set-trigger.png)
+1. Kirjoita hakuruutuun **Powerappsin**, ja valitse sitten **Powerappsin** kuvake.
 
-3. Valitse **Uusi vaihe** ja valitse sitten **Lisää toiminto**.
+    ![PowerApps-käynnistimen](./media/using-logic-flows/set-trigger.png)
+    
+1. Seuraavalla sivulla, valitse PowerApps-kuvake uudelleen ja valitse sitten **uusi vaihe**.
 
-    ![Toiminnon lisäämisvaihtoehto](./media/using-logic-flows/add-action.png)
+1. Boxissa, jossa lukee **Hae liittimet ja toiminnot**, Määritä toiminto työnkululle tämän esimerkin mukaisesti:
 
-4. Määritä toiminto työnkululle ruudussa, jossa lukee **Hae kaikki palvelut ja toiminnot**, kuten tässä esimerkissä:
-
-   1. Kirjoita valintaruutuun **SharePoint** ja valitse sitten kohdassa **Toiminnot** olevasta luettelosta **SharePoint – Luo kohde**.
+   1. Tyyppi **SharePoint** ruutuun ja valitse sitten **Luo kohde** alla olevaa **toiminnot**.
 
        ![SharePoint-kohteen luontivaihtoehto](./media/using-logic-flows/create-sharepoint-item.png)
 
-   2. Jos näyttöön tulee kehote, anna tunnistetiedot yhteyden muodostamiseksi SharePointiin.
+   1. Jos näyttöön tulee kehote, anna tunnistetiedot yhteyden muodostamiseksi SharePointiin.
 
-   3. Kirjoita tai liitä luettelon sisältävän SharePoint Online -sivuston URL-osoite **Sivuston osoite** -ruutuun.
+   1. Kirjoita tai liitä luettelon sisältävän SharePoint Online -sivuston URL-osoite **Sivuston osoite** -ruutuun.
 
        > [!NOTE]
-      > Määritä sivuston URL-osoite, joka ei sisällä luetteloa.
+       > Luettelon nimi ei liitetään URL-osoite.
 
-   4. Valitse **Luettelon nimi** -ruudusta luettelo, jota haluat käyttää.
+   1. Tässä **Luettelonimi** ruutuun, Määritä luettelo, jota haluat käyttää.
+   
+       ![Määritä luettelo](./media/using-logic-flows/list-fields.png)
 
-   5. Napsauta tai napauta **Otsikko**-ruutua ja valitse sitten **Lisää dynaaminen sisältö**.
+   1. Valitse tekstisyötteen ruutu kentän luetteloon (kuten **otsikko**), valitse **Näytä lisää** dynaamisen sisällön ruudussa ja valitse sitten **Kysy powerappsissa**. 
 
        ![Lisää Otsikko-kenttään Kysy PowerAppsissa -parametri](./media/using-logic-flows/ask-in-powerapps.png)
 
-   6. Valitse parametrien luettelossa **Kysy PowerAppsissa**.
+1. (valinnainen) Määritä vähintään yksi lisätoimia, kuten hyväksymissähköpostin lähettäminen määrittämääsi osoitteeseen tai liittyvän tapahtuman luominen toiseen tietolähteeseen.
 
-       ![Lisää parametri](./media/using-logic-flows/add-parameter.png)
-
-5. (valinnainen) Määritä vähintään yksi lisätoiminto, kuten hyväksymissähköpostin lähettäminen määrittämääsi osoitteeseen tai liittyvän tapahtuman luominen toiseen tietolähteeseen.
-
-6. Kirjoita tai liitä työnkulun nimi kohtaan näytön yläreunan lähellä ja valitse sitten **Luo työnkulku**.
-
-    ![Nimeä ja tallenna työnkulku](./media/using-logic-flows/name-flow.png)
+1. Vasemman yläkulman alueelta, kirjoita tai liitä työnkulun nimi ja valitse sitten **Tallenna** oikeassa yläkulmassa.
 
 ## <a name="add-a-flow-to-an-app"></a>Lisää työnkulku sovellukseen
-1. Valitse PowerAppsissa **Tiedosto**-valikosta **Uusi**.
+1. Valitse vasemmassa siirtymispalkissa **Luo**.
 
-2. Valitse **Tyhjä sovellus** -ruudusta **Puhelinasettelu**.
+1. Osoita **pohjaan perustuva sovellus tyhjästä** ruudun ja valitse sitten **Tee tämä sovellus**.
 
-3. Lisää **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjekti ja anna sille nimi **RecordTitle**.
+1. Lisää **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjekti ja anna sille nimi **RecordTitle**.
 
-4. Lisää **[Painike](controls/control-button.md)**-ohjausobjekti ja siirrä se ohjausobjektin **RecordTitle** alle.
+1. Lisää **[Painike](controls/control-button.md)**-ohjausobjekti ja siirrä se ohjausobjektin **RecordTitle** alle.
 
-5. Kun **[Painike](controls/control-button.md)**-ohjausobjekti on valittuna, valitse **Toiminnot**-välilehdestä **Työnkulut**.
+1. Kun **[Painike](controls/control-button.md)**-ohjausobjekti on valittuna, valitse **Toiminnot**-välilehdestä **Työnkulut**.
 
     ![Työnkulut-valinta Toiminto-välilehdessä](./media/using-logic-flows/action-tab.png)
 
-6. Valitse avautuvassa ruudussa työnkulku, jonka loit edellisessä toimenpiteessä.
+1. Valitse avautuvassa ruudussa työnkulku, jonka loit edellisessä toimenpiteessä.
 
     > [!NOTE]
    > Jos luomasi työnkulku ei ole käytettävissä, vahvista onko PowerApps määritetty ympäristöön, jossa loit työnkulun.
 
     ![Lisää työnkulku mukautusruudusta](./media/using-logic-flows/add-flow-from-pane.png)
 
-7. Kirjoita tai liitä kaavariville **RecordTitle.Text)** automaattisesti lisätyn kaavan loppuun.
+1. Kirjoita tai liitä kaavariville **RecordTitle.Text)** automaattisesti lisätyn kaavan loppuun.
 
     ![OnSelect-ominaisuus, joka sisältää työnkulun](./media/using-logic-flows/onselect-with-flow.png)
 
 ## <a name="test-the-flow"></a>Testaa työnkulku
-1. Avaa esikatselu painamalla F5 (tai valitsemalla nuoli oikean yläkulman läheltä).
+1. Kaksoisnapsauta **Tekstisyöte** ohjausobjektissa ja kirjoita tai liitä se tekstiä.
 
-    ![OnSelect-ominaisuus, joka sisältää työnkulun](./media/using-logic-flows/open-preview.png)
+1. Pidät Alt-näppäintä ja valitse **[painike](controls/control-button.md)** ohjausobjektin.
 
-2. Kirjoita tai liitä tekstiä kohtaan **RecordTitle** ja napsauta tai napauta sitten **[Painike](controls/control-button.md)**-ohjausobjektia.
-
-    SharePoint-kohde luodaan määrittämääsi luetteloon tekstillä, jonka määritit otsikoksi. Jos luettelo oli avoinna, kun työnkulku suoritettiin, saatat joutua päivittämään selainikkunan, jotta muutokset tulevat näkyviin.
+    SharePoint-kohde on luotu määrittämääsi luetteloon tekstillä määritit otsikoksi. Jos luettelo oli avoinna, kun työnkulku suoritettiin, saatat joutua päivittämään selainikkunan, jotta muutokset tulevat näkyviin.

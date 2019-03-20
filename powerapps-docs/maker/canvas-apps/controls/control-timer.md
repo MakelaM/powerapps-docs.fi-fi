@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 934ab9bddfb429ae3ed96706420af002a87697fb
-ms.sourcegitcommit: 87122dba00b4177ef736d87ecdde79581649ba42
-ms.translationtype: HT
+ms.openlocfilehash: 32b8ee57869ea733050c3f23f9c9e81f60e3d78d
+ms.sourcegitcommit: 66fd1129ad25b72556f11a08350ba95f2ba060dd
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44499518"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57804374"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -66,7 +66,7 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -169,3 +169,6 @@ Nämä vaatimukset eivät koske kaikkia tilanteita. Lue lisää [aikarajoja kosk
   > Näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein. Ajastimen **[Teksti](properties-core.md)** ei kuitenkaan sisälly ilmoitukseen.
 
 * Harkitse **[Selitteen](control-text-box.md)** lisäämistä kuluneen ajan näyttämiseksi. Opasta käyttäjää käynnistämään tai pysäyttämään ajastin ajastimen **[Tekstin](properties-core.md)** avulla.
+
+### <a name="support-in-powerapps-studio"></a>PowerApps Studio-tuki
+Kun luot sovelluksen, ajastimet on poistettu käytöstä estää tapahtumien käynnistämästä. Voit testata ajastimet PowerApps Studio, jos avaat esikatselu, tai voit tallentaa sovelluksen ja testaa ne PowerApps Mobilessa tai web Playeristä.

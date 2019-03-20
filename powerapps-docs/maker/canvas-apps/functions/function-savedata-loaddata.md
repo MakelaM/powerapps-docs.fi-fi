@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 01/31/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5aa9992b9371724c77bcc1d2baf439bb2d7b9dab
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3fb23fec6f6885a55b054889b90fed0c5efafd5e
+ms.sourcegitcommit: bdee274ce4ae622f7af5f208041902e66e03d1b3
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864323"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "57800349"
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>SaveData- ja LoadData-funktiot PowerAppsissa
 Tallentaa ja lataa uudelleen [kokoelman](../working-with-data-sources.md#collections).
@@ -28,9 +28,15 @@ Tallentaa ja lataa uudelleen [kokoelman](../working-with-data-sources.md#collect
 
 **LoadData**-funktio lataa valikoiman uudelleen nimellä, joka tallennettiin aiemmin **SaveData**-funktiolla. Tämän funktion avulla ei voi ladata kokoelmaa toisesta lähteestä.  
 
-**LoadData** ei luo kokoelmaa; se vain täyttää olemassa olevan kokoelman. Sinun on ensin luotava oikeat [sarakkeet](../working-with-tables.md#columns) sisältävä kokoelma **[Collect](function-clear-collect-clearcollect.md)**-funktiolla.
+Näiden funktioiden avulla voit parantaa sovelluksen käynnistyksen suorituskykyä tallentamalla tietoja välimuistiin **[App.OnStart](../controls/control-screen.md#additional-properties)** kaavan ensimmäisen suorittamisen ja ladataan paikallisen välimuistin, myöhemmät suoritukset uudelleen. Näiden funktioiden avulla voit myös lisätä [yksinkertainen offline-ominaisuuksista](../offline-apps.md) sovellukseesi.
 
-Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muilta käyttäjiltä ja muilta sovelluksilta.  
+Et voi käyttää näitä funktioita selaimen sisällä, kun kehität sovellusta PowerApps Studio tai suoritettaessa sovelluksen web Playeristä. Sovelluksen testaaminen suorittaa sen PowerApps Mobilessa iPhone-laitteessa.
+
+Nämä funktiot rajoittavat käytettävissä oleva sovellus muistin määrä, koska ne toimivat muistissa-kokoelma. Käytettävissä olevaa muistia voi vaihdella laite ja käyttöjärjestelmän ja PowerApps-toisto-ohjelmassa käyttämän muistin näyttöjä ja ohjausobjekteja sovelluksen monimutkaisuudesta riippuen. Jos tallennat useita megatavua, kokeile sovellusta odotettua skenaarioita, jolloin oletat sovellus suoritetaan laitteissa. Tulee yleisesti odottaa oltava 30 – 70 muistia megatavua.  
+
+**LoadData** ei luo kokoelmaa; se vain täyttää olemassa olevan kokoelman. Sinun on ensin luotava oikeat [sarakkeet](../working-with-tables.md#columns) sisältävä kokoelma **[Collect](function-clear-collect-clearcollect.md)**-funktiolla. Ladatut tiedot lisätään kokoelmaa; Käytä **[Tyhjennä](function-clear-collect-clearcollect.md)** funktion ensin, jos haluat aloittaa tyhjä kokoelma.
+
+Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muilta käyttäjiltä ja muilta sovelluksilta.
 
 ## <a name="syntax"></a>Syntaksi
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
@@ -43,6 +49,6 @@ Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muil
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **If(Connection.Connected, ClearCollect(LocalTweets, Twitter.SearchTweet(”PowerApps”, {maxResults: 100})),LoadData(LocalTweets, ”Tweets”, true))** |Jos laite on yhdistetty, lataa LocalTweets-kokoelma Twitter-palvelusta. Lataa kokoelma muussa tapauksessa paikallisesta tiedostovälimuistista. |Sisältö hahmonnetaan riippumatta siitä, onko laite online- vai offline-tilassa. |
+| **If(Connection.Connected, ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100})), LoadData (LocalTweets, ”Tweets”, true))** |Jos laite on yhdistetty, lataa LocalTweets-kokoelma Twitter-palvelusta. Lataa kokoelma muussa tapauksessa paikallisesta tiedostovälimuistista. |Sisältö hahmonnetaan riippumatta siitä, onko laite online- vai offline-tilassa. |
 | **SaveData(LocalTweets, ”Tweets”)** |Tallenna LocalTweets-kokoelma laitteen paikalliseen tiedostovälimuistiin. |Tiedot tallennetaan paikallisesti, jotta **LoadData** voi ladata sen kokoelmaan. |
 

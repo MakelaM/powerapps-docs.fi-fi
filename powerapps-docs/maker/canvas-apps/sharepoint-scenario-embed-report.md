@@ -1,24 +1,24 @@
 ---
 title: Power BI -projektiraportin upottaminen SharePoint Onlineen | Microsoft Docs
 description: Tässä tehtävässä upotamme Power BI -raportin samaan SharePoint Online -sivustoon, joka isännöi kahta luetteloamme.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/30/2018
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9d15001795cc33d163e85b358a52aba759c83021
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 92ae77237064d28e3070f7e7bc9cb94c4493a3c6
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865432"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799590"
 ---
 # <a name="embed-the-power-bi-project-report-in-sharepoint-online"></a>Power BI -projektiraportin upottaminen SharePoint Onlineen
 > [!NOTE]
@@ -28,7 +28,7 @@ Upotamme Power BI -raportin samaan SharePoint Online -sivustoon, joka isännöi 
 
 Tämäntyyppisessä upottamisessa Power BI upottaa raportin WWW-osana, antaa asianmukaiset käyttöoikeudet käyttäjille ja sallii siirtymisen upotetusta raportista powerbi.com-raporttiin napsauttamalla. Luomme ensin liittymislinkin Power BI:ssä ja käytämme sitten tätä linkkiä sivulla, jonka luomme. Katso lisätietoja upottamisesta kohdasta [Upottaminen raportti-WWW-osan kanssa SharePoint Onlinessa](https://docs.microsoft.com/power-bi/service-embed-report-spo).
 
-## <a name="step-1-generate-an-embed-link"></a>Vaihe 1: luo liittymislinkki
+## <a name="step-1-generate-an-embed-link"></a>Vaihe 1: Luo liittymislinkki
 1. Kirjaudu Power BI:hin ja napsauta tai napauta sitten vasemmanpuoleisessa siirtymisruudussa raportin nimeä.
    
     ![Siirry raporttiin](./media/sharepoint-scenario-embed-report/08-01-01-reports.png)
@@ -39,7 +39,7 @@ Tämäntyyppisessä upottamisessa Power BI upottaa raportin WWW-osana, antaa asi
    
     ![Upota linkki SharePointiin](./media/sharepoint-scenario-embed-report/08-01-03-embed-url.png)
 
-## <a name="step-2-embed-the-report"></a>Vaihe 2: upota raportti
+## <a name="step-2-embed-the-report"></a>Vaihe 2: Upota raportti
 1. Kirjaudu SharePointiin ja napsauta tai napauta sitten **Sivuston sisältö**.
    
     ![SharePoint-sivuston sisältö](./media/sharepoint-scenario-embed-report/08-01-04-site-contents.png)
@@ -60,7 +60,7 @@ Tämäntyyppisessä upottamisessa Power BI upottaa raportin WWW-osana, antaa asi
    
     ![Raportin upottaminen on valmis](./media/sharepoint-scenario-embed-report/08-01-09-report-complete.png)
 
-## <a name="step-3-grant-access-to-the-report"></a>Vaihe 3: myönnä käyttöoikeus raporttiin.
+## <a name="step-3-grant-access-to-the-report"></a>Vaihe 3: Myönnä käyttöoikeus raporttiin.
 Jos käytössäsi on Office 365 -ryhmiä, kuten on suositeltavaa, varmista, että käyttäjät, jotka tarvitsevat käyttöoikeuden, kuuluvat ryhmätyötilaan Power BI -palvelussa. Näin voit varmistaa, että käyttäjät voivat tarkastella ryhmän sisältöä. Jos haluat lisätietoja, katso [Yhteistyön tekeminen Power BI -sovelluksen työtilassa](https://docs.microsoft.com/power-bi/service-collaborate-power-bi-workspace).
 
 Tähän päättyy tehtävä Power BI:ssä tämän skenaarion osalta. Aloitimme hakemalla tietoja SharePoint-luetteloista Power BI:hin ja olemme päätyneet Power BI -raportin upottamiseen takaisin SharePointiin.

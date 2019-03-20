@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f4654c12c860496cd0e2b44bbd33c956b7385460
-ms.sourcegitcommit: 0269766ee598f75a4d2459824128f031f68ca042
-ms.translationtype: HT
+ms.openlocfilehash: dde096adbd82c04f7a2f17cd2af156b2e334c990
+ms.sourcegitcommit: 66fd1129ad25b72556f11a08350ba95f2ba060dd
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47860606"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57804351"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -77,9 +77,9 @@ PowerAppsin mukautettu visualisointi on käytettävissä esikatselussa, ja visua
 - PowerAppsin mukautettu visualisointi ei voi käynnistää Power BI -raporttia tai Power BI -tietolähdettä. Jos kirjoitat tietoa takaisin sovelluksesta samaan tietolähteeseen, jossa raportti on, muutoksiasi ei oteta heti käyttöön. Muutokset otetaan käyttöön seuraavassa ajoitetussa päivityksessä.
 - PowerAppsin mukautettu visualisointi ei voi suodattaa tietoa tai lähettää tietoa takaisin raporttiin.
 - Sinun on jaettava PowerApps-sovellus raportistasi erillisenä. Lue lisätietoja [sovellusten jakamisesta PowerAppsissa](share-app.md).
-- Power BI -raporttipalvelin ja Power BI -mobiilisovellus eivät tue PowerAppsin mukautettua visualisointia.
+- Nämä tekniikat eivät tue Powerappsin mukautettua visualisointia: Power BI-raporttipalvelin on Power BI-ja Internet Explorer-mobiilisovellus.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
 * Käy läpi yksinkertainen [vaiheittainen opetusohjelma](embed-powerapps-powerbi.md).
-* Katso [video](https://aka.ms/powerappscustomvisualvideo).
+* Tutustu Microsoftin [video](https://aka.ms/powerappscustomvisualvideo).

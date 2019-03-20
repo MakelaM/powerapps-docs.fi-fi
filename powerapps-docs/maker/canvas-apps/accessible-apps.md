@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 119b7e6ff590f63ad938016c5f0127f5d6521d65
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b6e2fc48d931ccf702dd2711bdc00a484dc51018
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834378"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57801936"
 ---
 # <a name="create-accessible-canvas-apps-in-powerapps"></a>Helppokäyttöisten pohjaan perustuvien sovellusten luominen PowerAppsissa
 Helppokäyttöisen pohjaan perustuvan sovelluksen avulla käyttäjät, joilla on näkö-, kuulo- tai muu rajoite, voivat käyttää sovellusta.  Sen lisäksi, että monet valtiot ja organisaatiot edellyttävät näiden sovellusten käyttöä, alla olevien ohjeiden noudattaminen parantaa käytettävyyttä kaikille käyttäjille.
@@ -38,16 +38,16 @@ Terve järki ja yksinkertainen suunnittelu tekevät sovelluksista helpompia käy
 Kun testaat sovelluksen helppokäyttöisyyttä, varmista, että sovellusta voidaan käyttää pelkällä näppäimistöllä ja helppokäyttöisyystilassa iOS- ja Android-käyttöjärjestelmissä ja että siinä voidaan siirtyä, kun näytönlukuohjelma on käytössä.
 
 Varmista näppäimistöllä käyttämistä (näytönlukuohjelmalla tai ilman sitä) varten, että siirryttäessä SARKAIN-näppäimen avulla syöttökenttiin käytetään loogista järjestystä, asettamalla kunkin ohjausobjektin **[TabIndex](controls/properties-accessibility.md)**-ominaisuus:
-- Otsikko-, Kuva-, Kuvake- ja Muoto-ohjausobjektit – Jos ne edustavat interaktiivisia elementtejä (painikkeet), aseta TabIndex-arvoksi 0. Jos ne ovat koriste-elementtejä tai tekstiä, aseta TabIndex-arvoksi -1.
+- Otsikko, kuva-, kuvake muoto-ohjausobjektit – jos ne edustavat interaktiivisia elementtejä (painikkeet) Aseta TabIndex-0. Jos ne ovat koriste-elementtejä tai tekstiä, Aseta TabIndex-arvoksi-1.
 - Vältä sarkainindeksin asettamista suuremmaksi kuin 0.
 
 ## <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
 Seuraavat ohjelmistoyhdistelmät ovat tuettuja suosituksia PowerAppsin käyttämiseen näytönlukuohjelmalla:
 
-- **Windows**: Edge/Narrator
-- **macOS**: Safari/VoiceOver
-- **Android**: PowerApps-sovellus/Talkback
-- **iOS**: PowerApps-sovellus/VoiceOver
+- **Windows**: Microsoft Edge / Narrator
+- **macOS**: Safari / VoiceOver
+- **Android**: PowerApps-sovellus / Talkback
+- **iOS**: PowerApps-sovellus / VoiceOver
 
 Jotta voit varmistaa tyydyttävän käyttökokemuksen näytönlukuohjelman kanssa, suosittelemme seuraavia:
 
@@ -58,7 +58,7 @@ Jotta voit varmistaa tyydyttävän käyttökokemuksen näytönlukuohjelman kanss
 
 
 ## <a name="multimedia"></a>Multimedia
-Varmista, että kaikissa videoissa on tekstitys ja että käyttäjä voi käyttää kaikkien äänitallenteiden tekstiversiota.  **Video**-ohjausobjekti tukee tekstityksiä WebVTT-muodossa **ClosedCaptionsUrl**-ominaisuuden kautta.
+Varmista, että kaikissa videoissa on tekstitys ja että käyttäjä voi käyttää kaikkien äänitallenteiden tekstiversiota.  **Videon** ohjausobjekti tukee tekstityksen WebVTT-muodossa kautta **ClosedCaptionsUrl** ominaisuus.
 
 Huomaa, että näytönlukuohjelman ollessa käytössä **Ajastin** ei ilmoita painikkeen tekstiä vaan kuluneen ajan.  Ilmoituksia ei voi poistaa käytöstä, vaikka ajastin olisi piilotettu pienellä peittävyydellä.
 

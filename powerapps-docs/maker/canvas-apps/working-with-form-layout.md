@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 43d623daecb609fbe3d4e593a7e15f95051871e9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b6bff4d0f9586f94e4d0da133197fcb7f78c765d
+ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836414"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "57800257"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten tietolomakkeen asettelun ymmärtäminen PowerAppsissa
 
@@ -32,20 +32,20 @@ Tässä opetusohjelmassa käymme läpi vaiheet tämän lomakkeen luomiseen. Tark
 
 Jos olet uusi PowerApps-käyttäjä (tai olet luonut sovelluksia vain automaattisesti), kannattaa [luoda sovellus alusta](get-started-create-from-blank.md), ennen kuin ryhdyt toimimaan tämän ohjeaiheen mukaan. Luomalla sovelluksen alusta opit välttämättömiä käsitteitä, joita mainitaan tässä ohjeaiheessa, mutta ei selitetä, kuten tietolähteiden ja ohjausobjektien lisääminen.
 
+Tämä ohjeaihe on kirjoitettu aivan kuin sinulla tietoja tietolähteen, jonka nimi on **myyntitilaus** , joka sisältää kenttien edellisessä kuvassa. Jos sinulla on Powerappsin palvelupaketin 2 käyttöoikeus tai [kokeiluversion käyttöoikeus](../signup-for-powerapps.md) järjestelmänvalvojaan tai järjestelmän mukauttajat oikeudet, voit [entiteetin](../common-data-service/data-platform-create-entity.md) luomiseen Common Data Service (CDS) for Appsissa ja lisää samanlaiset kentät. 
+
 ## <a name="add-a-gallery"></a>Lisää valikoima
 
-1. Luo tablettisovellus alusta alkaen.
+1. Luo tablettisovellus alusta ja lisätä tietolähteen.
 
     Kaikki tässä aiheessa kuvatut asiat koskevat myös puhelinasetteluja, paitsi että puhelinsovelluksissa on usein vain yksi pystysuuntainen sarake.
-2. Lisää **Myyntitilaus**-entiteetti [Common Data Serviceen](../common-data-service/data-platform-intro.md) tietolähteenä sovellukselle.
-
-    Voit käyttää tämän opetusohjelman ulkopuolella mitä tahansa tietolähteitä, mukaan lukien SharePoint-luetteloita ja Excel-taulukoita.
-3. Lisää vaakasuuntainen **Valikoima**-ohjausobjekti ja aseta sen **Kohteet**-ominaisuudeksi **Myyntitilaus**.
+    
+2. Lisää vaakasuuntainen **Valikoima**-ohjausobjekti ja aseta sen **Kohteet**-ominaisuudeksi **Myyntitilaus**.
    
     (valinnainen) Jotta esimerkit vastaavat tätä opetusohjelmaa, muuta valikoiman **asettelua** siten, että se näyttää vain **otsikon ja alaotsikon**.
    
     ![Myyntitilausluettelo](./media/working-with-form-layout/gallery-layout.png)
-4. Napsauta tai napauta valikoimassa **SO004**.
+3. Napsauta tai napauta valikoimassa **SO004**.
    
     ![Myyntitilausluettelo](./media/working-with-form-layout/sales-order-gallery-screen.png)
    
@@ -204,7 +204,7 @@ Kuten kaikkialla PowerAppsissa, lomakkeen asettelua säätelevät kortin ohjauso
 ### <a name="basic-layout-x-y-and-width"></a>Perusasettelu: X, Y ja leveys
 Ominaisuudet **X** ja **Y** määräävät korttien sijainnin. Kun käytämme ohjausobjekteja tyhjällä pohjalla, nämä ominaisuudet tarjoavat absoluuttisen sijainnin. Lomakkeessa näillä ominaisuuksilla on eri merkitys:
 
-* **X**: Järjestys rivillä.
+* **X**: Tilauksen rivin.
 * **Y**: Rivin numero.
 
 Kuten mallipohjan ohjausobjektit, **Leveys**-ominaisuus määrittää kortin vähimmäisleveyden (lisätietoja vähimmäissuhteesta hieman myöhemmin).

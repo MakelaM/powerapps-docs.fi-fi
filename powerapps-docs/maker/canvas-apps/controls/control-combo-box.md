@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 278560c1ececafd6d4c57945d6058879cf55170f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: ad3b8efc2306540862d0470223cee4f46fb5703c
+ms.sourcegitcommit: 50404720bed371bbc93feb08d296c954ef8038e1
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42858309"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031350"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista.  Tukee hakua ja useita valintoja.
@@ -36,7 +36,7 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
 **[Items](properties-core.md)**  – Valintojen tekemisessä käytetyn tiedon lähde.
 
-**DefaultItems** – Alkuperäiset valitut kohteet, ennen kuin käyttäjä on vuorovaikutuksessa ohjausobjektin kanssa.
+**DefaultSelectedItems** – alkuperäiset valitut kohteet, ennen kuin käyttäjä on vuorovaikutuksessa ohjausobjektin kanssa.
 
 **SelectedItems** – Luettelo kohteista, jotka on valittu käyttäjän toiminnan perusteella.
 
@@ -54,8 +54,6 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 **[BorderStyle](properties-color-border.md)** – Onko ohjausobjektin reuna **yhtenäinen**, **katkoviiva**, **pisteviiva** vai **ei mitään**.
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
-
-**[Default](properties-core.md)** – Alkuperäinen valinta, ennen kuin käyttäjä on muuttanut sitä yksittäisen valinnan tilassa.
 
 **DisplayFields** – Luettelo kentistä, jotka näytetään jokaisesta haun palauttamasta kohteesta.  Helpoin määrittää Ominaisuudet-välilehden tietoruudun kautta.
 

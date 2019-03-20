@@ -1,24 +1,24 @@
 ---
 title: SharePoint Online -integrointiskenaarion läpikäynti alusta loppuun | Microsoft Docs
 description: Tutustu skenaarion alusta loppuun -läpikäyntiin, jonka olemme laatineet tässä opetusohjelmasarjassa.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: df3c186bb41621e7ec6087a9da55fc037e286b1a
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 64a26fbd0e36937427bc679869d5bc942f254130
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850186"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799636"
 ---
 # <a name="walk-end-to-end-through-the-completed-sharepoint-online-integration-scenario"></a>Käydään läpi valmis SharePoint Onlinen integrointiskenaario alusta loppuun
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "42850186"
 
 Tämän sarjan opetusohjelmissa on käsitelty valtava määrä asioita kangassovellusten ja työnkulkujen laatimisesta raporttien luomiseen ja liittämiseen SharePointiin. Toivottavasti olet oppinut paljon ja olet nähnyt tarpeeksi, miten nämä tekniikat integroituvat toisiinsa, jotta voit integroida kangassovelluksia, työnkulkuja ja raportteja SharePointiin omien tarpeidesi mukaan. Ennen kuin lopetamme, haluamme käydä skenaarion läpi alusta loppuun ja nähdä, miten kaikki osat toimivat yhdessä.
 
-## <a name="step-1-add-a-project-to-the-project-requests-list"></a>Vaihe 1: Lisää projekti Projektipyynnöt-luetteloon
+## <a name="step-1-add-a-project-to-the-project-requests-list"></a>Vaihe 1: Lisää projekti projektipyynnöt-luetteloon
 1. Napsauta tai napauta **Projektipyynnöt**-luettelossa kohtaa **Kaikki kohteet** ja sen jälkeen kohtaa **Projektipyyntöjen sovellus**.
    
     ![Projektipyyntöjen sovelluksen näkymä](./media/sharepoint-scenario-summary/09-00-01-view-app.png)
@@ -74,7 +74,7 @@ Tämän sarjan opetusohjelmissa on käsitelty valtava määrä asioita kangassov
     ![SharePoint-luettelo, jossa on päivitetty kohde](./media/sharepoint-scenario-summary/09-02-03-yes.png)
 
 ## <a name="step-3-assign-a-manager-to-the-project"></a>Vaihe 3: Määritä esimies projektiin
-1. Ensin katsotaan **Projektitiedot**-luetteloa SharePointissa. Uudella projektilla on arvo **Määrittämätön** sarakkeessa **PMAssigned**.
+1. Katsotaan ensin **Projektitiedot**-luetteloa SharePointissa. Uudella projektilla on arvo **Määrittämätön** sarakkeessa **PMAssigned**.
    
     ![Määrittämätön SharePoint-luettelokohde](./media/sharepoint-scenario-summary/09-03-01-unassigned.png)
 2. Napsauta tai napauta **Projektinhallintasovellusta** SharePoint-sivuston vasemmassa siirtymisruudussa.
@@ -138,7 +138,7 @@ Tämän sarjan opetusohjelmissa on käsitelty valtava määrä asioita kangassov
    
     Kuten tätä visualisointia luotaessa mainittiin, Irvin Sayersille määritetyissä projektissa aloittamiseen kului enemmän aikaa ja kaksi projektia vei paljon enemmän aikaa kuin muut.
 
-## <a name="step-6-respond-to-pending-project-delays"></a>Vaihe 6: Reagoi odottaviin projektiviiveisiin
+## <a name="step-6-respond-to-pending-project-delays"></a>Vaihe 6: Projektiviiveisiin vastata
 1. Napsauta tai napauta Power BI-palvelussa **Projektianalyysi**-tietojoukkoa ja napsauta tai napauta sen jälkeen **PÄIVITÄ NYT**. Päivitys käynnistää hälytyksen, jonka määritimme odottavia projekteja varten.
    
     ![Päivitä tietojoukko nyt](./media/sharepoint-scenario-summary/09-06-01-refresh.png)

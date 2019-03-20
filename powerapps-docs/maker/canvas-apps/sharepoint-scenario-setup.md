@@ -1,30 +1,30 @@
 ---
 title: Luo luetteloita SharePoint Onlinen integroimiseksi PowerAppsin, Microsoft Flow’n ja Power BI:n kanssa | Microsoft Docs
 description: Tässä tehtävässä luomme SharePoint-luetteloita, jotka toimivat sovellusten, työnkulkujen, raporttien ja koontinäyttöjen tietolähteinä.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/19/2017
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9e1694a3190740c788eb9cd53de1187ed32d0fbc
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 7be4a0574c1a81684188eaede4b6e80b02e7b7cc
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833316"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799176"
 ---
 # <a name="set-up-lists-for-sharepoint-online-integration-with-powerapps-microsoft-flow-and-power-bi"></a>Luo luetteloita SharePoint Onlinen integroimiseksi PowerAppsin, Microsoft Flow’n ja Power BI:n kanssa
 > [!NOTE]
-> Tämä artikkeli on osa opetusohjelmasarjaa PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämisestä SharePoint Onlinen kanssa. Varmista, että luet [sarjan esittelyn](sharepoint-scenario-intro.md), jotta saat paremman käsityksen kokonaiskuvasta, sekä aiheeseen liittyvät ladattavat tiedostot.
+> Tämä artikkeli on osa opetusohjelmasarjaa PowerAppsin, Microsoft Flow’n ja Power BI:n käyttämisestä SharePoint Onlinen kanssa. Lukemalla [sarjan esittelyn](sharepoint-scenario-intro.md) saat paremman käsityksen kokonaiskuvasta sekä aiheeseen liittyvät ladattavat tiedostot.
 
-SharePointissa on lukemattomia jakamisen ja yhteistyön ominaisuuksia, mutta keskitymme tässä artikkelissa yhteen skenaarion ominaisuuteen: [SharePoint-luettelot](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). Luettelo on yksinkertaisesti tietokokoelma, jonka voit jakaa ryhmäsi jäsenten ja muiden sivuston käyttäjien kanssa. Käymme läpi tässä skenaariossa käytettyjä luetteloita. Sitten voit luoda niitä omalla SharePoint Online -sivustollasi.
+SharePointissa on lukemattomia jakamisen ja yhteistyön ominaisuuksia, mutta keskitymme yhteen tämän skenaarion ominaisuuteen: [SharePoint-luetteloiden](https://support.office.com/article/Introduction-to-lists-0A1C3ACE-DEF0-44AF-B225-CFA8D92C52D7). Luettelo on yksinkertaisesti tietokokoelma, jonka voit jakaa ryhmäsi jäsenten ja muiden sivuston käyttäjien kanssa. Käymme läpi tässä skenaariossa käytettyjä luetteloita. Sitten voit luoda niitä omalla SharePoint Online -sivustollasi.
 
 ## <a name="step-1-understand-the-lists"></a>Vaihe 1: Luetteloiden ymmärtäminen
 Ensimmäinen luettelo on **Projektipyynnöt**, jolla projektin pyytäjä lisää pyynnön. Sitten projektin hyväksyjä tarkastelee pyyntöä ja hyväksyy tai hylkää sen.
@@ -105,7 +105,7 @@ Voidaksesi jatkaa tätä skenaariota sinun on luotava kaksi SharePoint-luetteloa
 4. Kopioi tiedot ja liitä ne ruudukkoon SharePointissa. Napauta tai napsauta sitten **Valmis**.
    
     ![Valmis tietoja sisältävä luettelo](./media/sharepoint-scenario-setup/01-01-09-full-grid.png)
-5. Toista luettelon luomisvaiheet ja kopiointiprosessi Projektitiedot-luettelon osalta. Käytä project-details.xlsx-työkirjaa. Katso ohjeet sarakkeiden nimiä ja tietotyyppejä varten [Vaihe 1: Luetteloiden ymmärtäminen](#step-1-understand-the-lists) -osuuden Projektitiedot-taulukosta.
+5. Toista luettelon luomisvaiheet ja kopiointiprosessi Projektitiedot-luettelon osalta. Käytä project-details.xlsx-työkirjaa. Osuuden projektitiedot-taulukosta [vaihe 1: Luetteloiden ymmärtäminen](#step-1-understand-the-lists) sarakkeiden nimiä ja tietotyyppejä varten.
 
 ## <a name="step-3-update-connections-to-samples---optional"></a>Vaihe 3: Päivitä yhteydet esimerkkeihin (valinnainen)
 Kuten tämän opetusohjelmasarjan johdannossa todettiin, olemme lisänneet kaksi esimerkkisovellusta ja raportin [latauspakettiin](https://aka.ms/o4ia0f). Voit suorittaa tämän skenaarion loppuun ilman näiden esimerkkien käyttöä, mutta jos haluat käyttää esimerkkejä, sinun on päivitettävä yhteydet SharePoint-luetteloihin. Kun päivität yhteydet, ne käyttävät *sinun* luetteloitasi tietolähteinä meidän lähteidemme sijaan.

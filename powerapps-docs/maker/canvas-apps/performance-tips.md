@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9d86bcaf02050da1b3cd0364e28bc4ec05a6407d
-ms.sourcegitcommit: 6e579014ebb1f801985b8b4b68b7b768a09559c7
-ms.translationtype: HT
+ms.openlocfilehash: a04320d2d8bb2d8ad3ebf30d3ecbd0dfe7f9b0bd
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247582"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57801959"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Kangassovellusten suorituskyvyn optimointi PowerAppsissa
 Microsoft tekee kaikkensa parantaakseen kaikkien PowerApps-ympäristössä toimivien sovellusten suorituskykyä. Tämän aiheen parhaiden käytäntöjen avulla voit myös tehostaa luomiesi sovellusten suorituskykyä.
@@ -65,7 +65,7 @@ Voit sisällyttää saman kaavan **Concurrent**-funktioon vähentääksesi toimi
         
 Tämän muutoksen jälkeen sovellus noutaa taulukot rinnakkain: 
 
-![Rinnakkainen ClearCollect](./media/performance-tips/perfconcurrent2.png)  
+![Rinnakkaisen ClearCollect](./media/performance-tips/perfconcurrent2.png)  
 
 ## <a name="cache-lookup-data"></a>Välimuistin hakutiedot
 Käytä **Joukko**-funktiota tallentaaksesi hakutaulukkotietoja välimuistiin paikallisesti, jolloin et joudu toistuvasti noutamaan tietoja lähteestä. Tämä menetelmä auttaa optimoimaan suorituskykyä, jos tiedot eivät oletettavasti tule muuttumaan istunnon aikana. Kuten tässä esimerkissä näytetään, tiedot noudetaan lähteestä kerran, jonka jälkeen niihin viitataan paikallisesti siihen asti, kunnes käyttäjä sulkee sovelluksen. 
@@ -101,3 +101,15 @@ Käyttämällä delegoitavia tietolähteitä ja kaavoja voit varmistaa sovelluks
 
 ## <a name="republish-apps-regularly"></a>Julkaise sovelluksesi uudelleen säännöllisesti
 [Julkaise sovelluksesi uudelleen](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blogikirjoitus) saadaksesi suorituskyvyn parannuksia ja muita ominaisuuksia PowerApps-ympäristöstä.
+
+## <a name="avoid-repeating-the-same-formula-in-multiple-places"></a>Toistaa saman kaavan useita paikoissa
+Jos useita ominaisuudet (etenkin, jos se on monimutkainen) samaa kaavaa, harkitse määritetty kerran ja viittaavat kaikki lisäehdot ensimmäisen ominaisuus tulos. Esimerkiksi ei määritetty **DisplayMode** saman monimutkaisia kaavan ohjausobjekteja A, B, C, D ja E-ominaisuuden. Määritä sen sijaan A: n **DisplayMode** ominaisuus monimutkaisia kaava B **DisplayMode** A: n tuloksen ominaisuudeksi **DisplayMode** -ominaisuuden, ja niin edelleen C D ja E.
+
+## <a name="enable-delayoutput-on-all-text-input-controls"></a>DelayOutput käyttöön kaikki teksti syöteohjausobjektit
+Jos sinulla on useita kaavat tai sääntöjä, jotka viittaavat arvo **Tekstisyöte** ohjausobjekti, Määritä **DelayedOutput** TRUE tämän ohjausobjektin ominaisuuden. **Tekstin** päivitetään vasta, kun näppäilyt annettu nopeasti peräkkäin on lopettanut tämän ohjausobjektin ominaisuuden. Kaavoja tai sääntöjä ei suoriteta niin monta kertaa ja parantaa sovelluksen suorituskykyä.
+
+## <a name="avoid-using-formupdates-in-rules-and-formulas"></a>Vältä Form.Updates säännöt ja kaavat
+Jos viittaat käyttäjän syötteen arvon sääntö tai kaavan avulla **Form.Updates** muuttujan, se laskee kaikki lomakkeen tiedot kortteja funktion ja luo tietueen aina, kun. Jos haluat tehdä sovelluksen tehokkaampia, viitata suoraan kortin tai ohjausobjektin arvo arvo.
+
+## <a name="next-steps"></a>Seuraavat vaiheet
+Tarkista [koodausstandardeja](https://aka.ms/powerappscanvasguidelines) maksimoida sovellusta ja pitämällä sovellukset ylläpitämistä.

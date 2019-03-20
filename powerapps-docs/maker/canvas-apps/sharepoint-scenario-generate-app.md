@@ -1,24 +1,24 @@
 ---
 title: Projektipyyntöjä käsittelevän kangassovelluksen laatiminen| Microsoft Docs
 description: Tässä tehtävässä luomme tavallisen kolmen näytön kangassovelluksen suoraan SharePoint-luettelosta.
-author: mgblythe
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4466d8f42a0ba9c9a162353bc214abf6d9d9ef83
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c9c7e58c8127b1c2784e0b1d79e78a1cb9478054
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834255"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799314"
 ---
 # <a name="generate-a-canvas-app-to-handle-project-requests"></a>Kangassovelluksen luominen projektipyyntöjen hallintaa varten
 > [!NOTE]
@@ -29,7 +29,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
 > [!TIP]
 > Tämän skenaarion [latauspaketti](https://aka.ms/o4ia0f) sisältää viimeistellyn version tästä sovelluksesta: project-requests-app.msapp.
 
-## <a name="step-1-generate-an-app-from-a-sharepoint-list"></a>Vaihe 1: Luo sovellus SharePoint-luettelosta
+## <a name="step-1-generate-an-app-from-a-sharepoint-list"></a>Vaihe 1: Sovelluksen luominen SharePoint-luettelosta
 
 1. Napsauta tai napauta luomassasi **Projektipyynnöt**-luettelossa kohtaa **PowerApps** ja sen jälkeen **Luo sovellus**.
    
@@ -39,7 +39,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Määritä sovelluksen nimi](./media/sharepoint-scenario-generate-app/02-01-02-create-app-name.png)
 
-## <a name="step-2-review-the-app-in-powerapps-studio"></a>Vaihe 2: Tarkista sovellus PowerApps Studiossa
+## <a name="step-2-review-the-app-in-powerapps-studio"></a>Vaihe 2: Tarkista sovellus PowerApps Studio
 
 1. PowerApps Studiossa näkyy vasemmassa siirtymispalkissa oletusarvoisesti hierarkkinen näkymä sovelluksen näytöistä ja ohjausobjekteista.
    
@@ -59,7 +59,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
       
       ![PowerApps Studio, jossa näkyy pikkukuvanäkymä](./media/sharepoint-scenario-generate-app/02-02-03-studio-screens-thumbnails.png)
 
-## <a name="step-3-customize-the-apps-browse-screen"></a>Vaihe 3: Sovelluksen selaa-näytön mukauttaminen
+## <a name="step-3-customize-the-apps-browse-screen"></a>Vaihe 3: Sovelluksen Selaa-näytön mukauttaminen
 
 1. Napsauta tai napauta selaa-näyttöä.
    
@@ -93,7 +93,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
 
 6. Napsauta tai napauta kohtaa **Tiedosto** ja sen jälkeen **Tallenna**. Palaa sovellukseen napsauttamalla tai napauttamalla ![Takaisin sovellukseen -kuvaketta](./media/sharepoint-scenario-generate-app/icon-back-to-app.png).
 
-## <a name="step-4-review-the-apps-details-screen-and-edit-screen"></a>Vaihe 4: Tarkista sovelluksen tiedot-näyttö ja muokkausnäyttö
+## <a name="step-4-review-the-apps-details-screen-and-edit-screen"></a>Vaihe 4: Tarkista sovelluksen tiedot-näyttö ja Muokkaa-näyttö
 1. Napsauta tai napauta tiedot-näyttöä.
    
     Tässä näytössä on erilainen asettelu, joka sisältää kohteen *Näytä lomake* valikoimasta valitun kohteen tietojen näyttämiseen. Sillä on ohjausobjekteja kohteiden muokkaamista ja poistamista varten ja takaisin selailunäyttöön siirtymistä varten.
@@ -108,7 +108,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
 
 ## <a name="step-5-run-the-app-from-the-list"></a>Vaihe 5: Suorita sovellus luettelosta
 
-1. Napsauta tai napauta **Projektipyynnöt**-luettelossa kohtaa **Kaikki kohteet** ja sen jälkeen kohtaa **Projektipyyntösovellus**.
+1. Napsauta tai napauta **Projektipyynnöt**-luettelossa kohtaa **Kaikki kohteet** ja sen jälkeen kohtaa **Projektipyyntöjen sovellus**.
    
     ![Tarkastele projektipyyntösovellusta](./media/sharepoint-scenario-generate-app/02-05-01-view-app.png)
 2. Napsauta kohtaa **Avaa**, joka avaa sovelluksen selaimen uudessa välilehdessä.

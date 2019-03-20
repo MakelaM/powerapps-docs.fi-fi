@@ -1,24 +1,24 @@
 ---
 title: InfoPath-lomakkeen muuntaminen pohjaan perustuvaan sovellukseen | Microsoft Docs
 description: Aloita InfoPath-lomakkeen muuntaminen PowerAppsiin yleisiä skenaarioita koskevista tiedoista ja ohjeista, joiden avulla näitä luodaan pohjaan perustuvassa sovelluksessa.
-author: richardriley99
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/05/2018
-ms.author: rriley
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c2d72368b36f2de854a0aa575f9ef44f2f966ace
-ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
-ms.translationtype: HT
+ms.openlocfilehash: 0ceffa705262e879ee09df2494f71f59bcc2d1b5
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806221"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802373"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>InfoPath-lomakkeen muuntaminen PowerAppsiin
 
@@ -99,23 +99,23 @@ Tämä kaava ilmoittaa, että jos nykyinen kohteen **väri**-kenttä on **Sinine
 
 Jos haluat piilottaa sen sijaan, että se muunnetaan vain luku -tilaan, lisää samanlainen funktio **DisplayMode**-kohdan yllä olevaan **Näkyvissä**-ominaisuuteen.
 
-Voit myös kokeilla esimerkiksi sitä, että hyväksymispainike näytetään vain jos käyttäjän sähköpostiosoite vastaa hyväksyjän sähköpostiosoitetta. (Vihje: Kaavalla **User().Email** pääset käsiksi nykyisen käyttäjän sähköpostiosoitteeseen.) Voit tallentaa hyväksyjän sähköpostiosoitteen **YourDataCard**-kohtaan ja asettaa painikkeen **Näkyvissä**-ominaisuuden arvoksi seuraavan kaavan:
+Voit myös kokeilla esimerkiksi sitä, että hyväksymispainike näytetään vain jos käyttäjän sähköpostiosoite vastaa hyväksyjän sähköpostiosoitetta. (Vihje: Käytä **User(). Lähetä** pääset käsiksi nykyisen käyttäjän sähköpostiosoitteeseen.) Voit tallentaa hyväksyjän sähköpostiosoitteen **YourDataCard**-kohtaan ja asettaa painikkeen **Näkyvissä**-ominaisuuden arvoksi seuraavan kaavan:
 
-```If(YourDataCard.Text = User().Email, true, false)```
+```If( YourDataCard.Text = User().Email, true, false )```
 
 **Ehdollinen muotoilu**  
 Samaan tapaan kuin edellisessä kentän piilottavassa esimerkissä voit antaa käyttäjille visuaalista palautetta. Ehkä haluat korostaa tekstin punaisella, jos annettu arvo ei ole hyväksytyllä alueella, tai ehkä haluat muuttaa latauspainikkeiden tekstin ja värin, kun tiedosto on ladattu. Voit tehdä molemmat käyttämällä **If**-funktiota esim. **Väri**- tai **Näkyvissä**-ominaisuuksissa.
 
 Voit esimerkiksi käyttää **If**-funktiota yhdessä [IsMatch](functions/function-ismatch.md)-funktion kanssa, kun haluat vaihtaa sähköpostiosoitekentän tekstin värin punaiseksi, jos käyttäjä ei kirjoittanut syöteruutuun kelvollisen muotoista sähköpostiosoitetta. Voit tehdä tämän asettamalla **TextInput1**-kohdan (johon käyttäjä kirjoittaa sähköpostiosoitteen) **Väri**-arvoksi seuraavan kaavan:
 
-```If(IsMatch(TextInput1.Text, Email), Black, Red)```
+```If( IsMatch(TextInput1.Text, Email), Black, Red )```
 
 **IsMatch** tukee lukuisia erilaisia esimääritettyjä kuvioita, kuten Email, mutta voit luoda myös oman kuvion. Lisätietoja ehdollisesta muotoilusta on tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
 
 **Roolipohjaisen suojauksen käyttöönotto**  
 Ensimmäiseksi kannattaa harkita [DataSourceInfo](functions/function-datasourceinfo.md)-funktiota. Tietolähteestä saatavat tiedot vaihtelevat, mutta usein voit tarkistaa tällä kaavalla, onko käyttäjällä tietojen muokkausoikeutta (korvaa *YourDataSource* oman tietolähteesi nimellä):
 
-```DataSourceInfo(YourDataSource, DataSourceInfo.EditPermission)```
+```DataSourceInfo( YourDataSource, DataSourceInfo.EditPermission )```
 
 Tällä funktiolla lomake tai painike näytetään vain, jos käyttäjällä on muokkausoikeus. [DataSourceInfo](functions/function-datasourceinfo.md)-funktion ohjeissa on täydellinen luettelo tiedoista, joita siinä voi kysellä.
 
@@ -138,7 +138,7 @@ Jos silti tarvitset muuttujaa (tällaisia tilanteita riittää), nämä ohjeet a
 
 - Yleiset muuttujat ovat tutuimpia. Voit määrittää yleisen muuttujan arvon [Set](functions/function-set.md)-funktiolla ja valitsemalla koko sovelluksen sen käyttöalueeksi:
 
-    ```Set(YourVariable, YourValue)```
+    ```Set( YourVariable, YourValue )```
 
     Tämän jälkeen voit viitata *OmaMuuttuja*-muuttujaan sen nimellä kaikkialla sovelluksessasi.
 
@@ -157,13 +157,13 @@ Avattavat johdannaisvalikot ovat erittäin hyödyllisiä, koska voit esimerkiksi
 
 Tässä esimerkissä voit lisätä avattavan valikon, jonka nimi on **ddSelectType** ja määrittää sen **Kohteet**-ominaisuudeksi seuraavan arvon:
 
-```Distinct(Impacts, Title)```
+```Distinct( Impacts, Title )```
 
 Avattava valikko näyttää vain Kustannukset-, Ohjelman vaikutus- ja Ajoitus-vaihtoehdot. Sen jälkeen voit lisätä toisen avattavan valikon ja määrittää sen **Kohteet**-ominaisuudeksi seuraavan kaavan:
 
-```Filter(Impacts,ddSelectType.Selected.Value in SCategory)```
+```Filter( Impacts, ddSelectType.Selected.Value in SCategory )```
 
-Tuloksena on avattavia johdannaisvalikkoja. Lisätietoja on PowerApps-tiimin julkaisussa [SharePoint: Cascading Dropdowns in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) (SharePoint: Avattavat johdannaisvalikot neljällä helpolla vaiheella!) ja tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Äläkä huoli, voit tehdä sen aivan yhtä helposti ilman SharePointia.
+Tuloksena on avattavia johdannaisvalikkoja. Lisätietoja, tutustu PowerApps-tiimin julkaisussa [SharePoint: Avattavat Johdannaisvalikot in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) ja tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Äläkä huoli, voit tehdä sen aivan yhtä helposti ilman SharePointia.
 
 **Älä luo yhtä jättisovellusta**  
 PowerAppsin avulla voit kutsua sovelluksia toisista sovelluksista. Voit siis luoda ryhmän sovelluksia, jotka kutsuvat toisiaan ja jopa siirtävät tietoa toisilleen. Kehittäminen on siten helpompaa ja voit jättää valtavat, juuri ja juuri koossa pysyvät InfoPath-lomakkeet taaksesi.

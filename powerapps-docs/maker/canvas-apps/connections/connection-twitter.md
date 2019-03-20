@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2ab480b0bb2aa61c65e33f67cca5a3b0974ca2c8
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 23a61dd1300fab71bed4d8c72b861c3c38a1cdea
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834522"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802074"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Twitter-yhteyden luominen PowerAppsista
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -114,7 +114,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
-   * Jos haluat nähdä, keitä joku toinen käyttäjä seuraa, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:
+   * Jos haluat nähdä, keitä toinen käyttäjä seuraa, Määritä **[kohteet](../controls/properties-core.md)** ominaisuus seuraavalla kaavalla:
 
        `Twitter.Following( *TwitterHandle* )`
 
@@ -192,7 +192,7 @@ Tämä yhteys sisältää seuraavat funktiot:
 | [OnNewTweet](connection-twitter.md#onnewtweet) |Käynnistää työnkulun, kun Twitterissä julkaistaan uusi twiitti, joka vastaa hakuehtojasi |
 
 ### <a name="usertimeline"></a>UserTimeline
-Hae käyttäjän aikajana: hakee määritetyn käyttäjän uusimmat twiitit
+Hae käyttäjän aikajana: Hakee määritetyn käyttäjän uusimmat twiitit
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -213,7 +213,7 @@ Hae käyttäjän aikajana: hakee määritetyn käyttäjän uusimmat twiitit
 | MediaUrls |matriisi |Ei | |
 
 ### <a name="hometimeline"></a>HomeTimeline
-Hae kotiaikajana: hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on julkaistu minulle ja seuraajilleni
+Hae kotiaikajana: Hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on kirjattu minulle ja seuraajilleni
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -233,7 +233,7 @@ Hae kotiaikajana: hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on julk
 | MediaUrls |matriisi |Ei | |
 
 ### <a name="searchtweet"></a>SearchTweet
-Hae twiittiä: hakee määritettyä kyselyä vastaavat twiitit
+Hae twiittiä: Hakee hakuehtojen mukaiset twiitit
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -254,7 +254,7 @@ Hae twiittiä: hakee määritettyä kyselyä vastaavat twiitit
 | MediaUrls |matriisi |Ei | |
 
 ### <a name="followers"></a>Seuraajat
-Hae seuraajat: hakee määritetyn käyttäjän seuraajat
+Hae seuraajat: Hakee määritetyn käyttäjän seuraajat
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -277,7 +277,7 @@ Hae seuraajat: hakee määritetyn käyttäjän seuraajat
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="myfollowers"></a>MyFollowers
-Hae omat seuraajat: hakee omat seuraajani
+Hae Omat seuraajat: Hakee minua seuraavat käyttäjät
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -299,7 +299,7 @@ Hae omat seuraajat: hakee omat seuraajani
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="following"></a>Seurattavat
-Hae seurattavat: hakee käyttäjät, joita määritetty käyttäjä seuraa
+Hae seurattavat: Hakee käyttäjät, joita määritetty käyttäjä seuraa
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -322,7 +322,7 @@ Hae seurattavat: hakee käyttäjät, joita määritetty käyttäjä seuraa
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="myfollowing"></a>MyFollowing
-Hae omat seurattavat: hakee käyttäjät, joita itse seuraan
+Hae Omat seurattavat: Hakee käyttäjät, joita itse seuraan
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -343,8 +343,8 @@ Hae omat seurattavat: hakee käyttäjät, joita itse seuraan
 | StatusesCount |kokonaisluku |Ei | |
 | FriendsCount |kokonaisluku |Ei | |
 
-### <a name="user"></a>Käyttäjä
-Hae käyttäjä: hakee tietoa määritetystä käyttäjästä (esimerkiksi käyttäjänimi, kuvaus, seuraajien määrä jne.)
+### <a name="user"></a>User
+Hae käyttäjän: Hakee tietoja määritetystä käyttäjästä (esimerkiksi käyttäjänimi, kuvaus, seuraajien määrä jne.)
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -366,7 +366,7 @@ Hae käyttäjä: hakee tietoa määritetystä käyttäjästä (esimerkiksi käyt
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="tweet"></a>Twiitti
-Julkaise uusi twiitti: twiittaa
+Julkaise uusi twiitti: Twiitti
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -382,7 +382,7 @@ Julkaise uusi twiitti: twiittaa
 | TweetId |merkkijono |Kyllä | |
 
 ### <a name="onnewtweet"></a>OnNewTweet
-Kun uusi twiitti tulee näkyviin: käynnistää työnkulun, kun julkaistaan uusi hakukyselyä vastaava twiitti
+Kun uusi twiitti tulee näkyviin: Käynnistää työnkulun, kun Twitterissä julkaistaan uusi twiitti, joka vastaa hakuehtojasi
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 

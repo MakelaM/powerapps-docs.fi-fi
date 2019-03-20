@@ -1,24 +1,24 @@
 ---
 title: Kangassovelluksen luominen projektien hallitsemista varten | Microsoft Docs
 description: Tässä tehtävässä rakennamme kangassovelluksen alusta alkaen. Tämä sovellus sallii käyttäjän määrittää esimiehen projekteihin ja päivittää projektin tietoja.
-author: mgblythe
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/12/2017
-ms.author: mblythe
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6b55fe94e7d781147e3e3511769c4d72ca3d90de
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 5125299c969db635a9e260ea7bac28f6a6e02bc0
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42842367"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799889"
 ---
 # <a name="create-a-canvas-app-to-manage-projects"></a>Kangassovelluksen luominen projektien hallitsemista varten
 > [!NOTE]
@@ -86,7 +86,7 @@ Sovelluksen pitäisi nyt näyttää samalta kuin seuraavassa kuvassa.
 
 ![Kaikki sovelluksen näytöt](./media/sharepoint-scenario-build-app/04-01-05-all-screens.png)
 
-## <a name="step-2-connect-to-a-sharepoint-list"></a>Vaihe 2: Yhdistä SharePoint-luetteloon
+## <a name="step-2-connect-to-a-sharepoint-list"></a>Vaihe 2: Yhdistäminen SharePoint-luetteloon
 Tässä vaiheessa yhdistämme **tuotetietojen** SharePoint-luetteloon. Käytämme vain yhtä luetteloa tässä sovelluksessa, mutta voit helposti yhdistää molempiin, jos haluat laajentaa sovellusta.
 
 1. Napsauta tai napauta vasemmassa siirtymispalkissa kohtaa **SelectTask**.
@@ -291,7 +291,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
    
    * **Korkeus**-ominaisuus = **60**
 
-   * **OnSelect**-ominaisuus = **Patch('Project Details', LookUp('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. Katso lisätietoja kohdasta [Kaavoja pintaa syvemmältä](#formula-deep-dive).
+   * **OnSelect** ominaisuuden = **Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. Katso lisätietoja kohdasta [Kaavoja pintaa syvemmältä](#formula-deep-dive).
 
    * Tämä kaava päivittää **Projektitiedot**-luettelon asettaen arvon PMAssigned-kentälle.
 
@@ -496,7 +496,7 @@ Nyt kun olemme lisänneet sovelluksen SharePoint-sivustoon, omaksumme projektin 
 ## <a name="formula-deep-dive"></a>Kaavoja pintaa syvemmältä
 Tämä on toinen valinnainen osa, jossa käsitellään PowerApps-kaavoja. Ensimmäisessä tutustuimme yhteen kaavoista, joita PowerApps luo selausvalikoimalle kolmen näytön sovelluksessa. Tässä syventävässä ohjeessa tarkastelemme kaavaa, jota käytämme toisen sovelluksen **AssignManager**-näytössä. Tässä on kaava:
 
-**Patch ( 'Project Details', LookUp ( 'Project Details', ID = Gallery1.Selected.ID ), {PMAssigned: TextInput1.Text} )**
+**Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**
 
 Mitä tämä kaava tekee? Kun valitset kohteen valikoimassa ja napsautat **OK**-painiketta, kaava päivittää **Projektitiedot**-luettelon asettaen **PMAssigned**-sarakkeen arvoon, jonka määritit tekstisyötteessä. Kaavassa käytetään funktioita sen tehtävien suorittamiseen:
 

@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 07/11/2018
+ms.date: 11/28/2018
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 926d2b4b0d24f07a9a4cd42216e7d737db57308c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 57a63ddf829e2a6c1062cad34e0f3c608d69afad
+ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42853838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57804213"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
@@ -41,51 +41,70 @@ Ennen kuin jaat sovelluksen, tallenna sen pilvipalveluun (ei paikallisesti) ja j
 
     ![Näytä sovellusluettelo](./media/share-app/file-apps.png)
 
-1. Valitse kolmea pistettä (...) sen sovelluksen kohdalla, jonka haluat jakaa ja valitse sitten **Jaa**.
+1. Valitse sovellus, jonka haluat jakaa valitsemalla sen kuvake.
 
-    ![Avaa jakonäyttö](./media/share-app/ellipsis-share.png)
+    ![Valitse sovellus](./media/share-app/select-app.png)
 
-1. Määritä, keiden käyttäjien tai Azure Active Directory -käyttöoikeusryhmien kanssa haluat jakaa sovelluksen.
+1. Valitse nauhan, **Jaa**.
+
+    ![Avaa jakonäyttö](./media/share-app/banner-share.png)
+
+1. Määritä nimi tai alias käyttäjän tai käyttöoikeusryhmän nimi Azure Active Directory, joiden kanssa haluat jakaa sovelluksen.
+
+    - Salli koko organisaation suorittaa sovelluksen (mutta ei muokata tai jakaa sen), kirjoita **kaikki** jakamisen paneelin.
+    - Voit jakaa sovelluksen ja aliaksia, kutsumanimi tai näistä yhdistelmää luettelo (esimerkiksi **Jane Doe &lt; jane.doe@contoso.com>**) Jos kohteita on erotettu toisistaan puolipisteellä. Jos useampi kuin yksi henkilö on sama nimi, mutta eri aliaksia, ensimmäisen löydetyn henkilön lisätään luetteloon. Työkaluvihje tulee näkyviin, jos nimi tai alias on jo määritetty, tai ei voi ratkaista. 
+    
+    ![Määritä käyttäjät ja muiden omistajien](./media/share-app/share-everyone.png)
 
     > [!NOTE]
-    > Et voi jakaa sovelluksia organisaatiosi jakeluryhmän tai organisaatiosi ulkopuolisten käyttäjien tai ryhmien kanssa.
+    > Et voi jakaa sovelluksen jakeluryhmän organisaatiosi tai käyttäjän tai ryhmän organisaatiosi ulkopuolella.
 
-    ![Määritä käyttäjät](./media/share-app/share-list.png)
+1. Jos haluat sallia, joille jaat sovelluksen muokata ja jakaa sen (lisäksi käynnissä sen), valitse **toinen omistaja** valintaruutu.
 
-    Voit myös jakaa sovelluksen koko organisaation kesken niin, että kaikki voivat käyttää sitä mutta eivät muokata tai jakaa sitä.
+    Et voi myöntää **toinen omistaja** oikeuksia suojaus ryhmän, jos voit [luoda sovelluksen ratkaisu](add-app-solution.md).
+    
+    > [!NOTE]
+    > Oikeuksia kaksi kukaan voit muokata sovellusta samaan aikaan. Jos yksi henkilö avaa sovellus muokkaamista varten, muut voivat suorittaa sen, mutta ei muokata.
 
-1. (valinnainen) Auttaaksesi käyttäjiä löytämään sovelluksesi, valitse valintaruutu lähettääksesi heille sähköpostikutsun.
+1. Jos sovelluksesi muodostaa yhteyden tietoihin, jonka käyttäjät tarvitsevat käyttöoikeudet, määritä ne.
 
-    Kutsun sisältää linkin, jonka avulla käyttäjät voivat suorittaa sovelluksen.
+    Sovelluksesi saattaa esimerkiksi yhdistää entiteetin CDS for Apps-tietokanta. Kun jaat olevan sovelluksen, jakamisen paneelin kehottaa kyseisen entiteetin suojauksen hallinta.
 
-    - Jos käyttäjä valitsee linkin pöytätietokoneessa, sovellus avautuu [Dynamics 365](http://home.dynamics.com):ssa.
-    - Jos käyttäjä valitsee linkin mobiililaitteessa, sovellus avautuu PowerApps Mobilessa.
+    ![Käyttöoikeuksien määrittäminen](./media/share-app/set-permissions.png)
 
-    Jos annat käyttäjille oikeuden muokata sovellusta, viesti sisältää myös erillisen linkin, joka avaa sovelluksen PowerApps Studiossa muokkaamista varten.
+    Katso lisätietoja entiteetin suojauksen hallinta [entiteetin käyttöoikeuksien hallinta](share-app.md#manage-entity-permissions) jäljempänä tässä aiheessa.
 
-    Riippumatta siitä, lähetätkö kutsun, käyttäjät voivat suorittaa sovelluksen [Dynamics 365:n](http://home.dynamics.com) AppSourcesta. Käyttäjät, joilla oikeus **muokata** sovellusta, voivat tehdä niin myös [Powerappsin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) kautta.
+1. Jos haluat löytää sovelluksesi, valitse ihmisten **lähettää sähköpostikutsun uusille käyttäjille** valintaruutu.
 
-1. Määritä kunkin käyttäjän tai käyttöoikeusryhmän käyttöoikeudet ja valitse sitten **Tallenna**.
+1. Jaa paneelin alareunasta Valitse **jakaa**.
 
-    - **Voivat käyttää**: käyttäjät voivat käyttää, mutta eivät jakaa sovellusta.
-    - **Voivat muokata**: käyttäjät voivat suorittaa sovelluksen, muokata sitä ja jakaa mukautetun version muiden käyttäjien kanssa.
+    Kaikille, joille jaoit sovelluksen sitä voi käyttää PowerApps Mobilessa mobiililaitteessa tai appsourcessa [Dynamics 365](https://home.dynamics.com) selaimessa. Muiden omistajien voit muokata ja jakaa sovelluksen [Powerappsin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-        ![Määritä käyttöoikeudet](./media/share-app/edit-use.png)
+    Jos lähetit sähköpostikutsun, kaikille, joille jaoit sovelluksen suorittaa sen valitsemalla linkki kutsussa.
 
-    Voit muuttaa käyttäjän tai käyttöoikeusryhmän käyttöoikeuksia valitsemalla käyttäjän tai ryhmän vieressä olevan alaspäin osoittavan nuolen ja määrittämällä sitten eri käyttöoikeudet.
+    - Jos käyttäjä valitsee olevaa linkkiä mobiililaitteessa, sovellus avautuu PowerApps Mobilessa.
+    - Jos käyttäjä valitsee pöytäkone linkkiä, sovellus avautuu selaimessa.
 
-    Jos haluat poistaa kaikki käyttäjän tai ryhmän käyttöoikeudet, valitse**x**-kuvake kyseisen käyttäjän tai ryhmän kohdalla.
+    Muiden omistajien, jotka saavat kutsun saada toisen linkki, joka avaa PowerApps Studio sovelluksen muokkaamista varten.
+
+Voit muuttaa käyttäjän tai käyttöoikeusryhmän käyttöoikeuksia valitsemalla hänen nimensä ja suorittamalla sitten jommankumman seuraavista toimista:
+
+- Suorita sovellus, mutta ei enää muokata tai jakaa sen muiden omistajien, poista **toinen omistaja** valintaruutu.
+- Lopettaa sovelluksen jakaminen kyseisen käyttäjän tai ryhmän, valitse Poista (x)-kuvaketta.
 
 ## <a name="security-group-considerations"></a>Käyttöoikeusryhmän huomioon otettavia seikkoja
 
 - Jos jaat sovelluksen käyttöoikeusryhmän kanssa, kaikki ryhmään kuuluvat ja siihen myöhemmin liittyvät jäsenet saavat käyttöoikeudet, jotka olet kyseiselle ryhmälle määrittänyt. Kaikki ryhmästä poistuvat menettävät käyttöoikeutensa, paitsi jos he kuuluvat toiseen ryhmään, jolla on käyttöoikeudet, tai annat heille käyttöluvan yksittäisinä käyttäjinä.
-- Jokaisella käyttöoikeusryhmän jäsenellä on samat käyttöoikeudet sovellukseen kuin ryhmällä yleensä. Voit kuitenkin halutessasi määrittää yhdelle tai useammalle ryhmän jäsenelle laajemmat käyttöoikeudet. Voit esimerkiksi antaa käyttöoikeusryhmälle A **Voivat käyttää** -käyttöoikeuden, mutta voit myös antaa tähän ryhmään kuuluvalle käyttäjälle B **Voivat muokata** -käyttöoikeuden. Jokainen käyttöoikeusryhmän jäsen voi suorittaa sovelluksen, mutta vain käyttäjä B voi muokata sitä. Jos annat käyttöoikeusryhmälle A **Voivat muokata** -käyttöoikeuden ja käyttäjälle B **Voivat käyttää** -käyttöoikeuden, kyseinen käyttäjä voi yhä muokata sovellusta.
+- Jokaisella käyttöoikeusryhmän jäsenellä on samat käyttöoikeudet sovellukseen kuin ryhmällä yleensä. Voit kuitenkin halutessasi määrittää yhdelle tai useammalle ryhmän jäsenelle laajemmat käyttöoikeudet. Esimerkiksi antaa käyttöoikeusryhmälle A oikeuksia suorittaa sovelluksen, mutta voit myös antaa käyttäjälle B kuuluu ryhmään, **toinen omistaja** käyttöoikeus. Jokainen käyttöoikeusryhmän jäsen voi suorittaa sovelluksen, mutta vain käyttäjä B voi muokata sitä. Jos annat käyttöoikeusryhmälle A **toinen omistaja** käyttöoikeuden ja käyttäjälle B oikeuksia suorittaa sovelluksen, kyseinen käyttäjä voi yhä muokata sovellusta.
 
 ## <a name="manage-entity-permissions"></a>Entiteetin käyttöoikeuksien hallinta
 
 ### <a name="common-data-service-for-apps"></a>Microsoft Common Data Service for Apps
 
-Jos luot Common Data Service (CDS) for Apps -palveluun perustuvan sovelluksen, sinun on varmistettava, että sitä suorittavilla käyttäjillä on sovelluksen hyödyntämälle entiteetille tai entiteeteille tarvittavat käyttöoikeudet. Kyseisten käyttäjien on siis kuuluttava käyttöoikeusrooliin, joka voi suorittaa sellaisia tehtäviä kuin luominen, lukeminen, kirjoittaminen ja/tai asianmukaisten tietueiden poistaminen. Monissa tapauksissa kannattaa luoda yksi tai useampia käyttöoikeusrooleja, jotka sisältävät tarkat oikeudet, joita sovellustesi käyttämiseen tarvitaan. Voit sitten määrittää näitä rooleja käyttäjille tarpeen mukaan. 
+Jos luot CDS for Appsin perustuvan sovelluksen, sinun on myös varmistaa, että käyttäjät, joille jaat sovelluksen entiteetin tai entiteetit, joita sovellus hyödyntää tarvittavia käyttöoikeuksia. Tarkemmin sanottuna käyttäjille, jotka on kuuluttava käyttöoikeusrooli, joka suorittaa tehtäviä, kuten luominen, lukeminen, kirjoittaminen ja tietueiden poistaminen. Monissa tapauksissa haluat luoda tarkka käyttöoikeuksilla voit suorittaa sovelluksen käyttäjät tarvitsevat vähintään yksi mukautettu käyttöoikeusrooli. Voit määrittää roolin sitten kukin käyttäjä tarpeen mukaan.
+
+> [!NOTE]
+> Tätä kirjoitettaessa Määritä käyttöoikeusroolit yksittäisten käyttäjien, mutta ei käyttöoikeusryhmiä.
 
 #### <a name="prerequisite"></a>Edellytys
 
@@ -93,13 +112,7 @@ Seuraavat kaksi toimenpidettä edellyttävät, että sinulla on CDS for Apps -ti
 
 #### <a name="create-a-security-role"></a>Käyttöoikeusroolin luominen
 
-1. [Kirjaudu sisään PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja varmista, että olet samassa ympäristössä kuin sovellus, jonka haluat jakaa.
-
-1. Valitse oikeasta yläkulmasta hammaspyöräkuvake ja valitse sitten **lisämukautukset**.
-
-    ![Avaa lisämukautukset-ruutu](media/share-app/advanced-customizations.png)
-
-1. Valitse **Käyttöoikeusroolit**-linkki.
+1. Valitse jakamisen paneelin **käyttöoikeudet** kohdassa **tietojen käyttöoikeudet**, ja valitse sitten **käyttöoikeusrooleja** linkki.
 
     ![Avaa käyttöoikeusroolit](media/share-app/security-roles.png)
 
@@ -109,7 +122,7 @@ Seuraavat kaksi toimenpidettä edellyttävät, että sinulla on CDS for Apps -ti
 
 1. Valitse yksi tai useita välilehtiä löytääksesi entiteetin tai entiteetit, joita sovellus käyttää, valitse sitten käyttöoikeudet, jotka haluat myöntää käyttöoikeusroolille.
 
-    Tässä kuvassa näkyy esimerkiksi, että käyttöoikeusrooli voi luoda, lukea, kirjoittaa ja poistaa tietueita Tili-entiteetissä, joka on näkyvillä **Ydintietueiden**-välilehdellä.
+    Esimerkiksi Tässä kaaviossa näkyy, **tärkeimmät tietueiden** välilehti sisältää **tilit** entiteetin ja käyttäjät, joihin tämä käyttöoikeusrooli on määritetty voi luoda, lukea, kirjoittaa ja poistaa tietueiden kyseisen entiteetin .
 
     ![Määritä käyttöoikeudet](media/share-app/grant-access.png)
 
@@ -117,7 +130,7 @@ Seuraavat kaksi toimenpidettä edellyttävät, että sinulla on CDS for Apps -ti
 
 #### <a name="assign-a-user-to-a-role"></a>Roolin määrittäminen käyttäjälle
 
-1. Avaa **Lisämukautukset**-ruutu edellä kuvatun tavan mukaisesti ja valitse sitten **Käyttäjät**-linkki.
+1. Valitse jakamisen paneelin **käyttöoikeudet** kohdassa **tietojen käyttöoikeudet**, ja valitse sitten **käyttäjät** linkki.
 
     ![Käyttäjät-linkki](media/share-app/open-users.png)
 
@@ -129,10 +142,10 @@ Seuraavat kaksi toimenpidettä edellyttävät, että sinulla on CDS for Apps -ti
 
 1. Valitse yläpalkista **roolien hallinta**.
 
-1. Valitse näyttöön avautuvasta valintaikkunasta**Common Data Service -käyttäjän** ja sovelluksesi edellyttämän roolin valintaruudut käyttäjälle ja valitse sitten **OK.**
+1. Valitse tulevassa valintaikkunassa valintaruudut **Common Data Service-käyttäjän** ja käyttäjä tarvitsee sovelluksen roolin ja valitse sitten **OK.**
 
     ![Roolin määrittäminen käyttäjälle](media/share-app/assign-users.png)
 
 ### <a name="common-data-service-previous-version"></a>Common Data Service (aiempi versio)
 
-Kun jaat sovelluksen, joka perustuu Common Data Servicen vanhempaan versioon, sinun täytyy jakaa palvelun suorituksenaikainen käyttöoikeus erikseen. Jos sinulla ei ole lupaa jakamiseen, ota yhteys ympäristön järjestelmänvalvojaan.
+Kun jaat sovelluksen, joka perustuu Common Data Service-vanhemman version, sinun täytyy jakaa palvelun suorituksenaikainen käyttöoikeus erikseen. Jos sinulla ei ole lupaa jakamiseen, ota yhteyttä ympäristön järjestelmänvalvojaan.

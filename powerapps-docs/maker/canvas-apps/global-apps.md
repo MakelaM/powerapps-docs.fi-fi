@@ -13,17 +13,17 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7ccd505d53377617bd13cda775cce489c554bc64
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 4aae487a0b2efe50e3ac6bd42c90d26de23fed60
+ms.sourcegitcommit: ead27300a1b7371136edee1842829ed87ca77a72
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862572"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57892272"
 ---
 # <a name="build-global-support-into-canvas-apps"></a>Globaalin tuen kehittäminen pohjaan perustuville sovelluksille
 PowerApps on maailmanlaajuinen tuote. Pohjaan perustuvia sovelluksia voi kehittää käytettäväksi monilla kielillä ja alueilla.
 
-Sovelluksia luotaessa ja käytettäessä PowerAppsin näyttämä teksti on käännetty useille eri kielille.  Näet valikkokohtia, valintaikkunoita, valintanauhan välilehtiä ja muuta tekstiä omalla kielelläsi.  Päivämäärien ja numeroiden kirjoittaminen ja näyttäminen on myös sovitettu omaan kieleesi ja alueeseesi.  Esimerkiksi pistettä "." käytetään desimaalierottimena joillain alueilla, kun taas toisilla alueilla käytetään pilkkua ",".  
+Sovelluksia luotaessa ja käytettäessä PowerAppsin näyttämä teksti on käännetty useille eri kielille.  Näet valikkokohtia, valintaikkunoita, valintanauhan välilehtiä ja muuta tekstiä omalla kielelläsi.  Päivämäärien ja numeroiden kirjoittaminen ja näyttäminen on myös sovitettu omaan kieleesi ja alueeseesi.  Esimerkiksi joitakin alueiden maailman käyttö **.** (piste) desimaalierottimena, kun taas toisilla **,** (pilkku).  
 
 Myös luomasi sovellukset voivat olla maailmanlaajuisia.  Käytä **[Language](functions/function-language.md)**-, **[Text](functions/function-text.md)**, **[Value](functions/function-value.md)**-, **[DateValue](functions/function-datevalue-timevalue.md)**-funktioita ja muita funktioita määrittämään, mitä näytetään ja käytetään syötteenä eri kielissä.   
 
@@ -38,11 +38,11 @@ Luontiympäristö sopeutuu tekijän kieliasetukseen.  Itse sovellus tallennetaan
 ### <a name="names-in-formulas"></a>Nimet kaavoissa
 Useimmat kaavan osat ovat aina englanniksi:
 
-* Funktionimet: **If**, **Navigate**, **Collect**, ...
-* Ohjausobjektin ominaisuusnimet: **Screen.Fill**, **Button.OnSelect**, **Textbox.Font**, ...
+* Funktio nimet: **Jos**, **siirtyä**, **kerätä**,...
+* Ohjausobjektin ominaisuusnimet: **Screen.Fill**, **Button.OnSelect**, **Textbox.Font**,...
 * Luettelointinimet: **Color.Aqua**, **DataSourceInfo.MaxValue**, **FontWeight.Bold**...
-* Signaalitietueet: **Compass.Heading**, **Location. Latitude**, **App.ActiveScreen**, ...
-* Operaattorit: **Parent**, **in**, **exactIn**, ...
+* Signaalin tietueiden: **Compass.Heading**, **sijainti. Latitude**, **App.ActiveScreen**, ...
+* Operaattorit: **Ylemmän tason**, **-**, **exactIn**,...
 
 Kun luontiympäristö lokalisoidaan, ohjausobjektin ja muiden objektien nimet näkyvät tekijän omalla kielellä.  Espanjaksi jotkin ohjausobjektin nimet näkyvät seuraavasti:
 
@@ -76,15 +76,15 @@ Muutos PowerApps-luetteloerottimessa vaikuttaa myös siihen, mitä Excel-luettel
 * kenttiin [tietueessa](working-with-tables.md#elements-of-a-table).
 * tietueisiin [arvotaulukossa](working-with-tables.md#inline-syntax).
 
-Katso esimerkiksi seuraavaa "en-US"-muotoista kaavaa:
+Otetaan esimerkiksi ilmaista kielen ja alueen, kuten japanin tai Yhdistyneessä kuningaskunnassa desimaalierottimena käytetään piste seuraava kaava:
 
-**If( Slider1.Value > 12.59, UpdateContext( { Validation: true, MovingOn: 1 } ); Navigate( "NextScreen", "" ), UpdateContext( { Validation: false } ) )**
+![PowerApps-kaavassa, jos Avaa sulkeen slider1 piste arvo on suurempi kuin 12 piste 59 pilkuin Ilmoita Avaa sulkeen ”kelvolliset”! Sulje pilkuin onnistui sulkeen puolipistein Navigate Avaa sulkeen ”NextScreen” pilkuin ei mitään Sulje sulkeen pilkuin Ilmoita Avaa sulkeen ”virheellinen, yritä uudelleen” pilkuin virhe Sulje sulkeen Sulje sulkeen](media/global-apps/operators-dot.png)
 
-Kielessä, jossa "," on desimaalierottimena, kaava näkyy tekijälle seuraavassa muodossa:
+Nyt tarkastella tämän saman kaavan kieli ja alue, jossa kuten ranska tai Espanja desimaalierottimena käytetään pilkkua:
 
-**If( Slider1.Value > 12,59; UpdateContext( { Validation: true; MovingOn: 1 } );; Navigate( "NextScreen", "" ); UpdateContext( { Validation: false } ) )**
+![PowerApps-kaavassa, jos Avaa sulkeen slider1 piste arvo on suurempi kuin 12 pilkuin 59 puolipistein Ilmoita Avaa sulkeen ”kelvolliset”! Sulje puolipistein onnistui sulkeen Navigate Avaa sulkeen ”NextScreen” None Sulje sulkeen puolipistein kaksinkertainen puolipiste puolipistein Ilmoita Avaa sulkeen ”virheellinen, yritä uudelleen” puolipistein virhe Sulje sulkeen Sulje sulkeen](media/global-apps/operators-comma.png)
 
-Huomaa, että ominaisuuden valintaoperaattori **.** kohdassa **Slider1.Value** on aina sama desimaalierottimesta riippumatta.
+Korostuksen näyttää operaattorit, joita vaihtaa kaksi versiota.  Huomaa, että ominaisuuden valintaoperaattori **.** (piste)- **Slider1.Value** on aina sama desimaalierottimesta desimaalierottimena on.
 
 Kaava ei muutu sisäisesti, vain sen näyttötapa ja tekijän muokkaustapa muuttuvat.  Kahta eri kieltä käyttävät käyttäjät voivat näyttää ja muokata samaa kaavaa, jolloin kumpikin näkee oman kielensä mukaiset erottimet ja operaattorit.
 
@@ -125,17 +125,17 @@ Jos haluat lisätietoja, katso **[Text](functions/function-text.md)**-funktion d
 ### <a name="reading-numbers-dates-and-times"></a>Numerojen, päivämäärien ja aikojen lukeminen
 Käyttäjän antamien numerojen, päivämäärien ja aikojen lukemiseen on kolme funktiota:
 
-* **[Value](functions/function-value.md)** – muuntaa tekstimerkkijonon numeron numeroarvoksi.
-* **[DateValue](functions/function-datevalue-timevalue.md)** – muuntaa päivämääräarvon merkkijonossa päivämäärä- ja aika-arvoksi.  Tekstimerkkijonossa määritetty aika ohitetaan.
-* **[TimeValue](functions/function-datevalue-timevalue.md)** – muuntaa aika-arvon merkkijonossa päivämäärä- ja aika-arvoksi.  Tekstimerkkijonossa määritetty päivämäärä ohitetaan.
-* **[DateTimeValue](functions/function-datevalue-timevalue.md)** – muuntaa päivämäärä- ja aika-arvon tekstimerkkijonossa päivämäärä- ja aika-arvoksi.  
+* **[Arvo](functions/function-value.md)**: Muuntaa tekstimerkkijonon numeron numeroarvoksi.
+* **[DateValue](functions/function-datevalue-timevalue.md)**: Muuntaa päivämääräarvon merkkijonossa päivämäärä-ja aika-arvoa.  Tekstimerkkijonossa määritetty aika ohitetaan.
+* **[TimeValue](functions/function-datevalue-timevalue.md)**: Muuntaa aika-arvon tekstimerkkijonossa päivämäärä ja aika-arvoa.  Tekstimerkkijonossa määritetty päivämäärä ohitetaan.
+* **[DateTimeValue](functions/function-datevalue-timevalue.md)**: Muuntaa tekstimerkkijonon päivämäärä ja aika-arvon päivämäärä ja aika-arvoa.  
 
 Jos olet käyttänyt Exceliä, nämä kaikki funktiot yhdistetään yhdeksi **Value**-funktioksi.  Ne on eroteltu tässä, koska PowerApps käyttää erityyppisiä päivämäärä- ja aika-arvoja ja numeroja.
 
 Kaikilla näillä funktioilla on samat argumentit:
 
 * *Merkkijono, pakollinen*: Käyttäjän antama merkkijono. Merkkijono esimerkiksi kirjoittaa **Tekstisyöte**-ohjausobjektiin ja lukee ohjausobjektista **Teksti**-ominaisuudella.
-* *Kieli, valinnainen*: Kieli, jolla *Merkkijono* tulkitaan.  Oletusarvoisesti tämä on käyttäjän kieliasetus.
+* *Kieli, valinnainen*: Kieli, jota tulkita *merkkijonon*.  Oletusarvoisesti tämä on käyttäjän kieliasetus.
 
 Esimerkki:
 

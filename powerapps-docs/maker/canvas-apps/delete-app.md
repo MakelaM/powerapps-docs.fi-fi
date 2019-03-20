@@ -1,24 +1,24 @@
 ---
 title: Kangassovelluksen poistaminen | Microsoft Docs
 description: Olemassa olevan kangassovelluksen poistaminen PowerAppsissa
-author: jamesol-msft
+author: linhtranms
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 10/16/2016
-ms.author: jamesol
+ms.author: litran
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5fd2551ff0fac40acf54c77d6750ab983ee5819e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 7b64914e436856196aa0a7021ba9c3772172ef59
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834752"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57798854"
 ---
 # <a name="delete-a-canvas-app-from-powerapps"></a>Kangassovelluksen poistaminen PowerAppsista
 Tässä aiheessa näytetään, kuinka voit poistaa kangassovelluksen PowerApps-tililtäsi ja niiden käyttäjien tileiltä, joille sovellus jaettiin.

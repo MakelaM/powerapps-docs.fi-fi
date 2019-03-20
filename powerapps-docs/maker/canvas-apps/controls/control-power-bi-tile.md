@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ba7d48104d9fdf85573029cc510af2c29d3f6ca0
-ms.sourcegitcommit: 5db6e3ac3a622de313a1102417397e126c3f92f2
-ms.translationtype: HT
+ms.openlocfilehash: 82a7089ec14753a70d52d09024d1df527dbeb866
+ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45640350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57804259"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Power BI -ruudun ohjausobjekti PowerAppsissa
 
 Ohjausobjekti, joka näyttää [Power BI](https://powerbi.microsoft.com) -ruudun sovelluksessa.
 
-Eikö sinulla ole Power BI:tä? [Rekisteröidy](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
+Eikö sinulla ole Power BI? [Rekisteröidy](https://docs.microsoft.com/power-bi/service-self-service-signup-for-power-bi).
 
 ## <a name="description"></a>Kuvaus
 
@@ -37,6 +37,20 @@ Kun jaat sovelluksen, jossa on Power BI -sisältöä, sinun on jaettava sovelluk
 ## <a name="performance"></a>Suorituskyky
 
 Yli kolmen Power BI -ruudun lataamista sovellukseen yhtä aikaa ei suositella. Voit hallita ruutujen lataamista ja poistamista muistista määrittämällä **LoadPowerBIContent**-ominaisuuden.
+
+## <a name="pass-a-parameter"></a>Välittää parametri
+
+Välittämällä yksittäinen parametri sovelluksesta, voit suodattaa tulokset, jotka näkyvät Power BI-ruudun. Vain merkkijonoarvoja ja equals-operaattoria, ja suodattimen eivät ehkä toimi taulukon tai sarakkeen nimessä on välilyöntejä.
+
+Voit välittää yhden suodattimen arvon muokkaamalla arvo **TileURL** ominaisuutta, joka noudattaa seuraavaa syntaksia:
+
+```"https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>" ```
+
+Arvoon Liitä seuraavaa syntaksia:
+
+```&$filter=<TableName>/<ColumnName> eq "<Value>" ```
+
+Parametrin suodattaa raportin tietojoukon arvo Jos ruutu on peräisin.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 

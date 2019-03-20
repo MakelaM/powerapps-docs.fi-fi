@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f7aed7812890482bb781e2d5ff7eac8c996b8837
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: d48559ee3a54cbb723621a0e36f09cb4a1d0fe3b
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803431"
 ---
 # <a name="understand-behavior-formulas-for-canvas-apps-in-powerapps"></a>Toimintakaavojen ymmärtäminen PowerAppsin pohjaan perustuvissa sovelluksissa
 
@@ -30,18 +30,18 @@ Mitä tässä yhteydessä tarkoittaa se, kun käyttäjä valitsee **[painike](co
 
 Valitsemalla **[painike](controls/control-button.md)**-ohjausobjektin käyttäjä käynnistää toimintojen tai tapahtumien sarjan, joka muuttaa sovelluksen tilaa:
 
-* Vaihda esiin tulevaa näyttöä: **[Back](functions/function-navigate.md)**- ja **[Navigate](functions/function-navigate.md)**-funktiot.
-* Hallitse [signaalia](functions/signals.md): **[Enable](functions/function-enable-disable.md)**- ja **[Disable](functions/function-enable-disable.md)** funktiot.
-* Päivitä, korvaa tai poista [tietolähteen](working-with-data-sources.md) kohteita: **[Refresh](functions/function-refresh.md)**-, **[Update](functions/function-update-updateif.md)**-, **[UpdateIf](functions/function-update-updateif.md)**-, **[Patch](functions/function-patch.md)**-, **[Remove](functions/function-remove-removeif.md)**- ja **[RemoveIf](functions/function-remove-removeif.md)**-funktiot.
-* Päivitä [kontekstimuuttuja](working-with-variables.md#create-a-context-variable): **[UpdateContext](functions/function-updatecontext.md)**-funktio.
-* Luo, päivitä tai poista [kokoelman](working-with-data-sources.md#collections) kohteita: **[Collect](functions/function-clear-collect-clearcollect.md)**-, **[Clear](functions/function-clear-collect-clearcollect.md)**- ja **[ClearCollect](functions/function-clear-collect-clearcollect.md)**-funktiot.
+* Vaihda esiin tulevaa näyttöä: **[Takaisin](functions/function-navigate.md)**  ja **[Navigate](functions/function-navigate.md)** funktioita.
+* Ohjausobjekti [signaalin](functions/signals.md): **[Ota käyttöön](functions/function-enable-disable.md)**  ja **[käytöstä](functions/function-enable-disable.md)** funktioita.
+* Päivitä, Päivitä tai poista kohteita [tietolähteen](working-with-data-sources.md): **[Päivitä](functions/function-refresh.md)**,  **[päivitys](functions/function-update-updateif.md)**,  **[UpdateIf](functions/function-update-updateif.md)**, **[korjaustiedosto](functions/function-patch.md)**,  **[Poistaa](functions/function-remove-removeif.md)**, **[RemoveIf](functions/function-remove-removeif.md)** funktioita.
+* Päivitys [kontekstimuuttujan](working-with-variables.md#use-a-context-variable):  **[UpdateContext](functions/function-updatecontext.md)**  funktio.
+* Luo, Päivitä tai poista kohteita [kokoelma](working-with-data-sources.md#collections):  **[Kerää](functions/function-clear-collect-clearcollect.md)**,  **[Tyhjennä](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)** funktioita.
 
 Koska nämä funktiot muuttavat sovelluksen tilaa, niitä ei voi automaattisesti laskea uudelleen. Voit käyttää niitä kaavoissa **[OnSelect](controls/properties-core.md)**-, **[OnVisible](controls/control-screen.md)**- ja **[OnHidden](controls/control-screen.md)**-ominaisuuksille sekä muille **On...**-ominaisuuksille, joita kutsutaan toimintakaavoiksi.
 
 ### <a name="more-than-one-action"></a>Useampi kuin yksi toiminto
 Luo suoritettavien toimintojen luettelo käyttämällä puolipisteitä. Esimerkiksi, haluat ehkä päivittää kontekstimuuttujan ja palata sitten edelliseen näyttöön:
 
-* **UpdateContext( { x: 1 } ); Back()**
+* **UpdateContext ({x: 1 } ); Back()**
 
 Toiminnot suoritetaan siinä järjestyksessä, jossa ne näkyvät kaavassa.  Seuraava funktio ei käynnisty, ennen kuin nykyinen toiminto on suoritettu. Jos ilmenee virhe, seuraavat funktiot eivät ehkä käynnisty.
 

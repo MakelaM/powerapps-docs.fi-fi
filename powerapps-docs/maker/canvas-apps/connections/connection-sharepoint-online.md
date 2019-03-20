@@ -1,24 +1,24 @@
 ---
 title: SharePoint-yhteyden yleiskatsaus | Microsoft Docs
 description: Katso SharePointin käytettävissä olevat funktiot, vastaukset ja esimerkit
-author: sarafankit
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 07/12/2017
-ms.author: ankitsar
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0a13d2602f06f436d4b805669b004f1ee63daeb9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: c7f973b9a62e50ea646999d6d10b185fb02306dd
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836731"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57798923"
 ---
 # <a name="connect-to-sharepoint-from-powerapps"></a>Yhdistä PowerAppsista SharePointiin
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
@@ -62,7 +62,7 @@ PowerApps voi lukea sarakkeita, jotka sisältävät välilyöntejä, mutta väli
 
     Sovelluksessa on oletuksena kolme näyttöä: yksi tietueiden selaamiseen, yksi tietueen tietojen näyttämiseen ja yksi tietueen luomiseen tai päivittämiseen. Kun sovellus on luotu, haluat todennäköisesti mukauttaa [selausnäyttöä](../customize-layout-sharepoint.md) ja [tieto- ja muokkausnäyttöjä](../customize-forms-sharepoint.md) omien tarpeidesi mukaan.
 
-    **Huomautus:** Jos SharePoint-luettelosi sisältää **Valinta**-, **Haku**- tai **Henkilö tai ryhmä** -sarakkeen, katso kohta [Tietojen näyttäminen valikoimassa](connection-sharepoint-online.md#show-data-in-a-gallery) jäljempänä tässä aiheessa.
+    **Huomautus:** Jos SharePoint-luettelo sisältää **valinta**, **Lookup**, tai **henkilö tai ryhmä** sarakkeen, katso [tietojen näyttäminen valikoimassa](connection-sharepoint-online.md#show-data-in-a-gallery) jäljempänä tässä aiheessa.
 
 * Luo oma sovelluksesi alusta alkaen [yhdistämällä SharePointiin](../connect-to-sharepoint.md), tutustumalla käsitteisiin kohdassa [Sovelluksen luominen alusta alkaen](../get-started-create-from-blank.md) ja käyttämällä niitä SharePointissa Excelin sijaan.
 
@@ -91,7 +91,7 @@ PowerApps voi lukea sarakkeita, jotka sisältävät välilyöntejä, mutta väli
 
        ![Määritä tunnistetiedot](./media/connection-sharepoint-online/specify-creds.png)
 
-       **Huomautus:** Jos sinulla ei ole asennettuna paikallista tietoyhdyskäytävää, [asenna se](../gateway-reference.md) ja päivitä yhdyskäytäväluettelo napsauttamalla tai napauttamalla päivityskuvaketta.
+       **Huomautus:** Jos sinulla ei ole asennettuna paikallista tietoyhdyskäytävää, [asenna sellainen](../gateway-reference.md) ja päivitä yhdyskäytäväluettelo napsauttamalla tai napauttamalla päivityskuvaketta.
 
        Napsauta tai napauta **Valitse yhdyskäytävä** -kohdassa yhdyskäytävää, jota haluat käyttää.
 
@@ -128,7 +128,7 @@ Näytä tietoja tämäntyyppisistä sarakkeista valikoimassa käyttämällä kaa
 
     Voit myös näyttää erilaista tietoa käyttäjistä, kuten sähköpostiosoitteet tai työnimikkeet. Voit näyttää luettelon kaikista valinnoista määrittämällä **ThisItem.[ColumnName].** (piste lopussa).
 
-    **Huomautus:** Jos käytät **CreatedBy**-saraketta, määritä **ThisItem.Author.DisplayName** näyttämään luettelossa kohteita luoneiden käyttäjien näyttönimet. Jos käytät **ModifiedBy**-saraketta, määritä **ThisItem.Editor.DisplayName** näyttämään luettelon kohteita muuttaneiden käyttäjien näyttönimet.
+    **Huomautus:** Varten **CreatedBy** saraketta, Määritä **ThisItem.Author.DisplayName** näyttämään luettelossa kohteita luoneiden käyttäjien näyttönimet. Jos käytät **ModifiedBy**-saraketta, määritä **ThisItem.Editor.DisplayName** näyttämään luettelon kohteita muuttaneiden käyttäjien näyttönimet.
 
 * Jos käytät **Managed Metadata** -saraketta, määritä **ThisItem.[ColumnName].Label** näyttämään tiedot kyseisessä sarakkeessa.
 

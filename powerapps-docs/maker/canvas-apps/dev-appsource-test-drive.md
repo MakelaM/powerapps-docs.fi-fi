@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5920c40396ab3ff8c1691b5d683615f41f6a7509
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 590dc1707d080c1790c00f236df820559fe8f5a9
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863733"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308405"
 ---
 # <a name="let-customers-test-drive-your-canvas-app-on-appsource"></a>Anna asiakkaiden koekäyttää pohjaan perustuvia sovelluksiasi AppSourcessa
 
@@ -42,7 +42,7 @@ Sovelluksen rakentaminen Test Drive -ratkaisua varten on kuin sovelluksen luomin
 PowerApps tukee suoraan sovellusten rakentamista upotettujen tietojen avulla, joten tarvitset vain sovelluksen käyttämät esimerkkitiedot. Nämä tiedot tulee sisällyttää Excel-tiedostoon yhtenä tai useampana taulukkona. PowerAppsissa noudetaan sitten Excel-taulukkojen tiedot sovellukseen ja niitä käsitellään sovelluksessa, ei ulkoisen yhteyden kautta. Alla kuvatussa kolmivaiheisessa prosessissa näytetään, kuinka tiedot noudetaan ja kuinka niitä käytetään sovelluksessa.
 
 ### <a name="step-1-import-data-into-the-app"></a>Vaihe 1: Tietojen tuominen sovellukseen
-Oletetaan, että sinulla on Excel-tiedosto, jossa on kaksi taulukkoa: **SiteInspector** ja **SitePhotos**.
+Oletetaan, että sinulla on Excel-tiedosto, jossa kaksi taulukkoa: **SiteInspector** ja **SitePhotos**.
 
 ![Tuotavat Excel-taulukot](./media/dev-appsource-test-drive/excel-file.png)
 
@@ -54,13 +54,14 @@ Nyt taulukot ovat tietolähteinä sovelluksessasi.
 
 ![Excel-taulukot tuotuina tietolähteinä](./media/dev-appsource-test-drive/data-sources.png)
 
-### <a name="step-2-handling-read-only-and-read-write-scenarios"></a>Vaihe 2: Vain luku- ja luku ja kirjoitus -skenaarioiden käsittely
+### <a name="step-2-handling-read-only-and-read-write-scenarios"></a>Vaihe 2: Vain luku- ja luku ja kirjoitus-skenaarioiden käsittely
 Tuodut tiedot ovat *staattisia*, eli niitä voidaan vain lukea. Jos sovelluksesi on vain luku -sovellus (eli se vain näyttää tietoja käyttäjälle), viittaa taulukoihin suoraan sovelluksessa. Jos esimerkiksi haluat käyttää **SiteInspector**-taulukon **Title**-kenttää, käytä kaavassasi tekstiä **SiteInspector.Title**.
 
 Jos sovelluksesi sallii myös kirjoittamisen, nouda tiedot ensin taulukoista *kokoelmaan*, joka on PowerAppsin taulukkomuotoinen tietorakenne. Voit sitten työskennellä kokoelman kanssa taulukon sijaan. Tietojen noutaminen **SiteInspector**- ja **SitePhotos**-taulukoista **SiteInspectorCollect**- ja **SitePhotosCollect**-kokoelmiin:
 
-```
-ClearCollect(SiteInspectorCollect,SiteInspector); ClearCollect(SitePhotosCollect,SitePhotos)
+```powerapps-dot
+ClearCollect( SiteInspectorCollect, SiteInspector ); 
+ClearCollect( SitePhotosCollect, SitePhotos )
 ```
 
 Kaava tyhjentää molemmat kokoelmat ja kerää tiedot taulukoista asianmukaiseen kokoelmaan:
@@ -71,27 +72,39 @@ Kaava tyhjentää molemmat kokoelmat ja kerää tiedot taulukoista asianmukaisee
 
 Jos haluat käyttää **Title**-kenttää, käytä kaavassasi tekstiä **SiteInspectorCollect.Title**.
 
-### <a name="step-3-add-update-and-delete-data-in-your-app"></a>Vaihe 3: Tietojen lisääminen, päivitys ja poistaminen sovelluksessa
+### <a name="step-3-add-update-and-delete-data-in-your-app"></a>Vaihe 3: Lisää, päivittää ja poistaa sovelluksen tiedot
 Olet nähnyt, kuinka tietoja voidaan lukea suoraan kokoelmasta. Nyt näytämme, kuinka voit lisätä, päivittää tai poistaa kokoelman tietoja:
 
 **Lisää kokoelmaan rivi** käyttämällä kaavaa [Collect( DataSource, Item, ... )](../canvas-apps/functions/function-clear-collect-clearcollect.md):
 
-```
-Collect(SiteInspectorCollect,{ID:Value(Max(SiteInspectorCollect, ID)+1),
-    Title:TitleText.Text,SubTitle:SubTitleText.Text,Description:DescriptionText.Text)
+```powerapps-dot
+Collect( SiteInspectorCollect,
+    {
+        ID: Value( Max( SiteInspectorCollect, ID ) + 1 ),
+        Title: TitleText.Text,
+        SubTitle: SubTitleText.Text,
+        Description: DescriptionText.Text
+    }
+)
 ```
 
 **Päivitä kokoelman rivi** käyttämällä kaavaa [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](../canvas-apps/functions/function-update-updateif.md):
 
-```
-UpdateIf(SiteInspectorCollect,ID=record.ID,
-    {Title:TitleEditText.Text,SubTitle:SubTitleEditText.Text,Description:DescriptionEditText.Text)
+```powerapps-dot
+UpdateIf( SiteInspectorCollect,
+    ID = record.ID,
+    {
+        Title: TitleEditText.Text,
+        SubTitle: SubTitleEditText.Text,
+        Description: DescriptionEditText.Text
+    }
+)
 ```
 
 **Poista kokoelmasta rivi** käyttämällä kaavaa [RemoveIf( DataSource, Condition [, ...] )](../canvas-apps/functions/function-remove-removeif.md):
 
-```
-RemoveIf(SiteInspectorCollect,ID=record.ID)
+```powerapps-dot
+RemoveIf( SiteInspectorCollect, ID = record.ID )
 ```
 
 > [!NOTE]

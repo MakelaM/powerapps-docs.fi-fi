@@ -1,36 +1,40 @@
 ---
 title: Etsi ominaisuuksia | Microsoft Docs
 description: Etsi ominaisuuksia ohjausobjektin, luokan tai aakkosjärjestyksen mukaan.
-author: gregli-msft
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 03/17/2016
-ms.author: gregli
+ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6c69d32f21bb5d1222122c4ec129d765b390d98f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 968722e672c6f169c4a9e2e87be959aa48e23c86
+ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863121"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58073667"
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Ohjausobjektit ja ominaisuudet PowerAppsissa
+
 Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuksia. Kullakin ohjausobjektityypillä on erilainen ominaisuusjoukko. Jotkin ominaisuudet, kuten **korkeus** ja **leveys**, ovat yhteisiä melkein kaikentyyppisille ohjausobjekteille, mutta jotkin ominaisuudet, kuten **CheckboxSize**, koskevat vain yhdenlaista ohjausobjektia.
 
 ## <a name="controls"></a>Ohjausobjektit
+
 **[Lisää kuva](controls/control-add-picture.md)** – Lataa kuvia paikallisesta laitteesta tietolähteeseen lähettämistä varten.
 
 **[Liitteet](controls/control-attachments.md)** – Lataa ja lähetä tiedostoja paikallisesta laitteesta tietolähteeseen.
 
 **[Ääni](controls/control-audio-video.md)** – Toista äänileike tai videoleikkeen ääniosa.
 
-**[Viivakoodiskanneri (kokeellinen)](controls/control-barcodescanner.md)** – Skannaa viivakoodi laitteella, jossa on kamera.
+**[Viivakoodiskanneri (kokeellinen)](controls/control-barcodescanner.md)**  – tarkistaa koodit (vanha tai vanhentunut) selaimessa.
+
+**[Viivakoodiskanneri](controls/control-new-barcode-scanner.md)**  – Skannaa viivakoodeja, QR-koodeja ja tietojen matriisi-koodit Android tai iOS-laitteessa.
 
 **[Painike](controls/control-button.md)** – Käsittele sovellusta napsauttamalla tai napauttamalla sitä.
 
@@ -56,7 +60,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Muokattu lomake](controls/control-form-detail.md)** – Muokkaa ja luo tietueita tietolähteessä lomakkeen avulla.
 
-**[Entiteettilomake](entity-form-control.md)** – Kokeellinen ominaisuus: lisää dynaamisia lomakkeita, joita käyttäjät voivat tarkastella, selata ja muokata Common Data Servicestä.
+**[Entiteettilomake](entity-form-control.md)**  -kokeellinen ominaisuus: Lisää dynaamisia lomakkeita, jossa käyttäjät voivat tarkastella, siirry ja muokata Common Data Service-relaatiotietoja.
 
 **[Vienti](controls/control-export-import.md)** – Vie tiedot käytettäviksi muualla PowerAppsissa.
 
@@ -88,7 +92,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Luokitus](controls/control-rating.md)**  – Ilmaise arvo 1:n ja määritetyn luvun välillä.
 
-**[Tekstimuotoilueditori (kokeellinen)](controls/control-richtexteditor.md)**  – Mahdollistaa RTF-tekstin muotoilun sovelluksen käyttäjille.
+**[Tekstimuotoilueditori](controls/control-richtexteditor.md)**  – mahdollistaa RTF-tekstin muotoilun sovelluksen käyttäjille.
 
 **[Näyttö](controls/control-screen.md)** – Näytä ja päivitä tietyn tehtävän tietoja.
 
@@ -106,7 +110,10 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Video](controls/control-audio-video.md)** – Toista videoleike paikallisesta tiedostosta, tietolähteestä tai YouTubesta.
 
+**[WWW-Viivakoodiskanneri (kokeellinen)](controls/control-barcodescanner.md)**  – vanha Viivakoodiskanneri, joka on vanhentunut, mutta voi olla hyötyä tarkistus koodit selaimessa.
+
 ## <a name="common-properties-by-category"></a>Yhteiset ominaisuudet luokittain
+
 **[Väri ja reuna](controls/properties-color-border.md)**  – Määritä ohjausobjektin väri ja reuna, joka voi muuttua käyttäjän käsitellessä sitä.
 
 **[Ydin](controls/properties-core.md)** – Määritä, voiko käyttäjä nähdä ohjausobjektin ja käsitellä sitä.
@@ -118,7 +125,9 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Teksti](controls/properties-text.md)** – Määritä, miten teksti näkyy ohjausobjekteissa, kuten fontin ominaisuudet, tasaus ja rivin korkeus.  
 
 ## <a name="all-properties"></a>Kaikki ominaisuudet
+
 ### <a name="a"></a>A
+
 **[ActualZoom](controls/control-pdf-viewer.md)** – Ohjausobjektin todellinen zoomaus, joka voi erota **Zoomaa**-ominaisuudella pyydetystä zoomauksesta.  Koskee **[PDF-katseluohjelma](controls/control-pdf-viewer.md)**-ohjausobjektia.
 
 **[Tasaa](controls/properties-text.md)**  – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.  Koskee useita ohjausobjekteja.
@@ -134,6 +143,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **AutoStart** – Alkaako ääni- tai video-ohjausobjekti toistaa leikettä automaattisesti, kun käyttäjä siirtyy tämän ohjausobjektin sisältävään näyttöön.  Koskee **[Ääni](controls/control-audio-video.md)**-, **[Ajastin](controls/control-timer.md)**- ja **[Video](controls/control-audio-video.md)**-ohjausobjekteja.
 
 ### <a name="b"></a>B
+
 **[BackgroundImage](controls/properties-visual.md)** – Näytön taustalla näkyvän kuvatiedoston nimi.  Koskee **[Näyttö](controls/control-screen.md)**-ohjausobjektia.
 
 **[BorderColor](controls/properties-color-border.md)** – Ohjausobjektin reunan väri.  Koskee useita ohjausobjekteja.
@@ -145,6 +155,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Kirkkaus](controls/control-camera.md)** – Miten paljon valoa käyttäjä näkee kuvassa.  Koskee **[Kamera](controls/control-camera.md)**-ohjausobjektia.
 
 ### <a name="c"></a>C
+
 **[CalculateOriginalDimensions](controls/control-image.md)** – Ottaa käyttöön ominaisuudet **[OriginalHeight](controls/control-image.md)** ja **[OriginalWidth](controls/control-image.md)**.  Koskee **[Kuva](controls/control-image.md)**-ohjausobjektia.
 
 **[Kamera](controls/control-camera.md)** – Sovelluksen käyttämän kameran numerotunnus, jos laitteessa on useampi kuin yksi kamera.  Koskee **[Kamera](controls/control-camera.md)**-ohjausobjektia.
@@ -172,6 +183,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[CurrentPage](controls/control-pdf-viewer.md)** – Näytettävän PDF-tiedoston sivunumero.  Koskee **[PDF-katseluohjelma](controls/control-pdf-viewer.md)**-ohjausobjektia.
 
 ### <a name="d"></a>D
+
 **[Tiedot](controls/control-export-import.md)** – Paikalliseen tiedostoon vietävän kokoelman nimi.  Koskee **[Vienti](controls/control-export-import.md)**-ohjausobjektia.
 
 **[DataField](controls/control-card.md)** – Sen tietueessa olevan kentän nimi, jonka tämä kortti näyttää ja jota se muokkaa.  Koskee **[Kortti](controls/control-card.md)**-ohjausobjektia.
@@ -203,6 +215,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Kesto](controls/control-timer.md)** – Miten kauan ajastin on käynnissä.  Koskee **[Ajastin](controls/control-timer.md)**-ohjausobjektia.
 
 ### <a name="e"></a>E
+
 **[EndYear](controls/control-date-picker.md)** – Viimeisin vuosi, jolle käyttäjä voi määrittää päivämäärävalitsin-ohjausobjektin arvon.  Koskee **[Päivämäärävalitsin](controls/control-date-picker.md)**-ohjausobjektia.
 
 **Virhe** – Tämän ominaisuuden merkitys vaihtelee ohjausobjektin mukaan:
@@ -216,6 +229,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Hajota](controls/control-pie-chart.md)** – Lohkojen etäisyys toisistaan ympyräkaaviossa.  Koskee **[Ympyräkaavio](controls/control-pie-chart.md)**-ohjausobjektia.
 
 ### <a name="f"></a>F
+
 **[Täyttö](controls/properties-color-border.md)** – Ohjausobjektin taustaväri.  Koskee useita ohjausobjekteja.
 
 **[FindNext](controls/control-pdf-viewer.md)** – Etsii seuraavan **FindText**-esiintymän asiakirjasta.  Koskee **[PDF-katseluohjelma](controls/control-pdf-viewer.md)**-ohjausobjektia.
@@ -226,12 +240,14 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Fontti](controls/properties-text.md)**  – Tekstissä käytetyn fonttiperheen nimi.  Koskee useita ohjausobjekteja.
 
-**[FontWeight](controls/properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.  Koskee useita ohjausobjekteja.
+**[FontWeight](controls/properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.  Koskee useita ohjausobjekteja.
 
 ### <a name="g"></a>G
+
 **[GridStyle](controls/control-column-line-chart.md)** – Näytetäänkö pysty- tai viivakaaviossa sen x-akseli, y-akseli, molemmat tai ei kumpaakaan.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**- ja **[Viivakaavio](controls/control-column-line-chart.md)**-ohjausobjekteja.
 
 ### <a name="h"></a>H
+
 **[HandleActiveFill](controls/control-slider.md)** – Liukusäätimen kahvan väri, kun käyttäjä muuttaa sen arvoa.  Koskee **[Liukusäädin](controls/control-slider.md)**-ohjausobjektia.
 
 **[HandleFill](controls/control-slider.md)** – Vaihtopainikkeen tai liukusäätimen kahvan (osa, jonka sijainti muuttuu) väri.  Koskee **[Liukusäädin](controls/control-slider.md)**-ohjausobjektia.
@@ -251,6 +267,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[HTMLText](controls/control-html-text.md)** – HTML-tekstin ohjausobjektissa näkyvä teksti, joka voi sisältää HTML-tunnisteita.  Koskee **[HTML-teksti](controls/control-html-text.md)**-ohjausobjektia.
 
 ### <a name="i"></a>I
+
 **[Kuva](controls/properties-visual.md)** – Kuvan, äänen tai mikrofonin ohjausobjektissa näkyvän kuvan nimi.  Koskee **[Ääni](controls/control-audio-video.md)**-, **[Kuva](controls/control-image.md)**-, **[Mikrofoni](controls/control-microphone.md)**- ja **[Video](controls/control-audio-video.md)**-ohjausobjekteja.
 
 **[ImagePosition](controls/properties-visual.md)** – Kuvan tai ohjausobjektin asettelu (**Täytä**, **Sovita**, **Venytä**, **Vierekkäin** tai **Keskitä**), jos se ei ole saman kokoinen kuin näyttö.  Koskee useita ohjausobjekteja.
@@ -274,6 +291,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[ItemsGap](controls/control-column-line-chart.md)** – Pylväskaavion pylväiden välinen etäisyys.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**-ohjausobjektia.
 
 ### <a name="l"></a>L
+
 **[LabelPosition](controls/control-pie-chart.md)** – Selitteiden sijainti ympyräkaaviossa suhteessa sen lohkoihin.  Koskee **[Ympyräkaavio](controls/control-pie-chart.md)**-ohjausobjektia.
 
 **[LastSubmit](controls/control-form-detail.md)** – Viimeinen onnistuneesti lähetetty tietue, mukaan lukien palvelimen luomat kentät.  Koskee **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjektia.
@@ -285,6 +303,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Silmukka](controls/control-audio-video.md)** – Alkaako ääni- tai videoleike automaattisesti alusta, kun sen toistaminen lopetetaan.  Koskee **[Ääni](controls/control-audio-video.md)**- ja **[Video](controls/control-audio-video.md)**-ohjausobjekteja.
 
 ### <a name="m"></a>M
+
 **[Merkit](controls/control-column-line-chart.md)** – Näytetäänkö pylväs- tai viivakaaviossa kunkin arvopisteen arvo.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**- ja **[Viivakaavio](controls/control-column-line-chart.md)**-ohjausobjekteja.
 
 **[MarkerSuffix](controls/control-column-line-chart.md)** – Teksti, joka näytetään jokaisen pylväskaavion arvon jälkeen, jos pylväskaavion **[Merkit](controls/control-column-line-chart.md)**-ominaisuudeksi on määritetty **true**.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**-ohjausobjektia.
@@ -308,11 +327,13 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 * **[Tekstinsyöttö](controls/control-text-input.md)**-ohjausobjekti – Ohjausobjekti on **SingleLine**-, **MultiLine**- tai **Salasana**-tilassa.
 
 ### <a name="n"></a>N
+
 **[NavigationStep](controls/control-gallery.md)** – Kuinka paljon valikoimaa vieritetään, jos sen **[ShowNavigation](controls/control-gallery.md)**-ominaisuudeksi on asetettu **true** ja käyttäjä valitsee valikoiman jommassakummassa päässä olevan siirtymisnuolen.  Koskee **[Valikoima](controls/control-gallery.md)**-ohjausobjektia.
 
 **[NumberOfSeries](controls/control-column-line-chart.md)** – Pylväs- tai viivakaavion edustamien tietosarakkeiden määrä.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**- ja **[Viivakaavio](controls/control-column-line-chart.md)**-ohjausobjekteja.
 
 ### <a name="o"></a>O
+
 **[OnChange](controls/properties-core.md)** – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).  Koskee useita ohjausobjekteja.
 
 **OnCheck** – Miten sovellus reagoi, kun valintaruudun tai vaihtopainikkeen arvo muuttuu arvoksi **true**.  Koskee ohjausobjekteja **[Valintaruutu](controls/control-check-box.md)** ja **[Vaihda](controls/control-toggle.md)**.
@@ -354,6 +375,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Ylivuoto](controls/control-text-box.md)** – Tuleeko selitteeseen näkyviin vierityspalkki, jos sen **[Rivitys](controls/control-text-box.md)**-ominaisuuden arvoksi on asetettu **true** ja ohjausobjektin **[Teksti](controls/properties-core.md)**-ominaisuuden arvo sisältää enemmän merkkejä kuin ohjausobjekti pystyy näyttämään kerralla.  Koskee **[Otsikko](controls/control-text-box.md)**-ohjausobjektia.
 
 ### <a name="p"></a>P
+
 **[Täyttö](controls/properties-size-location.md)** – Tuonti- tai vientipainikkeen tekstin ja painikkeen reunojen välinen etäisyys.  Koskee ohjausobjekteja **[Lisää kuva](controls/control-add-picture.md)**, **[Vienti](controls/control-export-import.md)** ja **[Tuonti](controls/control-export-import.md)**.
 
 **[PaddingBottom](controls/properties-size-location.md)** – Ohjausobjektin tekstin ja alareunan välinen etäisyys.  Koskee useita ohjausobjekteja.
@@ -381,6 +403,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[PressedFill](controls/properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.  Koskee useita ohjausobjekteja.
 
 ### <a name="r"></a>R
+
 **[RadioBackgroundFill](controls/control-radio.md)** – Valintanapin ympyröiden taustaväri.  Koskee **[Radio](controls/control-radio.md)**-ohjausobjektia.
 
 **[RadioBorderColor](controls/control-radio.md)** – Valintanapin ympyrän väri kullekin valintanapin vaihtoehdolle.  Koskee **[Radio](controls/control-radio.md)**-ohjausobjektia.
@@ -412,6 +435,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Nollaa](controls/properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.  Koskee useita ohjausobjekteja.  Katso myös **[Nollaa](functions/function-reset.md)**-funktio.
 
 ### <a name="s"></a>S
+
 **Valittu** – Valittu kohde.  Koskee ohjausobjekteja **[Avattava luettelo](controls/control-drop-down.md)** ja **[Valikoima](controls/control-gallery.md)**.
 
 **[SelectedDate](controls/control-date-picker.md)** – Tällä hetkellä päivämäärä-ohjausobjektissa valittu päivämäärä.  Koskee **[Päivämäärävalitsin](controls/control-date-picker.md)**-ohjausobjektia.
@@ -455,6 +479,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Yliviivaus](controls/properties-text.md)** – Yliviivataanko ohjausobjektissa näkyvä teksti.  Koskee useita ohjausobjekteja.
 
 ### <a name="t"></a>T
+
 **[TemplateFill](controls/control-gallery.md)** – Valikoiman taustaväri.  Koskee **[Valikoima](controls/control-gallery.md)**-ohjausobjektia.
 
 **[TemplatePadding](controls/control-gallery.md)** – Valikoiman kohteiden välinen etäisyys.  Koskee **[Valikoima](controls/control-gallery.md)**-ohjausobjektia.
@@ -472,6 +497,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Läpinäkyvyys](controls/control-image.md)** – Läpinäkyvyys eli missä määrin kuvan takana olevat ohjausobjektit pysyvät näkyvissä.  Koskee **[Kuva](controls/control-image.md)**-ohjausobjektia.
 
 ### <a name="u"></a>U
+
 **[Underline](controls/properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattua.  Koskee useita ohjausobjekteja.
 
 **[Tallentamaton](controls/control-form-detail.md)** – True, jos **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjekti sisältää käyttäjän tekemiä muutoksia, joita ei ole tallennettu.  Koskee **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjektia.
@@ -481,6 +507,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Päivitykset](controls/control-form-detail.md)** – Lomakeohjausobjektiin ladatun tietueen arvot, jotka kirjoitetaan takaisin tietolähteeseen.  Koskee **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjektia.
 
 ### <a name="v"></a>V
+
 **Kelvollinen** – Sisältääkö **[Kortti](controls/control-card.md)**- tai **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjekti kelvollisia merkintöjä, jotka voidaan lähettää tietolähteeseen.  Koskee **[Kortti](controls/control-card.md)**- ja **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjekteja.
 
 **[Arvo](controls/properties-core.md)** – Syöteohjausobjektin arvo.  Koskee ohjausobjekteja **[Valintaruutu](controls/control-check-box.md)**, **[Valintanappi](controls/control-radio.md)**, **[Liukusäädin](controls/control-slider.md)** ja **[Vaihda](controls/control-toggle.md)**.
@@ -494,6 +521,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Näkyvissä](controls/properties-core.md)** – Onko ohjausobjekti näkyvissä vai piilossa.  Koskee useita ohjausobjekteja.
 
 ### <a name="w"></a>W
+
 **[Leveys](controls/properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.  Koskee useita ohjausobjekteja.
 
 **[WidthFit](controls/properties-size-location.md)** – kasvaako ohjausobjekti automaattisesti vaakasuunnassa täyttämään tyhjän tilan säilön ohjausobjektissa, kuten **[Muokattu lomake](controls/control-form-detail.md)** -ohjausobjektissa. Jos monelle kortille on asetettu tämän ominaisuuden arvoksi **true**, tyhjä tila jaetaan niiden kesken. Lisätietoja on kohdassa [Tutustu tietolomakkeiden asetteluun](working-with-form-layout.md).
@@ -503,11 +531,13 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[WrapCount](controls/control-gallery.md)**  – Montako tietuetta näkyy kussakin valikoiman kohteessa.  Koskee **[Valikoima](controls/control-gallery.md)**-ohjausobjektia.
 
 ### <a name="x"></a>X
+
 **[X](controls/properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys. Koskee useita ohjausobjekteja. Jos **[Kortti](controls/control-card.md)**-ohjausobjekti on säilössä, jossa on useita sarakkeita, tämä ominaisuus määrittää sarakkeen, johon kortti tulee näkyviin.
 
 **[XLabelAngle](controls/control-column-line-chart.md)** – Pylväs- tai viivakaavion x-akselin alapuolella olevien otsikoiden kulma.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**- ja **[Viivakaavio](controls/control-column-line-chart.md)**-ohjausobjekteja.
 
 ### <a name="y"></a>Y
+
 **[Y](controls/properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys. Koskee useita ohjausobjekteja. Jos **[Kortti](controls/control-card.md)**-ohjausobjekti on säilössä, jossa on useita rivejä, tämä ominaisuus määrittää rivin, johon kortti tulee näkyviin.
 
 **[YAxisMax](controls/control-column-line-chart.md)** – Viivakaavion y-akselin enimmäisarvo.  Koskee **[Viivakaavio](controls/control-column-line-chart.md)**-ohjausobjektia.
@@ -517,4 +547,5 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[YLabelAngle](controls/control-column-line-chart.md)** – Pylväs- tai viivakaavion y-akselin vieressä olevien otsikoiden kulma.  Koskee **[Pylväskaavio](controls/control-column-line-chart.md)**- ja **[Viivakaavio](controls/control-column-line-chart.md)**-ohjausobjekteja.
 
 ### <a name="z"></a>Z
+
 **Zoomaa** – Prosenttiosuus, jonka verran kameran kuvaa tai PDF-katseluohjelman tiedoston näkymää suurennetaan.  Koskee **[Kamera](controls/control-camera.md)**- ja **[PDF-katseluohjelma](controls/control-pdf-viewer.md)**- ohjausobjekteja.

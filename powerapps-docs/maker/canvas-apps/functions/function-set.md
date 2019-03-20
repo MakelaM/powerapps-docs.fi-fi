@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 96b8b8276b385a49bd29be150b9a41ba08ba67ba
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3292d03a55fe6296b8efdf2377efde5f2b4ad36e
+ms.sourcegitcommit: 676cfa415f67e2e8fcfcf30fab83fc118a6f3210
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862814"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "57800487"
 ---
 # <a name="set-function-in-powerapps"></a>PowerAppsin Set-funktio
 Asettaa yleisen muuttujan arvon.
@@ -26,14 +26,14 @@ Asettaa yleisen muuttujan arvon.
 ## <a name="overview"></a>Yleiskatsaus
 Käytä **Set**-funktiota yleisen muuttujan arvon asettamiseen. Yleinen muuttuja säilyttää tilapäisesti tietoja, kuten montako kertaa käyttäjä on valinnut painikkeen tai tietotoiminnon tuloksen.  
 
-Yleiset muuttujat ovat koko sovelluksen käytettävissä kaikissa sen näytöissä.  Tämä on yksinkertaisin muuttujatyyppi, ja se täyttää tarpeet useimmissa tapauksissa.  On myös olemassa kontekstimuuttujia, jotka toimivat yhdessä ruudussa, sekä kokoelmia, jotka mahdollistavat taulukoiden rivitason muokkaukset.  Katso lisätietoja näistä vaihtoehdoista aiheesta [Muuttujien käyttäminen](../working-with-variables.md).
+Yleiset muuttujat ovat koko sovelluksen käytettävissä kaikissa sen näytöissä. Tämä on yksinkertaisin muuttujatyyppi, ja se täyttää tarpeet useimmissa tapauksissa. On myös olemassa kontekstimuuttujia, jotka toimivat yhdessä ruudussa, sekä kokoelmia, jotka mahdollistavat taulukoiden rivitason muokkaukset. Lisätietoja näistä vaihtoehdoista, tarkista [Tutustu muuttujiin](../working-with-variables.md).
 
-PowerApps perustuu kaavoihin, jotka lasketaan automaattisesti uudelleen, kun käyttäjä on vuorovaikutuksessa sovelluksen kanssa.  Yleiset muuttujat eivät tarjoa tätä etua, ja ne voivat vaikeuttaa sovelluksesi laatimista ja ymmärtämistä.  Ennen kuin käytät yleistä muuttujaa, tutustu kohtaan [Muuttujien käyttäminen](../working-with-variables.md).
+PowerApps perustuu kaavoihin, jotka lasketaan automaattisesti uudelleen, kun käyttäjä on vuorovaikutuksessa sovelluksen kanssa. Kaavat, jotka ovat riippuvaisia muuttuja päivitetään automaattisesti, kun ne muuttuvat. Kuitenkin muuttujan automaattisesti päivitetä kaavan arvo käyttänyt **määrittää** funktio muutoksia. Tämä edellyttää päivitettävä manuaalisesti muuttujan, joka voi olla virhe, jotka altistuvat paketin ja muiden ymmärtää, ettei sovelluksen laatija. Ennen kuin käytät yleistä muuttujaa, tutustu kohtaan [Tutustu muuttujiin](../working-with-variables.md).
 
 ## <a name="description"></a>Kuvaus
-Yleiset muuttujat luodaan implisiittisesti, kun **Set**-funktiota käytetään.  Eksplisiittinen määrittely ei ole välttämätön.  Jos poistat kaikki yleisen muuttujan **Set**-funktiot, yleinen muuttuja lakkaa olemasta.  Poista muuttujasarjan arvot määrittämällä sen arvoksi [**Blank**-funktion](function-isblank-isempty.md) tulos.
+Yleiset muuttujat luodaan implisiittisesti, kun **Set**-funktiota käytetään. Eksplisiittinen ilmoitusta ei tarvita. Jos poistat kaikki **määrittää** yleisen muuttujan Funktiot, Yleinen muuttuja lakkaa olemasta. Poista muuttujasarjan arvot, aseta sen arvoksi tuloksen [ **tyhjä** funktion](function-isblank-isempty.md).
 
-Voit nähdä-muuttujien arvot, määritelmät ja käyttötarkoitukset Tiedosto-valikon Muuttujat-näkymässä luontiympäristössä.
+Voit nähdä-muuttujien arvot, määritelmät ja käyttää kanssa muuttujat-näkymässä **tiedoston** PowerApps Studio-valikosta.
 
 Kuten myöhemmin tämän artikkelin esimerkeissä osoitetaan, yleiset muuttujat voivat sisältää useita erilaisia tietoja, kuten seuraavat:
 

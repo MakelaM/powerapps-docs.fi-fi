@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 06/11/2018
+ms.date: 12/17/2018
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 218fb97f6cd523275c0ba296ea120d487cf67e4c
-ms.sourcegitcommit: c26976af24a3e510e4eced78cf5c48cc2f71cae2
+ms.openlocfilehash: 12d13ecfb8c60a1c1ccb23496dd9dc7f8cf42814
+ms.sourcegitcommit: a1568c9a09d83efe50c032b73eaa18c7db723e86
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025667"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57804443"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>SharePoint-luettelolomakkeen mukauttaminen PowerAppsin avulla
 
@@ -29,81 +29,79 @@ Tämän artikkelin ohjeita noudattamalla luot yksinkertaisen luettelon, jonka av
 > [!NOTE]
 > Jos **Mukauta lomakkeita** -vaihtoehto ei ole käytettävissä tai se ei toimi oikein luettelosi kanssa, siinä voi olla tietotyyppejä, joita [PowerApps ei tue](connections/connection-sharepoint-online.md#known-issues). Et myöskään voi siirtää lomakettasi toiseen luetteloon tai [ympäristöön](working-with-environments.md).
 
-## <a name="prerequisites"></a>Edellytykset
+## <a name="create-a-list"></a>Luo luettelo
 
-Luo SharePoint-sivustossa luettelo, johon lisäät seuraavat sarakkeet:
+SharePoint-sivuston Luo luettelo ja lisää sitten näiden sarakkeiden luetteloon:
 
-- **Tuotenimi** (yksi tekstirivi)
 - **Tiedot** (kyllä/ei)
 - **Hinta** (valuutta)
 - **Saatavuus** (päivämäärä ilman aikaa)
 - **Väri** (vaihtoehto)
 
-## <a name="open-the-form-in-powerapps"></a>Lomakkeen avaaminen PowerAppsissa
+> [!div class="mx-imgBorder"]
+> ![Valitse sivuston sisältö > Uusi > luettelon, kirjoita Luettelonimi ja valitse Luo. Kussakin sarakkeessa, valitse Lisää sarake, Määritä luettelotyypin (Kyllä/ei, valuutta, päivämäärä, valinta), Määritä Luettelonimi (tiedot, hinta, käytettävyyteen, väri) ja valitse Tallenna.](./media/customize-list-form/create-list.gif)
 
-1. Avaa luomasi luettelo ja valitse komentopalkissa sitten **Uusi**.
+## <a name="open-the-form"></a>Avaa lomake
 
-    Lomake avautuu ja näyttää lisäämäsi kentät sekä kentät **Otsikko** ja **Liitteet**.
-
-1. Valitse lähellä lomakkeen yläreunaa **Mukauta**.
+1. Valitse komentopalkissa **Powerappsin**, ja valitse sitten **mukauttaminen**.
 
     PowerApps Studio avautuu samaan selaimen välilehteen.
 
 1. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, valitse **Ohita**.
 
-## <a name="hide-extra-fields"></a>Ylimääräisten kenttien piilottaminen
+> [!div class="mx-imgBorder"]
+> ![Valitse komentopalkissa PowerApps ja valitse Mukauta lomaketta. PowerApps Studio avautuu samaan selaimen välilehteen. Jos Tervetuloa PowerApps Studio-valintaikkuna avautuu, valitse Ohita.](./media/customize-list-form/create-form.gif)
 
-Näytön keskellä PowerApps näyttää lomakkeesi, mutta se sisältää joitakin kenttiä, joiden et tarvitse.
+## <a name="move-and-remove-a-field"></a>Siirrä ja Poista kenttä
 
-- Tyhjennä **Tiedot**-ruudussa **Otsikko**- ja **Liitteet**-kenttien valintaruudut.
+1. Vedä **Käytettävyysryhmän** kentän kentät-luettelon loppuun.
 
-    Nämä kentät katoavat lomakkeesta, ja vain sinun lisäämäsi kentät jäävät jäljelle.
+    Kentät näkyvät siinä järjestyksessä, jotka olet määrittänyt.
 
-    ![Kenttäluettelo](./media/customize-list-form/field-list.png)
+1. Osoita **liitteet** kentän, valitse kolme pistettä (...), joka näkyy ja valitse sitten **poistaa**.
+
+    Kenttä, jonka määrität katoaa lomakkeesta.
+
+> [!div class="mx-imgBorder"]
+> ![Vedä kenttiä luettelon loppuun käytettävyys-kenttä. Osoita liitteet-kenttä, valitse kolme pistettä (...), joka näkyy ja valitse sitten Poista.](./media/customize-list-form/move-remove-fields.gif)
 
 ## <a name="set-conditional-formatting"></a>Ehdollisen muotoilun määrittäminen
 
 Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviksi vain, jos **Tiedot**-asetuksena on kyllä.
 
-1. Valitse **Hinta**-kortti napsauttamalla tai napauttamalla sitä.
+1. Laajenna vasemmassa siirtymispalkissa **Details_DataCard1**, ja Huomaa numero, joka näkyy lopussa **DataCardValue**.
 
-    ![Saatavuus-kortin valitseminen](./media/customize-list-form/select-card.png)
+1. Määritä **näkyvyyden** -ominaisuuden **väri**, **Käytettävyysryhmän**, ja **hinta** kortit tämä kaava (korvataan tarvittaessa numero, sitä, joka edellisessä vaiheessa):
 
-1. Valitse ominaisuusluettelossa **Visible**.
-
-    ![Visible-ominaisuuden valitseminen](./media/customize-list-form/select-property.png)
-
-1. Kirjoita tai liitä kaavariville tämä kaava:
-
-    **If(DataCardValue3.Value = true, true)**
-
-    ![Visible-ominaisuuden arvon määrittäminen](./media/customize-list-form/build-formula.png)
-
-1. Toista kolme viimeistä vaihetta **Saatavuus**- ja **Väri**-korteille.
+    **Jos (DataCardValue2.Value = true, true)**
 
 1. Pidä Alt-näppäintä painettuna ja valitse **Tiedot**-vaihtopainike (napsauttamalla tai napauttamalla sitä) useita kertoja.
 
     Kolme määrittämääsi kenttää tulevat näkyviin korttiin ja katoavat siitä.
 
-1. (valinnainen) Mukauta lomakettasi useilla muilla tavoin, kuten näillä:
+> [!div class="mx-imgBorder"]
+> ![Vasemmassa siirtymispalkissa Huomaa numero, joka näkyy DataCardValue lopussa. Ominaisuuden näkyvyyden väriä, käytettävyys ja hinta kortit tämä kaava. Pidä Alt-näppäintä ja valitse tiedot-ohjausobjektin useita kertoja.](./media/customize-list-form/conditional-format.gif)
 
-    - Muuta sen kokoa, suuntaa tai molempia (esimerkiksi [lomakkeen leventämistä varten](set-aspect-ratio-portrait-landscape.md)).
-    - Lisää ohjausobjekti, jonka avulla käyttäjät voivat [ladata liitteitä](controls/properties-text.md).
-    - Luo [hakukenttä](sharepoint-lookup-fields.md).
-
-## <a name="save-publish-and-show-the-form"></a>Lomakkeen tallentaminen, julkaiseminen ja näyttäminen
+## <a name="save-and-publish-the-form"></a>Tallenna ja julkaise lomake
 
 1. Avaa **Tiedosto**-valikko, valitse **Tallenna** ja valitse sitten **Julkaise SharePointiin** kahdesti.
 
 1. Valitse vasemmassa yläkulmassa, paluunuoli ja valitse sitten **Takaisin SharePointiin**.
 
-1. Avaa mukautettu lomakkeesi valitsemalla komentopalkissa **Uusi**.
+> [!div class="mx-imgBorder"]
+> ![Avaa tiedosto-valikon, valitse Tallenna ja valitse sitten Julkaise SharePointiin kahdesti. Vasemmassa yläkulmassa Valitse takaisin-nuoli ja valitse sitten takaisin SharePointiin.](./media/customize-list-form/save-form.gif)
 
-1. Voit piilottaa ja näyttää kolme viimeistä kenttää valitsemalla **Tiedot**-valintapainikkeen useita kertoja.
+## <a name="further-customize-your-form"></a>Mukauttaa lomaketta enemmän
 
-Jos haluat [mukauttaa lomaketta lisää](sharepoint-form-integration.md), avaa se, valitse **Mukauta** lähellä lomakkeen yläreunaa ja tee, tallenna ja julkaise haluamasi muutokset.
+1. Avaa luettelostasi, valitse **uusi** -komennon ja sitten Valitse **Mukauta** yläosan lomakkeen.
 
-Jos luot vähintään yhden kohteen tällä lomakkeella, **Otsikko**-kenttä on tyhjä. Voit piilottaa tämän kentän muokkaamalla oletusnäkymää.
+1. Mukauta lomakettasi eri tavoin, kuten, jotka kuvaavat aiheet:
+
+    - Muuta sen kokoa, suuntaa tai molempia (esimerkiksi [lomakkeen leventämistä varten](set-aspect-ratio-portrait-landscape.md)).
+    - Lisää ohjausobjekti, jonka avulla käyttäjät voivat [ladata liitteitä](controls/properties-text.md).
+    - Luo [hakukenttä](sharepoint-lookup-fields.md).
+
+    Lisätietoja: [SharePoint-lomakkeiden integrointi](sharepoint-form-integration.md)
 
 ## <a name="use-the-default-form"></a>Oletuslomakkeen käyttäminen
 
@@ -135,39 +133,39 @@ Jos luot vähintään yhden kohteen tällä lomakkeella, **Otsikko**-kenttä on 
 
 ### <a name="forms-vs-apps"></a>Lomakkeet ja sovellukset
 
-**K:** Miten mukautettu lomake eroaa erillisestä sovelluksesta, jonka luon SharePointista tai PowerAppsista?
+**K:** Miten mukautetun lomakkeen eroaa erillisestä sovelluksesta, jonka luon SharePointista tai Powerappsista?
 
-**V:** Jos mukautat SharePoint-luettelon lomakkeen, lomake ei näy sovelluksena PowerApps Studiossa eikä PowerApps Mobilessa. Voit avata lomakkeen vain luettelosta, jota varten olet luonut sen.
+**A:** Jos mukautat lomakkeen SharePoint-luetteloa varten, lomakkeen ei näy sovellusta PowerApps Studio tai PowerApps Mobilessa. Voit avata lomakkeen vain luettelosta, jota varten olet luonut sen.
 
-**K:** Milloin minun pitäisi mukauttaa lomaketta SharePoint-luettelon tietojen hallintaa varten, ja milloin minun pitäisi luoda erillinen sovellus?
+**K:** Kun lomakkeen SharePoint-luettelon tiedonhallintaa varten tulee mukauttaminen ja milloin minun tulisi luoda erillisen sovelluksen?
 
-**V:** Mukauta lomaketta, jos haluat käyttäjien hallitsevan tietoja poistumatta SharePointista (esimerkiksi pöytäkoneen selaimessa). Luo sovellus, jos haluat käyttäjien hallitsevan tietoja SharePointin ulkopuolella (esimerkiksi mobiililaitteessa).
+**A:** Lomakkeen mukauttaminen, jos haluat käyttäjien tietojen hallitsemiseksi SharePoint poistumatta (esimerkiksi selaimessa työpöydän). Luo sovellus, jos haluat käyttäjien hallitsevan tietoja SharePointin ulkopuolella (esimerkiksi mobiililaitteessa).
 
-**K:** Voinko mukauttaa lomaketta ja luoda sovelluksen samalle luettelolle?
+**K:** Voit mukauttaa lomaketta ja luoda sovelluksen samalle luettelolle?
 
-**V:** Kyllä.
+**A:** Kyllä.
 
-**K:** Voinko mukauttaa luetteloa ja luoda sovelluksen käyttämällä samoja ominaisuuksia?
+**K:** Voit mukauttaa luettelon ja luo sovellus käyttämällä samoja ominaisuuksia?
 
-**V:** Kyllä.
+**A:** Kyllä.
 
-**K:** Voinko mukauttaa lomaketta muussa ympäristössä kuin organisaationi oletusympäristössä?
+**K:** Oletusympäristön muussa ympäristössä lomakkeen mukauttaminen organisaationi
 
-**V:** Et.
+**A:** Ei.
 
 ### <a name="manage-your-custom-form"></a>Mukautetun lomakkeen hallinta
 
 **K:** Miten voin helposti jakaa lomakkeen muiden kanssa?
 
-**V:** Avaa lomake, valitse **Kopioi linkki** ja lähetä sitten linkki kenelle tahansa, jonka haluat käyttävän lomaketta.
+**A:** Avaa lomake, valitse **Kopioi linkki**, ja lähetä sitten linkin kaikille, jota haluat käyttää lomakkeen.
 
-**K:** Voinko päivittää lomakkeeni niin, että muut eivät näe muutoksia?
+**K:** Lomakkeen päivittää tekemättä muut näkevät muutokseni
 
-**V:** Kyllä. Voit muuttaa lomakettasi ja tallentaa niin monta kertaa kuin haluat, mutta muutoksesi eivät näy muille, ennen kuin valitset **Julkaise SharePointiin** kahdesti.
+**A:** Kyllä. Voit muuttaa lomakettasi ja tallentaa niin monta kertaa kuin haluat, mutta muutoksesi eivät näy muille, ennen kuin valitset **Julkaise SharePointiin** kahdesti.
 
-**K:** Jos teen virheen mukauttaessani luettelolomaketta, voinko palauttaa aiemman version?
+**K:** Jos voinko mukauttaa luettelolomakkeen ja tulee virhe, voinko palauttaa aiemman version?
 
-**V:** Kyllä.
+**A:** Kyllä.
 
 1. Avaa luettelosi, valitse komentopalkissa **PowerApps** ja valitse sitten **Mukauta lomakkeita**.
 
@@ -183,31 +181,31 @@ Jos luot vähintään yhden kohteen tällä lomakkeella, **Otsikko**-kenttä on 
     > [!NOTE]
     > Jos saat virheviestin, jossa kerrotaan, että palauttaminen epäonnistui, koska lomake on toisen käyttäjän lukitsema, odota, kunnes lukitus poistetaan, ja yritä uudelleen.
 
-**K:** Voinko siirtää luetteloni yhdestä luettelosta toiseen?
+**K:** Voin siirtää lomakkeen yhdestä luettelosta toiseen?
 
-**V:** Et.
+**A:** Ei.
 
 ### <a name="administer-your-custom-form"></a>Mukautetun lomakkeen hallinnointi
 
-**K:** Miten voin jakaa lomakkeeni?
+**K:** Miten voin jakaa lomakkeen?
 
-**V:** Sinun ei tarvitse jakaa lomaketta. Lomake perii käyttöoikeudet SharePoint-luettelosta. Kun olet tehnyt kaikki muutokset lomakkeeseen, [julkaise se takaisin SharePointiin](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint), jotta muut voivat käyttää sitä.
+**A:** Sinun ei tarvitse jakaa lomaketta - lomake perii käyttöoikeudet SharePoint-luettelosta. Kun olet tehnyt kaikki muutokset lomakkeeseen, [julkaise se takaisin SharePointiin](customize-list-form.md#save-and-publish-the-list-form-back-to-sharepoint), jotta muut voivat käyttää sitä.
 
-**K:** Kuka voi mukauttaa lomakkeita?
+**K:** Kuka voi mukauttaa lomakkeet?
 
-**V:** Kuka tahansa, jolla on SharePoint-käyttöoikeudet liitetyn luettelon hallitsemiseen, suunnittelemiseen tai muokkaamiseen.
+**A:** Kuka tahansa, jolla hallinta, suunnittelemiseen tai muokkaamiseen liittyvä luettelo SharePoint-käyttöoikeudet.
 
-**K:** Tarvitsenko PowerApps-käyttöoikeuden mukautettujen luettelolomakkeiden luomiseen tai käyttämiseen?
+**K:** Tarvitsenko PowerApps-käyttöoikeus, voit luoda tai käyttää mukautettuja luettelolomakkeita?
 
-**V:** Tarvitset [Office 365 -palvelupaketin, joka sisältää PowerAppsin](../../administrator/pricing-billing-skus.md#licenses).
+**A:** Sinun [Office 365-sopimus, joka sisältää Powerappsin](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus.md#licenses).
 
-**K:** Mitä tapahtuu, kun vieraskäyttäjät käyttävät luetteloa, jossa on mukautettu lomake?
+**K:** Mitä tapahtuu, kun vierailevien käyttäjien luettelo, jossa on mukautettua lomaketta?
 
-**V:** Vieraskäyttäjät saavat virheviestin, jos he yrittävät käyttää PowerAppsin avulla mukautettua luettelolomaketta.
+**A:** Vieraskäyttäjät saavat virheviestin, jos he yrittävät käyttää luettelolomakkeen, joka on mukautettu Powerappsin avulla.
 
-**K:** Miten saan järjestelmänvalvojana luettelon kaikista organisaationi mukautetuista lomakkeista?
+**K:** Järjestelmänvalvoja miten saan kaikkien mukautettujen lomakkeiden luettelo organisaationi?
 
-**V:** Jos olet PowerAppsin vuokraajajärjestelmänvalvoja tai sinulla on ympäristön järjestelmänvalvojan oikeudet organisaatiosi oletusarvoiseen PowerApps-ympäristöön, toimi seuraavasti:
+**A:** Jos olet vuokraajan järjestelmänvalvoja, powerappsin, tai sinulla on ympäristön järjestelmänvalvojan oikeudet organisaatiosi oletusarvoisessa PowerApps-ympäristössä, toimi seuraavasti:
 
 1. Valitse [PowerApps-hallintakeskuksessa](https://admin.powerapps.com) ja valitse ympäristöluettelosta organisaatiosi oletusympäristö.
 

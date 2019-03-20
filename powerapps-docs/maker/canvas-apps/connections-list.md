@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f7a053aff947ffd543381956cf725a7e656d8a65
-ms.sourcegitcommit: ebe0a9c41b693a2134e9198ffc7e7a8eabee4330
-ms.translationtype: HT
+ms.openlocfilehash: 29de71e413a83a1c0939796f7b65bd42d4aca3c4
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "51276368"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57801982"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>PowerAppsin kangassovellusten liitinten yleiskatsaus
 Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteeseen* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerApps sisältää liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi kangassovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).
@@ -35,7 +35,7 @@ Voit määrittää, mitä tietoja sovelluksesi noutaa muokkaamalla tietojasi nä
 
  ![Laajennetun tietolähteen Kohteet-ominaisuus](./media/connections-list/ItemPropertyExpanded.png)
 
-Saat lisätietoja kaavojen muokkaamisesta taulukoiden avulla näistä ohjeaiheista:
+Saat lisätietoja siitä, miten voit mukauttaa kaavan taulukoilla on seuraavissa ohjeaiheissa:
 
   [Tutustu tietolähteisiin PowerAppsissa](working-with-data-sources.md)<br> 
   [Sovelluksen luominen Excel-tiedoista](get-started-create-from-data.md)<br> 
@@ -53,13 +53,16 @@ Jos liittimesi tarjoaa toimintoja, sinun on silti valittava tietolähde kuten ai
 
 Jos haluat käsitellä mukautettuja tietopäivityksiä toimintoliittimissä, luo **Patch**-funktion sisältävän kaavan. Määritä kaavassa toiminto ja kentät, jotka sidotaan toimintoon.  
 
-Saat lisätietoja kaavojen mukauttamisesta mukautettuja päivityksiä varten seuraavista ohjeaiheista:
+Saat lisätietoja mukauttamisesta kaavan mukautetun päivitykset on seuraavissa ohjeaiheissa:
 
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Päivitä](functions/function-update-updateif.md)
 
+> [!NOTE]
+>  **PowerApps ei toimi dynaamisen rakenteen**. Lauseen dynaamisen rakenteen viittaa saman toiminnon saattaa palauttaa eri taulukkoon, jossa on erilaisia sarakkeita. Ehtoja, jotka saattavat aiheuttaa sarakkeet vaihdella taulukot ovat toiminnon syöteparametrit, käyttäjä tai rooli, joka suorittaa toiminnon ja ryhmä, jossa käyttäjä toimii, mm. Esimerkiksi SQL Server-tallennettuja toimintosarjoja saattaa palauttaa erilaisia sarakkeita, jos käyttää eri syötteitä. Dynaamisen rakenteen toimintojen connector-dokumentaatio näyttää **tämän toiminnon tulokset ovat dynaamisia.** palautusarvoja. Sen sijaan Microsoft Flow toimii dynaamisen rakenteen ja voi tarjota tarpeisiin työ-ympärille.
+
 ## <a name="popular-connectors"></a>Suositut liittimet
 
-Tämä taulukko sisältää linkit suosituimpien liitinten lisätietoihin. Katso luettelo kaikista liittimistä kohdasta [Kaikki liittimet](#all-standard-connectors).
+Tämä taulukko sisältää linkit suosituimpien liitinten lisätietoihin. Katso luettelo kaikista liittimistä kohdasta [Kaikki liittimet](https://docs.microsoft.com/connectors/).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |

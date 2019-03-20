@@ -1,24 +1,24 @@
 ---
 title: Kangassovelluksen muokkaaminen | Microsoft Docs
 description: Vaiheittaiset ohjeet kangassovellusten muokkaamiseen ja istunnon lukitustilanteisiin PowerAppsissa.
-author: karthik-1
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 05/19/2017
-ms.author: sharik
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 97dc8b245da9dc48a67f22243f11cf26b7bd6d8e
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 03a6f9939f5de5e4eb3f4abd941a725ce24b46fb
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835071"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57798831"
 ---
 # <a name="edit-a-canvas-app-in-powerapps"></a>Kangassovelluksen muokkaaminen PowerAppsissa
 Muokkaa mitä tahansa kangassovellusta, jonka olet luonut tai johon sinulla on **voi muokata** -käyttöoikeudet. Voit muokata sovellusta PowerApps Studiossa. Jos yrität muokata sovellusta, joka on avoimena muokkausta varten muualla, viesti kertoo, onko se jo sinulla avattuna, vai onko se toisella käyttäjällä.

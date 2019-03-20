@@ -1,224 +1,136 @@
 ---
-title: Luo ja päivitä kokoelma | Microsoft Docs
-description: Luo kokoelmia ja lisää sarakkeita olemassa oleviin kokoelmiin PowerAppsissa
-author: lonu
+title: Luo ja Päivitä kokoelma pohjaan perustuvassa sovelluksessa | Microsoft Docs
+description: Luo kokoelma pohjaan perustuvan sovelluksen, Lisää kohteita kokoelmaan ja vähintään yksi kohteiden poistaminen
+author: aftowen
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/30/2015
-ms.author: lonu
+ms.date: 01/28/2019
+ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c1043d32fc4ab4213d2ac2e690ef69e13fec8ed3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.openlocfilehash: aca1b78262ac359689d66f687f902103740fa3a6
+ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831645"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "57800303"
 ---
-# <a name="create-and-update-a-collection-in-your-app"></a>Luo ja päivitä kokoelma sovelluksessasi
-Kokoelman avulla voit tallentaa tietoja, joita voidaan käyttää sovelluksessasi. Kokoelma on joukko kohteita, jotka ovat samankaltaisia. Voit luoda esimerkiksi MyImages-kokoelman, johon tallennat kuvat kaikista tuotteista, joita yrityksesi myy. PowerAppsissa voit lisätä MyImages-kokoelman ja luoda sovelluksen, joka näyttää kuvia kyseisistä tuotteista. Voit myös luoda hinnastokokoelman, joka sisältää luettelon tuotteista ja kunkin tuotteen hinnan.
+# <a name="create-and-update-a-collection-in-a-canvas-app"></a>Luo ja Päivitä kokoelma pohjaan perustuva sovellus
 
-### <a name="prerequisites"></a>Edellytykset
-* [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
-* Luo sovellus tai avaa olemassa oleva sovellus PowerAppsissa.
-* Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
-* Näissä ohjeissa käytetään esimerkkisyötetietona [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-tiedostoa. Zip-tiedosto sisältää XML-tiedoston, joka voidaan muuntaa Excel-muotoon. Muussa tapauksessa PowerApps lukee .zip-tiedostojen tiedostot automaattisesti ja tuo sitten tiedot onnistuneesti. Voit ladata ja käyttää mallitietoa tai tuoda omasi.
+Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovelluksessa. Kokoelma on joukko kohteita, jotka muistuttavat, kuten tuotteen luettelon tuotteita. Saat lisätietoja eri muuttujatyyppiä kuten kokoelmat: [Tutustu pohjaan perustuvien sovellusten muuttujiin](working-with-variables.md).
 
-## <a name="create-a-single-column-collection"></a>Luo yksisarakkeinen kokoelma
-Luo kokoelma ja lisää siihen kohteita **Collect**-funktion avulla.
+## <a name="prerequisites"></a>Edellytykset
 
-1. Valitse sovelluksessa **Lisää**-välilehdeltä **Teksti** ja valitse sitten **Tekstisyöte**:
+- [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+- Luo sovellus tai avaa olemassa oleva sovellus PowerAppsissa.
+- Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 
-   ![][1]
+## <a name="create-a-multicolumn-collection"></a>Luo monisarakkeisen kokoelma
 
-1. Valitse vasemmassa yläkulmassa **Teksti1** ja nimeä ohjausobjekti uudelleen nimellä **Kohde**:
+1. PowerApps Studio, Lisää **Tekstisyöte** ohjausobjektin.
 
-   ![][2]
+    ![Lisää Tekstisyöte](./media/create-update-collection/add-textbox.png)
 
-1. Lisää suunnittelutyökaluusi painikeohjausobjekti valitsemalla **Lisää**-välilehdeltä **Painike**. Avattavassa luettelossa näkyy **[OnSelect](controls/properties-core.md)**-ominaisuus. Aseta sen arvoksi seuraava funktio:  
-   
-    ```Collect(Destinations, Destination!Text)```
-   
-    Sen pitäisi näyttää tältä:
+1. Ohjausobjektin nimeäminen uudelleen valitsemalla vasemmassa siirtymisruudussa sen pistettä valitsemalla **nimeä**, ja kirjoittamalla sitten **ProductName**.
 
-    ![][3]
+    ![Ohjausobjektin nimeäminen uudelleen](./media/create-update-collection/rename-textbox.png)
 
-5. Valitse painikkeen teksti ja kirjoita **Lisää**:
+1. Lisää **avattava** ohjausobjektin.
 
-   ![][5]
+    ![Avattavan luettelon lisääminen](./media/create-update-collection/add-dropdown.png)
 
-1. Valitse **Lisää**-painike ja siirrä se tekstiohjausobjektisi alle. Voit siirtää sen haluamaasi kohtaan:  
-   ![][6]
+1. Nimeä uudelleen **avattava** ohjausobjektin **värit**, ja varmista, että **kohteet** ominaisuus valitaan ominaisuusluettelossa.
 
-Loit edellisissä vaiheissa kokoelman nimeltä **Destinations** käyttämällä Collect-funktiota. Lisäsit myös painikeohjausobjektin, jonka valitsemalla voit lisätä uusia kohteita kokoelmaasi. Nyt näet, mitä olet luonut:
+    ![Kohteiden ominaisuus](./media/create-update-collection/items-property.png)
 
-1. Valitse esikatselu:  
-   ![][7]  
-2. Kirjoita ruutuun kaupungin nimi ja valitse sitten **Lisää**-painike.
-3. Anna lisää kaupunkien nimiä ja valitse jokaisen jälkeen **Lisää**.
-4. Sulje esikatseluikkuna painamalla **Esc**-näppäintä.
-5. Näet Destinations-kokoelman ja antamasi tekstiarvot. Valitse **Tiedosto**-välilehdeltä **Kokoelmat**. Kirjoittamasi teksti näkyy luettelossa:  
-   ![][8]
+1. Korvaa kaavarivillä **DropDownSample** Tämä lauseke:
 
-#### <a name="extra-credit"></a>Lisätehtävä
-Sidotaan Destinations-kokoelma luetteloruutuun:
+    `["Red","Green","Blue"]`
 
-1. Palaa takaisin suunnittelutyökaluusi.
-2. Valitse **Lisää**-välilehdeltä **Ohjausobjektit** ja valitse sitten **Luetteloruutu**:  
-   ![][22]  
-3. Siirrä luetteloruutua, jotta näet sen helposti. Määritä sen **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-   ```Destinations!Value```  <br/>
-   
-    Kun teet näin, luetteloruutu täytetään automaattisesti kohteilla, jotka olet aiemmin lisännyt Destinations-kokoelmaan:  
-   ![][4]  
+1. Lisää **painike** ohjausobjekti, määritä sen **tekstin** ominaisuudeksi **”Lisää”**, ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-Esikatsele tekemiäsi muutoksia: ![][7]. Antamasi kaupungit näkyvät luetteloruudussa. Kirjoita tekstisyöte-ohjausobjektiin uusi kaupunki ja valitse **Lisää**-painike. Antamasi uusi kaupunki päivittyy automaattisesti luetteloruutuun.
+    ```powerapps-dot
+    Collect(
+        ProductList,
+        {
+            Product: ProductName.Text,
+            Color: Colors.Selected.Value
+        }
+    )
+    ```
 
-## <a name="create-a-multi-column-collection"></a>Luo monisarakkeinen kokoelma
-Seuraavissa vaiheittaisissa ohjeissa näytetään, miten luot Collect-funktiolla kokoelman sovelluksessasi ja miten lisäät kokoelmaan useita rivejä.
+1. Paina F5-näppäintä, kirjoita tekstiä **ProductName**, valitse vaihtoehto **värit**, ja valitse sitten **Lisää**.
 
-1. Avaa **Aloitus**-välilehdeltä uusi näyttö.
-2. Valitse **Lisää**-välilehdeltä **Teksti** ja valitse sitten **Tekstisyöte**.
-3. Nimeä tekstiohjausobjekti uudelleen nimellä **City**:  
-   ![][9]  
-4. Lisää toinen tekstisyöte-ohjausobjekti ja nimeä se uudelleen nimellä **States**.
-5. Siirrä City- ja States-tekstiohjausobjekteja siten, että näet ne molemmat:  
-   ![][10]  
-   
-    > [!NOTE]
-   > Voit korvata tekstinsyötön toisella sanalla, esimerkiksi sanalla ”city” tai ”state”, kuten kuvassa on tehty.  
-6. Valitse **Lisää**-välilehdeltä **Painike**. Määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava funktio:  
-   ```Collect(Destinations, {Cities:City!Text, States:States!Text})```  
-   
-    Sen pitäisi näyttää tältä:  
-    ![][11]  
-   
-    > [!NOTE]
-   > Saman funktion avulla voit lisätä sarakkeita kokoelmaan. Voit lisätä esimerkiksi toisen tekstisyöte-ohjausobjektin Country, jos haluat lisätä Countries-sarakkeen:
-   
-    `Collect(Destinations, {Cities:City!Text, States:States!Text}, {Countries:Country!Text})`
-7. Nimeä painikeohjausobjekti uudelleen nimellä **AddCityStateButton** ja määritä sen **[Text](controls/properties-core.md)**-ominaisuudeksi **Add City and State**:  
-   ![][12]  
+    ![Sovelluksen esikatselu](./media/create-update-collection/preview-add.png)
 
-Näitä vaiheita noudattamalla lisäsit **Destinations**-kokoelmaan **Cities**- ja **States**-sarakkeet. Painikeohjausobjekti lisää uudet tekstikohteet kokoelmaasi. Nyt näet, mitä olet luonut:
+1. Toista edellinen vaihe vähintään kaksi kertaa ja paina sitten ESC-näppäintä.
 
-1. Valitse esikatselu:  
-   ![][7]  
-2. Kirjoita tekstiä City- ja State-ruutuihin ja valitse sitten **Add City and State** -painike.
-3. Lisää vielä muutama kaupunki ja osavaltio.
-4. Sulje esikatseluikkuna painamalla **Esc**-näppäintä.
-5. Voit tarkastella Destinations-kokoelmaan lisäämiäsi kohteita valitsemalla **Tiedosto**-välilehden ja valitsemalla sitten **Kokoelmat**:  
-   ![][13]
+1. Valitse **tiedoston** -valikosta **kokoelmat** näyttämään kokoelman, jonka loit.
 
-## <a name="add-columns-to-a-collection"></a>Lisää sarakkeita kokoelmaan
-Tässä ohjeessa on muutama osa. Kun olet valmis, osaat tuoda tietoja kokoelmaan ja luoda valikoiman, joka sisältää tietoja hinnastossa. Osaat myös käyttää liukusäädintä, joka määrittää tuotteiden määrän.
+    ![Näytä kokoelma](./media/create-update-collection/show-collection.png)
 
-### <a name="import-the-price-list-and-create-the-collection"></a>Tuo hinnasto ja luo kokoelma
-1. Lataa [PriceList.zip](http://pwrappssamples.blob.core.windows.net/samples/PriceList.zip)-tiedosto.
-2. Lisää **Aloitus**-välilehdeltä uusi näyttö.
-3. Valitse **Lisää**-välilehdeltä **Ohjausobjektit** ja valitse sitten **Tuo**:  
-   ![][14]  
-4. Valitse **Toiminto**-välilehdeltä **OnSelect**. Kirjoita seuraava funktio:  
-   
-    ```Collect(PriceList, Import1!Data)```  
-5. Esikatsele sovellustasi. Valitse **Tuo tiedot** -painike, valitse PriceList.zip-tiedosto ja valitse **Avaa**.
-6. Sulje esikatseluikkuna.
-7. Valitse **Tiedosto**-välilehdeltä **Kokoelmat**. Tuodut hinnastokohteet on lisätty luetteloon:  
-   ![][15]
+## <a name="show-a-collection"></a>Näytä kokoelma
 
-### <a name="add-the-gallery-to-show-the-collection-items"></a>Lisää valikoima kokoelman kohteiden näyttämistä varten
-1. Palaa takaisin suunnittelutyökaluusi.
-2. Palaa **Lisää**-välilehdelle ja valitse **Valikoima**, vieritä alaspäin kohtaan **Mukautetut valikoimat** ja valitse **Pysty**:    
-   ![][16]  
-3. Nimeä valikoima uudelleen nimellä **PriceGallery** ja määritä **[Items](controls/properties-core.md)**-ominaisuudeksi **PriceList**:  
-   ![][18]  
-4. Siirrä hinnastovalikoima **Tuo tiedot** -ohjausobjektin alle. Valitse valikoiman reunat ja muuta valikoiman kokoa napsauttamalla ja vetämällä niin, että näkyviin tulee kolme neliötä.
-5. Valitse valikoimasta ensimmäisen neliö ja lisää kolme selitettä (**Lisää**-välilehti > **Selite**).
-6. Muuta selitteiden kokoa ja järjestä ne riviin ensimmäisen neliön yläosaan. Valikoimasi näyttää jotakuinkin seuraavalta:  
-   ![][19]
-7. Määritä jokaisen selitteen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-   
-   | Selite | Aseta Text-ominaisuudeksi |
-   | --- | --- |
-   | Label1 |``ThisItem!Name`` |
-   | Label2 |``Text(ThisItem!Price, "$#")`` |
-   | Label3 |``ThisItem!Maker`` |
-   
-    Kun teet näin, nimi, hinta ja maker-arvo päivittyvät automaattisesti PriceList-kokoelman selitteisiin.
-8. Poista ylimääräinen tila muuttamalla selitteiden ja valikoiman kokoa. Näyttösi näyttää jotakuinkin seuraavalta:  
-   ![][17]
+1. Lisää pystysuora **valikoiman** ohjausobjektin.
 
-### <a name="add-the-quantity-slider-and-update-the-collection"></a>Lisää määrän liukusäädin ja päivitä kokoelma
-1. Valitse **Lisää**-valikosta **Ohjausobjektit** ja valitse **Liukusäädin**. Nimeä liukusäädin uudelleen nimellä **OrderQty** ja siirrä se valikoiman alle.
-2. Lisää painike, aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi **Lisää** ja siirrä se **OrderQty**-liukusäätimen alle. Sovelluksesi näyttää jotakuinkin seuraavalta:  
-   ![][20]
-3. Määritä **Lisää**-painikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-   
-    ```Collect(OrderList, {Name:PriceGallery!Selected!Name, Qty:OrderQty!Value, Cost:OrderQty!Value*LookUp(PriceList, PriceGallery!Selected!Name in Name, Price)});SaveData(OrderList, "orderfile")```  
-   
-    > [!NOTE]
-   > Kun valitset tämän painikkeen myöhemmin tämän toimintosarjan aikana, luot ja tallennat kokoelman nimeltä **OrderList**. Kokoelma sisältää valikoimaan lisäämäsi tuotteen nimen, liukusäätimellä valitun määrän ja kokonaiskustannukset, jotka lasketaan kertomalla tuotteen hinta määrällä.
-4. Valitse **Näyttö**-välilehti ja määritä **[OnVisible](controls/control-screen.md)**-ominaisuudeksi seuraava lauseke:  
-   
-    ```If(IsEmpty(PriceList), LoadData(PriceList, "pricefile"));If(IsEmpty(OrderList), LoadData(OrderList, "orderfile"))```
+    ![Lisää pystysuuntainen valikoima](./media/create-update-collection/add-gallery.png)
 
-Nyt näet, mitä olet luonut:
+1. Määritä valikoiman **kohteet** ominaisuudeksi **ProductList**.
 
-1. Avaa **esikatselu**.
-2. Valitse valikoimasta tuote, siirrä liukusäädintä haluamasi määrän kohdalle ja valitse sitten **Lisää**-painike.  
-   
-   > [!IMPORTANT]
-   > Kun valitset tuotteen, kyseisen tuotteen valintaa ei osoiteta korostamalla. Emme lisänneet tätä toimintoa, kun loimme valikoiman. Tuotteen napsauttaminen valitsee sen.  
-   > 
-   > 
-3. Toista nämä vaiheet ja lisää muutama tuote. Sulje esikatseluikkuna painamalla **ESC**-näppäintä.
-4. Avaa luomasi **OrderList**-kokoelman esikatselu valitsemalla **Tiedosto**-välilehdeltä **Kokoelmat**:  
-   ![][21]
+1. - **Tietojen** ruudussa alaotsikko kentän arvoksi **väri**, ja otsikkokentän arvoksi **tuotteen**.
 
-> [!TIP]
-> Jos haluat poistaa kaikki kohteet tilausluettelosta, lisää painike, määritä sen **[Text](controls/properties-core.md)**-ominaisuudeksi **Tyhjennä** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-> ```Clear(OrderList);SaveData(OrderList, "orderfile")```  
-> Jos haluat poistaa yhden kohteen kerrallaan, näytä **OrderList**-kokoelma valikoimassa ja määritä kyseisessä valikoimassa olevan selitteen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-> ```Remove(OrderList, ThisItem);SaveData(OrderList, "orderfile")```
-> 
-> 
+    ![Valikoiman Items-ominaisuuden asettaminen ja muuta se näyttää kentät](./media/create-update-collection/configure-gallery.png)
 
-## <a name="tips-and-tricks"></a>Vihjeitä ja vinkkejä
-* Voit tarkastella kaavioitasi tietojen kanssa milloin tahansa valitsemalla Esikatselu-painikkeen (![][7]).
-* Voit muuttaa ohjausobjektien kokoa ja siirrellä niitä napsauttamalla ja vetämällä, kun suunnittelet sovellustasi.
+1. Sulje **tietojen** ruutu avautuu, ja **asettelu** kentän **otsikko ja alaotsikko**.
 
-## <a name="what-you-learned"></a>Mitä olet oppinut
-Tässä aiheessa:
+    ![Valikoiman Items-ominaisuuden asettaminen ja muuta se näyttää kentät](./media/create-update-collection/change-layout.png)
 
-* Loit sovellukseesi kokoelman Collect()-funktion avulla.
-* Lisäsit painikeohjausobjektin, jonka valitsemalla voit lisätä uusia kohteita kokoelmaasi.
-* Lisäsit kohteita kokoelmaan luetteloruudun avulla.
-* Lisäsit liukusäätimen kokoelmassa olevien kohteiden päivittämiseen.
+    Näytön pitäisi näyttää samalta kuin tässä esimerkissä:
 
-[1]: ./media/create-update-collection/insertmenu-inputtext.png
-[2]: ./media/create-update-collection/renametext.png
-[3]: ./media/create-update-collection/buttononselect.png
-[4]: ./media/create-update-collection/listboxpreview.png
-[5]: ./media/create-update-collection/buttontext.png
-[6]: ./media/create-update-collection/buttonundertext.png
-[7]: ./media/create-update-collection/preview.png
-[8]: ./media/create-update-collection/existingcollections.png
-[9]: ./media/create-update-collection/renametext-city.png
-[10]: ./media/create-update-collection/citystate.png
-[11]: ./media/create-update-collection/buttononselectcitystate.png
-[12]: ./media/create-update-collection/buttononcitystate.png
-[13]: ./media/create-update-collection/existingcollectionscitystate.png
-[14]: ./media/create-update-collection/import.png
-[15]: ./media/create-update-collection/pricelistcollection.png
-[16]: ./media/create-update-collection/portrait.png
-[17]: ./media/create-update-collection/resizedgallery.png
-[18]: ./media/create-update-collection/galleryitems.png
-[19]: ./media/create-update-collection/gallerylabels.png
-[20]: ./media/create-update-collection/slider.png
-[21]: ./media/create-update-collection/existingcollectionsorderlist.png
-[22]: ./media/create-update-collection/listbox.png
+    ![Ensimmäinen näyttö-Esimerkki](./media/create-update-collection/screen-example1.png)
+
+## <a name="remove-one-or-all-items"></a>Poista yksi tai kaikki kohteet
+
+1. Valitse haluamasi valikoiman mallipohja napsauttamalla tai napauttamalla valikoiman ja napsauttamalla tai napauttamalla vasemmassa yläkulmassa olevaa kynäkuvaketta.
+
+    ![Valitse valikoiman mallipohja](./media/create-update-collection/select-template.png)
+
+1. Lisää **roskakori** kuvake valikoiman mallipohja.
+
+    ![Lisää roskakorikuvake](./media/create-update-collection/trash-icon.png)
+
+1. Määritä kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+
+    `Remove(ProductList, ThisItem)`
+
+1. Valikoiman ulkopuolella Lisää painike, määritä sen **tekstin** ominaisuudeksi **”Tyhjennä”**, ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+
+    `Clear(ProductList)`
+
+1. Pidät Alt-näppäintä ja valitse **roskakori** kohde kokoelmasta poistettavat sen tai valitsemalla kuvakkeen **Tyhjennä** poistaaksesi kaikki kohteet kokoelmasta.
+
+## <a name="put-a-sharepoint-list-into-a-collection"></a>SharePoint-luettelon asettaminen kokoelmaan
+
+1. [Yhdistä SharePoint-luetteloon](connect-to-sharepoint.md).
+
+1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
+
+    `Collect(MySPCollection, ListName)`
+
+    Tämä funktio luo kokoelman, jonka nimi on **MySPCollection** ja joka sisältää samat tiedot kuin SharePoint-luettelokin.
+
+1. Pidä Alt-näppäintä painettuna ja valitse painike.
+
+1. (valinnainen) Jos haluat esikatsella luomasi kokoelman, valitse **kokoelmat** - **tiedoston** valikosta.
+
+Lisätietoja SharePoint-luettelosta (esimerkiksi päivämäärät, vaihtoehtoja ja henkilöt) tietojen näyttäminen valikoimassa: [Tietojen näyttäminen valikoimassa](connections/connection-sharepoint-online.md#show-data-in-a-gallery). Lisätietoja siitä, miten voit näyttää lomakkeen (avattavia luetteloita, päivämäärävalitsimia ja ihmisten keräilijät): [Muokattu lomake- ja näytetty lomake-ohjausobjektit](controls/control-form-detail.md).
+
+## <a name="next-steps"></a>Seuraavat vaiheet
+
+- Tarkista [tiedot](functions/function-clear-collect-clearcollect.md) varten **kerätä** funktio.
+- Lue, miten voit muotoilla kokoelman tietoja käyttämällä [AddColumns-, DropColumns-, RenameColumns- ja ShowColumns](functions/function-table-shaping.md) funktioita.

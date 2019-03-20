@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6625df3f822462c86de1f720b7a310f5e516a6ca
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 25cae936ace1dcd3108f11271e3fe38cb41ae2e7
+ms.sourcegitcommit: 55c6af2f767e90c999eea4d29589c1fe19dfc4db
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849867"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443731"
 ---
 # <a name="calendar-and-clock-functions-in-powerapps"></a>PowerAppsin Calendar- ja Clock-funktiot PowerAppsissa
 Noutavat nykyistä aluetta koskevat kello- ja kalenteritiedot.
@@ -66,11 +66,11 @@ Kun **[Language](function-language.md)**-funktio palauttaa Yhdysvalloissa arvon 
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Calendar.MonthsLong()** |Paluuarvo sisältää kuukausien täydet nimet, alkaen ”January”. |[ ”January”, ”February”, ”March”, ”April”, ”May”, ”June”, ”July”, ”August”, ”September”, ”October”, ”November”, ”December” ] |
-| **Calendar.MonthsShort()** |Paluuarvo sisältää kuukausien lyhennetyt nimet, alkaen ”Jan”. |[ ”Jan”, ”Feb”, ”Mar”, ”Apr”, ”May”, ”Jun”, ”Jul”, ”Aug”, ”Sep”, ”Oct”, ”Nov”, ”Dec” ] |
-| **Calendar.WeekdaysLong()** |Paluuarvo sisältää viikonpäivien täydet nimet, alkaen ”Sunday”. |[ ”Sunday”, ”Monday”, ”Tuesday”, ”Wednesday”, ”Thursday”, ”Friday”, ”Saturday” ] |
-| **Calendar.WeekdaysShort()** |Paluuarvo sisältää viikonpäivien lyhennetyt nimet, alkaen ”Sun”. |[ ”Sun”, ”Mon”, ”Tue”, ”Wed”, ”Thu”, ”Fri”, ”Sat” ] |
-| **Clock.AmPm()** |Tämä kieli käyttää 12 tunnin kelloa.  Paluuarvo sisältää täydet AM- ja PM-määreet isoilla kirjaimilla. |[ ”AM”, ”PM” ] |
-| **Clock.AmPmShort()** |Tämä kieli käyttää 12 tunnin kelloa.  Paluuarvo sisältää lyhyet AM- ja PM-määreet isoilla kirjaimilla. |[ ”AM”, ”PM” ] |
+| **Calendar.MonthsLong()** |Paluuarvo sisältää viikonpäivien, alkaen ”January” koko nimi. |[ ”January”, ”February”, ”March”, ”April”, ”May”, ”June”, ”July”, ”August”, ”September”, ”October”, ”November”, ”December” ] |
+| **Calendar.MonthsShort()** |Paluuarvo sisältää viikonpäivien, alkaen ”January” nimen. |[ ”Jan”, ”Feb”, ”Mar”, ”Apr”, ”May”, ”Jun”, ”Jul”, ”Aug”, ”Sep”, ”Oct”, ”Nov”, ”Dec” ] |
+| **Calendar.WeekdaysLong()** |Paluuarvo sisältää päivä, alkaen ”Sunday” koko nimi. |[ ”Sunday”, ”Monday”, ”Tuesday”, ”Wednesday”, ”Thursday”, ”Friday”, ”Saturday” ] |
+| **Calendar.WeekdaysShort()** |Paluuarvo sisältää nimen päivä, alkaen ”Sunday”. |[ ”Sun”, ”Mon”, ”Tue”, ”Wed”, ”Thu”, ”Fri”, ”Sat” ] |
+| **Clock.AmPm()** |Tämä kieli käyttää 12 tunnin kelloa. Paluuarvo sisältää täydet AM- ja PM-määreet isoilla kirjaimilla. |[ ”AM”, ”PM” ] |
+| **Clock.AmPmShort()** |Tämä kieli käyttää 12 tunnin kelloa. Paluuarvo sisältää lyhyet AM- ja PM-määreet isoilla kirjaimilla. |[ ”AM”, ”PM” ] |
 | **Clock.IsClock24()** |Tämä kieli käyttää 12 tunnin kelloa. |**epätosi** |
 

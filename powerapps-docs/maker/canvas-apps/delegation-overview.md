@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0ac78340f344ce42fd68d18940b1aaca41412a96
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 813dddc205eb5abb870d333635723fcd5e2f2738
+ms.sourcegitcommit: 6d1ec3d5afa0466d1a5ce4434e588686a195d0fa
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42829747"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "57802534"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
-PowerApps sisältää tehokkaita funktioita tietotaulukoiden suodattamiseen, lajittelemiseen ja muotoilemiseen pohjaan perustuvassa sovelluksessa. Näitä funktioita ovat esimerkiksi **[Filter](functions/function-filter-lookup.md)**, **[Sort](functions/function-sort.md)** ja **[AddColumns](functions/function-table-shaping.md)**. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
+PowerApps sisältää tehokkaita toimintoja, joilla suodatusta, lajittelemiseen ja muotoilemiseen taulukoiden pohjaan perustuvan sovelluksen tiedot: **[Suodattimen](functions/function-filter-lookup.md)**,  **[Lajittele](functions/function-sort.md)**, ja **[AddColumns](functions/function-table-shaping.md)** joitakin funktioita. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
 
 Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienentäminen, joka on siirrettävä laitteeseesi. Ehkä tarvitset vain muutaman kourallisen tietueita miljoonien joukosta, ja yksittäinen koostearvo voi edustaa tuhansia tietueita. Tai ehkä vain ensimmäinen tietuejoukko voidaan hakea ja muut tuoda, kun käyttäjä ilmoittaa tarvitsevansa lisää. Keskittyneisyys voi pienentää huomattavasti sovelluksen tarvitsemaa käsittelytehoa, muistia ja verkon kaistanleveyttä. Tämän ansiosta käyttäjiesi kokemat vasteajat lyhenevät jopa matkapuhelinverkon kautta yhdistetyissä puhelimissa. 
 
@@ -29,17 +29,19 @@ Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienen
 
 Tässä asia monimutkaistuu, ja juuri tästä syystä tämä artikkeli on olemassa: kaikkea, mitä voidaan ilmaista PowerApps-kaavassa, ei voida delegoida jokaiseen tietolähteeseen. PowerApps-kieli imitoi Excelin kaavakieltä, johon sisältyy täydellinen ja välitön käyttöoikeus muistissa olevaan täydelliseen työkirjaan monine erilaisine numeron- ja tekstinkäsittelyfunktioineen. Näin ollen PowerApps-kieli on monin verroin monipuolisempi kuin mitä useimmat tietolähteet voivat tukea, ja siihen kuuluvat tehokkaat tietokantamoduulit, kuten SQL Server.
 
-**Suurien tietomäärien käyttäminen edellyttää delegoitavien tietolähteiden ja kaavojen käyttöä.**  Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiaan tietoja. Kiinnitä huomiota delegointivaroituksiin. Ne ilmaisevat paikat, joissa delegointi ei ole mahdollista. Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä sovellus voi käsitellä tietoja paikallisesti, jos kaavaa ei voi delegoida. 
+**Suurien tietomäärien käyttäminen edellyttää delegoitavien tietolähteiden ja kaavojen käyttöä.** Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiaan tietoja. Kiinnitä huomiota delegointivaroituksiin. Ne ilmaisevat paikat, joissa delegointi ei ole mahdollista. Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä sovellus voi käsitellä tietoja paikallisesti, jos kaavaa ei voi delegoida. 
 
 > [!NOTE]
 > Delegointivaroituksia kutsuttiin PowerAppsissa aiemmin sinisellä pisteellä merkityiksi ehdotuksiksi, mutta delegointiehdotukset on sittemmin luokiteltu uudelleen varoituksiksi. Jos tietolähteessä on yli 500 tietuetta eikä funktiota voida delegoida, PowerApps ei ehkä voi noutaa kaikkia tietoja ja sovelluksesi tulokset voivat olla vääriä. Delegointivaroitukset helpottavat sovelluksesi hallintaa niin, että sen tulokset ovat oikeat.
 
 ## <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
-Katso [delegointiluettelosta](delegation-list.md) täydellinen luettelo tietolähteistä, jotka tukevat delegointia, ja tuetun delegoinnin laajuus.
+Delegointia tuetaan tiettyjen vain Taulukkomuotoisissa tietolähteissä. Jos tietolähde tukee delegointia, sen [connector ohjeet](https://docs.microsoft.com/connectors/) kuvataan tukevat. Taulukkomuotoiset tietolähteet ovat Suosituimmat, ja ne delegointia:
 
-Lisäämme jatkuvasti delegointitukea olemassa oleviin tietolähteisiin. Lisäämme myös tietolähteitä.
+- [Common Data Service (CDS) for Appsissa](https://docs.microsoft.com/connectors/commondataservice/) 
+- [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
+- [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 
-(Lisää staattista tietoa sovellukseen -tietolähteen avulla) tuodut Excel-työkirjat, kokoelmat ja taulukot, jotka on tallennettu kontekstimuuttujiin, eivät edellytä delegointia. Kaikki nämä tiedot ovat jo muistissa, ja koko PowerApps-kieltä voidaan soveltaa.
+Tuotu Excel-työkirjojen (käyttämällä **Lisää staattisia tietoja sovellukseesi** tietolähde), kokoelmat ja taulukot, jotka on tallennettu kontekstimuuttujiin, eivät edellytä delegointia. Kaikki nämä tiedot ovat jo muistissa, ja koko PowerApps-kieltä voidaan soveltaa.
 
 ## <a name="delegable-functions"></a>Delegoitavat funktiot
 Seuraava vaihe on vain delegoitavien kaavojen käyttäminen. Tässä ovat kaavan osat, jotka voidaan delegoida. Jokainen tietolähde on kuitenkin erilainen, eivätkä ne kaikki tue kaikkia näitä elementtejä. Tarkista delegointivaroitukset kaavassasi.
@@ -68,9 +70,9 @@ Edellinen luettelo ei sisällä näitä huomattavia kohteita:
 * **[*](functions/operators.md)**, **[/](functions/operators.md)**, **[Mod](functions/function-mod.md)**
 * **[Concatenate](functions/function-concatenate.md)** (mukaan lukien **[&](functions/operators.md)**)
 * **[ExactIn](functions/operators.md)**
-* Merkkijonon käsittelyfunktiot: **[Lower](functions/function-lower-upper-proper.md)**, **[Upper](functions/function-lower-upper-proper.md)**, **[Left](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**, **[Len](functions/function-left-mid-right.md)**, ...
-* Signaalit: **[Location](functions/signals.md)**, **[Acceleration](functions/signals.md)**, **[Compass](functions/signals.md)**, ...
-* Vaihtuvat: **[Now](functions/function-now-today-istoday.md)**, **[Today](functions/function-now-today-istoday.md)**, **[Rand](functions/function-rand.md)**, ...
+* Merkkijonon käsittelyfunktiot: **[LOWER](functions/function-lower-upper-proper.md)**,  **[Upper](functions/function-lower-upper-proper.md)**,  **[vasemmalle](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**,  **[Len](functions/function-left-mid-right.md)**,...
+* Signaalit: **[Sijainnin](functions/signals.md)**,  **[Acceleration](functions/signals.md)**,  **[kompassi](functions/signals.md)**,...
+* Vaihtuvat: **[Nyt](functions/function-now-today-istoday.md)**,  **[tänään](functions/function-now-today-istoday.md)**,  **[Rand](functions/function-rand.md)**,...
 * [Kokoelmat](working-with-variables.md)
 
 ### <a name="sorting-functions"></a>Funktioiden lajittelu
@@ -88,7 +90,7 @@ Muita koostefunktioita, kuten **[StdevP](functions/function-aggregates.md)** ja 
 ## <a name="non-delegable-functions"></a>Funktiot, joita ei voi delegoida
 Kaikki muut toiminnot eivät tue delegointia, mukaan lukien nämä tärkeät funktiot:
 
-* Taulukon muovaaminen: **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, **[ShowColumns](functions/function-table-shaping.md)**, ...
+* Taulukon muovaaminen: **[AddColumns](functions/function-table-shaping.md)**,  **[DropColumns](functions/function-table-shaping.md)**,  **[ShowColumns](functions/function-table-shaping.md)**,...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Choices](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
@@ -107,7 +109,7 @@ Koska **LookUp**-funktio ja sen tietolähde ovat delegoitavia, **Suppliers**-vas
 ## <a name="non-delegable-limits"></a>Rajoitukset, joita ei voi delegoida
 Kaavat, joita ei voi delegoida, käsitellään paikallisesti. Tämä sallii PowerApps-kaavakielen käytön koko laajuudessaan. Tällä on kuitenkin hintansa: kaikki tiedot on ensin tuotava laitteeseen, mikä saattaa merkitä suurten tietomäärin noutamista verkosta. Tähän voi kulua aikaa, mikä antaa sovelluksesta hitaan tai kaatuneen vaikutelman.
 
-Voit välttää tämän, sillä PowerApps rajoittaa paikallisesti käsiteltävien tietojen määrää ja sallii oletusarvoisesti vain 500 tietuetta.  Valitsimme tämän luvun, jotta sinulla olisi yhä täydet käyttöoikeudet pieniin tietojoukkoihin ja voisit tarkentaa suurien tietojoukkojen käyttöä näkemällä osittaiset tulokset.
+Voit välttää tämän, PowerApps rajoittaa paikallisesti tietojen määrään: oletusarvoisesti vain 500 tietuetta.  Valitsimme tämän luvun, jotta sinulla olisi yhä täydet käyttöoikeudet pieniin tietojoukkoihin ja voisit tarkentaa suurien tietojoukkojen käyttöä näkemällä osittaiset tulokset.
 
 Tätä ominaisuutta on luonnollisesti käytettävä varoen, sillä se saattaa hämmentää käyttäjiä. Ajatellaan esimerkiksi **Filter**-funktiota, jossa on delegointikelvoton valintakaava, yli miljoona tietuetta sisältävässä tietolähteessä. Koska suodatus tehdään paikallisesti, vain 500 ensimmäistä tietuetta luetaan. Jos haluttu tietue on tietue 501 tai 500 001, **Filter** ei ota sitä huomioon eikä palauta sitä.
 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 64641b0cc0822a955de2b1c9e53692dac9dfcf31
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3adb036a1619263d2b8cef1f649c2d2f97925ceb
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803132"
 ---
 # <a name="patch-function-in-powerapps"></a>PowerAppsin Patch-funktio
 Muokkaa [tietolähteen](../working-with-data-sources.md) [tietuetta](../working-with-tables.md#records) tai luo sellaisen tai yhdistää tietueita tietolähteen ulkopuolella.
@@ -30,21 +30,21 @@ Vähemmän monimutkaisissa tilanteissa voit käyttää **Muokattu lomake** -ohja
 ## <a name="overview"></a>Yleiskatsaus
 Käytä **Patch**-funktiota muokkaamaan yhtä tai useampaa tietolähteen tietuetta.  Tiettyjen [kenttien](../working-with-tables.md#elements-of-a-table) arvoja muokataan vaikuttamatta muihin ominaisuuksiin. Esimerkiksi tämä kaava muuttaa Contoso-nimisen asiakkaan puhelinnumeroa:
 
-**Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: "1-212-555-1234" } )**
+`Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: “1-212-555-1234” } )`
 
 Käytä **Patch**-funktiota **[Defaults](function-defaults.md)**-funktion kanssa tietueiden luomiseen. Käytä tätä toimintaa rakentamaan [yksi näyttö](../working-with-data-sources.md) sekä tietueiden luomiseen että muokkaamiseen. Esimerkiksi tämä kaava luo tietueen asiakkaalle nimeltä Contoso:
 
-**Patch( Customers, Defaults( Customer ), { Name: "Contoso" } )**
+`Patch( Customers, Defaults( Customer ), { Name: “Contoso” } )`
 
 Vaikka et työskentelisikään tietolähteen kanssa, voit käyttää **Patch**-funktiota kahden tai useamman tietueen yhdistämiseen. Esimerkiksi tämä kaava yhdistää kaksi tietuetta yhdeksi tietueeksi, joka sisältää sekä Contoson puhelinnumeron että sijainnin:
 
-**Patch( { Name: "Contoso", Phone: "1-212-555-1234" }, { Name: "Contoso", Location: "Midtown"  } )**
+`Patch( { Name: "Contoso", Phone: “1-212-555-1234” }, { Name: "Contoso", Location: “Midtown”  } )`
 
 ## <a name="description"></a>Kuvaus
 ### <a name="modify-or-create-a-record-in-a-data-source"></a>Tietueen luominen tai muokkaaminen tietolähteessä
 Määritä tietolähde ja sitten määritä perustietue tämän funktion käyttämiseksi tietolähteen kanssa:
 
-* Tietueen muokkaamiseksi perustietueen täytyy olla peräisin tietolähteestä.  Perustietue saattaa olla peräisin valikoiman **[Items](../controls/properties-core.md)**-ominaisuudesta, se saatettiin sijoittaa [kontekstimuuttujan](../working-with-variables.md#create-a-context-variable) kautta tai se voi olla peräisin jostain muualta. Tietue pitää kuitenkin pystyä jäljittämään takaisin tietolähteeseen.  Tämä on tärkeää, sillä tietue sisältää lisätietoja, jotka auttavat löytämään tietueen uudelleen muokkausta varten.  
+* Tietueen muokkaamiseksi perustietueen täytyy olla peräisin tietolähteestä.  Perustietue saattaa olla peräisin valikoiman **[Items](../controls/properties-core.md)**-ominaisuudesta, se saatettiin sijoittaa [kontekstimuuttujan](../working-with-variables.md#use-a-context-variable) kautta tai se voi olla peräisin jostain muualta. Tietue pitää kuitenkin pystyä jäljittämään takaisin tietolähteeseen.  Tämä on tärkeää, sillä tietue sisältää lisätietoja, jotka auttavat löytämään tietueen uudelleen muokkausta varten.  
 * Luo tietue käyttämällä **[Defaults](function-defaults.md)**-funktiota perustietueen luomiseksi oletusarvoilla.  
 
 Määritä sitten yksi tai useampi muutostietue, jotka sisältävät uusia ominaisuusarvoja, jotka korvaavat perustietueen arvot. Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
@@ -76,7 +76,7 @@ Määritä kaksi tai useampaa tietuetta, jotka haluat yhdistää. Tietueet käsi
 * *ChangeRecord(s)* – Pakollinen.  Yksi tai useampi tietue, jotka sisältävät *BaseRecord*in muokattavat ominaisuudet.  Muutostietueet käsitellään järjestyksessä argumenttiluettelon alusta loppuun niin, että myöhemmät ominaisuusarvot korvaavat aiemmat.
 
 #### <a name="modify-or-create-a-set-of-records-in-a-data-source"></a>Tietueiden joukon luominen tai muokkaaminen tietolähteessä
-**Patch**( *DataSource*, *BaseRecordsTable*, *ChageRecordTable1*, [, *ChangeRecordTable2*, … ] )
+**Patch**( *DataSource*, *BaseRecordsTable*, *ChangeRecordTable1* [, *ChangeRecordTable2*,... ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueet, joita haluat muokata tai tulee sisältämään tietueet, jotka haluat luoda.
 * *BaseRecordTable* – Pakollinen. Muokattavien tai luotavien tietueiden taulukko.  Jos tietue on peräisin tietolähteestä, tietue etsitään ja sitä muokataan. Jos **[Defaults](function-defaults.md)**-funktion tulosta käytetään, tietue luodaan.

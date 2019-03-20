@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b3d80c2bafb36bf4437a9c37541f5bb56945f3b4
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1bf9f3cf075441dd3264b5a2f6533671d2e08654
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851318"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802304"
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funktio PowerAppsissa
 Havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toiminnon.
@@ -39,7 +39,7 @@ Jos kaikki argumentit funktioon **IfError** aiheuttavat virheen, viimeisen argum
 **IfError**( *Value*, *Fallback1* [, *Fallback2*, ... ] )
 
 * *Value* – Pakollinen. Kaavat virhearvojen testaamiseksi. 
-* *Fallback(s)* – Pakollinen. Arvioitavat kaavat ja palautettavat arvot, jos edelliset argumentit palauttivat virheen.  *Fallback*-argumentit arvioidaan järjestyksessä, kunnes ei-virhearvo löydetään.
+* *Fallback(s)* – Pakollinen. Arvioitavat kaavat ja palautettavat arvot, jos edelliset argumentit palauttivat virheen.  *Fallback* argumentit arvioidaan järjestyksessä, kunnes ei-virhearvo löydetään.
 
 ## <a name="examples"></a>Esimerkkejä
 

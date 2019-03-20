@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 91f84ebbec83c5734e910680f4ab3a79077164df
-ms.sourcegitcommit: ce621966a34061dda2f75232403847e21816ffa9
-ms.translationtype: HT
+ms.openlocfilehash: 194da16a1025daa84c658ae8884734a08780c6c1
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/30/2018
-ms.locfileid: "47459451"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802051"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -122,8 +122,8 @@ Johdettu **Mode**-ominaisuudesta, eikä sitä voi määrittää erikseen:
 | Tila | Kuvaus |
 | --- | --- |
 | **FormMode.Edit** |Käyttäjä voi muokata tietuetta lomakkeen avulla. Lomakkeen korteissa olevat arvot on täytetty olemassa olevalla tietueella. Käyttäjä voi muuttaa niitä halutessaan. Jos **[SubmitForm](../functions/function-form.md)**-funktion suorittaminen onnistuu, olemassa olevaa tietuetta muokataan. |
-| **FormMode.New** |Käyttäjä voi luoda tietueen lomakkeen avulla. Lomakkeen ohjausobjekteissa olevat arvot on täytetty tietolähteen tietueen oletusarvoilla. Jos **[SubmitForm](../functions/function-form.md)**-funktion suorittaminen onnistuu, tietue luodaan. |
-| **FormMode.View** |Käyttäjä voi tarkastella tietuetta lomakkeen avulla. Lomakkeen ohjausobjekteissa olevat arvot on täytetty tietolähteen tietueen oletusarvoilla. |
+| **FormMode.New** |Käyttäjä voi luoda tietueen lomakkeen avulla. Lomakkeen ohjausobjekteissa arvot esitäytetty tietueen tietolähteen oletusarvot. Jos **[SubmitForm](../functions/function-form.md)**-funktion suorittaminen onnistuu, tietue luodaan. |
+| **FormMode.View** |Käyttäjä voi tarkastella tietuetta lomakkeen avulla. Lomakkeen ohjausobjekteissa arvot esitäytetty tietueen tietolähteen oletusarvot. |
 
 Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutoksista tapahtuu:
 
@@ -152,7 +152,7 @@ Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutok
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
 * Tämän ominaisuuden avulla voit poimia kenttäarvoja ohjausobjektin korteista.  Voit käyttää näitä arvoja tietolähteen manuaaliseen päivittämiseen **[Ohjelmakorjaus](../functions/function-patch.md)**-funktiokutsulla tai muulla yhteyden näyttämällä menetelmällä.  Tätä toimintoa ei tarvita, jos **[SubmitForm](../functions/function-form.md)**-funktio on käytössä.
-* Ominaisuus palauttaa tietueen arvoista.  Jos Lomake-ohjausobjekti sisältää Kortti-ohjausobjektit **Nimi**- ja **Määrä**-kentille ja kyseisten korttien **[Update](control-card.md)**-ominaisuudet palauttavat arvot ”Widget” ja 10, Lomake-ohjausobjektin **Päivitykset**-ominaisuus palauttaa arvon **{ Nimi: ”Widget”, Määrä: 10 }**.
+* Ominaisuus palauttaa tietueen arvoista.  Jos lomake-ohjausobjekti sisältää kortti-ohjausobjektit **nimi** ja **määrä** kentät ja arvot **[päivitys](control-card.md)** kyseisten korttien ominaisuudet palauttavat ”Widget” ja 10, myös **päivitykset** lomake-ohjausobjektin ominaisuus palauttaa arvon **{nimi: ”Widget”, Quantity: 10 }**.
 
 **Valid** – Sisältääkö **[Kortti](control-card.md)**- tai **Muokattu lomake** -ohjausobjekti kelvollisia merkintöjä, jotka voidaan lähettää tietolähteeseen.
 

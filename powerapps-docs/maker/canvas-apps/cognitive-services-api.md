@@ -1,33 +1,33 @@
 ---
 title: Kognitiivisten palvelujen käyttö PowerAppsissa | Microsoft Docs
-description: Luo tavallinen kangassovellus, joka analysoi tekstiä käyttämällä Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API).
-author: AFTOwen
+description: Luo perustason pohjaan perustuvan sovelluksen, joka analysoi tekstiä käyttämällä Azuren kognitiivisten palvelujen Tekstianalyysin API.
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
-ms.author: anneta
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: df823f68842ad3c7a7497e6dce9cc3540520527e
-ms.sourcegitcommit: 3dc330d635aaf5bc689efa6bd39826d6e396c832
-ms.translationtype: HT
+ms.openlocfilehash: 07548ff8fb14626543472b72ea52b80c858eeb0e
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48875872"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803661"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
-Tässä artikkelissa kerrotaan, miten luodaan tavallinen kangassovellus, joka analysoi tekstiä käyttämällä [Microsoftin kognitiivisten palvelujen tekstianalysoinnin ohjelmointirajapintaa (API)](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview). Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda kangassovelluksen, joka kutsuu API:a.
+Tässä artikkelissa kerrotaan, miten voit luoda perustason pohjaan perustuvan sovelluksen, joka käyttää [Azuren kognitiivisten palveluiden Tekstianalyysin Ohjelmointirajapinta](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) analysoi tekstiä. Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda kangassovelluksen, joka kutsuu API:a.
 
 > [!NOTE]
 > Jos PowerApps-sovellusten kehittäminen on sinulle uutta, suosittelemme lukemaan kohdan [Sovelluksen luominen alusta alkaen](get-started-create-from-blank.md) ennen kuin perehdyt tähän artikkeliin.
 
-## <a name="introduction-to-microsoft-cognitive-services"></a>Microsoftin kognitiiviset palvelut
-Microsoftin kognitiiviset palvelut ovat joukko API-liittymiä, SDK:ita ja palveluja, joiden avulla voit tehdä sovelluksestasi älykkäämmän, kiinnostavamman ja helpommin löydettävän. Näiden palvelujen avulla voit helposti lisätä sovelluksiisi älykkäitä ominaisuuksia – kuten tunnetilojen ja videokuvan tunnistuksen, kasvojen ja puheen tunnistuksen, tietokonenäön sekä puheen ja kielen ymmärtämisen.
+## <a name="introduction-to-azure-cognitive-services"></a>Azuren kognitiiviset palvelut
+Azuren kognitiiviset palvelut ovat joukko API-liittymiä, SDK: T ja palveluja avulla voit tehdä sovelluksestasi älykkäämmän, kiinnostavamman ja helpommin löydettävän. Näiden palvelujen avulla voit helposti lisätä sovelluksiisi älykkäitä ominaisuuksia – kuten tunnetilojen ja videokuvan tunnistuksen, kasvojen ja puheen tunnistuksen, tietokonenäön sekä puheen ja kielen ymmärtämisen.
 
 Tässä artikkelissa keskitytään kielen ymmärtämiseen tekstianalyysin ohjelmointirajapinnan (Text Analytics API) avulla. Tämän API:n avulla voit tunnistaa asenteen, tärkeimmät lauseet, aiheet ja tekstin kielen. Aloitamme API:n kokeiluversiolla ja kirjaudumme sen jälkeen esikatseluversion käyttäjäksi.
 
@@ -47,11 +47,7 @@ API on saatavana maksuttomana esikatselutoimintona, ja se on liitetty Azure-tila
 
 1. Jos sinulla ei vielä ole Azure-tiliä, [rekisteröidy ja tee maksuton tilaus](https://azure.microsoft.com/free/).
 
-2. Kirjaudu Azure-tilillesi.
-
-3. Siirry Azure-portaalissa kohtaan [Luo kognitiivisia palveluja](https://go.microsoft.com/fwlink/?LinkId=761108).
-
-4. Syötä tekstianalyysin API:n tiedot seuraavassa kuvassa olevan mallin mukaan. Valitse hinnoittelutasoksi **F0** (maksuton).
+2. - [Tämän sivun](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics), anna Tekstianalyysin API-tietoja kuin tässä kuvassa. Valitse hinnoittelutasoksi **F0** (maksuton).
    
     ![Luo tekstianalyysin API](./media/cognitive-services-api/azure-create.png)
 
@@ -125,29 +121,44 @@ Nyt sinulla on hieno sovellus, jolla ei vielä ole mitään käyttöä. Korjataa
 
 1. Sovellus tekee API-kutsut valittuna olevien valintaruutujen perusteella. Kun napsautat tai napautat **Analysoi teksti**, sovellus tekee 1, 2 tai 3 API-kutsua.
 
-2. Sovellus tallentaa API:n palauttamat tiedot kolmeen eri [kokoelmaan](working-with-variables.md#create-a-collection): **languageCollect**, **sentimentCollect** ja **phrasesCollect**.
+2. Sovellus tallentaa API:n palauttamat tiedot kolmeen eri [kokoelmaan](working-with-variables.md#use-a-collection): **languageCollect**, **sentimentCollect** ja **phrasesCollect**.
 
 3. Näiden kolmen kokoelman sisällön perusteella sovellus päivittää valikoimaan kahden selitteen **Teksti**-ominaisuuden sekä **Kohteet**-ominaisuuden.
 
 Pidä tämä mielessäsi, kun lisäät painikkeen **OnSelect** (Valittaessa) -ominaisuuden. Kohta alkaa tapahtua.
 
-```
-If(chkLanguage.Value=true,
-
-        ClearCollect(languageCollect, TextAnalytics.DetectLanguage({numberOfLanguagesToDetect:1, text:tiTextToAnalyze.Text}).detectedLanguages.name)
-
+```powerapps-dot
+If( chkLanguage.Value = true,
+    ClearCollect( languageCollect, 
+        TextAnalytics.DetectLanguage(
+            {
+                numberOfLanguagesToDetect: 1, 
+                text: tiTextToAnalyze.Text
+            }
+        ).detectedLanguages.name
+    )
 );
 
-If(chkPhrases.Value=true,
-
-        ClearCollect(phrasesCollect, TextAnalytics.KeyPhrases({language:"en", text:tiTextToAnalyze.Text}).keyPhrases)
-
+If( chkPhrases.Value = true,
+    ClearCollect( phrasesCollect, 
+        TextAnalytics.KeyPhrases(
+            {
+                language: "en", 
+                text: tiTextToAnalyze.Text
+            }
+        ).keyPhrases
+    )
 );
 
-If(chkSentiment.Value=true,
-
-        ClearCollect(sentimentCollect, TextAnalytics.DetectSentiment({language:"en", text:tiTextToAnalyze.Text}).score)
-
+If( chkSentiment.Value = true,
+    ClearCollect( sentimentCollect, 
+        TextAnalytics.DetectSentiment(
+            {
+                language: "en", 
+                text: tiTextToAnalyze.Text
+            }
+        ).score
+    )
 )
 ```
 
@@ -161,7 +172,7 @@ API-kutsun tekeminen muodostuu useasta osasta, jotka selitetään tässä:
 
   * Kielen tunnistamiseen tarkoitettuun **DetectLanguage()**-asetukseen valittavien kielten määrä (**numberOfLanguagesToDetect**) on kovakoodattu arvoon 1, mutta voit ohittaa tämän parametrin käyttämällä sovelluksessa jotain logiikkaa.
 
-  * Avainlauseiden **KeyPhrases()**-ominaisuuden ja asennetunnisteen **DetectSentiment()**-ominaisuuden **kielten enimmäismääräksi** on kovakoodattu ”fi”, mutta voit ohittaa tämän parametrin käyttämällä sovelluksessa jotain logiikkaa. Voit esimerkiksi tunnistaa kielen ensin **DetectLanguage()**-ominaisuuden avulla ja määrittää tämän parametrin sen mukaan, mitä edellä mainittu parametri palauttaa.
+  * - **KeyPhrases()** ja **DetectSentiment()**, **kielen** on kovakoodattu ”en”, mutta voit ohittaa tämän parametrin asetukseen valittavien sovelluksessa. Voit esimerkiksi tunnistaa kielen ensin **DetectLanguage()**-ominaisuuden avulla ja määrittää tämän parametrin sen mukaan, mitä edellä mainittu parametri palauttaa.
 
 * Lisää kunkin kutsun tulokset asianmukaiseen kokoelmaan:
 

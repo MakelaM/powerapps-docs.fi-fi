@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dea20bf885afa8e687329aff4babff00b4f3263b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: ca4fbaf18d7fa993a28f5cbb70f317b4ef5d42fd
+ms.sourcegitcommit: a4719a7d719116aeda26baa44159b2271a9a79c8
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864952"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "57800533"
 ---
 # <a name="left-mid-and-right-functions-in-powerapps"></a>Left-, Mid- ja Right-funktiot PowerAppsissa
 Poimii tekstimerkkijonosta vasemmanpuoleisen osan, keskiosan tai oikeanpuoleisen osan.
@@ -39,13 +39,13 @@ Jos aloituskohta on negatiivinen tai suurempi kuin merkkijonon loppukohta, **Mid
 
 * *String* – Pakollinen. Merkkijono, josta tulos poimitaan.
 * *StartingPosition*  – Pakollinen (vain **Mid**).  Aloituskohta.  Merkkijonon ensimmäinen merkki on kohta 1.
-* *NumberOfCharacters*  – Pakollinen.  Palautettavien merkkien määrä.
+* *Merkkienmäärä* – pakollinen (**vasemmalle** ja **oikealle** vain).  Palautettavien merkkien määrä.  Jos tämä jätetään pois **Mid** funktio, funktio palauttaa osan alkaen sijainnista merkkijonon loppuun saakka.
 
 **Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
 
 * *SingleColumnTable* – Pakollinen. Yksisarakkeinen taulukko merkkijonoista, joista haluat poimia tulokset.
 * *StartingPosition*  – Pakollinen (vain**Mid**).  Aloituskohta.  Merkkijonon ensimmäinen merkki on kohta 1.
-* *NumberOfCharacters*  – Pakollinen.  Palautettavien merkkien määrä.
+* *Merkkienmäärä* – pakollinen (**vasemmalle** ja **oikealle** vain).  Palautettavien merkkien määrä.  Jos tämä jätetään pois **Mid** funktio, funktio palauttaa osan alkaen sijainnista merkkijonon loppuun saakka.
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="single-string"></a>Yksittäinen merkkijono
@@ -55,6 +55,7 @@ Tämän osan esimerkeissä käytetään tekstisyöte-ohjausobjektia niiden [tiet
 | --- | --- | --- |
 | **Left( Author.Text, 5 )** |Poimii viisi merkkiä merkkijonon alusta. |"E. E." |
 | **Mid( Author.Text, 7, 4 )** |Poimii merkkijonosta enintään neljä merkkiä seitsemännestä merkistä alkaen. |"Cumm" |
+| **Mid (Author.Text, 7)** |Poimii kaikki merkkiä seitsemännestä merkistä merkkijonosta. |”Cummings” |
 | **Right( Author.Text, 5 )** |Poimii viisi merkkiä merkkijonon lopusta. |"mings" |
 
 ### <a name="single-column-table"></a>Yksisarakkeinen taulukko

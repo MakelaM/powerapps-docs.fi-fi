@@ -1,24 +1,24 @@
 ---
 title: Työnkulun luominen projektin hyväksyntien hallintaan | Microsoft Docs
 description: Tässä tehtävässä luomme työnkulun, joka ohjaa projektien hyväksyntäprosessia.
-author: mgblythe
+author: stepsic-microsoft-com
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/09/18
-ms.author: mblythe
+ms.author: stepsic
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c17f4cbc4438057e68b1c2ff713a2bfd66228ce9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: d41807bedf85c151c8e115456b9fb3e23756629d
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834593"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799613"
 ---
 # <a name="create-a-flow-to-manage-project-approvals"></a>Työnkulun luominen projektin hyväksyntien hallintaan
 > [!NOTE]
@@ -44,11 +44,11 @@ Tässä tehtävässä luomme työnkulun, joka ohjaa projektien hyväksyntäprose
    
     ![Hyväksyntäsähköpostiviestin yhteyshenkilö](./media/sharepoint-scenario-approval-flow/03-01-05-approval-email.png)
    
-    Työnkulun seuraava ruutu edustaa projektin hyväksyjän päätöstä ja lähettää työnkulun eteenpäin jompaankumpaan kahdesta *haarasta*: **Jos kyllä** tai **Jos ei**.
+    Työnkulun Seuraava ruutu edustaa työnkulun jompaankumpaan kahdesta projektin hyväksyjän päätöstä ja *haaroja*: **Jos Kyllä** tai **Jos ei**.
    
     ![Hyväksynnän ehto](./media/sharepoint-scenario-approval-flow/03-01-06-condition.png)
 
-## <a name="step-2-create-actions-for-approve--yes"></a>Vaihe 2: Hyväksynnän toimintojen luominen = kyllä
+## <a name="step-2-create-actions-for-approve--yes"></a>Vaihe 2: Hyväksynnän toimintojen luominen = Kyllä
 Tämä haara lähettää oletusarvoisesti hyväksyntäsähköpostiviestin pyytäjälle. Päivitämme myös **projektipyyntöjen** luettelon ja lisäämme kohteen **projektitietojen** luetteloon, koska projekti on hyväksytty.
 
 1. Napsauta tai napauta **Jos kyllä** -haarassa **Inform item creator of approval** (Ilmoita hyväksynnästä kohteen tekijälle) ja sitten **Muokkaa**, niin näet pyytäjälle lähetetyn sähköpostiviestin oletusasetukset.
@@ -133,7 +133,7 @@ Tämä haara lähettää oletusarvoisesti hylkäyssähköpostiviestin pyytäjäl
    
     ![Valmis-painike](./media/sharepoint-scenario-approval-flow/03-01-15a-done-button.png)
 
-## <a name="step-4-run-the-approval-flow"></a>Vaihe 4: Suorita hyväksyntätyönkulku
+## <a name="step-4-run-the-approval-flow"></a>Vaihe 4: Suorita Hyväksyntätyönkulku
 1. Napsauta tai napauta **projektipyyntöjen** luettelossa **Nopea muokkaus** ja lisää seuraava kohde:
    
    * **Otsikko** = "New monitor for Megan"

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d3a83f5ae96b8d9146163ed7d5ff4c4529f8d562
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c405af25d0e3228939b908c081ea8b08ce674ea6
+ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830767"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "57802327"
 ---
 # <a name="sort-and-sortbycolumns-functions-in-powerapps"></a>Sort- ja SortByColumns-funktiot PowerAppsissa
 Lajittelee [taulukon](../working-with-tables.md).
@@ -30,7 +30,7 @@ Kaava lasketaan taulukon jokaisen [tietueen](../working-with-tables.md#records) 
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Jos haluat lajitella ensin yhden sarakkeen mukaan ja sitten toisen mukaan, upota **Sort**-kaava toisen kaavan sisään. Voit esimerkiksi käyttää tätä kaavaa **Yhteystiedot**-taulukon lajittelemiseksi ensin **Sukunimi**-sarakkeen mukaan ja sitten **Etunimi**-sarakkeen mukaan:  **Sort( Sort( Yhteystiedot, Sukunimi ), Etunimi )**
+Jos haluat lajitella ensin yhden sarakkeen mukaan ja sitten toisen mukaan, upota **Sort**-kaava toisen kaavan sisään. Esimerkiksi Tämä kaava avulla voit lajitella **yhteystiedot** taulukon lajittelemiseksi ensin **Sukunimi** sarakkeen ja lajitteluperuste **Etunimi** sarakkeen:  **Sort (Sort (yhteystiedot, Sukunimi), Etunimi)**
 
 **SortByColumns**-funktiolla voidaan myös lajitella taulukko yhden tai useamman sarakkeen mukaan.
 
@@ -86,7 +86,7 @@ Seuraavissa esimerkeissä käytämme **IceCream**-[tietolähdettä](../working-w
 ### <a name="step-by-step"></a>Vaihe vaiheelta
 Voit suorittaa näitä esimerkkejä itse luomalla **IceCream**-tietolähteen [kokoelmana](../working-with-data-sources.md#collections):
 
-1. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>**ClearCollect( IceCream, { Flavor: "Chocolate", Quantity: 100, OnOrder: 150 }, { Flavor:  "Vanilla", Quantity: 200, OnOrder: 20 }, { Flavor: "Strawberry", Quantity: 300, OnOrder: 0 }, { Flavor: "Mint Chocolate", Quantity: 60, OnOrder: 100 }, { Flavor: "Pistachio", Quantity: 200, OnOrder: 10 } )**
+1. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>**ClearCollect (IceCream, {Flavor: ”Suklaa”, Quantity: 100, OnOrder: 150}, {flavor:  ”Vanilla”, Quantity: 200, OnOrder: 20}, {flavor: ”Mansikka”, Quantity: 300, OnOrder: 0}, {flavor: ”Minttutäyte suklaa”, Quantity: 60, OnOrder: 100}, {flavor: ”Pistachio”, Quantity: 200, OnOrder: 10 } )**
 2. Esikatsele sovellusta, valitse painike ja palaa oletustyötilaan painamalla ESC-näppäintä.
 3. Valitse **Kokoelmat** **Tiedosto**-valikossa näyttääksesi juuri luomasi kokoelman. Palaa oletustyötilaan painamalla Esc-näppäintä.
 
@@ -103,7 +103,7 @@ Voit suorittaa näitä esimerkkejä itse luomalla **IceCream**-tietolähteen [ko
 1. Lisää toinen painike ja aseta sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>
    **ClearCollect( SortByQuantity, SortByColumns( IceCream, "Quantity", Ascending, "Flavor", Descending ) )**
    
-     Edellinen kaava luo kolmannen kokoelman, jonka nimi on **SortByQuantity**. Se sisältää samat tiedot kuin **IceCream**. Uusi kokoelma sisältää kuitenkin tiedot numeerisesti lajiteltuna **Quantity**-sarakkeen mukaan nousevassa järjestyksessä, ja sitten **Flavor**-sarakkeen mukaan laskevassa järjestyksessä.
+     Edellinen kaava luo kolmannen kokoelman, jonka nimi on **SortByQuantity**. Se sisältää samat tiedot kuin **IceCream**. Uusi kokoelma sisältää kuitenkin tiedot numeerisesti lajiteltuna **määrä** sarakkeen mukaan nousevassa järjestyksessä ja mukaan **Flavor** sarakkeen laskevaan järjestykseen.
 2. Paina F5-näppäintä, valitse uusi painike ja paina sitten ESC-näppäintä.
 3. Valitse **Kokoelmat** **Tiedosto**-valikossa näyttääksesi kaikki kolme kokoelmaa. Palaa oletustyötilaan painamalla ESC-näppäintä.
 4. Toista kolme edellistä vaihetta, mutta muuta luotavan kokoelman nimeä ja korvaa **SortByColumns**-kaava **SortByColumns**-funktiota käyttävällä eri kaavalla, joka on esitetty aiemmin tämän osion esimerkkitaulukossa.

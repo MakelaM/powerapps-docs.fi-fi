@@ -1,24 +1,24 @@
 ---
 title: Power BI -raportin luominen projektien analysointiin | Microsoft Docs
 description: Tässä tehtävässä luomme Power BI -raportin, joka perustuu kahteen SharePoint-luetteloon.
-author: mgblythe
+author: fikaradz
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/10/2018
-ms.author: mblythe
+ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: adda4a7adae9961b77f01320e92527b53ac61e7f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c57375906ba900a3112b9d7999d3941f14e9af58
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42828773"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799935"
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Power BI -raportin luominen projektien analysointiin
 > [!NOTE]
@@ -30,9 +30,9 @@ Tässä tehtävässä luomme Power BI -raportin, joka perustuu kahteen SharePoin
 > Tämän skenaarion [latauspaketti](https://aka.ms/o4ia0f) sisältää viimeistellyn version raportista project-analysis.pbix.
 
 ## <a name="quick-review-of-power-bi-desktop"></a>Lyhyt katsaus Power BI Desktopiin
-Ennen kuin aloitamme raportin luomisen, esittelemme hiukan Power BI Desktopia. Kyseessä on tehokas työkalu, jossa on paljon ominaisuuksia. Tämän vuoksi keskitymme tarkastelemaan alueita, joita käytät tässä tehtävässä. Power BI Desktopissa on kolme pääasiallista työaluetta tai *näkymää*: **Raportti**-näkymä, **Tiedot**-näkymä ja **Suhteet**-näkymä. Power BI Desktop sisältää myös **Kyselyeditorin**, joka avautuu erilliseen ikkunaan.
+Ennen kuin aloitamme raportin luomisen, esittelemme hiukan Power BI Desktopia. Kyseessä on tehokas työkalu, jossa on paljon ominaisuuksia. Tämän vuoksi keskitymme tarkastelemaan alueita, joita käytät tässä tehtävässä. On kolme pääasiallista työaluetta tai *näkymät* Power BI Desktop: **Raportin** näkymässä **tietojen** -näkymässä ja **suhteita** näkymä. Power BI Desktop sisältää myös **Kyselyeditorin**, joka avautuu erilliseen ikkunaan.
 
-Power BI Desktopin vasemmassa reunassa on kolme näkymäkuvaketta, jotka näkyvät seuraavassa näytössä: ylhäältä alaspäin ne ovat **Raportti**, **Tiedot** ja **Suhteet**. Vasemmalla oleva keltainen palkki osoittaa nykyisen näkymän: tässä tapauksessa näytettävänä on **Raportti**-näkymä. Vaihda näkymää valitsemalla jokin kolmesta kuvakkeesta.
+Seuraavassa näytössä näkyy Power BI Desktop vasemmalle kolme näkymäkuvaketta: **Raportin**, **tietojen**, ja **suhteita**, ylhäältä alas. Vasemmalla oleva keltainen palkki osoittaa nykyisen näkymän: tässä tapauksessa näytettävänä on **Raportti**-näkymä. Vaihda näkymää valitsemalla jokin kolmesta kuvakkeesta.
 
 ![Power BI Desktopin näkymät](./media/sharepoint-scenario-build-report/05-00-00-tabs.png)
 
@@ -65,7 +65,7 @@ Emme käytä tässä tehtävässä **Suhteet**-näkymää, mutta voit tutustua s
 
 ![Power BI Desktopin kyselyeditori](./media/sharepoint-scenario-build-report/05-00-03-query.png)
 
-## <a name="step-1-get-data-into-power-bi-desktop"></a>Vaihe 1: tietojen noutaminen Power BI Desktopiin
+## <a name="step-1-get-data-into-power-bi-desktop"></a>Vaihe 1: Saat tietoja Power BI Desktop
 Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poistamalla sarakkeita, joita emme tarvitse tietoanalyysiin. Muutamme myös joidenkin jäljelle jäävien sarakkeiden tietotyyppejä, jotta laskutoimitukset toimivat oikein. Lisätietoja tietojen noutamisesta ja siistimisestä Power BI Desktopissa saat ohjatun oppimisen kurssin osasta [Tietojen noutaminen](https://powerbi.microsoft.com/guided-learning/powerbi-learning-1-1-overview-of-power-bi-desktop).
 
 ### <a name="connect-to-sharepoint-lists"></a>Yhdistäminen SharePoint-luetteloihin
@@ -94,7 +94,7 @@ Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poi
 2. Valitse keskimmäisessä ruudussa sarake **FileSystemObjectType** ja napsauta tai napauta **Poista sarakkeet**.
    
     ![Poista sarakkeet](./media/sharepoint-scenario-build-report/05-01-07-remove-column.png)
-3. Poista kaksi **Id**-sarakkeen jälkeistä saraketta: **ServerRedirectedEmbedURL** ja **ContentTypeId**. 
+3. Poista jälkeen kaksi saraketta **tunnus** sarakkeen: **ServerRedirectedEmbedURL** ja **ContentTypeId**. 
    > [!TIP]
    > Valitse molemmat sarakkeet käyttämällä vaihtonäppäintä ja napsauta tai napauta sitten **Poista sarakkeet**.
 4. Poista kaikki sarakkeen **PMAssigned** oikealla puolella olevat sarakkeet (yhteensä 22 saraketta). Taulukon pitäisi vastata seuraavaa kuvaa:
@@ -105,11 +105,11 @@ Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poi
     ![ Projektipyynnöt-taulukko kyselyeditorissa](./media/sharepoint-scenario-build-report/05-01-09-table-requests.png)
 
 ### <a name="change-the-data-type-on-project-details-columns"></a>Tietotyypin muuttaminen Projektin tiedot -sarakkeissa
-1. Valitse **ProjectedDays**-sarake, napsauta tai napauta **Tietotyyppi: mikä tahansa** ja sitten **Kokonaisluku**.
+1. Valitse **ProjectedDays** sarake, napsauta tai napauta **tietotyyppi: Mikä tahansa**, sitten **kokonaisluku**.
    
     ![Tietotyypin muuttaminen kokonaisluvuksi](./media/sharepoint-scenario-build-report/05-01-10-datatype-number.png)
 2. Toista edellinen vaihe **ActualDays**-sarakkeelle.
-3. Valitse **ApprovedDate**-sarake, napsauta tai napauta **Tietotyyppi: mikä tahansa** ja sitten **Päivämäärä**.
+3. Valitse **ApprovedDate** sarake, napsauta tai napauta **tietotyyppi: Mikä tahansa**, sitten **päivämäärä**.
    
     ![ Tietotyypin muuttaminen päivämääräksi](./media/sharepoint-scenario-build-report/05-01-11-datatype-date.png)
 
@@ -117,9 +117,9 @@ Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poi
 
 ### <a name="change-the-data-type-on-project-requests-columns"></a>Tietotyypin muuttaminen Projektipyynnöt-sarakkeissa
 
-1. Valitse **EstimatedDays**-sarake, napsauta tai napauta **Tietotyyppi: mikä tahansa** ja sitten **Kokonaisluku**.
+1. Valitse **arvioidut päivät** sarake, napsauta tai napauta **tietotyyppi: Mikä tahansa**, sitten **kokonaisluku**.
 
-2. Valitse **RequestDate**-sarake, napsauta tai napauta **Tietotyyppi: mikä tahansa** ja sitten **Päivämäärä**.
+2. Valitse **pyynnön päivämäärä** sarake, napsauta tai napauta **tietotyyppi: Mikä tahansa**, sitten **päivämäärä**.
 
 ### <a name="apply-and-save-changes"></a>Ota muutokset käyttöön ja tallenna
 
@@ -129,7 +129,7 @@ Tässä vaiheessa yhdistämme ensin kaksi luetteloa. Sitten siistimme tiedot poi
 
 2. Napsauta tai napauta **Tiedosto** ja sitten **Tallenna** ja tallenna nimellä project-analysis.pbix.
 
-## <a name="step-2-improve-the-data-model"></a>Vaihe 2: tietomallin parantaminen
+## <a name="step-2-improve-the-data-model"></a>Vaihe 2: Tietomallin parantaminen
 SharePoint-luetteloiden tiedot on nyt noudettu Power BI Desktopiin, ja voimme siirtyä tietojen mallinnukseen. Tietojen mallinnus voi olla aikaa vievä prosessi, mutta näytämme lyhyesti muutamia kiinnostavia keinoja, joiden avulla saat luettelotiedoista enemmän irti Power BI Desktopissa:
 
 * Muuta tapaa, jolla kaksi taulukkoa liittyy toisiinsa
@@ -170,7 +170,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
 1. Napsauta tai napauta **Uusi taulukko**.
    
     ![Uusi taulukko](./media/sharepoint-scenario-build-report/05-02-05-modeling-table.png)
-2. Syötä kaavariville seuraava kaava: **Dates = CALENDARAUTO()**.
+2. Kirjoita kaavariville seuraava kaava: **Dates = CALENDARAUTO()**.
    
     ![Kaavarivi Dates = CALENDARAUTO()](./media/sharepoint-scenario-build-report/05-02-06-formula-bar.png)
    
@@ -284,7 +284,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
    
     ![Lisää MaxDaysPending-mittayksikkö](./media/sharepoint-scenario-build-report/05-02-12-measure-maxdayspending.png)
 
-## <a name="step-3-create-report-visualizations"></a>Vaihe 3: raportin visualisointien luominen
+## <a name="step-3-create-report-visualizations"></a>Vaihe 3: Raportin visualisointien luominen
 Nyt olemme vaiheessa, joka monelle tulee mieleen tietojen analysoinnista: visualisointien luomisessa. Visualisointi auttaa löytämään tiedoista toistuvia kuvioita. Tässä vaiheessa luomme neljä visualisointia:
 
 * pylväskaavion, joka näyttää projektin arvioidut päivät ja toteutuneet päivät

@@ -1,24 +1,24 @@
 ---
 title: Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot | Microsoft Docs
 description: PowerAppsissa rakennettujen kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
-author: AFTOwen
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/07/2018
-ms.author: anneta
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5ba279e361dfe450de1187cf6aca87bc026178ba
-ms.sourcegitcommit: 60006ce9cb21c59e588c00f2ba5c41ffebbbba09
-ms.translationtype: HT
+ms.openlocfilehash: 64b8f1b0871438a4162448ce45e8a578e537eb89
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/30/2018
-ms.locfileid: "47456294"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799222"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.

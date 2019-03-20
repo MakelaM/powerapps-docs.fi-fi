@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5e4e0ad13280783b7b6cd00121b4dc05cca6df8
-ms.sourcegitcommit: e4fe4b27651b62edb67e5995fc5955577d8ac5b8
-ms.translationtype: HT
+ms.openlocfilehash: 09e139353e500ad27650628a844bc01264eab3d0
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075376"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308382"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Avattava luettelo -ohjausobjekti PowerAppsissa
 Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luettelon.
@@ -66,7 +66,7 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -126,7 +126,7 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä lauseke:
 
-    ```["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]```
+    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
@@ -139,13 +139,13 @@ Tämän toimenpiteen periaatteet pätevät mihin tahansa [tietolähteeseen, joka
 
 1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    ```Distinct(Accounts, address1_city)```
+    `Distinct(Accounts, address1_city)`
 
     Tämä kaava näyttää kaikki **Tilit**-entiteetin kaupungit. Jos sama kaupunki on useassa tietueessa, **[Distinct](../functions/function-distinct.md)**-funktio piilottaa kaksoiskappaleen avattavan valikon ohjausobjektissa.
 
 1. (valinnainen) Vaihda **Avattava luettelo** -ohjausobjektin nimeksi **Kaupungit** ja lisää pystysuora **Valikoima**-ohjausobjekti. Aseta valikoiman **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    ```Filter(Accounts, address1_city = Cities.Selected.Value)```
+    `Filter(Accounts, address1_city = Cities.Selected.Value)`
 
     Tämä **[suodatinfunktio](../functions/function-filter-lookup.md)** näyttää vain ne **Tilit**-entiteetin tietueet, joissa kaupunki vastaa **Kaupungit**-ohjausobjektissa valittua arvoa.
 

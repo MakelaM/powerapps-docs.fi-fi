@@ -1,24 +1,24 @@
 ---
 title: Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia | Microsoft Docs
 description: Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia, jotta käyttäjät voivat työskennellä tehokkaasti myös ilman verkkoyhteyttä.
-author: mgblythe
+author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 05/09/2017
-ms.author: mblythe
+ms.date: 01/31/2019
+ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f081369d75ec6f8fc29e6177b8173734d2462e03
-ms.sourcegitcommit: 097ddfb25eb0f09f0229b866668c2b02fa57df55
-ms.translationtype: HT
+ms.openlocfilehash: f9922c64769aeacd9b9b65cc3039b091ac7fe353
+ms.sourcegitcommit: bdee274ce4ae622f7af5f208041902e66e03d1b3
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991765"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "57800372"
 ---
 # <a name="develop-offline-capable-canvas-apps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia
 
@@ -29,10 +29,15 @@ Yksi yleisimpiä mobiilisovelluksen kehittäjänä kohtaamiasi haasteita on, mit
 * Määrittää, onko sovellus offline-tilassa, verkossa tai käyttääkö se käytön mukaan laskutettavaa yhteyttä käyttämällä [Connection](../canvas-apps/functions/signals.md#connection)-signaaliobjektia.
 * Käyttää [kokoelmia](../canvas-apps/create-update-collection.md) ja hyödyntää funktioita, kuten [LoadData ja SaveData](../canvas-apps/functions/function-savedata-loaddata.md), perustietojen tallennukseen offline-tilassa.
 
-> [!NOTE]
-> Tämä ominaisuusalue on vielä kehitteillä, eikä sitä ole optimoitu jokaista nykyistä skenaariota varten. Funktiot SaveData() ja LoadData() tietojen tallentamiseen paikalliseen laitteeseen ja lataamiseen paikallisesta laitteesta toimivat parhaiten niiden nykyisenä toteutuksena, kun tiedon määrä ei yleensä ylitä kahta megatavua. Tietueiden määrän on hyvä olla vain kymmeniä tekstitietueita per taulukko. Tästä on hyötyä joissain perustason offline-skenaarioissa sekä silloin, kun on parannettava pohjaan perustuvien sovellusten käynnistyksen suorituskykyä tallentamalla tietoja paikallisesti välimuistiin. Tämän ominaisuuden käyttö suurten tietomäärien tallentamiseen voi aiheuttaa virheitä tai toimintahäiriöitä nykyisessä käyttöönotossa, joten sitä tulisi välttää. Suurilla tietomäärillä tarkoitetaan tässä esimerkiksi tuhansien taulukkorivien tallentamista tai suurten kuvien tai videoiden tallentamista. Lisäksi funktiot eivät automaattisesti ratkaise yhdistämisristiriitoja, kun laite palaa verkkoyhteyteen offline-tilasta. On lausekkeiden kirjoittajan vastuulla määrittää, mitä tietoja tallennetaan ja miten yhteyden uudelleenmuodostamista käsitellään.
->
-> Pyrimme laajentamaan offline-sovellusten ominaisuuksia, parantamaan vakautta ja lieventämään kokorajoituksia. Tulevaisuudessa päätökset tallentamisesta ja ristiriitojen ratkaisemisesta on tarkoitus käsitellä automaattisesti. Pidä silmällä tätä ohjeaihetta ja [PowerApps-blogia](https://powerapps.microsoft.com/blog/), niin saat tietää, milloin päivitykset tulevat saataville.
+## <a name="limitations"></a>Rajoitukset
+
+**LoadData** ja **SaveData** yhdistää lomake yksinkertainen mekanismia pieniä tietomääriä tallentaa paikalliseen laitteeseen. Näiden funktioiden avulla voit lisätä yksinkertainen offline-ominaisuuksista sovellukseesi.  
+
+Nämä funktiot rajoittavat käytettävissä oleva sovellus muistin määrä, koska ne toimivat muistissa-kokoelma. Käytettävissä olevaa muistia voi vaihdella laitteen, käyttöjärjestelmän, PowerApps Mobilessa käyttämän muistin ja näyttöjä ja ohjausobjekteja sovelluksen monimutkaisuudesta riippuen. Jos tallennat useita megatavua, kokeile sovellusta odotettua skenaarioita, jolloin oletat suoritettavaksi laitteissa. Tulee yleisesti odottaa oltava 30 – 70 muistia megatavua.  
+
+Funktiot myös ei automaattisesti ratkaisemaan yhdistämisen ristiriitoja, kun laite palauttaa offline yhteydet – mitä tietoja on tallennettu ja miten käsitellään yhteyden muodostamista uudelleen määritys on enintään valmistaja, kun kirjoitat lausekkeita.
+
+Pyrimme Laajenna offline-tilanteita ominaisuudet. Pidä silmällä tätä ohjeaihetta ja [PowerApps-blogia](https://powerapps.microsoft.com/blog/), niin saat tietää, milloin päivitykset tulevat saataville.
 
 ## <a name="how-to-build-offline-capable-apps"></a>Offline-tilassa toimivien sovellusten luominen
 
@@ -64,7 +69,7 @@ Ylätasolla sovellus tekee seuraavaa:
 
     ![Tyhjä sovellus, puhelinasettelu](./media/offline-apps/blank-app.png)
 
-### <a name="step-2-add-a-twitter-connection"></a>Vaihe 2: Lisää Twitter-yhteys
+### <a name="step-2-add-a-twitter-connection"></a>Vaihe 2: Twitter-yhteyden lisääminen
 
 1. Napsauta tai napauta **Sisältö** > **Tietolähteet** ja valitse sitten **Lisää tietolähde** **Tietolähteet**-paneelissa.
 
@@ -74,27 +79,18 @@ Ylätasolla sovellus tekee seuraavaa:
 
     ![Twitter-yhteyden lisääminen](./media/offline-apps/twitter-connection.png)
 
-### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Vaihe 3: Lataa twiittejä LocalTweets-kokoelmaan sovelluksen käynnistyksen yhteydessä
+### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Vaihe 3: Twiittien LocalTweets-kokoelmaan sovelluksen käynnistyksen yhteydessä
 Valitse **OnVisible**-ominaisuus **Screen1**:lle sovelluksessa ja kopioi siihen seuraava kaava:
 
-```
-If(Connection.Connected,
-
-    ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100}));
-
-    UpdateContext({statusText: "Online data"})
-
-    ,
-
+```powerapps-dot
+If( Connection.Connected,
+    ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
+        UpdateContext( {statusText: "Online data"} ),
     LoadData(LocalTweets, "Tweets", true);
-
-    UpdateContext({statusText: "Local data"})
-
+        UpdateContext( {statusText: "Local data"} )
 );
-
-LoadData(LocalTweetsToPost, "LocalTweets", true);
-
-SaveData(LocalTweets, "Tweets")
+LoadData( LocalTweetsToPost, "LocalTweets", true );
+SaveData( LocalTweets, "Tweets" )
 ```
 
 ![Kaava twiittien lataamista varten](./media/offline-apps/load-tweets.png)
@@ -104,9 +100,9 @@ Tämä kaava tarkistaa, onko laite online-tilassa:
 * Jos laite on online-tilassa, se lataa **LocalTweets**-kokoelmaan enintään 100 twiittiä, jotka sisältävät hakusanan ”PowerApps”.
 * Jos laite on offline-tilassa, se lataa paikalliseen välimuistiin tiedoston, jonka nimi on ”Twiittejä”, jos se on saatavilla.
 
-### <a name="step-4-add-a-gallery-and-bind-it-to-the-localtweets-collection"></a>Vaihe 4: Lisää valikoima ja sido se LocalTweets-kokoelmaan
+### <a name="step-4-add-a-gallery-and-bind-it-to-the-localtweets-collection"></a>Vaihe 4: Lisää valikoima ja sido se LocalTweets-kokoelma
 
-1. Lisää uusi valikoima, jonka korkeus on joustava: **Lisää** > **Valikoima** > **Tyhjä, joustava korkeus**.
+1. Lisää uusi valikoima, joustava korkeus: **Lisää** > **valikoiman** > **tyhjä, joustava korkeus**.
 
 2. Määritä **Items**-ominaisuuden arvoksi **LocalTweets**.
 
@@ -120,36 +116,28 @@ Tämä kaava tarkistaa, onko laite online-tilassa:
 ### <a name="step-5-add-a-connection-status-label"></a>Vaihe 5: Lisää yhteyden tilan selite
 Lisää uusi **Selite**-ohjausobjekti ja määritä sen **Text**-ominaisuudeksi seuraava kaava:
 
-```
-If (Connection.Connected, "Connected", "Offline")
-```
+```If( Connection.Connected, "Connected", "Offline" )```
 
 Tämä kaava tarkistaa, onko laite online-tilassa. Jos näin on, selitteen tekstinä on ”Yhdistetty”, muussa tapauksessa se on ”Offline”.
 
-### <a name="step-6-add-a-text-input-to-compose-new-tweets"></a>Vaihe 6: Lisää tekstisyöte uusien twiittien laatimista varten
+### <a name="step-6-add-a-text-input-to-compose-new-tweets"></a>Vaihe 6: Lisää Tekstisyöte uusien twiittien laatimista varten
 
 1. Lisää uusi **tekstisyöte**-ohjausobjekti, jonka nimi on ”NewTweetTextInput”.
 
 2. Määritä tekstisyötteen **Reset**-ominaisuudeksi **resetNewTweet**.
 
-### <a name="step-7-add-a-button-to-post-the-tweet"></a>Vaihe 7: Lisää painike, jolla twiitti lähetetään
+### <a name="step-7-add-a-button-to-post-the-tweet"></a>Vaihe 7: Lisää painike, jolla twiitti
 1. Lisää **Button**-ohjausobjekti ja aseta sen **Text**-ominaisuudeksi ”Tweet”.
 2. Määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```
-    If (Connection.Connected,
-
-        Twitter.Tweet("", {tweetText: NewTweetTextInput.Text}),
-
-        Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-
-        SaveData(LocalTweetsToPost, "LocalTweetsToPost")
-
+    ```powerapps-dot
+    If( Connection.Connected,
+        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
+            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
     );
-
-    UpdateContext({resetNewTweet: true});
-
-    UpdateContext({resetNewTweet: false})
+    UpdateContext( {resetNewTweet: true} );
+    UpdateContext( {resetNewTweet: false} )
     ```  
 
 Tämä kaava tarkistaa, onko laite online-tilassa:
@@ -159,7 +147,7 @@ Tämä kaava tarkistaa, onko laite online-tilassa:
 
 Sitten kaava palauttaa tekstiruudun tekstin.
 
-### <a name="step-8-add-a-timer-to-check-for-tweets-every-five-minutes"></a>Vaihe 8: Lisää ajastin, joka tarkistaa twiittejä viiden minuutin välein
+### <a name="step-8-add-a-timer-to-check-for-tweets-every-five-minutes"></a>Vaihe 8: Lisää ajastin Tarkista twiittejä viiden minuutin välein
 Lisää uusi **Timer**-ohjausobjekti:
 
 * Määritä **Duration**-ominaisuuden arvoksi 300000.
@@ -168,18 +156,13 @@ Lisää uusi **Timer**-ohjausobjekti:
 
 * Määritä **OnTimerEnd**in arvoksi seuraava kaava:
 
-    ```
-    If(Connection.Connected,
-
-        ForAll(LocalTweetsToPost, Twitter.Tweet("", {tweetText: tweetText}));
-
-        Clear(LocalTweetsToPost);
-
-        Collect(LocalTweetsToPost, {tweetText: NewTweetTextInput.Text});
-
-        SaveData(LocalTweetsToPost, "LocalTweetsToPost");
-
-        UpdateContext({statusText: "Online data"})
+    ```powerapps-dot
+    If( Connection.Connected,
+        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
+        Clear( LocalTweetsToPost);
+        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
+        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
+        UpdateContext( {statusText: "Online data"} )
     )
     ```
 

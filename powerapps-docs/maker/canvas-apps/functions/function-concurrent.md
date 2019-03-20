@@ -13,24 +13,24 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a0fdddcf906a04914ea9ba9a8572798ea5d55378
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b3f95b5c8ddbca1925f89797e52b1b227c4b10e8
+ms.sourcegitcommit: ead27300a1b7371136edee1842829ed87ca77a72
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42834815"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57892249"
 ---
 # <a name="concurrent-function-in-powerapps"></a>PowerAppsin Concurrent-funktio
 Arvioi useita kaavoja keskenään samanaikaisesti.
 
 ## <a name="description"></a>Kuvaus
-**Concurrent**-funktio arvioi useita kaavoja samaan aikaan. Yleensä useita kaavoja arvioidaan ketjuttamalla ne yhteen operaattorilla [**;**](operators.md) (tai [**;;**](operators.md)), joka arvioi jokaisen kaavan järjestyksessä peräkkäin. Kun sovellus suorittaa toimintoja samanaikaisesti, käyttäjät saavat tuloksen tavallista nopeammin.
+**Concurrent**-funktio arvioi useita kaavoja samaan aikaan. Yleensä kaavat lasketaan ketjuttamalla niitä yhdessä [ **;** ](operators.md) operaattoria, joka laskee kaikki peräkkäisessä järjestyksessä järjestyksessä. Kun sovellus suorittaa toimintoja samanaikaisesti, käyttäjät saavat tuloksen tavallista nopeammin.
 
 Paranna sovelluksesi suorituskykyä, kun se lataa tietoja, käyttämällä sovelluksen [**OnStart**](../controls/control-screen.md)-ominaisuuden **Concurrent**-funktiota. Kun tietokutsut eivät ala ennen edellisten kutsujen valmistumista, sovelluksen on odotettava kaikkien pyyntöaikojen summaa. Jos tietokutsut alkavat samanaikaisesti, sovelluksen on odotettava vain pisimmän pyyntöajan verran. Selaimet parantavat usein suorituskykyä suorittamalla tietotoimintoja samanaikaisesti.
 
-Ei voida ennustaa, missä järjestyksessä kaavojen arviointi **Concurrent**-funktiossa alkaa ja päättyy. **Concurrent**-funktion kaavoissa ei tulisi olla riippuvuuksia muihin kaavoihin samassa **Concurrent**-funktiossa, ja PowerApps tuo näyttöön virhesanoman, jos riippuvuuksia on. Funktion sisältä voi turvallisesti käyttää riippuvuuksia **Concurrent**-funktion ulkopuolisiin kaavoihin, koska ne päättyvät ennen **Concurrent**-funktion käynnistymistä. **Concurrent**-funktion jälkeiset kaavat voivat turvallisesti käyttää riippuvuuksia funktion sisäisiin kaavoihin. Ne kaikki päättyvät ennen **Concurrent**-funktion päättymistä, ja suoritus siirtyy ketjun seuraavaan kaavaan (jos käytät operaattoria **;** tai **;;**). Varo hienovaraisia järjestysriippuvuuksia, jos kutsut funktioita tai palvelumenetelmiä, joilla on sivuvaikutuksia.
+Ei voida ennustaa, missä järjestyksessä kaavojen arviointi **Concurrent**-funktiossa alkaa ja päättyy. **Concurrent**-funktion kaavoissa ei tulisi olla riippuvuuksia muihin kaavoihin samassa **Concurrent**-funktiossa, ja PowerApps tuo näyttöön virhesanoman, jos riippuvuuksia on. Funktion sisältä voi turvallisesti käyttää riippuvuuksia **Concurrent**-funktion ulkopuolisiin kaavoihin, koska ne päättyvät ennen **Concurrent**-funktion käynnistymistä. Kaavat jälkeen **samanaikaisten** funktio voi olla riippuvuudet turvallisesti kaavoja: kaikki suoritetaan loppuun ennen **samanaikaisten** funktio on valmis ja siirtyy seuraava kaava ketjun (Jos voit Käytä **;** operaattorin). Varo hienovaraisia järjestysriippuvuuksia, jos kutsut funktioita tai palvelumenetelmiä, joilla on sivuvaikutuksia.
 
-Voit ketjuttaa kaavoja yhteen operaattorilla **;** (tai **;;**) **Concurrent**-funktion argumentin sisällä. Esimerkiksi funktio **Concurrent( Set( a, 1 ); Set( b, a+1 ), Set( x, 2 ); Set( y, x+2 ) )** arvioi kaavan **Set( a, 1 ); Set( b, a+1 )** samanaikaisesti kaavan **Set( x, 2 ); Set( y, x+2 )** kanssa. Tässä tapauksessa kaavojen sisäisiä riippuvuuksia voidaan käyttää: **a** määritetään ennen **b**:tä ja **x** määritetään ennen **y**:tä.
+Voit ketjun kaavat yhdessä **;** operaattorin argumentti sisällä **samanaikaisten**. Esimerkiksi funktio **Concurrent( Set( a, 1 ); Set( b, a+1 ), Set( x, 2 ); Set( y, x+2 ) )** arvioi kaavan **Set( a, 1 ); Set( b, a+1 )** samanaikaisesti kaavan **Set( x, 2 ); Set( y, x+2 )** kanssa. Tässä tapauksessa kaavojen sisäisiä riippuvuuksia voidaan käyttää: **a** määritetään ennen **b**:tä ja **x** määritetään ennen **y**:tä.
 
 Sen mukaan, missä laitteessa tai selaimessa sovellus on käynnissä, vain kourallinen kaavoja saatetaan arvioida samanaikaisesti. **Concurrent** käyttää käytettävissä olevia ominaisuuksia, eikä sen suoritus pääty, ennen kuin kaikki kaavat on arvioitu.
 
@@ -55,7 +55,12 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 2. Lisää **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    **ClearCollect( Product, '[SalesLT].[Product]' );<br> ClearCollect( Customer, '[SalesLT].[Customer]' );<br> ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );<br> ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )**
+    ```powerapps-dot
+    ClearCollect( Product, '[SalesLT].[Product]' );
+    ClearCollect( Customer, '[SalesLT].[Customer]' );
+    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ); 
+    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+    ```
 
 3. Ota [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network)- tai [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) -selaimessa kehitystyökalut käyttöön, jotta voit tarkkailla verkkoliikennettä sovelluksen ollessa käynnissä.
 
@@ -73,7 +78,14 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 1. Lisää toinen **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    **Concurrent(<br> &nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Product, '[SalesLT].[Product]' ),<br> &nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( Customer, '[SalesLT].[Customer]' ),<br> &nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),<br> &nbsp;&nbsp;&nbsp;&nbsp;ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )<br> )**
+    ```powerapps-dot
+    Concurrent( 
+        ClearCollect( Product, '[SalesLT].[Product]' ), 
+        ClearCollect( Customer, '[SalesLT].[Customer]' ),
+        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
+        ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+    )
+    ```
 
     Huomaa, että lisäsit samat **ClearCollect**-kutsut ensimmäiseen painikkeeseen, mutta ne on tässä vaiheessa rivitetty ja erotettu pilkulla **Concurrent**-funktiossa.
 
@@ -99,7 +111,23 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 3. Lisää **Painike**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    **Set( StartTime, Value(Now()) );<br> Concurrent(<br> &nbsp;&nbsp;&nbsp;&nbsp;Set(FRTrans, MicrosoftTranslator.Translate(TextInput1.Text,"fr")); Set(FRTransTime, Value(Now()) ),<br> &nbsp;&nbsp;&nbsp;&nbsp;Set(DETrans, MicrosoftTranslator.Translate(TextInput1.Text,"de")); Set(DETransTime, Value(Now()) )<br> ); <br> Collect( <br> &nbsp;&nbsp;&nbsp;&nbsp;Results, <br> &nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input: TextInput1.Text, <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;French: FRTrans, FrenchTime: FRTransTime-StartTime,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;German: DETrans, GermanTime: DETransTime-StartTime,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FrenchFaster: FRTransTime < DETransTime <br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> )**
+    ```powerapps-dot
+    Set( StartTime, Value( Now() ) );
+    Concurrent(
+        Set( FRTrans, MicrosoftTranslator.Translate( TextInput1.Text, "fr" ) ); 
+            Set( FRTransTime, Value( Now() ) ),
+        Set( DETrans, MicrosoftTranslator.Translate( TextInput1.Text, "de" ) ); 
+            Set( DETransTime, Value( Now() ) )
+    );
+    Collect( Results,
+        { 
+            Input: TextInput1.Text,
+            French: FRTrans, FrenchTime: FRTransTime - StartTime, 
+            German: DETrans, GermanTime: DETransTime - StartTime, 
+            FrenchFaster: FRTransTime < DETransTime
+        }
+    )
+    ```
 
 4. Lisää [**Arvotaulukko**](../controls/control-data-table.md)-ohjausobjekti ja aseta sen **Items**-ominaisuudeksi **Tulokset**.
 

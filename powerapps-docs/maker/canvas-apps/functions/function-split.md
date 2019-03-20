@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7cc3608d6a973c0ef301c9979b62f5ba898c029c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: b8f8dc0d354dd17fedd16524fed0f358b70839d4
+ms.sourcegitcommit: f5013108140276b3d66a9dce13a061df89609d26
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848574"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "57798394"
 ---
 # <a name="split-function-in-powerapps"></a>PowerAppsin Split-funktio
 Jakaa merkkijonon osamerkkijonojen taulukoksi.
@@ -28,7 +28,7 @@ Jakaa merkkijonon osamerkkijonojen taulukoksi.
 
 Merkkijono jaetaan osiin käyttämällä erotinta.  Erotin voi muodostua nollasta merkistä, yhdestä merkistä tai useammasta merkistä, jotka yhdistetään kokonaisuutena merkkijonoon.  Jos käytetään nollapituutta eli *tyhjää* merkkijonoa, kaikki merkit erotetaan toisistaan.  Yhdistettyjä erotinmerkkejä ei palauteta tuloksen mukana.  Jos erottimelle ei löydy vastinetta, koko merkkijono palautetaan yhtenä tuloksena.
 
-Voit koota merkkijonon uudelleen käyttämällä **[Concat](function-concatenate.md)**-funktiota (ilman erottimia).  
+Voit koota merkkijonon uudelleen käyttämällä **[Concat](function-concatenate.md)**-funktiota (ilman erottimia). Käytä **[MatchAll](function-ismatch.md)** funktiolla merkkijonon osan säännönmukainen lauseke, jonka (joissakin tapauksissa) avulla voit jakaa merkkijonon käyttämällä. 
 
 ## <a name="syntax"></a>Syntaksi
 **Split**( *Text*, *Separator* )

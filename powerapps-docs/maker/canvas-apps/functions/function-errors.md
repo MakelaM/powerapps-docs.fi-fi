@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 886479b4cd2f7e04e9949c99ba05e6219e92b2b3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1cc589d1bff73777e0c20ed933a563e42b934f35
+ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42859982"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57803592"
 ---
 # <a name="errors-function-in-powerapps"></a>PowerAppsin Virheet-funktio
 Antaa [tietolähteen](../working-with-data-sources.md) edellisiin muutoksiin liittyviä virhetietoja.
@@ -72,15 +72,15 @@ Tässä esimerkissä käytämme **IceCream**-tietolähdettä:
 
 ![](media/function-errors/icecream.png)
 
-Sovelluksessa käyttäjä lataa Chocolate-tietueen tietolomakkeeseen ja muuttaa sitten **Quantity**-arvoksi luvun 90.  Työstettävä tietue sijoitetaan [kontekstimuuttujaan](../working-with-variables.md#create-a-context-variable)**EditRecord**:
+Sovelluksessa käyttäjä lataa Chocolate-tietueen tietolomakkeeseen ja muuttaa sitten **Quantity**-arvoksi luvun 90.  Työstettävä tietue sijoitetaan [kontekstimuuttujaan](../working-with-variables.md#use-a-context-variable)**EditRecord**:
 
-* **UpdateContext( { EditRecord: First( Filter( IceCream, Flavor = "Chocolate" ) ) } )**
+* **UpdateContext ({EditRecord: Ensimmäinen (Filter (IceCream, Flavor = ”suklaa”))})**
 
 Tämä muutos tehdään tietolähteeseen **[Patch](function-patch.md)**-funktiolla:
 
 * **Patch( IceCream, EditRecord, Gallery.Updates )**
 
-jossa **Gallery.Updates** saa arvon **{ Quantity: 90 }**, koska vain **Quantity**-ominaisuutta on muokattu.
+Jos **Gallery.Updates** antaa tulokseksi **{määrä: 90}**, koska vain **määrä** ominaisuutta on muokattu.
 
 Valitettavasti, juuri ennen kuin **[Patch](function-patch.md)**-funktio käynnistettiin, joku muu muutti Chocolate-tietueen **Quantity**-arvoksi luvun 80.  PowerApps tunnistaa tämän eikä salli ristiriitaista muutosta.  Voit tarkistaa tällaisen tilanteen seuraavalla kaavalla:
 
@@ -90,7 +90,7 @@ joka palauttaa **epätoden**, koska **Errors**-funktio palautti seuraavan tauluk
 
 | Tietue | Sarake | Viesti | Virhe |
 | --- | --- | --- | --- |
-| { Flavor: "Chocolate", Quantity: 100 } |*tyhjä* |”Toinen käyttäjä on muokannut tietuetta, jota yrität muokata. Lataa tietue uudestaan ja yritä uudelleen.” |ErrorKind.Conflict |
+| {Flavor: ”Suklaa”, Quantity: 100 } |*tyhjä* |”Toinen käyttäjä on muokannut tietuetta, jota yrität muokata. Lataa tietue uudestaan ja yritä uudelleen.” |ErrorKind.Conflict |
 
 Voit sijoittaa lomakkeeseen selitteen, joka näyttää tämän virheen käyttäjälle.
 

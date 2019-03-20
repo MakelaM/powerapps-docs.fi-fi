@@ -7,24 +7,36 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 08/02/2018
+ms.date: 11/09/2018
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5701f85d28d987229aa56756b5c1817892bd5c0
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3c3b559be5f27c6ead9a4ea2f02027637c8aea8e
+ms.sourcegitcommit: 67f9974ee2fa06773c729876ba7ef95145c63a07
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42855098"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253073"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Yleisiä PowerAppsin ongelmia ja ratkaisuja
 
 Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttäjät saattavat kohdata PowerAppsia käyttäessään. Tarvittaessa annetaan ratkaisuehdotuksia.
 
 ## <a name="added-after-february-2018"></a>Lisätty helmikuun 2018 jälkeen
+
+1. **Kameran ongelma Android-mobiililaitteiden** (1. tämän 2019)
+
+    Jos kameran ohjausobjekti lakkaa toimimasta Android-laitteessa, Julkaise sovelluksesi uudelleen ja avaa se uudelleen laitteessa. Kamera-ohjausobjektin päivitettiin vastauksena Android-käyttöjärjestelmän muutos ja sovelluksesi tehdään, etuna päivitys julkaistessasi.
+
+1. **Joustava korkeus valikoimat vierittäminen** (27. Nov. 2018)
+
+    Jos kohtaat rajoitus, vieritettäessä sormella, nosta ja Käynnistä vieritettävä uudelleen.
+
+1. **Piirustuksen hiirtä tai kosketus-syöte ei ole tasainen PowerApps for Windows** (Separated 24, 2018)
+
+    Kynä-ohjausobjekti on vain osittain tuki piirtäminen hiiren avulla tai kosketuksella Windows-sovelluksessa. Oletuskynänvedot voi olla ajoittaisia. Tasoitettu viivatyyliä kynällä tai suorittaa sovelluksen selaimessa.
 
 1. **Useita mediaohjausobjekteja PowerApps Mobilessa** (2.8.2018)
 
@@ -39,7 +51,7 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 1. <a name="out-of-memory"></a>**Selaimen muisti on loppumassa** (23.7.2018)
 
-    Jos muisti loppuu käytettäessä PowerApps-sovelluksia, harkitse Chromen, Edgen tai Internet Explorerin 64-bittisen version lataamista.
+    Jos suoritat muisti ei riitä Powerappsia käyttäessään, harkitse 64-bittinen versio Chrome, Microsoft Edgen tai Internet Explorerin ladataan.
 
 1. **Sivuston käynnistäminen upotetusta sovelluksesta** (10.5.2018)
 

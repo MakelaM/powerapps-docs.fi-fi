@@ -1,24 +1,24 @@
 ---
 title: Julkaise Power BI -projektiraportti ja luo koontinäyttö| Microsoft Docs
 description: Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, minkä jälkeen luomme raportin pohjalta koontinäytön.
-author: mgblythe
+author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/30/2018
-ms.author: mblythe
+ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5a39ec04015fe360bc550d9ea4f708d887ba34c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 43e95b88cdf305e7c4b768def83a6b41fa0fcae7
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833870"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799360"
 ---
 # <a name="publish-the-power-bi-project-report-and-create-a-dashboard"></a>Power BI -projektiraportin julkaiseminen ja koontinäytön luominen
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "42833870"
 
 Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, minkä jälkeen luomme raportin pohjalta koontinäytön. Usein raportit sisältävät runsaasti visualisointeja ja koontinäytössä käytetään vain alijoukkoa. Tässä tapauksessa lisäämme kaikki neljä visualisointia koontinäyttöön.
 
-## <a name="step-1-publish-the-dataset-and-report"></a>Vaihe 1: tietojoukon ja raportin julkaiseminen
+## <a name="step-1-publish-the-dataset-and-report"></a>Vaihe 1: Tietojoukon ja raportin julkaiseminen
 1. Napsauta tai napauta Power BI Desktopin **Aloitus**-välilehdessä **Julkaise**.
    
     ![Tietojoukon ja raportin julkaiseminen](./media/sharepoint-scenario-publish-report/06-01-01-publish.png)
@@ -48,7 +48,7 @@ Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, m
    
     Kuten kuvasta nähdään, Power BI Desktop latasi julkaisun yhteydessä palvelimeen tietojoukon **(d)** ja raportin **(c)**. Koontinäyttöjä luodaan palvelussa, ei Power BI Desktopissa. Tässä työtilassa ei ole vielä koontinäyttöjä **(b)**. Luomme sellaisen pian.
 
-## <a name="step-2-configure-credentials-for-refresh"></a>Vaihe 2: tunnistetietojen määrittäminen päivittämistä varten
+## <a name="step-2-configure-credentials-for-refresh"></a>Vaihe 2: Tunnistetietojen määrittäminen päivittämistä varten
 1. Napsauta palvelun oikeassa yläkulmassa olevaa ![hammaspyöräkuvaketta](./media/sharepoint-scenario-publish-report/icon-gear.png) ja napsauta tai napauta **Asetukset**.
 2. Napsauta tai napauta **Tietojoukot**, sitten **project-analysis**.
    
@@ -67,7 +67,7 @@ Tässä tehtävässä julkaisemme tietojoukon ja raportin Power BI -palveluun, m
    
     ![Tietolähde päivitettiin](./media/sharepoint-scenario-publish-report/06-01-11-updated.png)
 
-## <a name="step-3-create-a-dashboard"></a>Vaihe 3: koontinäytön luominen
+## <a name="step-3-create-a-dashboard"></a>Vaihe 3: Koontinäytön luominen
 
 1. Voit palata raporttiisi napsauttamalla tai napauttamalla kohdetta **project-analysis** kohdassa **RAPORTIT**.
 

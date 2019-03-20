@@ -7,35 +7,30 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 07/10/2017
+ms.date: 02/03/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c0c4e14b2f4a7db81dcdd51dd75a45d3cac4da68
-ms.sourcegitcommit: 6851486b8a44d76b6d87837952b7a7f38a8752b6
-ms.translationtype: HT
+ms.openlocfilehash: b6f83d21b2964dac7c4925d45efdf11a3a1e6b02
+ms.sourcegitcommit: 7f67cd28c781a48f6a211ed82c2c861ae3acf1a5
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53570347"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "57800717"
 ---
 # <a name="add-a-screen-to-a-canvas-app-and-navigate-between-screens"></a>Näytön lisääminen pohjaan perustuvaan sovellukseen ja näyttöjen välillä siirtyminen
 
 Luo usean näytön pohjaan perustuva sovellus ja lisää tapoja, joilla käyttäjät voivat siirtyä niiden välillä.
 
-## <a name="prerequisites"></a>Edellytykset
-
-* Lue, miten [ohjausobjekti määritetään](add-configure-controls.md).
-* Luo tai avaa sovellus.
-
 ## <a name="add-and-rename-a-screen"></a>Lisää ja nimeä näyttö uudelleen
 
-1. Napsauta tai napauta **Aloitus**-välilehdestä **Uusi näyttö**.
+1. Valitse **aloitus** -välilehden **uuden näytön**, ja valitse sitten näytön, jonka haluat lisätä tyyppi.
 
     ![Lisää Aloitus-välilehteen Näyttö-vaihtoehto](./media/add-screen-context-variables/add-screen.png)
 
-2. Napsauta tai napauta oikeanpuoleisessa ruudussa näytön nimeä (suoraan **Ominaisuudet**-välilehden yläpuolella), ja kirjoita sitten uusi nimi **Lähde**.
+2. Valitse oikeanpuoleisessa ruudussa näytön nimeä (vain yläpuolella **ominaisuudet** välilehdessä), ja kirjoita sitten **tietolähteen**.
 
     ![Nimeä oletusnäyttö uudelleen](./media/add-screen-context-variables/name-source-screen.png)
 
@@ -43,24 +38,37 @@ Luo usean näytön pohjaan perustuva sovellus ja lisää tapoja, joilla käyttä
 
     ![Vasemman siirtymispalkin kaksi näyttöä](./media/add-screen-context-variables/two-screens-in-nav.png)
 
+## <a name="reorder-screens"></a>Näyttöjen järjestäminen uudelleen
+
+Osoita näyttö, jossa haluat siirtää tai alas, valitse kolme pistettä, joka näkyy vasemmassa siirtymispalkissa ja valitse sitten **ylöspäin** tai **alaspäin**.
+
+![Näytön järjestäminen uudelleen](./media/add-screen-context-variables/reorder-screen.png)
+
+> [!NOTE]
+> Kun sovellus avataan, yläosassa oleva ohjausobjektien hierarkkisessa luettelossa näytön yleensä näkyy ensimmäisenä. Mutta voit määrittää eri näyttöön määrittämällä **[OnStart](controls/control-screen.md)** ominaisuuden näyttämään kaavan, joka sisältää **[Navigate](functions/function-navigate.md)** funktio.
+
 ## <a name="add-navigation"></a>Lisää siirtyminen
-1. Avaa **Lisää**-välilehti **Lähde**-näytön ollessa valittuna, napsauta tai napauta **Kuvakkeet** ja napsauta tai napauta sitten **Seuraava nuoli**.  
+
+1. Kanssa **tietolähteen** näytön ollessa valittuna, Avaa **Lisää** -välilehden **kuvakkeet**, ja valitse sitten **seuraava-nuolta**.  
 
     ![Lisää-välilehden Muodot-vaihtoehto](./media/add-screen-context-variables/add-next-arrow.png)
 
 2. (valinnainen) Siirrä nuolta niin, että se näkyy näytön oikeassa alakulmassa.
 
-3. Napsauta tai napauta **Toiminto**-välilehteä nuolen ollessa edelleen valittuna ja napsauta tai napauta sitten **Siirry**.
+3. Nuolen ollessa edelleen valittuna ja valitse **toiminto** välilehti ja valitse sitten **Navigate**.
 
-    Nuolen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi määritetään automaattisesti **Siirry**-toiminto.  
+    Nuolen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi määritetään automaattisesti **Siirry**-toiminto.
 
     ![OnSelect-ominaisuudeksi on määritetty Siirry-toiminto](./media/add-screen-context-variables/onselect-default.png)
 
-    Kun käyttäjä napsauttaa tai napauttaa nuolta, **Kohde**-näyttö voimistuu esiin.
+    Kun käyttäjä valitsee olevaa nuolta **kohde** näyttö voimistuu esiin.
 
 4. Lisää **Kohde**-näyttöön **takaisin-nuoli** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Navigate(Lähde, ScreenTransition.Fade)**
 
-5. Avaa esikatselutila (![](./media/add-screen-context-variables/preview.png) tai paina F5-näppäintä) ja siirry sitten näyttöjen välillä napsauttamalla tai napauttamalla lisäämiäsi nuolia.
+    `Navigate(Source, ScreenTransition.Fade)`
 
-6. Palaa oletustyötilaan painamalla **Esc**.
+5. Kun pidät alhaalla Alt-näppäintä, Näytä tai piilota valitsemalla nuoli kunkin näytön näyttöjen välillä.
+
+## <a name="more-information"></a>Lisätietoja
+
+[Näytön ohjausobjektin viittauksesta](controls/control-screen.md)

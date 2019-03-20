@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e469cc3769c8deeb5046dc79f34b9ae42788b2d2
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 99c07c0561b4942e6cbbd49fa5c498d90b502d7e
+ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865170"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58073279"
 ---
-# <a name="rich-text-editor-control-experimental-in-powerapps"></a>Tekstimuotoilueditorin ohjausobjekti (kokeellinen) PowerAppsissa
-Kokeellinen ohjausobjekti, jonka avulla käyttäjät voivat muotoilla tekstiä WYSIWYG-muokkausalueen sisällä.  Tulostemuoto on HTML.
+# <a name="rich-text-editor-control-in-powerapps"></a>Rich text ohjausobjekti powerappsissa
+Sallii käyttäjien muotoilla tekstiä WYSIWYG-muokkausalueen sisällä.  Tulostemuoto on HTML.
 
 ## <a name="description"></a>Kuvaus
 **Tekstimuotoilueditori**-ohjausobjekti tarjoaa sovelluksen käyttäjälle WYSIWYG-muokkausalueen tekstin muotoilemista varten.  Ohjausobjektin syöte- ja tulostemuoto on HTML.
@@ -40,20 +40,10 @@ Tällä hetkellä tuettuja ominaisuuksia ovat muun muassa seuraavat:
 
 Jos haluat käyttää ohjausobjektia lomakkeen sisällä, valitse Muokkaa monirivistä tekstiä -kortti ja mukauta sitä lisäämällä RTE-ohjausobjekti.
 
-## <a name="limitations"></a>Rajoitukset
-Ohjausobjektin nykyinen versio on kokeellinen seuraavien tilapäisten rajoitusten vuoksi:
-- Ohjausobjektilla on rajoitetut tekstinmuotoiluominaisuudet.  
-
-- Ohjausobjekti on ensisijaisesti tarkoitettu käytettäväksi selaimissa suurilla näytöillä.  Ohjausobjektin käyttäminen matkapuhelimella voi olla turhauttava kokemus.
-
-- Tunnettuja ongelmia luomisessa, kun käytetään Windows Studiota tai Microsoft Edge -selainta.   Nykyinen suositus on käyttää Web Studiota Chromessa.
-
-
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **[Oletus](properties-core.md)** – Editorissa näkyvän ensimmäisen tekstiarvon syöteominaisuus.
 
 **HtmlText** – Tuloksena saatavan HTML-muodossa olevan tekstin tulosteominaisuus.
-
 
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
