@@ -1,24 +1,24 @@
 ---
 title: Näytä, lajittele ja suodata tietoja valikoimassa | Microsoft Docs
 description: Valikoiman avulla voit näyttää kuvia ja tekstiä. Lajittele ja suodata kuvia PowerAppsissa.
-author: lonu
+author: adrianorth
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 06/02/2015
-ms.author: lonu
+ms.author: aorth
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e782b7082e8dbf0d4efee2060131aa620e7a4af1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: a557c73863dc25acb69627b51613e6e25f229bdb
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42844454"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799774"
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Näytä, lajittele ja suodata tietoja PowerApps-valikoimassa
 Luo valikoima, jonka avulla voit näyttää kuvia ja tekstiä useista tuotteista, ja lajittele ja suodata näitä tietoja.
@@ -43,7 +43,7 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
       
       ![][1]  
    2. Määritä tuontiohjausobjektin **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
-      **Collect(Inventory, Import1!Data)**
+      **Collect (varasto Import1.Data)**
       
       ![][12]  
    3. Avaa Windowsin Resurssienhallinta valitsemalla **Tuo tiedot** -painike. Valitse *CreateFirstApp.zip* ja sitten **Avaa**.
@@ -79,14 +79,14 @@ PowerAppsissa voit valikoiman avulla näyttää useita liittyviä kohteita samal
    > 
    > 
 8. Määritä selitteen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-    **ThisItem!UnitsInStock** <br/>
+    **ThisItem.UnitsInStock** <br/>
    
     Tämän jälkeen selite näyttää kappaleiden lukumäärän varastossa kullekin tuotteelle:
 
 ![][8]  
 
 > [!NOTE]
-> Yläselitteen **[Text](controls/properties-core.md)**-ominaisuudeksi tulee oletusarvoisesti ```ThisItem!ProductName```. Voit muuttaa sen joksikin muuksi kohteeksi kokoelmassa. Jos kokoelmassa on esimerkiksi kentät *ProductDescription* tai *Price*, voit määrittää selitteeksi ```ThisItem!ProductDescription``` tai ```ThisItem!Price```.
+> Yläselitteen **[Text](controls/properties-core.md)**-ominaisuudeksi tulee oletusarvoisesti ```ThisItem.ProductName```. Voit muuttaa sen joksikin muuksi kohteeksi kokoelmassa. Jos kokoelmassa on esimerkiksi kentät *ProductDescription* tai *Price*, voit määrittää selitteeksi ```ThisItem.ProductDescription``` tai ```ThisItem.Price```.
 > 
 > 
 
@@ -102,7 +102,7 @@ Näissä vaiheissa toimme kokoelmaan .jpg-kuvia sisältäviä tietoja. Sitten li
    ![][10]  
 6. Valitse **Muoto**-välilehdessä **Näkyvissä** ja kirjoita sitten kaavariville seuraava kaava:  
    
-    **If(ThisItem!IsSelected, true)**
+    **IF(ThisItem.IsSelected, TRUE)**
    
     Sininen suorakulmio ympäröi nykyisen valinnan valikoimassa. Vahvista, että suorakulmio näkyy jokaisen valitsemasi kohteen ympärillä valitsemalla muutamia valikoiman kohteita. Muista, että voit myös avata **esikatselun** ![][2] ja tarkastaa ja testata tuloksen.
 
@@ -137,7 +137,7 @@ Näissä vaiheissa lajittelemme valikoiman kohteet nousevassa ja laskevassa jär
    2. Valitse **Sisältö**-välilehdestä **Suurin** ja kirjoita sitten seuraava lauseke:  
       ```Max(Inventory, UnitsInStock)```
 3. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen. Määritä valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter!Value)```
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value)```
 4. Aseta **esikatselussa** liukusäädin arvoon, joka on valikoiman suurimman ja pienimmän määrän välissä. Kun säädät liukusäädintä, valikoimassa näkyvät vain ne tuotteet, joita on valitsemaasi arvoa vähemmän:  
    ![][13]  
 
@@ -146,7 +146,7 @@ Lisätään seuraavaksi suodatin:
 1. Palaa takaisin suunnittelutyökaluun.
 2. Valitse **Lisää**-välilehdessä **Teksti**, valitse **Syöteteksti** ja anna uudelle ohjausobjektille uusi nimi **NameFilter**. Siirrä Teksti-ohjausobjekti liukusäätimen alle.
 3. Määritä valikoiman **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter!Value && NameFilter!Text in ProductName)```
+   ```Filter(Inventory, UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
 4. Aseta **esikatselussa** liukusäädin arvoon *30* ja kirjoita kirjain *g* Tekstisyöte-ohjausobjektiin. Näyttöön tulee valikoiman ainoa tuote, jota on varastossa alle 30 kappaletta *ja* jonka nimessä on g-kirjain:  
    ![][14]  
 

@@ -7,29 +7,31 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 10/25/2016
+ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dab6004afe7350b2375ade21871efe9144b6325b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 3a3d272737783abeaf2fe33557457486dae31e45
+ms.sourcegitcommit: a4719a7d719116aeda26baa44159b2271a9a79c8
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849289"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "57800556"
 ---
 # <a name="text-function-in-powerapps"></a>PowerAppsin Text-funktio
-Muotoilee luvun tai päivämäärän/kellonajan esitystavan.
+Muuntaa mitään arvoa ja alustaa tekstimerkkijonon numeron tai päivämäärän/ajan arvo.
 
 ## <a name="description"></a>Kuvaus
 **Text**-funktio soveltaa numeron tai päivämäärän/kellonajan muotoiluun jotain seuraavan tyyppisistä argumenteista:
 
-* Ennalta määritetty päivämäärän/kellonajan esitystapa, jonka voit määrittää käyttämällä **DateTimeFormat**-luettelointia.  Tätä tyyppiä suositellaan päivämäärien ja kellonaikojen muotoiluun, koska se mukautuu automaattisesti kunkin käyttäjän kielen ja sijaintipaikan mukaan.
-* Mukautettu muotoilu tarkoittaa merkkijonoa, jossa käytetään paikkamerkkejä osoittamaan, miten päivämäärä ja kellonaika muotoillaan. Paikkamerkit osoittavat näytössä näkyvien numeroiden määrän, käytetäänkö ryhmittelyerottimia ja miten kuukausien nimet esitetään. PowerApps tukee samaa paikkamerkkien osajoukkoa, jota Microsoft Excel käyttää.
+* Ennalta määritetty päivämäärän/kellonajan esitystapa, jonka voit määrittää käyttämällä **DateTimeFormat**-luettelointia. Päivämäärien ja kellonaikojen Tämä lähestymistapa on ensisijainen, koska se mukautuu automaattisesti kunkin käyttäjän kielen ja alueen.
+* Mukautettua muotoa, joka sisältää merkkijonon paikkamerkkejä, jotka määrittävät esimerkiksi onko luvut Näytä desimaalierottimena ja päivämäärät näyttää kuukauden lyhenteenä kuukauden ja kuukauden lukuna koko nimi. PowerApps tukee samaa paikkamerkkien osajoukkoa, jota Microsoft Excel käyttää. Tämä merkkijono kielen paikkamerkki määrittää kielen, jonka muut paikkamerkit tulkita. Jos mukautettu muoto on piste, esimerkiksi kielen muodossa paikkamerkin määrittää jakso desimaalierottimena (ja-JP) vai tuhaterottimen separator (es-ES).
 
 Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../show-text-dates-times.md).
+
+**Tekstin** funktio muuntaa myös mille tahansa tietotyypille tekstin esityksen default-muodossa. Tämän avulla voit välittää teksti-arvot tekstipohjainen Funktiot, kuten [ **Len**](function-len.md), [ **oikealle**](function-left-mid-right.md), ja [  **IsMatch**](function-ismatch.md).
 
 ### <a name="predefined-datetime-formats"></a> Ennalta määritetyt päivämäärän ja kellonajan muotoilut
 
@@ -53,18 +55,18 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 | --- | --- |
 | **0** (*nolla*) |Näyttää merkityksettömät nollat, jos luvussa on vähemmän numeroita kuin muodossa nollia. Käytä esimerkiksi muotoa **#.00**, jos haluat näyttää luvun **8,9** muodossa **8,90**. |
 | **#** |Noudattaa samoja sääntöjä kuin **0** (nolla). **Text**-funktio ei kuitenkaan palauta ylimääräisiä nollia, jos desimaalipilkun jommallakummalla puolella on numeroita vähemmän kuin muotoilussa on ristikkosymboleja (#). Esimerkiksi **8,9** näytetään, jos mukautettu muoto on **#.##** ja muotoiltava numero on **8,9**. |
-| **.** (*piste*) |Näyttää luvun desimaalierottimen.  Riippuu mukautetun muodon kielestä; katso lisätietoja kohdasta [Yleisiä sovelluksia](#global-apps). |
-| **,** (*pilkku*) |Näyttää ryhmittelyerottimen, jota joissakin kielissä käytetään tuhaterottimena. **Text**-funktio erottaa ryhmät pilkuilla, jos muotoilussa on ristikkomerkkien (**#**) tai nollien sisällä oleva pilkku.  Riippuu mukautetun muodon kielestä; katso lisätietoja kohdasta [Yleisiä sovelluksia](#global-apps). |
+| **.** (*piste*) |Näyttää luvun desimaalierottimen. Riippuu mukautetun muodon; kieli Katso [yleisiä sovelluksia](#global-apps) lisätietoja. |
+| **,** (*pilkku*) |Näyttää ryhmittelyerottimen, jota joissakin kielissä käytetään tuhaterottimena. **Text**-funktio erottaa ryhmät pilkuilla, jos muotoilussa on ristikkomerkkien (**#**) tai nollien sisällä oleva pilkku. Riippuu mukautetun muodon; kieli Katso [yleisiä sovelluksia](#global-apps) lisätietoja. |
 
 Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, luku pyöristetään niin moneen desimaaliin kuin muodossa on paikkamerkkejä. Jos desimaalipilkun vasemmalla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, ylimääräiset numerot näytetään. Jos desimaalipilkun vasemmalla puolella on vain ristikkomerkkejä (#), lukua 1 pienemmän arvot alkavat desimaalipilkulla (esimerkiksi **,47**).
 
 ### <a name="date-and-time-placeholders"></a>Päivämäärän ja kellonajan paikkamerkit
 
-|                                                                                                 Paikkamerkki                                                                                                  |                                                                                                     Kuvaus                                                                                                     |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                                                                                    **m**                                                                                                     |                                                                               Näyttää kuukauden lukuna ilman ensimmäistä nollaa.                                                                                |
-|                                                                                                    **mm**                                                                                                    |                                                                        Näyttää kuukauden lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                         |
-|                                                                                                   **mmm**                                                                                                    |                                                                             Näyttää kuukauden lyhenteenä (**tam**...**jou**).                                                                             |
+|   Paikkamerkki    |   Kuvaus                                                  |
+|------------------|----------------------------------------------------------------|
+|  **m**   |   Näyttää kuukauden lukuna ilman ensimmäistä nollaa.               |
+|  **mm**  |   Näyttää kuukauden lukuna ja käyttää tarvittaessa ensimmäistä nollaa. |
+|  **mmm** |   Näyttää kuukauden lyhenteenä (**tam**...**jou**).          |
 |                                                                                                   **mmmm**                                                                                                   |                                                                          Näyttää kuukauden koko nimen (**tammikuu**...**joulukuu**).                                                                           |
 |                                                                                                    **d**                                                                                                     |                                                                                Näyttää kuukauden päivän ilman ensimmäistä nollaa.                                                                                 |
 |                                                                                                    **dd**                                                                                                    |                                                                         Näyttää kuukauden päivän lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                          |
@@ -73,15 +75,13 @@ Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on pai
 |                                                                                                    **yy**                                                                                                    |                                                                                      Näyttää vuoden kaksinumeroisena lukuna.                                                                                       |
 |                                                                                                   **yyyy**                                                                                                   |                                                                                      Näyttää vuoden nelinumeroisena lukuna.                                                                                      |
 |                                                                                                    **h**                                                                                                     |                                                                                Näyttää tunnit ilman ensimmäistä nollaa.                                                                                |
-|                                                                                                    **hh**                                                                                                    | Näyttää tunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. Jos muotoiluun sisältyy **AM** tai **PM**, aika näkyy 12 tunnin mukaan. Muussa tapauksessa aika näytetään 24 tunnin mukaan. |
-|                                                                                                    **m**                                                                                                     |                                                                         Näyttää minuutit lukuna ilman ensimmäistä nollaa.  > [!NOTE]                                                                          |
-|            > **m**- tai **mm** -koodin on oltava heti **h**- tai **hh**-koodin perässä tai heti ennen **ss**-koodia; muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan.            |                                                                                                                                                                                                                     |
-|                                                                                                    **mm**                                                                                                    |                                                                   Näyttää minuutit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. > [!NOTE]                                                                   |
-| > **m**- tai **mm**-paikkamerkin on oltava heti **h**- tai **hh**-paikkamerkin jälkeen tai heti ennen **ss**-paikkamerkkiä. Muussa tapauksessa **Text**-funktio palauttaa kuukauden minuuttien sijaan. |                                                                                                                                                                                                                     |
-|                                                                                                    **s**                                                                                                     |                                                                               Näyttää sekunnin lukuna ilman ensimmäistä nollaa.                                                                               |
-|                                                                                                    **ss**                                                                                                    |                                                                        Näyttää sekunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                        |
+|   **hh** | Näyttää tunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa. Jos muotoiluun sisältyy **AM** tai **PM**, aika näkyy 12 tunnin mukaan. Muussa tapauksessa aika näytetään 24 tunnin mukaan. | 
+|  **m**   |   Näyttää minuutit lukuna ilman ensimmäistä nollaa.<br><br>Tämän paikkamerkin on oltava heti **h** tai **hh** koodi tai heti ennen **ss** koodia; muussa tapauksessa **tekstin** palauttaa kuukauden minuuttien sijaan.  |    
+| **mm**   | Näyttää minuutit lukuna ja käyttää tarvittaessa ensimmäistä nollaa.<br><br>Tämän paikkamerkin on oltava heti **h** tai **hh** paikkamerkki tai heti ennen **ss** paikkamerkki. Muussa tapauksessa **tekstin** palauttaa kuukauden minuuttien sijaan. |                                                                                                                   
+| **s**   |  Näyttää sekunnin lukuna ilman ensimmäistä nollaa.  |
+| **ss**  | Näyttää sekunnit lukuna ja käyttää tarvittaessa ensimmäistä nollaa.                                                                        |
 |                                                                                                    **f**                                                                                                     |                                                                                         Näyttää sekunnin murto-osat.                                                                                          |
-|                                                                                    **AM/PM**, **am/pm**, **A/P**, **a/p**                                                                                    |               Näyttää ajan 12 tunnin kellon perusteella. **Text**-funktio palauttaa arvon "AM", "am", "A" tai "a" keskiyöstä keskipäivään ja "PM", "pm", "P" tai "p" keskipäivästä keskiyöhön                |
+|                                                                                    **AM/PM**, **/ p**                                                                                    |               Näyttää ajan 12 tunnin kellon perusteella. **Tekstin** palauttaa ”AM” tai ”a” kertaa keskiyöstä keskipäivään ja ”PM” tai ”p” keskipäivästä keskiyöhön                |
 
 ### <a name="literal-placeholders"></a>Literaalit paikkamerkit
 Voit sisällyttää muotoilumerkkijonoon seuraavia merkkejä.  Ne näkyvät **Text**-funktion tuloksessa sellaisenaan. Muita merkkejä varataan tulevia paikkamerkkejä varten, joten niitä ei kannata käyttää.
@@ -107,49 +107,53 @@ Voit sisällyttää muotoilumerkkijonoon seuraavia merkkejä.  Ne näkyvät **Te
 | &nbsp; |Välilyönti |
 
 ## <a name="global-apps"></a>Yleiset sovellukset
-**Text**-funktio on maailmanlaajuinen.  Se tuntee suuren määrän kieliä ja osaa kirjoittaa päivämäärät, kellonajat, valuutat ja numerot kielen mukaan.  Onnistuakseen tässä se tarvitsee seuraavat kaksi tietoa:
+**Text**-funktio on maailmanlaajuinen. Se tuntee suuren määrän kieliä ja osaa kirjoittaa päivämäärät, kellonajat, valuutat ja numerot kielen mukaan. Onnistuakseen tässä se tarvitsee seuraavat kaksi tietoa:
 
-* **Mukautettavan muodon kieli:** miten mukautettu muoto tulkitaan tekstin laatijaa varten?  Erotinmerkeillä (**.** ja **,**) on eri kielissä eri merkitykset.  Tämä hoidetaan käyttämällä kielikoodilla varustettua paikkamerkkiä.  Lisäksi [etukäteen määritetyt päivämäärän ja kellonajan muotoilut](#predefined-datetime-formats) ovat kieliagnostisia, eli käytetty kieli ei vaikuta niihin.
-* **Tuloksen kieli:** millä kielellä tulos näytetään käyttäjälle?  Kuukausien ja viikonpäivien nimet on muotoiltava sovelluksen käyttäjän kielen mukaisiksi.  Tämä hoidetaan lisäämällä **Text**-funktioon kolmas valinnainen argumentti. 
+* **Mukautetun muotoilun kielen:** Tekijöille miten mukautettu muoto tulkitaan tekstin laatijaa? Erotinmerkeillä (**.** ja **,**) on eri kielissä eri merkitykset. Jos määrität mukautettua muotoa, voit sisällyttää kielen paikkamerkki tai kestää oletusarvo, joka vastaa sitä kohtaa, johon laitettasi määritetään kielen. Helpottuu, voit käyttää jotakin [ennalta määritettyjä päivämäärän ja kellonajan muotoilut](#predefined-datetime-formats), jotka ovat kieliagnostisia kielen.
+* **Tuloksen kieli:** Käyttäjille millä kielellä funktion tulos näkyä? Kuukausien ja viikonpäivien nimet on oltava sovellus, jonka voit määrittää lisäämällä kolmas Valinnainen argumentti käyttäjän kielen mukaisiksi **tekstin** funktio. 
 
-Kumpaankin näistä määrityksistä liitetään [kielitunniste](function-language.md#language-tags).  Voit tarkastella tuettujen kielten luetteloa kirjoittamalla kaavariville tai lisänäkymään **Text( 1234, "", )** ja selaamalla kolmanteen argumenttiin ehdotettuja kieliasetuksia.
+Kumpikin kieli määrittää käyttämällä [kielitunnisteen](function-language.md#language-tags). Voit tarkastella tuettujen kielten luettelo kirjoittamalla **Text (1234 ”,”,)** kaavarivillä tai **lisäasetukset** välilehti oikeanpuoleisessa ruudussa ja sitten selaamalla argumenttiin ehdotettuja kieliasetuksia kolmas argumentti.
 
-#### <a name="custom-format-language-placeholder"></a>Mukautetun muotoilun kielen paikkamerkki
+### <a name="language-placeholder"></a>Kielen paikkamerkki
 Voit käyttää mukautetun muotoilun kielen määrittämiseen seuraavia:
 
 | Paikkamerkki | Kuvaus |
 | --- | --- |
-| **[$-*LanguageTag*]** |*LanguageTag* on **Language**-funktion palauttama kielitunniste.  Se voidaan esittää pelkän kielen muodossa, kuten englannin kielen **[$-en]**, tai siihen voidaan lisätä tarkentava aluetunnus, kuten Ison-Britannian **[$-en-GB]**. |
+| **[$-*LanguageTag*]** |*LanguageTag* on **Language**-funktion palauttama kielitunniste. Se määrittää vain (kuten **[$-en]** englanti), tai se määrittää myös alueella (kuten **[$-en-GB]** -tarkentava aluetunnus). |
 
 Kielen paikkamerkki voi esiintyä missä tahansa kohdassa mukautettavaa muotoilua, mutta vain kerran.
 
-Jos et lisää kielen paikkamerkkiä luodessasi kaavaa ja muotoiltu merkkijono on globaalissa mielessä epäselvä, luontityökalu lisää kielen paikkamerkin automaattisesti sen kielen mukaan, joka on parhaillaan käytössä.  
+Jos määrität mukautettua muotoa ilman kielen paikkamerkki ja muoto on yleinen epäselvä, nykyisen kielen kielitunnisteen lisätään automaattisesti.  
 
-Jos tätä paikkamerkkiä ei löydy, kun sovellus suoritetaan, ohjelma olettaa, että asetus on **[$-en-US]**. 
+**[$-en-US]**  oletetaan, jos tämän paikkamerkin ei ole olemassa, kun sovellus suoritetaan. 
 
 > [!NOTE]
-> Tulevassa versiossa tämän paikkamerkin syntaksi voi muuttua, jotta sitä ei sekoitettaisi Excelin tukemaan paikkamerkkiin, joka on samantyyppinen mutta erilainen.
+> Tulevassa versiossa tämän paikkamerkin syntaksi voi muuttua välttää paikkamerkillä mutta erilainen, joka tukee Excel.
 
-#### <a name="result-language-tag"></a>Tuloksen kielitunniste
-**Text**-funktion tuloksessa näkyy käännetyn kielen mukainen kuukausi, viikonpäivä, AM/PM, ryhmityserottaja ja desimaalimerkki.
+### <a name="result-language-tag"></a>Tuloksen kielitunniste
+Tuloksen **tekstin** sisältää kuukausien, arkipäivät, ja AM/PM, ryhmityserottaja sekä sopivaan ryhmään ja desimaalimerkki käännetyt merkkijonot.
 
-Oletusmuotoisesti **Text**-funktio käyttää sitä kieltä, jota sovelluksessa parhaillaan käytetään.  **Language**-funktio palauttaa nykyisen käyttäjän kielitunnisteen.  Voit ohittaa tämän oletuksen lisäämällä **Text**-funktion valinnaiselle kolmannelle argumentille kielitunnisteen.
+Oletusmuotoisesti **Text**-funktio käyttää sitä kieltä, jota sovelluksessa parhaillaan käytetään. **Language**-funktio palauttaa nykyisen käyttäjän kielitunnisteen. Voit ohittaa tämän oletusarvon antamalla kolmannen argumentin kielitunnisteen **tekstin**.
 
 ## <a name="syntax"></a>Syntaksi
-**Text**( *Number*, *DateTimeFormatEnum* [, *ResultLanguageTag* ] )
+**Tekstin**( *NumberOrDateTime*, *DateTimeFormatEnum* [, *ResultLanguageTag* ])
 
-* *Number* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
+* *NumberOrDateTime* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *DateTimeFormat* – Pakollinen.  **DateTimeFormat** – Luetteloinnin osa.
-* *ResultLanguageTag* – Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
+* *ResultLanguageTag* – Valinnainen. Kielitunniste, jota käytetään tulostekstiin. Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
 
-**Text**( *Number*, *CustomFormat* [, *ResultLanguageTag* ] )
+**Tekstin**( *NumberOrDateTime*, *CustomFormat* [, *ResultLanguageTag* ])
 
 * *Number* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *CustomFormat* – pakollinen. Yksi tai useampi paikkamerkki lainausmerkkien sisällä.
-* *ResultLanguageTag* – Valinnainen.  Kielitunniste, jota käytetään tulostekstiin.  Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
+* *ResultLanguageTag* – Valinnainen. Kielitunniste, jota käytetään tulostekstiin. Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
+
+**Tekstin**( *AnyValue* )
+
+* *AnyValue* – pakollinen. Tekstin esityksen muunnettava arvo. Default-muotoa käytetään.
 
 ## <a name="examples"></a>Esimerkkejä
-Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinnut kielekseen englannin.  **Language**-funktio palauttaa tuloksen "en-US".
+Ellei toisin mainita suorittaa nämä kaavat käyttäjä sijaitsee Yhdysvalloissa ja on valinnut kielekseen englannin kielellä.  **Language**-funktio palauttaa tuloksen "en-US".
 
 ### <a name="number"></a>Luku
 
@@ -177,9 +181,17 @@ Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinn
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Text( 1234567.89, "[$-en-US]$ #,###" )** |Tulkitsee pilkun (**,**) tuhaterottimeksi, joka näytetään kolmen merkin välein, ja lisää valuuttamerkin **$**. Koska desimaaleja ei käytetä, arvo pyöristetään suurempaan kokonaislukuun. Tässä tapauksessa **[$-en-US]** on valinnainen, sillä se on oletusarvo. |"$ 1,234,568" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###" )** |Tulkitsee pilkun (**,**) desimaalierottimeksi ja merkinnän **&euro;** valuuttasymboliksi.  Koska **[$-fr-FR]** määrittää ainoastaan, miten muotoilumerkkijono tulkitaan, desimaalierottimena käytetään oletusmuotoisen en-US-kielitunnisteen mukaista pistettä (**"."**) ja valuuttasymbolina merkkiä **$**. |"$ 1234567.89" |
-| **Text( 1234567.89, "[$-es-ES]&euro; #,###", "es-ES" )** |Tulkitsee pilkun (**,**) desimaalierottimeksi.  Tuloksen kielitunnisteeksi on asetettu "fr-FR", joten desimaalierottimena käytetään pilkkua ( **,**) ja valuuttasymbolina merkkiä **&euro;**. |"&euro; 1234567,89" |
-| **Text( Date(2016,1,31), "dddd mmmm d" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän muotoiltuna nykyisen käyttäjän kielen mukaan. Koska paikkamerkit eivät ole kieleen sidottuja, tekstin muotoiluun ei tarvita kielitunnistetta. |"Saturday January 31" |
-| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän kielitunnisteen "es-ES" mukaisesti. |"domingo enero 31" |
+| **Text (1234567.89 ”, [$-fr-FR] # ###, ## &euro;”, ”fr-FR”)** | Näyttää välilyönnin ryhmittely erottimena, jossa desimaalierottimena pilkuin ja **&euro;** ja valuuttasymbolina merkkiä. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Text (1234567,89; ”[$-fr-FR] # ###, ## &euro;”)** | Jos lähdetiedot noudattaa Ranskan mukautettu-käyttämällä desimaalierottimena, muuta Aluekohtaiset asetukset ranska ja argumentit erotetaan toisistaan puolipisteellä pilkku saman tuloksen kuin edellä sijaan. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Text( Date(2016,1,31), "dddd mmmm d" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän muotoiltuna nykyisen käyttäjän kielen mukaan. Koska paikkamerkit eivät ole kieleen sidottuja, tekstin muotoiluun ei tarvita kielitunnistetta. |”Lauantai&nbsp;tammikuu&nbsp;31” |
+| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän kielitunnisteen "es-ES" mukaisesti. |”domingo&nbsp;enero nojalla&nbsp;31” |
 
+### <a name="converting-values-to-text"></a>Arvojen muuntaminen teksti
+
+| Kaava | Kuvaus | Tulos |
+| --- | --- | --- |
+| **Text (&nbsp;1234567.89&nbsp;)** | Muuntaa merkkijonon luvuksi. Ei ole tuhaterottimen erottimet tai hallita ennen tai jälkeen desimaalierottimen; numeroiden määrä Lisää ohjausobjekti Anna luvun paikkamerkit toinen argumentti. | "1234567.89" |
+| **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Muuntaa tekstimerkkijonon päivämäärä ja aika-arvoa. Hallita muuntaminen, anna joko DateTimeFormat-luetteloinnin jäsen tai mukautettu muotoilumerkkijono. | ”1/4/2003 12:00 AM” |
+| **Text (&nbsp;true&nbsp;)** | Muuntaa merkkijonon totuusarvo. | "true" |
+| **Text (&nbsp;GUID()&nbsp;)** | Muuntaa merkkijonon luotu GUID-arvon.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
+| **Vasen (&nbsp;teksti (&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Palauttaa ensimmäiset neljä merkkiä luotu GUID-tunnus. | "2d9c" | 

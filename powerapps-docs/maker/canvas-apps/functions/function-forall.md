@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 688b1e87e5bc1d2ee3429711b9995f3b4ef61e1c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: f538d785b9655b94a44a79c3299e979bbfe88883
+ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42857104"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54308773"
 ---
 # <a name="forall-function-in-powerapps"></a>ForAll-funktio PowerAppsissa
 Laskee arvot ja suorittaa toiminnot [taulukon](../working-with-tables.md) kaikille [tietueille](../working-with-tables.md#records).
@@ -62,9 +62,9 @@ Seuraavissa esimerkeissä käytetään **Squares**-[tietolähdettä](../working-
 
 ![](media/function-forall/squares.png)
 
-Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painikkeen** **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
+Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painike**-ohjausobjektin **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
 
-* **ClearCollect( Squares, [ "1", "4", "9" ] )**
+`ClearCollect( Squares, [ "1", "4", "9" ] )`
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ Seuraavissa esimerkeissä käytetään **Expressions**[-tietolähdettä](../work
 
 Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painike**-ohjausobjektin **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
 
-* **ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )**
+`ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )`
 
 Tämä esimerkki käyttää myös [Microsoft Translator](../connections/connection-microsoft-translator.md) -yhteyttä.  Katso tämän yhteyden lisäämiseksi sovellukseesi [yhteyksien hallintaa](../add-manage-connections.md) käsittelevä aihe.
 
@@ -104,7 +104,16 @@ Seuraavissa esimerkeissä käytetään **Products**[-tietolähdettä](../working
 
 Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painike**-ohjausobjektin **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
 
-* **ClearCollect( Products, Table( { Product: "Widget", 'Quantity Requested': 6, 'Quantity Available': 3 }, { Product: "Gadget", 'Quantity Requested': 10, 'Quantity Available': 20 }, { Product: "Gizmo", 'Quantity Requested': 4, 'Quantity Available': 11 }, { Product: "Apparatus", 'Quantity Requested': 7, 'Quantity Available': 6 } ) )**
+```powerapps-dot
+ClearCollect( Products, 
+    Table( 
+        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
+        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
+        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
+        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
+    )
+)
+```
 
 Tavoitteena on käyttää työskentelyyn johdettua taulukkoa, joka sisältää vain ne kohteet, joita on pyydetty enemmän kuin on saatavilla ja joita täytyy tilata:
 
@@ -115,7 +124,17 @@ Voimme suorittaa tämän tehtävän eri tavoilla, joista kaikki tuottavat saman 
 #### <a name="table-shaping-on-demand"></a>Taulukon muovaaminen pyydettäessä
 Älä tee kopiota!  Voimme käyttää seuraavaa kaavaa kaikkialla, missä sitä tarvitsemme:
 
-* **ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" )**
+```powerapps-dot
+// Table shaping on demand, no need for a copy of the result
+ShowColumns( 
+    AddColumns( 
+        Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+        "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+    ), 
+    "Product", 
+    "Quantity To Order"
+)
+```
 
 **Filter**- ja **AddColumns**-funktiot luovat [tietuealueen](../working-with-tables.md#record-scope), jonka avulla suoritetaan vertailu- ja vähennystoiminnot jokaisen tietueen **”Quantity Requested”**- ja **”Quantity Available”** -kentille tässä järjestyksessä.
 
@@ -126,7 +145,16 @@ Ja koska emme tehneet kopiota, ei ole olemassa ylimääräistä tietojen kopiota
 #### <a name="forall-on-demand"></a>ForAll pyydettäessä
 Toinen menetelmä on käyttää **ForAll**-funktiota taulukkoa muovaavien funktioiden korvikkeena:
 
-* **ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) )**
+```powerapps-dot
+ForAll( Products, 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        { 
+            Product: Product, 
+            'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+        } 
+    ) 
+)
+```
 
 Tämä kaava voi olla joillekin yksinkertaisempi lukea ja kirjoittaa.
 
@@ -137,15 +165,50 @@ Joissakin tapauksissa voi olla tarpeen kopioida tiedot.  Tietoja voi olla tarpee
 
 Käytämme samaa taulukon muovaamista kuin kahdessa edellisessä esimerkissä, mutta kaappaamme tulokset kokoelmaan:
 
-* **ClearCollect( NewOrder, ShowColumns( AddColumns( Filter( Products, 'Quantity Requested' > 'Quantity Available' ), "Quantity To Order", 'Quantity Requested' - 'Quantity Available' ), "Product", "Quantity To Order" ) )**
-* **ClearCollect( NewOrder, ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
+```powerapps-dot
+ClearCollect( NewOrder, 
+    ShowColumns( 
+        AddColumns( 
+            Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
+            "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
+        ), 
+        "Product", 
+        "Quantity To Order"
+    )
+)
+```
+
+```powerapps-dot
+ClearCollect( NewOrder, 
+    ForAll( Products, 
+        If( 'Quantity Requested' > 'Quantity Available', 
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        } 
+    )
+)
+```
 
 **ClearCollect**- ja **Collect**-funktioita ei voi delegoida.  Tämän vuoksi tällä menetelmällä ei voida siirtää suuria määriä tietoja.
 
 #### <a name="collect-within-forall"></a>ForAll-funktion sisäinen Collect-funktio
 Lopuksi voimme suorittaa **Collect**-funktion suoraan **ForAll**-funktion sisällä:
 
-* **Clear( ProductsToOrder ); ForAll( Products, If( 'Quantity Requested' > 'Quantity Available', Collect( NewOrder, { Product: Product, 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' } ) ) )**
+```powerapps-dot
+Clear( ProductsToOrder ); 
+ForAll( Products, 
+    If( 'Quantity Requested' > 'Quantity Available', 
+        Collect( NewOrder,  
+            { 
+                Product: Product, 
+                'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
+            } 
+        )
+    )
+)
+```
 
 Muistutuksena **ForAll**-funktiota ei voi tällä hetkellä delegoida.  Jos **Products**-taulukkomme on suuri, **ForAll** tarkastelee vain tietueidemme ensimmäistä joukkoa, joten meiltä saattaa jäädä huomaamatta tuotteita, joita täytyy tilata.  Tämä menetelmä sopii kuitenkin taulukoille, joiden tiedämme säilyvän pieninä.
 

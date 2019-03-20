@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 07/10/2017
+ms.date: 01/25/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 03f768124b2b7260995fe89120091e85e4cdaa0d
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 798a355e1c8728b41f3e92f183d4a4e2831b7cc2
+ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42826491"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "57799452"
 ---
 # <a name="add-and-configure-a-canvas-app-control-in-powerapps"></a>Pohjaan perustuvan sovelluksen ohjausobjektin lisääminen ja määrittäminen PowerAppsissa
 
@@ -26,227 +26,126 @@ Lisää käyttöliittymäelementtejä pohjaan perustuvaan sovellukseesi ja mää
 
 ## <a name="prerequisites"></a>Edellytykset
 
-1. [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
+1. Jos sinulla ei vielä ole PowerApps-käyttöoikeus [Rekisteröidy](../signup-for-powerapps.md), ja sitten [Kirjaudu sisään](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Valitse **Tee oma sovellukseni**, osoitin **pohjaan perustuva sovellus tyhjästä**, ja valitse sitten **Tee tämä sovellus**.
+1. Jos sinua pyydetään esittely, valitse **seuraava** aloitusnäytön-PowerApps-käyttöliittymän (tai valitse **Ohita**).
 
-2. Napsauta tai napauta PowerApps Studion **Tiedosto-valikon** (lähellä vasenta reunaa) kohtaa **Uusi**.
+    Voit voit aina katsella esittelyn myöhemmin valitsemalla näytön oikean yläkulman kysymysmerkkikuvaketta ja valitsemalla sitten **esittely**.
 
-    ![Tiedosto-valikon Uusi-vaihtoehto](./media/add-configure-controls/file-new.png)
+## <a name="add-and-select-a-control"></a>Lisää ja valitse ohjausobjekti
 
-3. Napsauta tai napauta **Tyhjä sovellus** -ruudun kohtaa **Puhelinasettelu**.
+Valitse **Lisää** välilehti, suorita jompikumpi seuraavista vaiheista:
 
-    ![Luo sovellus alusta alkaen](./media/add-configure-controls/blank-app.png)
+- Valitse **nimen** tai **painike** lisäämään tällaisia ohjausobjekteja.
+- Valitse luokka ohjausobjektien ja valitse sitten ohjausobjekti, jonka haluat lisätä tyyppi.
 
-4. Jos sinua pyydetään katsomaan esittely PowerApps-käyttöliittymän avainalueista, voit katsoa sen napsauttamalla tai napauttamalla **Seuraava**. Ohita esittely napsauttamalla tai napauttamalla **Ohita**.
+Valitse esimerkiksi **uuden näytön**, ja valitse sitten **tyhjä** Lisää tyhjä näyttö sovellukseesi. (Näyttöjä ovat ohjausobjektissa, joka voi sisältää ohjausobjekteja.)
 
-    ![Esittelyn avausruutu](./media/add-configure-controls/quick-tour.png)
+![Lisää näyttö](./media/add-configure-controls/add-screen.png)
 
-    Voit aina katsella esittelyn myöhemmin napsauttamalla tai napauttamalla kysymysmerkkikuvaketta, joka on lähellä ruudun oikeaa yläkulmaa, ja napsauttamalla tai napauttamalla sitten **Katso esittely**.
+Uuden näytön nimi on **Screen2** ja se näkyy vasemmassa siirtymisruudussa. Tässä ruudussa näkyy sovelluksesi ohjausobjektien hierarkkisessa luettelossa, niin, että voit helposti etsiä ja valita kunkin ohjausobjektin.
 
-## <a name="add-a-control"></a>Ohjausobjektin lisääminen
-Voit lisätä minkä tahansa ohjausobjektin useista eri luokista napsauttamalla tai napauttamalla työkalurivin **Lisää**-välilehteä, napsauttamalla tai napauttamalla luokkaa ja valitsemalla sitten haluamasi ohjausobjektin. Tässä osassa voit tarkastella eri luokkien ohjausobjekteja, tutustua lisättävien ohjausobjektien tyyppeihin ja oppia löytämään ne.
+![Screen2 luettelossa](./media/add-configure-controls/list-screen2.png)
 
-Napsauta tai napauta **Lisää**-välilehdestä mitä tahansa luokkaa ja valitse sitten ohjausobjekti, jonka haluat lisätä:
+Osoittaa, miten tämän luettelon toimii, valitse **nimen** , **Lisää** välilehti. Uusi ohjausobjekti näkyy kohdassa **Screen2** hierarkkisessa luettelossa.
 
-**Teksti**: selite, tekstisyöte, HTML-teksti, kynäsyöte<br>
-**Ohjausobjektit**: painike, avattava luettelo, päivämäärävalitsin, luetteloruutu, valintaruutu, valintanappi, vaihtopainike, liukusäädin, luokitus, ajastin<br>
-**Valikoima**: pystysuora, vaakasuora, joustava korkeus, tyhjä pystysuuntainen, tyhjä vaakasuuntainen, tyhjä joustava korkeus<br>
-**Tietotaulukko**<br>
-**Lomakkeet**: muokkaa, näytä, entiteettilomake<br>
-**Media**: kuva, kamera, viivakoodi, video, ääni, mikrofoni, lisää kuva<br>
-**Kaaviot**: pylväskaavio, viivakaavio, ympyräkaavio<br>
-**Kuvakkeet**
+![Screen2 luettelossa](./media/add-configure-controls/add-label.png)
 
-> [!TIP]
-> Jos tarvitset enemmän tilaa ohjausobjekteille, [lisää toinen näyttö](add-screen-context-variables.md).
+Näytöllä kuusi kahvat ympäröi valintaruutu nimen oletusarvon mukaan. Ruudun tyypin ympäröi tallennettuun ohjausobjekti on valittuna. Jos valitset näytössä napsauttamalla tai napauttamalla sen (mutta ulkopuolelle selite), selite katoaa ruutuun. Valitse selite uudelleen, voit napsauttamalla tai napauttamalla sen tai napsauttamalla tai napauttamalla **Label2** ohjausobjektien hierarkkisessa luettelossa.
 
-## <a name="configure-a-control-directly"></a>Ohjausobjektin määrittäminen suoraan
-Tässä menettelyssä lisätään ja määritetään **selite**ohjausobjekti, mutta samat periaatteet pätevät myös moniin muihin ohjausobjekteihin.
+> [!IMPORTANT]
+> Sinun täytyy valita ohjausobjektin aina, ennen kuin voit määrittää sen.
 
-1. Napsauta tai napauta **Lisää**-välilehteä ja valitse **Selite**.
+## <a name="rename-a-control"></a>Ohjausobjektin nimeäminen uudelleen
 
-    ![Lisää-välilehti](./media/add-configure-controls/insert-text-box.png)
+Valitse hierarkkisessa luettelossa ohjausobjekteja, hiiren osoitinta ohjausobjektin, jonka haluat nimetä uudelleen, pistettä, joka näkyy ja valitse sitten **nimeä**. Kirjoita yksilöllinen ja helposti muistettavan tehdä helposti sovelluksen nimi.
 
-    Kun lisäät ohjausobjektin, se on valittuna oletusarvoisesti. Voit myös valita aiemmin luodun ohjausobjektin napsauttamalla tai napauttamalla sitä. Kun ohjausobjekti on valittuna, sitä ympäröi valintaruutu, ja muut käyttöliittymän alueet muuttuvat siten, että voit määrittää valitun ohjausobjektin. Esimerkiksi valittu **selite**ohjausobjekti muistuttaa seuraavaa kuvaa.
+![Ohjausobjektin nimeäminen uudelleen](./media/add-configure-controls/rename-control.png)
 
-    ![Valittu selite](./media/add-configure-controls/selected-text-box.png)
+## <a name="delete-a-control"></a>Ohjausobjektin poistaminen
 
-    > [!IMPORTANT]
-   > Jos ohjausobjekti on valittuna, kun valitset toisen ohjausobjektin tai tyhjän alueen näytössä, ensimmäinen elementti ei ole enää valittuna.
-2. Kavenna **selite**ohjausobjektia vetämällä valintakehyksen oikeassa reunassa olevaa kahvaa vasemmalle. (Keskikahva näkyy vain, jos zoomaat lähemmäs.)
+Hierarkkisessa luettelossa ohjausobjektien, hiiren osoitinta ohjausobjektin, jonka haluat poistaa, valitse kolme pistettä, joka näkyy ja valitse sitten **poistaa**. Jos haluat poistaa ohjausobjekti, joka ei ole näyttö, voit myös valita ohjausobjektin pohjalla ja paina Delete-näppäintä.
 
-    ![Selite, jonka kokoa on muutettu](./media/add-configure-controls/shorter-text-box.png)
+![Poista ohjausobjekti](./media/add-configure-controls/delete-control.png)
 
-     Voit myös muuttaa ohjausobjektin kokoa muokkaamalla sen **[Korkeus](controls/properties-size-location.md)**- ja **[Leveys](controls/properties-size-location.md)**-ominaisuuksia tavalla, joka kuvataan myöhemmin tässä aiheessa.
+## <a name="reorder-screens"></a>Näyttöjen järjestäminen uudelleen
 
-3. Siirrä **selite**ohjausobjektia vetämällä valintakehystä (tai muokkaamalla **[X](controls/properties-size-location.md)**- ja **[Y](controls/properties-size-location.md)**-ominaisuuksia tavalla, joka kuvataan myöhemmin tässä aiheessa).
+Osoitin ohjausobjektien hierarkkisessa luettelossa näytön, jonka haluat siirtää tai alas, valitse kolme pistettä, joka tulee näkyviin, ja valitse sitten **ylöspäin** tai **alaspäin**.
 
-4. Napsauta **selite**ohjausobjektissa näkyvää tekstiä kolmesti ja kirjoita **Hei maailma**.
+![Näytön järjestäminen uudelleen](./media/add-configure-controls/reorder-screen.png)
 
-    ![Selite, jossa on mukautettua tekstiä](./media/add-configure-controls/change-text-directly.png)
+> [!NOTE]
+> Kun sovellus avataan, yläosassa oleva ohjausobjektien hierarkkisessa luettelossa näytön yleensä näkyy ensimmäisenä. Mutta voit määrittää eri näyttöön määrittämällä **[OnStart](controls/control-screen.md)** ominaisuuden näyttämään kaavan, joka sisältää **[Navigate](functions/function-navigate.md)** funktio.
 
-     Voit muokata tekstiä määrittämällä ohjausobjektin **[Teksti](controls/properties-core.md)**-ominaisuuden tavalla, joka kuvataan myöhemmin tässä aiheessa.
+## <a name="move-and-resize-a-control"></a>Siirrä ja muuta ohjausobjektin kokoa
+
+Siirrä ohjausobjektia valitsemalla se keskipiste hiirtä niin, että tulee neljän joista-nuoli ja vetämällä ohjausobjektin eri sijaintiin.
+
+![Siirrä ohjausobjektia](./media/add-configure-controls/move-control.png)
+
+Muuta ohjausobjektin kokoa, valitse se, mitä tahansa valintaruudun kahvaa hiirtä niin, että näkyviin tulee kaksi joista-nuoli ja vetämällä kahvaa.
+
+![Siirrä ohjausobjektia](./media/add-configure-controls/resize-control.png)
+
+> [!NOTE]
+> Kuten tässä ohjeaiheessa kuvataan myöhemmin, voit myös siirtää ja muuta ohjausobjektin kokoa muokkaamalla minkä tahansa yhdistelmän sen  **[X](controls/properties-size-location.md)**,  **[Y](controls/properties-size-location.md)**,  **[Korkeus](controls/properties-size-location.md)**, ja **[leveys](controls/properties-size-location.md)** ominaisuudet kaavarivillä.
+
+## <a name="change-the-text-of-a-label-or-a-button"></a>Muuta selitteen tai painikkeen teksti
+
+Valitse otsikko tai painikkeen, kaksoisnapsauta ohjausobjektissa näkyvä teksti ja kirjoita sitten haluamasi teksti.
+
+![Muuta teksti](./media/add-configure-controls/change-text.png)
+
+> [!NOTE]
+> Tässä aiheessa kuvataan myöhemmin, voit myös muuttaa tekstiä muokkaamalla sen **[tekstin](controls/properties-core.md)** ominaisuus kaavarivillä.
 
 ## <a name="configure-a-control-from-the-toolbar"></a>Ohjausobjektin määrittäminen työkaluriviltä
+
 Voit määrittää useampia ohjausobjektin asetuksia määrittämällä objektin työkaluriviltä kuin määrittämällä ohjausobjektin suoraan.
 
-1. Napsauta tai napauta työkalurivin **Aloitus**-välilehteä, kun **selite**ohjausobjekti on valittuna.
+Voit esimerkiksi, valitse nimi, valitse **aloitus** välilehti ja muuta sitten selitteen tekstin fontin.
 
-    ![Aloitus-välilehti](./media/add-configure-controls/home-tab.png)
-
-2. Napsauta tai napauta **Täytä** ja valitse sitten väri, esimerkiksi vedenvihreä.
-
-    ![Täyttöasetukset](./media/add-configure-controls/fill-option.png)
-
-    **Selite**ohjausobjekti muuttuu muutostesi mukaisesti.
-
-    ![Selite, jossa on vedenvihreä täyttö](./media/add-configure-controls/change-fill.png)
-
-3. Fonttiperheen tai tekstin koon muuttaminen (esimerkiksi 18 pisteen Georgia).
-
-    ![Fonttiohjausobjektit](./media/add-configure-controls/font-size.png)
-
-    **Selite**ohjausobjekti muuttuu muutostesi mukaisesti.
-
-    ![18 pisteen Georgia](./media/add-configure-controls/change-font.png)
-
-4. Napsauta tai napauta **Selite**-välilehteä, napsauta tai napauta **VerticalAlign** ja valitse **Top**.
-
-    ![Tekstiruutu-välilehti](./media/add-configure-controls/text-box-tab.png)
-
-    **Selite**ohjausobjekti muuttuu muutostesi mukaisesti.
-
-    ![Selite, jonka teksti on tasattu ruudun yläreunaan](./media/add-configure-controls/change-align.png)
+![Muuta fontti](./media/add-configure-controls/change-font.png)
 
 ## <a name="configure-a-control-from-the-properties-tab"></a>Ohjausobjektin määrittäminen Ominaisuudet-välilehdeltä
-Käyttämällä **Ominaisuudet**-välilehteä voit määrittää ohjausobjektin kirjoittamatta kaavaa. Tässä menettelyssä lisätään ja määritetään toinen **selite**ohjausobjekti, mutta samat periaatteet pätevät myös moniin muihin ohjausobjekteihin.
 
-1. Lisää toinen **selite**ohjausobjekti tavalla, joka kuvattiin aiemmin tässä aiheessa.
+Käyttämällä **ominaisuudet** välilehdessä voit määrittää erilaisia vaihtoehtoja kuin määrittämällä ohjausobjektin työkaluriviltä.
 
-2. Napsauta tai napauta oikeanpuoleisessa ruudussa olevaa **Ominaisuudet**-välilehteä, kun uusi ohjausobjekti on valittuna.
+Esimerkiksi, voit valita ohjausobjektin ja sitten näyttää tai piilottaa muuttamalla sen **näkyvissä** ominaisuus.
 
-    ![Ominaisuuspaneeli](./media/add-configure-controls/properties-panel.png)
-
-3. Kirjoita **tekstiruutuun** **Ominaisuudet-välilehti**.
-
-    ![Ominaisuuspaneelin selitteen teksti](./media/add-configure-controls/properties-panel-text.png)
-
-    Kirjoitettu teksti näytetään **selite**ohjausobjektissa.
-
-    ![Ominaisuuspaneelin pohjan teksti](./media/add-configure-controls/properties-panel-canvas-text.png)
-
-4. Napsauta tai napauta **Ominaisuus**paneelin **Täytä**-kuvaketta ja valitse sitten väri.
-
-    ![Ominaisuuspaneelin värin teksti](./media/add-configure-controls/properties-panel-color.png)
-
-    **Selite**ohjausobjekti muuttuu muutostesi mukaisesti.
-
-    ![Ominaisuuspaneelin pohjan väri](./media/add-configure-controls/properties-panel-canvas-color.png)
-
-5. Napsauta tai napauta ominaisuuspaneelin **Väri**-ominaisuutta.
-
-    ![Ominaisuuspaneelin ominaisuus](./media/add-configure-controls/properties-panel-property.png)
-
-    **Väri**-ominaisuuden arvo korostetaan kaavarivillä.
-
-    ![Ominaisuuspaneelin ominaisuuslauseke](./media/add-configure-controls/properties-panel-property-expression.png)
-
-6. Poista toinen **selite**ohjausobjekti napsauttamalla tai napauttamalla sitä ja painamalla sitten Poista.
+![Määritä näkyvyys](./media/add-configure-controls/set-visibility.png)
 
 ## <a name="configure-a-control-in-the-formula-bar"></a>Ohjausobjektin määrittäminen kaavariviltä
-Kaavariviltä voit määrittää ominaisuuksia, joita ei voi määrittää suoraan **Ominaisuudet**-välilehdeltä tai työkaluriviltä. Voit esimerkiksi määrittää työkaluvihjeen, joka tulee näkyviin, kun käyttäjä osoittaa ohjausobjektia, mutta ei napsauta tai napauta sitä. Voit myös määrittää monimutkaisia kaavoja, jotka tekevät sovelluksestasi entistä tehokkaamman.
 
-Aiemmin tässä aiheessa tehdyt muutokset ovat päivittäneet määritettävän ohjausobjektin jonkin [ominaisuuden](reference-properties.md) arvoa.
+Sen sijaan, että määrittäisit ohjausobjektin suoraan työkaluriviltä, ja tässä **ominaisuudet** välilehdessä voit määrittää ohjausobjektin ominaisuusluettelo ominaisuuden valitsemalla ja määrittämällä arvon kaavariville. Tämän lähestymistavan avulla voit hakea ominaisuuksia aakkosjärjestyksen mukaan ja määrittää useampia arvotyyppejä.
 
-* Kun muutit ohjausobjektin kokoa, muutit sen **[Leveys](controls/properties-size-location.md)**-ominaisuutta.
-* Kun siirsit ohjausobjektia, muutit sen **[X](controls/properties-size-location.md)**- ja **[Y](controls/properties-size-location.md)**-ominaisuuksia.
-* Kun muutit ohjausobjektin näyttämää tekstiä, muutit sen **[Teksti](controls/properties-core.md)**-ominaisuutta.
+Voit esimerkiksi Valitse nimi ja määritä se seuraavasti:
 
-Sen sijaan, että määrittäisit ohjausobjektin suoraan, **Ominaisuudet**-välilehdeltä tai työkaluriviltä, voit päivittää ominaisuuden arvon valitsemalla sen ominaisuusluettelosta ja määrittämällä arvon kaavariville. Tämän lähestymistavan avulla voit hakea ominaisuuksia aakkosjärjestyksen mukaan ja määrittää useampia arvotyyppejä.
+- Siirrä se valitsemalla **X** tai **Y** ominaisuudet-luettelossa ja määrittämällä kaavarivillä eri.
 
-1. Valitse jäljellä oleva **selite**ohjausobjekti, napsauta tai napauta ominaisuusluettelossa **[Teksti](controls/properties-core.md)**-ominaisuutta ja kirjoita kaavariville **"Yrityksen nimi"** (mukaan lukien lainausmerkit).
+    ![Määrittää X-ominaisuus](./media/add-configure-controls/x-property.png)
 
-    ![Literaalimerkkijono selitteessä](./media/add-configure-controls/text-literal.png)
+- Muuta sen kokoa valitsemalla **korkeus** tai **leveys** ominaisuudet-luettelossa ja määrittämällä kaavarivillä eri.
 
-    Ympäröimällä merkkijonon lainausmerkeillä määrität, että sitä käsitellään täsmälleen samalla tavalla, kuin se on kirjoitettu. Vaihtoehtoisesti voit määrittää ominaisuuden arvoksi kaavan.
+    ![Määritä Height-ominaisuus](./media/add-configure-controls/height-property.png)
 
-2. Valitse **selite**ohjausobjekti, napsauta tai napauta ominaisuusluettelossa **[Teksti](controls/properties-core.md)**-ominaisuutta ja kirjoita kaavariville **Today()** (ilman kysymysmerkkejä).
+- Muuta sen tekstiä valitsemalla **tekstin** ominaisuudet-luettelossa ja määrittämällä kaavarivillä literaalimerkkijono, lausekkeen tai kaavan.
 
-    Ohjausobjekti näyttää nykyisen päivämäärän.
+    - Literaalimerkkijono on lainausmerkkien sisällä, ja se näkyy täsmälleen, heti sitä kirjoitettaessa. **”Hello, world”** ole merkkijonoliteraali.
 
-    ![Today-funktio](./media/add-configure-controls/today-function.png)
+        ![Aseta Text-ominaisuudeksi literaalimerkkijono](./media/add-configure-controls/literal-string.png)
 
-    > [!TIP]
-   > Voit [muotoilla päivämäärän ja kellonajan](show-text-dates-times.md) usein eri tavoin, minkä lisäksi voit suorittaa niillä laskutoimituksia.
+    - Lauseke ei sisällä funktion ja perustuu usein toisen ohjausobjektin ominaisuuden. **Screen1.Height** on lauseke, joka näyttää korkeus **Screen1**.
 
-## <a name="configure-two-controls-to-interact-with-each-other"></a>Kahden ohjausobjektin määrittäminen vuorovaikutukseen toistensa kanssa
-Tässä menettelyssä lisätään valintaruutu ja määritetään selitettä, jonka määritit näytettäväksi vain, kun valintaruutu on valittuna.
+        ![Aseta Text-ominaisuudeksi lausekkeen](./media/add-configure-controls/expression.png)
 
-1. Napsauta tai napauta **Lisää**-välilehteä.
+    - Kaava sisältää yhden tai useita funktioita. **Nyt** -funktio palauttaa nykyisen päivämäärän ja ajan paikallisen aikavyöhykkeen, ja **tekstin** funktio muotoilee arvoja, kuten päivämäärät, kertaa ja valuutta.
 
-    ![Lisää-välilehti](./media/add-configure-controls/insert-tab.png)
+        ![Aseta Text-ominaisuudeksi kaavan](./media/add-configure-controls/formula.png)
 
-2. Napsauta tai napauta **Ohjausobjektit** ja napsauta tai napauta **valintaruutu**.
+        Kaavat ovat yleensä paljon monimutkaisempaa kuin tässä esimerkissä, jotta ne päivittää tiedot, lajitella ne, suodattaa se ja tehdä muita toimia. Jos haluat lisätietoja, katso [kaavan viittaus](formula-reference.md).
 
-    ![Lisää valintaruutu](./media/add-configure-controls/insert-check-box.png)
+## <a name="next-steps"></a>Seuraavat vaiheet
 
-3. Siirrä **valintaruutu**ohjausobjektia siten, että se näkyy **selite**ohjausobjektin alla, ja määritä **valintaruutu**ohjausobjektin **[Teksti](controls/properties-core.md)**-ominaisuudeksi **Näytä teksti**.
-
-    ![Määritä valintaruutu](./media/add-configure-controls/configure-check-box.png)
-
-4. Varmista, että **valintaruutu**ohjausobjekti on edelleen valittuna, napsauta tai napauta sen nimeä **Ominaisuudet**-välilehden yläpuolella ja kirjoita **MyCheckbox**
-
-    ![Nimeä valintaruutu uudelleen](./media/add-configure-controls/properties-panel-rename.png)
-
-5. Valitse **selite**ohjausobjekti napsauttamalla tai napauttamalla sitä.
-
-6. Valitse **Ominaisuudet**-välilehti ja napsauta tai napauta **Näkyvissä**-ominaisuutta.
-
-    ![Näkyvissä-ominaisuus](./media/add-configure-controls/properties-panel-visible-property.png)
-
-7. Poista kaavariviltä arvo **true** ja kirjoita tai liitä seuraava kaava:
-
-    **If(MyCheckbox.Value = true, true, false)**
-
-    Tämä **[If-funktio](functions/function-if.md)** ilmaisee, että selite näytetään vain, jos valintaruutu on valittuna. Koska valintaruudun valinta poistetaan, **selite**ohjausobjekti katoaa (lukuun ottamatta valintakehystä).
-
-    ![Näkyvissä-kaava](./media/add-configure-controls/visible-formula.png)
-
-8. Lisää valintakehys napsauttamalla tai napauttamalla **valintaruutu**ohjausobjektia. Napsauta tai napauta sitä sitten uudelleen, jos haluat lisätä valintamerkin.
-
-    **Selite** tulee näkyviin uudelleen:
-
-    ![Selite tulee näkyviin, kun valintaruutu on valittuna](./media/add-configure-controls/show-text.png)
-
-9. Piilota **selite**ohjausobjekti poistamalla **valintaruutu**ohjausobjektin valinta.
-
-    ![Selite katoaa näkyvistä, kun valintaruutu ei ole valittuna](./media/add-configure-controls/hide-text.png)
-
-Esimerkki on perustasoa, mutta voit määrittää sovelluksesi toimintaa ja ulkoasua yksinkertaisesta monimutkaiseen muodostamalla yhden tai useamman [kaavan](formula-reference.md).
-
-## <a name="rename-a-screen-or-a-control"></a>Näytön tai ohjausobjektin nimeäminen uudelleen
-Voit muodostaa helpommin luettavia ja ylläpidettäviä kaavoja nimeämällä näytön tai ohjausobjektin uudelleen.
-
-1. Napsauta tai napauta näyttöä tai ohjausobjektia, jonka haluat nimetä uudelleen.
-
-2. Napsauta tai napauta oikeanpuoleisessa ruudussa ohjausobjektin nimeä (suoraan **Ominaisuudet**-välilehden yläpuolella) ja kirjoita haluamasi nimi.
-
-    ![Nimeä valintaruutu uudelleen](./media/add-configure-controls/properties-panel-rename.png)
-
-## <a name="find-and-select-a-screen-or-a-control"></a>Näytön tai ohjausobjektin etsiminen ja valitseminen
-Voit etsiä ja valita näytön tai ohjausobjektin hakemalla sitä vasemmanpuoleisessa ruudussa, vaikka se olisi piilotettu tai päällekkäinen toisen ohjausobjektin kanssa. Tässä ruudussa näkyy joko pikkukuva sovelluksen jokaisesta näytöstä tai hierarkkinen näkymä jokaisesta ruudusta ja niiden sisältämistä ohjausobjekteista.
-
-* **Voit siirtyä pikkukuvien ja hierarkkisen näkymän välillä** napsauttamalla tai napauttamalla ruudun oikeassa yläkulmassa olevaa kuvaketta.
-
-    ![Näkymien vaihtaminen](./media/add-configure-controls/toggle-view.png)
-
-* **Etsi ohjausobjekteja** kirjoittamalla yksi tai useampi merkki. Tämä korostaa ne ohjausobjektit, jotka sisältävät kirjoittamasi tekstin.
-
-    Voit valita ohjausobjektin sovelluksessa napsauttamalla tai napauttamalla hakutulosta.
-
-    ![Hae puunäkymässä](./media/add-configure-controls/search.png)
-
-* **Voit siirtää näytön ylös- tai alaspäin, kopioida sen, poistaa sen tai nimetä sen uudelleen** napsauttamalla sitä hiiren kakkospainikkeella (tai napsauttamalla tai napauttamalla sen vieressä olevia kolmea pistettä) ja valitsemalla sitten haluamasi vaihtoehdon.
-
-    ![Puunäkymän pikavalikko](./media/add-configure-controls/context.png)
-
-* **Voit kopioida, liittää tai poistaa ohjausobjektin tai nimetä sen uudelleen** napsauttamalla sitä hiiren kakkospainikkeella (tai napsauttamalla tai napauttamalla sen vieressä olevia kolmea pistettä) ja valitsemalla sitten haluamasi vaihtoehdon.
+- Vaiheittaiset ohjeet etsiä määrittäminen yleisiä ohjausobjekteja, kuten [näyttöjä](add-screen-context-variables.md), [luettelo](add-list-box-drop-down-list-radio-button.md), [valikoimat](add-gallery.md), [lomakkeiden](add-form.md), ja [kaavioiden](use-line-pie-bar-chart.md).
+- Löytää kullakin Ohjausobjektityypillä tietoja [ohjausobjekti viittaus](reference-properties.md).
