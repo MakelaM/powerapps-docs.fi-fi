@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1be6055a2b8f42d8d4194653417313b29ab5610d
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: 2c367aa57294e52fc22f538f88b361c90c3afb99
+ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799843"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330236"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Asenna ja määritä Help Desk -malli PowerAppsissa
 
@@ -47,7 +47,7 @@ Tukipalvelu tarjoaa käyttäjäystävällisen tavan muodostaa yhteys loppukäytt
 
 Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
-1. Avaa selain ja siirry kohteeseen https://portal.office.com.
+1. Avaa selain ja siirry kohteeseen https://admin.microsoft.com.
 2. Kirjaudu sisään tilillä, jolla on oikeus luoda SharePoint-luetteloita.
 3. Siirry sivustokokoelmaan, johon haluat sijoittaa tukipalvelun luettelon.
 4. Napsauta **hammaspyöräkuvaketta** web-sivun yläosassa oikealla.

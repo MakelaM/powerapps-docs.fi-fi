@@ -1,20 +1,20 @@
 ---
-title: Mikä PowerApps on | Microsoft Docs
+title: Mikä on PowerApps? | Microsoft Docs
 description: Antaa yleiskatsauksen PowerAppsista ja tietoa siitä, miten käyttäjät, sovellusten tekijät, järjestelmänvalvojat ja ammattikehittäjät voivat käyttää sitä.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: 3a314ee6fabc5d3891a19610bfc4cf8aebdd6dcf
-ms.sourcegitcommit: edd4b1029b7085bb3849d87b0c94e0d8cb5758aa
+ms.openlocfilehash: ec03fdfd4837bb54fb150562ade38db758887f88
+ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251543"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58162259"
 ---
 # <a name="what-is-powerapps"></a>Mikä on PowerApps?
 
@@ -23,6 +23,8 @@ PowerApps on sovelluksista, palveluista, yhdistimistä ja tietoalustasta koostuv
 PowerAppsilla luodut sovellukset tarjoavat monipuolisia liiketoimintalogiikan ja -työnkulkujen toimintoja, joiden avulla muunnat manuaaliset liiketoimintaprosessit digitaalisiksi ja automatisoiduiksi prosesseiksi. Lisäksi PowerAppsilla luodut sovellukset ovat rakenteeltaan vuorovaikutteisia, ja niitä voi käyttää saumattomasti selaimessa tai mobiililaitteissa (puhelimilla ja tableteilla). PowerApps tekee mukautettujen yrityssovellusten luomisesta ”demokraattista” mahdollistamalla monipuolisia ominaisuuksia sisältävien mukautettujen yrityssovellusten luomisen koodia kirjoittamatta.
 
 PowerApps sisältää myös alustan, jonka kautta ammattikehittäjät voivat ohjelmallisesti käsitellä tietoja ja metatietoja, hyödyntää liiketoimintalogiikkaa, luoda mukautettuja yhdistimiä ja integroida ulkoisia tietoja.
+
+Lisätietoja saat YouTubesta [PowerAppsin kanavalta](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg).
 
 ## <a name="powerapps-for-app-makerscreators"></a>PowerApps sovellusten tekijöille ja luojille
 
