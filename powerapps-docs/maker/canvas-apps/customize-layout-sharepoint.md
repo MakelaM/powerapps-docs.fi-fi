@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6e77ddfcc572a776e80ab90d3907aaa7b67f01ea
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 2864ab5614bb3af415e24e23df3c52f6e668ab24
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864768"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357134"
 ---
-# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opetusohjelma: Valikoiman mukauttaminen PowerAppsissa
+# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opetusohjelma: Powerappsin valikoiman mukauttaminen
 
 Tässä opetusohjelmassa mukautat valikoimaksi kutsutun tietueluettelon ja teet muita muutoksia sovellukseen, joka luotiin automaattisesti Microsoft PowerAppsissa. Käyttäjät voivat hallita sovelluksen tietoja, vaikka et tee näitä muutoksia, mutta sovellusta on helpompi käyttää, jos mukautat sitä organisaatiosi tarpeiden mukaan.
 
@@ -47,7 +47,7 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 ## <a name="prerequisites"></a>Edellytykset
 
-[Luo sovellus](data-platform-create-app.md) Common Data Service (CDS) for Appsin **Tilit**-entiteetistä.
+[Sovelluksen luominen](data-platform-create-app.md) - **tilit** Common Data Service-entiteettiin.
 
 ## <a name="open-the-generated-app"></a>Avaa luotu sovellus
 

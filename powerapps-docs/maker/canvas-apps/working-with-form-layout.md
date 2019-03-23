@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b6bff4d0f9586f94e4d0da133197fcb7f78c765d
-ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
+ms.openlocfilehash: a8abc0a641f13cc05e723b96d48dd2d877f0b70f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "57800257"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356904"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten tietolomakkeen asettelun ymmärtäminen PowerAppsissa
 
@@ -32,7 +32,7 @@ Tässä opetusohjelmassa käymme läpi vaiheet tämän lomakkeen luomiseen. Tark
 
 Jos olet uusi PowerApps-käyttäjä (tai olet luonut sovelluksia vain automaattisesti), kannattaa [luoda sovellus alusta](get-started-create-from-blank.md), ennen kuin ryhdyt toimimaan tämän ohjeaiheen mukaan. Luomalla sovelluksen alusta opit välttämättömiä käsitteitä, joita mainitaan tässä ohjeaiheessa, mutta ei selitetä, kuten tietolähteiden ja ohjausobjektien lisääminen.
 
-Tämä ohjeaihe on kirjoitettu aivan kuin sinulla tietoja tietolähteen, jonka nimi on **myyntitilaus** , joka sisältää kenttien edellisessä kuvassa. Jos sinulla on Powerappsin palvelupaketin 2 käyttöoikeus tai [kokeiluversion käyttöoikeus](../signup-for-powerapps.md) järjestelmänvalvojaan tai järjestelmän mukauttajat oikeudet, voit [entiteetin](../common-data-service/data-platform-create-entity.md) luomiseen Common Data Service (CDS) for Appsissa ja lisää samanlaiset kentät. 
+Tämä ohjeaihe on kirjoitettu aivan kuin sinulla tietoja tietolähteen, jonka nimi on **myyntitilaus** , joka sisältää kenttien edellisessä kuvassa. Jos sinulla on Powerappsin palvelupaketin 2 käyttöoikeus tai [kokeiluversion käyttöoikeus](../signup-for-powerapps.md) järjestelmänvalvojaan tai järjestelmän mukauttajat oikeudet, voit [entiteetin](../common-data-service/data-platform-create-entity.md) Common Data Service- ja lisää samanlaiset kentät. 
 
 ## <a name="add-a-gallery"></a>Lisää valikoima
 

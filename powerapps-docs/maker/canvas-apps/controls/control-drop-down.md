@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 09e139353e500ad27650628a844bc01264eab3d0
-ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.openlocfilehash: 2283f77f7e1c09ceade63f96003fefabc5e92539
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54308382"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357640"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Avattava luettelo -ohjausobjekti PowerAppsissa
 Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luettelon.
@@ -133,7 +133,7 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 1. Näytä luettelon kohteet valitsemalla ohjausobjektin alanuoli samalla, kun painat Alt-näppäintä.
 
 ### <a name="list-from-a-data-source"></a>Luettelo tietolähteestä
-Tämän toimenpiteen periaatteet pätevät mihin tahansa [tietolähteeseen, joka tarjoaa taulukoita](../connections-list.md#tables). Jotta voit kuitenkin noudattaa seuraavia ohjeita tarkasti, sinun on avattava ympäristö, jolle on luotu Common Data Service for Apps -tietokanta ja lisätty mallitietoja.
+Tässä toimintosarjassa periaatteet pätevät mihin tahansa [tietolähde, joka sisältää taulukoita](../connections-list.md#tables) mutta noudattamalla seuraavia ohjeita tarkasti, sinun on avattava ympäristö, jota Common Data Service-tietokanta on luotu ja lisätty esimerkkitiedot.
 
 1. [Avaa tyhjä sovellus](../data-platform-create-app-scratch.md#open-a-blank-app) ja [määritä **Tilit**-entiteetti](../data-platform-create-app-scratch.md#specify-an-entity).
 

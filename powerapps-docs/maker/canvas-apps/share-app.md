@@ -13,19 +13,19 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 57a63ddf829e2a6c1062cad34e0f3c608d69afad
-ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.openlocfilehash: 34cf740bb029440480618a180ac45bc094c061d5
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57804213"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357272"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
 Kun olet luonut pohjaan perustuvan sovelluksen, joka vastaa liiketoiminnan tarpeiseen, määritä organisaatiosi käyttäjät, jotka voivat suorittaa sovelluksen, muokata sitä ja jopa jakaa sen uudelleen. Määrittä kukin käyttäjä nimen perusteella tai määritä käyttöoikeusryhmä Azure Active Directoryssä. Jos kaikki hyötyisivät sovelluksestasi, määritä, että koko organisaatio voi suorittaa sen.
 
 > [!IMPORTANT]
-> Jotta jaettu sovellus toimisi haluamallasi tavalla, sinun on myös hallittava tietolähteiden käyttöoikeuksia tai niiden lähteiden, joihin sovellus perustuu, kuten [Common Data Service for Apps -palvelun](#common-data-service-for-apps) tai [Excelin](share-app-data.md) käyttöoikeuksia. Voit myös joutua jakamaan sovelluksen perustana toimivia [muita resursseja](share-app-resources.md), kuten työnkulkuja, yhdyskäytäviä tai yhteyksiä.
+> Jaettu sovelluksen toimisi haluamallasi tavalla, on myös hallita käyttöoikeuksia tietolähteeseen tai tietolähteisiin, johon sovellus perustuu, kuten [Common Data Service-](#common-data-service) tai [Excel](share-app-data.md). Voit myös joutua jakamaan sovelluksen perustana toimivia [muita resursseja](share-app-resources.md), kuten työnkulkuja, yhdyskäytäviä tai yhteyksiä.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -68,7 +68,7 @@ Ennen kuin jaat sovelluksen, tallenna sen pilvipalveluun (ei paikallisesti) ja j
 
 1. Jos sovelluksesi muodostaa yhteyden tietoihin, jonka käyttäjät tarvitsevat käyttöoikeudet, määritä ne.
 
-    Sovelluksesi saattaa esimerkiksi yhdistää entiteetin CDS for Apps-tietokanta. Kun jaat olevan sovelluksen, jakamisen paneelin kehottaa kyseisen entiteetin suojauksen hallinta.
+    Sovelluksesi saattaa esimerkiksi yhdistää entiteetin Common Data Service-tietokannassa. Kun jaat olevan sovelluksen, jakamisen paneelin kehottaa kyseisen entiteetin suojauksen hallinta.
 
     ![Käyttöoikeuksien määrittäminen](./media/share-app/set-permissions.png)
 
@@ -99,16 +99,16 @@ Voit muuttaa käyttäjän tai käyttöoikeusryhmän käyttöoikeuksia valitsemal
 
 ## <a name="manage-entity-permissions"></a>Entiteetin käyttöoikeuksien hallinta
 
-### <a name="common-data-service-for-apps"></a>Microsoft Common Data Service for Apps
+### <a name="common-data-service"></a>Common Data Service
 
-Jos luot CDS for Appsin perustuvan sovelluksen, sinun on myös varmistaa, että käyttäjät, joille jaat sovelluksen entiteetin tai entiteetit, joita sovellus hyödyntää tarvittavia käyttöoikeuksia. Tarkemmin sanottuna käyttäjille, jotka on kuuluttava käyttöoikeusrooli, joka suorittaa tehtäviä, kuten luominen, lukeminen, kirjoittaminen ja tietueiden poistaminen. Monissa tapauksissa haluat luoda tarkka käyttöoikeuksilla voit suorittaa sovelluksen käyttäjät tarvitsevat vähintään yksi mukautettu käyttöoikeusrooli. Voit määrittää roolin sitten kukin käyttäjä tarpeen mukaan.
+Jos luot sovelluksen Common Data Service-perusteella, sinun on myös varmistettava, että käyttäjät, joille jaat sovelluksen entiteetin tai entiteetit, joita sovellus hyödyntää tarvittavia käyttöoikeuksia. Tarkemmin sanottuna käyttäjille, jotka on kuuluttava käyttöoikeusrooli, joka suorittaa tehtäviä, kuten luominen, lukeminen, kirjoittaminen ja tietueiden poistaminen. Monissa tapauksissa haluat luoda tarkka käyttöoikeuksilla voit suorittaa sovelluksen käyttäjät tarvitsevat vähintään yksi mukautettu käyttöoikeusrooli. Voit määrittää roolin sitten kukin käyttäjä tarpeen mukaan.
 
 > [!NOTE]
 > Tätä kirjoitettaessa Määritä käyttöoikeusroolit yksittäisten käyttäjien, mutta ei käyttöoikeusryhmiä.
 
 #### <a name="prerequisite"></a>Edellytys
 
-Seuraavat kaksi toimenpidettä edellyttävät, että sinulla on CDS for Apps -tietokannan **järjestelmänvalvojan** oikeudet.
+Seuraavat kaksi toimintojen suorittamista, sinulla on oltava **järjestelmänvalvojaan** Common Data Service-tietokannan käyttöoikeuksia.
 
 #### <a name="create-a-security-role"></a>Käyttöoikeusroolin luominen
 

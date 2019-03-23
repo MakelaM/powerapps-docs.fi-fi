@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b3f95b5c8ddbca1925f89797e52b1b227c4b10e8
-ms.sourcegitcommit: ead27300a1b7371136edee1842829ed87ca77a72
+ms.openlocfilehash: e9c63d1814b72cae0c675be6b33773799cfb3b8f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57892249"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357088"
 ---
 # <a name="concurrent-function-in-powerapps"></a>PowerAppsin Concurrent-funktio
 Arvioi useita kaavoja keskenään samanaikaisesti.
@@ -47,7 +47,7 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 #### <a name="loading-data-faster"></a>Tietojen lataamisen nopeuttaminen
 
-1. Luo sovellus ja lisää neljä tietolähdettä Common Data Service for Apps -palvelusta, SQL Serveristä tai SharePointista. 
+1. Luo sovellus ja lisää neljä tietolähteitä Common Data Service, SQL Server-tai SharePoint. 
 
     Tässä esimerkissä käytetään neljää taulukkoa [SQL Azuren Adventure Works -mallitietokannasta](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal). Kun olet luonut tietokannan, yhdistä se PowerAppsista käyttämällä täydellistä palvelimen nimeä (esimerkiksi srvname.database.windows.net):
 

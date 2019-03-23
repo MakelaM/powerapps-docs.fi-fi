@@ -13,23 +13,23 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9b213484bf1412d808c3fa9599debd5c9e546a4e
-ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
+ms.openlocfilehash: 6968e15bbfdb16d3f5443c51065765069ae8867b
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330121"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357180"
 ---
 # <a name="what-are-canvas-apps-in-powerapps"></a>Mitä ovat PowerAppsin pohjaan perustuvat sovellukset?
 Voit suunnitella ja rakentaa liiketoimintasovelluksen pohjan avulla Microsoft PowerAppsissa kirjoittamatta perinteistä ohjelmointikieltä, kuten C#. Suunnittele sovellus vetämällä ja pudottamalla elementtejä pohjalle, kuten PowerPoint-esitystä suunnitellessasi. Luo Excel-tyyppisiä lausekkeita logiikan määrittelemiseksi ja tietojen työstämiseksi. Voit rakentaa sovelluksia, jotka integroivat liiketoimintatietoja [useista erilaisista Microsoftin ja kolmannen osapuolen lähteistä](connections-list.md). Jaettuasi sovelluksesi se on käytettävissä selaimessa tai mobiililaitteilla, ja upotettuasi sen sitä voidaan käyttää SharePointissa, Power BI:ssä tai Teamsissa.
 
-Jos et tarvitse mukautettua mallia ja tietosi ovat Common Data Service (CDS) for Appsissa, voit luoda mallipohjaisen sovelluksen liiketoimintatietojesi ja -prosessiesi avulla automaattisesti. Tällaisella sovelluksella voi mallintaa lomakkeita, näkymiä ja muita komponentteja, ja oletusarvoinen käyttöliittymä skaalautuu laitteen (puhelin, tabletti tai vastaava) mukaan automaattisesti. Lisätietoa tällaisista sovelluksista on kohdassa [Yleiskatsaus mallipohjaisen sovelluksen luomiseen](../model-driven-apps/model-driven-app-overview.md).
+Jos et tarvitse mukautettua mallia ja tietosi ovat tässä Common Data Service, voit luoda mallipohjaisen sovelluksen automaattisesti Yritystiedot ja prosesseja. Tällaisella sovelluksella voi mallintaa lomakkeita, näkymiä ja muita komponentteja, ja oletusarvoinen käyttöliittymä skaalautuu laitteen (puhelin, tabletti tai vastaava) mukaan automaattisesti. Lisätietoa tällaisista sovelluksista on kohdassa [Yleiskatsaus mallipohjaisen sovelluksen luomiseen](../model-driven-apps/model-driven-app-overview.md).
 
 ## <a name="build-an-app"></a>Sovelluksen rakentaminen
 Pääset alkuun luomalla sovelluksen automaattisesti esimerkiksi jostakin seuraavista lähteistä:
 - [mallisovellus](open-and-run-a-sample-app.md)
 - [malli](get-started-test-drive.md)
-- [CDS for Apps](data-platform-create-app.md)
+- [Common Data Service](data-platform-create-app.md)
 - [SharePoint](app-from-sharepoint.md)
 - [Excel](get-started-create-from-data.md)
 
@@ -39,7 +39,7 @@ Pääset alkuun luomalla sovelluksen automaattisesti esimerkiksi jostakin seuraa
 
 Kun olet luonut sovelluksen automaattisesti, mukauta sen ulkoasu ja toiminta käyttäjien työnkulkujen perusteella. Muuta esimerkiksi näytettävien tietojen tyyppiä, niiden lajittelutapaa tai sitä, voivatko käyttäjät määrittää numeron kirjoittamalla sen vai valitsemalla sen liukusäätimellä. Lisää ja mukauta [näyttöjä](add-screen-context-variables.md), [valikoimia](customize-layout-sharepoint.md), [lomakkeita](customize-forms-sharepoint.md) ja muita ohjausobjekteja.
 
-Kun olet luonut sovelluksen tai pari automaattisesti ja saanut kokemusta mukauttamisesta, luo sovellus tyhjästä [CDS for Appsin](data-platform-create-app-scratch.md), [Excelin](get-started-create-from-blank.md) tai jonkin muun tietolähteen avulla. Tyhjästä aloittaminen opettaa joustavuutta sovelluksen suunnitteluun, työnkulkuun ja ohjausobjekteihin, ja voit sisällyttää useampia erilaisia tietolähteitä.
+Kun olet luonut sovelluksen tai pari automaattisesti ja saatuasi kokemusta mukauttamisesta, luo sovellus alusta alkaen perusteella [Common Data Service-](data-platform-create-app-scratch.md), [Excel](get-started-create-from-blank.md), tai muuta tietolähdettä. Tyhjästä aloittaminen opettaa joustavuutta sovelluksen suunnitteluun, työnkulkuun ja ohjausobjekteihin, ja voit sisällyttää useampia erilaisia tietolähteitä.
 
 ## <a name="share-and-run-an-app"></a>Jaa ja suorita sovellus
 Kun sovellus on valmis ja tallennat sen pilveen, [voit jakaa sen muiden kanssa](share-app.md) organisaatiossasi. Määritä, ketkä käyttäjät tai mitkä ryhmät voivat suorittaa sovelluksen ja voivatko ne myös jakaa sen muiden organisaatioon kuuluvien kanssa.

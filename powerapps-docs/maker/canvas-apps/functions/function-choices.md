@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 531a614493ef739acd7be71f396dfc2f7e1ada1c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 77268aa63ed49d10f825850909d31ec4feace063
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42832792"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357594"
 ---
 # <a name="choices-function-in-powerapps"></a>PowerAppsin Choices-funktio
 Palauttaa hakusarakkeen mahdollisten arvojen taulukon.
@@ -38,7 +38,7 @@ Tällä hetkellä et voi [delegoida](../delegation-overview.md) **Choices**-funk
 
 Sarakeviittausten on viitattava suoraan tietolähteeseen. Jos tietolähde on esimerkiksi **Accounts** ja haku on **SLA**, sarakeviittaus on **Accounts.SLA**. Viittausta ei voi välittää funktion, muuttujan tai ohjausobjektin kautta. Jos tätä esimerkkiä laajentaen **Accounts** syötetään **Valikoima**-ohjausobjektiin, viittaa valittuun tiliin käyttämällä kaavaa **Gallery.Selected.SLA**. Tämä viittaus on kuitenkin välitetty ohjausobjektin kautta, joten sitä ei voida välittää **Columns**-funktioon. Sinun on silti käytettävä kaavaa **Accounts.SLA**.
 
-Tällä hetkellä hakusarakkeita voi käyttää vain SharePointin ja Common Data Service for Apps -palvelun kanssa.
+Tällä hetkellä voit hakusarakkeita vain SharePoint- ja Common Data Service-kanssa.
 
 ## <a name="syntax"></a>Syntaksi
 **Choices**( *column-reference* )
@@ -49,11 +49,11 @@ Tällä hetkellä hakusarakkeita voi käyttää vain SharePointin ja Common Data
 
 #### <a name="choices-for-a-lookup"></a>Hakuvaihtoehdot
 
-1. [Luo tietokanta](../../../administrator/create-database.md) Common Data Service for Apps -palvelussa ja valitse **Sisällytä mallisovellukset ja tiedot** -ruutu.
+1. [Luo tietokanta](../../../administrator/create-database.md) Common Data Service-ja valitse **Sisällytä Mallisovellukset ja tiedot** ruutuun.
 
     Useita entiteettejä luodaan, kuten **Accounts**.
 
-    **Huomautus**: entiteettien nimet ovat yksikössä web.powerapps.com-sivustossa ja monikossa PowerApps Studiossa.
+    **Huomautus**: Entiteettien nimien on yksittäinen osoitteessa web.powerapps.com ja plural PowerApps Studio.
 
     ![Common Data Service for Apps -palvelun Account-entiteetin kenttien osittainen luettelo, josta näkyy, että Ensisijainen yhteyshenkilö on hakukenttä](media/function-choices/entity-account.png)
 

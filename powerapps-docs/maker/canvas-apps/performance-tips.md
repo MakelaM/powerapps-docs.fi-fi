@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a04320d2d8bb2d8ad3ebf30d3ecbd0dfe7f9b0bd
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.openlocfilehash: 6406afad9079895a0da38c7f1f6e3961f2e37fa1
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57801959"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357847"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Kangassovellusten suorituskyvyn optimointi PowerAppsissa
 Microsoft tekee kaikkensa parantaakseen kaikkien PowerApps-ympäristössä toimivien sovellusten suorituskykyä. Tämän aiheen parhaiden käytäntöjen avulla voit myös tehostaa luomiesi sovellusten suorituskykyä.
@@ -32,7 +32,7 @@ Kun käyttäjä avaa sovelluksen, sovellus käy seuraavat suoritusvaiheet läpi,
 ## <a name="limit-data-connections"></a>Rajoita tietoyhteyksiä 
 **Älä yhdistä yli 30 tietolähteeseen samassa sovelluksessa**. Sovellus pyytää uusia käyttäjiä kirjautumaan sisään jokaiseen liittimeen, joten jokainen ylimääräinen liitin kasvattaa sovelluksen käynnistysaikaa. Kun sovellusta suoritetaan, jokainen liitin käyttää suoritinresursseja, muistia ja verkon kaistanleveyttä, kun sovellus pyytää tietoja kyseisestä tietolähteestä. 
 
-Voit nopeasti mitata sovelluksesi suorituskykyä ottamalla käyttöön kehittäjätyökalut [Microsoft Edgessä](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) tai [Google Chromessa](https://developers.google.com/web/tools/chrome-devtools/network-performance/) sovelluksen suorittamisen aikana. On hyvin todennäköistä, että sovelluksesi joutuu käyttämään yli 15 sekuntia aikaa tietojen palauttamiseen, jos sen täytyy pyytää tietoja useampaan kertaan yli 30 tietolähteestä kuten Common Data Service for Appsista, Azure SQL:stä, SharePointista ja OneDrivessa toimivasta Excelistä.  
+Voit nopeasti mitata sovelluksesi suorituskykyä ottamalla käyttöön kehittäjätyökalut [Microsoft Edgessä](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) tai [Google Chromessa](https://developers.google.com/web/tools/chrome-devtools/network-performance/) sovelluksen suorittamisen aikana. Sovelluksesi on todennäköisesti kestää kauemmin kuin 15 sekuntia palauttamana tietoja, jos se pyytää tietoja usein yli 30 tietolähteisiin, kuten Common Data Service-, Azure SQL-, SharePoint- ja Excel onedrivessa.  
 
 ## <a name="limit-the-number-of-controls"></a>Rajoita ohjausobjektien määrää 
 **Älä lisää yli 500 ohjausobjektia samaan sovellukseen**. PowerApps luo HTML DOMin kunkin ohjausobjektin hahmontamista varten. Mitä enemmän ohjausobjekteja lisäät, sitä enemmän muodostamisaikaa PowerApps tarvitsee. 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 02aaaf7fd149ca0d9f3e1325b98e5287c90bebec
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 735894f8e28d25777aa7f66146f5782da2ab2f3e
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316995"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356789"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>Kirjautuminen sisään PowerAppsiin ensimmäistä kertaa
 
@@ -42,7 +42,7 @@ Aloita varmistamalla, että aloitussivu on määritetty oikealle ympäristölle.
 
 ## <a name="choose-an-environment"></a>Ympäristön valitseminen
 
-Kun luot sovelluksen, työnkulun, tietoyhteyden tai entiteetin Common Data Service for Appsissa, suurin osa PowerAppsissa tehtävistä toimista rajoittuu tiettyyn ympäristöön. Ympäristöt luovat rajoja erityyppisille töille. Esimerkiksi organisaatiolla voi olla erilliset ympäristöt eri osastoille. Monet organisaatiot käyttävät ympäristöjä vielä kehitteillä olevien sovellusten erottamiseen jo laajaan käyttöön valmiista sovelluksista. Sinulla voi olla käyttöoikeus useisiin ympäristöihin tai esimerkiksi vain yhteen. Voit luoda omia ympäristöjäsi, jos sinulla on siihen asianmukaiset oikeudet.
+Kun esimerkiksi luot sovelluksen, työnkulun, tietoyhteyden tai entiteetin tässä Common Data Service, paljon mitä teet PowerApps sisältyy tietyssä ympäristössä. Ympäristöt luovat rajoja erityyppisille töille. Esimerkiksi organisaatiolla voi olla erilliset ympäristöt eri osastoille. Monet organisaatiot käyttävät ympäristöjä vielä kehitteillä olevien sovellusten erottamiseen jo laajaan käyttöön valmiista sovelluksista. Sinulla voi olla käyttöoikeus useisiin ympäristöihin tai esimerkiksi vain yhteen. Voit luoda omia ympäristöjäsi, jos sinulla on siihen asianmukaiset oikeudet.
 
 Otsikon oikealla puolella oleva ympäristövalitsin näyttää nykyisen ympäristön.
 
@@ -60,9 +60,9 @@ Lisätietoja on kohdassa [Ympäristöjen yleiskatsaus](../../administrator/envir
 PowerAppsissa voit luoda ja suorittaa seuraavantyyppisiä sovelluksia:
 
 - **Pohjaan perustuvat sovellukset** tukevat mukautetun käyttöliittymän suunnittelua ja yhteyden muodostamista useissa lähteissä oleviin tietoihin.
-- **Mallipohjaisissa sovelluksissa** on vakiokäyttöliittymä ja ne muodostavat yhteyden vain Common Data Service (CDS) for Appsissa oleviin tietoihin. Niissä voit kuitenkin helpommin luoda muita elementtejä, kuten näkymiä, koontinäyttöjä ja erityyppisiä liiketoimintalogiikkoja.
+- **Mallipohjaisten sovellusten** on standard Käyttöliittymän ja vain Common Data Service-tietoihin yhdistäminen. Niissä voit kuitenkin helpommin luoda muita elementtejä, kuten näkymiä, koontinäyttöjä ja erityyppisiä liiketoimintalogiikkoja.
 
-Jos valitset ympäristön, jossa on CDS for Apps -tietokanta, voit laatia pohjaan perustuvia tai mallipohjaisia sovelluksia samalta **aloitussivulta**.
+Jos ympäristö, joka on Common Data Service-tietokanta, voit rakentaa pohjaan perustuvan tai mallipohjaisen sovelluksen saman **aloitus** sivun.
 
 ## <a name="play-or-edit-an-app"></a>Sovelluksen toistaminen tai muokkaaminen
 
@@ -84,7 +84,7 @@ Voit myös etsiä sovellusta kirjoittamalla yhden tai useamman merkin hakukentt�
 - [luo oma mallipohjainen sovellus](../model-driven-apps/overview-model-driven-samples.md)
 - [mukauta mallipohjaisen sovelluksen valmiiksi luotua mallia.](../model-driven-apps/build-first-model-driven-app.md)
 
-## <a name="learn-more"></a>Lue lisätietoja
+## <a name="learn-more"></a>Opi lisää
 
 Saat lisätietoja joko pohjaan perustuvista tai mallipohjaisista sovelluksista kahdella tavalla:
 
@@ -120,6 +120,6 @@ Otsikon ja vasemman siirtymispalkin vaihtoehdoilla voit tehdä paljon muutakin k
 
 Laajentaa sovellustesi toimintoja suorittamalla seuraavia tehtäviä:
 
-- Hallitse entiteettejä, asetusjoukkoja ja tietojen integrointia [Common Data Service for Appsissa](../common-data-service/data-platform-intro.md).
+- Entiteettien, asetusjoukkojen ja tietojen integroinnin hallinta [Common Data Service-](../common-data-service/data-platform-intro.md).
 - Määritä liiketoimintalogiikka [Microsoft Flow’ssa](https://docs.microsoft.com/flow/getting-started).
 - Kehitä, paketoi ja ylläpidä [ratkaisuja](../../developer/common-data-service/introduction-solutions.md).

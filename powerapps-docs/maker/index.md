@@ -8,14 +8,9 @@ ms.topic: conceptual
 ms.custom: canvas
 ms.date: 03/18/2018
 ms.author: anneta
-ms.reviewer: ''
-ms.openlocfilehash: c3e40df2d2ecc13e2c466aa91178ccb5d23548fe
-ms.sourcegitcommit: 2300de0a0486187762f830068c872116d5b04c32
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806084"
+ms.reviewer: null
 ---
+
 # <a name="overview-of-creating-apps-in-powerapps"></a>Yleiskuvaus sovellusten luomisesta PowerAppsissa
 
 PowerApps on erittäin tehokas liiketoimintasovellusten kehitysalusta, johon kuuluu kolme keskeistä osaa:
@@ -57,7 +52,7 @@ Mallipohjaisten sovellusten aloittaminen on helppoa, ja voit lähteä liikkeelle
 - [lisää turvallisuutta](https://docs.microsoft.com/dynamics365/customer-engagement/customize/manage-access-apps-security-roles)
 - [lisää liiketoimintalogiikka](https://docs.microsoft.com/dynamics365/customer-engagement/customize/guide-staff-through-common-tasks-processes)
 
-## <a name="common-data-service-for-apps"></a>Common Data Service sovelluksia varten
+## <a name="common-data-service"></a>Common Data Service
 
 Common Data Servicen avulla voit varastoida ja hallita turvallisesti tietoja, jotka on tallennettu määritettyyn joukkoon vakiokohteita ja mukautettuja kohteita. Voit myös tarvittaessa lisätä näihin kohteisiin kenttiä.
 

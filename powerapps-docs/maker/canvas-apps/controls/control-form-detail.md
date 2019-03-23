@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 194da16a1025daa84c658ae8884734a08780c6c1
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.openlocfilehash: 4d7b21286f793aefdcc66a3dcbb027ab8f9ac4e7
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57802051"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356835"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -33,7 +33,7 @@ Jos lisäät **[Valikoima](control-gallery.md)**-ohjausobjektin, voit määritt�
 ### <a name="record-selection"></a>Tietueen valitseminen
 Määritä kumman tahansa lomaketyypin **DataSource**-ominaisuudeksi taulukon tietueet ja määritä lomakkeen **Item**-ominaisuus näyttämään tietty tietue kyseisessä taulukossa. Voit esimerkiksi määrittää lomakkeen **Item**-ominaisuudeksi **[Valikoima](control-gallery.md)**-ohjausobjektin **SelectedItem**-ominaisuuden. Kun käyttäjä valitsee valikoimasta tietueen, sama tietue näytetään myös lomakkeessa, mutta siinä voidaan näyttää enemmän kenttiä. Jos käyttäjä palaa valikoimaan ja valitsee toisen tietueen, valikoiman **SelectedItem**-ominaisuus muuttuu. Tämä muutos päivittää lomakkeen **Item**-ominaisuuden, jonka jälkeen lomakkeessa näytetään juuri valittu tietue.
 
-Voit myös määrittää lomakkeen **Item**-ominaisuus käyttämällä **avattavan luettelon** ohjausobjektia [Tietueen tarkasteleminen, muokkaaminen tai lisääminen](../add-form.md) -kohdassa kuvatulla tavalla, tai funktiota, kuten **Haku** tai **Ensimmäinen**. Voit esimerkiksi määrittää **Item**-ominaisuuden jompaankumpaan näistä kaavoista näyttääksesi Fabrikam-merkinnän Common Data Service for Appsin **Tilit**-entiteetissä:
+Voit myös määrittää lomakkeen **Item**-ominaisuus käyttämällä **avattavan luettelon** ohjausobjektia [Tietueen tarkasteleminen, muokkaaminen tai lisääminen](../add-form.md) -kohdassa kuvatulla tavalla, tai funktiota, kuten **Haku** tai **Ensimmäinen**. Voit esimerkiksi määrittää **kohteen** ominaisuuden joko näyttämään Fabrikam-merkintää nämä kaavat **tilit** Common Data Service-entiteettiin:
 
 ```First(Accounts)```
 

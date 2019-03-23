@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 09d2bc10d465510887b546df8341c8798df136c1
-ms.sourcegitcommit: 02d0234bd84352bf1c43d0fc9225ab60947a0add
-ms.translationtype: HT
+ms.openlocfilehash: 1adf38b59b01bb08bc89c6101a96247b8bce8092
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316812"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357456"
 ---
-# <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Pikaopas: Luo kangas-sovellus mallin perusteella PowerAppsissa
+# <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Pikaopas: Luo kangas-sovellus mallin perusteella powerappsissa
 Tässä pikaoppaassa luot kangas-sovelluksen mallin perusteella, jolloin voit tutkia suunnittelumahdollisuuksia ja löytää ideoita, joita voit käyttää kehittäessäsi omia kangas-sovelluksiasi.
 
 Jokaiseen malliin liittyy tosimaailman skenaario, mutta tiedot ovat kuvitteellisia. Näiden tietojen tallentamista varten tarvitset pilvitallennustilin, kuten Dropboxin, Google Driven tai OneDriven.
@@ -64,7 +64,7 @@ Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi]
 1. Napsauta tai napauta vasemman reunan lähellä **Tallenna**. 
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa loit oman mallisovellukseen perustuvan sovelluksen, jossa käytetään kuvitteellisia tietoja, jotka tallennetaan pilvitallennuspalvelutilillesi. Jos haluat lisäapua sovelluksen luomisen opetteluun, voit myös luoda automaattisesti sovelluksen, joka perustuu muissa lähteissä, kuten Common Data Service for Appsissa, SharePointissa tai Excelissä oleviin tietoihin.
+Tässä pikaoppaassa loit oman mallisovellukseen perustuvan sovelluksen, jossa käytetään kuvitteellisia tietoja, jotka tallennetaan pilvitallennuspalvelutilillesi. Jos haluat lisäapua sovelluksen luomisen opetteluun, voit luoda myös automaattisesti sovelluksen muista lähteistä, kuten Common Data Service, SharePoint tai Excel-tietojen perusteella.
 
 > [!div class="nextstepaction"]
 > [Luo sovellus](data-platform-create-app.md)

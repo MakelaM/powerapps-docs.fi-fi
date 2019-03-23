@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: db511edd7e64f4d8ccd27cb59cae9a2c369e1a90
-ms.sourcegitcommit: a06e3137e3cb36414f0d61825bbc687487ea6f8c
+ms.openlocfilehash: e00c81f25de9a764e8f6d963ff94f3c0ffe052a2
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57804236"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357249"
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Luo pohjaan perustuva sovellus riippuvaiset avattavia luetteloita
 
@@ -206,6 +206,6 @@ Tämä ongelma on todennäköisesti vuoksi käyttämällä **LookUp** sarakkeen 
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 
-Tämä määritys on käytettävissä **avattava** ohjausobjekteja, sekä **yhdistelmäruudun** ja **luetteloruutu** ohjausobjekteja, jotka sallivat kerrallaan yhden valinnan. Et voi käyttää **riippuu-** määritys jonkin näiden ohjausobjektien, jos ne Salli useita valintoja. Tämä lähestymistapa ei kuitenkaan suositella käsittelyyn Asetusjoukot Common Data Service for Appsiin.
+Tämä määritys on käytettävissä **avattava** ohjausobjekteja, sekä **yhdistelmäruudun** ja **luetteloruutu** ohjausobjekteja, jotka sallivat kerrallaan yhden valinnan. Et voi käyttää **riippuu-** määritys jonkin näiden ohjausobjektien, jos ne Salli useita valintoja. Tämä lähestymistapa ei ole suositeltavaa käsitteleminen asetusjoukkoja tässä Common Data Service.
 
 **Riippuu-** määritys ei tue staattisia tietoja tai kokoelmia. Määrittämään näiden tietolähteiden riippuvaiset avattavia luetteloita Muokkaa lauseketta suoraan kaavarivillä. Lisäksi PowerApps ei tue kaksi valinta-kenttiä SharePointissa ilman mitään vastaavaa taulukon ja ei voi määrittää **Matching kentän** sisällä tämän Käyttöliittymän.

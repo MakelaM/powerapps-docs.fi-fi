@@ -1,6 +1,6 @@
 ---
-title: Pohjaan perustuvan sovelluksen luominen Common Data Service for Apps -palvelussa | Microsoft Docs
-description: Luo PowerAppsissa automaattisesti pohjaan perustuva sovellus Common Data Service for Apps -palvelun tietojen hallintaan
+title: Luo pohjaan perustuva sovellus Common Data Service-| Microsoft Docs
+description: Powerappsissa automaattisesti luoda pohjaan perustuvan sovelluksen Common Data Service-tietojen hallintaan
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -13,22 +13,22 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1393d6dcdd9b88f4bca9e536a776b8601ae4c1c1
-ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
+ms.openlocfilehash: 38e2798ae60206ff0584254916e4f750096155e4
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "57801775"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356858"
 ---
-# <a name="generate-a-canvas-app-from-common-data-service-for-apps-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Common Data Service for Apps -palvelussa PowerAppsissa
+# <a name="generate-a-canvas-app-from-common-data-service-in-powerapps"></a>Luo pohjaan perustuva sovellus Common Data Service-powerappsissa
 
-Luo Microsoft PowerAppsissa automaattisesti pohjaan perustuva sovellus [Common Data Service for Apps](../common-data-service/data-platform-intro.md) -palvelun esimerkkitilien luettelon pohjalta. Tässä sovelluksessa voit selata kaikkia tilejä, tarkastella yksittäisen tilin tietoja sekä luoda, päivittää tai poistaa tilin.
+Powerappsissa automaattisesti luoda esimerkkitilien luettelon pohjalta pohjaan perustuvan sovelluksen [Common Data Service-](../common-data-service/data-platform-intro.md). Tässä sovelluksessa voit selata kaikkia tilejä, tarkastella yksittäisen tilin tietoja sekä luoda, päivittää tai poistaa tilin.
 
 Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ennen aloittamista.
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Tämän pikaoppaan noudattamiseksi sinun on määritettävä [ympäristön tekijän](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) käyttöoikeusrooli ja on [Vaihda ympäristöön](working-with-environments.md) , joka CDS for Apps-tietokanta on luotu, sisältää tietoja, ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
+Tämän pikaoppaan noudattamiseksi sinun on määritettävä [ympäristön tekijän](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) käyttöoikeusrooli ja on [Vaihda ympäristöön](working-with-environments.md) , jota Common Data Service-tietokantaa on luotu, sisältää tietoja, ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
 
 ## <a name="generate-an-app"></a>Luo sovellus
 
@@ -64,7 +64,7 @@ Luultavasti haluat tehdä sovellukseen lisää muutoksia ennen kuin käytät sit
 1. Valitse vasemman reunan lähellä **Tallenna** ja valitse sitten vasemmassa alakulmassa **Tallenna**.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa luotiin sovellus, jolla hallitaan tilien näytetietoja Common Data Service for Apps -palvelussa. Seuraavaksi voit mukauttaa valikoimaa ja oletusselausnäytön muita osia sopimaan paremmin tarpeisiisi.
+Tässä pikaoppaassa luotiin sovellus ja hallitse Common Data Service-tilien näytetietoja. Seuraavaksi voit mukauttaa valikoimaa ja oletusselausnäytön muita osia sopimaan paremmin tarpeisiisi.
 
 > [!div class="nextstepaction"]
 > [Mukauta valikoima](customize-layout-sharepoint.md).

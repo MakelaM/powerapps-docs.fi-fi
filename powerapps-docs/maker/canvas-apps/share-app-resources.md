@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f6adc46eafda2f5bd9798c13b292a82d567e34a7
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 4f303cdfba474448321d230bb61b698e8f959e5f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831332"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357410"
 ---
 # <a name="share-canvas-app-resources-in-powerapps"></a>Pohjaan perustuvan sovelluksen resurssien jakaminen PowerAppsissa
 
 Ennen kuin voit [jakaa pohjaan perustuvan sovelluksen](share-app.md), ota huomioon resurssityypit, joita se hyödyntää, kuten yhtä tai useampia seuraavista:
 
-* entiteetit Common Data Service for Appsissa
+* Common Data Service-entiteettejä
 
     Lisätietoja oikeuksien antamisesta näiden tietojen käyttämiseen on ohjeaiheessa [Entiteetin käyttöoikeuksien hallinta](share-app.md#manage-entity-permissions).
     

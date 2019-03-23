@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c50b2452829f0878c40ccf5f2e47010596bc0b7b
-ms.sourcegitcommit: eef2d6d9a9c7f5c8a44b9734817f59dc0eac3ecf
+ms.openlocfilehash: 4b2c6b9518e987ef17f2ff2b50987568c8a0b69f
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "57801591"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356766"
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Liittyvät ja Unrelate-Funktiot powerappsissa
 
@@ -26,7 +26,7 @@ Liittyvät ja unrelate kautta yksi-moneen- tai monta-moneen-suhteen kahden entit
 
 ## <a name="description"></a>Kuvaus
 
-**Relate** funktio yhdistää kaksi tietuetta yksi-moneen- tai monta moneen suhteen luomiseen Common Data Service (CDS) for Appsissa kautta. **Unrelate** funktio kääntää prosessi ja poistaa linkin.
+**Relate** funktio yhdistää kaksi tietuetta yksi-moneen- tai monta-moneen-suhteen Common Data Service-kautta. **Unrelate** funktio kääntää prosessi ja poistaa linkin.
 
 Yksi moneen suhteiden monta kohteella viiteavain kenttä, joka osoittaa yhden entiteetin tietueen. **Liittyvät** määrittää tämän kentän osoittamaan tietyn tietueen yhden entiteetin, kun **Unrelate** määrittää tämän kentän *tyhjä*. Jos kenttä on jo määritetty kun **Relate** on nimeltään, nykyisen linkin menetetään, koska uuden linkin. Voit myös määrittää tämän kentän avulla [ **Patch** ](function-patch.md) funktio tai **[muokkauslomake](../controls/control-form-detail.md)** ohjausobjektin; mitä tarvitset Käytä **yhdistäminen**  funktio.
 

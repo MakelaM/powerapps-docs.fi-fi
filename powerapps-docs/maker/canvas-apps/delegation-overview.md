@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 813dddc205eb5abb870d333635723fcd5e2f2738
-ms.sourcegitcommit: 6d1ec3d5afa0466d1a5ce4434e588686a195d0fa
+ms.openlocfilehash: e709c600e02d0acf26883da76ead163c62411802
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "57802534"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357617"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
 PowerApps sisältää tehokkaita toimintoja, joilla suodatusta, lajittelemiseen ja muotoilemiseen taulukoiden pohjaan perustuvan sovelluksen tiedot: **[Suodattimen](functions/function-filter-lookup.md)**,  **[Lajittele](functions/function-sort.md)**, ja **[AddColumns](functions/function-table-shaping.md)** joitakin funktioita. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
@@ -37,7 +37,7 @@ Tässä asia monimutkaistuu, ja juuri tästä syystä tämä artikkeli on olemas
 ## <a name="delegable-data-sources"></a>Delegoitavat tietolähteet
 Delegointia tuetaan tiettyjen vain Taulukkomuotoisissa tietolähteissä. Jos tietolähde tukee delegointia, sen [connector ohjeet](https://docs.microsoft.com/connectors/) kuvataan tukevat. Taulukkomuotoiset tietolähteet ovat Suosituimmat, ja ne delegointia:
 
-- [Common Data Service (CDS) for Appsissa](https://docs.microsoft.com/connectors/commondataservice/) 
+- [Common Data Service](https://docs.microsoft.com/connectors/commondataservice/) 
 - [SharePoint](https://docs.microsoft.com/connectors/sharepointonline/) 
 - [SQL Server](https://docs.microsoft.com/connectors/sql/) 
 
@@ -131,7 +131,7 @@ PowerApps antaa varoituksen (keltaisen kolmion), kun luot kaavan, joka sisältä
 Delegointivaroitukset näytetään vain kaavoissa, jotka toimivat delegoitavissa tietolähteissä. Jos varoitusta ei tule näkyviin ja uskot, että kaavaa ei delegoida oikein, vertaa tietolähdetyyppiä edellä tässä ohjeaiheessa olevaan [delegoitavien tietolähteiden](delegation-overview.md#delegable-data-sources) luetteloon.
 
 ## <a name="examples"></a>Esimerkkejä
-Tässä esimerkissä luodaan automaattisesti kolmen näytön sovellus käyttämällä pohjana SQL Server -taulukkoa nimeltä **[dbo].[Fruit]**. Sovelluksen luomisessa voit käyttää SQL Serveriin samanlaisia periaatteita kuin [Common Data Service for Apps -palvelun ohjeaiheessa](data-platform-create-app.md) on kuvattu.
+Tässä esimerkissä luodaan automaattisesti kolmen näytön sovellus käyttämällä pohjana SQL Server -taulukkoa nimeltä **[dbo].[Fruit]**. Lisätietoja siitä, miten voit luoda sovelluksen, voit käyttää samankaltaisia periaatteet [aiheessa tietoja Common Data Service-](data-platform-create-app.md) SQL Server.
 
 ![Kolmen näytön sovellus](./media/delegation-overview/products-afd.png)
 

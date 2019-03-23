@@ -13,26 +13,26 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: da9c8f85844e37d6af8e1063b36496c820fbfa07
-ms.sourcegitcommit: e2a9d1a6090cdd8aa78515b49f38ed2365217ea6
-ms.translationtype: HT
+ms.openlocfilehash: 31b166dbe0257127d02f410182aaebb70e641da6
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384244"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357893"
 ---
 # <a name="attachments-control-in-powerapps"></a>Liiteohjausobjekti PowerAppsissa
-Ohjausobjekti, jolla käyttäjät voivat ladata tiedostoja laitteeseen sekä ladata ja poistaa tiedostoja SharePoint-luettelosta tai Common Data Service for Apps -entiteetistä.
+Ohjausobjekti, jonka avulla käyttäjät voivat ladata tiedostoja laitteensa, sekä ladata ja poistaa tiedostoja SharePoint-luetteloon tai Common Data Service-entiteetistä.
 
 ## <a name="limitations"></a>Rajoitukset
 Liiteohjausobjektilla on seuraavat rajoitukset:
-1. Liitteitä tuetaan SharePoint-luetteloissa ja CDS for Apps -entiteeteissä.
+1. SharePoint-luetteloiden ja Common Data Service-entiteettejä tuetaan liitteet.
 
 1. Lataaminen ja poistaminen toimivat vain lomakkeen sisällä.  Liiteohjausobjekti näyttää käytöstä poistetulta, kun käyttäjä on Muokkaa-tilassa eikä lomakkeen sisällä. Huomaa, että loppukäyttäjän on tallennettava lomake, jos tiedoston lisäykset ja poistot halutaan tallentaa taustatietokantaan.
 
 1. Voit ladata enintään 10 Mt:n kokoisia tiedostoja.  
 
 ## <a name="description"></a>Kuvaus
-**Liitteet**-ohjausobjektin avulla voit avata, lisätä ja poistaa tiedostoja SharePoint-luettelosta tai CDS for Apps -entiteetistä.
+**Liitteet** ohjausobjektin avulla voit avata, lisätä ja poistaa tiedostoja SharePoint-luetteloon tai Common Data Service-entiteetistä.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **[Items](properties-core.md)**  – Ladattavia tiedostoja kuvaava lähde.

@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3da9d769ab36df23c6c54510937adea2ce38863f
-ms.sourcegitcommit: b8b2a2c3cf3300fa52bdf71bfef6a2892e36cffc
+ms.openlocfilehash: 9415ab67b93ef64f5caa025af5ac685ca2363305
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57802626"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357065"
 ---
 # <a name="guid-function-in-powerapps"></a>PowerAppsin GUID-funktio
 Muuntaa GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) -merkkijonon GUID-arvoksi tai luo uuden GUID-arvon.
 
 ## <a name="description"></a>Kuvaus
-**GUID**-funktiolla muunnetaan GUID-tunnuksen heksadesimaalimuotoisen esityksen sisältävä merkkijono GUID-arvoksi, joka voidaan välittää tietokantaan. Tietokantajärjestelmät, kuten Common Data Service for Apps ja SQL Server, käyttävät GUID-arvoja avaimina.
+**GUID**-funktiolla muunnetaan GUID-tunnuksen heksadesimaalimuotoisen esityksen sisältävä merkkijono GUID-arvoksi, joka voidaan välittää tietokantaan. GUID-arvoja käytetään avaimet tietokannan järjestelmien, kuten Common Data Service-ja SQL Server.
 
 Välitetty merkkijono voi sisältää isoja tai pieniä kirjaimia. Siinä on oltava 32 heksadesimaalimerkkiä jommassakummassa seuraavista muodoista:
 
