@@ -21,7 +21,7 @@ search.app:
 ---
 # <a name="configure-connection-roles"></a>Yhteysroolien määrittäminen
 
-Common Data Service sovelluksille -ratkaisun avulla voit määrittää **yhteydet** entiteettitietueiden välille ilman entiteettisuhteen luomista. Mallipohjaisissa sovelluksissa tietueiden välille voidaan muodostaa nimetty linkki. Näin muodostetaan vähemmän muodollinen suhde, joka ei anna aihetta todellisen entiteettisuhteen luomiselle. Esimerkkejä ovat *ystävä*, *sisarus*, *puoliso*, *osallistuja* ja *sidosryhmän jäsen*. Jotkin yhteydet voivat olla myös kaksisuuntaisia, kuten *lapsi* ja *vanhempi*, *aviomies* ja *aviovaimo* ja *lääkäri* ja *potilas*.
+Common Data Service sovelluksille -ratkaisun avulla voit määrittää **yhteydet** entiteettitietueiden välille ilman entiteettisuhteen luomista. Mallipohjaisissa sovelluksissa tietueiden välille voidaan muodostaa nimetty linkki. Näin muodostetaan vähemmän muodollinen suhde, joka ei anna aihetta todellisen entiteettisuhteen luomiselle. Esimerkkejä ovat *ystävä*, *sisarus*, *puoliso*, *osallistuja* ja *sidosryhmän jäsen*. Jotkin yhteydet voivat olla myös kaksisuuntaisia, kuten *lapsi* ja *vanhempi*, *aviomies* ja *aviovaimo* sekä *lääkäri* ja *potilas*.
 
 Kun kahden tietueen välille määritetään yhteys, sille voidaan lisätä myös kuvaus ja lisätietoja, kuten suhteen alku- ja loppupäivämäärät. Lisätietoja: [Yhteyksien luominen tietueiden välisten suhteiden määrittämistä ja tarkastelemista varten](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 

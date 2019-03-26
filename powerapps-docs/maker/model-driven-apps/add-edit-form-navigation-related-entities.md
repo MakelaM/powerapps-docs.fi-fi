@@ -1,6 +1,6 @@
 ---
 title: Mallipohjaisen sovelluksen lomakkeen siirtymisruudun lisääminen liittyviin entiteetteihin PowerAppsissa | MicrosoftDocs
-descriptoin: Learn how to add form navigation for related entities
+description: Lisätietoja lomakkeen siirtymisalueen lisääminen liittyviin entiteetteihin
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''

@@ -2,7 +2,7 @@
 title: 'Esikatselutoiminto: Azure Cosmos DB for SQL API -tietojen tarjoajan käyttäminen Common Data Service -ratkaisun avulla | MicrosoftDocs'
 description: Tietoja Azure Cosmos DB for SQL API -tietojen tarjoajan määrittämisestä virtuaalientiteettien kanssa käyttöä varten.
 keywords: SQL API
-ms.date: 06/27/2018
+ms.date: 02/15/2019
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -94,7 +94,7 @@ SQL-kyselyn suodattaminen tukee seuraavia operaattoreita.
     |Kenttä|Kuvaus|
     |--|--|
     |**Nimi**|Kirjoita tietolähteen kuvaava nimi.|
-    |**Kokoelman nimi**|Sen virtuaalientiteetin sisältävän Azure Cosmos DB -tietokantakokoelman tunnus, jonka tiedot haluat esittää.  |
+    |**Kokoelman nimi**|Sen virtuaalientiteetin sisältävän Azure Cosmos DB -*tietokannan* kokoelman nimi, jonka tiedot haluat esittää.  |
     |**Valtuutusavain**|Azure Cosmos DB -tilin ensisijainen tai toissijainen avain. Voit etsiä avaimen Azure-hallintaportaalin Azure Cosmos DB -tilin **Avaimet**-asetuksesta.|
     |**URI**|Sen resurssiryhmän URI, jossa Azure Cosmos DB -kokoelma sijaitsee. URI-osoite on muodostettu samalla tavalla kuin `https://contoso/documents.azure.com:443`. Voit etsiä URI:n Azure-hallintaportaalin Azure Cosmos DB -tilin **Avaimet**-asetuksesta. |
     |**Aikakatkaisu sekunteina**|Anna Azure Cosmos DB -palvelun vastauksen odotusaika sekunteina. Tämän jälkeen tietopyyntö aikakatkaistaan. Voit esimerkiksi antaa arvoksi 30, jolloin odotusaika on enintään 30 sekuntia ennen aikakatkaisua. Oletusaikakatkaisu on 120 sekuntia.|

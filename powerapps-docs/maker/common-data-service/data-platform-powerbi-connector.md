@@ -1,13 +1,13 @@
 ---
 title: PowerBI-raportin luominen | Microsoft Docs
 description: Tietojen käyttäminen PowerBI Desktop -sovelluksessa Common Data Service sovelluksiin -yhdysohjelman avulla.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -85,7 +85,7 @@ Jos esimerkiksi ApprovalStatus-nimisellä entiteetillä on asetusjoukko, Power B
 * ApprovalStatus - Näyttää yksilöllisen kokonaisarvon asetusjoukon jokaiselle nimikkeelle. Tämä on hyödyllistä suodattimien käyttämisen yhteydessä, koska tällöin näyttönimien muuttaminen ei vaikuta suodattimiin.
 * ApprovalStatus_display - Näyttää nimikkeen näyttönimen kutsumanimen. Tätä käytetään yleensä silloin, kun asetus esitetään taulukossa tai kaaviossa.
 
-    |ApproalStatus|ApprovalStatus_Display|
+    |ApprovalStatus|ApprovalStatus_Display|
     |---------|---------|
     1|Lähetetty
     2|Tarkistettavana

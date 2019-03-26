@@ -1,7 +1,7 @@
 ---
 title: Värimallin muuttaminen tai logon lisääminen organisaation tuotemerkkiä vastaavaksi | MicrosoftDocs
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 02/19/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -50,7 +50,7 @@ Voit luoda sovelluksellesi mukautetun ulkoasun (teeman) muuttamalla mukauttamatt
   
 -   Kohdistin linkin päällä -tehoste  
   
--   Prosessin ohjausobjektin väri  
+-   Vanha korostusväri (prosessin ohjausobjektien ensisijainen taustaväri)  
   
 -   Entiteetin oletusväri  
   

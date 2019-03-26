@@ -2,7 +2,7 @@
 title: Mallipohjaisen sovelluksen pikaluontilomakkeiden luominen tai muokkaaminen PowerAppsissa | MicrosoftDocs
 description: Tietoja pikaluontilomakkeen luomisesta tai muokkaamisesta
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 01/25/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -49,7 +49,8 @@ Voit ottaa käyttöön mukautettuja aktiviteettientiteettejä tukemaan pikaluont
  Vaikka voit määrittää useita pikaluontilomakkeita, vain yhtä pikaluontilomaketta voidaan käyttää kaikkien käyttäjien toimesta. Kaikkien haluama lomake luodaan käyttämällä lomaketilausta. Pikaluontilomakkeita ei voi delegoida käyttöoikeusrooleille ja ne eivät tarjoa käyttäjälle mahdollisuutta vaihtaa lomakkeita.  
   
 > [!NOTE]
->  Entiteetissä on oltava **Salli nopea luominen** -asetus valittuna, jotta pikaluontilomake näytetään. 
+>  - Entiteetissä on oltava **Salli nopea luominen** -asetus valittuna, jotta pikaluontilomake näytetään. 
+>  - Joitakin kenttiä, kuten CREATEDON, ei voi lisätä pikaluontilomakkeeseen.  
   
 ### <a name="how-to-create-a-quick-create-form"></a>Pikaluontilomakkeen luominen  
   

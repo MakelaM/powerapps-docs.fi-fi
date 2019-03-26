@@ -1,12 +1,12 @@
 ---
-title: 'Opetusohjelma, jossa kerrotaan PowerApps-sovelluksen kanssa osia sisältävän mukautetun entiteetin luomisesta | Microsoft Docs'
-description: 'Opetusohjelma, joka sisältää vaiheittaiset ohjeet PowerApps-sovelluksessa käytettävän entiteetin luomisesta ja määrittämisestä.'
+title: PowerApps-sovelluksen kanssa osia sisältävän mukautetun entiteetin luominen | Microsoft Docs
+description: Ohjeaihe sisältää vaiheittaiset ohjeet PowerApps-sovelluksessa käytettävän entiteetin luomisesta ja määrittämisestä.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: tutorial
-ms.date: 06/22/2018
+ms.date: 01/23/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -15,11 +15,11 @@ search.app:
   - D365CE
 ---
 
-# <a name="tutorial-create-a-custom-entity-that-has-components-in-powerapps"></a>Opetusohjelma: Osia sisältävän mukautetun entiteetin luominen PowerAppsissa
+# <a name="create-a-custom-entity-that-has-components-in-powerapps"></a>Osia sisältävän mukautetun entiteetin luominen PowerAppsissa
 
 PowerApps-sovelluksen avulla voit mukauttaa mallipohjaista sovellusta niin, että se vastaa organisaatiosi toimialaa, terminologian yhtenäistämistä ja yksilöllisiä liiketoimintaprosesseja. PowerApps-sovelluksen kehitystyö sisältää valmiiden vakioentiteettien lisäämisen tai mukautettujen entiteettien luomisen. Entiteetti määrittää tiedot, joita tietueiden lomakkeessa seurataan. Ne ovat yleensä ominaisuuksia, kuten yrityksen nimi, sijainti, tuotteet, sähköposti ja puhelin. 
 
-Tässä opetusohjelmassa luodaan entiteetti ja lisätään tärkeimmät osat, kuten kentät, suhteet, näkymät ja lomakkeet, ja mukautetaan niitä. Saat lisätietoja seuraavista toiminnoista:
+Tässä ohjeaiheessa luodaan entiteetti ja lisätään tärkeimmät osat, kuten kentät, suhteet, näkymät ja lomakkeet, ja mukautetaan niitä. Saat lisätietoja seuraavista toiminnoista:
 
 - Mukautetun entiteetin luominen
 - Mukautettujen kenttien lisääminen entiteettiin
@@ -27,7 +27,7 @@ Tässä opetusohjelmassa luodaan entiteetti ja lisätään tärkeimmät osat, ku
 - Näkymän mukauttaminen 
 - Lomakkeen mukauttaminen
 
-Opetusohjelma seuraa yritystä, Contosoa, joka tarjoaa trimmauspalvelua koirille ja kissoille. Contoso tarvitsee työntekijöiden eri laitteissa toimivan sovelluksen asiakkaiden ja lemmikkien seuraamista varten.
+Ohjeaihe seuraa yritystä, Contosoa, joka tarjoaa trimmauspalvelua koirille ja kissoille. Contoso tarvitsee työntekijöiden eri laitteissa toimivan sovelluksen asiakkaiden ja lemmikkien seuraamista varten.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -117,17 +117,16 @@ Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_m
 
 Ohita tämä vaihe, jos haluat käyttää Lemmikki-entiteettiä vain kaaviosovelluksessa. 
 
-1. Valitse PowerAppsin vasemmanpuoleisessa siirtymisruudussa **Mallipohjainen**.
-2. Laajenna vasemmanpuoleisessa siirtymisruudussa **Tiedot**-kohta ja valitse **Entiteetit**. Valitse sitten **Lemmikki**.
-3. Valitse **Lomakkeet**-välilehti ja valitse sitten **päälomaketyypin** vieressä oleva **Tiedot**-kohta ja avaa lomake-editori.
+1. Laajenna vasemmanpuoleisessa siirtymisruudussa **Tiedot**-kohta ja valitse **Entiteetit**. Valitse sitten **Lemmikki**.
+2. Valitse **Lomakkeet**-välilehti ja valitse sitten **päälomaketyypin** vieressä oleva **Tiedot**-kohta ja avaa lomake-editori.
     > [!div class="mx-imgBorder"] 
     > ![Päälomakkeen muokkaaminen](media/create-custom-entity/main-form-edit.png)
-4. Vedä ja pudota lomake-editorin **Laji**-, **Rotu**-, **Tapaamisen päivämäärä**- ja **Asiakas**-kentät, jotka sijaitsevat lomakekaavion Yleistä-osan Kenttien hallinta -ruudussa. Lopuksi lomake näyttää tältä.
+3. Vedä ja pudota lomake-editorin **Laji**-, **Rotu**-, **Tapaamisen päivämäärä**- ja **Asiakas**-kentät, jotka sijaitsevat lomakekaavion Yleistä-osan Kenttien hallinta -ruudussa. Lopuksi lomake näyttää tältä.
     > [!div class="mx-imgBorder"] 
     > ![Päälomakkeen kenttien valitseminen](media/create-custom-entity/main-form-edit2.png) 
-5. Valitse **Tallenna**.
-6. Valitse **Julkaise**.
-7. Valitse **Tallenna ja sulje**, kun haluat sulkea lomakkeen suunnitteluohjelman.
+4. Valitse **Tallenna**.
+5. Valitse **Julkaise**.
+6. Valitse **Tallenna ja sulje**, kun haluat sulkea lomakkeen suunnitteluohjelman.
 
 ## <a name="add-the-custom-entity-to-an-app"></a>Mukautetun entiteetin lisääminen sovellukseen
 
@@ -135,6 +134,6 @@ Nyt entiteettiä voi käyttää kaavion tai mallipohjaisen sovelluksen luomisess
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-Tässä opetusohjelmassa oli tietoja hyödyllisen sovelluksen luomisessa käytettävän entiteetin luomisesta. 
+Tässä ohjeaiheessa oli tietoja hyödyllisen sovelluksen luomisessa käytettävän entiteetin luomisesta. 
 - Lisätietoja mallipohjaisen sovelluksen luomisesta on kohdassa [Ensimmäisen mallipohjaisen sovelluksen luominen](../model-driven-apps/build-first-model-driven-app.md).
 - Lisätietoja kaaviosovelluksen luomisesta on kohdassa [Sovelluksen luominen alusta alkaen](../canvas-apps/get-started-create-from-blank.md).

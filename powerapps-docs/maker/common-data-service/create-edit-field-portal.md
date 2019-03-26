@@ -63,7 +63,7 @@ Kenttätyyppejä on paljon, mutta voit luoda vain joitakin niistä. Lisätietoja
 
 Kun luot kenttää, **tietotyyppi** mahdollistaa seuraavat vaihtoehdot:
 
-### <a name="text"></a>Teksti 
+### <a name="text"></a>Text 
 
 Vakiotekstikenttiin voi tallentaa jopa 4 000 merkkiä. [Pituuden oletusarvo](#max-length) -asetuksen arvoksi on määritetty alempi arvo, jota voi muokata.
 

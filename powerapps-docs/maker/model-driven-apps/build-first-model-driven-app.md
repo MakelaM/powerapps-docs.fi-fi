@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 10/15/2018
+ms.date: 02/05/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -35,15 +35,18 @@ Kirjaudu sisään [PowerApps](https://web.powerapps.com/) -sovellukseen. Jos sin
   > [!IMPORTANT]
   > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment).   
 
-2. Valitse **aloitussivulla** mallipohjaisen sovelluksen **Aloita tyhjästä** -asetus.
-![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png)
+2. Valitse **Aloitus**-sivulla **Mallipohjainen sovellus tyhjästä**.
+<!-- ![Start-from-blank_model](media/build-first-model-driven-app/start-from-blank-model-driven.png) -->
 
 3.  Kirjoita **Luo uusi sovellus** -sivulla seuraavat tiedot ja valitse **Valmis**: 
-  - **Nimi**: Anna sovellukselle nimi, kuten *Ensimmäinensovellukseni*. 
+  - **Nimi**: Anna sovellukselle nimi, kuten *Ensimmäinen sovellukseni*. 
+  - **Yksilöivä nimi**: Yksilöllisenä nimenä käytetään oletusarvoisesti **Nimi**-ruudussa määritettyä nimeä ilman välilyöntejä. Lisäksi siihen liitetään julkaisijan etuliite ja alaviiva (_). Esimerkki: *crecf_Ensimmäinensovellukseni*. Lisätietoja: [Ratkaisujulkaisijan etuliitteen muuttaminen](../common-data-service/change-solution-publisher-prefix.md)
   - **Kuvaus**: Kirjoita lyhyt kuvaus siitä, mikä sovellus on ja on tai mitä se tekee, kuten *Tämä on ensimmäinen sovellukseni*.
-Lisätietoja sovelluksen lisäominaisuuksista on kohdassa [Sovelluksen luominen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/create-edit-app#create-an-app).
- 
-    ![Uuden sovelluksen luominen](media/build-first-model-driven-app/create-new-app.png)
+Lisätietoja sovelluksen lisäominaisuuksista on kohdassa [Sovelluksen luominen](create-edit-app.md#create-an-app).
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/create-new-app.png "Uuden sovelluksen luominen") 
+
 
 ## <a name="add-components-to-your-app"></a>Osien lisääminen sovellukseen
 Lisää osia sovellukseen sovellusten suunnitteluohjelmassa.

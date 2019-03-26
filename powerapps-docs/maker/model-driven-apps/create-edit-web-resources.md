@@ -136,4 +136,4 @@ Kun olet tehnyt haluamasi mukautukset, julkaise ne:
 [Verkkoresurssin ominaisuudet](web-resource-properties-legacy.md) <br /> 
 [Luo ja suunnittele lomakkeita](create-design-forms.md) <br />
 [Tietoja mallipohjaisen sovelluksen osista](model-driven-app-components.md) <br /> 
-[Sovelluskehittäjän dokumentaatio: Customer Engagement -sovelluksen WWW-resurssit](/dynamics365/customer-engagement/developer/web-resources)
+[Sovelluskehittäjän dokumentaatio: Customer Engagementin verkkoresurssit](/dynamics365/customer-engagement/developer/web-resources)

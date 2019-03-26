@@ -2,9 +2,9 @@
 title: Ratkaisujen kanssa työskentely PowerAppsissa | MicrosoftDocs
 description: 'Tietoja siitä, miten ratkaisut jaetaan'
 ms.custom: ''
-ms.date: 10/29/2018
+ms.date: 01/28/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,18 +23,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-
-<a name="BKMK_Solutions"></a>   
+   
 # <a name="solutions-overview"></a>Ratkaisujen yleiskatsaus  
 
   PowerAppsissa ratkaisuja käytetään siirtämään sovelluksia ja komponentteja ympäristöstä toiseen tai käyttämään mukautussarjoja aiemmin luoduissa sovelluksissa. Ratkaisuun sisältyy vähintään yksi sovellus ja muita osia, kuten entiteettejä ja asetusjoukkoja. Voit hankkia ratkaisun [AppSourcesta](https://appsource.microsoft.com/) tai riippumattomalta ohjelmistotoimittajalta.
   
-Lisätietoja: [Julkaisu: Ratkaisun konfiguraattorien mallit ja käytännöt](http://go.microsoft.com/fwlink/p/?LinkID=533946)  
+Lisätietoja: [Raportti: Ratkaisun elinkaaren hallinta](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
 > [!NOTE]
 >  Jos olet riippumaton ohjelmistotoimittaja ja luot sovelluksen jaettavaksi, sinun on käytettävä ratkaisuja. Lisätietoja ratkaisujen käyttämisestä on ohjeaiheessa [Ratkaisuja käyttävät paketit ja jaettavat laajennukset](https://msdn.microsoft.com/library/gg334530.aspx).  
   
- Seuraavassa on lisätietoja ratkaisuista, jos olet kiinnostunut luomaan PowerApps-sovelluksia organisaatiota varten tai muokkaamaan Dynamics 365:tä:  
+ Seuraavassa on lisätietoja ratkaisuista, jos olet kiinnostunut luomaan PowerApps-sovelluksia organisaatiota varten tai muokkaamaan Dynamics 365 for Customer Engagement -sovelluksia:  
   
 -   Ratkaisujen luominen on valinnaista. Voit luoda kaikki PowerApps-ympäristön sovellukset tai mukauttaa niitä suoraan ilman ratkaisun luomista.  
   

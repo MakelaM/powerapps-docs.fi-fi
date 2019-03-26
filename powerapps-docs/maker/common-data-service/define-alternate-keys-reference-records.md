@@ -86,7 +86,7 @@ Kun avain on luotu, järjestelmä varmistaa, että ympäristö voi tukea avainta
 
 ### <a name="unicode-characters-in-key-value"></a>Unicode-merkit avaimen arvossa
 
-Jos vaihtoehtoisessa avaimessa käytettävät kentän tiedot noudattavat seuraavia merkkejä, korjaustiedostot tai upsert-toiminnot eivät toimi: `<`,`>`,`*`,`%`,`&`,`:`,`\\`. 
+Jos vaihtoehtoisessa avaimessa käytettävät kentän tiedot noudattavat seuraavia merkkejä, korjaustiedostot tai upsert-toiminnot eivät toimi: `<`,`>`,`*`,`%`,`&`,`:`,`/`,`\\`. 
 
 Jos tarvitaan vain yksilöllisyyttä, tämä tapa toimii, mutta jos näitä avaimia on käytettävä tietojen integroinnin osana, avain on paras luoda kentille, joilla ei ole näitä merkkejä sisältäviä tietoja.
 

@@ -1,7 +1,7 @@
 ---
 title: Kaaviosovelluksen upottaminen mallipohjaiseen lomakkeeseen | MicrosoftDocs
 ms.custom: ''
-ms.date: 12/10/2018
+ms.date: 12/17/2018
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -30,12 +30,12 @@ Kaaviosovellusten ansiosta on helppo suunnitella ja luoda mukautettuja asetteluj
 
 > [!NOTE]
 > Tämä ominaisuus on käytettävissä vain esiversiona. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] <br /><br />
 
 Upotettujen kaaviosovellusten avulla niiden omaisuudet saadaan mallipohjaisiin lomakkeisiin. Upotettujen kaaviosovellusten avulla on helppo luoda monipuolisia visuaalisia alueita lomakkeeseen ja näyttää tietoja erilaisista lähteistä Common Data Servicen tietojen vieressä.
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/embed-canvas-app-in-form.png "Mallipohjaisen sovelluksen lomakkeeseen upotettu kaaviosovellus")
+   > ![Mallipohjaisen sovelluksen lomakkeeseen upotettu kaaviosovellus](media/embed-canvas-app-in-form.png "Mallipohjaisen sovelluksen lomakkeeseen upotettu kaaviosovellus")
 
 Kaaviosovellukset upotetaan mallipohjaisiin lomakkeisiin samalla tavoin kuin muutkin mukautetut ohjausobjektit lisätään. Upotetussa kaaviosovelluksessa on monipuoliset tietojen integrointitoiminnot, joilla kontekstitiedot tuodaan mallipohjaisesta isäntälomakkeesta upotettuun kaaviosovellukseen.
 
@@ -43,11 +43,15 @@ Ohjeet kaaviosovelluksen upottamiseen mallipohjaiseen lomakkeeseen vaihtelevat s
 -   Välitä nykyinen tietue tietokontekstina. Lisätietoja: [Nykyisen tietueen välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-current-embedded-canvas-app.md)
 -   Välitä nykyiseen tietueeseen liittyvien tietueiden luettelo tietokontekstina. Lisätietoja: [Liittyvien tietueiden luettelon välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-related-embedded-canvas-app.md) 
 
-<!-- After you have added an embedded canvas app to your model-driven form, learn how to share your embedded canvas app with other users (LINK TO ARTICLE #4).  -->
+Kun olet lisännyt upotetun kaaviosovelluksen mallipohjaiseen lomakkeeseen, opit jakamaan sen muiden käyttäjien kanssa. Lisätietoja: [Upotetun kaaviosovelluksen jakaminen](share-embedded-canvas-app.md).
 
-<!-- For things to keep in mind when working with embedded canvas apps and to help troubleshoot any issues you might encounter, see (LINK TO ARTICLE #5). -->
+Ohjeita upotettujen kaaviosovellusten käsittelyyn ja hyödyllisiä vihjeitä mahdollisten ongelmien vianmääritykseen: [Upotettujen kaaviosovellusten käsittelyohjeita](embedded-canvas-app-guidelines.md).
 
 ## <a name="see-also"></a>Katso myös
 [Mitä PowerAppsin kaaviosovellukset ovat?](../canvas-apps/getting-started.md) <br />
 [Kaaviosovelluksen ohjausobjektin lisääminen ja määrittäminen PowerAppsissa](../canvas-apps/add-configure-controls.md) <br />
-[PowerAppsin kaaviosovellusyhdistimien yleiskatsaus](../canvas-apps/connections-list.md) 
+[PowerAppsin kaaviosovellusyhdistimien yleiskatsaus](../canvas-apps/connections-list.md) <br />
+[Nykyisen tietueen välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-current-embedded-canvas-app.md) <br />
+[Liittyvien tietueiden luettelon välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-related-embedded-canvas-app.md) <br />
+[Upotetun sovelluksen jakaminen](share-embedded-canvas-app.md) <br />
+[Upotettujen kaaviosovellusten käsittelyohjeita](embedded-canvas-app-guidelines.md)

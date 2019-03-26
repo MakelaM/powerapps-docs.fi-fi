@@ -22,7 +22,7 @@ Tässä ohjeaiheessa on tietoja Tuotearvio-nimisen mukautetun entiteetin luomise
 ## <a name="prerequisites"></a>Edellytykset
 Tämän toiminnon seuraaminen edellyttää seuraavia kohteita:
 * Joko PowerApps-palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeus. Vaihtoehtoisesti voit rekisteröityä [ilmaiseksi PowerApps-palvelupaketin 2 kokeiluversioon](https://web.powerapps.com/signup?redirect=marketing&email=).
-* Common Data Service sovelluksille -ratkaisun järjestelmänvalvojan tai järjestelmän mukauttajan käyttöoikeusrooli.
+* Common Data Service for Apps -ratkaisun järjestelmänvalvojan tai järjestelmän mukauttajan käyttöoikeusrooli.
 
 ## <a name="sign-in-to-powerapps"></a>Kirjaudu sisään PowerApps -sovellukseen
 Kirjaudu sisään PowerApps -sovellukseen osoitteessa [https://web.powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).

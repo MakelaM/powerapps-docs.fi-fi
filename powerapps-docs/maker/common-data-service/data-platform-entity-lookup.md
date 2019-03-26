@@ -1,13 +1,13 @@
 ---
 title: Entiteettien välisen suhteen luominen hakukentän avulla | Microsoft Docs
 description: Vaiheittaiset ohjeet entiteettien välisen suhteen luomiseksi PowerAppsissa hakukentän avulla.
-author: clwesene
-manager: kfile
+author: lancedMicrosoft
+manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
-ms.date: 03/21/2018
-ms.author: clwesene
+ms.date: 02/21/2019
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -86,6 +86,9 @@ Tällä hetkellä Lisäasetukset-valikossa on vain tämä. Valitse PowerApps-kot
 
 ## <a name="use-a-lookup-field-in-an-app"></a>Hakukentän käyttäminen sovelluksessa
 Jos [sovellus luodaan automaattisesti](../canvas-apps/data-platform-create-app.md) entiteetistä, jossa on hakukenttä, se näkyy **avattavan valikon** ohjausobjektina, joka sisältää entiteetin **Ensisijainen nimi** -kentän tiedot.
+
+## <a name="add-1n-and-nn-relationships-for-canvas-apps"></a>Kaaviosovellusten 1:N- ja N:N-suhteiden lisääminen
+Linkitä kaksi tietuetta **Relate**-toiminnolla käyttämällä Common Data Service (CDS) for Apps -ratkaisun yksi moneen- tai monta yhteen -suhdetta. Lisätietoja: [PowerAppsin Relate- ja Unrelate-toiminnot](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * [Sovelluksen luominen Common Data Service -tietokannan avulla](../canvas-apps/data-platform-create-app.md)

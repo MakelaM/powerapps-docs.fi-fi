@@ -1,8 +1,8 @@
 ---
-title: Mukautettujen kuvakkeiden näyttäminen luettelonäkymien arvojen sijaan PowerAppsilla | MicrosoftDocs
+title: Mukautettujen kuvakkeiden näyttäminen luettelonäkymien rinnalla PowerAppsilla | MicrosoftDocs
 description: 'Tietoja siitä, miten voit näyttää näkymässä mukautettuja kuvakkeita'
 ms.custom: ''
-ms.date: 06/21/2018
+ms.date: 02/14/2019
 ms.reviewer: ''
 ms.service: crm-online
 ms.suite: ''
@@ -23,11 +23,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="display-custom-icons-instead-of-values-in-list-views"></a>Mukautettujen kuvakkeiden näyttäminen luettelonäkymien arvojen sijaan
+# <a name="display-custom-icons-alongside-values-in-list-views"></a>Mukautettujen kuvakkeiden näyttäminen luettelonäkymien arvojen rinnalla
 
 <a name="GridIcons"></a>   
 
- PowerApps-ympäristön järjestelmänvalvojat ja mukauttajat voivat lisätä kuvia näkymään yhteyttä ja määrittää kuvan valinnassa käytettävän logiikan sarakkeen arvojen perusteella JavaScriptin avulla. Mahdollisuus näyttää luettelonäkymät, joiden joissakin sarakkeissa näkyy kuvakkeita teksti- tai numeroarvojen sijaan, lisättiin Liikesuhdetoimintoihin. 
+ PowerApps-ympäristön järjestelmänvalvojat ja mukauttajat voivat lisätä kuvia näkymään yhteyttä ja määrittää kuvan valinnassa käytettävän logiikan sarakkeen arvon perusteella JavaScriptin avulla. Ominaisuudella voi mukauttaa luettelonäkymiä, joissa kuvakkeen näkyvät teksti- tai numeroarvojen rinnalla. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/icon-in-opportunity-view.png "Kaikki mahdollisuudet -näkymä sekä kuvakkeet ja tekstiarvon näyttävä Luokitus-sarake")
   
 > [!NOTE]
 >  Ruudukkokuvakkeet näytetään vain WWW-liittymässä. Ne eivät näy [!INCLUDE[pn_Outlook_short](../../includes/pn-outlook-short.md)]issa ja mobiilisovelluksessa.  
@@ -38,7 +41,7 @@ search.app:
   
 2.  Kirjoita vähintään yksi JavaScript-funktio, joka määrittää eri arvoille näytettävät kuvakkeet (yleensä tarvitaan yksi funktio jokaiselle mukautettavalle sarakkeelle). Kunkin funktion on hyväksyttävä rivin tieto-objektin ja kielen (LCID) koodi syöttönä ja palautettava matriisi joka sisältää kuvan nimen ja työkaluvihjeen tekstin. Löydät esimerkin myöhemmin tässä ohjeaiheessa olevasta kohdasta [Esimerkki JavaScript-funktio](#SampleJavascript).  
   
-3.  Kirjautuminen järjestelmänvalvojana ympäristöösi ja [ratkaisunhallinnan](../model-driven-apps/advanced-navigation.md#solution-explorer) avaaminen.  
+3.  Kirjautuminen järjestelmänvalvojana ympäristöösi ja ratkaisunhallinnan avaaminen.  
   
 4.  **Oletusratkaisu**-ponnahdusikkuna avautuu. Siirry kohtaan **Komponentit** > **WWW-resurssit**.  
   
@@ -91,12 +94,15 @@ search.app:
 <a name="SampleJavascript"></a>   
 
 ### <a name="sample-javascript-function"></a>JavaScript-mallifunktio  
- Mukautettujen kuvakkeiden ja työkaluvihjeiden näyttämisen JavaScript-funktio odottaa kahta argumenttia, jotka ovat layoutxml-kohdassa määritetty koko rivin objekti ja kutsuvan käyttäjän aluekohtaisten asetusten tunnus (LCID). LCID-parametrin avulla voit määrittää työkaluvihjeen tekstin useilla eri kielillä. Lisätietoja ympäristön tukemista kielistä on kohdassa [Kielten ottaminen käyttöön](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages) ja [Dynamics 365:n kielipakettien asentaminen ja päivittäminen](https://technet.microsoft.com/library/hh699674.aspx). Lisätietoja koodissa käytettävien aluekohtaisten asetusten tunnuksen (LCID) arvoista on kohdassa [Microsoftin määrittämät aluekohtaisten asetusten tunnukset](https://go.microsoft.com/fwlink/?linkid=829588) .
+ Mukautettujen kuvakkeiden ja työkaluvihjeiden näyttämisen JavaScript-funktio odottaa kahta argumenttia, jotka ovat layoutxml-kohdassa määritetty koko rivin objekti ja kutsuvan käyttäjän aluekohtaisten asetusten tunnus (LCID). LCID-parametrin avulla voit määrittää työkaluvihjeen tekstin useilla eri kielillä. Lisätietoja ympäristön tukemista kielistä on kohdassa [Kielten ottaminen käyttöön](/dynamics365/customer-engagement/admin/enable-languages) ja [Dynamics 365 for Customer Engagementin kielipakettien asentaminen ja päivittäminen](/dynamics365/customer-engagement/on-premises/install-or-upgrade-language-packs). Lisätietoja koodissa käytettävien aluekohtaisten asetusten tunnuksen (LCID) arvoista on kohdassa [Microsoftin määrittämät aluekohtaisten asetusten tunnukset](https://go.microsoft.com/fwlink/?linkid=829588) .
 
   
  Oletetaan, että lisäät mukautettuja kuvakkeita asetusjoukolle, jonka tyyppi on Määrite. Sillä on rajattu määrä ennalta määritettyjä asetuksia. Varmista, että käytät kokonaislukuarvoa otsikon sijaan, jotta lokalisoinnissa ei tapahdu virheitä.  
   
  Seuraava mallikoodi näyttää kuvakkeet ja työkaluvihjeet yhden arvon perusteella kolmesta (1: kuuma, 2: lämmin, 3: kylmä) opportunityratingcode (luokitus) -määritteessä. Mallikoodi näyttää myös, miten lokalisoidun työkaluvihjeen teksti näytetään. Tätä mallia varten on luotava kolme kuva-WWW-resurssia, joiden koko on 16x16-ilmentymässä ja joiden nimet: new_Hot, new_Warm, and new_Cold.  
+
+> [!IMPORTANT]
+> Tässä mallissa tarvitaan mahdollisuusentiteetti, joka on käytettävissä Dynamics 365 for Customer Engagement -sovelluksissa.
   
 ```  
 function displayIconTooltip(rowData, userLCID) {      
@@ -148,9 +154,9 @@ function displayIconTooltip(rowData, userLCID) {
 }  
 ```  
   
- Kuvakkeiden näyttäminen työkaluvihjeissä **Luokitus**-sarakkeessa riippuu kunkin rivin arvosta. Tulos saattaa olla tämä:  
+ <!-- This results in displaying icons with tooltips in the **Rating** column that depend on the value in each row. The result could look like this:  
   
- ![Mukautettuja kuvia esimerkki](media/custom-column-graphics-example.png "Mukautettuja kuvia esimerkki")  
+ ![Custom column graphics example](../customize/media/custom-column-graphics-example.png "Custom column graphics example")  -->
  
  ### <a name="see-also"></a>Katso myös
- [Näkymien luominen tai muokkaaminen](../model-driven-apps/create-edit-views.md)
+[Tietoja mallipohjaisen sovelluksen näkymistä](../model-driven-apps/create-edit-views.md)

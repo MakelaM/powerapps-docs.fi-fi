@@ -92,7 +92,7 @@ search.app:
 |CC_Timeline_URL|URL-kenttä, joka yhdistää aikajanan kunkin kohteen näytettävän URL-osoitteen.|  
 |CC_Timeline_URL_Desc|URL-kentän kuvaus|  
 |CC_Timeline_ThumbnailURL|Kenttä, joka yhdistää näytettävän pikkukuvan tai kuvakkeen kunkin nimikkeen osalta.|  
-|CC_Timeline_ThumnailURL_Desc|`ThumbnailURL`-kentän kuvaus.|  
+|CC_Timeline_ThumbnailURL_Desc|`ThumbnailURL`-kentän kuvaus.|  
 |CC_Timeline_Filter|Aikajanan suodatusta varten yhdistettävä kenttä.|  
 |CC_Timeline_Filter_Desc|Suodattimen kuvaus|  
 |CC_Timeline_Footer|Verkkoresurssi, joka näytetään aikajanan alatunnisteena.|  

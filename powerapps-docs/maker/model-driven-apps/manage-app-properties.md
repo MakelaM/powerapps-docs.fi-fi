@@ -2,7 +2,7 @@
 title: PowerAppsin sovellusten suunnitteluohjelman mallipohjaisen sovelluksen ominaisuuksien hallinta | MicrosoftDocs
 description: Tietoja sovelluksen ominaisuuksien hallitsemisesta
 keywords: ''
-ms.date: 06/27/2018
+ms.date: 02/05/2019
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -19,6 +19,11 @@ ms.suite: null
 ms.tgt_pltfrm: null
 caps.latest.revision: 14
 topic-status: Drafting
+search.audienceType:
+  - maker
+search.app:
+  - PowerApps
+  - D365CE
 ---
 
 # <a name="manage-model-driven-app-properties-in-the-app-designer"></a>Sovellusten suunnitteluohjelman mallipohjaisen sovelluksen ominaisuuksien hallinta
@@ -38,11 +43,12 @@ Sovellusten ominaisuudet määrittävät sovelluksen tärkeät tiedot, kuten ots
     |**Kuvaus**|Kirjoita lyhyt kuvaus sovelluksesta.|  
     |**Kuvake**|**Käytä oletussovellusta** -pikkukuvan valintaruutu on valittuna oletusarvoisesti. Voit valita toisen WWW-resurssin sovelluksen kuvakkeeksi tyhjentämällä valintaruudun ja valitsemalla sitten kuvakkeen avattavasta luettelosta. Tämä kuvake näytetään sovelluksen esikatseluruudussa.|
     |**Yksilöivä nimi**| Et voi muuttaa yksilöllinen nimi. Yksilöivä nimeä käyttämällä voi hakea taulukoita saadaksesi tietoja tietokannasta.| 
-    |**Asiakas.**|Määrittää asiakasohjelmatyyppi, jolla sovellusta käytetään.<br/>-  **WWW:** Tämä on perinteinen Dynamics 365 Customer Engagement -WWW-selainasiakasohjelma.<br/>-  **Unified Interface:** Tämä on uusi verkkoselainasiakasohjelma, jolla on vastaava käyttöliittymä PC-ja mobiililaitteille.|
-    |**Sovelluksen URL-osoitteen jälkiliite**| Sovelluksen luonnin yhteydessä valittu URL-osoite näytetään tässä oletusarvoisesti. Voit muuttaa sovelluksen URL-osoitteen **Sovellusten hallinta** -valintaikkunaa. Ota huomioon, että sovelluksen URL-osoitetta ei voi viedä tai tuoda ratkaisussa tällä hetkellä.|
+    |**Asiakas<sup>1</sup>**|Määrittää asiakasohjelmatyyppi, jolla sovellusta käytetään.<br/>-  **WWW:** Tämä on perinteinen Dynamics 365 Customer Engagement -WWW-selainasiakasohjelma.<br/>-  **Unified Interface:** Tämä on uusi verkkoselainasiakasohjelma, jolla on vastaava käyttöliittymä PC-ja mobiililaitteille.|
+    |**Sovelluksen URL-osoitteen jälkiliite**<sup>1</sup>| Sovelluksen luonnin yhteydessä valittu URL-osoite näytetään tässä oletusarvoisesti. Voit muuttaa sovelluksen URL-osoitteen **Sovellusten hallinta** -valintaikkunaa. Ota huomioon, että sovelluksen URL-osoitetta ei voi viedä tai tuoda ratkaisussa tällä hetkellä.|
     |**Valitse sovelluksen aloitussivu**|Tällä vaihtoehdolla voit valita varten ympäristösi käytettävissä olevista verkkoresursseista. Luotavilla aloitussivuilla voi olla hyödyllisiä tietoja käyttäjille, kuten videolinkkejä, päivitysohjeita tai aloitustietoja. Lisätietoja verkkoresurssin, kuten aloitussivuna käytettävän HTML-tiedoston, luonnista on kohdassa [Verkkosovelluksen laajentaminen luomalla ja muokkaamalla verkkoresursseja](create-edit-web-resources.md).|
     |**Ota Mobile Offline käyttöön**|Tämän asetuksen avulla sovellusta voi käyttää offline-tilassa mobiililaitteilla profiileihin, jotka on valittu käyttämällä **Mobile Offline -tilan profiilit** avattavaa luetteloa.|
-  
+
+    <sup>1</sup>**Asiakas**- ja **Sovelluksen URL-osoitteen jälkiliite** -ominaisuudet eivät ole enää käytettävissä uutta sovellusta luotaessa.
 3.  Tallenna sovellus.  
   
 ## <a name="next-steps"></a>Seuraavat vaiheet  

@@ -167,4 +167,6 @@ Yhteenveto raportin sarakkeista:
 
 
 ## <a name="see-also"></a>Katso myös
-[PowerApps-ratkaisujen ohjeet ja parhaat käytännöt](https://docs.microsoft.com/dynamics365/customer-engagement/guidance/)
+[Common Data Service for Apps -ratkaisun parhaat käytännöt ja ohjeet](../../developer/common-data-service/best-practices/index.md)<br />
+[Mallipohjaisten sovellusten parhaat käytännöt ja ohjeet](../../developer/model-driven-apps/best-practices/index.md)<br />
+[Ratkaisun tarkistustoimintoon liittyvät yleiset ongelmat ja niiden ratkaisut](common-issues-resolutions-solution-checker.md)<br />

@@ -2,7 +2,7 @@
 title: Mallipohjaisen sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla PowerAppsissa | MicrosoftDocs
 description: Tietoja sovellusten luomisesta tai muokkaamisesta sovellusten suunnitteluohjelmalla
 keywords: ''
-ms.date: 10/15/2018
+ms.date: 02/05/2019
 ms.service: crm-online
 ms.custom: null
 ms.topic: article
@@ -26,9 +26,9 @@ search.app:
   - D365CE
 ---
 
-# <a name="tutorial-create-a-model-driven-app-by-using-the-app-designer"></a>Opetusohjelma: Mallipohjaisen sovelluksen luominen sovellusten suunnitteluohjelmalla
+# <a name="create-a-model-driven-app-by-using-the-app-designer"></a>Mallipohjaisen sovelluksen luominen sovellusten suunnitteluohjelmalla
 
-Tässä opetusohjelmassa on perustietoja mallipohjaisen sovelluksen luomisesta ja muokkaamisesta ruutuihin perustuvan sovellusten suunnitteluohjelman avulla.
+Tässä ohjeaiheessa on perustietoja mallipohjaisen sovelluksen luomisesta ja muokkaamisesta ruutuihin perustuvan sovellusten suunnitteluohjelman avulla.
 
 ## <a name="prerequisites"></a>Edellytykset
 Tarkista seuraavat edellytykset, ennen kuin alat luoda sovellusta:
@@ -38,16 +38,12 @@ Tarkista seuraavat edellytykset, ennen kuin alat luoda sovellusta:
 <a name="createApp"></a>   
 ## <a name="create-an-app"></a>Sovelluksen luominen  
 
-1.  Valitse [PowerAppsin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **aloitussivulla** mallipohjaisen sovelluksen **Aloita tyhjästä** -asetus.  
-
-    ![Mallipohjainen aloitus tyhjästä](media/start-from-blank-model-driven.png)
+1.  Valitse [PowerAppsin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) **aloitussivulla** mallipohjaisen sovelluksen **Mallipohjainen sovellus tyhjästä** -asetus.  
 
     > [!IMPORTANT]
     > Jos **mallipohjainen** suunnittelutila ei ole käytettävissä, sinun on [luotava ympäristö](https://docs.microsoft.com/powerapps/administrator/create-environment). 
 
-2. Valitse **Luo tämä sovellus**.
-
-3. Syötä **Luo uusi sovellus** -sivulla seuraavat tiedot: 
+2. Syötä **Luo uusi sovellus** -sivulla seuraavat tiedot: 
 
     - **Nimi**: Anna sovelluksen nimi.  
   
@@ -60,21 +56,6 @@ Tarkista seuraavat edellytykset, ennen kuin alat luoda sovellusta:
   
     - **Kuvake**: **Käytä oletussovellusta** -pikkukuvan valintaruutu on valittuna oletusarvoisesti. Voit valita toisen WWW-resurssin sovelluksen kuvakkeeksi tyhjentämällä valintaruudun ja valitsemalla sitten kuvakkeen avattavasta luettelosta. Tämä kuvake näytetään sovelluksen esikatseluruudussa.  
   
-    - Valitse asiakasohjelmatyyppi, jolla sovellusta käytetään.  
-  
-        - **Unified Interface**: Tämä on uusi, responsiivinen selainasiakasohjelma, jonka käyttöliittymä on samanlainen PC-ja mobiililaitteissa.  
-
-        - **WWW**: Tämä on perinteinen Dynamics 365 Customer Engagement -WWW-selainasiakasohjelma.  
-    
-    - **Sovelluksen URL-jälkiliite**: Sovelluksen URL-osoite annetaan automaattisesti määrittämäsi sovelluksen nimen perusteella. Esikatselussa näet, miltä täydellinen URL-osoite näyttää. Sovelluksen URL-osoitteen on oltava yksilöllinen.  
-  
-         Esimerkki: https://\<org>.crm#.dynamics.com/Apps/\<sovelluksen URL-osoite>
-
-         Paikalliseen käyttöön: http://\<server>/\<org name>/Apps/\<App URL> 
-  
-      > [!NOTE]
-      >  Jos poistat **sovelluksen URL-jälkiliitteen** kentän arvon ja tallennat sen, sovelluksen URL-osoitteelle luodaan automaattisesti sovelluksen tunnus.  
-  
     - **Aiemman ratkaisun avulla voit luoda sovelluksen**: valitsemalla tämän voit luoda sovelluksen asennettujen ratkaisujen luettelosta. Kun olet valinnut tämän vaihtoehdon **valmis** siirtyy **seuraava** otsikossa. Jos valitset **seuraava**, **Luo sovellus aiemmasta ratkaisusta** -sivu avautuu. Valitse **Valitse ratkaisu** -pudotusvalikosta ratkaisu, josta haluat luoda sovelluksen. Jos kaikkia sivustokarttoja voi käyttää valitulle ratkaisulle, **Valitse sivustokartta** avattava luettelo tulee näkyviin. Valitse sivustokartta ja valitse sitten **valmis**.
 
       > [!NOTE]
@@ -82,14 +63,14 @@ Tarkista seuraavat edellytykset, ennen kuin alat luoda sovellusta:
 
       ![Aiemman ratkaisun avulla voit luoda sovellussivun](media/use-existing-solution-to-create-the-app.png "Aiemman ratkaisun avulla voit luoda sovellussivun") 
 
-    - **Valitse tervetulosivu**: Tällä vaihtoehdolla voit valita organisaatiosi käytettävissä olevista verkkoresursseista. Luotavilla aloitussivuilla voi olla hyödyllisiä tietoja käyttäjille, kuten videolinkkejä, päivitysohjeita tai aloitustietoja. Aloitussivu avautuu, kun sovellus avataan. Käyttäjät voivat valita aloitussivulla **Älä näytä tätä Tervetuloa-ruutua seuraavalla kerralla**, aloitussivu poistetaan käytöstä eikä se avaudu, kun sovellus käynnistyy seuraavan kerran. Lisätietoja verkkoresurssin, kuten aloitussivuna käytettävän HTML-tiedoston, luonnista on kohdassa [Verkkosovelluksen laajentaminen luomalla ja muokkaamalla verkkoresursseja](create-edit-web-resources.md).  
+    - **Valitse tervetulosivu**: Tällä vaihtoehdolla voit valita organisaatiosi käytettävissä olevista verkkoresursseista. Luotavilla aloitussivuilla voi olla hyödyllisiä tietoja käyttäjille, kuten videolinkkejä, päivitysohjeita tai aloitustietoja. Aloitussivu avautuu, kun sovellus avataan. Käyttäjät voivat valita aloitussivulla **Älä näytä tätä Tervetuloa-ruutua seuraavalla kerralla**, aloitussivu poistetaan käytöstä eikä se avaudu, kun sovellus käynnistyy seuraavan kerran. Huomaa, että **Älä näytä tätä Tervetuloa-ruutua seuraavalla kerralla** -asetus on käyttäjätason asetus, jota järjestelmänvalvojat tai sovelluskehittäjät eivät voi hallita. Lisätietoja verkkoresurssin, kuten aloitussivuna käytettävän HTML-tiedoston, luonnista on kohdassa [Verkkosovelluksen laajentaminen luomalla ja muokkaamalla verkkoresursseja](create-edit-web-resources.md).  
       
     Voit muokata sovelluksen ominaisuuksia myöhemmin siirtymällä sovelluksen suunnitteluohjelman **Ominaisuudet**-välilehteen. Lisätietoja: [Sovelluksen ominaisuuksien hallinta](manage-app-properties.md)  
   
      > [!NOTE]
      >  Et voi muuttaa yksilöllistä nimeä ja sovelluksen URL-jälkiliitettä **Ominaisuudet**-välilehdessä.  
   
-4. Valitse **Valmis** tai&mdash;jos olet valinnut **Sovelluksen luonti aiemmin luodun ratkaisun avulla**&mdash;valitse **seuraava**, jotta voit valita käytettävissä olevista ratkaisuista, joiden tuonti onnistui organisaatioon.  
+3. Valitse **Valmis** tai&mdash;jos olet valinnut **Sovelluksen luonti aiemmin luodun ratkaisun avulla**&mdash;valitse **seuraava**, jotta voit valita käytettävissä olevista ratkaisuista, joiden tuonti onnistui organisaatioon.  
   
     Luodaan uusi sovellus, joka on luonnostilassa. Uuden sovelluksen sovelluksen suunnitteluohjelman kaavio on näkyvissä. Siellä voit lisätä osia, kuten entiteettejä, näkymiä ja koontinäyttöjä, joiden avulla voit tehdä sovelluksestasi hyödyllisen. Lisätiedot: [Sovelluksen osien lisääminen tai muokkaaminen](add-edit-app-components.md)  
    
