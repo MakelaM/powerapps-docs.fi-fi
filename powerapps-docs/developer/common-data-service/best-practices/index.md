@@ -1,6 +1,6 @@
 ---
-title: 'Kehittäjät: Parhaat käytännöt ja ohjeita Common Data Service for Appsille | Microsoft Docs'
-description: Parhaat käytännöt ja ohjeet kehittäjille PowerAppsin Common Data Service for Appsissa.
+title: 'Kehittäjät: Parhaat käytännöt ja ohjeita Common Data Servicelle | Microsoft Docs'
+description: Parhaat käytännöt ja ohjeet kehittäjille PowerAppsin Common Data Servicessa.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,20 +16,15 @@ ms.workload: na
 ms.date: 01/07/2019
 ms.author: jowells
 search.audienceType:
-- developer
+  - developer
 search.app:
-- PowerApps
-- D365CE
-ms.openlocfilehash: bf449f801e4e7617e7fe91d0884b3443559e71c6
-ms.sourcegitcommit: 11486fb4c16095e3fef785126003cac3e3e06c0d
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54271367"
+  - PowerApps
+  - D365CE
 ---
-# <a name="best-practices-and-guidance-for-the-common-data-service-for-apps"></a>Parhaat käytännöt ja ohjeita Common Data Service for Appsille
 
-Common Data Service (CDS) for Apps on laajennettava ympäristö, jonka avulla kehittäjät voivat luoda erittäin mukautettuja ja räätälöityjä kokemuksia. Kun sovelluskehittäjä mukauttaa, laajennat tai integroit Common Data Service (CDS) for Appsilla, hänen tulee tuntea vakiintuneet ohjeet ja parhaat käytännöt. 
+# <a name="best-practices-and-guidance-for-the-common-data-service"></a>Parhaat käytännöt ja ohjeita Common Data Servicelle
+
+Common Data Service on laajennettava ympäristö, jonka avulla kehittäjät voivat luoda erittäin mukautettuja ja räätälöityjä kokemuksia. Kun sovelluskehittäjä mukauttaa, laajentaa tai integroi Common Data Servicella, hänen tulee tuntea vakiintuneet ohjeet ja parhaat käytännöt. 
 
 Tässä osiossa on tietoja ongelmista, jotka olemme tunnistaneet, ja niiden vaikutuksesta. Saat myös ohjeita niiden ratkaisemiseksi. Selitämme taustaa sille, miksi asiat tulee tehdä tietyllä tavalla, jolloin voit välttää mahdollisia ongelmia tulevaisuudessa. Tästä voi olla hyötyä ympäristösi käytettävyydelle, tuettavuudelle ja suorituskyvylle. Ohjedokumentaatio tukee nykyisiä tietoja, jotka ovat kehittäjien ja hallinnoijien oppaissa.
 
@@ -37,8 +32,8 @@ Tässä osiossa on tietoja ongelmista, jotka olemme tunnistaneet, ja niiden vaik
 Dokumentaatio kohdentaa seuraaviin mukauttamistyyppeihin:
 
 - Mukautetut työnkulkuaktiviteetit ja laajennukset
-- CDS-tietojen käyttäminen
-- Common Data Service for Appsia laajentavat integroinnit
+- Common Data Servicen tietojen käyttäminen
+- Common Data Servicea laajentavat integroinnit
 
 # <a name="sections"></a>Osat
 Kussakin ohjeartikkelissa on useimmat tai kaikki seuraavat osiot:

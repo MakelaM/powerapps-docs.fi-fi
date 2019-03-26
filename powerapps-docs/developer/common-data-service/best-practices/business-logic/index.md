@@ -1,6 +1,6 @@
 ---
-title: 'Kehittäjät: Parhaat käytännöt ja ohjeet laajennusten ja työnkulkujen kehittämiseen Common Data Service for Appsissa | Microsoft Docs'
-description: Parhaat käytännöt ja ohjeet laajennusten ja työnkulkujen kehittämiseen kehittäjille PowerAppsin Common Data Service for Appsissa.
+title: 'Kehittäjät: Parhaat käytännöt ja ohjeet laajennusten ja työnkulkujen kehittämiseen Common Data Servicessa | Microsoft Docs'
+description: Parhaat käytännöt ja ohjeet laajennusten ja työnkulkujen kehittämiseen kehittäjille PowerAppsin Common Data Servicessa.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -16,20 +16,14 @@ ms.workload: na
 ms.date: 1/15/2019
 ms.author: jowells
 search.audienceType:
-- developer
+  - developer
 search.app:
-- PowerApps
-- D365CE
-ms.openlocfilehash: 87e7337a4bf62a10647edfd9b6c17bce0a0903bf
-ms.sourcegitcommit: 72c97378e96fb54e5d92ec087a59dd0fb1444f99
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334013"
+  - PowerApps
+  - D365CE
 ---
-# <a name="best-practices-and-guidance-regarding-plug-in-and-workflow-development-for-the-common-data-service-for-apps"></a>Parhaat käytännöt ja ohjeet laajennusten ja työnkulkujen kehittämiseen Common Data Service for Appsissa
+# <a name="best-practices-and-guidance-regarding-plug-in-and-workflow-development-for-the-common-data-service"></a>Parhaat käytännöt ja ohjeet laajennusten ja työnkulkujen kehittämiseen Common Data Servicessa
 
-Tässä alla olevassa luettelossa on kaikki ohjeet ja parhaat käytännöt, jotka liittyvät laajennuksen ja työnkulun kehittämiseen Common Data Services for Appsissa.
+Tässä alla olevassa luettelossa on kaikki ohjeet ja parhaat käytännöt, jotka liittyvät laajennuksen ja työnkulun kehittämiseen Common Data Servicessa.
 
 |Paras käytäntö  |Kuvaus  |
 |---------|---------|

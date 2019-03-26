@@ -1,6 +1,6 @@
 ---
-title: Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla | Microsoft Docs
-description: Luo PowerAppsissa pohjaan perustuva sovellus, jotta voit lisätä, päivittää ja poistaa tietueita Common Data Service for Apps -palvelussa.
+title: Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla | Microsoft Docs
+description: Luo PowerAppsissa pohjaan perustuva sovellus, jotta voit lisätä, päivittää ja poistaa tietueita Common Data Servicessa.
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -13,16 +13,16 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dab8caea5679701735685a5c4383c77cd7ed44f6
-ms.sourcegitcommit: 452d4ead948591d16aff144006ad84c957eba837
+ms.openlocfilehash: 0528d3324e85984e05b549f8b8ba282fdc1df4af
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091219"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356881"
 ---
-# <a name="create-a-canvas-app-from-scratch-using-common-data-service-for-apps"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Service for Apps -palvelun avulla
+# <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla
 
-Voit rakentaa pohjaan perustuvan sovelluksen, jolla hallitaan Common Data Service for Apps -tietokannassa säilytettäviä tietoja käyttämällä (sisäänrakennettuja) standardientiteettejä, (organisaatiosi luomia) mukautettuja entiteettejä tai kumpiakin.
+Voit rakentaa pohjaan perustuvan sovelluksen, jolla hallitaan Common Data Servicessa säilytettäviä tietoja käyttämällä (sisäänrakennettuja) standardientiteettejä, (organisaatiosi luomia) mukautettuja entiteettejä tai kumpiakin.
 
 Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yhteyttä PowerAppsista, kuten on tarpeen tietolähteille SharePoint, Dynamics 365 ja Salesforce. Sinun tarvitsee vain määrittää sovellukselle entiteetit, joita haluat näyttää, hallita tai käyttää kummallekin toiminnalle.
 

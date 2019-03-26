@@ -209,7 +209,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Sovellusten tekijät voivat hallinnoida organisaationsa toiminnan kannalta kriittisiä tietoja luomalla mukautettuja yrityssovelluksia nopeasti koodia kirjoittamatta. Voit luoda kahdenlaisia sovelluksia PowerAppsissa: <strong>Pohjan sovellus</strong> ja <strong>malliin perustuva sovellus</strong>. <strong>CDS for Apps</strong> on tietojen käyttöympäristö, jolla voit tallentaa ja hallinnoida yrityssovellusten käyttämiä tietoja suojatusti. Lisätietoja: <a href="/powerapps/maker">Sovellusten luominen</a>.</p>
+                           <p>Sovellusten tekijät voivat hallinnoida organisaationsa toiminnan kannalta kriittisiä tietoja luomalla mukautettuja yrityssovelluksia nopeasti koodia kirjoittamatta. Voit luoda kahdenlaisia sovelluksia PowerAppsissa: <strong>Pohjan sovellus</strong> ja <strong>malliin perustuva sovellus</strong>. <strong>Common Data Service</strong> on tietojen käyttöympäristö, jolla voit tallentaa ja hallinnoida yrityssovellusten käyttämiä tietoja suojatusti. Lisätietoja: <a href="/powerapps/maker">Sovellusten luominen</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -278,20 +278,20 @@ ms.custom:
                               <div class="card">
                                  <div class="cardImageOuter">
                                     <div class="cardImage">
-                                       <img alt="Common Data Service (CDS) for Apps" src="media/index/i_common-data-service.svg">
+                                       <img alt="Common Data Service" src="media/index/i_common-data-service.svg">
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">CDS for Apps</h3>
+                                    <h3 style="font-size: 1.15rem">Common Data Service</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">Mikä CDS for Apps on?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">Mikä on Common Data Service?</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entiteetit</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Entiteettien väliset suhteet</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Kentät</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/cds-processes">Liiketoimintalogiikan soveltaminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Ratkaisut</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/en-us/download/details.aspx?id=57777">Tekninen raportti: Sovelluksen elinkaaren hallintaa käyttävät ratkaisut</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Power BI -raporttien luominen CDS for Apps -tiedoista</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Luo Power BI -raportteja Common Data Service -tiedoista</a></p>
                                  </div>
                               </div>
                            </div>
@@ -343,7 +343,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Tietojen integrointi ja DSR</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/data-integrator">Tietojen integrointi CDS for Appsiin</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/data-integrator">Tietojen integrointi Common Data Serviceen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/powerapps-gdpr-dsr-guide">Data Subject Rights (DSR) -pyyntöihin vastaaminen</a></p>
                                  </div>
                               </div>
@@ -398,7 +398,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Kehittäjät ovat <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">sovellusten tekijöitä</a>, jotka voivat käyttää koodia laajentamaan yrityssovelluksia ja luoda asiakassovellukset, jotka yhdistävät CDS for Appsiin.</p>
+                           <p>Kehittäjät ovat <a href="/powerapps/?branch=release-crm-mig-vivek#pivot=home&panel=maker">sovellusten tekijöitä</a>, jotka voivat käyttää koodia laajentamaan yrityssovelluksia ja luoda asiakassovellukset, jotka yhdistävät Common Data Serviceen.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -415,7 +415,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Aloittaminen</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">CDS for Apps: Yleiskatsaus kehittäjille</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/overview">Common Data Service: Yleiskatsaus kehittäjille</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/overview">Mallipohjaiset sovellukset: Yleiskatsaus kehittäjille</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/dev-enterprise-intro">Pohjan sovellukset: Yleiskatsaus kehittäjille</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/common-data-model/overview">Common Data Model</a></p>
@@ -479,7 +479,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">CDS for Apps -tietojen käyttäminen</h3>
+                                    <h3 style="font-size: 1.15rem">Common Data Servicen tietojen käyttäminen</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/webapi/overview">WWW-ohjelmointirajapinnan käyttäminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/org-service/overview">Organisaatiopalvelun käyttäminen</a></p>
@@ -502,7 +502,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">CDS for Apps -metatietojen käyttäminen</h3>
+                                    <h3 style="font-size: 1.15rem">Common Data Servicen metatietojen käyttäminen</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/metadata-services">Metatietojen käytön aloittaminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/browse-your-metadata">Ympäristön metatietojen selaaminen</a></p>
@@ -527,8 +527,8 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Liiketoimintalogiikan soveltaminen</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Laajennukset (CDS for Apps)</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Työnkulun laajennukset (CDS for Apps)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/plug-ins">Laajennukset (Common Data Service)</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/workflow/workflow-extensions">Työnkulun laajennukset (Common Data Service)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Asiakkaan komentosarjat (malliin perustuvat sovellukset)</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices/business-logic">Parhaat käytännöt: Laajennukset ja työnkulun laajennukset</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices/business-logic">Parhaat käytännöt: Asiakkaan komentosarjat</a></p>
@@ -547,7 +547,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Tietojen integrointi CDS for Appsilla</h3>
+                                    <h3 style="font-size: 1.15rem">Tietojen integrointi Common Data Serviceen</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/virtual-entities/get-started-ve">Virtuaaliset entiteetit</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/azure-integration">Azure-integrointi</a></p>
@@ -592,7 +592,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Asiakassovellusten luominen CDS for Appsille</h3>
+                                    <h3 style="font-size: 1.15rem">Asiakassovellusten luominen Common Data Serviceen</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/authentication">Todennus</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/discovery-service">Käyttäjäorganisaatioihin tutustuminen</a></p>
@@ -614,7 +614,7 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Parhaat käytännöt</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices">CDS for Apps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/best-practices">Common Data Service</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/best-practices">Mallipohjaiset sovellukset</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/canvas-apps/performance-tips">Pohjan sovellukset</a></p>
                                  </div>
