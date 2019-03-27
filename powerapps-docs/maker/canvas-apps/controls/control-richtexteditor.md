@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 99c07c0561b4942e6cbbd49fa5c498d90b502d7e
-ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.openlocfilehash: 3174d959a2360b36e82cd7070c4401251ca9fe18
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58073279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491587"
 ---
 # <a name="rich-text-editor-control-in-powerapps"></a>Rich text ohjausobjekti powerappsissa
 Sallii käyttäjien muotoilla tekstiä WYSIWYG-muokkausalueen sisällä.  Tulostemuoto on HTML.
@@ -62,3 +62,14 @@ Jos haluat käyttää ohjausobjektia lomakkeen sisällä, valitse Muokkaa moniri
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön vasemman reunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
+
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+* **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
+
+### <a name="keyboard-support"></a>Näppäimistön tuki
+* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+
+> [!TIP]
+> Käytä **Alt + 0** aikana editorin on kohdistettu lisätietoja muiden pikanäppäimet.

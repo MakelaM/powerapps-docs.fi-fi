@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 961f8908014ef9cd85eadacb97a7c1dfc7e52b25
-ms.sourcegitcommit: eef2d6d9a9c7f5c8a44b9734817f59dc0eac3ecf
+ms.openlocfilehash: 1e41ec8d228e62c22354d77777a8390bfd442f8c
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "57800993"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491566"
 ---
 # <a name="barcode-scanner-control-for-canvas-apps"></a>Viivakoodiskanneri ohjausobjekti pohjaan perustuvat sovellukset
 
@@ -72,3 +72,11 @@ Ohjausobjekti tukee QR-koodit, tietojen matriisi-koodit ja nämä erityyppisiä 
 **[X](properties-size-location.md)** – Ohjausobjektin vasemman reunan ja pääsäilön (tai näytön, jos pääsäilöä ei ole) vasemman reunan välinen etäisyys.
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
+
+## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+Ohjeet ovat samat kuin **[painike](control-button.md)** ohjausobjektin koskevat **Viivakoodiskanneri** ohjausobjekti, koska se on tarkistuksen käynnistävän painikkeen.
+
+### <a name="visual-alternatives"></a>Visualisoinnin vaihtoehtoihin
+* Viivakoodiskanneri on painike, joka ei Näytä tarkistus tuloksen. Harkitse näytetään tarkistuksen tuloksen **[nimen](control-text-box.md)** ohjausobjektin. Määritä selitteen **[tekstin](properties-core.md)** viivakoodiskannerin ominaisuudeksi **arvo** ominaisuus. Määritä selitteen **[Live](properties-accessibility.md)** ominaisuudeksi **Polite** niin, että Näytönlukuohjelman käyttäjät saavat ilmoituksen muuttuu. Tämä muutos tekee skannatun arvon helppokäyttöisen kaikille käyttäjille visual kyvyn riippumatta.
+
+* Käyttäjät, joilla on visualisointi ja moottoripyörän ehkä halua osoita kameran viivakoodia. Harkitse toisen lomakkeen syötteen, kuten **[Tekstisyöte](control-text-input.md)** ohjausobjektin kirjoittaa viivakoodeja.

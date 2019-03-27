@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 32b8ee57869ea733050c3f23f9c9e81f60e3d78d
-ms.sourcegitcommit: 66fd1129ad25b72556f11a08350ba95f2ba060dd
+ms.openlocfilehash: 5d20e2324f2efb4f866ed4fc183f289733c10a41
+ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57804374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491661"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -26,9 +26,11 @@ Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kul
 ## <a name="description"></a>Kuvaus
 Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, tai muuttaa ohjausobjektin muita ominaisuuksia tietyn ajan kuluttua.
 
-Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa suunnittelutoiminnossa.  Tämän ansiosta käyttäjä voi määrittää ajastimen suunnittelutoiminnossa ilman aikarajoituksia.
+> [!NOTE]
+> PowerApps Studio ajastimet suorittaa vain esikatselutilassa.
 
-## <a name="key-properties"></a>Keskeiset ominaisuudet
+
+## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **Kesto** – Miten kauan ajastin on käynnissä millisekunneissa.  Suurinta arvoa ei ole.
 
 **OnTimerEnd** – Miten sovellus reagoi, kun ajastin lopettaa työnkulun suorittamisen.
@@ -142,33 +144,31 @@ Huomaa, että sinun on esikatseltava sovellus, jotta ajastin voidaan suorittaa s
 
 5. Käynnistä tai pysäytä animaatio valitsemalla ajastinpainike. Selitteen teksti häivytetään valkoiseksi, minkä jälkeen se palaa täyteen voimakkuuteen. Tämän jälkeen prosessi toistuu.
 
-
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
-Ohjeet ovat samat kuin **[Painike](control-button.md)**-ohjausobjektille, sillä **Ajastin** on erityinen painike.
+Ohjeet ovat samat kuin **[painike](control-button.md)** ohjausobjektin koskevat **ajastin** ohjausobjektissa, jos käyttäjät voivat käyttää sitä.
 
-> [!IMPORTANT]
-> **Ajastimen** hallintaa ilman käyttäjän suoria toimia ei tueta helppokäyttöisyyttä varten. Esimerkiksi ajastin voidaan piilottaa sijoittamalla muita ohjausobjekteja sen päälle tai asettamalla sen **[Näkyvä](properties-core.md)** -ominaisuuden arvoksi **epätosi**. Ajastin käynnistyy automaattisesti, kun näyttö avautuu, ja se suorittaa jonkin ajan kuluttua automaattisesti joitakin toimintoja. Tällä hetkellä ei ole yleistä tapaa tehdä tästä skenaariosta helppokäyttöistä.
+### <a name="background-timers"></a>Taustan ajastimet
+Taustan ajastimet suorittaa automaattisesti, ja se on piilotettu. Käyttää niitä tukevia roolissa jossa kuluneen ajan on pieni kiinnostuksen käyttäjälle. Voit esimerkiksi päivittää tiedot joka minuutti tai ilmoitussanoma näyttää vain tietyn ajanjakson.
 
-Muita helppokäyttötoimintojen ohjeita ovat seuraavat:
+Taustan ajastimet tulee olla niiden **[näkyvissä](properties-core.md)** ominaisuuden arvoksi epätosi, niin, että ne on piilotettu kaikilta käyttäjiltä.
 
-### <a name="timing"></a>Ajoitus
-Jos **Ajastin** käynnistetään tai pysäytetään automaattisesti, mieti onko käyttäjillä riittävästi aikaa lukea ja käyttää sisältöä. Näppäimistön ja näytönlukuohjelman käyttäjät saattavat tarvita enemmän aikaa ajastettuun tapahtumaan reagointiin.
+### <a name="timing-considerations"></a>Ajoitus huomioon otettavia seikkoja
+Jos **ajastin** suoritetaan automaattisesti, mieti onko käyttäjillä riittävästi aikaa lukea ja käyttää sisältöä. Näppäimistön ja Näytönlukuohjelman käyttäjät voivat on enemmän aikaa ajastettuun tapahtumaan.
 
 Jokin seuraavista strategioista riittää:
-* Salli käyttäjien peruuttaa ajastettu tapahtuma
-* Salli käyttäjien säätää aikarajaa ennen sen alkamista
-* Varoita 20 sekuntia ennen aikarajan umpeutumista ja tarjoa mahdollisuus pidentää aikaa helposti
+* Salli käyttäjien peruuttaa ajastettu tapahtuma.
+* Salli käyttäjien säätää aikarajaa ennen sen alkamista.
+* Varoita 20 sekuntia ennen aikarajan ja tarjoavat helpon tavan umpeutumista.
 
 Nämä vaatimukset eivät koske kaikkia tilanteita. Lue lisää [aikarajoja koskevasta WCAG 2.0 -ohjeesta](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
-* **[Teksti](properties-core.md)** on oltava käytössä.
-* Älä käytä **[Tekstiä](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin. Näytönlukuohjelman käyttäjille ei ilmoiteta **[Tekstin](properties-core.md)** muutoksista.
+* Jos ajastin käynnistyy muutokset nykyisessä näytössä, käytä [reaaliaikaisen alueen](../accessible-apps-live-regions.md) – Näytönlukuohjelman käyttäjät kertoa, mitä muuttaa.
 
     > [!NOTE]
-  > Näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein. Ajastimen **[Teksti](properties-core.md)** ei kuitenkaan sisälly ilmoitukseen.
+    > Ajastin on näkyvissä ja käynnissä, näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein.
 
-* Harkitse **[Selitteen](control-text-box.md)** lisäämistä kuluneen ajan näyttämiseksi. Opasta käyttäjää käynnistämään tai pysäyttämään ajastin ajastimen **[Tekstin](properties-core.md)** avulla.
-
-### <a name="support-in-powerapps-studio"></a>PowerApps Studio-tuki
-Kun luot sovelluksen, ajastimet on poistettu käytöstä estää tapahtumien käynnistämästä. Voit testata ajastimet PowerApps Studio, jos avaat esikatselu, tai voit tallentaa sovelluksen ja testaa ne PowerApps Mobilessa tai web Playeristä.
+* Älä käytä **[tekstin](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin ohjausobjektin ominaisuus. Näytönlukuohjelmat ei ilmoita muutokset  **[tekstin](properties-core.md)**.
+* -Vuorovaikutteinen ajastimet:
+    * **[Teksti](properties-core.md)** on oltava käytössä.
+    * Harkitse **[nimen](control-text-box.md)** ohjausobjektin kuluneen ajan näyttämiseksi. Ajastin ajastimen **[tekstin](properties-core.md)** ominaisuudeksi kehota käyttäjää Käynnistä tai Pysäytä ajastin.
