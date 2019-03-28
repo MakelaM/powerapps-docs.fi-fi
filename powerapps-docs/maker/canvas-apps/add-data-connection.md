@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 33ca717967989a202fabbf8281b93f8b8263b79d
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 28357a6187831e05fe27075b8b22514950215ab4
+ms.sourcegitcommit: fc604f3e7f0399bdabee86ce94f67de49531a444
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42853200"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545057"
 ---
 # <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>Tietoyhteyden lisääminen pohjaan perustuvaan sovellukseen PowerAppsissa
 
@@ -34,57 +34,54 @@ Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja halli
 
 [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin ja [kirjaudu sitten sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) samoilla tunnistetiedoilla, joita käytit rekisteröityessäsi.
 
-## <a name="add-a-data-source"></a>Lisää tietolähde
-1. **Aloitus**-välilehdellä siirrä osoitin **Aloita tyhjästä**-ruudun päälle ja valitse sitten **Tee tämä sovellus.**
+## <a name="open-a-blank-app"></a>Avaa tyhjä sovellus
 
-    ![Sovelluksen luominen alusta alkaen](./media/add-data-connection/blank-app-tile.png)
+1. Valitse **aloitus** -välilehden **pohjaan perustuva sovellus tyhjästä**.
+
+1. Määritä sovelluksen nimi ja valitse sitten **Luo**.
 
 1. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, valitse **Ohita**.
 
-3. Napsauta tai napauta keskimmäisellä ruudulla **Yhdistä tietoihin**.
+## <a name="add-data-source"></a>Tietolähteen lisääminen
 
-4. Jos **Tiedot**-ruudun yhteysluettelossa on haluamasi yhteys, lisää se sovellukseen valitsemalla sen. Muussa tapauksessa siirry seuraavaan vaiheeseen.
+1. Valitse keskimmäisessä ruudussa **tietoihin yhdistäminen** avaamiseen **tietojen** ruudussa.
 
-    ![Tietolähteen lisääminen](./media/add-data-connection/choose-existing-connections.png)
+    Jos tämä on olemassa olevan sovelluksen ja näytön sisältää jo ohjausobjektin, valitse **Näytä** > **tietolähteet** Avaa samassa ruudussa.
 
-5. Avaa luettelo liittimistä valitsemalla **Uusi yhteys**.
+1. Valitse **tietolähde**.
 
-    ![Yhteyden lisääminen](./media/add-data-connection/new-connection.png)
+1. Jos yhteysluettelossa on se, jota haluat, valitse Lisää se sovellukseen. Muussa tapauksessa siirry seuraavaan vaiheeseen.
 
-6. Selaa luetteloa ja valitse yhteys, jonka haluat luoda (esimerkiksi **Office 365 Outlook**).
+    ![Valitse olemassa oleva yhteys](./media/add-data-connection/choose-existing-connection.png)
 
-    ![Yhteyden valinta](./media/add-data-connection/choose-connection.png)
+1. Valitse **uusi yhteys** Näytä yhteyksien luettelo.
 
-7. Luo yhteys ja lisää se sovellukseesi valitsemalla **Luo**.
+    ![Yhteyden lisääminen](./media/add-data-connection/add-connection.png)
+
+1. Hakukenttään Kirjoita tai liitä ensimmäiset kirjaimet yhteyden, ja valitse sitten yhteys kun se tulee näkyviin.
+
+    ![Yhteyden haku](./media/add-data-connection/search-connections.png)
+
+1. Luo yhteys ja lisää se sovellukseesi valitsemalla **Luo**.
 
     Jotkin liittimet, kuten **Office 365 Outlook**, eivät vaadi lisävaiheita, ja voit näyttää niiltä saatuja tietoja välittömästi. Jotkin muut liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Esimerkiksi [SharePoint](connections/connection-sharepoint-online.md) ja [SQL Server](connections/connection-azure-sqldatabase.md) tarvitsevat lisätietoja, ennen kuin voit käyttää niitä.
-
-## <a name="add-another-data-source"></a>Lisää toinen tietolähde
-1. Lisää ohjausobjekti, johon haluat lisätä tietolähteen.
-
-    Ohjausobjektilla on oltava **Kohteet**-ominaisuus, kuten valikoimilla ja luetteloruuduilla, tai **Kohde**-ominaisuus, kuten lomakkeilla.
-
-1. **Tiedot**-ruudussa (joka avautuu automaattisesti) avaa luettelo kohdassa **Tietolähde** ja valitse sitten **Lisää tietolähde**.
-
-1. Noudata edellä olevia ohjeita, alkaen vaiheesta 4.
 
 ## <a name="identify-or-change-a-data-source"></a>Tietolähteen tunnistaminen tai muuttaminen
 Sovellusta päivitettäessä voi olla tarpeen tunnistaa valikoimassa, lomakkeessa tai muussa ohjausobjektissa esiintyvien tietojen lähde tai muuttaa sitä. Tietolähteitä voi haluta tunnistaa esimerkiksi päivitettäessä jonkun muun luomaa sovellusta tai sovellusta, jonka käyttäjä on itse luonut kauan sitten.
 
-1. Valitse ohjausobjekti, jonka tietolähteen haluat tunnistaa tai muuttaa.
-
-    Valitse esimerkiksi valikoima (eikä valikoiman sisältämää ohjausobjektia) napsauttamalla tai napauttamalla sitä näyttöjen ja ohjausobjektien hierarkkisessa luettelossa lähellä vasenta reunaa.
+1. Valitse ohjausobjekti, esimerkiksi valikoima, jonka haluat tunnistaa tai muuttaa tietolähteeseen.
 
     Tietolähteen nimi näkyy oikeanpuoleisen ruudun **Ominaisuudet**-välilehdessä.
 
-2. Muuta tietolähde tai näytä siitä enemmän tietoja valitsemalla se.
+    ![Tunnista yhteys](./media/add-data-connection/identify-connection.png)
 
-    ![Tietoruutu](./media/add-data-connection/data-pane.png)
+1. Tietolähteen lisätietojen näyttämiseksi tai muuttaa sitä, napsauta alanuolta, sen nimen vieressä.
 
-3. Muuta tietolähde avaamalla luettelo tietolähteistä ja valitsemalla tai luomalla toisen lähteen.
+    Lisätietoja nykyinen tietolähde tulee näkyviin ja voit valita tai luomalla toisen lähteen.
 
-     ![Tietoruutu](./media/add-data-connection/datasource-list.png)
+    ![Muuttaa yhteyden](./media/add-data-connection/change-connection.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
+
 * Tietojen näyttämiseksi tai päivittämiseksi lähteessä, kuten Excel, SharePoint tai SQL Server, [lisää valikoima](add-gallery.md) ja [lisää lomake](add-form.md).
 * Käytä muita tietolähteitä varten liitinkohtaisia funktioita, kuten [Office 365 Outlookin](connections/connection-office365-outlook.md), [Twitterin](connections/connection-twitter.md) ja [Microsoft Translatorin](connections/connection-microsoft-translator.md) kanssa käytettävissä olevia funktioita.

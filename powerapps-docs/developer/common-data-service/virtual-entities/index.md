@@ -1,4 +1,4 @@
 ---
-redirect_url: /powerapps/administrator/admin-guide
+redirect_url: get-started-ve
 ---
 Pelkkä uudelleenohjauksen tiedosto - ei sisältöä

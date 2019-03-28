@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2864ab5614bb3af415e24e23df3c52f6e668ab24
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 4ca9ed14f96dbad52fe6f7b0318f520dbdd33d10
+ms.sourcegitcommit: fc604f3e7f0399bdabee86ce94f67de49531a444
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357134"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545080"
 ---
 # <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opetusohjelma: Powerappsin valikoiman mukauttaminen
 
@@ -53,8 +53,6 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 1. Kirjaudu [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse **Sovellukset** lähellä vasenta reunaa.
 
-    [![PowerAppsin aloitussivu](./media/customize-layout-sharepoint/sign-in.png)](./media/customize-layout-sharepoint/sign-in.png#lightbox)
-
 1. Etsi luomasi sovellus, valitse kolme pistettä (**...**) sovelluksen kohdalla ja valitse sitten **Muokkaa**.
 
     ![Avaa sovellus muokkaamista varten](./media/customize-layout-sharepoint/open-app.png)
@@ -69,25 +67,15 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
     ![Valitse valikoima](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. Valitse **Tilit** lähellä oikeaa reunaa, jolloin avautuu **Tiedot**-ruutu.
-
-    ![Avaa Tiedot-ruutu](./media/customize-layout-sharepoint/open-data-pane.png)
-
-1. Avaa **Tiedot**-ruudussa **Asettelu**-kohdan vaihtoehtoluettelo.
-
-    ![Näytä asetteluasetukset](./media/customize-layout-sharepoint/show-layouts.png)
-
-1. Valitse valintaluettelossa vaihtoehto, jossa näkyy vain otsikko.
+1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa kohdan vaihtoehtoluettelo **asettelu**, ja valitse sitten haluamasi vaihtoehdon näkyy vain otsikko.
 
     ![Valitse vain otsikko -asettelu](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. Avaa **Tiedot**-ruudussa otsikon vaihtoehtoluettelo.
+1. Kohdan **kentät**, valitse **Muokkaa**, ja valitse sitten otsikkoruutuun alanuolta.
 
     Tämän ohjausobjektin nimi päättyy numeroon, kuten **Title1**, mutta numero saattaa vaihdella muiden mahdollisesti tekemiesi toimintojen perusteella.
 
-    ![Avaa otsikon vaihtoehtoluettelo](./media/customize-layout-sharepoint/show-title-options.png)
-
-1. Valitse vaihtoehtoluettelosta **Tilin nimi (nimi)** ja sulje **Tiedot**-ruutu.
+1. Valitse valintaluettelossa, **tilin nimi**, ja sulje sitten **tietojen** ruudussa.
 
     Valikoima näyttää kunkin tilin nimen.
 
@@ -154,9 +142,7 @@ Jos käyttäjillä ei mahdollisesti ole kosketusnäyttöä tai hiiren kiekkopain
 
     ![Valitse valikoima](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. Valitse **Valikoima**-välilehdessä **Näytä vierityspalkki** ja vahvista, että kyseisen ominaisuuden arvoksi on muuttunut **true**.
-
-    ![Näytä vierityspalkki](./media/customize-layout-sharepoint/show-scrollbar.png)
+1. Määritä valikoiman **Näytä vierityspalkki** ominaisuudeksi **true**.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

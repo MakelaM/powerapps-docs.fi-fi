@@ -1,4 +1,4 @@
 ---
-redirect_url: /powerapps/administrator/admin-guide
+redirect_url: workflow-extensions
 ---
 Pelkkä uudelleenohjauksen tiedosto - ei sisältöä
