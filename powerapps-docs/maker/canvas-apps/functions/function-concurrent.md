@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e9c63d1814b72cae0c675be6b33773799cfb3b8f
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: ce8128f3a5eddf3a67fe2082844bf996c25adc05
+ms.sourcegitcommit: 2180982e57f0d161610be584fdae9424fe7e06b5
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357088"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58616681"
 ---
 # <a name="concurrent-function-in-powerapps"></a>PowerAppsin Concurrent-funktio
 Arvioi useita kaavoja keskenään samanaikaisesti.
@@ -131,7 +131,7 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 4. Lisää [**Arvotaulukko**](../controls/control-data-table.md)-ohjausobjekti ja aseta sen **Items**-ominaisuudeksi **Tulokset**.
 
-1. Valitse oikean ruudun **Ominaisuudet**-välilehdessä **Tulokset**, jolloin **Tiedot**-ruutu avautuu.
+1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä** avaamiseen **kentät** ruudussa.
 
 1. Valitse kenttäluettelossa kaikkien niiden kenttien valintaruutu, joiden haluat näkyvän arvotaulukossa.
 

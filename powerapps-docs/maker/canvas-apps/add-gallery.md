@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f5daff973e3d6a90c6ca7748e0684a7a68c23226
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: f45948bc16f036669a09ed2c566c60440d24a797
+ms.sourcegitcommit: 2180982e57f0d161610be584fdae9424fe7e06b5
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799015"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58616704"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
 
@@ -26,64 +26,60 @@ Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä pohjaan per
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* Lue, miten [voit lisätä ja määrittää ohjausobjektin](add-configure-controls.md) PowerAppsissa.
+- Lue, miten [voit lisätä ja määrittää ohjausobjektin](add-configure-controls.md) PowerAppsissa.
 
-* Esimerkkitietojen määrittäminen:
+- Esimerkkitietojen määrittäminen:
     1. Lataa [tämä Excel-tiedosto](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), joka sisältää opetusohjelman näytetiedot.
 
     2. Lataa Excel-tiedosto [pilvitallennuspalveluun](connections/cloud-storage-blob-connections.md), kuten OneDrive for Business -palveluun.
 
-## <a name="add-a-gallery-control"></a>Valikoima-ohjausobjektin lisääminen
-1. Avaa PowerApps ja napsauta tai napauta **Uusi** lähellä vasenta reunaa.
+- Avaa tyhjä sovellus:
+    1. [Kirjaudu sisään PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-2. Napsauta tai napauta **Tyhjä sovellus** -ruudussa kohtaa **Puhelinasettelu**.
+    1. Valitse **Tee oma sovelluksesi** -kohdasta vaihtoehto **Pohjan sovellus tyhjästä**.
 
-3. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, napsauta tai napauta **Ohita**.
+    1. Määritä sovelluksesi nimi, valitse **Puhelin** ja valitse sitten **Luo**.
 
-4. [Lisää yhteys](add-data-connection.md) Excel-tiedoston **FlooringEstimates**-taulukkoon.
+    1. Jos **Tervetuloa PowerApps Studioon** -valintaikkuna avautuu, valitse **Ohita**.
 
-5. (valinnainen) Lisää oletusnäytölle **Valikoima**-ohjausobjekti valitsemalla **Lisää**-välilehti ja napsauttamalla tai napauttamalla ensin kohtaa **Valikoima** ja sitten joko tyhjää tai ohjausobjektien oletusjoukon sisältävää **Valikoima**-ohjausobjektia.
+    1. [Lisää yhteys](add-data-connection.md) Excel-tiedoston **FlooringEstimates**-taulukkoon.
 
-    Näihin vaihtoehtoihin kuuluu **Valikoima**-ohjausobjekteja, joita voi vierittää vaaka- tai pystysuoraan. Voit myös lisätä **Valikoima**-ohjausobjektin, jonka koko perustuu automaattisesti kohteissa olevan sisällön määrään.
+## <a name="add-a-gallery-to-a-blank-screen"></a>Lisää valikoima tyhjä näyttö
 
-    ![Valikoiman lisääminen](./media/add-gallery/gallery-dropdown.png)
+1. Käyttöön **Lisää** -välilehden **valikoiman**, ja valitse sitten **pystysuuntainen**.
 
-6. Napsauta tai napauta **Aloitus**-välilehdestä **Uusi näyttö**.
+    ![Lisää pystysuuntainen valikoima](./media/add-gallery/gallery-dropdown.png)
 
-    Voit lisätä näytön, joka on tyhjä, jota voi vierittää, joka sisältää **Valikoima**-ohjausobjektin tai joka sisältää lomakkeen.
+1. Valitse **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa **kohteet** luettelo ja valitse sitten **Flooring Estimates**.
 
-7. Lisää näyttö, joka sisältää **Valikoima**-ohjausobjektin ja muita ohjausobjekteja, kuten hakupalkin, napsauttamalla tai napauttamalla kohtaa **Luettelonäyttö**.
+    ![Flooring estimates](./media/add-gallery/select-layout.png)
 
-    > [!NOTE]
-   > Lisäsitpä **Valikoima**-ohjausobjektin uuteen tai olemassa olevaan näyttöön, voit valita sen napauttamalla tai napsauttamalla **Valikoima**-ohjausobjektin alaosaa. Valitse sitten oikeanpuoleisessa ruudussa **FlooringEstimates** ja napsauta tai napauta eri asettelua **Tiedot**-ruudussa. Jätä tätä opetusohjelmaa varten asettelu oletusarvoonsa.
+1. (valinnainen) Tässä **asettelu** -luettelosta vaihtoehdon.
 
-    ![Valikoiman asettelun valinta](./media/add-gallery/select-layout.png)
+## <a name="add-a-gallery-in-a-screen"></a>Lisää valikoima näyttöön
 
-8. Napsauta tai napauta **Valikoima**-ohjausobjektia näytössä, jonka juuri lisäsit.
+1. Valitse **aloitus** -välilehden **uuden näytön** > **luettelonäyttö**.
 
-9. Napsauta tai napauta oikean ruudun **Ominaisuudet**-välilehden kohtaa **CustomGallerySample**.
+    Näyttö, joka sisältää **valikoiman** ohjausobjektin ja muita ohjausobjekteja, kuten hakupalkin, tulee näkyviin.
 
-10. Valitse **Tiedot**-ruudussa ensin **CustomGallerySample** ja sitten **FlooringEstimates**.
-
-    ![Tietolähteen valinta](./media/add-gallery/choose-data.png)
+1. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `FlooringEstimates`.
 
     **Valikoima**-ohjausobjekti näyttää esimerkkitiedot.
 
     ![Näytä tiedot](./media/add-gallery/show-data-default.png)
 
-    Tämän aiheen myöhemmässä osiossa määritetään lajittelu ja haku.
-
 ## <a name="add-a-control-to-the-gallery-control"></a>Ohjausobjektin lisääminen Valikoima-ohjausobjektiin
-Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Valikoima**-ohjausobjektin ensimmäinen ohjausobjektijoukko on mallipohja, joka määrittää, miten kaikki **Valikoima**-ohjausobjektin tiedot näytetään.
+Ennen kuin teet muita mukautuksia, varmista, että asettelu- **valikoiman** ohjausobjektin aihettasi parhaiten vastaava mitä. Sieltä voit muokata **valikoiman** malli, joka määrittää, miten kaikki tiedot **valikoiman** ohjausobjekti näkyy.
 
-1. Valitse mallipohja napsauttamalla tai napauttamalla **Valikoima**-ohjausobjektin alaosaa ja sitten napsauttamalla tai napauttamalla vasemman yläkulman lyijykynäkuvaketta.
+1. Valitse malli napsauttamalla tai napauttamalla lähellä **valikoiman** ohjausobjektin ja valitsemalla sitten sen vasemmassa yläkulmassa olevaa kynäkuvaketta.
 
     ![Valikoimamallin muokkaus](./media/add-gallery/edit-item.png)
 
 2. Kun mallipohja on valittuna, lisää **[Selite](controls/control-text-box.md)**-ohjausobjekti ja sitten siirrä sitä ja muuta sen kokoa niin, että se ei ole muiden mallipohjan ohjausobjektien päällä.
 
-    ![Selitteen lisääminen](./media/add-gallery/add-text-box.png)
-3. Avaa **Tiedot**-ruutu valitsemalla mallipohja ja napsauttamalla tai napauttamalla sitten oikeanpuoleisessa ruudussa kohtaa **Flooring Estimates**.
+    ![Lisää nimi](./media/add-gallery/add-text-box.png)
+
+3. Valitse valikoima ja valitse sitten **Muokkaa** kohdan **kentät** , **ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
 
 4. Valitse aiemmin lisäämäsi selite ja avaa korostettu luettelo **Tiedot**-ruudussa.
 
@@ -91,55 +87,53 @@ Ennen kuin teet mukautuksia, valitse **Valikoima**-ohjausobjektin asettelu. **Va
 
 5. Napsauta tai napauta luettelon kohtaa **Price**.
 
-    ![Selitteen sidonnan muuttaminen](./media/add-gallery/change-binding.png)
-
     **Valikoima**-ohjausobjekti näyttää uudet arvot.
 
     ![Lopullinen valikoima](./media/add-gallery/final-gallery.png)
 
-## <a name="filter-the-gallery-control"></a>Valikoima-ohjausobjektin suodattaminen
-**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää, mitä se näyttää. Tässä toimintosarjassa kyseinen ominaisuus määritetään niin, että **Valikoima**-ohjausobjekti näyttää vain ne kohteet, joissa tuotteen nimi sisältää **TextSearchBox1**-kentässä määritetyn tekstin.
+## <a name="filter-and-sort-a-gallery"></a>Suodattaa ja lajitella valikoiman
+**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää, mitä se näyttää. Tässä toimintosarjassa kyseinen ominaisuus määritetään niin, että se myös määrittää, mitkä tietueet näkyvät perusteella suodatusehdot ja missä järjestyksessä.
 
-![Tekstihakukenttä](./media/add-gallery/text-search-box.png)
-
-1. Valitse **Valikoima**-ohjausobjekti napsauttamalla tai napauttamalla ohjausobjektin alaosaa.
-
-2. Määritä **Lisäasetukset**-välilehdessä **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-
-    **If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name)))**
-
-    Lisätietoja tämän kaavan funktioista on aiheessa [Lisätietoja kaavasta](formula-reference.md).
-
-3. Kirjoita tuotteen nimi tai osa siitä hakukenttään.
-
-    **Valikoima**-ohjausobjekti näyttää vain kohteet, jotka täyttävät suodatusehdon.
-
-## <a name="sort-the-gallery-control"></a>Valikoima-ohjausobjektin lajittelu
-**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää järjestyksen, jossa kohteet näytetään. Tässä toimintosarjassa ominaisuus määritetään niin, että **Valikoima**-ohjausobjekti näyttää kohteet kohdassa **ImageSortUpDown1** määritetyssä järjestyksessä.
-
-![Lajittelun kuva](./media/add-gallery/image-sorting.png)
+![Hakukuvaketta ruutuun ja lajitteleminen](./media/add-gallery/text-search-box.png)
 
 1. Aseta **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    **Sort(If(IsBlank(TextSearchBox1.Text), FlooringEstimates, Filter(FlooringEstimates, TextSearchBox1.Text in Text(Name))), Name, If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+    ```powerapps-dot
+    Sort
+        (If
+            (IsBlank(TextSearchBox1.Text),
+            FlooringEstimates,
+            Filter(
+                FlooringEstimates,
+                TextSearchBox1.Text in Text(Name)
+            )
+        ),
+        Name,
+        If(
+            SortDescending1,
+            SortOrder.Descending,
+            SortOrder.Ascending
+        )
+    )
+    ```
 
-2. Vaihda **Valikoima**-ohjausobjektin lajittelujärjestys tuotteiden nimien mukaiseksi valitsemalla lajittelukuvake.
+    Lisätietoja tämän kaavan funktioista on aiheessa [Lisätietoja kaavasta](formula-reference.md).
 
-**Valikoima**-ohjausobjektin lajittelu *ja* suodattaminen:
+1. Kaksoisnapsauta hakuruutua ja kirjoita sitten sen tai osa siitä tuotteen nimi.
 
-* Korvaa tämän kaavan kumpikin *Tietolähde*-kohta tietolähteesi nimellä.
+    Näkyvät vain ne kohteet, jotka täyttävät suodatuskriteeriä.
 
-* Korvaa tämän kaavan kumpikin *SarakkeenNimi*-kohta sen sarakkeen nimellä, jonka mukaan haluat lajitella ja suodattaa.
+1. Kun painamalla Alt-näppäintä, valitse lajittelukuvake kerran tai useita kertoja Vaihda lajittelujärjestystä.
 
-**Sort(If(IsBlank(TextSearchBox1.Text),** *Tietolähde*, **Filter(** *Tietolähde*, **TextSearchBox1.Text in Text(** *SarakkeenNimi* **))),** *SarakkeenNimi*, **If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))**
+    Tietueet viivakaaviosta nousevan ja laskevan tuotteen nimen mukaan aakkosjärjestyksessä.
 
 ## <a name="highlight-the-selected-item"></a>Valitun kohteen korostaminen
-Aseta **Valikoima**-ohjausobjektin **TemplateFill**-ominaisuudeksi kaava, joka muistuttaa tätä esimerkkiä:
+Määritä **valikoiman** ohjausobjektin **TemplateFill** ominaisuudeksi kaava, joka muistuttaa tätä esimerkkiä, mutta voit määrittää eri värejä, jos haluat:
 
 **If(ThisItem.IsSelected, LightCyan, White)**
 
 ## <a name="change-the-default-selection"></a>Oletusvalinnan muuttaminen
-Aseta **Valikoima**-ohjausobjektin **Default**-ominaisuudeksi se tietue, jonka haluat olevan valittuna oletuksena. Määritä esimerkiksi **FlooringEstimates**-tietolähteen viides kohta:
+Aseta **Valikoima**-ohjausobjektin **Default**-ominaisuudeksi se tietue, jonka haluat olevan valittuna oletuksena. Voit esimerkiksi määrittää viides **FlooringEstimates** tietolähde:
 
 **Last(FirstN(FlooringEstimates, 5))**
 

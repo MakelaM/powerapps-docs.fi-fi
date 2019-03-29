@@ -1,0 +1,37 @@
+items:
+- name: Windows-asiakassovellusten kehitys XRM-työkaluilla
+  href: build-windows-client-applications-xrm-tools.md
+  items:
+  - name: Yhdistäminen CrmServiceClient-konstruktoreilla
+    href: use-crmserviceclient-constructors-connect.md
+  - name: Yhdistäminen XRM-työkalujen yhteysmerkkijonoilla
+    href: use-connection-strings-xrm-tooling-connect.md
+  - name: Yhdistäminen PowerShellin XRM-työkaluille tarkoitetuilla cmdlet-komennoilla
+    href: use-powershell-cmdlets-xrm-tooling-connect.md
+  - name: XRM-työkalujen käyttö toimintojen suorittamiseen
+    href: use-xrm-tooling-execute-actions.md
+    items:
+    - name: XRM-työkalujen käyttö tietojen luomiseen
+      href: use-xrm-tooling-create-data.md
+    - name: XRM-työkalujen käyttö tietojen noutamiseen
+      href: use-xrm-tooling-retrieve-data.md
+    - name: XRM-työkalujen käyttö tietojen päivittämiseen
+      href: use-xrm-tooling-update-data.md
+    - name: XRM-työkalujen käyttö tietojen poistamiseen
+      href: use-xrm-tooling-delete-data.md
+    - name: Sanomien käyttö ExecuteCrmOrganizationRequest-menetelmällä
+      href: use-messages-executecrmorganizationrequest-method.md
+  - name: XRM-työkalujen kirjautumisen valvonnan käyttö asiakassovelluksissa
+    href: use-xrm-tooling-common-login-control-client-applications.md
+  - name: Jäljityksen määrittäminen XRM-työkaluissa
+    href: configure-tracing-xrm-tooling.md
+  - name: Yksinkertaistettu yhteyden pikaopas
+    href: sample-simplified-connection-quick-start.md
+  - name: 'Malli: Pikaopas XRM-työkalujen ohjelmointirajapinnalle'
+    href: sample-quick-start-xrm-tooling-api.md
+ms.openlocfilehash: 6ffd323731891e38feb1b728f7e6f43120d5cc37
+ms.sourcegitcommit: 499fdc1a7c78d7d10e372a8caf26dfafc3492b6c
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58542782"

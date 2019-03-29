@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2c367aa57294e52fc22f538f88b361c90c3afb99
-ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
+ms.openlocfilehash: 9981a549aaf0ce88f6e66dd4df2c7897901d219b
+ms.sourcegitcommit: 5c098a62f66a2f33418967fdce9363bd529e0fc1
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330236"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58581089"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Asenna ja määritä Help Desk -malli PowerAppsissa
 
@@ -136,9 +136,9 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 1. Napsauta **Otsikko**-sarakkeen linkkiä.
 2. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Ei**.
-3. Valitse **OK**.
+3. Napsauta **OK**.
 
-## <a name="download-the-help-desk-powerapp"></a>Lataa Help Desk PowerApp
+## <a name="download-the-app"></a>Lataa sovellus
 
 1.  [Lataa](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/helpdesk/docs/HelpDesk(SP_List).zip) PowerApps-paketti ja tallenna se tietokoneeseesi.
 
@@ -172,9 +172,9 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 4.  Valitse **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
 
-## <a name="import-the-help-desk-powerapp"></a>Tuo Help Desk PowerApp
+## <a name="import-the-app"></a>Sovelluksen tuonti
 
-1. Siirry selaimella kohteeseen https://web.powerapps.com.
+1. Siirry selaimella osoitteeseen https://web.powerapps.com.
 2. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
 3. Valitse vasemmasta valikosta **Sovellukset**. 
 4. Napsauta kohtaa **Tuo paketti (esikatselu)**.
@@ -209,33 +209,27 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
     ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-done.png)
 
-## <a name="configure-the-powerapp-to-use-the-sharepoint-list"></a>Määritä PowerApp käyttämään SharePoint-luetteloa
+## <a name="configure-the-app-to-use-the-sharepoint-list"></a>Määritä sovellus SharePoint-luettelon avulla
 
 1. Valitse seuraavissa vaiheissa **Avaa sovellus**.
 2. Valitse **Salli** oikeutta pyydettäessä.
 
 ### <a name="delete-connections"></a>Yhteyksien poistaminen
 
-1. Napsauta **Näkymä**.
-2. Napsauta **Tietolähteet**.
-3. Napsauta **Tiedot**-ruudussa **kolmea pistettä** **HelpDeskin** SharePoint-yhteyden vieressä.
-4. Napsauta **Poista**.
+1. Käyttöön **Näytä** -välilehden **tietolähteet**.
+1. - **Tietojen** ruudussa, valitse kolme pistettä (...) kohdan **HelpDesk**, ja valitse sitten **poistaa**.
 
 ### <a name="helpdesk-list"></a>HelpDesk-luettelo
 
-1. Napsauta **Näkymä**.
-2. Napsauta **Tietolähteet**.
-3. Napsauta **Tiedot**-ruudussa **+ Lisää tietolähde**.
-4. Valitse **SharePoint**.
-5. Valitse **Luo**.
-6. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit HelpDesk-luettelon.
+1. Käyttöön **Näytä** -välilehden **tietolähteet**.
+1. Tässä **tietojen** ruudussa **Lisää tietolähde** > **uusi yhteys** > **SharePoint**  >  **Luoda**.
+1. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit HelpDesk-luettelon.
 
     > [!TIP] 
-    > Jos sivusto ei näy luettelossa, kirjoita SharePoint-sivuston URL-osoite tekstikenttään ja napsauta **Siirry**.
+    > Jos sivusto ei näy luettelossa, kirjoita tai liitä SharePoint-sivuston URL-osoite tekstiruutuun ja valitse sitten **Siirry**.
 
-7. Syötä luettelon yläosassa olevaan **Haku**-tekstikenttään **HelpDesk**.
-8. Valitse **HelpDesk**-luettelon vieressä oleva valintaruutu.
-9. Napsauta **Yhdistä**.
+1. - **Hae** yläosassa luettelon tyyppi tai liitä **HelpDesk**.
+1. Valitse valintaruutu kohdan **HelpDesk**, ja valitse sitten **Yhdistä**.
 
 ### <a name="update-admin-list"></a>Päivitä järjestelmänvalvojien luettelo
 
@@ -247,22 +241,19 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
     ![Päivitä järjestelmänvalvojaluettelo](./media/help-desk-install/Change-admin.png)
     
    > [!TIP]
-   > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, käytä pilkkua järjestelmänvalvojien erottelemiseen.  Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
+   > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, pilkkua järjestelmänvalvojien erottelemiseen järjestelmänvalvojien luetteloon. Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
    > Jos haluat varmistaa, että AdminList-luettelon osoitteet vastaavat PowerAppsin vaatimaa muotoa, valitse Näytä > Muuttujat > Yleiset > Oma profiili ja katso, onko Sähköposti-sarakkeessa vaadittava sähköpostimuoto.
 
-5. Napsauta **Tiedosto**.
-6. Napsauta **Tallenna**.
-7. Napsauta **Julkaise**.
-8. Napsauta **Julkaise tämä versio**.
+1. Valitse **tiedoston** > **Tallenna** > **Julkaise** > **Julkaise tämä versio**.
 
 ## <a name="modify-the-flow"></a>Työnkulun muokkaaminen
 
 1.  Valitse vasemmasta valikosta **Työnkulut**.
 2.  Jos sinua pyydetään kirjautumaan sisään, kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
-3.  Valitse **Omat työnkulut** yläreunan valikosta.
-4.  Napsauta **HelpDeskFlow**-työnkulun vieressä olevaa **kynäkuvaketta**. 
+3.  Valitse yläreunan valikosta **Omat työnkulut**.
+4.  Kohdan **HelpDeskFlow** työnkulun vieressä olevaa kynäkuvaketta. 
  
-    ![Muokkaa työnkulun näyttöä](./media/help-desk-install/edit-flow.png)
+    ![Työnkulun muokkaaminen -näyttö](./media/help-desk-install/edit-flow.png)
 
 5.  Laajenna **Hae kohteet** -toiminto. 
 6.  Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan luomaasi HelpDesk SharePoint -luetteloa.
@@ -281,18 +272,16 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 11. Napsauta **Päivitä työnkulku**.
 
-## <a name="play-the-powerapp"></a>Toista PowerApp
+## <a name="play-the-app"></a>Toista sovellus
 
 1. Napsauta selaimessa kohtaa **Sovellukset**.
-2. Napsauta **kolmea pistettä** HelpDesk PowerAppin vieressä.
+2. Napsauta kolmea pistettä (...) tukipalvelun sovelluksen.
 3. Napsauta **Avaa**. 
 
 > [!TIP]
 > Katso tästä [videosta](https://youtu.be/sl5fXwwnvzI), miten Help Desk PowerApp -mallia käytetään.
 
-
 ## <a name="next-steps"></a>Seuraavat vaiheet
 - [SharePoint-luettelolomakkeen mukauttaminen](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 - [Ohjausobjektin lisääminen ja määrittäminen](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
-- [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
- 
+- [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

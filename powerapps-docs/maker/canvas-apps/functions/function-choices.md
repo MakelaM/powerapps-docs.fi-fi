@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 77268aa63ed49d10f825850909d31ec4feace063
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 5c6876ac22f50be293781a7a6be58657f856baec
+ms.sourcegitcommit: 9444e6404770788b99cfcdb13b41ca6187d25149
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357594"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623391"
 ---
 # <a name="choices-function-in-powerapps"></a>PowerAppsin Choices-funktio
 Palauttaa hakusarakkeen mahdollisten arvojen taulukon.
@@ -83,10 +83,10 @@ Tällä hetkellä voit hakusarakkeita vain SharePoint- ja Common Data Service-ka
 
 8. Valitse **Ensisijainen yhteyshenkilö** -kortissa **Yhdistelmäruutu**-ohjausobjekti.
 
-    Kyseisen ohjausobjektin **Items**-ominaisuus on määritetty toiseen kahdesta kaavasta sen mukaan, mikä lisäasetusten **Käytä sarakkeiden näyttönimiä** -valintaruudun tila on.
+    **Kohteet** kyseisen ohjausobjektin asetuksena on kaava, joka tunnistaa sarakkeen sen näyttönimi, kuten ensimmäisessä esimerkissä tai sen looginen nimi, kuten toisessa esimerkissä:
 
-   - Jos valintaruutu on valittuna, ominaisuus on määritetty tähän kaavaan:<br>**Choices( Accounts.'Primary Contact' )**
-   - Jos valintaruutu on tyhjä, ominaisuus on määritetty tähän kaavaan:<br>**Choices( Accounts.primarycontactid )**
+   - **Choices( Accounts.'Primary Contact' )**
+   - **Choices( Accounts.primarycontactid )**
 
      ![Kaavionäyttö ja lomakeohjausobjekti. **Yhdistelmäruutu**-ohjausobjekti **Ensisijainen yhteyshenkilö** -kortissa on valittuna, ja Items-ominaisuus kaavassa Choices( Accounts.'Primary Contact' ) on näkyvissä](media/function-choices/accounts-primary-contact.png)
 
@@ -94,10 +94,9 @@ Tällä hetkellä voit hakusarakkeita vain SharePoint- ja Common Data Service-ka
 
 10. Valitse **Lisää**-välilehdestä **Arvotaulukko**.
 
-11. Määritä kunkin **Arvotaulukko**-ohjausobjektin **Items**-ominaisuudeksi jokin näistä kaavoista:
+11. Määritä **kohteet** -ominaisuuden **tietotaulukko** ominaisuudeksi tämä kaava:
 
-     - Jos **Käytä sarakkeiden näyttönimiä** -valintaruutu on valittuna lisäasetuksissa, käytä seuraavaa kaavaa:<br>**Choices( Accounts.'Primary Contact' )**
-     - Muutoin käytä tätä kaavaa:<br>**Choices( Accounts.primarycontactid )**
+     **Choices( Accounts.'Primary Contact' )**
 
 12. Avaa **Tiedot**-ruutu ja valitse sitten **firstname**- tai **lastname**-valintaruutu tai mikä tahansa muu kenttä, jonka haluat näyttää.
 

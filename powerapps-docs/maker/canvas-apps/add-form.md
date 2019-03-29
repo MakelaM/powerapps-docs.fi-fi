@@ -1,5 +1,5 @@
 ---
-title: Tietueen näyttäminen, muokkaaminen tai lisääminen taulukosta pohjaan perustuvassa sovelluksessa | Microsoft Docs
+title: Näytä, Muokkaa tai pohjaan perustuva sovellus tietueen lisääminen | Microsoft Docs
 description: Käytä pohjaan perustuvan sovelluksen lomaketta tietueen näyttämiseen, muokkaamiseen tai lisäämiseen tietolähteesi taulukosta.
 author: emcoope-msft
 manager: kvivek
@@ -13,102 +13,93 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4a434cd7a8d7eb029200c51fc5c8755946c13f3b
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: e94aa48ed3fba1b4591e196e3b81d3fb0f76666f
+ms.sourcegitcommit: 5c098a62f66a2f33418967fdce9363bd529e0fc1
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57798900"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58581020"
 ---
-# <a name="show-edit-or-add-a-record-from-a-table-in-powerapps"></a>Tietueen näyttäminen, muokkaaminen tai lisääminen taulukosta PowerAppsissa
+# <a name="show-edit-or-add-a-record-in-a-canvas-app"></a>Näytä, Muokkaa tai pohjaan perustuva sovellus tietueen lisääminen
 
-Lisää ja määritä **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjekti tietueen kaikkien kenttien näyttämiseksi pohjaan perustuvassa sovelluksessa. Voit muokata mitä tahansa tietueen kenttää (tai lisätä tietueen) ja tallentaa muutokset takaisin tietolähteeseen lisäämällä ja määrittämällä ensin **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektin pohjaan perustuvaan sovellukseen.
+Pohjaan perustuvassa sovelluksessa, Lisää ja määritä **[näytön](controls/control-form-detail.md)** lomake-ohjausobjekti tietueen kaikkien kenttien näyttämiseksi voit myös lisätä ja määrittää **[Muokkaa](controls/control-form-detail.md)** lomakkeen ohjausobjektin muokata mitä tahansa tietueen kenttää, lisätä tietueen ja tallentaa muutokset takaisin tietolähteeseen.
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* Lue, miten [voit lisätä ja määrittää ohjausobjektin](add-configure-controls.md) PowerAppsissa.
-* Lataa [tämä Excel-tiedosto](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), joka sisältää tämän opetusohjelman näytetiedot.
-* Lataa Excel-tiedosto [pilvitallennuspalveluun](connections/cloud-storage-blob-connections.md), kuten OneDrive for Business -palveluun.
-* Lisää uuteen tai olemassa olevaan sovellukseen [yhteys](add-data-connection.md) Excel-tiedoston **FlooringEstimates**-taulukkoon.
-* Jos käytät olemassa olevaa sovellusta, [lisää siihen näyttö](add-screen-context-variables.md).
+- Lue, miten [voit lisätä ja määrittää ohjausobjektin](add-configure-controls.md) PowerAppsissa.
+- Lataa [tämä Excel-tiedosto](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), joka sisältää tämän opetusohjelman näytetiedot.
+- Lataa Excel-tiedosto [pilvitallennuspalveluun](connections/cloud-storage-blob-connections.md), kuten OneDrive for Business -palveluun.
+- Luo tai avaa sovellus puhelinsovellus [Lisää yhteys](add-data-connection.md) - **FlooringEstimates** taulukko Excel-tiedoston.
+
+    Voit lisätä lomakkeen tablettisovellus, mutta se ei vastaa tässä ohjeaiheessa, koska lomake on kolme saraketta oletuksena.
+
+- Jos avaat olemassa olevan sovelluksen [Lisää näyttö](add-screen-context-variables.md) siihen.
 
 ## <a name="add-a-form-and-show-data"></a>Lomakkeen lisääminen ja tietojen näyttäminen
-1. Lisää **[Avattava luettelo](controls/control-drop-down.md)** -ohjausobjekti, anna sille nimeksi **ChooseProduct** ja aseta sen **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava arvo:
-
-    **FlooringEstimates.Name**
+1. Lisää tyhjä näyttö **[avattava](controls/control-drop-down.md)** ohjausobjekti ja anna sille **ChooseProduct**.
 
     > [!NOTE]
    > Jos et ole varma, kuinka ohjausobjekteja lisätään, nimetään uudelleen tai kuinka niille määritetään ominaisuus, katso [Ohjausobjektien lisääminen ja määrittäminen](add-configure-controls.md).
 
+1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa määrittää **kohteet** - `FlooringEstimates` ja **arvo** - `Name`.
+
+    ![Lomakkeen Items-ominaisuuden asettaminen](./media/add-form/items-property.png)
+
     Luettelossa näytetään tietolähteeltä saadut lattiatuotteiden nimet.
 
-2. Lisää **Muokkaa lomaketta** -ohjausobjekti, siirrä se kohdan **ChooseProduct** alle ja muuta sen kokoa niin, että se kattaa suurimman osan näytöstä.
+1. Lisää **Muokkaa** lomake-ohjausobjekti, siirrä se kohdan **ChooseProduct**, ja muuta kokoa niin, se kattaa suurimman osan näytöstä.
 
     ![Lomakkeen lisääminen](./media/add-form/add-a-form.png)
 
     > [!NOTE]
-   > Tässä aiheessa kuvaillaan **Muokkaa lomaketta** -ohjausobjektia, mutta samanlaiset periaatteet pätevät myös **Näytä lomake** -ohjausobjektiin.
+   > Tässä aiheessa kuvataan **Muokkaa** lomake-ohjausobjekti, mutta samankaltaisia periaatteet pätevät **Näytä** lomake-ohjausobjekti.
 
-3. Aseta lomakkeen **[DataSource](controls/control-form-detail.md)**-ominaisuudeksi **FlooringEstimates** ja **[Item](controls/control-form-detail.md)**-ominaisuudeksi tämä kaava:
+1. Määritä lomakkeen **[DataSource](controls/control-form-detail.md)** ominaisuudeksi **FlooringEstimates** ja sen **[kohteen](controls/control-form-detail.md)** -ominaisuuden arvoksi Tämä kaava:
 
-   **First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))**
+    `First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))`
 
    Tällä kaavalla määritetään, että lomakkeen määritysten suorittamisen jälkeen siinä näkyvät tietueet, jotka käyttäjä valitsee kohdassa **ChooseProduct**.
 
-4. Napsauta tai napauta **Tiedot**-ruudulta kenttien valintaruutuja niiden näyttämiseksi.
+1. Valitse **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä**.
 
-    > [!NOTE]
-   > Jos **Tiedot**-ruutu on suljettuna, avaa se valitsemalla lomake vasemmanpuoleisesta ruudusta ja napsauttamalla tai napauttamalla sitten oikeanpuoleisesta ruudusta **Tiedot**.
+    ![Muokkaa kenttiä](./media/add-form/edit-fields.png)
 
-    ![Kenttien näyttäminen lomakkeessa](./media/add-form/checkbox.png)
+1. Valitse **Kentät**-ruudussa **Lisää kenttä**, valitse kunkin kentän valintaruutu ja valitse sitten **Lisää**.
 
-5. Vedä **Tiedot**-ruudussa **Nimi**-tieto luettelon ylimmäksi.
+    ![Lisää kenttiä](./media/add-form/add-fields.png)
 
-    ![Kortin siirtäminen](./media/add-form/drag-field.png)
+1. Valitse kolme pistettä (...) kohdan **Lisää kenttä**, valitse **Kutista kaikki**, ja vedä sitten **nimi** luettelon ylimmäksi.
 
-    **Muokkaa lomaketta** -ohjausobjekti päivittyy muutoksen mukaisesti.
+    ![Siirrä kenttä](./media/add-form/move-field.png)
 
-    ![Nimi ylimpänä](./media/add-form/move-card-form.png)
+    **Muokkaa** lomake-ohjausobjekti päivittyy muutoksen mukaisesti.
+
+    ![Näytä lomake](./media/add-form/show-form1.png)
 
 ## <a name="set-the-card-type-for-a-field"></a>Kortin tyypin asettaminen kentälle
-1. Kun lomake on valittuna, napsauta tai napauta **Tiedot**-ruudussa **Price**-kohdan kortin valitsinta.
+1. - **Kentät** ruudusta, laajenna **hinta** kentän valitsemalla sen alanuolta.
 
-    ![Kortin valitsimen valinta](./media/add-form/price-card2.png)
+1. Avaa **ohjausobjekti tyyppi** luettelo ja valitse sitten **Muokkaa liukusäädintä**.
 
-2. Vieritä näkymää alemmaksi ja napsauta tai napauta sitten **Näytä teksti** -vaihtoehtoa, niin käyttöön otetaan vain luku -tila.
+    ![Muokkaa liukusäädintä](./media/add-form/edit-slider.png)
 
-    ![Näytä teksti](./media/add-form/view-text.png)
+    Lomakkeen **hinta** kenttä näkyy **liukusäätimen** ohjausobjektin sijaan **Tekstisyöte** ohjausobjektin.
 
-    Lomake päivittyy muutoksen mukaisesti.
-
-    ![Vain luku -numero](./media/add-form/read-only.png)  
+1. (valinnainen) Voit muuttaa ohjausobjektin saman prosessia **yleiskatsaus** kenttä **Muokkaa monirivistä tekstiä** ohjausobjektin.
 
 ## <a name="edit-form-only-save-changes"></a>(Vain Muokkaa lomaketta) Muutosten tallentaminen
-1. Valitse lomake vasemmanpuoleisesta ruudusta ja napsauta tai napauta sitten kolmea pistettä (...).
 
-   ![Lomakkeen valinta](./media/add-form/select-form.png)
+1. Anna lomakkeelle **EditForm**.
 
-2. Napsauta tai napauta **Nimeä uudelleen** ja anna lomakkeelle nimi **EditForm**.
+1. Lisää **[painike](controls/control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
-3. Lisää **[Painike](controls/control-button.md)**-ohjausobjekti ja aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi **Tallenna**.
+   `SubmitForm(EditForm)`
 
-    ![Tallennuspainikkeen lisääminen](./media/add-form/save-button.png)  
+1. Avaa esikatselu painamalla F5-näppäintä muuttaa tuotteen nimen ja valitse sitten painike, jonka loit.
 
-4. Määritä **Tallenna**-painikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
+    **[SubmitForm](functions/function-form.md)** funktio tallentaa muutokset tietolähteeseen.
 
-   **SubmitForm(EditForm)**
-
-5. Avaa esikatselutila valitsemalla oikean yläkulman alueella oleva toistopainike (tai painamalla F5-näppäintä).
-
-    ![Esikatselutilan avaaminen](./media/add-form/open-preview.png)
-
-6. Muuta jonkin tuotteen nimeä ja napsauta tai napauta sitten luomaasi **Tallenna**-painiketta.
-
-    **[SubmitForm](functions/function-form.md)**-funktio tallentaa muutoksesi lomakkeelle määritettyyn tietolähteeseen.
-
-7. (Valinnainen) Sulje esikatselutila valitsemalla sulkemiskuvake (tai painamalla ESC-näppäintä).
-
-    ![Esikatselutilan sulkeminen](./media/add-form/close-preview.png)
+1. (valinnainen) Sulje esikatselutila painamalla ESC-näppäintä (tai valitsemalla sulkemiskuvake oikeassa yläkulmassa).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 Lisätietoa [lomakkeiden](working-with-forms.md) ja [kaavojen](working-with-formulas.md) kanssa työskentelystä.
