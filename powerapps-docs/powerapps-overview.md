@@ -9,16 +9,16 @@ ms.custom: ''
 ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: ec03fdfd4837bb54fb150562ade38db758887f88
-ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.openlocfilehash: 4e24047d44beb19e55dadb8d653604e47460a5d2
+ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162259"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58357571"
 ---
 # <a name="what-is-powerapps"></a>Mikä on PowerApps?
 
-PowerApps on sovelluksista, palveluista, yhdistimistä ja tietoalustasta koostuva paketti, joka tarjoaa nopean sovelluskehitysympäristön liiketoimintatarkoituksiin luotavien mukautettujen sovellusten rakentamiseen. PowerAppsin avulla voit nopeasti luoda mukautettuja yrityssovelluksia, jotka muodostavat yhteyden *joko* taustalla olevaan tietoalustaan (**Common Data Service for Apps)** *tai* erilaisiin verkkolähteisiin tai paikallisiin lähteisiin (SharePoint, Excel, Office 365, Dynamics 365, SQL Server jne.) tallennettuihin yritystietoihin. 
+PowerApps on sovelluksista, palveluista, yhdistimistä ja tietoalustasta koostuva paketti, joka tarjoaa nopean sovelluskehitysympäristön liiketoimintatarkoituksiin luotavien mukautettujen sovellusten rakentamiseen. PowerAppsin avulla voit nopeasti luoda mukautettuja yrityssovelluksia, jotka muodostavat yhteyden *joko* taustalla olevaan tietoalustaan (**Common Data Service)** *tai* erilaisiin verkkolähteisiin tai paikallisiin lähteisiin (SharePoint, Excel, Office 365, Dynamics 365, SQL Server jne.) tallennettuihin yritystietoihin. 
 
 PowerAppsilla luodut sovellukset tarjoavat monipuolisia liiketoimintalogiikan ja -työnkulkujen toimintoja, joiden avulla muunnat manuaaliset liiketoimintaprosessit digitaalisiksi ja automatisoiduiksi prosesseiksi. Lisäksi PowerAppsilla luodut sovellukset ovat rakenteeltaan vuorovaikutteisia, ja niitä voi käyttää saumattomasti selaimessa tai mobiililaitteissa (puhelimilla ja tableteilla). PowerApps tekee mukautettujen yrityssovellusten luomisesta ”demokraattista” mahdollistamalla monipuolisia ominaisuuksia sisältävien mukautettujen yrityssovellusten luomisen koodia kirjoittamatta.
 
@@ -46,7 +46,7 @@ PowerApps-järjestelmänvalvojat voivat käyttää:
 
 - **PowerApps-hallintakeskusta** ([admin.powerapps.com](https://admin.powerapps.com)) ympäristöjen, käyttäjien, roolien ja tietojen menetyksen estokäytäntöjen luomiseen ja hallinnointiin. 
 
-- **Power Platform -hallintakeskusta** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) ympäristöjen hallinnointiin, Dynamics 365 for Customer Engagement -sovellusten, PowerAppsin ja Microsoft Flow -ohjelman käyttöä koskevien reaaliaikaisten ja omatoimisten suositusten ja tukiartikkeleiden lukemiseen sekä CDS for Apps -analyysien tarkasteluun. 
+- **Power Platform -hallintakeskusta** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) ympäristöjen hallinnointiin, Dynamics 365 for Customer Engagement -sovellusten, PowerAppsin ja Microsoft Flow -ohjelman käyttöä koskevien reaaliaikaisten ja omatoimisten suositusten ja tukiartikkeleiden lukemiseen sekä Common Data Service -analyysien tarkasteluun. 
 
 Lisätietoja: [PowerAppsin hallitseminen](/power-platform/admin/admin-guide)
 
@@ -56,7 +56,7 @@ Kehittäjät ovat sovellusten tekijöitä, jotka voivat laajentaa yrityssovellus
 
 ## <a name="powerapps-and-dynamics-365"></a>PowerApps ja Dynamics 365
 
-Dynamics 365 -sovellukset, kuten Dynamics 365 for Sales, Dynamics 365 for Service, Dynamics 365 for Marketing, käyttävät myös taustalla olevaa tietoalustaa (CDS for Apps), jota PowerApps käyttää tietojen tallentamiseen ja suojaamiseen. Voit näin luoda sovelluksia PowerAppsin ja Common Data Service for Appsin avulla suoraan ilman integrointia Dynamics 365:ssä jo käytössä olevien tärkeiden yritystietojen avulla. Lisätietoja: [Dynamics 365 ja Common Data Service for Apps](maker/common-data-service/data-platform-intro.md#dynamics-365-and-the-common-data-service-for-apps)
+Dynamics 365 -sovellukset, kuten Dynamics 365 for Sales, Dynamics 365 for Service, Dynamics 365 for Marketing, käyttävät myös taustalla olevaa tietoalustaa (Common Data Service), jota PowerApps käyttää tietojen tallentamiseen ja suojaamiseen. Voit näin luoda sovelluksia PowerAppsin ja Common Data Servicen avulla suoraan ilman integrointia Dynamics 365:ssä jo käytössä olevien tärkeiden yritystietojen avulla. Lisätietoja: [Dynamics 365 ja Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-the-common-data-service)
 
 ## <a name="try-powerapps-for-free"></a>Kokeile PowerAppsia ilmaiseksi
 
