@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0fbc97e6c2663210bea79cc7236ce784110a4950
-ms.sourcegitcommit: c6ad6ba7814c5e7b12c3b7b76bf2e7718bf41b8c
+ms.openlocfilehash: 86c23a2da0dca20bb6f755a9cb548c092180ef16
+ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198609"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58765498"
 ---
 # <a name="connect-to-sharepoint-from-a-canvas-app"></a>Yhdistäminen SharePoint-pohjaan perustuva sovellus
 
@@ -34,7 +34,7 @@ Muodosta yhteys SharePoint-sivustoon voit luoda sovelluksen automaattisesti muka
 Jos haluat mukautetun luettelon tietojen hallintaan, PowerApps voi [Luo kolmen näytön sovellus automaattisesti](../app-from-sharepoint.md). Käyttäjät voivat selata ensimmäisessä näytössä, Näytä kohteen tiedot toinen näyttö ja luoda tai päivittää kolmas näyttö-kohteita.
 
 > [!NOTE]
-> Jos SharePoint-luettelo sisältää **valinta**, **Lookup**, tai **henkilö tai ryhmä** sarakkeen, katso [tietojen näyttäminen valikoimassa](connection-sharepoint-online.md#show-data-in-a-gallery) jäljempänä tässä aiheessa.
+> Jos SharePoint-luettelo sisältää **valinta**, **Lookup**, tai **henkilö tai ryhmä** sarakkeen, katso [tietojen näyttäminen valikoimassa](connection-sharepoint-online.md#show-list-columns-in-a-gallery) jäljempänä tässä aiheessa.
 
 ## <a name="create-a-connection"></a>Luo yhteys
 

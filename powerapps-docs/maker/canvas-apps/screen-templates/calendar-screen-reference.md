@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: abf88db2bfb97a6541ee638ba8be5af27c20bc5f
-ms.sourcegitcommit: 5e15a1033a68289781f8092fb65c57432501f911
+ms.openlocfilehash: e3d5f40a604d2cbfa074ed5973d599c40a6c5c05
+ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459570"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58765579"
 ---
 # <a name="reference-information-about-the-calendar-screen-template-for-canvas-apps"></a>Lisätietoja pohjaan perustuvat sovellukset kalenterin näytön-malli
 
@@ -191,7 +191,7 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
     ```
 
     > [!NOTE]
-    > Määrityksiä  **\_firstDayOfMonth**,  **\_firstDayInView**, ja  **\_lastDayOfMonth** ovat lähes samat kuin - [kalenterin avattavasta](#calendar-dropdown) tämän ohjeaiheen osan.
+    > Määrityksiä  **\_firstDayOfMonth**,  **\_firstDayInView**, ja  **\_lastDayOfMonth** ovat lähes samat kuin - [kalenterin avattavasta](#calendar-drop-down) tämän ohjeaiheen osan.
 
     Kolme ensimmäistä riviä edellä oleva koodi, joka suoritetaan, kun käyttäjä valitsee nuolenkärjen seuraavan kuukauden, määritä muuttujia, jotka tarvitaan oikea kalenterinäkymä näyttämiseen. Jäljellä oleva koodi suoritetaan vain, jos käyttäjä ei ole valittu aiemmin tässä kuussa valittuun kalenteriin.
 
