@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 166fea9e02ebdaa490b400274c971f0c7268ec76
-ms.sourcegitcommit: e64344548d607767e495a6b9526900bb5975226a
+ms.openlocfilehash: 4640c1f3fcab1382ec70573cea2ac259cf8b2a30
+ms.sourcegitcommit: 5c098a62f66a2f33418967fdce9363bd529e0fc1
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330282"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58581066"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa PowerAppsissa
 
@@ -34,20 +34,20 @@ Seuraa kuluraportteja niiden lähettämisestä hyväksymiseen. Kirjaa nimikkeit�
 ![Kuluraportti-PowerAppsin näytön avaaminen](./media/expense-report-install/expense-report-powerapp.png)
 
 > [!TIP]
-> Katso [tästä](https://youtu.be/h6E9cdrOvMU) videosta, miten voit käyttää kuluraportti-PowerApps-mallia.
+> Katso [tästä](https://youtu.be/h6E9cdrOvMU) videosta, miten kuluraporttimallia käytetään.
 
 ## <a name="prerequisites"></a>Edellytykset
 
 - [Rekisteröidy](../signup-for-powerapps.md) PowerAppsiin.
 
-## <a name="create-the-expenses-sharepoint-list"></a>Kulujen SharePoint-luettelon luominen
+## <a name="create-the-expenses-list"></a>Kulut-luettelon luominen
 
 Tähän luetteloon tallennetaan kuluraportit.
 
-1. Avaa selain ja siirry kohteeseen https://admin.microsoft.com.
+1. Avaa verkkoselain ja siirry kohteeseen https://admin.microsoft.com.
 2. Kirjaudu sisään tilillä, jolla on oikeus luoda luetteloita.
 3. Siirry sivustokokoelmaan, johon haluat sijoittaa kululuettelon.
-4. Napsauta **hammaspyöräkuvaketta** verkkosivun yläosassa oikealla.
+4. Napsauta hammaspyöräkuvaketta verkkosivun yläosassa oikealla.
 5. Napsauta kohtaa **Lisää sovellus**.
 6. Syötä **Etsi sovellus** -tekstiruutuun **Mukautettu**.
 7. Napsauta **hakukuvaketta**.
@@ -55,19 +55,19 @@ Tähän luetteloon tallennetaan kuluraportit.
 9. Syötä **Nimi**-tekstiruutuun **Kulut**.
 
     > [!IMPORTANT]
-    > Jos valitset luettelolle eri nimen, muista kirjoittaa se ylös, sillä sinun täytyy korvata se Kulujen tilalle kaikkialla, missä näet sen asennus- ja määritysprosessin aikana.
+    > Jos valitset luettelolle eri nimen, muista kirjoittaa se ylös, sillä sinun täytyy korvata se Kulut-kohdan tilalle kaikkialla, missä näet sen asennus- ja määritysprosessin aikana.
 
 10. Napsauta **Luo**.
 
 ### <a name="create-cost-center-column"></a>Kustannuskeskus-sarakkeen luominen
 
 1. Napsauta **Kulut**-luetteloa.
-2. Napsauta **hammaspyöräkuvaketta** verkkosivun yläosassa oikealla.
+2. Napsauta hammaspyöräkuvaketta verkkosivun yläosassa oikealla.
 3. Napsauta **Luetteloasetukset**.
 4. Napsauta **Luo sarake**.
 5. Syötä **Sarakkeen nimi** -tekstikenttään**Kustannuskeskus**.
 6. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Valinta**.
-7. Syötä **Kirjoita kukin vaihtoehto omalle rivilleen** -tekstikenttään seuraavat arvot, kukin omalle rivilleen: 
+7. Syötä **Kirjoita kukin vaihtoehto omalle rivilleen** -tekstiruutuun seuraavat arvot, kukin omalle rivilleen: 
     - Microsoft
     - Contoso
 8. Syötä **Oletusarvo**-tekstiruutuun **Microsoft**.
@@ -76,7 +76,7 @@ Tähän luetteloon tallennetaan kuluraportit.
 ### <a name="create-comments-column"></a>Kommentit-sarakkeen luominen
 
 1. Napsauta **Luo sarake**.
-2. Syötä **Sarakkeen nimi** -tekstikenttään **Kommentit**.
+2. Syötä **Sarakkeen nimi** -tekstiruutuun **Kommentit**.
 3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Useita tekstirivejä**.
 4. Napsauta **OK**.
 
@@ -88,7 +88,7 @@ Tähän luetteloon tallennetaan kuluraportit.
 4. Napsauta **Luo sarake**.
 5. Syötä **Sarakkeen nimi** -tekstikenttään **Tila**.
 6. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Valinta**.
-7. Syötä **Kirjoita kukin vaihtoehto omalle rivilleen** -tekstikenttään seuraavat arvot, kukin omalle rivilleen: 
+7. Syötä **Kirjoita kukin vaihtoehto omalle rivilleen** -tekstiruutuun seuraavat arvot, kukin omalle rivilleen: 
     - Avaa
     - Odottaa
     - Hyväksytty
@@ -98,7 +98,7 @@ Tähän luetteloon tallennetaan kuluraportit.
 ### <a name="create-approvername-column"></a>ApproverName-sarakkeen luominen
 
 1. Napsauta **Luo sarake**.
-2. Syötä **Sarakkeen nimi** -tekstikenttään**ApproverName**.
+2. Syötä **Sarakkeen nimi** -tekstiruutuun **ApproverName**.
 3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Henkilö tai ryhmä**.
 4. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Kyllä**.
 5. Napsauta **OK**.
@@ -106,7 +106,7 @@ Tähän luetteloon tallennetaan kuluraportit.
 ### <a name="create-datesubmitted-column"></a>DateSubmitted-sarakkeen luominen
 
 1. Napsauta **Luo sarake**.
-2. Syötä **Sarakkeen nimi** -tekstikenttään **DateSubmitted**.
+2. Syötä **Sarakkeen nimi** -tekstiruutuun **DateSubmitted**.
 3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Päivämäärä ja aika**.
 4. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Kyllä**.
 5. Napsauta **OK**.
@@ -114,7 +114,7 @@ Tähän luetteloon tallennetaan kuluraportit.
 ### <a name="create-startdate-column"></a>StartDate-sarakkeen luominen
 
 1. Napsauta **Luo sarake**.
-2. Syötä **Sarakkeen nimi** -tekstikenttään **StartDate**.
+2. Syötä **Sarakkeen nimi** -tekstiruutuun **StartDate**.
 3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Päivämäärä ja aika**.
 4. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Kyllä**.
 5. Napsauta **OK**.
@@ -122,17 +122,17 @@ Tähän luetteloon tallennetaan kuluraportit.
 ### <a name="create-enddate-column"></a>EndDate-sarakkeen luominen
 
 1. Napsauta **Luo sarake**.
-2. Syötä **Sarakkeen nimi** -tekstikenttään **EndDate**.
+2. Syötä **Sarakkeen nimi** -tekstiruutuun **EndDate**.
 3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Päivämäärä ja aika**.
 4. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Kyllä**.
 5. Napsauta **OK**.
 
-## <a name="create-the-line-items-sharepoint-list"></a>Nimikkeiden SharePoint-luettelon luominen
+## <a name="create-the-lineitems-list"></a>LineItems-luettelon luominen
 
-Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
+Tähän luetteloon tallennetaan kuhunkin kuluraporttiin liittyvät rivikohteet.
 
 1. Siirry samaan sivustokokoelmaan, johon loit kululuettelon.
-2. Napsauta **hammaspyöräkuvaketta** verkkosivun yläosassa oikealla.
+2. Napsauta hammaspyöräkuvaketta verkkosivun yläosassa oikealla.
 3. Napsauta kohtaa **Lisää sovellus**.
 4. Syötä **Etsi sovellus** -tekstiruutuun **Mukautettu**.
 5. Napsauta **hakukuvaketta**.
@@ -140,14 +140,14 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 7. Syötä **Nimi**-tekstiruutuun **LineItems**.
 
     > [!IMPORTANT] 
-    > Jos valitset luettelolle eri nimen, muista kirjoittaa se ylös, sillä sinun täytyy korvata se Kulun tilalle kaikkialla, missä näet sen asennus- ja määritysprosessin aikana.
+    > Jos valitset luettelolle eri nimen, muista kirjoittaa se ylös, sillä sinun täytyy korvata se LineItems-kohdan tilalle kaikkialla, missä näet sen asennus- ja määritysprosessin aikana.
 
 8. Napsauta **Luo**.
  
 ### <a name="create-category-column"></a>Luokka-sarakkeen luominen
 
 1. Napsauta **LineItems**-luetteloa.
-2. Napsauta **hammaspyöräkuvaketta** verkkosivun yläosassa oikealla.
+2. Napsauta hammaspyöräkuvaketta verkkosivun yläosassa oikealla.
 3. Napsauta **Luetteloasetukset**.
 4. Napsauta **Luo sarake**.
 5. Syötä **Sarakkeen nimi** -tekstikenttään**Luokka**.
@@ -200,13 +200,13 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 2. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Ei**.
 3. Napsauta **OK**.
 
-## <a name="download-the-expense-report-powerapp"></a>Kuluraportti-PowerAppsin lataaminen
+## <a name="download-the-expense-report-app"></a>Kuluraporttisovelluksen lataaminen
 
-1.  Siirry selaimella seuraavaan linkkiin:
+1. Siirry selaimella seuraavaan linkkiin:
 
     [http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip).
 
-2.  Lataa Kuluraportti-PowerApps-mallipaketti ja tallenna se laitteeseesi.
+2. Lataa Kuluraportti-PowerApps-mallipaketti ja tallenna se laitteeseesi.
 
 ## <a name="create-connections"></a>Yhteyksien luominen
 
@@ -214,14 +214,14 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 2.  Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
 3.  Valitse vasemmasta valikosta **Yhteydet**.
 
-### <a name="create-approvals-connection"></a>Hyväksynnät-yhteyden luominen
+### <a name="create-an-approvals-connection"></a>Hyväksynnät-yhteyden luominen
 
-1.  Napsauta kohtaa **+ Uusi yhteys**.
+1.  Napsauta **+ Uusi yhteys**.
 2.  Syötä **Haku**-tekstikenttään **Hyväksynnät**.
 3.  Valitse luettelossa **Hyväksynnät**.
 4.  Napsauta **Luo**.
     
-### <a name="create-office-365-outlook-connection"></a>Luo Office 365 Outlook -yhteys
+### <a name="create-an-office-365-outlook-connection"></a>Office 365 Outlook -yhteyden luominen
 
 1.  Napsauta **+ Uusi yhteys**.
 2.  Syötä **Haku**-tekstikenttään **Office 365 Outlook**.
@@ -229,7 +229,7 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 4.  Napsauta **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
 
-### <a name="create-sharepoint-connection"></a>SharePoint-yhteyden luominen
+### <a name="create-a-sharepoint-connection"></a>SharePoint-yhteyden luominen
 
 1.  Napsauta **+ Uusi yhteys**.
 2.  Syötä **Haku**-tekstikenttään **SharePoint**.
@@ -237,151 +237,128 @@ Tähän luetteloon tallennetaan kuluraportteihin liittyvät nimikkeet.
 4.  Napsauta **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
 
-## <a name="import-the-expense-report-powerapp"></a>Kuluraportti-PowerAppsin tuominen
+## <a name="import-the-app"></a>Sovelluksen tuominen
 
 1. Siirry selaimella osoitteeseen https://web.powerapps.com.
-2. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
-3. Valitse vasemmasta valikosta **Sovellukset**. 
-4. Napsauta kohtaa **Tuo paketti (esikatselu)**.
-    
-   ![Tuo paketti -näyttö](./media/expense-report-install/import-package.png)
+1. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
+1. Valitse vasemmassa siirtymispalkissa **Sovellukset**, ja valitse sitten **Tuo paketti (esikatselu)**.
 
-5. Napsauta **Lataa palvelimeen**-painiketta ja valitse PowerApp-paketti, jonka latasit edellisten vaiheiden aikana.
-6. Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
-7. Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
-    
-   ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings.png)
+    ![Tuo paketti -näyttö](./media/expense-report-install/import-package.png)
 
-8. Napsauta **SharePoint-yhteyden** **punaista kuvaketta**.
-9. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+1. Valitse **Lataa**, ja valitse sitten paketti, jonka latasit aiemmin.
+1. Määritä **App**- ja **Flow**-resurssityypeille **Tuonnin määritykset** -arvoksi **Luo uusina**.
+1. Määritä **SharePoint**- ja **Outlook**-yhteyksille **Tuonnin määritykset** -arvoksi **Valitse tuonnin aikana**.
 
-   ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-sharepoint.png)
+    ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings.png)
 
-10. Napsauta **Tallenna**.
-11. Napsauta **Hyväksynnän yhteyden** **punaista kuvaketta**.
-12. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+1. Valitse punainen kuvake **SharePoint-yhteydelle**.
+1. Valitse Yhteydet-luettelossa kohde, jossa on käyttäjänimesi.
+
+    ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-sharepoint.png)
+
+1. Valitse **Tallenna**.
+1. Valitse punainen kuvake **hyväksyntäyhteydelle**.
+1. Valitse Yhteydet-luettelossa kohde, jossa on käyttäjänimesi.
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-approvals.png)
 
-13. Napsauta **Tallenna**.
-14. Napsauta **Office 365 Outlook -yhteyden** **punaista kuvaketta**.
-15. Napsauta yhteydet-luettelossa kohdetta, jossa on käyttäjänimesi.
+1. Valitse **Tallenna**.
+1. Valitse punainen kuvake **Office 365 Outlook -yhteydelle**.
+1. Valitse Yhteydet-luettelossa kohde, jossa on käyttäjänimesi.
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-office365outlook.png)
 
-16. Napsauta **Tallenna**.
+1. Valitse **Tallenna**.
 
     > [!TIP] 
     > Kun olet valmis, se näyttää tältä:
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-settings-done.png)
 
-17. Napsauta **Tuo** ja odota, kunnes prosessi on valmis.
+1. Napsauta **Tuo** ja odota sitten, kunnes prosessi on valmis.
 
     ![Tuonnin asetukset -näyttö](./media/expense-report-install/import-done.png)
 
-## <a name="configure-the-powerapp-to-use-the-sharepoint-lists"></a>Määritä PowerApp käyttämään SharePoint-luetteloa
+## <a name="configure-the-app-to-use-the-sharepoint-lists"></a>Sovelluksen määrittäminen käyttämään SharePoint-luetteloita
 
-1. Napsauta selaimessa kohtaa **Sovellukset**.
-2. Napsauta **kolmea pistettä** Kuluraportti-PowerAppsin vieressä.
-3. Napsauta **Muokkaa verkossa**.
-4. Napsauta **Salli**.
+1. Valitse verkkoselaimessa **Sovellukset**.
+2. Napsauta kolmea pistettä Kuluraportti-sovelluksen vieressä.
+3. Valitse **Muokkaa verkossa** > **Salli**.
 
 ### <a name="delete-connections"></a>Yhteyksien poistaminen
-1. Napsauta **Näkymä**.
-2. Napsauta **Tietolähteet**.
-3. Napsauta **Tiedot**-ruudussa **kolmea pistettä** kohdan **Kulut** vieressä.
-4. Napsauta **Poista**.
-5. Napsauta **Tiedot**-ruudussa **kolmea pistettä** kohdan **LineItems** vieressä.
-6. Napsauta **Poista**.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
+1. Valitse **Tiedot**-ruudussa kolme pistettä (...) **Kulut**-kohdan vieressä ja valitse sitten **Poista**.
+1. Toista edellinen vaihe, jotta voit poistaa **LineItems**- tietolähteen.
 
 ### <a name="expenses-list"></a>Kulut-luettelo
 
-1. Napsauta **Näkymä**.
-2. Napsauta **Tietolähteet**.
-3. Napsauta **Tiedot**-ruudussa **+ Lisää tietolähde**.
-4. Napsauta **+ Uusi yhteys**.
-5. Valitse **SharePoint**.
-6. Napsauta **Luo**.
-7. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit Kulut-luettelon.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
+1. Valitse **Tiedot**-ruudussa **Lisää tietolähde** > **Uusi yhteys** > **SharePoint** > **Luo**.
+1. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit Kulut-luettelon.
 
     > [!TIP] 
-    > Jos sivusto ei näy luettelossa, kirjoita SharePoint-sivuston URL-osoite tekstikenttään ja napsauta **Siirry**.
+    > Jos sivusto ei näy luettelossa, kirjoita tai liitä SharePoint-sivuston URL-osoite tekstiruutuun ja valitse sitten **Siirry**.
 
-8. Syötä luettelon yläosassa olevaan **Haku**-tekstikenttään **Kulut**.
-9. Valitse **Kulut**-luettelon vieressä oleva valintaruutu.
-10. Napsauta **Yhdistä**.
+1. Kirjoita tai liitä luettelon yläosassa olevaan **Haku**-ruutuun **Kulut**.
+1. Valitse **Kulut**-kohdan viereinen valintaruutu ja valitse sitten **Yhdistä**.
 
 ### <a name="lineitems-list"></a>LineItems-luettelo
 
-1. Napsauta **Näkymä**.
-2. Napsauta **Tietolähteet**.
-3. Napsauta **Tiedot**-ruudussa **+ Lisää tietolähde**.
-4. Napsauta **+ Uusi yhteys**.
-5. Valitse **SharePoint**.
-6. Napsauta **Luo**.
-7. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit LineItems-luettelon.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
+1. Valitse **Tiedot**-ruudussa **SharePoint**.
+1. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit LineItems-luettelon.
 
     > [!TIP] 
-    > Jos sivusto ei näy luettelossa, kirjoita SharePoint-sivuston URL-osoite tekstikenttään ja napsauta **Siirry**.
+    > Jos sivusto ei näy luettelossa, kirjoita tai liitä SharePoint-sivuston URL-osoite tekstiruutuun ja valitse sitten **Siirry**.
 
-8. Syötä luettelon yläosassa olevaan **Haku**-tekstikenttään **LineItems**.
-9. Valitse **LineItems**-luettelon vieressä oleva valintaruutu.
-10. Napsauta **Yhdistä**.
-11. Napsauta **Tiedosto**.
-12. Napsauta **Tallenna**.
-13. Napsauta **Julkaise**.
-14. Napsauta **Julkaise tämä versio**.
+1. Kirjoita tai liitä luettelon yläosassa olevaan **Haku**-ruutuun **LineItems**.
+1. Valitse **LineItems**-kohdan viereinen valintaruutu ja valitse sitten **Yhdistä**.
+1. Valitse **Tiedosto** > **Tallenna** > **Julkaise** > **Julkaise tämä versio**.
 
 ## <a name="modify-the-flow"></a>Työnkulun muokkaaminen
 
-1.  Valitse vasemmasta valikosta **Työnkulut**.
-2.  Jos sinua pyydetään kirjautumaan sisään, kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
-3.  Valitse yläreunan valikosta **Omat työnkulut**.
-4.  Napsauta **ApproveExpense**-työnkulun vieressä olevaa **kynäkuvaketta**.
- 
+1. Valitse vasemmassa siirtymispalkissa **Työnkulut**.
+1. Jos sinua pyydetään kirjautumaan sisään, anna samat tunnistetiedot, joita käytit rekisteröityessäsi.
+1. Valitse lähellä näytön yläreunaa **Omat työnkulut**.
+1. Valitse **ApproveExpense**-työnkulun vieressä kynäkuvake.
+
     ![Työnkulun muokkaaminen -näyttö](./media/expense-report-install/edit-flow.png)
 
-5.  Laajenna **Hae kohteet** -toiminto. 
-6.  Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan luomaasi Kuluraportti-SharePoint-luetteloa.
-    
+1. Laajenna **Hae kohteet** -toiminto. 
+1. Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan SharePointissa luomaasi Kulut-luetteloa.
+
     ![Työnkulun muokkaaminen -näyttö](./media/expense-report-install/edit-flow-getitems.png)
 
     > [!TIP] 
-    > Sinun ei tarvitse kirjoittaa manuaalisesti, voit valita sen avattavasta luettelosta.
+    > Sinun ei tarvitse kirjoittaa sitä manuaalisesti; voit valita sen avattavasta luettelosta.
 
-7.  Laajenna **Ehto**.
-8.  Laajenna **Jos kyllä** -kohtaa.
-9.  Laajenna **Vaihda kohteen tilaksi Hyväksytty** -toimintoa.
-10. Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan luomaasi Kuluraportti-SharePoint-luetteloa.
+1. Laajenna **Ehto**.
+1. Laajenna **Jos kyllä** -kohtaa.
+1. Laajenna **Vaihda kohteen tilaksi Hyväksytty** -toimintoa.
+1. Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan SharePointissa luomaasi Kulut-luetteloa.
 
     ![Työnkulun muokkaaminen -näyttö](./media/expense-report-install/edit-flow-condition-ifyes.png) 
 
     > [!TIP] 
-    > Sinun ei tarvitse kirjoittaa manuaalisesti, voit valita sen avattavasta luettelosta.
+    > Sinun ei tarvitse kirjoittaa sitä manuaalisesti; voit valita sen avattavasta luettelosta.
 
-11. Laajenna **Jos ei** -kohtaa.
-12. Laajenna **Vaihda kohteen tilaksi Avoin** -toimintoa.
-13. Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan luomaasi Kuluraportti-SharePoint-luetteloa. 
+1. Laajenna **Jos ei** -kohtaa.
+1. Laajenna **Vaihda kohteen tilaksi Avoin** -toimintoa.
+1. Muuta **Sivuston osoite** ja **Luettelonimi** vastaamaan SharePointissa luomaasi Kulut-luetteloa. 
 
     ![Työnkulun muokkaaminen -näyttö](./media/expense-report-install/edit-flow-condition-ifno.png)
 
     > [!TIP] 
-    > Sinun ei tarvitse kirjoittaa manuaalisesti, voit valita sen avattavasta luettelosta.
+    > Sinun ei tarvitse kirjoittaa sitä manuaalisesti; voit valita sen avattavasta luettelosta.
 
-14. Napsauta **Päivitä työnkulku**.
+14. Valitse **Päivitä työnkulku**.
 
-## <a name="play-the-powerapp"></a>Toista PowerApp
+## <a name="play-the-app"></a>Sovelluksen toistaminen
 
-1. Napsauta selaimessa kohtaa **Sovellukset**.
-2. Napsauta **kolmea pistettä** Kuluraportti-PowerAppsin vieressä.
-3. Napsauta **Avaa**.
-
+1. Valitse verkkoselaimessa **Sovellukset**.
+1. Valitse kolme pistettä (...) Kuluraportti-sovelluksen vieressä ja valitse sitten **Avaa**.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 - [SharePoint-luettelolomakkeen mukauttaminen](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
 - [Ohjausobjektin lisääminen ja määrittäminen](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-configure-controls)
-- [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/en-us/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
-
-
-
+- [SharePoint-luettelon tai -kirjaston käyttöoikeuksien muokkaaminen ja hallinta](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)

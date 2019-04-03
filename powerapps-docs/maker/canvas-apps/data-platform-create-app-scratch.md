@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0528d3324e85984e05b549f8b8ba282fdc1df4af
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 68c54838b613d0aa459833509cad57b49ade759a
+ms.sourcegitcommit: dd7659f9fe5161df6053a735781fdfb62bbea88e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356881"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58624255"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla
 
 Voit rakentaa pohjaan perustuvan sovelluksen, jolla hallitaan Common Data Servicessa säilytettäviä tietoja käyttämällä (sisäänrakennettuja) standardientiteettejä, (organisaatiosi luomia) mukautettuja entiteettejä tai kumpiakin.
 
-Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yhteyttä PowerAppsista, kuten on tarpeen tietolähteille SharePoint, Dynamics 365 ja Salesforce. Sinun tarvitsee vain määrittää sovellukselle entiteetit, joita haluat näyttää, hallita tai käyttää kummallekin toiminnalle.
+Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä PowerAppsista, kuten SharePointin, Dynamics 365:n tai Salesforcen kaltaisten tietolähteiden kanssa. Sinun on vain määritettävä entiteetit, jotka haluat näyttää tai joita haluat hallita sovelluksessa.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -36,37 +36,37 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 
 1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Vie hiiren osoitin **Tee oma sovelluksesi** -osiossa pohjaan perustuvien sovellusten **Aloita tyhjästä** -ruudun päälle. Napsauta tai napauta puhelinkuvaketta ja napsauta tai napauta sitten kohtaa **Tee tämä sovellus**.
+1. Valitse **Tee oma sovelluksesi** -kohdasta vaihtoehto **Pohjan sovellus tyhjästä**.
 
-    ![Tyhjän sovelluksen ruutu](./media/data-platform-create-app-scratch/start-from-blank.png)
+    ![Tyhjän sovelluksen ruutu](./media/data-platform-create-app-scratch/blank-app.png)
 
-    Voit suunnitella sovelluksen alusta alkaen puhelimille tai muille laitteille (kuten tableteille). Tässä aiheessa keskitytään puhelinsovelluksen luomiseen.
+1. Määritä sovelluksesi nimi, valitse **Puhelin** ja valitse sitten **Luo**.
+
+    Voit luoda sovelluksen alusta alkaen tableteille, mutta tässä aiheessa näytetään sovelluksen luominen puhelimille.
 
 ## <a name="specify-an-entity"></a>Entiteetin määritys
 
-1. Napsauta tai napauta näytön keskialueella olevaa kohtaa **yhdistä tietoihin** ja sitten napsauta tai napauta **Tiedot**-ruudun **Common Data Service** -yhteyttä.
+1. Valitse näytön keskellä **Yhdistä tietoihin**.
 
-1. Suodata entiteettiluetteloa kirjoittamalla tai liittämällä hakukenttään pari ensimmäistä kirjainta sanasta **Accounts**, valitse **Accounts**-valintaruutu ja napsauta tai napauta **Yhdistä**.
+1. Valitse **Tiedot**-ruudussa **Common Data Service**, valitse **Tilit**-valintaruutu ja valitse sitten **Yhdistä**.
 
-    ![Accounts-entiteetin määrittäminen](./media/data-platform-create-app-scratch/cds-connect.png)
-
-1. Sulje **Tiedot**-ruutu napsauttamalla tai napauttamalla oikean yläkulman sulkemiskuvaketta.
+1. Sulje **Tiedot**-ruutu valitsemalla oikean yläkulman sulkemiskuvake.
 
 ## <a name="add-a-list-screen"></a>Luettelonäytön lisääminen
 
-1. Napsauta tai napauta **Aloitus**-välilehdessä **Uusi näyttö** -kohdan alaspäin osoittavaa nuolta ja napsauta tai napauta **Luettelonäyttö**.
+1. Valitse **Aloitus**-välilehdessä **Uusi näyttö** -kohdan vieressä oleva alanuoli ja valitse sitten **Luettelo**.
 
     ![Luettelonäytön lisääminen](./media/data-platform-create-app-scratch/list-screen.png)
 
-1. Napsauta tai napauta vasemman siirtymäpalkin kohtaa **TemplateGalleryList1** ja aseta sen **Items**-ominaisuudeksi tämä kaava:
+1. Valitse vasemmassa siirtymäpalkissa **BrowseGallery1**-kohta ja aseta sen **Items**-ominaisuuden arvoksi tämä kaava:
 
     `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     Tämä kaava määrittää seuraavat:
 
    - Valikoiman tulee näyttää **Accounts**-entiteetin tietoja.
-   - Tiedot tulee järjestää nousevassa järjestyksessä, kunnes käyttäjä napsauttaa tai napauttaa lajittelupainiketta järjestyksen muuttamiseksi.
-   - Jos käyttäjä kirjoittaa tai liittää yhden tai useamman merkin hakukenttään, luettelo näyttää vain ne tilit, joiden nimikenttä sisältää käyttäjän määrittämät merkit.
+   - Tiedot tulee lajitella nousevassa järjestyksessä, kunnes käyttäjä valitsee lajittelupainikkeen lajittelujärjestyksen vaihtamiseksi.
+   - Jos käyttäjä kirjoittaa tai liittää yhden tai useamman merkin hakuriville (**TextSearchBox1**), luettelo näyttää vain ne tilit, joiden **nimikenttä** sisältää käyttäjän määrittämät merkit.
 
      Voit käyttää [näitä ja monia muita funktioita](formula-reference.md) määrittämään sovelluksen ulkoasua ja toimintaa.
 
@@ -76,9 +76,9 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 
     ![Selaa-näyttö](./media/data-platform-create-app-scratch/final-browse.png)
 
-1. Siirrä hiiren osoitin kohdan **Screen1** päälle, napsauta tai napauta kolmea pistettä (...) ja napsauta tai napauta **Poista**.
+1. Liikuta hiirtä vasemmassa siirtymispalkissa **Screen1**-kohdan yläpuolella, valitse kolmen pisteen kuvake (...) ja valitse sitten **Poista**.
 
-1. Siirrä hiiren osoitin kohdan **Screen2** päälle, napsauta tai napauta kolmea pistettä (...) ja napsauta tai napauta **Nimeä uudelleen**.
+1. Liikuta hiirtä vasemmassa siirtymispalkissa **Screen2**-kohdan yläpuolella, valitse kolmen pisteen kuvake (...) ja valitse sitten **Nimeä uudelleen**.
 
 1. Kirjoita tai liitä nimi **BrowseScreen** ja sitten anna näytön valikoiman nimeksi **BrowseGallery**.
 
@@ -86,20 +86,24 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 
 ## <a name="add-a-form-screen"></a>Lomakenäytön lisääminen
 
-1. Toista edellisen toimintosarjan ensimmäinen kohta, mutta lisää **Luettelonäytön** sijasta **Lomakenäyttö**.
+1. Toista edellisen toimintosarjan ensimmäinen vaihe, mutta lisää **Luettelonäytön** sijasta **Lomakenäyttö**.
 
-1. Aseta lomakkeen **DataSource**-ominaisuudeksi **Accounts** ja sen **Item**-ominaisuudeksi **BrowseGallery.Selected** kuten oikeanpuoleisen **Lisäasetukset-välilehdessä** näytetään.
+1. Aseta lomakkeen **DataSource**-ominaisuudeksi **Accounts** ja sen **Item**-ominaisuudeksi **BrowseGallery.Selected** kuten oikeanpuoleisen ruudun **Lisäasetukset**-välilehdessä on näytetty.
 
     ![Lomakkeen Datasource- ja Item-ominaisuuden asettaminen](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. Napsauta tai napauta oikeanpuoleisen ruudun **Ominaisuudet**-välilehteä, napsauta tai napauta **Accounts**, niin **Tiedot**-ruutu avautuu, ja valitse seuraavien kenttien valintaruudut:
+1. Valitse oikeanpuoleisen ruudun **Ominaisuudet**-välilehdessä **Muokkaa kenttiä**, jotta voit valita **Kentät**-ruudun.
 
-    - Tilin nimi
-    - Osoite 1: Katuosoite 1
-    - Osoite 1: Postitoimipaikka
-    - Osoite 1: Postinumero
-    - Työntekijöiden määrä
-    - Vuosittainen tuotto
+1. Valitse **Lisää kenttä**, ja valitse sitten seuraavien kenttien valintaruudut:
+
+    - **Tilin nimi**
+    - **Osoite 1: Katuosoite 1**
+    - **Osoite 1: Kaupunki**
+    - **Osoite 1: Postinumero**
+    - **Työntekijöiden määrä**
+    - **Vuosittainen tuotto**
+
+1. Valitse **Lisää**.
 
 1. Aseta otsikkopalkin **Text**-ominaisuudeksi **Luo/Muokkaa**.
 
@@ -111,37 +115,37 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 
 ## <a name="configure-icons"></a>Kuvakkeiden määritys
 
-1. Napsauta tai napauta **BrowseScreen**-näytöllä ympyränmuotoista kuvaketta näytön yläosassa ja aseta sen **OnSelect**-ominaisuudeksi tämä kaava:
+1. Aseta **BrowseScreen**-kohdassa näytön yläosan pyöreän kuvakkeen lähellä olevan **OnSelect**-ominaisuudeksi tämä kaava:
 
     `Refresh(Accounts)`
 
     ![Päivitä-kuvake](./media/data-platform-create-app-scratch/refresh-icon.png)
 
-1. Napsauta tai napauta plus-kuvaketta ja aseta sen **OnSelect**-ominaisuudeksi tämä kaava:
+1. Aseta plus-kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
     `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Lisäämiskuvake](./media/data-platform-create-app-scratch/plus-icon.png)
 
-1. Napsauta tai napauta ensimmäistä oikealle osoittavaa nuolta ja aseta sen **OnSelect**-ominaisuudeksi tämä kaava:
+1. Aseta ensimmäisen oikealle osoittavan nuolen **OnSelect**-ominaisuudeksi tämä kaava:
 
     `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Seuraava-kuvake](./media/data-platform-create-app-scratch/next-icon.png)
 
-1. Napsauta tai napauta **FormScreen**-näytöllä peruutuskuvaketta ja aseta sen **OnSelect**-ominaisuudeksi tämä kaava:
+1. Aseta **FormScreen**-kohdassa peruutuskuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
     `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Peruutuskuvake](./media/data-platform-create-app-scratch/cancel-icon.png)
 
-1. Napsauta tai napauta valintamerkkikuvaketta ja aseta sen **OnSelect**-ominaisuudeksi tämä kaava:
+1. Aseta valintamerkkikuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
     `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Valintamerkkikuvake](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
-1. Napsauta tai napauta **Lisää**-välilehdessä **Kuvakkeet** ja napsauta tai napauta **Roskakori**-kuvaketta.
+1. Valitse **Lisää**-välilehdessä **Kuvakkeet** ja valitse sitten **Roskakori**-kuvake.
 
 1. Aseta **Roskakori**-kuvakkeen **Color**-ominaisuudeksi **White** ja sen **OnSelect**-ominaisuudeksi tämä kaava:
 
@@ -151,11 +155,11 @@ Kun rakennat sovelluksen Common Data Servicen avulla, sinun ei tarvitse luoda yh
 
 ## <a name="test-the-app"></a>Sovelluksen testaus
 
-1. Valitse vasemmanpuoleiselta siirtymäpalkilta **BrowseScreen** ja avaa Esikatselu painamalla F5-näppäintä (tai napsauttamalla tai napauttamalla Toista-kuvaketta lähellä oikeaa yläkulmaa).
+1. Valitse vasemmanpuoleisessa siirtymispalkissa **BrowseScreen**-kohta ja avaa sitten Esikatselu painamalla F5-näppäintä (tai valitsemalla Toista-kuvake lähellä oikeaa yläkulmaa).
 
     ![Esikatselun avaaminen](./media/data-platform-create-app-scratch/open-preview.png)
 
-1. Vaihda luettelon lajittelujärjestystä nousevan ja laskevan välillä ja suodata luetteloa syöttämällä tilien nimien sisältämiä merkkejä.
+1. Vaihda luettelon lajittelujärjestystä nousevan ja laskevan välillä, ja suodata luetteloa syöttämällä tilin nimen sisältävä yksi tai useampi merkki.
 
 1. Lisää tili, muokkaa lisäämääsi tiliä ja aloita tilin päivittäminen, mutta sitten peruuta muutokset ja poista tili.
 

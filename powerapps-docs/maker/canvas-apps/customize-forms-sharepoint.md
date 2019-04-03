@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bb6f8edb35bd6f19bff06516f6fb9d22de1320a0
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 1a6465a00f135489d594bad75b8a25942e05dd25
+ms.sourcegitcommit: f4b71ea0996603b3358377a0da21b9e4428a287c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42852665"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870927"
 ---
 # <a name="customize-a-canvas-app-form-in-powerapps"></a>Pohjaan perustuvan sovelluksen lomakkeen mukauttaminen PowerAppsissa
 
@@ -26,7 +26,7 @@ Mukauta pohjaan perustuvassa sovelluksessa **Näytä lomake**- ja **Muokkaa loma
 
 Jokainen lomake käsittää yhden tai useampia kortteja, joista jokainen näyttää tiedot tietolähteen tietystä sarakkeesta. Noudattamalla tämän artikkelin ohjeita voit määrittää, mitkä kortit näkyvät lomakkeessa, ja voit siirtää kortteja ylös ja alas lomakkeessa.
 
-Jos et tunne PowerAppsia, katso [PowerAppsin johdanto](getting-started.md).
+Jos et tunne pohjaan pps, katso [mitä ovat pohjaan perustuvat sovellukset?](getting-started.md).
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -34,84 +34,94 @@ Jos et tunne PowerAppsia, katso [PowerAppsin johdanto](getting-started.md).
 
 ## <a name="show-and-hide-cards"></a>Korttien näyttäminen ja piilottaminen
 
-1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Kirjaudu sisään [Powerappsin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), ja Avaa luomasi ja mukauttamasi sovellus.
 
-    ![PowerApps-sivuston aloitussivu](./media/customize-forms-sharepoint/sign-in.png)
+1. Vasemmassa siirtymispalkissa, kirjoita tai liitä **D** hakukenttään elementtien luettelo ja valitse sitten **DetailForm1**.
 
+    > [!div class="mx-imgBorder"]
+    > ![Valitse tiedot-näyttö](./media/customize-forms-sharepoint/select-detailform.png)
 
-1. Avaa luomasi ja mukauttamasi sovellus.
+1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä** avaamiseen **kentät** ruudussa.
 
-1. Suodata elementtilistaa kirjoittamalla tai liittämällä **D** vasemman siirtymispalkin etsintäpalkkiin ja valitse sitten **DetailForm1** napsauttamalla tai napauttamalla sitä.
+    > [!div class="mx-imgBorder"]
+    > ![Avaa kentät-ruudussa](./media/customize-forms-sharepoint/edit-fields.png)
 
-    ![Valitse tiedot-näyttö](./media/customize-forms-sharepoint/select-detailform.png)
+1. Piilota kenttä, kuten **kuvaus**, hiiren osoitin sen päälle, valitsemalla kolme pistettä (...), joka näkyy ja valitsemalla sitten **poistaa**.
 
-1. Napsauta tai napauta oikeanpuoleisessa ruudussa **Tilit**-näppäintä näyttääksesi **tietoruudun**.
+    > [!div class="mx-imgBorder"]
+    > ![Kenttäluettelo](./media/customize-forms-sharepoint/hide-fields.png)
 
-    ![Näytä tietoruutu](./media/customize-forms-sharepoint/show-data-pane.png)
+1. Näytä kentän valitsemalla **Lisää kenttä**, kirjoittamalla tai liittämällä kentän nimi muutama ensimmäinen hakuruutuun, valitsemalla kentän ja valitsemalla sitten **Lisää**.
 
-1. Tyhjennä **tietoruudun** **Ensisijainen yhteyshenkilö**-, **Kuvaus**- ja **Osoite 1: Katu 2** -valintaruudut piilottaaksesi kyseiset kentät.
-
-    ![Kenttäluettelo](./media/customize-forms-sharepoint/hide-fields.png)
-
-1.  Näytä **tietoruudun** **Osoite 1: Postinumero** -valintaruutu valitsemalla se.
-
-    ![Kenttäluettelo](./media/customize-forms-sharepoint/show-field.png)
+    > [!div class="mx-imgBorder"]
+    > ![Kenttäluettelo](./media/customize-forms-sharepoint/show-field.png)
 
 ## <a name="reorder-the-cards"></a>Järjestä kortit uudelleen
-1. Vedä **tietoruudun** **Tilin nimi** -kenttä kenttäluettelon ylimmäiseksi.
 
-    ![Siirrä kortti](./media/customize-forms-sharepoint/move-card.png)
+1. - **Kentät** ruudussa tietokenttä **tilin nimi** kentän kenttäluettelossa yläreunaan.
 
-    Samat muutokset näkyvät **DetailForm1**:n korteissa.
+    Korttien **DetailForm1** muutoksen.
 
-    ![Uudelleen järjestetyt kortit](./media/customize-forms-sharepoint/reordered-card.png)
+    > [!div class="mx-imgBorder"]
+    > ![Uudelleen järjestetyt kortit](./media/customize-forms-sharepoint/reordered-card.png)
 
-1. Järjestä muut kortit uudelleen tähän järjestykseen:
+1. (valinnainen) Järjestä muut kortit uudelleen tähän järjestykseen:
 
     - Tilin nimi
-    - Osoite 1: Katu 1
-    - Osoite 1: Kaupunki
-    - Osoite 1: Postinumero
     - Työntekijöiden määrä
     - Vuosittainen tuotto
+    - Ensisijainen puhelin
+    - Osoite 1: Katuosoite 1
+    - Osoite 1: Katuosoite 2
+    - Osoite 1: Postitoimipaikka
+    - Osoite 1: Postinumero
 
-1. Kirjoita tai liitä **Ed** vasemmanpuoleiseen siirtymispalkkiin ja valitse sitten **EditForm1** napsauttamalla tai napauttamalla sitä.
+1. Vasemmassa siirtymispalkissa, kirjoita tai liitä **Ed** Etsi ja valitse sitten **EditForm1** sitä.
 
 1. Toista edellisen ja nykyisen toimintosarjan vaiheet, jotta **EditForm1**:n kentät vastaavat **DetailForm1**:n kenttiä.
 
 ## <a name="run-the-app"></a>Sovelluksen suorittaminen
-1. Kirjoita tai liitä **Br** vasemmanpuoleiseen siirtymispalkkiin ja valitse sitten **BrowseScreen1** napsauttamalla tai napauttamalla sitä.
 
-2. Avaa esikatselutila painamalla F5-näppäintä (tai valitsemalla **Esikatselu**-kuvake oikean yläkulman läheltä).
+1. Vasemmassa siirtymispalkissa, kirjoita tai liitä **Br** Etsi ja valitse sitten **BrowseScreen1** sitä.
 
-    ![Esikatselun kuvake](./media/customize-forms-sharepoint/open-preview.png)
+1. Avaa esikatselutila painamalla F5-näppäintä (tai valitsemalla **Esikatselu**-kuvake oikean yläkulman läheltä).
 
-3. Napsauttamalla tai napauttamalla oikeassa yläkulmassa sijaitsevaa plus-kuvaketta voit lisätä tietueen **EditScreen1**:een.
+    > [!div class="mx-imgBorder"]
+    > ![Esikatselukuvake](./media/customize-forms-sharepoint/open-preview.png)
 
-    ![Tietueen lisääminen](./media/customize-forms-sharepoint/add-record.png)
+1. Valitse oikeassa yläkulmassa plus-kuvaketta voit lisätä tietueen **EditScreen1**.
 
-4. Lisää haluamasi tiedot ja napsauta tai napauta valintamerkkikuvaketta oikeassa yläkulmassa tallentaaksesi muutokset ja palataksesi **BrowseScreen1**:een.
+    > [!div class="mx-imgBorder"]
+    > ![Tietueen lisääminen](./media/customize-forms-sharepoint/add-record.png)
 
-    ![Tietueen tallentaminen](./media/customize-forms-sharepoint/save-record.png)
+1. Lisää haluamasi tiedot ja valitse sitten valintamerkkikuvaketta oikeassa yläkulmassa tallentaaksesi muutokset ja palaa **BrowseScreen1**.
 
-5. Napsauta tai napauta juuri laatimasi kohteen nuolta tuodaksesi näkyviin tietoja kyseisestä kohteesta **DetailScreen1**:ssä.  
+    > [!div class="mx-imgBorder"]
+    > ![Tietueen tallentaminen](./media/customize-forms-sharepoint/save-record.png)
 
-    ![Oikea nuoli](./media/customize-forms-sharepoint/right-arrow.png)
+1. Valitse nuoli-kohteen, jonka loit äsken näyttää tietoja kyseisestä kohteesta **DetailScreen1**.
 
-6. Napsauta tai napauta oikeassa yläkulmassa sijaitsevaa muokkauskuvaketta päivittääksesi tietueen **EditScreen1**:ssä.
+    > [!div class="mx-imgBorder"]
+    > ![Oikea nuoli](./media/customize-forms-sharepoint/right-arrow.png)
 
-    ![Tietueen muokkaaminen](./media/customize-forms-sharepoint/edit-record.png)
+1. Valitse oikeassa yläkulmassa sijaitsevaa muokkauskuvaketta päivittääksesi tietueen **EditScreen1**.
 
-7. Muuta yhden tai useamman kentän tietoja ja napsauta tai napauta oikeassa yläkulmassa sijaitsevaa valintamerkkiä tallentaaksesi muutokset SharePoint-luetteloon ja palataksesi **DetailScreen1**:een.  
+    > [!div class="mx-imgBorder"]
+    > ![Tietueen muokkaaminen](./media/customize-forms-sharepoint/edit-record.png)
 
-    ![Tallenna muutokset](./media/customize-forms-sharepoint/save-record.png)
+1. Muuta yhden tai useamman kentän tietoja ja valitse sitten valintamerkkiä oikeassa yläkulmassa tallentaaksesi muutokset ja palaa **DetailScreen1**.
 
-8. Napsauttamalla tai napauttamalla oikean yläkulman lähellä sijaitsevaa roskakorikuvaketta voit poistaa juuri päivittämäsi tietueen ja palata **BrowseScreen1**:een.
+    > [!div class="mx-imgBorder"]
+    > ![Muutosten tallentaminen](./media/customize-forms-sharepoint/save-record.png)
 
-    ![Tietueen poistaminen](./media/customize-forms-sharepoint/delete-record.png)
+1. Valitse oikeassa yläkulmassa roskakorikuvaketta voit poistaa juuri päivittämäsi tietueen ja palata **BrowseScreen1**.
 
-9. Sulje esikatselutila painamalla ESC-näppäintä (tai napsauttamalla tai napauttamalla vasemmassa yläkulmassa sijaitsevaa sulje-kuvaketta).
+    > [!div class="mx-imgBorder"]
+    > ![Tietueen poistaminen](./media/customize-forms-sharepoint/delete-record.png)
+
+1. Sulje esikatselutila painamalla ESC-näppäintä (tai valitsemalla vasemmassa yläkulmassa sijaitsevaa Sulje-kuvaketta).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
+
 - [Tallenna ja julkaise](save-publish-app.md) sovelluksesi.
 - [Mukauta korttia](customize-card.md) sovelluksessasi.

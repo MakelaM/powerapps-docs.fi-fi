@@ -1,6 +1,6 @@
 ---
-title: Kortin mukauttaminen | Microsoft Docs
-description: Muuta kortilla oletuksena näytettävää ohjausobjektia Tiedot- tai Muokkaa-lomakkeessa PowerAppsissa
+title: Pohjaan perustuvan sovelluksen kortin mukauttaminen | Microsoft Docs
+description: Muuta oletuksena näytettävää ohjausobjektia tiedot-kortin tai Muokkaa lomaketta pohjaan perustuvassa sovelluksessa
 author: AFTOwen
 manager: kvivek
 ms.service: powerapps
@@ -13,80 +13,70 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 31c0810b9da5a52bcd5cc3b28b6def858541e15b
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: ddc1c677ed95caf10d8cd6e0e7e12e6aaf88a0f5
+ms.sourcegitcommit: f4b71ea0996603b3358377a0da21b9e4428a287c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42841782"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870904"
 ---
-# <a name="customize-a-card-in-powerapps"></a>Kortin mukauttaminen PowerAppsissa
+# <a name="customize-a-card-in-a-canvas-app"></a>Pohjaan perustuvan sovelluksen kortin mukauttaminen
+
 Voit suorittaa kortille perustason mukautuksia (poistamatta kortin lukitusta) esimerkiksi vaihtamalla sen ohjausobjektia. Edistyneitä mukautuksia varten kortin lukitus täytyy poistaa. Näihin kuuluu esimerkiksi sellaisen ohjausobjektin lisääminen, joka ei ole oletuksena käytettävissä kyseiselle kortille.
 
 Katso yleiskatsaus aiheesta [Tutustu tietokortteihin](working-with-cards.md).
 
 ## <a name="prerequisites"></a>Edellytykset
 
-* Lue, kuinka [voit lisätä ja määrittää ohjausobjekteja](add-configure-controls.md).
-* Voit tarkastella vain tämän aiheen yleisiä käsitteitä, tai voit seurata sitä täsmällisesti suorittamalla näiden aiheiden vaiheet:
+- Lue, kuinka [voit lisätä ja määrittää ohjausobjekteja](add-configure-controls.md).
+- Voit tarkastella tämän aiheen yleisiä käsitteitä tai vaihtoehtoisesti seurata vaihe vaiheelta toimit näiden aiheiden vaiheet toimintosarjoja:
 
-  1. [Sovelluksen luominen](data-platform-create-app.md).
-  2. [Valikoiman mukauttaminen](customize-layout-sharepoint.md).
-  3. [Lomakkeiden mukauttaminen](customize-forms-sharepoint.md).
+    1. [Sovelluksen luominen](data-platform-create-app.md).
+    1. [Valikoiman mukauttaminen](customize-layout-sharepoint.md).
+    1. [Lomakkeiden mukauttaminen](customize-forms-sharepoint.md).
 
 ## <a name="customize-a-locked-card"></a>Lukitun kortin mukauttaminen
-Tässä prosessissa korvaat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektin **[Liukusäädin](controls/control-slider.md)**-ohjausobjektilla poistamatta kortin lukitusta.
 
-1. Kirjaudu sisään [PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+Tässä toimenpiteessä korvaat **[tekstisyötteen](controls/control-text-input.md)** ohjausobjektin **[liukusäätimen] (ohjausobjekteja/ohjausobjektin-slider.md** ohjausobjektilla poistamatta kortin.
 
-    ![PowerAppsin aloitussivu](./media/customize-card/sign-in.png)
+1. Valitse luomasi ja mukauttamasi sovellus **EditForm1** vasemmassa siirtymisruudussa ja valitse sitten **Muokkaa kenttiä** , **ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
 
-1. Avaa luomasi ja mukauttamasi sovellus, valitse **EditForm1** ja sitten avaa **Tiedot**-ruutu valitsemalla oikeasta ruudusta **Accounts**.
+1. Valitse kentät-luettelosta alanuolta **työntekijöiden määrä**, ja Avaa luettelo kohdassa **ohjausobjekti tyyppi**.
 
-1. Avaa vaihtoehtoluettelo valitsemalla luettelokentistä kohdan **Number of Employees** alaspäin osoittava nuoli ja valitse **Muokkaa liukusäädintä**.
+    > [!div class="mx-imgBorder"]
+    > ![Avattava asetusluettelo numerokortille](./media/customize-card/card-selector.png)
 
-    ![Avattava asetusluettelo numerokortille](./media/customize-card/card-selector.png)
+1. Valitse **Muokkaa liukusäädintä**.
 
     Näyttö päivittyy muutoksen mukaisesti.
 
-    ![EditForm1 liukusäätimellä](./media/customize-card/add-slider.png)
+    > [!div class="mx-imgBorder"]
+    > ![EditForm1 liukusäätimellä](./media/customize-card/add-slider.png)
 
 ## <a name="unlock-and-customize-a-card"></a>Kortin lukituksen poistaminen ja mukauttaminen
-Tässä prosessissa poistetaan kortin lukitus ja **[Kytkin](controls/control-toggle.md)**-ohjausobjekti korvataan **[Valintaruutu](controls/control-check-box.md)**-ohjausobjektilla.
 
-1. Näytä **EditForm1:ssä** **Send Marketing Materials** -kenttä.
+Tässä toimenpiteessä poistetaan kortin lukitus ja päivittää **Max** -ominaisuuden **liukusäätimen** juuri lisäämäsi ohjausobjektin.
 
-    ![Send Marketing Materials -kentän näyttäminen](./media/customize-card/show-field.png)
+1. - **EditForm1**, valitse **liukusäätimen** ohjausobjektia **työntekijöiden määrä** kortti.
 
-2. Kun kortti on valittuna, avaa kortin lukitus napsauttamalla tai napauttamalla oikean ruudun yläosan kohtaa **Lisäasetukset** ja napsauta tai napauta lukkokuvaketta.
+    > [!div class="mx-imgBorder"]
+    > ![Valitse liukusäädin](./media/customize-card/select-slider.png)
 
-    ![Send Marketing Materials -kentän näyttäminen](./media/customize-card/unlock-card.png)
+1. Valitse **lisäasetukset** välilehti oikeanpuoleisessa ruudussa Valitse Avaa kortin lukitus lukkokuvaketta.
 
-1. Poista kortista **Kytkin**-ohjausobjekti, lisää **Valintaruutu**-ohjausobjekti ja anna sille nimeksi **chkMktg**.
+    > [!div class="mx-imgBorder"]
+    > ![Kortin lukituksen avaaminen](./media/customize-card/lock-icon.png)
 
-    ![Kytkimen korvaaminen valintaruudulla](./media/customize-card/add-checkbox.png)
+1. Määritä **Max** -ominaisuuden **liukusäätimen** ohjausobjektin 10 000.
 
-1. Valitse kortti, jonka juuri päivitit.
+    > [!div class="mx-imgBorder"]
+    > ![Suurin-ominaisuus Lisäasetukset-välilehdessä](./media/customize-card/max-property.png)
 
-    ![Kortin valinta](./media/customize-card/select-card.png)
+    **Liukusäätimen** ohjausobjekti näyttää tarkemman arvon.
 
-1. Varmista, että oikeassa ruudussa on edelleen valittuna **Lisäasetukset**-välilehti ja napsauta tai napauta kohtaa **Enemmän vaihtoehtoja**.
-
-    ![Enemmän vaihtoehtoja -painike](./media/customize-card/more-options.png)
-
-1. Vaihda kortin **Update**-ominaisuudeksi tämä kaava:
-<br>`chkMktg.Value`
-
-1. Vaihda kortin virheviestin **Y**-ominaisuuden arvoksi tämä kaava:<br>
-`chkMktg.Y + chkMktg.Height`
-
-    ![Virheviestin valinta uudelle kortille](./media/customize-card/select-error.png)
-
-1. Vaihda **chkMktg:n** **Text**-ominaisuudeksi **Kyllä**.
-
-    Näyttö päivittyy muutosten mukaisesti ja virheet ratkaistaan.
-
-    ![Lopullinen ruutu virheet ratkaistuina](./media/customize-card/final-screen.png)
+    > [!div class="mx-imgBorder"]
+    > ![Liukusäätimen alue: 0-10,000](./media/customize-card/final-slider.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
+
 Nyt kun ymmärrät sovelluksen luomisen sekä valikoiman, lomakkeen ja kortin mukauttamisen, voit [luoda oman sovelluksen alusta alkaen](data-platform-create-app-scratch.md).
