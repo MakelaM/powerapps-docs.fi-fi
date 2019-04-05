@@ -1,30 +1,32 @@
 ---
 title: SharePoint-yhteyden yleiskatsaus | Microsoft Docs
-description: Katso SharePointin käytettävissä olevat funktiot, vastaukset ja esimerkit
+description: Katso SharePointin käytettävissä olevat Funktiot, vastaukset ja esimerkit.
 author: NickWaggoner
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 07/12/2017
+ms.date: 04/03/2019
 ms.author: niwaggon
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 86c23a2da0dca20bb6f755a9cb548c092180ef16
-ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
+ms.openlocfilehash: 65ce3b7736b55f3734d6da7d945965ed791a3ce4
+ms.sourcegitcommit: 4fe0a71efd54c1f4d22a279aa74c6bde3d908b9d
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58765498"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59007885"
 ---
 # <a name="connect-to-sharepoint-from-a-canvas-app"></a>Yhdistäminen SharePoint-pohjaan perustuva sovellus
 
 ![SharePoint](./media/connection-sharepoint-online/sharepointicon.png)
 
 Muodosta yhteys SharePoint-sivustoon voit luoda sovelluksen automaattisesti mukautetun luettelon tai muodosta yhteys, ennen kuin tietojen lisääminen olemassa olevan sovelluksen tai sovelluksen luominen alusta alkaen.
+
+Voi kestää jompikumpi tai molemmat sopiva tapa sen mukaan, jossa tiedot sijaitsee:
 
 - Näytä tietoja mukautetun luettelon SharePoint Online-sivustossa tai paikallisen sivustossa.
 - Kuvien näyttäminen ja toistaa video- tai (vain SharePoint Online) kirjaston tiedostoja.
@@ -96,7 +98,7 @@ Jos haluat mukautetun luettelon tietojen hallintaan, PowerApps voi [Luo kolmen n
     > [!div class="mx-imgBorder"]
     > ![Valitse luettelo Valitse tiedostot-valintaruutu tai yksi tai useampi luettelo, jota haluat käyttää ja valitse sitten Yhdistä](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Kaikkia luettelotyyppejä ei näytetä oletuksena. PowerApps tukee mukautettuja luetteloita mutta ei mallipohjaisia luetteloita.  Jos käytettävän luettelon nimeä ei näy, vieritä näkymä alas ja kirjoita luettelon nimi laatikkoon, jossa lukee **Anna mukautettu luettelon nimi**.
+    Kaikkia luettelotyyppejä ei näytetä oletuksena. PowerApps tukee mukautettuja luetteloita mutta ei mallipohjaisia luetteloita. Jos haluat käyttää luettelon nimeä ei näy, vieritä alas ja kirjoita sitten ruutuun, joka sisältää luettelon nimi **Anna mukautetun taulukkonimi**.
 
     > [!div class="mx-imgBorder"]
     > ![Kirjoita luettelon nimi ruutu, joka sisältää Anna mukautettu Luettelonimi.](./media/connection-sharepoint-online/custom-list.png)
@@ -111,20 +113,20 @@ Ota käyttöön-käsitteitä [sovelluksen luominen alusta alkaen](../get-started
 
 Jos mukautettu luettelo sisältää kaikki tällaiset sarakkeet, Näytä, että tiedot **valikoiman** ohjausobjektiin kaavarivin avulla voit määrittää **tekstin** ominaisuuden yhden tai useamman **nimen** asettamiseen kyseisessä valikoimassa:
 
-- Jos käytät **Valinta**- tai **Haku**-saraketta, määritä **ThisItem.[ColumnName].Value** tietojen näyttämiseksi tässä sarakkeessa.
+- Varten **valinta** tai **Lookup** saraketta, Määritä **ThisItem.** _ColumnName_**. Arvo** näyttämään tiedot kyseisessä sarakkeessa.
 
     Määritä esimerkiksi **ThisItem.Location.Value**, jos sinulla on **Valinta**-sarake, jonka nimi on **Location**, ja määritä **ThisItem.PostalCode.Value**, jos sinulla on **Haku**-sarake, jonka nimi on **PostalCode**.
 
-- Jos käytät **Henkilö tai ryhmä** -saraketta, määritä **ThisItem.[ColumnName].DisplayName** käyttäjän tai ryhmän näyttönimen näyttämiseksi.
+- Varten **henkilö tai ryhmä** saraketta, Määritä **ThisItem.** _ColumnName_**. DisplayName** näyttämään käyttäjän tai ryhmän näyttönimi.
 
     Määritä esimerkiksi **ThisItem.Manager.DisplayName** näyttämään näyttönimet **Henkilö tai ryhmä** -sarakkeesta, jonka nimi on **Manager**.
 
-    Voit myös näyttää erilaista tietoa käyttäjistä, kuten sähköpostiosoitteet tai työnimikkeet. Voit näyttää luettelon kaikista valinnoista määrittämällä **ThisItem.[ColumnName].** (piste lopussa).
+    Voit myös näyttää erilaista tietoa käyttäjistä, kuten sähköpostiosoitteet tai työnimikkeet. Voit näyttää luettelon kaikista valinnoista määrittämällä **ThisItem.** _ColumnName_**.** (mukaan lukien lopussa ajan).
 
     > [!NOTE]
     > Varten **CreatedBy** saraketta, Määritä **ThisItem.Author.DisplayName** näyttämään luettelossa kohteita luoneiden käyttäjien näyttönimet. Jos käytät **ModifiedBy**-saraketta, määritä **ThisItem.Editor.DisplayName** näyttämään luettelon kohteita muuttaneiden käyttäjien näyttönimet.
 
-- Jos käytät **Managed Metadata** -saraketta, määritä **ThisItem.[ColumnName].Label** näyttämään tiedot kyseisessä sarakkeessa.
+- Varten **Managed Metadata** saraketta, Määritä **ThisItem.** _ColumnName_**. Nimen** näyttämään tiedot kyseisessä sarakkeessa.
 
     Määritä esimerkiksi **ThisItem.Languages.Label**, jos sinulla on **Managed Metadata** -sarake, jonka nimi on **Languages**.
 

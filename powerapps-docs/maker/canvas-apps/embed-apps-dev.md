@@ -13,15 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a6b23b97195f000e6e17bb6fd6f0e9f3a2da4f09
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.openlocfilehash: e4d3d2e769951ed75ddeeb57f7fe4c0b350d02e7
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799038"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042682"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Pohjaan perustuvien sovellusten integroiminen verkkosivustoihin ja muihin palveluihin
-Luomasi sovellukset ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä ihmiset työskentelevät. PowerAppsin avulla voit upottaa pohjaan perustuvia sovelluksia iframe-kehykseen niin, että ne voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI:hin tai SharePointiin.
+Sovellukset, jotka luot ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä käyttämissään työkaluissa. Upottamalla pohjaan perustuvia sovelluksia iframe voit voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI tai SharePoint.
 
 Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen upottamista varten. Sen jälkeen upotamme verkkosivulle resurssien järjestelysovelluksemme.
 
@@ -29,10 +29,10 @@ Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen up
 
 Ota huomioon seuraavat rajoitukset:
 
-* Vain saman vuokraajan PowerApps-käyttäjät voivat käyttää upotettua sovellusta.
-* Jos käytät PowerAppsia Internet Explorer 11 -selaimella, sinun on poistettava yhteensopivuusnäkymä käytöstä.
+- Vain saman vuokraajan PowerApps-käyttäjät voivat käyttää upotettua sovellusta.
+- Jos käytät PowerAppsia Internet Explorer 11 -selaimella, sinun on poistettava yhteensopivuusnäkymä käytöstä.
 
-Voit integroida PowerAppsin myös SharePoint Onlineen (käyttämättä iframe-kehystä). Lisää tietoa on kohdassa [Sovelluksen luominen SharePointin sisältä PowerAppsilla](app-from-sharepoint.md#generate-an-app-from-within-sharepoint-online).
+Voit integroida pohjaan perustuvat sovellukset SharePoint Onlineen käyttämättä iframe. Lisätietoja: [PowerApps-web-osan](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 
 ## <a name="set-uri-parameters-for-your-app"></a>Sovelluksen URI-parametrien määrittäminen
 Jos haluat upottaa sovelluksen, ensimmäinen vaihe on määrittää parametrit Uniform Resource Identifierille (URI) niin, että iframe-kehys tietää, mistä sovellus löytyy. URI on seuraavassa muodossa:
@@ -58,10 +58,10 @@ Sovellustunnus on saatavilla powerapps.com-sivustolla. Sovellukselle, jonka halu
 1. Napsauta tai napauta [powerapps.com](https://powerapps.microsoft.com)-sivuston **Sovellukset**-välilehdessä kolmea pistettä (**...** ) ja sen jälkeen kohtaa **Tiedot**.
    
     ![Siirry sovelluksen tietoihin](./media/embed-apps-dev/details.png)
-2. Kopioi **Sovellustunnus**.
+1. Kopioi **Sovellustunnus**.
    
     ![Kopioi sovellustunnus tiedoista](./media/embed-apps-dev/app-id.png)
-3. Korvaa arvo `[AppID]` URI:ssä. Resurssien järjestelysovelluksemme URI näyttää tältä:
+1. Korvaa arvo `[AppID]` URI:ssä. Resurssien järjestelysovelluksemme URI näyttää tältä:
    
     ```
     https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/76897698-91a8-b2de-756e-fe2774f114f2
@@ -85,8 +85,7 @@ Seuraavassa kuvassa näkyy resurssien järjestelysovellus upotettuna Contoson es
 
 Ota sovelluksen käyttäjien todentamisessa huomioon seuraavat asiat:
 
-* Jos sivustosi käyttää Azure Active Directory (AAD) -pohjaista todennusta, muuta kirjautumista ei vaadita.
-* Jos verkkosivusi käyttää mitä tahansa muuta kirjautumismenetelmää tai siinä ei käytetä tunnistautumista, käyttäjäsi näkevät kirjautumiskehotteen iframe-kehyksessä. Sisäänkirjauduttuaan he voivat käyttää sovellusta, jos sovelluksen laatija on jakanut sen heidän kanssaan.
+- Jos sivustosi käyttää Azure Active Directory (AAD) -pohjaista todennusta, muuta kirjautumista ei vaadita.
+- Jos verkkosivusi käyttää mitä tahansa muuta kirjautumismenetelmää tai siinä ei käytetä tunnistautumista, käyttäjäsi näkevät kirjautumiskehotteen iframe-kehyksessä. Sisäänkirjauduttuaan he voivat käyttää sovellusta, jos sovelluksen laatija on jakanut sen heidän kanssaan.
 
 Kuten näet, sovellusten upottaminen on yksinkertaista ja tehokasta. Upottamisen avulla voit tuoda sovelluksia juuri sinne, missä sinä ja asiakkaasi työskentelevät: Power BI -koontinäyttöihin, SharePoint-sivuille ja moniin muihin kohteisiin.
-

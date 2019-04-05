@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b7d29d883a14e34dd89d766a6aeffb17275bde6b
-ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.openlocfilehash: 1b598cc863ec01bcb2a66a9510cb48ec5203e679
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57803454"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042620"
 ---
 # <a name="char-function-in-powerapps"></a>Char-funktio PowerAppsissa
 
@@ -38,9 +38,9 @@ Muuntaa merkkikoodin merkkijonoksi.
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Char( 65 )** |Palauttaa merkin, joka vastaa ASCII-koodia 65. |"A" |
-| **Char( 105 )** |Palauttaa merkin, joka vastaa ASCII-koodia 105. |”i” |
-| **Char( 35 )** |Palauttaa merkin, joka vastaa ASCII-koodia 35. |"#" |
+| **CHAR (65)** |Palauttaa merkin, joka vastaa ASCII-koodia 65. |"A" |
+| **CHAR (105)** |Palauttaa merkin, joka vastaa ASCII-koodia 105. |”i” |
+| **CHAR (35)** |Palauttaa merkin, joka vastaa ASCII-koodia 35. |"#" |
 
 ### <a name="display-a-character-map"></a>Kartan merkki
 
@@ -60,7 +60,7 @@ Muuntaa merkkikoodin merkkijonoksi.
     - **TemplateSize**: 30
     - **TemplatePadding**: 0
 
-    Arvo **kohteet** ominaisuuden kertoo annettu arvo-sarake sarakenumero 16 **kohteet** ominaisuuden ensimmäinen valikoiman (0 – 7 ThisItem.Value). Kaava Lisää sitten tuloksen jokin rivinumerot toinen valikoimasta (0 – 15 tietueen vaikutusalueen, joka [ **ForAll** ](function-forall.md) funktio tarjoaa).
+    Arvo **kohteet** ominaisuuden kertoo annettu arvo-sarake sarakenumero 16 **kohteet** ensimmäinen valikoiman ominaisuuden (0 – 7 `ThisItem.Value`). Kaava Lisää sitten tuloksen jokin rivinumerot toinen valikoimasta (0 – 15 tietueen vaikutusalueen, joka [ **ForAll** ](function-forall.md) funktio tarjoaa).
 
 1. Toinen (pysty) valikoiman sisällä, Lisää **nimen** ohjausobjekti ja määritä nämä ominaisuudet:
 

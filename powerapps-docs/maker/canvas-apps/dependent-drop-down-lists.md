@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 02/28/2019
+ms.date: 04/04/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e00c81f25de9a764e8f6d963ff94f3c0ffe052a2
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: dc1b3b87e2c1fdcd4ab7eb6634db7f9e7c049ec2
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357249"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042751"
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Luo pohjaan perustuva sovellus riippuvaiset avattavia luetteloita
 
@@ -28,7 +28,7 @@ Paras käytäntö on luoda ”ylätasoksi” ja ”lapsi” arvojen tietolähtee
 
 Tässä aiheessa skenaarion tallentaa työntekijät Lähetä ongelmat **tapaukset** luettelon lomakkeen kautta. Työntekijät määrittää ei vain säilön sijainnin ilmenivät mutta jotka myös osasto sisällä kyseiseen sijaintiin. Kaikki sijainnit on sama Osastot, joten **sijaintien** luettelon avulla voidaan varmistaa, että työntekijät ei voi määrittää sijaintiin, joka ei ole osaston osasto.
 
-Tässä aiheessa käytetään tietolähteenä SharePoint-luetteloihin, mutta kaikki taulukkomuotoisia tietolähteitä toimivat samalla tavalla.
+Tässä aiheessa käytetään tietolähteenä Microsoft SharePoint-luetteloihin, mutta kaikki taulukkomuotoisia tietolähteitä toimivat samalla tavalla.
 
 ## <a name="create-data-sources"></a>Luo tietolähteitä
 
@@ -49,7 +49,7 @@ A **sijaintien** luettelossa näytetään kussakin osastojen.
 | Pembroke       | Tuottaa          |
 | Pembroke       | Kukikas           |
 
-**Tapaukset** luettelossa näytetään yhteystiedot ja kunkin tapauksen tietoja. Kuin päivämäärä-sarakkeen luominen **päivämäärä** saraketta, mutta luoda muita sarakkeita kuin **Yksi tekstirivi** määritystä ja vältä sarakkeita [delegointia](./delegation-overview.md) varoitukset Powerappsin.
+**Tapaukset** luettelossa näytetään yhteystiedot ja kunkin tapauksen tietoja. Kuin päivämäärä-sarakkeen luominen **päivämäärä** saraketta, mutta luoda muita sarakkeita kuin **Yksi tekstirivi** määritystä ja vältä sarakkeita [delegointia](./delegation-overview.md) varoitukset Microsoft PowerApps.
 
 | Etunimi | Sukunimi | Puhelinnumero     | Location | Department | Kuvaus       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
@@ -86,7 +86,7 @@ Tämän muutoksen jälkeen voit ohittaa **otsikko** sarakkeen, tai voit [poistaa
 
 ## <a name="replace-the-controls"></a>Korvaa ohjausobjektit
 
-1. - **Kentät** ruudussa, napsauta alanuolta kohdan **sijainti**.
+1. - **Kentät** ruudussa Valitse nuoli kohdan **sijainti**.
 
     Jos olet suljettu **kentät** ruudussa voit avata sen uudelleen valitsemalla **SharePointForm1** vasemmassa siirtymispalkissa ja valitsemalla sitten **Muokkaa kenttiä** , **Ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
 
@@ -144,7 +144,7 @@ Jos nimeät ohjausobjektit, voi määrittää entistä helpommin ja esimerkit on
 
 ## <a name="configure-the-departments"></a>Määritä yksiköiden
 
-1. Valitse **ddDepartment** ja sitten, **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **on riippuvainen.**
+1. Valitse **ddDepartment**, ja sitten, **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **on riippuvainen.**
 
 1. Kohdassa **ohjausobjektin Parent**, varmista, että **ddLocation** näkyy ylempi luettelo ja **tuloksen** on alempi luettelo.
 
@@ -202,7 +202,7 @@ Vahvista onko näytät oikeaan kenttään ohjausobjektin jommankumman seuraavist
     > ![Muuta yhdistelmäruudun](./media/dependent-drop-down-lists/combo-box-display-field.png)
 
 **Omat alikohde avattavasta luettelosta sisältää päällekkäisyyksiä.**
-Tämä ongelma on todennäköisesti vuoksi käyttämällä **LookUp** sarakkeen SharePointissa tai **vaihtoehtoja** -funktio powerappsissa. Voit poistaa kohteen rivitys **Distinct** funktio palauttaa oikein tietojen ympärille. Lisätietoja: [DISTINCT-funktio](functions/function-distinct.md)
+Tämä ongelma on todennäköisesti vuoksi käyttämällä **LookUp** sarakkeen SharePointissa tai **vaihtoehtoja** -funktio powerappsissa. Voit poistaa kohteen rivitys **Distinct** funktio palauttaa oikein tietojen ympärille. Lisätietoja: [DISTINCT-funktio](functions/function-distinct.md).
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 

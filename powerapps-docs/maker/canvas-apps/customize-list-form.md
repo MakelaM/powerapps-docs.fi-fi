@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 711d8029f0f8353efcdff5bea8cbb1402884502f
-ms.sourcegitcommit: 647e183c070c2159b790c7813a7be1d60b2551bd
+ms.openlocfilehash: d33f541ea698b02a662edb652f809095f47acc6e
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58765475"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042728"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>SharePoint-luettelolomakkeen mukauttaminen PowerAppsin avulla
 
@@ -95,13 +95,13 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 
 1. Avaa luettelostasi, valitse **uusi** -komennon ja sitten Valitse **Mukauta** yläosan lomakkeen.
 
-1. Mukauta lomakettasi eri tavoin, kuten, jotka kuvaavat aiheet:
+1. Mukauta lomakettasi eri tavoin, kuten tiedot, joita nämä ohjeaiheissa:
 
     - Muuta sen kokoa, suuntaa tai molempia (esimerkiksi [lomakkeen leventämistä varten](set-aspect-ratio-portrait-landscape.md)).
     - [Mukauta yhdelle tai useammalle](working-with-cards.md) (esimerkiksi muuttaa kortin Näytä teksti- tai syöte-ohjausobjekti).
     - Luo [hakukenttä](sharepoint-lookup-fields.md).
 
-    Lisätietoja: [SharePoint-lomakkeiden integrointi](sharepoint-form-integration.md)
+    Lisätietoja: [SharePoint-lomakkeiden integrointi](sharepoint-form-integration.md).
 
 ## <a name="use-the-default-form"></a>Oletuslomakkeen käyttäminen
 
@@ -157,7 +157,7 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 
 **K:** Miten voin helposti jakaa lomakkeen muiden kanssa?
 
-**A:** Avaa lomake, valitse **Kopioi linkki**, ja lähetä sitten linkin kaikille, jota haluat käyttää lomakkeen.
+**A:** Avaa lomake, valitse **Kopioi linkki**, ja lähetä sitten linkin kaikille, joille haluat käyttää lomakkeen.
 
 **K:** Lomakkeen päivittää tekemättä muut näkevät muutokseni
 
@@ -179,7 +179,7 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 1. Palaa toisen selainvälilehden **Versiot**-sivulle, etsi palautettava versio ja valitse **Palauta**.
 
     > [!NOTE]
-    > Jos saat virheviestin, jossa kerrotaan, että palauttaminen epäonnistui, koska lomake on toisen käyttäjän lukitsema, odota, kunnes lukitus poistetaan, ja yritä uudelleen.
+    > Jos saat virheviestin, että palauttaminen epäonnistui, koska lomake on toisen käyttäjän lukitsema Odota ja yritä sitten uudelleen.
 
 **K:** Voin siirtää lomakkeen yhdestä luettelosta toiseen?
 
@@ -189,7 +189,7 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 
 **K:** Miten voin jakaa lomakkeen?
 
-**A:** Sinun ei tarvitse jakaa lomaketta - lomake perii käyttöoikeudet SharePoint-luettelosta. Kun olet tehnyt kaikki muutokset lomakkeeseen, [julkaise se takaisin SharePointiin](customize-list-form.md#save-and-publish-the-form), jotta muut voivat käyttää sitä.
+**A:** Sinun ei tarvitse jakaa lomaketta – lomake perii käyttöoikeudet SharePoint-luettelosta. Kun olet tehnyt kaikki muutokset lomakkeeseen, [julkaise se takaisin SharePointiin](customize-list-form.md#save-and-publish-the-form), jotta muut voivat käyttää sitä.
 
 **K:** Kuka voi mukauttaa lomakkeet?
 
@@ -211,6 +211,6 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 
 1. Valitse oletusympäristösivun ylälaidassa **Resurssit**.
 
-1. Etsi sovellusluettelosta sovelluksia, joilla on **SharePoint-lomake**-sovellustyyppi – nämä ovat mukautettuja lomakkeita.
+1. Sovellusten luettelo, Etsi sovellusluettelosta sovelluksia **SharePoint-lomaketta** sovellustyyppi – nämä ovat mukautettuja lomakkeita.
 
     ![Mukautettujen lomakkeiden luettelo](./media/customize-list-form/all-customized-forms.png)

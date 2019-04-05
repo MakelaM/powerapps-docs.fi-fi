@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8a46cb15be6a93988b89d8f85658ae7c9d5a900e
-ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.openlocfilehash: 776a542d8e790cc9ae3591b6cda9f08d0d347ef7
+ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58173243"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042774"
 ---
 # <a name="create-responsive-layouts-in-canvas-apps"></a>Luo reagoiva asettelut pohjaan perustuvat sovellukset
 
@@ -26,9 +26,9 @@ Ennen kuin luot powerappsissa pohjaan perustuvan sovelluksen, voit määrittää
 
 Kun valinta, voit tehdä joitakin vaihtoehtoja, jos valitset **tiedoston** > **sovellusasetukset** > **näytön koko + suunta**. Voit valita pysty- tai vaakasuunnassa ja näyttökokoon (vain tablet). Voit myös lukita tai kuvasuhteen lukituksen ja tue laitteen (tai ei).
 
-Vaihtoehdot käsitteisiin jokaisen suunnittelet näytön asetteluja teet vaihtoehdon. Jos sovellus suoritetaan laitteessa, jonka eri koko tai verkossa koko asettelun-asteikon Sovita näyttöön, jossa sovellus on käynnissä. Jos sovellus, joka on suunniteltu puhelimella toimii suuri selainikkunassa, esimerkiksi sovelluksen skaalautuu korvaamaan ja näyttää sen tilaa Ylikokoinen. Sovellus ei voi hyödyntää muita kuvapistettä useita ohjausobjekteja tai enemmän sisältöä.
+Vaihtoehdot käsitteisiin jokaisen suunnittelet näytön asetteluja teet vaihtoehdon. Jos sovellus suoritetaan laitteessa, jonka eri koko tai verkossa, koko asettelun skaalautuu Sovita näyttöön, jossa sovellus on käynnissä. Jos sovellus, joka on suunniteltu puhelimella toimii suuri selainikkunassa, esimerkiksi sovelluksen skaalautuu korvaamaan ja näyttää sen tilaa Ylikokoinen. Sovellus ei voi hyödyntää muita kuvapistettä useita ohjausobjekteja tai enemmän sisältöä.
 
-Jos luot reagoiva asettelu, ohjausobjektit voivat vastata eri laitteille tai ikkunan koon, parannat käyttökokemusta erilaisilla muototekijöillä all-in enemmän. Jotta reagoiva asettelu, säätää joitakin asetuksia ja lausekkeiden kaikkialla sovelluksessasi. 
+Jos luot reagoiva asettelu, ohjausobjektit voivat vastata eri laitteille tai ikkunan koon, joten eri kokemuksia voit luonnolliseen. Jotta reagoiva asettelu, säätää joitakin asetuksia ja lausekkeiden kaikkialla sovelluksessasi. 
 
 ## <a name="disable-scale-to-fit"></a>Sovita käytöstä
 
@@ -44,7 +44,7 @@ Jotta sovelluksesi reagoiva, sinun on tehtävä lisätoimia, mutta tämä muutos
 
 Jotta sovelluksesi asetteluja näytön dimensioiden muutokset vastata, kirjoittaa kaavoja, jotka käyttävät **leveys** ja **korkeus** näytön ominaisuuksiin. Näytä nämä ominaisuudet, Avaa sovellus PowerApps Studio ja valitse sitten näyttöön. Nämä ominaisuudet oletusarvon kaavat näkyvät **lisäasetukset** välilehti oikeanpuoleisessa ruudussa.
 
-**Width** = `Max(App.Width, App.DesignWidth)`
+**Leveys** = `Max(App.Width, App.DesignWidth)`
 
 **Korkeus** = `Max(App.Height, App.DesignHeight)`
 
@@ -72,39 +72,42 @@ Yksinkertaisin tapauksessa yksi ohjausobjekti täyttää koko näytön. Luo täm
 | **Leveys**  | `Parent.Width`  |
 | **Korkeus** | `Parent.Height` |
 
-Nämä kaavat käyttävät Parent-operaattori. Sijoitettu näytön ohjausobjektin Parent viittaa näytön. Ominaisuusarvoja, jossa ohjausobjekti näkyy vasemmassa yläkulmassa näytön (0, 0) ja sama **leveys** ja **korkeus** kuin näytön.
+Nämä kaavat käyttävät **pääkohde** operaattori. Näyttö, sijoitettu ohjausobjektin **pääkohde** näytön viittaa. Ominaisuusarvoja, jossa ohjausobjekti näkyy vasemmassa yläkulmassa näytön (0, 0) ja sama **leveys** ja **korkeus** kuin näytön.
 
-Myöhemmin tässä aiheessa käyttää näitä periaatteita (ja Parent-operaattori) sijainti muut säilöt ohjausobjektien valikoimat, ryhmän ohjausobjekteja ja komponentteja, kuten.
+Tämän aiheen näitä periaatteita sovellat (ja **pääkohde** operaattorin) sijaintia ohjausobjektien muut säilöt, kuten valikoimat, ryhmän ohjausobjekteja ja komponentteja.
 
-Vaihtoehtoisesti ohjausobjektin lisätä vain näytön yläosassa. Luo tämä tehoste, muuttaa **korkeus** kaavaksi **Parent.Height** / 2, ja jätä muissa kaavoissa ennallaan.
+Vaihtoehtoisesti ohjausobjektin lisätä vain näytön yläosassa. Luo tämä tehoste **korkeus** ominaisuudeksi **Parent.Height** / 2, ja jätä muissa kaavoissa ennallaan.
 
 Jos haluat toisen ohjausobjektin täyttämään alaosassa puolet samassa näytössä, voi tehdä vähintään kaksi lähestymistapoja sen kaavojen luomisesta. Yksinkertaisuuden vuoksi voi kestää tätä lähestymistapaa:
 
 | Ohjausobjekti | Ominaisuus | Kaava           |
 |-|----------|-------------------|
-| **Ylempi** | **X**        | 0                 |
-| **Ylempi** | **Y**        | 0                 |
-| **Ylempi** | **Leveys**    | `Parent.Width`      |
-| **Ylempi** | **Korkeus**   | `Parent.Height / 2` |
-| **Pienempi** | **X**        | 0                 |
-| **Pienempi** | **Y**        | `Parent.Height / 2` |
-| **Pienempi** | **Leveys**    | `Parent.Width`      |
-| **Pienempi** | **Korkeus**   | `Parent.Height / 2` |
+| **Upper** | **X**        | 0                 |
+| **Upper** | **Y**        | 0                 |
+| **Upper** | **Leveys**    | `Parent.Width`      |
+| **Upper** | **Korkeus**   | `Parent.Height / 2` |
+| **Lower** | **X**        | 0                 |
+| **Lower** | **Y**        | `Parent.Height / 2` |
+| **Lower** | **Leveys**    | `Parent.Width`      |
+| **Lower** | **Korkeus**   | `Parent.Height / 2` |
 
 ![Ylempi ja Pienennä ohjausobjekti](media/create-responsive-layout/dynamic-layout.png)
 
-Tämä määritys päästä siitä, että haluat, mutta on muokattava kukin kaava, jos voit muuttaa ohjausobjektien suhteellista kokoa. Voit esimerkiksi päättää, että yläreunan ohjausobjektin tulee vallata vain yläreunan kolmannes näytön täyttämisen pienempi kahden kolmasosan alas-ohjausobjektin kanssa. Luomiseen, jotka vaikuttavat on päivitettävä **korkeus** -ominaisuuden **Upper** ohjausobjektin ja **Y** ja **korkeus** ominaisuudet **Pienempi** ohjausobjektin. Harkitse sen sijaan, kaavojen kirjoittamisesta **pienempi** sekä hallita **Upper** ohjausobjektin (ja itse), kuten seuraavassa esimerkissä:
+Tämä määritys päästä siitä, että haluat, mutta on muokattava kukin kaava, jos voit muuttaa ohjausobjektien suhteellista kokoa. Voit esimerkiksi päättää, että yläreunan ohjausobjektin tulee vallata vain yläreunan kolmannes näytön täyttämisen pienempi kahden kolmasosan alas-ohjausobjektin kanssa. 
+
+Luomiseen, jotka vaikuttavat on päivitettävä **korkeus** -ominaisuuden **Upper** ohjausobjektin ja **Y** ja **korkeus** ominaisuudet **Pienempi** ohjausobjektin. Harkitse sen sijaan, kaavojen kirjoittamisesta **pienempi** sekä hallita **Upper** ohjausobjektin (ja itse), kuten seuraavassa esimerkissä:
+
 
 | Ohjausobjekti | Ominaisuus | Kaava           |
 |-|----------|-------------------|
-| **Ylempi** | **X**        | 0                 |
-| **Ylempi** | **Y**        | 0                 |
-| **Ylempi** | **Leveys**    | `Parent.Width`      |
-| **Ylempi** | **Korkeus**   | `Parent.Height / 2` |
-| **Pienempi** | **X**        | 0                       |
-| **Pienempi** | **Y**        | `Upper.Y + Upper.Height`  |
-| **Pienempi** | **Leveys**    | `Parent.Width`            |
-| **Pienempi** | **Korkeus**   | `Parent.Height - Lower.Y` |
+| **Upper** | **X**        | 0                 |
+| **Upper** | **Y**        | 0                 |
+| **Upper** | **Leveys**    | `Parent.Width`      |
+| **Upper** | **Korkeus**   | `Parent.Height / 2` |
+| **Lower** | **X**        | 0                       |
+| **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
+| **Lower** | **Leveys**    | `Parent.Width`            |
+| **Lower** | **Korkeus**   | `Parent.Height - Lower.Y` |
 
 ![Ylempi ja alemman suhteellisen koon muuttaminen](media/create-responsive-layout/dynamic-layout2.png)
 
@@ -145,7 +148,7 @@ Kun olet muodostanut näyttöjä, jotka sisältävät useita ohjausobjekteja, si
 
 ### <a name="galleries"></a>Valikoimat
 
-Jos käytät valikoiman sovelluksessa, sinun tulee Asettele ohjausobjekteille valikoiman mallipohjaa. Voit sijoittaa nämä ohjausobjektit kirjoittamalla kaavoja, jotka käyttävät Parent-operaattori, joka viittaa valikoiman mallipohja. Ohjausobjekteilla, jotka valikoiman mallipohja kaavoissa Parent.TemplateHeight ja Parent.TemplateWidth ominaisuuksien avulla. Käytä näitä sijaan Parent.Width ja Parent.Height, jotka viittaavat valikoiman kokoa.
+Jos käytät valikoiman sovelluksessa, sinun tulee Asettele ohjausobjekteille valikoiman mallipohjaa. Voit sijoittaa nämä ohjausobjektit kirjoitettaessa kaavoja, jotka käyttävät mukaan **pääkohde** operaattoria, joka viittaa valikoiman mallipohja. Valikoiman mallipohja ohjausobjekteille, kaavojen avulla **Parent.TemplateHeight** ja **Parent.TemplateWidth** ominaisuudet; Älä käytä **Parent.Width** ja  **Parent.Height**, jotka viittaavat valikoiman kokoa.
 
 ![Mallin leveys ja korkeus pystysuuntainen valikoima](media/create-responsive-layout/gallery-vertical.png)
 
@@ -172,7 +175,7 @@ Nämä kaavat on kirjoitettu, voit muuttaa kokoa tai sijaintia **otsikon** ohjau
 
 ### <a name="components"></a>Osat
 
-Jos käytät toista kokeellinen ominaisuutta nimeltä osia, voit luoda rakenneosia ja käyttää niitä uudelleen kaikkialla sovelluksessasi. Kuten **ryhmän** ohjausobjektin ohjausobjekteja, jotka voit sijoittaa komponentti tulee pohjaaminen niiden sijainti ja koko kaavoja `Parent.Width` ja `Parent.Height`, jotka viittaavat osa kokoa. Lisätietoja: [Luo komponentti](create-component.md)
+Jos käytät toista kokeellinen ominaisuutta nimeltä osia, voit luoda rakenneosia ja käyttää niitä uudelleen kaikkialla sovelluksessasi. Kuten **ryhmän** ohjausobjektin ohjausobjekteja, jotka voit sijoittaa komponentti tulee pohjaaminen niiden sijainti ja koko kaavoja `Parent.Width` ja `Parent.Height`, jotka viittaavat osa kokoa. Lisätietoja: [Luo osa](create-component.md).
 
 ## <a name="adapting-layout-for-device-size-and-orientation"></a>Laitteen kokoa ja suuntaa mukauttamiseksi asettelu
 
@@ -189,27 +192,27 @@ Vaikeaa **korkeus** 1136- ja laitteen korkeuteen (tässä Tämä suunta) 640, k�
 
 Näytön mukauttamiseksi **leveys** ja **korkeus** ominaisuudet laitteen-asentoon, voit määrittää nämä kaavat:
 
-**Width** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
+**Leveys** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
 
 **Korkeus** = `Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))`
 
 Nämä kaavat Vaihda sovelluksen **DesignWidth** ja **DesignHeight** perusteella, onko laitteen leveys on pienempi kuin sen korkeutta (pystysuunnassa) tai suurempi kuin sen korkeutta (vaakasuunnassa) .
 
-Kun säädät näytön **leveys** ja **korkeus** kaavoja, voit halutessasi myös järjestää käyttämään tilaa paremmin näytön ohjausobjektit. Jos kaksi ohjausobjekteihin kattaa puolet näytöstä, voit pinon ne pystysuunnassa pysty mutta järjestää ne rinnakkain vaakanäkymässä.
+Kun säädät näytön **leveys** ja **korkeus** kaavoja, voit myös halutessasi järjestää käyttämään tilaa paremmin näytön ohjausobjektit. Jos kaksi ohjausobjekteihin kattaa puolet näytöstä, voit pinon ne pystysuunnassa pysty mutta järjestää ne rinnakkain vaakanäkymässä.
 
 > [!NOTE]
 > Vaakasuunnassa **Upper** ja **pienempi** ohjausobjektit näkyvät vasemman ja oikean ohjausobjekteja.
 
 | Ohjausobjekti | Ominaisuus | Kaava |
 |--|----------|---|
-| **Ylempi** | **X** | 0 |
-| **Ylempi** | **Y** | 0 |
-| **Ylempi** | **Leveys** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
-| **Ylempi** | **Korkeus**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
-| **Pienempi** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
-| **Pienempi** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
-| **Pienempi** | **Leveys** | `Parent.Width - Lower.X` |
-| **Pienempi** | **Korkeus** | `Parent.Height - Lower.Y` |
+| **Upper** | **X** | 0 |
+| **Upper** | **Y** | 0 |
+| **Upper** | **Leveys** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
+| **Upper** | **Korkeus**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
+| **Lower** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
+| **Lower** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
+| **Lower** | **Leveys** | `Parent.Width - Lower.X` |
+| **Lower** | **Korkeus** | `Parent.Height - Lower.Y` |
 
 ![lausekkeita mukauttamiseksi pystysuuntaisia](media/create-responsive-layout/portrait.png)
 
@@ -217,6 +220,6 @@ Kun säädät näytön **leveys** ja **korkeus** kaavoja, voit halutessasi myös
 
 ### <a name="known-limitations"></a>Tunnetut rajoitukset
 
-Luontiympäristö pohjan ei vastaa luotu koon muuttaminen kaavat. Testattava reagoiva toiminta Tallenna ja julkaise sovelluksesi ja avaa sen laitteissa tai selainikkunat eri kokoja ja suuntia.
+Luontiympäristö pohjan ei vastaa luotu koon muuttaminen kaavat. Testattava reagoiva toiminta Tallenna ja julkaise sovelluksesi ja avaa se laitteissa tai selainikkunat eri kokoja ja suuntia.
 
 Jos kirjoitat lausekkeita tai kaavat **X**, **Y**, **leveys**, ja **korkeus** ominaisuuksia ohjausobjektin, ne korvata lausekkeita tai kaavoja, jos myöhemmin Vedä ohjausobjekti eri sijaintia tai muuttaa ohjausobjektin kokoa vetämällä sen reunaa.
