@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e709c600e02d0acf26883da76ead163c62411802
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 61a7e67b7914e5f844397389833f830244d5af28
+ms.sourcegitcommit: 2dce3fe99828b0ffa23885bc7e11f1a1f871af07
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098042"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
 PowerApps sisältää tehokkaita toimintoja, joilla suodatusta, lajittelemiseen ja muotoilemiseen taulukoiden pohjaan perustuvan sovelluksen tiedot: **[Suodattimen](functions/function-filter-lookup.md)**,  **[Lajittele](functions/function-sort.md)**, ja **[AddColumns](functions/function-table-shaping.md)** joitakin funktioita. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
@@ -29,7 +29,7 @@ Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienen
 
 Tässä asia monimutkaistuu, ja juuri tästä syystä tämä artikkeli on olemassa: kaikkea, mitä voidaan ilmaista PowerApps-kaavassa, ei voida delegoida jokaiseen tietolähteeseen. PowerApps-kieli imitoi Excelin kaavakieltä, johon sisältyy täydellinen ja välitön käyttöoikeus muistissa olevaan täydelliseen työkirjaan monine erilaisine numeron- ja tekstinkäsittelyfunktioineen. Näin ollen PowerApps-kieli on monin verroin monipuolisempi kuin mitä useimmat tietolähteet voivat tukea, ja siihen kuuluvat tehokkaat tietokantamoduulit, kuten SQL Server.
 
-**Suurien tietomäärien käyttäminen edellyttää delegoitavien tietolähteiden ja kaavojen käyttöä.** Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiaan tietoja. Kiinnitä huomiota delegointivaroituksiin. Ne ilmaisevat paikat, joissa delegointi ei ole mahdollista. Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä sovellus voi käsitellä tietoja paikallisesti, jos kaavaa ei voi delegoida. 
+**Suurien tietomäärien käyttäminen edellyttää tietolähteitä ja kaavoja, jotka voidaan delegoida.** Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiaan tietoja. Kiinnitä huomiota delegointivaroituksiin. Ne ilmaisevat paikat, joissa delegointi ei ole mahdollista. Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä sovellus voi käsitellä tietoja paikallisesti, jos kaavaa ei voi delegoida. 
 
 > [!NOTE]
 > Delegointivaroituksia kutsuttiin PowerAppsissa aiemmin sinisellä pisteellä merkityiksi ehdotuksiksi, mutta delegointiehdotukset on sittemmin luokiteltu uudelleen varoituksiksi. Jos tietolähteessä on yli 500 tietuetta eikä funktiota voida delegoida, PowerApps ei ehkä voi noutaa kaikkia tietoja ja sovelluksesi tulokset voivat olla vääriä. Delegointivaroitukset helpottavat sovelluksesi hallintaa niin, että sen tulokset ovat oikeat.
@@ -54,15 +54,15 @@ Nämä luettelot muuttuvat ajan myötä. Pyrimme tukemaan delegoinnilla useampia
 **Filter**- ja **LookUp**-funktioissa voidaan käyttää näitä termejä tarvittavien tietueiden valitsemiseen taulukon sarakkeista:
 
 * **[And](functions/function-logicals.md)** (mukaan lukien **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (mukaan lukien **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (mukaan lukien **[!](functions/operators.md)**)
-* **[In](functions/operators.md)**
+* **[-](functions/operators.md)**
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**
 * **[IsBlank](functions/function-isblank-isempty.md)**
-* **[StartsWith](functions/function-startswith.md)**
+* **[StartsWith](functions/function-startswith.md)**,  **[EndsWith](functions/function-startswith.md)**
 * Vakioarvot, jotka ovat samat kaikissa tietueissa, kuten ohjausobjektien ominaisuudet ja [yleiset ja kontekstimuuttujat](working-with-variables.md).
 
-Voit käyttää myös kaavan osia, jotka antavat tulokseksi vakioarvon kaikille tietueille. Esimerkiksi **Left( Language(), 2 )** ei ole riippuvainen tietueen mistään sarakkeista ja näin ollen palauttaa saman arvon kaikille tietueille. Käytännöllisesti katsoen se on vakio. Kontekstimuuttujien, kokoelmien ja signaalien käyttö ei ehkä ole vakiomallista, mikä estää **Filter**- ja **LookUp**-funktioiden delegoimisen.  
+Voit käyttää myös kaavan osia, jotka antavat tulokseksi vakioarvon kaikille tietueille. Esimerkiksi **Left (Language(), 2)**, **päivämäärä (2019, 3, 31)**, ja **Today()** ei ole riippuvainen tietueen mistään sarakkeista ja siksi palautetaan saman arvon kaikille tietueille. Nämä arvot voidaan lähettää tietolähteeseen vakiona, ja se ei estä delegointia. 
 
 Edellinen luettelo ei sisällä näitä huomattavia kohteita:
 
@@ -72,7 +72,7 @@ Edellinen luettelo ei sisällä näitä huomattavia kohteita:
 * **[ExactIn](functions/operators.md)**
 * Merkkijonon käsittelyfunktiot: **[LOWER](functions/function-lower-upper-proper.md)**,  **[Upper](functions/function-lower-upper-proper.md)**,  **[vasemmalle](functions/function-left-mid-right.md)**, **[Mid](functions/function-left-mid-right.md)**,  **[Len](functions/function-left-mid-right.md)**,...
 * Signaalit: **[Sijainnin](functions/signals.md)**,  **[Acceleration](functions/signals.md)**,  **[kompassi](functions/signals.md)**,...
-* Vaihtuvat: **[Nyt](functions/function-now-today-istoday.md)**,  **[tänään](functions/function-now-today-istoday.md)**,  **[Rand](functions/function-rand.md)**,...
+* Vaihtuvat: **[RAND](functions/function-rand.md)**,...
 * [Kokoelmat](working-with-variables.md)
 
 ### <a name="sorting-functions"></a>Funktioiden lajittelu
@@ -87,24 +87,32 @@ Laskentafunktioita, kuten **[CountRows](functions/function-table-counts.md)**, *
 
 Muita koostefunktioita, kuten **[StdevP](functions/function-aggregates.md)** ja **[VarP](functions/function-aggregates.md)**, ei voi delegoida.
 
+### <a name="table-shaping-functions"></a>Taulukon muovaaminen Funktiot
+
+**[AddColumns](functions/function-table-shaping.md)**,  **[DropColumns](functions/function-table-shaping.md)**,  **[RenameColumns](functions/function-table-shaping.md)**, ja **[ShowColumns](functions/function-table-shaping.md)** osittain delegointia.  Niiden argumentit kaavat voidaan delegoida.  Nämä funktiot tulos koskevat kuitenkin delegointia tietueen rajan.
+
+Kuten tässä esimerkissä käyttäjät voivat käyttää usein **AddColumns** ja **LookUp** yhdistämiseen yhdestä taulukosta toiseen, kutsutaan yleisesti tietokantojen yhdistämiseksi liitoksen:
+
+```powerapps-dot
+AddColumns( Products, 
+    "Supplier Name", 
+    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+)
+```
+
+Vaikka **tuotteiden** ja **toimittajat** ehkä delegoitavia tietolähteitä ja **LookUp** on delegoitava funktio, tuloksesta **AddColumns**funktio ei ole delegoitava. Koko kaavan tulos rajoittuu ensimmäinen osa **tuotteiden** tietolähteeseen. Koska **LookUp**-funktio ja sen tietolähde ovat delegoitavia, **Suppliers**-vastaavuus on löydettävissä mistä tahansa tietolähteessä, vaikka se olisi suuri. 
+
+Jos käytät **AddColumns** tällä tavalla **LookUp** täytyy tehdä erilliset kutsut tietolähteeseen kunkin ensimmäisille tietueille **tuotteiden**, joka aiheuttaa paljon verkon chatter. Jos **toimittajat** on tarpeeksi pieni eikä muutu usein, voi olla vaikkapa **kerätä** funktiota [ **OnStart** ](functions/signals.md) välimuistiin tiedot lähde sovelluksesi yhteydessä. Sovelluksesi vaihtoehtoisesti voitu uudelleen niin, että voit saada näkyviin liittyvät tietueet vain, kun käyttäjä pyytää niitä.  
+ 
 ## <a name="non-delegable-functions"></a>Funktiot, joita ei voi delegoida
 Kaikki muut toiminnot eivät tue delegointia, mukaan lukien nämä tärkeät funktiot:
 
-* Taulukon muovaaminen: **[AddColumns](functions/function-table-shaping.md)**,  **[DropColumns](functions/function-table-shaping.md)**,  **[ShowColumns](functions/function-table-shaping.md)**,...
 * **[First](functions/function-first-last.md)**, **[FirstN](functions/function-first-last.md)**, **[Last](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)**
 * **[Choices](functions/function-choices.md)**
 * **[Concat](functions/function-concatenate.md)**
 * **[Collect](functions/function-clear-collect-clearcollect.md)**, **[ClearCollect](functions/function-clear-collect-clearcollect.md)**
 * **[CountIf](functions/function-table-counts.md)**, **[RemoveIf](functions/function-remove-removeif.md)**, **[UpdateIf](functions/function-update-updateif.md)**
 * **[GroupBy](functions/function-groupby.md)**, **[Ungroup](functions/function-groupby.md)**
-
-Yleinen malli on **AddColumns**- ja **LookUp**-funktioiden käyttäminen tietojen yhdistämiseen yhdestä taulukosta toiseen. Tätä kutsutaan yleisesti tietokantojen yhdistämiseksi.  Esimerkki:
-
-**AddColumns( Products, "Supplier Name", LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name )**
-
-Vaikka **Products** ja **Suppliers** ovat ehkä delegoitavia tietolähteitä ja **LookUp** on delegoitava funktio, **AddColumns**-funktio ei ole delegoitava.  Koko kaavan tulos rajoittuu **Products**-tietolähteen ensimmäiseen osaan.  
-
-Koska **LookUp**-funktio ja sen tietolähde ovat delegoitavia, **Suppliers**-vastaavuus on löydettävissä mistä tahansa tietolähteessä, vaikka se olisi suuri. Mahdollinen huono puoli on se, että **LookUp** lähettää erilliset kutsut tietolähteeseen kunkin **Products**-tietolähteen ensimmäisille tietueille, mikä aiheuttaa paljon liikennettä verkossa. Jos **Suppliers** on tarpeeksi pieni eikä muutu usein, voit lisätä tietolähteen välimuistiin sovelluksessa **Collect**-kutsulla, kun sovellus käynnistyy (käyttämällä [**OnVisible**](controls/control-screen.md)-ominaisuutta aloitusnäytössä) ja tehdä sille **LookUp**-haun sen sijaan.  
 
 ## <a name="non-delegable-limits"></a>Rajoitukset, joita ei voi delegoida
 Kaavat, joita ei voi delegoida, käsitellään paikallisesti. Tämä sallii PowerApps-kaavakielen käytön koko laajuudessaan. Tällä on kuitenkin hintansa: kaikki tiedot on ensin tuotava laitteeseen, mikä saattaa merkitä suurten tietomäärin noutamista verkosta. Tähän voi kulua aikaa, mikä antaa sovelluksesta hitaan tai kaatuneen vaikutelman.

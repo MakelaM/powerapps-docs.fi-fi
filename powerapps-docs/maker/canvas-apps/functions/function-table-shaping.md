@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/24/2018
+ms.date: 04/04/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7b0701c9fcf7033ab8d57bb039972ce63c8faf29
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.openlocfilehash: fc682694bb22ecc63ecc762a735df07950ce29d3
+ms.sourcegitcommit: 2dce3fe99828b0ffa23885bc7e11f1a1f871af07
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57802396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096163"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>AddColumns-, DropColumns-, RenameColumns- ja ShowColumns-funktiot PowerAppsissa
 Muokkaa [taulukkoa](../working-with-tables.md) lisäämällä, poistamalla, nimeämällä uudelleen ja valitsemalla sen [sarakkeita](../working-with-tables.md#columns).
@@ -49,9 +49,20 @@ Kaava lasketaan taulukon jokaiselle tietueelle.
 
 **ShowColumns**-funktio sisällyttää taulukon sarakkeet ja jättää pois kaikki muut sarakkeet. Voit käyttää **ShowColumns**-funktiota yksisarakkeisen taulukon luomiseen usean sarakkeen taulukosta.  **ShowColumns** sisällyttää sarakkeet, **DropColumns** jättää pois sarakkeet.  
 
-Kaikkien näiden funktioiden tuloksena on uusi taulukko, johon on tehty muunnos.  Alkuperäistä taulukkoa ei muokata.
+Kaikkien näiden funktioiden tuloksena on uusi taulukko, johon on tehty muunnos. Alkuperäistä taulukkoa ei muokata. Et voi muokata olemassa olevan taulukon, jossa on kaava. SharePointista, Common Data Service, SQL Server ja muita tietolähteitä on työkaluja sarakkeet luetteloita, entiteetteihin ja taulukoita, joita ovat kutsutaan usein rakenteen muokkaamista varten. Funktioista on aiheessa Muunna syötetaulukon, vain muokkaamatta alkuperäisen, käytettäväksi edelleen output-taulukkoon.
 
-[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
+Argumentit näiden funktioiden delegointia. Esimerkiksi **suodatin** funktion argumenttina pull-tietueiden hauissa läpi kaikki luettelot, vaikka **' [dbo]. [ AllListings]'** tietolähde sisältää miljoona riviä:
+
+```powerapps-dot
+AddColumns( RealEstateAgents, 
+    "Listings",  
+    Filter(  '[dbo].[AllListings]', ListingAgentName = AgentName ) 
+)
+```
+
+Kuitenkin tulos näistä funktioista kuuluu [delegointia tietueen rajan](../delegation-overview.md#non-delegable-limits).  Tässä esimerkissä vain 500 tietuetta palautetaan vaikka **RealEstateAgents** tietolähteellä 501 tai useampaa tietuetta.
+
+Jos käytät **AddColumns** tällä tavalla **suodatin** täytyy tehdä erilliset kutsut tietolähteeseen kunkin ensimmäisille tietueille **RealEstateAgents**, joka aiheuttaa paljon verkon chatter. Jos **[dbo]. [ AllListings]** on tarpeeksi pieni eikä muutu usein, voi olla vaikkapa **kerätä** funktiota [ **OnStart** ](signals.md#app) välimuistiin sovelluksessa tietolähde Kun se alkaa. Sovelluksesi vaihtoehtoisesti voitu uudelleen niin, että voit saada näkyviin liittyvät tietueet vain, kun käyttäjä pyytää niitä.  
 
 ## <a name="syntax"></a>Syntaksi
 **AddColumns**( *Table*, *ColumnName1*, *Formula1* [, *ColumnName2*, *Formula2*, ... ] )
@@ -85,19 +96,46 @@ Mikään näistä esimerkeistä ei muokkaa **IceCreamSales**-tietolähdettä. Jo
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Lisää **Revenue**-sarakkeen tulokseen.  **UnitPrice * QuantitySold** arvioidaan jokaiselle tietueelle, ja tulos sijoitetaan uuteen sarakkeeseen. |<style> img { max-width: none; } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
-| **DropColumns( IceCreamSales, "UnitPrice" )** |Sulkee pois **UnitPrice**-sarakkeen tuloksesta. Tällä funktiolla voit sulkea pois sarakkeita, ja **ShowColumns**-funktiolla voit sisällyttää niitä. |![](media/function-table-shaping/icecream-drop-price.png) |
-| **ShowColumns( IceCreamSales, "Flavor" )** |Sisältää vain tuloksen **Flavor**-sarakkeen. Tällä funktiolla voit sisällyttää sarakkeita, ja **DropColumns**-funktiolla voit sulkea niitä pois. |![](media/function-table-shaping/icecream-select-flavor.png) |
-| **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Nimeää uudelleen **UnitPrice** sarakkeen tulokseen. |![](media/function-table-shaping/icecream-rename-price.png) |
-| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Nimeää uudelleen **UnitPrice**- ja **QuantitySold**-sarakkeet tuloksessa. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
-| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Suorittaa seuraavan taulukkomuunnoksen järjestyksessä alkaen kaavan sisältä: <ol><li>Lisää **Revenue**-sarakkeen tietuekohtaisen **UnitPrice * Quantity** -laskutoimituksen perusteella.<li>Muuttaa **UnitPrice**-sarakkeen nimeksi **Price**.<li>Jättää pois **Quantity**-sarakkeen.</ol>  Huomaa, että järjestys on tärkeä. Emme voi esimerkiksi laskea sarakkeella **UnitPrice**, kun sen nimi on muutettu. |![](media/function-table-shaping/icecream-all-transforms.png) |
+| **AddColumns (IceCreamSales, ”tuotto” UnitPrice * QuantitySold)** |Lisää **Revenue**-sarakkeen tulokseen.  **UnitPrice * QuantitySold** arvioidaan jokaiselle tietueelle, ja tulos sijoitetaan uuteen sarakkeeseen. |<style> IMG {Enimmäisleveys: none;} </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
+| **DropColumns (IceCreamSales, ”UnitPrice”)** |Sulkee pois **UnitPrice**-sarakkeen tuloksesta. Tällä funktiolla voit sulkea pois sarakkeita, ja **ShowColumns**-funktiolla voit sisällyttää niitä. |![](media/function-table-shaping/icecream-drop-price.png) |
+| **ShowColumns (IceCreamSales ”Flavor”)** |Sisältää vain tuloksen **Flavor**-sarakkeen. Tällä funktiolla voit sisällyttää sarakkeita, ja **DropColumns**-funktiolla voit sulkea niitä pois. |![](media/function-table-shaping/icecream-select-flavor.png) |
+| **RenameColumns (IceCreamSales, ”UnitPrice”, ”hinta”)** |Nimeää uudelleen **UnitPrice** sarakkeen tulokseen. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns (IceCreamSales ”UnitPrice”, ”hinta”, ”QuantitySold”, ”Number”)** |Nimeää uudelleen **UnitPrice**- ja **QuantitySold**-sarakkeet tuloksessa. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
+| **DropColumns)<br>RenameColumns(<br>AddColumns (IceCreamSales, ”tuotto”<br>UnitPrice * QuantitySold),<br>”UnitPrice”, ”Price”)<br>”Tilattava määrä”)** |Suorittaa seuraavan taulukkomuunnoksen järjestyksessä alkaen kaavan sisältä: <ol><li>Lisää **Revenue**-sarakkeen tietuekohtaisen **UnitPrice * Quantity** -laskutoimituksen perusteella.<li>Muuttaa **UnitPrice**-sarakkeen nimeksi **Price**.<li>Jättää pois **Quantity**-sarakkeen.</ol>  Huomaa, että järjestys on tärkeä. Emme voi esimerkiksi laskea sarakkeella **UnitPrice**, kun sen nimi on muutettu. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta
-1. Tuo tai luo kokoelma, jonka nimi on **Inventory**, kuten kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäisessä alitoimintosarjassa on kuvattu.
-2. Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   
-    **ClearCollect(Inventory2, RenameColumns(Inventory, "ProductName", "JacketID"))**
-3. Palaa suunnittelutyötilaan painamalla F5-näppäintä, valitsemalla juuri luomasi painike ja painamalla Esc-näppäintä.
-4. Valitse **Tiedosto**-valikosta **Kokoelmat**.
-5. Vahvista, että olet luonut kokoelman, jonka nimi on **Inventory2**. Uusi kokoelma sisältää samat tiedot kuin **Inventory**, paitsi että sarake **ProductName** kohteessa **Inventory** on nimeltään **JacketID** kohteessa **Inventory2**.
 
+Kokeillaanpa joitakin esimerkkejä aiemmin tässä ohjeaiheessa.  
+
+1. Luo kokoelma lisäämällä **[painike](../controls/control-button.md)** ohjausobjektin sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+
+    ```powerapps-dot
+    ClearCollect( IceCreamSales, 
+        Table(
+            { Flavor: "Strawberry", UnitPrice: 1.99, QuantitySold: 20 }, 
+            { Flavor: "Chocolate", UnitPrice: 2.99, QuantitySold: 45 },
+            { Flavor: "Vanilla", UnitPrice: 1.50, QuantitySold: 35 }
+        )
+    )
+    ```
+
+1. Suorita kaava valitsemalla painikkeen, kun pidät alhaalla Alt-näppäintä.
+
+1. Lisää toinen **painike** ohjausobjekti, määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava ja suorita se:
+
+    ```powerapps-dot
+    ClearCollect( FirstExample, 
+        AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )
+    ) 
+    ```
+1. Käyttöön **tiedoston** valikosta **kokoelmat**, ja valitse sitten **IceCreamSales** näyttää kyseisen kokoelma.
+ 
+    Kuten tässä kaaviossa näkyy, toinen kaava ei muokata tässä kokoelmassa. **AddColumns** funktion **IceCreamSales** vain luku-argumenttina, funktio ei muokata taulukkoa, johon argumentille viittaa.
+    
+    ![Ice Cream myynti-kokoelma, joka ei sisällä Tuotto sarakkeen kolme tietuetta näytetään kokoelma-katseluohjelma](media/function-table-shaping/ice-cream-sales-collection.png)
+
+1. Valitse **FirstExample**.
+
+    Kuten tässä kaaviossa näkyy, toinen kaava palauttaa uuden taulukon, jossa lisätty sarake. **ClearCollect** funktion siepattu uuden taulukon **FirstExample** kokoelman, lisääminen jotakin alkuperäisen taulukon kuin sen vaikutuksesta funktio muokkaamatta lähde:
+
+    ![Ensimmäisessä esimerkissä kokoelma on uusi tuotto-sarake sisältää kolme tietuetta näytetään kokoelma-katseluohjelma](media/function-table-shaping/first-example-collection.png)
