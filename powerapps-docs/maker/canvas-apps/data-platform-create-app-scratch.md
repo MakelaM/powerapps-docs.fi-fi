@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 68c54838b613d0aa459833509cad57b49ade759a
-ms.sourcegitcommit: dd7659f9fe5161df6053a735781fdfb62bbea88e
+ms.openlocfilehash: 428ca1fd96df4ed8a9c3fd7c14a1ad3e07356c70
+ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58624255"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480212"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla
 
@@ -98,7 +98,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
     - **Tilin nimi**
     - **Osoite 1: Katuosoite 1**
-    - **Osoite 1: Kaupunki**
+    - **Osoite 1: Postitoimipaikka**
     - **Osoite 1: Postinumero**
     - **Työntekijöiden määrä**
     - **Vuosittainen tuotto**
