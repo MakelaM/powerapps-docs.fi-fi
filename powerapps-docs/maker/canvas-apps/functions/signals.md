@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 147766eb9e9b17698882241e8eb3bd0ae7ba7e78
-ms.sourcegitcommit: 0dbbf53aea319e53edadc1d3a9efa5728856ebd8
+ms.openlocfilehash: d13f4a0669ae9f0d7ef9a5f4ef7115e006256bd9
+ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58172629"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480235"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Acceleration-, App-, Compass-, Connection- ja Location-signaalit PowerAppsissa
 Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.  
@@ -46,8 +46,8 @@ Kaikki signaalit palauttavat [tietueen](../working-with-tables.md#records) tiedo
 | **App.ActiveScreen** | Näkyvissä oleva näyttö. Palauttaa näytön ohjausobjektin, jota voit käyttää viittaamaan näytön ominaisuuksiin tai vertaamaan toiseen näyttöön määrittääksesi, mikä näyttö näytetään. Voit muuttaa näytettävää näyttöä **[takaisin](function-navigate.md)** tai **[Navigate](function-navigate.md)** funktio. |
 | **App.Width** | Palauttaa leveys-ikkunan, jossa sovellus on käynnissä. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **leveys** reagoiva sovelluksen rakentaminen näytön ominaisuus.  |
 | **App.Height** | Palauttaa ikkunan, jossa sovellus on käynnissä korkeuden. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** reagoiva sovelluksen rakentaminen näytön ominaisuus. |
-| **App.DesignWidth** | Palauttaa sovelluksen leveys PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **leveys** ominaisuuden näytön, varmista, että Vähimmäisleveys reagoiva sovelluksessa.  |
-| **App.DesignHeight** | Palauttaa sovelluksen korkeus PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** ominaisuuden näytön, varmista, että vähimmäiskorkeus reagoiva sovelluksessa.  |
+| **App.DesignWidth** | Palauttaa sovelluksen leveys PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **leveys** näytön Vähimmäisleveys reagoiva sovelluksessa varmistamiseksi ominaisuus.  |
+| **App.DesignHeight** | Palauttaa sovelluksen korkeus PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** näytön vähimmäiskorkeus reagoiva sovelluksessa varmistamiseksi ominaisuus.  |
 
 **Sovelluksen** objekti on myös [toimintakaavassa](../working-with-formulas-in-depth.md) , johon voit asettaa.
 
