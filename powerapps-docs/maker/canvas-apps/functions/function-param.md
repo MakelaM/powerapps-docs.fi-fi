@@ -1,6 +1,6 @@
 ---
 title: Download-, Launch- ja Param-funktiot | Microsoft Docs
-description: PowerAppsin Download-, Launch- ja Param-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkkejä
+description: Viitetiedot, mukaan lukien syntaksi ja esimerkkejä latauksen, käynnistämisen ja Param-funktioiden pohjaan perustuvat sovellukset
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,22 +13,24 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6c465a8cd23511c0cffbbfab9b70dd436be06d37
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 4a53d8c20bd4b7784cb94daa574682c041f104ea
+ms.sourcegitcommit: b316e0eee9946ef09e0512577ce2d11cd27aa864
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42860013"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59508305"
 ---
-# <a name="download-launch-and-param-functions-in-powerapps"></a>PowerAppsin Download-, Launch- ja Param-funktiot
+# <a name="download-launch-and-param-functions-in-canvas-apps"></a>Latauksen, käynnistämisen ja Param-funktioiden pohjaan perustuvat sovellukset
 Lataa tai avaa verkkosivun tai sovelluksen parametreilla.  
 
 ## <a name="description"></a>Kuvaus
-**Download**-funktio lataa tiedoston verkosta paikalliseen laitteeseen.  Käyttäjältä pyydetään tiedoston tallennussijainti.  **Download** palauttaa tiedoston paikallisen tallennussijainnin merkkijonona.  
+**Download**-funktio lataa tiedoston verkosta paikalliseen laitteeseen. Käyttäjältä pyydetään tiedoston tallennussijainti.  **Download** palauttaa tiedoston paikallisen tallennussijainnin merkkijonona.  
 
-**Launch**-funktio avaa verkkosivun tai sovelluksen.  Tämä funktio voi valinnaisesti välittää sovellukselle parametreja.  
+**Launch**-funktio avaa verkkosivun tai sovelluksen.  Tämä funktio voi valinnaisesti välittää sovellukselle parametreja.
 
-**Param**-funktio noutaa sovellukselle avaamisen yhteydessä välitetyn parametrin.  Jos nimettyä parametria ei välitetty, **Param** palauttaa *tyhjän*.
+Internet Explorerin ja Microsoft Edge **Käynnistä** -funktio avaa sivustoon tai sovellukseen vain, jos sen tietoturva-asetukset ovat samat tai suurempi kuin ne sovelluksen, joka sisältää funktio. Jos esimerkiksi lisäät **Käynnistä** funktiota sovelluksen, joka suoritetaan **Luotetut sivustot** suojaus vyöhykkeen, varmista, että sivustoon tai sovellukseen, jotka haluat avata-funktio on **Luotetut sivustojen** tai **paikallisen lähiverkon** aikavyöhykkeen (ei **rajoitetut sivustojen**). Lisätietoja: [Internet Explorer 11 suojaus ja tietosuoja-asetusten muuttaminen](https://support.microsoft.com/en-us/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
+
+**Param**-funktio noutaa sovellukselle avaamisen yhteydessä välitetyn parametrin. Jos nimettyä parametria ei välitetty, **Param** palauttaa *tyhjän*.
 
 ## <a name="syntax"></a>Syntaksi
 **Download**( *Address* )
