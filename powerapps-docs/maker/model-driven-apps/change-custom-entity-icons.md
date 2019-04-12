@@ -4,7 +4,7 @@ definition: Learn how to change the icon for a custom entity
 ms.custom: ''
 ms.date: 05/17/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -63,7 +63,7 @@ Määritä entiteettien kuvakkeet ratkaisunhallinnan avulla.
   
 ## <a name="community-tools"></a>Yhteisön työvälineet
 
-**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** on työnkalu, jonka XrmToolbox-yhteisö on kehittänyt Dynamics 365 Customer Engagement -sovellusta varten. Lisätietoja yhteisön kehittämistä työkaluista on kohdassa [Common Data Service sovelluksille -ratkaisun sovelluskehittäjän työkalut](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
+**[Iconator](https://www.xrmtoolbox.com/plugins/MscrmTools.Iconator/)** on työnkalu, jonka XrmToolbox-yhteisö on kehittänyt Dynamics 365 Customer Engagement -sovellusta varten. Lisätietoja yhteisön kehittämistä työkaluista on kohdassa [Common Data Servicen sovelluskehittäjän työkalut](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
 
 > [!NOTE]
 > Yhteisön työkalut eivät ole Microsoftin tuotteita eivätkä laajenna tuen yhteisön työkaluille. Jos sinulla on kysymyksiä työkalusta, ota yhteyttä julkaisijaan. Lisätietoja: [XrmToolBox](https://www.xrmtoolbox.com).

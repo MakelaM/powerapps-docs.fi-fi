@@ -3,7 +3,7 @@ title: Ratkaisujulkaisijan etuliitteen muuttaminen | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,9 +24,9 @@ search.app:
 
 # <a name="change-the-solution-publisher-prefix"></a>Ratkaisujulkaisijan etuliitteen muuttaminen
 
-Jokainen tehty mukautus on osa ratkaisua. Jokaisella ratkaisulla on julkaisija. Oletusarvoisesti PowerAppsissa käytettävä ratkaisu on **Common Data Services -oletusratkaisu**, joka liitetään **CDS-oletusjulkaisijaan**.
+Jokainen tehty mukautus on osa ratkaisua. Jokaisella ratkaisulla on julkaisija. Oletusarvoisesti PowerAppsissa käytettävä ratkaisu on **Common Data Services -oletusratkaisu**, joka liitetään **Common Data Service -oletusjulkaisijaan**.
 
-Mukautuksen oletusetuliite liitetään satunnaisesti tähän julkaisijaan. Se voi olla esimerkiksi `cr8a3`. Tämä tarkoittaa sitä, että jokaisella organisaatioon luotavalla metatietojen uudella kohteella on alkuun liitettynä nimissä kohteiden yksilöimistä varten. Jos luot uuden entiteetin, jonka nimi on **Eläin**, CDS sovelluksille -ratkaisun käyttämä yksilöllinen nimi on `cr8a3_animal`. Sama koskee uusia kenttiä (määritteitä), suhteita tai asetusjoukon asetuksia.
+Mukautuksen oletusetuliite liitetään satunnaisesti tähän julkaisijaan. Se voi olla esimerkiksi `cr8a3`. Tämä tarkoittaa sitä, että jokaisella organisaatioon luotavalla metatietojen uudella kohteella on alkuun liitettynä nimissä kohteiden yksilöimistä varten. Jos luot uuden entiteetin, jonka nimi on **Eläin**, Common Data Servicen käyttämä yksilöllinen nimi on `cr8a3_animal`. Sama koskee uusia kenttiä (määritteitä), suhteita tai asetusjoukon asetuksia.
 
 Jos et jaa ratkaisua niin, että se asennetaan yhdessä toiselle ratkaisunjulkaisijalle luotujen metatietojen kohteiden kanssa, mukautuksen etuliite voi oikeastaan olla mikä tahansa. Se ei näy sovelluksen useimmille käyttäjille. Se näkyy kuitenkin sovelluskäyttäjille ja esimerkiksi henkilöille, jotka luovat raportteja. Tämän avulla voi nopeasti saada lisätietoja kohteen lisänneestä ratkaisusta.
 
@@ -36,12 +36,12 @@ Tämän vuoksi useat käyttäjät haluavat muuttaa ratkaisunjulkaisijan etuliite
 > Jos muutat ratkaisunjulkaisijan etuliitettä, tee se ennen uusien metatietojen kohteiden luomista. Et voi muuttaa metatietojen kohteiden nimiä.
 > Kun vaihdat mukautetun etuliitteen arvoa, muista siirtyä sarkaimella seuraavaan kenttään. **Asetuksen arvon etuliite** luo automaattisesti luvun mukautuksen etuliitteen perusteella. Tätä lukua käytetään, kun lisäät asetuksia asetusjoukkoihin. Se myös ilmaisee, millä ratkaisulla asetus lisättiin. 
 
-## <a name="change-the-solution-publisher-prefix-for-the-cds-default-publisher"></a>CDS-oletusjulkaisijan ratkaisujulkaisijan etuliitteen muuttaminen  
+## <a name="change-the-solution-publisher-prefix-for-the-common-data-service-default-publisher"></a>Common Data Servicen oletusjulkaisijan ratkaisujulkaisijan etuliitteen muuttaminen  
 
  1. Valitse PowerApps-portaalissa vasemmassa alakulmassa **Mallipohjainen**.
  2. Valitse vasemmalla olevassa siirtymistoiminnossa **Lisätiedot**, jolloin **Common Data Services -oletusratkaisu** avautuu
  3. Valitse ratkaisunhallinnassa vasemmalla olevassa siirtymistoiminnossa **Tiedot**-alue.
- 4. Valitse **Julkaisija**-linkki, jolloin **CDS-oletusjulkaisija**-lomake avautuu.
+ 4. Valitse **Julkaisija**-linkki, jolloin **Common Data Service -oletusjulkaisija**-lomake avautuu.
  5. Muokkaa **Etuliite**-kentän arvoksi haluamasi mukautuksen etuliite.
  6. Valitse **Tallenna ja sulje**.
   

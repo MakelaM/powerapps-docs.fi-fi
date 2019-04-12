@@ -1,10 +1,10 @@
 ---
-title: Virtuaalinen entiteetin vaihekuvaus OData v4 -tietojen tarjoajan avulla Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
+title: Virtuaalinen entiteetin vaihekuvaus OData-tietojen tarjoajan avulla Common Data Servicessa | MicrosoftDocs
 description: Opettele käyttämään OData v4 -tietojen tarjoajaa virtuaalientiteetin kanssa
 ms.custom: ''
 ms.date: 06/04/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article

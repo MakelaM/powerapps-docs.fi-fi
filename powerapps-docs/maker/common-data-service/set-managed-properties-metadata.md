@@ -1,10 +1,10 @@
 ---
-title: Hallittujen ominaisuuksien määrittäminen Common Data Service sovelluksille -ratkaisun metatiedoissa | MicrosoftDocs
+title: Hallittujen ominaisuuksien määrittäminen Common Data Servicen metatiedoissa | MicrosoftDocs
 description: Tietoja metatietojen kohteiden hallittujen ominaisuuksien määrittämisestä ratkaisussa
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="set-managed-properties-in-common-data-service-for-apps-metadata"></a>Hallittujen ominaisuuksien määrittäminen Common Data Service sovelluksille -ratkaisun metatiedoissa 
+# <a name="set-managed-properties-in-common-data-service-metadata"></a>Hallittujen ominaisuuksien määrittäminen Common Data Servicen metatiedoissa 
 
 Hallitut ominaisuudet ovat käytössä vain, kun hallitussa ratkaisussa on metatietoja ja se tuodaan toiseen ympäristöön. Näiden asetusten avulla ratkaisun tekijä pystyy jonkin verran hallitsemaan sitä, kuinka paljon hallittua ratkaisua käyttävät henkilöt voivat tehdä mukautuksia. 
 
@@ -58,7 +58,7 @@ Entiteeteillä on useampia hallittuja ominaisuuksia kuin muun tyyppisillä osill
 
 ## <a name="field-managed-properties"></a>Kentän hallitut ominaisuudet
 
-Lisätietoja kenttien muokkaamisesta on kohdassa [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md).
+Lisätietoja kenttien muokkaamisesta on kohdassa [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md).
 
 Valitse [kenttien tarkastelemisen](create-edit-field-solution-explorer.md#view-fields) yhteydessä hallitsemattoman ratkaisun mukautettu kenttä ja valitse sitten valikkoriviltä **Lisää toimintoja** >  **Hallitut ominaisuudet**.
 
@@ -94,6 +94,6 @@ Suhteilla on vain yksi hallittu ominaisuus: **Voidaan mukauttaa**. Tämä asetus
 
 [Hallitut ominaisuudet](solutions-overview.md#managed-properties)<br />
 [Entiteettien luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-entities-solution-explorer.md)<br />
-[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
 [1:N (yksi moneen)- ja N:1 (monta yhteen) -entiteettisuhteiden luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-1n-relationships-solution-explorer.md)<br />
-[N:N (monta moneen) -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa ratkaisunhallinnan avulla](create-edit-nn-relationships-solution-explorer.md)
+[N:N (monta moneen) -entiteettisuhteiden luominen Common Data Servicessä ratkaisunhallinnan avulla](create-edit-nn-relationships-solution-explorer.md)

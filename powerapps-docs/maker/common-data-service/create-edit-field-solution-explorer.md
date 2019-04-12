@@ -1,9 +1,9 @@
 ---
-title: Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla | MicrosoftDocs
+title: Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -19,13 +19,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-fields-for-common-data-service-for-apps-using-powerapps-solution-explorer"></a>Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla
+# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-solution-explorer"></a>Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla
 
-Ratkaisunhallinta on eräs tapa luoda kenttiä Common Data Service sovelluksille -ratkaisuun ja muokata niitä.
+Ratkaisunhallinta on eräs tapa luoda Common Data Servicen kenttiä ja muokata niitä.
 
 [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. <br />Lisätietoja: 
-- [Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-fields.md)
-- [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)
+- [Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)
+- [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)
   
 ## <a name="open-solution-explorer"></a>Ratkaisunhallinnan avaaminen
 
@@ -142,7 +142,7 @@ Jos valitset **Käytä olemassa olevaa asetusjoukkoa** -arvon, suunnitteluohjelm
 
 ![Yleisen asetusjoukon määrittäminen](media/global-option-set-solution-explorer.png)
 
-Voit määrittää yleiset asetusjoukot myös erikseen. Lisätietoja: [Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)
+Voit määrittää yleiset asetusjoukot myös erikseen. Lisätietoja: [Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)
 
 > [!NOTE]
 > Jos määrität jokaisen asetusjoukon yleiseksi asetusjoukoksi, yleisten asetusjoukkojen luettelo kasvaa. Tällöin sen hallinta voi olla vaikeaa. Jos tiedät, että asetusjoukkoa tullaan käyttämään vain yhdessä paikassa, käytä paikallista asetusjoukkoa.
@@ -260,8 +260,8 @@ Kaikissa kentissä, joihin voi kirjoittaa suoraan tekstiä, on IME-tila. IME-edi
 
 
 ### <a name="see-also"></a>Katso myös  
-[Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-fields.md)<br />
-[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)<br />
 [Kenttien tyypit ja kentän tietojen tyypit](types-of-fields.md)<br />
 [Voit automatisoida manuaalisen laskennan laskettujen kenttien määrittämiseen](define-calculated-fields.md)<br />
 [Määritä koontikenttiä, jotka kokoavat arvoja](define-rollup-fields.md)<br />

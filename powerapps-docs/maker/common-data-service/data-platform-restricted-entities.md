@@ -1,13 +1,13 @@
 ---
 title: Dynamics 365 -käyttöoikeuksia vaativat rajoitetut entiteetit | Microsoft Docs
-description: 'Common Data Service (CDS) sovelluksille -ratkaisun niiden rajoitettujen entiteettien luettelo, jotka vaativat Dynamics 365 -käyttöoikeudet.'
-author: clwesene
+description: 'Niiden Common Data Servicen rajoitettujen entiteettien luettelo, jotka vaativat Dynamics 365 -käyttöoikeudet.'
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
 ms.date: 05/01/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -16,7 +16,7 @@ search.app:
 ---
 
 # <a name="restricted-entities-requiring-dynamics-365-licenses"></a>Dynamics 365 -käyttöoikeuksia vaativat rajoitetut entiteetit
-Sovellusten tekijät voivat käyttää suurinta osaa Common Data Service (CDS) sovelluksille -ratkaisun käytettävissä olevista entiteeteistä luodessaan sovelluksia ja työnkulkuja käyttäjille, joilla on vain PowerApps-palvelupaketin 1 käyttöoikeus. Joissakin entiteeteissä on kuitenkin monimutkaista liiketoimintalogiikkaa, joka vaatii käyttäjiltä PowerApps-palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeuden (lisätietoja on kohdassa [Entiteetin käyttöoikeusvaatimukset](data-platform-entity-licenses.md)). Jopa pieni Dynamics 365 -tuotteisiin yhdistetty entiteettijoukko edellyttää kaavion ja mallipohjaisen sovelluksen käyttäjiltä Dynamics 365 -tuotteen käyttöoikeuden, jos käyttäjien on luotava, päivitettävä tai poistettava tietueita entiteeteistä. Näitä kutsutaan *rajoitetuiksi* entiteeteiksi.
+Sovellusten tekijät voivat käyttää suurinta osaa Common Data Servicen käytettävissä olevista entiteeteistä luodessaan sovelluksia ja työnkulkuja käyttäjille, joilla on vain PowerApps-palvelupaketin 1 käyttöoikeus. Joissakin entiteeteissä on kuitenkin monimutkaista liiketoimintalogiikkaa, joka vaatii käyttäjiltä PowerApps-palvelupaketin 2 tai Microsoft Flow -palvelupaketin 2 käyttöoikeuden (lisätietoja on kohdassa [Entiteetin käyttöoikeusvaatimukset](data-platform-entity-licenses.md)). Jopa pieni Dynamics 365 -tuotteisiin yhdistetty entiteettijoukko edellyttää kaavion ja mallipohjaisen sovelluksen käyttäjiltä Dynamics 365 -tuotteen käyttöoikeuden, jos käyttäjien on luotava, päivitettävä tai poistettava tietueita entiteeteistä. Näitä kutsutaan *rajoitetuiksi* entiteeteiksi.
 
 Seuraavien syiden vuoksi entiteetit voivat vaatia Dynamics 365 -käyttöoikeuden:
 

@@ -1,7 +1,7 @@
 ---
 title: Mallipohjaisen sovelluksen päälomakkeiden aliruudukon ominaisuudet PowerAppsissa | MicrosoftDocs
 description: Tietoja päälomakkeiden Aliruudukko-resurssin ominaisuuksista
-Keywords: Main form; Sub-Grid properties; Dynamics 365
+Keywords: Päälomake; aliruudukon ominaisuudet; Dynamics 365
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/07/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
 search.audienceType:

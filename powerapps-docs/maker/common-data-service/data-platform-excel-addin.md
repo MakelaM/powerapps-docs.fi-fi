@@ -1,13 +1,13 @@
 ---
 title: Entiteetin tietojen avaaminen Excelissä | Microsoft Docs
 description: Avaa entiteetin tiedot Excelissä vuorovaikutteista tarkastelua ja muokkaamista varten.
-author: clwesene
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 05/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:
@@ -78,6 +78,6 @@ Jos ongelmaa ei ole kuvattu tässä, ota yhteyttä [tukisivujen](https://powerap
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * [Entiteetin kenttien hallinta](data-platform-manage-fields.md)
 * [Entiteettien välisten suhteiden määrittäminen](data-platform-entity-lookup.md)
-* [Sovelluksen luominen Common Data Service sovelluksille -ratkaisun avulla](../canvas-apps/data-platform-create-app.md)
-* [Sovelluksen luominen alusta Common Data Service sovelluksille -ratkaisun avulla](../canvas-apps/data-platform-create-app-scratch.md)
+* [Sovelluksen luominen Common Data Servicen avulla](../canvas-apps/data-platform-create-app.md)
+* [Sovelluksen luominen alusta Common Data Servicen avulla](../canvas-apps/data-platform-create-app-scratch.md)
 

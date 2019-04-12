@@ -1,10 +1,10 @@
 ---
-title: Hierarkkisten tietojen määrittäminen ja kysely Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
+title: Hierarkkisten tietojen määrittäminen ja kysely Common Data Servicen avulla | MicrosoftDocs
 description: Tietoja hierarkkisesti järjestettyjen tietojen määrittämisestä ja kyselystä
 ms.custom: ''
 ms.date: 06/02/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -35,7 +35,7 @@ Joillekin vakioentiteeteille on jo määritetty hierarkiat. Muissa entiteeteiss�
 
 ## <a name="define-hierarchical-data"></a>Hierarkkisten tietojen määrittäminen
 
-Common Data Service sovelluksille tukee hierarkkisten tietorakenteiden liittyvien tietueiden *itseen viittaavia* yksi moneen (1:N) -suhteita. 
+Common Data Service tukee hierarkkisten tietorakenteiden liittyvien tietueiden *itseen viittaavia* yksi moneen (1:N) -suhteita. 
 
 > [!NOTE]
 > *Itseen viittaava* tarkoittaa sitä, että entiteetti liittyy siihen itseensä. Esimerkiksi asiakasentiteetillä on hakukenttä, joka liittää sen toiseen asiakasentiteettitietueeseen.

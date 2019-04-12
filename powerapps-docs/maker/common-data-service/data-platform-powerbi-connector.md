@@ -1,6 +1,6 @@
 ---
 title: PowerBI-raportin luominen | Microsoft Docs
-description: Tietojen käyttäminen PowerBI Desktop -sovelluksessa Common Data Service sovelluksiin -yhdysohjelman avulla.
+description: Tietojen käyttäminen PowerBI Desktopissa Common Data Servicen avulla.
 author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
@@ -15,43 +15,43 @@ search.app:
   - D365CE
 ---
 # <a name="create-a-power-bi-report"></a>Power BI -raportin luominen
-Common Data Service sovelluksille mahdollistaa tietojen käyttämisen suoraan Power BI Desktop -sovelluksen avulla raporttien luomiseksi ja niiden julkaisemiseksi Power BI:ssä. Power BI:ssä raportteja voi käyttää koontinäytöissä ja niitä voi jakaa muille käyttäjille. Niitä voi käyttää myös Power BI:n mobiilisovelluksissa eri ympäristöissä.
+Common Data Service mahdollistaa tietojen käyttämisen suoraan Power BI Desktopin avulla raporttien luomiseksi ja niiden julkaisemiseksi Power BI:ssä. Power BI:ssä raportteja voi käyttää koontinäytöissä ja niitä voi jakaa muille käyttäjille. Niitä voi käyttää myös Power BI:n mobiilisovelluksissa eri ympäristöissä.
 
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Jos haluat käyttää Power BI:tä Common Data Service sovelluksille -ratkaisussa, tee seuraavat toiminnot:
+Jos haluat käyttää Power BI:tä Common Data Servicessä, tee seuraavat toiminnot:
 
 * Lataa ja asenna Power BI Desktop. Se on ilmainen paikallisesti käytettävä sovellus. Voit ladata Power BI Desktop -sovelluksen [täältä](https://powerbi.microsoft.com/desktop/).
-* Common Data Service sovelluksille -ympäristö ja tekijän oikeudet, joiden avulla voi käyttää portaalia. Lukuoikeudet, joiden avulla voi käyttää entiteettien tietoja.
+* Common Data Service -ympäristö ja tekijän oikeudet, joiden avulla voi käyttää portaalia sekä lukuoikeudet, joiden avulla voi käyttää entiteettien tietoja.
 
-## <a name="finding-your-common-data-service-for-apps-environment-url"></a>Common Data Service sovelluksille -ympäristön URL-osoitteen löytäminen
+## <a name="finding-your-common-data-service-environment-url"></a>Common Data Service -ympäristön URL-osoitteen etsiminen
 
 1. Avaa [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse ympäristö, johon muodostat yhteyden. Valitse oikeassa yläkulmassa oleva **asetusratas** ja valitse sitten **Lisämukautukset**
 
-    ![CDS sovelluksille -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "CDS sovelluksille -ympäristö")
+    ![Common Data Service -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "Common Data Service -ympäristö")
 
 2. Valitse Sovelluskehittäjän resurssit -osassa **Resurssit**, jolloin näyttöön avautuu uusi välilehti.
 
-    ![CDS sovelluksille -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv2.png "CDS sovelluksille -ympäristö")
+    ![Common Data Service -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv2.png "Common Data Service -ympäristö")
 
 3. Kopioi URL-osoitteen juuri uuteen välilehteen. Tämä on ympäristön yksilöllinen URL-osoite. URL-osoitteen muoto on **https://yourenvironmentid.crm.dynamics.com/**. Varmista, että et kopioi URL-osoitteen loppuosaa. Talleta osoite niin, että saat sen käyttöösi, kun luot PowerBI-raportin.
 
     > [!div class="mx-imgBorder"] 
-    > ![CDS sovelluksille -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "CDS sovelluksille -ympäristö")
+    > ![Common Data Service -ympäristö](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "Common Data Service -ympäristö")
 
-## <a name="connecting-to-common-data-service-for-apps-from-power-bi-desktop"></a>Yhteyden muodostaminen Common Data Service sovelluksille -ratkaisuun Power BI Desktop -sovelluksesta
+## <a name="connecting-to-common-data-service-from-power-bi-desktop"></a>Yhteyden muodostaminen Common Data Serviceen Power BI Desktopista
 
 1. Käynnistä **Power BI Desktop**. Jos käynnistät sen ensimmäisen kerran, näyttöön tulee aloitusnäyttö tai tyhjä kaavio. Valitse kummassakin tapauksessa **Hae tiedot** ja valitse sitten **Lisää**. Näyttöön tulee Power BI Desktop -sovelluksen käytettävissä olevien tietolähteiden täydellinen luettelo.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport1.png "Power BI Desktop")
 
-2. Valitse yhdysohjelmaluettelosta **Online-palvelut** ja **Common Data Service sovelluksille (beetaversio)**. Valitse **Yhdistä**.
+2. Valitse yhdysohjelmaluettelosta **Online-palvelut** ja **Common Data Service (beetaversio)**. Valitse **Yhdistä**.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop")
 
-3. Liitä **Common Data Service sovelluksille -ympäristön URL-osoite** **Palvelimen URL-osoite** -kenttään ja valitse **Ok**. Jos tämä on ensimmäinen kerta, kun teet näin, näyttöön tulevat PowerAppsissä ja Common Data Service sovelluksille -ratkaisussa käytettävät tunnistetiedot.
+3. Liitä **Common Data Service -ympäristön URL-osoite** **Palvelimen URL-osoite** -kenttään ja valitse **Ok**. Jos tämä on ensimmäinen kerta, kun teet näin, näyttöön tulevat PowerAppsissa ja Common Data Servicessä käytettävät tunnistetiedot.
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop")
 
@@ -94,7 +94,7 @@ Jos esimerkiksi ApprovalStatus-nimisellä entiteetillä on asetusjoukko, Power B
 
 ## <a name="navigating-relationships"></a>Suhteissa siirtyminen
 
-Common Data Service sovelluksille -ratkaisun suhteet edellyttävät, että PowerBI Desktop -sovelluksen ja kahden GUID-kenttää käyttävän entiteetin välille luodaan suhde. GUID on järjestelmän luoma yksilöllinen tunnus, joka varmistaa, että suhteet luodaan luontitietueille, joissa voi olla sekaannuksia tai kaksoiskappaleita muiden kenttien kanssa. Lisätietoja Power BI Desktop -sovelluksen suhteiden hallinnasta on [täällä](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Common Data Servicen suhteet edellyttävät, että PowerBI Desktop -sovelluksen ja kahden GUID-kenttää käyttävän entiteetin välille luodaan suhde. GUID on järjestelmän luoma yksilöllinen tunnus, joka varmistaa, että suhteet luodaan luontitietueille, joissa voi olla sekaannuksia tai kaksoiskappaleita muiden kenttien kanssa. Lisätietoja Power BI Desktop -sovelluksen suhteiden hallinnasta on [täällä](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
 Vaikka jotkin suhteet voidaan luoda automaattisesti, voit silti tarkistaa ne ja varmistaa, että raportin luomisen yhteydessä luodaan oikeat suhteet:
 

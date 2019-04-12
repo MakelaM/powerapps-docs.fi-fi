@@ -1,10 +1,10 @@
 ---
-title: 'N:N (monta moneen) -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa ratkaisunhallinnan avulla | MicrosoftDocs'
+title: 'N:N (monta moneen) -entiteettisuhteiden luominen Common Data Servicessä ratkaisunhallinnan avulla | MicrosoftDocs'
 description: Monta moneen -suhteiden luominen
 ms.custom: ''
 ms.date: 05/29/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -22,13 +22,13 @@ search.app:
   - D365CE
 ---
 
-# <a name="create-nn-many-to-many-entity-relationships-in-common-data-service-for-apps-using-solution-explorer"></a>N:N (monta moneen) -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa ratkaisunhallinnan avulla
+# <a name="create-nn-many-to-many-entity-relationships-in-common-data-service-using-solution-explorer"></a>N:N (monta moneen) -entiteettisuhteiden luominen Common Data Servicessä ratkaisunhallinnan avulla
 
-Ratkaisunhallinta on eräs tapa luoda N:N (monta moneen) -suhteita Common Data Service sovelluksille -ratkaisuun ja muokata niitä.
+Ratkaisunhallinta on eräs tapa luoda Common Data Servicen N:N (monta moneen) -suhteita ja muokata niitä.
 
 [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. Lisätietoja:
 - [Monta moneen (N:N) -entiteettisuhteiden luominen](create-edit-nn-relationships.md)
-- [Monta moneen -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa PowerApps-portaalin avulla](create-edit-nn-relationships-portal.md)
+- [Monta moneen -entiteettisuhteiden luominen Common Data Servicessä PowerApps-portaalin avulla](create-edit-nn-relationships-portal.md)
 
   
 ## <a name="open-solution-explorer"></a>Ratkaisunhallinnan avaaminen
@@ -107,5 +107,5 @@ Suhteen poistaminen poistaa myös luodun suhteen entiteetin. Kaikki suhdetta kä
 ### <a name="see-also"></a>Katso myös
 
 [Monta moneen (N:N) -entiteettisuhteiden luominen](create-edit-nn-relationships.md)<br />
-[Monta moneen -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa PowerApps-portaalin avulla](create-edit-nn-relationships-portal.md)<br />
+[Monta moneen -entiteettisuhteiden luominen Common Data Servicessä PowerApps-portaalin avulla](create-edit-nn-relationships-portal.md)<br />
 [1:N (yksi moneen)- ja N:1 (monta yhteen) -entiteettisuhteen luominen ja muokkaaminen](create-edit-1n-relationships.md)

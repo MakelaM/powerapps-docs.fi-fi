@@ -1,10 +1,10 @@
 ---
-title: Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
+title: Liiketoimintalogiikan käyttäminen Common Data Servicessä | MicrosoftDocs
 description: 'Lue, miten voit käyttää sovelluksessa erilaisia liiketoimintalogiikkoja'
 ms.custom: ''
 ms.date: 08/06/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -23,14 +23,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="apply-business-logic-in-common-data-service-for-apps"></a>Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisussa
+# <a name="apply-business-logic-in-common-data-service"></a>Liiketoimintalogiikan käyttäminen Common Data Servicessä
 
 Määritä entiteetille *liiketoimintasäännöt*, joita käytetään kaikissa entiteettilomakkeissa ja palvelintasolla. Entiteetille määritettyjä liiketoimintasääntöjä käytetään sekä *kaaviosovelluksissa* ja *mallipohjaisissa sovelluksissa*, jos entiteettiä käytetään sovelluksessa. Lisätietoja:a [Entiteetin liiketoimintasäännön luominen](data-platform-create-business-rule.md).
 
 > [!NOTE]
 > Lisätietoja mallipohjaisen sovelluksen lomakkeessa käytettävän liiketoimintasäännön luomisesta on kohdassa [Liiketoimintasääntöjen luominen mallipohjaisen sovelluksen lomakkeeseen](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
-Voit käyttää myös perinteisiä Common Data Service (CDS) sovelluksille -ratkaisun prosesseja eli työnkulkuja ja toimintoja. Lisätietoja: [Microsoft Flow: Työnkulkuprosessien käyttäminen](/flow/workflow-processes) ja [Microsoft Flow: Toimintojen yleiskatsaus](/flow/actions).
+Voit käyttää myös perinteisiä Common Data Servicen prosesseja eli työnkulkuja ja toimintoja. Lisätietoja: [Microsoft Flow: Työnkulkuprosessien käyttäminen](/flow/workflow-processes) ja [Microsoft Flow: Toimintojen yleiskatsaus](/flow/actions).
 
 ## <a name="see-also"></a>Katso myös
 

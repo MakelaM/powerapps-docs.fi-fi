@@ -1,16 +1,16 @@
 ---
-title: 'Opetusohjelma, jossa kerrotaan mallipohjaisen sovelluksen jakamisesta PowerAppsin avulla | Microsoft Docs'
-description: 'Tässä opetusohjelmassa on lisätietoja siitä, miten mallipohjainen sovellus jaetaan'
+title: Mallipohjaisen sovelluksen jakaminen PowerAppsin avulla | Microsoft Docs
+description: Tietoja mallipohjaisen sovelluksen jakamisesta
 documentationcenter: ''
 author: Mattp123
-manager: kfile
+manager: kvivek
 editor: ''
 tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/21/2018
+ms.date: 03/19/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -19,11 +19,11 @@ search.app:
   - D365CE
 ---
 
-# <a name="tutorial-share-a-model-driven-app-with-powerapps"></a>Opetusohjelma: Mallipohjaisen sovelluksen jakaminen PowerAppsin avulla
+# <a name="share-a-model-driven-app-with-powerapps"></a>Mallipohjaisen sovelluksen jakaminen PowerAppsin avulla
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)]-sovellukset käyttävät jakamisessa rooliin perustuvaa suojausta Rooliin perustuvan suojauksen peruskonsepti on se, että käyttöoikeusrooli sisältää oikeuksia, jotka määrittävät sovelluksessa suoritettavan toimintojoukon oikeudet. Kaikille sovelluksen käyttäjille on delegoitava vähintään yksi ennalta määritetty tai mukautettu rooli. Roolit voi myös delegoida ryhmille. Kun käyttäjä tai ryhmä delegoidaan johonkin näistä rooleista, henkilölle tai ryhmän jäsenille myönnetään roolille liitettyjen oikeuksien joukko. 
 
-Tässä opetusohjelmassa suoritetaan mallipohjaisen sovelluksen jakamiseen liittyvät tehtävät. Jakamisen jälkeen muut voivat käyttää sovellusta. Saat lisätietoja seuraavista toiminnoista:
+Tässä ohjeaiheessa suoritetaan mallipohjaisen sovelluksen jakamiseen liittyvät tehtävät. Jakamisen jälkeen muut voivat käyttää sovellusta. Saat lisätietoja seuraavista toiminnoista:
 - Mukautetun käyttöoikeusroolin luominen
 - Käyttäjien delegoiminen mukautetulle käyttöoikeusroolille
 - Käyttöoikeusroolin delegoiminen sovellukselle
@@ -35,7 +35,7 @@ Sovelluksen jakaminen edellyttää [!INCLUDE [powerapps](../../includes/powerapp
 Kirjaudu sisään [PowerApps](https://powerapps.microsoft.com/) -sovellukseen. Jos sinulla ei vielä ole [!INCLUDE [powerapps](../../includes/powerapps.md)]-tiliä, valitse **Aloita ilmaiseksi** -linkki.
 
 ## <a name="share-an-app"></a>Sovelluksen jakaminen 
-Opetusohjelma seuraa yritystä, Contosoa, joka tarjoaa trimmauspalvelua koirille ja kissoille. Sovellus, joka sisältää trimmausyrityksen seurannan mukautetun entiteetin, on jo luotu ja julkaistu. Nyt sovellus on jaettava niin, että trimmausyrityksen henkilöstö voi käyttää sitä. Voit jakaa sovelluksen, jos järjestelmänvalvoja tai sovelluksen tekijä delegoi käyttäjille ja sovellukselle vähintään yhden käyttöoikeusroolin. 
+Ohjeaiheessa seurataan yritystä, Contosoa, joka tarjoaa trimmauspalvelua koirille ja kissoille. Sovellus, joka sisältää trimmausyrityksen seurannan mukautetun entiteetin, on jo luotu ja julkaistu. Nyt sovellus on jaettava niin, että trimmausyrityksen henkilöstö voi käyttää sitä. Voit jakaa sovelluksen, jos järjestelmänvalvoja tai sovelluksen tekijä delegoi käyttäjille ja sovellukselle vähintään yhden käyttöoikeusroolin. 
 
 ## <a name="create-or-configure-a-security-role"></a>Käyttöoikeusroolin luominen tai määrittäminen
 The [!INCLUDE [powerapps](../../includes/powerapps.md)]-ympäristö sisältää [ennalta määritettyjä käyttöoikeusrooleja](#about-predefined-security-roles), jotka vastaavat yleisiä käyttäjän tehtäviä ja käyttöoikeustasoja, jotka vastaavat suojauksen parhaiden käytäntöjen tavoitteita. Niissä tarjotaan käyttöoikeus pienimpään mahdolliseen yritystietomäärään, joka sovelluksen käyttö vaatii. Muista, että Contoson trimmaussovellus perustuu mukautettuun entiteettiin. Koska entiteetti on mukautettu, oikeudet on määritettävä tarkkaan, ennen kuin käyttäjät voivat käyttää sovellusta. Voit tehdä tämän suorittamalla jonkin seuraavista toiminnoista.
@@ -50,22 +50,36 @@ Lisätietoja käyttöoikeuksista ja vaikutusalueen oikeuksista on kohdassa [Käy
 
 ## <a name="create-a-custom-security-role"></a>Mukautetun käyttöoikeusroolin luominen
 1. Valitse [!INCLUDE [powerapps](../../includes/powerapps.md)] -sivustossa **Sovellukset** > **…**> **Jaa linkki**.
+
 2. Valitse **Luo käyttöoikeusrooli** -kohdan **Jaa tämä sovellus** -valintaikkunassa **Käyttöoikeusasetus**.
+
 3. Valitse **Asetukset**-sivulla **Uusi**.  
 
 4. Käyttöoikeusroolien suunnitteluohjelmassa voi valita toiminnot, kuten lukemisen, kirjoittamisen tai poistamisen, ja kyseisen toiminnon suorituksen vaikutusalueen. Vaikutusalue määrittää, miten syvällä tai korkealla ympäristön hierarkiassa käyttäjä voi suorittaa tietyn toiminnon. Anna **Roolin nimi** -ruutuun *Trimmaajat*.
+
 5. Valitse **Mukautetut entiteetit** -välilehti ja etsi haluamasi mukautettu entiteetti. Tässä esimerkissä mukautetun entiteetin nimi on **Lemmikki**. 
+
 6. Valitse **Lemmikki**-rivillä kaikki seuraavat oikeudet neljä kertaa, kunnes organisaation yleinen vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu: **Luku, kirjoitus, liitos**
-> [!div class="mx-imgBorder"] 
-> ![Uusi käyttöoikeusrooli](media/share-model-driven-app/custom-security-role.png)
+
+   > [!div class="mx-imgBorder"] 
+   > ![Uusi käyttöoikeusrooli](media/share-model-driven-app/custom-security-role.png)
+
 7. Koska trimmaussovelluksella on myös suhde asiakasentiteetin kanssa, valitse **Ydintietueet**-välilehti. Valitse **Asiakas**-rivillä **Luku** neljä kertaa, kunnes organisaation yleinen vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu. 
-8. Valitse **Tallenna ja sulje**. 
-9. Kirjoita käyttöoikeusroolin suunnitteluohjelman **Roolin nimi** -ruutuun *Trimmausyrityksen ajanvaraajat*. 
-10. Valitse **Mukautetut entiteetit** -välilehti ja etsi **Lemmikki**-entiteetti. 
-11. Valitse **Lemmikki**-rivillä kaikki seuraavat oikeudet neljä kertaa, kunnes organisaation yleinen vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu: **Luonti, luku, kirjoitus, poisto, liitos, liitos kohteeseen, delegointi, jako**
-12. Koska trimmaussovelluksella on myös suhde asiakasentiteetin kanssa ja ajanvaraajilla on oltava asiakastietueiden luonti- ja muokkausmahdollisuus, valitse **Ydintietueet**-välilehti. Valitse **Asiakas**-rivillä seuraavat oikeudet neljä kertaa, kunnes organisaation yleinen vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu. 
+
+8. Valitse ensin **Mukauttaminen**-välilehti ja valitse sitten oikeusluettelossa **Luku**-oikeus **Mallipohjainen sovellus** -vieressä. Organisaation vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on nyt valittu.
+
+9. Valitse **Tallenna ja sulje**. 
+
+10. Kirjoita käyttöoikeusroolin suunnitteluohjelman **Roolin nimi** -ruutuun *Trimmausyrityksen ajanvaraajat*. 
+
+11. Valitse **Mukautetut entiteetit** -välilehti ja etsi **Lemmikki**-entiteetti. 
+
+12. Valitse **Lemmikki**-rivillä kaikki seuraavat oikeudet neljä kertaa, kunnes organisaation yleinen vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu: **Luonti, luku, kirjoitus, poisto, liitos, liitos kohteeseen, delegointi, jako**
+
+13. Koska trimmaussovelluksella on myös suhde asiakasentiteetin kanssa ja ajanvaraajilla on oltava asiakastietueiden luonti- ja muokkausmahdollisuus, valitse **Ydintietueet**-välilehti. Valitse **Asiakas**-rivillä seuraavat oikeudet neljä kertaa, kunnes organisaation yleinen vaikutusalue ![Organisaation yleinen vaikutusalue](media/share-model-driven-app/organizational-scope-privilege.png) on valittu. 
     **Luonti, luku, kirjoitus, poisto, liitos, liitos kohteeseen, delegointi, jako**
-13. Valitse **Tallenna ja sulje**.
+
+14. Valitse **Tallenna ja sulje**.
 
 ## <a name="assign-security-roles-to-users"></a>Käyttöoikeusroolien delegoiminen käyttäjille
 Käyttöoikeusroolit hallitsevat käyttäjän käyttöön tulevia tietoja käyttöoikeustaso- ja oikeusjoukkojen perusteella. Tiettyyn käyttöoikeusrooliin sisältyvä käyttöoikeustasojen ja oikeuksien yhdistelmä rajaa, mitä tietoja käyttäjä näkee ja mitä hän voi niille tehdä.

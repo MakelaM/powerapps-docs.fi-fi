@@ -4,7 +4,7 @@ description: Tietoja entiteetin luomisesta ratkaisunhallinnan avulla
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 
 # <a name="create-and-edit-entities-using-solution-explorer"></a>Entiteettien luominen ja muokkaaminen ratkaisunhallinnan avulla
 
-Voit helposti luoda entiteetin useimmissa tavallisissa tilanteissa PowerApps-portaalin avulla. Kaikkia ominaisuuksia ei kuitenkaan ole otettu käyttöön. Jos kohdassa [Entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-entities.md) mainitut vaatimukset on täytettävä, saavutat ne luomalla tai muokkaamalla entiteettejä ratkaisunhallinnan avulla.
+Voit helposti luoda entiteetin useimmissa tavallisissa tilanteissa PowerApps-portaalin avulla. Kaikkia ominaisuuksia ei kuitenkaan ole otettu käyttöön. Jos kohdassa [Entiteettien luominen ja muokkaaminen Common Data Servicessä](create-edit-entities.md) mainitut vaatimukset on täytettävä, saavutat ne luomalla tai muokkaamalla entiteettejä ratkaisunhallinnan avulla.
 
 ## <a name="open-solution-explorer"></a>Ratkaisunhallinnan avaaminen
 
@@ -106,9 +106,9 @@ Both should point to this include
 [!INCLUDE [cc_entity-changeable-options-table](../../includes/cc_entity-changeable-options-table.md)]
 
 Voit tehdä myös seuraavat muutokset:
-- [Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-fields.md)
+- [Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)
 - [Entiteettien välisten suhteiden luominen ja muokkaaminen](create-edit-entity-relationships.md)
-- [Luo ja suunnittele lomakkeita](../model-driven-apps/create-design-forms.md)
+- [Lomakkeiden luominen ja suunnittelu](../model-driven-apps/create-design-forms.md)
 - [Luomalla liiketoimintaprosessin voidaan yhdenmukaistaa prosessit](/flow/create-business-process-flow)
 
 ## <a name="delete-an-entity"></a>Entiteetin poistaminen
@@ -197,6 +197,6 @@ Joitakin asetuksia käytetään vain virtuaalisen entiteetin luomisen yhteydess�
 Lisätietoja: [Ulkoisten tietolähteiden tietoja sisältävien virtuaalisten entiteettien luominen ja muokkaaminen](create-edit-virtual-entities.md)
 
 ### <a name="see-also"></a>Katso myös
-[Entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-entities.md)<br />
+[Common Data Servicen entiteettien luominen ja muokkaaminen](create-edit-entities.md)<br />
 [Opetusohjelma: Osia sisältävän mukautetun entiteetin luominen PowerAppsissa](/powerapps/maker/common-data-service/create-custom-entity)<br />
 [Ratkaisun luominen](create-solution.md)

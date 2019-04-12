@@ -1,14 +1,14 @@
 ---
-title: Tietojen lisääminen Common Data Service sovelluksille -ratkaisun entiteettiin Power Queryn avulla | Microsoft Docs
-description: Vaiheittaiset ohjeet Power Queryn käyttämisestä tietojen lisäämisessä Common Data Service (CDS) sovelluksille -ratkaisun uuteen tai olemassa olevaan entiteettiin toisesta tietolähteestä.
-author: AFTOwen
+title: Tietojen lisääminen Common Data Servicen entiteettiin Power Queryn avulla | Microsoft Docs
+description: Vaiheittaiset ohjeet Power Queryn käyttämisestä tietojen lisäämisessä Common Data Servicen uuteen tai olemassa olevaan entiteettiin toisesta tietolähteestä.
+author: mllopis
 manager: kfile
 ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: cds
 ms.date: 03/21/2018
-ms.author: anneta
+ms.author: millopis
 search.audienceType:
   - maker
 search.app:
@@ -16,8 +16,8 @@ search.app:
   - D365CE
 ---
 
-# <a name="add-data-to-an-entity-in-common-data-service-for-apps-by-using-power-query"></a>Tietojen lisääminen Common Data Service sovelluksille -ratkaisun entiteettiin Power Queryn avulla
-Tämän toimintosarjan avulla luodaan entiteetti [Common Data Service (CDS) sovelluksille -ratkaisussa](data-platform-intro.md) ja täytetään entiteetin tiedot OData-syötteestä Power Queryn avulla. Voit integroida tiedot esimerkiksi näistä online-lähteistä ja paikallisista lähteistä käyttämällä samoja tekniikoita:
+# <a name="add-data-to-an-entity-in-common-data-service-by-using-power-query"></a>Tietojen lisääminen Common Data Servicen entiteettiin Power Queryn avulla
+Tämän toimintosarjan avulla luodaan entiteetti [Common Data Servicessä](data-platform-intro.md) ja täytetään entiteetin tiedot OData-syötteestä Power Queryn avulla. Voit integroida tiedot esimerkiksi näistä online-lähteistä ja paikallisista lähteistä käyttämällä samoja tekniikoita:
 
 * SQL Server
 * Salesforce

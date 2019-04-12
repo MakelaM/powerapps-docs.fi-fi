@@ -3,7 +3,7 @@ title: Värimallin muuttaminen tai logon lisääminen organisaation tuotemerkki�
 ms.custom: ''
 ms.date: 02/19/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -116,7 +116,7 @@ Seuraavassa näyttökuvassa on osa oletusteeman asetuksista.
 ### <a name="theme-contrast"></a>Teeman kontrasti  
  Suosittelemme kontrastien värejä käytettäväksi seuraavalla tavalla:  
   
--   Kontrastien värit kannattaa valita huolella. Kontrastien värit kannattaa valita huolella. Common Data Service sovelluksille -ratkaisun valmiissa oletusteemassa on optimaalista käytettävyyttä tukevat kontrastisuhteet. Käytä uusissa teemoissa samoja suhteita.  
+-   Kontrastien värit kannattaa valita huolella. Kontrastien värit kannattaa valita huolella. Common Data Servicen valmiissa oletusteemassa on optimaalista käytettävyyttä tukevat kontrastisuhteet. Käytä uusissa teemoissa samoja suhteita.  
   
 -   Käytä suurissa kontrasteissa oletusväriasetuksia.  
   

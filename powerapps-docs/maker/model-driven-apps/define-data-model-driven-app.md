@@ -1,7 +1,7 @@
 ---
 title: Mallipohjaisen sovelluksen tietojen määrittäminen PowerAppsissa | MicrosoftDocs
 description: Mallipohjaisen sovelluksen tietojen määrittäminen
-Keywords: 'data, entity, fields, relationship, attributes, model-driven app'
+Keywords: 'tiedot, entiteetti, kentät, suhde, määritteet, mallipohjainen sovellus'
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 search.audienceType:
   - maker
@@ -20,11 +20,11 @@ search.app:
 ---
 # <a name="define-data-for-your-model-driven-app"></a>Mallipohjaisen sovelluksen tietojen määrittäminen
 
-Mallipohjaisen sovelluksen tiedot määritetään [Common Data Service (CDS) sovelluksille -ratkaisussa](../common-data-service/data-platform-intro.md). 
+Mallipohjaisen sovelluksen tiedot määritetään [Common Data Servicessä](../common-data-service/data-platform-intro.md). 
 
 Voit määrittää sovelluksen tiedot seuraavien osien avulla: *entiteetti*, *kenttä* ja *suhde*.
 
-Seuraavissa CDS sovelluksille -osan ohjeaiheissa on lisätietoja näiden osien käyttämisestä CDS sovelluksille -ratkaisussa mallipohjaisen sovelluksen tietojen määrittämistä varten:
+Seuraavissa Common Data Service -osan ohjeaiheissa on lisätietoja näiden osien käyttämisestä Common Data Servicessä mallipohjaisen sovelluksen tietojen määrittämistä varten:
 
 |Osa |Aihe|
 |-----|----|

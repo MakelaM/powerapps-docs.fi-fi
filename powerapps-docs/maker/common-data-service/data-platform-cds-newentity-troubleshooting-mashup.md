@@ -1,6 +1,6 @@
 ---
 title: Power Queryn vianmääritys | Microsoft Docs
-description: Ongelmien ratkaiseminen luomalla Common Data Service sovelluksille -ratkaisulle mukautettu entiteetti Power Queryn avulla.
+description: Ongelmien ratkaiseminen luomalla Common Data Servicessä mukautettu entiteetti Power Queryn avulla.
 author: mllopis
 manager: kfile
 ms.service: powerapps
@@ -20,7 +20,7 @@ Kun luot ulkoisten lähteiden tietoja mukautetun entiteetin Power Query for Exce
 
 >”Azure Active Directory -järjestelmänvalvoja on määrittänyt käytännön, joka estää tämän toiminnon käyttämisen. Ota yhteyttä järjestelmänvalvojaan, joka voi myöntää tämän toiminnon käyttöoikeudet puolestasi."
 
-Tämä virhe tapahtuu, jos Power Query ei voi käyttää organisaation tietoja PowerAppsissa tai Common Data Service sovelluksille -ratkaisussa. Tämä tapahtuu seuraavissa kahdessa tilanteessa:
+Tämä virhe tapahtuu, jos Power Query ei voi käyttää organisaation tietoja PowerAppsissa tai Common Data Servicessä. Tämä tapahtuu seuraavissa kahdessa tilanteessa:
 
 * Azure Active Directory (Azure AD) -vuokraajan järjestelmänvalvoja on poistanut käytöstä käyttäjän mahdollisuuden antaa suostumus sovelluksille, jotka käyttävät yrityksen tietoja heidän puolestaan.
 * Hallitsemattoman Active Directory -vuokraajan käyttäminen. Hallitsematon vuokraaja on hakemisto, jolla ei ole yleistä järjestelmänvalvojaa. Se on luotu itsepalvelun rekisteröitymistarjouksen viimeistelemiseksi. Jos käyttäjä haluaa korjata tämän skenaarion, hänen on ensin muunnettava hallittu vuokraaja ja seurattava toista ongelmaan määritettyä ratkaisua. Ratkaisut on kuvattu seuraavassa osassa.

@@ -4,7 +4,7 @@ description: 'Opi, miten järjestelmän entiteettisanomien muokataan'
 ms.custom: ''
 ms.date: 05/15/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,7 +25,7 @@ search.app:
 ---
 # <a name="edit-system-entity-messages"></a>Järjestelmäentiteetin sanomien muokkaaminen
 
-Joidenkin järjestelmäentiteettien oletusnäyttönimeä käytetään Common Data Service sovelluksille -ratkaisun käyttöliittymätekstissä ja virhesanomissa. Jos haluat muuttaa näyttönimeä, päivitä myös oletusnäyttönimeä käyttävät sanomat. Jos muutat esimerkiksi *Asiakas*-näyttönimen *Yritys*-näyttönimeksi, vanha nimi näkyy yhä virhesanomassa.  
+Joidenkin järjestelmäentiteettien oletusnäyttönimeä käytetään Common Data Servicen käyttöliittymätekstissä ja virhesanomissa. Jos haluat muuttaa näyttönimeä, päivitä myös oletusnäyttönimeä käyttävät sanomat. Jos muutat esimerkiksi *Asiakas*-näyttönimen *Yritys*-näyttönimeksi, vanha nimi näkyy yhä virhesanomassa.  
 
 Järjestelmäsanomia ei voi muokata PowerApps-portaalissa. Niiden muokkaamisessa on käytettävä ratkaisunhallintaa.
 

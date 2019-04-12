@@ -1,10 +1,10 @@
 ---
-title: Monta moneen -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa PowerApps-portaalin avulla | MicrosoftDocs
+title: Monta moneen -entiteettisuhteiden luominen Common Data Servicessä PowerApps-portaalin avulla | MicrosoftDocs
 description: Monta moneen -suhteiden luominen
 ms.custom: ''
 ms.date: 06/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -22,13 +22,13 @@ search.app:
   - D365CE
 ---
 
-# <a name="create-many-to-many-entity-relationships-in-common-data-service-for-apps-using-powerapps-portal"></a>Monta moneen -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa PowerApps-portaalin avulla
+# <a name="create-many-to-many-entity-relationships-in-common-data-service-using-powerapps-portal"></a>Monta moneen -entiteettisuhteiden luominen Common Data Servicessä PowerApps-portaalin avulla
 
-[PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla on helppo luoda ja muokata monta moneen -entiteettisuhteita Common Data Service sovelluksille -ratkaisussa.
+[PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla on helppo luoda ja muokata monta moneen -entiteettisuhteita Common Data Servicessä.
 
 Portaalin avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. Lisätietoja: 
 - [N:N (monta moneen ) -entiteettisuhteiden luominen](create-edit-nn-relationships.md)
-- [N:N (monta moneen) -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa ratkaisunhallinnan avulla](create-edit-nn-relationships-solution-explorer.md)
+- [N:N (monta moneen) -entiteettisuhteiden luominen Common Data Servicessä ratkaisunhallinnan avulla](create-edit-nn-relationships-solution-explorer.md)
 
 ## <a name="view-many-to-many-entity-relationships"></a>Monta moneen -entiteettisuhteiden tarkasteleminen
 
@@ -86,4 +86,4 @@ Monta moneen -suhteen poistaminen poistaa myös luodun suhteen entiteetin. Kaikk
 ### <a name="see-also"></a>Katso myös
 
 [N:N (monta moneen ) -entiteettisuhteiden luominen](create-edit-nn-relationships.md)<br />
-[N:N (monta moneen) -entiteettisuhteiden luominen Common Data Service sovelluksille -ratkaisussa ratkaisunhallinnan avulla](create-edit-nn-relationships-solution-explorer.md)
+[N:N (monta moneen) -entiteettisuhteiden luominen Common Data Servicessä ratkaisunhallinnan avulla](create-edit-nn-relationships-solution-explorer.md)

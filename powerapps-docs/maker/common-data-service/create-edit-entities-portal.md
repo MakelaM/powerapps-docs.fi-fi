@@ -4,7 +4,7 @@ description: Tietoja entiteettien luomisesta ja muokkaamisesta PowerApps-portaal
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,10 +25,10 @@ search.app:
 
 # <a name="create-and-edit-entities-using-powerapps-portal"></a>Entiteettien luominen ja muokkaaminen PowerApps-portaalin avulla
 
-[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo luoda ja muokata entiteettejä Common Data Service sovelluksille -ratkaisulle.
+[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo luoda ja muokata Common Data Servicen entiteettejä.
 
 Portaalin avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. Lisätietoja: 
-- [Entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-entities.md)
+- [Common Data Servicen entiteettien luominen ja muokkaaminen](create-edit-entities.md)
 - [Entiteettien luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-entities-solution-explorer.md)
 
 ## <a name="view-entities"></a>Entiteettien tarkasteleminen
@@ -62,7 +62,7 @@ Anna seuraavien kenttien tiedot
 |--|--|
 |**Näyttönimi**|Tämä on sovelluksessa näkyvä entiteetin yksikkönimi. Sen voi muuttaa myöhemmin.|
 |**Monikollinen näyttönimi**|Tämä on sovelluksessa näkyvä entiteetin monikollinen nimi. Sen voi muuttaa myöhemmin.|
-|**Nimi**|Kenttä täytetään valmiiksi tähän kirjoitetun **näyttönimen** perusteella. Se sisältää CDS :n ratkaisunjulkaisijan mukautuksen etuliitteen. Sitä ei voi muuttaa entiteetin tallentamisen jälkeen.|
+|**Nimi**|Kenttä täytetään valmiiksi tähän kirjoitetun **näyttönimen** perusteella. Se sisältää Common Data Servicen ratkaisunjulkaisijan mukautuksen etuliitteen. Sitä ei voi muuttaa entiteetin tallentamisen jälkeen.|
 |**Kuvaus**|Anna entiteetin tarkoitukselle merkityksellinen kuvaus.|
 
 Valitse **Seuraava**, kun haluat jatkaa. Tällöin **Uusi entiteetti** -paneeli suljetaan ja näyttöön tulee kenttäluettelo.
@@ -144,7 +144,7 @@ Jos entiteetillä on riippuvuuksia, jotka estävät sen poistamisen, näyttöön
 
 ### <a name="see-also"></a>Katso myös
 
-[Entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-entities.md)<br />
+[Common Data Servicen entiteettien luominen ja muokkaaminen](create-edit-entities.md)<br />
 [Entiteettien luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-entities-solution-explorer.md)
 
 

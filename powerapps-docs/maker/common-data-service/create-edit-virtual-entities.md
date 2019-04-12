@@ -1,10 +1,10 @@
 ---
-title: Virtuaalisten entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisun avulla | MicrosoftDocs
+title: Virtuaalisten entiteettien luominen ja muokkaaminen Common Data Servicen avulla | MicrosoftDocs
 description: Tietoja virtuaalisten entiteettien luomisesta
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,13 +25,13 @@ search.app:
 ---
 # <a name="create-and-edit-virtual-entities-that-contain-data-from-an-external-data-source"></a>Virtuaalisten entiteettien, jotka sisältävät ulkoisen tietolähteen tietoja, luominen ja muokkaaminen
 
-Virtuaalinen entiteetti on Common Data Service sovelluksille -ratkaisun mukautettu entiteetti, jonka kentät sisältävät tietoja ulkoisesta tietolähteestä. Virtuaaliset entiteetit näkyvät sovelluksen käyttäjille tavallisina entiteettitietueina, mutta ne sisältävät tietoja, jotka on noudettu ulkoisesta tietokannasta (esimerkiksi Azure SQL Databasesta). Virtuaalisiin entiteetteihin perustuvat tietueet ovat käytettävissä kaikissa asiakasohjelmissa, CDS sovelluksille -ratkaisun WWW-palvelun avulla kehitetyt mukautetut asiakasohjelmat mukaan lukien.  
+Virtuaalinen entiteetti on Common Data Servicen mukautettu entiteetti, jonka kentät sisältävät tietoja ulkoisesta tietolähteestä. Virtuaaliset entiteetit näkyvät sovelluksen käyttäjille tavallisina entiteettitietueina, mutta ne sisältävät tietoja, jotka on noudettu ulkoisesta tietokannasta (esimerkiksi Azure SQL Databasesta). Virtuaalisiin entiteetteihin perustuvat tietueet ovat käytettävissä kaikissa asiakasohjelmissa, Common Data Servicen verkkopalvelun avulla kehitetyt mukautetut asiakasohjelmat mukaan lukien.  
   
 Menneisyydessä voidakseen integroida eri tietolähteitä niitä varten piti kehittää yhdysohjelma tietojen liikuttamiseen tai luoda mukautettu laajennus joko asiakas- tai palvelinpuolelle. Kuitenkin virtuaalientiteetteihin voi yhdistää suoraan ulkoisen tietolähteen suorituksen yhteydessä niin, että ulkoisesta lähteestä vaaditut tiedot ovat käytettävissä ympäristössä ilman tarvetta tietojen replikointiin.  
 
-Virtuaalientiteetit koostuvat kolmesta tärkeimästä osasta *tietopalvelu*, *tietolähde* tietue ja *näennäisentiteetti*. Tietojen toimittaja koostuu laajennuksista ja tietojen lähde-entiteetistä. Tietojen lähde on entiteettitietue CDS sovelluksille -ratkaisussa, joka sisältää metatiedot, joka vastaa yhteyden parametrien rakennetta. Kukin näennäisentiteetti viittaa tietolähteeseen kohdemäärityksessä.  
+Virtuaalientiteetit koostuvat kolmesta tärkeimästä osasta *tietopalvelu*, *tietolähde* tietue ja *näennäisentiteetti*. Tietojen toimittaja koostuu laajennuksista ja tietojen lähde-entiteetistä. Tietojen lähde on entiteettitietue Common Data Servicessä, joka sisältää metatiedot, joka vastaa yhteyden parametrien rakennetta. Kukin näennäisentiteetti viittaa tietolähteeseen kohdemäärityksessä.  
   
-CDS sovelluksille sisältää OData-tietojen toimittajan, jonka avulla voi yhteyden muodostaa OData v4 -WWW-palveluun, joka käyttää ulkoisia tietoja. 
+Common Data Service sisältää OData-tietojen toimittajan, jonka avulla voi yhteyden muodostaa OData v4 -verkkopalveluun, joka käyttää ulkoisia tietoja. 
   
 Sovelluskehittäjät voivat myös muodostaa omat tietopalvelut. Tietopalvelut asennetaan ympäristöön ratkaisuna. Lisätietoja: [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](../../developer/common-data-service/virtual-entities/get-started-ve.md)
   
@@ -41,7 +41,7 @@ Sovelluskehittäjät voivat myös muodostaa omat tietopalvelut. Tietopalvelut as
   
 ## <a name="virtual-entity-benefits"></a>Näennäisentiteettiin edut  
   
-- Sovelluskehittäjät voivat ottaa käyttöön ulkoisia tietoja lukevia laajennuksia käyttämällä CDS sovelluksille -ratkaisun WWW-palveluita ja laajennusten rekisteröintityökalua.  
+- Sovelluskehittäjät voivat ottaa käyttöön ulkoisia tietoja lukevia laajennuksia käyttämällä Common Data Servicen verkkopalveluita ja laajennusten rekisteröintityökalua.  
 - Järjestelmän mukauttajat valitsevat PowerAppsin ratkaisunhallinnan tietolähdetietueen määrittämistä ja virtuaalientiteettien luomista varten. Niitä voidaan käyttää ulkoisten tietojen näkemiseen kirjoittamatta yhtään koodia.  
 - Loppukäyttäjät tarkastelevat kenttien, ruudukkojen, hakutulosten sekä Fetch XML -pohjaisten raporttien ja koontinäyttöjen tietoja virtuaalisen entiteetin luomissa tietueissa.  
   
@@ -58,7 +58,7 @@ Sovelluskehittäjät voivat myös muodostaa omat tietopalvelut. Tietopalvelut as
     |Tietojen tarjoaja|Kuvaus|
     |--|--|
     |*Mukautettujen tietojen tarjoaja*|Jos olet tuonut tietopalvelulaajennuksen, tietopalvelu tulee näkyviin tähän. Lisätietoja on kohdassa [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)|
-    |**OData v4 -tietojen tarjoaja**|CDS sovelluksille sisältää OData -tietojen tarjoajan, jota voi käyttää OData v4 -WWW-palveluissa. Lisätietoja on kohdassa [OData v4 -tietojen tarjoajan määritys, vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)|
+    |**OData v4 -tietojen tarjoaja**|Common Data Service sisältää OData-tietojen tarjoajan, jota voi käyttää OData v4 -verkkopalveluissa. Lisätietoja on kohdassa [OData v4 -tietojen tarjoajan määritys, vaatimukset ja parhaat käytännöt](virtual-entity-odata-provider-requirements.md)|
 
   
 ### <a name="add-a-secured-field-to-a-data-source"></a>Suojatun kentän lisääminen tietolähteeseen
@@ -75,7 +75,7 @@ Voit luoda tietolähteelle kenttiä samalla tavalla kuin mille tahansa entiteeti
   
 ## <a name="create-a-virtual-entity"></a>Virtuaalikohteen luominen
   
-Voit luoda virtuaalisen entiteetin samalla tavalla kuin minkä tahansa muun CDS sovelluksille -ratkaisun entiteetin. Voit luoda myös joitakin ylimääräisiä määritteitä tässä kuvatulla tavalla. Virtuaaliset entiteetit on luotava ratkaisunhallinnan avulla.
+Voit luoda virtuaalisen entiteetin samalla tavalla kuin minkä tahansa muun entiteetin Common Data Servicessä. Voit luoda myös joitakin ylimääräisiä määritteitä tässä kuvatulla tavalla. Virtuaaliset entiteetit on luotava ratkaisunhallinnan avulla.
 
 > [!NOTE]
 >  Vaikka voit luoda virtuaalisen entiteetin valitsemalla tietolähteeksi **Ei mitään**, virtuaalisen entiteetin hankkiminen edellyttää, että tietolähde määritetään. Lisätietoja on kohdassa [Tietolähteen lisääminen virtuaalisissa entiteeteissä käyttämistä varten](#AddDataSource)
@@ -140,10 +140,10 @@ Virtuaalientiteeteillä on rajoitukset.
 - Päivityskokoelmissa tai laskettujen kentissä virtuaalientiteettien kenttiä ei voi käyttää.
 - Virtuaalientiteetti ei voi olla entiteetin aktiviteetin tyyppi.  
 - Virtuaalisissa entiteeteissä ei voi ottaa käyttöön useita entiteettitaulukon riveihin vaikuttavia ominaisuuksia.  Esimerkkejä ovat jonot, tietämyksenhallinta, SLA-sopimukset, kaksoiskappaleiden tunnistus, muutosten seuranta, Mobile Offline -ominaisuus, kenttien suojaus, osuvuushaku, Dynamics 365:n verkkoportaalin ratkaisujen portaalit ja virtuaalientiteettien väliset N:N-suhteet.  
-- Organisaatiot omistavat virtuaaliset entiteetit. Niissä ei tueta rivitason Common Data Service for Apps -suojaukseen liittyviä käsitteitä. Suosittelemme, että ulkoisen tietolähde oma suojausmalli otetaan käyttöön.  
-- On suositeltavaa käyttää kohteena yksi tietolähde Erikoishaussa kun käyttää virtuaalientiteettejä. Esimerkiksi sellaisen Erikoishaku-toiminnon luontia, joka luo lopulta liitoksen Common Data Service for Apps alkuperäisien tietojen ja virtuaalientiteetin ulkoisien tietojen välille, ei suositella.  
+- Organisaatiot omistavat virtuaaliset entiteetit. Niissä ei tueta rivitason Common Data Servicen suojaukseen liittyviä käsitteitä. Suosittelemme, että ulkoisen tietolähde oma suojausmalli otetaan käyttöön.  
+- On suositeltavaa käyttää kohteena yksi tietolähde Erikoishaussa kun käyttää virtuaalientiteettejä. Esimerkiksi sellaisen Erikoishaku-toiminnon luontia, joka luo lopulta liitoksen Common Data Servicen alkuperäisien tietojen ja virtuaalientiteetin ulkoisien tietojen välille, ei suositella.  
 - Päivityksen yhteydessä tarkistettavat kentän metatietojen ominaisuudet eivät koske virtuaalisia entiteettejä. Esimerkiksi virtuaalisen entiteetin Kokonaisluku-kenttä voidaan määrittää niin, että pienin mahdollinen arvo on nolla. Koska arvo saadaan ulkopuolisesta tietolähteestä, kysely kuitenkin palauttaa nollaa pienemmät arvot, kun arvot haetaan virtuaalisesta entiteetistä.  Vähimmäisarvon ominaisuutta ei oteta huomioon kyselyssä.  Arvot on kuitenkin suodatettava, jotta saadaan haluttu nollaa suurempi arvo.
-- Virtuaaliset entiteetit eivät tue muutosten seurantaa. Niitä ei voi synkronoida käyttämällä CDS sovelluksille -toimintoa, kuten tietojen vientipalvelua.
+- Virtuaaliset entiteetit eivät tue muutosten seurantaa. Niitä ei voi synkronoida käyttämällä Common Data Service -toimintoa, kuten tietojen vientipalvelua.
   
 ### <a name="see-also"></a>Katso myös  
 

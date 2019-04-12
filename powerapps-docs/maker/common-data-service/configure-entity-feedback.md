@@ -4,7 +4,7 @@ description: 'Lue lisää, miten voi ottaa käyttöön entiteetin palautteen'
 ms.custom: ''
 ms.date: 05/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -42,7 +42,8 @@ Muokkaa entiteettiä ja ota **palaute** käyttöön. Lisätietoja: [Entiteetin m
 
 Oletusarvoisesti käyttäjien täytyy mennä liittyvien tietueiden luetteloon jossa on tietue, johon haluat lisätä palautteen. Jotta käyttäjien on helpompaa lisätä palautetta, haluat ehkä lisätä Palaute-aliruudukon entiteetin lomakkeeseen, jossa otat palautteen käyttöön.  
 
-<!-- This is the closest I could find to a topic about adding an subgrid to a form. --> Lisätietoja:  [Aliruudukon ominaisuuksien yleiskatsaus](../model-driven-apps/sub-grid-properties-legacy.md)
+<!-- This is the closest I could find to a topic about adding an subgrid to a form. -->
+Lisätietoja: [Aliruudukon ominaisuuksien yleiskatsaus](../model-driven-apps/sub-grid-properties-legacy.md)
 
 ## <a name="add-a-rollup-field--to-the-entity-form-to-show-the-ratings"></a>Lisää koontikenttä entiteettilomakkeeseen ja näytä luokitukset  
 

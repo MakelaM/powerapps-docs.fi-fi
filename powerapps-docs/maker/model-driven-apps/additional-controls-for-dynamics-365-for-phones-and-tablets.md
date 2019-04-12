@@ -4,7 +4,7 @@ description: Dynamics 365 puhelimille ja taulutietokoneille -sovelluksen kanssa 
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article

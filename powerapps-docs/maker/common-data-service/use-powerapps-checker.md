@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 12/04/2018
+ms.date: 03/20/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -17,22 +17,18 @@ search.app:
 
 # <a name="use-solution-checker-to-validate-your-model-driven-apps-in-powerapps"></a>Mallipohjaisten sovellusten tarkistaminen PowerAppsissa ratkaisun tarkistustoiminnolla
 
-Kun mallipohjaisten sovellusten kehittäjät luovat yrityksen toiveita vastaavan ratkaisun, tuloksena on usein erittäin kehittyneitä ratkaisuja, jotka mukauttavat ja laajentavat Common Data Service (CDS) sovelluksille -ympäristöä. Tällaisiin toteutuksiin liittyy usein riski, että ratkaisun suorituskyky, vakaus ja luotettavuus kärsivät, mikä voi vaikuttaa kielteisesti käyttäjäkokemukseen. Tällaisten ongelmien havaitseminen ja niiden ratkaiseminen voi olla hankalaa ja viedä paljon aikaa. Ratkaisun tarkistustoiminnon avulla voi tehdä monipuolisen staattisen analyysin, jossa ratkaisun käyttöä verrataan parhaiden käytäntöjen mukaisiin sääntöihin. Tällä tavoin ongelmalliset kohdat havaitaan nopeasti. Saat tarkistuksen valmistumien jälkeen yksityiskohtaisen raportin havaituista ongelmista, osista ja koodista, joihin nämä ongelmat vaikuttavat, sekä linkin kunkin ongelman ratkaisuohjeisiin.
+Kun mallipohjaisten sovellusten kehittäjät luovat yrityksen toiveita vastaavan ratkaisun, tuloksena on usein erittäin kehittyneitä ratkaisuja, jotka mukauttavat ja laajentavat Common Data Service -ympäristöä. Tällaisiin toteutuksiin liittyy usein riski, että ratkaisun suorituskyky, vakaus ja luotettavuus kärsivät, mikä voi vaikuttaa kielteisesti käyttäjäkokemukseen. Tällaisten ongelmien havaitseminen ja niiden ratkaiseminen voi olla hankalaa ja viedä paljon aikaa. Ratkaisun tarkistustoiminnon avulla voi tehdä monipuolisen staattisen analyysin, jossa ratkaisun käyttöä verrataan parhaiden käytäntöjen mukaisiin sääntöihin. Tällä tavoin ongelmalliset kohdat havaitaan nopeasti. Saat tarkistuksen valmistumien jälkeen yksityiskohtaisen raportin havaituista ongelmista, osista ja koodista, joihin nämä ongelmat vaikuttavat, sekä linkin kunkin ongelman ratkaisuohjeisiin.
 
 Ratkaisun tarkistustoimintoa analysoidaan seuraavilla ratkaisun osilla: 
-- CDS sovelluksille -laajennukset
-- Mukautetut CDS sovelluksille -työnkulkuaktiviteetit 
-- CDS -sovelluksille verkkoresurssit (HTML ja JavaScript)
-- CDS sovelluksille -määritykset, kuten SDK-viestin osavaiheet 
+- Common Data Service -laajennukset
+- Common Data Servicen mukautetut työnkulkuaktiviteetit 
+- Common Data Servicen verkkoresurssit (HTML ja JavaScript)
+- Common Data Servicen määritykset, kuten SDK-viestin osavaiheet 
 
-Ratkaisun tarkistustoimintoa voi käyttää sellaisissa hallitsemattomissa ratkaisuissa, jotka voidaan viedä ympäristöstä. Ratkaisun tarkistustoimintoa *ei* voi käyttää seuraavissa ratkaisuissa: 
+Ratkaisun tarkistustoimintoa voi käyttää sellaisissa hallitsemattomissa ratkaisuissa, jotka voidaan viedä ympäristöstä. 
 
-
-<!--from editor: Should it be Common Data Service (singular) below, rather than Services? -->
-
-- Järjestelmän oletusratkaisut (oletusratkaisu ja Common Data Services -oletusratkaisu).
-- Ratkaisut, joissa JavaScript käyttää versiota ECMAScript 6 (2015) tai sitä uudempaa versiota. Jos havaitaan, että JavaScript käyttää jotakin näistä versioista, verkkoresurssin JS001-syntaksiongelma ilmoitetaan.
-
+> [!NOTE]
+> Ratkaisun tarkistustoiminto ei toimi ratkaisuissa, jonka sisältämässä JavaScriptissä käytetään versiota ECMAScript 6 (2015) tai uudempia versioita. Jos havaitaan, että JavaScript käyttää jotakin näistä versioista, verkkoresurssin JS001-syntaksiongelma ilmoitetaan.
 
 ## <a name="enable-the-solution-checker"></a>Ratkaisun tarkistustoiminnon ottaminen käyttöön
 Ratkaisun tarkistustoiminto on käytettävissä PowerAppsin Ratkaisut-alueella sen jälkeen, kun PowerAppsin tarkistustoimintoratkaisu on asennettu. Huomaa, että se ei löydy selaamalla eikä hakemalla Microsoft Appsourcesta. Voit asentaa sen seuraavasti:  
@@ -62,7 +58,7 @@ When you install the PowerApps checker these solution specific components are cr
    - Analysis Result
 - System job: A system job is created so admins can remove solution analysis data from the environment. The job contains a configuration value, currently set to remove the solution analysis data after 60 days, which an administrator can override. 
 - Security Roles: Two security roles, **Export Customizations**, and **Solution Checker** are created. These roles are required to export the solution for analysis, and storing the analysis results to the entities in your environment.
-- User principle: The **PowerApps Advisor** user is created that allows the checker to authenticate with your CDS for Apps environment and assign the two security roles, Export Customizations and Solution Checker. The PowerApps Advisor is an application user and does not consume a license.  -->
+- User principle: The **PowerApps Advisor** user is created that allows the checker to authenticate with your Common Data Service environment and assign the two security roles, Export Customizations and Solution Checker. The PowerApps Advisor is an application user and does not consume a license.  -->
 
 ## <a name="run-the-solution-checker"></a>Ratkaisun tarkistustoiminnon suorittaminen
 Kun PowerAppsin tarkistustoiminto on asennettu ympäristöön, **Ratkaisun tarkistustoiminto** on valittavissa valikossa, kun valitset hallitsemattoman ratkaisun PowerAppsin **Ratkaisut**-alueella. 
@@ -157,7 +153,7 @@ Yhteenveto raportin sarakkeista:
 |WWW-resurssit  | [web-avoid-crm2011-service-soap](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-crm2011-service-soap&client=PAChecker&source=featuredocs)  | Älä käytä kohteena Microsoft Dynamics CRM 2011 -SOAP-palveluja.   |
 |WWW-resurssit  | [web-avoid-browser-specific-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-browser-specific-api&client=PAChecker&source=featuredocs) | Älä käytä Internet Explorerin vanhoja ohjelmointirajapintoja tai selainlaajennuksia.   |
 |WWW-resurssit  | [web-avoid-2011-api](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-2011-api&client=PAChecker&source=featuredocs)  | Älä käytä vanhentunutta Microsoft Dynamics CRM 2011 -objektimallia.  |
-|WWW-resurssit  | [web-use-relative-uri](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Älä käytä absoluuttisia CDS sovelluksille -päätepisteen URL-osoitteita.    |
+|WWW-resurssit  | [web-use-relative-uri](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-relative-uri&client=PAChecker&source=featuredocs)   | Älä käytä absoluuttisia Common Data Servicen päätepisteen URL-osoitteita.    |
 |WWW-resurssit  | [web-use-client-context](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-client-context&client=PAChecker&source=featuredocs)  | Käytä asiakasohjelmakonteksteja.   |
 |WWW-resurssit  | [web-use-dialog-api-param](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-dialog-api-param&client=PAChecker&source=featuredocs)   | Käytä valintaikkunan ohjelmointirajapinnan parametreja.   |
 |WWW-resurssit  | [web-use-org-setting](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-org-setting&client=PAChecker&source=featuredocs)   | Käytä organisaation asetuksia.   |
@@ -167,6 +163,6 @@ Yhteenveto raportin sarakkeista:
 
 
 ## <a name="see-also"></a>Katso myös
-[Common Data Service for Apps -ratkaisun parhaat käytännöt ja ohjeet](../../developer/common-data-service/best-practices/index.md)<br />
+[Common Data Servicen parhaat käytännöt ja ohjeet](../../developer/common-data-service/best-practices/index.md)<br />
 [Mallipohjaisten sovellusten parhaat käytännöt ja ohjeet](../../developer/model-driven-apps/best-practices/index.md)<br />
 [Ratkaisun tarkistustoimintoon liittyvät yleiset ongelmat ja niiden ratkaisut](common-issues-resolutions-solution-checker.md)<br />

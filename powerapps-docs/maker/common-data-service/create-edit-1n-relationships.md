@@ -4,7 +4,7 @@ description: Tietoja yksi moneen- tai monta yhteen -entiteettisuhteiden luomises
 ms.custom: ''
 ms.date: 05/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -26,7 +26,7 @@ search.app:
 ---
 # <a name="create-one-to-many-or-many-to-one-entity-relationships-overview"></a>Yksi moneen- tai monta yhteen -entiteettisuhteiden luomisen yhteenveto
 
-Määritä, miten Common Data Service sovelluksille -ratkaisun 1:N (yksi moneen)- tai N:1 (monta yhteen) -suhteiden kaksi entiteettiä liittyvät toisiinsa. 
+Määritä, miten Common Data Service 1:N (yksi moneen)- tai N:1 (monta yhteen) -suhteiden kaksi entiteettiä liittyvät toisiinsa. 
   
 Arvioi ennen mukautetun entiteettisuhteen luomista, vastaako jokin aiemmin luotu entiteettisuhde vaatimuksiasi. <br />Lisätietoja: [Luodaanko uusia metatietoja vai käytetäänkö olemassa olevia metatietoja?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -42,7 +42,7 @@ Arvioi ennen mukautetun entiteettisuhteen luomista, vastaako jokin aiemmin luotu
 > - Valitse mallipohjaisissa sovelluksissa **Uusi kenttä** lomake-editorissa ja luo *hakukenttä*. <br />Lisätietoja: [Kentän lisääminen lomakkeeseen](../model-driven-apps/add-field-form.md)
 > - Luo liittyvälle entiteetille uusi hakukenttä. <br />Lisätietoja: [Kenttien luominen ja muokkaaminen](create-edit-fields.md)
 > - Tuo ratkaisu, joka sisältää entiteettisuhteen määrityksen. <br />Lisätietoja: [Ratkaisujen tuominen. päivittäminen ja vieminen](import-update-export-solutions.md)
-> - Luo uusia entiteettejä Power Queryn avulla ja anna niiden tiedot. <br />Lisätietoja: [Tietojen lisääminen Common Data Service sovelluksille -ratkaisun entiteettiin Power Queryn avulla](data-platform-cds-newentity-pq.md).
+> - Luo uusia entiteettejä Power Queryn avulla ja anna niiden tiedot. <br />Lisätietoja: [Tietojen lisääminen Common Data Servicen entiteettiin Power Queryn avulla](data-platform-cds-newentity-pq.md).
 > - Sovelluskehittäjä voi käyttää [metatietopalveluita](../../developer/common-data-service/metadata-services.md) ohjelman kirjoittamisessa entiteettisuhteiden luomista ja päivittämistä varten. <br />Lisätietoja: [Entiteettisuhteen metatietojen mukauttaminen](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)
 
 Tämän ohjeaiheen tietojen avulla voit valita käytettävän suunnitteluohjelman. 
@@ -58,7 +58,7 @@ Käytä PowerApps-portaalia 1:N (yksi moneen)- tai N:1 (monta yhteen) -entiteett
 
 ## <a name="community-tools"></a>Yhteisön työvälineet
 
-**[Entiteettisuhteen kaavion tekijä](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** on työkalu, jonka XrmToolbox-yhteisö kehitti CDS sovelluksille -ratkaisua varten. Lisätietoja yhteisön kehittämistä työkaluista on kohdassa [Common Data Service sovelluksille -ratkaisun sovelluskehittäjän työkalut](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
+**[Entiteettisuhteen kaavion tekijä](https://www.xrmtoolbox.com/plugins/JourneyIntoCRM.XrmToolbox.ERDPlugin/)** on työkalu, jonka XrmToolbox-yhteisö kehitti Common Data Serviceä varten. Lisää yhteisön kehittämiä työkaluja on kohdassa [Common Data Servicen sovelluskehittäjän työkalut](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
 
 > [!NOTE]
 > Yhteisön työkalut eivät ole Microsoftin tuotteita eivätkä laajenna tuen yhteisön työkaluille. Jos sinulla on kysymyksiä työkalusta, ota yhteyttä julkaisijaan. Lisätietoja: [XrmToolBox](https://www.xrmtoolbox.com).

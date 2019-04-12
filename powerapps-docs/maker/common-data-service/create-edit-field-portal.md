@@ -1,9 +1,9 @@
 ---
-title: Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla | MicrosoftDocs
+title: Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla | MicrosoftDocs
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 02/28/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -12,20 +12,20 @@ applies_to:
   - Dynamics 365 Version 9.x
   - PowerApps
 ms.author: matp
-manager: brycho
+manager: kvivek
 search.audienceType:
   - maker
 search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-fields-for-common-data-service-for-apps-using-powerapps-portal"></a>Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla
+# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-portal"></a>Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla
 
-[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo luoda ja muokata entiteettikenttiä Common Data Service sovelluksille -ratkaisun avulla.
+[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo luoda ja muokata entiteettikenttiä Common Data Servicen avulla.
 
 Portaalin avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. <br />Lisätietoja: 
-- [Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-fields.md)
-- [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)
+- [Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)
+- [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)
 
 ## <a name="view-fields"></a>Näyttökentät
 
@@ -52,8 +52,8 @@ Alun perin käytettävissä on vain kolme kentän ominaisuutta:
  |Ominaisuus|Kuvaus|
  |--|--|
  |**Näyttönimi**|Käyttöliittymän kentässä näytettävä teksti.|
- |**Nimi**|Yksilöllinen nimi ympäristössä. Nimi luodaan annetun näyttönimen perusteella. Voit kuitenkin muokata sitä ennen tallennusta. Nimeä ei voi muuttaa kentän luomisen jälkeen, koska kenttään voidaan viitata sovelluksissa tai koodissa. Nimellä on mukautuksen etuliite **CDS:n oletusjulkaisijan** alussa.|
- |**Tietotyyppi**|Määrittää, miten arvot tallennetaan ja miten ne muotoillaan joissakin sovelluksissa. Kentän tietotyyppiä ei voi muuttaa tallennuksen jälkeen, koska se saattaa vaikuttaa entiteetin tietoihin.|
+ |**Nimi**|Yksilöllinen nimi ympäristössä. Nimi luodaan annetun näyttönimen perusteella. Voit kuitenkin muokata sitä ennen tallennusta. Nimeä ei voi muuttaa kentän luomisen jälkeen, koska kenttään voidaan viitata sovelluksissa tai koodissa. Nimellä on mukautuksen etuliite **Common Data Servicen oletusjulkaisijan** alussa.|
+ |**Tietotyyppi**|Määrittää, miten arvot tallennetaan ja miten ne muotoillaan joissakin sovelluksissa. Kun kenttä on tallennettu, et voi muuttaa tietotyyppiä. Poikkeuksena on kuitenkin tekstikenttien muuntaminen automaattisesti numeroiduksi kentiksi.|
 
 Voit määrittää lisäasetuksia **tietotyypin** valinnasta riippuen.
 
@@ -75,6 +75,7 @@ Vakiotekstikenttiin voi tallentaa jopa 4 000 merkkiä. [Pituuden oletusarvo](#ma
 |**URL-osoite**|URL-osoitteeksi vahvistettu ja URL-osoitteen avaavaksi linkiksi hahmonnettu tekstiarvo.|
 |**Osaketunnus**|Kaupankäyntitunnuksen tekstiarvo. Se näyttää linkin, joka avaa pörssin kaupankäyntitunnuksen tarjouksen. |
 |**Puhelin**|Puhelinnumeroksi vahvistettu ja linkiksi hahmonnettu tekstiarvo, joka aloittaa Skype-puhelun. |
+|**Automaattinen numerointi**|Numeroiden ja kirjaimien mukautettava yhdistelmä, jonka palvelin luo automaattisesti aina, kun tietue luodaan. Lisätietoja: [Automaattisesti numeroidut kentät](autonumber-fields.md) |
 
 #### <a name="max-length"></a> - enimmäispituus 
 
@@ -170,7 +171,7 @@ Lisätietoja: [Arvot kokoavien koontikenttien määrittäminen](define-rollup-fi
 
 ## <a name="number-field-options"></a>Numerokentän asetukset
 
-Numerokentän jokaisella tyypillä on absoluuttiset vähimmäis- ja enimmäisarvot. Voit määrittää näille absoluuttisille arvoille soveltuvan **vähimmäis**- ja **enimmäisarvon**. Tee niin, jotta CDS sovelluksille -ratkaisu voi tarkistaa tietojen arvot, jotka haluat tallentaa kenttään.
+Numerokentän jokaisella tyypillä on absoluuttiset vähimmäis- ja enimmäisarvot. Voit määrittää näille absoluuttisille arvoille soveltuvan **vähimmäis**- ja **enimmäisarvon**. Tee niin, jotta Common Data Service voi tarkistaa tietojen arvot, jotka haluat tallentaa kenttään.
 
 Voit määrittää **Liukuluku**- ja **Desimaaliluku**-tietotyypeille useita **desimaalilukuja**.
 
@@ -224,8 +225,8 @@ Kaikissa kentissä, joihin voi kirjoittaa suoraan tekstiä, on IME-tila. IME-edi
 
 
 ### <a name="see-also"></a>Katso myös  
-[Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-fields.md)<br />
-[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
 [Kenttien tyypit ja kentän tietojen tyypit](types-of-fields.md)<br />
 [Voit automatisoida manuaalisen laskennan laskettujen kenttien määrittämiseen](define-calculated-fields.md)<br />
 [Määritä koontikenttiä, jotka kokoavat arvoja](define-rollup-fields.md)<br />

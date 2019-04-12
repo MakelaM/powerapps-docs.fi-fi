@@ -88,7 +88,7 @@ Tällä hetkellä Lisäasetukset-valikossa on vain tämä. Valitse PowerApps-kot
 Jos [sovellus luodaan automaattisesti](../canvas-apps/data-platform-create-app.md) entiteetistä, jossa on hakukenttä, se näkyy **avattavan valikon** ohjausobjektina, joka sisältää entiteetin **Ensisijainen nimi** -kentän tiedot.
 
 ## <a name="add-1n-and-nn-relationships-for-canvas-apps"></a>Kaaviosovellusten 1:N- ja N:N-suhteiden lisääminen
-Linkitä kaksi tietuetta **Relate**-toiminnolla käyttämällä Common Data Service (CDS) for Apps -ratkaisun yksi moneen- tai monta yhteen -suhdetta. Lisätietoja: [PowerAppsin Relate- ja Unrelate-toiminnot](../canvas-apps/functions/function-relate-unrelate.md)
+Linkitä kaksi tietuetta **Liitä**-toiminnolla käyttämällä Common Data Servicen yksi moneen- tai monta yhteen -suhdetta. Lisätietoja: [PowerAppsin Relate- ja Unrelate-toiminnot](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 * [Sovelluksen luominen Common Data Service -tietokannan avulla](../canvas-apps/data-platform-create-app.md)

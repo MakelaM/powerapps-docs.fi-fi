@@ -3,7 +3,7 @@ title: Kehittäjien resurssien tarkasteleminen tai lataaminen | MicrosoftDocs
 description: Etsi Kehittäjien resurssit ja palvelun päätepiste-URL-osoitteet
 keywords: ''
 ms.date: 06/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -54,9 +54,9 @@ Tässä osassa on linkkejä, joiden avulla sovelluskehittäjät voivat etsiä re
 <!-- TODO update 512122 to go to https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget -->
 
 
-## <a name="connect-your-apps-to-this-instance-of-common-data-service-for-apps"></a>Yhteyden muodostaminen sovelluksista Common Data Service sovelluksille -ratkaisun tähän ilmentymään
+## <a name="connect-your-apps-to-this-instance-of-common-data-service"></a>Yhteyden muodostaminen sovelluksista Common Data Servicen tähän ilmentymään
 
-Tässä osassa on tietoja, joiden avulla voit muodostaa yhteyden Common Data Service sovelluksille -ilmentymään.
+Tässä osassa on tietoja, joiden avulla voit muodostaa yhteyden Common Data Servicen ilmentymään.
 
 ### <a name="instance-web-api"></a>Esiintymän Web-ohjelmointirajapinta
 
@@ -75,9 +75,9 @@ Nämä tiedot yksilöivät ilmentymän. Tiedot sisältävät GUID-**tunnuksen** 
 Näitä tietoja tarvitaan ilmentymän Azure-laajennusten käytössä.
 Lisätietoja: [Sovelluskehittäjän dokumentaatio: Dynamics 365 Customer Engagement -sovelluksen Azure-laajennukset](/dynamics365/customer-engagement/developer/azure-extensions)
 
-## <a name="connect-your-apps-to-the-common-data-service-for-apps-discovery-service"></a>Yhteyden muodostaminen sovelluksista Common Data Service sovelluksille -ratkaisun etsintäpalveluun
+## <a name="connect-your-apps-to-the-common-data-service-discovery-service"></a>Yhteyden muodostaminen sovelluksista Common Data Servicen etsintäpalveluun
 
-Käyttäjillä voi olla useita CDS sovelluksille -ympäristöjen käyttöoikeuksia. Tämän vuoksi etsintäpalvelu hakee käyttäjien käytettävissä olevat ympäristöt käyttäjien tunnistetietojen avulla.
+Käyttäjillä voi olla useita Common Data Service -ympäristöjen käyttöoikeuksia. Tämän vuoksi etsintäpalvelu hakee käyttäjien käytettävissä olevat ympäristöt käyttäjien tunnistetietojen avulla.
 
 ### <a name="discovery-web-api"></a>Verkkoetsintäpalvelun ohjelmointirajapinta
 

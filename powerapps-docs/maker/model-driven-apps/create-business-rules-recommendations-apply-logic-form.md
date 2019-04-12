@@ -1,9 +1,9 @@
 ---
 title: Mallipohjaisen sovelluksen liiketoimintasääntöjen ja suositusten luominen | MicrosoftDocs
 ms.custom: ''
-ms.date: 12/06/2018
+ms.date: 03/15/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -24,9 +24,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="tutorial-create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Opetusohjelma: Liiketoimintasääntöjen ja suositusten luominen mallipohjaisen sovelluksen lomakkeen logiikan käyttämiseksi
+# <a name="create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Liiketoimintasääntöjen ja suositusten luominen mallipohjaisen sovelluksen lomakkeen logiikan käyttämiseksi
 
-Tässä opetusohjelmassa kerrotaan, miten liiketoimintasääntöjä ja -suosituksia luodaan käyttämällä lomakelogiikka mallipohjaisessa sovelluksessa ilman, että on kirjoitettava JavaScript-koodia tai luotava laajennuksia. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Niitä voidaan käyttää pää- ja pikalomakkeissa. Ne toimivat mallipohjaisissa sovelluksissa, Dynamics 365 Customer Engagement -verkkosovelluksissa, Dynamics 365 for tablets- ja Dynamics 365 for Outlook (online ja offline-tila) -sovelluksissa.
+Tässä ohjeaiheessa kerrotaan, miten liiketoimintasääntöjä ja -suosituksia luodaan käyttämällä lomakelogiikka mallipohjaisessa sovelluksessa ilman, että on kirjoitettava JavaScript-koodia tai luotava laajennuksia. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Niitä voidaan käyttää pää- ja pikalomakkeissa. Ne toimivat mallipohjaisissa sovelluksissa, Dynamics 365 Customer Engagement -verkkosovelluksissa, Dynamics 365 for tablets- ja Dynamics 365 for Outlook (online ja offline-tila) -sovelluksissa.
 
 > [!NOTE]
 > Lisätietoja entiteetin liiketoimintasäännön määrittämisestä siten, että sittä käytetään kaikissa lomakkeissa ja palvelimessa on kohdassa [Entiteetin liiketoimintasäännön luominen](/powerapps/maker/common-data-service/data-platform-create-business-rule).
@@ -129,7 +129,13 @@ Tässä opetusohjelmassa kerrotaan, miten liiketoimintasääntöjä ja -suosituk
 ## <a name="localize-error-messages-used-in-business-rules"></a>Liiketoimintasäännöissä käytettävien virhesanomien lokalisoiminen  
  Jos organisaatiossa on käytössä useita kieliä, määritetyt virhesanomat kannattaa lokalisoida. Järjestelmä määrittää sanomalle otsikon sanoman luonnin yhteydessä. Jos viet käännökset organisaatioon, voit lisätä sanomien lokalisoidut versiot ja tuoda otsikot takaisin järjestelmään. Tällöin muuta kuin asennuskieltä käyttävät käyttäjät näkevät käännetyt sanomat.  
 
-## <a name="is-your-business-rule-not-firing-for-a-form"></a>Jääkö lomakkeen liiketoimintasääntö käynnistymättä?
+## <a name="common-issues"></a>Yleisiä ongelmia
+Tässä osassa käsitellään yleisiä ongelmia, joita voi esiintyä liiketoimintasääntöjä käytettäessä. 
+
+### <a name="full-name-field-not-supported-with-unified-interface-apps"></a>Koko nimi -kenttää ei tueta Unified Interface -sovelluksissa
+**Koko nimi** (fullname) -kenttää käyttäviä toimintoja tai ehtoja ei tueta Unified Interfaceen perustuvissa sovelluksissa.  Vaihtoehtoisesti voit käyttää **Etunimi** (firstname)- ja **Sukunimi** (lastname) -kenttien toimintoja ja ehtoja. 
+
+### <a name="is-your-business-rule-not-firing-for-a-form"></a>Jääkö lomakkeen liiketoimintasääntö käynnistymättä?
 Liiketoimintasääntö saattaa jäädä suorittamatta, koska sääntö, johon kenttä viittaa, ei sisälly lomakkeeseen. 
 1.  Avaa ratkaisunhallinta. Laajenna haluamasi entiteetti ja valitse **Lomakkeet**. 
 2.  Avaa haluamasi lomake ja valitse lomakkeiden suunnitteluohjelman valintanauhasta **Liiketoimintasäännöt**. 

@@ -1,10 +1,10 @@
 ---
-title: Entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
+title: Common Data Servicen entiteettien luominen ja muokkaaminen | MicrosoftDocs
 description: Tietoja entiteettien luomisesta ja muokkaamisesta
 ms.custom: ''
 ms.date: 05/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -22,7 +22,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-entities-in-common-data-service-for-apps"></a>Entiteettien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa
+# <a name="create-and-edit-entities-in-common-data-service"></a>Common Data Servicen entiteettien luominen ja muokkaaminen
 
 Arvioi ennen mukautetun entiteetin luomista, vastaako jokin aiemmin luotu entiteetti vaatimuksiasi. Lisätietoja: [Luodaanko uusia metatietoja vai käytetäänkö olemassa olevia metatietoja?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 

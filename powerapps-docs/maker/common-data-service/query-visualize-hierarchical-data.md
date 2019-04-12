@@ -4,7 +4,7 @@ description: 'Tietoja siitä, miten voit tehdä kyselyjä ja visualisoida hierar
 ms.custom: ''
 ms.date: 06/20/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -37,7 +37,7 @@ Joidenkin entiteettien, kuten asiakkaan ja käyttäjän, visualisoinnit ovat val
   
 <a name="BKMK_Querydata"></a>   
 ## <a name="query-hierarchical-data"></a>Kyselyn tekeminen hierarkkisista tiedoista  
- Common Data Service sovelluksille tukee hierarkkisten tietorakenteiden liittyvien tietueiden itseen viittaavia yksi moneen (1:N) -suhteita. Aiemmin hierarkkisten tietojen tarkasteleminen vaati toisiinsa liittyvien tietueiden toistuvia kyselyjä. Tällä hetkellä liittyvistä tiedoista voi tehdä kyselyn hierarkiana yhdessä vaiheessa. Entiteetin tietueista voi tehdä kyselyn käyttämällä **alle**- ja **ei alle** -logiikkaa. Hierarkkisia **alle**- ja **ei alle** -operaattoreita ovat käytettävissä Erikoishaku-toiminnossa ja työnkulkueditorissa. Katso lisätietoja siitä, miten näitä operaattoreita käytetään kohdassa [työnkulun osavaiheiden määritys](/flow/configure-workflow-steps). Lisätietoja erikoishausta on artikkelissa [Erikoishaun luominen, muokkaaminen tai tallentaminen](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
+ Common Data Service tukee hierarkkisten tietorakenteiden liittyvien tietueiden itseen viittaavia yksi moneen (1:N) -suhteita. Aiemmin hierarkkisten tietojen tarkasteleminen vaati toisiinsa liittyvien tietueiden toistuvia kyselyjä. Tällä hetkellä liittyvistä tiedoista voi tehdä kyselyn hierarkiana yhdessä vaiheessa. Entiteetin tietueista voi tehdä kyselyn käyttämällä **alle**- ja **ei alle** -logiikkaa. Hierarkkisia **alle**- ja **ei alle** -operaattoreita ovat käytettävissä Erikoishaku-toiminnossa ja työnkulkueditorissa. Katso lisätietoja siitä, miten näitä operaattoreita käytetään kohdassa [työnkulun osavaiheiden määritys](/flow/configure-workflow-steps). Lisätietoja erikoishausta on artikkelissa [Erikoishaun luominen, muokkaaminen tai tallentaminen](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
   
  Seuraavassa esimerkissä kuvataan eri skenaariot, joiden avulla hierarkioista voi tehdä kyselyn.  
   

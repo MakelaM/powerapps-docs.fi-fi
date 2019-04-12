@@ -1,9 +1,9 @@
 ---
-title: Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
+title: Common Data Servicen kenttien luominen ja muokkaaminen | MicrosoftDocs
 ms.custom: ''
 ms.date: 02/08/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="how-to-create-and-edit-fields"></a>Kenttien luominen ja muokkaaminen
 
-Common Data Service sovelluksille -ratkaisun kentät määrittävät yksittäiset tieto-osat, joihin tietoja voidaan tallentaa entiteetissä. Sovelluskehittäjät kutsuvat kenttiä joskus *määritteiksi*. 
+Common Data Servicen kentät määrittävät yksittäiset tieto-osat, joihin tietoja voidaan tallentaa entiteetissä. Sovelluskehittäjät kutsuvat kenttiä joskus *määritteiksi*. 
   
 Arvioi ennen mukautetun kentän luomista, vastaisiko jokin aiemmin luotu kenttä vaatimuksiasi. Lisätietoja: [Luodaanko uusia metatietoja vai käytetäänkö olemassa olevia metatietoja?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)
 
@@ -31,8 +31,8 @@ Kenttiä voi luoda kahden suunnitteluohjelman avulla:
 
 |Suunnittelija| Kuvaus|
 |--|--|
-|[PowerApps-portaali](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Tarjoaa helpon ja nopean käyttökokemuksen, mutta jotkin erityisasetukset eivät ole käytettävissä.<br />Lisätietoja: [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)|
-|Ratkaisunhallinta|Tämä ei ole niin helppo tapa, mutta tarjoaa enemmän joustavuutta vähemmän yleisille vaatimuksille.<br />Lisätietoja: [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md) |
+|[PowerApps-portaali](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Tarjoaa helpon ja nopean käyttökokemuksen, mutta jotkin erityisasetukset eivät ole käytettävissä.<br />Lisätietoja: [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)|
+|Ratkaisunhallinta|Tämä ei ole niin helppo tapa, mutta tarjoaa enemmän joustavuutta vähemmän yleisille vaatimuksille.<br />Lisätietoja: [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md) |
 
 > [!NOTE]
 > Voit luoda kenttiä ympäristössä myös seuraavasti:
@@ -43,11 +43,11 @@ Kenttiä voi luoda kahden suunnitteluohjelman avulla:
 
 Tämän ohjeaiheen tietojen avulla voit valita käytettävän suunnitteluohjelman. 
 
-Käytä PowerApps-portaalia Common Data Service for Apps -ratkaisun kenttien luomisessa ja muokkaamisessa, jos seuraavia vaatimuksia ei tarvitse ottaa huomioon:
+Käytä PowerApps-portaalia Common Data Servicen kenttien luomisessa ja muokkaamisessa, jos seuraavia vaatimuksia ei tarvitse ottaa huomioon:
 
 - Luo asiakkaan hakukenttä. 
    - Lisätietoja: [Erityyppiset haut](types-of-fields.md#different-types-of-lookups)
-- Luo kenttä muussa kuin CDS-oletusratkaisussa. 
+- Kentän luominen muussa kuin Common Data Servicen oletusratkaisussa 
    - Lisätietoja: [Ratkaisujen yleiskatsaus](solutions-overview.md)
 - Määritän tilan syyn siirtymät. 
    - Lisätietoja: [Palvelupyynnön tai muokattujen entiteettien tilan syyn siirtojen määrittäminen](define-status-reason-transitions.md)
@@ -70,14 +70,14 @@ Käytä PowerApps-portaalia Common Data Service for Apps -ratkaisun kenttien luo
 
 ## <a name="community-tools"></a>Yhteisön työvälineet
 
-**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** on XrmToolbox-yhteisön CDS sovelluksille -ratkaisua varten kehittämä työkalu. Lisätietoja yhteisön kehittämistä työkaluista on ohjeaiheessa [Sovelluskehittäjän työkalut](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
+**[Attribute Manager](https://www.xrmtoolbox.com/plugins/DLaB.Xrm.AttributeManager/)** on työkalu, jonka XrmToolbox-yhteisö on kehittänyt Common Data Servicelle. Lisätietoja yhteisön kehittämistä työkaluista on ohjeaiheessa [Sovelluskehittäjän työkalut](https://docs.microsoft.com/dynamics365/customer-engagement/developer/developer-tools).
 
 > [!NOTE]
 > Yhteisön työkalut eivät ole Microsoftin tuotteita eivätkä laajenna tuen yhteisön työkaluille. Jos sinulla on kysymyksiä työkalusta, ota yhteyttä julkaisijaan. Lisätietoja: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### <a name="see-also"></a>Katso myös  
-[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)<br />
-[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
 [Kenttien tyypit ja kentän tietojen tyypit](types-of-fields.md)<br />
 [Sovelluskehittäjän dokumentaatio: Määritteen metatietojen käsitteleminen](/dynamics365/customer-engagement/developer/org-service/work-attribute-metadata)
  

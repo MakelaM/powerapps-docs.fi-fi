@@ -4,7 +4,7 @@ description: 'Lue, miten voit käyttää sovelluksessa erilaisia liiketoimintalo
 ms.custom: ''
 ms.date: 08/02/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -55,7 +55,7 @@ Microsoft Flow sisältää useita erilaisia prosesseja, joista jokainen on suunn
   
 -   Liiketoimintaprosessit.  Luo liiketoimintaprosessi ja varmista sen avulla, että käyttäjät kirjoittavat tietoja yhdenmukaisesti ja suorittavat samat vaiheet aina, kun he käyttävät sovellusta. Lisätietoja: [Liiketoimintaprosessien yleiskatsaus](/flow/business-process-flows-overview)
 
--   Työnkulut ja toiminnot. Dynamics 365 Customer Engagementin mukauttajat voivat jo tuntea perinteisen CDS sovelluksille -ratkaisun prosessit. Ne ovat työnkulkuja ja toimintoja. Lisätietoja: [Työnkulun prosessien käyttäminen](/flow/workflow-processes) ja [Toimintojen yleiskatsaus](/flow/actions)
+-   Työnkulut ja toiminnot. Dynamics 365 Customer Engagement -sovelluksen mukauttajat voivat jo tuntea perinteisen Common Data Servicen prosessit. Ne ovat työnkulkuja ja toimintoja. Lisätietoja: [Työnkulun prosessien käyttäminen](/flow/workflow-processes) ja [Toimintojen yleiskatsaus](/flow/actions)
   
 ## <a name="next-step"></a>Seuraava vaihe
 
@@ -63,4 +63,4 @@ Microsoft Flow sisältää useita erilaisia prosesseja, joista jokainen on suunn
 
 ### <a name="see-also"></a>Katso myös
 
-[Liiketoimintalogiikan käyttäminen Common Data Service sovelluksille -ratkaisussa](../common-data-service/cds-processes.md)
+[Liiketoimintalogiikan käyttäminen Common Data Servicessä](../common-data-service/cds-processes.md)

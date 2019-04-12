@@ -1,10 +1,10 @@
 ---
-title: Viitetietueiden vaihtoehtoisten avainten määrittäminen Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
-description: Tietoja tietueisiin viittaavien vaihtoehtoisten avainten määrittämisestä Common Data Service sovelluksille -ratkaisussa
+title: Viitetietueiden vaihtoehtoisten avainten määrittäminen Common Data Servicessä | MicrosoftDocs
+description: Tietoja tietueisiin viittaavien vaihtoehtoisten avainten määrittämisestä Common Data Servicessä
 ms.custom: ''
 ms.date: 06/06/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -25,7 +25,7 @@ search.app:
 ---
 # <a name="define-alternate-keys-to-reference-records"></a>Tietueisiin viittaavien vaihtoehtoisten avainten määrittäminen
 
-*Vaihtoehtoiset avaimet* mahdollistavat tietojen tehokkaan ja täsmällisen integroinnin ulkoisista järjestelmistä. Jos ulkoinen järjestelmä ei tallenna GUID-tunnuksia, on tärkeää yksilöidä tietueet Common Data Service sovelluksille -ratkaisussa. 
+*Vaihtoehtoiset avaimet* mahdollistavat tietojen tehokkaan ja täsmällisen integroinnin ulkoisista järjestelmistä. Jos ulkoinen järjestelmä ei tallenna GUID-tunnuksia, on tärkeää yksilöidä tietueet Common Data Servicessä. 
 
 Tietojen integrointijärjestelmä yksilöi tietueet vaihtoehtoisten avainten avulla yhdessä tai useassa entiteettikentän arvossa, joka edustaa yksilöivää yhdistelmää. Jokaisella vaihtoehtoisella avaimella on yksilöllinen nimi. 
 
@@ -61,7 +61,7 @@ Tämän ohjeaiheen tietojen avulla voit valita käytettävän suunnitteluohjelma
 
 Luo vaihtoehtoisia avaimia [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla, jos seuraavia vaatimuksia ei tarvitse ottaa huomioon:
 
-- Luo vaihtoehtoinen avain ratkaisussa, joka on jokin muu kuin Common Data Service sovelluksille -oletusratkaisu.
+- Luo vaihtoehtoinen avain ratkaisussa, joka on jokin muu kuin Common Data Servicen oletusratkaisu.
 - Seuraa helposti luotua järjestelmätyötä, joka seuraa tuki-indeksien luomisen edistymistä
 
 

@@ -1,9 +1,9 @@
 ---
-title: Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luomisen ja muokkaamisen (valintaluettelot) yleiskuvaus | MicrosoftDocs
+title: Common Data Servicen yleisten asetusjoukkojen luomisen ja muokkaamisen (valintaluettelot) yleiskuvaus | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/26/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -37,7 +37,7 @@ Yleisiä asetusjoukkoja voi luoda kahden suunnitteluohjelman avulla seuraavasti:
 |Suunnittelija| Kuvaus|
 |--|--|
 |[PowerApps-portaali](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Tarjoaa helpon ja nopean käyttökokemuksen, mutta jotkin erityisasetukset eivät ole käytettävissä.<br />Lisätietoja: [Asetusjoukon luominen](custom-picklists.md) |
-|Ratkaisunhallinta|Tämä ei ole niin helppo tapa, mutta tarjoaa enemmän joustavuutta vähemmän yleisille vaatimuksille. <br />Lisätietoja: [Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-global-option-sets-solution-explorer.md) |
+|Ratkaisunhallinta|Tämä ei ole niin helppo tapa, mutta tarjoaa enemmän joustavuutta vähemmän yleisille vaatimuksille. <br />Lisätietoja: [Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-global-option-sets-solution-explorer.md) |
 
 > [!NOTE]
 > Voit luoda yleisiä asetusjoukkoja ympäristössä myös seuraavasti:
@@ -50,7 +50,7 @@ Käytä yleisiä asetusjoukkoja [PowerApps-portaalin](https://web.powerapps.com/
 
 - Värien määrittäminen asetuksille
 - Asetusten järjestyksen muuttaminen
-- Yleisen asetusjoukon luominen muussa kuin CDS-oletusratkaisussa
+- Yleisen asetusjoukon luominen muussa kuin Common Data Servicen oletusratkaisussa
 - Hallittujen ominaisuuksien määrittäminen
 - Virtuaalisissa entiteeteissä käytettävien ominaisuuksien määrittäminen
 - Riippuvuuksien tarkasteleminen
@@ -58,7 +58,7 @@ Käytä yleisiä asetusjoukkoja [PowerApps-portaalin](https://web.powerapps.com/
 ## <a name="see-also"></a>Katso myös
 
 [Asetusjoukon luominen](custom-picklists.md)<br />
-[Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-global-option-sets-solution-explorer.md)<br />
+[Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla](create-edit-global-option-sets-solution-explorer.md)<br />
 [Sovelluskehittäjän dokumentaatio: Yleisten asetusjoukkojen mukauttaminen](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)
   
 

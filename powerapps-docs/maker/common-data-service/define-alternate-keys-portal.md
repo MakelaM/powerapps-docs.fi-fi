@@ -4,7 +4,7 @@ description: Tietoja vaihtoehtoisten avainten määrittämisestä PowerApps-port
 ms.custom: ''
 ms.date: 05/31/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="define-alternate-keys-using-powerapps-portal"></a>Vaihtoehtoisten avainten määrittäminen PowerApps-portaalin avulla
 
-[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo tarkastella ja luoda entiteetin vaihtoehtoisia avaimia Common Data Service sovelluksille -ratkaisun avulla.
+[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo tarkastella ja luoda entiteetin vaihtoehtoisia avaimia Common Data Servicen avulla.
 
 Portaalin avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. <br />Lisätietoja: 
 - [Tietueisiin viittaavien vaihtoehtoisten avainten määrittäminen](define-alternate-keys-reference-records.md)

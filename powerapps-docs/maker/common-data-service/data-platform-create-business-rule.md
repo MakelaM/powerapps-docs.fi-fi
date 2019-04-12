@@ -1,13 +1,13 @@
 ---
-title: Liiketoimintasäännön luominen Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
-description: Liiketoimintasäännön luomisen vaiheittaiset vaiheet Common Data Service (CDS) sovelluksille -ratkaisussa.
-author: clwesene
+title: Liiketoimintasäännön luominen Common Data Servicessä | MicrosoftDocs
+description: Liiketoimintasäännön luomisen vaiheittaiset vaiheet Common Data Servicessä.
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:

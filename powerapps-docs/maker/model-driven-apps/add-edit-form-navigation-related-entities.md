@@ -4,7 +4,7 @@ description: Lisätietoja lomakkeen siirtymisalueen lisääminen liittyviin enti
 ms.custom: ''
 ms.date: 06/18/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -83,4 +83,4 @@ Tässä ohjeaiheessa käytetään lomakkeen siirtymisruutua. Sen avulla lisätä
 > Ratkaisun asentaminen tai mukautusten julkaiseminen saattaa häiritä järjestelmän normaalikäyttöä. Suosittelemme, että ajoitat ratkaisun tuonnin ajankohtaan, jolloin siitä on vähiten häiriötä käyttäjille.
   
 ## <a name="next-steps"></a>Seuraavat vaiheet  
- [Common Data Service sovelluksille -ratkaisun entiteettisuhteiden luominen ja muokkaaminen](../common-data-service/create-edit-entity-relationships.md)
+ [Common Data Servicen entiteettisuhteiden luominen ja muokkaaminen](../common-data-service/create-edit-entity-relationships.md)

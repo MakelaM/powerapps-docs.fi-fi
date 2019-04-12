@@ -1,10 +1,10 @@
 ---
-title: Entiteetit ja metatiedot Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
-description: Lisätietoja entiteeteistä ja metatiedoista Common Data Service sovelluksille -ratkaisussa
+title: Entiteetit ja metatiedot Common Data Servicessä | MicrosoftDocs
+description: Tietoja Common Data Servicen entiteeteistä ja metatiedoista
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,15 +24,15 @@ search.app:
   - D365CE
 ---
 
-# <a name="entities-and-metadata-in-common-data-service-for-apps"></a>Entiteetit ja metatiedot Common Data Service sovelluksille -ratkaisussa
+# <a name="entities-and-metadata-in-common-data-service"></a>Common Data Servicen entiteetit ja metatiedot
 
-Common Data Service sovelluksille on suunniteltu niin, että voit luoda sovellukselle tietomallin nopeasti ja helposti. Yleensä käyttäjän ei tarvitse ottaa huomioon tämän ohjeaiheen sisältämiä metatietoja koskevat tietoja. Jos kuitenkin haluat ymmärtää enemmän CDS sovelluksille -ratkaisua käyttävien sovellusten toimintaa tai jos olet arvioimassa mahdollisia toimintoja, CDS sovelluksille -ratkaisun käyttämien metatietojen ymmärtäminen voi antaa tärkeitä tietoja.
+Common Data Service on suunniteltu niin, että voit luoda sovellukselle tietomallin nopeasti ja helposti. Yleensä käyttäjän ei tarvitse ottaa huomioon tämän ohjeaiheen sisältämiä metatietoja koskevat tietoja. Jos kuitenkin haluat ymmärtää enemmän Common Data Serviceä käyttävien sovellusten toimintaa tai jos olet arvioimassa mahdollisia toimintoja, Common Data Servicen käyttämien metatietojen ymmärtäminen voi antaa tärkeitä tietoja.
 
-*Metatiedoilla* tarkoitetaan tietoja koskevia tietoja. CDS sovelluksille on joustavan ympäristö, koska ympäristön käyttämiä tietojen määrityksiä on melko helppo muokata. CDS sovelluksille -ratkaisun metatiedot ovat kokoelma entiteettejä. Entiteetit kuvaavat millaisia tietoja on tallennettu tietokantaan.  Jokainen entiteetti vastaa tietokantataulukkoa ja jokainen kenttä (tunnettu myös määritteenä) entiteetin sisällä vastaa taulukon saraketta. Entiteetin metatiedot määrittävät millaisia tietueita voit luoda ja millaisia toimintoja voidaan suorittaa niissä. Kun käytät mukauttamistyökaluja entiteettien, kenttien ja entiteettisuhteiden luomisessa tai muokkaamisessa, muokkaat näitä metatietoja. 
+*Metatiedoilla* tarkoitetaan tietoja koskevia tietoja. Common Data Service on joustavan ympäristö, koska ympäristön käyttämiä tietojen määrityksiä on melko helppo muokata. Common Data Servicessä metatiedot ovat entiteettikokoelma. Entiteetit kuvaavat millaisia tietoja on tallennettu tietokantaan.  Jokainen entiteetti vastaa tietokantataulukkoa ja jokainen kenttä (tunnettu myös määritteenä) entiteetin sisällä vastaa taulukon saraketta. Entiteetin metatiedot määrittävät millaisia tietueita voit luoda ja millaisia toimintoja voidaan suorittaa niissä. Kun käytät mukauttamistyökaluja entiteettien, kenttien ja entiteettisuhteiden luomisessa tai muokkaamisessa, muokkaat näitä metatietoja. 
   
 Erilaiset asiakasohjelmat, joilla käyttäjät käyttävät ympäristön tietoja, tarvitsevat entiteetin metatietoja ja niiden on muututtava metatietojen mukauttamisen yhteydessä. Mutta nämä asiakkaat ovat riippuvaisia myös muista tiedoista, jotta he voivat hallita sitä, mitä visuaalisia elementtejä näytetään, mitä mukautettua logiikkaa käytetään ja kuinka suojausta käytetään. Nämä järjestelmätiedot on myös tallennettu entiteetteihin mutta itse entiteetit eivät ole mukautettavissa.
 
-Saat lisätietoja CDS sovelluksille -ratkaisun oletusarvoisista vakioentiteeteistä, määritteistä ja entiteettisuhteista kohdasta [Entiteettisuhde](/powerapps/developer/common-data-service/reference/about-entity-reference).
+Saat lisätietoja Common Data Servicen oletusarvoisista vakioentiteeteistä, määritteistä ja entiteettisuhteista kohdasta [Entiteettisuhde](/powerapps/developer/common-data-service/reference/about-entity-reference).
 
 > [!TIP]
 > Sovelluskehittäjät, jotka voivat muokata metatietoja, eivät voi näyttää kaikkia niiden tietoja. Voit asentaa mallipohjaisen sovelluksen, jonka nimi on **Metadata Browser**. Sen avulla voit tarkastella järjestelmän kaikkien entiteettien ja metatietojen ominaisuuksia. Lisätietoja: [Metatietojen etsiminen selaamalla ympäristössä](https://docs.microsoft.com/dynamics365/customer-engagement/developer/browse-your-metadata).
@@ -41,7 +41,7 @@ Saat lisätietoja CDS sovelluksille -ratkaisun oletusarvoisista vakioentiteeteis
 
 ## <a name="create-new-metadata-or-use-existing-metadata"></a>Luodaanko uusia metatietoja vai käytetäänkö olemassa olevia metatietoja?
 
-CDS sovelluksille sisältää lukuisia vakioentiteettejä, jotka tukevat liiketoimintasovelluksen ydinominaisuuksia. Esimerkiksi tietoa asiakkaista tai potentiaalisista asiakkaista on tarkoitus tallentaa käyttäen asiakas- tai yhteyshenkilö-entiteettejä.  
+Common Data Service sisältää lukuisia vakioentiteettejä, jotka tukevat liiketoimintasovelluksen ydinominaisuuksia. Esimerkiksi tietoa asiakkaista tai potentiaalisista asiakkaista on tarkoitus tallentaa käyttäen asiakas- tai yhteyshenkilö-entiteettejä.  
   
 Jokainen näistä entiteeteistä sisältää myös useita kenttiä, jotka esittävät yleisiä tietoja, jotka järjestelmän on ehkä tallennettava vastaavan entiteettiin.  
   

@@ -4,7 +4,7 @@ description: Lisätietoja sovellusten luomisesta ja muokkaamisesta ratkaisujen a
 ms.custom: ''
 ms.date: 10/29/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -101,8 +101,8 @@ Voit avata PowerAppsissa perinteisen ratkaisunhallinnan valitsemalla vasemmassa 
 - Vaikka kaaviosovellus olisi pakattu hallittuna ratkaisuna, sitä voi silti muokata kohdeympäristössä.
 - Riippuvuuksia ei voi käyttää kaaviosovelluksissa.
 - Hallitun ratkaisun poistaminen ei johda palautumiseen toiseen kaaviosovelluksen versioon. 
--   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service (CDS) sovelluksille -tietokannasta.
--   CDS-ohjelmointirajapinnat, joilla kaaviosovelluksia kutsutaan, on estetty eikä niiden kautta palauteta mitään. 
+-   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service (CDS) -tietokannasta.
+-   Common Data Servicen ohjelmointirajapinnat, joilla kaaviosovelluksia kutsutaan, on estetty eikä niiden kautta palauteta mitään. 
 -   Ratkaisussa luotua kaaviosovellusta ei voi jakaa rinnakkaisomistajana AAD-käyttöoikeusryhmälle.
 -   Kaaviosovellukset eivät näy perinteisessä ratkaisunhallinnassa.
 -   Aiemmin luodut kaaviosovellukset eivät ole ratkaisukohtaisia. 

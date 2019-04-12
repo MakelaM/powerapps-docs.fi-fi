@@ -3,7 +3,7 @@ title: Yhteysroolien määrittäminen | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -21,7 +21,7 @@ search.app:
 ---
 # <a name="configure-connection-roles"></a>Yhteysroolien määrittäminen
 
-Common Data Service sovelluksille -ratkaisun avulla voit määrittää **yhteydet** entiteettitietueiden välille ilman entiteettisuhteen luomista. Mallipohjaisissa sovelluksissa tietueiden välille voidaan muodostaa nimetty linkki. Näin muodostetaan vähemmän muodollinen suhde, joka ei anna aihetta todellisen entiteettisuhteen luomiselle. Esimerkkejä ovat *ystävä*, *sisarus*, *puoliso*, *osallistuja* ja *sidosryhmän jäsen*. Jotkin yhteydet voivat olla myös kaksisuuntaisia, kuten *lapsi* ja *vanhempi*, *aviomies* ja *aviovaimo* sekä *lääkäri* ja *potilas*.
+Common Data Servicen avulla voit määrittää **yhteydet** entiteettitietueiden välille ilman entiteettisuhteen luomista. Mallipohjaisissa sovelluksissa tietueiden välille voidaan muodostaa nimetty linkki. Näin muodostetaan vähemmän muodollinen suhde, joka ei anna aihetta todellisen entiteettisuhteen luomiselle. Esimerkkejä ovat *ystävä*, *sisarus*, *puoliso*, *osallistuja* ja *sidosryhmän jäsen*. Jotkin yhteydet voivat olla myös kaksisuuntaisia, kuten *lapsi* ja *vanhempi*, *aviomies* ja *aviovaimo* sekä *lääkäri* ja *potilas*.
 
 Kun kahden tietueen välille määritetään yhteys, sille voidaan lisätä myös kuvaus ja lisätietoja, kuten suhteen alku- ja loppupäivämäärät. Lisätietoja: [Yhteyksien luominen tietueiden välisten suhteiden määrittämistä ja tarkastelemista varten](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)
 
@@ -29,7 +29,7 @@ Kuka tahansa, jolla on **Yhteysrooli**-entiteetin kirjoitusoikeus, voi määritt
 
 ## <a name="view-connection-roles"></a>Yhteysroolien tarkasteleminen
 
-CDS sovelluksille-ratkaisuun on jo määritetty useita vakioyhteyksiä. Voit tarkastella niitä siirtymällä asetusten alueeseen. 
+Common Data Servicessä on jo määritetty useita vakioyhteyksiä. Voit tarkastella niitä siirtymällä asetusten alueeseen. 
 
 ### <a name="navigate-to-the-settings-area"></a>Asetusten alueeseen siirtyminen
 
@@ -91,7 +91,7 @@ Määritä seuraavat kentät:
 - MYYNTIRYHMÄ
 - Palvelu
 
-Voit lisätä uusia luokkia tai muokata olemassa olevia luokkia muokkaamalla **luokan** yleistä asetusjoukkoa. Lisätietoja: [Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)
+Voit lisätä uusia luokkia tai muokata olemassa olevia luokkia muokkaamalla **luokan** yleistä asetusjoukkoa. Lisätietoja: [Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)
 
 ### <a name="select-record-types"></a>Tietuetyyppien valitseminen
 
@@ -125,7 +125,7 @@ Jos vastaavia yhteysrooleja on määritetty useita, yhteysroolit edustavat vain 
 ### <a name="see-also"></a>Katso myös
 <!-- This is in the basics guide. It needs to be migrated -->
 [Tietueiden välisten suhteiden määrittäminen ja näyttäminen yhteyksiä luomalla](/dynamics365/customer-engagement/basics/create-connections-view-relationships-between-records)<br />
-[Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)<br />
+[Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)<br />
 [Entiteettien välisten suhteiden luominen ja muokkaaminen](create-edit-entity-relationships.md)
 
 

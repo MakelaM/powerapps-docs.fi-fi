@@ -1,10 +1,10 @@
 ---
 title: Vaihtoehtoisten avainten määrittäminen ratkaisunhallinnan avulla | MicrosoftDocs
-description: Tietoja tietueisiin viittaavien vaihtoehtoisten avainten määrittämisestä Common Data Service sovelluksille -ratkaisussa ratkaisunhallinnan avulla
+description: Tietoja tietueisiin viittaavien vaihtoehtoisten avainten määrittämisestä Common Data Servicessä ratkaisunhallinnan avulla
 ms.custom: ''
 ms.date: 05/31/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="define-alternate-keys-using-solution-explorer"></a>Vaihtoehtoisten avainten määrittäminen ratkaisunhallinnan avulla
 
-Ratkaisunhallinta on eräs tapa tarkastella ja luoda vaihtoehtoisia avaimia Common Data Service sovelluksille -ratkaisuun
+Ratkaisunhallinta on eräs tapa tarkastella ja luoda vaihtoehtoisia avaimia Common Data Serviceen.
 
 [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. <br />Lisätietoja: 
 - [Tietueisiin viittaavien vaihtoehtoisten avainten määrittäminen](define-alternate-keys-reference-records.md)<br />

@@ -3,7 +3,7 @@ title: Entiteettien tyypit | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/30/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 ---
 # <a name="types-of-entities"></a>Entiteettien tyypit
 
-Ennen entiteettien luomista ja muokkaamista Common Data Service sovelluksille -ratkaisussa on tiedettävä, että olemassa on erityyppisiä entiteettejä. Kun mukautettu entiteetti on luotu, näitä tyyppejä ei voi muuttaa. Kaksi tärkeintä divisioonaa perustuvat entiteetin omistukseen ja siihen, ovatko entiteetit aktiviteettientiteettejä.  
+Ennen entiteettien luomista ja muokkaamista Common Data Servicessä on tiedettävä, että olemassa on erityyppisiä entiteettejä. Kun mukautettu entiteetti on luotu, näitä tyyppejä ei voi muuttaa. Kaksi tärkeintä divisioonaa perustuvat entiteetin omistukseen ja siihen, ovatko entiteetit aktiviteettientiteettejä.  
   
 <a name="BKMK_EntityOwnership"></a>
 
@@ -51,7 +51,7 @@ Aktiviteetin voidaan ajatella olevan mikä tahansa toiminto, jolle voidaan tehd�
   
 Aktiviteettientiteetin omistaja voi olla vain käyttäjä tai ryhmä. Organisaatio ei voi omistaa aktiviteettientiteettiä.  
   
-Seuraavassa taulukossa on CDS sovelluksille -oletusympäristön käytettävissä olevien aktiviteettientiteettien luettelo.
+Seuraavassa taulukossa on Common Data Service -oletusympäristön käytettävissä olevien aktiviteettientiteettien luettelo.
   
 |Nimi|Kuvaus|Näytä aktiviteettivalikoissa|Viite|
 |----------|-----------------|----------------|---------------|  

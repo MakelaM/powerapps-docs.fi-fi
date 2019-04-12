@@ -1,9 +1,9 @@
 ---
-title: Päivämäärän ja kellonajan kentän toimintatapa ja muoto Common Data Service sovelluksille -ratkaisussa | MicrosoftDocs
+title: Päivämäärän ja kellonajan kentän toimintatapa ja muoto Common Data Servicessä | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/25/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -24,7 +24,7 @@ search.app:
 ---
 # <a name="behavior-and-format-of-the-date-and-time-field"></a>Päivämäärän ja kellonajan kentän toimintatapa ja muoto
 
-Common Data Service sovelluksille -ratkaisussa päivämäärän ja ajan tietotyyppiä käytetään useissa vakioentiteettikentissä. Voit valita erilaisia kenttien toimintatapoja kentän päivämäärän tarkoituksesta riippuen: **Käyttäjän paikallinen**, **Vain päivämäärä** tai **Aikavyöhykkeestä riippumaton**.  
+Common Data Servicessä päivämäärän ja ajan tietotyyppiä käytetään useissa vakioentiteettikentissä. Voit valita erilaisia kenttien toimintatapoja kentän päivämäärän tarkoituksesta riippuen: **Käyttäjän paikallinen**, **Vain päivämäärä** tai **Aikavyöhykkeestä riippumaton**.  
   
 <a name="Behavior"></a>   
 

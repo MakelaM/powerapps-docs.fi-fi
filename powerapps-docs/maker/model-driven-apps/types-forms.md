@@ -4,7 +4,7 @@ description: Tietoja erityyppisistä lomakkeista
 ms.custom: ''
 ms.date: 06/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -30,10 +30,10 @@ search.app:
   
 |Lomaketyyppi|Kuvaus|Lisätietoja|  
 |---------------|-----------------|-----------------|  
-|**Ensisijainen**|Käytetään PowerApps-sovelluksissa, Dynamics 365 Customer Engagement -WWW-sovelluksessa sekä Dynamics 365 for tablets- ja Dynamics 365 for Outlook -sovelluksessa.<br /><br /> Nämä lomakkeet tarjoavat tärkeimmän käyttöliittymän entiteetin tietojen käsittelemiseen.|[Päälomakkeiden suunnittelunäkökohtia](design-considerations-main-forms.md)|  
-|**Mobiilikäyttö**|Käytetään Dynamics 365 for phones -sivuilla. Tämä yksinkertaistettu muoto on suunniteltu käytettäväksi kannettaviin laitteisiin.|[Mobiilisovelluksen mukauttaminen](https://docs.microsoft.com/dynamics365/customer-engagement/customize/customize-phones-tablets)  |  
+|**Ensisijainen**|Käytetään PowerApps-sovelluksissa, Dynamics 365 Customer Engagement -WWW-sovelluksessa sekä Dynamics 365 for tablets- ja Dynamics 365 for Outlook -sovelluksessa.<br /><br /> Nämä lomakkeet tarjoavat tärkeimmän käyttöliittymän entiteetin tietojen käsittelemiseen.|[Päälomakkeiden suunnittelunäkökohtia](design-considerations-main-forms.md)|    
 |**Pikaluonti**|Käytetään PowerApps-sovelluksissa, Dynamics 365 Customer Engagement -WWW-sovelluksessa sekä Dynamics 365 for tablets- ja Dynamics 365 for Outlook -sovelluksessa.<br /><br /> Nämä lomakkeet tarjoavat peruslomakkeen, joka on optimoitu uusien tietueiden luomiseen päivitetyille entiteeteille.|[Luo ja muokkaa pikaluontilomakkeita nopeasti](create-edit-quick-view-forms.md) |  
 |**Pikanäkymä**|Käytetään PowerApps-sovelluksissa, Dynamics 365 Customer Engagement -WWW-sovelluksessa sekä Dynamics 365 for tablets- ja Dynamics 365 for Outlook -sovelluksessa.<br /><br /> Päivitetyissä entiteeteissä nämä lomakkeet näkyvät päälomakkeessa näyttääkseen muita tietoja tietueelle, jotka viittaavat lomakkeen hakukenttään.|[Luo ja muokkaa lomakkeita nopeasti](create-edit-quick-view-forms.md)|  
+|**Kortti** | Käytetään PowerApps-sovellusten näkymissä. Korttilomakkeet on suunniteltu esittämään tiedot mobiililaitteisiin sopivassa tiiviissä muodossa. | [Korttilomakkeen luominen](create-card-forms.md) |
 
 Vaikka kullakin lomaketyypillä on tarpeitansa, käsittelet lomakkeita lomake-editorissa. Lisätietoja: [Lomake-editorin käyttöliittymän yleiskatsaus](form-editor-user-interface-legacy.md)
 

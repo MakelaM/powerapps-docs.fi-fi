@@ -2,9 +2,9 @@
 title: Mallipohjaisen sovelluksen lomakkeiden käytön hallinta PowerAppsissa | MicrosoftDocs
 description: Päälomakkeiden käytön hallinta
 ms.custom: ''
-ms.date: 06/27/2018
+ms.date: 03/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -40,14 +40,14 @@ search.app:
   
  Vaiheittaiset ohjeet [Määritä käyttöoikeusroolit lomakkeisiin](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form).  
   
- Kun sinulla on useampi kuin yksi pää- tai mobiili-lomake määritettynä entiteetille, voit valita mitä lomakkeita käyttäjät voivat käyttää perustuen näiden käyttöoikeusrooleihin. Koska kunkin entiteetin on voitava näyttää lomake kaikille käyttäjille, vähintään yksi lomake on nimettävä "varalomakkeeksi" – lomake näkyy käyttäjille, joiden käyttöoikeusrooleilla ei ole lomakkeita, jotka olisi määrätty nimenomaan heille.  
+ Kun sinulla on useampi kuin yksi päälomake tai muu lomaketyyppi määritettynä entiteetille, voit valita mitä lomakkeita käyttäjät voivat käyttää perustuen näiden käyttöoikeusrooleihin. Koska kunkin entiteetin on voitava näyttää lomake kaikille käyttäjille, vähintään yksi lomake on nimettävä "varalomakkeeksi" – lomake näkyy käyttäjille, joiden käyttöoikeusrooleilla ei ole lomakkeita, jotka olisi määrätty nimenomaan heille.  
   
 > [!NOTE]
->  Pikalomakkeita ja pikaluontilomakkeita ei voida määrittää käyttöoikeusrooleille.  
+>  Pikalomakkeita, pikaluontilomakkeita ja korttilomakkeita ei voida määrittää käyttöoikeusrooleille.  
   
- Voit määrittää lomake-editorissa tai lomaketaulukossa lomakkeen käyttöoikeusroolit. Jos entiteetillä on vain yksi lomake, et voi poistaa **Käytössä varalomakkeena** -vaihtoehtoa **Määritä käyttöoikeusroolit** -valintaikkunassa. Tällöin vaikka olisit määrittänyt lomakkeelle käyttöoikeusrooleja, kuka tahansa käyttäjä, jolla on jokin muu käyttöoikeusrooli, pystyy siitä huolimatta tarkastelemaan lomaketta, koska se on otettu käyttöön varalomakkeena.  
+ Voit määrittää lomake-editorissa tai lomaketaulukossa päälomakkeen käyttöoikeusroolit. Jos entiteetillä on vain yksi lomake, et voi poistaa **Käytössä varalomakkeena** -vaihtoehtoa **Määritä käyttöoikeusroolit** -valintaikkunassa. Tällöin vaikka olisit määrittänyt lomakkeelle käyttöoikeusrooleja, kuka tahansa käyttäjä, jolla on jokin muu käyttöoikeusrooli, pystyy siitä huolimatta tarkastelemaan lomaketta, koska se on otettu käyttöön varalomakkeena.  
   
- Kun olet luonut entiteetille toisenkin pää- tai mobiililomakkeen, voit poistaa **Käytössä varalomakkeena** -asetuksen toisesta lomakkeesta. Järjestelmä varmistaa aina, että varalomakkeeksi on määritetty vähintään yksi lomake.  
+ Kun olet luonut entiteetille toisenkin päälomakkeen, voit poistaa **Käytössä varalomakkeena** -asetuksen toisesta lomakkeesta. Järjestelmä varmistaa aina, että varalomakkeeksi on määritetty vähintään yksi lomake.  
   
  Kun sinulla on useampi kuin yksi päälomake, voit määrittää lomaketilauksen, joka ohjaa, mikä lomakkeista, joita henkilö voi tarkastella, on se, joka tulee näkyviin oletusarvon mukaan. Jos he voivat käyttää useita lomakkeita, he voivat muuttaa lomakkeita ja se lomake, jonka he valitsevat, on oletuslomake, kunnes he valitsevat uuden lomakkeen. Tämä asetus tallennetaan selaimeen. Jos he käyttävät eri tietokonetta tai selainta, he näkevät alkuperäisen oletusarvon mukaisen lomakkeen.  
   

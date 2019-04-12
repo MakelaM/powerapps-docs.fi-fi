@@ -4,7 +4,7 @@ description: 'Tietoja siitä, miten voit muuttaa siirtymistä lomakkeessa'
 ms.custom: ''
 ms.date: 06/06/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -29,7 +29,7 @@ search.app:
   
  Näytettäviksi määritetyt entiteettisuhteet voidaan ohittaa lomake-editorissa. Voit lisätä lomakkeen siirtymisosaan linkkejä, joilla näytetään verkkoresursseja tai muita sivustoja.  
   
- Vaiheittaiset ohjeet ovat kohdassa [Common Data Service sovelluksille -ratkaisun entiteettisuhteiden luominen ja muokkaaminen](../common-data-service/create-edit-entity-relationships.md)  
+ Vaiheittaiset ohjeet ovat kohdassa [Common Data Servicen entiteettisuhteiden luominen ja muokkaaminen](../common-data-service/create-edit-entity-relationships.md)  
   
  Jos haluat ottaa siirtymisen muokkaamisen käyttöön, sinun on ensin valittava **Siirtyminen** lomakkeen suunnitteluohjelman **Koti**-välilehden **Valitse**-ryhmässä.  
  

@@ -3,7 +3,7 @@ title: Mallipohjaisen sovelluksen jakelu ratkaisun avulla | MicrosoftDocs
 description: Tietoja mallipohjaisen sovelluksen jakelusta ratkaisujen avulla
 keywords: ''
 ms.date: 08/06/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:

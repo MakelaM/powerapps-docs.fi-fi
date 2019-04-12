@@ -1,13 +1,13 @@
 ---
 title: Entiteetin mukautettujen kenttien hallinta | Microsoft Docs
-description: 'Common Data Service (CDS) sovelluksille -ratkaisun entiteetin mukautettujen kenttien luomisen, lukemisen, päivittämisen ja poistamisen ohjeet.'
-author: clwesene
+description: 'Common Data Servicen entiteetin mukautettujen kenttien luomisen, lukemisen, päivittämisen ja poistamisen ohjeet.'
+author: lancedMicrosoft
 manager: kfile
 ms.service: powerapps
 ms.component: cds
 ms.topic: conceptual
 ms.date: 03/21/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:

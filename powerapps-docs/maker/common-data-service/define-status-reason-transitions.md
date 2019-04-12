@@ -4,7 +4,7 @@ description: Tilan syyn siirtymien määrittäminen
 ms.custom: ''
 ms.date: 05/25/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -29,7 +29,7 @@ search.app:
 Voit määrittää tilan syyn siirtymät Esiintymä (**Palvelupyyntö**) -entiteetille tai mukautetuille entiteeteille.
 
 > [!NOTE]
-> Vaikka tapauksen (palvelupyynnön) entiteetti ei kuulu Common Data Service sovelluksille -oletusratkaisuun, [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) käyttää sitä ja se on määritetty [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json) -palvelussa
+> Vaikka tapauksen (palvelupyynnön) entiteetti ei kuulu Common Data Service -oletusympäristöön, [Dynamics 365 for Customer Service](https://dynamics.microsoft.com/customer-service/) käyttää sitä ja se on määritetty [Common Data Model](https://github.com/Microsoft/CDM/blob/master/schemaDocuments/core/applicationCommon/foundationCommon/crmCommon/service/Incident.cdm.json) -palvelussa
   
 Tilan syyn siirtymät ovat valinnainen, ylimääräinen suodatustaso, jolla määritetään, mitä tilan syyn arvoa voidaan muuttaa kussakin tilan syyssä. Kun rajallinen arvovaihtoehtojen luettelo on määritetty, käyttäjien on helpompi valita tietueelle oikea seuraava tilan syy, kun valittavana on runsaasti kelvollisia tilan syyn arvoyhdistelmiä.  
   
@@ -60,7 +60,7 @@ Kentän metatiedot määrittävät, mitä tilan arvoja voi käyttää tietyssä 
 Voit muokata Tapaus-entiteetin ja mukautettujen entiteettien tilan syy -kenttäasetuksia määrittääksesi, mitä muita tilan syy -vaihtoehtoja käyttäjät voivat valita. Ainoa rajoitus on, että kullekin tilan syy -vaihtoehdon aktiiviselle tilalle on sallittava vähintään yksi polku passiiviseen tilaan. Muussa tapauksessa voitaisiin luoda ehto, jossa palvelupyyntöä ei voi ratkaista eikä peruuttaa.  
 
 > [!NOTE]
-> Tilan syyn siirtojen muokkaaminen edellyttää ratkaisunhallintaa. Lisätietoja kenttien muokkaamisesta on kohdassa [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md).
+> Tilan syyn siirtojen muokkaaminen edellyttää ratkaisunhallintaa. Lisätietoja kenttien muokkaamisesta on kohdassa [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md).
   
  Tilan syy -kenttää muokatessa **Muokkaa tilan syyn siirtymiä** -painike näkyy valikossa. 
 
@@ -81,7 +81,7 @@ Seuraavassa näyttökuvassa on esimerkki, joka täyttää seuraavat vaatimukset:
   
 ### <a name="see-also"></a>Katso myös  
 
-[Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
+[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
 [Entiteetin metatiedot > Entiteetin tilat](/powerapps/developer/common-data-service/entity-metadata#entity-states)<br />
 [Mukautetun tilan mallisiirtojen määrittäminen](/dynamics365/customer-engagement/developer/define-custom-state-model-transitions)
 

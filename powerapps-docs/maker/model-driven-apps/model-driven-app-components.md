@@ -1,7 +1,7 @@
 ---
 title: Tietoja mallipohjaisen sovelluksen osista PowerAppsissa | MicrosoftDocs
 description: 'Tietoja mallipohjaisen sovelluksen eri osista, kuten tiedoista, käyttöliittymästä, logiikasta ja visualisoinnista.'
-Keywords: 'fields, attributes, model-driven app'
+Keywords: 'kentät, määritteet, mallipohjainen sovellus'
 author: Mattp123
 applies_to:
   - Dynamics 365 (online)
@@ -10,7 +10,7 @@ applies_to:
 ms.author: matp
 manager: kvivek
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.topic: article
 search.audienceType:
   - maker

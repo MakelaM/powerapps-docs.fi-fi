@@ -1,13 +1,13 @@
 ---
 title: 'Monimutkaiset entiteetit, jotka vaativat PowerApps-palvelupaketin 2 käyttöoikeudet | Microsoft Docs'
-description: 'Common Data Service (CDS) sovelluksille -ratkaisun niiden monimutkaisten entiteettien luettelo, jotka vaativat PowerApps-palvelupaketin 2 käyttöoikeudet.'
-author: clwesene
+description: 'Niiden Common Data Servicen monimutkaisten entiteettien luettelo, jotka vaativat PowerApps-palvelupaketin 2 käyttöoikeudet.'
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
 ms.date: 07/17/2018
-ms.author: clwesene
+ms.author: lanced
 search.audienceType:
   - maker
 search.app:

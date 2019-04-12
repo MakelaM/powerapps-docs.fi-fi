@@ -1,9 +1,9 @@
 ---
-title: Common Data Service sovelluksille -ratkaisun kenttien tietotyypit | MicrosoftDocs
+title: Common Data Servicen kenttien tietotyypit | MicrosoftDocs
 description: Tietoja sovelluksen käytettävissä olevista kenttien tietotyypeistä
 keywords: ''
 ms.date: 06/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -58,8 +58,8 @@ Tyyppien nimet riippuvat käytetystä suunnitteluohjelmasta. [PowerApps-portaali
 |**Kokonaisluku**|**Kokonaisluku**<br />*Ei mitään* -muoto|`IntegerType`|
 
 Lisätietoja lisättävistä ja muokattavista tyypeistä on vastaavan suunnitteluohjelman ohjeaiheessa:
- - [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla: Kentän tietotyypit](create-edit-field-portal.md#field-data-types)
- - [Common Data Service sovelluksille -ratkaisun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla: Kentän tietotyypit](create-edit-field-solution-explorer.md#field-data-types)
+ - [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla: Kentän tietotyypit](create-edit-field-portal.md#field-data-types)
+ - [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla: Kentän tietotyypit](create-edit-field-solution-explorer.md#field-data-types)
 
 Lisätietoja kentän tietotyyppien määrittämisestä ohjelmointirajapinnassa on kohdassa [Määritteen metatiedot](/powerapps/developer/common-data-service/entity-attribute-metadata)
 

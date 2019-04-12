@@ -4,7 +4,7 @@ description: Tietoja yksi moneen- ja monta moneen -entiteettisuhteiden luomisest
 ms.custom: ''
 ms.date: 06/11/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -23,7 +23,7 @@ search.app:
 ---
 # <a name="create-and-edit-one-to-many-or-many-to-one-entity-relationships-using-powerapps-portal"></a>Yksi moneen- ja monta yhteen -entiteettisuhteiden luominen ja muokkaaminen PowerApps-portaalin avulla
 
-[PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla on helppo luoda ja muokata 1:n (yksi moneen)- ja N:1 (monta yhteen) -suhteita Common Data Service sovelluksille -ratkaisussa.
+[PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla on helppo luoda ja muokata 1:n (yksi moneen)- ja N:1 (monta yhteen) -suhteita Common Data Servicessä.
 
 Portaalin avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. Lisätietoja: 
 - [1:N (yksi moneen)- ja N:1 (monta yhteen) -suhteen luominen ja muokkaaminen](create-edit-1n-relationships.md)

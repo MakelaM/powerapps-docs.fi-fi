@@ -2,9 +2,9 @@
 title: Mallipohjaisen sovelluksen lomakejärjestyksen määrittäminen PowerAppsissa | MicrosoftDocs
 description: Lisätietoja oletuslomakkeen delegoinnista sovelluksessa
 ms.custom: ''
-ms.date: 06/22/2018
+ms.date: 03/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -26,9 +26,9 @@ search.app:
 ---
 # <a name="assign-model-driven-app-form-order"></a>Mallipohjaisen sovelluksen lomakejärjestyksen määrittäminen
 
- Kun sinulla on useita pää-, pikaluonti- tai mobiililomakkeita entiteetille, voit luoda lomaketilauksen. Lomaketilaus määrittää mitä käytettävissä olevista lomakkeista näkyy oletusarvon mukaan. Käytettävissä olevia pää- tai mobiililomakkeita voidaan edelleen valvoa määrittämällä lomakkeille käyttöoikeusroolit. Lisätietoja on kohdassa [Lomakkeiden käytön valvominen](control-access-forms.md).  
+ Kun sinulla on useita entiteetin pää-, pikaluonti-, pikanäkymä- tai korttilomakkeita, voit määrittää lomaketilauksen. Lomaketilaus määrittää mitä käytettävissä olevista lomakkeista näkyy oletusarvon mukaan. Käytettävissä olevia päälomakkeita voidaan edelleen valvoa määrittämällä lomakkeelle käyttöoikeusroolit. Lisätietoja on kohdassa [Lomakkeiden käytön valvominen](control-access-forms.md).  
   
- Et voi määrittää käyttöoikeusrooleja pikaluontilomakkeille, joten ainoa muoto, jota käytetään kaikilla käyttäjillä on lomaketilauksen ylälaidassa oleva.  
+ Et voi määrittää käyttöoikeusrooleja pikaluonti-, pikanäkymä- tai korttilomakkeille, joten ainoa muoto, jota käytetään kaikilla käyttäjillä on lomaketilauksen ylälaidassa oleva.  
   
 ## <a name="to-assign-a-form-order"></a>Lomaketilauksen delegointi  
   
@@ -39,7 +39,7 @@ search.app:
      > [!div class="mx-imgBorder"] 
      > ![Lomakejärjestyksen työkalurivin komento](media/form-order.png)
   
-3.  Valitse **Päälomakejoukko**, **Pikaluontilomakejoukko**, **Pikalomakejoukko** tai **Mobiililomakeryhmä** sen mukaan, mikä käsiteltävien lomakkeiden tyyppi on. Lisätietoja: [Lomakkeiden tyyppi](types-forms.md). 
+3.  Valitse **Päälomakejoukko**, **Pikaluontilomakejoukko**, **Pikalomakejoukko** tai **Korttilomakeryhmä** sen mukaan, mikä käsiteltävien lomakkeiden tyyppi on. Lisätietoja: [Lomakkeiden tyyppi](types-forms.md). 
   
 4.  **Lomaketilaus** -valintaikkuna on yksinkertainen luettelo, jossa voit siirtää ylös- tai alaspäin valittua lomaketta lomaketilauksessa.  
   

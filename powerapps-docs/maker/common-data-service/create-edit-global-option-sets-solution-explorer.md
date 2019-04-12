@@ -1,9 +1,9 @@
 ---
-title: Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla | MicrosoftDocs
+title: Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla | MicrosoftDocs
 ms.custom: ''
 ms.date: 05/26/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -19,12 +19,12 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-global-option-sets-for-common-data-service-for-apps-using-solution-explorer"></a>Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla
+# <a name="create-and-edit-global-option-sets-for-common-data-service-using-solution-explorer"></a>Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen ratkaisunhallinnan avulla
 
-Ratkaisunhallinta on yksi tapa luoda ja muokata Common Data Service sovelluksille -ratkaisun yleisiä asetusjoukkoja Common Data Service sovelluksille -ratkaisun avulla.
+Ratkaisunhallinta on eräs tapa luoda Common Data Servicen yleisiä asetusjoukkoja ja muokata niitä.
 
 [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. <br />Lisätietoja: 
-- [Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen](create-edit-global-option-sets.md)
+- [Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen](create-edit-global-option-sets.md)
 - [Asetusjoukon luominen](custom-picklists.md)
 
 ## <a name="open-solution-explorer"></a>Ratkaisunhallinnan avaaminen
@@ -40,7 +40,7 @@ Kun ratkaisunhallinta on avattu, valitse **Osat**-kohdassa **Asetusjoukot**.
 ![Yleisten asetusjoukkojen tarkasteleminen](media/view-global-option-sets-solution-explorer.png)
 
 > [!NOTE]
-> Jotkin järjestelmän yleiset asetusjoukot eivät ole mukautettavia. Päivitykset ja uudet versiot voivat muuttaa näitä asetuksia, joten niiden käyttöä ei suositella, ellet ole varma, että vaatimuksesi vastaavat CDS sovelluksille -ratkaisun tapaa käyttää näitä arvoja.
+> Jotkin järjestelmän yleiset asetusjoukot eivät ole mukautettavia. Päivitykset ja uudet versiot voivat muuttaa näitä asetuksia, joten niiden käyttöä ei suositella, ellet ole varma, että vaatimuksesi vastaavat Common Data Servicen tapaa käyttää näitä arvoja.
 
 ## <a name="create-a-global-option-set"></a>Yleisen asetusjoukon luominen
 
@@ -81,7 +81,7 @@ Voit poistaa yleisen asetusjoukon valitsemalla luettelon tarkastelemisen yhteyde
   
 ### <a name="see-also"></a>Katso myös
  
-[Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen](create-edit-global-option-sets.md)<br />
+[Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen](create-edit-global-option-sets.md)<br />
 [Asetusjoukon luominen](custom-picklists.md)<br />
 [Kenttien luominen ja muokkaaminen](create-edit-fields.md)<br />
 [Sovelluskehittäjän dokumentaatio: Yleisten asetusjoukkojen mukauttaminen](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)

@@ -4,7 +4,7 @@ description: 'Tietoja siitä, miten voit linkittää entiteettikentät'
 ms.custom: ''
 ms.date: 05/29/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -98,7 +98,7 @@ Seuraavat säännöt määrittävät, minkälaisia tietoja voi yhdistää.
 - Jos kentät muodostavat asetusjoukon, kaikkien vaihtoehtojen kokonaislukuarvojen on oltava samat.  
   
 > [!NOTE]
->  Jos haluat yhdistää asetusjoukkokenttiä, on suositeltavaa määrittää molemmat kentät käyttämään samaa yleistä asetusjoukkoa. Kahden eri asetusjoukon ylläpitäminen käsin olisi muutoin vaikeaa. Jos jokaisen asetuksen kokonaislukuarvoa ei ole määritetty oikein, tietojoukossasi voi seurauksena olla ongelmia. Lisätietoja: [Common Data Service sovelluksille -ratkaisun yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)  
+>  Jos haluat yhdistää asetusjoukkokenttiä, on suositeltavaa määrittää molemmat kentät käyttämään samaa yleistä asetusjoukkoa. Kahden eri asetusjoukon ylläpitäminen käsin olisi muutoin vaikeaa. Jos jokaisen asetuksen kokonaislukuarvoa ei ole määritetty oikein, tietojoukossasi voi seurauksena olla ongelmia. Lisätietoja: [Common Data Servicen yleisten asetusjoukkojen luominen ja muokkaaminen (valintaluettelot)](create-edit-global-option-sets.md)  
   
 ## <a name="automatically-generate-field-mappings"></a>Yhdistämismääritysten luominen automaattisesti  
 

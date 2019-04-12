@@ -1,5 +1,5 @@
 ---
-title: Entiteettisuhteiden käyttäytyminen (Common Data Service sovelluksille) | MicrosoftDocs
+title: Entiteettisuhteiden käyttäytyminen (Common Data Service) | MicrosoftDocs
 description: <Description>
 ms.custom: ''
 ms.date: 08/01/2018

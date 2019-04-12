@@ -4,7 +4,7 @@ description: 'Opettele eri tavat, joilla entiteetin voi muokata'
 ms.custom: ''
 ms.date: 05/15/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -39,7 +39,7 @@ Entiteettiä voi muokata kahdella seuraavalla tavalla suunnitteluohjelmassa:
 
 Sekä PowerApps-portaalissa että ratkaisunhallinnassa voidaan tehdä seuraavat toiminnot:
 
-- **Muokkaa entiteettikenttiä**. Lisätietoja: [Kenttien luominen ja muokkaaminen Common Data Service sovelluksille -ratkaisussa](create-edit-fields.md)
+- **Muokkaa entiteettikenttiä**. Lisätietoja: [Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)
   
 - **Muokkaa entiteettisuhteita**. Lisätietoja: [Suhteiden luominen ja niiden muokkaaminen entiteettien välillä](create-edit-entity-relationships.md)
 

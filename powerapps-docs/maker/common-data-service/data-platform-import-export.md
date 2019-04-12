@@ -1,6 +1,6 @@
 ---
-title: Common Data Service sovelluksille -ratkaisun tietojen tuominen tai tietojen vieminen ratkaisuun
-description: Common Data Service sovelluksille -ratkaisun Excel- tai CSV-tiedostojen tietojen joukkotuonti ja -vienti Hae tiedot Excelistä- ja Vie tiedot -toimintojen avulla
+title: Common Data Servicen tietojen tuominen tai vieminen
+description: Common Data Servicen Excel- tai CSV-tiedostojen tietojen joukkotuonti ja -vienti Hae tiedot Excelistä- ja Vie tiedot -toimintojen avulla
 author: sabinn-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="import-or-export-data-from-common-data-service-for-apps"></a>Common Data Service sovelluksille -ratkaisun tietojen tuominen tai tietojen vieminen ratkaisuun
+# <a name="import-or-export-data-from-common-data-service"></a>Common Data Servicen tietojen tuominen tai vieminen
 
-Voit joukkotuoda ja -viedä tietoja Microsoft Excel- tai CSV-tiedostoista päivitetyn Common Data Service sovelluksille -ratkaisun ympäristöjen Hae tiedot Excel-tiedostosta- ja Vie tiedot -toimintojen avulla.
+Voit joukkotuoda ja -viedä tietoja Microsoft Excel- tai CSV-tiedostoista päivitetyn Common Data Service -ympäristöjen Hae tiedot Excel-tiedostosta- ja Vie tiedot -toimintojen avulla.
 
 Tiedostoja voi tuoda entiteetteihin Excel- tai CSV-tiedostoista kahdella eri tavalla.
 
@@ -66,7 +66,7 @@ Jokaisella entiteetillä on pakollisia kenttiä, joiden on oltava syöttötiedos
 
 ## <a name="option-2-import-by-bringing-your-own-source-file"></a>Vaihtoehto 2: Tuonti tuomalla oma lähdetiedosto
 
-Jos olet kokenut käyttäjä ja tiedät Common Data Service sovelluksille -entiteettien annetun entiteetin pakolliset kentät, määritä oma Excel- tai CSV-lähdetiedosto. Noudata kohdan **Tiedoston tuominen** ohjeita.
+Jos olet kokenut käyttäjä ja tiedät Common Data Service -entiteettien annetun entiteetin pakolliset kentät, määritä oma Excel- tai CSV-lähdetiedosto. Noudata kohdan **Tiedoston tuominen** ohjeita.
 
 ## <a name="navigate-mapping-errors"></a>Yhdistämismääritysvirheisiin siirtyminen
 
@@ -92,7 +92,7 @@ Jos saat yhdistämismääritysvirheitä tiedoston lataamisen jälkeen, valitse *
 
 ## <a name="ensure-uniqueness-when-you-import-data-into-an-entity-from-excel-or-csv"></a>Varmista yksilöllisyys, kun tuot tiedot entiteettiin Excelistä tai CSV-tiedostosta
 
-Common Data Service sovelluksille -entiteetit käyttävät ensisijaista avainta Common Data Service -entiteettitaulukon tietueiden yksilöinnissä. Common Data Service -entiteetin ensisijainen avain on GUID-tunnus. Se muodostaa tietueen tunnistamisen oletusperustan. Tietotoiminnot, kuten tietojen tuominen Common Data Service -entiteetteihin, tuovat esille ensisijaiset oletusavaimet.
+Common Data Service -entiteetit käyttävät ensisijaista avainta Common Data Service -entiteettitaulukon tietueiden yksilöinnissä. Common Data Service -entiteetin ensisijainen avain on GUID-tunnus. Se muodostaa tietueen tunnistamisen oletusperustan. Tietotoiminnot, kuten tietojen tuominen Common Data Service -entiteetteihin, tuovat esille ensisijaiset oletusavaimet.
 
 Esimerkki:  
 **Asiakas**-entiteetin ensisijainen avain on **accountid**.

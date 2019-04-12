@@ -1,9 +1,9 @@
 ---
-title: 'Esikatselutoiminto: Azure Cosmos DB for SQL API -tietojen tarjoajan käyttäminen Common Data Service -ratkaisun avulla | MicrosoftDocs'
+title: 'Esiversiotoiminto: Azure Cosmos DB for SQL API -tietojen tarjoajan käyttäminen Common Data Servicen avulla | MicrosoftDocs'
 description: Tietoja Azure Cosmos DB for SQL API -tietojen tarjoajan määrittämisestä virtuaalientiteettien kanssa käyttöä varten.
 keywords: SQL API
 ms.date: 02/15/2019
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -52,9 +52,9 @@ Oletetaan, että sinulla on Azure Cosmos DB -asiakirja kokoelmassa, jonka nimi o
 
 ![Esimerkki-JSON SQL API -asiakirjaa varten.](media/documentdbexample.png)
 
-Seuraavassa taulukossa esitetään SQL API -asiakirjojen tietotyyppien yhdistämismääritykset *Tilaukset*-kokoelmassa Common Data Service sovelluksille -ratkaisun kanssa.
+Seuraavassa taulukossa esitetään SQL API -asiakirjojen tietotyyppien yhdistämismääritykset *Tilaukset*-kokoelmassa Common Data Servicen kanssa.
 
-|SQL API -tiedot|CSD sovelluksille|
+|SQL API -tiedot|Common Data Service|
 |--|--|
 |`id`|Ensisijainen avain|
 |`name`|Yksi tekstirivi|
@@ -67,7 +67,7 @@ Seuraavassa taulukossa esitetään SQL API -asiakirjojen tietotyyppien yhdistäm
 
 > [!NOTE]
 > - SQL API luo määritteet, joiden etuliite on alaviiva (_).
-> - Määritteet, jotka määritetään valinnaisiksi SQL API -asiakirjassa ja jotka yhdistetään CDS sovelluksille -ratkaisuun **Yritys on pakollinen** -arvona, aiheuttavat suorituksenaikaisen virheen.
+> - Määritteet, jotka määritetään valinnaisiksi SQL API -asiakirjassa ja jotka yhdistetään Common Data Servicessä **Yritys on pakollinen** -arvona, aiheuttavat suorituksenaikaisen virheen.
 > - id-määritteen arvojen on oltava GUID-tunnuksia.
 > - Lisätietoja päivämäärien käyttämisestä SQL API:ssa on kohdassa [Päivämäärien käsitteleminen Azure Cosmos DB -tietokannassa](https://azure.microsoft.com/blog/working-with-dates-in-azure-documentdb-4/).
 
@@ -78,7 +78,7 @@ SQL-kyselyn suodattaminen tukee seuraavia operaattoreita.
 - Vertailuoperaattorit:`<`,`>`,`<=`, `>=`,`!=`
 - Loogiset operaattorit: `and`, `or` 
 - Set-operaattorit: `in`, `not in`
-- String-operaattorit: `like`, `contains`, b`egins with`, `ends with`
+- String-operaattorit: `like`, `contains`, `begins with`, `ends with`
 
 > [!NOTE]
 > Like-operaattorin käyttö käännetään operaattoreita `contains`/`begins with`/`ends with` vastaavaksi. SQL API ei tue malliargumentteja, kuten aiheessa [Like (Transact SQL)](/sql/t-sql/language-elements/like-transact-sql) kerrotaan. Azure Cosmos DB for SQL API -tietojen tarjoaja voi kääntää yhden eritystapauksen `Like('[aA]%')` kohteeksi `BeginsWith('a')` TAI kohteeksi `BeginsWith('A')`. Huomaa, että kirjainkoolla on merkitystä SQL API :n merkkijonovertailussa.
