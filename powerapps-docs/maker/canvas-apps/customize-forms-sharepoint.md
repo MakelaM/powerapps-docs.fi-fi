@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 1a6465a00f135489d594bad75b8a25942e05dd25
-ms.sourcegitcommit: f4b71ea0996603b3358377a0da21b9e4428a287c
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870927"
 ---
 # <a name="customize-a-canvas-app-form-in-powerapps"></a>Pohjaan perustuvan sovelluksen lomakkeen mukauttaminen PowerAppsissa
@@ -41,7 +41,7 @@ Jos et tunne pohjaan pps, katso [mitä ovat pohjaan perustuvat sovellukset?](get
     > [!div class="mx-imgBorder"]
     > ![Valitse tiedot-näyttö](./media/customize-forms-sharepoint/select-detailform.png)
 
-1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä** avaamiseen **kentät** ruudussa.
+1. Valitse oikeanpuoleisen ruudun **Ominaisuudet**-välilehdessä **Muokkaa kenttiä**, jotta voit valita **Kentät**-ruudun.
 
     > [!div class="mx-imgBorder"]
     > ![Avaa kentät-ruudussa](./media/customize-forms-sharepoint/edit-fields.png)
@@ -49,12 +49,12 @@ Jos et tunne pohjaan pps, katso [mitä ovat pohjaan perustuvat sovellukset?](get
 1. Piilota kenttä, kuten **kuvaus**, hiiren osoitin sen päälle, valitsemalla kolme pistettä (...), joka näkyy ja valitsemalla sitten **poistaa**.
 
     > [!div class="mx-imgBorder"]
-    > ![Kenttäluettelo](./media/customize-forms-sharepoint/hide-fields.png)
+    > ![Kenttien luettelo](./media/customize-forms-sharepoint/hide-fields.png)
 
 1. Näytä kentän valitsemalla **Lisää kenttä**, kirjoittamalla tai liittämällä kentän nimi muutama ensimmäinen hakuruutuun, valitsemalla kentän ja valitsemalla sitten **Lisää**.
 
     > [!div class="mx-imgBorder"]
-    > ![Kenttäluettelo](./media/customize-forms-sharepoint/show-field.png)
+    > ![Kenttien luettelo](./media/customize-forms-sharepoint/show-field.png)
 
 ## <a name="reorder-the-cards"></a>Järjestä kortit uudelleen
 
@@ -87,7 +87,7 @@ Jos et tunne pohjaan pps, katso [mitä ovat pohjaan perustuvat sovellukset?](get
 1. Avaa esikatselutila painamalla F5-näppäintä (tai valitsemalla **Esikatselu**-kuvake oikean yläkulman läheltä).
 
     > [!div class="mx-imgBorder"]
-    > ![Esikatselukuvake](./media/customize-forms-sharepoint/open-preview.png)
+    > ![Esikatselu-kuvake](./media/customize-forms-sharepoint/open-preview.png)
 
 1. Valitse oikeassa yläkulmassa plus-kuvaketta voit lisätä tietueen **EditScreen1**.
 
@@ -97,7 +97,7 @@ Jos et tunne pohjaan pps, katso [mitä ovat pohjaan perustuvat sovellukset?](get
 1. Lisää haluamasi tiedot ja valitse sitten valintamerkkikuvaketta oikeassa yläkulmassa tallentaaksesi muutokset ja palaa **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Tietueen tallentaminen](./media/customize-forms-sharepoint/save-record.png)
+    > ![Tallenna tietue](./media/customize-forms-sharepoint/save-record.png)
 
 1. Valitse nuoli-kohteen, jonka loit äsken näyttää tietoja kyseisestä kohteesta **DetailScreen1**.
 
@@ -112,12 +112,12 @@ Jos et tunne pohjaan pps, katso [mitä ovat pohjaan perustuvat sovellukset?](get
 1. Muuta yhden tai useamman kentän tietoja ja valitse sitten valintamerkkiä oikeassa yläkulmassa tallentaaksesi muutokset ja palaa **DetailScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Muutosten tallentaminen](./media/customize-forms-sharepoint/save-record.png)
+    > ![Tallenna muutokset](./media/customize-forms-sharepoint/save-record.png)
 
 1. Valitse oikeassa yläkulmassa roskakorikuvaketta voit poistaa juuri päivittämäsi tietueen ja palata **BrowseScreen1**.
 
     > [!div class="mx-imgBorder"]
-    > ![Tietueen poistaminen](./media/customize-forms-sharepoint/delete-record.png)
+    > ![Poista tietue](./media/customize-forms-sharepoint/delete-record.png)
 
 1. Sulje esikatselutila painamalla ESC-näppäintä (tai valitsemalla vasemmassa yläkulmassa sijaitsevaa Sulje-kuvaketta).
 

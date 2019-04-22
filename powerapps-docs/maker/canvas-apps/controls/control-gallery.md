@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ba5df28f03ec5e7c9a3d8146aecb0427d8145b13
-ms.sourcegitcommit: dc578df718420c7f19e4583d9e7002e69495e268
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59425307"
 ---
 # <a name="gallery-control-in-canvas-apps"></a>Valikoima-ohjausobjektin pohjaan perustuvat sovellukset
@@ -90,22 +90,22 @@ Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen
 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
-## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
+## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Suodattimen**( *DataSource*, *kaava* )](../functions/function-filter-lookup.md)
+[**Filter**( *Tietolähde*, *Kaava* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Esimerkkejä
 
 ### <a name="show-and-filter-data"></a>Tietojen näyttäminen ja suodattaminen
 
-* [Näytä teksti](control-text-box.md#show-data-in-a-gallery)
+* [Tekstin näyttäminen](control-text-box.md#show-data-in-a-gallery)
 * [Kuvien näyttäminen](control-image.md#show-a-set-of-images-from-a-data-source)
 * [Tietojen suodattaminen luettelovaihtoehdon valinnalla](control-drop-down.md#example)
-* [Tietojen suodattaminen liukusäädin](control-slider.md#example)
+* [Tietojen suodattaminen liukusäätimellä](control-slider.md#example)
 
 ### <a name="get-data-from-the-user"></a>Tietojen vastaanottaminen käyttäjältä
 
-* [Hae teksti](control-text-input.md#collect-data)
+* [Tekstin vastaanottaminen](control-text-input.md#collect-data)
 * [Kuvien vastaanottaminen](control-add-picture.md#add-images-to-an-image-gallery-control)
 * [Valokuvien vastaanottaminen](control-camera.md#example)
 * [Äänien vastaanottaminen](control-microphone.md#example)

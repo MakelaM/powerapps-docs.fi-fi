@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 428ca1fd96df4ed8a9c3fd7c14a1ad3e07356c70
-ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
+ms.openlocfilehash: 1fc257bb8ef99353b78e7a87234397b4ced3bc4a
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480212"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59686220"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla
 
@@ -30,7 +30,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 - Ennen sovelluksen luomista alusta alkaen tutustu PowerAppsin perusteisiin [luomalla sovellus](data-platform-create-app.md) ja mukauttamalla sovelluksen [valikoimaa](customize-layout-sharepoint.md), [lomakkeita](customize-forms-sharepoint.md) ja [kortteja](customize-card.md).
 - [Vaihda ympäristöön](working-with-environments.md), jossa on luotu tietokanta näytetiedoilla. Jos sinulla on asianmukainen käyttöoikeus, voit [luoda ympäristön](../../administrator/create-environment.md), joka täyttää tämän tarpeen.
-- Sovelluksen luominen edellyttää, että käyttöoikeusroolisi on [Ympäristön tekijä](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles).
+- Sovelluksen luominen edellyttää, että käyttöoikeusroolisi on [Ympäristön tekijä](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles).
 
 ## <a name="open-a-blank-app"></a>Avaa tyhjä sovellus
 
@@ -98,7 +98,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
     - **Tilin nimi**
     - **Osoite 1: Katuosoite 1**
-    - **Osoite 1: Postitoimipaikka**
+    - **Osoite 1: Kaupunki**
     - **Osoite 1: Postinumero**
     - **Työntekijöiden määrä**
     - **Vuosittainen tuotto**

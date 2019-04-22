@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 38e2798ae60206ff0584254916e4f750096155e4
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.openlocfilehash: 7e06c24d4d83b0e176782b705d6a77e956b6043b
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356858"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671465"
 ---
 # <a name="generate-a-canvas-app-from-common-data-service-in-powerapps"></a>Luo pohjaan perustuva sovellus Common Data Service-powerappsissa
 
@@ -28,7 +28,7 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Tämän pikaoppaan noudattamiseksi sinun on määritettävä [ympäristön tekijän](https://docs.microsoft.com/power-platform/admin/database-security.md#predefined-security-roles) käyttöoikeusrooli ja on [Vaihda ympäristöön](working-with-environments.md) , jota Common Data Service-tietokantaa on luotu, sisältää tietoja, ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](https://docs.microsoft.com/power-platform/admin/environments-administration.md#create-an-environment), joka täyttää tämän vaatimuksen.
+Tämän pikaoppaan noudattamiseksi sinun on määritettävä [ympäristön tekijän](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) käyttöoikeusrooli ja on [Vaihda ympäristöön](working-with-environments.md) , jota Common Data Service-tietokantaa on luotu, sisältää tietoja, ja sallii päivitykset. Jos tällaista ympäristöä ei ole olemassa ja sinulla on järjestelmänvalvojan käyttöoikeudet, voit [luoda ympäristön](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment), joka täyttää tämän vaatimuksen.
 
 ## <a name="generate-an-app"></a>Luo sovellus
 

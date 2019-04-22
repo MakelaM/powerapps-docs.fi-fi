@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: fc682694bb22ecc63ecc762a735df07950ce29d3
-ms.sourcegitcommit: 2dce3fe99828b0ffa23885bc7e11f1a1f871af07
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096163"
 ---
 # <a name="addcolumns-dropcolumns-renamecolumns-and-showcolumns-functions-in-powerapps"></a>AddColumns-, DropColumns-, RenameColumns- ja ShowColumns-funktiot PowerAppsissa
@@ -96,12 +96,12 @@ Mikään näistä esimerkeistä ei muokkaa **IceCreamSales**-tietolähdettä. Jo
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **AddColumns (IceCreamSales, ”tuotto” UnitPrice * QuantitySold)** |Lisää **Revenue**-sarakkeen tulokseen.  **UnitPrice * QuantitySold** arvioidaan jokaiselle tietueelle, ja tulos sijoitetaan uuteen sarakkeeseen. |<style> IMG {Enimmäisleveys: none;} </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
-| **DropColumns (IceCreamSales, ”UnitPrice”)** |Sulkee pois **UnitPrice**-sarakkeen tuloksesta. Tällä funktiolla voit sulkea pois sarakkeita, ja **ShowColumns**-funktiolla voit sisällyttää niitä. |![](media/function-table-shaping/icecream-drop-price.png) |
-| **ShowColumns (IceCreamSales ”Flavor”)** |Sisältää vain tuloksen **Flavor**-sarakkeen. Tällä funktiolla voit sisällyttää sarakkeita, ja **DropColumns**-funktiolla voit sulkea niitä pois. |![](media/function-table-shaping/icecream-select-flavor.png) |
-| **RenameColumns (IceCreamSales, ”UnitPrice”, ”hinta”)** |Nimeää uudelleen **UnitPrice** sarakkeen tulokseen. |![](media/function-table-shaping/icecream-rename-price.png) |
-| **RenameColumns (IceCreamSales ”UnitPrice”, ”hinta”, ”QuantitySold”, ”Number”)** |Nimeää uudelleen **UnitPrice**- ja **QuantitySold**-sarakkeet tuloksessa. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
-| **DropColumns)<br>RenameColumns(<br>AddColumns (IceCreamSales, ”tuotto”<br>UnitPrice * QuantitySold),<br>”UnitPrice”, ”Price”)<br>”Tilattava määrä”)** |Suorittaa seuraavan taulukkomuunnoksen järjestyksessä alkaen kaavan sisältä: <ol><li>Lisää **Revenue**-sarakkeen tietuekohtaisen **UnitPrice * Quantity** -laskutoimituksen perusteella.<li>Muuttaa **UnitPrice**-sarakkeen nimeksi **Price**.<li>Jättää pois **Quantity**-sarakkeen.</ol>  Huomaa, että järjestys on tärkeä. Emme voi esimerkiksi laskea sarakkeella **UnitPrice**, kun sen nimi on muutettu. |![](media/function-table-shaping/icecream-all-transforms.png) |
+| **AddColumns( IceCreamSales, "Revenue", UnitPrice * QuantitySold )** |Lisää **Revenue**-sarakkeen tulokseen.  **UnitPrice * QuantitySold** arvioidaan jokaiselle tietueelle, ja tulos sijoitetaan uuteen sarakkeeseen. |<style> img { max-width: none; } </style> ![](media/function-table-shaping/icecream-add-revenue.png) |
+| **DropColumns( IceCreamSales, "UnitPrice" )** |Sulkee pois **UnitPrice**-sarakkeen tuloksesta. Tällä funktiolla voit sulkea pois sarakkeita, ja **ShowColumns**-funktiolla voit sisällyttää niitä. |![](media/function-table-shaping/icecream-drop-price.png) |
+| **ShowColumns( IceCreamSales, "Flavor" )** |Sisältää vain tuloksen **Flavor**-sarakkeen. Tällä funktiolla voit sisällyttää sarakkeita, ja **DropColumns**-funktiolla voit sulkea niitä pois. |![](media/function-table-shaping/icecream-select-flavor.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price")** |Nimeää uudelleen **UnitPrice** sarakkeen tulokseen. |![](media/function-table-shaping/icecream-rename-price.png) |
+| **RenameColumns( IceCreamSales, "UnitPrice", "Price", "QuantitySold", "Number")** |Nimeää uudelleen **UnitPrice**- ja **QuantitySold**-sarakkeet tuloksessa. |![](media/function-table-shaping/icecream-rename-price-quant.png) |
+| **DropColumns(<br>RenameColumns(<br>AddColumns( IceCreamSales, "Revenue",<br>UnitPrice * QuantitySold ),<br>"UnitPrice", "Price" ),<br>"Quantity" )** |Suorittaa seuraavan taulukkomuunnoksen järjestyksessä alkaen kaavan sisältä: <ol><li>Lisää **Revenue**-sarakkeen tietuekohtaisen **UnitPrice * Quantity** -laskutoimituksen perusteella.<li>Muuttaa **UnitPrice**-sarakkeen nimeksi **Price**.<li>Jättää pois **Quantity**-sarakkeen.</ol>  Huomaa, että järjestys on tärkeä. Emme voi esimerkiksi laskea sarakkeella **UnitPrice**, kun sen nimi on muutettu. |![](media/function-table-shaping/icecream-all-transforms.png) |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta
 

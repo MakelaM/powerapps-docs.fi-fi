@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 776a542d8e790cc9ae3591b6cda9f08d0d347ef7
-ms.sourcegitcommit: 38f91423933749ca19557f29e86cd8f5ad06e1eb
+ms.openlocfilehash: cad1d7f138a8f831631d9a57b55c54b30d537b9c
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042774"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671603"
 ---
 # <a name="create-responsive-layouts-in-canvas-apps"></a>Luo reagoiva asettelut pohjaan perustuvat sovellukset
 
@@ -44,7 +44,7 @@ Jotta sovelluksesi reagoiva, sinun on tehtävä lisätoimia, mutta tämä muutos
 
 Jotta sovelluksesi asetteluja näytön dimensioiden muutokset vastata, kirjoittaa kaavoja, jotka käyttävät **leveys** ja **korkeus** näytön ominaisuuksiin. Näytä nämä ominaisuudet, Avaa sovellus PowerApps Studio ja valitse sitten näyttöön. Nämä ominaisuudet oletusarvon kaavat näkyvät **lisäasetukset** välilehti oikeanpuoleisessa ruudussa.
 
-**Leveys** = `Max(App.Width, App.DesignWidth)`
+**Width** = `Max(App.Width, App.DesignWidth)`
 
 **Korkeus** = `Max(App.Height, App.DesignHeight)`
 
@@ -67,8 +67,8 @@ Yksinkertaisin tapauksessa yksi ohjausobjekti täyttää koko näytön. Luo täm
 
 | Ominaisuus      | Value            |
 |--------|---------------|
-| **X**      | 0             |
-| **Y**      | 0             |
+| **X**      | `0`             |
+| **Y**      | `0`             |
 | **Leveys**  | `Parent.Width`  |
 | **Korkeus** | `Parent.Height` |
 
@@ -82,14 +82,14 @@ Jos haluat toisen ohjausobjektin täyttämään alaosassa puolet samassa näytö
 
 | Ohjausobjekti | Ominaisuus | Kaava           |
 |-|----------|-------------------|
-| **Upper** | **X**        | 0                 |
-| **Upper** | **Y**        | 0                 |
-| **Upper** | **Leveys**    | `Parent.Width`      |
-| **Upper** | **Korkeus**   | `Parent.Height / 2` |
-| **Lower** | **X**        | 0                 |
-| **Lower** | **Y**        | `Parent.Height / 2` |
-| **Lower** | **Leveys**    | `Parent.Width`      |
-| **Lower** | **Korkeus**   | `Parent.Height / 2` |
+| **Ylempi** | **X**        | `0`                 |
+| **Ylempi** | **Y**        | `0`                 |
+| **Ylempi** | **Leveys**    | `Parent.Width`      |
+| **Ylempi** | **Korkeus**   | `Parent.Height / 2` |
+| **Pienempi** | **X**        | `0`                 |
+| **Pienempi** | **Y**        | `Parent.Height / 2` |
+| **Pienempi** | **Leveys**    | `Parent.Width`      |
+| **Pienempi** | **Korkeus**   | `Parent.Height / 2` |
 
 ![Ylempi ja Pienennä ohjausobjekti](media/create-responsive-layout/dynamic-layout.png)
 
@@ -100,14 +100,14 @@ Luomiseen, jotka vaikuttavat on päivitettävä **korkeus** -ominaisuuden **Uppe
 
 | Ohjausobjekti | Ominaisuus | Kaava           |
 |-|----------|-------------------|
-| **Upper** | **X**        | 0                 |
-| **Upper** | **Y**        | 0                 |
-| **Upper** | **Leveys**    | `Parent.Width`      |
-| **Upper** | **Korkeus**   | `Parent.Height / 2` |
-| **Lower** | **X**        | 0                       |
-| **Lower** | **Y**        | `Upper.Y + Upper.Height`  |
-| **Lower** | **Leveys**    | `Parent.Width`            |
-| **Lower** | **Korkeus**   | `Parent.Height - Lower.Y` |
+| **Ylempi** | **X**        | `0`                 |
+| **Ylempi** | **Y**        | `0`                 |
+| **Ylempi** | **Leveys**    | `Parent.Width`      |
+| **Ylempi** | **Korkeus**   | `Parent.Height / 2` |
+| **Pienempi** | **X**        | `0`                       |
+| **Pienempi** | **Y**        | `Upper.Y + Upper.Height`  |
+| **Pienempi** | **Leveys**    | `Parent.Width`            |
+| **Pienempi** | **Korkeus**   | `Parent.Height - Lower.Y` |
 
 ![Ylempi ja alemman suhteellisen koon muuttaminen](media/create-responsive-layout/dynamic-layout2.png)
 
@@ -117,9 +117,9 @@ Voit määrittää nämä kaavan mallit ilmaisemisen common asettelu välisiä o
 
 | C- ja sen ylätason suhde | Ominaisuus | Kaava | Kuva |
 |--|--|--|--|
-| **C** täyttää ylätason leveyden jossa *N* | **X**| *N* | ![Esimerkki ylemmän tason C täyttöä leveys](media/create-responsive-layout/c1.png) |
+| **C** täyttää ylätason leveyden jossa *N* | **X**| `N` | ![Esimerkki ylemmän tason C täyttöä leveys](media/create-responsive-layout/c1.png) |
 |  | **Leveys** | `Parent.Width - (N * 2)` |  |
-| **C** täyttää ylä-ja korkeus reunukseen *N* | **Y** | *N* | ![Esimerkki ylemmän tason C täyttöä korkeus](media/create-responsive-layout/c2.png) |
+| **C** täyttää ylä-ja korkeus reunukseen *N* | **Y** | `N` | ![Esimerkki ylemmän tason C täyttöä korkeus](media/create-responsive-layout/c2.png) |
 |  | **Korkeus** | `Parent.Height - (N * 2)` |  |
 | **C** ylä-ja oikeaan reunaan reunukseen paikkaa *N* | **X** | `Parent.Width - (C.Width + N)` | ![Esimerkki C tasaaminen reunan ylemmän tason mukaan](media/create-responsive-layout/c3.png) |
 | **C** alareunan ylätason reunukseen paikkaa *N* | **Y** | `Parent.Height - (C.Height + N)` | ![Esimerkki C tasaaminen reunan ylemmän tason mukaan](media/create-responsive-layout/c4.png) |
@@ -164,10 +164,10 @@ Määritä näiden ohjausobjektien ominaisuudet Nämä arvot:
 
 | Ominaisuus | Otsikko | Valikko | Sulje | Otsikko |
 |--|--|--|--|--|
-| **X** | 0  | 0 | `Parent.Width - Close.Width` | `Menu.X + Menu.Width` |
-| **Y** | 0 | 0 | 0 | 0 |
+| **X** | `0`  | `0` | `Parent.Width - Close.Width` | `Menu.X + Menu.Width` |
+| **Y** | `0` | `0` | `0` | `0` |
 | **Leveys**  | `Parent.Width` | `Parent.Height` | `Parent.Height` | `Close.X - Title.X` |
-| **Korkeus** | 64 | `Parent.Height` | `Parent.Height` | `Parent.Height` |
+| **Korkeus** | `64` | `Parent.Height` | `Parent.Height` | `Parent.Height` |
 
 Varten **otsikon** ohjausobjektin `Parent` näytön viittaa. Muiden `Parent` viittaa **otsikon** ohjausobjektin.
 
@@ -192,7 +192,7 @@ Vaikeaa **korkeus** 1136- ja laitteen korkeuteen (tässä Tämä suunta) 640, k�
 
 Näytön mukauttamiseksi **leveys** ja **korkeus** ominaisuudet laitteen-asentoon, voit määrittää nämä kaavat:
 
-**Leveys** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
+**Width** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
 
 **Korkeus** = `Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))`
 
@@ -200,25 +200,67 @@ Nämä kaavat Vaihda sovelluksen **DesignWidth** ja **DesignHeight** perusteella
 
 Kun säädät näytön **leveys** ja **korkeus** kaavoja, voit myös halutessasi järjestää käyttämään tilaa paremmin näytön ohjausobjektit. Jos kaksi ohjausobjekteihin kattaa puolet näytöstä, voit pinon ne pystysuunnassa pysty mutta järjestää ne rinnakkain vaakanäkymässä.
 
+Voit käyttää näytön **suunta** ominaisuus määrittää, onko näytön zoomauspaneeli vaaka- tai vaakasuunnassa.
+
 > [!NOTE]
 > Vaakasuunnassa **Upper** ja **pienempi** ohjausobjektit näkyvät vasemman ja oikean ohjausobjekteja.
 
 | Ohjausobjekti | Ominaisuus | Kaava |
 |--|----------|---|
-| **Upper** | **X** | 0 |
-| **Upper** | **Y** | 0 |
-| **Upper** | **Leveys** | `If(Parent.Width < Parent.Height, Parent.Width, Parent.Width / 2)` |
-| **Upper** | **Korkeus**   | `If(Parent.Width < Parent.Height, Parent.Height / 2, Parent.Height)` |
-| **Lower** | X | `If(Parent.Width < Parent.Height, 0, Upper.X + Upper.Width)`  |
-| **Lower** | Y | `If(Parent.Width < Parent.Height, Upper.Y + Upper.Height, 0)` |
-| **Lower** | **Leveys** | `Parent.Width - Lower.X` |
-| **Lower** | **Korkeus** | `Parent.Height - Lower.Y` |
+| **Ylempi** | **X** | `0` |
+| **Ylempi** | **Y** | `0` |
+| **Ylempi** | **Leveys** | `If(Parent.Orientation = Layout.Vertical, Parent.Height, Parent.Width, Parent.Width / 2)` |
+| **Ylempi** | **Korkeus**   | `If(Parent.Orientation = Layout.Vertical, Parent.Height / 2, Parent.Height)` |
+| **Pienempi** | X | `If(Parent.Orientation = Layout.Vertical, 0, Upper.X + Upper.Width)`  |
+| **Pienempi** | Y | `If(Parent.Orientation = Layout.Vertical, Upper.Y + Upper.Height, 0)` |
+| **Pienempi** | **Leveys** | `Parent.Width - Lower.X` |
+| **Pienempi** | **Korkeus** | `Parent.Height - Lower.Y` |
 
 ![lausekkeita mukauttamiseksi pystysuuntaisia](media/create-responsive-layout/portrait.png)
 
 ![lausekkeita mukauttamiseksi vaakasuunnassa](media/create-responsive-layout/landscape.png)
 
-### <a name="known-limitations"></a>Tunnetut rajoitukset
+### <a name="screen-sizes-and-breakpoints"></a>Näyttöjen ja keskeytyskohtien
+
+Voit säätää asettelu laitteen koon perusteella. Näytön **koon** ominaisuuden luokittelee nykyinen laite koko. Koko on positiivinen kokonaisluku; ScreenSize tyyppi on nimetty vakioita auttamaan luettavuuden kannalta. Tämä taulukko sisältää vakioille:
+
+| Vakio              | Value | Tavallinen laitetyyppiä (käyttämällä sovelluksen oletusasetuksia) |
+|-----------------------|-------|--------------------------------------------------|
+| ScreenSize.Small      | 1     | Puhelinnumero                                            |
+| ScreenSize.Medium     | 2     | Tabletissa säilyttää pystysuunnassa                          |
+| ScreenSize.Large      | 3     | Tabletissa säilyttää vaakasuunnassa                        |
+| ScreenSize.ExtraLarge | 4     | Pöytätietokone                                 |
+
+Sovelluksen asettelu päätöksiä näitä kokoja avulla. Jos haluat piilottaa laitteessa puhelin kokoisen mutta näkyvissä muussa tapauksessa ohjausobjektin, voit esimerkiksi määrittää ohjausobjektin **näkyvissä** -ominaisuuden arvoksi tämä kaava:
+
+`Parent.Size >= ScreenSize.Medium`
+
+Tämä kaava laskee **true** kun koko on Keskikokoiset tai suurempi ja **false** muussa tapauksessa.
+
+Jos haluat hallita laajentuu eri murtoluvun perusteella näytön koko näytön leveys, Määritä ohjausobjektin **leveys** -ominaisuuden arvoksi tämä kaava:
+
+```
+Parent.Width *  
+    Switch(Parent.Size,  
+        ScreenSize.Small, 0.5,  
+        ScreenSize.Medium, 0.3,  
+        0.25)
+```
+Tämä kaava määrittää ohjausobjektin leveyden puoliskolla näytön leveys pienessä näytössä, kolme kymmenesosina näytön leveys Normaali näytössä ja Neljännes näytön leveys kaikki muut näytöissä.
+
+## <a name="custom-breakpoints"></a>Mukautettu keskeytyskohtien
+
+Näytön **koon** ominaisuuden lasketaan vertaamalla näytön **leveys** sovelluksen arvot ominaisuudeksi **SizeBreakpoints** ominaisuus. Tämä ominaisuus on yksisarakkeisen taulukon lukujen, jotka osoittavat, jotka erottavat nimetty näyttöjen leveys keskeytyskohtien:
+
+Sovelluksen tabletissa tai verkon, oletusarvo arvo sovelluksen **SizeBreakpoints** ominaisuus on **600, 900, 1200**. Sovelluksen puhelimia varten, arvo on **[1 200, 1 800, 2 400]**. (Puhelinsovelluksille arvot ovat kaksinkertainen koska tällainen sovellukset käyttävät koordinaatit, jotka ovat tehokkaasti double käyttänyt muissa sovelluksissa koordinaatit.)
+
+![oletusarvot App.SizeBreakpoints ominaisuuden](media/create-responsive-layout/default-breakpoints.png)
+
+Voit mukauttaa sovelluksen keskeytyskohtien muuttamalla sovelluksen arvot **SizeBreakpoints** ominaisuus. Valitse **sovelluksen** Valitse puunäkymässä **SizeBreakpoints** -ominaisuudessa luettelosta ja muokkaa sitten kaavarivillä. Voit luoda useita keskeytyskohtien sovelluksesi tarvitsee, mutta koon vain 1 – 4 vastaavat nimetty näyttöjen. Kaavoissa, voit viitata koot asettamiesi ExtraLarge numeeristen arvojen mukaan (5, 6 ja niin edelleen).
+
+Voit myös määrittää vähemmän keskeytyskohtien. Esimerkiksi sovelluksesi on ehkä vain kolme koon (kaksi keskeytyskohta), joten mahdollista näyttöjen pieni, Normaali ja suuri.
+
+## <a name="known-limitations"></a>Tunnetut rajoitukset
 
 Luontiympäristö pohjan ei vastaa luotu koon muuttaminen kaavat. Testattava reagoiva toiminta Tallenna ja julkaise sovelluksesi ja avaa se laitteissa tai selainikkunat eri kokoja ja suuntia.
 

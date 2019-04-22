@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 61a7e67b7914e5f844397389833f830244d5af28
-ms.sourcegitcommit: 2dce3fe99828b0ffa23885bc7e11f1a1f871af07
+ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098042"
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
@@ -29,7 +29,7 @@ Keskeistä tehokkaiden sovellusten kehittämisessä on sen tietomäärän pienen
 
 Tässä asia monimutkaistuu, ja juuri tästä syystä tämä artikkeli on olemassa: kaikkea, mitä voidaan ilmaista PowerApps-kaavassa, ei voida delegoida jokaiseen tietolähteeseen. PowerApps-kieli imitoi Excelin kaavakieltä, johon sisältyy täydellinen ja välitön käyttöoikeus muistissa olevaan täydelliseen työkirjaan monine erilaisine numeron- ja tekstinkäsittelyfunktioineen. Näin ollen PowerApps-kieli on monin verroin monipuolisempi kuin mitä useimmat tietolähteet voivat tukea, ja siihen kuuluvat tehokkaat tietokantamoduulit, kuten SQL Server.
 
-**Suurien tietomäärien käyttäminen edellyttää tietolähteitä ja kaavoja, jotka voidaan delegoida.** Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiaan tietoja. Kiinnitä huomiota delegointivaroituksiin. Ne ilmaisevat paikat, joissa delegointi ei ole mahdollista. Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä sovellus voi käsitellä tietoja paikallisesti, jos kaavaa ei voi delegoida. 
+**Suurien tietomäärien käyttäminen edellyttää delegoitavien tietolähteiden ja kaavojen käyttöä.** Se on ainoa tapa, jolla sovellus voidaan pitää hyvin toiminnassa ja varmistaa, että käyttäjät voivat käyttää kaikkia tarvitsemiaan tietoja. Kiinnitä huomiota delegointivaroituksiin. Ne ilmaisevat paikat, joissa delegointi ei ole mahdollista. Jos käsittelet pieniä tietojoukkoja (alle 500 tietuetta), voit käyttää mitä tahansa tietolähdettä ja kaavaa, sillä sovellus voi käsitellä tietoja paikallisesti, jos kaavaa ei voi delegoida. 
 
 > [!NOTE]
 > Delegointivaroituksia kutsuttiin PowerAppsissa aiemmin sinisellä pisteellä merkityiksi ehdotuksiksi, mutta delegointiehdotukset on sittemmin luokiteltu uudelleen varoituksiksi. Jos tietolähteessä on yli 500 tietuetta eikä funktiota voida delegoida, PowerApps ei ehkä voi noutaa kaikkia tietoja ja sovelluksesi tulokset voivat olla vääriä. Delegointivaroitukset helpottavat sovelluksesi hallintaa niin, että sen tulokset ovat oikeat.
@@ -54,7 +54,7 @@ Nämä luettelot muuttuvat ajan myötä. Pyrimme tukemaan delegoinnilla useampia
 **Filter**- ja **LookUp**-funktioissa voidaan käyttää näitä termejä tarvittavien tietueiden valitsemiseen taulukon sarakkeista:
 
 * **[And](functions/function-logicals.md)** (mukaan lukien **[&&](functions/operators.md)**), **[Or](functions/function-logicals.md)** (mukaan lukien **[||](functions/operators.md)**), **[Not](functions/function-logicals.md)** (mukaan lukien **[!](functions/operators.md)**)
-* **[-](functions/operators.md)**
+* **[In](functions/operators.md)**
 * **[=](functions/operators.md)**, **[<>](functions/operators.md)**, **[>=](functions/operators.md)**, **[<=](functions/operators.md)**, **[>](functions/operators.md)**, **[<](functions/operators.md)**
 * **[+](functions/operators.md)**, **[-](functions/operators.md)**
 * **[TrimEnds](functions/function-trim.md)**

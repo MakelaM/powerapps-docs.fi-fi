@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4c09bd3dead3ca3ac31f5c052929625b271efac3
-ms.sourcegitcommit: 7f67cd28c781a48f6a211ed82c2c861ae3acf1a5
+ms.openlocfilehash: 6fedff6d6ffc34fe390ec6978672d699480a7cb9
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "57800740"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671580"
 ---
 # <a name="screen-control-in-powerapps"></a>Screen-ohjausobjekti PowerAppsissa
 
@@ -36,11 +36,13 @@ Useimmissa sovelluksissa on useita **näytön** ohjausobjekteja, jotka sisältä
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 
-**[ImagePosition](properties-visual.md)** – Kuvan tai ohjausobjektin asettelu (**Fill** [täytä], **Fit** [sovita], **Stretch** [venytä], **Tile** [vierekkäin] tai **Center** [keskitä]), jos kuva tai ohjausobjekti ei ole saman kokoinen kuin näyttö.
+**Korkeus** -näytön korkeus. Jos sovellus on reagoiva ([**Sovita** ](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) on **käytöstä**) ja laite, johon sovellus on käynnissä on lyhyempi kuin tätä ominaisuutta, näyttöön voi vierittää pystysuunnassa.
+
+**[ImagePosition](properties-visual.md)** – Näytössä olevan kuvan tai ohjausobjektin asettelu (**Täyttö**, **Sovita**, **Stretch**, **Vierekkäin** tai **Keskitä**), jos se ei ole saman kokoinen kuin kuva.
+
+**Nimi** -näytön nimi.
 
 **OnHidden** – miten sovellus reagoi, kun käyttäjä siirtyy pois näytöstä.
-
-**OnVisible** – miten sovellus reagoi, kun käyttäjä siirtyy näyttöön.
 
 **OnStart** – miten sovellus reagoi, kun käyttäjä avaa sovelluksen.
 
@@ -49,7 +51,15 @@ Useimmissa sovelluksissa on useita **näytön** ohjausobjekteja, jotka sisältä
 - Kun päivität sovelluksen, kaava, johon tämä ominaisuus määritetään, suoritetaan kun sovellus ladataan PowerApps Studioon. Jotta näet tämän ominaisuuden muuttamisen vaikutuksen, tallenna, sulje ja lataa sovellus uudelleen.
 - **OnStart**-ominaisuus on varsinaisesti sovelluksen ominaisuus, ei näytön ominaisuus. Muokkaamisen helpottamiseksi sitä tarkastellaan ja muokataan ominaisuutena sovelluksen ensimmäisessä näytössä. Jos poistat ensimmäisen näytön tai muutat näyttöjen järjestystä, tätä ominaisuutta voi olla vaikea löytää. Tässä tapauksessa tallenna, sulje ja lataa sovellus uudelleen, niin ominaisuus näkyy uudelleen ominaisuutena ensimmäisellä ruudulla.
 
-## <a name="related-functions"></a>Liittyvät funktiot
+**OnVisible** – miten sovellus reagoi, kun käyttäjä siirtyy näyttöön.
+
+**Suunta** -näytön suunnan. Jos sen **leveys** on suurempi kuin sen **korkeus**, suuntaa on **Layout.Horizontal**; muussa tapauksessa se on **Layout.Vertical** .
+
+**Koon** -positiivinen kokonaisluku, joka luokittelee näytön koko. Luokituksen määritetään vertaamalla näytön **leveys** ominaisuuden arvot [ **App.SizeBreakpoints** ](../functions/signals.md) ominaisuus. **ScreenSize** tyyppi koostuu neljästä arvosta (**pieni**, **Normaali**, **suuri**, ja **ExtraLarge** ), jotka vastaavat kokonaislukujen 1 – 4.
+
+**Leveys** -näytön leveys. Jos sovellus on reagoiva ([**Sovita** ](../set-aspect-ratio-portrait-landscape.md#change-screen-size-and-orientation) on **käytöstä**) ja laite, johon sovellus on käynnissä on kuin tätä ominaisuutta, näytön vierittää vaakasuunnassa.
+
+## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
 
 [**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 

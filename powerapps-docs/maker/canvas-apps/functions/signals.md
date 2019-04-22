@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d13f4a0669ae9f0d7ef9a5f4ef7115e006256bd9
-ms.sourcegitcommit: d1d39d6b72516d62514af4ff90f04c35fbdd8638
+ms.openlocfilehash: 18bd89549aa330b5da333dccfd723887db38a36e
+ms.sourcegitcommit: 39c9b4cbc26617e302d46085d81c6d397e01fbf7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480235"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671557"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Acceleration-, App-, Compass-, Connection- ja Location-signaalit PowerAppsissa
 Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.  
@@ -48,12 +48,13 @@ Kaikki signaalit palauttavat [tietueen](../working-with-tables.md#records) tiedo
 | **App.Height** | Palauttaa ikkunan, jossa sovellus on käynnissä korkeuden. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** reagoiva sovelluksen rakentaminen näytön ominaisuus. |
 | **App.DesignWidth** | Palauttaa sovelluksen leveys PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **leveys** näytön Vähimmäisleveys reagoiva sovelluksessa varmistamiseksi ominaisuus.  |
 | **App.DesignHeight** | Palauttaa sovelluksen korkeus PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** näytön vähimmäiskorkeus reagoiva sovelluksessa varmistamiseksi ominaisuus.  |
+| **App.SizeBreakpoints** | Yhden sarakkeen taulukon, joka rajoittaa ikkunan koon lukujen välillä, joka [ **Screen.Size** ](../controls/control-screen.md) ominaisuus palauttaa. Mukauta, että kaikki sovelluksen näyttöjä, käytä keskeytyskohtien voi muuttaa tämän taulukon arvot.
 
 **Sovelluksen** objekti on myös [toimintakaavassa](../working-with-formulas-in-depth.md) , johon voit asettaa.
 
 | Ominaisuus  | Kuvaus |
 | --- | --- |
-| **OnStart** | Sovellus, kun käyttäjä käynnistää sen toiminta. Tätä ominaisuutta käytetään yleisesti ja tietoja välimuistiin kokoelmiin kanssa **[kerätä](function-clear-collect-clearcollect.md)** funktio, Määritä muuttujat **[määrittää](function-set.md)** funktio ja ensimmäinen näyttö ja siirry **[Navigate](function-navigate.md)** funktio. Kaava lasketaan, ennen kuin ensimmäinen näyttö näytetään. Yhtään näyttöä ei ladattu, joten et voi määrittää kontekstimuuttujan kanssa **[UpdateContext](function-updatecontext.md)** funktio. Voit kuitenkin välittää kontekstimuuttujia kanssa **Navigate** funktio. |
+| **App.OnStart** | Sovellus, kun käyttäjä käynnistää sen toiminta. Tekijät usein tämän ominaisuuden avulla ja noutaa tietoja välimuistiin kokoelmiin kanssa **[kerätä](function-clear-collect-clearcollect.md)** funktio, Määritä muuttujat **[määrittää](function-set.md)** funktio ja ensimmäinen näyttö ja siirry **[Navigate](function-navigate.md)** funktio. Kaava lasketaan, ennen kuin ensimmäinen näyttö näytetään. Yhtään näyttöä ei ladattu, joten et voi määrittää kontekstimuuttujan kanssa **[UpdateContext](function-updatecontext.md)** funktio. Voit kuitenkin välittää kontekstimuuttujia kanssa **Navigate** funktio. |
 
 **Sovelluksen** näkyy vasemmassa siirtymisruudussa ohjausobjektien hierarkkisessa luettelossa yläosassa ja voit valita tämän objektin näytössä on ohjausobjekti, kuten. Kun olet valinnut objektia, voit tarkastella ja muokata sen ominaisuuksia, jos valitset kyseisen ominaisuuden vasemmalla puolella kaavarivin avattavasta-luettelosta.  
 
