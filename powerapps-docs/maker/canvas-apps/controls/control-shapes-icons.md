@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d20c19e44f3fb247314613cdfe23e1d1e5820cba
-ms.sourcegitcommit: 0aa8344e6ff1096b67fbac6b986515ec2540e5fd
+ms.openlocfilehash: 88e0a74d2c25d1d2f5f571f4d1850417d1aab9ca
+ms.sourcegitcommit: 0267e58b305f9fb0a4b32130fb149cd6e34b3354
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59541811"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59993822"
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Muoto- ja kuvakeohjausobjektit PowerAppsissa
 Grafiikkoja, joille voi määrittää ulkoasu- ja toimintaominaisuuksia.
@@ -26,10 +26,18 @@ Grafiikkoja, joille voi määrittää ulkoasu- ja toimintaominaisuuksia.
 ## <a name="description"></a>Kuvaus
 Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toimintokuvakkeet ja symbolit, joille voi määrittää täytön, koon ja sijainnin kaltaisia ominaisuuksia. Voit myös määrittää niiden **[OnSelect](properties-core.md)** ominaisuus niin, että sovellus reagoi, jos käyttäjä valitsee ohjausobjektin.
 
-## <a name="key-properties"></a>Tärkeimmät ominaisuudet
+## <a name="key-properties-icons-and-shapes"></a>Tärkeimmät ominaisuudet (kuvakkeet ja muodot)
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
 **[OnSelect](properties-core.md)**  – miten sovellus reagoi, kun käyttäjä valitsee ohjausobjektin.
+
+## <a name="key-properties-icons-only"></a>Tärkeimmät ominaisuudet (vain kuvakkeet)
+
+**Kuvake** -kuvaketta näyttääksesi tyyppi (esimerkiksi **ArrowDown** tai **ShoppingCart**). 
+
+**Kierto** -arvo Kierrä kuvaketta. 
+
+**Väri** -kuvake nimen tai RGBA arvojen väri.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.

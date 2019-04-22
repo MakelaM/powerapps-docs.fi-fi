@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 28357a6187831e05fe27075b8b22514950215ab4
-ms.sourcegitcommit: fc604f3e7f0399bdabee86ce94f67de49531a444
+ms.openlocfilehash: 43832847f447a9af8a05d149b0d6f3b564b770e1
+ms.sourcegitcommit: 0267e58b305f9fb0a4b32130fb149cd6e34b3354
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545057"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59993799"
 ---
 # <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>Tietoyhteyden lisääminen pohjaan perustuvaan sovellukseen PowerAppsissa
 
@@ -58,7 +58,7 @@ Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja halli
 
     ![Yhteyden lisääminen](./media/add-data-connection/add-connection.png)
 
-1. Hakukenttään Kirjoita tai liitä ensimmäiset kirjaimet yhteyden, ja valitse sitten yhteys kun se tulee näkyviin.
+1. Hakukenttään Kirjoita tai liitä ensimmäiset kirjaimet yhteyttä ja valitse yhteys, kun se tulee näkyviin.
 
     ![Yhteyden haku](./media/add-data-connection/search-connections.png)
 
@@ -67,7 +67,7 @@ Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja halli
     Jotkin liittimet, kuten **Office 365 Outlook**, eivät vaadi lisävaiheita, ja voit näyttää niiltä saatuja tietoja välittömästi. Jotkin muut liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Esimerkiksi [SharePoint](connections/connection-sharepoint-online.md) ja [SQL Server](connections/connection-azure-sqldatabase.md) tarvitsevat lisätietoja, ennen kuin voit käyttää niitä.
 
 ## <a name="identify-or-change-a-data-source"></a>Tietolähteen tunnistaminen tai muuttaminen
-Sovellusta päivitettäessä voi olla tarpeen tunnistaa valikoimassa, lomakkeessa tai muussa ohjausobjektissa esiintyvien tietojen lähde tai muuttaa sitä. Tietolähteitä voi haluta tunnistaa esimerkiksi päivitettäessä jonkun muun luomaa sovellusta tai sovellusta, jonka käyttäjä on itse luonut kauan sitten.
+Sovellusta päivitettäessä voi olla tarpeen tunnistaa valikoimassa, lomakkeessa tai muussa ohjausobjektissa esiintyvien tietojen lähde tai muuttaa sitä. Sinun on esimerkiksi tunnistaa tietolähteeseen, kun päivität sovelluksen jonkun muun luoman tai luonut kauan sitten.
 
 1. Valitse ohjausobjekti, esimerkiksi valikoima, jonka haluat tunnistaa tai muuttaa tietolähteeseen.
 
