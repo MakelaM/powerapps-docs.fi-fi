@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: f431373b2c36a84b54a3241ad2d49af019c37419
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42858423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61557986"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>Yhteyden muodostaminen PowerAppsista Oracle-tietokantaan
 Luetteloi taulukoita ja luo, lue ja poista taulukon rivejä Oracle-tietokannassa sen jälkeen, kun olet luonut yhteyden ja luonut sovelluksen PowerAppsissa. Oracle Database -tietokantayhteys tukee suodatuksen, lajittelun ja muiden funktioiden täyttä delegointia mutta ei käynnistimiä tai tallennettuja toimintosarjoja.

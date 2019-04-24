@@ -1,6 +1,6 @@
 ---
-title: Helppokäyttöominaisuudet | Microsoft Docs
-description: Tietoja ominaisuuksista, kuten TabIndex ja työvaluvihje
+title: Helppokäyttötoimintojen ominaisuudet pohjaan perustuvien sovellusten | Microsoft Docs
+description: Tietoja ominaisuuksista, kuten TabIndex ja työkaluvihje
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -13,18 +13,28 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4d75fcd4c0605e295c1e61c5232ba747203d1647
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 5fa8b6fecdf690114cbf6a0945f2dfec66b067c3
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42854143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61560411"
 ---
-# <a name="accessibility-properties-in-powerapps"></a>PowerAppsin helppokäyttöominaisuudet
+# <a name="accessibility-properties-for-canvas-apps"></a>Pohjaan perustuvat sovellukset Helppokäyttöisyysasetukset
+
 Ominaisuuksia, jotka on määritetty auttamaan toimintarajoitteisia ihmisiä käyttämään ohjausobjekteja.
 
-### <a name="properties"></a>Ominaisuudet
+## <a name="properties"></a>Ominaisuudet
+
 **AccessibleLabel** – Näytönlukuohjelmien käyttämä selite. Jos kuvan, kuvakkeen tai muodon ohjausobjektin kohdalla on tyhjä arvo, ohjausobjekti piilotetaan näytönlukijalta ja sitä käsitellään muotoiluna.
+
+**Live** – miten näytönlukuohjelmat tulee ilmoittavat sisällön muutokset. Käytettävissä vain **[nimen](control-text-box.md)** ohjausobjektin.
+
+* Kun **käytöstä**, näytönlukuohjelma ei muutoksia.
+* Kun **Polite**, näytönlukuohjelma on valmis, ennen kuin muutokset, joka suoritettaessa näytönlukuohjelma oli puhumalla esittelyssä puhumalla.
+* Kun **Assertive**, näytönlukuohjelma keskeyttää itse koskevista muutoksista, joka suoritettaessa näytönlukuohjelma oli puhumalla.
+
+Lue, miten [ilmoittavat dynaamisia muutoksia live-alueiden kanssa](../accessible-apps-live-regions.md).
 
 **TabIndex** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 

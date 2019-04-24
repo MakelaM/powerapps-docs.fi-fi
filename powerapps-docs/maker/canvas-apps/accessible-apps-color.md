@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 586c82804380846ef400f020c4ce55c07262730f
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57802028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61549969"
 ---
 # <a name="accessible-colors-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten helppokäyttöisyysvärit PowerAppsissa
 Pohjaan perustuvissa sovelluksissa käytettävien värien tulisi olla sellaisia, että värisokeat ja näkökyvyltään alentuneen henkilöt voivat käyttää sovelluksia. Kaikki PowerAppsin teemat ovat oletusarvoisesti helppokäyttöisiä. Kun muokkaat sovelluksessa käytettyjä värejä, varmista helppokäyttöisyys seuraavien ohjeiden mukaisesti. Verkossa on käytettävissä useita työkaluja, mitkä voivat auttaa tunnistamaan värikontrastiongelmia.

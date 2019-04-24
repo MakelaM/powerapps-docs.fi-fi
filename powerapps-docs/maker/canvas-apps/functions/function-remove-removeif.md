@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a6887694f2cc64cd44dcdc74e7769ce874872f70
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42863274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61520808"
 ---
 # <a name="remove-and-removeif-functions-in-powerapps"></a>PowerAppsin Remove- ja RemoveIf-funktio
 Poistaa [tietueita](../working-with-tables.md#records) [tietolähteestä](../working-with-data-sources.md).

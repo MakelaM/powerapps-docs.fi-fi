@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: b388b5252e467aee598848a8ce24f2feed94df9e
-ms.sourcegitcommit: ead27300a1b7371136edee1842829ed87ca77a72
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57892295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61553856"
 ---
 # <a name="operators-and-data-types-in-powerapps"></a>Operaattorit ja tietotyypit PowerAppsissa
 Jotkin näistä operaattoreista ovat riippuvaisia tekijän kielestä.  Jos haluat lisätietoja, katso [Yleiset sovellukset](../global-apps.md).

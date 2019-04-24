@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c4e02adfdd5c1c4e49bb1a605ccfff463369f750
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: cc7eefbe2989ed1aa0e893c2d826215aec48003b
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61556972"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Microsoft PowerAppsin käyttäminen eri ympäristöissä
 PowerAppsin avulla voit työskennellä eri ympäristöissä ja siirtyä helposti niiden välillä. Lue ympäristöjen yleiskuvaus kohdasta [Ympäristöjen yleiskuvaus](../../administrator/environments-overview.md), jossa selitetään yksityiskohtaisesti, miksi ympäristöjä käytetään ja miten voit luoda ja hallita niitä. Tämä artikkeli kattaa seuraavat ympäristöä koskevat ohjeaiheet:

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: cc4338e37b7ecde2e2e2e9ad5c5ac6e96d116b58
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61559474"
 ---
 # <a name="card-control-in-powerapps"></a>Korttien hallinta PowerAppsissa
 Käsittää näytön ja muokkauksen **[Näytä lomake](control-form-detail.md)**- tai **[Muokkaa lomaketta](control-form-detail.md)** -ohjausobjektin yhdessä kentässä.

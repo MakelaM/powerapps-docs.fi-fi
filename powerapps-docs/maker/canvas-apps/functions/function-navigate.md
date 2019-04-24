@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: f0bd11881dc0999cada58f65d7ed8d7f9df68c5a
-ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
-ms.translationtype: MT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57803615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61562780"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 Nämä funktiot vaihtavat näytettävää näyttöä.

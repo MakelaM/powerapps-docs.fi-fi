@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 919efacd1a1dc5c931d71e07024aa7c8a30168bf
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61538868"
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Tutustu SharePoint-lomakkeiden integrointiin
 Nyt voit helposti [mukauttaa mitä tahansa SharePoint-luettelolomakkeita](customize-list-form.md) PowerAppsissa. Näissä ohjeissa neuvomme vaiheittain, miten nämä lomakkeet toimivat ja miten niitä voi mukauttaa lisää.

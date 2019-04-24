@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: bca875eb2160702c749f8556613b6ebe5a426cb4
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57798877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61536272"
 ---
 # <a name="change-app-name-and-icon-for-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen nimen ja kuvakkeen muuttaminen PowerAppsissa
 Mukauta pohjaan perustuvaa sovellusta muuttamalla sen nimeä ja kuvaketta.

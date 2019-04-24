@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 7ac87e794341fe79a6e4f949893b64462c384f83
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42843793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61544633"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Äänen ja videon ohjausobjektit PowerAppsissa
 Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubessa.
@@ -111,13 +111,13 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 ### <a name="play-a-youtube-video"></a>Toista YouTube-video
 1. Lisää **Video**-ohjausobjekti ja aseta sen **Media**-ominaisuus YouTube-videon URL-osoitteeseen lainausmerkeissä.
 2. Paina F5 ja toista sitten leike napsauttamalla tai napauttamalla **Video**-ohjausobjektin toistopainiketta.
-3. Palaa oletustyötilaan painamalla Esc-näppäintä.
+3. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 ### <a name="play-a-video-from-azure-media-services"></a>Videon toistaminen Microsoft Azure -mediapalveluista
 1. Kun videot on julkaistu Microsoft Azure -mediapalveluissa, kopioi kokoonpanotietojen URL-osoite. Käynnistä palvelusi virtauttamisen päätepiste, jos sitä ei ole vielä käynnistetty.
 1. Lisää **Video**-ohjausobjekti ja aseta sen **Media**-ominaisuus Microsoft Azure -mediapalveluiden videon URL-osoitteeseen lainausmerkeissä.
 2. Paina F5 ja toista sitten leike napsauttamalla tai napauttamalla **Video**-ohjausobjektin toistopainiketta.
-3. Palaa oletustyötilaan painamalla Esc-näppäintä.
+3. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet

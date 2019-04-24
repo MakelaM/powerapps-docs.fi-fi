@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f52338d4eed8942259e7ae15a8df3b05c45a703d
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: c255daf93cdb4807572f1a663c7bb87be0bb39e1
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42837008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61536661"
 ---
 # <a name="save-and-publish-a-canvas-app-in-powerapps"></a>Kangassovelluksen tallentaminen ja julkaiseminen PowerAppsissa
 Kun tallennat kangassovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
@@ -60,5 +60,6 @@ Siirry osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&
 Julkaise uusin versio valitsemalla **Julkaise tämä versio** ja napsauta tai napauta **Julkaise**-valintaikkunan **Julkaise tämä versio** -painiketta.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
+* Etsi ja suorita sovellus [selaimen](../../user/run-app-browser.md) tai [Puhelin](../../user/run-app-client.md).
 * [Nimeä sovellus uudelleen](set-name-tile.md) osoitteesta powerapps.com.
 * [Palauta sovellus](restore-an-app.md), jos sinulla on useita versioita sovelluksesta.

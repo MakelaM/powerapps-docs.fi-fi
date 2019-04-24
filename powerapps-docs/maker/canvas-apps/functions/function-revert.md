@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a1a9a02917ed5202e24ce0228b8b581e2f45b8b9
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61520623"
 ---
 # <a name="revert-function-in-powerapps"></a>PowerAppsin Revert-funktio
 Lataa uudelleen ja poistaa virheet [tietolähteen](../working-with-data-sources.md) [tietueista](../working-with-tables.md#records).
@@ -46,13 +46,13 @@ Tässä esimerkissä palautetaan tietolähde nimeltä **IceCream**, jolla on alu
 Käyttäjä muuttaa eri laitteella **Strawberry**-tietueen **Quantity**-ominaisuudeksi **400**.  Samaan aikaan sinä muutat saman tietueen samaksi ominaisuudeksi **500** tietämättä toisen käyttäjän muutoksesta.
 
 Käytät **[Patch](function-patch.md)**-funktiota tietueen päivittämiseen:<br>
-**Patch( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ), { Quantity: 500 } )**
+**Patch (IceCream, ensimmäisenä (Filter (IceCream, Flavor = ”Strawberry”)), {määrä: 500 } )**
 
 Tarkistat **[Errors](function-errors.md)**-taulukon ja näet virheen:
 
 | Tietue | [Sarake](../working-with-tables.md#columns) | Viesti | Virhe |
 | --- | --- | --- | --- |
-| **{ ID: 1, Flavor: "Strawberry", Quantity: 300 }** |*tyhjä* |**"Toinen käyttäjä on muokannut tietuetta, jota yrität muokata.  Palauta tietue ja yritä uudelleen."** |**ErrorKind.Conflict** |
+| **{TUNNUS: 1, flavor: ”Mansikka”, Quantity: 300 }** |*tyhjä* |**"Toinen käyttäjä on muokannut tietuetta, jota yrität muokata.  Palauta tietue ja yritä uudelleen."** |**ErrorKind.Conflict** |
 
 **Error**-sarakkeen perusteella sinulla on **Lataa uudelleen** -painike, jonka **[OnSelect](../controls/properties-core.md)**-ominaisuus on tämä kaava:<br>
 **Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 4a3682a913dbbdf0c1848378dad9ab06ccc78aaf
-ms.sourcegitcommit: 90245baddce9d92c3ce85b0537c1ac1cf26bf55a
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "57799268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61557135"
 ---
 # <a name="create-a-rule-in-powerapps"></a>Säännön luominen PowerAppsissa
 Voit luoda sääntöjä, joilla voit muokata sovellusta automaattisesti määrittämiesi ehtojen perusteella. Luo esimerkiksi sellainen sääntö, jolla luettelokohteet näytetään punaisella, keltaisella tai vihreällä niiden tilan perusteella tai jolla hyväksyntäpainike näytetään vain tietyille käyttäjille (esimerkiksi esimiehille).

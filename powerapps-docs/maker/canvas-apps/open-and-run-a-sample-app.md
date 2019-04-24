@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 1adf38b59b01bb08bc89c6101a96247b8bce8092
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61540274"
 ---
 # <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Pikaopas: Luo kangas-sovellus mallin perusteella powerappsissa
 Tässä pikaoppaassa luot kangas-sovelluksen mallin perusteella, jolloin voit tutkia suunnittelumahdollisuuksia ja löytää ideoita, joita voit käyttää kehittäessäsi omia kangas-sovelluksiasi.

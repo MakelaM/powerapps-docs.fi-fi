@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 40ac3089d3563d220ddac29197b0902f4de88a25
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61562895"
 ---
 # <a name="if-and-switch-functions-in-powerapps"></a>If- ja Switch-funktiot PowerAppsissa
 Määrittää, onko mikään joukon ehdoista tosi (**If**) tai vastaako kaavan tulos mitään joukon arvoa (**Switch**), ja palauttaa sitten tuloksen tai suorittaa toiminnon.

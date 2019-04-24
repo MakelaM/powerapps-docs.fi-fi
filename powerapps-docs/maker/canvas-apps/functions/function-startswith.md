@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: e202ce052bf12f5f67715deb2e86b385c2e515a7
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61546993"
 ---
 # <a name="endswith-and-startswith-functions-in-powerapps"></a>EndsWith- ja StartsWith-funktiot PowerAppsissa
 Testaa, alkaako tekstimerkkijono toisella merkkijonolla tai päättyykö se toiseen tekstimerkkijonoon.
@@ -68,7 +68,7 @@ Loput tämän ohjeaiheen esimerkeistä näyttävät hakutuloksia luettelosta, jo
 
 Luo tämä tietolähde kokoelmana luomalla **[Painike](../controls/control-button.md)**-ohjausobjekti ja määrittämällä sen **OnSelect**-ominaisuuden arvoksi tämä kaava:
 
-**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
+**ClearCollect (asiakkaisiin, taulukon ({nimi: ”Fred Suominen”, yrityksen: ”Northwind Traders”}, {nimi: ”Cole Miller” yrityksen: ”Contoso”}, {nimi: ”Glenda Lahti”, yrityksen: ”Contoso”}, {nimi: ”Mike Collins”, yrityksen: ”Adventure Works”}, {nimi: ”Colleen Jones”, yrityksen: "Adventure Works" } ) )**
 
 Kuten tässä esimerkissä, voit näyttää luettelon [**Valikoima-ohjausobjektin**](../controls/control-gallery.md) tietueista näytön alareunassa. Näytön yläosassa voit lisätä [**Tekstisyöte**](../controls/control-text-input.md)-ohjausobjektin nimeltä **SearchInput**, jotta käyttäjät voivat määrittää, mitkä tietueet kiinnostavat heitä.
 
@@ -91,6 +91,6 @@ Voit laajentaa haun sisältämään sekä **Company**-sarakkeen että **Name**-s
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarake tai **Company**-sarake alkaa hakumerkkijonolla (esimerkiksi **co**).  [**&#124;&#124;**-operaattori ](operators.md) on *true*, jos jompikumpi **StartsWith**-funktio on *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
-| **Filter( Asiakkaat, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Asiakkaat**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
-| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Suodatin**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
+| **Filter( Customers, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
+| **Search( Customers, SearchInput.Text, "Name", "Company" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Filter**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
 

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 4b2c6b9518e987ef17f2ff2b50987568c8a0b69f
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61527207"
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Liittyvät ja Unrelate-Funktiot powerappsissa
 
@@ -100,7 +100,7 @@ Ensin luot yksinkertaisen sovelluksen, voit tarkastella ja määrittää varauks
 
 1. Luo [tyhjä tablettisovellus](../data-platform-create-app-scratch.md).
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
 1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-** > **tuotteiden**  >  **Yhteyden**.  
 
@@ -170,7 +170,7 @@ Tämän sovelluksen avulla käyttäjä voi siirtää varauksen yhdessä tuottees
 
 Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta ei voi poistaa yhteyden kokonaan. Voit määrittää **Unrelate** funktiota varauksen tietueen katkaista tuotetta.
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
 1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-** > **varaukset**  >  **Yhteyden**.
 
@@ -271,7 +271,7 @@ Luot toiseen sovellukseen, joka muistuttaa loit aiemmin tässä ohjeaiheessa, mu
 
     ![Määritä Peruuta-kuvaketta](media/function-relate-unrelate/contacts-unrelate.png)
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
 1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-** > **yhteystiedot**  >  **Yhteyden**.
 

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 9981a549aaf0ce88f6e66dd4df2c7897901d219b
-ms.sourcegitcommit: 5c098a62f66a2f33418967fdce9363bd529e0fc1
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58581089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61554213"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Asenna ja määritä Help Desk -malli PowerAppsissa
 
@@ -172,7 +172,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 4.  Valitse **Luo**.
 5.  Valitse ponnahdusikkunassa tili, jolla kirjauduit sisään.
 
-## <a name="import-the-app"></a>Sovelluksen tuonti
+## <a name="import-the-app"></a>Sovelluksen tuominen
 
 1. Siirry selaimella osoitteeseen https://web.powerapps.com.
 2. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
@@ -216,13 +216,13 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 ### <a name="delete-connections"></a>Yhteyksien poistaminen
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 1. - **Tietojen** ruudussa, valitse kolme pistettä (...) kohdan **HelpDesk**, ja valitse sitten **poistaa**.
 
 ### <a name="helpdesk-list"></a>HelpDesk-luettelo
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**.
-1. Tässä **tietojen** ruudussa **Lisää tietolähde** > **uusi yhteys** > **SharePoint**  >  **Luoda**.
+1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
+1. Valitse **Tiedot**-ruudussa **Lisää tietolähde** > **Uusi yhteys** > **SharePoint** > **Luo**.
 1. Valitse **Viimeisimmät sivustot** -luettelosta SharePoint-sivusto, jossa loit HelpDesk-luettelon.
 
     > [!TIP] 
@@ -244,7 +244,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
    > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, pilkkua järjestelmänvalvojien erottelemiseen järjestelmänvalvojien luetteloon. Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
    > Jos haluat varmistaa, että AdminList-luettelon osoitteet vastaavat PowerAppsin vaatimaa muotoa, valitse Näytä > Muuttujat > Yleiset > Oma profiili ja katso, onko Sähköposti-sarakkeessa vaadittava sähköpostimuoto.
 
-1. Valitse **tiedoston** > **Tallenna** > **Julkaise** > **Julkaise tämä versio**.
+1. Valitse **Tiedosto** > **Tallenna** > **Julkaise** > **Julkaise tämä versio**.
 
 ## <a name="modify-the-flow"></a>Työnkulun muokkaaminen
 
@@ -272,7 +272,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 11. Napsauta **Päivitä työnkulku**.
 
-## <a name="play-the-app"></a>Toista sovellus
+## <a name="play-the-app"></a>Sovelluksen toistaminen
 
 1. Napsauta selaimessa kohtaa **Sovellukset**.
 2. Napsauta kolmea pistettä (...) tukipalvelun sovelluksen.

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 968722e672c6f169c4a9e2e87be959aa48e23c86
-ms.sourcegitcommit: 957d67e13bd4153d042b3b3bd650f6d0de20613c
+ms.openlocfilehash: 97f9324230e1d935cb056eada294e11d8bfb4d73
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58073667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61535824"
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Ohjausobjektit ja ominaisuudet PowerAppsissa
 
@@ -31,8 +31,6 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 **[Liitteet](controls/control-attachments.md)** – Lataa ja lähetä tiedostoja paikallisesta laitteesta tietolähteeseen.
 
 **[Ääni](controls/control-audio-video.md)** – Toista äänileike tai videoleikkeen ääniosa.
-
-**[Viivakoodiskanneri (kokeellinen)](controls/control-barcodescanner.md)**  – tarkistaa koodit (vanha tai vanhentunut) selaimessa.
 
 **[Viivakoodiskanneri](controls/control-new-barcode-scanner.md)**  – Skannaa viivakoodeja, QR-koodeja ja tietojen matriisi-koodit Android tai iOS-laitteessa.
 

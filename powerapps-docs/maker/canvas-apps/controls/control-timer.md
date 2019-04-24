@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 5d20e2324f2efb4f866ed4fc183f289733c10a41
-ms.sourcegitcommit: 212d397284c431f5989dc7b39549e2fc170d447e
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61560463"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.

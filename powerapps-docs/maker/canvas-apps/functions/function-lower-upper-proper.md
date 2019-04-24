@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 72e1bd234a9cbccc24cf35723ee10bacd175b278
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61563734"
 ---
 # <a name="lower-upper-and-proper-functions-in-powerapps"></a>PowerAppsin Lower-, Upper- ja Proper -funktiot
 Muuntavat tekstimerkkijonot kokonaan pieniksi kirjaimiksi, kokonaan isoiksi kirjaimiksi tai alkamaan isolla kirjaimella.

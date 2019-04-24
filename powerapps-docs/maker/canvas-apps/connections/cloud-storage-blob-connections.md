@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 10a6178c63495b929eb6e5885ded9394b31a11ef
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61545938"
 ---
 # <a name="connect-to-cloud-storage-from-powerapps"></a>Pilvitallennustiliin yhdistäminen PowerAppsista
 PowerApps tarjoaa useita pilvitallennusyhteyksiä. Voit tallentaa Excel-tiedoston ja käyttää sen tietoja kaikkialla sovelluksessasi käyttämällä näitä yhteyksiä. Näitä yhteyksiä ovat muun muassa seuraavat:  

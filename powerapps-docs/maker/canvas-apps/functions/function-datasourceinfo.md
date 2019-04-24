@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: d856ccd086a919e206175c25eee19f435325fb8c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61551288"
 ---
 # <a name="datasourceinfo-function-in-powerapps"></a>PowerAppsin DataSourceInfo-funktio
 Antaa [tietolähteen](../working-with-data-sources.md) tietoja.
@@ -65,7 +65,7 @@ Voit käyttää **DataSourceInfo**-funktiota hakemaan tietoja tietolähteestä k
 * *ColumnName* – Valinnainen. Saraketason tiedoille sarakkeen nimi merkkijonona. Sarake **Puhelin** välitettäisiin muodossa **"Puhelin"**, mukaan lukien lainausmerkit. *ColumnName*-argumenttia ei voi käyttää tietolähdetason tietoja varten.
   
     > [!NOTE]
-  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Sarakkeen nimeksi** **”Sarakkeen_x0020_Nimi”**.
+  > Jos SharePoint- ja Excel-tietolähteiden sarakenimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **\_x0020\_**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
 ## <a name="examples"></a>Esimerkkejä
 Tämän osion esimerkeissä käytetään tietolähdettä nimeltä **IceCream**:

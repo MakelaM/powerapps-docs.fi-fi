@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 3c061d43a766bfdcd0a560c5959756f79751a7f2
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42849139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61547273"
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Yhdistä Dynamics 365:een PowerAppsista
 PowerAppsin avulla voit nopeasti luoda, mukauttaa, jakaa ja suorittaa mobiilisovelluksia käyttäen vain vähän tai ei lainkaan koodia. Dynamics 365 -liittimen avulla voit luoda hyödyllisiä mobiilisovelluksia organisaatiollesi jaettaviksi vain muutamassa minuutissa.

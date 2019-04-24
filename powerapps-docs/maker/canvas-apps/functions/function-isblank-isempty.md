@@ -15,11 +15,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: e31d3689c7b61c408be90c31f1e212e4fdd9a91c
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42848979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61563829"
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>PowerAppsin Blank-, Coalesce-, IsBlank- ja IsEmpty-funktiot
 Testaa, onko arvo tyhjä tai sisältääkö [taulukko](../working-with-tables.md) nolla [tietuetta](../working-with-tables.md#records), ja mahdollistaa *tyhjien* arvojen luomisen.
@@ -77,7 +77,7 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
-    **ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )**
+    **ClearCollect (kaupungit, {nimi: "Seattle", Weather: "Rainy" } )**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 4. Napsauta tai napauta **Tiedosto**-valikosta **Kokoelmat**.
 
@@ -92,7 +92,7 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
     Otsikko näyttää arvon **epätosi**, koska **Weather** sisältää arvon ("Rainy").
 7. Lisää toinen painike ja aseta sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    **Patch( Cities, First( Cities ), { Weather: Blank() } )**
+    **Patch (kaupungit, ensimmäinen (kaupungit), {sää: Blank() } )**
 8. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 
     **Cities**-kohdan ensimmäisen tietueen **Weather**-kenttä korvataan *tyhjällä* arvolla. Siitä poistetaan siinä aiemmin ollut "Rainy".
@@ -136,7 +136,7 @@ Muita esimerkkejä:
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
-    **Collect( IceCream, { Flavor: "Strawberry", Quantity: 300 }, { Flavor: "Chocolate", Quantity: 100 } )**
+    **Collect (IceCream, {Flavor: ”Mansikka”, Quantity: 300}, {flavor: ”Suklaa”, Quantity: 100 } )**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 
     Kokoelma nimeltä **IceCream** luodaan ja se sisältää nämä tiedot:

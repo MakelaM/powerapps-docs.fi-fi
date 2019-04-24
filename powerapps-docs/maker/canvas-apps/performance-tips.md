@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 6406afad9079895a0da38c7f1f6e3961f2e37fa1
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61536364"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Kangassovellusten suorituskyvyn optimointi PowerAppsissa
 Microsoft tekee kaikkensa parantaakseen kaikkien PowerApps-ympäristössä toimivien sovellusten suorituskykyä. Tämän aiheen parhaiden käytäntöjen avulla voit myös tehostaa luomiesi sovellusten suorituskykyä.

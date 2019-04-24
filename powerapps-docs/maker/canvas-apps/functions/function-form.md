@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 930439325b60b60fefed18b66c22d9d4f97f55b7
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57802097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61550981"
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>PowerAppsin funktiot EditForm, NewForm, SubmitForm, ResetForm ja ViewForm
 Tarkastele ja muokkaa kohdetta, luo kohde, tallenna sisältö ja palauta ohjausobjektit **[Muokkaa lomaketta](../controls/control-form-detail.md)** -ohjausobjektissa.

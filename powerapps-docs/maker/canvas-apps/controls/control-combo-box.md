@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ad3b8efc2306540862d0470223cee4f46fb5703c
-ms.sourcegitcommit: 50404720bed371bbc93feb08d296c954ef8038e1
+ms.openlocfilehash: e6d1b1083fcc7e865fa7c9cfe3f8966e20ed86a5
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61552039"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista.  Tukee hakua ja useita valintoja.
@@ -84,15 +84,21 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **Yhdistelmäruutu**-ohjausobjekti Ohjausobjektit-valikon Lisää-välilehdeltä.  
-2. Valitse Ominaisuusasetukset-välilehdeltä Tiedot.  
-3. Valitse tietolähde, asettelu ja siihen liittyvät ominaisuudet alta.
-4. Määritä **SelectMultiple**-ominaisuus Lisäasetukset-välilehdeltä.
+1. Käyttöön **Lisää** välilehti, Avaa **ohjausobjekteja** valikko ja valitse sitten **yhdistelmäruudun**.  
 
-    Sovellukseesi tulee näkyviin toiminnallinen **Yhdistelmäruutu**.
+1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa **Valitse tietolähde** luettelo (kohdan **kohteet**), ja lisätä tai valitse tietolähde.
 
-    Miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
+1. Valitse samassa välilehdessä **Muokkaa** (kohdan **kentät**).
 
+1. - **Tietojen** ruutu, avattuna **ensisijainen tekstin** luettelosta ja valitse sitten se sarake, jonka haluat näyttää **yhdistelmäruudun** ohjausobjektin.
+
+1. Kun pidät alhaalla Alt-näppäintä, napsauta alanuolta, voit avata **yhdistelmäruudun** ohjausobjektin.
+
+    Ohjausobjekti näyttää sarakkeen, jonka määritit tietolähteen, jonka olet määrittänyt tiedot.
+    
+1. (valinnainen) Näytä ensimmäisen tietueen oletusarvoisesti määrittämällä **DefaultSelectedItems** ominaisuudeksi Tämä lauseke korvataan *DataSource* tietolähteen nimi:
+
+    `First(DataSource)`
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 ### <a name="color-contrast"></a>Värikontrasti

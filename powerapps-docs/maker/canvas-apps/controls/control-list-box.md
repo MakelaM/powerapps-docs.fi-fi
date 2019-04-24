@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a2cb87cf68457771605e78970b8d7a923af61fce
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42835168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61544391"
 ---
 # <a name="list-box-control-in-powerapps"></a>Luetteloruutu-ohjausobjekti PowerAppsissa
 Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
@@ -60,7 +60,7 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -140,9 +140,9 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
      ![Lattiapäällysteiden nimet avattavissa luetteloissa](./media/control-list-box/flooring-names.png)
 4. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Näkyvissä](properties-core.md)**-ominaisuudeksi jokin näistä arvoista:
    
-   * CarpetList: **If("Matto" in CategoryList.SelectedItems.Value, true)**
-   * HardwoodList: **If("Kovapuu" in CategoryList.SelectedItems.Value, true)**
-   * TileList: **If("Laatta" in CategoryList.SelectedItems.Value, true)**
+   * CarpetList: **Jos (”matto” in CategoryList.SelectedItems.Value, true)**
+   * HardwoodList: **IF (”Kovapuu” in CategoryList.SelectedItems.Value, true)**
+   * TileList: **IF (”laatta” in CategoryList.SelectedItems.Value, true)**
      
      Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 5. Paina F5-näppäintä ja valitse sitten yksi tai useampi kohde kohdasta **CategoryList**.

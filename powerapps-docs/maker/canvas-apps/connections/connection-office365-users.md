@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 507bac0b57cdc1e348bd384d5544d7b664a3e0f5
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61557340"
 ---
 # <a name="connect-to-office-365-users-connection-from-powerapps"></a>Yhdistäminen Office 365 -käyttäjät -yhteyteen PowerAppsissa
 ![Office 365 -käyttäjät](./media/connection-office365-users/office365icon.png)
@@ -142,7 +142,7 @@ Tämä yhteys sisältää seuraavat funktiot:
 | [SearchUser](connection-office365-users.md#searchuser) |Noutaa käyttäjäprofiilien hakutulokset |
 
 ### <a name="myprofile"></a>MyProfile
-Hae oma profiili: noutaa nykyisen käyttäjän profiilin.
+Hae oma profiilini: Noutaa nykyisen käyttäjän profiilin.
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 Ei mitään.
@@ -164,7 +164,7 @@ Ei mitään.
 | AccountEnabled |totuusarvo |Tili käytössä -merkintä |
 
 ### <a name="userprofile"></a>UserProfile
-Hae käyttäjän profiili: noutaa määritetyn käyttäjäprofiilin.
+Hae käyttäjäprofiili: Noutaa määritetyn käyttäjäprofiilin.
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -189,7 +189,7 @@ Hae käyttäjän profiili: noutaa määritetyn käyttäjäprofiilin.
 | AccountEnabled |totuusarvo |Tili käytössä -merkintä |
 
 ### <a name="manager"></a>Esimies
-Hae esimies: Noutaa määritetyn käyttäjän esimiehen käyttäjäprofiilin
+Hae Esimies: Noutaa määritetyn käyttäjän esimiehen käyttäjäprofiilin
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -239,7 +239,7 @@ Hae suorat alaiset: Hae suorat alaiset
 | AccountEnabled |totuusarvo |Tili käytössä -merkintä |
 
 ### <a name="searchuser"></a>SearchUser
-Etsi käyttäjiä: noutaa käyttäjäprofiilien hakutulokset
+Hae käyttäjiä: Noutaa käyttäjäprofiilien hakutulokset
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 

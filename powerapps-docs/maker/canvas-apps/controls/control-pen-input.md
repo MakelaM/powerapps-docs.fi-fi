@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: bad3dcf3b0268a8bb08036fec709281b2cbba253
-ms.sourcegitcommit: e4fe4b27651b62edb67e5995fc5955577d8ac5b8
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61546243"
 ---
 # <a name="pen-input-control-in-powerapps"></a>PowerAppsin Kynän syöte -ohjausobjekti
 Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan alueita.

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 3adb036a1619263d2b8cef1f649c2d2f97925ceb
-ms.sourcegitcommit: 825daacc9a812637815afc1ce6fad28f0cebd479
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57803132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61543902"
 ---
 # <a name="patch-function-in-powerapps"></a>PowerAppsin Patch-funktio
 Muokkaa [tietolähteen](../working-with-data-sources.md) [tietuetta](../working-with-tables.md#records) tai luo sellaisen tai yhdistää tietueita tietolähteen ulkopuolella.

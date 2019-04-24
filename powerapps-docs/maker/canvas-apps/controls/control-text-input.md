@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: a46635276f6598cf0591dc21ae5aeb855b6667c1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42830543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61560475"
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerAppsin Tekstisyöte-ohjausobjekti
 Ruutu, johon käyttäjä voi kirjoittaa tekstiä, numeroita ja muuta tietoa.
@@ -64,7 +64,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **Format** – Onko käyttäjän syöte rajoitettu vain numeroihin vai voiko se olla mitä tahansa tekstiä.
 

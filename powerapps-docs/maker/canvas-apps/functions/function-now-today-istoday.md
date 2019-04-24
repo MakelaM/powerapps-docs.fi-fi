@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 748f76835e9a66281f4723b88ed7249a7a07e091
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42843442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61544161"
 ---
 # <a name="now-today-and-istoday-functions-in-powerapps"></a>Now-, Today- ja IsToday-funktiot PowerAppsissa
 Palauttaa nykyisen päivämäärän ja ajan ja testaa, vastaako päivämäärä/aika-arvo tätä päivää.

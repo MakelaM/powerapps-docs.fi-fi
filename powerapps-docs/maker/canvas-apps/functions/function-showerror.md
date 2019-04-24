@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 3ceb6e0bcac83bbd79d78dac859a7ddb7acf42a8
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42864612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61519721"
 ---
 # <a name="notify-function-in-powerapps"></a>PowerAppsin Ilmoita-funktio
 Näyttää ilmoitussanoman käyttäjälle.
@@ -45,7 +45,7 @@ PowerApps voi lähettää myös palveluilmoituksia käyttämällä täysin **Not
 
 **Notify** palauttaa aina arvon *true*.
 
-Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError**, kun se pystyi näyttämään vain virhesanomia.
+Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError** kun se pystyi näyttämään vain virhesanomia.
 
 ## <a name="syntax"></a>Syntaksi
 **Notify**( *Message*, [ *NotificationType* ] )

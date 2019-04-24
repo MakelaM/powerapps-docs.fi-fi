@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5dcc07f3ba9b9b4baca39cf2090a2c57cb7e67b7
-ms.sourcegitcommit: 967812754d8e5b1ff72baa35ffbe548f3b9b0085
-ms.translationtype: HT
+ms.openlocfilehash: 831e63920db07414db7b40fe69be82989add89eb
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61554487"
 ---
 # <a name="understand-on-premises-data-gateways-for-canvas-apps"></a>Tutustu kangassovellusten paikallisiin tietoyhdyskäytäviin
 ## <a name="installation-and-configuration"></a>Asennus ja määritys
@@ -106,7 +106,7 @@ Palomuuri voi estää myös yhteydet, jotka Azuren palveluväylä muodostaa Azur
 
 **Porttien määritys**
 
-Yhdyskäytävä luo lähtevän yhteyden Azuren palveluväylään. Se viestii lähtevien porttien kautta: TCP 443 (oletusarvoinen), 5671, 5672, 9350–9354. Yhdyskäytävä ei vaadi saapuvia portteja.
+Yhdyskäytävä luo lähtevän yhteyden Azuren palveluväylään. Se viestii lähtevien porttien kautta: TCP 443 (oletusarvoinen), 5671, 5672, 9350 – 9354. Yhdyskäytävä ei vaadi saapuvia portteja.
 
 Lue lisätietoja [yhdistelmäratkaisuista](https://azure.microsoft.com/documentation/articles/service-bus-fundamentals-hybrid-solutions/).
 
@@ -125,7 +125,7 @@ Tässä on luettelo yhdyskäytävän käyttämistä täysin valtuutetuista toimi
 | *.servicebus.windows.net |443, 9350–9354 |Kuuntelutoiminnot Azuren palveluväylässä käyttäen TCP-protokollaa (edellyttää 443:n käyttöoikeuksien hallinnan tunnusta hankintaa varten) |
 | *.frontend.clouddatahub.net |443 |HTTPS |
 | *.core.windows.net |443 |HTTPS |
-| login.microsoftonline.com |443 |HTTPS |
+| *login.microsoftonline.com |443 |HTTPS |
 | *.msftncsi.com |443 |Käytetään Internet-yhteyden testaamiseen, jos Power BI -palvelu ei saa yhteyttä yhdyskäytävään. |
 
 **Kirjautumistili**
@@ -144,7 +144,7 @@ Jos kohtaat todentamisen vuoksi ongelmia välityspalvelimen kanssa, sinun kannat
 
 Tällä hetkellä ei ole yhtä paikkaa, jossa vuokraajan järjestelmänvalvojat voivat hallita kaikkia yhdyskäytäviä, joita muut käyttäjät ovat asentaneet ja määrittäneet.  Jos olet vuokraajan järjestelmänvalvoja, sinun kannattaa pyytää organisaatiosi käyttäjiä lisäämään sinut järjestelmänvalvojaksi jokaiseen asentamaansa yhdyskäytävään. Näin voit hallita kaikkia organisaatiosi yhdyskäytäviä Yhdyskäytäväasetukset-sivulla tai [PowerShell-komennoilla](https://docs.microsoft.com/power-bi/service-gateway-high-availability-clusters#powershell-support-for-gateway-clusters).
 
-## <a name="frequently-asked-questions"></a>Usein kysytyt kysymykset
+## <a name="frequently-asked-questions"></a>Usein kysyttyjä kysymyksiä
 #### <a name="general"></a>Yleistä
 **Kysymys:** Mitä tietolähteitä yhdyskäytävä tukee?  
 **Vastaus:** Tätä kirjoitettaessa:
@@ -156,57 +156,57 @@ Tällä hetkellä ei ole yhtä paikkaa, jossa vuokraajan järjestelmänvalvojat 
 * Filesystem
 * DB2
 
-**Kysymys:** Tarvitsenko yhdyskäytävän pilvipalvelussa, kuten SQL Azuressa, oleviin tietolähteisiin?  
-**Vastaus:** Et. Yhdyskäytävä muodostaa yhteyden vain paikallisiin tietolähteisiin.
+**Kysymys:** Tarvitsenko yhdyskäytävän pilvipalveluun, kuten SQL Azure-tietolähteille?  
+**Vastaus:** Ei. Yhdyskäytävä muodostaa yhteyden vain paikallisiin tietolähteisiin.
 
-**Kysymys:** Mikä on varsinaisen Windows-palvelun nimi?  
-**Vastaus:** Palvelut-kohdassa yhdyskäytävän nimi on **Power BI Enterprise Gateway Service**.
+**Kysymys:** Mikä on varsinaisen Windows-palvelun varsinainen nimi?  
+**Vastaus:** Palveluissa yhdyskäytävä on nimeltään **Power BI Enterprise Gateway Service**.
 
-**Kysymys:** Saapuuko pilvipalvelusta yhteyksiä yhdyskäytävään?  
+**Kysymys:** Onko saapuvia yhteyksiä yhdyskäytävään pilvestä?  
 **Vastaus:** Ei. Yhdyskäytävä käyttää lähteviä yhteyksiä Azuren palveluväylään.
 
-**Kysymys:** Entä jos estän lähtevät yhteydet? Mitä minun tulee avata?  
-**Vastaus:** Katso yllä oleva luettelo yhdyskäytävän käyttämistä porteista ja isännistä.
+**Kysymys:** Entä jos estän Lähtevät yhteydet? Mitä minun tulee avata?  
+**Vastaus:** Katso luettelo portit ja yhdyskäytävän isännistä yläpuolella.
 
-**Vastaus:** Onko yhdyskäytävä asennettava samalle koneelle kuin tietolähde?  
+**Kysymys:** Onko yhdyskäytävä asennettava samalle koneelle kuin tietolähde?  
 **Vastaus:** Ei. Yhdyskäytävä yhdistää tietolähteeseen käyttämällä annettuja yhteystietoja. Yhdyskäytävä on tässä mielessä eräänlainen asiakassovellus. Sen on vain pystyttävä muodostamaan yhteys annettuun palvelimen nimeen.
 
-**Kysymys:** Mikä on viive suoritettaessa kyselyjä yhdyskäytävästä tietolähteeseen? Mikä on paras arkkitehtuuri?  
-**Vastaus:** Vähennä verkon viivettä asentamalla yhdyskäytävä mahdollisimman lähelle tietolähdettä. Jos voit asentaa yhdyskäytävän varsinaiseen tietolähteeseen, viive minimoituu. Muista myös palvelinkeskukset. Jos palvelusi käyttää esimerkiksi West US -palvelinkeskusta ja sinulla on SQL Server isännöitynä Azure VM:ssä, haluat että Azure VM on myös West US:ssä. Tämä minimoi viiveen ja auttaa välttämään lähtevän liikenteen maksut Azure VM:ssä.
+**Kysymys:** Mikä on viive suoritettaessa kyselyjä Yhdyskäytävästä tietolähteeseen? Mikä on paras arkkitehtuuri?  
+**Vastaus:**  Vähennä verkon viivettä asentamalla mahdollisimman lähelle tietolähdettä kuin yhdyskäytävä. Jos voit asentaa yhdyskäytävän varsinaiseen tietolähteeseen, viive minimoituu. Muista myös palvelinkeskukset. Jos palvelusi käyttää esimerkiksi West US -palvelinkeskusta ja sinulla on SQL Server isännöitynä Azure VM:ssä, haluat että Azure VM on myös West US:ssä. Tämä minimoi viiveen ja auttaa välttämään lähtevän liikenteen maksut Azure VM:ssä.
 
 **Kysymys:** Onko verkon kaistanleveydelle vaatimuksia?  
-**Vastaus:** On suositeltavaa, että verkkoyhteyden siirtomäärä on hyvä. Jokainen ympäristö on erilainen, ja lähetettävien tietojen määrä vaikuttaa tuloksiin. ExpressRouten käyttäminen voi auttaa varmistamaan siirtomäärätason paikallisten palvelinkeskusten ja Azuren palvelinkeskusten välillä.
+**Vastaus:** On suositeltavaa, että siirtomäärä on hyvä verkkoyhteys. Jokainen ympäristö on erilainen, ja lähetettävien tietojen määrä vaikuttaa tuloksiin. ExpressRouten käyttäminen voi auttaa varmistamaan siirtomäärätason paikallisten palvelinkeskusten ja Azuren palvelinkeskusten välillä.
 
 Voit käyttää kolmannen osapuolen työkalua, [Azure Speed Test -sovellusta](http://azurespeedtest.azurewebsites.net/), siirtomäärän mittaamiseen.
 
-**Kysymys:** Voiko yhdyskäytävän Windows-palvelu toimia Azure Active Directory -tilin kanssa?  
+**Kysymys:** Voiko yhdyskäytävän Windows-palvelu käyttää Azure Active Directory-tilillä?  
 **Vastaus:** Ei. Windows-palvelulla on oltava kelvollinen Windows-tili. Oletusarvoisesti se toimii Service SID:llä, *NT SERVICE\PBIEgwService*.
 
 **Kysymys:** Miten tulokset lähetetään takaisin pilvipalveluun?  
-**Vastaus:** Tämä tehdään Azuren palveluväylän kautta. Saat lisätietoja [Miten se toimii](gateway-reference.md#how-the-gateway-works) -kohdasta.
+**Vastaus:** Tämä tehdään Azuren Palveluväylään. Saat lisätietoja [Miten se toimii](gateway-reference.md#how-the-gateway-works) -kohdasta.
 
 **Kysymys:** Mihin tunnistetietoni tallennetaan?  
-**Vastaus:** Tietolähteelle antamasi tunnistetiedot tallennetaan salattuina yhdyskäytävän pilvipalveluun. Tunnistetietojen salaus puretaan paikallisessa yhdyskäytävässä.
+**Vastaus:** Anna tietolähteen tunnistetiedot tallennetaan salattuina yhdyskäytävän pilvipalveluun. Tunnistetietojen salaus puretaan paikallisessa yhdyskäytävässä.
 
-**Kysymys:** Voinko sijoittaa yhdyskäytävän edustaverkkoon (toiselta nimeltään DMZ tai suojattu aliverkko)?  
+**Kysymys:** Voinko sijoittaa yhdyskäytävän eteisverkkoon (tunnetaan myös dmz-alueella, demilitarized alue ja tai suojattu aliverkko)?  
 **Vastaus:** Yhdyskäytävä vaatii liitettävyyden tietolähteeseen. Jos tietolähde ei ole edustaverkossasi, yhdyskäytävä ei välttämättä voi muodostaa yhteyttä siihen. Esimerkiksi tietokone, joka käyttää SQL Serveriä, ei välttämättä ole edustaverkossasi, etkä voi yhdistää tähän tietokoneeseen edustaverkosta. Jos olet sijoittanut yhdyskäytävän edustaverkkoon, yhdyskäytävä ei voi tavoittaa SQL Serveriä käyttävää tietokonetta.
 
 #### <a name="high-availabilitydisaster-recovery"></a>Korkea käytettävyys / järjestelmäpalautus
-**Kysymys:** Onko suunnitteilla korkean käytettävyyden skenaarioiden ottamista käyttöön yhdyskäytävän kanssa?  
-**Vastaus:** Voit ottaa korkean käytettävyyden käyttöön yhdistämällä vähintään 2 yhdyskäytävää saman klusteriin.  Korkean käytettävyyden yhdyskäytäväklusterit edellyttävät, että tietoyhdyskäytävään on asennettu marraskuun 2017 päivitys tai uudempi.  Lisätietoja saat [ilmoitukseen liittyvästä blogikirjoituksesta](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow).
+**Kysymys:** Onko suunnitteilla korkean käytettävyyden skenaarioiden yhdyskäytävän?  
+**Vastaus:** Suuren käytettävyyden on käytössä yhdistämällä vähintään 2 yhdyskäytävien sisään samassa klusterissa.  Korkean käytettävyyden yhdyskäytäväklusterit edellyttävät, että tietoyhdyskäytävään on asennettu marraskuun 2017 päivitys tai uudempi.  Lisätietoja saat [ilmoitukseen liittyvästä blogikirjoituksesta](https://powerapps.microsoft.com/en-us/blog/gateway-high-availability-for-powerapps-and-flow).
 
-**Kysymys:** Mitä vaihtoehtoja järjestelmäpalautukseen on saatavilla?  
-**Vastaus:** Voit käyttää palautusavainta yhdyskäytävän palauttamiseen tai siirtämiseen. Määritä palautusavain, kun asennat yhdyskäytävän.
+**Kysymys:** Mitä vaihtoehtoja on käytettävissä järjestelmäpalautukseen?  
+**Vastaus:** Voit palauttaa tai siirtää yhdyskäytävän palautusavain. Määritä palautusavain, kun asennat yhdyskäytävän.
 
-**Kysymys:** Mitä etua palautusavaimesta on?  
-**Vastaus:** Se tarjoaa tavan siirtää tai palauttaa yhdyskäytävän asetukset vakavan häiriön jälkeen.
+**Kysymys:** Mikä on etua palautusavaimesta on?  
+**Vastaus:** Se tarjoaa tavan siirtää tai palauttaa yhdyskäytäväasetukset vakavan häiriön jälkeen.
 
 #### <a name="troubleshooting"></a>Vianmääritys
-**Kysymys:** Missä yhdyskäytävän lokit ovat?  
+**Kysymys:** Missä ovat yhdyskäytävän lokit?  
 **Vastaus:** Katso [Työkalut](gateway-reference.md#tools) jäljempänä tässä aiheessa.
 
-**Kysymys:** Miten näen, mitkä kyselyt lähetetään paikalliseen tietolähteeseen?  
-**Vastaus:** Voit ottaa käyttöön kyselyjen seurannan, joka kattaa lähetettävät kyselyt. Muista vaihtaa oletusarvo takaisin, kun olet suorittanut vianmäärityksen. Jos kyselyjen seuranta jätetään käyttöön, lokit muuttuvat suuremmiksi.
+**Kysymys:** Miten voin nähdä, mitä kyselyjä lähetetään paikalliseen tietolähteeseen?  
+**Vastaus:** Voit ottaa käyttöön kyselyn seurannan, joka kattaa lähetettävät kyselyt. Muista vaihtaa oletusarvo takaisin, kun olet suorittanut vianmäärityksen. Jos kyselyjen seuranta jätetään käyttöön, lokit muuttuvat suuremmiksi.
 
 Voit myös tutustua työkaluihin, jotka tietolähteesi sisältää kyselyjen seuraamista varten. Voit käyttää esimerkiksi Extended Events- tai SQL Profiler for SQL Server- ja Analysis Services -työkaluja.
 

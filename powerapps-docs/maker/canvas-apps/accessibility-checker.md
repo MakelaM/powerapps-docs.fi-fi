@@ -11,11 +11,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 11ec805a713743e2524651128b036ccaaade69e3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42842528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61542482"
 ---
 # <a name="review-a-canvas-app-for-accessibility-in-powerapps"></a>Tarkista pohjaan perustuvan sovelluksen helppokäyttöisyys PowerAppsissa
 
@@ -70,7 +70,7 @@ Helppokäyttöisyyden tarkistus luokittelee jokaisen ongelman virheeksi, varoitu
 | **Poista automaattinen käynnistys käytöstä**                 | Varoitus  | Kun **Ääni**- tai **Video**-ohjausobjektin **Automaattinen käynnistys** -ominaisuuden arvoksi on asetettu **True** (tosi). | Määritä ohjausobjektin **Automaattinen käynnistys** -ominaisuuden arvoksi **False** (epätosi). | Automaattisesti käynnistyvät video- ja äänitiedostot voivat häiritä käyttäjiä. Anna heidän valita, haluavatko he toistaa tiedoston. |
 | **Muokkaa näyttönimeä**                 | Vihje      | Näytöllä on oletusnimi, jonka näytönlukija lukee, kun käyttäjät siirtyvät sovellukseen. | Anna näytölle nimi, joka kuvaa sitä, mitä näytössä on tai mihin sitä käytetään.| Sokeat, heikkonäköiset tai lukivaikeuksista kärsivät ovat navigoidessaan riippuvaisia näytönlukijan lukemista näyttönimistä. |
 | **Lisää tilan ilmaisemisen teksti**          | Vihje      |  Ohjausobjektilla on tila, kuten vaihtopainike, mutta arvo-otsikot ovat poissa käytöstä. | Määritä ohjausobjektin **ShowValue**-ominaisuuden arvoksi **True** (tosi), jotta sen tämänhetkinen tila näkyy. | Käyttäjät eivät saa vahvistusta toiminnoistaan, jos ohjausobjektin tila ei tule näkyviin. |
-| **Tarkista näytön kohteiden järjestys**| Vihje      | **TabIndex**-ominaisuus on suurempi kuin 1. Sovelluksen tekijä voi määrittää mukautettuja välilehtien järjestyksiä asettamalla **TabIndex**-ominaisuuden arvoksi numeerisen arvon, esimerkiksi 1, 2, 3 ja 4. Tämä vinkki muistuttaa sinua tarkistamaan näytön vuorovaikutteisen järjestyksen. Paras käytäntö on noudattaa rakennetta, jossa **TabIndex**-ominaisuuden arvo on 0.  | Varmista, että näyttösi elementit vastaavat järjestystä, jossa haluat käydä niitä läpi sarkainta käytettäessä. | Kun näytönlukija lukee sovelluksen osia, niiden pitäisi näkyä siinä järjestyksessä, jossa käyttäjä näkee ne, vähemmän intuitiivisen järjestyksen sijasta.  |
+| **Tarkista näytön kohteiden järjestys**| Vihje      | **TabIndex**-ominaisuus on suurempi kuin 1. Sovelluksen tekijä voi määrittää mukautettuja välilehtien järjestyksiä asettamalla **TabIndex**-ominaisuuden arvoksi numeerisen arvon, esimerkiksi 1, 2, 3 ja 4. Tämä vinkki muistuttaa sinua tarkistamaan näytön vuorovaikutteisen järjestyksen. Paras käytäntö on noudattaa rakennetta, jossa **TabIndex**-ominaisuuden arvo on 0.  | Varmista, että näyttösi elementit vastaavat järjestystä, jossa haluat käydä niitä läpi sarkainta käytettäessä. | Kun näytönlukija lukee sovelluksen osia, niiden pitäisi näkyä siinä järjestyksessä, jossa käyttäjä näkee ne, vähemmän intuitiivisen järjestyksen sijasta.  |
 | **Lisää toinen syöttötapa**           | Vihje      | Sovellus sisältää **Kynä**-ohjausobjektin. Tämä vinkki muistuttaa sisällyttämään erillisen syöttömenetelmän. | Lisää **Tekstisyöte**-ohjausobjekti **Kynä**-ohjausobjektin lisäksi taataksesi helppokäyttöisen kokemuksen. | Kaikki käyttäjät eivät voi käyttää kynää ja tarvitsevat toisen tavan tietojen syöttämiseksi (esimerkiksi allekirjoituksen lisääminen näppäimistön avulla). |
 
 ## <a name="next-steps"></a>Seuraavat vaiheet

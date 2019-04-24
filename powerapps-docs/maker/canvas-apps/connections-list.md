@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 29de71e413a83a1c0939796f7b65bd42d4aca3c4
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "57801982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61556559"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>PowerAppsin kangassovellusten liitinten yleiskatsaus
 Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteeseen* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerApps sisältää liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi kangassovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).

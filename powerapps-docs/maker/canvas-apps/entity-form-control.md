@@ -14,16 +14,16 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ee8573cb9ae4df5ac42deefad4ac67aede3a3502
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42836273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61547641"
 ---
 # <a name="use-the-entity-form-control"></a>Entiteettilomake-ohjausobjektin käyttäminen
 Luo sovelluksia nopeammin käyttämällä **Entiteettilomake**-ohjausobjektia monipuolisten lomakkeiden lisäämiseksi Common Data Service -entiteetille.
 
-Saat esittelyn **Entiteettilomake**-ohjausobjektista tästä blogikirjoituksesta: [Uusi entiteettilomakkeen ohjausobjekti (kokeellinen ominaisuus) Common Data Servicelle](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
+Johdanto **entiteettilomake** ohjausobjekti, tästä blogikirjoituksesta: [Uusi entiteettilomakkeen ohjausobjekti (kokeellinen ominaisuus) Common Data Service-](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
 > [!IMPORTANT]
 > Ota huomioon blogikirjoituksessa mainittu **Entiteettilomake**-ohjausobjektin kokeellisuus ja ole varovainen, jos käytät **entiteettilomake**-ohjausobjektia käyttöä tuotantosovelluksissa ainakin toistaiseksi.
@@ -45,15 +45,15 @@ Tässä ovat **Entiteettilomake**-ohjausobjektin tärkeimmät ominaisuudet.
 **Item** – Määrittää tietolähteen tietueen, jonka **Entiteettilomake**-ohjausobjektin tulisi näyttää. Tätä ominaisuutta käytetään vain, kun **Pattern**in arvoksi on määritetty **FormPattern.Details**.
 
 **Selected** – Hakee tällä hetkellä valittuna olevan tietueen.  
-Esimerkki: Jos **Entiteettilomake**-ohjausobjekti näyttää myyntitilaustietueiden luettelon, **Selected**-ominaisuus antaa tällä hetkellä valitun tietueen. Voit myös käyttää tietueen kenttää. (Määritä esimerkiksi valitun tietueen **Account**-kentän arvoksi **Selected.Account**.)
+Esimerkki: Jos **entiteettilomake** ohjausobjekti näyttää myyntitilaustietueiden, luettelo **valittu** ominaisuus antaa tällä hetkellä valitun tietueen. Voit myös käyttää tietueen kenttää. (Määritä esimerkiksi valitun tietueen **Account**-kentän arvoksi **Selected.Account**.)
 
 **SelectableFields** – Määrittää, mitkä kentät tulee näyttää linkkeinä. Aseta tämän ominaisuuden arvo tällä syntaksilla:  
 **{Field1Name : true, Field2Name : true}**  
-Esimerkki: Jos haluat, että kentät **SalesOrderId** ja **Account** näkyvät linkkeinä lomakkeessa, aseta kyseisen lomakkeen **SelectableFields**-ominaisuudeksi tämä arvo:  
+Esimerkki: Jos haluat **SalesOrderId** ja **tilin** kentät näkyvät linkkeinä lomakkeessa, aseta **SelectableFields** ominaisuuden kyseisen lomakkeen tämä arvo:  
 **{SalesOrderId : true, Account : true}**
 
 **SelectedField** – Määrittää, mitä kenttää on napsautettu tai napautettu. Tämä pätee vain kenttiin, joille on määritetty **SelectableFields**-ominaisuus.  
-Esimerkki: Jos asetat **SelectableFields**-ominaisuudeksi **{SalesOrderId : true, Account : true}** ja käyttäjä napsauttaa tai napauttaa **Account**-kenttää, kohdan **SelectedField.Account** arvoksi asetetaan tosi.
+Esimerkki: Jos määrität **SelectableFields** ominaisuudeksi **{SalesOrderId: true, Account: true}** ja käyttäjä napsauttaa tai napauttaa **tilin** kentän  **SelectedField.Account** asetetaan tosi.
 
 **OnFieldSelect** – Kuinka sovellus reagoi, kun käyttäjä napsauttaa tai napauttaa kenttää. Tämä pätee vain kenttiin, joille on määritetty **SelectableFields**-ominaisuus.
 
@@ -190,7 +190,7 @@ Katsotaanpa, kuinka lomakkeen mukautusruutu lisää siirtymisen ja kontekstin.
 
 Tämä määritettiin automaattisesti, kun määritimme lomakkeen mukautusruudulla **SalesOrderId**-kentän siirtämään näkymän **SalesOrderDetailsScreen**-näyttöön. Näin ollen **SalesOrderId**-kentän arvot näytetään linkkeinä.
 
-**SalesOrderListForm**-lomakkeen **OnFieldSelect**-ominaisuudelle on asennettu [**If**](functions/function-if.md)-funktio, joka määrittää, napsauttaako tai napauttaako käyttäjä **SalesOrderId**-kenttää: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
+**OnFieldSelect** -ominaisuuden **SalesOrderListForm** asetetaan [ **Jos** ](functions/function-if.md) funktio, joka määrittää, onko käyttäjä napsauttaa tai napauttaa **salesorderid** kenttä: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
 
 Jos funktion tulos on tosi, **SalesOrderDetailsScreen** avautuu aiemmin käyttämämme **NavigationContext**-kontekstimuuttujan kanssa.  
 

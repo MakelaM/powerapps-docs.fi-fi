@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 2b88e765fcc56a2d76ede30a44fcfbaae70aaea3
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42861785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61559882"
 ---
 # <a name="text-properties-in-powerapps"></a>Tekstin ominaisuudet PowerAppsissa
 Määritä, kuinka teksti näytetään ohjausobjektissa, työkaluvihjeessä, kun käyttäjä kirjoittaa tietoja, ja määritä muita tekstiin liittyviä ominaisuuksia.
@@ -28,7 +28,7 @@ Määritä, kuinka teksti näytetään ohjausobjektissa, työkaluvihjeessä, kun
 
 * Koskee ohjausobjekteja **[Lisää kuva](control-add-picture.md)**, **[Painike](control-button.md)**, **[Valintaruutu](control-check-box.md)**, **[Kaaviosarake](control-column-line-chart.md)**, **[Päivämäärän valitsin](control-date-picker.md)**, **[Avattava luettelo](control-drop-down.md)**, **[Vienti](control-export-import.md)**, **[HTML-teksti](control-html-text.md)**, **[Tuonti](control-export-import.md)**, **[Otsikko](control-text-box.md)**, **[Viivakaavio](control-column-line-chart.md)**, **[Luetteloruutu](control-list-box.md)**, **[Lohkokaavio](control-pie-chart.md)**, **[Valintanappi](control-radio.md)**, **[Tekstisyöte](control-text-input.md)** ja **[Ajastin](control-timer.md)**.
 
-**FontWeight** – Ohjausobjektin tekstin paino: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**FontWeight** – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 * Koskee ohjausobjekteja **[Lisää kuva](control-add-picture.md)**, **[Painike](control-button.md)**, **[Valintaruutu](control-check-box.md)**, **[Päivämäärän valitsin](control-date-picker.md)**, **[Avattava luettelo](control-drop-down.md)**, **[Vienti](control-export-import.md)**, **[Tuonti](control-export-import.md)**, **[Otsikko](control-text-box.md)**, **[Luetteloruutu](control-list-box.md)**, **[Valintanappi](control-radio.md)**, **[Tekstisyöte](control-text-input.md)** ja **[Ajastin](control-timer.md)**.
 

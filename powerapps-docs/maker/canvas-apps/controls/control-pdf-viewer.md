@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8d3add2ccb460e11211baa993c61902856c8f083
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 66813cf8c31fad82eeb25fd515acad4a5ea1f756
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42833717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61548796"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>PDF-katseluohjelman ohjausobjekti (kokeellinen) PowerAppsissa
 Kokeellinen ohjausobjekti, joka näyttää PDF-tiedoston sisällön.
@@ -27,10 +27,17 @@ Kokeellinen ohjausobjekti, joka näyttää PDF-tiedoston sisällön.
 Näytä tekstiä, grafiikkaa ja muuta sisältöä PDF-tiedostossa lisäämällä tämä ohjausobjekti. Määritä ohjausobjektin **Document**-ominaisuuden arvoksi kaksoislainausmerkeissä oleva URL-osoite, joka viittaa tiedostoon, jonka haluat näyttää.
 
 ## <a name="limitations"></a>Rajoitukset
-Huomaa, että PowerAppsin suojausarkkitehtuurin vuoksi PDF-katseluohjelma tukee vain HTTPS-linkkejä, ei HTTP-linkkejä.  
-Jos PDF-tiedosto sijaitsee palvelimella, jonka CORS-asetukset ovat rajoittavat, tiedostoa ei ehkä voi tarkastella sovelluksessa.  Tämän ongelman ratkaisemiseksi PDF-tiedostoja isännöivän palvelimen täytyy sallia eri alkuperiä sisältävät pyynnöt (CORS), jotka ovat peräisin osoitteesta powerapps.com.
+1. Powerappsin tietoturva-arkkitehtuurin edellyttää PDF-katseluohjelma tukee vain HTTPS linkkejä, ei HTTP.  
 
-Jos asiakirjaa ei voi avata PowerAppsissa, loppukäyttäjälle annetaan mahdollisuus avata asiakirja ulkoisessa selaimessa.  Vaihtoehto on käytettävissä myös järjestelmävalikossa kaikille ulkoisille asiakirjoille.
+2. **Asiakirjan** ominaisuus on linkki suoraan PDF-tiedoston. Palvelimien uudelleenohjauksen tai HTML-tiedoston näkymiä ei tueta.
+
+3. Asiakirjan isännöivän palvelimen on oltava edellytä todennusta.
+
+4. Ei voi olla pysty tarkastelemaan PDF-tiedosto sovelluksessasi, jos tiedosto sijaitsee palvelimessa, jossa on rajoittava rajat alkuperä resurssien jakaminen (CORS)-asetukset. Voit ratkaista tämän ongelman PDF-tiedostoja isännöivän palvelimen on mahdollistettava rajat alkuperä pyyntöjen powerapps.com.
+
+Sovelluksen käyttäjät kiertää nämä rajoitukset avaamalla PDF-tiedostoja ulkoisten selaimessa, kun niin kehotetaan tekemään, jos ohjausobjektia ei voi avata tiedosto. Vaihtoehto on käytettävissä myös järjestelmävalikossa kaikille ulkoisille asiakirjoille.
+
+Sovellusten tekijöille voit kiertää nämä rajoitukset mukaan lukien PDF-tiedostoja media-resursseina sovelluksessa. Näin PDF-katseluohjelman ohjausobjekti voi näyttää aina tiedoston.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **Document** – Kaksoislainausmerkeissä oleva PDF-tiedoston URL-osoite.

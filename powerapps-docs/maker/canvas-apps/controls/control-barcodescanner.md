@@ -1,6 +1,6 @@
 ---
-title: 'Viivakoodiskannerin ohjausobjekti: viittaus | Microsoft Docs'
-description: Viivakoodiskannerin ohjausobjektia koskevia tietoja, kuten ominaisuudet ja esimerkkejä
+title: 'WWW-viivakoodiskannerin ohjausobjekti: viittaus | Microsoft Docs'
+description: Tietoja, kuten ominaisuudet ja esimerkkejä, Viivakoodiskanneri ohjausobjektista
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -13,23 +13,27 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 853558273521491467fa7474688ce9c984ac5db6
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 787fa34bdfcabf6103fefd82f66e976b680544e2
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42862464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61544587"
 ---
-# <a name="barcode-scanner-control-experimental-in-powerapps"></a>Viivakoodiskannerin ohjausobjekti (kokeellinen) PowerAppsissa
-Kokeellinen ohjausobjekti, jolla käyttäjä voi ottaa valokuvia käyttämällä laitteen viivakoodiskanneria.
+# <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>WWW-viivakoodiskannerin ohjausobjekti (kokeellinen) powerappsissa
+
+Vanhat viivakoodien skannaus ohjausobjektin, joka on vanhentunut, mutta voi olla hyötyä tarkistus koodit selaimessa.
 
 ## <a name="description"></a>Kuvaus
-Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteeseen yhden tai useita valokuvia mistä tahansa sovelluksen käyttöpaikasta.
+
+Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäjät voivat skannata viivakoodeja kaikissa laitteissa. Ohjausobjekti on vanhentunut vuoksi heikentää suorituskykyä ja mobile **[Viivakoodiskanneri](control-new-barcode-scanner.md)** ohjausobjektin korvaa tämän ohjausobjektin.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
+
 **barcode scanner** – Sovelluksen käyttämän viivakoodiskannerin numeerinen tunnus laitteessa, jossa on useampi kuin yksi viivakoodiskanneri.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
+
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
@@ -61,24 +65,32 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
+
 [**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
+
 ### <a name="add-photos-to-an-image-gallery-control"></a>Lisää valokuvia Kuvavalikoima-ohjausobjektiin
+
 1. Lisää **viivakoodiskannerin** ohjausobjekti ja anna sen nimeksi **Oma viivakoodiskanneri**
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **Selite**-ohjausobjekti ja määritä sen tulosteeksi viivakoodin **Teksti**.  
-3. Skannaa tyypin viivakoodi BarcodeType-ominaisuudella.
-4. Selite näyttää skannatun viivakoodin.
 
+1. Lisää **nimen** ohjausobjekti ja määritä sen tulosteeksi Viivakoodiskanneri **tekstin** ominaisuus.
+
+1. Skannaa tyypin viivakoodi **BarcodeType** ominaisuus.
+
+    Selite näyttää skannatun viivakoodin.
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
+
 ### <a name="video-alternatives"></a>Vaihtoehdot videoille
+
 * Harkitse **[selitteen](control-text-box.md)** lisäämistä, jonka **[Teksti](properties-core.md)**-objektin arvoksi on asetettu viivakoodiskannerin **Teksti**. Koska viivakoodiskanneri ei näytä tunnistettua viivakoodiarvoa, tämä tekee skannerista helppokäyttöisen kaikille käyttäjille, ei vain näkövammaisille.
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
+
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-  > Näytönlukuohjelmat ilmoittavat uusista viivakoodeista. Arvoa ei ilmoiteta. Niin kauan kuin viivakoodi on näkyvissä, näytönlukuohjelmat muistuttavat viiden sekunnin välein, että tunnistettu viivakoodi on edelleen sama.
+  > Näytönlukuohjelmat ilmoittavat, kun uusi viivakoodi on havaittu. Arvo ei voi ilmoitti. Niin kauan kuin viivakoodi on näkyvissä, näytönlukuohjelmat muistuttavat käyttäjän viiden sekunnin välein, joka sama tunnistettu viivakoodi on edelleen.

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: dad00e28dfc61c92c03aaf917c154e67291af073
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42843620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61560236"
 ---
 # <a name="image-properties-in-powerapps"></a>Kuvan ominaisuudet PowerAppsissa
 Sovelluksen graafisten elementtien, kuten kuvien, valokuvien ja kynäohjausobjektin elementtien määrittäminen.

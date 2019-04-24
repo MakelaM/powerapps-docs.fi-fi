@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 3504c80cbf2414959cadc218339d959d168d15ba
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42858655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61559445"
 ---
 # <a name="check-box-control-in-powerapps"></a>Valintaruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi valita tai tyhjentää ja asettaa siten sen arvoksi **tosi** tai **epätosi**.
@@ -66,7 +66,7 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)** – Ohjausobjektin tekstin paksuus: **lihavoitu**, **puolilihavoitu**, **normaali** tai **ohuempi**.
+**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 405dcf432526206aa3a5f341a38e2ae5547cea1f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42858281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61545609"
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Yhdistä Microsoft Translatoriin PowerAppsista
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -99,7 +99,7 @@ Tämä yhteys sisältää seuraavat funktiot:
 | [TextToSpeech](connection-microsoft-translator.md#texttospeech) |Muuntaa annetun tekstin puheeksi äänivirtana WAV-muodossa |
 
 ### <a name="languages"></a>Languages
-Nouda kielet: noutaa kaikki kielet, joita Microsoft Translator tukee
+Hae kielet: Noutaa kaikki kielet, joita Microsoft Translator tukee
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 Ei mitään.
@@ -112,7 +112,7 @@ Ei mitään.
 | Nimi |merkkijono |Ei | |
 
 ### <a name="translate"></a>Translate
-Käännä teksti: kääntää tekstin määritetylle kielelle Microsoft Translatorilla
+Käännä teksti: Kääntää tekstin määritetylle kielelle Microsoft Translatorilla
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -127,7 +127,7 @@ Käännä teksti: kääntää tekstin määritetylle kielelle Microsoft Translat
 Ei mitään.
 
 ### <a name="detect"></a>Detect
-Tunnista kieli: tunnistaa annetun tekstin lähdekielen
+Tunnista kieli: Tunnistaa annetun tekstin lähdekielen
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -143,7 +143,7 @@ Tunnista kieli: tunnistaa annetun tekstin lähdekielen
 | Nimi |merkkijono |Ei | |
 
 ### <a name="speechlanguages"></a>SpeechLanguages
-Nouda puhekielet: noutaa puhesynteesille käytettävissä olevat kielet
+Hae puhekielet: Noutaa puhesynteesille käytettävissä olevat kielet
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 Ei mitään.
@@ -156,7 +156,7 @@ Ei mitään.
 | Nimi |merkkijono |Ei | |
 
 ### <a name="texttospeech"></a>TextToSpeech
-Teksti puheeksi: muuntaa annetun tekstin puheeksi aaltomuotoisena äänivirtana
+Teksti puheeksi: Muuntaa annetun tekstin puheeksi äänivirtana WAV-muodossa
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
