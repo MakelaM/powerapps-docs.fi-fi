@@ -1,0 +1,120 @@
+- name: Tietoja käyttävän koodin käsitteleminen
+  href: ../work-with-data-cds.md
+- name: Organisaatiopalveluiden käyttäminen
+  href: overview.md
+- name: Aloittaminen
+  items:
+    - name: 'Pikaopas: Konsolisovelluksen luominen'
+      href: quick-start-org-service-console-app.md
+    - name: Late- ja Early-sitoutunut ohjelmointi
+      href: early-bound-programming.md
+    - name: IOrganizationService-liittymä
+      href: iorganizationservice-interface.md
+    - name: OrganizationServiceContext
+      href: organizationservicecontext.md
+    - name: Asiakassovelluksen luominen
+      href: create-client-app.md
+      items:
+        - name: SDK-kokoonpanon päivitysten tilaaminen NuGetilla
+          href: subscribe-sdk-assembly-updates-using-nuget.md
+        - name: Visual Studio ja .NET Framework
+          href: visual-studio-dot-net-framework.md
+        - name: Etsintäpalvelu
+          href: discovery-service.md
+        - name: XRM-työkalujen käyttäminen
+          href: ../xrm-tooling/build-windows-client-applications-xrm-tools.md
+- name: Entiteettitoiminnot
+  href: entity-operations.md
+  items:
+    - name: Kyselytiedot
+      href: entity-operations-query-data.md
+      items:
+        - name: Kyselyiden luominen QueryExpressionilla
+          href: build-queries-with-queryexpression.md
+          items:
+            - name: QueryExpression-luokan käyttäminen
+              href: use-queryexpression-class.md
+            - name: ConditionExpression-luokan käyttäminen
+              href: use-conditionexpression-class.md
+            - name: FilterExpression-luokan käyttäminen
+              href: use-filterexpression-class.md
+            - name: ColumnSet-luokan käyttäminen
+              href: use-the-columnset-class.md
+            - name: Suurien tulosjoukkojen sivuttaminen QueryExpressionilla
+              href: page-large-result-sets-with-queryexpression.md
+            - name: QueryExpressionin vasemman ulkoliitoksen käyttäminen ”ei sisälly” -kyselyiden tekemiseen
+              href: use-left-outer-join-queryexpression-query-records-not-in.md
+            - name: QueryByAttribute-luokan käyttäminen
+              href: use-querybyattribute-class.md
+            - name: 'Suurien tulosjoukkojen sivuttaminen FetchXML:llä'
+              href: page-large-result-sets-with-fetchxml.md
+    - name: Entiteettien luominen
+      href: entity-operations-create.md
+    - name: Entiteetin noutaminen
+      href: entity-operations-retrieve.md
+    - name: Entiteettien päivittäminen ja poistaminen
+      href: entity-operations-update-delete.md
+    - name: Entiteettien yhdistäminen ja erottaminen
+      href: entity-operations-associate-disassociate.md
+- name: Viestien käyttäminen
+  href: use-messages.md
+- name: Erityistoiminnot
+  items:
+    - name: ExecuteAsync käyttäminen
+      href: use-executeAsync.md
+    - name: ExecuteTransaction käyttäminen
+      href: use-executetransaction.md
+    - name: Useiden pyyntöjen suorittaminen
+      href: execute-multiple-requests.md
+- name: OrganizationServiceContextin käyttäminen
+  items:
+    - name: Kyselyiden luominen LINQillä (.NET-kieli-integroitu kysely)
+      href: build-queries-with-linq-net-language-integrated-query.md
+    - name: LINQ-kyselyiden esimerkkejä
+      href: linq-query-examples.md
+    - name: Tulosten järjestäminen LINQillä entiteettiominaisuuksien avulla
+      href: order-results-entity-attributes-linq.md
+    - name: Suurien tulosjoukkojen sivuttaminen LINQillä
+      href: page-large-result-sets-linq.md
+    - name: Late-sidotun entiteettiluokan käyttäminen LINQ-kyselyllä
+      href: use-late-bound-entity-class-linq-query.md
+    - name: Kyselyn luominen LINQillä
+      href: use-linq-construct-query.md
+- name: Tietojen kaksoiskappaleen tunnistaminen
+  href: detect-duplicate-data.md
+- name: Luokkien luominen Early-sidottuun ohjelmointiin
+  href: generate-early-bound-classes.md
+  items:
+    - name: Koodinmuodostustyökalujen laajennusten luominen
+      href: extend-code-generation-tool.md
+- name: Metatietojen käsitteleminen
+  href: work-with-metadata.md
+  items:
+    - name: Mukautetun entiteetin luominen
+      href: create-custom-entity.md
+    - name: Metatietojen kanssa työskenteleminen
+      href: metadata-attributemetadata.md
+    - name: 'Yleisten asetusjoukkojen lisääminen, päivittäminen, poistaminen ja järjestäminen'
+      href: metadata-global-option-set-options.md
+    - name: Asetusjoukkojen mukauttaminen
+      href: metadata-option-sets.md
+    - name: Entiteetin suhteiden luominen ja noutaminen
+      href: metadata-relationshipmetadata.md
+    - name: Metatietojen hakeminen ja muutosten tunnistaminen
+      href: metadata-retrieve-detect-changes.md
+    - name: 'Entiteettien noutaminen, päivittäminen ja poistaminen'
+      href: metadata-retrieve-update-delete-entities.md
+    - name: Entiteetin luominen sähköpostitoimintojen lähettämistä varten
+      href: create-update-entity-emailed.md
+- name: Tietojen tuominen
+  href: ../import-data.md
+- name: Mallitiedot
+  href: ../sample-data.md
+- name: Koodaamisen käytäntöjä
+  items:
+    - name: Koodin poikkeuksien hallitseminen
+      href: handle-exceptions-code.md
+    - name: WWW-palvelun virhekoodit
+      href: web-service-error-codes.md
+- name: Esimerkit
+  href: samples/toc.yml

@@ -1,0 +1,26 @@
+- name: '(C#)  Tietotoimintojen mallit'
+  items:
+    - name: 'C#-malleilla aloittaminen'
+      href: ../web-api-samples-csharp.md
+    - name: Perustoiminnot
+      href: basic-operations-csharp.md
+    - name: Tietojen pyytäminen
+      href: query-data-csharp.md
+    - name: Ehdolliset toiminnot
+      href: conditional-operations-csharp.md
+    - name: Funktiot ja toiminnot
+      href: functions-actions-csharp.md
+- name: Client-side JavaScriptin tietotoimintojen mallit
+  items:
+    - name: Client-side JavaScriptin malleilla aloittaminen
+      href: ../web-api-samples-client-side-javascript.md
+    - name: Perustoiminnot
+      href: basic-operations-client-side-javascript.md
+    - name: Tietojen pyytäminen
+      href: query-data-client-side-javascript.md
+    - name: Ehdolliset toiminnot
+      href: conditional-operations-client-side-javascript.md
+    - name: Funktiot ja toiminnot
+      href: functions-actions-client-side-javascript.md
+- name: 'Yleinen Discovery-palvelumalli (C#)'
+  href: global-discovery-service-csharp.md

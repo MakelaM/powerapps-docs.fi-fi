@@ -1,0 +1,9 @@
+- name: Näennäisentiteeteillä aloittaminen
+  href: get-started-ve.md
+  items:
+    - name: Tietoja API-ohjelmointirajapinnasta
+      href: api-considerations-ve.md
+    - name: Mukautettu tietopalvelu
+      href: custom-ve-data-providers.md
+    - name: 'Malli: Geneerinen näennäisen entiteetin tietopalvelun lisäosa'
+      href: sample-generic-ve-plugin.md

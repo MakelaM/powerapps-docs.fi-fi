@@ -1,0 +1,11 @@
+- name: Outlook-asiakasohjelman laajennus
+  href: extend-dynamics-365-outlook.md
+  items:
+    - name: Offline-tilan ja Outlookin suodattimet ja mallit
+      href: offline-outlook-filters-templates.md
+    - name: 'Malli: Luo ja nouda Outlook-suodattimet'
+      href: sample-create-retrieve-outlook-filters.md
+    - name: 'Malli: Käytä Microsoft Dynamics 365 for Outlookin menetelmiä'
+      href: sample-outlook-methods.md
+    - name: Käytä verkkopalveluita offline-tilassa
+      href: offline-use-services.md

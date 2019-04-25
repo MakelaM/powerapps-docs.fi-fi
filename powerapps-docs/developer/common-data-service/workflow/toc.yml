@@ -1,0 +1,14 @@
+- name: Koodia käyttävän liiketoimintalogiikan käyttäminen
+  href: ../apply-business-logic-with-code.md
+- name: Työnkulun laajennukset
+  href: workflow-extensions.md
+- name: Korjaa työnkulkutoimintojen virheet
+  href: debug-workflow-activites.md
+- name: 'Opetusohjelma: Luo työnkulun laajennus'
+  href: tutorial-create-workflow-extension.md
+- name: 'Malli: Luo mukautettu työnkulkutoiminto'
+  href: sample-create-custom-workflow-activity.md
+- name: 'Malli: Päivitä seuraava syntymäpäivä mukautetun työnkulkutoiminnon avulla'
+  href: sample-update-next-birthday-using-custom-workflow-activity.md
+- name: 'Malli: Laske luottotaso mukautetun työnkulkutoiminnon avulla'
+  href: sample-calculate-credit-score-custom-workflow-activity.md
