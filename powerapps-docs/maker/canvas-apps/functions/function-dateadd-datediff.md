@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: b70026e84eb7dfee67583abe26665bf78a566b76
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42865250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321058"
 ---
 # <a name="dateadd-datediff-and-timezoneoffset-functions-in-powerapps"></a>DateAdd-, DateDiff- ja TimeZoneOffset-funktiot PowerAppsissa
 Lisää tai etsii päivämäärä/aika-arvon eron ja muuntaa paikallisen ajan ja UTC-ajan välillä.
@@ -41,13 +41,13 @@ Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](..
 
 * *DateTime* – Pakollinen. Käytettävä päivämäärä/aika-arvo.
 * *Addition* – Pakollinen. *Yksikköinä (units)* annettu luku, joka lisätään *DateTime*en.
-* *Units* – Valinnainen. Lisättävien *Yksiköiden* tyyppi: **millisekuntia**, **sekunnit**, **minuutit**, **tunnit**, **päivät**, **kuukausia**, **vuosineljännestä** tai **vuodet**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
+* *Units* – Valinnainen. Tyypin *yksiköt* Lisää: **Millisekuntia**, **sekuntia**, **minuuttia**, **tuntia**, **päivää**, **kuukauden**,  **Vuosineljänneksen aikana**, tai **vuoden**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
 
 **DateDiff**( *StartDateTime*, *EndDateTime* [, *Units* ] )
 
 * *StartDateTime* – Pakollinen. Alkupäivämäärä/aika-arvo.
 * *EndDateTime* – Pakollinen. Loppupäivämäärä/aika-arvo.
-* *Units* – Valinnainen. Lisättävien *Yksiköiden* tyyppi: **millisekuntia**, **sekunnit**, **minuutit**, **tunnit**, **päivät**, **kuukausia**, **vuosineljännestä** tai **vuodet**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
+* *Units* – Valinnainen. Tyypin *yksiköt* Lisää: **Millisekuntia**, **sekuntia**, **minuuttia**, **tuntia**, **päivää**, **kuukauden**,  **Vuosineljänneksen aikana**, tai **vuoden**.  Jos tätä ei määritetä, käytetään yksikköä **päivät**.
 
 **TimeZoneOffset**( [ *DateTime* ] )
 

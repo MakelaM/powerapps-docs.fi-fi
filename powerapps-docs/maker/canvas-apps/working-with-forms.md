@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 661f6710c8cec55868ccc9d67d0f83dd230f89c1
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63318238"
 ---
 # <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Pohjaan perustuvan sovelluksen lomakkeiden ymmärtäminen Microsoft PowerAppsissa
 
@@ -334,18 +334,22 @@ Sovelluksessa, jonka PowerApps loi tiedoista, on Selaa-näytön yläosassa kaksi
 
 ![Lajittelun ja haun ohjausobjektit Selaa-näytössä](./media/working-with-forms/afd-browse-search-sort.png)
 
-Kun käyttäjä valitsee lajittelupainikkeen, valikoiman lajittelujärjestys muuttuu käänteiseksi. Luomme tämän toiminnan *kontekstimuuttujalla*, joka seuraa suuntaa, johon valikoima on lajiteltu. Kun käyttäjä valitsee painikkeen, muuttuja päivitetään ja suunta muuttuu. Lajittelupainikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi määritetään tämä kaava: **UpdateContext( {SortDescending1: !SortDescending1} )**
+Kun käyttäjä valitsee lajittelupainikkeen, valikoiman lajittelujärjestys muuttuu käänteiseksi. Luomme tämän toiminnan *kontekstimuuttujalla*, joka seuraa suuntaa, johon valikoima on lajiteltu. Kun käyttäjä valitsee painikkeen, muuttuja päivitetään ja suunta muuttuu. **[OnSelect](controls/properties-core.md)** lajittelupainikkeen ominaisuus on tämä kaava: **UpdateContext ({SortDescending1:! SortDescending1})**
 
 **[UpdateContext](functions/function-updatecontext.md)**-toiminto luo **SortDescending1**-kontekstimuuttujan, jos sitä ei vielä ole olemassa. Funktio lukee muuttujan arvon ja määrittää sen loogiseen vastakkaiseen arvoon **!** -operaattorilla. Jos arvo on *true*, siitä tulee *false*. Jos arvo on *false*, siitä tulee *true*.
 
 **[Valikoima](controls/control-gallery.md)**-ohjausobjektin **[Kohteet](controls/properties-core.md)**-ominaisuuden kaava käyttää tätä kontekstimuuttujaa yhdessä tekstin kanssa **TextSearchBox1**-ohjausobjektissa:
 
-    Gallery1.Items = Sort( If( IsBlank(TextSearchBox1.Text),
-                               Assets,
-                               Filter( Assets,
-                                       TextSearchBox1.Text in Text(ApproverEmail) ) ),
-                            ApproverEmail,
-                            If(SortDescending1, Descending, Ascending) )
+```powerapps-dot
+Sort( 
+    If( IsBlank(TextSearchBox1.Text),
+        Assets,
+        Filter( Assets, TextSearchBox1.Text in Text(ApproverEmail) ) 
+    ),
+    ApproverEmail,
+    If(SortDescending1, Descending, Ascending) 
+)
+```
 
 Katsotaan tätä tarkemmin:
 

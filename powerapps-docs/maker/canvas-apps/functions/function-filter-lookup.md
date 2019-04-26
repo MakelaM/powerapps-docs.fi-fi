@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c37aa315981c51a446254473686c44501e72a96f
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42831472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321021"
 ---
 # <a name="filter-search-and-lookup-functions-in-powerapps"></a>Filter-, Search- ja LookUp-funktiot PowerAppsissa
 Etsii vähintään yhden [tietueen](../working-with-tables.md#records) [taulukosta](../working-with-tables.md).
@@ -78,7 +78,7 @@ Seuraavissa esimerkeissä käytetään **IceCream**-[tietolähdettä](../working
 | **LookUp( IceCream, Flavor = "Chocolate", Quantity )** |Etsii tietuetta, jonka **Flavor** on Chocolate. Sellaisia on yksi.  Palauttaa ensimmäisen löydetyn tietueen **Quantity**-arvon. |100 |
 | **LookUp( IceCream, Quantity > 150, Quantity + OnOrder )** |Etsii tietuetta, jonka **Quantity** on suurempi kuin 100. Sellaisia on useita.  Ensimmäisen löydetyn tietueen **Flavor** on Vanilja. Palauttaa kyseisen tietueen **Quantity**- ja **OnOrder**-sarakkeiden summan. |250 |
 | **LookUp( IceCream, Flavor = "Pistachio", OnOrder )** |Etsii tietuetta, jonka **Flavor** on Pistachio. Sellaisia ei ole.  Koska yhtään tietuetta ei löytynyt, **Lookup** palauttaa arvon *tyhjä*. |*tyhjä* |
-| **LookUp( IceCream, Flavor = "Vanilla" )** |Etsii tietuetta, jonka **Flavor** on Vanilla. Sellaisia on yksi.  Koska vähennyskaavaa ei annettu, koko tietue palautetaan. |{ Flavor: "Vanilla", Quantity: 200, OnOrder: 75 } |
+| **LookUp( IceCream, Flavor = "Vanilla" )** |Etsii tietuetta, jonka **Flavor** on Vanilla. Sellaisia on yksi.  Koska vähennyskaavaa ei annettu, koko tietue palautetaan. |{Flavor: ”Vanilla”, Quantity: 200, OnOrder: 75 } |
 
 ### <a name="search-user-experience"></a>Käyttökokemuksen etsiminen
 Monissa sovelluksissa hakukenttään voi kirjoittaa yhden tai useamman merkin. Tällä tavalla voit suodattaa tietueluetteloita suurissa tietojoukoissa. Luettelossa näytetään vain ne tietueet, jotka vastaavat kirjoittamiasi hakuehtoja.
@@ -89,7 +89,7 @@ Loput tämän ohjeaiheen esimerkeistä näyttävät hakutuloksia luettelosta, jo
 
 Luo tämä tietolähde kokoelmana luomalla **[Painike](../controls/control-button.md)**-ohjausobjekti ja määrittämällä sen **OnSelect**-ominaisuuden arvoksi tämä kaava:
 
-**ClearCollect( Customers, Table( { Name: "Fred Garcia", Company: "Northwind Traders" }, { Name: "Cole Miller", Company: "Contoso" }, { Name: "Glenda Johnson", Company: "Contoso" }, { Name: "Mike Collins", Company: "Adventure Works" }, { Name: "Colleen Jones", Company: "Adventure Works" } ) )**
+**ClearCollect (asiakkaisiin, taulukon ({nimi: ”Fred Suominen”, yrityksen: ”Northwind Traders”}, {nimi: ”Cole Miller” yrityksen: ”Contoso”}, {nimi: ”Glenda Lahti”, yrityksen: ”Contoso”}, {nimi: ”Mike Collins”, yrityksen: ”Adventure Works”}, {nimi: ”Colleen Jones”, yrityksen: "Adventure Works" } ) )**
 
 Kuten tässä esimerkissä, voit näyttää luettelon [**Valikoima-ohjausobjektin**](../controls/control-gallery.md) tietueista näytön alareunassa. Näytön yläosassa voit lisätä [**Tekstisyöte**](../controls/control-text-input.md)-ohjausobjektin nimeltä **SearchInput**, jotta käyttäjät voivat määrittää, mitkä tietueet kiinnostavat heitä.
 

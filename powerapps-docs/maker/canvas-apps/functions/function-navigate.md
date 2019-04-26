@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/08/2015
+ms.date: 04/23/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f0bd11881dc0999cada58f65d7ed8d7f9df68c5a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 0033d0a2d7473e6aaeac1e8533f62873e0d2f49a
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "61562780"
+ms.locfileid: "63321909"
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 Nämä funktiot vaihtavat näytettävää näyttöä.
@@ -39,12 +39,14 @@ Määritä ensimmäiseksi argumentiksi avattavan näytön nimi.
 
  Määritä toiseksi argumentiksi, kuinka vanhasta näytöstä siirrytään uuteen:
 
-| Siirtymän argumentti | Kuvaus |
-| --- | --- |
-| **ScreenTransition.Cover** |Uusi näyttö liukuu näkyviin ja peittää nykyisen näytön. |
-| **ScreenTransition.Fade** |Vanha näyttö häivytetään, ja uusi näyttö tulee näkyviin. |
-| **ScreenTransition.None** |Vanha näyttö vaihdetaan nopeasti uuteen. |
-| **ScreenTransition.UnCover** |Vanha näyttö liukuu pois näkyvistä uuden näytön päältä. |
+| Siirtymän argumentti | Kuvaus | Esittely |
+| --- | --- | --- |
+| **ScreenTransition.Cover** |Uusi näyttö liukuu, siirtää oikealle vasemmalle ja peittää nykyisen näytön. | ![näytön siirtymä kannen animaatio](media/function-navigate/cover.gif) |
+| **ScreenTransition.CoverRight** |Uusi näyttö diat näkymään, siirtäminen vasemmalta oikealle, että se kattaa nykyisen näytön. | ![näytön siirtymä kannen juuri animaatio](media/function-navigate/coverright.gif) |
+| **ScreenTransition.Fade** |Nykyinen pois, jotta uusi näyttö tulee näkyviin näytön-Häivytys. | ![näytön siirtymä fade animaatio](media/function-navigate/fade.gif) |
+| **ScreenTransition.None** (oletus) |Uuden näytön korvaa nopeasti nykyisessä näytössä. | ![näytön siirtymä ei mitään animaatio](media/function-navigate/none.gif) |
+| **ScreenTransition.UnCover** | Nykyinen näyttö liukuu pois näkyvistä, siirtää oikealle vasemmalle, löytää uuden näytön. | ![näytön siirtymä paljastaa animaatio](media/function-navigate/uncover.gif) |
+| **ScreenTransition.UnCoverRight** | Nykyinen näyttö diat pois näkyvistä, siirtäminen vasemmalta oikealle löytää uuden näytön. | ![näytön siirtymä paljastaa juuri animaatio](media/function-navigate/uncoverright.gif) |
 
 Voit käyttää **Navigate**-funktiota uuden näytön kontekstimuuttujien luomiseen tai päivittämiseen. Valinnaisena kolmantena argumenttina voidaan välittää [tietue](../working-with-tables.md#records), joka sisältää kontekstimuuttujan nimen [sarakkeen](../working-with-tables.md#columns) nimenä ja uuden arvon kontekstimuuttujalle.  Tietue on sama kuin se, jota käytetään **[UpdateContext](function-updatecontext.md)**-funktion kanssa.
 
@@ -57,17 +59,17 @@ Näitä funktioita voidaan käyttää vain [toimintakaavassa](../working-with-fo
 ## <a name="syntax"></a>Syntaksi
 **Back**()
 
-**Navigate**( *Näyttö*, *Siirtymä* [, *UpdateContextRecord* ] )
+**Siirry**( *näytön* [, *siirtymä* [, *UpdateContextRecord* ]])
 
 * *Screen* – Pakollinen. Avattava näyttö.
-* *Transition* – Pakollinen.  Nykyisestä näytöstä uuteen siirtymisen visuaalinen efekti. Katso tämän argumentin kelvolliset arvot tämän aiheen aiemmasta osasta.
+* *Siirtymä* – valinnainen.  Nykyisestä näytöstä uuteen siirtymisen visuaalinen efekti. Katso tämän argumentin kelvolliset arvot tämän aiheen aiemmasta osasta. Oletusarvo on **ei mitään**.
 * *UpdateContextRecord* – Valinnainen.  Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon jokaiselle sarakkeelle. Tämä tietue päivittää uuden näytön kontekstimuuttujat, jos se välitetään **[UpdateContext](function-updatecontext.md)**-funktiolle.
 
 ## <a name="examples"></a>Esimerkkejä
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Navigate( Lisätiedot, ScreenTransition.None )** |Näyttää **Lisätiedot**-näytön ilman siirtymäefektiä tai muutoksia kontekstimuuttujan arvoon. |**Lisätiedot**-näyttö ilmestyy nopeasti. |
+| **Navigate (lisätiedot)** |Näyttää **Lisätiedot**-näytön ilman siirtymäefektiä tai muutoksia kontekstimuuttujan arvoon. |**Lisätiedot**-näyttö ilmestyy nopeasti. |
 | **Navigate( Lisätiedot, ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Mitään kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
 | **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä ja päivittää **ID**-kontekstimuuttujan arvoksi **12**. |Uusi näyttö häivytetään, **Lisätiedot**-näyttö näytetään ja kyseisen näytön kontekstimuuttujan **ID**-arvoksi asetetaan **12**. |
 | **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä. Päivittää **ID**-kontekstimuuttujan arvoksi **12** ja päivittää **Shade**-kontekstimuuttujan arvoksi **Color.Red**. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. **Lisätiedot**-ruudun **ID**-kontekstimuuttujan arvoksi asetetaan **12** ja **Shade**-kontekstimuuttujan arvoksi asetetaan **Color.Red**. Jos asetat jonkin **Lisätiedot**-näytön ohjausobjektin **Fill**-ominaisuudeksi **Shade**, kyseinen ohjausobjekti näytetään punaisena. |
@@ -77,7 +79,7 @@ Näitä funktioita voidaan käyttää vain [toimintakaavassa](../working-with-fo
 2. Lisää näyttö ja anna sille nimeksi **LisäNäyttö**.
 3. Lisää **LisäNäyttö**-näytölle otsikko ja aseta sen **[Text](../controls/properties-core.md)**-ominaisuudeksi **Lisä**.
 4. Lisää **LisäNäyttö**-näytölle painike ja aseta sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä funktio:<br>**Navigate(OletusNäyttö, ScreenTransition.Fade)**
-5. Paina **LisäNäyttö**-näytöllä F5-näppäintä ja valitse painike.<br>**OletusNäyttö** näytetään.
+5. Paina **LisäNäyttö**-näytöllä F5-näppäintä ja valitse painike.<br>**Oletusnäyttö** fade siirtymän tulee näkyviin.
 
 [Toinen esimerkki](../add-screen-context-variables.md)
 

@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: f538d785b9655b94a44a79c3299e979bbfe88883
-ms.sourcegitcommit: ba5542ff1c815299baa16304c6e0b5fed936e776
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54308773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63320947"
 ---
 # <a name="forall-function-in-powerapps"></a>ForAll-funktio PowerAppsissa
 Laskee arvot ja suorittaa toiminnot [taulukon](../working-with-tables.md) kaikille [tietueille](../working-with-tables.md#records).

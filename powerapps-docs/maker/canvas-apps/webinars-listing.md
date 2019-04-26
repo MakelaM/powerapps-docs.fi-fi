@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: c11800767225f66520e1a5c368de5102219505d2
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42845334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321628"
 ---
 # <a name="powerapps-webinar-listing"></a>Luettelo PowerApps-verkkoseminaareista #
 Nämä verkkoseminaarit auttavat sinua hyödyntämään Microsoft PowerAppsin ominaisuuksia ja toimintoja. Verkkoseminaarit ovat katsottavissa nauhoitettuina suoran lähetyksen jälkeen. Huomaa, että joissakin tapauksissa sinun on annettava rekisteröintitiedot uudelleen, minkä jälkeen sinulle lähetetään sähköpostitse linkki tallenteeseen. 
@@ -70,7 +70,7 @@ Nämä verkkoseminaarit auttavat sinua hyödyntämään Microsoft PowerAppsin om
 **PowerAppsin hallinta | Usein kysytyt kysymykset**
 <br>Manas Maheshwari [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/PowerApps-Administration-FAQ/m-p/127369#M44)
 
-**Universal Audit -sovelluksen sisällä: näe, mihin PowerApps ja Flow pystyvät Paul Culmseen kanssa**
+**Universal Audit-sovellus: sisällä Näe, mihin PowerApps ja Flow pystyvät Paul Culmsee**
 <br>Paul Culmsee [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Inside-the-Universal-Audit-App-See-what-PowerApps-and-Flow-are/m-p/127370#M45)
 
 ## <a name="advanced-webinar-series"></a>Edistyneen verkkoseminaarisarja ##
@@ -108,7 +108,7 @@ Nämä verkkoseminaarit auttavat sinua hyödyntämään Microsoft PowerAppsin om
 **Office Graphin ja PowerAppsin yhdistetty teho**
 <br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/The-Power-of-Office-Graph-with-PowerApps/m-p/116888)
 
-**Liittimien käyttäminen: Project Online (PWA)**
+**Työskentely liittimien kanssa: Project Online (PWA)**
 <br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Connecting-to-Project-Online-PWA/m-p/116889)
 
 ## <a name="sharepoint-series"></a>SharePoint-sarja ##
@@ -150,5 +150,5 @@ Nämä verkkoseminaarit auttavat sinua hyödyntämään Microsoft PowerAppsin om
 **Valintaikkunoiden tai ponnahdussanomien luominen PowerAppsissa**
 <br>Veronica Ward [Katso nyt](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Building-Dialogs-in-PowerApps-by-Veronica-Ward/m-p/117627#M39)
 
-**Esiripun takana PowerApps-kehittäjän kanssa – tarkempi katsaus malleihin: Marie Hoeger**
+**Näyttää esiripun yhdessä PowerApps-kehittäjät – katsaus malleihin: Marie Hoeger**
 <br>Audrie Gordon [Katso heti](https://powerusers.microsoft.com/t5/Live-Events-and-Webinars/Developer-Intro-and-Discussing-Templates/m-p/116848)

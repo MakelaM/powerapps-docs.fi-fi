@@ -14,11 +14,11 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: 883ea1a63952a01cf1f131b0ccae6629a0324b2c
-ms.sourcegitcommit: 4c7b63c43c1f3515a6dfeff5806692b0eba55071
-ms.translationtype: HT
+ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49401339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63321494"
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot PowerAppsissa
 Valmiiden väriarvojen käyttäminen sekä mukautettujen värien ja alfasekoituksen määrittäminen.
