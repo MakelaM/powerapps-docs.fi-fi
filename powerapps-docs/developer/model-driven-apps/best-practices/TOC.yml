@@ -1,21 +1,14 @@
-items:
 - name: Mallipohjaisten sovellusten parhaat käytännöt ja ohjeet
   href: index.md
   items:
-  - name: Asiakkaan komentosarjaa käyttävän liiketoimintalogiikan käyttäminen
-    href: business-logic/index.md
-    items:
-    - name: Vältä kohteen window.top käyttämistä
-      href: business-logic/avoid-window-top.md
-    - name: Harkitse siirtymispalkin poistamista käytöstä, kun avaat ohjelmallisesti entiteettilomakkeita tai näkymiä
-      href: business-logic/consider-disabling-navbar-programmatically-opening-entity-forms-views.md
-    - name: Käytä HTTP- ja HTTPS-resursseja asynkronisesti
-      href: business-logic/interact-http-https-resources-asynchronously.md
-    - name: Poista mukautukset, jotka on poistettu käytöstä tai joiden aktivoinnit on poistettu
-      href: business-logic/remove-deactivated-disabled-configurations.md
-ms.openlocfilehash: 0602b8fc8f4783d44ddbd7eeb05c24fc3ec1eec6
-ms.sourcegitcommit: 44ca0a386fce0c4a18310b515a4880065942dd05
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59537869"
+    - name: Asiakkaan komentosarjaa käyttävän liiketoimintalogiikan käyttäminen
+      href: business-logic/index.md
+      items:
+        - name: Vältä kohteen window.top käyttämistä
+          href: business-logic/avoid-window-top.md
+        - name: 'Harkitse siirtymispalkin poistamista käytöstä, kun avaat ohjelmallisesti entiteettilomakkeita tai näkymiä'
+          href: business-logic/consider-disabling-navbar-programmatically-opening-entity-forms-views.md
+        - name: Käytä HTTP- ja HTTPS-resursseja asynkronisesti
+          href: business-logic/interact-http-https-resources-asynchronously.md
+        - name: 'Poista mukautukset, jotka on poistettu käytöstä tai joiden aktivoinnit on poistettu'
+          href: business-logic/remove-deactivated-disabled-configurations.md
