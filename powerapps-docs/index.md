@@ -9,12 +9,12 @@ featureFlags:
 ms.service: powerapps
 ms.custom:
 - powerapps-hub
-ms.openlocfilehash: e20fa35acda2953bff2068ffd3c3c20e6d051fe0
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 9ef852744a302ee502fdb9eadfaac7289537a4ab
+ms.sourcegitcommit: 444bd58ec52339516c45e49ea0f42447417faf4e
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61542924"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63769792"
 ---
 <div id="main"
    class="v2">
@@ -370,7 +370,7 @@ ms.locfileid: "61542924"
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/pricing-billing-skus">Käyttöoikeuksien yleiskatsaus</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-entity-licenses">Entiteettien käyttöoikeusvaatimukset</a></p>
-<!--                                   <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/administrator/powerapps-for-us-govt">PowerApps for US Government</a></p> -->
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/powerapps-us-government">PowerApps, Yhdysvaltain valtionhallinto</a></p>
                                  </div>
                               </div>
                            </div>
@@ -468,7 +468,7 @@ ms.locfileid: "61542924"
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-visualizations-dashboards">Visualisointien ja koontinäyttöjen mukauttaminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/client-scripting">Asiakkaan komentosarjaa käyttävän liiketoimintalogiikan käyttäminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/customize-commands-ribbon">Komentojen ja valintanauhan mukauttaminen</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/web-resources">WWW-resurssien käyttäminen</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/component-framework/overview">Mukautettujen ohjausobjektien kehittäminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/model-driven-apps/create-manage-model-driven-apps-using-code">Sovelluksen luominen, hallinnoiminen ja julkaiseminen</a></p>
                                  </div>
                               </div>
