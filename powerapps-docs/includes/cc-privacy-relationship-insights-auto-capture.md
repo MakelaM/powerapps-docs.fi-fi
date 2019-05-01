@@ -1,3 +1,11 @@
-Automaattisen sieppaustoiminnon avulla [!INCLUDE[pn_Exchange](pn-exchange.md)] -tiedot voidaan hakea [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:n avulla. Tiedot osoittavat kirjautuneen käyttäjän sähköpostiaktiviteetin. Tietoja ei voi tallentaa. Käyttäjät voivat seurata näitä sähköposteja kopioimalla [!INCLUDE[pn_Exchange](pn-exchange.md)]-sähköpostit [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:ään sähköpostiaktiviteettina. Ne jaetaan asianmukaisten käyttäjien kanssa [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:n oikeuksissa määritetyllä tavalla.  
+---
+ms.openlocfilehash: 167d4e0362f7d3f1716bee5b7f2f0aa4068bfaee
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61571908"
+---
+Kun automaattinen sieppaustoiminto on käytössä, [!INCLUDE[pn_Exchange](pn-exchange.md)]-tiedot noutaa [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] (mutta ei tallenna) sisäänkirjautuneen käyttäjän sähköpostiaktiviteetin näyttämiseksi. Käyttäjät voivat seurata näitä sähköposteja eksplisiittisesti kopioidakseen [!INCLUDE[pn_Exchange](pn-exchange.md)]-sähköpostit kohteeseen [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] sähköpostiaktiviteettina, jotta ne voidaan jakaa asianmukaisille käyttäjille [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-oikeuksien mukaisesti.  
   
- Järjestelmänvalvoja voi ottaa automaattisen sieppaustoiminnon käyttöön ja poistaa sen käytöstä siirtymällä kohtaan **Asetukset** > **Älykkään toiminnon määritykset**, valitsemalla **Automaattinen sieppaus** -välilehden ja tekemällä soveltuvat valinnat. Käyttäjä voi myös poistaa automaattisen sieppaustoiminnon käytöstä **Henkilökohtaiset asetukset** -kohdan Sähköposti-välilehdessä muuttamalla **Näytä aktiviteettiluettelossa Dynamics 365:n sähköpostit, joita ei seurata** -kohdan arvoksi **Ei**.
+ Järjestelmänvalvoja voi ottaa käyttöön ja poistaa käytöstä automaattisen sieppaustoiminnon siirtymällä kohtaan **Asetukset** > **Intelligence-asetukset** ja tekemällä **Automaattinen sieppaus** -välilehdellä asianmukaiset valinnat. Käyttäjä voi poistaa käytöstä automaattisen sieppaustoiminnon myös Sähköposti-välilehdeltä kohdassa **Henkilökohtaiset asetukset**, muuttamalla **Näytä aktiviteettiluettelossa sähköposti, jota ei seurata Dynamics 365:ssä**  -asetukseksi **Ei**.

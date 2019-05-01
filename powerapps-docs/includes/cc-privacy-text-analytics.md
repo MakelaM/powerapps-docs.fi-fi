@@ -1,43 +1,51 @@
-Ottamalla käyttöön Tekstianalyysi-ominaisuuden otat käyttöön [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:n riippuvia ominaisuuksia, jotka hyödyntävät [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n kognitiivisten palvelujen tekstianalyysin ohjelmointirajapintaa edistyneiden näkemyksien tuottamiseksi. Riippuvat ominaisuudet:  
+---
+ms.openlocfilehash: 80997689e9d4ebca8eb4809cc3e94dab549482b5
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61571905"
+---
+Ottamalla tekstianalyysi-ominaisuuden käyttöön otat käyttöön myös riippuvaiset ominaisuudet, [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] joilla hyödynnetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] kognitiivisten palveluiden tekstianalyysin ohjelmointirajapintaa tarjoamaan merkityksellisiä tietoja. Näitä riippuvaisia ominaisuuksia ovat:  
   
--   tietoehdotukset  
+-   Tietämysehdotukset  
   
--   palvelupyynnön aiheen analyysi  
+-   Palvelupyynnön aiheen analyysi  
   
--   Samankaltaisten palvelupyyntöjen ehdotukset  
+-   Vastaavien pyyntöjen ehdotukset  
   
- Järjestelmänvalvoja voi ottaa Tekstianalyysi-ominaisuuden käyttöön [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] -organisaation **Asetukset** > **Hallinto** > **Järjestelmäasetukset** >  **Esiversio** -välilehdessä.  
+ Järjestelmänvalvoja voi ottaa tekstianalyysi-toiminnon käyttöön kohdassa **Asetusten** > **hallinnan** > **järjestelmäasetusten**  >  **esikatselu** -välilehdellä [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] organisaatiossa.  
   
- Kun sinulla on Tekstianalyysi-ominaisuus käytössä ja määrität tekstianalyysipohjaisia tietoehdotuksia [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]:ssä, palvelupyyntö ja sen liittyvien entiteettien tiedot lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan avainsanojen ja ilmausten purkamista varten. Mitään tietoja ei tallenneta [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan. Vain tietopankin artikkelin määrityksessä määritetyt kentät lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan termien purkamista varten. Järjestelmänvalvoja tai mukauttaja voi poistaa tietopankin artikkelin määrityksen aktivoinnin, jolloin API-kutsut [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan lopetetaan. Mukauttaja voi myös lopettaa tekstianalyysiin perustuvien ehdotuksien käytön ottamalla Kenttään perustuvat ehdotukset -asetuksen käyttöön palvelupyyntöentiteetin lomakkeen määrityksissä.  
+ Ottamalla tekstianalyysi-toiminnon käyttöön, kun määrität tekstianalyysipohjaisia tietämysehdotuksia[!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], palvelupyyntö ja siihen liittyvä entiteettidata lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan poimimaan avainsanoja tai lauseita. Mitään tietoja ei tallenneta [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapinnan avulla. Vain määritetyt kentät tietoartikkelin määrityksissä lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan poimimaan ehdot. Järjestelmänvalvoja tai mukauttaja voi deaktivoida tietoartikkelin määrityksen ja lopettaa ohjelmointirajapinnan kutsut [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan. Myös mukauttajat voivat poistaa tekstianalyysipohjaiset ehdotukset siirtymällä takaisin kenttään perustuviin ehdotuksiin Palvelupyynnön entiteettilomake -määrityksessä.  
   
- Kun sinulla on Tekstianalyysi-ominaisuus käytössä ja määrität palvelupyynnön aiheen analyysin [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]:ssä, palvelupyyntö ja sen liittyvien entiteettien tiedot lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan aiheen määritystä varten. Mitään tietoja ei tallenneta [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan. Vain aiheen mallin määrityksiin määritetyt kentät lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan aiheiden purkamista varten. Järjestelmänvalvoja tai mukauttaja voi poistaa aiheen mallin aktivoinnin, jolloin [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapinnan kutsut lopetetaan.  
+ Ottamalla tekstianalyysi-toiminnon käyttöön kun määrität palvelupyyntöanalyysia[!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], palvelupyyntö ja siihen liittyvä entiteettidata lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan aiheen määrittämiseksi. Mitään tietoja ei tallenneta [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapinnan avulla. Vain määritetyt kentät aiheen mallin määrityksissä lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan poimimaan aiheet. Järjestelmänvalvoja tai mukauttaja voi deaktivoida aiheen mallin lopettaaksesi kutsut [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan.  
   
- Kun sinulla on Tekstianalyysi-ominaisuus käytössä ja määrität samanlaisten palvelupyyntöjen ehdotuksia [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)]:ssä, palvelupyyntö ja sen liittyvien entiteettien tiedot lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan avainsanojen ja ilmausten purkamista varten, jos Samanlaisuussääntö-kohdassa on otettu käyttöön Kehittynyt tekstianalyysi -valinta. Vain tekstikentät, jotka on määritetty samanlaisuussäännössä, lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan. Mitään tietoja ei tallenneta [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan. Järjestelmänvalvoja tai mukauttaja voi poistaa samanlaisuussäännön aktivoinnin, jolloin [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapinnan kutsut lopetetaan.  
+ Ottamalla tekstianalyysi-ominaisuuden käyttöön kun määrität samanlaisia palvelupyyntöehdotuksia [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)], edistynyt tekstianalyysi -valinta on käytössä samanlaisuussäännössä, ja palvelupyyntö sekä siihen liittyvä entiteettidata lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan poimimaan avainsanoja tai lauseita. Vain samanlaisuussäännössä määritetyt tekstikentät lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan. Mitään tietoja ei tallenneta [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapinnan avulla. Järjestelmänvalvoja tai mukauttaja voi deaktivoida samanlaisuussäännön lopettaaksesi kutsut [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin ohjelmointirajapintaan.  
   
- Seuraavissa osissa esitellään Tekstianalyysi-ominaisuuteen perustuvat [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponentit ja -palvelut.  
+ Seuraavissa osioissa esitellään tietojen vientipalveluun liittyvät [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponentit ja -palvelut, jotka liittyvät tekstianalyysipohjaisiin ominaisuuksiin.  
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
  [Azure API -sovellus](https://azure.microsoft.com/services/app-service/api/)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API käynnistää verkkotöitä, jotka lukevat tietoja [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] -organisaatiosta ja lähettävät ne tekstianalyysin ohjelmointirajapintaan aiheanalyysia varten. [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API -sovellus käyttää verkkotöitä varsinaiseen tietojen käsittelyyn taustalla, ja se kirjoittaa tulostiedot [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob -tallennustilaan. Tiedot tallennetaan [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob -tallennustilaan väliaikaisesti. Aiheen määrittämisen jälkeen tiedot poistetaan [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tallennustilasta.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Ohjelmointirajapintasovellus käynnistää verkkoyöt, jotka lukevat tietoja [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] organisaatiosta ja lähettävät tietoja Tekstianalyysin ohjelmointirajapintaan aiheiden analyysia varten. [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API-sovellus käyttää verkkotyötä tekemään todellista tietojenkäsittelyä taustalla ja kirjoittamaan datatulosteita [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob-säilöön. Tiedot tallennetaan väliaikaisesti tähän [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob-säilöön. Lopuksi tiedot poistetaan [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] säiliöstä, kun aiheen määritys on tehty.  
   
- [Azuren aikataulutus](https://azure.microsoft.com/services/storage/)  
+ [Azure-ajoitustoiminto](https://azure.microsoft.com/services/storage/)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n aikataulutusta käytetään käynnistämään verkkotyö ajoitetusti aiheanalyysin suorittamiseksi. Vain aiheen mallin luontiaikataulu jaetaan aikataulutuksen kanssa.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Ajoitusta käytetään käynnistämään verkkotyö ajastetusti aiheen analyysin suorittamiseksi. Vain aiheen malliin rakennettu aikataulu jaetaan ajoitustoiminnon kanssa.  
   
- [Azure-taulukko](https://azure.microsoft.com/services/storage/)  
+ [Azuren taulukot](https://azure.microsoft.com/services/storage/)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-taulukkoa käytetään malliversion ja organisaation kontekstin tietojen vaihtamiseen [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] API -sovelluksen ja verkkotyön välillä.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Taulukkoa käytetään mallin versio ja organisaation konteksti välisessä kommunikaatiossa [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] ohjelmointirajapintasovelluksen ja verkkotyön välillä.  
   
- [Azure Blob -säilö](https://azure.microsoft.com/services/storage/)  
+ [Azure Blob -säiliö](https://azure.microsoft.com/services/storage/)  
   
- Verkkotyöt tallentavat tiedot väliaikaisesti [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob -säilöön ja poistavat tiedot, kun Logic-sovelluksen putken suoritus on valmis.  
+ Verkkotyöt tallennetaan tilapäisesti [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Blob-säilöön ja poistetaan, kun Logic App -putki on käsitelty.  
   
- [Azuren tekstianalyysin ohjelmointirajapinta](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api)  
+ [Azure-tekstianalyysin API](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api)  
   
- [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]n tekstianalyysin ohjelmointirajapintaan lähetetään tietoja tietohaun, aihemallin tai samanlaisuussäännön määrityksien kenttien perusteella. Esimerkiksi Tietohaun kenttä -määrityksissä on määritetty palvelupyyntöentiteettikentät, kuten otsikko, kuvaus sekä liittyvien muistiinpanojen ja aktiviteettien kuvauskenttä.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] Tekstianalyysin API:lle lähetetään tiedot, jotka on määritetty aktiivisissa tietohakukentissä tai aiheen mallin määrityksissä tai samanlaisuussäännön määrityksissä. Esimerkiksi palvelupyyntöjen entiteettikentät, kuten otsikko ja kuvaus sekä niihin liittyvien huomautusten ja toimintojen kuvauskentät on määritetty tietojen hakukentän määrityksissä.  
   
- [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] -osuvuushaku  
+ [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]Osuvuushaku  
   
- Jos järjestelmänvalvojasi on ottanut osuvuushaun käyttöön, voit etsiä sen avulla palvelupyynnön kanssa samanlaisia tietueita. Samanlaisuussäännössä käytettyjä tekstiosuvuuskenttiä ja tarkkojen osumien kenttiä käytetään käynnistämään osuvuushaun ohjelmointirajapinta. Tietojen käsittelystä saat tarkempia tietoja [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] -osuvuushaun teknisistä ohjeista.
+ Voit käyttää Osuvuushakua, jos järjestelmänvalvoja on ottanut sen käyttöön, ja käyttää sitä samankaltaisia tietueiden etsimiseen. Tekstiä vastaavat kentät ja tarkka vastaavuus -kenttä, joita käytetään samanlaisuussäännössä, käytetään Osuvuushaun ohjelmointirajapinnan käynnistämiseen. Lue [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] Osuvuushaku tietojen käsittelyssä.

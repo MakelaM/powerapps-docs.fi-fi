@@ -1,11 +1,19 @@
-Kun suhdeavustajatoiminto otetaan käyttöön, noudetaan rajoitetut Exchange-tiedot, esimerkiksi lähettäjän nimi ja sähköpostiosoite sekä sähköpostiviestin tekstin otteet sähköpostin tärkeiden tietojen näyttämistä varten. Tietoja ei tallenneta [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:ään. Lisäksi suhdeavustajan voi määrittää hakemaan uutisia, taloustietoja ja lentotietoja lähettämällä pyyntöjä ulkoisille komponenteille, kuten MSN Talous ja Bing (jotka eivät ole [!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] -ydinpalveluja). Järjestelmänvalvoja voi ottaa suhdeavustajatoiminnon käyttöön ja poistaa sen käytöstä siirtymällä kohtaan **Asetukset** > **Älykkään toiminnon määritykset**, valitsemalla **Suhdeavustaja**-välilehden ja tekemällä soveltuvat valinnat.  
+---
+ms.openlocfilehash: 40dcde544894751da2696defc76819892659cb25
+ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.translationtype: HT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61571892"
+---
+Kun otat käyttöön suhdeavustajaominaisuuden, joitakin käyttötietoja, kuten lähettäjän nimi ja sähköpostiosoite sekä otteita sähköpostiviestin sisällöstä, noudetaan (mutta ei tallenneta kohteeseen [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]) sähköpostisi asianmukaisten tietojen näyttämiseksi. Lisäksi suhdeavustajaominaisuus voidaan määrittää noutamaan tietoja, jotka liittyvät uutisiin, talouteen ja lentotietoihin, lähettämällä pyyntöjä ulkoisiin osiin, kuten MSN Talous -sovellukseen ja Bingiin (jotka eivät ole [!INCLUDE[pn_ms_dyn_365](pn-ms-dyn-365.md)] Core -palveluita). Järjestelmänvalvoja voi ottaa käyttöön ja poistaa käytöstä suhdeavustajaominaisuuden siirtymällä kohtaan **Asetukset** > **Intelligence-asetukset** ja tekemällä **Suhdeavustaja**-välilehdellä asianmukaiset valinnat.  
   
- Seuraavissa osissa kerrotaan suhdeavustajatoimintoon liittyvien ulkoisten komponenttien yksityiskohtaiset tiedot.  
+ Suhdeavustajaominaisuuteen liittyvät ulkoiset osat on eritelty tarkemmin seuraavissa osioissa.  
   
  **[!INCLUDE[pn_bing](pn-bing.md)]**  
   
- Suhdeavustaja käyttää [!INCLUDE[pn_bing](pn-bing.md)] -ohjelmaa hakiessaan asiaankuuluvia uutisia, jotka näytetään käyttäjille kyseisten käyttäjien[!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:n tietojen tilien nimien perusteella.  
+ Suhdeavustaja etsii käyttäjälle sopivia uutisia [!INCLUDE[pn_bing](pn-bing.md)]-palvelusta käyttämällä käyttäjän [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] tietojen tilinimiä.  
   
  **[!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)]**  
   
- Suhdeavustaja näyttää [!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)] -sovelluksen avulla käyttäjälle asiaankuuluvat osaketiedot käyttämällä kyseisen käyttäjän [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:n tietojen tilin kaupankäyntitunnusta.
+ Suhdeavustaja etsii käyttäjälle sopivia taloustietoja [!INCLUDE[pn_ms_MSN_Money](pn-ms-msn-money.md)]-palvelusta käyttämällä käyttäjän [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] tietojen tilin kaupankäyntitunnusta.

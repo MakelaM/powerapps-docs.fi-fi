@@ -11,23 +11,18 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 045a395b-4475-48dd-8f67-6bc2b33cd89c
-ms.openlocfilehash: 7cf5f46fedc5708f4e2f30dc30140b8a8d9f3529
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 88e9d35792d86e279b9af4a19eaff288643412ca
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63393850"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "64524317"
 ---
 # <a name="manifest-schema-reference"></a>Luettelotiedoston rakenteen tietoja
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Tässä osassa on tietoja luettelotiedoston rakenteesta, joka luodaan PowerApps-komentorivikäyttöliittymän (CLI) avulla.
-
-> [!IMPORTANT]
-> - PowerApps-komponenttikehys on esikatselutoiminto.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
 
 |Elementti|Kuvaus|
 |----|-----------|
