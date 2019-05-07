@@ -8,23 +8,18 @@ ms.assetid: ''
 author: nkrb
 ms.author: nabuthuk
 manager: Jdaly
-ms.openlocfilehash: 8351f48019635dd0a6ec9921d8888d8ca4b77f80
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 4e84956807b91e535e709aa2e0739fdf121bc2f7
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63394379"
+ms.lasthandoff: 04/26/2019
+ms.locfileid: "64524282"
 ---
 # <a name="powerapps-component-framework-api-reference"></a>PowerApps-osakehyksen API-tietoja
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Tässä osassa on viitetietoja mukautettujen ohjausobjektien luomisesta PowerApps-osakehyksen avulla.
-
-> [!IMPORTANT]
-> - PowerApps-osakehys on esikatselutoiminto.
-> - [!INCLUDE[cc_preview_features_definition](../../../includes/cc-preview-features-definition.md)] 
-> - [!INCLUDE[cc_preview_features_no_MS_support](../../../includes/cc-preview-features-no-ms-support.md)]
+Tämä osio sisältää viitetiedot mukautettujen osien luomiseen PowerApps-osakehyksen avulla.
 
 |Nimi|Kuvaus|
 |----|-----------|
