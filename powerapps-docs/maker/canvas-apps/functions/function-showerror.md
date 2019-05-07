@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61519721"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="notify-function-in-powerapps"></a>PowerAppsin Ilmoita-funktio
 Näyttää ilmoitussanoman käyttäjälle.
@@ -48,7 +49,7 @@ PowerApps voi lähettää myös palveluilmoituksia käyttämällä täysin **Not
 Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError** kun se pystyi näyttämään vain virhesanomia.
 
 ## <a name="syntax"></a>Syntaksi
-**Notify**( *Message*, [ *NotificationType* ] )
+**Notify**( *Message*; [ *NotificationType* ] )
 
 * *Message* – Pakollinen.  Sanoma, joka näytetään käyttäjälle.
 * *NotificationType* – Valinnainen.  Näytettävän sanoman tyyppi edellä olevasta taulukosta.  Oletus on **NotificationType.Information**.  
@@ -71,7 +72,7 @@ Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError** kun se pystyi n�
 
 4. Muuta sanoman tyyppi ilmoittamaan virheestä.  Lisää toinen argumentti kaavaan:
 
-    **Notify( ”Hei maailma”, NotificationType.Error )**
+    **Notify( ”Hei maailma”; NotificationType.Error )**
 
 5. Napsauta tai paina painiketta.
 
@@ -81,7 +82,7 @@ Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError** kun se pystyi n�
 
 4. Muuta sanoman tyyppi antamaan varoituksen.  Muuta toista argumenttia kaavassa:
 
-    **Notify( ”Hei maailma”, NotificationType.Warning )**
+    **Notify( ”Hei maailma”; NotificationType.Warning )**
 
 5. Napsauta tai paina painiketta.
 
@@ -91,7 +92,7 @@ Huomautus: Tämä funktio oli aiemmin nimeltään **ShowError** kun se pystyi n�
 
 4. Muuta sanoman tyyppi ilmoittamaan onnistumisesta.  Muuta toista argumenttia kaavassa:
 
-    **Notify( ”Hei maailma”, NotificationType.Success )**
+    **Notify( ”Hei maailma”; NotificationType.Success )**
 
 5. Napsauta tai paina painiketta.
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563074"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="language-function-in-powerapps"></a>PowerAppsin Kieli-funktio
 Palauttaa nykyisen käyttäjän kielitunnisteen.
@@ -39,7 +40,7 @@ Kielitietojen avulla voit tehdä sovelluksestasi paikallisen version.  Jos esime
 
 PowerApps käyttää kielitunnisteen muotoa [IETF BCP-47 ](https://tools.ietf.org/html/bcp47).  
 
-Voit tarkastella tuettujen kielitunnisteiden luetteloa kirjoittamalla kaavariville tai lisänäkymään **Value( "1", )** ja selaamalla toiselle argumentille ehdotettuja kielialueita.  
+Voit tarkastella tuettujen kielitunnisteiden luetteloa kirjoittamalla kaavariville tai lisänäkymään **Value( "1"; )** ja selaamalla toiselle argumentille ehdotettuja kielialueita.  
 
 Myös **[Teksti](function-text.md)**- ja **[Arvo](function-value.md)**-funktiot käyttävät kielen tunnisteita.  Näiden funktioiden avulla voit kääntää merkkijonoja globaalisti toimivalla tavalla.  Kun välität näihin funktioihin kielitunnisteen, mutta alueella ei ole merkitystä, voit käyttää tunnisteen pelkkää kieliosaa.
 
@@ -79,7 +80,7 @@ kokoelmaa tai mitä tahansa muuta tietolähdettä, mutta valitsimme Excelin, kos
 
 Siirry siihen sovelluksen kohtaan, jossa olisit aiemmin käyttänyt tekstiä **"Hello"**, ja käytä sen sijaan tätä kaavaa:
 
-* **LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
+* **LookUp( Table1; TextID = "Hello" && (LanguageTag = Left( Language(); 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
 Tämä kaava hakee sopivan **LocalizedText**-arvon, joka on käännetty käyttäjän kielelle. Jos lokalisoitua arvoa ei löydy, kaava ottaa käyttöön oletusmuotoisen *tyhjän* version. 
 
@@ -93,7 +94,7 @@ Voit kääntää tekstiä tarpeen mukaan käyttämällä käännöspalvelua, kut
 
 Siirry siihen sovelluksen kohtaan, jossa olisit aiemmin käyttänyt tekstiä **”Hello”**, ja käytä sen sijaan tätä kaavaa:
 
-* **MicrosoftTranslator.Translate( "Hello", Language() )**
+* **MicrosoftTranslator.Translate( "Hello"; Language() )**
 
 Microsoft Translator-palvelu käyttää samoja kielitunnisteita, jotka **Kieli**-funktio palauttaa.
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61547273"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-dynamics-365-from-powerapps"></a>Yhdistä Dynamics 365:een PowerAppsista
 PowerAppsin avulla voit nopeasti luoda, mukauttaa, jakaa ja suorittaa mobiilisovelluksia käyttäen vain vähän tai ei lainkaan koodia. Dynamics 365 -liittimen avulla voit luoda hyödyllisiä mobiilisovelluksia organisaatiollesi jaettaviksi vain muutamassa minuutissa.
@@ -81,7 +82,7 @@ Tässä toimenpiteessä määrität **BrowseScreen1**:n näyttämään jokaisen 
     ![Asettelun valitseminen](./media/connection-dynamics-crmonline/select-layout.png)
 4. Kopioi tämä kaava ja liitä se valikoiman ollessa edelleen valittuna kaavariville (**fx**-painikkeen oikealle puolelle):
    
-    `SortByColumns(Search(Filter(Contacts,statuscode=1), TextSearchBox1.Text, "lastname"), "lastname", If(SortDescending1, Descending, Ascending))`
+    `SortByColumns(Search(Filter(Contacts;statuscode=1); TextSearchBox1.Text; "lastname"); "lastname"; If(SortDescending1; Descending; Ascending))`
 5. Valitse oikeanpuoleisessa ruudussa yläreunan avattavan luettelon kohta **firstname** ja keskimmäisen avattavan luettelon kohta **lastname**.
    
     ![Valitse Body1](./media/connection-dynamics-crmonline/firstname-lastname.png)

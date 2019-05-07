@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548704"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="label-control-in-canvas-apps"></a>Selite-ohjausobjekti pohjaan perustuvat sovellukset
 
@@ -130,7 +131,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 
-[**Text**( *Number*, "*FormatCodes*" )](../functions/function-text.md)
+[**Text**( *Number*; "*FormatCodes*" )](../functions/function-text.md)
 
 ## <a name="examples"></a>Esimerkkejä
 
@@ -155,7 +156,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 Tässä toimenpiteessä luot kokoelman, jonka nimi on **KaupunkienVäkiluvut**. Se sisältää tietoja Euroopan kaupunkien väkiluvuista. Seuraavaksi näytät tiedot kolme selitettä sisältävässä valikoimassa ja määrität, minkä tyyppistä tietoa kukin selite näyttää.
 
 1. Lisää painike ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-   **ClearCollect(KaupunkienVäkiluvut, {Kaupunki:"Lontoo", Maa:"Yhdistynyt kuningaskunta", Väkiluku:8615000}, {Kaupunki:"Berliini", Maa:"Saksa", Väkiluku:3562000}, {Kaupunki:"Madrid", Maa:"Espanja", Väkiluku:3165000}, {Kaupunki:"Rooma", Maa:"Italia", Väkiluku:2874000}, {Kaupunki:"Pariisi", Maa:"Ranska", Väkiluku:2273000}, {Kaupunki:"Hampuri", Maa:"Saksa", Väkiluku:1760000}, {Maa:"Barcelona", Maa:"Espanja", Väkiluku:1602000}, {Kaupunki:"München", Maa:"Saksa", Väkiluku:1494000}, {Kaupunki:"Milano", Maa:"Italia", Väkiluku:1344000})**
+   **ClearCollect(KaupunkienVäkiluvut; {Kaupunki:"Lontoo"; Maa:"Yhdistynyt kuningaskunta"; Väkiluku:8615000}; {Kaupunki:"Berliini"; Maa:"Saksa"; Väkiluku:3562000}; {Kaupunki:"Madrid"; Maa:"Espanja"; Väkiluku:3165000}; {Kaupunki:"Rooma"; Maa:"Italia"; Väkiluku:2874000}; {Kaupunki:"Pariisi"; Maa:"Ranska"; Väkiluku:2273000}; {Kaupunki:"Hampuri"; Maa:"Saksa"; Väkiluku:1760000}; {Maa:"Barcelona"; Maa:"Espanja"; Väkiluku:1602000}; {Kaupunki:"München"; Maa:"Saksa"; Väkiluku:1494000}; {Kaupunki:"Milano"; Maa:"Italia"; Väkiluku:1344000})**
 2. Paina F5-painiketta, valitse painike ja paina sitten ESC-näppäintä.
 3. Lisää tekstivalikoima ja määritä sen **[Kohteet](properties-core.md)**-ominaisuuden arvoksi **KaupunkienVäkiluvut**.
 

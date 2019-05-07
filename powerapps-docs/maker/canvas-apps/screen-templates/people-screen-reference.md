@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61540691"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-people-screen-template-for-canvas-apps"></a>Lisätietoja pohjaan perustuvat sovellukset käyttäjät-näytön-malli
 
@@ -50,11 +51,11 @@ Muutamia muita ohjausobjekteja toimia, tai se on riippuvuus teksti-hakuruudun:
 * Ominaisuus: **Kohteet**<br>
     Arvo: Voit hakea käyttäjille, kun käyttäjä aloittaa kirjoittamisen Logic:
     
-    ```powerapps-dot
-    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
+    ```powerapps-comma
+    If( !IsBlank( Trim( TextSearchBox.Text ) ); 
         'Office365Users'.SearchUser(
             {
-                searchTerm: Trim( TextSearchBox.Text ), 
+                searchTerm: Trim( TextSearchBox.Text ); 
                 top: 15
             }
         )
@@ -76,12 +77,12 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **OnSelect**<br>
     Arvo: Voit lisätä käyttäjän sovelluksen tason kokoelmaan Code ja valitse sitten käyttäjä:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Set( _selectedUser, ThisItem ),
-        Reset( TextSearchBox ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-            Collect( MyPeople, ThisItem )
+        Set( _selectedUser; ThisItem );
+        Reset( TextSearchBox );
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
+            Collect( MyPeople; ThisItem )
         )
     )
     ```
@@ -98,9 +99,9 @@ Valitsemalla tämän ohjausobjektin tekee kolmesta samanaikaisesti:
 * Ominaisuus: **Kuva**<br>
     Arvo: Noutaa käyttäjäprofiilin valokuva logiikka.
 
-    ```powerapps-dot
+    ```powerapps-comma
     If( !IsBlank( ThisItem.Id ) && 
-            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
+            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto;
         'Office365Users'.UserPhoto( ThisItem.Id )
     )
     ```
@@ -126,7 +127,7 @@ Tämä on alustettu tai valitsemalla lisätään kokoelma **UserBrowseGallery ot
 ![PeopleAddedGallery otsikko-ohjausobjekti](media/people-screen/people-people-gall-title.png)
 
 * Ominaisuus: **OnSelect**<br>
-    Arvo: `Set( _selectedUser, ThisItem )`
+    Arvo: `Set( _selectedUser; ThisItem )`
 
 Määrittää **_selectedUser** muuttujan valitun kohteen **EmailPeopleGallery**.
 
@@ -135,7 +136,7 @@ Määrittää **_selectedUser** muuttujan valitun kohteen **EmailPeopleGallery**
 ![PeopleAddedGallery iconRemove ohjausobjekti](media/people-screen/people-people-gall-delete.png)
 
 * Ominaisuus: **OnSelect**<br>
-    Arvo: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
+    Arvo: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
 Etsii tietueen **MyPeople** kokoelma, jossa **UserPrincipalName** vastaa **UserPrincipalName** valitun kohteen ja sitten poistaa, tietue kokoelma.
 

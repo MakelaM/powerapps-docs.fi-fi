@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551127"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="errors-function-in-powerapps"></a>PowerAppsin Virheet-funktio
 Antaa [tietolähteen](../working-with-data-sources.md) edellisiin muutoksiin liittyviä virhetietoja.
@@ -61,7 +62,7 @@ Virheitä voidaan palauttaa koko tietolähteestä tai vain valitusta rivistä an
 Jos virheitä ei ole, taulukko, jonka **Errors** palauttaa, on [tyhjä](function-isblank-isempty.md) ja sitä voidaan testata **[IsEmpty](function-isblank-isempty.md)**-funktiolla.
 
 ## <a name="syntax"></a>Syntaksi
-**Errors**( *DataSource* [, *Record* ] )
+**Errors**( *DataSource* [; *Record* ] )
 
 * *DataSource* – Pakollinen. Tietolähde, jolle haluat palauttaa virheitä.
 * *Record* – Valinnainen.  Tietty tietue, jolle haluat palauttaa virheitä. Jos et määritä tätä argumenttia, funktio palauttaa virheitä koko tietolähteelle.
@@ -74,17 +75,17 @@ Tässä esimerkissä käytämme **IceCream**-tietolähdettä:
 
 Sovelluksessa käyttäjä lataa Chocolate-tietueen tietolomakkeeseen ja muuttaa sitten **Quantity**-arvoksi luvun 90.  Työstettävä tietue sijoitetaan [kontekstimuuttujaan](../working-with-variables.md#use-a-context-variable)**EditRecord**:
 
-* **UpdateContext ({EditRecord: Ensimmäinen (Filter (IceCream, Flavor = ”suklaa”))})**
+* **UpdateContext ({EditRecord: Ensimmäinen (Filter (IceCream; Flavor = ”suklaa”))})**
 
 Tämä muutos tehdään tietolähteeseen **[Patch](function-patch.md)**-funktiolla:
 
-* **Patch( IceCream, EditRecord, Gallery.Updates )**
+* **Patch( IceCream; EditRecord; Gallery.Updates )**
 
 Jos **Gallery.Updates** antaa tulokseksi **{määrä: 90}**, koska vain **määrä** ominaisuutta on muokattu.
 
 Valitettavasti, juuri ennen kuin **[Patch](function-patch.md)**-funktio käynnistettiin, joku muu muutti Chocolate-tietueen **Quantity**-arvoksi luvun 80.  PowerApps tunnistaa tämän eikä salli ristiriitaista muutosta.  Voit tarkistaa tällaisen tilanteen seuraavalla kaavalla:
 
-* **IsEmpty( Errors( IceCream, EditRecord ) )**
+* **IsEmpty( Errors( IceCream; EditRecord ) )**
 
 joka palauttaa **epätoden**, koska **Errors**-funktio palautti seuraavan taulukon:
 
@@ -95,12 +96,12 @@ joka palauttaa **epätoden**, koska **Errors**-funktio palautti seuraavan tauluk
 Voit sijoittaa lomakkeeseen selitteen, joka näyttää tämän virheen käyttäjälle.
 
 * Näytä virhe määrittämällä selitteen **[Teksti](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-  **Label.Text = First(Errors( IceCream, EditRecord )).Message**
+  **Label.Text = First(Errors( IceCream; EditRecord )).Message**
 
 Voit myös lisätä **Lataa uudelleen** -painikkeen lomakkeeseen, jotta käyttäjä voi ratkaista ristiriidan tehokkaasti.
 
 * Näytä painike vain, kun ristiriita on esiintynyt, määrittämällä painikkeen **[Visible](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-    **!IsEmpty( Lookup( Errors( IceCream, EditRecord ), Error = ErrorKind.Conflict ) )**
+    **!IsEmpty( Lookup( Errors( IceCream; EditRecord ); Error = ErrorKind.Conflict ) )**
 * Kumoa muutos, kun käyttäjä valitsee painikkeen, määrittämällä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-    **ReloadButton.OnSelect = Revert( IceCream, EditRecord )**
+    **ReloadButton.OnSelect = Revert( IceCream; EditRecord )**
 

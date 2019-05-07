@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318119"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
 PowerApps sisältää tehokkaita toimintoja, joilla suodatusta, lajittelemiseen ja muotoilemiseen taulukoiden pohjaan perustuvan sovelluksen tiedot: **[Suodattimen](functions/function-filter-lookup.md)**,  **[Lajittele](functions/function-sort.md)**, ja **[AddColumns](functions/function-table-shaping.md)** joitakin funktioita. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
@@ -62,7 +63,7 @@ Nämä luettelot muuttuvat ajan myötä. Pyrimme tukemaan delegoinnilla useampia
 * **[StartsWith](functions/function-startswith.md)**,  **[EndsWith](functions/function-startswith.md)**
 * Vakioarvot, jotka ovat samat kaikissa tietueissa, kuten ohjausobjektien ominaisuudet ja [yleiset ja kontekstimuuttujat](working-with-variables.md).
 
-Voit käyttää myös kaavan osia, jotka antavat tulokseksi vakioarvon kaikille tietueille. Esimerkiksi **Left (Language(), 2)**, **päivämäärä (2019, 3, 31)**, ja **Today()** ei ole riippuvainen tietueen mistään sarakkeista ja siksi palautetaan saman arvon kaikille tietueille. Nämä arvot voidaan lähettää tietolähteeseen vakiona, ja se ei estä delegointia. 
+Voit käyttää myös kaavan osia, jotka antavat tulokseksi vakioarvon kaikille tietueille. Esimerkiksi **Left (Language(); 2)**, **päivämäärä (2019, 3, 31)**, ja **Today()** ei ole riippuvainen tietueen mistään sarakkeista ja siksi palautetaan saman arvon kaikille tietueille. Nämä arvot voidaan lähettää tietolähteeseen vakiona, ja se ei estä delegointia. 
 
 Edellinen luettelo ei sisällä näitä huomattavia kohteita:
 
@@ -93,10 +94,10 @@ Muita koostefunktioita, kuten **[StdevP](functions/function-aggregates.md)** ja 
 
 Kuten tässä esimerkissä käyttäjät voivat käyttää usein **AddColumns** ja **LookUp** yhdistämiseen yhdestä taulukosta toiseen, kutsutaan yleisesti tietokantojen yhdistämiseksi liitoksen:
 
-```powerapps-dot
-AddColumns( Products, 
-    "Supplier Name", 
-    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+```powerapps-comma
+AddColumns( Products; 
+    "Supplier Name"; 
+    LookUp( Suppliers; Suppliers.ID = Product.SupplierID ).Name 
 )
 ```
 

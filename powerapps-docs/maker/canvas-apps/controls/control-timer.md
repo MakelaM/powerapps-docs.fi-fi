@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61560463"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -125,7 +126,7 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 2. Määritä ajastimen **Kesto**-ominaisuudeksi **10000** sekä **Toista**- ja **Autostart**-ominaisuudet tilaan **true**.
 3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)**-ominaisuudeksi **160**, **[Leveys](properties-size-location.md)**-ominaisuudeksi **600** ja **[Koko](properties-text.md)**-ominaisuudeksi **60**.
 4. Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
+   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000; 0)**
 
     Haluatko lisätietoja **[RoundUp](../functions/function-round.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 
@@ -138,7 +139,7 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 2. Määritä ajastimen **Kesto**-ominaisuuden arvoksi **5 000**, **Toista**-ominaisuuden arvoksi **tosi** ja **[Teksti](properties-core.md)**-ominaisuuden arvoksi **Toggle animation** (Vaihda animaatio).
 3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)**-ominaisuudeksi **160**, **[Leveys](properties-size-location.md)**-ominaisuudeksi **600** ja **[Koko](properties-text.md)**-ominaisuudeksi **60**.
 4. Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuus näyttämään **Welcome!** ja määritä sen **[Väri](properties-color-border.md)**-ominaisuudeksi tämä kaava:
-   <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
+   <br>**ColorFade(Color.BlueViolet; FadeIn.Value/5000)**
 
     Haluatko lisätietoja **[ColorFade](../functions/function-colors.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 

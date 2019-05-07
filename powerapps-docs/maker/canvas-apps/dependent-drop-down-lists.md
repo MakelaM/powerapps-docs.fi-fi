@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61550694"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Luo pohjaan perustuva sovellus riippuvaiset avattavia luetteloita
 
@@ -138,7 +139,7 @@ Jos nimeät ohjausobjektit, voi määrittää entistä helpommin ja esimerkit on
 
 1. Määritä **kohteet** ominaisuuden **ddlocation** tämä kaava:
 
-    `Distinct(Locations, Location)`
+    `Distinct(Locations; Location)`
 
 1. (valinnainen) Kun pidät alhaalla Alt-näppäintä, Avaa **ddLocation**, ja varmista, että luettelossa on kolme sijainteja.
 
@@ -158,7 +159,7 @@ Jos nimeät ohjausobjektit, voi määrittää entistä helpommin ja esimerkit on
 
     **Kohteet** ominaisuuden **ddDepartment** on asetettu tämä kaava:
 
-    `Filter(Locations, Location = ddLocation.Selected.Result)`
+    `Filter(Locations; Location = ddLocation.Selected.Result)`
 
     Tämä kaava suodattaa kohteet **ddDepartment** perusteella käyttäjä valitsee- **ddLocation**. Kokoonpanossa varmistaa, että osastojen ”lapsi”-luettelo päivittyy ”ylätasoksi” sen sijainnin tiedot kuin **sijaintien** luettelo SharePointissa määrittää.
 

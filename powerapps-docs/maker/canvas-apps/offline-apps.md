@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61538317"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="develop-offline-capable-canvas-apps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia
 
@@ -82,15 +83,15 @@ Ylätasolla sovellus tekee seuraavaa:
 ### <a name="step-3-load-tweets-into-a-localtweets-collection-on-app-startup"></a>Vaihe 3: Twiittien LocalTweets-kokoelmaan sovelluksen käynnistyksen yhteydessä
 Valitse **OnVisible**-ominaisuus **Screen1**:lle sovelluksessa ja kopioi siihen seuraava kaava:
 
-```powerapps-dot
-If( Connection.Connected,
-    ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-        UpdateContext( {statusText: "Online data"} ),
-    LoadData(LocalTweets, "Tweets", true);
+```powerapps-comma
+If( Connection.Connected;
+    ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 100} ) );;
+        UpdateContext( {statusText: "Online data"} );
+    LoadData(LocalTweets; "Tweets"; true);;
         UpdateContext( {statusText: "Local data"} )
-);
-LoadData( LocalTweetsToPost, "LocalTweets", true );
-SaveData( LocalTweets, "Tweets" )
+);;
+LoadData( LocalTweetsToPost; "LocalTweets"; true );;
+SaveData( LocalTweets; "Tweets" )
 ```
 
 ![Kaava twiittien lataamista varten](./media/offline-apps/load-tweets.png)
@@ -110,13 +111,13 @@ Tämä kaava tarkistaa, onko laite online-tilassa:
    * **ThisItem.TweetText**
    * **ThisItem.UserDetails.FullName & " \@" & ThisItem.UserDetails.UserName**
    * **"RT: " & ThisItem.RetweetCount**
-   * **Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)**
+   * **Text(DateTimeValue(ThisItem.CreatedAtIso); DateTimeFormat.ShortDateTime)**
 4. Lisää **Image**-ohjausobjekti ja määritä **Image**-ominaisuuden arvoksi **ThisItem.UserDetails.ProfileImageUrl**.
 
 ### <a name="step-5-add-a-connection-status-label"></a>Vaihe 5: Lisää yhteyden tilan selite
 Lisää uusi **Selite**-ohjausobjekti ja määritä sen **Text**-ominaisuudeksi seuraava kaava:
 
-```If( Connection.Connected, "Connected", "Offline" )```
+```If( Connection.Connected; "Connected"; "Offline" )```
 
 Tämä kaava tarkistaa, onko laite online-tilassa. Jos näin on, selitteen tekstinä on ”Yhdistetty”, muussa tapauksessa se on ”Offline”.
 
@@ -130,13 +131,13 @@ Tämä kaava tarkistaa, onko laite online-tilassa. Jos näin on, selitteen tekst
 1. Lisää **Button**-ohjausobjekti ja aseta sen **Text**-ominaisuudeksi ”Tweet”.
 2. Määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
-    );
-    UpdateContext( {resetNewTweet: true} );
+    ```powerapps-comma
+    If( Connection.Connected;
+        Twitter.Tweet( ""; {tweetText: NewTweetTextInput.Text} );
+        Collect( LocalTweetsToPost; {tweetText: NewTweetTextInput.Text} );;
+            SaveData( LocalTweetsToPost; "LocalTweetsToPost" )
+    );;
+    UpdateContext( {resetNewTweet: true} );;
     UpdateContext( {resetNewTweet: false} )
     ```  
 
@@ -156,12 +157,12 @@ Lisää uusi **Timer**-ohjausobjekti:
 
 * Määritä **OnTimerEnd**in arvoksi seuraava kaava:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost);
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-        SaveData( LocalTweetsToPost, "LocalTweetsToPost" );
+    ```powerapps-comma
+    If( Connection.Connected;
+        ForAll( LocalTweetsToPost; Twitter.Tweet( ""; {tweetText: tweetText} ) );;
+        Clear( LocalTweetsToPost);;
+        Collect( LocalTweetsToPost; {tweetText: NewTweetTextInput.Text} );;
+        SaveData( LocalTweetsToPost; "LocalTweetsToPost" );;
         UpdateContext( {statusText: "Online data"} )
     )
     ```

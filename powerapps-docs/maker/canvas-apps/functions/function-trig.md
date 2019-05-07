@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61519892"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="acos-acot-asin-atan-atan2-cos-cot-degrees-pi-radians-sin-and-tan-functions-in-powerapps"></a>Acos-, Acot-, Asin-, Atan-, Atan2-, Cos-, Cot-, Degrees-, Pi-, Radians-, Sin- ja Tan-funktiot PowerAppsissa
 Laskee trigonometriset arvot.
@@ -42,7 +43,7 @@ Laskee trigonometriset arvot.
 
 **Atan**-funktio palauttaa argumentista arkustangentin (käänteisen tangentin). Arkustangentti on kulma, jonka tangentti on argumentti. Palautettu kulma annetaan radiaaneina alueella –&pi;/2 ja &pi; /2.
 
-**Atan2**-funktio palauttaa määritettyjen *x*- ja *y* -koordinaattien arkustangentin (käänteisen tangentin) argumentteina. Arkustangentti on kulma, joka muodostuu *x*-akselin ja sen suoran väliin, joka sisältää origon (0, 0) ja koordinaattipisteen (*x*, *y*). Kulma annetaan radiaaneina alueella –&pi; ja &pi;, pois lukien –&pi;.  Positiivinen tulos edustaa kulmaa, joka aukeaa vastapäivään suhteessa *x*-akseliin; negatiivinen tulos edustaa kulmaa, joka aukeaa myötäpäivään.  **Atan2(&nbsp;*a*,&nbsp;*b*&nbsp;)** on yhtä suuri kuin **Atan(&nbsp;*b*/*a*&nbsp;)**, paitsi että**Atan2**-funktiolla ***a*** voi olla 0 (nolla).
+**Atan2**-funktio palauttaa määritettyjen *x*- ja *y* -koordinaattien arkustangentin (käänteisen tangentin) argumentteina. Arkustangentti on kulma, joka muodostuu *x*-akselin ja sen suoran väliin, joka sisältää origon (0, 0) ja koordinaattipisteen (*x*, *y*). Kulma annetaan radiaaneina alueella –&pi; ja &pi;, pois lukien –&pi;.  Positiivinen tulos edustaa kulmaa, joka aukeaa vastapäivään suhteessa *x*-akseliin; negatiivinen tulos edustaa kulmaa, joka aukeaa myötäpäivään.  **Atan2(&nbsp;*a*;&nbsp;*b*&nbsp;)** on yhtä suuri kuin **Atan(&nbsp;*b*/*a*&nbsp;)**, paitsi että**Atan2**-funktiolla ***a*** voi olla 0 (nolla).
 
 ### <a name="helper-functions"></a>Apufunktiot
 **Degrees**-funktio muuntaa radiaanit asteiksi.  &pi; radiaania on 180 astetta.
@@ -75,7 +76,7 @@ Jos argumentti tuottaisi määrittämättömän arvon, tulos on *tyhjä*.  Näin
 
 * *SingleColumnTable* – Pakollinen. Yksisarakkeinen taulukko, joka sisältää käsittelyn kohteena olevat numerot.
 
-**Atan2**( *X*, *Y* )
+**Atan2**( *X*; *Y* )
 
 * *X* – Pakollinen.  *X*-akselin koordinaatti.
 * *Y* – Pakollinen.  *Y*-akselin koordinaatti.
@@ -96,17 +97,17 @@ Jos argumentti tuottaisi määrittämättömän arvon, tulos on *tyhjä*.  Näin
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Cos(&nbsp;1.047197&nbsp;)** |Palauttaa kosinin arvolle 1.047197 radiaania eli 60 astetta. |0.5 |
+| **Cos(&nbsp;1,047197&nbsp;)** |Palauttaa kosinin arvolle 1.047197 radiaania eli 60 astetta. |0.5 |
 | **Cot(&nbsp;Pi()/4&nbsp;)** |Palauttaa kotangentin arvolle 0.785398...radiaania eli 45 astetta. |1 |
 | **Sin(&nbsp;Pi()/2&nbsp;)** |Palauttaa sinin arvolle 1.570796... radiaania eli 90 astetta. |1 |
 | **Tan(&nbsp;Radians(60)&nbsp;)** |Palauttaa tangentin arvolle 1.047197... radiaania eli 60 astetta. |1.732050... |
-| **Acos(&nbsp;0.5&nbsp;)** |Palauttaa arkuskosinin arvolle 0.5 radiaania. |1.047197... |
+| **Acos(&nbsp;0,5&nbsp;)** |Palauttaa arkuskosinin arvolle 0.5 radiaania. |1.047197... |
 | **Acot(&nbsp;1&nbsp;)** |Palauttaa arkustangentin arvolle 1 radiaani. |0.785398... |
 | **Asin(&nbsp;1&nbsp;)** |Palauttaa arkustangentin arvolle 1 radiaani. |1.570796... |
-| **Atan(&nbsp;1.732050&nbsp;)** |Palauttaa arkustangentin arvolle 1.732050 radiaania. |1.047197... |
+| **Atan(&nbsp;1,732050&nbsp;)** |Palauttaa arkustangentin arvolle 1.732050 radiaania. |1.047197... |
 | **Atan2 (&nbsp;5,&nbsp;3&nbsp;)** |Palauttaa arkustangentin kulmalle, joka muodostuu *x*-akselin ja suoran, joka sisältää origon (0,0) ja koordinaatin (5,3), välille, mikä on noin 31 astetta. |0.540419... |
-| **Atan2(&nbsp;4,&nbsp;4&nbsp;)** |Palauttaa arkustangentin kulmalle, joka muodostuu *x*-akselin ja suoran, joka sisältää origon (0,0) ja koordinaatin (4,4), välille, mikä on täsmälleen &pi;/4 radiaania eli 45 astetta. |0.785398... |
-| **Degrees(&nbsp;1.047197&nbsp;)** |Palauttaa astemääräisen arvon, joka vastaa 1.047197 radiaania. |60 |
+| **Atan2(&nbsp;4;&nbsp;4&nbsp;)** |Palauttaa arkustangentin kulmalle, joka muodostuu *x*-akselin ja suoran, joka sisältää origon (0,0) ja koordinaatin (4,4), välille, mikä on täsmälleen &pi;/4 radiaania eli 45 astetta. |0.785398... |
+| **Degrees(&nbsp;1,047197&nbsp;)** |Palauttaa astemääräisen arvon, joka vastaa 1.047197 radiaania. |60 |
 | **Pi()** |Palauttaa transsendenttiluvun&pi;. |3.141592... |
 | **Radians(&nbsp;15&nbsp;)** |Palauttaa radiaaneina arvon, joka vastaa 15 astetta. |0.261799... |
 

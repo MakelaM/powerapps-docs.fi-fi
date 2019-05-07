@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563381"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="groupby-and-ungroup-functions-in-powerapps"></a>GroupBy- ja Ungroup-funktiot PowerAppsissa
 [Taulukon](../working-with-tables.md) [tietueiden](../working-with-tables.md#records) ryhmittely ja ryhmittelyn purku.
@@ -45,7 +46,7 @@ Voit myös koostaa tulokset ryhmittelyn perusteella:
 PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit määrittää taulukon funktion argumenttina ja funktio voi palauttaa taulukon. **GroupBy** ja **Ungroup** eivät muokkaa taulukkoa. Ne kohtelevat taulukkoa argumenttina ja palauttavat eri taulukon. Lisätietoja on kohdassa [taulukoiden käsitteleminen](../working-with-tables.md).
 
 ## <a name="syntax"></a>Syntaksi
-**GroupBy**( *Table*, *ColumnName1* [, *ColumnName2*, ... ], *GroupColumnName* )
+**GroupBy**( *Table*; *ColumnName1* [; *ColumnName2*; ... ]; *GroupColumnName* )
 
 * *Table* – Pakollinen. Ryhmiteltävä taulukko.
 * *ColumnName(s)* – Pakollinen.  Sarakkeiden nimet *Taulukossa*, jonka perusteella tietueet ryhmitellään.  Näistä sarakkeista tulee sarakkeita lopputuloksena saatavaan taulukkoon.
@@ -54,7 +55,7 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
     > [!NOTE]
   > Jos SharePoint- ja Excel-tietolähteiden sarakkeennimissä käytetään välilyöntejä, merkitse jokaisen välilyönnin tilalle **"\_x0020\_"**. Voit esimerkiksi määrittää **Column Name** -arvoksi **"Sarakkeen_x0020_Nimi"**.
 
-**Ungroup**( *Table*, *GroupColumnName* )
+**Ungroup**( *Table*; *GroupColumnName* )
 
 * *Table* – Pakollinen. Taulukko, jonka ryhmitys puretaan.
 * *GroupColumnName* – Pakollinen. Sarake, joka sisältää tietueen asetustiedot **GroupBy**-funktiolla.
@@ -67,17 +68,17 @@ PowerAppsissa taulukko on arvo, samaan tapaan kuin merkkijono tai luku. Voit mä
 1. Lisää painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuus niin, että painikkeessa lukee **Alkuperäinen**.
 2. Määritä **Alkuperäinen**-painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
 
-```powerapps-dot   
-ClearCollect( CityPopulations, 
-    { City: "London",    Country: "United Kingdom", Population: 8615000}, 
-    { City: "Berlin",    Country: "Germany",        Population: 3562000}, 
-    { City: "Madrid",    Country: "Spain",          Population: 3165000}, 
-    { City: "Rome",      Country: "Italy",          Population: 2874000}, 
-    { City: "Paris",     Country: "France",         Population: 2273000}, 
-    { City: "Hamburg",   Country: "Germany",        Population: 1760000}, 
-    { City: "Barcelona", Country: "Spain",          Population: 1602000}, 
-    { City: "Munich",    Country: "Germany",        Population: 1494000}, 
-    { City: "Milan",     Country: "Italy",          Population: 1344000}
+```powerapps-comma   
+ClearCollect( CityPopulations; 
+    { City: "London";    Country: "United Kingdom"; Population: 8615000}; 
+    { City: "Berlin";    Country: "Germany";        Population: 3562000}; 
+    { City: "Madrid";    Country: "Spain";          Population: 3165000}; 
+    { City: "Rome";      Country: "Italy";          Population: 2874000}; 
+    { City: "Paris";     Country: "France";         Population: 2273000}; 
+    { City: "Hamburg";   Country: "Germany";        Population: 1760000}; 
+    { City: "Barcelona"; Country: "Spain";          Population: 1602000}; 
+    { City: "Munich";    Country: "Germany";        Population: 1494000}; 
+    { City: "Milan";     Country: "Italy";          Population: 1344000}
 )
 ```
 
@@ -94,7 +95,7 @@ ClearCollect( CityPopulations,
 1. Lisää toinen painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuuden arvoksi **"Group"**.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
-    **ClearCollect( KaupungitMaittain, GroupBy( KaupunkienVäkiluvut, "Maa", "Kaupungit" ) )**
+    **ClearCollect( KaupungitMaittain; GroupBy( KaupunkienVäkiluvut; "Maa"; "Kaupungit" ) )**
 3. Pidä Alt-näppäintä painettuna ja valitse **Ryhmä**-painike.
    
     Juuri luomasi kokoelman nimi on **KaupungitMaittain**. Kokoelmassa edellisen kokoelman tietueet on ryhmitelty **Maa**-sarakkeen mukaan.
@@ -111,7 +112,7 @@ ClearCollect( CityPopulations,
 1. Lisää painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuus niin, että painikkeessa lukee **"Suodata"**.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
-    **ClearCollect (KaupungitMaittainSuodatettu, Filter(KaupungitMaittain, "e" in Maa))**
+    **ClearCollect (KaupungitMaittainSuodatettu; Filter(KaupungitMaittain; "e" in Maa))**
 3. Pidä Alt-näppäintä painettuna ja valitse lisäämäsi painike.
    
     Loit juuri kolmannen kokoelman nimeltä **KaupungitMaittainSuodatettu**, joka sisältää vain ne maat, joiden nimessä ”e” (eli ei Saksaa tai Italiaa).
@@ -120,7 +121,7 @@ ClearCollect( CityPopulations,
 4. Lisää vielä yksi painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuus niin, että painikkeessa lukee **"Pura ryhmittely"**.
 5. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
-    **ClearCollect( KaupunkienVäkiluvutRyhmittelemätön, Ungroup( KaupungitMaittainSuodatettu, "Kaupungit" ) )**
+    **ClearCollect( KaupunkienVäkiluvutRyhmittelemätön; Ungroup( KaupungitMaittainSuodatettu; "Kaupungit" ) )**
    
     Jonka tuloksena saadaan:
    
@@ -132,20 +133,20 @@ Ryhmitetyn taulukon avulla voidaan myös koostaa tuloksia.  Tässä esimerkissä
 1. Lisää painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuus niin, että painikkeessa lukee **"Summa"**.
 2. Määritä **"Summa"**-painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
    
-    **ClearCollect( KaupunkienVäkiluvutSumma, AddColumns( KaupungitMaittain, "Kaupunkien väkilukujen summa", Sum( Kaupungit, Väkiluku ) ) )**
+    **ClearCollect( KaupunkienVäkiluvutSumma; AddColumns( KaupungitMaittain; "Kaupunkien väkilukujen summa"; Sum( Kaupungit; Väkiluku ) ) )**
    
     Jonka tuloksena saadaan:
    
     ![](media/function-groupby/cities-sum.png)
    
-    **[AddColumns](function-table-shaping.md)** aloittaa **KaupungitMaittain**-kokoelmasta ja lisää uuden sarakkeen **Kaupunkien väkilukujen summa**.  Sarakkeen arvot lasketaan riveittäin perustuen kaavaan **Sum( Kaupungit, Väkiluku)**.  **AddColumns** antaa **Kaupungit**-sarakkeen arvon (taulukko) jokaiselle riville, ja **[Sum](function-aggregates.md)** laskee yhteen jokaisen alataulukon rivin **väkiluvun**.
+    **[AddColumns](function-table-shaping.md)** aloittaa **KaupungitMaittain**-kokoelmasta ja lisää uuden sarakkeen **Kaupunkien väkilukujen summa**.  Sarakkeen arvot lasketaan riveittäin perustuen kaavaan **Sum( Kaupungit; Väkiluku)**.  **AddColumns** antaa **Kaupungit**-sarakkeen arvon (taulukko) jokaiselle riville, ja **[Sum](function-aggregates.md)** laskee yhteen jokaisen alataulukon rivin **väkiluvun**.
 
     Kun meillä on nyt haluamamme summa, voimme käyttää **[DropColumns](function-table-shaping.md)**-funktiota alataulukoiden poistamiseen.
   
 3. Lisää painike ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuus niin, että painikkeessa lukee **"SumOnly"**.
 4. Määritä **"SumOnly"**-painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    **ClearCollect( KaupunkienVäkiluvutVainSumma, DropColumns( KaupunkienVäkiluvutSumma, "Kaupungit" ) )**
+    **ClearCollect( KaupunkienVäkiluvutVainSumma; DropColumns( KaupunkienVäkiluvutSumma; "Kaupungit" ) )**
    
     Jonka tuloksena saadaan:
    

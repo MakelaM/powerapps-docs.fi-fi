@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61557476"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Twitter-yhteyden luominen PowerAppsista
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -65,7 +66,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
 
-       `Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
+       `Twitter.UserTimeline(Tweep.Text; {maxResults:5}).TweetText`
 
        Valikoiman ohjausobjektiin ilmaantuvat automaattisesti ne twiitit, joiden julkaisijan tunnuksen kirjoitit tekstiruutuun.
 
@@ -94,7 +95,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
 
-       `Twitter.Followers(Tweep.Text, {maxResults:5})`
+       `Twitter.Followers(Tweep.Text; {maxResults:5})`
 
        Valikoiman ohjausobjektiin ilmaantuvat automaattisesti sen Twitter-tunnuksen seuraajat, jonka kirjoitit tekstiruutuun.
 
@@ -123,7 +124,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
 
-       `Twitter.Following(Tweep.Text, {maxResults:5})`
+       `Twitter.Following(Tweep.Text; {maxResults:5})`
 
        Valikoiman ohjausobjekti näyttää automaattisesti muut Twitter-tunnukset, joita seuraat.
 
@@ -160,8 +161,8 @@ Vaihtoehtoisesti voit käyttää syötetekstin ohjausobjektia ja kirjoittaa Twit
     > [!TIP]
    > Näytä viisi ensimmäistä tulosta käyttämällä maxResults-ominaisuutta:  
 
-    `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
-2. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.
+    `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5}).TweetText`
+2. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5})`.
 
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 3. Valitse ensimmäisestä luettelosta **TweetText**, toisesta luettelosta **TweetedBy** ja kolmannesta luettelosta **CreatedAt**.

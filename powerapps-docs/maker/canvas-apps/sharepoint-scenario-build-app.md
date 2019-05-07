@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61541547"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-canvas-app-to-manage-projects"></a>Kangassovelluksen luominen projektien hallitsemista varten
 > [!NOTE]
@@ -140,7 +141,7 @@ Tässä vaiheessa kerromme tavan, jolla voit siirtyä sovelluksen muihin näytt�
     ![Lisää painike](./media/sharepoint-scenario-build-app/04-03-05-button-default.png)
 2. Määritä seuraavat painikkeen ominaisuudet kaavarivillä:
    
-   * **OnSelect**-ominaisuus = **Navigate(AssignManager, Fade)**. Kun suoritat sovelluksen ja napsautat tätä painiketta, siirryt sovelluksen seuraavaan näyttöön himmennettyjen siirtymien kautta.
+   * **OnSelect**-ominaisuus = **Navigate(AssignManager; Fade)**. Kun suoritat sovelluksen ja napsautat tätä painiketta, siirryt sovelluksen seuraavaan näyttöön himmennettyjen siirtymien kautta.
 
    * **Teksti**-ominaisuus = **"Assign Manager"**
 
@@ -149,7 +150,7 @@ Tässä vaiheessa kerromme tavan, jolla voit siirtyä sovelluksen muihin näytt�
     ![Päivitä-painikkeen teksti](./media/sharepoint-scenario-build-app/04-03-06-button-updated.png)
 4. Lisää toinen painike, jossa on seuraavat ominaisuudet:
    
-   * **OnSelect**-ominaisuus = **Navigate(ViewProjects, Fade)**.
+   * **OnSelect**-ominaisuus = **Navigate(ViewProjects; Fade)**.
 
    * **Teksti**-ominaisuus = **"Update Details"**
      
@@ -207,7 +208,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
 
    * **Korkeus**-ominaisuus = **40**
 
-   * **OnSelect**-ominaisuus = **Navigate(SelectTask, Fade)**
+   * **OnSelect**-ominaisuus = **Navigate(SelectTask; Fade)**
 
    * **Leveys**-ominaisuus = **40**
      
@@ -233,7 +234,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
 
    * **BorderStyle**-ominaisuus = **Dotted**
 
-   * **Kohteet**-ominaisuus = **Filter('Project Details', PMAssigned="Unassigned")**. Vain projektit, joille ei ole määritetty esimiestä, sisältyvät valikoimaan.
+   * **Kohteet**-ominaisuus = **Filter('Project Details'; PMAssigned="Unassigned")**. Vain projektit, joille ei ole määritetty esimiestä, sisältyvät valikoimaan.
      
      ![Valikoima, jossa on tekstiä luettelosta](./media/sharepoint-scenario-build-app/04-04-06-gallery-updated.png)
 
@@ -291,7 +292,7 @@ Tässä vaiheessa käytämme valikoimaa näyttämään kaikki projektit, jotka o
    
    * **Korkeus**-ominaisuus = **60**
 
-   * **OnSelect** ominaisuuden = **Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**. Katso lisätietoja kohdasta [Kaavoja pintaa syvemmältä](#formula-deep-dive).
+   * **OnSelect** ominaisuuden = **Patch ('Project Details'; LookUp ('Project Details'; ID = Gallery1.Selected.ID); {PMAssigned: TextInput1.Text})**. Katso lisätietoja kohdasta [Kaavoja pintaa syvemmältä](#formula-deep-dive).
 
    * Tämä kaava päivittää **Projektitiedot**-luettelon asettaen arvon PMAssigned-kentälle.
 
@@ -326,7 +327,7 @@ Tässä vaiheessa muutamme valikoiman ominaisuuksia **ViewProjects**-näytössä
 
 5. Valitse päivityspainikkeen ![Päivitä-kuvake](./media/sharepoint-scenario-build-app/icon-refresh.png) ja määritä sen **OnSelect**-ominaisuuden arvoksi **Refresh('Project Details')**.
 
-6. Valitse uuden kohteen painike ![Lisää uusi kuvake](./media/sharepoint-scenario-build-app/icon-add-item.png) ja määritä sen **OnSelect**-ominaisuuden arvoksi **NewForm(EditForm1); Navigate(UpdateDetails, ScreenTransition.None)**.
+6. Valitse uuden kohteen painike ![Lisää uusi kuvake](./media/sharepoint-scenario-build-app/icon-add-item.png) ja määritä sen **OnSelect**-ominaisuuden arvoksi **NewForm(EditForm1);; Navigate(UpdateDetails; ScreenTransition.None)**.
 
 ### <a name="add-a-back-arrow-to-return-to-the-selecttask-screen"></a>Lisää takaisin-nuoli, jolla palataan SelectTask-näyttöön
 
@@ -338,15 +339,15 @@ Tässä vaiheessa muutamme valikoiman ominaisuuksia **ViewProjects**-näytössä
    
     ![Takaisin-painike](./media/sharepoint-scenario-build-app/04-05-04-left-arrow-v.png)
    
-    Kaikki ominaisuudet tulevat sen mukana, mukaan lukien **OnSelect**-ominaisuuden **Navigate(SelectTask, Fade)**.
+    Kaikki ominaisuudet tulevat sen mukana, mukaan lukien **OnSelect**-ominaisuuden **Navigate(SelectTask; Fade)**.
 
 ### <a name="change-the-data-source-for-the-browsegallery1-gallery"></a>BrowseGallery1-valikoiman tietolähteen muuttaminen
 
-1. Valitse **BrowseGallery1**-valikoima ja määritä valikoiman **Kohteet**-ominaisuudeksi **SortByColumns(Filter('Project Details', StartsWith(Title, TextSearchBox1.Text)), "Title", If(SortDescending1, Descending, Ascending))**.
+1. Valitse **BrowseGallery1**-valikoima ja määritä valikoiman **Kohteet**-ominaisuudeksi **SortByColumns(Filter('Project Details'; StartsWith(Title; TextSearchBox1.Text)); "Title"; If(SortDescending1; Descending; Ascending))**.
    
     Tämä asetus määrittää valikoiman tietolähteen **Projektitiedot**-luetteloon ja käyttää hakemiseen ja lajitteluun **Otsikko**-kenttää.
 
-2. Valitse ![Tiedot-nuolikuvake](./media/sharepoint-scenario-build-app/icon-details-arrow.png) ensimmäisessä valikoiman kohteessa ja määritä **OnSelect**-ominaisuuden arvoksi **Navigate(UpdateDetails, None)**.
+2. Valitse ![Tiedot-nuolikuvake](./media/sharepoint-scenario-build-app/icon-details-arrow.png) ensimmäisessä valikoiman kohteessa ja määritä **OnSelect**-ominaisuuden arvoksi **Navigate(UpdateDetails; None)**.
    
     ![ Näytä projektien valikoima – ensimmäinen kohde valittuna](./media/sharepoint-scenario-build-app/04-05-05b-gallery-arrow-v.png)
 
@@ -396,7 +397,7 @@ Tässä vaiheessa yhdistämme muokkauslomakkeen **UpdateDetails**-näytössä ti
    * **ActualDays**
      
      ![Muokkaa lomakkeen kenttiä](./media/sharepoint-scenario-build-app/04-06-03-edit-fields.png)
-6. Valitse Peruuta-painikkeen ![Peruuta kuvake](./media/sharepoint-scenario-build-app/icon-cancel.png) ja määritä sen **OnSelect** -ominaisuuden arvoksi **ResetForm(EditForm1); Back()**.
+6. Valitse Peruuta-painikkeen ![Peruuta kuvake](./media/sharepoint-scenario-build-app/icon-cancel.png) ja määritä sen **OnSelect** -ominaisuuden arvoksi **ResetForm(EditForm1);; Back()**.
 
 7. Valitse tallennuspainikkeen ![Valintamerkin tallennus -kuvake](./media/sharepoint-scenario-build-app/icon-check-mark.png) ja tarkista **OnSelect**-kaava **SubmitForm(EditForm1)**. Koska käytämme lomakkeen muokkausohjausobjektia, voimme käyttää **Submit()**:ia **Patch()**:n sijaan, kuten teimme aiemmin.
 
@@ -496,7 +497,7 @@ Nyt kun olemme lisänneet sovelluksen SharePoint-sivustoon, omaksumme projektin 
 ## <a name="formula-deep-dive"></a>Kaavoja pintaa syvemmältä
 Tämä on toinen valinnainen osa, jossa käsitellään PowerApps-kaavoja. Ensimmäisessä tutustuimme yhteen kaavoista, joita PowerApps luo selausvalikoimalle kolmen näytön sovelluksessa. Tässä syventävässä ohjeessa tarkastelemme kaavaa, jota käytämme toisen sovelluksen **AssignManager**-näytössä. Tässä on kaava:
 
-**Patch ('Project Details', LookUp ('Project Details', ID = Gallery1.Selected.ID), {PMAssigned: TextInput1.Text})**
+**Patch ('Project Details'; LookUp ('Project Details'; ID = Gallery1.Selected.ID); {PMAssigned: TextInput1.Text})**
 
 Mitä tämä kaava tekee? Kun valitset kohteen valikoimassa ja napsautat **OK**-painiketta, kaava päivittää **Projektitiedot**-luettelon asettaen **PMAssigned**-sarakkeen arvoon, jonka määritit tekstisyötteessä. Kaavassa käytetään funktioita sen tehtävien suorittamiseen:
 

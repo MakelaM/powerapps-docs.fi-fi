@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551211"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="distinct-function-in-powerapps"></a>PowerAppsin Distinct-funktio
 Tekee [taulukon](../working-with-tables.md#records) [tietueista](../working-with-tables.md) yhteenvedon ja poistaa kaksoiskappaleet.
@@ -29,7 +30,7 @@ Tekee [taulukon](../working-with-tables.md#records) [tietueista](../working-with
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
 ## <a name="syntax"></a>Syntaksi
-**Distinct**( *Table*, *Formula* )
+**Distinct**( *Table*; *Formula* )
 
 * *Table* – Pakollinen.  Taulukko, jolle kaava lasketaan.
 * *Formula* – Pakollinen.  Kaava, jolla lasketaan arvot kullekin tietueelle.
@@ -37,5 +38,5 @@ Tekee [taulukon](../working-with-tables.md#records) [tietueista](../working-with
 ## <a name="example"></a>Esimerkki
 Jos sinulla on **Työntekijät**-taulukko, jossa on **Osasto**-sarake, tämä funktio luetteloi jokaisen yksilöllisen osaston nimen kyseisessä sarakkeessa riippumatta siitä, kuinka monta kertaa kukin nimi siinä esiintyy:
 
-**Distinct(Työntekijät, Osasto)**
+**Distinct(Työntekijät; Osasto)**
 

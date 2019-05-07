@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61539010"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-calendar-screen-template-for-canvas-apps"></a>Lisätietoja pohjaan perustuvat sovellukset kalenterin näytön-malli
 
@@ -55,15 +56,15 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 
    Tämä osa-kaava suoritetaan vain ensimmäisellä kerralla, että käyttäjä valitsee vaihtoehdon avattavasta luettelosta sovelluksen avaamisen jälkeen:
 
-    ```powerapps-dot
-    If( IsBlank( _userDomain ),
-        UpdateContext( {_showLoading: true} );
-        Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
-        Set( _dateSelected, Today() );
-        Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );  
-        Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 1), Days ) );
-        Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )  
-    );
+    ```powerapps-comma
+    If( IsBlank( _userDomain );
+        UpdateContext( {_showLoading: true} );;
+        Set( _userDomain; Right( User().Email; Len( User().Email ) - Find( "@"; User().Email ) ) );;
+        Set( _dateSelected; Today() );;
+        Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days ) );;  
+        Set( _firstDayInView; DateAdd( _firstDayOfMonth; -(Weekday(_firstDayOfMonth) - 1); Days ) );;
+        Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) )  
+    );;
     ```
 
     Yllä olevaa koodia muuttujat:
@@ -76,28 +77,28 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 
    Funktiot jälkeen **Jos** funktio suorittaa aina, kun käyttäjä valitsee vaihtoehdon Kalenteri avattavasta luettelosta (ei pelkästään ensimmäistä kertaa käyttäjä avaa sovelluksen):
 
-    ```powerapps-dot
-    Set( _calendarVisible, false );
-    UpdateContext( {_showLoading: true} );
-    Set( _myCalendar, dropdownCalendarSelection2.Selected );
-    Set( _minDate, 
-        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
-    );
-    Set(_maxDate, 
+    ```powerapps-comma
+    Set( _calendarVisible; false );;
+    UpdateContext( {_showLoading: true} );;
+    Set( _myCalendar; dropdownCalendarSelection2.Selected );;
+    Set( _minDate; 
+        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days )
+    );;
+    Set(_maxDate; 
         DateAdd(
-            DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ), 
-            40, 
+            DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days ); 
+            40; 
             Days
         )
-    );
-    ClearCollect( MyCalendarEvents, 
-        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-            Text( _minDate, UTC ), 
-            Text( _maxDate, UTC )
+    );;
+    ClearCollect( MyCalendarEvents; 
+        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name; 
+            Text( _minDate; UTC ); 
+            Text( _maxDate; UTC )
         ).value
-    );
-    UpdateContext( {_showLoading: false} );
-    Set( _calendarVisible, true )
+    );;
+    UpdateContext( {_showLoading: false} );;
+    Set( _calendarVisible; true )
     ```
 
     Yllä olevaa koodia määrittää muuttujia ja yksi kokoelma:
@@ -117,11 +118,11 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **OnSelect**<br>
     Arvo: Neljä **määrittää** toiminnot, jotka vaihtaa kalenterin valikoiman päivämäärä:
 
-    ```powerapps-dot
-    Set( _dateSelected, Today() );
-    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days) );
-    Set( _firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days));
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )
+    ```powerapps-comma
+    Set( _dateSelected; Today() );;
+    Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days) );;
+    Set( _firstDayInView; DateAdd(_firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days));;
+    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) )
     ```
 
     Yllä olevaa koodia palauttaa kaikki päivämäärä-muuttujia, jotka on täytettävä asianmukaiset kalenterinäkymä näyttäminen:
@@ -139,20 +140,20 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 
 - Ominaisuus: **OnSelect**<br>Arvo: Neljä **määrittää** Funktiot ja **Jos** funktion, joka näyttää edellisen kuukauden kalenterin valikoimassa:
 
-    ```powerapps-dot
-    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
-    Set( _firstDayInView, 
-        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
-    );
-    Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _minDate > _firstDayOfMonth,
-        Collect( MyCalendarEvents,
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name,
-                Text( _firstDayInView, UTC ), 
-                Text( DateAdd( _minDate, -1, Days ), UTC )
+    ```powerapps-comma
+    Set( _firstDayOfMonth; DateAdd( _firstDayOfMonth; -1; Months ) );;
+    Set( _firstDayInView; 
+        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days )
+    );;
+    Set( _lastDayOfMonth; DateAdd(DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
+    If( _minDate > _firstDayOfMonth;
+        Collect( MyCalendarEvents;
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name;
+                Text( _firstDayInView; UTC ); 
+                Text( DateAdd( _minDate; -1; Days ); UTC )
             ).value
-        );
-        Set( _minDate, _firstDayInView )
+        );;
+        Set( _minDate; _firstDayInView )
     )
     ```
 
@@ -174,19 +175,19 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **OnSelect**<br>
     Arvo: Neljä **määrittää** Funktiot ja **Jos** funktion, joka näyttää seuraavan kuukauden kalenterin valikoimassa:
 
-    ```powerapps-dot
-    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
-    Set( _firstDayInView, 
-        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    If( _maxDate < _lastDayOfMonth,
-        Collect( MyCalendarEvents, 
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
-                Text( DateAdd( _maxDate, 1, Days ), UTC ), 
-                DateAdd( _firstDayInView, 40, Days )
+    ```powerapps-comma
+    Set( _firstDayOfMonth; DateAdd( _firstDayOfMonth; 1; Months ) );;
+    Set( _firstDayInView; 
+        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days ) );;
+    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
+    If( _maxDate < _lastDayOfMonth;
+        Collect( MyCalendarEvents; 
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name; 
+                Text( DateAdd( _maxDate; 1; Days ); UTC ); 
+                DateAdd( _firstDayInView; 40; Days )
             ).value
-        );
-        Set( _maxDate, DateAdd( _firstDayInView, 40, Days) )    
+        );;
+        Set( _maxDate; DateAdd( _firstDayInView; 40; Days) )    
     )
     ```
 
@@ -206,8 +207,8 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 ![MonthDayGallery ohjausobjekti](media/calendar-screen/calendar-month-gall.png)
 
 - Ominaisuus: **Kohteet**<br>
-    Arvo: `[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,
-    20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]`
+    Arvo: `[0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;
+    20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41]`
   
   0-41 joukko käytetään kalenterin valikoima kohteille, koska huonointa mahdollista tilannetta, Kalenteri-näkymässä on 42 koko päivän näyttämiseen. Näin tapahtuu, kun lauantaina toteutuu kuukauden ensimmäisen ja viimeisen kuukauden sunnuntai käyttöön. Tässä tapauksessa kalenterin näytetään kuuden kuukauden ensimmäisen sisältävän rivin edellisen kuukauden päivän ajan ja kuusi seuraavan kuukauden-rivillä, joka sisältää kuukauden viimeisen päivän ajan. Tämä on 42 yksilöivät arvot, joiden 30 ovat valitun kuukauden.
 
@@ -221,26 +222,26 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 ![MonthDayGallery otsikko-ohjausobjekti](media/calendar-screen/calendar-month-text.png)
 
 - Ominaisuus: **Teksti**<br>
-    Arvo: `Day( DateAdd( _firstDayInView, ThisItem.Value, Days ) )`
+    Arvo: `Day( DateAdd( _firstDayInView; ThisItem.Value; Days ) )`
 
     Peruuta,  **\_firstDayInView** on määritetty (**\_firstDayOfMonth** -sen weekday-arvo) + 1. Tapaamiset  **\_firstDayInView** on aina sunnuntai, ja  **\_firstDayOfMonth** on aina ensimmäinen rivi **MonthDayGallery**. Nämä kaksi faktaa vuoksi  **\_firstDayInView** on aina ensimmäiselle solua **MonthDayGallery**. **ThisItem.Value** on kyseisen solun **MonthDayGallery** kohteen ominaisuuden. Siis ottaen  **\_firstDayInView** lähtökohtana, kunkin solun näyttää lisäyksen-  **\_firstDayInView** + sen vastaavan solun arvo.
 
 - Ominaisuus: **Täyttö**<br>
     Arvo: Yksi **Jos** funktio:
 
-    ```powerapps-dot
-    If( DateAdd( _firstDayInView, ThisItem.Value ) = Today() && 
-                DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected, 
-            RGBA( 0, 0, 0, 0 ),
-        DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
-            ColorFade( Subcircle.Fill, 0.67 ),
-        Abs( Title.Text - ThisItem.Value) > 10,
-            RGBA( 200, 200, 200, 0.3 ),
-        RGBA( 0, 0, 0, 0 )
+    ```powerapps-comma
+    If( DateAdd( _firstDayInView; ThisItem.Value ) = Today() && 
+                DateAdd( _firstDayInView; ThisItem.Value ) = _dateSelected; 
+            RGBA( 0; 0; 0; 0 );
+        DateAdd( _firstDayInView; ThisItem.Value) = Today(); 
+            ColorFade( Subcircle.Fill; 0,67 );
+        Abs( Title.Text - ThisItem.Value) > 10;
+            RGBA( 200; 200; 200; 0,3 );
+        RGBA( 0; 0; 0; 0 )
     )
     ```
 
-  Kuvatulla tavalla kuvaus **tekstin** ominaisuutta, `DateAdd(_firstDayInView, ThisItem.Value)` edustaa päivän visible-soluun. Ottaen huomioon edellisen koodin suorittaa nämä vertailut:
+  Kuvatulla tavalla kuvaus **tekstin** ominaisuutta, `DateAdd(_firstDayInView; ThisItem.Value)` edustaa päivän visible-soluun. Ottaen huomioon edellisen koodin suorittaa nämä vertailut:
   1. Jos solun arvo on päivämäärä ja solun vastaa  **\_dateSelected**, älä anna täyttö arvo.
   1. Jos solun arvo on päivämäärä, mutta ei vastaa  **\_dateSelected**, anna **ColorFade** täyttö.
   1. Viimeisin vertailu ei ole yhtä Tyhjennä. Vertailu todellinen tekstiarvo solun ja arvo (luku, Näytä) ja kohteen numero solun on on.<br>
@@ -257,10 +258,10 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **Näkyvissä**<br>
     Arvo:
 
-    ```powerapps-dot
+    ```powerapps-comma
     !(
-        DateAdd( _firstDayInView, ThisItem.Value, Days ) - 
-            Weekday( DateAdd( _firstDayInView, ThisItem.Value,Days ) ) + 1 
+        DateAdd( _firstDayInView; ThisItem.Value; Days ) - 
+            Weekday( DateAdd( _firstDayInView; ThisItem.Value;Days ) ) + 1 
         > _lastDayOfMonth
     )
     ```
@@ -270,8 +271,8 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **OnSelect**<br>
     Arvo: A **määrittää** funktion, joka määrittää  **\_dateSelected** muuttujan valitun solun päivämäärä:
 
-    ```powerapps-dot
-    Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
+    ```powerapps-comma
+    Set( _dateSelected; DateAdd( _firstDayInView; ThisItem.Value; Days ) )
     ```
 
 ### <a name="circle-control-in-the-calendar-gallery"></a>Ympyrä valikoiman ohjausobjektia, kalenteri
@@ -281,10 +282,10 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **Näkyvissä**<br>
     Arvo: Kaava, joka määrittää, voiko tapahtumat ajoitetaan valitun päivämäärän ja onko **Subcircle** ja **otsikko** ohjausobjektit näkyvät:
 
-    ```powerapps-dot
+    ```powerapps-comma
     CountRows(
-        Filter( MyCalendarEvents, 
-            DateValue( Text( Start ) ) = DateAdd( _firstDayInView, ThisItem.Value, Days )
+        Filter( MyCalendarEvents; 
+            DateValue( Text( Start ) ) = DateAdd( _firstDayInView; ThisItem.Value; Days )
         )
     ) > 0 && !Subcircle.Visible && Title.Visible
     ```
@@ -298,8 +299,8 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **Näkyvissä**<br>
     Arvo:
 
-    ```powerapps-dot
-    DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
+    ```powerapps-comma
+    DateAdd( _firstDayInView; ThisItem.Value ) = _dateSelected && Title.Visible
     ```
 
   **Subcircle** ohjausobjekti on näkyvissä, kun  **\_dateSelected** vastaa solun, Date ja **otsikko** ohjausobjekti on näkyvissä. Toisin sanoen tämän ohjausobjektin tulee näkyviin, kun solu on tällä hetkellä valittu päivämäärä.
@@ -311,11 +312,11 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
 - Ominaisuus: **Kohteet**<br>
     Arvo: Kaava, joka lajittelee ja suodattaa valikoiman tapahtumat:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SortByColumns(
-        Filter( MyCalendarEvents,
-            Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
-        ),
+        Filter( MyCalendarEvents;
+            Text( Start; DateTimeFormat.ShortDate ) = Text( _dateSelected; DateTimeFormat.ShortDate )
+        );
         "Start"
     )
     ```

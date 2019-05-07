@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520613"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="select-function-in-powerapps"></a>PowerAppsin Select-funktio
 Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**-kaavan laskennan.
@@ -83,7 +84,7 @@ Ohjausobjekti ei voi **Valita** itseään suoraan tai epäsuorasti muiden ohjaus
 
 5. Määritä kuvanhallinnan **OnSelect**-ominaisuudeksi tämä kaava:
 
-    **Notify( ”Kuva valittu”, Onnistui )**
+    **Notify( ”Kuva valittu”; Onnistui )**
 
 6. Pidä Alt-näppäintä pohjassa, napsauta tai napauta valikoiman eri elementtejä.
 

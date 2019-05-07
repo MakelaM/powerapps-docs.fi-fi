@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562821"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>PowerAppsin And-, Or- ja Not-funktiot
 Totuusarvon logiikkafunktiot, joita käytetään yleensä muokkaamaan vertailujen tuloksia ja testauksia.
@@ -33,8 +34,8 @@ Totuusarvon logiikkafunktiot, joita käytetään yleensä muokkaamaan vertailuje
 Nämä funktiot toimivat loogisten arvojen kanssa. Niille ei voida suoraan välittää numeroa tai merkkijonoa. Sen sijaan täytyy suorittaa vertaus tai testaus. Esimerkiksi vertailu **x > 1** on looginen kaava, joka saa totuusarvon **tosi**, jos **x** on suurempi kuin **1**. Jos **x** on pienempi kuin **1**, kaava saa arvon **epätosi**.
 
 ## <a name="syntax"></a>Syntaksi
-**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
-**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**And**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
+**Or**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
 **Not**( *LogicalFormula* )
 
 * *LogicalFormula(s)* – Pakollinen.  Loogiset kaavat, jotka arvioidaan ja joille toiminto suoritetaan.
@@ -43,11 +44,11 @@ Nämä funktiot toimivat loogisten arvojen kanssa. Niille ei voida suoraan väli
 ### <a name="step-by-step"></a>Vaihe vaiheelta
 Käytä tätä funktiota määrittämään, onko liukusäätimen arvo välin 50–100 ulkopuolella:
 
-**Or(Slider1.Value < 50, Slider1.Value> 100)**
+**Or(Slider1.Value < 50; Slider1.Value> 100)**
 
 Jos [taulukko](../working-with-tables.md) sisältää [sarakkeet](../working-with-tables.md#columns) **Osasto** ja **Palkka**, voit käyttää tätä funktiota **Tulos**-sarakkeessa näyttämään arvon **tosi** kaikilla riveillä, joissa **Osasto**-sarakkeen arvo on **HR** tai **Palkka**-sarakkeen arvo on suurempi kuin **200 000**:
 
-**Or(Osasto = HR, Palkka >= 200000)**
+**Or(Osasto = HR; Palkka >= 200000)**
 
 Voit vaihtoehtoisesti käyttää ||-operaattoria saman tuloksen saamiseksi kuin edelliset kaavat:
 

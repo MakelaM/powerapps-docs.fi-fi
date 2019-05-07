@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548773"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="radio-control-in-powerapps"></a>Valintanappi PowerAppsissa
 
@@ -126,13 +127,13 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 
-[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 
 1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    **["Standard", "Premium"]**
+    **["Standard"; "Premium"]**
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 

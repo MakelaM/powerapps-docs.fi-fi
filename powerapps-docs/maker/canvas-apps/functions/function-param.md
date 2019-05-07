@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544334"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="download-launch-and-param-functions-in-canvas-apps"></a>Latauksen, käynnistämisen ja Param-funktioiden pohjaan perustuvat sovellukset
 Lataa tai avaa verkkosivun tai sovelluksen parametreilla.  
@@ -37,7 +38,7 @@ Internet Explorerin ja Microsoft Edge **Käynnistä** -funktio avaa sivustoon ta
 
 * *Address* – Pakollinen.  Ladattavan verkkoresurssin osoite.
 
-**Launch**( *Address* [, *ParameterName1*, *ParameterValue1*, ... ] )
+**Launch**( *Address* [; *ParameterName1*; *ParameterValue1*; ... ] )
 
 * *Address* – Pakollinen.  Avattavan verkkosivun osoite tai sovelluksen tunnus.
 * *ParameterName(s)* – Valinnaisia.  Parametrin nimi.

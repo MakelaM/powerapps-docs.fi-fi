@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562338"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-responsive-layouts-in-canvas-apps"></a>Luo reagoiva asettelut pohjaan perustuvat sovellukset
 
@@ -44,9 +45,9 @@ Jotta sovelluksesi reagoiva, sinun on tehtävä lisätoimia, mutta tämä muutos
 
 Jotta sovelluksesi asetteluja näytön dimensioiden muutokset vastata, kirjoittaa kaavoja, jotka käyttävät **leveys** ja **korkeus** näytön ominaisuuksiin. Näytä nämä ominaisuudet, Avaa sovellus PowerApps Studio ja valitse sitten näyttöön. Nämä ominaisuudet oletusarvon kaavat näkyvät **lisäasetukset** välilehti oikeanpuoleisessa ruudussa.
 
-**Width** = `Max(App.Width, App.DesignWidth)`
+**Width** = `Max(App.Width; App.DesignWidth)`
 
-**Korkeus** = `Max(App.Height, App.DesignHeight)`
+**Korkeus** = `Max(App.Height; App.DesignHeight)`
 
 Nämä kaavat viittaavat **leveys**, **korkeus**, **DesignWidth**, ja **DesignHeight** sovelluksen ominaisuudet. Sovelluksen **leveys** ja **korkeus** ominaisuudet vastaavat dimensioita laitteessa tai selaimessa ikkunan, jossa sovellus on käynnissä. Jos käyttäjä muuttaa selainikkuna (tai pyörii laitteen, jos olet poistanut käytöstä **lukitse kuvasuhde**), näiden ominaisuuksien arvoja dynaamisesti. Näytön kaavat **leveys** ja **korkeus** ominaisuudet ovat arvioitaessa uudelleen, kun nämä arvot muuttuvat.
 
@@ -185,16 +186,16 @@ Tähän mennessä olet oppinut luomaan käytettävissä olevan tilan vastaus kun
 
 Oletus-kaavoja näytölle **leveys** ja **korkeus** ominaisuudet kuin tämä aihe on kuvattu, eivät välttämättä hyvä kokemuksen tarjoamiseksi Jos käyttäjä kiertää laite. Sovelluksen, joka on suunniteltu puhelinta pystysuunnassa on esimerkiksi **DesignWidth** 640- ja **DesignHeight** -1136. Samaa sovellusta puhelimessa vaakasuunnassa on tämän ominaisuuden:
 
-- Näytön **leveys** asetuksena on `Max(App.Width, App.DesignWidth)`. Sovelluksen **leveys** (1136) on suurempi kuin sen **DesignWidth** (640), joten kaavan tulos 1136.
-- Näytön **korkeus** asetuksena on `Max(App.Height, App.DesignHeight)`. Sovelluksen **korkeus** (640) on pienempi kuin sen **DesignHeight** (1136), joten kaavan tulos 1136.
+- Näytön **leveys** asetuksena on `Max(App.Width; App.DesignWidth)`. Sovelluksen **leveys** (1136) on suurempi kuin sen **DesignWidth** (640), joten kaavan tulos 1136.
+- Näytön **korkeus** asetuksena on `Max(App.Height; App.DesignHeight)`. Sovelluksen **korkeus** (640) on pienempi kuin sen **DesignHeight** (1136), joten kaavan tulos 1136.
 
 Vaikeaa **korkeus** 1136- ja laitteen korkeuteen (tässä Tämä suunta) 640, käyttäjän on Vieritä näytön pystysuunnassa näyttämään kaikki sen sisältö, mikä ei ehkä käyttökokemus, joka halutaan.
 
 Näytön mukauttamiseksi **leveys** ja **korkeus** ominaisuudet laitteen-asentoon, voit määrittää nämä kaavat:
 
-**Width** = `Max(App.Width, If(App.Width < App.Height, App.DesignWidth, App.DesignHeight))`
+**Width** = `Max(App.Width; If(App.Width < App.Height; App.DesignWidth; App.DesignHeight))`
 
-**Korkeus** = `Max(App.Height, If(App.Width < App.Height, App.DesignHeight, App.DesignWidth))`
+**Korkeus** = `Max(App.Height; If(App.Width < App.Height; App.DesignHeight; App.DesignWidth))`
 
 Nämä kaavat Vaihda sovelluksen **DesignWidth** ja **DesignHeight** perusteella, onko laitteen leveys on pienempi kuin sen korkeutta (pystysuunnassa) tai suurempi kuin sen korkeutta (vaakasuunnassa) .
 
@@ -209,10 +210,10 @@ Voit käyttää näytön **suunta** ominaisuus määrittää, onko näytön zoom
 |--|----------|---|
 | **Ylempi** | **X** | `0` |
 | **Ylempi** | **Y** | `0` |
-| **Ylempi** | **Leveys** | `If(Parent.Orientation = Layout.Vertical, Parent.Width, Parent.Width / 2)` |
-| **Ylempi** | **Korkeus**   | `If(Parent.Orientation = Layout.Vertical, Parent.Height / 2, Parent.Height)` |
-| **Pienempi** | X | `If(Parent.Orientation = Layout.Vertical, 0, Upper.X + Upper.Width)`  |
-| **Pienempi** | Y | `If(Parent.Orientation = Layout.Vertical, Upper.Y + Upper.Height, 0)` |
+| **Ylempi** | **Leveys** | `If(Parent.Orientation = Layout.Vertical; Parent.Width; Parent.Width / 2)` |
+| **Ylempi** | **Korkeus**   | `If(Parent.Orientation = Layout.Vertical; Parent.Height / 2; Parent.Height)` |
+| **Pienempi** | X | `If(Parent.Orientation = Layout.Vertical; 0; Upper.X + Upper.Width)`  |
+| **Pienempi** | Y | `If(Parent.Orientation = Layout.Vertical; Upper.Y + Upper.Height; 0)` |
 | **Pienempi** | **Leveys** | `Parent.Width - Lower.X` |
 | **Pienempi** | **Korkeus** | `Parent.Height - Lower.Y` |
 
@@ -252,7 +253,7 @@ Tämä kaava määrittää ohjausobjektin leveyden puoliskolla näytön leveys p
 
 Näytön **koon** ominaisuuden lasketaan vertaamalla näytön **leveys** sovelluksen arvot ominaisuudeksi **SizeBreakpoints** ominaisuus. Tämä ominaisuus on yksisarakkeisen taulukon lukujen, jotka osoittavat, jotka erottavat nimetty näyttöjen leveys keskeytyskohtien:
 
-Sovelluksen tabletissa tai verkon, oletusarvo arvo sovelluksen **SizeBreakpoints** ominaisuus on **600, 900, 1200**. Sovelluksen puhelimia varten, arvo on **[1 200, 1 800, 2 400]**. (Puhelinsovelluksille arvot ovat kaksinkertainen koska tällainen sovellukset käyttävät koordinaatit, jotka ovat tehokkaasti double käyttänyt muissa sovelluksissa koordinaatit.)
+Sovelluksen tabletissa tai verkon, oletusarvo arvo sovelluksen **SizeBreakpoints** ominaisuus on **600, 900, 1200**. Sovelluksen puhelimia varten, arvo on **[1 200; 1 800; 2 400]**. (Puhelinsovelluksille arvot ovat kaksinkertainen koska tällainen sovellukset käyttävät koordinaatit, jotka ovat tehokkaasti double käyttänyt muissa sovelluksissa koordinaatit.)
 
 ![oletusarvot App.SizeBreakpoints ominaisuuden](media/create-responsive-layout/default-breakpoints.png)
 

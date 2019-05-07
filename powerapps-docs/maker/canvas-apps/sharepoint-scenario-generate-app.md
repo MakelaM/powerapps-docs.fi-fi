@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321219"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="generate-a-canvas-app-to-handle-project-requests"></a>Kangassovelluksen luominen projektipyyntöjen hallintaa varten
 > [!NOTE]
@@ -85,7 +86,7 @@ Nyt kun SharePoint-luettelot ovat paikallaan, voimme luoda ja mukauttaa ensimmä
    
     ![Items-ominaisuus](./media/sharepoint-scenario-generate-app/02-03-03-items.png)
 
-6. Muuta kaava muotoon **SortByColumns(Filter('Projektipyynnöt', StartsWith(Otsikko, TextSearchBox1.Text)), "Otsikko", If(SortDescending1, Descending, Ascending))**.
+6. Muuta kaava muotoon **SortByColumns(Filter('Projektipyynnöt'; StartsWith(Otsikko; TextSearchBox1.Text)); "Otsikko"; If(SortDescending1; Descending; Ascending))**.
    
     ![Kaavarivi](./media/sharepoint-scenario-generate-app/02-03-04-formula.png)
    

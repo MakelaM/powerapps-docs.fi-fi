@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551381"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concurrent-function-in-powerapps"></a>PowerAppsin Concurrent-funktio
 Arvioi useita kaavoja keskenään samanaikaisesti.
@@ -30,7 +31,7 @@ Paranna sovelluksesi suorituskykyä, kun se lataa tietoja, käyttämällä sovel
 
 Ei voida ennustaa, missä järjestyksessä kaavojen arviointi **Concurrent**-funktiossa alkaa ja päättyy. **Concurrent**-funktion kaavoissa ei tulisi olla riippuvuuksia muihin kaavoihin samassa **Concurrent**-funktiossa, ja PowerApps tuo näyttöön virhesanoman, jos riippuvuuksia on. Funktion sisältä voi turvallisesti käyttää riippuvuuksia **Concurrent**-funktion ulkopuolisiin kaavoihin, koska ne päättyvät ennen **Concurrent**-funktion käynnistymistä. Kaavat jälkeen **samanaikaisten** funktio voi olla riippuvuudet turvallisesti kaavoja: kaikki suoritetaan loppuun ennen **samanaikaisten** funktio on valmis ja siirtyy seuraava kaava ketjun (Jos voit Käytä **;** operaattorin). Varo hienovaraisia järjestysriippuvuuksia, jos kutsut funktioita tai palvelumenetelmiä, joilla on sivuvaikutuksia.
 
-Voit ketjun kaavat yhdessä **;** operaattorin argumentti sisällä **samanaikaisten**. Esimerkiksi funktio **Concurrent( Set( a, 1 ); Set( b, a+1 ), Set( x, 2 ); Set( y, x+2 ) )** arvioi kaavan **Set( a, 1 ); Set( b, a+1 )** samanaikaisesti kaavan **Set( x, 2 ); Set( y, x+2 )** kanssa. Tässä tapauksessa kaavojen sisäisiä riippuvuuksia voidaan käyttää: **a** määritetään ennen **b**:tä ja **x** määritetään ennen **y**:tä.
+Voit ketjun kaavat yhdessä **;** operaattorin argumentti sisällä **samanaikaisten**. Esimerkiksi funktio **Concurrent( Set( a; 1 );; Set( b; a+1 ); Set( x; 2 );; Set( y; x+2 ) )** arvioi kaavan **Set( a; 1 );; Set( b; a+1 )** samanaikaisesti kaavan **Set( x; 2 );; Set( y; x+2 )** kanssa. Tässä tapauksessa kaavojen sisäisiä riippuvuuksia voidaan käyttää: **a** määritetään ennen **b**:tä ja **x** määritetään ennen **y**:tä.
 
 Sen mukaan, missä laitteessa tai selaimessa sovellus on käynnissä, vain kourallinen kaavoja saatetaan arvioida samanaikaisesti. **Concurrent** käyttää käytettävissä olevia ominaisuuksia, eikä sen suoritus pääty, ennen kuin kaikki kaavat on arvioitu.
 
@@ -39,7 +40,7 @@ Jos otat **kaavatason virheiden hallinnan** käyttöön (lisäasetuksissa), ensi
 Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Concurrent**( *Formula1*, *Formula2* [, ...] )
+**Concurrent**( *Formula1*; *Formula2* [; ...] )
 
 * *Formula(s)* – Pakollinen. Samanaikaisesti arvioitavat kaavat. Vähintään kaksi kaavaa on annettava.
 
@@ -55,11 +56,11 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 2. Lisää **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    ClearCollect( Product, '[SalesLT].[Product]' );
-    ClearCollect( Customer, '[SalesLT].[Customer]' );
-    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ); 
-    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+    ```powerapps-comma
+    ClearCollect( Product; '[SalesLT].[Product]' );;
+    ClearCollect( Customer; '[SalesLT].[Customer]' );;
+    ClearCollect( SalesOrderDetail; '[SalesLT].[SalesOrderDetail]' );; 
+    ClearCollect( SalesOrderHeader; '[SalesLT].[SalesOrderHeader]' )
     ```
 
 3. Ota [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network)- tai [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) -selaimessa kehitystyökalut käyttöön, jotta voit tarkkailla verkkoliikennettä sovelluksen ollessa käynnissä.
@@ -78,12 +79,12 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 1. Lisää toinen **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent( 
-        ClearCollect( Product, '[SalesLT].[Product]' ), 
-        ClearCollect( Customer, '[SalesLT].[Customer]' ),
-        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
-        ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+        ClearCollect( Product; '[SalesLT].[Product]' ); 
+        ClearCollect( Customer; '[SalesLT].[Customer]' );
+        ClearCollect( SalesOrderDetail; '[SalesLT].[SalesOrderDetail]' );
+        ClearCollect( SalesOrderHeader; '[SalesLT].[SalesOrderHeader]' )
     )
     ```
 
@@ -111,19 +112,19 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 3. Lisää **Painike**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    Set( StartTime, Value( Now() ) );
+    ```powerapps-comma
+    Set( StartTime; Value( Now() ) );;
     Concurrent(
-        Set( FRTrans, MicrosoftTranslator.Translate( TextInput1.Text, "fr" ) ); 
-            Set( FRTransTime, Value( Now() ) ),
-        Set( DETrans, MicrosoftTranslator.Translate( TextInput1.Text, "de" ) ); 
-            Set( DETransTime, Value( Now() ) )
-    );
-    Collect( Results,
+        Set( FRTrans; MicrosoftTranslator.Translate( TextInput1.Text; "fr" ) );; 
+            Set( FRTransTime; Value( Now() ) );
+        Set( DETrans; MicrosoftTranslator.Translate( TextInput1.Text; "de" ) );; 
+            Set( DETransTime; Value( Now() ) )
+    );;
+    Collect( Results;
         { 
-            Input: TextInput1.Text,
-            French: FRTrans, FrenchTime: FRTransTime - StartTime, 
-            German: DETrans, GermanTime: DETransTime - StartTime, 
+            Input: TextInput1.Text;
+            French: FRTrans; FrenchTime: FRTransTime - StartTime; 
+            German: DETrans; GermanTime: DETransTime - StartTime; 
             FrenchFaster: FRTransTime < DETransTime
         }
     )

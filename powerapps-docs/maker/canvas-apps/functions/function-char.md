@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559663"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="char-function-in-powerapps"></a>Char-funktio PowerAppsissa
 
@@ -46,7 +47,7 @@ Muuntaa merkkikoodin merkkijonoksi.
 
 1. Lisää tyhjä näyttö tablettisovellus, [ **valikoiman** ](../controls/control-gallery.md) ohjausobjektin **tyhjä vaakasuuntainen** asettelu, ja määritä sitten nämä ominaisuudet:
 
-    - **Kohteet**: `[0,1,2,3,4,5,6,7]`
+    - **Kohteet**: `[0;1;2;3;4;5;6;7]`
     - **Leveys**: 800
     - **Korkeus**: 500
     - **TemplateSize**: 100
@@ -54,7 +55,7 @@ Muuntaa merkkikoodin merkkijonoksi.
 
 1. Kyseisen valikoiman sisällä, Lisää **valikoiman** ohjausobjektin **tyhjä pystysuuntainen** asettelu, ja määritä sitten nämä ominaisuudet:
 
-    - **Kohteet**: `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
+    - **Kohteet**: `ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 )`
     - **Leveys**: 100
     - **Korkeus**: 500
     - **TemplateSize**: 30
@@ -79,7 +80,7 @@ Olet luonut kaavion ensin 128 ASCII-merkin. Merkkejä, jotka näkyvät kuin pien
 
 Näyttää laajennettu ASCII-merkkejä **kohteet** ominaisuus toinen tämä kaava, joka lisää 128 merkkiä jokaisen arvon:
 
-`ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
+`ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 + 128)`
 
 ![Laajennetun ASCII-merkkejä](media/function-char/chart-higher.png)
 

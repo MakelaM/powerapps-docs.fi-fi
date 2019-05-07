@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321708"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="date-picker-control-in-powerapps"></a>Päivämäärävalitsin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa päivämäärän määrittämiseksi.
@@ -109,7 +110,7 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
+   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
 
     Haluatko lisätietoja **[DateDiff](../functions/function-dateadd-datediff.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä, valitse päivämäärä kohdassa **Määräaika** ja napsauta tai napauta **OK**.

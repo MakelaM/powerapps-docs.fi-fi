@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520486"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="savedata-and-loaddata-functions-in-powerapps"></a>SaveData- ja LoadData-funktiot PowerAppsissa
 Tallentaa ja lataa uudelleen [kokoelman](../working-with-data-sources.md#collections).
@@ -39,7 +40,7 @@ Nämä funktiot rajoittavat käytettävissä oleva sovellus muistin määrä, ko
 Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muilta käyttäjiltä ja muilta sovelluksilta.
 
 ## <a name="syntax"></a>Syntaksi
-**SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
+**SaveData**( *Collection*; *Name* )<br>**LoadData**( *Collection*; *Name* [; *IgnoreNonexistentFile* ])
 
 * *Collection* – Pakollinen.  Tallennettava tai ladattava kokoelma.
 * *Name* – Pakollinen.  Tallennustilan nimi. Käytä samaa nimeä saman tietojoukon tallentamiseen ja lataamiseen. Nimi-tilaa ei jaeta muiden sovellusten tai käyttäjien kanssa.
@@ -49,6 +50,6 @@ Tallennustila on salattu ja sijaitsee erillään laitteesta ja eristettynä muil
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **If(Connection.Connected, ClearCollect(LocalTweets, Twitter.SearchTweet("PowerApps", {maxResults: 100})), LoadData (LocalTweets, ”Tweets”, true))** |Jos laite on yhdistetty, lataa LocalTweets-kokoelma Twitter-palvelusta. Lataa kokoelma muussa tapauksessa paikallisesta tiedostovälimuistista. |Sisältö hahmonnetaan riippumatta siitä, onko laite online- vai offline-tilassa. |
-| **SaveData(LocalTweets, ”Tweets”)** |Tallenna LocalTweets-kokoelma laitteen paikalliseen tiedostovälimuistiin. |Tiedot tallennetaan paikallisesti, jotta **LoadData** voi ladata sen kokoelmaan. |
+| **If(Connection.Connected; ClearCollect(LocalTweets; Twitter.SearchTweet("PowerApps"; {maxResults: 100})); LoadData (LocalTweets; ”Tweets”; true))** |Jos laite on yhdistetty, lataa LocalTweets-kokoelma Twitter-palvelusta. Lataa kokoelma muussa tapauksessa paikallisesta tiedostovälimuistista. |Sisältö hahmonnetaan riippumatta siitä, onko laite online- vai offline-tilassa. |
+| **SaveData(LocalTweets; ”Tweets”)** |Tallenna LocalTweets-kokoelma laitteen paikalliseen tiedostovälimuistiin. |Tiedot tallennetaan paikallisesti, jotta **LoadData** voi ladata sen kokoelmaan. |
 

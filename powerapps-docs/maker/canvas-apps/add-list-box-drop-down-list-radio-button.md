@@ -19,6 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61555866"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app"></a>Lisää luetteloruutu, avattava luettelo tai valintanappeja pohjaan perustuvaan sovellukseen
 
@@ -36,7 +37,7 @@ Tässä artikkelissa käsitellään erityisesti luetteloruutuja ja valintanappej
 
 1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **MyListBox** ja aseta sen **Kohteet**-ominaisuudeksi tämä lauseke:
 
-    ```["circle","triangle","rectangle"]```  <br/>
+    ```["circle";"triangle";"rectangle"]```  <br/>
 
     Suunnittelutyökalusi näyttää jotakuinkin seuraavalta:
 
@@ -54,9 +55,9 @@ Tässä artikkelissa käsitellään erityisesti luetteloruutuja ja valintanappej
 
    | Muoto | Määritä Visible-funktioksi |
    | --- | --- |
-   | circle |```If("circle" in MyListBox.SelectedItems.Value, true)``` |
-   | triangle |```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
-   | rectangle |```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
+   | circle |```If("circle" in MyListBox.SelectedItems.Value; true)``` |
+   | triangle |```If("triangle" in MyListBox.SelectedItems.Value; true)``` |
+   | rectangle |```If("rectangle" in MyListBox.SelectedItems.Value; true)``` |
 
 7. Pidä Alt-näppäintä painettuna ja valitse yksi tai useampia muotoja **MyListBox**-ohjausobjektista.
 
@@ -72,7 +73,7 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseen. Voit käyttää tät�
     ![][10]  
 
 3. Anna **Valintanappi**-ohjausobjektille nimi **Choices** ja aseta sen **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:  
-   ```["red","green","blue"]```  <br/>
+   ```["red";"green";"blue"]```  <br/>
 
     ![][12]  
 
@@ -81,7 +82,7 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseen. Voit käyttää tät�
 4. Valitse **Lisää**-välilehdeltä **Kuvakkeet** ja valitse ympyrä.
 
 5. Määritä ympyrän **[Fill](controls/properties-color-border.md)**-ominaisuudeksi seuraava funktio:  
-   ```If(Choices.Selected.Value = "red", Red, Choices.Selected.Value = "green", Green, Choices.Selected.Value = "blue", Blue)```  
+   ```If(Choices.Selected.Value = "red"; Red; Choices.Selected.Value = "green"; Green; Choices.Selected.Value = "blue"; Blue)```  
 
     Tällä kaavalla ympyrä vaihtaa väriään valitun valintanapin mukaan.
 

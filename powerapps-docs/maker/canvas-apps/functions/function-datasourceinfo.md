@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551288"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="datasourceinfo-function-in-powerapps"></a>PowerAppsin DataSourceInfo-funktio
 Antaa [tietolähteen](../working-with-data-sources.md) tietoja.
@@ -58,7 +59,7 @@ Voit käyttää **DataSourceInfo**-funktiota hakemaan tietoja tietolähteestä k
 | **DataSourceInfo.ReadPermission** |Totuusarvo |Onko nykyisellä käyttäjällä oikeus lukea tietueita tässä tietolähteessä? Jos tietolähde ei aseta tätä, palauttaa arvon **true**. |
 
 ## <a name="syntax"></a>Syntaksi
-**DataSourceInfo**( *DataSource*, *Information*, *ColumnName* )
+**DataSourceInfo**( *DataSource*; *Information*; *ColumnName* )
 
 * *DataSource* – Pakollinen. Käytettävä tietolähde.
 * *Information* – Pakollinen. Haettavan tiedon tyyppi.
@@ -83,14 +84,14 @@ Tietolähde on antanut myös nämä tiedot:
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DisplayName,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen näyttönimen. |"Quantity on Hand" |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxLength,&nbsp;"Flavor"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Flavor**-sarakkeen merkkijonon enimmäispituuden. |30 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Flavor"&nbsp;)** |Onko **IceCream**-tietolähteen **Flavor**-sarake pakollinen? |**true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.Required,&nbsp;"Quantity"&nbsp;)** |Onko **IceCream**-tietolähteen **Quantity**-sarake pakollinen? |**false** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MaxValue,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen enimmäisnumeroarvon. |100 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.MinValue,&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen vähimmäisnumeroarvon. |0 |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.ReadPermission)** |Voiko nykyinen käyttäjä lukea **IceCream**-tietolähteen tietueita? |**true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.EditPermission)** |Voiko nykyinen käyttäjä muokata **IceCream**-tietolähteen tietueita? |**true** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.CreatePermission)** |Voiko nykyinen käyttäjä luoda **IceCream**-tietolähteen tietueita? |**false** |
-| **DataSourceInfo(&nbsp;IceCream, DataSourceInfo.DeletePermission)** |Voiko nykyinen käyttäjä poistaa **IceCream**-tietolähteen tietueita? |**false** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.DisplayName;&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen näyttönimen. |"Quantity on Hand" |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.MaxLength;&nbsp;"Flavor"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Flavor**-sarakkeen merkkijonon enimmäispituuden. |30 |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.Required;&nbsp;"Flavor"&nbsp;)** |Onko **IceCream**-tietolähteen **Flavor**-sarake pakollinen? |**true** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.Required;&nbsp;"Quantity"&nbsp;)** |Onko **IceCream**-tietolähteen **Quantity**-sarake pakollinen? |**false** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.MaxValue;&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen enimmäisnumeroarvon. |100 |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.MinValue;&nbsp;"Quantity"&nbsp;)** |Palauttaa **IceCream**-tietolähteen **Quantity**-sarakkeen vähimmäisnumeroarvon. |0 |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.ReadPermission)** |Voiko nykyinen käyttäjä lukea **IceCream**-tietolähteen tietueita? |**true** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.EditPermission)** |Voiko nykyinen käyttäjä muokata **IceCream**-tietolähteen tietueita? |**true** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.CreatePermission)** |Voiko nykyinen käyttäjä luoda **IceCream**-tietolähteen tietueita? |**false** |
+| **DataSourceInfo(&nbsp;IceCream; DataSourceInfo.DeletePermission)** |Voiko nykyinen käyttäjä poistaa **IceCream**-tietolähteen tietueita? |**false** |
 

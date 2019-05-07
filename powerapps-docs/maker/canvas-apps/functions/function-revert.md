@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520623"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="revert-function-in-powerapps"></a>PowerAppsin Revert-funktio
 Lataa uudelleen ja poistaa virheet [tietolähteen](../working-with-data-sources.md) [tietueista](../working-with-tables.md#records).
@@ -33,7 +34,7 @@ Jos **[Errors](function-errors.md)**-funktio ilmoittaa ristiriidasta **[Patch](f
 **Revert**-funktiolla ei ole paluuarvoa. Sitä voidaan käyttää vain [toimintakaavassa](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Revert**( *DataSource* [, *Record* ] )
+**Revert**( *DataSource* [; *Record* ] )
 
 * *DataSource* – Pakollinen. Tietolähde, jonka haluat palauttaa.
 * *Record* – Valinnainen.  Tietue, jonka haluat palauttaa.  Jos et määritä tietuetta, koko tietolähde palautetaan.
@@ -46,16 +47,16 @@ Tässä esimerkissä palautetaan tietolähde nimeltä **IceCream**, jolla on alu
 Käyttäjä muuttaa eri laitteella **Strawberry**-tietueen **Quantity**-ominaisuudeksi **400**.  Samaan aikaan sinä muutat saman tietueen samaksi ominaisuudeksi **500** tietämättä toisen käyttäjän muutoksesta.
 
 Käytät **[Patch](function-patch.md)**-funktiota tietueen päivittämiseen:<br>
-**Patch (IceCream, ensimmäisenä (Filter (IceCream, Flavor = ”Strawberry”)), {määrä: 500 } )**
+**Patch (IceCream; ensimmäisenä (Filter (IceCream; Flavor = ”Strawberry”)); {määrä: 500 } )**
 
 Tarkistat **[Errors](function-errors.md)**-taulukon ja näet virheen:
 
 | Tietue | [Sarake](../working-with-tables.md#columns) | Viesti | Virhe |
 | --- | --- | --- | --- |
-| **{TUNNUS: 1, flavor: ”Mansikka”, Quantity: 300 }** |*tyhjä* |**"Toinen käyttäjä on muokannut tietuetta, jota yrität muokata.  Palauta tietue ja yritä uudelleen."** |**ErrorKind.Conflict** |
+| **{TUNNUS: 1; flavor: ”Mansikka”; Quantity: 300 }** |*tyhjä* |**"Toinen käyttäjä on muokannut tietuetta, jota yrität muokata.  Palauta tietue ja yritä uudelleen."** |**ErrorKind.Conflict** |
 
 **Error**-sarakkeen perusteella sinulla on **Lataa uudelleen** -painike, jonka **[OnSelect](../controls/properties-core.md)**-ominaisuus on tämä kaava:<br>
-**Revert( IceCream, First( Filter( IceCream, Flavor = "Strawberry" ) ) )**
+**Revert( IceCream; First( Filter( IceCream; Flavor = "Strawberry" ) ) )**
 
 Kun olet valinnut **Lataa uudelleen** -painikkeen, **[Errors](function-errors.md)**-taulukko on [tyhjä](function-isblank-isempty.md) ja **Strawberry**-tietueen uusi arvo on ladattu:
 

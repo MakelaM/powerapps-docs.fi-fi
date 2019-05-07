@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61546619"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="average-max-min-stdevp-sum-and-varp-functions-in-powerapps"></a>PowerAppsin Average-, Max-, Min-, StdevP-, Sum- ja VarP-funktiot
 Koostefunktiot, jotka koostavat numerojoukon.
@@ -38,7 +39,7 @@ Koostefunktiot, jotka koostavat numerojoukon.
 
 Voit antaa funktioille arvot seuraavin tavoin:
 
-* Erillisinä argumentteina. Esimerkiksi **Sum( 1, 2, 3 )** palauttaa arvon 6.
+* Erillisinä argumentteina. Esimerkiksi **Sum( 1; 2; 3 )** palauttaa arvon 6.
 * [Taulukkona](../working-with-tables.md) ja kaavana, joka suoritetaan taulukolle.  Kooste lasketaan kaavan arvoille joka [tietueelle](../working-with-tables.md#records).  
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
@@ -48,11 +49,11 @@ Nämä funktiot toimivat vain numeroarvojen kanssa. Muut arvotyypit, kuten merkk
 **Average**-, **Max**-, **Min**- ja **Sum**-funktiot voidaan delegoida, kun niitä käytetään [näiden funktioiden delegointia tukevan tietolähteen kanssa](../delegation-list.md).  **StdevP**- ja **VarP**-funktioita ei kuitenkaan voi delegoida minkään tietolähteen osalta.  Jos delegointia ei tueta, vain tietojen ensimmäinen osa noudetaan ja sen jälkeen funktio otetaan käyttöön paikallisesti.  Tulos ei ehkä vastaa koko tarinaa.  Muokkaamisen aikana näyttöön tulee delegointivaroitus, joka muistuttaa tästä rajoituksesta ja ehdottaa mahdollisia delegoitavia vaihtoehtoja. Lisätietoja on kohdassa [Delegoinnin yleiskatsaus](../delegation-overview.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Average**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Max**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Min**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**Sum**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**StdevP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )<br>**VarP**( *NumericalFormula1*, [ *NumericalFormula2*, ... ] )
+**Average**( *NumericalFormula1*; [ *NumericalFormula2*; ... ] )<br>**Max**( *NumericalFormula1*; [ *NumericalFormula2*; ... ] )<br>**Min**( *NumericalFormula1*; [ *NumericalFormula2*; ... ] )<br>**Sum**( *NumericalFormula1*; [ *NumericalFormula2*; ... ] )<br>**StdevP**( *NumericalFormula1*; [ *NumericalFormula2*; ... ] )<br>**VarP**( *NumericalFormula1*; [ *NumericalFormula2*; ... ] )
 
 * *NumericalFormula(s)* – Pakollinen.  Käsiteltävät numeeriset arvot.
 
-**Average**( *Table*, *NumericalFormula* )<br>**Max**( *Table*, *NumericalFormula* )<br>**Min**( *Table*, *NumericalFormula* )<br>**Sum**( *Table*, *NumericalFormula* )<br>**StdevP**( *Table*, *NumericalFormula* )<br>**VarP**( *Table*, *NumericalFormula* )
+**Average**( *Table*; *NumericalFormula* )<br>**Max**( *Table*; *NumericalFormula* )<br>**Min**( *Table*; *NumericalFormula* )<br>**Sum**( *Table*; *NumericalFormula* )<br>**StdevP**( *Table*; *NumericalFormula* )<br>**VarP**( *Table*; *NumericalFormula* )
 
 * *Table* – Pakollinen.  Käsiteltävä taulukko.
 * *NumericalFormula* – Pakollinen. Kullekin tietueelle laskettava kaava. Tämän kaavan tulosta käytetään koostamiseen. Voit käyttää taulukon sarakkeita kaavassa.
@@ -60,12 +61,12 @@ Nämä funktiot toimivat vain numeroarvojen kanssa. Muut arvotyypit, kuten merkk
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="step-by-step"></a>Vaihe vaiheelta
 Oletetaan, että käytössä on [tietolähde](../working-with-data-sources.md) nimeltä **Sales**, joka sisältää sarakkeen **CostPerUnit** ja sarakkeen **UnitsSold**, ja asetat selitteen **[Text](../controls/properties-core.md)**-ominaisuudeksi tämän kaavan:<br>
-**Sum(Sales, CostPerUnit * UnitsSold)**
+**Sum(Sales; CostPerUnit * UnitsSold)**
 
 Selite näyttää kokonaismyynnit kertomalla tietueiden sarakkeiden arvot ja lisäämällä kaikkien tietueiden tulokset yhteen:<br>![Kokonaismyynnin laskenta myydyistä yksiköistä ja yksikköhinnasta](./media/function-aggregates/total-sales.png)
 
 Toisessa erilaisessa esimerkissä käytössä on liukusäätimet nimeltä **Slider1**, **Slider2** ja **Slider3** ja selite, jonka **[Text](../controls/properties-core.md)**-ominaisuudeksi on määritetty seuraava kaava:<br>
-**Sum(Slider1.Value, Slider2.Value, Slider3.Value)**
+**Sum(Slider1.Value; Slider2.Value; Slider3.Value)**
 
 Selite näyttää kaikkien näiden liukusäädinten asetusten summan.
 

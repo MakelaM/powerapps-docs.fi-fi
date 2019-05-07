@@ -19,6 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318393"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="how-to-save-images-in-an-excel-file-and-then-add-these-images-to-your-app"></a>Kuvien tallentaminen Excel-tiedostoon ja lisääminen sovellukseen
 
@@ -58,7 +59,7 @@ Tässä opetusohjelmassa me:
    
    ![Nimeä uudelleen](./media/tutorial-working-with-images-in-excel/rename-mypen.png)
 4. Lisää **Painike**-ohjausobjekti (**Lisää**-valikko) ja määritä sen **OnSelect**-ominaisuus seuraavalla kaavalla:  
-   `Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})`
+   `Patch(Drawings; Defaults(Drawings); {Image:MyPen.Image})`
 5. Lisää **Kuvavalikoima**-ohjausobjekti (**Lisää**-valikko > **Valikoima**) ja määritä sen **Kohteet**-ominaisuudeksi `Drawings`. Valikoima-ohjausobjektin **Kuva**-ominaisuudeksi asetetaan automaattisesti `ThisItem.Image`.
    
    Näyttösi kuuluu näyttää seuraavankaltaiselta:  

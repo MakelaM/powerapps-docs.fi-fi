@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544296"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -37,7 +38,7 @@ Voit myös määrittää lomakkeen **Item**-ominaisuus käyttämällä **avattav
 
 ```First(Accounts)```
 
-```Lookup(Accounts, "Fabrikam" in name)```
+```Lookup(Accounts; "Fabrikam" in name)```
 
 Jokainen Lomake-ohjausobjekti sisältää vähintään yhden **[Kortti](control-card.md)**-ohjausobjektin. Voit [määrittää, minkä kentän kortti näyttää ja muita tietoja](../add-form.md) määrittämällä kortin **[DataField](control-card.md)**-ominaisuuden.
 
@@ -152,7 +153,7 @@ Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutok
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
 * Tämän ominaisuuden avulla voit poimia kenttäarvoja ohjausobjektin korteista.  Voit käyttää näitä arvoja tietolähteen manuaaliseen päivittämiseen **[Ohjelmakorjaus](../functions/function-patch.md)**-funktiokutsulla tai muulla yhteyden näyttämällä menetelmällä.  Tätä toimintoa ei tarvita, jos **[SubmitForm](../functions/function-form.md)**-funktio on käytössä.
-* Ominaisuus palauttaa tietueen arvoista.  Jos lomake-ohjausobjekti sisältää kortti-ohjausobjektit **nimi** ja **määrä** kentät ja arvot **[päivitys](control-card.md)** kyseisten korttien ominaisuudet palauttavat ”Widget” ja 10, myös **päivitykset** lomake-ohjausobjektin ominaisuus palauttaa arvon **{nimi: ”Widget”, Quantity: 10 }**.
+* Ominaisuus palauttaa tietueen arvoista.  Jos lomake-ohjausobjekti sisältää kortti-ohjausobjektit **nimi** ja **määrä** kentät ja arvot **[päivitys](control-card.md)** kyseisten korttien ominaisuudet palauttavat ”Widget” ja 10, myös **päivitykset** lomake-ohjausobjektin ominaisuus palauttaa arvon **{nimi: ”Widget”; Quantity: 10 }**.
 
 **Valid** – Sisältääkö **[Kortti](control-card.md)**- tai **Muokattu lomake** -ohjausobjekti kelvollisia merkintöjä, jotka voidaan lähettää tietolähteeseen.
 
@@ -160,7 +161,7 @@ Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutok
 * **Lomake**-ohjausobjektin **Valid**-ominaisuus koostaa kaikkien lomakkeen **[Kortti](control-card.md)**-ohjausobjektien **Valid**-ominaisuudet. Lomakkeen **Valid**-ominaisuuden arvo on **true** vain, jos lomakkeen kaikkien korttien tiedot ovat kelvollisia. Muussa tapauksessa **Valid**-ominaisuus on **false**.
 * Voit määrittää painikkeen tallentamaan muutokset vain, jos lomakkeen tiedot ovat kelvollisia, mutta niitä ei ole vielä lähetetty, määrittämällä painikkeen **DisplayMode**-arvoksi seuraavan kaavan:
   
-    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid; DisplayMode.Edit; DisplayMode.Disabled)**
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.

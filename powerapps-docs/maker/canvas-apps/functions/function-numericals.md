@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544021"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="abs-exp-ln-power-and-sqrt-functions-in-powerapps"></a>Abs-, Exp-, Ln-, Power- ja Sqrt-funktiot PowerAppsissa
 Laskevat itseisarvot, luonnolliset logaritmit, neliöjuuret sekä *e*:n tai minkä tahansa numeron määritettyyn potenssiin korottamisen tulokset.
@@ -43,7 +44,7 @@ Jos argumentti tuottaa määrittämättömän arvon, tulos on *tyhjä*.  Näin v
 
 * *Number* – pakollinen. Numero, jolle toiminto suoritetaan.
 
-**Power**( *Base*, *Exponent* )
+**Power**( *Base*; *Exponent* )
 
 * *Base* – Pakollinen. Kantaluku, joka korotetaan potenssiin.
 * *Exponent* – Pakollinen. Eksponentti, johon kantaluku korotetaan.
@@ -60,7 +61,7 @@ Jos argumentti tuottaa määrittämättömän arvon, tulos on *tyhjä*.  Näin v
 | **Abs( -55 )** |Palauttaa luvun ilman miinusmerkkiä. |55 |
 | **Exp( 2 )** |Palauttaa luvun *e* korotettuna potenssiin 2, tai *e* \* *e*. |7.389056... |
 | **Ln( 100 )** |Palauttaa luvun 100 luonnollisen logaritmin (*e*-kanta). |4.605170... |
-| **Power( 5, 3 )** |Palauttaa luvun 5 korotettuna potenssiin 3, tai 5 \* 5 \* 5. |125 |
+| **Power( 5; 3 )** |Palauttaa luvun 5 korotettuna potenssiin 3, tai 5 \* 5 \* 5. |125 |
 | **Sqrt( 9 )** |Palauttaa luvun, joka kerrottuna itsellään on yhtä suuri kuin 9. |3 |
 
 ### <a name="single-column-table"></a>Yksisarakkeinen taulukko

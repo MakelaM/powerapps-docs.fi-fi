@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63319942"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="export-control-and-import-control-in-powerapps"></a>Vienti- ja tuonti-ohjausobjektit PowerAppsissa
 Ohjausobjektit tietojen viemiseen paikalliseen tiedostoon ja sen jälkeen näiden tietojen tuomiseen toiseen sovellukseen PowerAppsissa.
@@ -116,7 +117,7 @@ Vientitoimintoa ei tueta verkkoselaimissa.
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **[Painike](control-button.md)**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
+   <br>**ClearCollect(Products; {Name:"Europa"; Price:"10.99"}; {Name:"Ganymede"; Price:"12.49"}; {Name:"Callisto"; Price:"11.79"})**
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
    
@@ -126,7 +127,7 @@ Vientitoimintoa ei tueta verkkoselaimissa.
 4. Paina F5-näppäintä, napsauta tai napauta **Vienti**-ohjausobjektia ja määritä sitten sen tiedoston nimi, johon haluat viedä tiedot.
 5. Napsauta tai napauta **Tallenna** ja palaa sitten oletustyötilaan painamalla ESC-näppäintä.
 6. Lisää uuteen tai aiemmin luotuun sovellukseen **Tuonti**-ohjausobjekti, anna sen nimeksi **MyData**, ja määritä sen **[OnSelect](properties-core.md)**-ominaisuuden arvoksi tämä kaava:<br>
-   **Collect(ImportedProducts, MyData.Data)**
+   **Collect(ImportedProducts; MyData.Data)**
 7. Paina F5-näppäintä, napsauta tai napauta kohtaa **MyData**, napsauta tai napauta viemääsi tiedostoa ja napsauta tai napauta sitten **Avaa**.
 8. Paina ESC-näppäintä, napsauta tai napauta kohtaa **Kokoelmat** **Tiedosto**-valikossa ja vahvista, että nykyisellä sovelluksella on viemäsi tiedot.
 

@@ -16,6 +16,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562015"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-component-for-canvas-apps"></a>Luo pohjaan perustuvat sovellukset komponentti
 
@@ -104,7 +105,7 @@ Tässä esimerkissä luodaan, joka muistuttaa seuraavaa kuvaa tai, jossa voit mu
 
 1. Määrittää komponentin **kohteet** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Table({Item:"SampleText"})
     ```
 
@@ -114,7 +115,7 @@ Tässä esimerkissä luodaan, joka muistuttaa seuraavaa kuvaa tai, jossa voit mu
 
 1. Varmista, että ominaisuusluettelo näyttää **kohteet** ominaisuuden (sellaisena kuin se tekee oletusarvon mukaan), ja määritä sitten kyseisen ominaisuuden arvoksi seuraava lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     MenuComponent.Items
     ```
 
@@ -140,8 +141,8 @@ Seuraavaksi osa lisätään näyttöön ja määritä merkkijonotaulukko näytt�
 
 1. Määritä **kohteet** ominaisuuden **MenuComponent_1** tämä kaava:
 
-    ```powerapps-dot
-    Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
+    ```powerapps-comma
+    Table({Item:"Home"}; {Item:"Admin"}; {Item:"About"}; {Item:"Help"})
     ```
 
     Tämän esiintymän muistuttaa seuraavaa kuvaa, mutta voit mukauttaa teksti ja muut ominaisuudet kunkin esiintymän.
@@ -160,7 +161,7 @@ Tähän mennessä olet luonut osan ja lisätä sen sovellukseen. Seuraavaksi luo
 
 1. Käyttöön **lisäasetukset** välilehdeltä arvoa **valittu** ominaisuudeksi Tämä lauseke säätäminen valikoima-nimi on numero tarvittaessa:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected.Item
     ```
 
@@ -168,7 +169,7 @@ Tähän mennessä olet luonut osan ja lisätä sen sovellukseen. Seuraavaksi luo
 
 1. Oletusarvon mukainen sovelluksen näytössä Lisää selite ja aseta sen **tekstin** ominaisuudeksi Tämä lauseke säätäminen komponentin nimi numero tarvittaessa:
 
-    ```powerapps-dot
+    ```powerapps-comma
     MenuComponent_1.Selected
     ```
 

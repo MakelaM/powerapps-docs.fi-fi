@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61550392"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="let-customers-test-drive-your-canvas-app-on-appsource"></a>Anna asiakkaiden koekäyttää pohjaan perustuvia sovelluksiasi AppSourcessa
 
@@ -59,9 +60,9 @@ Tuodut tiedot ovat *staattisia*, eli niitä voidaan vain lukea. Jos sovelluksesi
 
 Jos sovelluksesi sallii myös kirjoittamisen, nouda tiedot ensin taulukoista *kokoelmaan*, joka on PowerAppsin taulukkomuotoinen tietorakenne. Voit sitten työskennellä kokoelman kanssa taulukon sijaan. Tietojen noutaminen **SiteInspector**- ja **SitePhotos**-taulukoista **SiteInspectorCollect**- ja **SitePhotosCollect**-kokoelmiin:
 
-```powerapps-dot
-ClearCollect( SiteInspectorCollect, SiteInspector ); 
-ClearCollect( SitePhotosCollect, SitePhotos )
+```powerapps-comma
+ClearCollect( SiteInspectorCollect; SiteInspector );; 
+ClearCollect( SitePhotosCollect; SitePhotos )
 ```
 
 Kaava tyhjentää molemmat kokoelmat ja kerää tiedot taulukoista asianmukaiseen kokoelmaan:
@@ -77,12 +78,12 @@ Olet nähnyt, kuinka tietoja voidaan lukea suoraan kokoelmasta. Nyt näytämme, 
 
 **Lisää kokoelmaan rivi** käyttämällä kaavaa [Collect( DataSource, Item, ... )](../canvas-apps/functions/function-clear-collect-clearcollect.md):
 
-```powerapps-dot
-Collect( SiteInspectorCollect,
+```powerapps-comma
+Collect( SiteInspectorCollect;
     {
-        ID: Value( Max( SiteInspectorCollect, ID ) + 1 ),
-        Title: TitleText.Text,
-        SubTitle: SubTitleText.Text,
+        ID: Value( Max( SiteInspectorCollect; ID ) + 1 );
+        Title: TitleText.Text;
+        SubTitle: SubTitleText.Text;
         Description: DescriptionText.Text
     }
 )
@@ -90,12 +91,12 @@ Collect( SiteInspectorCollect,
 
 **Päivitä kokoelman rivi** käyttämällä kaavaa [UpdateIf( DataSource, Condition1, ChangeRecord1 [, Condition2, ChangeRecord2, ...] )](../canvas-apps/functions/function-update-updateif.md):
 
-```powerapps-dot
-UpdateIf( SiteInspectorCollect,
-    ID = record.ID,
+```powerapps-comma
+UpdateIf( SiteInspectorCollect;
+    ID = record.ID;
     {
-        Title: TitleEditText.Text,
-        SubTitle: SubTitleEditText.Text,
+        Title: TitleEditText.Text;
+        SubTitle: SubTitleEditText.Text;
         Description: DescriptionEditText.Text
     }
 )
@@ -103,8 +104,8 @@ UpdateIf( SiteInspectorCollect,
 
 **Poista kokoelmasta rivi** käyttämällä kaavaa [RemoveIf( DataSource, Condition [, ...] )](../canvas-apps/functions/function-remove-removeif.md):
 
-```powerapps-dot
-RemoveIf( SiteInspectorCollect, ID = record.ID )
+```powerapps-comma
+RemoveIf( SiteInspectorCollect; ID = record.ID )
 ```
 
 > [!NOTE]

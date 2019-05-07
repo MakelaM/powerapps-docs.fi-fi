@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321438"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-edit-or-add-a-record-in-a-canvas-app"></a>Näytä, Muokkaa tai pohjaan perustuva sovellus tietueen lisääminen
 
@@ -56,7 +57,7 @@ Pohjaan perustuvassa sovelluksessa, Lisää ja määritä **[näytön](controls/
 
 1. Määritä lomakkeen **[DataSource](controls/control-form-detail.md)** ominaisuudeksi **FlooringEstimates** ja sen **[kohteen](controls/control-form-detail.md)** -ominaisuuden arvoksi Tämä kaava:
 
-    `First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))`
+    `First(Filter(FlooringEstimates; Name=ChooseProduct.Selected.Value))`
 
    Tällä kaavalla määritetään, että lomakkeen määritysten suorittamisen jälkeen siinä näkyvät tietueet, jotka käyttäjä valitsee kohdassa **ChooseProduct**.
 

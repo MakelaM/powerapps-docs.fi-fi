@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61547641"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="use-the-entity-form-control"></a>Entiteettilomake-ohjausobjektin käyttäminen
 Luo sovelluksia nopeammin käyttämällä **Entiteettilomake**-ohjausobjektia monipuolisten lomakkeiden lisäämiseksi Common Data Service -entiteetille.
@@ -48,12 +49,12 @@ Tässä ovat **Entiteettilomake**-ohjausobjektin tärkeimmät ominaisuudet.
 Esimerkki: Jos **entiteettilomake** ohjausobjekti näyttää myyntitilaustietueiden, luettelo **valittu** ominaisuus antaa tällä hetkellä valitun tietueen. Voit myös käyttää tietueen kenttää. (Määritä esimerkiksi valitun tietueen **Account**-kentän arvoksi **Selected.Account**.)
 
 **SelectableFields** – Määrittää, mitkä kentät tulee näyttää linkkeinä. Aseta tämän ominaisuuden arvo tällä syntaksilla:  
-**{Field1Name : true, Field2Name : true}**  
+**{Field1Name : true; Field2Name : true}**  
 Esimerkki: Jos haluat **SalesOrderId** ja **tilin** kentät näkyvät linkkeinä lomakkeessa, aseta **SelectableFields** ominaisuuden kyseisen lomakkeen tämä arvo:  
-**{SalesOrderId : true, Account : true}**
+**{SalesOrderId : true; Account : true}**
 
 **SelectedField** – Määrittää, mitä kenttää on napsautettu tai napautettu. Tämä pätee vain kenttiin, joille on määritetty **SelectableFields**-ominaisuus.  
-Esimerkki: Jos määrität **SelectableFields** ominaisuudeksi **{SalesOrderId: true, Account: true}** ja käyttäjä napsauttaa tai napauttaa **tilin** kentän  **SelectedField.Account** asetetaan tosi.
+Esimerkki: Jos määrität **SelectableFields** ominaisuudeksi **{SalesOrderId: true; Account: true}** ja käyttäjä napsauttaa tai napauttaa **tilin** kentän  **SelectedField.Account** asetetaan tosi.
 
 **OnFieldSelect** – Kuinka sovellus reagoi, kun käyttäjä napsauttaa tai napauttaa kenttää. Tämä pätee vain kenttiin, joille on määritetty **SelectableFields**-ominaisuus.
 

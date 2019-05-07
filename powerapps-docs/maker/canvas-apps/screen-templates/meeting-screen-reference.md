@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61539518"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-meeting-screen-template-for-canvas-apps"></a>Lisätietoja pohjaan perustuvat sovellukset kokouksen näytön-malli
 
@@ -48,12 +49,12 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
    ![LblInviteTab ohjausobjekti](media/meeting-screen/meeting-invite-text.png)
 
 * Ominaisuus: **Väri**<br>
-    Arvo: `If( _showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
+    Arvo: `If( _showDetails; LblRecipientCount.Color; RectQuickActionBar.Fill )`
 
     **_showDetails** on selvittää muuttuja, **LblInviteTab** ohjausobjektin tai **LblScheduleTab** ohjausobjekti on valittuna. Jos arvo **_showDetails** on **true**, **LblScheduleTab** valitaan; Jos arvo on **false**, **LblInviteTab**  on valittuna. Tämä tarkoittaa, että jos arvon **_showDetails** on **true** (tämän välilehden *ei ole* valitun), välilehti väri vastaa **LblRecipientCount**. Muussa tapauksessa se vastaa täyttö arvo **RectQuickActionBar**.
 
 * Ominaisuus: **OnSelect**<br> 
-    Arvo: `Set( _showDetails, false )`
+    Arvo: `Set( _showDetails; false )`
 
     Määrittää **_showDetails** muuttujan **false**, mikä tarkoittaa sitä, kutsu-välilehden ovat näkyvissä ja sisällön **aikataulun** välilehti on piilotettu.
 
@@ -62,12 +63,12 @@ Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna
    ![LblInviteTab ohjausobjekti](media/meeting-screen/meeting-schedule-text.png)
 
 * Ominaisuus: **Väri**<br>
-    Arvo: `If( !_showDetails, LblRecipientCount.Color, RectQuickActionBar.Fill )`
+    Arvo: `If( !_showDetails; LblRecipientCount.Color; RectQuickActionBar.Fill )`
 
     **_showDetails** on selvittää muuttuja, **LblInviteTab** ohjausobjektin tai **LblScheduleTab** ohjausobjekti on valittuna. Jos se on TOSI, **LblScheduleTab** valitaan; Jos arvo on false, **LblInviteTab** on. Tämä tarkoittaa, että jos **_showDetails** on tosi (tämän välilehden *on* valitun), välilehti väri täyttö-arvo vastaa **RectQuickActionBar**. Muussa tapauksessa se vastaa väriarvon **LblRecipientCount**.
 
 * Ominaisuus: **OnSelect**<br>
-    Arvo: `Set( _showDetails, true )`
+    Arvo: `Set( _showDetails; true )`
 
     Määrittää **_showDetails** muuttujan **true**, mikä tarkoittaa desimaali sisällön ovat näkyvissä ja kutsu-välilehden on piilotettu.
 
@@ -92,9 +93,9 @@ Tämän ohjausobjektin avulla käyttäjät voivat lisätä ihmiset, jotka eivät
 * Ominaisuus: **Näkyvissä**<br>
     Arvo: Kolme looginen tarkistaa, että kaikki arvoksi on tultava **true** ohjausobjektin näkyvät:
 
-    ```powerapps-dot
+    ```powerapps-comma
     !IsBlank( TextSearchBox.Text ) &&
-        IsMatch( TextSearchBox.Text, Match.Email ) &&
+        IsMatch( TextSearchBox.Text; Match.Email ) &&
         Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
     ```
 
@@ -107,42 +108,42 @@ Tämän ohjausobjektin avulla käyttäjät voivat lisätä ihmiset, jotka eivät
 * Ominaisuus: **OnSelect**<br> 
     Arvo: A **kerätä** lauseke Lisää käyttäjä osallistuja luettelo toisen päivityksen käytettävissä kokouksen ajat ja useita muuttujan käytössä tai pois käytöstä:
 
-    ```powerapps-dot
-    Collect( MyPeople,
+    ```powerapps-comma
+    Collect( MyPeople;
         { 
-            DisplayName: TextSearchBox.Text, 
-            UserPrincipalName: TextSearchBox.Text, 
+            DisplayName: TextSearchBox.Text; 
+            UserPrincipalName: TextSearchBox.Text; 
             Mail: TextSearchBox.Text
         }
-    );
+    );;
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+        Reset( TextSearchBox );
+        Set( _showMeetingTimes; false );
+        UpdateContext( { _loadMeetingTimes: true } );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false );
+        ClearCollect( MeetingTimes; 
             AddColumns(
                 'Office365'.FindMeetingTimes(
                     { 
-                        RequiredAttendees: Concat(MyPeople, UserPrincipalName & ";")
-                        MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ),
-                        End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                        MaxCandidates: 15, 
-                        MinimumAttendeePercentage:1, 
-                        IsOrganizerOptional: false, 
+                        RequiredAttendees: Concat(MyPeople; UserPrincipalName & ";")
+                        MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC );
+                        End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                        MaxCandidates: 15; 
+                        MinimumAttendeePercentage:1; 
+                        IsOrganizerOptional: false; 
                         ActivityDomain: "Work"
                     }
-                ).MeetingTimeSuggestions,
-                "StartTime", MeetingTimeSlot.Start.DateTime, 
-                "EndTime", MeetingTimeSlot.End.DateTime
+                ).MeetingTimeSuggestions;
+                "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                "EndTime"; MeetingTimeSlot.End.DateTime
             )
         )
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+    );;
+    UpdateContext( { _loadingMeetingTimes: false } );;
+    Set( _showMeetingTimes; true )
     ```
 
   Valitsemalla tämän ohjausobjektin Lisää kelvollinen sähköpostiosoite (näkyvissä vain, jos kelvollinen sähköpostiosoite on kirjoitettu **TextSearchBox**)- **MyPeople** kokoelma (tässä kokoelmassa on osallistujien luettelo) ja sitten päivittää käytettävissä ajat uuden käyttäjän tapahtuman.
@@ -174,9 +175,9 @@ Tämän ohjausobjektin avulla käyttäjät voivat lisätä ihmiset, jotka eivät
 
 * Ominaisuus: **Kohteet**<br>
     Arvo: 
-    ```powerapps-dot
-    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
-        'Office365Users'.SearchUser( { searchTerm: Trim(TextSearchBox.Text), top: 15 } )
+    ```powerapps-comma
+    If( !IsBlank( Trim( TextSearchBox.Text ) ); 
+        'Office365Users'.SearchUser( { searchTerm: Trim(TextSearchBox.Text); top: 15 } )
     )
     ```
 
@@ -196,46 +197,46 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **OnSelect**<br>
     Arvo: A **kerätä** lauseke Lisää käyttäjä osallistuja luettelo toisen päivityksen käytettävissä kokouksen ajat ja useita muuttujan käytössä tai pois käytöstä:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _selectedUser, ThisItem ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-            Collect( MyPeople, ThisItem ); 
+        Reset( TextSearchBox );
+        Set( _selectedUser; ThisItem );
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
+            Collect( MyPeople; ThisItem );; 
             Concurrent(
-                Set( _showMeetingTimes, false ),
-                UpdateContext( { _loadMeetingTimes: true } ),
-                Set( _selectedMeetingTime, Blank() ),
-                Set( _selectedRoom, Blank() ),
-                Set( _roomListSelected, false ),
-                ClearCollect( MeetingTimes, 
+                Set( _showMeetingTimes; false );
+                UpdateContext( { _loadMeetingTimes: true } );
+                Set( _selectedMeetingTime; Blank() );
+                Set( _selectedRoom; Blank() );
+                Set( _roomListSelected; false );
+                ClearCollect( MeetingTimes; 
                     AddColumns(
                         'Office365'.FindMeetingTimes(
                             {
-                                RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ),
-                                MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                                Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ),
-                                End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                                MaxCandidates: 15, 
-                                MinimumAttendeePercentage: 1, 
-                                IsOrganizerOptional: false, 
+                                RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" );
+                                MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                                Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC );
+                                End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                                MaxCandidates: 15; 
+                                MinimumAttendeePercentage: 1; 
+                                IsOrganizerOptional: false; 
                                 ActivityDomain: "Work"
                             }
-                        ).MeetingTimeSuggestions,
-                        "StartTime", MeetingTimeSlot.Start.DateTime, 
-                        "EndTime", MeetingTimeSlot.End.DateTime
+                        ).MeetingTimeSuggestions;
+                        "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                        "EndTime"; MeetingTimeSlot.End.DateTime
                     )
                 )
-            );
-            UpdateContext( { _loadingMeetingTimes: false } );
-            Set( _showMeetingTimes, true )
+            );;
+            UpdateContext( { _loadingMeetingTimes: false } );;
+            Set( _showMeetingTimes; true )
         )
     )
     ```
 
     Suuren tasolla tämän ohjausobjektin valitsemalla Lisää henkilö **MyPeople** kokoelma (sovelluksen tallennus osallistujien luettelo) ja päivittää käytettävissä kokouksen ajat perusteella käyttäjä lisätty.
 
-    Valitsemalla tämän ohjausobjektin muistuttaa valitsemalla **AddIcon** ohjausobjektin; ainoa ero on se, että `Set(_selectedUser, ThisItem)` lauseke ja toiminnot suorittamisen järjestystä. Näin ollen tämän keskustelun ei ole yhtä syvä. Lue täydellisemmän selitys [AddIcon ohjausobjektin](#add-icon) osiossa.
+    Valitsemalla tämän ohjausobjektin muistuttaa valitsemalla **AddIcon** ohjausobjektin; ainoa ero on se, että `Set(_selectedUser; ThisItem)` lauseke ja toiminnot suorittamisen järjestystä. Näin ollen tämän keskustelun ei ole yhtä syvä. Lue täydellisemmän selitys [AddIcon ohjausobjektin](#add-icon) osiossa.
 
     Valitsemalla tämän ohjausobjektin nollaa **TextSearchBox**. Jos valinta ei ole **MyPeople** kokoelman, ohjausobjekti:
     1. Määrittää **_loadMeetingTimes** tila- **true** ja **_showMeetingTimes** tila- **false**, tyhjät **_ selectedMeetingTime** ja **_selectedRoom** muuttujia ja päivityksiä **MeetingTimes** kokoelma, jossa on lisätty **MyPeople** kokoelma. 
@@ -253,15 +254,15 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **Korkeus**<br>
     Arvo: Salli valikoiman kasvamaan enimmäiskorkeus 350 logiikan:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Min( 
-        76 * RoundUp( CountRows( MeetingPeopleGallery.AllItems ) / 2, 0 ),
+        76 * RoundUp( CountRows( MeetingPeopleGallery.AllItems ) / 2; 0 );
         350
     )
     ```
 
   
-   Valikoiman korkeus säätää enimmäiskorkeus 350 valikoiman kohteiden määrä. Kaavalle 76 kuin yhden rivin korkeus **MeetingPeopleGallery**, kertoo sen rivien määrän mukaan. **WrapCount** ominaisuuden arvo on 2, joten true rivien määrä on `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2, 0)`.
+   Valikoiman korkeus säätää enimmäiskorkeus 350 valikoiman kohteiden määrä. Kaavalle 76 kuin yhden rivin korkeus **MeetingPeopleGallery**, kertoo sen rivien määrän mukaan. **WrapCount** ominaisuuden arvo on 2, joten true rivien määrä on `RoundUp(CountRows(MeetingPeopleGallery.AllItems) / 2; 0)`.
 
 * Ominaisuus: **ShowScrollbar**<br>
     Arvo: `MeetingPeopleGallery.Height >= 350`
@@ -274,7 +275,7 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 
 * Ominaisuus: **OnSelect**<br>
     
-    Arvo: `Set(_selectedUser, ThisItem)`
+    Arvo: `Set(_selectedUser; ThisItem)`
     
     Määrittää **_selectedUser** muuttujan valitun kohteen **MeetingPeopleGallery**.
 
@@ -285,36 +286,36 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **OnSelect**<br>
     Arvo: A **poistaa** lauseke, voit poistaa käyttäjän osallistujien-luettelosta **kerätä** lauseke päivittää käytettävissä kokouksen ajat ja useita muuttujan käytössä tai pois käytöstä:
 
-    ```powerapps-dot
-    Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) );
+    ```powerapps-comma
+    Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) );;
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+        Reset( TextSearchBox );
+        Set( _showMeetingTimes; false );
+        UpdateContext( { _loadMeetingTimes: true } );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false );
+        ClearCollect( MeetingTimes; 
             AddColumns(
                 'Office365'.FindMeetingTimes(
                     {
-                        RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ), 
-                        MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ), 
-                        End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                        MaxCandidates: 15, 
-                        MinimumAttendeePercentage: 1, 
-                        IsOrganizerOptional: false, 
+                        RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" ); 
+                        MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC ); 
+                        End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                        MaxCandidates: 15; 
+                        MinimumAttendeePercentage: 1; 
+                        IsOrganizerOptional: false; 
                         ActivityDomain: "Work"
                     }
-                ).MeetingTimeSuggestions,
-                "StartTime", MeetingTimeSlot.Start.DateTime, 
-                "EndTime", MeetingTimeSlot.End.DateTime
+                ).MeetingTimeSuggestions;
+                "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                "EndTime"; MeetingTimeSlot.End.DateTime
             )
         )
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+    );;
+    UpdateContext( { _loadingMeetingTimes: false } );;
+    Set( _showMeetingTimes; true )
     ```
 
   Tason valitsemalla tämän ohjausobjektin poistaa henkilön osallistujien-luettelosta ja päivittää käytettävissä kokouksen ajat, tämä henkilö poistaminen perusteella.
@@ -331,7 +332,7 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
    ![MeetingDateSelect ohjausobjekti](media/meeting-screen/meeting-datepicker.png)
 
 * Ominaisuus: **DisplayMode**<br>
-    Arvo: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
+    Arvo: `If( IsEmpty(MyPeople); DisplayMode.Disabled; DisplayMode.Edit )`
 
     Kokouksen päivämäärä ei voi valita, kunnes vähintään yksi osallistujien on lisätty **MyPeople** kokoelma.
 
@@ -343,35 +344,35 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **OnSelect**<br>
     Arvo: A **kerätä** lauseke päivittää käytettävissä kokouksen ajat ja useita muuttujan käytössä tai pois käytöstä:
   
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Reset( TextSearchBox ),
-        Set( _showMeetingTimes, false ),
-        UpdateContext( { _loadingMeetingTimes: true } ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false ),
-        ClearCollect( MeetingTimes, 
+        Reset( TextSearchBox );
+        Set( _showMeetingTimes; false );
+        UpdateContext( { _loadingMeetingTimes: true } );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false );
+        ClearCollect( MeetingTimes; 
             AddColumns(
                 'Office365'.FindMeetingTimes(
                     {
-                        RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ), 
-                        MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate, 8, Hours ), UTC ), 
-                        End: Text( DateAdd( MeetingDateSelect.SelectedDate, 17, Hours ), UTC ),
-                        MaxCandidates: 15, 
-                        MinimumAttendeePercentage: 1, 
-                        IsOrganizerOptional: false, 
+                        RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" ); 
+                        MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: Text( DateAdd( MeetingDateSelect.SelectedDate; 8; Hours ); UTC ); 
+                        End: Text( DateAdd( MeetingDateSelect.SelectedDate; 17; Hours ); UTC );
+                        MaxCandidates: 15; 
+                        MinimumAttendeePercentage: 1; 
+                        IsOrganizerOptional: false; 
                         ActivityDomain: "Work"
                     }
-                ).MeetingTimeSuggestions,
-                "StartTime", MeetingTimeSlot.Start.DateTime, 
-                "EndTime", MeetingTimeSlot.End.DateTime
+                ).MeetingTimeSuggestions;
+                "StartTime"; MeetingTimeSlot.Start.DateTime; 
+                "EndTime"; MeetingTimeSlot.End.DateTime
             )
         )
-    );
-    UpdateContext( { _loadingMeetingTimes: false } );
-    Set( _showMeetingTimes, true )
+    );;
+    UpdateContext( { _loadingMeetingTimes: false } );;
+    Set( _showMeetingTimes; true )
     ```
 
   Korkean tason valitsemalla tämä ohjausobjekti päivittyy käytettävissä kokouksen ajat. Tämä on arvokas, koska jos käyttäjä muuttaa päivämäärän, käytettävissä kokouksen ajat tarvitse päivitetään osallistujien saatavuuden päivän.
@@ -387,7 +388,7 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
    ![MeetingDateSelect ohjausobjekti](media/meeting-screen/meeting-timepicker.png)
 
 * Ominaisuus: **DisplayMode**<br>
-    Arvo: `If( IsEmpty(MyPeople), DisplayMode.Disabled, DisplayMode.Edit )`
+    Arvo: `If( IsEmpty(MyPeople); DisplayMode.Disabled; DisplayMode.Edit )`
 
     Kokouksen kesto ei voi valita, kunnes vähintään yksi osallistujien on lisätty **MyPeople** kokoelma.
 
@@ -417,13 +418,13 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **Teksti**<br>
     Arvo: Muuntaminen, joka näytetään käyttäjän paikallisen ajan alkamisaika:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Text(
         DateAdd(
-            DateTimeValue( ThisItem.StartTime ),
-            - TimeZoneOffset(), 
+            DateTimeValue( ThisItem.StartTime );
+            - TimeZoneOffset(); 
             Minutes
-        ),
+        );
         DateTimeFormat.ShortTime
     )
     ```
@@ -434,48 +435,48 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **OnSelect**<br>
     Arvo: Useita **kerätä** lausekkeita kerätä kokouksen huoneet ja niiden ehdotetut saatavuuden sekä useita muuttujan käytössä tai pois käytöstä:
 
-    ```powerapps-dot
-    Set( _selectedMeetingTime, ThisItem );
-    UpdateContext( { _loadingRooms: true } );
-    If( IsEmpty( RoomsLists ),
-        ClearCollect( RoomsLists, 'Office365'.GetRoomLists().value) );
-    If( CountRows( RoomsLists ) <= 1,
-        Set( _noRoomLists, true );
-        ClearCollect( AllRooms, 'Office365'.GetRooms().value );
-        Set( _allRoomsConcat, Concat( FirstN( AllRooms, 20 ), Address & ";" ) );
-        ClearCollect( RoomTimeSuggestions, 
+    ```powerapps-comma
+    Set( _selectedMeetingTime; ThisItem );;
+    UpdateContext( { _loadingRooms: true } );;
+    If( IsEmpty( RoomsLists );
+        ClearCollect( RoomsLists; 'Office365'.GetRoomLists().value) );;
+    If( CountRows( RoomsLists ) <= 1;
+        Set( _noRoomLists; true );;
+        ClearCollect( AllRooms; 'Office365'.GetRooms().value );;
+        Set( _allRoomsConcat; Concat( FirstN( AllRooms; 20 ); Address & ";" ) );;
+        ClearCollect( RoomTimeSuggestions; 
             'Office365'.FindMeetingTimes(
                 {
-                    RequiredAttendees: _allRoomsConcat, 
-                    MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                    Start: _selectedMeetingTime.StartTime & "Z", 
-                    End: _selectedMeetingTime.EndTime & "Z", 
-                    MinimumAttendeePercentage: "1",
-                    IsOrganizerOptional: "false", 
+                    RequiredAttendees: _allRoomsConcat; 
+                    MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                    Start: _selectedMeetingTime.StartTime & "Z"; 
+                    End: _selectedMeetingTime.EndTime & "Z"; 
+                    MinimumAttendeePercentage: "1";
+                    IsOrganizerOptional: "false"; 
                     ActivityDomain: "Unrestricted"
                 }
             ).MeetingTimeSuggestions
-        );
-        ClearCollect( AvailableRooms, 
+        );;
+        ClearCollect( AvailableRooms; 
             AddColumns(
                 AddColumns(
                     Filter( 
-                        First( RoomTimeSuggestions ).AttendeeAvailability,
+                        First( RoomTimeSuggestions ).AttendeeAvailability;
                         Availability="Free"
-                    ), 
-                    "Address", Attendee.EmailAddress.Address
-                ), 
-                "Name", LookUp( AllRooms, Address = Attendee.EmailAddress.Address ).Name 
+                    ); 
+                    "Address"; Attendee.EmailAddress.Address
+                ); 
+                "Name"; LookUp( AllRooms; Address = Attendee.EmailAddress.Address ).Name 
             )
-        );
-        ClearCollect( AvailableRoomsOptimal, 
+        );;
+        ClearCollect( AvailableRoomsOptimal; 
             DropColumns(
-                DropColumns( AvailableRooms, "Availability" ), 
+                DropColumns( AvailableRooms; "Availability" ); 
                 "Attendee" 
             )
-        ),
-        Set( _roomListSelected, false) 
-    );
+        );
+        Set( _roomListSelected; false) 
+    );;
     UpdateContext( {_loadingRooms: false} )
     ```
 
@@ -502,11 +503,11 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **Kohteet**<br>
     Arvo: Määritä loogisesti kaksi identtistä rakenne, sen mukaan, onko käyttäjä on valinnut huoneluettelo tai huoneet luettelot heidän vuokraajakäytännöissään sisäinen kokoelmia:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Search(
-        If( _roomListSelected || _noRoomLists, AvailableRoomsOptimal, RoomsLists ),
-        Trim(TextMeetingLocation1.Text), 
-        "Name", 
+        If( _roomListSelected || _noRoomLists; AvailableRoomsOptimal; RoomsLists );
+        Trim(TextMeetingLocation1.Text); 
+        "Name"; 
         "Address"
     )
     ```
@@ -525,46 +526,46 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **OnSelect**<br>
     Arvo: Joukon loogisesti sidotun **kerätä** ja **määrittää** lausekkeita, joka saattaa tai saattaa ei voi käynnistää, sen mukaan, onko käyttäjä tarkastelee huoneluettelot tai tilat:
 
-    ```powerapps-dot
-    UpdateContext( { _loadingRooms: true } );
-    If( !_roomListSelected && !noRoomLists,
-        Set( _roomListSelected, true );
-        Set( _selectedRoomList, ThisItem.Name );
-        ClearCollect( AllRooms, 'Office365'.GetRoomsInRoomList( ThisItem.Address ).value );
-        Set( _allRoomsConcat, Concat( FirstN( AllRooms, 20 ), Address & ";" ) );
-        ClearCollect( RoomTimeSuggestions, 
+    ```powerapps-comma
+    UpdateContext( { _loadingRooms: true } );;
+    If( !_roomListSelected && !noRoomLists;
+        Set( _roomListSelected; true );;
+        Set( _selectedRoomList; ThisItem.Name );;
+        ClearCollect( AllRooms; 'Office365'.GetRoomsInRoomList( ThisItem.Address ).value );;
+        Set( _allRoomsConcat; Concat( FirstN( AllRooms; 20 ); Address & ";" ) );;
+        ClearCollect( RoomTimeSuggestions; 
             'Office365'.FindMeetingTimes(
                 {
-                    RequiredAttendees: _allRoomsConcat, 
-                    MeetingDuration: MeetingDurationSelect.Selected.Minutes,
-                        Start: _selectedMeetingTime.StartTime & "Z", 
-                    End: _selectedMeetingTime.EndTime & "Z", 
-                    MinimumAttendeePercentage: "1",
-                    IsOrganizerOptional: "false", 
+                    RequiredAttendees: _allRoomsConcat; 
+                    MeetingDuration: MeetingDurationSelect.Selected.Minutes;
+                        Start: _selectedMeetingTime.StartTime & "Z"; 
+                    End: _selectedMeetingTime.EndTime & "Z"; 
+                    MinimumAttendeePercentage: "1";
+                    IsOrganizerOptional: "false"; 
                     ActivityDomain: "Unrestricted"
                 }
             ).MeetingTimeSuggestions
-        );
-        ClearCollect( AvailableRooms, 
+        );;
+        ClearCollect( AvailableRooms; 
             AddColumns(
                 AddColumns(
                     Filter(
-                        First( RoomTimeSuggestions ).AttendeeAvailability, 
+                        First( RoomTimeSuggestions ).AttendeeAvailability; 
                         Availability = "Free"
-                    ),
-                    "Address", Attendee.EmailAddress.Address 
-                ), 
-                "Name", LookUp( AllRooms, Address = Attendee.EmailAddress.Address ).Name
+                    );
+                    "Address"; Attendee.EmailAddress.Address 
+                ); 
+                "Name"; LookUp( AllRooms; Address = Attendee.EmailAddress.Address ).Name
             )
-        );
-        ClearCollect( AvailableRoomsOptimal, 
+        );;
+        ClearCollect( AvailableRoomsOptimal; 
             DropColumns(
-                DropColumns( AvailableRooms, "Availability" )
-            ), 
+                DropColumns( AvailableRooms; "Availability" )
+            ); 
             "Attendee" )
-        ),
-        Set( _selectedRoom, ThisItem )
-    );
+        );
+        Set( _selectedRoom; ThisItem )
+    );;
     UpdateContext( {_loadingRooms: false} )
     ```
 
@@ -591,7 +592,7 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
     Tämä ohjausobjekti on näkyvissä vain, jos molemmat huoneluettelo on valittu ja **aikataulun** välilehti on valittuna.
 
 * Ominaisuus: **OnSelect**<br>
-    Arvo: `Set( _roomListSelected, false )`
+    Arvo: `Set( _roomListSelected; false )`
 
     Kun **_roomListSelected** asetetaan **false**, se muuttuu **RoomBrowseGallery** ohjausobjekti, joka näyttää kohteita **RoomsLists** kokoelma.
 
@@ -602,10 +603,10 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 * Ominaisuus: **DisplayMode**<br>
     Arvo: Pakota käyttäjä antamaan kokouksen tietyt tiedot, ennen kuin tulee muokattavissa logiikan.
     
-    ```powerapps-dot
+    ```powerapps-comma
     If( Len( Trim( TextMeetingSubject1.Text ) ) > 0
-        && !IsEmpty( MyPeople ) && !IsBlank( _selectedMeetingTime ),
-        DisplayMode.Edit, DisplayMode.Disabled
+        && !IsEmpty( MyPeople ) && !IsBlank( _selectedMeetingTime );
+        DisplayMode.Edit; DisplayMode.Disabled
     )
     ```
   Kuvake on valittavissa vain, jos kokouksen aihe on arvo, on vähintään yksi osallistujien kokouksen ja kokouksen ajan on valittu. Muussa tapauksessa se on poistettu käytöstä.
@@ -614,32 +615,32 @@ Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https
 
     Arvo: Lähetä kokouksen kutsu valitun osallistujille ja poista kaikki syöttökenttiä koodi:
 
-    ```powerapps-dot
-    Set( _myCalendarName, LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name );
-    Set( _myScheduledMeeting, 
-        'Office365'.V2CalendarPostItem( _myCalendarName,
-            TextMeetingSubject1.Text, 
-            Text(DateAdd(DateTimeValue( _selectedMeetingTime.StartTime), -TimeZoneOffset(), Minutes) ),
-            Text(DateAdd(DateTimeValue( _selectedMeetingTime.EndTime), -TimeZoneOffset(), Minutes) ),
+    ```powerapps-comma
+    Set( _myCalendarName; LookUp( 'Office365'.CalendarGetTables().value; DisplayName = "Calendar" ).Name );;
+    Set( _myScheduledMeeting; 
+        'Office365'.V2CalendarPostItem( _myCalendarName;
+            TextMeetingSubject1.Text; 
+            Text(DateAdd(DateTimeValue( _selectedMeetingTime.StartTime); -TimeZoneOffset(); Minutes) );
+            Text(DateAdd(DateTimeValue( _selectedMeetingTime.EndTime); -TimeZoneOffset(); Minutes) );
             {
-                RequiredAttendees: Concat( MyPeople, UserPrincipalName & ";" ) & _selectedRoom.Address, 
-                Body: TextMeetingMessage1.Text, 
-                Location: _selectedRoom.Name, 
-                Importance: "Normal", 
-                ShowAs: "Busy", 
+                RequiredAttendees: Concat( MyPeople; UserPrincipalName & ";" ) & _selectedRoom.Address; 
+                Body: TextMeetingMessage1.Text; 
+                Location: _selectedRoom.Name; 
+                Importance: "Normal"; 
+                ShowAs: "Busy"; 
                 ResponseRequested: true
             }
         )
-    );
+    );;
     Concurrent(
-        Reset( TextMeetingLocation1 ),
-        Reset( TextMeetingSubject1 ),
-        Reset( TextMeetingMessage1 ),
-        Clear( MyPeople ),
-        Set( _selectedMeetingTime, Blank() ),
-        Set( _selectedRoomList, Blank() ),
-        Set( _selectedRoom, Blank() ),
-        Set( _roomListSelected, false )
+        Reset( TextMeetingLocation1 );
+        Reset( TextMeetingSubject1 );
+        Reset( TextMeetingMessage1 );
+        Clear( MyPeople );
+        Set( _selectedMeetingTime; Blank() );
+        Set( _selectedRoomList; Blank() );
+        Set( _selectedRoom; Blank() );
+        Set( _roomListSelected; false )
     )
     ```
   

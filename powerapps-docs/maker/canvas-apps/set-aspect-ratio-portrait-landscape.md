@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61536036"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="change-screen-size-and-orientation-of-a-canvas-app-in-powerapps"></a>Kangassovelluksen näytön koon ja suunnan muuttaminen PowerAppsissa
 Mukauta kangassovellusta muuttamalla sen näytön kokoa ja suuntaa.
@@ -47,7 +48,7 @@ Luo sovellus tai avaa sovellus muokkaamista varten ja valitse sitten **sovellusa
 
     Jos poistat tämän asetuksen käytöstä, sovellus säätää kuvasuhteen sen laitteen, johon se on käynnissä ja käyttää kaikki käytettävissä olevan tilan. Sovellus ei Skaalaa ja siksi näyttöjä näyttää enemmän tietoja.
 
-    Kun tämä asetus on poistettu käytöstä, **lukitse kuvasuhde** on automaattisesti poistettu käytöstä ja poistettu käytöstä. Lisäksi **leveys** kaikki näytöt asetuksena on `Max(App.Width, App.DesignWidth)`, ja niiden **korkeus** asetuksena on `Max(App.Height, App.DesignHeight)` niin, että he seurata dimensiot-ikkunan, jossa sovellus on käynnissä. Muutos voit luoda sovelluksia, jotka vastaavat eri laitteille ja ikkunan dimensioita. Lisätietoja: [Luo reagoiva asettelu](create-responsive-layout.md)
+    Kun tämä asetus on poistettu käytöstä, **lukitse kuvasuhde** on automaattisesti poistettu käytöstä ja poistettu käytöstä. Lisäksi **leveys** kaikki näytöt asetuksena on `Max(App.Width; App.DesignWidth)`, ja niiden **korkeus** asetuksena on `Max(App.Height; App.DesignHeight)` niin, että he seurata dimensiot-ikkunan, jossa sovellus on käynnissä. Muutos voit luoda sovelluksia, jotka vastaavat eri laitteille ja ikkunan dimensioita. Lisätietoja: [Luo reagoiva asettelu](create-responsive-layout.md)
 
 1. Valitse kohdassa **Lukitse kuvasuhde**joko **Käytössä** tai **Ei käytössä**.
 

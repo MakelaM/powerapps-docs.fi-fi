@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559984"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Palveluilmoituksen lähettäminen PowerAppsissa
 Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.
@@ -86,7 +87,7 @@ Palveluilmoituksesi voivat välittää sovellukselle parametreja. Esimerkiksi **
 Voit asettaa sovelluksen avaamaan esimerkiksi **Case details** -sivun, kun sovellus avautuu:
 
 1. Lisää **Ajastin**-ohjausobjekti ja aseta sen **OnTimerEnd**-ominaisuudeksi seuraava kaava:
-   <br>**Navigate(EditCase, ScreenTransition.None)**
+   <br>**Navigate(EditCase; ScreenTransition.None)**
 2. (valinnainen) Piilota **Ajastin**-ohjausobjekti asettamalla sen **Visible**-ominaisuudeksi **false**.
 3. Aseta näytön **OnVisible**-ominaisuudeksi **Timer.Start()**.
 

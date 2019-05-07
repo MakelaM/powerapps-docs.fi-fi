@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61556261"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
 Tässä artikkelissa kerrotaan, miten voit luoda perustason pohjaan perustuvan sovelluksen, joka käyttää [Azuren kognitiivisten palveluiden Tekstianalyysin Ohjelmointirajapinta](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) analysoi tekstiä. Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda kangassovelluksen, joka kutsuu API:a.
@@ -127,34 +128,34 @@ Nyt sinulla on hieno sovellus, jolla ei vielä ole mitään käyttöä. Korjataa
 
 Pidä tämä mielessäsi, kun lisäät painikkeen **OnSelect** (Valittaessa) -ominaisuuden. Kohta alkaa tapahtua.
 
-```powerapps-dot
-If( chkLanguage.Value = true,
-    ClearCollect( languageCollect, 
+```powerapps-comma
+If( chkLanguage.Value = true;
+    ClearCollect( languageCollect; 
         TextAnalytics.DetectLanguage(
             {
-                numberOfLanguagesToDetect: 1, 
+                numberOfLanguagesToDetect: 1; 
                 text: tiTextToAnalyze.Text
             }
         ).detectedLanguages.name
     )
-);
+);;
 
-If( chkPhrases.Value = true,
-    ClearCollect( phrasesCollect, 
+If( chkPhrases.Value = true;
+    ClearCollect( phrasesCollect; 
         TextAnalytics.KeyPhrases(
             {
-                language: "en", 
+                language: "en"; 
                 text: tiTextToAnalyze.Text
             }
         ).keyPhrases
     )
-);
+);;
 
-If( chkSentiment.Value = true,
-    ClearCollect( sentimentCollect, 
+If( chkSentiment.Value = true;
+    ClearCollect( sentimentCollect; 
         TextAnalytics.DetectSentiment(
             {
-                language: "en", 
+                language: "en"; 
                 text: tiTextToAnalyze.Text
             }
         ).score
@@ -189,7 +190,7 @@ Kun haluat nähdä API-kutsujen tulokset, katso asianmukainen kokoelma kustakin 
    
     **First()**-funktio palauttaa ensimmäisen (ja tässä tapauksessa ainoan) tietueen **languageCollect**-kokoelmaan, ja sovellus näyttää kyseiseen tietueeseen liittyvän **nimen** (ainut kenttä).
 
-2. Määritä asenne-selitteen **Text**-ominaisuudeksi: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)\*100 & "% positive."`.
+2. Määritä asenne-selitteen **Text**-ominaisuudeksi: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value; 3)\*100 & "% positive."`.
    
     Myös tämä kaava käyttää **First()**-funktiota, hakee **arvon** (0-1) ensimmäisestä ja ainoasta tietueesta ja muodostaa sen perusteella prosenttimäärän.
 

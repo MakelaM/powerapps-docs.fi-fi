@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318341"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-text-dates-and-times-in-powerapps"></a>Näytä tekstiä, päivämääriä ja kellonaikoja PowerAppsissa
 Lisää PowerAppsissa päivämääriä ja kellonaikoja pohjaan perustuvaan sovellukseen ja muotoile niitä niin, että ne näyttävät oikean määrän tietoja tai vastaavat sijaintiasi. Laske kahden päivämäärän välinen aika tai laske päivämäärä, joka on tietyn aikaeron verran ennen tai jälkeen määrittämääsi päivämäärää. Muunna päivämäärät erillisiin päivä-, kuukausi- tai vuosiarvoihin tai päin vastoin. Muunna ajat erillisiin tunti-, minuutti- ja sekuntiarvoihin tai päin vastoin.
@@ -46,7 +47,7 @@ Seuraavassa on joitakin esimerkkejä.
    
     Jos tietokoneesi aluekohtaisiksi asetuksiksi on määritetty ”fr-fr”, nykyinen päivämäärä ja aika näkyvät seuraavassa muodossa:  <br>*dd/mm/yyyy hh:mm AM/PM*
 2. Määritä **ShowText**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(Today(), DateValue("01/01/2020"))**
+   <br>**DateDiff(Today(); DateValue("01/01/2020"))**
    
     ![Päivien määrä tämän päivän ja 1. tammikuuta 2020 välillä](./media/show-text-dates-times/date-diff-text.png)
    
@@ -60,7 +61,7 @@ Seuraavassa on joitakin esimerkkejä.
 4. Anna **BirthDate**-ohjausobjektille syntymäkuukautesi ja -päiväsi (esimerkiksi **05/18**).
 
 5. Määritä **ShowText**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(Today(), DateValue(BirthDate.Text))**
+   <br>**DateDiff(Today(); DateValue(BirthDate.Text))**
    
     ![Päivien määrä tämän päivän ja syntymäpäiväsi välillä](./media/show-text-dates-times/birth-diff.png)
    
@@ -88,7 +89,7 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
    
     **ShowDate** näyttää samat tiedot, jotka olet kirjoittanut, mutta muunnettuna tekstistä arvoksi ja eri tavalla muotoiltuna. Esimerkiksi vuosi näkyy nelinumeroisena kahden numeron sijaan.
 3. Määritä **ShowDate**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateTimeValue(ArrivalDateTime.Text, "fr")**
+   <br>**DateTimeValue(ArrivalDateTime.Text; "fr")**
    
     ![Näyttää päivämäärä/aika-arvon ranskalaisessa muodossa](./media/show-text-dates-times/date-value-fr.png)
    
@@ -101,7 +102,7 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
    > 
    > 
 4. Jos käytät jonkin useista valmiista muodoista, vaihda **ShowDate-ohjausobjektin** **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(DateTimeValue(ArrivalDateTime.Text), DateTimeFormat.LongDateTime)**
+   <br>**Text(DateTimeValue(ArrivalDateTime.Text); DateTimeFormat.LongDateTime)**
    
     ![Näyttää päivämäärä/aika-arvon ranskalaisessa muodossa](./media/show-text-dates-times/long-date-time.png)
    
@@ -112,7 +113,7 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
    > 
    > 
 5. Jos haluat käyttää mukautettua muotoa, vaihda **ShowDate**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(DateTimeValue(ArrivalDateTime.Text), "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
+   <br>**Text(DateTimeValue(ArrivalDateTime.Text); "mm/dd/yyyy hh:mm:ss.fff AM/PM")**
    
     ![Näyttää päivämäärä/aika-arvon ranskalaisessa muodossa](./media/show-text-dates-times/format-milliseconds.png)
    
@@ -132,15 +133,15 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
    
     **FormatDate** näyttää kirjoittamasi päivämäärän, mutta vuosi näkyy nelinumeroisena.
 3. Määritä **FormatDate**-ohjausobjektin**[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateValue(ArrivalDate.Text, "fr")**
+   <br>**DateValue(ArrivalDate.Text; "fr")**
    
     **FormatDate** näyttää päivän ennen kuukautta ranskalaisen käyttäjän odottamassa muodossa.
 4. Jos haluat käyttää jotakin monista valmiista muodoista, määritä **FormatDate**-ohjausobjektin**[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(DateValue(ArrivalDate.Text), DateTimeFormat.LongDate)**
+   <br>**Text(DateValue(ArrivalDate.Text); DateTimeFormat.LongDate)**
    
     **FormatDate** näyttää viikonpäivän, kuukauden, päivän ja vuoden.
 5. Jos haluat käyttää mukautettua muotoa, määritä **FormatDate**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(DateValue(ArrivalDate.Text), "yy/mm/dd")**
+   <br>**Text(DateValue(ArrivalDate.Text); "yy/mm/dd")**
    
     **FormatDate** näyttää päivämäärän määrittämässäsi muodossa.
 
@@ -151,11 +152,11 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
 2. Lisää **[nimi](controls/control-text-box.md)**-ohjausobjekti, jonka nimi on**ShowTime**.
 
 3. Jos haluat käyttää yhtä monista valmiista muodoista, määritä **ShowTime**-ohjausobjektin**[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(DateTimeValue(ArrivalTime.Text), DateTimeFormat.LongTime)**
+   <br>**Text(DateTimeValue(ArrivalTime.Text); DateTimeFormat.LongTime)**
    
     **ShowTime** näyttää määrittämäsi ajan, sekunnit mukaan lukien.
 4. Jos haluat käyttää mukautettua muotoa, määritä **ShowTime**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(DateTimeValue(ArrivalTime.Text), "hh:mm:ss.fff AM/PM")**
+   <br>**Text(DateTimeValue(ArrivalTime.Text); "hh:mm:ss.fff AM/PM")**
    
     **ShowTime** näyttää määrittämäsi ajan, sekunnit ja millisekunnit mukaan lukien.
    
@@ -171,12 +172,12 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
 2. Kirjoita **4/1/2015** **Start**-ohjausobjektiin ja **1/1/2016** **End**-ohjausobjektiin.
 
 3. Lisää **[nimi](controls/control-text-box.md)**-ohjausobjekti, jonka nimi on **DateDiff**, ja aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text))**
+   <br>**DateDiff(DateValue(Start.Text); DateValue(End.Text))**
    
     ![Kahden päivämäärän vertailu](./media/show-text-dates-times/date-diff.png)
    
     **DateDiff** näyttää tuloksen **275**, joka on päivien määrä päivien 1. huhtikuuta 2015 ja 1. tammikuuta 2016 välillä.
-4. Määritä **DateDiff**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  <br>**DateDiff(DateValue(Start.Text), DateValue(End.Text), Months)**
+4. Määritä **DateDiff**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  <br>**DateDiff(DateValue(Start.Text); DateValue(End.Text); Months)**
    
     **DateDiff** näyttää tuloksen **9**, joka on kuukausien määrä päivien 1. huhtikuuta 2015 ja 1. tammikuuta 2016 välillä. Korvaa parametri **Months** parametrilla **Quarters** tai **Years** näyttääksesi ajan kuukausina, vuosineljänneksinä tai vuosina.
 
@@ -185,19 +186,19 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
 1. Lisää **[tekstisyöte](controls/control-text-input.md)**- ohjausobjekti, jonka nimi on **Start**, ja kirjoita siihen **5/10/1985**.
 
 2. Lisää **[nimi](controls/control-text-box.md)**-ohjausobjekti, jonka nimi on **DateAdd**, ja aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateAdd(DateValue(Start.Text), 3)**
+   <br>**DateAdd(DateValue(Start.Text); 3)**
    
     ![Lisää kolme päivää](./media/show-text-dates-times/date-add.png)
    
     **DateAdd** näyttää tuloksen **5/13/1985**, joka on kolme päivää **Start**-päivämäärän jälkeen.
 3. Määritä **DateAdd**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateAdd(DateValue(Start.Text), -3)**
+   <br>**DateAdd(DateValue(Start.Text); -3)**
    
     ![Vähennä kolme päivää](./media/show-text-dates-times/date-subtract.png)
    
     **DateAdd** näyttää tuloksen **5/7/1985**, joka on kolme päivää ennen **Start**-päivämäärää.
 4. Määritä **DateAdd**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateAdd(DateValue(Start.Text), 3, Months)**
+   <br>**DateAdd(DateValue(Start.Text); 3; Months)**
    
     ![Lisää kolme kuukautta](./media/show-text-dates-times/date-add-months.png)
    
@@ -208,16 +209,16 @@ Muunna päivämääriä ja aikoja tekstimerkkijonoista arvoiksi, joita voit muot
 1. Lisää kolme **[avattava luettelo](controls/control-drop-down.md)** -ohjausobjektia, joiden nimet ovat **Vuosi**, **Kuukausi** ja **Päivä**.
 
 2. Määritä **Vuosi**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Table({Vuosi:"2014"}, {Vuosi:"2015"}, {Vuosi:"2016"})**
+   <br>**Table({Vuosi:"2014"}; {Vuosi:"2015"}; {Vuosi:"2016"})**
 
 3. Määritä **Kuukausi**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Table({Kuukausi:"1"}, {Kuukausi:"2"}, {Kuukausi:"3"}, {Kuukausi:"4"}, {Kuukausi:"5"}, {Kuukausi:"6"}, {Kuukausi:"7"}, {Kuukausi:"8"}, {Kuukausi:"9"}, {Kuukausi:"10"}, {Kuukausi:"11"}, {Kuukausi:"12"})**
+   <br>**Table({Kuukausi:"1"}; {Kuukausi:"2"}; {Kuukausi:"3"}; {Kuukausi:"4"}; {Kuukausi:"5"}; {Kuukausi:"6"}; {Kuukausi:"7"}; {Kuukausi:"8"}; {Kuukausi:"9"}; {Kuukausi:"10"}; {Kuukausi:"11"}; {Kuukausi:"12"})**
 
 4. Määritä **Päivä**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Table({Päivä:"1"}, {Päivä:"2"}, {Päivä:"3"}, {Päivä:"4"}, {Päivä:"5"}, {Päivä:"6"}, {Päivä:"7"}, {Päivä:"8"}, {Päivä:"9"}, {Päivä:"10"}, {Päivä:"11"}, {Päivä:"12"}, {Päivä:"13"}, {Päivä:"14"}, {Päivä:"15"}, {Päivä:"16"}, {Päivä:"17"}, {Päivä:"18"}, {Päivä:"19"}, {Päivä:"20"}, {Päivä:"21"}, {Päivä:"22"}, {Päivä:"23"}, {Päivä:"24"}, {Päivä:"25"}, {Päivä:"26"}, {Päivä:"27"}, {Päivä:"28"}, {Päivä:"29"}, {Päivä:"30"}, {Päivä:"31"})**
+   <br>**Table({Päivä:"1"}; {Päivä:"2"}; {Päivä:"3"}; {Päivä:"4"}; {Päivä:"5"}; {Päivä:"6"}; {Päivä:"7"}; {Päivä:"8"}; {Päivä:"9"}; {Päivä:"10"}; {Päivä:"11"}; {Päivä:"12"}; {Päivä:"13"}; {Päivä:"14"}; {Päivä:"15"}; {Päivä:"16"}; {Päivä:"17"}; {Päivä:"18"}; {Päivä:"19"}; {Päivä:"20"}; {Päivä:"21"}; {Päivä:"22"}; {Päivä:"23"}; {Päivä:"24"}; {Päivä:"25"}; {Päivä:"26"}; {Päivä:"27"}; {Päivä:"28"}; {Päivä:"29"}; {Päivä:"30"}; {Päivä:"31"})**
 
 5. Lisää **[nimi](controls/control-text-box.md)**-ohjausobjekti ja määritä sen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**Text(Date(Value(Vuosi.Selected.Value), Value(Kuukausi.Selected.Value), Value(Päivä.Selected.Value)), DateTimeFormat.LongDate)**
+   <br>**Text(Date(Value(Vuosi.Selected.Value); Value(Kuukausi.Selected.Value); Value(Päivä.Selected.Value)); DateTimeFormat.LongDate)**
    
     Tuloksena näkyy oletusarvoisesti **keskiviikko, tammikuu 1, 2014**. Valitse eri arvoja **[avattava luettelo](controls/control-drop-down.md)** -ohjausobjekteissa muuttaaksesi päivämäärää **[nimi](controls/control-text-box.md)**-ohjausobjektissa.
 
@@ -236,17 +237,17 @@ Joudut ehkä muuntamaan odottamattomia tietoja. Jos lisäät **[tekstisyöte](co
 1. Lisää kaksi **avattava luettelo**-ohjausobjektia, joiden nimet ovat **Tunti** ja **Minuutti**.
 
 2. Määritä **Tunti**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Table({Tunti:"9"}, {Tunti:"10"}, {Tunti:"11"}, {Tunti:"12"}, {Tunti:"13"}, {Tunti:"14"}, {Tunti:"15"}, {Tunti:"16"}, {Tunti:"17"})**
+   <br>**Table({Tunti:"9"}; {Tunti:"10"}; {Tunti:"11"}; {Tunti:"12"}; {Tunti:"13"}; {Tunti:"14"}; {Tunti:"15"}; {Tunti:"16"}; {Tunti:"17"})**
 
 3. Määritä **Minuutti**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Table({Minuutti:"0"}, {Minuutti:"15"}, {Minuutti:"30"}, {Minuutti:"45"})**
+   <br>**Table({Minuutti:"0"}; {Minuutti:"15"}; {Minuutti:"30"}; {Minuutti:"45"})**
 
 4. Lisää **[nimi](controls/control-text-box.md)**-ohjausobjekti ja määritä sen **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
-   <br>**Text(Time(value(Tunti.Selected.Value), Value(Minuutti.Selected.Value), 0), DateTimeFormat.ShortTime)**
+   <br>**Text(Time(value(Tunti.Selected.Value); Value(Minuutti.Selected.Value); 0); DateTimeFormat.ShortTime)**
 
 5. Valitse **15** kohdassa **Tunti** ja **45** kohdassa **Minuutti**.
    
     **[Nimi](controls/control-text-box.md)**-ohjausobjekti näyttää tuloksen **3:45 PM**.
    
-    Voit lisätä vaihtoehtoja kohtiin **Tunti** ja **Minuutti**, jotta käyttäjät voivat valita suuremmasta tuntimäärästä ja määrittää tarkemman minuuttimäärän. Voit myös lisätä kolmannen **[avattava luettelo](controls/control-drop-down.md)**-ohjausobjektin, jotta käyttäjät voivat määrittää sekunnit. Jos lisäät kolmannen luettelon, määritä **[nimi](controls/control-text-box.md)**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**Text(Time(Value(Tunti.Selected.Value), Value(Minuutti.Selected.Value), Value(Sekunti.Selected.Value)), DateTimeFormat.LongTime)**
+    Voit lisätä vaihtoehtoja kohtiin **Tunti** ja **Minuutti**, jotta käyttäjät voivat valita suuremmasta tuntimäärästä ja määrittää tarkemman minuuttimäärän. Voit myös lisätä kolmannen **[avattava luettelo](controls/control-drop-down.md)**-ohjausobjektin, jotta käyttäjät voivat määrittää sekunnit. Jos lisäät kolmannen luettelon, määritä **[nimi](controls/control-text-box.md)**-ohjausobjektin **[Text](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**Text(Time(Value(Tunti.Selected.Value); Value(Minuutti.Selected.Value); Value(Sekunti.Selected.Value)); DateTimeFormat.LongTime)**
 

@@ -20,6 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563829"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>PowerAppsin Blank-, Coalesce-, IsBlank- ja IsEmpty-funktiot
 Testaa, onko arvo tyhjä tai sisältääkö [taulukko](../working-with-tables.md) nolla [tietuetta](../working-with-tables.md#records), ja mahdollistaa *tyhjien* arvojen luomisen.
@@ -48,7 +49,7 @@ Mikä tahansa ominaisuus tai laskettu arvo voi olla *tyhjä*.  Esimerkiksi totuu
 * **[If](function-if.md)**-funktion *else*-osaa ei määritetty, ja kaikkien ehtojen arvot olivat **epätosi**.
 * Käytit **[Update](function-update-updateif.md)**-funktiota, mutta et määrittänyt arvoa kaikille sarakkeille. Näin ollen sarakkeille, joita et määrittänyt, ei asetettu arvoja.
 
-**Coalesce**-funktio arvioi argumentin järjestyksessä ja palauttaa ensimmäisen arvon, joka ei ole *tyhjä*.  Käytä funktiota korvaamaan *tyhjä* arvo toisella arvolla niin, että ei-*tyhjiä* arvoja ei muuteta.  Jos kaikki argumentit ovat *tyhjiä*, funktio palauttaa *tyhjän* arvon.  Kaikkien **Coalesce**-funktion argumenttien täytyy olla samaa tyyppiä. Et voi esimerkiksi sekoittaa numeroita ja merkkijonoja.  **Coalesce( arvo1, arvo2 )** on tiiviimpi versio kaavasta **If( Not( IsBlank( arvo1 ) ), arvo1, arvo2 )** eikä se vaadi **arvo1**:n arvioimista kahdesti.  
+**Coalesce**-funktio arvioi argumentin järjestyksessä ja palauttaa ensimmäisen arvon, joka ei ole *tyhjä*.  Käytä funktiota korvaamaan *tyhjä* arvo toisella arvolla niin, että ei-*tyhjiä* arvoja ei muuteta.  Jos kaikki argumentit ovat *tyhjiä*, funktio palauttaa *tyhjän* arvon.  Kaikkien **Coalesce**-funktion argumenttien täytyy olla samaa tyyppiä. Et voi esimerkiksi sekoittaa numeroita ja merkkijonoja.  **Coalesce( arvo1; arvo2 )** on tiiviimpi versio kaavasta **If( Not( IsBlank( arvo1 ) ); arvo1; arvo2 )** eikä se vaadi **arvo1**:n arvioimista kahdesti.  
 
 **IsEmpty**-funktio testaa, sisältääkö taulukko yhtään tietuetta. Se vastaa **[CountRows](function-table-counts.md)**-funktion käyttämistä, kun haetaan nollaa. Voit tarkistaa, onko tietolähteessä virheitä, yhdistämällä **IsEmpty**-funktion **[Errors](function-errors.md)**-funktioon.
 
@@ -57,7 +58,7 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 ## <a name="syntax"></a>Syntaksi
 **Blank**()
 
-**Coalesce**( *Arvo1* [, *Arvo2*, ... ] )
+**Coalesce**( *Arvo1* [; *Arvo2*; ... ] )
 
 * *Arvo(t)* – Pakollinen. Testattavat arvot.  Jokainen arvo arvioidaan, kunnes löydetään ei-*tyhjä* arvo.  Ensimmäisen ei-*tyhjän* arvon jälkeisiä arvoja ei arvioida.  
 
@@ -77,7 +78,7 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
-    **ClearCollect (kaupungit, {nimi: "Seattle", Weather: "Rainy" } )**
+    **ClearCollect (kaupungit; {nimi: "Seattle"; Weather: "Rainy" } )**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 4. Napsauta tai napauta **Tiedosto**-valikosta **Kokoelmat**.
 
@@ -92,7 +93,7 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
     Otsikko näyttää arvon **epätosi**, koska **Weather** sisältää arvon ("Rainy").
 7. Lisää toinen painike ja aseta sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    **Patch (kaupungit, ensimmäinen (kaupungit), {sää: Blank() } )**
+    **Patch (kaupungit; ensimmäinen (kaupungit); {sää: Blank() } )**
 8. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 
     **Cities**-kohdan ensimmäisen tietueen **Weather**-kenttä korvataan *tyhjällä* arvolla. Siitä poistetaan siinä aiemmin ollut "Rainy".
@@ -105,14 +106,14 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Coalesce( Blank(), 1 )** |Testaa **Blank**-funktion paluuarvon. Blank palauttaa aina *tyhjän* arvon. Koska ensimmäinen argumentti on *tyhjä*, arviointi jatkuu seuraavalla arvolla, kunnes löydetään ei-*tyhjä* arvo. |**1** |
-| **Coalesce( Blank(), Blank(), Blank(), Blank(), 2, 3 )** |**Coalesce** aloittaa argumenttiluettelon alusta ja arvioi argumentteja, kunnes löydetään ei-*tyhjä* arvo.  Tässä tapauksessa ensimmäiset neljä argumenttia palauttavat kaikki *tyhjän* arvon, joten arviointi jatkuu viidenteen argumenttiin. Viidennen argumentin arvo on ei-*tyhjä*, joten arviointi päättyy tähän. Viidennen argumentin arvo palautetaan, ja kuudetta argumenttia ei arvioida. |**2** |
+| **Coalesce( Blank(); 1 )** |Testaa **Blank**-funktion paluuarvon. Blank palauttaa aina *tyhjän* arvon. Koska ensimmäinen argumentti on *tyhjä*, arviointi jatkuu seuraavalla arvolla, kunnes löydetään ei-*tyhjä* arvo. |**1** |
+| **Coalesce( Blank(); Blank(); Blank(); Blank(); 2; 3 )** |**Coalesce** aloittaa argumenttiluettelon alusta ja arvioi argumentteja, kunnes löydetään ei-*tyhjä* arvo.  Tässä tapauksessa ensimmäiset neljä argumenttia palauttavat kaikki *tyhjän* arvon, joten arviointi jatkuu viidenteen argumenttiin. Viidennen argumentin arvo on ei-*tyhjä*, joten arviointi päättyy tähän. Viidennen argumentin arvo palautetaan, ja kuudetta argumenttia ei arvioida. |**2** |
 
 ### <a name="isblank"></a>IsBlank
 1. Luo sovellus alusta alkaen, lisää Tekstisyöte-ohjausobjekti ja anna sille nimeksi **FirstName**.
 2. Lisää otsikko ja aseta sen **[Text](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    **If( IsBlank( FirstName.Text ), "Etunimi on pakollinen kenttä." )**
+    **If( IsBlank( FirstName.Text ); "Etunimi on pakollinen kenttä." )**
 
     Oletuksena Tekstisyöte-ohjausobjektin **[Text](../controls/properties-core.md)**-ominaisuudeksi asetetaan **"Text input"**. Koska ominaisuus sisältää arvon, se ei ole tyhjä, eikä otsikko näytä mitään viestiä.
 3. Poista kaikki merkit Tekstisyöttö-ohjausobjektista, mukaan lukien välilyönnit.
@@ -129,14 +130,14 @@ Muita esimerkkejä:
 | **IsBlank( "" )** |Merkkijono, joka ei sisällä merkkejä. |**tosi** |
 | **IsBlank( "Hei" )** |Merkkijono, joka sisältää yhden tai useamman merkin. |**epätosi** |
 | **IsBlank( *AnyCollection* )** |Koska [kokoelma](../working-with-data-sources.md#collections) on olemassa, se ei ole tyhjä, vaikka se ei sisältäisi tietueita. Jos haluat tarkistaa, onko kokoelma tyhjä, käytä **IsEmpty**-funktiota. |**epätosi** |
-| **IsBlank( Mid( "Hei", 17, 2 ) )** |**[Mid](function-left-mid-right.md)**-aloitusmerkki on merkkijonon jälkeen.  Tuloksena on tyhjä merkkijono. |**tosi** |
-| **IsBlank( If( false, false ) )** |**[If](function-if.md)**-funktio ilman *ElseResult*:ia.  Koska ehto on aina **epätosi**, tämä **[If](function-if.md)** palauttaa aina *tyhjän* arvon. |**tosi** |
+| **IsBlank( Mid( "Hei"; 17; 2 ) )** |**[Mid](function-left-mid-right.md)**-aloitusmerkki on merkkijonon jälkeen.  Tuloksena on tyhjä merkkijono. |**tosi** |
+| **IsBlank( If( false; false ) )** |**[If](function-if.md)**-funktio ilman *ElseResult*:ia.  Koska ehto on aina **epätosi**, tämä **[If](function-if.md)** palauttaa aina *tyhjän* arvon. |**tosi** |
 
 ### <a name="isempty"></a>IsEmpty
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
 
-    **Collect (IceCream, {Flavor: ”Mansikka”, Quantity: 300}, {flavor: ”Suklaa”, Quantity: 100 } )**
+    **Collect (IceCream; {Flavor: ”Mansikka”; Quantity: 300}; {flavor: ”Suklaa”; Quantity: 100 } )**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 
     Kokoelma nimeltä **IceCream** luodaan ja se sisältää nämä tiedot:
@@ -159,7 +160,7 @@ Voit testata **IsEmpty**-funktiolla, onko laskettu taulukko tyhjä, kuten seuraa
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **IsEmpty( [&nbsp;1,&nbsp;2,&nbsp;3 ] )** |Yhden sarakkeen taulukko sisältää kolme tietuetta, eikä se siis ole tyhjä. |**epätosi** |
+| **IsEmpty( [&nbsp;1;&nbsp;2;&nbsp;3 ] )** |Yhden sarakkeen taulukko sisältää kolme tietuetta, eikä se siis ole tyhjä. |**epätosi** |
 | **IsEmpty( [&nbsp;] )** |Yhden sarakkeen taulukko ei sisällä tietueita, joten se on tyhjä. |**tosi** |
-| **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** |Yhden sarakkeen taulukko ei sisällä tietueita, joiden arvo on suurempi kuin 5.  Suodattimen tulos ei sisällä tietueita, joten se on tyhjä. |**tosi** |
+| **IsEmpty( Filter( [&nbsp;1;&nbsp;2;&nbsp;3&nbsp;]; Value > 5 ) )** |Yhden sarakkeen taulukko ei sisällä tietueita, joiden arvo on suurempi kuin 5.  Suodattimen tulos ei sisällä tietueita, joten se on tyhjä. |**tosi** |
 

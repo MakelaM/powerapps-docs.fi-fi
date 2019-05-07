@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61535970"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-meeting-screen-template-for-canvas-apps"></a>Pohjaan perustuvat sovellukset kokouksen näytön-mallin yleiskatsaus
 
@@ -58,10 +59,10 @@ Joitakin hyödyllisiä Huomautuksia:
 * Kokouksen luomiseen on Lisää vähintään yksi henkilö osallistuja, anna aihe ja valitse kokouksen ajan **aikataulun** välilehti.
 * Kun olet lähettänyt kokouspyyntö, kaikki tiedot kyseiseen kokoukseen on poistettu.
 * **OnSelect** Lähetä-kuvake (oikeassa yläkulmassa)-lause sisältää tämä kaava:
-    ```powerapps-dot
-    Set( _myCalendarName, 
-        LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name 
-    );
+    ```powerapps-comma
+    Set( _myCalendarName; 
+        LookUp( 'Office365'.CalendarGetTables().value; DisplayName = "Calendar" ).Name 
+    );;
     ```
 * ”Kalenterin” on useimpien Office-käyttäjien kalenterien oletusarvon näyttönimi, mutta organisaatiosi saattaa vaihdella. Jos näin on, voit muuttaa ”kalenterin”-org. asianmukainen termi
 * Näkyviin tulee virhe, jos yrität kokouksen, joka on jo mennyt tai lisää yli 20 ihmisiä kokoukseen.

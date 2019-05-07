@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61562809"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funktio PowerAppsissa
 Havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toiminnon.
@@ -36,7 +37,7 @@ Käytä **IfError**-funktiota [toimintakaavoissa](../working-with-formulas-in-de
 Jos kaikki argumentit funktioon **IfError** aiheuttavat virheen, viimeisen argumentin arvo palautetaan (se on virhearvo). 
 
 ## <a name="syntax"></a>Syntaksi
-**IfError**( *Value*, *Fallback1* [, *Fallback2*, ... ] )
+**IfError**( *Value*; *Fallback1* [; *Fallback2*; ... ] )
 
 * *Value* – Pakollinen. Kaavat virhearvojen testaamiseksi. 
 * *Fallback(s)* – Pakollinen. Arvioitavat kaavat ja palautettavat arvot, jos edelliset argumentit palauttivat virheen.  *Fallback* argumentit arvioidaan järjestyksessä, kunnes ei-virhearvo löydetään.
@@ -45,10 +46,10 @@ Jos kaikki argumentit funktioon **IfError** aiheuttavat virheen, viimeisen argum
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **IfError( 1, 2 )** |Ensimmäinen argumentti ei ole virhe.  Se palautetaan, eikä seuraavia argumentteja arvioida.   | 1 |
-| **IfError( 1/0, 2 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, jolloin syntyy ei-virhearvo, joka palautetaan. | 2 | 
-| **IfError( 1/0, Notify( "Sisäinen virhe", NotificationType.Error ) )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, ja käyttäjälle näytetään viesti.  **IfError**-funktion palautusarvo on **Notify**-funktion palautusarvo, joka on pakotettu samantyyppiseksi kuin ensimmäinen argumentti funktioon **IfError** (luku). | 1 |
-| **IfError( 1/0, 1/0, 2, 1/0, 3 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan. Myös tästä syntyy virhearvo (toinen jakolasku nollalla).  Kolmas argumentti arvioidaan. Tämä ei tuota palautettavaa virhearvoa.  Neljäs ja viides argumentti ohitetaan.  | 2 |
+| **IfError( 1; 2 )** |Ensimmäinen argumentti ei ole virhe.  Se palautetaan, eikä seuraavia argumentteja arvioida.   | 1 |
+| **IfError( 1/0; 2 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, jolloin syntyy ei-virhearvo, joka palautetaan. | 2 | 
+| **IfError( 1/0; Notify( "Sisäinen virhe"; NotificationType.Error ) )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan, ja käyttäjälle näytetään viesti.  **IfError**-funktion palautusarvo on **Notify**-funktion palautusarvo, joka on pakotettu samantyyppiseksi kuin ensimmäinen argumentti funktioon **IfError** (luku). | 1 |
+| **IfError( 1/0; 1/0; 2; 1/0; 3 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla).  Toinen argumentti arvioidaan. Myös tästä syntyy virhearvo (toinen jakolasku nollalla).  Kolmas argumentti arvioidaan. Tämä ei tuota palautettavaa virhearvoa.  Neljäs ja viides argumentti ohitetaan.  | 2 |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta
 
@@ -58,7 +59,7 @@ Jos kaikki argumentit funktioon **IfError** aiheuttavat virheen, viimeisen argum
 
 3. Määritä **Label1**:n **Text**-ominaisuuden kaavaksi:
 
-    **IfError( Value( TextInput1.Text ), -1 )**
+    **IfError( Value( TextInput1.Text ); -1 )**
 
 4. Kirjoita **TextInput1**-kohtaan **1234**.  
 

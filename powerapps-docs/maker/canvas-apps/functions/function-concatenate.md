@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551326"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Concat- ja Concatenate-funktiot PowerAppsissa
 Yhdistää yksittäisiä tekstimerkkijonoja ja merkkijonoja [taulukoiksi](../working-with-tables.md).
@@ -33,12 +34,12 @@ Käytä **[Split](function-split.md)**-funktiota merkkijonon jakamiseen osamerkk
 **Concatenate**-funktio yhdistää kokoelman yksittäisiä merkkijonoja ja yksisarakkeisen merkkijonotaulukon. Yksittäisten merkkijonojen kanssa käytettynä tämä funktio vastaa **&**[-operaattorin käyttöä](operators.md). Voit käyttää **[ShowColumns](function-table-shaping.md)**-funktion sisältävää kaavaa yksisarakkeisen taulukon luomiseen useita sarakkeita sisältävästä taulukosta.
 
 ## <a name="syntax"></a>Syntaksi
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*; *Formula* )
 
 * *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
 * *Formula* – Pakollinen.  Kaikkiin taulukon tietueisiin käytettävä kaava.
 
-**Concatenate**( *String1* [, *String2*, ...] )
+**Concatenate**( *String1* [; *String2*; ...] )
 
 * *String(s)* – Pakollinen.  Yksittäisten merkkijonojen tai yksisarakkeisen taulukon merkkijonojen yhdistelmä.
 
@@ -46,22 +47,22 @@ Käytä **[Split](function-split.md)**-funktiota merkkijonon jakamiseen osamerkk
 #### <a name="concat"></a>Concat
 1. Lisää **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
    
-    **Collect(Products, {String:”Violin”, Wind:”Trombone”, Percussion:”Bongos”}, {String:”Cello”, Wind:”Trumpet”, Percussion:”Tambourine”})**
+    **Collect(Products; {String:”Violin”; Wind:”Trombone”; Percussion:”Bongos”}; {String:”Cello”; Wind:”Trumpet”; Percussion:”Tambourine”})**
 2. Palaa suunnittelutyötilaan painamalla F5-näppäintä, napsauttamalla painiketta ja painamalla sitten Esc-näppäintä.
 3. Lisää **[Nimi](../controls/control-text-box.md)**-ohjausobjekti ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
    
-    **Concat(Products, String & ” ”)**
+    **Concat(Products; String & ” ”)**
    
     Selitteessä näkyy **Violin Cello**.
 
 #### <a name="concatenate"></a>Concatenate
 1. Lisää **[Tekstisyöte](../controls/control-text-input.md)**-ohjausobjekti ja anna sille nimi **AuthorName**.
 2. Lisää **[Nimi](../controls/control-text-box.md)**-ohjausobjekti ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-   **Concatenate(”By ”, AuthorName.Text)**
+   **Concatenate(”By ”; AuthorName.Text)**
 3. Kirjoita nimesi kohtaan **AuthorName**.
    
     Selitteessä näkyy **By**, jota seuraa nimesi.
 
 Jos sinulla oli **Employees**-taulukko, joka sisälsi **FirstName**-sarakkeen ja **LastName**-sarakkeen, tämä kaava yhdistäisi näiden sarakkeiden kunkin rivin tiedot.
-<br>**Concatenate(Employees.FirstName, ” ”, Employees.LastName)**
+<br>**Concatenate(Employees.FirstName; ” ”; Employees.LastName)**
 

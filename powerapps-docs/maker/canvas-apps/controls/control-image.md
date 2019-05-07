@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544610"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="image-control-in-powerapps"></a>Kuva-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka näyttää kuvan esimerkiksi paikallisesta tiedostosta tai tietolähteestä.
@@ -111,7 +112,7 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-[**Remove**( *DataSource*, ThisItem )](../functions/function-remove-removeif.md)
+[**Remove**( *DataSource*; ThisItem )](../functions/function-remove-removeif.md)
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="show-an-image-from-a-local-file"></a>Paikallisen tiedoston kuvan näyttäminen

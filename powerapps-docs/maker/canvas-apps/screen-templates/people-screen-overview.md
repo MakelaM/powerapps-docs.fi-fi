@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61536111"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-people-screen-template-for-canvas-apps"></a>Pohjaan perustuvat sovellukset käyttäjät-näytön-mallin yleiskatsaus
 
@@ -94,19 +95,19 @@ Käyttäjät-näytön lisää ihmisiä tekemiesi valintojen **MyPeople** kokoelm
 1. Määritä **OnSelect** ominaisuuden **BackIcon** - `Back()`.
 1. Määritä **OnSelect** ominaisuuden **SendIcon** tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Office365.SendEmail( 
-        Concat( MyPeople, UserPrincipalName & ";" ), 
-        SubjectLine.Text, 
+        Concat( MyPeople; UserPrincipalName & ";" ); 
+        SubjectLine.Text; 
         MessageBody.Text 
     )
     ```
     
-    Käytät tässä, Lähetä sähköpostiviesti Outlook-liitintä. Se välittää `Concat(MyPeople, UserPrincipalName & ";")` vastaanottajat luettelona. Tämä kaava yhdistää kaikki olevia sähköpostiosoitteita **MyPeople** kokoelma puolipisteillä erottelemalla ne yksittäiseksi merkkijonoksi. Tämä ei ole poikkeaa kirjoitettaessa ulos sähköpostiosoitteet puolipisteillä eroteltuina suosikkisähköpostiasi asiakkaan ”-”-rivillä merkkijonon.
+    Käytät tässä, Lähetä sähköpostiviesti Outlook-liitintä. Se välittää `Concat(MyPeople; UserPrincipalName & ";")` vastaanottajat luettelona. Tämä kaava yhdistää kaikki olevia sähköpostiosoitteita **MyPeople** kokoelma puolipisteillä erottelemalla ne yksittäiseksi merkkijonoksi. Tämä ei ole poikkeaa kirjoitettaessa ulos sähköpostiosoitteet puolipisteillä eroteltuina suosikkisähköpostiasi asiakkaan ”-”-rivillä merkkijonon.
     * Olet välittämällä `SubjectLine.Text` viestin aihe mukaan ja `MessageBody.Text` viestin tekstiosassa.
 1. Lisää käyttäjät-näytön oikeassa yläkulmassa **sähköpostia** kuvake.
    Muuta kuvakkeen väri riippumatta sinulle sopii sinulle.
-1. Määritä **OnSelect** -ominaisuuden **SendIcon** - `Navigate( EmailScreen, None )`.
+1. Määritä **OnSelect** -ominaisuuden **SendIcon** - `Navigate( EmailScreen; None )`.
 
     Sinulla on nyt kaksi näytön sovellus, jossa voit valita käyttäjät, laadi sähköpostiviestin niille ja lähettää sen. Voit testata sitä, mutta ole varovainen, sillä sovellus lähettää sähköpostiviesteille kaikille voit lisätä **MyPeople** kokoelma.
 

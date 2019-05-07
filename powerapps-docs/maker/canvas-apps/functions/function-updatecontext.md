@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61537637"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funktio PowerAppsissa
 Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#use-a-context-variable) nykyisessä näytössä.
@@ -62,7 +63,7 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 
 * *UpdateRecord*  – Pakollinen. Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon tälle sarakkeelle. Kontekstimuuttuja luodaan tai päivitetään jokaiselle sarakkeelle ja arvolle, jonka määrität.
 
-**UpdateContext**({ *Kontekstimuuttuja1*: *Arvo1* [, *Kontekstimuuttuja2*: *Arvo2* [,...]]} )
+**UpdateContext**({ *Kontekstimuuttuja1*: *Arvo1* [; *Kontekstimuuttuja2*: *Arvo2* [;...]]} )
 
 * *ContextVariable1*  – Pakollinen.  Luotavan tai päivitettävän kontekstimuuttujan nimi.
 * *Value1*  – Pakollinen.  Arvo, joka määritetään kontekstimuuttujalle.
@@ -74,18 +75,18 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 | --- | --- | --- |
 | **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Counter** ja asettaa sen arvoksi **1**. |**Counter**-arvo on **1**. Voit viitata kyseisen muuttujan nimeen **Counter** kaavassa. |
 | **UpdateContext( {&nbsp;Counter:&nbsp;2&nbsp;} )** |Määrittää kontekstimuuttujan **Counter** arvoksi edellisessä esimerkissä **2**. |**Counter**-arvo on **2**. |
-| **UpdateContext( {&nbsp;Name:&nbsp;"Lily",&nbsp;Score:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Name** ja **Score** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Name** arvo on **Lily** ja muuttujan **Score** arvo on **10**. |
-| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Person** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |Muuttujan **Person** arvo on tietue **{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
-| **UpdateContext ({&nbsp;henkilö: Patch (&nbsp;henkilö,&nbsp;{osoite:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;)}&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”, Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
+| **UpdateContext( {&nbsp;Name:&nbsp;"Lily";&nbsp;Score:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Name** ja **Score** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Name** arvo on **Lily** ja muuttujan **Score** arvo on **10**. |
+| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Person** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |Muuttujan **Person** arvo on tietue **{&nbsp;Name:&nbsp;”Milton”; Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
+| **UpdateContext ({&nbsp;henkilö: Patch (&nbsp;henkilö;&nbsp;{osoite:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;)}&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”; Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
 
 ### <a name="step-by-step-example"></a>Vaiheittainen esimerkki
 1. Anna oletusnäytön nimeksi **Lähde**, lisää toinen näyttö ja anna sille nimeksi **Kohde**.
 2. Lisää näytössä **Lähde** kaksi painiketta ja määritä niiden **[Text](../controls/properties-core.md)**-ominaisuudet niin, että toisessa lukee **Englanti** ja toisessa lukee **Espanja**.
-3. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Englanti**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Englanti"})**
-4. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Espanja**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Espanja"})**
-5. Lisää näytössä **Kohde** otsikko ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**If(Kieli=”Englanti”, ”Hello!”, ”Hola!”)**
+3. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Englanti**-painikkeelle seuraava lauseke:<br>**Navigate(Target; ScreenTransition.Fade; {Language:"Englanti"})**
+4. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Espanja**-painikkeelle seuraava lauseke:<br>**Navigate(Target; ScreenTransition.Fade; {Language:"Espanja"})**
+5. Lisää näytössä **Kohde** otsikko ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**If(Kieli=”Englanti”; ”Hello!”; ”Hola!”)**
 6. Valitse **Kohde**-näytössä **Shapes** **Lisää**-välilehdeltä ja valitse sitten taaksepäin osoittava nuoli.
-7. Määritä taaksepäin osoittavan nuolen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate(Source, ScreenTransition.Fade)**
+7. Määritä taaksepäin osoittavan nuolen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate(Source; ScreenTransition.Fade)**
 8. Paina **Lähde**-näytössä F5-näppäintä ja valitse sitten painike molemmille kielille.
 
     **Kohde**-näytössä otsikko näkyy kielellä, joka vastaa valitsemaasi painiketta.

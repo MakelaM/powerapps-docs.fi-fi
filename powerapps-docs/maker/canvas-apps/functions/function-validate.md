@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63317666"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="validate-function-in-powerapps"></a>Validate-funktio PowerAppsissa
 **Validate**-funktio tarkistaa, onko yksittäisen [sarakkeen](../working-with-tables.md#columns) tai täydellisen [tietueen](../working-with-tables.md#records) arvo kelvollinen [tietolähteelle](../working-with-data-sources.md).  
@@ -40,13 +41,13 @@ Tietolähteet vaihtelevat sen mukaan, kuinka paljon vahvistustietoja ne antavat 
 Jos **Validate** löytää ongelman, funktio palauttaa virhesanoman, jonka voit näyttää sovelluksen käyttäjälle. Jos kaikki arvot ovat kelvollisia, **Validate** palauttaa [tyhjän](function-isblank-isempty.md) arvon. Kun käsittelet [kokoelmaa](../working-with-data-sources.md#collections), jossa ei ole vahvistustietoja, arvot ovat aina kelvollisia.
 
 ## <a name="syntax"></a>Syntaksi
-**Validate**( *DataSource*, *Column*, *Value* )
+**Validate**( *DataSource*; *Column*; *Value* )
 
 * *DataSource* – Pakollinen. Tietolähde, jonka kanssa vahvistetaan.
 * *Column* – Pakollinen. Vahvistettava sarake.
 * *Value* – pakollinen. Valitun sarakkeen vahvistettava arvo.
 
-**Validate**( *DataSource*, *OriginalRecord*, *Updates* )
+**Validate**( *DataSource*; *OriginalRecord*; *Updates* )
 
 * *DataSource* – Pakollinen. Tietolähde, jonka kanssa vahvistetaan.
 * *OriginalRecord* – Pakollinen.  Tietue, jonka mukaan päivityksiä vahvistetaan.
@@ -59,13 +60,13 @@ Näissä esimerkeissä arvojen **Pisteet**-tietolähteen **Prosenttiosuus**-sara
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Validate( Scores, Percentage, 10 )** |Tarkistaa, onko **10** kelvollinen arvo **Percentage**-sarakkeelle **Scores**-tietolähteessä. |*tyhjä* |
-| **Validate( Scores, Percentage, 120 )** |Tarkistaa, onko **120** kelvollinen arvo **Percentage**-sarakkeelle **Scores**-tietolähteessä. |”Arvojen on oltava alueella 0–100.” |
+| **Validate( Scores; Percentage; 10 )** |Tarkistaa, onko **10** kelvollinen arvo **Percentage**-sarakkeelle **Scores**-tietolähteessä. |*tyhjä* |
+| **Validate( Scores; Percentage; 120 )** |Tarkistaa, onko **120** kelvollinen arvo **Percentage**-sarakkeelle **Scores**-tietolähteessä. |”Arvojen on oltava alueella 0–100.” |
 
 ### <a name="validate-with-a-complete-record"></a>Vahvista täydellisen tietueen kanssa
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Validate( Scores, EditRecord, Gallery.Updates )** |Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Scores**-tietolähteen kannalta. Tässä esimerkissä **Percentage**-sarakkeen arvo on **10**. |*tyhjä* |
-| **Validate( Scores, EditRecord, Gallery.Updates )** | Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Scores**-tietolähteen kannalta. Tässä esimerkissä **Percentage**-sarakkeen arvo on **120**. |”Arvojen on oltava alueella 0–100.” |
+| **Validate( Scores; EditRecord; Gallery.Updates )** |Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Scores**-tietolähteen kannalta. Tässä esimerkissä **Percentage**-sarakkeen arvo on **10**. |*tyhjä* |
+| **Validate( Scores; EditRecord; Gallery.Updates )** | Tarkistaa, ovatko kaikkien sarakkeiden arvot kelvollisia **Scores**-tietolähteen kannalta. Tässä esimerkissä **Percentage**-sarakkeen arvo on **120**. |”Arvojen on oltava alueella 0–100.” |
 

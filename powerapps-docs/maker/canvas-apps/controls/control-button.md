@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63320597"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="button-control-in-powerapps"></a>Painike-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa sovelluksen toimintojen käyttämiseksi.
@@ -117,7 +118,7 @@ Määritä **Painike**-ohjausobjektin **[OnSelect](properties-core.md)**-ominais
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
-**[Navigate( *ScreenName*, *ScreenTransitionValue* )](../functions/function-navigate.md)**
+**[Navigate( *ScreenName*; *ScreenTransitionValue* )](../functions/function-navigate.md)**
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="add-a-basic-formula-to-a-button"></a>Peruskaavan lisääminen painikkeeseen
@@ -144,7 +145,7 @@ Lisää kaava, joka tyhjentää **Tekstisyöte**-ohjausobjektin syöttöjen väl
 1. Aseta **Source**-kohdan **[HintText](control-text-input.md)**-ominaisuudeksi ”Syötä numero”.
 2. Määritä **Lisää**-kohdan **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:
    
-    **UpdateContext({Total:Total + Value(Source.Text)});<br>UpdateContext({ClearInput: ""})**
+    **UpdateContext({Total:Total + Value(Source.Text)});;<br>UpdateContext({ClearInput: ""})**
    
     > [!NOTE]
    > Erota kaavat toisistaan puolipisteellä ”**;**”.

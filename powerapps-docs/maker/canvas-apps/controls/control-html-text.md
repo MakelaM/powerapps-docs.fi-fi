@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544219"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstin ohjausobjekti PowerAppsissa
 Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
@@ -75,7 +76,7 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
+[**Find**( *FindString*; *WithinString* )](../functions/function-find.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, anna sille nimi **Source** ja määritä sen **[Text](properties-core.md)**-ominaisuudeksi tämä merkkijono:
