@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 798a355e1c8728b41f3e92f183d4a4e2831b7cc2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3311433b3950bcf48dc6c7b7969da501e542952c
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61530387"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670885"
 ---
 # <a name="add-and-configure-a-canvas-app-control-in-powerapps"></a>Pohjaan perustuvan sovelluksen ohjausobjektin lisääminen ja määrittäminen PowerAppsissa
 
@@ -51,7 +51,7 @@ Osoittaa, miten tämän luettelon toimii, valitse **nimen** , **Lisää** välil
 
 ![Screen2 luettelossa](./media/add-configure-controls/add-label.png)
 
-Näytöllä kuusi kahvat ympäröi valintaruutu nimen oletusarvon mukaan. Ruudun tyypin ympäröi tallennettuun ohjausobjekti on valittuna. Jos valitset näytössä napsauttamalla tai napauttamalla sen (mutta ulkopuolelle selite), selite katoaa ruutuun. Valitse selite uudelleen, voit napsauttamalla tai napauttamalla sen tai napsauttamalla tai napauttamalla **Label2** ohjausobjektien hierarkkisessa luettelossa.
+Näytöllä kuusi kahvat ympäröi valintaruutu nimen oletusarvon mukaan. Ruudun tyypin ympäröi tallennettuun ohjausobjekti on valittuna. Jos valitset näytössä napsauttamalla tai napauttamalla sen (mutta ulkopuolelle selite), selite katoaa ruutuun. Valitse selite uudelleen, voit napsauttamalla tai napauttamalla sen tai napsauttamalla tai napauttamalla sen nimeä ohjausobjektien hierarkkisessa luettelossa.
 
 > [!IMPORTANT]
 > Sinun täytyy valita ohjausobjektin aina, ennen kuin voit määrittää sen.

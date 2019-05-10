@@ -13,51 +13,45 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: cc7eefbe2989ed1aa0e893c2d826215aec48003b
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: eeb7a80c106541acd6ca284541fae6112b6d470c
+ms.sourcegitcommit: 065b3b210273e5fe9025d41d27a08a62dfa16d03
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556972"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64904096"
 ---
 # <a name="working-with-environments-and-microsoft-powerapps"></a>Microsoft PowerAppsin käyttäminen eri ympäristöissä
 PowerAppsin avulla voit työskennellä eri ympäristöissä ja siirtyä helposti niiden välillä. Lue ympäristöjen yleiskuvaus kohdasta [Ympäristöjen yleiskuvaus](../../administrator/environments-overview.md), jossa selitetään yksityiskohtaisesti, miksi ympäristöjä käytetään ja miten voit luoda ja hallita niitä. Tämä artikkeli kattaa seuraavat ympäristöä koskevat ohjeaiheet:
 
-* ympäristön vaihtaminen powerapps.comissa
-* sovelluksen luominen oikeaan ympäristöön
-* sovelluksen tarkasteleminen oikeassa ympäristössä
+- ympäristön vaihtaminen powerapps.comissa
+- sovelluksen luominen oikeaan ympäristöön
+- sovelluksen tarkasteleminen oikeassa ympäristössä
 
 ## <a name="switch-the-environment"></a>Ympäristön vaihtaminen
-Kun rekisteröidyt ja kirjaudut ensimmäisen kerran powerapps.comiin, päädyt todennäköisesti oletusympäristöön. Voit tarkistaa asian katsomalla sivun oikeaa yläkulmaa.
+Kun rekisteröidyt ja kirjaudut ensimmäisen kerran powerappsiin, se avautuu oletusympäristö, jossa voit tunnistaa sivun oikeassa yläkulmassa.
 
-![Oletusympäristö](./media/working-with-environments/env-dropdown.png)
+> [!div class="mx-imgBorder"]
+> ![Oletusympäristö](./media/working-with-environments/env-dropdown.png)
 
-*Oletusympäristö* on kaikille helppokäyttöinen. Voit aloittaa sovellusten luomisen tässä ympäristössä ja jakaa sovelluksiasi muiden käyttäjien kanssa. Sinulla voi myös olla käyttöoikeus muihin ympäristöihin, kuten niihin, jotka [olet luonut itse](../../administrator/environments-administration.md), tai muiden luomiin ympäristöihin, joihin sinulla on käyttöoikeus. Voit vaihtaa ympäristöjä napsauttamalla oikeassa yläkulmassa olevaa avattavaa ympäristövalikkoa ja valitsemalla toisen ympäristön. Tässä esimerkissä näytetään vaihtaminen *oletusympäristöstä* *ympäristöön 1*.
+Kaikki organisaatiossasi voivat käyttää oletusympäristössä. Voit luoda sovelluksia tässä ympäristössä ja jakaa sovelluksiasi muiden käyttäjien kanssa. Mahdollisesti myös pääsy ympäristöihin, onko [voit luoda ne](../../administrator/environments-administration.md) tai muiden tehdä. Voit vaihtaa ympäristöjä avaamalla ympäristö-luettelosta oikeassa yläkulmassa ja valitsemalla sitten eri ympäristöön. Tässä esimerkissä näytetään vaihtaminen **Microsoft** - **MyOwnEnv**.
 
-![Ympäristön vaihtaminen](./media/working-with-environments/switch-env.png)
+> [!div class="mx-imgBorder"]
+> ![Ympäristön vaihtaminen](./media/working-with-environments/switch-environment.png)
 
-Kun vaihdat ympäristöä (esimerkiksi ympäristöön 1), huomaat, että kaikki sovellukset, jotka olet luonut tai joihin sinulla on käyttöoikeus, näkyvät myös uudessa ympäristössä.
+Kun vaihdat ympäristöjä, uusi ympäristö näyttää kaikki sovellukset, joihin sinulla on käyttöoikeudet kyseiseen ympäristöön.
 
 ## <a name="create-apps-in-the-right-environment"></a>Sovelluksen luominen oikeaan ympäristöön
 Voit luoda sovelluksia itse luomassasi ympäristössä tai ympäristössä, johon olet saanut käyttöoikeudet. Oman ympäristön luominen edellyttää kuitenkin [tarkkaa suunnitelmaa](../../administrator/pricing-billing-skus.md). Ennen kuin luot sovelluksen, **varmista aina, että olet valinnut ympäristön, jossa haluat sovelluksen olevan**. Muussa tapauksessa joudut siirtämään sovelluksia eri ympäristöjen välillä.
 
-Luo sovellus oikeassa ympäristössä tekemällä jokin seuraavista:
+Sovelluksen luominen oikeaan ympäristöön:
 
-- Jos PowerApps Studio ei ole avoinna, [kirjaudu sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), valitse ympäristö, jossa haluat luoda sovelluksen, valitse **Sovellukset** lähellä vasenta reunaa ja valitse sitten **Luo sovellus**.
+1. [Kirjaudu sisään PowerAppsiin](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-- Jos PowerApps Studio on avattu, valitse ympäristö uudelleen oikeassa yläkulmassa.
+1. Edellisen osan ohjeiden mukaan, valitse ympäristö, johon haluat luoda sovelluksen.
 
-5. Siirry **Tili**-sivulle ja valitse tällä hetkellä käytössä olevan ympäristön nimen vieressä oleva **Vaihda**-painike.
-
-6. Valitse ympäristö, johon haluat luoda sovelluksen.
-
-    ![Ympäristön vaihtaminen Studiossa](./media/working-with-environments/studio-env-dropdown2.PNG)
-
-7. Aloita sovelluksen luominen valitsemalla **Uusi**. Sovelluksesi sijaitsee nyt siinä ympäristössä, jonka valitsit vaiheessa 6.
-
-    ![Ympäristön vaihtaminen Studiossa](./media/working-with-environments/new-app.PNG)
+1. Valitse **sovelluksia** lähellä vasenta reunaa ja valitse sitten **sovelluksen**.
 
 ## <a name="view-apps-in-the-right-environment"></a>Sovelluksen tarkasteleminen oikeassa ympäristössä
-Riippumatta siitä, työskenteletkö [powerapps.comissa](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai PowerApps Studiossa, luettelo näkemistäsi sovelluksista, yhteyksistä jne. suodatetaan aina avattavasta valikosta valitun ympäristön perusteella. Jos et näe etsimiäsi sovelluksia, varmista aina, että oikea ympäristö on valittuna.
+Riippumatta siitä, työskenteletkö [powerapps.comissa](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) tai PowerApps Studiossa, luettelo näkemistäsi sovelluksista, yhteyksistä jne. suodatetaan aina avattavasta valikosta valitun ympäristön perusteella. Jos et näe haluamiasi sovelluksia, varmista aina, että oikea ympäristö on valittuna.
 
 Katso lisätietoja ympäristöistä [tästä yleiskatsauksesta](../../administrator/environments-overview.md).

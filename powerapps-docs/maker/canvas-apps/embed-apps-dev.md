@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e4d3d2e769951ed75ddeeb57f7fe4c0b350d02e7
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ed812fb8da85d36ff7c0790fe401b33043786cb8
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61550241"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670407"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Pohjaan perustuvien sovellusten integroiminen verkkosivustoihin ja muihin palveluihin
 Sovellukset, jotka luot ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä käyttämissään työkaluissa. Upottamalla pohjaan perustuvia sovelluksia iframe voit voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI tai SharePoint.
@@ -38,8 +38,7 @@ Voit integroida pohjaan perustuvat sovellukset SharePoint Onlineen käyttämätt
 Jos haluat upottaa sovelluksen, ensimmäinen vaihe on määrittää parametrit Uniform Resource Identifierille (URI) niin, että iframe-kehys tietää, mistä sovellus löytyy. URI on seuraavassa muodossa:
 
 ```
-https://web.powerapps.com/webplayer/iframeapp?source=iframe
-&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
 ```
 
 > [!NOTE]
@@ -70,7 +69,7 @@ Sovellustunnus on saatavilla powerapps.com-sivustolla. Sovellukselle, jonka halu
 ## <a name="embed-your-app-in-a-website"></a>Sovelluksen upottaminen sivustoon
 Sovelluksen upottaminen on nyt yhtä helppoa kuin iframe-kehyksen lisääminen sivustosi HTML-koodiin (tai muuhun palveluun, joka tukee iframe-kehyksiä, kuten Power BI tai SharePoint):
 
-```
+```html
 <iframe width="[W]" height="[H]" src="https://web.powerapps.com/webplayer/iframeapp?source=website&screenColor=rgba(165,34,55,1)&appId=/providers/Microsoft.PowerApps/apps/[AppID]" allow="geolocation; microphone; camera"/>
 ```
 

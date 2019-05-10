@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d33f541ea698b02a662edb652f809095f47acc6e
-ms.sourcegitcommit: f84095d964fe1fe5cc5290e5edbee284bd768e1e
+ms.openlocfilehash: 66fe60c0d74c86705615522621d8f277fcc343ae
+ms.sourcegitcommit: dbd922de8f2e97a478df64e7e9ba33b48574af5c
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042728"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088187"
 ---
 # <a name="customize-a-sharepoint-list-form-by-using-powerapps"></a>SharePoint-luettelolomakkeen mukauttaminen PowerAppsin avulla
 
@@ -71,7 +71,7 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 
 1. Laajenna vasemmassa siirtymispalkissa **Details_DataCard1**, ja Huomaa numero, joka näkyy lopussa **DataCardValue**.
 
-1. Määritä **näkyvyyden** -ominaisuuden **väri**, **Käytettävyysryhmän**, ja **hinta** kortit tämä kaava (korvataan tarvittaessa numero, sitä, joka edellisessä vaiheessa):
+1. Määritä **näkyvissä** -ominaisuuden **väri**, **Käytettävyysryhmän**, ja **hinta** kortit tämä kaava (korvaa, jos se on tarpeen, numero otsikkokohteelle, joka edellisessä vaiheessa):
 
     **Jos (DataCardValue2.Value = true, true)**
 
@@ -197,7 +197,7 @@ Voit määrittää kentät **Hinta**, **Saatavuus** ja **Värit** näytettäviks
 
 **K:** Tarvitsenko PowerApps-käyttöoikeus, voit luoda tai käyttää mukautettuja luettelolomakkeita?
 
-**A:** Sinun [Office 365-sopimus, joka sisältää Powerappsin](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus.md#licenses).
+**A:** Sinun [Office 365-sopimus, joka sisältää Powerappsin](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **K:** Mitä tapahtuu, kun vierailevien käyttäjien luettelo, jossa on mukautettua lomaketta?
 

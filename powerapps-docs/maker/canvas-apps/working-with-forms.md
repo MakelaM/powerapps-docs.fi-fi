@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 661f6710c8cec55868ccc9d67d0f83dd230f89c1
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
-ms.translationtype: HT
+ms.openlocfilehash: 4df4a9c6ddd411ea5766f13bb11ede57264e3062
+ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318238"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670735"
 ---
 # <a name="understand-canvas-app-forms-in-microsoft-powerapps"></a>Pohjaan perustuvan sovelluksen lomakkeiden ymmärtäminen Microsoft PowerAppsissa
 
@@ -53,8 +52,8 @@ Tämä näyttö sisältää seuraavat keskeiset kaavat:
 | Ohjausobjekti | Tuettu toiminta | Kaava |
 | --- | --- | --- |
 | **BrowseGallery1** |Näytä **Assets**-tietolähteen tietueet. |Valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuuden asetuksena on kaava, joka perustuu **Assets**-tietolähteeseen. |
-| **ImageNewItem1** |Näytä **Muokkaa ja Luo** -näyttö, jossa kunkin kentän arvona on oletusarvo, jotta käyttäjä voi helposti luoda tietueen. |Kuvan **[OnSelect](controls/properties-core.md)**-ominaisuudeksi on asetettu tämä kaava:<br> **NewForm( EditForm1 );;<br>Navigate( EditScreen1; None )** |
-| **NextArrow1** (valikoimassa) |Näytä **Tiedot**-näyttö, jossa voit tarkastella tällä hetkellä valitun tietueen useita tai kaikkia kenttiä. |Nuolen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi on asetettu tämä kaava:<br>**Navigate( DetailScreen1; None )** |
+| **ImageNewItem1** |Näytä **Muokkaa ja Luo** -näyttö, jossa kunkin kentän arvona on oletusarvo, jotta käyttäjä voi helposti luoda tietueen. |Kuvan **[OnSelect](controls/properties-core.md)**-ominaisuudeksi on asetettu tämä kaava:<br> **NewForm( EditForm1 );<br>Navigate( EditScreen1, None )** |
+| **NextArrow1** (valikoimassa) |Näytä **Tiedot**-näyttö, jossa voit tarkastella tällä hetkellä valitun tietueen useita tai kaikkia kenttiä. |Nuolen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi on asetettu tämä kaava:<br>**Navigate( DetailScreen1, None )** |
 
 Tämän näytön ensisijainen ohjausobjekti **BrowseGallery1** kattaa suurimman osan näytön alueesta. Käyttäjä voi selata valikoimaa, etsiä haluamansa tietueen ja näyttää tai päivittää lisää kenttiä.
 
@@ -64,7 +63,7 @@ Aseta **[Kohteet](controls/properties-core.md)**-ominaisuus ja näytä sen tieto
 > Luodussa sovelluksessa **[Kohteet](controls/properties-core.md)** on määritetty huomattavasti monimutkaisemmaksi kaavaksi oletusarvoisesti, jotta käyttäjä voi lajitella ja etsiä tietueita. Opit rakentamaan kyseisen kaavan jäljempänä tässä ohjeaiheessa. Yksinkertaisempi versio riittää toistaiseksi.
 
 Sen sijaan, että käyttäjä etsii tietueen, jota voi tarkastella tai muokata, hän voi luoda tietueen valitsemalla valikoiman yläpuolelta +-merkin. Luo tämä tehoste lisäämällä **[Kuva](controls/control-image.md)**-ohjausobjekti, jossa näkyy +-merkki, ja määrittämällä sen **[OnSelect](controls/properties-core.md)**-ominaisuuden arvoksi tämä kaava:
-<br>**NewForm( EditForm1 );; Navigate( EditScreen1; None )**
+<br>**NewForm( EditForm1 ); Navigate( EditScreen1, None )**
 
 Tämä kaava avaa **Muokkaa ja Luo** -näytön, jossa on **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekti nimeltä **EditForm1**. Kaava vaihtaa myös kyseisen lomakkeen **Uusi**-tilaan, jossa lomake näyttää oletusarvot tietolähteestä, jotta käyttäjä voi helposti luoda tietueen alusta.
 
@@ -75,7 +74,7 @@ Voit tutkia **BrowseGallery1**:ssä näkyvää ohjausobjektia valitsemalla ohjau
 Tässä esimerkissä ohjausobjektin **[Teksti](controls/properties-core.md)**-ominaisuutena on **ThisItem.AssignedTo**, joka on kenttä **Assets**-tietolähteessä. Valikoiman kolmen muun **[Nimi](controls/control-text-box.md)**-ohjausobjektin **[Teksti](controls/properties-core.md)**-ominaisuudeksi määritetään samankaltaiset kaavat, ja kukin ohjausobjekti näyttää eri kentän tietolähteessä.  
 
 Valitse **[Muoto](controls/control-shapes-icons.md)**-ohjausobjekti (nuoli) ja varmista, että sen **[OnSelect](controls/properties-core.md)**-ominaisuuden arvona on tämä kaava:
-<br>**Navigate( DetailScreen1; None )**
+<br>**Navigate( DetailScreen1, None )**
 
 Jos käyttäjä löytää tietueen **BrowseGallery1**:ssä, hän voi valita tietueen nuolen ja näyttää lisätietoja siitä **DetailScreen1**-kohdassa. Valitsemalla nuolen käyttäjä muuttaa **BrowseGallery1**:n **Valittu**-ominaisuuden arvon. Tässä sovelluksessa kyseinen ominaisuus määrittää, mikä tietue näkyy **DetailScreen1**-kohdassa sekä, jos käyttäjä päättää päivittää tietuetta, **Muokkaa ja Luo** -näytössä.
 
@@ -90,8 +89,8 @@ Tämä näyttö sisältää seuraavat keskeiset kaavat:
 | **DetailForm1** |Määrittää, mikä tietue näytetään. Luodussa sovelluksessa näkyy tietue, jonka käyttäjä valitsi valikoimassa. |Määritä tämän ohjausobjektin **[Kohde](controls/control-form-detail.md)**-ominaisuudeksi tämä arvo:<br>**BrowseGallery1.Selected** |
 | **[Kortti](controls/control-card.md)**-ohjausobjektit |Näyttää **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjektissa yhden kentän tietueessa. |Määritä **[DataField](controls/control-card.md)**-ominaisuuden arvoksi kentän nimi lainausmerkeissä (esimerkiksi **"Nimi"**). |
 | **ImageBackArrow1** |Kun käyttäjä valitsee tämän ohjausobjektin, **BrowseScreen1** avautuu. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Back()** |
-| **ImageDelete1** |Kun käyttäjä valitsee tämän ohjausobjektin, tietue poistetaan. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Remove( Assets; BrowseGallery1.Selected )** |
-| **ImageEdit1** |Kun käyttäjä valitsee tämän ohjausobjektin, **Muokkaa ja Luo** -näyttö avautuu nykyiseen tietueeseen. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate( EditScreen1; None )** |
+| **ImageDelete1** |Kun käyttäjä valitsee tämän ohjausobjektin, tietue poistetaan. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Remove( Assets, BrowseGallery1.Selected )** |
+| **ImageEdit1** |Kun käyttäjä valitsee tämän ohjausobjektin, **Muokkaa ja Luo** -näyttö avautuu nykyiseen tietueeseen. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate( EditScreen1, None )** |
 
 Näytön yläreunassa on **DetailForm1**-kohdan ulkopuolella kolme kuvaa, jotka toimivat painikkeina halliten sovelluksen kolmea näyttöä.
 
@@ -119,7 +118,7 @@ Tämä näyttö sisältää seuraavat keskeiset kaavat:
 | **EditForm1** |Näyttää tietueen **Assets**-tietolähteessä. |Määritä **[DataSource](controls/control-form-detail.md)**-ominaisuuden arvoksi **Assets**. |
 | **EditForm1** |Määrittää, mikä tietue näytetään. Luodussa sovelluksessa näkyy tietue, jonka käyttäjä valitsi **BrowseScreen1**:ssä. |Määritä **[Kohde](controls/control-form-detail.md)**-ominaisuudeksi tämä arvo:<br>**BrowseGallery1.Selected** |
 | **[Kortti](controls/control-card.md)**-ohjausobjektit |**[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekti sisältää ohjausobjekteja, jotta käyttäjä voi muokata yhtä tai useampaa tietueen kenttää. |Määritä **[DataField](controls/control-card.md)**-ominaisuuden arvoksi kentän nimi lainausmerkeissä (esimerkiksi **"Nimi"**). |
-| **ImageCancel1** |Kun käyttäjä valitsee tämän ohjausobjektin, meneillään olevat muutokset hylätään, ja **Tiedot**-näyttö avautuu. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**ResetForm( EditForm1 );; Back()** |
+| **ImageCancel1** |Kun käyttäjä valitsee tämän ohjausobjektin, meneillään olevat muutokset hylätään, ja **Tiedot**-näyttö avautuu. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**ResetForm( EditForm1 ); Back()** |
 | **ImageAccept1** |Kun käyttäjä valitsee tämän ohjausobjektin, muutokset lähetetään tietolähteeseen. |Määritä **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**SubmitForm( EditForm1 )** |
 | **EditForm1** |Jos muutokset hyväksytään, edellinen näyttö avautuu. |Määritä **[OnSuccess](controls/control-form-detail.md)**-ominaisuudeksi tämä kaava:<br>**Back()** |
 | **EditForm1** |Jos muutoksia ei hyväksytä, nykyinen näyttö pysyy avoinna, jotta käyttäjä voi korjata mahdolliset ongelmat, ja yrittää lähettää uudelleen. |Jätä **[OnFailure](controls/control-form-detail.md)**-ominaisuus tyhjäksi. |
@@ -224,7 +223,7 @@ Palataan seuraavaksi **[Valikoima](controls/control-gallery.md)**-ohjausobjektii
 1. Siirry ensimmäiseen näyttöön, joka isännöi **[Valikoima](controls/control-gallery.md)**-ohjausobjektia, ja valitse valikoiman ensimmäisen kohteen nuoli.
 
 2. Määritä muodon **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Navigate( Screen2; None )**
+   <br>**Navigate( Screen2, None )**
    
     ![Ice Cream -tietolähteen näytetty lomake ja Takaisin-painike](./media/working-with-forms/gallery-icecream-nav-new.png)
 
@@ -260,7 +259,7 @@ Nämä kaksi ominaisuutta ovat samat kuin **[Näytä lomake](controls/control-fo
 
 Lisää siirtyminen tähän näyttöön ja tästä näytössä näin:
 
-1. Lisää toinen **[Painike](controls/control-button.md)**-ohjausobjekti, määritä sen **[Teksti](controls/properties-core.md)**-ominaisuus näyttämään **Peruuta** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava: <br>**ResetForm( Form1 );; Back()**
+1. Lisää toinen **[Painike](controls/control-button.md)**-ohjausobjekti, määritä sen **[Teksti](controls/properties-core.md)**-ominaisuus näyttämään **Peruuta** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava: <br>**ResetForm( Form1 ); Back()**
    
     Tämä kaava hylkää kaikki tallentamattomat muokkaukset ja avaa edellisen näytön.
    
@@ -270,7 +269,7 @@ Lisää siirtyminen tähän näyttöön ja tästä näytössä näin:
     Kun päivitykset on tallennettu, edellinen näyttö (tässä tapauksessa Tiedot-näyttö) avautuu automaattisesti.
    
     ![Muokattu lomake ja lisätty OnSuccess-sääntö](./media/working-with-forms/edit-icecream-onsuccess.png)
-3. Lisää **Näyttö**-ohjausobjekti, lisää painike, määritä sen **[Teksti](controls/properties-core.md)**-ominaisuus näyttämään **Muokkaa** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br> **Navigate( Screen3; None )**
+3. Lisää **Näyttö**-ohjausobjekti, lisää painike, määritä sen **[Teksti](controls/properties-core.md)**-ominaisuus näyttämään **Muokkaa** ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br> **Navigate( Screen3, None )**
    
     ![Näytetty lomake ja lisätty muokkauspainike](./media/working-with-forms/viewform-icecream-edit.png)
 
@@ -289,7 +288,7 @@ Ensimmäisessä näytössä lisätään **Uusi**-painike:
 
 1. Valikoiman näytössä lisätään **[Painike](controls/control-button.md)**-ohjausobjekti.
 2. Aseta painikkeen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **Uusi** ja sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **NewForm( Form1 );; Navigate( Screen3; None )**
+   **NewForm( Form1 ); Navigate( Screen3, None )**
    
     Tämä kaava vaihtaa **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektin **Screen3**:ssa **Uusi**-tilaan ja avaa kyseisen näytön, jotta käyttäjä voi täyttää sen tietoja.
 
@@ -300,7 +299,7 @@ Kun Muokkaa ja luo -näyttö avautuu, lomake on tyhjä ja valmis sitä varten, e
 ## <a name="delete-a-record"></a>Tietueen poistaminen
 1. Lisää **Näyttö**-näytössä painike ja määritä sen **[Teksti](controls/properties-core.md)**-ominaisuus näyttämään **Poista**.
 2. Määritä painikkeen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**Remove( 'Ice Cream'; Gallery1.Selected );; Back()**
+   <br>**Remove( 'Ice Cream', Gallery1.Selected ); Back()**
    
     ![Näytetty lomake ja lisätty muokkauspainike](./media/working-with-forms/viewform-icecream-remove.png)
 
@@ -341,14 +340,14 @@ Kun käyttäjä valitsee lajittelupainikkeen, valikoiman lajittelujärjestys muu
 
 **[Valikoima](controls/control-gallery.md)**-ohjausobjektin **[Kohteet](controls/properties-core.md)**-ominaisuuden kaava käyttää tätä kontekstimuuttujaa yhdessä tekstin kanssa **TextSearchBox1**-ohjausobjektissa:
 
-```powerapps-comma
+```powerapps-dot
 Sort( 
-    If( IsBlank(TextSearchBox1.Text);
-        Assets;
-        Filter( Assets; TextSearchBox1.Text in Text(ApproverEmail) ) 
-    );
-    ApproverEmail;
-    If(SortDescending1; Descending; Ascending) 
+    If( IsBlank(TextSearchBox1.Text),
+        Assets,
+        Filter( Assets, TextSearchBox1.Text in Text(ApproverEmail) ) 
+    ),
+    ApproverEmail,
+    If(SortDescending1, Descending, Ascending) 
 )
 ```
 
