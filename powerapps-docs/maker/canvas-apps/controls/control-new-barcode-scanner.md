@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1e41ec8d228e62c22354d77777a8390bfd442f8c
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 9a4b2c941b5e28c462b85d3c6d54404746e22d04
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61543961"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517350"
 ---
 # <a name="barcode-scanner-control-for-canvas-apps"></a>Viivakoodiskanneri ohjausobjekti pohjaan perustuvat sovellukset
 
@@ -60,6 +60,8 @@ Ohjausobjekti tukee QR-koodit, tietojen matriisi-koodit ja nämä erityyppisiä 
 **FlashlightEnabled** – onko taskulampun otetaan käyttöön automaattisesti, kun skanneri on avattu.
 
 **[Korkeus](properties-size-location.md)**  – painike, joka aktivoi skanneri korkeus.
+
+**PreferFrontCamera** – onko eteen osoittavaa kamera, kun se on käytettävissä, käytetään lukemiseen.
 
 **[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 

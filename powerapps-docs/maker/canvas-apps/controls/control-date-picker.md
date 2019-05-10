@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 90f18c4b490564bc098046831ea932db13fce05d
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: eb8835a2e5c66bb975bc384d9ca782cd3a0f7d85
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63321708"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517430"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Päivämäärävalitsin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa päivämäärän määrittämiseksi.
@@ -37,7 +36,7 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 * Ohjausobjekti näyttää **12/31/2017**, jos käyttäjä napsauttaa tai napauttaa vuoden 2017 viimeistä päivää, **Muoto**-ominaisuudeksi määritetään **ShortDate** ja **Kieli**-ominaisuudeksi **en-us**.
 * Ohjausobjekti näyttää **dimanche 31 decembre 2017**, jos käyttäjä napsauttaa tai napauttaa vuoden 2017 viimeistä päivää, **Muoto**-ominaisuudeksi määritetään **LongDate** ja **Kieli**-ominaisuudeksi **fr-fr**.
 
-**Kieli** – Määrittää päivämäärän, jota käytetään päivämäärien muotoiluun, mukaan lukien kuukausien nimet. Jos tätä ominaisuutta ei ole määritetty, käyttäjän laitteen asetus määrittää kielen.
+**Kielen** – määrittää kielen, jota käytetään päivämäärien muotoiluun, mukaan lukien kuukausien nimet. Jos tätä ominaisuutta ei ole määritetty, käyttäjän laitteen asetus määrittää kielen. Tuetut arvot ovat ”fi-us” ja ”FR”.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
@@ -76,6 +75,8 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
 **IconBackground** – Päivämäärävalitsimen kuvakkeen taustaväri.
 
+**InputTextPlaceholder** – ohjeteksti, joka tulee näkyviin, jos et valitse päivämäärää.
+
 **[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
@@ -110,7 +111,7 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
+   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
     Haluatko lisätietoja **[DateDiff](../functions/function-dateadd-datediff.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä, valitse päivämäärä kohdassa **Määräaika** ja napsauta tai napauta **OK**.

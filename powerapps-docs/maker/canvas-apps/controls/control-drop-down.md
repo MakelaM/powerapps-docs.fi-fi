@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2283f77f7e1c09ceade63f96003fefabc5e92539
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 02e8477873adad476c65e513a470e027aee5cd5c
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544265"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517399"
 ---
 # <a name="drop-down-control-in-powerapps"></a>Avattava luettelo -ohjausobjekti PowerAppsissa
 Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luettelon.
@@ -34,7 +33,9 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
   
 **Arvo** – Ohjausobjektissa näytettävien tietojen sarake, jos esimerkiksi tietolähteessä on useita sarakkeita.
 
-**Valittu** – Valittu kohde.
+**Valitun** – tietueen, joka edustaa valittu kohde.
+
+**AllowEmptySelection** – onko ohjausobjekti näyttää valinta on tyhjä, jos yhtään kohdetta ei ole valittu. Sovelluksen käyttäjät voit myös poistaa niiden valinnat valitsemalla tyhjä.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
@@ -99,6 +100,8 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 **[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
+**SelectedText (vanhentunut)** – merkkijonoarvon, joka edustaa valittu kohde.
+
 **[SelectionColor](properties-color-border.md)** – Luettelosta valitun kohteen tai kohteiden tekstin väri tai kynä-ohjausobjektin valintatyökalun väri.
 
 **[SelectionFill](properties-color-border.md)** – Luettelon valitun kohteen tai kohteiden taustaväri tai kynä-ohjausobjektin valitun alueen väri.
@@ -127,7 +130,7 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä lauseke:
 
-    `["Seattle"; "Tokyo"; "London"; "Johannesburg"; "Rio de Janeiro"]`
+    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
@@ -140,13 +143,13 @@ Tässä toimintosarjassa periaatteet pätevät mihin tahansa [tietolähde, joka 
 
 1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    `Distinct(Accounts; address1_city)`
+    `Distinct(Accounts, address1_city)`
 
     Tämä kaava näyttää kaikki **Tilit**-entiteetin kaupungit. Jos sama kaupunki on useassa tietueessa, **[Distinct](../functions/function-distinct.md)**-funktio piilottaa kaksoiskappaleen avattavan valikon ohjausobjektissa.
 
 1. (valinnainen) Vaihda **Avattava luettelo** -ohjausobjektin nimeksi **Kaupungit** ja lisää pystysuora **Valikoima**-ohjausobjekti. Aseta valikoiman **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    `Filter(Accounts; address1_city = Cities.Selected.Value)`
+    `Filter(Accounts, address1_city = Cities.Selected.Value)`
 
     Tämä **[suodatinfunktio](../functions/function-filter-lookup.md)** näyttää vain ne **Tilit**-entiteetin tietueet, joissa kaupunki vastaa **Kaupungit**-ohjausobjektissa valittua arvoa.
 

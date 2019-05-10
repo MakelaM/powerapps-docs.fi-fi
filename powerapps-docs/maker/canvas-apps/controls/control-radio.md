@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 447cda7a1d8d4f27c8be2b943abd2b5d6b431d49
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 2b1527f8a7bf157c88b85ae9721626b6fc14f5a9
+ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548773"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65517361"
 ---
 # <a name="radio-control-in-powerapps"></a>Valintanappi PowerAppsissa
 
@@ -40,6 +39,8 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 **Asettelu** – Määrittää, onko asettelu vaaka- tai pystysuuntainen.
 
 **[Arvo](properties-core.md)** – Ohjausobjektiin syötetty arvo.
+
+**Valitun** – tietueen, joka edustaa valittu kohde.
 
 ## <a name="all-properties"></a>Kaikki ominaisuudet
 
@@ -105,9 +106,11 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 **RadioSize** – Valintanapin ympyröiden läpimitta.
 
-**[Reset](properties-core.md)** – Palautetaanko ohjausobjektin oletusarvo.
+**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
+**SelectedText (vanhentunut)** – merkkijonoarvon, joka edustaa valittu kohde.
+
+**[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
 **[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
@@ -127,13 +130,13 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 
-[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 
 1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:
 
-    **["Standard"; "Premium"]**
+    **["Standard", "Premium"]**
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
