@@ -1,24 +1,24 @@
 ---
 title: Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa | Microsoft Docs
 description: Tässä artikkelissa annetaan vaiheittaiset ohjeet PowerAppsin Kuluraportti-mallin asentamista ja määrittämistä varten pohjaan perustuvissa sovelluksissa.
-author: mr-dang-msft
+author: yijw2017
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/08/2018
-ms.author: brdang
+ms.author: yijw
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4640c1f3fcab1382ec70573cea2ac259cf8b2a30
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ad6f91a7870a84cf5aa74cb49d2f5705f2a31
+ms.sourcegitcommit: 9ec2853aec74e92ccd1e4a7ca54707cdf8b8cdd3
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560958"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535292"
 ---
 # <a name="install-and-configure-the-expense-report-sample-for-canvas-apps-in-powerapps"></a>Kuluraportti-mallin asentaminen ja määrittäminen pohjaan perustuvassa sovelluksessa PowerAppsissa
 

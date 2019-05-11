@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9796cf6c668818110cd6910311ab5b5f61a745df
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c801a67cc7944d32a6a0a93e8b8566618b66da98
+ms.sourcegitcommit: f6c9e525130a03b8c76f0a4b4e90419604c5823c
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559583"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525647"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -49,6 +49,8 @@ Muita elementtejä ovat:
 **[App](functions/signals.md)** – palauttaa tietoja käynnissä olevasta sovelluksesta, kuten sen, mikä näyttö on näkyvissä.
 
 **[Asin](functions/function-trig.md)** – palauttaa luvun arkussinin radiaaneina.
+
+**[AsType](functions/function-astype-istype.md)**  – käsittelee tietueen viittaus tietyn entiteettityyppi.
 
 **[Atan](functions/function-trig.md)** – palauttaa luvun arkustangentin radiaaneina.
 
@@ -183,6 +185,8 @@ Muita elementtejä ovat:
 **[IsNumeric](functions/function-isnumeric.md)** – tarkistaa, onko arvo numeerinen.
 
 **[IsToday](functions/function-now-today-istoday.md)** – tarkistaa, onko päivämäärä- ja aika-arvo jossain vaiheessa tämän päivän aikana.
+
+**[IsType](functions/function-astype-istype.md)**  – tarkistaa tietueen viittaus viittaa tietyn entiteettityyppi.  
 
 ## <a name="l"></a>L
 **[Language](functions/function-language.md)** – palauttaa nykyisen käyttäjän kielitunnisteen.

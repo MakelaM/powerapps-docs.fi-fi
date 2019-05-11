@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a46635276f6598cf0591dc21ae5aeb855b6667c1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 60340c3833f61be4acf4780a90d18e483c1dc010
+ms.sourcegitcommit: 26704369b17d2358a77cd4841bd70bbcca3384f2
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560475"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65521031"
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerAppsin Tekstisyöte-ohjausobjekti
 Ruutu, johon käyttäjä voi kirjoittaa tekstiä, numeroita ja muuta tietoa.
@@ -123,9 +122,11 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Underline](properties-text.md)** – Onko ohjausobjektissa näytettävä teksti alleviivattu.
+**[Underline](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti alleviivattu.
 
-**[Visible](properties-core.md)** – Onko ohjausobjekti näytössä vai piilotettuna.
+**VirtualKeyboardMode** – näppäimistön, teksti tai numeric, joka näkyy sovelluksen käyttäjälle kosketusnäytöllä vaikeaa. **Muodossa** ominaisuus määrittää oletusarvo. Laitteen tuki vaihtelee. Laitteet, joissa on iOS on oltava vähintään 12.2 versio. Suositellut Android-versio on 9.0 ja numeerinen näppäimistöt ominaisuudet vaihtelevat Android-laitteille. Windows 10 ei tue tätä ominaisuutta.  
+
+**[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
 **[Leveys](properties-size-location.md)** – Ohjausobjektin vasemman ja oikean reunan välinen etäisyys.
 
@@ -142,7 +143,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää painike, määritä sen **[Text](properties-core.md)**-ominaisuus näyttämään **Lisää** ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
     Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Lisää tekstivalikoima pysty- tai vaakasuunnassa, aseta sen **[Items](properties-core.md)**-ominaisuus näyttämään **Nimet** ja aseta **Subtitle1**-kohdan **[Text](properties-core.md)**-ominaisuudeksi **ThisItem.FirstName**.
@@ -155,7 +156,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 1. Lisää tekstisyötteen ohjausobjekti, anna sen nimeksi **inputPassword** ja aseta sen **Tila**-ominaisuudeksi **Salasana**.
 
 1. Lisää selite ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
     Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 
