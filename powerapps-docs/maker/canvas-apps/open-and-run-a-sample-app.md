@@ -1,5 +1,5 @@
 ---
-title: Malliohjelman käyttäminen (pikaopas) | Microsoft Docs
+title: Malliohjelman käyttäminen | Microsoft Docs
 description: Vaiheittaiset ohjeet malliin perustuvan kangas-sovelluksen luomiseen PowerAppsissa
 author: AFTOwen
 manager: kvivek
@@ -13,14 +13,14 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1adf38b59b01bb08bc89c6101a96247b8bce8092
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 1cac73bad25bf1179f88030ee1f02589189610e0
+ms.sourcegitcommit: 4201d95421a74da19c585239b34d7d8620c74113
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61540274"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65546866"
 ---
-# <a name="quickstart-create-a-canvas-app-from-a-sample-in-powerapps"></a>Pikaopas: Luo kangas-sovellus mallin perusteella powerappsissa
+# <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>Luo kangas-sovellus mallin perusteella powerappsissa
 Tässä pikaoppaassa luot kangas-sovelluksen mallin perusteella, jolloin voit tutkia suunnittelumahdollisuuksia ja löytää ideoita, joita voit käyttää kehittäessäsi omia kangas-sovelluksiasi.
 
 Jokaiseen malliin liittyy tosimaailman skenaario, mutta tiedot ovat kuvitteellisia. Näiden tietojen tallentamista varten tarvitset pilvitallennustilin, kuten Dropboxin, Google Driven tai OneDriven.
