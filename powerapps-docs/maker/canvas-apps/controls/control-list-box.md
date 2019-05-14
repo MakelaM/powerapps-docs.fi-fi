@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517416"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="list-box-control-in-powerapps"></a>Luetteloruutu-ohjausobjekti PowerAppsissa
 Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
@@ -125,11 +126,11 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **CategoryList** ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **["Matto","Kovapuu","Laatta"]**
+   **["Matto";"Kovapuu";"Laatta"]**
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
    
@@ -137,9 +138,9 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 2. Lisää kolme **[Avattava luettelo](control-drop-down.md)** -ohjausobjektia, siirrä ne kohtaan **CategoryList** ja anna niille nimeksi **CarpetList**, **HardwoodList**  ja **TileList**.
 3. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Kohteet](properties-core.md)**-ominaisuudeksi jokin näistä arvoista:
    
-   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
+   * CarpetList: **["Caserta Stone Beige";"Ageless Beauty Clay"; "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak";"Natural Hickory"; "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble";"Indian Autumn Slate"; "Panaria Vitality Ceramic"]**
      
      ![Lattiapäällysteiden nimet avattavissa luetteloissa](./media/control-list-box/flooring-names.png)
 4. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Näkyvissä](properties-core.md)**-ominaisuudeksi jokin näistä arvoista:

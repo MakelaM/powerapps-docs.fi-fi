@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64670440"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Palveluilmoituksen lähettäminen PowerAppsissa
 Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.
@@ -86,7 +87,7 @@ Palveluilmoituksesi voivat välittää sovellukselle parametreja. Esimerkiksi **
 Voit asettaa sovelluksen avaamaan esimerkiksi **Case details** -sivun, kun sovellus avautuu:
 
 1. Lisää **Ajastin**-ohjausobjekti ja aseta sen **OnTimerEnd**-ominaisuudeksi seuraava kaava:
-   <br>**Navigate(EditCase, ScreenTransition.None)**
+   <br>**Navigate(EditCase; ScreenTransition.None)**
 2. (valinnainen) Piilota **Ajastin**-ohjausobjekti asettamalla sen **Visible**-ominaisuudeksi **false**.
 3. Aseta näytön **OnVisible**-ominaisuudeksi **Timer.Start()**.
 
@@ -114,10 +115,10 @@ Voit asettaa sovelluksen avaamaan esimerkiksi **Case details** -sivun, kun sovel
 ### <a name="sample-formulas"></a>Esimerkkikaavoja
 Perusilmoituksen lähettäminen.
 
-```powerapps-dot
+```powerapps-comma
 PowerAppsNotification.SendPushNotification(
     {
-        recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b", "72f988bf-86f1-41af-91ab-2d7cd011db47"],
+        recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b"; "72f988bf-86f1-41af-91ab-2d7cd011db47"];
         message: "A new case was assigned to you."
     }
 )
@@ -125,12 +126,12 @@ PowerAppsNotification.SendPushNotification(
 
 Sovelluksen avaavan ja parametreja välittävän ilmoituksen lähettäminen.
 
-```powerapps-dot
+```powerapps-comma
 PowerAppsNotification.SendPushNotification(
     {
-        recipients: ["email1@contoso.com", "email2@contoso.com"],
-        message: "message in the notif toast",
-        params: Table({key:"notificationKey", value:"The value for notificationKey"}),
+        recipients: ["email1@contoso.com"; "email2@contoso.com"];
+        message: "message in the notif toast";
+        params: Table({key:"notificationKey"; value:"The value for notificationKey"});
         openApp: true
     }
 )

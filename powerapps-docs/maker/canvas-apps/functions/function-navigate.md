@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64670933"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 Nämä funktiot vaihtavat näytettävää näyttöä.
@@ -59,7 +60,7 @@ Näitä funktioita voidaan käyttää vain [toimintakaavassa](../working-with-fo
 ## <a name="syntax"></a>Syntaksi
 **Back**()
 
-**Siirry**( *näytön* [, *siirtymä* [, *UpdateContextRecord* ]])
+**Siirry**( *näytön* [; *siirtymä* [; *UpdateContextRecord* ]])
 
 * *Screen* – Pakollinen. Avattava näyttö.
 * *Siirtymä* – valinnainen.  Nykyisestä näytöstä uuteen siirtymisen visuaalinen efekti. Katso tämän argumentin kelvolliset arvot tämän aiheen aiemmasta osasta. Oletusarvo on **ei mitään**.
@@ -70,15 +71,15 @@ Näitä funktioita voidaan käyttää vain [toimintakaavassa](../working-with-fo
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Navigate (lisätiedot)** |Näyttää **Lisätiedot**-näytön ilman siirtymäefektiä tai muutoksia kontekstimuuttujan arvoon. |**Lisätiedot**-näyttö ilmestyy nopeasti. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Mitään kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä ja päivittää **ID**-kontekstimuuttujan arvoksi **12**. |Uusi näyttö häivytetään, **Lisätiedot**-näyttö näytetään ja kyseisen näytön kontekstimuuttujan **ID**-arvoksi asetetaan **12**. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä. Päivittää **ID**-kontekstimuuttujan arvoksi **12** ja päivittää **Shade**-kontekstimuuttujan arvoksi **Color.Red**. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. **Lisätiedot**-ruudun **ID**-kontekstimuuttujan arvoksi asetetaan **12** ja **Shade**-kontekstimuuttujan arvoksi asetetaan **Color.Red**. Jos asetat jonkin **Lisätiedot**-näytön ohjausobjektin **Fill**-ominaisuudeksi **Shade**, kyseinen ohjausobjekti näytetään punaisena. |
+| **Navigate( Lisätiedot; ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Mitään kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
+| **Navigate( Lisätiedot; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä ja päivittää **ID**-kontekstimuuttujan arvoksi **12**. |Uusi näyttö häivytetään, **Lisätiedot**-näyttö näytetään ja kyseisen näytön kontekstimuuttujan **ID**-arvoksi asetetaan **12**. |
+| **Navigate( Lisätiedot; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;;&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä. Päivittää **ID**-kontekstimuuttujan arvoksi **12** ja päivittää **Shade**-kontekstimuuttujan arvoksi **Color.Red**. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. **Lisätiedot**-ruudun **ID**-kontekstimuuttujan arvoksi asetetaan **12** ja **Shade**-kontekstimuuttujan arvoksi asetetaan **Color.Red**. Jos asetat jonkin **Lisätiedot**-näytön ohjausobjektin **Fill**-ominaisuudeksi **Shade**, kyseinen ohjausobjekti näytetään punaisena. |
 
 ### <a name="step-by-step"></a>Vaiheittainen esimerkki
 1. Anna oletusnäytön nimeksi **OletusNäyttö**, lisää siihen otsikko ja aseta otsikon **[Text](../controls/properties-core.md)**-ominaisuudeksi **Oletus**.
 2. Lisää näyttö ja anna sille nimeksi **LisäNäyttö**.
 3. Lisää **LisäNäyttö**-näytölle otsikko ja aseta sen **[Text](../controls/properties-core.md)**-ominaisuudeksi **Lisä**.
-4. Lisää **LisäNäyttö**-näytölle painike ja aseta sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä funktio:<br>**Navigate(OletusNäyttö, ScreenTransition.Fade)**
+4. Lisää **LisäNäyttö**-näytölle painike ja aseta sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä funktio:<br>**Navigate(OletusNäyttö; ScreenTransition.Fade)**
 5. Paina **LisäNäyttö**-näytöllä F5-näppäintä ja valitse painike.<br>**Oletusnäyttö** fade siirtymän tulee näkyviin.
 
 [Toinen esimerkki](../add-screen-context-variables.md)
