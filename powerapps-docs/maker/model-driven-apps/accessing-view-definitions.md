@@ -4,7 +4,7 @@ description: Tässä ohjeaiheessa on tietoja entiteettinäkymien käyttämisest�
 ms.custom: ''
 ms.date: 11/27/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -31,7 +31,7 @@ search.app:
 ## <a name="open-a-view-for-editing-in-the-latest-view-designer"></a>Näkymän avaaminen muokkausta varten uusimmassa näkymän suunnitteluohjelmassa
 
 > [!IMPORTANT]
-> Näkymän suunnitteluohjelman uusin versio on tällä hetkellä esiversiotilassa. Joitakin toimintoja, kuten tarkennettua suodatusta, mukautettuja ohjausobjekteja ja sarakkeen ominaisuuksia, ei vielä tueta. Jos haluat suorittaa näitä tehtäviä, [avaa perinteisen näkymän suunnitteluohjelma](#open-a-view-in-solution-explorer).
+> Näkymän suunnitteluohjelman uusin versio on tällä hetkellä esiversiotilassa. Joitakin toimintoja, kuten tarkennettua suodatusta, mukautettuja ohjausobjekteja ja sarakkeen ominaisuuksia, ei vielä tueta. Jos haluat suorittaa näitä tehtäviä, [avaa näkymä muokkausta varten ratkaisunhallinnassa](#open-a-view-for-editing-in-solution-explorer).
 
 1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.  
 

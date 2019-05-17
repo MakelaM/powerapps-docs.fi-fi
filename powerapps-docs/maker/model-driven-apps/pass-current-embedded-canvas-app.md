@@ -3,7 +3,7 @@ title: Nykyisen tietueen välittäminen tietokontekstina upotettuun kaaviosovell
 ms.custom: ''
 ms.date: 12/17/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -81,5 +81,6 @@ Tässä ohjeaiheessa käsiteltiin, miten pääset alkuun kaaviosovelluksen upott
 ## <a name="see-also"></a>Katso myös
 [Kaaviosovelluksen upottaminen mallipohjaiseen lomakkeeseen](embed-canvas-app-in-form.md) <br />
 [Liittyvien tietueiden luettelon välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-related-embedded-canvas-app.md) <br />
+[Ennalta määritettyjen toimintojen suorittaminen upotetun kaaviosovelluksen isäntälomakkeessa](embedded-canvas-app-actions.md) <br />
 [Upotetun sovelluksen jakaminen](share-embedded-canvas-app.md) <br />
 [Upotettujen kaaviosovellusten käsittelyohjeita](embedded-canvas-app-guidelines.md)

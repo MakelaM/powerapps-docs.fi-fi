@@ -9,7 +9,7 @@ applies_to:
   - powerapps
 ms.author: matp
 manager: kvivek
-ms.date: 06/27/2018
+ms.date: 04/03/2019
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 82cd41ea-95b0-4606-9e7d-43eb5ce9ecd6
@@ -36,6 +36,8 @@ Lomakkeen tarkastelemisen yhteydessä:
 
 ![Lisää WWW-resurssi -valintaikkuna](media/add-web-resource-dialog.png)
 
+> [!IMPORTANT]
+> Valitse **Näkyvissä oletusarvoisesti** -asetus, jolloin WWW-resurssi näkyy lomakkeessa ja on käyttäjien käytettävissä.
 
 ## <a name="web-resource-properties"></a>Verkkoresurssin ominaisuudet
 

@@ -100,6 +100,10 @@ Kun HTML-verkkoresursseja käsitellään ratkaisun tarkistustoiminnolla, HTML-ve
 
 Ratkaisun tarkistustoiminto ei tue versiota ECMAScript 6 (2015) ja sitä uudempia versioita. Kun ratkaisun tarkistustoiminto analysoi JavaScriptiä, jossa on käytössä ECMAScript 6 tai sitä uudempi versio, verkkoresurssin web-supported-syntax-ongelma ilmoitetaan.  
 
+## <a name="multiple-violations-reported-for-plug-ins-and-workflow-activities-based-on-call-scope"></a>Laajennuksille ja työnkulun aktiviteeteille raportoitiin useita virheitä kutsun vaikutusalueen perusteella
+
+Ratkaisun tarkistustoiminto aloittaa analyysin IPlugin-liittymän käyttöönotosta laajennuksen ja työnkulun aktiviteetin säännöille, joissa virhe koskee vain kutsun kontekstia. Tarkistustoiminto kulkee kutsukaavion läpi ja havaitsee kyseisen käyttöönoton vaikutusalueen virheet.  Joissakin tapauksissa virheen havaitsemissijaintiin vie useita kutsupolkuja.  Koska ongelma koskee kutsun vaikutusaluetta, työkalu voi raportoida kyseisen vaikutusalueen perusteella. Näin saadaan parempi kuva vaikutuksesta erillisten sijaintien sijaan. Tulos voi olla, että useat virheet viittaavat yhteen sijaintiin, joka on korjattava.
+
 ## <a name="see-also"></a>Katso myös
 [Common Data Servicen parhaat käytännöt ja ohjeet](../../developer/common-data-service/best-practices/index.md)<br />
 [Mallipohjaisten sovellusten parhaat käytännöt ja ohjeet](../../developer/model-driven-apps/best-practices/index.md)<br />

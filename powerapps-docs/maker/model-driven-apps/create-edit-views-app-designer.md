@@ -3,7 +3,7 @@ title: Julkisten näkymien tai järjestelmän mallipohjaisten sovellusten näkym
 description: Tietoja näkymien luomisesta tai muokkaamisesta sovelluksen suunnitteluohjelmalla
 keywords: ''
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -57,7 +57,7 @@ Sovelluksen tekijänä voit luoda tai muokata julkisia näkymiä PowerAppsin avu
 
 4. Anna **Luo näkymä** -valintaikkunaan nimi ja halutessasi kuvaus. Valitse sitten **Luo**. 
     
-5. Valitse näkymän suunnitteluohjelmassa pluspainike ja lisää näkymässä näytettävät lisäsarakkeet. Lisätietoja: [Sarakkeen lisääminen näkymään](#add-a-column-to-your-view)
+5. Valitse näkymän suunnitteluohjelmassa pluspainike ja lisää näkymässä näytettävät lisäsarakkeet. Lisätietoja: [Sarakkeen lisääminen sovellusten suunnitteluohjelman näkymään](#add-a-column-to-your-view-in-app-designer) 
 
    ![Sarakkeen lisääminen](../common-data-service/media/add-column-to-view.png)
 

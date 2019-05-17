@@ -67,7 +67,7 @@ Voit seurata tätä ohjeaihetta, jos vaihdat [ympäristöön](../canvas-apps/wor
 
 1. Napsauta tai napauta **Ensisijainen nimi -kenttä** -luettelossa **Yhteyshenkilön nimi** ja napsauta tai napauta sitten oikeassa alakulmassa oleva **Seuraava**.
 
-    Voit määrittää toisen ensisijaisen nimen kentälle, määrittää lähdetaulukon toisen sarakkeen entiteetin jokaiseen kenttään, jotka luot, tai molemmat. Jos haluat noudattaa täysin tätä opetusohjelmaa, jätä sarakkeen oletusvastaavuus.
+    Voit määrittää toisen ensisijaisen nimen kentälle, määrittää lähdetaulukon toisen sarakkeen entiteetin jokaiseen kenttään, jotka luot, tai molemmat. Voit myös määrittää, luodaanko kyselyn tekstisarakkeet usean rivin vain yhden rivin tekstinä Common Data Service -palvelussa. Jos haluat noudattaa täysin tätä opetusohjelmaa, jätä sarakkeen oletusvastaavuus.
 
 1. Kun **Latauksen tila** on **Valmis**, valitse oikeassa alakulmassa oleva **Valmis**.
 

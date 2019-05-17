@@ -3,7 +3,7 @@ title: Mallipohjaisen sovelluksen näkymien sarakkeiden valitseminen ja määrit
 description: Tietoja sovelluksen näkymien valitsemisesta ja määrittämisestä
 keywords: ''
 ms.date: 11/27/2018
-ms.service: crm-online
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -46,7 +46,7 @@ search.app:
   > Näkymän suunnitteluohjelman uusin versio on tällä hetkellä esiversiotilassa. Joitakin ominaisuuksia, kuten sarakkeen tavoitettavuuden käyttöönottoa ja käytöstäpoistoa sekä sarakkeen lisäämistä, ei vielä tueta. Jos haluat suorittaa näitä tehtäviä, [avaa perinteisen näkymän suunnitteluohjelma](/dynamics365/customer-engagement/customize/create-and-edit-views#open-the-classic-view-designer).
   >  -   [Ota käyttöön tavoitettavuus tai poista se käytöstä sarakkeelle](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_EnableOrDisablePresence)  
   >
-  >  -   [Lisää hakusarakkeita](choose-and-configure-columns.md#BKMK_AddFindColumns)  
+  >  -   [Lisää hakusarakkeita](/dynamics365/customer-engagement/customize/choose-and-configure-columns#BKMK_AddFindColumns) 
 
 
 
@@ -111,6 +111,8 @@ Napsauta sarakkeen otsikkoa ja vedä se oikeaan paikkaan.
   
 > [!TIP]
 >   Voit myös valita siirrettävän otsikon ja valita avattavasta luettelosta **Siirrä oikealle** tai **Siirrä vasemmalle**.  
+
+
   
 ## <a name="next-steps"></a>Seuraavat vaiheet
 [Näkymien luominen tai muokkaaminen](create-edit-views.md)

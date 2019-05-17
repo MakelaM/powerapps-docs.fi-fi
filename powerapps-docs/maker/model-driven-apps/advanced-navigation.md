@@ -6,9 +6,9 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ''
-ms.date: 10/30/2018
+ms.date: 04/11/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -39,9 +39,9 @@ Ratkaisunhallinnan avulla voi suorittaa luonnin ja mukautuksen tehtäviä, joita
 
 1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen. 
 2.  Valitse vasemmassa siirtymisruudussa **Ratkaisut**.  
-3.  Avaa ratkaisunhallinta valitsemalla työkalurivillä **Siirry perinteiseen**. 
-
+3.  Valitse työkalurivin **Siirry perinteiseen** -kohta ja avaa **Kaikki ratkaisut** -näkymä. 
     Huomaa, että **Siirry perinteiseen** -komento ei ole käytettävissä, kun valitset ratkaisun luettelossa.
+4.  Valitse käytettävissä olevien ratkaisujen luettelosta **Näyttönimi**-sarake ja avaa ratkaisunhallinta.
 
 ## <a name="apps"></a>Sovellukset
 Sovellusalueella on luettelo kaikista niistä mallipohjaisista sovelluksista ja kaaviosovelluksista, joiden käyttöoikeudet sinulla on omassa ympäristössä. Sovellusalueella voi sovelluksen käynnistämisen lisäksi määrittää sovellukselle käyttöoikeusrooleja. 

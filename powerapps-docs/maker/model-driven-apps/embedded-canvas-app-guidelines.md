@@ -3,7 +3,7 @@ title: Upotettujen kaaviosovellusten käsittelyohjeita | MicrosoftDocs
 ms.custom: ''
 ms.date: 01/07/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
@@ -55,9 +55,10 @@ Tässä ohjeaiheessa on upotettujen kaaviosovellusten käsittelyohjeita sekä k�
      - Voit viitata suoraan tietueeseen käyttämällä [First-funktiota](../canvas-apps/functions/function-first-last.md). Esimerkki: First(ModelDrivenFormIntegration.Data).Name
 -   Sovellustunnuksen muuttamista manuaalisesti kaaviosovelluksen ohjausobjektin ominaisuuksissa on syytä välttää, mikäli se suinkin on mahdollista.
      - Kaaviosovelluksen tunnus luodaan ja täytetään automaattisesti puolestasi. 
-     - Jos sitä on jostain syystä muokattava manuaalisesti, muista varmistaa, että käytettävä sovellustunnus vastaa *upotettua* kaaviosovellusta eikä vain erillistä kaaviosovellusta.
+     - Jos sitä on jostain syystä muokattava manuaalisesti, muista varmistaa, että käytettävä sovellustunnus vastaa *upotettua* kaaviosovellusta eikä vain erillistä kaaviosovellusta. 
      - Lisäksi upotettu kaaviosovellus on luotava siinä tietokontekstissa, jonka mallipohjainen lomake tulee lähettämään.
-     - Kun olet päivittänyt sovellustunnuksen, muodosta yhteys uuteen sovellukseen valitsemalla **Mukauta**.
+     - Kun olet päivittänyt sovellustunnuksen, valitse **Mukauta** ja avaa se PowerApps Studiossa. Muodosta sitten yhteys uuteen sovellukseen.
+     - Tee sovellukseen pieni muutos, jolloin sen tilaksi tulee Tallentamaton. Tämän jälkeen voit tallentaa sovelluksen ja julkaista sen.
 - Jos tarkastelet upotetun kaaviosovelluksen sisältävää mallipohjaista lomaketta ja näkyvissä on virhesanoma, jonka mukaan sovellusta ei löytynyt, varmista, että upotettu kaaviosovellus on samassa ratkaisussa kuin mallipohjainen sovellus.
 - Jos tarkastelet upotetun kaaviosovelluksen sisältävää mallipohjaista lomaketta ja näkyvissä on virhesanoma, jonka mukaan sinulla ei ilmeisesti ole tämän sovelluksen käyttöoikeutta ja kehottaa pyytämään, että omistaja jakaa sen kanssasi, varmista, että tekijä on jakanut upotetun kaaviosovelluksen kanssasi. Lisätietoja: [Upotetun kaaviosovelluksen jakaminen](share-embedded-canvas-app.md).
 
@@ -78,10 +79,12 @@ Tässä ohjeaiheessa on upotettujen kaaviosovellusten käsittelyohjeita sekä k�
 - Kun luot uuden tietueen, lomakkeen upotettua kaaviosovellusta ei näytetä edes tietueen tallentamisen jälkeen. 
 -    ModelDrivenFormIntegration.Data-objekti ei toimi tällä hetkellä lomakkeen näyttämisen ja muokkauksen ohjausobjektien kanssa.
 - Et voi myöntää käyttöoikeusroolin **Kaaviosovellus**-oikeuden avulla sovelluksen käyttäjille upotetun etkä erillisen kaaviosovelluksen käyttöoikeutta. Lisätietoja upotetun kaaviosovelluksen jakamisesta: [Upotetun kaaviosovelluksen jakaminen](share-embedded-canvas-app.md).
-- Jos kirjoitat takaisin samat mallipohjaisessa isäntälomakkeessa näytettävät tiedot, lomake jatkaa vanhojen tietojen näyttämistä päivittämiseen saakka. 
+- Jos kirjoitat takaisin samat mallipohjaisessa isäntälomakkeessa näytettävät tiedot, lomake jatkaa vanhojen tietojen näyttämistä päivittämiseen saakka. Tämän voi tehdä helposti käyttämällä [RefreshForm](embedded-canvas-app-actions.md)-menetelmää.
+- Jos IntelliSensessä ei näy niiden upotettujen kaaviosovellusten [ennalta määritettyjen toimintojen suorittamisessa tarvittavia menetelmiä](embedded-canvas-app-actions.md), jotka luotiin ennen kuin toiminnot olivat käytettävissä, tallenna ja sulje sovellus ja avaa se sitten uudelleen. 
 
 ## <a name="see-also"></a>Katso myös
 [Kaaviosovelluksen upottaminen mallipohjaiseen lomakkeeseen](embed-canvas-app-in-form.md) <br />
 [Nykyisen tietueen välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-current-embedded-canvas-app.md) <br />
 [Liittyvien tietueiden luettelon välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-related-embedded-canvas-app.md) <br />
+[Ennalta määritettyjen toimintojen suorittaminen upotetun kaaviosovelluksen isäntälomakkeessa](embedded-canvas-app-actions.md) <br />
 [Upotetun sovelluksen jakaminen](share-embedded-canvas-app.md)

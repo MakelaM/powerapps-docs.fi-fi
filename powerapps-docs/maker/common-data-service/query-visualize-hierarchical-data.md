@@ -37,7 +37,7 @@ Joidenkin entiteettien, kuten asiakkaan ja käyttäjän, visualisoinnit ovat val
   
 <a name="BKMK_Querydata"></a>   
 ## <a name="query-hierarchical-data"></a>Kyselyn tekeminen hierarkkisista tiedoista  
- Common Data Service tukee hierarkkisten tietorakenteiden liittyvien tietueiden itseen viittaavia yksi moneen (1:N) -suhteita. Aiemmin hierarkkisten tietojen tarkasteleminen vaati toisiinsa liittyvien tietueiden toistuvia kyselyjä. Tällä hetkellä liittyvistä tiedoista voi tehdä kyselyn hierarkiana yhdessä vaiheessa. Entiteetin tietueista voi tehdä kyselyn käyttämällä **alle**- ja **ei alle** -logiikkaa. Hierarkkisia **alle**- ja **ei alle** -operaattoreita ovat käytettävissä Erikoishaku-toiminnossa ja työnkulkueditorissa. Katso lisätietoja siitä, miten näitä operaattoreita käytetään kohdassa [työnkulun osavaiheiden määritys](/flow/configure-workflow-steps). Lisätietoja erikoishausta on artikkelissa [Erikoishaun luominen, muokkaaminen tai tallentaminen](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
+ Common Data Service tukee hierarkkisten tietorakenteiden liittyvien tietueiden itseen viittaavia suhteita. Aiemmin hierarkkisten tietojen tarkasteleminen vaati toisiinsa liittyvien tietueiden toistuvia kyselyjä. Tällä hetkellä liittyvistä tiedoista voi tehdä kyselyn hierarkiana yhdessä vaiheessa. Entiteetin tietueista voi tehdä kyselyn käyttämällä **alle**- ja **ei alle** -logiikkaa. Hierarkkisia **alle**- ja **ei alle** -operaattoreita ovat käytettävissä Erikoishaku-toiminnossa ja työnkulkueditorissa. Katso lisätietoja siitä, miten näitä operaattoreita käytetään kohdassa [työnkulun osavaiheiden määritys](/flow/configure-workflow-steps). Lisätietoja erikoishausta on artikkelissa [Erikoishaun luominen, muokkaaminen tai tallentaminen](https://docs.microsoft.com/dynamics365/customer-engagement/basics/save-advanced-find-search).  
   
  Seuraavassa esimerkissä kuvataan eri skenaariot, joiden avulla hierarkioista voi tehdä kyselyn.  
   
@@ -53,17 +53,22 @@ Joidenkin entiteettien, kuten asiakkaan ja käyttäjän, visualisoinnit ovat val
   
  ![Kyselyasiakkaan liittyvät mahdollisuudet](media/query-account-related-opportunities.png "Kyselyasiakkaan liittyvät mahdollisuudet")  
   
- Jos haluat tehdä kyselyn tiedoista hierarkiana, sinun on määritettävä jokin entiteetin itseen viittaava 1:N (yksi-moneen) -suhde käyttöön hierarkkisena. Voit ottaa hierarkian käyttöön seuraavasti:  
+ Jos haluat tehdä kyselyn tiedoista hierarkiana, sinun on määritettävä jokin entiteetin itseen viittaava yksi moneen- tai monta yhteen -suhde käyttöön hierarkkisena. Voit ottaa hierarkian käyttöön seuraavasti:  
   
-1.  Avaa [ratkaisunhallinta](../model-driven-apps/advanced-navigation.md#solution-explorer). 
-  
-2.  Valitse entiteetti, valitse **1:N-suhteet** ja valitse sitten (1:N)-suhde. 
 
-3.  Valitse **suhdemääritys**, aseta **Hierarkkinen** valinnaksi **Kyllä**.  
+1. Laajenna [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivustossa **Tiedot**-osa ja napsauta tai napauta **Entiteetit**-kohtaa vasemmanpuoleisessa siirtymisruudussa.
+
+2. Napsauta tai napauta olemassa olevaan entiteettiä tai [luo uusi entiteetti](data-platform-create-entity.md)
+
+3. Valitse **Suhteet**
+
+4.  Valitse itseen viittaava suhde.
+
+5.  Valitse suhteen tietopaneelissa **Hierarkkinen**.  
   
 > [!NOTE]
-> - Joitakin valmiita 1:N-suhteita ei voi mukauttaa. Tämä estää valitsemasta näitä suhteita hierarkkisiksi suhteiksi.  
-> - Voit määrittää hierarkkisen suhteen järjestelmän itseen viittaaville suhteille. Tämä sisältää järjestelmätyypin 1:N:n itseen viittaavat suhteet, kuten "contact_master_contact"-suhteen.  
+> - Joitakin valmiita suhteita ei voi mukauttaa. Tämä estää valitsemasta näitä suhteita hierarkkisiksi suhteiksi.  
+> - Voit määrittää hierarkkisen suhteen järjestelmän itseen viittaaville suhteille. Tämä sisältää järjestelmätyypin itseen viittaavat suhteet, kuten contact_master_contact-suhteen.  
   
 <a name="BKMK_Visualizedata"></a>   
 ## <a name="visualize-hierarchical-data"></a>Hierarkkisten tietojen visualisoiminen  
@@ -85,18 +90,19 @@ Joidenkin entiteettien, kuten asiakkaan ja käyttäjän, visualisoinnit ovat val
   
  Seuraavassa luetellaan asioita, jotka on tärkeä muistaa visualisointien luonnin yhteydessä.  
   
--   Entiteetille voi määrittää hierarkkiseksi vain yhden itseen viittaavan 1:N-suhteen. Tässä suhteessa ensisijaisella ja liittyvällä entiteetillä on oltava sama tyyppi, kuten account_parent_account tai new_new_widget_new_widget.  
+-   Entiteetille voi määrittää hierarkkiseksi vain yhden itseen viittaavan 1:N-suhteen. Tässä suhteessa ensisijaisella ja liittyvällä entiteetillä on oltava sama tyyppi, kuten account_parent_account tai Widget_new_Widget_new_Widget.  
   
 -   Tällä hetkellä hierarkia ja visualisointi perustuvat vain yhteen entiteettiin. Asiakkaan hierarkia voidaan esittää niin, että se näyttää asiakkaat useilla tasoilla. Asiakkaita ja yhteyshenkilöitä ei kuitenkaan voi näyttää samassa hierarkian visualisoinnissa.  
   
 -   Ruudussa voi näyttää enintään neljä kenttää. Jos lisäät ruutunäkymässä käytettävään pikalomakkeeseen enemmän kenttiä, vain neljä ensimmäistä kenttää näytetään.  
   
 ### <a name="visualization-example"></a>Visualisointiesimerkki  
- Tarkastellaan esimerkkiä mukautetun entiteetin visualisoinnin luonnista. Loimme mukautetun entiteetin nimeltä new_Widget ja itseen viittaavan (1:N)-suhteen **new_new_widget_new_widget** ja merkitsimme sen hierarkkiseksi tässä kuvatulla tavalla:  
-  
- ![Pienoissovelluksen suhdemääritys](media/widget-relationship-definition.png "Pienoissovelluksen suhdemääritys")  
-  
- Seuraavaksi valitsimme **Hierarkia-asetukset**-ruudukkonäkymässä hierarkkisen suhteen nimeltä **new_new_widget_new_widget**. Täytimme lomakkeen pakolliset kentät. Jos 1:N-suhdetta ei ole vielä merkitty hierakkiseksi, voit siirtyä lomakkeen linkillä suhteen määrityslomakkeeseen ja merkitä siellä suhteen hierarkkiseksi.  
+ Tarkastellaan esimerkkiä mukautetun entiteetin visualisoinnin luonnista. Loimme mukautetun entiteetin nimeltä new_Widget. Loimme myös itseen viittaavan suhteen ja merkitsimme sen hierarkkiseksi alla esitetyllä tavalla.  
+ 
+> [!div class="mx-imgBorder"] 
+> ![Pienoissovelluksen suhdemääritys](media/widget-relationship-definition.png "Pienoissovelluksen suhdemääritys")  
+   
+ Seuraavaksi valitsimme **Hierarkia-asetukset**-ruudukkonäkymässä hierarkkisen suhteen nimeltä **Widget_new_Widget_new_Widget**. Täytimme lomakkeen pakolliset kentät. Jos suhdetta ei ole vielä merkitty hierakkiseksi, voit siirtyä lomakkeen linkillä perinteisen entiteetin editoriin. Siellä voi myös merkitä suhteen hierarkkiseksi.  
   
  Loimme **pikanäyttölomakkeeseen** pikalomakkeen nimeltä **Pienoissovellushierarkiaruutu-lomake**. Tähän lomakkeeseen lisättiin neljä kenttää, jotka näkyvät kussakin ruudussa.  
   

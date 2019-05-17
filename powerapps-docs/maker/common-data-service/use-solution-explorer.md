@@ -75,16 +75,13 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Aiemmin luodun osan lisääminen ratkaisuun](media/solution-add-existing-component.PNG "Aiemmin luodun osan lisääminen ratkaisuun")  
   
- Hallituissa ratkaisuissa komentoja ei ole käytettävissä ja näytössä on seuraava sanoma. Osa on etsittävä **Oletusratkaisu**-nimisestä ratkaisusta, jossa voit yrittää muokata sitä tai lisätä sen toiseen luomaasi ei-hallittuun ratkaisuun. Osaa ei ehkä voi mukauttaa. Lisätietoja: [Hallitut ominaisuudet](solutions-overview.md#managed-properties)
+ Hallituissa ratkaisuissa vain tietyt komennot ovat käytettävissä ja näytössä on seuraava sanoma. Osa on etsittävä **Oletusratkaisu**-nimisestä ratkaisusta, jossa voit yrittää muokata sitä tai lisätä sen toiseen luomaasi ei-hallittuun ratkaisuun. Osaa ei ehkä voi mukauttaa. Lisätietoja: [Hallitut ominaisuudet](solutions-overview.md#managed-properties)
 
 > [!div class="mx-imgBorder"]  
 > ![Hallittu ratkaisu](media/managed-solution.PNG "Hallittu ratkaisu")  
 
  Monet tehtävät mukautukset koskevat entiteettejä. Voit näyttää **Entiteetit**-suodattimen avulla luettelon kaikista nykyisessä ratkaisussa entiteeteistä, joita voi mukauttaa jollain tavalla. Kun poraudut entiteettiin, näkyviin tulee entiteettiin kuuluvat ratkaisun osat, kuten seuraavassa kuvassa oleva asiakasentiteetti. 
- 
-> [!NOTE]
->  Kun tällä hetkellä lisäät aiemmin luodun entiteetin ratkaisuun, järjestelmä lisää automaattisesti entiteettiin kuuluvat osat ratkaisuun. Jos et halua, että näin tapahtuu, siirry perinteiseen käyttökokemukseen valitsemalla **Siirry perinteiseen** ja lisää vain haluamasi osat. <!-- We will soon improve this experience from PowerApps and allow you to select only the specific component(s) under entity that you want to add into a solution. -->
-  
+   
 > [!div class="mx-imgBorder"]  
 > ![Esittelyratkaisu, jossa näkyy laajennettu asiakasentiteetti](media/solution-entity-account.png "Esittelyratkaisu, jossa näkyy laajennettu asiakasentiteetti")  
 
@@ -94,18 +91,18 @@ Voit avata PowerAppsissa perinteisen ratkaisunhallinnan valitsemalla vasemmassa 
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 
-- Hallitun ratkaisun poistaminen ei poista kaaviosovellusta PowerAppsista.
 - Ratkaisussa ei voi käyttää mukautettuja yhdysohjelmia.
 - Kaaviosovellukset on avattava ratkaisun tuonnin jälkeen, jotta yhteyden päivittyvät.
-- Lisätty aiemmin luotu SDK-kokoonpano ei näy ratkaisussa. 
 - Vaikka kaaviosovellus olisi pakattu hallittuna ratkaisuna, sitä voi silti muokata kohdeympäristössä.
 - Riippuvuuksia ei voi käyttää kaaviosovelluksissa.
 - Hallitun ratkaisun poistaminen ei johda palautumiseen toiseen kaaviosovelluksen versioon. 
 -   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service (CDS) -tietokannasta.
 -   Common Data Servicen ohjelmointirajapinnat, joilla kaaviosovelluksia kutsutaan, on estetty eikä niiden kautta palauteta mitään. 
--   Ratkaisussa luotua kaaviosovellusta ei voi jakaa rinnakkaisomistajana AAD-käyttöoikeusryhmälle.
+-   Ratkaisussa luotuja kaaviosovelluksia ja työnkulkuja ei voi jakaa rinnakkaisomistajana AAD-käyttöoikeusryhmälle.
 -   Kaaviosovellukset eivät näy perinteisessä ratkaisunhallinnassa.
--   Aiemmin luodut kaaviosovellukset eivät ole ratkaisukohtaisia. 
+- Painikkeen avulla käynnistettävät työnkulut eivät ole käytettävissä ratkaisuissa.
+- Kaaviosovelluksen avulla käynnistettävät työnkulut eivät ole käytettävissä ratkaisuissa.
+- Microsoft 365 -sovellusten, kuten SharePointin ja Excelin, käynnistämät työnkulut eivät ole käytettävissä ratkaisuissa.
 
  Lisätietoja ratkaisun yksittäisten osien mukauttamisesta on seuraavissa ohjeaiheissa:  
   

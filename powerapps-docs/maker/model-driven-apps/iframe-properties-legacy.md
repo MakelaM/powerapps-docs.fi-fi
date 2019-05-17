@@ -41,7 +41,7 @@ Voit tarkastella iFrame-ominaisuuksia näiden ohjeiden avulla.
 |---------|--------------|-----------------|  
 |**Yleiset**|**Nimi**|**Pakollinen**: iFrame-kehyksen yksilöivä nimi. Nimessä voi olla vain aakkosnumeerisia merkkejä ja alaviivoja.|  
 ||**URL-osoite**|**Pakollinen**: iFrame-kehyksessä näytettävän sivun URL-osoite.|  
-||**Siirrä tietueen objektityyppikoodi ja yksilöivät tunnukset parametreina**|iFrame-kehykseen voidaan välittää tietoja organisaatiosta, käyttäjästä ja tietueesta. Lisätietoja: [Parametrien siirtäminen iFrames-kehyksiin](iframe-properties-legacy.md#BKMK_PassParametersToIFRAMEs)|  
+||**Siirrä tietueen objektityyppikoodi ja yksilöivät tunnukset parametreina**|iFrame-kehykseen voidaan välittää tietoja organisaatiosta, käyttäjästä ja tietueesta. Lisätietoja: [Parametrien siirtäminen iFrames-kehyksiin](#pass-parameters-to-iframes) |  
 ||**Otsikko**|**Pakollinen**: iFrame-kehyksessä näytettävä otsikko.|  
 ||**Näytä otsikko lomakkeessa**|Valitaan, näytetäänkö otsikko.|  
 ||**Rajoita kehysten väliset komentosarjat silloin, kun sitä tuetaan**|Yhteyden muodostamista toisen sivuston sivuista Dynamics 365 -sovellukseen komentosarjojen avulla pidetään tietoturvariskinä. Voit rajoittaa tällä asetuksella kehysten välisiä komentosarjoja sivuilla, joita et hallitse.<br /><br />|  
