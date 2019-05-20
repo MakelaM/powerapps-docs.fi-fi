@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 21e1042dc525e666fcab40610c290793abe37395
-ms.sourcegitcommit: 91f084def8d7c2b78eeef20fa3959d1d34b8da66
+ms.openlocfilehash: d85c93b74e840d9711da0827de9114b9cef9ceab
+ms.sourcegitcommit: 810e9cf313f4690f8dbdfbe179f9ce7227437176
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65516811"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65884067"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -96,10 +96,10 @@ Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studio
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph – käyttäjätietojen hankkimiseen profiilikuvat (esimerkiksi) |
 | gallery.azure.com |https |Esimerkki- ja mallisovellukset |
 | \*.azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
-| \*.powerapps.com |https | create.powerapps.com + web.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | \*.blob.core.windows.net |https | Blob-objektisäilö |
-| \*.flow.microsoft.com | https | create.powerapps.com + web.powerapps.com |
+| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetria |
 
 > [!NOTE]
