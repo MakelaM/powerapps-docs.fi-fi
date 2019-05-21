@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/17/2019
 ms.locfileid: "65828167"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="back-and-navigate-functions-in-powerapps"></a>Back- ja Navigate-funktio PowerAppsissa
 
@@ -71,7 +72,7 @@ Kun **takaisin** oletusarvon mukaan käytetään funktio suoritetaan, kääntein
 
 * *Siirtymä* – valinnainen. Käytä nykyisestä näytöstä ja Edellinen näyttö välillä visuaalinen siirtymä. Viittaavat tälle argumentille aiemmin tässä ohjeaiheessa kelvollisten arvojen luettelo. Siirtymä, jonka kautta näytön palauttaa on oletusarvoisesti siirtymän, jonka kautta vaikutti käänteisen.
 
-**Siirry**( *näytön* [, *siirtymä* [, *UpdateContextRecord* ]])
+**Siirry**( *näytön* [; *siirtymä* [; *UpdateContextRecord* ]])
 
 * *Screen* – Pakollinen. Avattava näyttö.
 * *Siirtymä* – valinnainen.  Nykyisestä näytöstä uuteen siirtymisen visuaalinen efekti. Katso tämän argumentin kelvolliset arvot tämän aiheen aiemmasta osasta. Oletusarvo on **ei mitään**.
@@ -82,9 +83,9 @@ Kun **takaisin** oletusarvon mukaan käytetään funktio suoritetaan, kääntein
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Navigate (lisätiedot)** |Näyttää **Lisätiedot**-näytön ilman siirtymäefektiä tai muutoksia kontekstimuuttujan arvoon. |**Lisätiedot**-näyttö ilmestyy nopeasti. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Mitään kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä ja päivittää **ID**-kontekstimuuttujan arvoksi **12**. |Uusi näyttö häivytetään, **Lisätiedot**-näyttö näytetään ja kyseisen näytön kontekstimuuttujan **ID**-arvoksi asetetaan **12**. |
-| **Navigate( Lisätiedot, ScreenTransition.Fade, {&nbsp;ID:&nbsp;12&nbsp;,&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä. Päivittää **ID**-kontekstimuuttujan arvoksi **12** ja päivittää **Shade**-kontekstimuuttujan arvoksi **Color.Red**. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. **Lisätiedot**-ruudun **ID**-kontekstimuuttujan arvoksi asetetaan **12** ja **Shade**-kontekstimuuttujan arvoksi asetetaan **Color.Red**. Jos asetat jonkin **Lisätiedot**-näytön ohjausobjektin **Fill**-ominaisuudeksi **Shade**, kyseinen ohjausobjekti näytetään punaisena. |
+| **Navigate( Lisätiedot; ScreenTransition.Fade )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä.  Mitään kontekstimuuttujan arvoa ei muuteta. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. |
+| **Navigate( Lisätiedot; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä ja päivittää **ID**-kontekstimuuttujan arvoksi **12**. |Uusi näyttö häivytetään, **Lisätiedot**-näyttö näytetään ja kyseisen näytön kontekstimuuttujan **ID**-arvoksi asetetaan **12**. |
+| **Navigate( Lisätiedot; ScreenTransition.Fade; {&nbsp;ID:&nbsp;12&nbsp;;&nbsp;Shade:&nbsp;Color.Red&nbsp;} )** |Näyttää **Lisätiedot**-näytön **Fade**-siirtymällä. Päivittää **ID**-kontekstimuuttujan arvoksi **12** ja päivittää **Shade**-kontekstimuuttujan arvoksi **Color.Red**. |Nykyinen näyttö häivytetään ja **Lisätiedot**-näyttö näytetään. **Lisätiedot**-ruudun **ID**-kontekstimuuttujan arvoksi asetetaan **12** ja **Shade**-kontekstimuuttujan arvoksi asetetaan **Color.Red**. Jos asetat jonkin **Lisätiedot**-näytön ohjausobjektin **Fill**-ominaisuudeksi **Shade**, kyseinen ohjausobjekti näytetään punaisena. |
 | **Back()** | Näyttää edellisen näytön, jossa oletusarvon palautuksen siirtymä. | Näyttää edellisen näytön käänteinen siirtymä siirtymän, jonka kautta nykyisessä näytössä ominaisuudelta kautta. |
 | **Edellinen (ScreenTransition.Cover)** |  Näyttää edellisen näytön kanssa **kattaa** siirtymä. | Näyttää edellisen näytön kautta **kattaa** siirtymä riippumatta siitä, jonka kautta nykyisessä näytössä ominaisuudelta siirtymä. |
 
@@ -100,8 +101,8 @@ Kun **takaisin** oletusarvon mukaan käytetään funktio suoritetaan, kääntein
 
 1. Valitse **Screen2**, Lisää painike ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    Navigate( Screen1, ScreenTransition.Cover )
+    ```powerapps-comma
+    Navigate( Screen1; ScreenTransition.Cover )
     ```
 
 1. Kun pidät alhaalla **Alt** avaimen, valitse painike.
@@ -110,7 +111,7 @@ Kun **takaisin** oletusarvon mukaan käytetään funktio suoritetaan, kääntein
 
 1. Valitse **Screen1**, Lisää painike ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Back()
     ```
 
