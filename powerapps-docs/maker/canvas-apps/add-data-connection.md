@@ -13,21 +13,22 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 43832847f447a9af8a05d149b0d6f3b564b770e1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 15f3f38dd4812ffcbebeeaab4d301f715c97e1d1
+ms.sourcegitcommit: be110258910aa097b0065da1ee4ea1c40b7e1334
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61530083"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65922541"
 ---
 # <a name="add-a-data-connection-to-a-canvas-app-in-powerapps"></a>Tietoyhteyden lisääminen pohjaan perustuvaan sovellukseen PowerAppsissa
 
-Lisää PowerAppsissa tietoyhteys olemassa olevaan pohjaan perustuvaan sovellukseen tai sovellukseen, jonka olet luonut alusta alkaen. Sovelluksesi voi yhdistää SharePointiin, Salesforceen, OneDriveen ja [moneen muuhun tietolähteeseen](connections-list.md).
+Lisää PowerAppsissa tietoyhteys olemassa olevaan pohjaan perustuvaan sovellukseen tai sovellukseen, jonka olet luonut alusta alkaen. Sovelluksesi voi yhdistää SharePointiin, Common Data Service, Salesforceen, Onedriveen, tai [moniin muihin tietolähteisiin](connections-list.md).
 
 Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja hallita tietoyhteydestä saatuja tietoja sovelluksessasi, kuten näissä esimerkeissä:
 
 * Yhdistä OneDriveen ja hallinnoi Excel-työkirjan tietoja sovelluksessasi.
 * Yhdistä Twilioon ja lähetä tekstiviesti sovelluksestasi.
+* Yhdistä Common Data Service-ja Päivitä entiteetin sovelluksestasi.
 * Yhdistä SQL Serveriin ja päivitä taulukko sovelluksestasi.
 
 ## <a name="prerequisites"></a>Edellytykset
@@ -64,7 +65,7 @@ Tämän artikkelin jälkeen [seuraava vaihe](#next-steps) on näyttää ja halli
 
 1. Luo yhteys ja lisää se sovellukseesi valitsemalla **Luo**.
 
-    Jotkin liittimet, kuten **Office 365 Outlook**, eivät vaadi lisävaiheita, ja voit näyttää niiltä saatuja tietoja välittömästi. Jotkin muut liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Esimerkiksi [SharePoint](connections/connection-sharepoint-online.md) ja [SQL Server](connections/connection-azure-sqldatabase.md) tarvitsevat lisätietoja, ennen kuin voit käyttää niitä.
+    Jotkin liittimet, kuten **Office 365 Outlook**, eivät vaadi lisävaiheita, ja voit näyttää niiltä saatuja tietoja välittömästi. Jotkin muut liittimet pyytävät sinua antamaan tunnistetietoja, määrittämään tiettyjä tietoja tai suorittamaan muita vaiheita. Esimerkiksi [SharePoint](connections/connection-sharepoint-online.md) ja [SQL Server](connections/connection-azure-sqldatabase.md) tarvitsevat lisätietoja, ennen kuin voit käyttää niitä. Kanssa [Common Data Service-](connections/connection-common-data-service.md), voit muuttaa ympäristön, ennen kuin voit valita entiteetin.
 
 ## <a name="identify-or-change-a-data-source"></a>Tietolähteen tunnistaminen tai muuttaminen
 Sovellusta päivitettäessä voi olla tarpeen tunnistaa valikoimassa, lomakkeessa tai muussa ohjausobjektissa esiintyvien tietojen lähde tai muuttaa sitä. Sinun on esimerkiksi tunnistaa tietolähteeseen, kun päivität sovelluksen jonkun muun luoman tai luonut kauan sitten.
@@ -83,5 +84,5 @@ Sovellusta päivitettäessä voi olla tarpeen tunnistaa valikoimassa, lomakkeess
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-* Tietojen näyttämiseksi tai päivittämiseksi lähteessä, kuten Excel, SharePoint tai SQL Server, [lisää valikoima](add-gallery.md) ja [lisää lomake](add-form.md).
+* Näytä ja Päivitä lähteessä, kuten Excel, SharePoint, Common Data Service-tai SQL Server- [Lisää valikoima](add-gallery.md), ja [lomakkeen lisääminen](add-form.md).
 * Käytä muita tietolähteitä varten liitinkohtaisia funktioita, kuten [Office 365 Outlookin](connections/connection-office365-outlook.md), [Twitterin](connections/connection-twitter.md) ja [Microsoft Translatorin](connections/connection-microsoft-translator.md) kanssa käytettävissä olevia funktioita.
