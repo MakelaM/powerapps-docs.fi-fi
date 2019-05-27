@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0337c7f79a81d7368128b6ef11d4d108345d3923
-ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
-ms.translationtype: HT
+ms.openlocfilehash: d2b4229cc39a84bcffa624be8352762bcdc7a47b
+ms.sourcegitcommit: 21163a6d77b784f4864fce4695776c9b4652cb29
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66216624"
+ms.lasthandoff: 05/26/2019
+ms.locfileid: "66225162"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Tietokorttien ymmärtäminen PowerAppsissa
 
@@ -157,6 +157,9 @@ Näiden ohjausobjektien tiedot täytetään noutamalla niiden ominaisuudet korti
 | **TextFieldDisplayName.Text** |**Parent.DisplayName** |Tekstiruudun ohjausobjekti näyttää kutsumanimen, jonka antaja on käyttäjä tai tietolähteen metatiedot, ja joka määritetään kortin **[DisplayName](controls/control-card.md)**-ominaisuudessa. |
 | **InputText.Default** |**Parent.Default** |Tekstisyöte-ohjausobjekti näyttää aluksi kentän arvon tietolähteestä kortin oletusarvon mukaisesti. |
 | **TextErrorMessage.Text** |**Parent.Error** |Jos vahvistusongelma ilmenee, kortin **Virhe**-ominaisuus näyttää asianmukaisen virhesanoman. |
+
+> [!NOTE]
+> **Parent.Error** ominaisuus on vain output-ominaisuus, ei voi määrittää käyttämällä kaavaa. Tämän vuoksi tämä ominaisuus ei näy vasemmassa yläkulmassa tai ominaisuuksien luettelo **ominaisuudet** tai **lisäasetukset** välilehdet lähellä oikeaa reunaa. Kaavarivi ehdottaa tätä ominaisuutta, jos kirjoitat kaavan, joka voi viitata ominaisuus.
 
 Käytämme seuraavia keskeisiä kaavoja tietojen hakemiseksi näistä ohjausobjekteista ja niiden siirtämiseksi takaisin tietolähteeseen:
 
