@@ -1,25 +1,24 @@
 ---
 title: InfoPath-lomakkeen muuntaminen pohjaan perustuvaan sovellukseen | Microsoft Docs
 description: Aloita InfoPath-lomakkeen muuntaminen PowerAppsiin yleisiä skenaarioita koskevista tiedoista ja ohjeista, joiden avulla näitä luodaan pohjaan perustuvassa sovelluksessa.
-author: gregli-msft
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
 ms.reviewer: anneta
 ms.date: 04/05/2018
-ms.author: gregli
+ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0ceffa705262e879ee09df2494f71f59bcc2d1b5
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 52f97ce8360981b060500ce62da44a58002f4afa
+ms.sourcegitcommit: dd74c98f48587730466e6669fc94da250d5c631e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318394"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/26/2019
+ms.locfileid: "66224819"
 ---
 # <a name="transform-your-infopath-form-to-powerapps"></a>InfoPath-lomakkeen muuntaminen PowerAppsiin
 
@@ -94,7 +93,7 @@ Siirry oikeanpuoleisessa ruudussa **DefaultMode**-ominaisuuteen niin, että voit
 
 Käytä tässä esimerkissä **If**-kaavaa:
 
-```If(ThisItem.Color = "Blue"; DisplayMode.View; DisplayMode.Edit)```
+```If(ThisItem.Color = "Blue", DisplayMode.View, DisplayMode.Edit)```
 
 Tämä kaava ilmoittaa, että jos nykyinen kohteen **väri**-kenttä on **Sininen**, **Eläin**-kenttä on vain luku -tilassa. Muussa tapauksessa kenttää voi muokata.
 
@@ -102,21 +101,21 @@ Jos haluat piilottaa sen sijaan, että se muunnetaan vain luku -tilaan, lisää 
 
 Voit myös kokeilla esimerkiksi sitä, että hyväksymispainike näytetään vain jos käyttäjän sähköpostiosoite vastaa hyväksyjän sähköpostiosoitetta. (Vihje: Käytä **User(). Lähetä** pääset käsiksi nykyisen käyttäjän sähköpostiosoitteeseen.) Voit tallentaa hyväksyjän sähköpostiosoitteen **YourDataCard**-kohtaan ja asettaa painikkeen **Näkyvissä**-ominaisuuden arvoksi seuraavan kaavan:
 
-```If( YourDataCard.Text = User().Email; true; false )```
+```If( YourDataCard.Text = User().Email, true, false )```
 
 **Ehdollinen muotoilu**  
 Samaan tapaan kuin edellisessä kentän piilottavassa esimerkissä voit antaa käyttäjille visuaalista palautetta. Ehkä haluat korostaa tekstin punaisella, jos annettu arvo ei ole hyväksytyllä alueella, tai ehkä haluat muuttaa latauspainikkeiden tekstin ja värin, kun tiedosto on ladattu. Voit tehdä molemmat käyttämällä **If**-funktiota esim. **Väri**- tai **Näkyvissä**-ominaisuuksissa.
 
 Voit esimerkiksi käyttää **If**-funktiota yhdessä [IsMatch](functions/function-ismatch.md)-funktion kanssa, kun haluat vaihtaa sähköpostiosoitekentän tekstin värin punaiseksi, jos käyttäjä ei kirjoittanut syöteruutuun kelvollisen muotoista sähköpostiosoitetta. Voit tehdä tämän asettamalla **TextInput1**-kohdan (johon käyttäjä kirjoittaa sähköpostiosoitteen) **Väri**-arvoksi seuraavan kaavan:
 
-```If( IsMatch(TextInput1.Text; Email); Black; Red )```
+```If( IsMatch(TextInput1.Text, Email), Black, Red )```
 
 **IsMatch** tukee lukuisia erilaisia esimääritettyjä kuvioita, kuten Email, mutta voit luoda myös oman kuvion. Lisätietoja ehdollisesta muotoilusta on tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Conditional-Formatting-and-Popups/m-p/84962).
 
 **Roolipohjaisen suojauksen käyttöönotto**  
 Ensimmäiseksi kannattaa harkita [DataSourceInfo](functions/function-datasourceinfo.md)-funktiota. Tietolähteestä saatavat tiedot vaihtelevat, mutta usein voit tarkistaa tällä kaavalla, onko käyttäjällä tietojen muokkausoikeutta (korvaa *YourDataSource* oman tietolähteesi nimellä):
 
-```DataSourceInfo( YourDataSource; DataSourceInfo.EditPermission )```
+```DataSourceInfo( YourDataSource, DataSourceInfo.EditPermission )```
 
 Tällä funktiolla lomake tai painike näytetään vain, jos käyttäjällä on muokkausoikeus. [DataSourceInfo](functions/function-datasourceinfo.md)-funktion ohjeissa on täydellinen luettelo tiedoista, joita siinä voi kysellä.
 
@@ -139,7 +138,7 @@ Jos silti tarvitset muuttujaa (tällaisia tilanteita riittää), nämä ohjeet a
 
 - Yleiset muuttujat ovat tutuimpia. Voit määrittää yleisen muuttujan arvon [Set](functions/function-set.md)-funktiolla ja valitsemalla koko sovelluksen sen käyttöalueeksi:
 
-    ```Set( YourVariable; YourValue )```
+    ```Set( YourVariable, YourValue )```
 
     Tämän jälkeen voit viitata *OmaMuuttuja*-muuttujaan sen nimellä kaikkialla sovelluksessasi.
 
@@ -158,11 +157,11 @@ Avattavat johdannaisvalikot ovat erittäin hyödyllisiä, koska voit esimerkiksi
 
 Tässä esimerkissä voit lisätä avattavan valikon, jonka nimi on **ddSelectType** ja määrittää sen **Kohteet**-ominaisuudeksi seuraavan arvon:
 
-```Distinct( Impacts; Title )```
+```Distinct( Impacts, Title )```
 
 Avattava valikko näyttää vain Kustannukset-, Ohjelman vaikutus- ja Ajoitus-vaihtoehdot. Sen jälkeen voit lisätä toisen avattavan valikon ja määrittää sen **Kohteet**-ominaisuudeksi seuraavan kaavan:
 
-```Filter( Impacts; ddSelectType.Selected.Value in SCategory )```
+```Filter( Impacts, ddSelectType.Selected.Value in SCategory )```
 
 Tuloksena on avattavia johdannaisvalikkoja. Lisätietoja, tutustu PowerApps-tiimin julkaisussa [SharePoint: Avattavat Johdannaisvalikot in 4 Easy Steps!](https://powerusers.microsoft.com/t5/PowerApps-Community-Blog/SharePoint-Cascading-Dropdowns-in-4-Easy-Steps/ba-p/16248) ja tässä [yhteisön videossa](https://powerusers.microsoft.com/t5/Video-Webinar-Gallery/PowerApps-Cascading-Dropdown/m-p/92813). Äläkä huoli, voit tehdä sen aivan yhtä helposti ilman SharePointia.
 

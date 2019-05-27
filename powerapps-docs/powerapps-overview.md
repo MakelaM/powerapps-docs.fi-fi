@@ -9,16 +9,16 @@ ms.custom: ''
 ms.date: 03/18/2019
 ms.author: kvivek
 ms.reviewer: kvivek
-ms.openlocfilehash: 4e24047d44beb19e55dadb8d653604e47460a5d2
-ms.sourcegitcommit: 5b2b70c3fc7bcba5647d505a79276bbaad31c610
-ms.translationtype: HT
+ms.openlocfilehash: eb90f35286098f27454e6cad883b0113a211af78
+ms.sourcegitcommit: 9b2648a9066fe5d3b27b3d893daacba9b18eb75e
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58357571"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65609388"
 ---
 # <a name="what-is-powerapps"></a>Mikä on PowerApps?
 
-PowerApps on sovelluksista, palveluista, yhdistimistä ja tietoalustasta koostuva paketti, joka tarjoaa nopean sovelluskehitysympäristön liiketoimintatarkoituksiin luotavien mukautettujen sovellusten rakentamiseen. PowerAppsin avulla voit nopeasti luoda mukautettuja yrityssovelluksia, jotka muodostavat yhteyden *joko* taustalla olevaan tietoalustaan (**Common Data Service)** *tai* erilaisiin verkkolähteisiin tai paikallisiin lähteisiin (SharePoint, Excel, Office 365, Dynamics 365, SQL Server jne.) tallennettuihin yritystietoihin. 
+PowerApps on sovelluksista, palveluista, yhdistimistä ja tietoalustasta koostuva paketti, joka tarjoaa nopean sovelluskehitysympäristön liiketoimintatarkoituksiin luotavien mukautettujen sovellusten rakentamiseen. PowerAppsin avulla voit nopeasti luoda mukautettuja yrityssovelluksia, jotka muodostavat yhteyden *joko* taustalla olevaan tietoalustaan ([Common Data Service)](/powerapps/maker/common-data-service/data-platform-intro) *tai* erilaisiin verkkolähteisiin tai paikallisiin lähteisiin (SharePoint, Excel, Office 365, Dynamics 365, SQL Server jne.) tallennettuihin yritystietoihin. 
 
 PowerAppsilla luodut sovellukset tarjoavat monipuolisia liiketoimintalogiikan ja -työnkulkujen toimintoja, joiden avulla muunnat manuaaliset liiketoimintaprosessit digitaalisiksi ja automatisoiduiksi prosesseiksi. Lisäksi PowerAppsilla luodut sovellukset ovat rakenteeltaan vuorovaikutteisia, ja niitä voi käyttää saumattomasti selaimessa tai mobiililaitteissa (puhelimilla ja tableteilla). PowerApps tekee mukautettujen yrityssovellusten luomisesta ”demokraattista” mahdollistamalla monipuolisia ominaisuuksia sisältävien mukautettujen yrityssovellusten luomisen koodia kirjoittamatta.
 

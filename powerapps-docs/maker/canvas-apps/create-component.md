@@ -10,13 +10,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 369304ded3fdc9fcd69459da9875e6080d5d860c
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 0a20218d3670775f67b26c907ce5a3a54fa0af7b
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61562015"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216657"
 ---
 # <a name="create-a-component-for-canvas-apps"></a>Luo pohjaan perustuvat sovellukset komponentti
 
@@ -51,9 +50,12 @@ Osat eivät tue **UpdateContext** funktiota, mutta voit luoda ja päivittää mu
 
 ## <a name="import-and-export"></a>Tuo ja vie
 
-Jos viet osaa, voit luoda voit tuoda eri paikalliseen tiedostoon. Jos sovellus on muokattu samassa osaa, sinua pyydetään päätä, haluatko korvata muokattu tai Peruuta tuonti. Tätä kirjoitettaessa ei voi tallentaa osat pilveen tai jakaa niitä ympäristössä.
+Tuominen yhdelle tai useammalle yhdestä sovelluksesta toiseen, valitse **tuo osat** osien avattavasta luettelosta. Valintaruutu Näyttää kaikki sovellukset, jotka sisältävät komponentteja, joilla on oikeudet muokata. Valitse sovellus ja valitse sitten **tuo** tuoda uusimmat julkaistu versio kaikki osat kyseisessä sovelluksessa. Kun olet tuonut vähintään yksi komponentti, voit muokata kopiosi ja poista tiedot, joita ei tarvita.
 
-![Tuo ja vie](./media/create-component/import.png)
+> [!div class="mx-imgBorder"]
+> ![Tuo osat-valintaikkunassa](./media/create-component/import-components.png)
+
+Jos viet osaa, voit luoda voit tuoda eri paikalliseen tiedostoon. Jos sovellus on muokattu samassa osaa, sinua pyydetään päätä, haluatko korvata muokattu tai Peruuta tuonti. 
 
 ## <a name="custom-properties"></a>Mukautettuja ominaisuuksia
 
@@ -105,7 +107,7 @@ Tässä esimerkissä luodaan, joka muistuttaa seuraavaa kuvaa tai, jossa voit mu
 
 1. Määrittää komponentin **kohteet** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Table({Item:"SampleText"})
     ```
 
@@ -115,7 +117,7 @@ Tässä esimerkissä luodaan, joka muistuttaa seuraavaa kuvaa tai, jossa voit mu
 
 1. Varmista, että ominaisuusluettelo näyttää **kohteet** ominaisuuden (sellaisena kuin se tekee oletusarvon mukaan), ja määritä sitten kyseisen ominaisuuden arvoksi seuraava lauseke:
 
-    ```powerapps-comma
+    ```powerapps-dot
     MenuComponent.Items
     ```
 
@@ -141,8 +143,8 @@ Seuraavaksi osa lisätään näyttöön ja määritä merkkijonotaulukko näytt�
 
 1. Määritä **kohteet** ominaisuuden **MenuComponent_1** tämä kaava:
 
-    ```powerapps-comma
-    Table({Item:"Home"}; {Item:"Admin"}; {Item:"About"}; {Item:"Help"})
+    ```powerapps-dot
+    Table({Item:"Home"}, {Item:"Admin"}, {Item:"About"}, {Item:"Help"})
     ```
 
     Tämän esiintymän muistuttaa seuraavaa kuvaa, mutta voit mukauttaa teksti ja muut ominaisuudet kunkin esiintymän.
@@ -161,7 +163,7 @@ Tähän mennessä olet luonut osan ja lisätä sen sovellukseen. Seuraavaksi luo
 
 1. Käyttöön **lisäasetukset** välilehdeltä arvoa **valittu** ominaisuudeksi Tämä lauseke säätäminen valikoima-nimi on numero tarvittaessa:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gallery1.Selected.Item
     ```
 
@@ -169,7 +171,7 @@ Tähän mennessä olet luonut osan ja lisätä sen sovellukseen. Seuraavaksi luo
 
 1. Oletusarvon mukainen sovelluksen näytössä Lisää selite ja aseta sen **tekstin** ominaisuudeksi Tämä lauseke säätäminen komponentin nimi numero tarvittaessa:
 
-    ```powerapps-comma
+    ```powerapps-dot
     MenuComponent_1.Selected
     ```
 
@@ -181,8 +183,7 @@ Tähän mennessä olet luonut osan ja lisätä sen sovellukseen. Seuraavaksi luo
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 
-- Tätä kirjoitettaessa tietolähteitä ei tallenneta osia, joten lomakkeet ja taulukoihin, on poistettu käytöstä. 
-- Jos luot muuttujan osaa, kyseisen muuttujan on rajoitettu vain osaa ja ei näy sovelluksen muuttujien käyttäminen.
+- Tätä kirjoitettaessa tietolähteitä ei tallenneta osia, joten lomakkeet ja taulukoihin, on poistettu käytöstä.
 - PowerApps ei tue kokoelmat osia.
 - Osaa ei voi lisätä valikoimassa, lomakkeessa tai tietojen kortti.
 - Osaa päätietokannan esiintymä on paikallinen pää- ja sisältäville sovellukseen. Jos muutat päätietokannan esiintymä, muutokset näkyvät vain kopioita osa sovelluksessa. Kopioi muissa sovelluksissa pysyy samana, ellei osa-kirjaston Tuo uudelleen. Kaikki kyseiset sovellukset päätietokannan esiintymät havaittu ja päivittää automaattisesti.

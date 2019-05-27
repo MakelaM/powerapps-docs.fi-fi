@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee2e2b854b56dadfd63b35a984e92db2ca515093
-ms.sourcegitcommit: 8bad6bff1b3397b21654df4a9357dd0180fbcfe6
+ms.openlocfilehash: 9ca80511875ff8534e5b07c3a7844485ff70a4a5
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65046064"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216165"
 ---
 # <a name="build-global-support-into-canvas-apps"></a>Globaalin tuen kehittäminen pohjaan perustuville sovelluksille
 PowerApps on maailmanlaajuinen tuote. Pohjaan perustuvia sovelluksia voi kehittää käytettäväksi monilla kielillä ja alueilla.
@@ -43,7 +42,7 @@ Useimmat kaavan osat ovat aina englanniksi:
 * Ohjausobjektin ominaisuusnimet: **Screen.Fill**, **Button.OnSelect**, **Textbox.Font**,...
 * Luettelointinimet: **Color.Aqua**, **DataSourceInfo.MaxValue**, **FontWeight.Bold**...
 * Signaalin tietueiden: **Compass.Heading**, **sijainti. Latitude**, **App.ActiveScreen**, ...
-* Operaattorit: **Ylemmän tason**, **-**, **exactIn**,...
+* Operaattorit: **Ylemmän tason**, **-** , **exactIn**,...
 
 Kun luontiympäristö lokalisoidaan, ohjausobjektin ja muiden objektien nimet näkyvät tekijän omalla kielellä.  Espanjaksi jotkin ohjausobjektin nimet näkyvät seuraavasti:
 
@@ -75,7 +74,7 @@ Powerappsin luetteloerotin muutos vastaa mitä Excel-luetteloerottimelle tapahtu
 
 * argumentteihin funktiokutsuissa.
 * kenttiin [tietueessa](working-with-tables.md#elements-of-a-table).
-* tietueisiin [arvotaulukossa](working-with-tables.md#inline-syntax).
+* Tietueet [taulukon](working-with-tables.md#inline-value-tables).
 
 Otetaan esimerkiksi ilmaista kielen ja alueen, kuten japanin tai Yhdistyneessä kuningaskunnassa desimaalierottimena käytetään piste seuraava kaava:
 
@@ -101,7 +100,7 @@ Voit käyttää **Language**-funktiota esimerkiksi käännetyn tekstin näyttäm
 
 Tämän jälkeen voit käyttää esimerkiksi seuraavaa kaavaa käännettyjen merkkijonojen hakemiseen taulukosta:
 
-**LookUp( Table1; TextID = "Hello" && (LanguageTag = Left( Language(); 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
+**LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
 Huomaa, että käännetyt merkkijonot voivat olla muissa kielissä huomattavasti pidempiä kuin omassa kielessäsi.  Monissa tapauksissa käyttöliittymäsi merkkijonot näyttävien selitteiden ja muiden elementtien tulee olla leveämpiä.
 
@@ -114,8 +113,8 @@ Numerot, päivämäärät ja kellonajat kirjoitetaan eri muodoissa eri puolilla 
 
 **Text** edellyttää muotoilumerkkijonoa sen selvittämiseksi, kuinka haluat muotoilla numeron tai päivämäärän.  Tämä muotoilumerkkijono voi olla kahdentyyppinen:
 
-* **Yleinen luettelointi.**  Esimerkiksi **Text( Now(); DateTimeFormat.LongDate )**.  Tämä kaava muotoilee nykyisen päivämäärän kieleen sopivaan muotoon.  Tämä on muotoilumerkkijonon ensisijainen määritystapa.
-* **Mukautettu muotoilumerkkijono.**  Esimerkiksi **Text( Now(); "[$-en-US]dddd, mmmm dd, yyyy" )** näyttää saman tekstin kuin luettelointi, kun käytössä on kieli "en-US".  Mukautetun muotoilumerkkijonon etu on, että voit määrittää täsmälleen mitä tahdot.
+* **Yleinen luettelointi.**  Esimerkiksi **Text( Now(), DateTimeFormat.LongDate )** .  Tämä kaava muotoilee nykyisen päivämäärän kieleen sopivaan muotoon.  Tämä on muotoilumerkkijonon ensisijainen määritystapa.
+* **Mukautettu muotoilumerkkijono.**  Esimerkiksi **Text( Now(), "[$-en-US]dddd, mmmm dd, yyyy" )** näyttää saman tekstin kuin luettelointi, kun käytössä on kieli "en-US".  Mukautetun muotoilumerkkijonon etu on, että voit määrittää täsmälleen mitä tahdot.
 
 "[$-en-US]" mukautetun muotoilumerkkijonon edessä kertoo **Text**-funktiolle, millä kielellä mukautettu muotoilumerkkijono tulkitaan.  Tämä lisätään puolestasi, ja sen oletusarvo on luontikielesi.  Yleensä sinun ei tarvitse muuttaa tätä.  Siitä on hyötyä, kun eri kieliä käyttävät tekijät muokkaavat samaa sovellusta.
 
@@ -140,10 +139,10 @@ Kaikilla näillä funktioilla on samat argumentit:
 
 Esimerkki:
 
-* **Value( "12,345.678"; "en-US" )** tai **Value( "12,345.678" )**, kun käyttäjän kieli on "en-US", palauttaa numeron **12345.678** valmiina laskutoimituksia varten.
-* **DateValue( "1/2/01"; "es-ES" )** tai **DateValue( "1/2/01" )**, kun käyttäjän kieli on "es-ES", palauttaa päivämäärä- ja aika-arvon **1.2.2001 keskiyöllä**.
-* **TimeValue( "11:43:02"; "fr-FR" )** tai **DateValue( "11:43:02" )**, kun käyttäjän kieli on "fr-FR", palauttaa päivämäärä- ja aika-arvon **1.1.1970 kello 11.43:02**.
-* **TimeDateValue( "11:43:02 1/2/01"; "de-DE" )** tai **DateValue( "11:43:02" )**, kun käyttäjän kieli on "de-DE", palauttaa päivämäärä- ja aika-arvon **1.2.2001 kello 11.43:02**.
+* **Value( "12,345.678", "en-US" )** tai **Value( "12,345.678" )** , kun käyttäjän kieli on "en-US", palauttaa numeron **12345.678** valmiina laskutoimituksia varten.
+* **DateValue( "1/2/01", "es-ES" )** tai **DateValue( "1/2/01" )** , kun käyttäjän kieli on "es-ES", palauttaa päivämäärä- ja aika-arvon **1.2.2001 keskiyöllä**.
+* **TimeValue( "11:43:02", "fr-FR" )** tai **DateValue( "11:43:02" )** , kun käyttäjän kieli on "fr-FR", palauttaa päivämäärä- ja aika-arvon **1.1.1970 kello 11.43:02**.
+* **TimeDateValue( "11:43:02 1/2/01", "de-DE" )** tai **DateValue( "11:43:02" )** , kun käyttäjän kieli on "de-DE", palauttaa päivämäärä- ja aika-arvon **1.2.2001 kello 11.43:02**.
 
 Jos haluat lisätietoja, katso **[Value](functions/function-value.md)**- ja **[DateValue-, TimeValue- ja DateTimeValue](functions/function-datevalue-timevalue.md)**-funktiot sekä [päivämäärien ja aikojen käsitteleminen](show-text-dates-times.md).
 

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e96bf33b5ca5446c309eeb8a35ff0dd1c7fc5847
-ms.sourcegitcommit: 6b75019dccc5296a313f9ff0eb397003f13ce737
+ms.openlocfilehash: f9acc04a9159349075647ca4e318f15939a230f7
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65941620"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216641"
 ---
 # <a name="data-types-in-canvas-apps"></a>Tietotyypit pohjaan perustuvat sovellukset
 
@@ -62,10 +62,6 @@ Koska kaikki tietotyypit tue *tyhjä*, **totuusarvo** ja **kaksi vaihtoehtoa** o
 
 Nämä tietotyypit neljä perustuvat [Unicode](https://en.wikipedia.org/wiki/Unicode) merkkijono.
 
-### <a name="size-limits"></a>Kokorajoitukset
-
-Nämä tietotyypit ole esiasetus rajaa pituus. Pohjana olevan JavaScript-toteutus selaimessa tai laitteesi voivat asettaa rajoitettu, mutta se on yleensä myös yli 100 Megatavua. Käytettävissä olevan muistin määrän laitteessasi voivat kuitenkin asettaa toisen rajoitus on todennäköisesti alle 100 Megatavua. Voit selvittää, onko sovelluksesi suoritetaan näiden rajojen, Testaa yleisiä skenaarioita, johon se tulee suorittaa kaikki laitteet.
-
 ### <a name="image-and-media-resources"></a>Kuva ja Media-resurssit
 
 Kautta **tiedoston** -valikosta voit lisätä kuvan, videon ja äänen tiedostoja app-resursseina. Tuotu tiedosto nimen tulee resurssinimi sovelluksessa. Tässä kuvassa logon, jonka nimi on Northwind Traders **nwindlogo**, on lisätty sovellukseen:
@@ -94,11 +90,21 @@ Että URI-osoite näkyy kaksi purppura ruudut skaalataan ylös-versio:
 
 ![](media/data-types/double-diamonds.png)
 
-Voit näyttää uusimmat kuva, joka siepataan [ **kameran** ](../controls/control-camera.md) ohjausobjektissa, jos määrität **kuvan** ominaisuuden kuva-ohjausobjektin **valokuva** kamera-ohjausobjektin ominaisuus. Sovellus sisältää kuvan muistissa, ja **valokuva** kamera-ohjausobjektin ominaisuus palauttaa URI-viittaus kuva. Esimerkiksi voi kestää kuvan ja kameran **valokuva** ominaisuus voi palauttaa **”appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1”**.
+Voit näyttää uusimmat kuva, joka siepataan [ **kameran** ](../controls/control-camera.md) ohjausobjektissa, jos määrität **kuvan** ominaisuuden kuva-ohjausobjektin **valokuva** kamera-ohjausobjektin ominaisuus. Sovellus sisältää kuvan muistissa, ja **valokuva** kamera-ohjausobjektin ominaisuus palauttaa URI-viittaus kuva. Esimerkiksi voi kestää kuvan ja kameran **valokuva** ominaisuus voi palauttaa **”appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1”** .
 
 Voit viitata kuvan tai toiseen tietokantaan tallennetun mediatiedosto URI avulla. Näin sovelluksen ei noutaa todellisten tietojen kunnes se itse asiassa tarvitaan. Esimerkiksi liitteen Common Data Service-entiteetissä saattaa palauttaa **”appres://datasources/Contacts/table/...”** Kameran esimerkissä voit näyttää tämän kuvan asettamalla **kuvan** kuvan ohjausobjektin avulla viitettä, joka hakee binaaritiedot-ominaisuuden.
 
 Kun tallennat media-tietotyyppi, kuten kuvan tietokanta, sovellus lähettää todellisen kuvan tai mediatietoja, ei URI-viittaus.
+
+### <a name="size-limits"></a>Kokorajoitukset
+
+Merkkijonoja ja URI nämä tietotyypit on pituudeltaan esiasetus rajaa.
+
+Binaaritiedot, jotka nämä tietotyypit viittaavat myös ei esiasetus rajaa koon. Esimerkiksi kamera-ohjausobjekti, joka viittaa nyt kautta siepattu kuvan **”appres: / /...”** voidaan suuri ja suuren tarkkuuden, kuten laitteen kameran voit muster. Tarkkuus, kehyksen määrä ja muita mediatiedostoja määritteet eivät ole rajoittaa tietotyyppi, mutta tiettyjen ohjausobjektien pelaamista ja tilastotietojen media voi olla omia rajoituksia.
+
+Tietojen kaikenkokoisille koskevat kuitenkin sovelluksen käytettävissä oleva määrä. Selaimista pöytätietokone yleensä tue yli 100 megatavua. Käytettävissä olevan muistin määrän laitteessa, kuten puhelimessa saattaa kuitenkin olla paljon pienempi yleensä alueella 30 – 70 megatavua. Voit selvittää, onko sovelluksesi suoritetaan näiden rajojen, Testaa yleisiä skenaarioita, johon se tulee suorittaa kaikki laitteet.
+
+Paras käytäntö säilyttävät tietoja muistissa vain niin kauan kuin on tarpeen. Lataa kuvat tietokannan heti, kun voit; Lataa kuvat, vain, kun sovelluksen käyttäjä pyytää niitä.
 
 ## <a name="number-and-currency"></a>Luku- ja
 
@@ -121,7 +127,7 @@ Päivämäärän/kellonajan arvot nousua luokkaa:
 
 Tässä taulukossa on joitakin esimerkkejä:
 
-| Päivämäärä-ja aika-tyyppi | Arvo, joka on tallennettu tietokantaan | Näytetään ja annettu 7 tuntia länteen UTC | Näytetään ja annettu neljän tunnin linjan UTC | 
+| Päivämäärä-ja aika-tyyppi | Arvo, joka on tallennettu tietokantaan | Näytetään ja annettu 7 tuntia länteen UTC | Näytetään ja annettu neljän tunnin linjan UTC |
 |--------------------------|------------------------------|------------------------------|
 | **Käyttäjän paikallinen** | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4.00 | Lauantai,&nbsp;saattaa&nbsp;18&nbsp;2019: lle<br>9:00 PM | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>8.00 |
 | **Aikavyöhykkeestä riippumaton** | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4.00 | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4.00 | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4.00 | 
@@ -152,6 +158,12 @@ UNIX kertaa ilmaise 1. tammikuuta 1970 sekuntia määrää 00:00:00 UTC. Koska p
 On esimerkiksi Unix-aika on 9. syyskuuta 2001 01:46:40 UTC kuin 1 000 000 000. Voit osoittaa, että päivämäärä-ja aika-arvoa pohjaan perustuvan sovelluksen, kerro numero 1 000 muuntaminen milliseconds ja käyttää sitä [ **tekstin** ](function-text.md) funktio. Kaava **teksti (1000000000 * 1 000, DateTimeFormat.UTC)** palauttaa merkkijonon **2001 – 09-09T01:46:40.000Z**.
 
 Kuitenkin, että-funktio palauttaa **lauantai, syyskuun 8-2001 18:46:40** Jos käytät **DateTimeFormat.LongDateTime24** aikavyöhyke, jolla on siirtymä-7 tuntia (7 tuntia länteen UTC) UTC-muodossa. Tämä tulos näyttää **DateTime** arvon perusteella oikein paikallisen aikavyöhykkeen.
+
+Jaa muuntamaan Unix-aika-tulos **arvo** 1 000 mukaan:
+<br>**RoundDown (arvo (UnixTime) / 1 000, 0)**
+
+Jos tarvitset Unix-aika **päivämäärä** arvo muita laskutoimituksia tai näyttää powerappsissa, käyttää tätä kaavaa:
+<br>**DateAdd (päivämäärä (1970,1,1) UnixTime, sekuntia)**
 
 ### <a name="sql-server"></a>SQL Server
 
@@ -194,7 +206,7 @@ Mutta voit käyttää tätä kaavaa:
 
 `If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
--Yleisiä asetusjoukkoja (entiteeteille jakaa), asetusjoukko luetteloinnin nimi vastaa yleinen asetusjoukko nimi. Paikallisia asetusjoukkoja (joka on rajoitettu entiteetti),-nimi saattaa sisältää entiteetin nimi. Näin vältetään ristiriidassa, jos useita entiteettejä on asetusjoukkoja, joilla on sama nimi. Esimerkiksi **tilit** entiteetillä voi olla **OrderStatus** asetusjoukon ja sen nimi voi olla **OrderStatus (tiliä)**. Kyseistä nimeä sisältää yhden tai useamman välilyöntejä ja sulkeet, joten ympäröi se heittomerkit Jos viitata kaavassa.
+-Yleisiä asetusjoukkoja (entiteeteille jakaa), asetusjoukko luetteloinnin nimi vastaa yleinen asetusjoukko nimi. Paikallisia asetusjoukkoja (joka on rajoitettu entiteetti),-nimi saattaa sisältää entiteetin nimi. Näin vältetään ristiriidassa, jos useita entiteettejä on asetusjoukkoja, joilla on sama nimi. Esimerkiksi **tilit** entiteetillä voi olla **OrderStatus** asetusjoukon ja sen nimi voi olla **OrderStatus (tiliä)** . Kyseistä nimeä sisältää yhden tai useamman välilyöntejä ja sulkeet, joten ympäröi se heittomerkit Jos viitata kaavassa.
 
 Kaksi asetusta arvot voivat lisäksi myös toimivat totuusarvoja. Esimerkiksi nimeltä kaksi asetusta arvo **TaxStatus** voi olla nimien **verollisen** ja **verottoman**, jotka vastaavat *true* ja *false* vastaavasti. Mallitiedoilla, voit käyttää tätä kaavaa:
 

@@ -13,14 +13,15 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d8436656150d3abf36c8c4a26efc46e940e35f06
-ms.sourcegitcommit: 6b75019dccc5296a313f9ff0eb397003f13ce737
+ms.openlocfilehash: 284e9dfca0dff9a3bb92c2f5b073cfbe962ce5e9
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940477"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215985"
 ---
 # <a name="operators-in-powerapps"></a>Operaattoreista powerappsissa
+
 Jotkin näistä operaattoreista ovat riippuvaisia tekijän kielestä.  Jos haluat lisätietoja, katso [Yleiset sovellukset](../global-apps.md).
 
 
@@ -51,7 +52,7 @@ Jotkin näistä operaattoreista ovat riippuvaisia tekijän kielestä.  Jos halua
 |                               **in**                                |                       &nbsp;                        |                                                      **&quot;The&quot; in &quot;The keyboard and the monitor...&quot;**                                                      |                                                                                                                Alimerkkijonotesti (kirjainkoko ei ole merkitsevä)                                                                                                                 |
 |                                **@**                                | [Selvitysoperaattori](#disambiguation-operator) |                                                                           **MyTable[@fieldname]**                                                                            |                                                                                                                       Kentän selvitys                                                                                                                       |
 |                                **@**                                |                       &nbsp;                        |                                                                              **[@MyVariable]**                                                                               |                                                                                                                      Yleinen selvitys                                                                                                                       |
-| **,**<br>[[kieleen sidottuja](../global-apps.md)]  |                   Luetteloerotin                    | **If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]** | Erottaa: <ul><li>argumentit funktiokutsuissa</li><li>kentät [tietueessa](../working-with-tables.md#elements-of-a-table)</li><li>tietueet [arvotaulukossa](../working-with-tables.md#inline-syntax)</li></ul>.  Tämä merkki on riippuvainen kielestä. |
+| **,**<br>[[kieleen sidottuja](../global-apps.md)]  |                   Luetteloerotin                    | **If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]** | Erottaa: <ul><li>argumentit funktiokutsuissa</li><li>kentät [tietueessa](../working-with-tables.md#elements-of-a-table)</li><li>tietueet [taulukko](../working-with-tables.md#inline-value-tables)</li></ul> Tämä merkki on riippuvainen kielestä. |
 | **;**<br>[[kieleen sidottuja](../global-apps.md)] |                  Kaavan ketjutus                   |                                     **Collect(T, A); Navigate(S1, &quot;&quot;)**                                     |                                                                          Erilliset funktioiden kutsut toimintaominaisuuksissa. Ketjutusoperaattori on riippuvainen kielestä.                                                                          |
 |                             **Parent**                              |         [Parent-operaattori](#parent-operator)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Ohjausobjektin säilön ominaisuuksien käyttö                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem-operaattori](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Pääsy valikoiman tai lomakkeen ohjausobjektin kenttiin                                                                                                           |
@@ -86,8 +87,8 @@ Tämän näytön ohjausobjekteilla on toinen vaihtoehto: He voivat käyttää su
 ## <a name="disambiguation-operator"></a>Selvitysoperaattori
 Jotkin funktiot luovat [tietuealueita](../working-with-tables.md#record-scope) taulukon kenttien käyttämiseksi tietueita käsiteltäessä, kuten **Filter**, **AddColumns** ja **Sum**.  Tietuealueen kanssa lisätyt kentän nimet ohittavat samat nimet muualta sovelluksesta.  Kun näin tapahtuu, voit edelleen käyttää arvoja tietuealueen ulkopuolelta käyttämällä **@** selvitysoperaattoria:
 
-* Voit käyttää sisäkkäisten tietuealueiden arvoja käyttämällä operaattoria **@** siten, että käsiteltävänä olevan taulukon nimi esitetään tämän mallin mukaisesti:<br>_Table_**[@**_FieldName_**]**
-* Voit käyttää yleisiä arvoja, kuten tietolähteitä, kokoelmia ja kontekstimuuttujia, esittämällä ne mallin **[@**_ObjectName_**]** mukaisesti (ilman taulukon määritystä).
+* Voit käyttää sisäkkäisten tietuealueiden arvoja käyttämällä operaattoria **@** siten, että käsiteltävänä olevan taulukon nimi esitetään tämän mallin mukaisesti:<br>_Table_ **[@** _FieldName_ **]**
+* Voit käyttää yleisiä arvoja, kuten tietolähteitä, kokoelmia ja kontekstimuuttujia, esittämällä ne mallin **[@** _ObjectName_ **]** mukaisesti (ilman taulukon määritystä).
 
 Katso lisätietoja ja esimerkkejä [tietuealueista](../working-with-tables.md#record-scope).
 

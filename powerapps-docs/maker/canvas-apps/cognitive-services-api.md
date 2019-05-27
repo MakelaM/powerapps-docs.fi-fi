@@ -1,25 +1,24 @@
 ---
 title: Kognitiivisten palvelujen käyttö PowerAppsissa | Microsoft Docs
 description: Luo perustason pohjaan perustuvan sovelluksen, joka analysoi tekstiä käyttämällä Azuren kognitiivisten palvelujen Tekstianalyysin API.
-author: gregli-msft
+author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 12/08/2017
-ms.author: gregli
+ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 07548ff8fb14626543472b72ea52b80c858eeb0e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ee3f7684ed1636cf2445945d1d01507733c18625
+ms.sourcegitcommit: dd74c98f48587730466e6669fc94da250d5c631e
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556261"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/26/2019
+ms.locfileid: "66224925"
 ---
 # <a name="use-cognitive-services-in-powerapps"></a>Kognitiivisten palvelujen käyttö PowerAppsissa
 Tässä artikkelissa kerrotaan, miten voit luoda perustason pohjaan perustuvan sovelluksen, joka käyttää [Azuren kognitiivisten palveluiden Tekstianalyysin Ohjelmointirajapinta](https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview) analysoi tekstiä. Näytämme, miten voit määrittää tekstianalysoinnin ohjelmointirajapinnan ja yhdistää sen käyttämällä [tekstianalysointiyhteyttä](https://docs.microsoft.com/connectors/cognitiveservicestextanalytics/). Sen jälkeen näytämme, miten voit luoda kangassovelluksen, joka kutsuu API:a.
@@ -93,7 +92,7 @@ Luo tämä näyttö noudattamalla seuraavia ohjeita. Jos ohjausobjektin nimi on 
 
 1. Napsauta tai napauta **Aloitus**-välilehdellä ensin **Uusi näyttö** ja sen jälkeen **Vieritettävä näyttö**. 
 
-2. Valitse **Näyttö2** ja sen jälkeen **[Otsikko]**, ja muuta otsikon arvoksi **Tekstianalyysi**.
+2. Valitse **Näyttö2** ja sen jälkeen **[Otsikko]** , ja muuta otsikon arvoksi **Tekstianalyysi**.
 
 3. Lisää esittelytekstiä varten **Otsikko**-ohjausobjektin teksti.
 
@@ -113,7 +112,7 @@ Luo tämä näyttö noudattamalla seuraavia ohjeita. Jos ohjausobjektin nimi on 
    
     ![Sovellus ja sen selitteet ja valikoima](./media/cognitive-services-api/partial-app-step3.png)
 
-9. Valitse vasemmasta ruudusta **Näyttö1** > kolme pistettä (**...** ) > **Poista** (et tarvitse tätä näyttöä sovelluksessa).
+9. Valitse vasemmasta ruudusta **Näyttö1** > kolme pistettä ( **...** ) > **Poista** (et tarvitse tätä näyttöä sovelluksessa).
 
 Pidämme tämän sovelluksen yksinkertaisen ja keskitymme tekstianalyysin API:n kutsumiseen. Voisit kuitenkin lisätä sovellukseen muita ominaisuuksia, kuten logiikan, jolla näytetään ja piilotetaan ohjausobjekteja valittujen valintaruutujen mukaan, vianhallinnan tilanteessa, jossa käyttäjä ei valitse mitään vaihtoehtoa, jne.
 
@@ -128,34 +127,34 @@ Nyt sinulla on hieno sovellus, jolla ei vielä ole mitään käyttöä. Korjataa
 
 Pidä tämä mielessäsi, kun lisäät painikkeen **OnSelect** (Valittaessa) -ominaisuuden. Kohta alkaa tapahtua.
 
-```powerapps-comma
-If( chkLanguage.Value = true;
-    ClearCollect( languageCollect; 
+```powerapps-dot
+If( chkLanguage.Value = true,
+    ClearCollect( languageCollect, 
         TextAnalytics.DetectLanguage(
             {
-                numberOfLanguagesToDetect: 1; 
+                numberOfLanguagesToDetect: 1, 
                 text: tiTextToAnalyze.Text
             }
         ).detectedLanguages.name
     )
-);;
+);
 
-If( chkPhrases.Value = true;
-    ClearCollect( phrasesCollect; 
+If( chkPhrases.Value = true,
+    ClearCollect( phrasesCollect, 
         TextAnalytics.KeyPhrases(
             {
-                language: "en"; 
+                language: "en", 
                 text: tiTextToAnalyze.Text
             }
         ).keyPhrases
     )
-);;
+);
 
-If( chkSentiment.Value = true;
-    ClearCollect( sentimentCollect; 
+If( chkSentiment.Value = true,
+    ClearCollect( sentimentCollect, 
         TextAnalytics.DetectSentiment(
             {
-                language: "en"; 
+                language: "en", 
                 text: tiTextToAnalyze.Text
             }
         ).score
@@ -171,9 +170,9 @@ API-kutsun tekeminen muodostuu useasta osasta, jotka selitetään tässä:
 
   * Jokaisen kolmen kutsun syötetekstiksi määritetään **tiTextToAnalyze.Text**.
 
-  * Kielen tunnistamiseen tarkoitettuun **DetectLanguage()**-asetukseen valittavien kielten määrä (**numberOfLanguagesToDetect**) on kovakoodattu arvoon 1, mutta voit ohittaa tämän parametrin käyttämällä sovelluksessa jotain logiikkaa.
+  * Kielen tunnistamiseen tarkoitettuun **DetectLanguage()** -asetukseen valittavien kielten määrä (**numberOfLanguagesToDetect**) on kovakoodattu arvoon 1, mutta voit ohittaa tämän parametrin käyttämällä sovelluksessa jotain logiikkaa.
 
-  * - **KeyPhrases()** ja **DetectSentiment()**, **kielen** on kovakoodattu ”en”, mutta voit ohittaa tämän parametrin asetukseen valittavien sovelluksessa. Voit esimerkiksi tunnistaa kielen ensin **DetectLanguage()**-ominaisuuden avulla ja määrittää tämän parametrin sen mukaan, mitä edellä mainittu parametri palauttaa.
+  * - **KeyPhrases()** ja **DetectSentiment()** , **kielen** on kovakoodattu ”en”, mutta voit ohittaa tämän parametrin asetukseen valittavien sovelluksessa. Voit esimerkiksi tunnistaa kielen ensin **DetectLanguage()** -ominaisuuden avulla ja määrittää tämän parametrin sen mukaan, mitä edellä mainittu parametri palauttaa.
 
 * Lisää kunkin kutsun tulokset asianmukaiseen kokoelmaan:
 
@@ -188,15 +187,15 @@ Kun haluat nähdä API-kutsujen tulokset, katso asianmukainen kokoelma kustakin 
 
 1. Määritä kielen selitteen **Text**-ominaisuudeksi: `"The language detected is " & First(languageCollect).name`.
    
-    **First()**-funktio palauttaa ensimmäisen (ja tässä tapauksessa ainoan) tietueen **languageCollect**-kokoelmaan, ja sovellus näyttää kyseiseen tietueeseen liittyvän **nimen** (ainut kenttä).
+    **First()** -funktio palauttaa ensimmäisen (ja tässä tapauksessa ainoan) tietueen **languageCollect**-kokoelmaan, ja sovellus näyttää kyseiseen tietueeseen liittyvän **nimen** (ainut kenttä).
 
-2. Määritä asenne-selitteen **Text**-ominaisuudeksi: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value; 3)\*100 & "% positive."`.
+2. Määritä asenne-selitteen **Text**-ominaisuudeksi: `"The sentiment score is " & Round(First(sentimentCollect.Value).Value, 3)\*100 & "% positive."`.
    
-    Myös tämä kaava käyttää **First()**-funktiota, hakee **arvon** (0-1) ensimmäisestä ja ainoasta tietueesta ja muodostaa sen perusteella prosenttimäärän.
+    Myös tämä kaava käyttää **First()** -funktiota, hakee **arvon** (0-1) ensimmäisestä ja ainoasta tietueesta ja muodostaa sen perusteella prosenttimäärän.
 
 3. Määritä avainlauseiden valikoiman **Items**-ominaisuudeksi: `phrasesCollect`.
    
-    Nyt käsittelet valikoimaa, joten et tarvitse **First()**-funktiota erottamaan yksittäistä arvoa. Viittaat kokoelmaan, ja valikoima näyttää avainlauseet luettelona.
+    Nyt käsittelet valikoimaa, joten et tarvitse **First()** -funktiota erottamaan yksittäistä arvoa. Viittaat kokoelmaan, ja valikoima näyttää avainlauseet luettelona.
 
 ## <a name="run-the-app"></a>Sovelluksen suorittaminen
 

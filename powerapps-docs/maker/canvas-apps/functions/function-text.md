@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 452b5f11ede81c0e19a84026803ea60d7fd3f934
-ms.sourcegitcommit: 26704369b17d2358a77cd4841bd70bbcca3384f2
+ms.openlocfilehash: 67c0e83245b60345f74912f2f005295c94cc0dd1
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65521085"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66215944"
 ---
 # <a name="text-function-in-powerapps"></a>PowerAppsin Text-funktio
 Muuntaa mitään arvoa ja alustaa tekstimerkkijonon numeron tai päivämäärän/ajan arvo.
@@ -57,7 +56,7 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 | **0** (*nolla*) |Näyttää merkityksettömät nollat, jos luvussa on vähemmän numeroita kuin muodossa nollia. Käytä esimerkiksi muotoa **#.00**, jos haluat näyttää luvun **8,9** muodossa **8,90**. |
 | **#** |Noudattaa samoja sääntöjä kuin **0** (nolla). **Text**-funktio ei kuitenkaan palauta ylimääräisiä nollia, jos desimaalipilkun jommallakummalla puolella on numeroita vähemmän kuin muotoilussa on ristikkosymboleja (#). Esimerkiksi **8,9** näytetään, jos mukautettu muoto on **#.##** ja muotoiltava numero on **8,9**. |
 | **.** (*piste*) |Näyttää luvun desimaalierottimen. Riippuu mukautetun muodon; kieli Katso [yleisiä sovelluksia](#global-apps) lisätietoja. |
-| **,** (*pilkku*) |Näyttää ryhmittelyerottimen, jota joissakin kielissä käytetään tuhaterottimena. **Text**-funktio erottaa ryhmät pilkuilla, jos muotoilussa on ristikkomerkkien (**#**) tai nollien sisällä oleva pilkku. Riippuu mukautetun muodon; kieli Katso [yleisiä sovelluksia](#global-apps) lisätietoja. |
+| **,** (*pilkku*) |Näyttää ryhmittelyerottimen, jota joissakin kielissä käytetään tuhaterottimena. **Text**-funktio erottaa ryhmät pilkuilla, jos muotoilussa on ristikkomerkkien ( **#** ) tai nollien sisällä oleva pilkku. Riippuu mukautetun muodon; kieli Katso [yleisiä sovelluksia](#global-apps) lisätietoja. |
 
 Jos desimaalipilkun oikealla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, luku pyöristetään niin moneen desimaaliin kuin muodossa on paikkamerkkejä. Jos desimaalipilkun vasemmalla puolella on enemmän numeroita kuin muodossa on paikkamerkkejä, ylimääräiset numerot näytetään. Jos desimaalipilkun vasemmalla puolella on vain ristikkomerkkejä (#), lukua 1 pienemmän arvot alkavat desimaalipilkulla (esimerkiksi **,47**).
 
@@ -110,7 +109,7 @@ Voit sisällyttää muotoilumerkkijonoon seuraavia merkkejä.  Ne näkyvät **Te
 ## <a name="global-apps"></a>Yleiset sovellukset
 **Text**-funktio on maailmanlaajuinen. Se tuntee suuren määrän kieliä ja osaa kirjoittaa päivämäärät, kellonajat, valuutat ja numerot kielen mukaan. Onnistuakseen tässä se tarvitsee seuraavat kaksi tietoa:
 
-* **Mukautetun muotoilun kielen:** Tekijöille miten mukautettu muoto tulkitaan tekstin laatijaa? Erotinmerkeillä (**.** ja **,**) on eri kielissä eri merkitykset. Jos määrität mukautettua muotoa, voit sisällyttää kielen paikkamerkki tai kestää oletusarvo, joka vastaa sitä kohtaa, johon laitettasi määritetään kielen. Helpottuu, voit käyttää jotakin [ennalta määritettyjä päivämäärän ja kellonajan muotoilut](#predefined-datetime-formats), jotka ovat kieliagnostisia kielen.
+* **Mukautetun muotoilun kielen:** Tekijöille miten mukautettu muoto tulkitaan tekstin laatijaa? Erotinmerkeillä ( **.** ja **,** ) on eri kielissä eri merkitykset. Jos määrität mukautettua muotoa, voit sisällyttää kielen paikkamerkki tai kestää oletusarvo, joka vastaa sitä kohtaa, johon laitettasi määritetään kielen. Helpottuu, voit käyttää jotakin [ennalta määritettyjä päivämäärän ja kellonajan muotoilut](#predefined-datetime-formats), jotka ovat kieliagnostisia kielen.
 * **Tuloksen kieli:** Käyttäjille millä kielellä funktion tulos näkyä? Kuukausien ja viikonpäivien nimet on oltava sovellus, jonka voit määrittää lisäämällä kolmas Valinnainen argumentti käyttäjän kielen mukaisiksi **tekstin** funktio. 
 
 Kumpikin kieli määrittää käyttämällä [kielitunnisteen](function-language.md#language-tags). Voit tarkastella tuettujen kielten luettelo kirjoittamalla **Text (1234 ”,”,)** kaavarivillä tai **lisäasetukset** välilehti oikeanpuoleisessa ruudussa ja sitten selaamalla argumenttiin ehdotettuja kieliasetuksia kolmas argumentti.
@@ -137,13 +136,13 @@ Tuloksen **tekstin** sisältää kuukausien, arkipäivät, ja AM/PM, ryhmitysero
 Oletusmuotoisesti **Text**-funktio käyttää sitä kieltä, jota sovelluksessa parhaillaan käytetään. **Language**-funktio palauttaa nykyisen käyttäjän kielitunnisteen. Voit ohittaa tämän oletusarvon antamalla kolmannen argumentin kielitunnisteen **tekstin**.
 
 ## <a name="syntax"></a>Syntaksi
-**Tekstin**( *NumberOrDateTime*; *DateTimeFormatEnum* [; *ResultLanguageTag* ])
+**Tekstin**( *NumberOrDateTime*, *DateTimeFormatEnum* [, *ResultLanguageTag* ])
 
 * *NumberOrDateTime* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *DateTimeFormat* – Pakollinen.  **DateTimeFormat** – Luetteloinnin osa.
 * *ResultLanguageTag* – Valinnainen. Kielitunniste, jota käytetään tulostekstiin. Oletusmuotoisesti käytetään nykyisen käyttäjän kieltä.
 
-**Tekstin**( *NumberOrDateTime*; *CustomFormat* [; *ResultLanguageTag* ])
+**Tekstin**( *NumberOrDateTime*, *CustomFormat* [, *ResultLanguageTag* ])
 
 * *Number* – pakollinen. Muotoiltava numero tai päivämäärä/kellonaika.
 * *CustomFormat* – pakollinen. Yksi tai useampi paikkamerkki lainausmerkkien sisällä.
@@ -160,11 +159,11 @@ Ellei toisin mainita suorittaa nämä kaavat käyttäjä sijaitsee Yhdysvalloiss
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Text(&nbsp;1234,59;&nbsp;"####.#"&nbsp;)** |Muotoilee luvun yhden desimaalin tarkkuudella. |"1234.6" |
-| **Text(&nbsp;8,9;&nbsp;"#.000"&nbsp;)** |Lisää tarvittaessa nollat numeron desimaaliosan loppuun. |"8.900" |
-| **Text(&nbsp;0,631;&nbsp;"0.#"&nbsp;)** |Lisää tarvittaessa kokonaislukuun nollan. |"0.6" |
-| **Text(&nbsp;12;&nbsp;"#.0#"&nbsp;)**<br>**Text(&nbsp;1234,568;&nbsp;"#.0#"&nbsp;)** |Lisää numeroon nollan yhden desimaalin tarkkuudella ja lisää toisen desimaalin, jos se syötetään. |"12.0"<br>"1234.57" |
-| **Text(&nbsp;12000;&nbsp;"$ #,###"&nbsp;)**<br>**Text(&nbsp;1200000;&nbsp;"$&nbsp;#,###"&nbsp;)** |Sijoittaa lukuun kolmen numeron välein tuhaterottimen ja lisää valuuttasymbolin. |"$&nbsp;12,000"<br>"$&nbsp;1,200,000" |
+| **Text(&nbsp;1234.59,&nbsp;"####.#"&nbsp;)** |Muotoilee luvun yhden desimaalin tarkkuudella. |"1234.6" |
+| **Text(&nbsp;8.9,&nbsp;"#.000"&nbsp;)** |Lisää tarvittaessa nollat numeron desimaaliosan loppuun. |"8.900" |
+| **Text(&nbsp;0.631,&nbsp;"0.#"&nbsp;)** |Lisää tarvittaessa kokonaislukuun nollan. |"0.6" |
+| **Text(&nbsp;12,&nbsp;"#.0#"&nbsp;)**<br>**Text(&nbsp;1234.568,&nbsp;"#.0#"&nbsp;)** |Lisää numeroon nollan yhden desimaalin tarkkuudella ja lisää toisen desimaalin, jos se syötetään. |"12.0"<br>"1234.57" |
+| **Text(&nbsp;12000,&nbsp;"$ #,###"&nbsp;)**<br>**Text(&nbsp;1200000,&nbsp;"$&nbsp;#,###"&nbsp;)** |Sijoittaa lukuun kolmen numeron välein tuhaterottimen ja lisää valuuttasymbolin. |"$&nbsp;12,000"<br>"$&nbsp;1,200,000" |
 
 ### <a name="datetime"></a>Päivämäärä/kellonaika
 * **2:37:47 PM**, **Monday, November 23, 2015**
@@ -172,21 +171,21 @@ Ellei toisin mainita suorittaa nämä kaavat käyttäjä sijaitsee Yhdysvalloiss
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Text( Now(); DateTimeFormat.LongDate )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä. |"Monday, November 23, 2015" |
-| **Text( Now(); DateTimeFormat.LongDate )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä 12 tunnin mukaan. |"Monday, November 23, 2015 2:37:47 PM" |
-| **Text( Now(); DateTimeFormat.LongTime24 )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä 24 tunnin mukaan. |"14:37:47" |
-| **Text( Now(); DateTimeFormat.ShortDate )** |Päivämäärä lyhyenä merkkijonona, käytössä olevan kielen mukaan esitettynä. |"11/23/2015" |
-| **Text( Now(); "d-mmm-yy" )** |Esitetään käyttämällä paikkamerkkejä: <ul><li>**d** – yksi- tai kaksinumeroinen kuukauden päivä<li>**-** – tulokseen kopioitu literaalimerkki<li>**mmm** – kolmikirjaiminen kuukauden lyhenne<li>**-** – toinen tulokseen kopioitu literaalimerkki<li>**yy** – vuosiluku kaksinumeroisena lyhenteenä</ul> |"23-Nov-15" |
-| **Text (1448318857000, ”KKK. PP, vvvv (hh: mm: ss AM/PM) ”)** | On näytettävän muodossa Unix-aika-arvon, jos lähdearvo kerrotaan mukaan 1 000. | ”Nov. 23, 2015 (02:47:37 PM)” |
+| **Text( Now(), DateTimeFormat.LongDate )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä. |"Monday, November 23, 2015" |
+| **Text( Now(), DateTimeFormat.LongDate )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä 12 tunnin mukaan. |"Monday, November 23, 2015 2:37:47 PM" |
+| **Text( Now(), DateTimeFormat.LongTime24 )** |Päivämäärä pitkänä merkkijonona, käytössä olevan kielen mukaan esitettynä 24 tunnin mukaan. |"14:37:47" |
+| **Text( Now(), DateTimeFormat.ShortDate )** |Päivämäärä lyhyenä merkkijonona, käytössä olevan kielen mukaan esitettynä. |"11/23/2015" |
+| **Text( Now(), "d-mmm-yy" )** |Esitetään käyttämällä paikkamerkkejä: <ul><li>**d** – yksi- tai kaksinumeroinen kuukauden päivä<li>**-** – tulokseen kopioitu literaalimerkki<li>**mmm** – kolmikirjaiminen kuukauden lyhenne<li>**-** – toinen tulokseen kopioitu literaalimerkki<li>**yy** – vuosiluku kaksinumeroisena lyhenteenä</ul> |"23-Nov-15" |
+| **Text (1448318857 * 1000, ”KKK. PP, vvvv (hh: mm: ss AM/PM) ”)** | On näytettävän muodossa Unix-aika-arvon, jos lähdearvo kerrotaan mukaan 1 000. | ”Nov. 23, 2015 (02:47:37 PM)” |
 
 ### <a name="global-apps"></a>Yleiset sovellukset
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Text (1234567,89 ”; [$-fr-FR] # ###; ## &euro;”; ”fr-FR”)** | Näyttää välilyönnin ryhmittely erottimena, jossa desimaalierottimena pilkuin ja **&euro;** ja valuuttasymbolina merkkiä. |"1&nbsp;234&nbsp;567,89 &euro;" |
-| **Text (1234567;89;; ”[$-fr-FR] # ###; ## &euro;”)** | Jos lähdetiedot noudattaa Ranskan mukautettu-käyttämällä desimaalierottimena, muuta Aluekohtaiset asetukset ranska ja argumentit erotetaan toisistaan puolipisteellä pilkku saman tuloksen kuin edellä sijaan. |"1&nbsp;234&nbsp;567,89 &euro;" |
-| **Text( Date(2016;1;31); "dddd mmmm d" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän muotoiltuna nykyisen käyttäjän kielen mukaan. Koska paikkamerkit eivät ole kieleen sidottuja, tekstin muotoiluun ei tarvita kielitunnistetta. |”Lauantai&nbsp;tammikuu&nbsp;31” |
-| **Text( Date(2016;1;31); "dddd mmmm d"; "es-ES" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän kielitunnisteen "es-ES" mukaisesti. |”domingo&nbsp;enero nojalla&nbsp;31” |
+| **Text (1234567.89 ”, [$-fr-FR] # ###, ## &euro;”, ”fr-FR”)** | Näyttää välilyönnin ryhmittely erottimena, jossa desimaalierottimena pilkuin ja **&euro;** ja valuuttasymbolina merkkiä. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Text (1234567,89; ”[$-fr-FR] # ###, ## &euro;”)** | Jos lähdetiedot noudattaa Ranskan mukautettu-käyttämällä desimaalierottimena, muuta Aluekohtaiset asetukset ranska ja argumentit erotetaan toisistaan puolipisteellä pilkku saman tuloksen kuin edellä sijaan. |"1&nbsp;234&nbsp;567,89 &euro;" |
+| **Text( Date(2016,1,31), "dddd mmmm d" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän muotoiltuna nykyisen käyttäjän kielen mukaan. Koska paikkamerkit eivät ole kieleen sidottuja, tekstin muotoiluun ei tarvita kielitunnistetta. |”Lauantai&nbsp;tammikuu&nbsp;31” |
+| **Text( Date(2016,1,31), "dddd mmmm d", "es-ES" )** |Palauttaa viikonpäivän, kuukauden ja kuukauden päivän kielitunnisteen "es-ES" mukaisesti. |”domingo&nbsp;enero nojalla&nbsp;31” |
 
 ### <a name="converting-values-to-text"></a>Arvojen muuntaminen teksti
 
@@ -196,4 +195,4 @@ Ellei toisin mainita suorittaa nämä kaavat käyttäjä sijaitsee Yhdysvalloiss
 | **Text(&nbsp;DateTimeValue(&nbsp;"01/04/2003"&nbsp;)&nbsp;)** | Muuntaa tekstimerkkijonon päivämäärä ja aika-arvoa. Hallita muuntaminen, anna joko DateTimeFormat-luetteloinnin jäsen tai mukautettu muotoilumerkkijono. | ”1/4/2003 12:00 AM” |
 | **Text (&nbsp;true&nbsp;)** | Muuntaa merkkijonon totuusarvo. | "true" |
 | **Text (&nbsp;GUID()&nbsp;)** | Muuntaa merkkijonon luotu GUID-arvon.  | "f8b10550-0f12-4f08-9aa3-bb10958bc3ff" |
-| **Vasen (&nbsp;teksti (&nbsp;GUID()&nbsp;);&nbsp;4&nbsp;)** | Palauttaa ensimmäiset neljä merkkiä luotu GUID-tunnus. | "2d9c" | 
+| **Vasen (&nbsp;teksti (&nbsp;GUID()&nbsp;),&nbsp;4&nbsp;)** | Palauttaa ensimmäiset neljä merkkiä luotu GUID-tunnus. | "2d9c" | 

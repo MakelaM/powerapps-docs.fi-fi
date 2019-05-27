@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: db0e42a45af217e9e5703242c2a5a867a52b687b
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
-ms.translationtype: MT
+ms.openlocfilehash: 0337c7f79a81d7368128b6ef11d4d108345d3923
+ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
+ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317834"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66216624"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Tietokorttien ymmärtäminen PowerAppsissa
 
@@ -97,9 +97,6 @@ Toisena esimerkkinä voit avata **ImageURL**-kortin lukituksen ja lisätä siihe
 
 Aseta kaavarivillä tämän ohjausobjektin **Kuva**-ominaisuudeksi *TextBox*.**Text**, jossa *TextBox* on URL-osoitteen sisältämän **tekstisyöte**-ohjausobjektin nimi:
 
-> [!TIP]
-> Paina Alt-näppäintä, niin näet jokaisen ohjausobjektin nimen.
-
 ![](./media/working-with-cards/show-image.png)
 
 Nyt näemme kuvat ja voimme muokata niiden URL-osoitteita. Huomaa, että olisimme voineet käyttää **Kuva**-ominaisuutena **Parent.Default**ia, mutta se ei olisi päivittynyt käyttäjän muuttaessa URL-osoitetta.
@@ -139,7 +136,7 @@ Tutustumme nyt ohjausobjekteihin, joista perustiedonsyöttökortti koostuu. Väl
 
 ![](./media/working-with-cards/dissect-card1.png)
 
-Näytä niiden ohjausobjektien nimet, joista tämä kortti koostuu pitämällä Alt-näppäintä painettuna:
+Kortin ohjausobjekteille on poistettu otsikko Tässä kuvassa:
 
 ![](./media/working-with-cards/dissect-card2.png)
 
