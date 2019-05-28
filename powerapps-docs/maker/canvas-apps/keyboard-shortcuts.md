@@ -13,14 +13,17 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 19c5382baba643e673edb7e77e0398616e880980
-ms.sourcegitcommit: 2b1ed0db9312152f330bd8a8ea663f01b40e7c23
+ms.openlocfilehash: 8c88417763b4eee125ce511fafcac61da018d2ec
+ms.sourcegitcommit: d87b2068a63e416e2814791328a3a47bbcb5bb48
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66185639"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66249815"
 ---
 # <a name="keyboard-shortcuts-for-canvas-apps"></a>Pohjaan perustuvat sovellukset pikanäppäimet
+
+> [!NOTE]
+> Pikakuvakkeita saattaa vaihdella kielen.
 
 ## <a name="file"></a>Tiedosto
 
@@ -56,6 +59,7 @@ ms.locfileid: "66185639"
 | CTRL += tai Ctrl + Vaihto += | Lähennä. |
 | CTRL +- tai Ctrl + Vaihto +- | Loitonna. |
 | Ctrl+0 | Sovita sivulle piirtoalusta. |
+| Vaihto + Enter | Kaavassa rivinvaihdon. |
 
 ## <a name="preview"></a>Esikatselu
 
