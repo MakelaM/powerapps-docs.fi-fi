@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66215918"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="iferror-function-in-powerapps"></a>IfError-funktio PowerAppsissa
 
@@ -33,18 +34,18 @@ Havaitsee virheitä ja tarjoaa vaihtoehtoisen arvon tai suorittaa toiminnon.
 
 Käytä **IfError** virhearvojen korvaamiseen kelvollisten arvojen kanssa. Käytä tätä funktiota esimerkiksi, jos käyttäjän syöte voi aiheuttaa jakolaskun nollalla. Luoda kaavan, joka korvaa tuloksen 0 tai toisen arvon, joka soveltuu sovelluksesi, jotta tuotantovirran laskutoimituksia voidaan suorittaa. Kaava voi olla yksinkertaisesti tässä esimerkissä:
 
-```powerapps-dot
-IfError( 1/x, 0 )
+```powerapps-comma
+IfError( 1/x; 0 )
 ```
 
 Jos arvo **x** ei ole nolla, kaava palauttaa **1 / x**. Muussa tapauksessa **1 / x** tuottaa virheen ja kaava palauttaa arvon 0 sen sijaan.
 
 Käytä **IfError** - [toimintakaavoissa](../working-with-formulas-in-depth.md) suorittaa toiminnon ja tarkista virhe ennen tekemistä lisätoimintoja, kuten tätä mallia:
 
-```powerapps-dot
+```powerapps-comma
 IfError(
-    Patch( DS1, ... ), Notify( "problem in the first action" ),
-    Patch( DS2, ... ), Notify( "problem in the second action" )
+    Patch( DS1; ... ); Notify( "problem in the first action" );
+    Patch( DS2; ... ); Notify( "problem in the second action" )
 )
 ```
 
@@ -54,7 +55,7 @@ Jos kaavan ei löydä virheitä ja olet määrittänyt valinnainen *oletustulos*
 
 ## <a name="syntax"></a>Syntaksi
 
-**IfError**( *arvo1*, *Fallback1* [, *arvo2*, *Fallback2*,... [, *Oletustulos* ]])
+**IfError**( *arvo1*; *Fallback1* [; *arvo2*; *Fallback2*;... [; *Oletustulos* ]])
 
 * *Arvo(t)* – pakollinen. Kaavat virhearvojen testaamiseksi.
 * *Fallback(s)* – Pakollinen. Arvioitavat kaavat ja palautettavat Jos vastaavaa arvot *arvo* argumentit palauttivat virheen.
@@ -64,9 +65,9 @@ Jos kaavan ei löydä virheitä ja olet määrittänyt valinnainen *oletustulos*
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **IfError( 1, 2 )** |Ensimmäinen argumentti ei ole virhe. Funktio on ei tarkista virheitä ja palautusarvo oletusasetusta. Funktio palauttaa viimeisimmän *arvo* argumentti arvioidaan.   | 1 |
-| **IfError( 1/0, 2 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla). Funktio arvioi toinen argumentti, ja palauttaa tuloksen. | 2 |
-| **IfError( 1/0, Notify( "Sisäinen virhe", NotificationType.Error ) )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla). Funktio arvioi toinen argumentti ja ilmoittaa käyttäjälle. **IfError**-funktion palautusarvo on **Notify**-funktion palautusarvo, joka on pakotettu samantyyppiseksi kuin ensimmäinen argumentti funktioon **IfError** (luku). | 1 |
+| **IfError( 1; 2 )** |Ensimmäinen argumentti ei ole virhe. Funktio on ei tarkista virheitä ja palautusarvo oletusasetusta. Funktio palauttaa viimeisimmän *arvo* argumentti arvioidaan.   | 1 |
+| **IfError( 1/0; 2 )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla). Funktio arvioi toinen argumentti, ja palauttaa tuloksen. | 2 |
+| **IfError( 1/0; Notify( "Sisäinen virhe"; NotificationType.Error ) )** | Ensimmäinen argumentti palauttaa virhearvon (jakolasku nollalla). Funktio arvioi toinen argumentti ja ilmoittaa käyttäjälle. **IfError**-funktion palautusarvo on **Notify**-funktion palautusarvo, joka on pakotettu samantyyppiseksi kuin ensimmäinen argumentti funktioon **IfError** (luku). | 1 |
 | **IfError (1, 2, 3, 4, 5)** | Ensimmäinen argumentti ei ole virhe, joten toiminto ei arvioida, että argumentille vastaava fallback. Kolmas argumentti ei virheen joko, joten toiminto ei arvioida, että argumentille vastaava fallback. Viidennen argumentin on ei ole vastaavaa fallback ja oletusarvon tulos. Funktio palauttaa tuloksen, koska kaavassa on virheitä. | 5 |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta
@@ -77,7 +78,7 @@ Jos kaavan ei löydä virheitä ja olet määrittänyt valinnainen *oletustulos*
 
 3. Määritä **Label1**:n **Text**-ominaisuuden kaavaksi:
 
-    **IfError( Value( TextInput1.Text ), -1 )**
+    **IfError( Value( TextInput1.Text ); -1 )**
 
 4. Kirjoita **TextInput1**-kohtaan **1234**.  
 

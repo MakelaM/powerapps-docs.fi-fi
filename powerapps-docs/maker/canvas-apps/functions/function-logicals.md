@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66215970"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>PowerAppsin And-, Or- ja Not-funktiot
 
@@ -36,7 +37,7 @@ Nämä funktiot toimivat samalla tavalla kuin Excelissä. Voit myös käyttää 
 
 | Funktio merkintätapaa | Visual Basic-operaattoria merkintätapaa | JavaScript-operaattoria merkintätapaa |
 | -------------|------------|--------|
-| **And( x, y )** | **x ja y** | **x & & y** |
+| **And( x; y )** | **x ja y** | **x & & y** |
 | **Tai (x, y)** | **x- tai y** | **x &#124; &#124; y** |
 | **Ei (x)** | **Ei x** | **! x** |
 
@@ -44,8 +45,8 @@ Nämä funktiot toimivat loogisten arvojen kanssa. Et voi välittää ne luku ta
 
 ## <a name="syntax"></a>Syntaksi
 
-**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
-**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**And**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
+**Or**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
 **Not**( *LogicalFormula* )
 
 - *LogicalFormula(s)* – Pakollinen.  Loogiset kaavat, jotka arvioidaan ja joille toiminto suoritetaan.
@@ -62,8 +63,8 @@ Tämän osion esimerkeissä käytetään näitä yleisiä muuttujia:
 
 Jos haluat luoda sovelluksen näitä yleisiä muuttujia, Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-```powerapps-dot
-Set( a, false ); Set( b, true ); Set( x, 10 ); Set( y, 100 ); Set( s, "Hello World" )
+```powerapps-comma
+Set( a; false );; Set( b; true );; Set( x; 10 );; Set( y; 100 );; Set( s; "Hello World" )
 ```
 
 Valitse painike (valitsemalla sen samalla, kun pitämällä Alt-näppäintä) ja Aseta **tekstin** ominaisuus [ **nimen** ](../controls/control-text-box.md) ominaisuudeksi seuraavan taulukon ensimmäisen sarakkeen kaava.
