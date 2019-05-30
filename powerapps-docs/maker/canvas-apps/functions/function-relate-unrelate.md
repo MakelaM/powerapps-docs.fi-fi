@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61527207"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Liittyvät ja Unrelate-Funktiot powerappsissa
 
@@ -44,12 +43,12 @@ Voit käyttää näitä funktioita vain [toimintakaavoissa](../working-with-form
 
 ## <a name="syntax"></a>Syntaksi
 
-**Liittyvät**( *Entity1RelatedTable*; *Entity2Record* )
+**Liittyvät**( *Entity1RelatedTable*, *Entity2Record* )
 
 * *Entity1RelatedTable* – pakollinen. Tietueen *Entity1*, on *Entity2* liittyvät yksi-moneen- tai monta-moneen-suhteen kautta.
 * *Entity2Record* – pakollinen. *Entity2* tietueen lisäämiseen suhteen.
 
-**Unrelate**( *Entity1RelatedTable*; *Entity2Record* )
+**Unrelate**( *Entity1RelatedTable*, *Entity2Record* )
 
 * *Entity1RelatedTable* – pakollinen. Tietueen *Entity1*, on *Entity2* liittyvät yksi-moneen- tai monta-moneen-suhteen kautta.
 * *Entity2Record* – pakollinen. *Entity2* tietueen Poista suhde.
@@ -65,29 +64,29 @@ Harkitse **tuotteiden** entiteettiä seuraava suhteita osoitetulla tavalla [Powe
 
 **Tuotteiden** ja **varaukset** liittyvät yksi-moneen-suhde.  Yhdistetään ensimmäisen tietueen **varaukset** entiteetti, jolla ensimmäisen tietueen **tuotteiden** entiteetin:
 
-`Relate( First( Products ).Reservations; First( Reservations ) )`
+`Relate( First( Products ).Reservations, First( Reservations ) )`
 
 Jos haluat poistaa nämä tietueet suhdetta:
 
-`Unrelate( First( Products ).Reservations; First( Reservations ) )`
+`Unrelate( First( Products ).Reservations, First( Reservations ) )`
 
 Milloin ei ollut Luomme tai poista tai tietue, vain tietueen välisen suhteen on muokattu.
 
 **Tuotteiden** ja **yhteystiedot** liittyvät monta-moneen-suhde.  Yhdistetään ensimmäisen tietueen **yhteystiedot** entiteetti, jolla ensimmäisen tietueen **tuotteiden** entiteetin:
 
-`Relate( First( Products ).Contacts; First( Contacts ) )`
+`Relate( First( Products ).Contacts, First( Contacts ) )`
 
 Kuin monta moneen suhteita symmetrisen, emme voi myös olet tehnyt tämän vastakkaiseen suuntaan:
 
-`Relate( First( Contacts ).Products; First( Products ) )`
+`Relate( First( Contacts ).Products, First( Products ) )`
 
 Jos haluat poistaa nämä tietueet suhdetta:
 
-`Unrelate( First( Products ).Contacts; First( Contacts ) )`
+`Unrelate( First( Products ).Contacts, First( Contacts ) )`
 
 tai:
 
-`Unrelate( First( Contacts ).Products; First( Products ) )`
+`Unrelate( First( Contacts ).Products, First( Products ) )`
 
 Läpikäyntiin, että seuraavat tarkalleen näitä entiteettejä avulla sovellus nämä toiminnot **valikoiman** ja **yhdistelmäruudun** ohjausobjektit valitsemalla liittyvät tietueet.
 
@@ -103,7 +102,7 @@ Ensin luot yksinkertaisen sovelluksen, voit tarkastella ja määrittää varauks
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
-1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-** > **tuotteiden**  >  **Yhteyden**.  
+1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-**  > **tuotteiden**  >  **Yhteyden**.  
 
     Tuotteiden entiteetti on osa ladata yllä mallitiedot.
 
@@ -147,14 +146,14 @@ Ensin luot yksinkertaisen sovelluksen, voit tarkastella ja määrittää varauks
 
     ![Määritä Salli useita valintoja ei ole käytössä](media/function-relate-unrelate/reservations-singleselect-right.png)
 
-1. Määritä kaavarivillä **ComboBox1**käyttäjän **DefaultSelectedItems** ominaisuudeksi **ThisItem. 'Tuotteen varauksen'**.
+1. Määritä kaavarivillä **ComboBox1**käyttäjän **DefaultSelectedItems** ominaisuudeksi **ThisItem. 'Tuotteen varauksen'** .
 
     ![Määritä DefaultSelectedItems ReserveCombo](media/function-relate-unrelate/reservations-combo.png)
 
 1. - **Gallery2**, Määritä **NextArrow2**käyttäjän **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-comma
-    Relate( ComboBox1.Selected.Reservations; ThisItem )
+    ```powerapps-dot
+    Relate( ComboBox1.Selected.Reservations, ThisItem )
     ```
 
     Kun käyttäjä valitsee tämän kuvakkeen, nykyinen varauksen muuttuu tuote, jonka käyttäjä valitsi **ComboBox1**.
@@ -173,15 +172,15 @@ Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta ei voi poista
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
-1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-** > **varaukset**  >  **Yhteyden**.
+1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-**  > **varaukset**  >  **Yhteyden**.
 
 1. - **Gallery2**, Määritä **OnSelect** kaavaa **NextArrow2** tämä kaava:
 
-    ```powerapps-comma
-    If( IsBlank( ComboBox1.Selected );
-        Unrelate( Gallery1.Selected.Reservations; ThisItem );
-        Relate( ComboBox1.Selected.Reservations; ThisItem )
-    );;
+    ```powerapps-dot
+    If( IsBlank( ComboBox1.Selected ),
+        Unrelate( Gallery1.Selected.Reservations, ThisItem ),
+        Relate( ComboBox1.Selected.Reservations, ThisItem )
+    );
     Refresh( Reservations )
     ```
     ![Määritä oikea kuvake](media/function-relate-unrelate/reservations-relate-unrelate.png)
@@ -194,8 +193,8 @@ Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta ei voi poista
 
 1. Varmista, kaksoiskappale **Gallery2** nimeltä **Gallery2_1**, ja aseta sen **kohteet** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-comma
-    Filter( Reservations; IsBlank( 'Product Reservation' ) )
+    ```powerapps-dot
+    Filter( Reservations, IsBlank( 'Product Reservation' ) )
     ```
 
     Delegointi varoituksen, mutta luontimenetelmällä ei tässä esimerkissä pieni tietomäärän kanssa.
@@ -256,7 +255,7 @@ Luot toiseen sovellukseen, joka muistuttaa loit aiemmin tässä ohjeaiheessa, mu
 
     ![Määritä ContactsGallery](media/function-relate-unrelate/contacts-gallery-right.png)
 
-1. - **Gallery2**, varmista, että **nimen** ohjausobjektin nimi on **Otsikko2**, ja aseta sen **tekstin** ominaisuudeksi  **ThisItem. 'Koko nimi ”**.
+1. - **Gallery2**, varmista, että **nimen** ohjausobjektin nimi on **Otsikko2**, ja aseta sen **tekstin** ominaisuudeksi  **ThisItem. 'Koko nimi ”** .
 
     Ei näy tekstiä, jotta ohjausobjektin ennen kuin tämän vaiheen ja määrittää yhteystiedon tuote.
 
@@ -266,15 +265,15 @@ Luot toiseen sovellukseen, joka muistuttaa loit aiemmin tässä ohjeaiheessa, mu
 
 1. Määritä **Peruuta** kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava: 
 
-    ```powerapps-comma
-    Unrelate( Gallery1.Selected.Contacts; ThisItem )
+    ```powerapps-dot
+    Unrelate( Gallery1.Selected.Contacts, ThisItem )
     ```
 
     ![Määritä Peruuta-kuvaketta](media/function-relate-unrelate/contacts-unrelate.png)
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
-1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-** > **yhteystiedot**  >  **Yhteyden**.
+1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-**  > **yhteystiedot**  >  **Yhteyden**.
 
 1. Kohdassa **Gallery2**, Lisää **yhdistelmäruudun** ohjausobjekti, varmista, että se on nimetty **ComboBox1**, ja aseta sen **kohteet** ominaisuudeksi**Yhteystiedot**.
 
@@ -286,8 +285,8 @@ Luot toiseen sovellukseen, joka muistuttaa loit aiemmin tässä ohjeaiheessa, mu
 
 1. Lisää **Lisää** kuvaketta ja aseta sen **OnSelect** -ominaisuuden arvoksi tämä kaava: 
 
-    ```powerapps-comma
-    Relate( Gallery1.Selected.Contacts; ComboBox1.Selected )
+    ```powerapps-dot
+    Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )
     ```
 
     ![Määritä Lisää kuvake](media/function-relate-unrelate/contacts-relate.png)
@@ -305,7 +304,7 @@ Tämän sovelluksen avulla käyttäjät voivat nyt vapaasti liittyvät ja unrela
 
 Monta-moneen-suhteet ovat symmetrisen. Voit laajentaa katselutilaan näyttämään, miten suhteen näkyy suuntaan kaksi näyttöä ja lisätä tuotteita yhteystiedon esimerkki.
 
-1. Määritä **OnVisible** ominaisuuden **Screen1** - **päivitys (tuotteet)**.
+1. Määritä **OnVisible** ominaisuuden **Screen1** - **päivitys (tuotteet)** .
 
     Kun päivität yksi-moneen- tai monta-moneen-suhde, vain ensimmäinen argumentti entiteetin tiedot **Relate** tai **Unrelate** kutsun päivitetään. Toinen on päivitettävä manuaalisesti, jos haluat kääntää tämän sovelluksen näyttöjen välillä.
 
@@ -325,15 +324,15 @@ Monta-moneen-suhteet ovat symmetrisen. Voit laajentaa katselutilaan näyttämä�
     - Label1_1.Text = `"Selected Contact Products"`
     - Gallery2_1.items = `Gallery1_1.Selected.Products`
     - Title2_1.Text = `ThisItem.Name`
-    - Icon1_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products; ThisItem )`
+    - Icon1_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
     - ComboBox1_1.Items = `Products`
-    - Icon2_1.OnSelect = `Relate( Gallery1_1.Selected.Products; ComboBox1_1.Selected )`
+    - Icon2_1.OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
 
     Tulos näyttää samalta kuin hyvin edelliseen näyttöön, mutta se tulee suhteen **yhteystiedot** puolella.
 
     ![Näytä yhteystiedot alkaen monta-moneen-suhde](media/function-relate-unrelate/reverse-screen.png)
 
-1. Lisää **nuolet ylös ja alas** kuvaketta ja aseta sen **OnSelect** ominaisuudeksi **Navigate (Screen1, ei mitään)**.  Tehdä saman asian **Screen1** kaavalla **Navigate (Screen1_1, ei mitään)**.
+1. Lisää **nuolet ylös ja alas** kuvaketta ja aseta sen **OnSelect** ominaisuudeksi **Navigate (Screen1, ei mitään)** .  Tehdä saman asian **Screen1** kaavalla **Navigate (Screen1_1, ei mitään)** .
 
     ![Lisää näyttöjen välillä siirtyminen](media/function-relate-unrelate/reverse-navigate.png)
 

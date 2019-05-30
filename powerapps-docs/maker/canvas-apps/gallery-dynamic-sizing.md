@@ -57,14 +57,14 @@ Jos et ole koskaan lisännyt ohjausobjekteja valikoimaan, katso ohjeet kohdasta 
     ![Lisää valikoima](./media/gallery-dynamic-sizing/add-flexible.png)
 2. Muuta valikoiman mitat niin, että se täyttää koko näytön.
 
-3. Määritä valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuuden asetukseksi **FlooringEstimates**.
+3. Määritä valikoiman **[Kohteet](controls/properties-core.md)** -ominaisuuden asetukseksi **FlooringEstimates**.
 
 ## <a name="show-the-product-names"></a>Tuotenimien näyttäminen
 1. Napsauta tai napauta valikoiman vasemmassa yläkulmassa olevaa kynäkuvaketta ja valitse haluamasi valikoiman mallipohja.
 
     ![Kynäkuvake](./media/gallery-dynamic-sizing/edit-template.png)
 
-2. Kun Valikoiman mallipohja on valittuna, lisää siihen **[Otsikko](controls/control-text-box.md)**- ohjausobjekti.
+2. Kun Valikoiman mallipohja on valittuna, lisää siihen **[Otsikko](controls/control-text-box.md)** - ohjausobjekti.
 
 3. Määritä **Otsikko**-ohjausobjektin **Teksti**-ominaisuus tällä lausekkeella:<br>
    **ThisItem.Name**
@@ -91,12 +91,12 @@ Jos et ole koskaan lisännyt ohjausobjekteja valikoimaan, katso ohjeet kohdasta 
 
     Näin sinun on helpompi lisätä rakennettavan sovelluksen mallipohjaan ohjausobjekteja, eikä muutos vaikuta siihen, miltä sovellus näyttää, kun sitä käytetään.
 
-2. Kun valikoiman mallipohja on valittuna, lisää toinen **[Kuva](controls/control-image.md)**-ohjausobjekti ja siirrä se ensimmäisen **OverviewText**-ohjausobjektin alle.
+2. Kun valikoiman mallipohja on valittuna, lisää toinen **[Kuva](controls/control-image.md)** -ohjausobjekti ja siirrä se ensimmäisen **OverviewText**-ohjausobjektin alle.
 
 3. Varmista, että **Kuva**-ohjausobjektin **Kuva**-ominaisuus määritetään seuraavalla lausekkeella:<br>
     **ThisItem.Image**
 
-4. Määritä **Kuva**-ohjausobjektin **[Y](controls/properties-core.md)**-asetus **OverviewText**-ruudun sijainnin ja koon perusteella seuraavan lausekkeen mukaisesti:
+4. Määritä **Kuva**-ohjausobjektin **[Y](controls/properties-core.md)** -asetus **OverviewText**-ruudun sijainnin ja koon perusteella seuraavan lausekkeen mukaisesti:
    <br>**OverviewText.Y + OverviewText.Height + 5**
 
     ![Lopullinen sovellus](./media/gallery-dynamic-sizing/final-app.png)

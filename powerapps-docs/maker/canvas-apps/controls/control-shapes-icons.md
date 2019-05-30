@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63318425"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Muoto- ja kuvakeohjausobjektit PowerAppsissa
 Grafiikkoja, joille voi määrittää ulkoasu- ja toimintaominaisuuksia.
@@ -69,27 +68,27 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Navigate**( *ScreenName*; *ScreenTransition* )](../functions/function-navigate.md)
+[**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
 
 ## <a name="example"></a>Esimerkki
 
-1. Anna oletusarvoiselle **[Näyttö](control-screen.md)**-ohjausobjektille nimi **Kohde**, lisää **[Otsikko](control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](properties-core.md)**-ominaisuus näyttämään **Kohde**.
+1. Anna oletusarvoiselle **[Näyttö](control-screen.md)** -ohjausobjektille nimi **Kohde**, lisää **[Otsikko](control-text-box.md)** -ohjausobjekti ja määritä sen **[Teksti](properties-core.md)** -ominaisuus näyttämään **Kohde**.
 
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
-1. Lisää **[Näyttö](control-screen.md)**-ohjausobjekti ja anna sille nimi **Lähde**.
+1. Lisää **[Näyttö](control-screen.md)** -ohjausobjekti ja anna sille nimi **Lähde**.
 
-1. Lisää **Lähde**-ohjausobjektiin **Muoto**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:
+1. Lisää **Lähde**-ohjausobjektiin **Muoto**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-  `Navigate(Target; ScreenTransition.Fade)`
+  `Navigate(Target, ScreenTransition.Fade)`
   
 1. Paina F5-näppäintä ja valitse sitten **muodon** ohjausobjektin.
 
     **Kohde**-näyttö tulee näkyviin.
 
-1. (valinnainen) Palaa oletustyötilaan painamalla Esc-näppäintä. Lisää **Muoto**-ohjausobjekti **Kohde**-näyttöön ja määritä **Muoto**-ohjausobjektin **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:
+1. (valinnainen) Palaa oletustyötilaan painamalla Esc-näppäintä. Lisää **Muoto**-ohjausobjekti **Kohde**-näyttöön ja määritä **Muoto**-ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-  `Navigate(Source; ScreenTransition.Fade)`
+  `Navigate(Source, ScreenTransition.Fade)`
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 
@@ -115,7 +114,7 @@ Muodot, jotka eivät sisällä reunoja:
 
 - **[AccessibleLabel](properties-accessibility.md)**  on oltava tyhjä tai tyhjä merkkijono **””** Jos kuvaa esitetään tarpeetonta tietoa tai pelkästään koristeena. Tämä arvo aiheuttaa näytönlukuohjelmat voivat ohittaa kuvan.
 
-Voit esimerkiksi määrittää **[AccessibleLabel](properties-accessibility.md)** ominaisuus **asetukset** kuvakkeen **asetukset**. Kuvaketta ei käytetä painikkeena. Se on vieressä **[nimen](control-text-box.md)** , joka lukee myös **asetukset**. Näytönlukuohjelmat lukevat kuvakkeen ja sitten myös selitteen tekstinä **asetukset**, joka on tarpeetonta. Tässä tapauksessa kuvake ei tarvitse  **[AccessibleLabel](properties-accessibility.md)**.
+Voit esimerkiksi määrittää **[AccessibleLabel](properties-accessibility.md)** ominaisuus **asetukset** kuvakkeen **asetukset**. Kuvaketta ei käytetä painikkeena. Se on vieressä **[nimen](control-text-box.md)** , joka lukee myös **asetukset**. Näytönlukuohjelmat lukevat kuvakkeen ja sitten myös selitteen tekstinä **asetukset**, joka on tarpeetonta. Tässä tapauksessa kuvake ei tarvitse  **[AccessibleLabel](properties-accessibility.md)** .
 
 > [!IMPORTANT]
 > Näytönlukuohjelmat lukevat kuvakkeen tai muodon kuin lukea **painike** Jos sen **[AccessibleLabel](properties-accessibility.md)** on asetettu tyhjä merkkijono, ja sen **[Sarkainindeksi ](properties-accessibility.md)** asetetaan nolla tai suurempi. Tällaiset kuvakkeet ja muodot hahmonnetaan painikkeina. 

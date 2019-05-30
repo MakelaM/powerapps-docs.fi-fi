@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517430"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="date-picker-control-in-powerapps"></a>Päivämäärävalitsin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa päivämäärän määrittämiseksi.
@@ -50,7 +49,7 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
 **[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md)**  – Salliiko ohjausobjekti käyttäjän syötettä (Muokkaa), vain tietojen tarkastelun (Näytä) vai onko se poissa käytöstä (Poistettu käytöstä).
+**[DisplayMode](properties-core.md) ** – Salliiko ohjausobjekti käyttäjän syötettä (Muokkaa), vain tietojen tarkastelun (Näytä) vai onko se poissa käytöstä (Poistettu käytöstä).
 
 **[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
 
@@ -62,13 +61,13 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[FontWeight](properties-text.md) ** – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -78,7 +77,7 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
 **InputTextPlaceholder** – ohjeteksti, joka tulee näkyviin, jos et valitse päivämäärää.
 
-**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
+**[Italic](properties-text.md) ** – Onko ohjausobjektin teksti kursivoitu.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -112,7 +111,7 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
+   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
     Haluatko lisätietoja **[DateDiff](../functions/function-dateadd-datediff.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä, valitse päivämäärä kohdassa **Määräaika** ja napsauta tai napauta **OK**.

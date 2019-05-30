@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/21/2019
 ms.locfileid: "65974427"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla
 
@@ -61,7 +60,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 1. Valitse vasemmassa siirtymäpalkissa **BrowseGallery1**-kohta ja aseta sen **Items**-ominaisuuden arvoksi tämä kaava:
 
-    `SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; SortOrder.Descending; SortOrder.Ascending))`
+    `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     Tämä kaava määrittää seuraavat:
 
@@ -127,25 +126,25 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 1. Aseta plus-kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `NewForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Lisäämiskuvake](./media/data-platform-create-app-scratch/plus-icon.png)
 
 1. Aseta ensimmäisen oikealle osoittavan nuolen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `EditForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Seuraava-kuvake](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. Aseta **FormScreen**-kohdassa peruutuskuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `ResetForm(EditForm1);;Navigate(BrowseScreen; ScreenTransition.None)`
+    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Peruutuskuvake](./media/data-platform-create-app-scratch/cancel-icon.png)
 
 1. Aseta valintamerkkikuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `SubmitForm(EditForm1);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Valintamerkkikuvake](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
@@ -153,7 +152,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 1. Aseta **Roskakori**-kuvakkeen **Color**-ominaisuudeksi **White** ja sen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `Remove(Accounts; BrowseGallery.Selected);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Roskakorikuvake](./media/data-platform-create-app-scratch/trash-icon.png)
 

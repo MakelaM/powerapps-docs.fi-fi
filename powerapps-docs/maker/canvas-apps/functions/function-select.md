@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61520613"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="select-function-in-powerapps"></a>PowerAppsin Select-funktio
 Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**-kaavan laskennan.
@@ -27,7 +26,7 @@ Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**
 ## <a name="description"></a>Kuvaus
 **Select**-funktio simuloi ohjausobjektin valittua toimintoa aivan kuin käyttäjä olisi klikannut tai napauttanut ohjausobjektia. Tämän vuoksi kohdeohjausobjektin **OnSelect**-kaava lasketaan.
 
-Käytä **Select**-funktiota levittääksesi valittu toiminto pääohjausobjektiin. Tämän tyyppinen välitys on oletusarvon mukaista esimerkiksi valikoimissa. Oletuksena kaikkien **[Valikoima](../controls/control-gallery.md)** -ohjausobjektien **OnSelect**-ominaisuus arvoksi on määritetty **Select( Parent )**. Näin voit määrittää valikoima-ohjausobjektin **OnSelect**-ominaisuuden arvon itse, ja kyseinen kaava lasketaan riippumatta siitä, missä kohtaa valikoimaa käyttäjä on klikannut tai napauttanut.
+Käytä **Select**-funktiota levittääksesi valittu toiminto pääohjausobjektiin. Tämän tyyppinen välitys on oletusarvon mukaista esimerkiksi valikoimissa. Oletuksena kaikkien **[Valikoima](../controls/control-gallery.md)** -ohjausobjektien **OnSelect**-ominaisuus arvoksi on määritetty **Select( Parent )** . Näin voit määrittää valikoima-ohjausobjektin **OnSelect**-ominaisuuden arvon itse, ja kyseinen kaava lasketaan riippumatta siitä, missä kohtaa valikoimaa käyttäjä on klikannut tai napauttanut.
 
 Jos haluat yhden tai useamman valikoima-ohjausobjektin suorittavan eri toimintoja itse valikoimasta, aseta niiden **OnSelect** -ominaisuuden arvoksi muu kuin oletusarvo. Voit jättää useimpien valikoima-ohjausobjektien **OnSelect**-ominaisuuden arvoksi oletusarvon, jos haluat niiden suorittavan saman toiminnon kuin itse valikoima.
 
@@ -68,7 +67,7 @@ Ohjausobjekti ei voi **Valita** itseään suoraan tai epäsuorasti muiden ohjaus
 
 #### <a name="gallery-control"></a>Valikoima-ohjausobjekti
 
-1. Lisää pystysuora **[Valikoima](../controls/control-gallery.md)**-ohjausobjekti, joka sisältää muita ohjausobjekteja.
+1. Lisää pystysuora **[Valikoima](../controls/control-gallery.md)** -ohjausobjekti, joka sisältää muita ohjausobjekteja.
 
     ![Valitse pystysuora valikoima, joka sisältää ohjausobjekteja](media/function-select/select-gallery.png)
 
@@ -84,7 +83,7 @@ Ohjausobjekti ei voi **Valita** itseään suoraan tai epäsuorasti muiden ohjaus
 
 5. Määritä kuvanhallinnan **OnSelect**-ominaisuudeksi tämä kaava:
 
-    **Notify( ”Kuva valittu”; Onnistui )**
+    **Notify( ”Kuva valittu”, Onnistui )**
 
 6. Pidä Alt-näppäintä pohjassa, napsauta tai napauta valikoiman eri elementtejä.
 

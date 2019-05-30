@@ -43,14 +43,14 @@ Voit määrittää vain **[nimen](controls/control-text-box.md)** ohjausobjektin
 * **Käyttäjät huomioivaa**: Näytönlukuohjelmat ilmoittavat muutokset jälkeiset puhumalla. Käytä tätä arvoa ei-vakavia ilmoitukset, jotka eivät edellytä välitöntä huomiota.
 * **Päättävämmin**: Näytönlukuohjelmat keskeyttää itsensä koskevista muutoksista heti. Käytä tätä kriittinen ilmoitukset, jotka edellyttävät välitöntä huomiota.
 
-Jos reaaliaikainen alue tekstisisältö muuttuu, näytönlukuohjelmat ilmoittavat koko tekstisisältöä, ei vain muutettu osan. Jos arvo **[tekstin](controls/properties-core.md)** ominaisuuden arvo on tyhjä merkkijono **””**, ei näytönlukuohjelma mitään.
+Jos reaaliaikainen alue tekstisisältö muuttuu, näytönlukuohjelmat ilmoittavat koko tekstisisältöä, ei vain muutettu osan. Jos arvo **[tekstin](controls/properties-core.md)** ominaisuuden arvo on tyhjä merkkijono **””** , ei näytönlukuohjelma mitään.
 
 Toista viesti Tyhjennä tekstisisältö asetetaan **[tekstin](controls/properties-core.md)** ominaisuus tyhjäksi merkkijonoksi **””** ja määritä arvoksi viestiin uudelleen.
 
 ## <a name="best-practices"></a>Parhaat käytännöt
 
 * Aina **[näkyvissä](controls/properties-core.md)** TRUE. Jotkin näytönlukuohjelmat ei tunnista reaaliaikainen alueita, joita poistetaan, ja uudelleen.
-* Vältä arvon muuttaminen  **[Live](controls/properties-accessibility.md)**. Jotkin näytön lukijat ei tunnista, kun-live-alue on live ja päinvastoin.
+* Vältä arvon muuttaminen  **[Live](controls/properties-accessibility.md)** . Jotkin näytön lukijat ei tunnista, kun-live-alue on live ja päinvastoin.
 * Aseta reaaliaikaisen alueen looginen sijainti sovelluksessa, vaikka se ei ole näkyvissä. Varmista, että sen sisältö ovat merkitseviä kontekstissa elementtien ennen ja jälkeen se. Käyttäjät voivat käyttää reaaliaikaista alue milloin tahansa kautta säännöllisesti siirtyminen käyttämiseen näytönlukuohjelmalla, ei vain, kun muutoksia tehdään.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet

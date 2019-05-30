@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61560463"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -55,11 +54,11 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -124,11 +123,11 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Määritä ajastimen **Kesto**-ominaisuudeksi **10000** sekä **Toista**- ja **Autostart**-ominaisuudet tilaan **true**.
-3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)**-ominaisuudeksi **160**, **[Leveys](properties-size-location.md)**-ominaisuudeksi **600** ja **[Koko](properties-text.md)**-ominaisuudeksi **60**.
-4. Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000; 0)**
+3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)** -ominaisuudeksi **160**, **[Leveys](properties-size-location.md)** -ominaisuudeksi **600** ja **[Koko](properties-text.md)** -ominaisuudeksi **60**.
+4. Lisää selite ja aseta sen **[Teksti](properties-core.md)** -ominaisuudeksi tämä kaava:
+   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
-    Haluatko lisätietoja **[RoundUp](../functions/function-round.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[RoundUp](../functions/function-round.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
     Selite näyttää, kuinka monen sekunnin kuluttua ajastin käynnistyy uudelleen.
 
@@ -136,12 +135,12 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 1. Lisää ajastin ja anna sille nimi **FadeIn**.
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Määritä ajastimen **Kesto**-ominaisuuden arvoksi **5 000**, **Toista**-ominaisuuden arvoksi **tosi** ja **[Teksti](properties-core.md)**-ominaisuuden arvoksi **Toggle animation** (Vaihda animaatio).
-3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)**-ominaisuudeksi **160**, **[Leveys](properties-size-location.md)**-ominaisuudeksi **600** ja **[Koko](properties-text.md)**-ominaisuudeksi **60**.
-4. Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuus näyttämään **Welcome!** ja määritä sen **[Väri](properties-color-border.md)**-ominaisuudeksi tämä kaava:
-   <br>**ColorFade(Color.BlueViolet; FadeIn.Value/5000)**
+2. Määritä ajastimen **Kesto**-ominaisuuden arvoksi **5 000**, **Toista**-ominaisuuden arvoksi **tosi** ja **[Teksti](properties-core.md)** -ominaisuuden arvoksi **Toggle animation** (Vaihda animaatio).
+3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)** -ominaisuudeksi **160**, **[Leveys](properties-size-location.md)** -ominaisuudeksi **600** ja **[Koko](properties-text.md)** -ominaisuudeksi **60**.
+4. Lisää selite ja aseta sen **[Teksti](properties-core.md)** -ominaisuus näyttämään **Welcome!** ja määritä sen **[Väri](properties-color-border.md)** -ominaisuudeksi tämä kaava:
+   <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
-    Haluatko lisätietoja **[ColorFade](../functions/function-colors.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[ColorFade](../functions/function-colors.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
 5. Käynnistä tai pysäytä animaatio valitsemalla ajastinpainike. Selitteen teksti häivytetään valkoiseksi, minkä jälkeen se palaa täyteen voimakkuuteen. Tämän jälkeen prosessi toistuu.
 
@@ -169,7 +168,7 @@ Nämä vaatimukset eivät koske kaikkia tilanteita. Lue lisää [aikarajoja kosk
     > [!NOTE]
     > Ajastin on näkyvissä ja käynnissä, näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein.
 
-* Älä käytä **[tekstin](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin ohjausobjektin ominaisuus. Näytönlukuohjelmat ei ilmoita muutokset  **[tekstin](properties-core.md)**.
+* Älä käytä **[tekstin](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin ohjausobjektin ominaisuus. Näytönlukuohjelmat ei ilmoita muutokset  **[tekstin](properties-core.md)** .
 * -Vuorovaikutteinen ajastimet:
     * **[Teksti](properties-core.md)** on oltava käytössä.
     * Harkitse **[nimen](control-text-box.md)** ohjausobjektin kuluneen ajan näyttämiseksi. Ajastin ajastimen **[tekstin](properties-core.md)** ominaisuudeksi kehota käyttäjää Käynnistä tai Pysäytä ajastin.

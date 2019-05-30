@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544587"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>WWW-viivakoodiskannerin ohjausobjekti (kokeellinen) powerappsissa
 
@@ -67,7 +66,7 @@ Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäj�
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 
@@ -87,7 +86,7 @@ Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäj�
 
 ### <a name="video-alternatives"></a>Vaihtoehdot videoille
 
-* Harkitse **[selitteen](control-text-box.md)** lisäämistä, jonka **[Teksti](properties-core.md)**-objektin arvoksi on asetettu viivakoodiskannerin **Teksti**. Koska viivakoodiskanneri ei näytä tunnistettua viivakoodiarvoa, tämä tekee skannerista helppokäyttöisen kaikille käyttäjille, ei vain näkövammaisille.
+* Harkitse **[selitteen](control-text-box.md)** lisäämistä, jonka **[Teksti](properties-core.md)** -objektin arvoksi on asetettu viivakoodiskannerin **Teksti**. Koska viivakoodiskanneri ei näytä tunnistettua viivakoodiarvoa, tämä tekee skannerista helppokäyttöisen kaikille käyttäjille, ei vain näkövammaisille.
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
 

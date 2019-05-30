@@ -19,13 +19,12 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517416"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="list-box-control-in-powerapps"></a>Luetteloruutu-ohjausobjekti PowerAppsissa
 Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
 
 ## <a name="description"></a>Kuvaus
-**Luetteloruutu**-ohjausobjekti näyttää aina kaikki käytettävissä olevat vaihtoehdot (toisin kuin **[Avattava luettelo](control-drop-down.md)** -ohjausobjekti), ja siitä käyttäjä voi valita useamman kuin yhden kohteen kerrallaan (toisin kuin **[Valintanappi](control-radio.md)**-ohjausobjekti).
+**Luetteloruutu**-ohjausobjekti näyttää aina kaikki käytettävissä olevat vaihtoehdot (toisin kuin **[Avattava luettelo](control-drop-down.md)** -ohjausobjekti), ja siitä käyttäjä voi valita useamman kuin yhden kohteen kerrallaan (toisin kuin **[Valintanappi](control-radio.md)** -ohjausobjekti).
 
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
 **[Oletus](properties-core.md)** – Alkuperäinen asetus, joka on voimassa, ennen kuin käyttäjä muuttaa sitä.
@@ -49,11 +48,11 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -126,30 +125,30 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **CategoryList** ja aseta sen **[Kohteet](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **["Matto";"Kovapuu";"Laatta"]**
+1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **CategoryList** ja aseta sen **[Kohteet](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
+   **["Matto","Kovapuu","Laatta"]**
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
    
     ![Lattianpäällysteet luetteloruudussa](./media/control-list-box/category-listbox.png)
 2. Lisää kolme **[Avattava luettelo](control-drop-down.md)** -ohjausobjektia, siirrä ne kohtaan **CategoryList** ja anna niille nimeksi **CarpetList**, **HardwoodList**  ja **TileList**.
-3. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Kohteet](properties-core.md)**-ominaisuudeksi jokin näistä arvoista:
+3. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Kohteet](properties-core.md)** -ominaisuudeksi jokin näistä arvoista:
    
-   * CarpetList: **["Caserta Stone Beige";"Ageless Beauty Clay"; "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak";"Natural Hickory"; "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble";"Indian Autumn Slate"; "Panaria Vitality Ceramic"]**
+   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
      ![Lattiapäällysteiden nimet avattavissa luetteloissa](./media/control-list-box/flooring-names.png)
-4. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Näkyvissä](properties-core.md)**-ominaisuudeksi jokin näistä arvoista:
+4. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Näkyvissä](properties-core.md)** -ominaisuudeksi jokin näistä arvoista:
    
    * CarpetList: **Jos (”matto” in CategoryList.SelectedItems.Value, true)**
    * HardwoodList: **IF (”Kovapuu” in CategoryList.SelectedItems.Value, true)**
    * TileList: **IF (”laatta” in CategoryList.SelectedItems.Value, true)**
      
-     Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 5. Paina F5-näppäintä ja valitse sitten yksi tai useampi kohde kohdasta **CategoryList**.
    
     Asianmukainen **[Avattava luettelo](control-drop-down.md)** -ohjausobjekti (tai useita) näkyy valintasi tai valintojesi perusteella.
@@ -172,7 +171,7 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
     > [!NOTE]

@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61543949"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="microphone-control-in-powerapps"></a>Mikrofoni-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla sovelluksen käyttäjät voivat tallentaa ääniä laitteestaan.
@@ -47,11 +46,11 @@ Sovelluksen käyttäjät voivat tehdä äänitallenteita, jos laitteessa, jossa 
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -96,31 +95,31 @@ Sovelluksen käyttäjät voivat tehdä äänitallenteita, jos laitteessa, jossa 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-sounds-to-a-custom-gallery-control"></a>Lisää ääniä mukautettuun valikoima-ohjausobjektiin
 1. Lisää **Mikrofoni**, anna sen nimeksi **MyMic** ja määritä sen **OnStop**-ominaisuudeksi tämä kaava:<br>
-   **Collect(MySounds; MyMic.Audio)**
+   **Collect(MySounds, MyMic.Audio)**
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
-    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-2. Lisää **Mukautettu valikoima** -ohjausobjekti, siirrä se kohdan **MyMic** alle ja määritä **[Kohteet](properties-core.md)**-ominaisuudeksi **Mukautettu valikoima** -ohjausobjektissa **MySounds**.
-3. Lisää **Mukautettu valikoima** - ohjausobjektin mallissa **[Ääni](control-audio-video.md)**-ohjausobjekti ja määritä sen **Media**-ominaisuudeksi  **ThisItem.Url**.
+    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
+2. Lisää **Mukautettu valikoima** -ohjausobjekti, siirrä se kohdan **MyMic** alle ja määritä **[Kohteet](properties-core.md)** -ominaisuudeksi **Mukautettu valikoima** -ohjausobjektissa **MySounds**.
+3. Lisää **Mukautettu valikoima** - ohjausobjektin mallissa **[Ääni](control-audio-video.md)** -ohjausobjekti ja määritä sen **Media**-ominaisuudeksi  **ThisItem.Url**.
 4. Paina F5-näppäintä, aloita taltiointi napsauttamalla tai napauttamalla **MyMic** ja lopeta taltiointi napsauttamalla tai napauttamalla sitä uudelleen.
-5. Toista taltiointi napsauttamalla tai napauttamalla **Mukautettu valikoima** -ohjausobjektin toistopainiketta **[Ääni](control-audio-video.md)**-ohjausobjektissa.
+5. Toista taltiointi napsauttamalla tai napauttamalla **Mukautettu valikoima** -ohjausobjektin toistopainiketta **[Ääni](control-audio-video.md)** -ohjausobjektissa.
 6. Lisää niin monta taltiointia kuin haluat ja palaa sitten oletustyötilaan painamalla Esc.
-7. (valinnainen) Lisää **Mukautettu valikoima** -ohjausobjektin mallissa **[Painike](control-button.md)**-ohjausobjekti, määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi **Remove(MySounds; ThisItem)**, paina F5-näppäintä ja poista sitten taltiointi napsauttamalla tai napauttamalla vastaavaa **Painike**-ohjausobjektia.
+7. (valinnainen) Lisää **Mukautettu valikoima** -ohjausobjektin mallissa **[Painike](control-button.md)** -ohjausobjekti, määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi **Remove(MySounds, ThisItem)** , paina F5-näppäintä ja poista sitten taltiointi napsauttamalla tai napauttamalla vastaavaa **Painike**-ohjausobjektia.
 
-Voit tallentaa taltioinnit paikallisesti **[SaveData](../functions/function-savedata-loaddata.md)**-funktiolla tai päivittää tietolähteen **[Ohjelmakorjaus](../functions/function-patch.md)**-funktiolla.
+Voit tallentaa taltioinnit paikallisesti **[SaveData](../functions/function-savedata-loaddata.md)** -funktiolla tai päivittää tietolähteen **[Ohjelmakorjaus](../functions/function-patch.md)** -funktiolla.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
-Ohjeet ovat samat kuin **[Painike](control-button.md)**-ohjausobjektille, sillä **Mikrofoni** on erityinen painike. Huomioi lisäksi seuraavat asiat:
+Ohjeet ovat samat kuin **[Painike](control-button.md)** -ohjausobjektille, sillä **Mikrofoni** on erityinen painike. Huomioi lisäksi seuraavat asiat:
 
 ### <a name="audio-alternatives"></a>Vaihtoehdot äänelle
-* Harkitse vaihtoehtoisen syöttötavan lisäämistä puhevammaisille käyttäjille tai käyttäjille, joilla ei ole mikrofonia. Esimerkiksi **[Tekstisyöte](control-text-input.md)**, jotta käyttäjät voivat kirjoittaa tekstiä.
+* Harkitse vaihtoehtoisen syöttötavan lisäämistä puhevammaisille käyttäjille tai käyttäjille, joilla ei ole mikrofonia. Esimerkiksi **[Tekstisyöte](control-text-input.md)** , jotta käyttäjät voivat kirjoittaa tekstiä.
 
 ### <a name="color-contrast"></a>Värikontrasti
 Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:

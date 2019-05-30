@@ -32,16 +32,16 @@ Millä tahansa seuraavilla tavoilla:
 
 * Määritä **[koon](controls/properties-text.md)** 0.
 * Määritä **[leveys](controls/properties-size-location.md)** ja **[korkeus](controls/properties-size-location.md)** 1.
-* Määritä  **[X](controls/properties-size-location.md)**,  **[Y](controls/properties-size-location.md)**, tai ominaisuuksia siten, että ohjausobjekti on näytön ulkopuolelta.
+* Määritä  **[X](controls/properties-size-location.md)** ,  **[Y](controls/properties-size-location.md)** , tai ominaisuuksia siten, että ohjausobjekti on näytön ulkopuolelta.
 * Määritä **[väri](controls/properties-color-border.md)** ja liittyvät ominaisuudet läpinäkyvä.
 * Suorakulmion sijainti **[muodon](controls/control-shapes-icons.md)** yllä sisältöä ja määritä **[Täytä](controls/properties-color-border.md)** saman taustaväriksi näytön taustavärin.
 
 > [!NOTE]
-> Käyttäjät voivat kuitenkin käyttää näppäimistöllä käyttämään vuorovaikutteisen komponentin, kuten  **[painike](controls/control-button.md)**, vaikka se käyttämällä tekniikoita luettelon. Määritä **[TabIndex](controls/properties-accessibility.md)** 1, jos haluat estää käyttäjiä käyttämästä ohjausobjekti painamalla SARKAINTA.
+> Käyttäjät voivat kuitenkin käyttää näppäimistöllä käyttämään vuorovaikutteisen komponentin, kuten  **[painike](controls/control-button.md)** , vaikka se käyttämällä tekniikoita luettelon. Määritä **[TabIndex](controls/properties-accessibility.md)** 1, jos haluat estää käyttäjiä käyttämästä ohjausobjekti painamalla SARKAINTA.
 
 ## <a name="hide-content-from-screen-reader-users-and-show-it-to-sighted-users"></a>Piilota – Näytönlukuohjelman käyttäjät sisältöä ja Näytä se tarjoaminen käyttäjille
 
-* -  **[Kuvan](controls/control-image.md)**,  **[kuvake](controls/control-shapes-icons.md)**, ja **[muodon](controls/control-shapes-icons.md)** ohjausobjekteja, Määritä **[AccessibleLabel](controls/properties-accessibility.md)** tyhjä merkkijono ””.
+* -  **[Kuvan](controls/control-image.md)** ,  **[kuvake](controls/control-shapes-icons.md)** , ja **[muodon](controls/control-shapes-icons.md)** ohjausobjekteja, Määritä **[AccessibleLabel](controls/properties-accessibility.md)** tyhjä merkkijono ””.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

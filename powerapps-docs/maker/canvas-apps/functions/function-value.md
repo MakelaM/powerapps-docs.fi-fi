@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "63321826"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="value-function-in-powerapps"></a>PowerAppsin Value-funktio
 Muuntaa merkkijonon luvuksi.
@@ -40,7 +39,7 @@ Jos luku ei ole oikeassa muodossa, **Value** palauttaa *tyhjän*.
 Käytä funktioita [**DateValue**](function-datevalue-timevalue.md), [**TimeValue**](function-datevalue-timevalue.md) ja [**DateTimeValue**](function-datevalue-timevalue.md) päivä- ja aika-arvojen muuntamiseen.
 
 ## <a name="syntax"></a>Syntaksi
-**Value**( *String* [; *LanguageTag* ] )
+**Value**( *String* [, *LanguageTag* ] )
 
 * *String* vaaditaan. Numeeriseksi arvoksi muunnettava merkkijono.
 * *LanguageTag* – valinnainen.  Kielitunniste, jonka perusteella merkkijono jäsennetään.  Jos sitä ei syötetä, käytetään nykyisen käyttäjän kieltä.
@@ -51,9 +50,9 @@ Käyttäjä, joka suorittaa nämä kaavat, sijaitsee Yhdysvalloissa ja on valinn
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Value( "123.456" )** |Käytetään oletuskieltä "en-US", jossa desimaalierottimena käytetään pistettä. |123.456 |
-| **Value( "123.456"; "es-ES" )** |"es-ES" on kielitunniste Espanjassa käytetylle espanjan kielelle.  Espanjassa tuhaterottimena käytetään pistettä. |123456 |
+| **Value( "123.456", "es-ES" )** |"es-ES" on kielitunniste Espanjassa käytetylle espanjan kielelle.  Espanjassa tuhaterottimena käytetään pistettä. |123456 |
 | **Value( "123,456" )** |Käytetään oletuskieltä "en-US", jossa tuhaterottimena käytetään pilkkua. |123456 |
-| **Value( "123,456"; "es-ES" )** |"es-ES" on kielitunniste Espanjassa käytetylle espanjan kielelle.  Espanjassa desimaalierottimena käytetään pilkkua. |123.456 |
+| **Value( "123,456", "es-ES" )** |"es-ES" on kielitunniste Espanjassa käytetylle espanjan kielelle.  Espanjassa desimaalierottimena käytetään pilkkua. |123.456 |
 | **Value( "12.34%" )** |Merkkijonon lopussa oleva prosenttimerkki ilmaisee, että tämä on prosenttiluku. |0.1234 |
 | **Value( "$ 12.34" )** |Nykyisen kielen valuuttasymboli ohitetaan. |12.34 |
 | **Value( "24e3" )** |Luvun 12 x 10<sup>3</sup> tieteellinen muoto. |24000 |

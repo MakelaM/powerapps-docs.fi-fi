@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65521031"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerAppsin Tekstisyöte-ohjausobjekti
 Ruutu, johon käyttäjä voi kirjoittaa tekstiä, numeroita ja muuta tietoa.
@@ -30,7 +29,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **[Default](properties-core.md)** – Ohjausobjektin alkuarvo ennen kuin käyttäjä muuttaa sitä.
 
-**[Text](properties-core.md)**  – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
+**[Text](properties-core.md) ** – Teksti, joka näytetään ohjausobjektissa tai jonka käyttäjä kirjoittaa ohjausobjektiin.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
@@ -45,7 +44,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **Clear** – Näyttääkö tekstisyötteen ohjausobjekti merkin X, jota käyttäjä voi napauttaa tai napsauttaa tyhjentääkseen kyseisen ohjausobjektin sisällön.
 
-**[Color](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
+**[Color](properties-color-border.md) ** – Ohjausobjektin tekstin väri.
 
 **DelayOutput** – Kun tämän arvo on tosi, käyttäjän syöte rekisteröidään puolen sekunnin viiveellä.  Toiminnosta on hyötyä, jos halutaan viivyttää kalliita toimintoja, kunnes käyttäjä on syöttänyt tekstin (esimerkiksi suodatus kun syötettä käytetään muissa kaavoissa).
 
@@ -59,13 +58,13 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[FontWeight](properties-text.md) ** – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
 
 **Format** – Onko käyttäjän syöte rajoitettu vain numeroihin vai voiko se olla mitä tahansa tekstiä.
 
@@ -75,11 +74,11 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[HoverBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, kun käyttäjä pitää hiiren osoitinta kyseisen ohjausobjektin päällä.
 
-**[HoverColor](properties-color-border.md)**  – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
+**[HoverColor](properties-color-border.md) ** – Ohjausobjektin tekstin väri, kun hiiren kohdistin on sen päällä.
 
-**[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
+**[HoverFill](properties-color-border.md) ** – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
 
-**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
+**[Italic](properties-text.md) ** – Onko ohjausobjektin teksti kursivoitu.
 
 **[LineHeight](properties-text.md)** – Rivin korkeus eli esimerkiksi tekstin tai luettelon rivien välinen etäisyys.
 
@@ -113,17 +112,17 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[RadiusTopRight](properties-size-location.md)** – Ohjausobjektin oikean yläkulman pyöristysaste.
 
-**[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
+**[Reset](properties-core.md) ** – Palautuuko ohjausobjekti oletusarvoonsa.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näytettävän tekstin fonttikoko.
 
-**[Strikethrough](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti yliviivattua.
+**[Strikethrough](properties-text.md) ** – Onko ohjausobjektissa näkyvä teksti yliviivattua.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
 **[Tooltip](properties-core.md)** – Ohjeteksti, joka ilmestyy näkyviin, kun hiiren kohdistin on ohjausobjektin päällä.
 
-**[Underline](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti alleviivattu.
+**[Underline](properties-text.md) ** – Onko ohjausobjektissa näkyvä teksti alleviivattu.
 
 **VirtualKeyboardMode** – näppäimistön, teksti tai numeric, joka näkyy sovelluksen käyttäjälle kosketusnäytöllä vaikeaa. **Muodossa** ominaisuus määrittää oletusarvo. Laitteen tuki vaihtelee. Laitteet, joissa on iOS on oltava vähintään 12.2 versio. Suositellut Android-versio on 9.0 ja numeerinen näppäimistöt ominaisuudet vaihtelevat Android-laitteille. Windows 10 ei tue tätä ominaisuutta.  
 
@@ -144,7 +143,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää painike, määritä sen **[Text](properties-core.md)**-ominaisuus näyttämään **Lisää** ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
     Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Lisää tekstivalikoima pysty- tai vaakasuunnassa, aseta sen **[Items](properties-core.md)**-ominaisuus näyttämään **Nimet** ja aseta **Subtitle1**-kohdan **[Text](properties-core.md)**-ominaisuudeksi **ThisItem.FirstName**.
@@ -157,7 +156,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 1. Lisää tekstisyötteen ohjausobjekti, anna sen nimeksi **inputPassword** ja aseta sen **Tila**-ominaisuudeksi **Salasana**.
 
 1. Lisää selite ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
     Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
 

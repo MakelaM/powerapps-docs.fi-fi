@@ -22,7 +22,7 @@ ms.locfileid: "66225162"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Tietokorttien ymmärtäminen PowerAppsissa
 
-**[Kortti](controls/control-card.md)**-ohjausobjektit ovat **[Muokkaa lomaketta](controls/control-form-detail.md)**- ja **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjektien rakenneosia pohjaan perustuvissa sovelluksissa. Lomake edustaa koko tietuetta ja jokainen kortti kyseisen tietueen yksittäistä kenttää.
+**[Kortti](controls/control-card.md)** -ohjausobjektit ovat **[Muokkaa lomaketta](controls/control-form-detail.md)** - ja **[Näytä lomake](controls/control-form-detail.md)** -ohjausobjektien rakenneosia pohjaan perustuvissa sovelluksissa. Lomake edustaa koko tietuetta ja jokainen kortti kyseisen tietueen yksittäistä kenttää.
 
 Kortteja on kätevintä käsitellä oikeanpuoleisessa ruudussa sen jälkeen, kun olet valinnut lomakkeen ohjausobjektin suunnittelutyötilassa. Tässä ruudussa voit valita, mitä kenttiä näytetään, miten ne näytetään ja missä järjestyksessä ne näytetään. Tässä esimerkissä näkyy **Muokkaa lomaketta** -ohjausobjekti sovelluksessa, joka luotiin SharePoint-luettelosta nimeltä **Assets**.
 
@@ -45,14 +45,14 @@ Useita tämän tietolähteen kenttiä ei ole näkyvissä, mutta voit näyttää 
 ![](./media/working-with-cards/add-security-code.png)
 
 ## <a name="customize-a-card"></a>Mukauta kortti
-Kortit sisältävät muita ohjausobjekteja. Käyttäjä lisää **Muokkaa lomaketta** -ohjausobjektiin tietoja vakio-ohjausobjektilla **[tekstisyöte](controls/control-text-input.md)**, joka lisätään **Lisää**-välilehdestä.  
+Kortit sisältävät muita ohjausobjekteja. Käyttäjä lisää **Muokkaa lomaketta** -ohjausobjektiin tietoja vakio-ohjausobjektilla **[tekstisyöte](controls/control-text-input.md)** , joka lisätään **Lisää**-välilehdestä.  
 
 Katsotaan nyt esimerkkiä, jossa tutustutaan kortin ulkoasun muuttamiseen sen ohjausobjekteja käsittelemällä.
 
 1. Palataan ensin korttiin, jonka viimeksi lisäsimme, ja sen **SecurityCode**-kenttään. Valitse tämä kortti napsauttamalla tai napauttamalla sitä kerran:
    
     ![](./media/working-with-cards/select-security-code.png)
-2. Valitse kortin sisällä oleva **[tekstisyöte](controls/control-text-input.md)**-ohjausobjekti napsauttamalla tai napauttamalla itse syöteohjausobjektia.
+2. Valitse kortin sisällä oleva **[tekstisyöte](controls/control-text-input.md)** -ohjausobjekti napsauttamalla tai napauttamalla itse syöteohjausobjektia.
    
     ![](./media/working-with-cards/select-text-input.png)
 3. Siirrä tätä ohjausobjektia kortin sisällä vetämällä valintakehystä, ja muuta ohjausobjektin kokoa vetämällä valintakehyksen reunassa olevia kahvoja:
@@ -66,9 +66,9 @@ Sen lisäksi, että kortit sisältävät ohjausobjekteja, ne ovat myös itse ohj
 
 ![](./media/working-with-cards/advanced-locked.png)
 
-Näkyvissä on heti yksi kortin tärkeimmistä ominaisuuksista: **[DataField](controls/control-card.md)**-ominaisuus. Tämä ominaisuus ilmaisee, minkä tietolähteen kentän käyttäjä näkee ja mitä kenttää hän voi muokata tässä kortissa.  
+Näkyvissä on heti yksi kortin tärkeimmistä ominaisuuksista: **[DataField](controls/control-card.md)** -ominaisuus. Tämä ominaisuus ilmaisee, minkä tietolähteen kentän käyttäjä näkee ja mitä kenttää hän voi muokata tässä kortissa.  
 
-**Lisäasetukset**-välilehden yläreunassa oleva palkki ilmaisee, että tämän kortin ominaisuudet on lukittu. Lukkokuvake näkyy myös ominaisuuksien **[DataField](controls/control-card.md)**,  **[DisplayName](controls/control-card.md)** ja **[Pakollinen](controls/control-card.md)** kohdalla. Oikeanpuoleinen ruutu loi nämä kaavat, ja lukituksella estetään tahattomat muutokset näihin ominaisuuksiin.
+**Lisäasetukset**-välilehden yläreunassa oleva palkki ilmaisee, että tämän kortin ominaisuudet on lukittu. Lukkokuvake näkyy myös ominaisuuksien **[DataField](controls/control-card.md)** ,  **[DisplayName](controls/control-card.md)** ja **[Pakollinen](controls/control-card.md)** kohdalla. Oikeanpuoleinen ruutu loi nämä kaavat, ja lukituksella estetään tahattomat muutokset näihin ominaisuuksiin.
 
 ![](./media/working-with-cards/lock-icons.png)
 
@@ -111,25 +111,25 @@ Avattuasi kortin lukituksen voit muuttaa tapaa, jolla se toimii sen sisältävä
 Alla on joitakin ohjeita siitä, miten ohjausobjektien on toimittava korttinsa kanssa ja miten korttien on toimittava lomakkeen kanssa. Nämä ovat vain suuntaviivoja. Voit luoda kaavoja, jotka viittaavat mihin tahansa PowerApps-ohjausobjektiin, samalla tavalla kuin kaikkien ohjausobjektien yhteydessä PowerAppsissa. Tämä koskee myös kortteja ja korttien ohjausobjekteja. Älä unohda luovuutta: sovelluksen voi luoda monella eri tavalla.  
 
 ### <a name="datafield-property"></a>DataField-ominaisuus
-Kortin tärkein ominaisuus on **[DataField](controls/control-card.md)**-ominaisuus.  Tämä ominaisuus vaikuttaa vahvistukseen, kenttien päivitykseen ja muihin kortin ominaisuuksiin.
+Kortin tärkein ominaisuus on **[DataField](controls/control-card.md)** -ominaisuus.  Tämä ominaisuus vaikuttaa vahvistukseen, kenttien päivitykseen ja muihin kortin ominaisuuksiin.
 
 ### <a name="information-flowing-in"></a>Sisään tuleva tieto
 Säilönä lomake asettaa **ThisItem**-operaattorin kaikkien sen sisältämien korttien saataville. Tämä tietue sisältää kaikki kiinnostuksen kohteena olevan nykyisen tietueen kentät.  
 
-Jokaisen kortin **[Oletus](controls/properties-core.md)**-ominaisuuden arvoksi on asetettava **ThisItem**. *FieldName*.  Joissakin tilanteissa haluat ehkä muuntaa tätä arvoa tietojen tullessa sisään. Saatat esimerkiksi haluta muotoilla merkkijonon tai kääntää arvon jostakin kielestä toiseen kieleen.
+Jokaisen kortin **[Oletus](controls/properties-core.md)** -ominaisuuden arvoksi on asetettava **ThisItem**. *FieldName*.  Joissakin tilanteissa haluat ehkä muuntaa tätä arvoa tietojen tullessa sisään. Saatat esimerkiksi haluta muotoilla merkkijonon tai kääntää arvon jostakin kielestä toiseen kieleen.
 
-Kunkin kortissa olevan ohjausobjektin on viitattava **Parent.Default**-ominaisuuteen, jotta kentän arvoon päästään käsiksi. Tämä strategia tarjoaa kapseloinnin kortille niin, että kortin **[Oletus](controls/properties-core.md)**-ominaisuutta voidaan muuttaa muuttamatta kortin sisäisiä kaavoja.
+Kunkin kortissa olevan ohjausobjektin on viitattava **Parent.Default**-ominaisuuteen, jotta kentän arvoon päästään käsiksi. Tämä strategia tarjoaa kapseloinnin kortille niin, että kortin **[Oletus](controls/properties-core.md)** -ominaisuutta voidaan muuttaa muuttamatta kortin sisäisiä kaavoja.
 
-Ominaisuudet **DefaultValue** ja **[Pakollinen](controls/control-card.md)** saadaan oletusarvoisesti tietolähteen metatiedoista **[DataField](controls/control-card.md)**-ominaisuuden perusteella. Voit ohittaa nämä kaavat käyttämällä omaa logiikkaa integroimalla tietolähteen metatiedot **[DataSourceInfo](functions/function-datasourceinfo.md)**-funktion avulla.
+Ominaisuudet **DefaultValue** ja **[Pakollinen](controls/control-card.md)** saadaan oletusarvoisesti tietolähteen metatiedoista **[DataField](controls/control-card.md)** -ominaisuuden perusteella. Voit ohittaa nämä kaavat käyttämällä omaa logiikkaa integroimalla tietolähteen metatiedot **[DataSourceInfo](functions/function-datasourceinfo.md)** -funktion avulla.
 
 ### <a name="information-flowing-out"></a>Ulos lähtevä tieto
-Kun käyttäjä on muokannut tietuetta kortin ohjausobjekteilla, **[SubmitForm](functions/function-form.md)**-funktio tallentaa kyseiset muutokset tietolähteeseen. Funktion suorittamisen aikana lomakkeen ohjausobjekti lukee jokaisen kortin **[DataField](controls/control-card.md)**-ominaisuuden arvot, mikä auttaa tunnistamaan muutettavat kentät.  
+Kun käyttäjä on muokannut tietuetta kortin ohjausobjekteilla, **[SubmitForm](functions/function-form.md)** -funktio tallentaa kyseiset muutokset tietolähteeseen. Funktion suorittamisen aikana lomakkeen ohjausobjekti lukee jokaisen kortin **[DataField](controls/control-card.md)** -ominaisuuden arvot, mikä auttaa tunnistamaan muutettavat kentät.  
 
-Lomakkeen ohjausobjektissa lukee myös jokaisen kortin **[Päivitä](controls/control-card.md)**-ominaisuuden arvo. Tämä arvo tallennetaan tietolähteeseen tälle kentälle. Tähän voidaan lisätä toinen muunnos, esimerkiksi sen muunnoksen peruutus, jota käytettiin kortin **[Default](controls/properties-core.md)**-kaavassa.
+Lomakkeen ohjausobjektissa lukee myös jokaisen kortin **[Päivitä](controls/control-card.md)** -ominaisuuden arvo. Tämä arvo tallennetaan tietolähteeseen tälle kentälle. Tähän voidaan lisätä toinen muunnos, esimerkiksi sen muunnoksen peruutus, jota käytettiin kortin **[Default](controls/properties-core.md)** -kaavassa.
 
-**Kelvollinen**-ominaisuus haetaan tietolähteen metatiedoista **[DataField](controls/control-card.md)**-ominaisuuden perusteella. Se perustuu myös **[Pakollinen](controls/control-card.md)**-ominaisuuteen ja siihen, sisältyykö **[Päivitä](controls/control-card.md)**-ominaisuuteen arvoa. Jos **[Päivitä](controls/control-card.md)**-ominaisuuden arvo ei ole kelvollinen, **Virhe**-ominaisuus antaa käyttöystävällisen virhesanoman.
+**Kelvollinen**-ominaisuus haetaan tietolähteen metatiedoista **[DataField](controls/control-card.md)** -ominaisuuden perusteella. Se perustuu myös **[Pakollinen](controls/control-card.md)** -ominaisuuteen ja siihen, sisältyykö **[Päivitä](controls/control-card.md)** -ominaisuuteen arvoa. Jos **[Päivitä](controls/control-card.md)** -ominaisuuden arvo ei ole kelvollinen, **Virhe**-ominaisuus antaa käyttöystävällisen virhesanoman.
 
-Jos kortin **[DataField](controls/control-card.md)**-ominaisuus on *tyhjä*, kortti on vain ohjausobjektien säilö. Sen ominaisuudet **Kelvollinen** ja **[Päivitä](controls/control-card.md)** eivät osallistu lomakkeen lähettämiseen.
+Jos kortin **[DataField](controls/control-card.md)** -ominaisuus on *tyhjä*, kortti on vain ohjausobjektien säilö. Sen ominaisuudet **Kelvollinen** ja **[Päivitä](controls/control-card.md)** eivät osallistu lomakkeen lähettämiseen.
 
 ## <a name="dissecting-an-example"></a>Esimerkin analysointi
 Tutustumme nyt ohjausobjekteihin, joista perustiedonsyöttökortti koostuu. Väliä ohjausobjektien välillä on suurennettu, jotta ne on helpompi nähdä:
@@ -144,17 +144,17 @@ Tämä kortti koostuu neljästä ohjausobjektista:
 
 | Nimi | Tyyppi | Kuvaus |
 | --- | --- | --- |
-| **TextRequiredStar** |**[Nimi](controls/control-text-box.md)**-ohjausobjekti |Näyttää tähden, jota käytetään usein tiedonsyöttölomakkeissa ilmoittamaan, että kenttä on pakollinen. |
-| **TextFieldDisplayName** |**[Nimi](controls/control-text-box.md)**-ohjausobjekti |Näyttää tämän kentän kutsumanimen. Tämä nimi voi erota nimestä tietolähteen rakenteessa. |
+| **TextRequiredStar** |**[Nimi](controls/control-text-box.md)** -ohjausobjekti |Näyttää tähden, jota käytetään usein tiedonsyöttölomakkeissa ilmoittamaan, että kenttä on pakollinen. |
+| **TextFieldDisplayName** |**[Nimi](controls/control-text-box.md)** -ohjausobjekti |Näyttää tämän kentän kutsumanimen. Tämä nimi voi erota nimestä tietolähteen rakenteessa. |
 | **InputText** |**Lisää teksti** -ohjausobjekti |Näyttää kentän alkuarvon, jota käyttäjä voi muuttaa. |
-| **TextErrorMessage** |**[Nimi](controls/control-text-box.md)**-ohjausobjekti |Näyttää käyttäjäystävällisen virhesanoman käyttäjälle, jos vahvistuksessa ilmenee ongelmia. Varmistaa myös, että kentässä on arvo, jos se on pakollinen. |
+| **TextErrorMessage** |**[Nimi](controls/control-text-box.md)** -ohjausobjekti |Näyttää käyttäjäystävällisen virhesanoman käyttäjälle, jos vahvistuksessa ilmenee ongelmia. Varmistaa myös, että kentässä on arvo, jos se on pakollinen. |
 
 Näiden ohjausobjektien tiedot täytetään noutamalla niiden ominaisuudet kortin ominaisuuksista näillä keskeisillä kaavoilla. Huomaa, että mikään näistä kaavoista ei viittaa mihinkään tiettyyn kenttään. Kaikki tiedot ovat sen sijaan peräisin kortista.
 
 | Ohjausobjektin ominaisuus | Kaava | Kuvaus |
 | --- | --- | --- |
 | **TextRequiredStar.Visible** |**Parent.Required** |Tähti näkyy vain, jos kenttä on pakollinen. Pakollinen on kaava, jota käyttäjä tai tietolähteen metatiedot ohjaavat. |
-| **TextFieldDisplayName.Text** |**Parent.DisplayName** |Tekstiruudun ohjausobjekti näyttää kutsumanimen, jonka antaja on käyttäjä tai tietolähteen metatiedot, ja joka määritetään kortin **[DisplayName](controls/control-card.md)**-ominaisuudessa. |
+| **TextFieldDisplayName.Text** |**Parent.DisplayName** |Tekstiruudun ohjausobjekti näyttää kutsumanimen, jonka antaja on käyttäjä tai tietolähteen metatiedot, ja joka määritetään kortin **[DisplayName](controls/control-card.md)** -ominaisuudessa. |
 | **InputText.Default** |**Parent.Default** |Tekstisyöte-ohjausobjekti näyttää aluksi kentän arvon tietolähteestä kortin oletusarvon mukaisesti. |
 | **TextErrorMessage.Text** |**Parent.Error** |Jos vahvistusongelma ilmenee, kortin **Virhe**-ominaisuus näyttää asianmukaisen virhesanoman. |
 

@@ -80,11 +80,11 @@ Microsoft Flow’n avulla voit luoda logiikan, joka suorittaa yhden tai useamman
 
 1. Osoita **pohjaan perustuva sovellus tyhjästä** ruudun ja valitse sitten **Tee tämä sovellus**.
 
-1. Lisää **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjekti ja anna sille nimi **RecordTitle**.
+1. Lisää **[Tekstisyöte](controls/control-text-input.md)** -ohjausobjekti ja anna sille nimi **RecordTitle**.
 
-1. Lisää **[Painike](controls/control-button.md)**-ohjausobjekti ja siirrä se ohjausobjektin **RecordTitle** alle.
+1. Lisää **[Painike](controls/control-button.md)** -ohjausobjekti ja siirrä se ohjausobjektin **RecordTitle** alle.
 
-1. Kun **[Painike](controls/control-button.md)**-ohjausobjekti on valittuna, valitse **Toiminnot**-välilehdestä **Työnkulut**.
+1. Kun **[Painike](controls/control-button.md)** -ohjausobjekti on valittuna, valitse **Toiminnot**-välilehdestä **Työnkulut**.
 
     ![Työnkulut-valinta Toiminto-välilehdessä](./media/using-logic-flows/action-tab.png)
 

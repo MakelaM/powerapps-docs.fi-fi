@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65517361"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="radio-control-in-powerapps"></a>Valintanappi PowerAppsissa
 
@@ -57,11 +56,11 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -131,25 +130,25 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 
-[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 
-1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi tämä kaava:
+1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **["Standard"; "Premium"]**
+    **["Standard", "Premium"]**
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
-2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, siirrä se **Valintanappi**-ohjausobjektin alapuolelle ja aseta **[Selite](control-text-box.md)**-ohjausobjektin **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:
+2. Lisää **[Selite](control-text-box.md)** -ohjausobjekti, siirrä se **Valintanappi**-ohjausobjektin alapuolelle ja aseta **[Selite](control-text-box.md)** -ohjausobjektin **[Text](properties-core.md)** -ominaisuudeksi tämä kaava:
 
     **If ("Premium" Pricing.Selected.Value "200 euroa per päivä", "150 euroa päivässä")**
 
-    Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
 3. Pidä Alt-näppäintä painettuna ja valitse jompikumpi **Valintanappi**-ohjausobjektin vaihtoehto.
 
-    **[Selite](control-text-box.md)**-ohjausobjekti näyttää valintasi mukaisen tekstin.
+    **[Selite](control-text-box.md)** -ohjausobjekti näyttää valintasi mukaisen tekstin.
 
 4. (valinnainen) Pidä Alt-näppäintä painettuna, valitse toinen vaihtoehdoista ja tarkista, että näyttöön tulee asianmukainen teksti.
 
@@ -164,10 +163,10 @@ Varmista [normaalien värikontrastivaatimusten](../accessible-apps-color.md) lis
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelmien tuki
 
-* Varmista, että jokaisella asetuksella on **[arvo](properties-core.md)**.
+* Varmista, että jokaisella asetuksella on **[arvo](properties-core.md)** .
 * Harkitse **[selitteen](control-text-box.md)** lisäämistä otsikoksi jokaisen **Valintanappi**-ohjausobjektin edelle.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 
-* Määritä **[TabIndex](properties-accessibility.md)**-ominaisuudeksi nolla tai suurempi arvo, jotta näppäimistön käyttäjät voivat siirtyä siihen.
-* Määritä  **[FocusedBorderColor](properties-color-border.md)**- ja **[FocusedBorderThickness](properties-color-border.md)**-ominaisuudet niin, että kohdistusilmaisimet näkyvät selvästi.
+* Määritä **[TabIndex](properties-accessibility.md)** -ominaisuudeksi nolla tai suurempi arvo, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* Määritä  **[FocusedBorderColor](properties-color-border.md)** - ja **[FocusedBorderThickness](properties-color-border.md)** -ominaisuudet niin, että kohdistusilmaisimet näkyvät selvästi.

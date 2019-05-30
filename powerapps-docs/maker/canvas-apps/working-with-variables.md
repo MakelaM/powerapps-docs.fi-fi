@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61558983"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-canvas-app-variables-in-powerapps"></a>Pohjaan perustuvan sovelluksen muuttujien ymmärtäminen PowerAppsissa
 
@@ -57,16 +56,16 @@ Huomaa, **Label1** ohjausobjekti on valittuna, sen **[tekstin](controls/properti
 
 Kaava **Label1** on automaattisesti uudelleen, näemme uuden arvon.
 
-PowerAppsissa voidaan käyttää kaavoja määrittämään ohjausobjektin ensisijaisen arvon lisäksi myös ominaisuuksia, kuten muotoilun. Seuraavassa esimerkissä kaava nimen **[Väri](controls/properties-color-border.md)**-ominaisuudelle näyttää negatiiviset arvot automaattisesti punaisella. **[If](functions/function-if.md)**-funktio näyttää hyvin tutulta Excelistä:
+PowerAppsissa voidaan käyttää kaavoja määrittämään ohjausobjektin ensisijaisen arvon lisäksi myös ominaisuuksia, kuten muotoilun. Seuraavassa esimerkissä kaava nimen **[Väri](controls/properties-color-border.md)** -ominaisuudelle näyttää negatiiviset arvot automaattisesti punaisella. **[If](functions/function-if.md)** -funktio näyttää hyvin tutulta Excelistä:
 
-`If( Value(Label1.Text) < 0; Red; Black )`
+`If( Value(Label1.Text) < 0, Red, Black )`
 
 ![Animaation ehdollinen muotoilu](media/working-with-variables/recalc-color.gif)
 
 Voit käyttää kaavoja moniin erilaisiin skenaarioihin:
 
 * Käyttämällä laitteen GPS:ää kartan ohjausobjekti voi näyttää nykyisen sijaintisi kaavalla, joka käyttää signaaleja **Location.Latitude** ja **Location.Longitude**.  Kun siirryt, kartta seuraa sijaintiasi automaattisesti.
-* Muut käyttäjät voivat päivittää [tietolähteitä](working-with-data-sources.md).  Muut ryhmän jäsenet voivat esimerkiksi päivittää SharePoint-luettelon kohteita.  Kun päivität tietolähteen, riippuvat kaavat lasketaan automaattisesti uudelleen vastaamaan päivitettyjä tietoja. Jos viemme tätä esimerkkiä eteenpäin, haluat ehkä määrittää valikoiman **[Kohteet](controls/properties-core.md)**-ominaisuuden kaavaksi **Filter( SharePointList )**, joka näyttää automaattisesti vastikään suodatettujen [tietueiden](working-with-tables.md#records) sarjan.
+* Muut käyttäjät voivat päivittää [tietolähteitä](working-with-data-sources.md).  Muut ryhmän jäsenet voivat esimerkiksi päivittää SharePoint-luettelon kohteita.  Kun päivität tietolähteen, riippuvat kaavat lasketaan automaattisesti uudelleen vastaamaan päivitettyjä tietoja. Jos viemme tätä esimerkkiä eteenpäin, haluat ehkä määrittää valikoiman **[Kohteet](controls/properties-core.md)** -ominaisuuden kaavaksi **Filter( SharePointList )** , joka näyttää automaattisesti vastikään suodatettujen [tietueiden](working-with-tables.md#records) sarjan.
 
 ### <a name="benefits"></a>Edut
 
@@ -105,7 +104,7 @@ Jotta voimme luoda laskimen, tarvitsemme muuttujan, joka sisältää juoksevan s
 
 Näin yleiset muuttujat toimivat:
 
-* Yleisen muuttujan arvo asetetaan **[Set](functions/function-set.md)**-funktiolla.  **Set( MyVar; 1 )** asettaa yleisen muuttujan **MyVar** arvoon **1**.
+* Yleisen muuttujan arvo asetetaan **[Set](functions/function-set.md)** -funktiolla.  **Set( MyVar, 1 )** asettaa yleisen muuttujan **MyVar** arvoon **1**.
 * Yleistä muuttujaa käytetään viittaamalla nimeen, jota käytetään **Set**-funktion kanssa.  Tässä tapauksessa **MyVar** palauttaa arvon **1**.
 * Yleiset muuttujat voivat sisältää mitä tahansa arvoja, mukaan lukien merkkijonoja, lukuja, tietueita ja [taulukkoja](working-with-tables.md).
 
@@ -113,9 +112,9 @@ Rakennetaan laskuri uudelleen käyttämällä yleistä muuttujaa:
 
 1. Lisää tekstisyötteen ohjausobjekti nimeltä **TextInput1** ja kaksi painiketta nimeltä **Button1** ja **Button2**.
 
-2. Määritä **Button1**-painikkeen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **Lisää** ja **Button2**-painikkeen **Teksti**-ominaisuudeksi **Tyhjennä**.
+2. Määritä **Button1**-painikkeen **[Teksti](controls/properties-core.md)** -ominaisuudeksi **Lisää** ja **Button2**-painikkeen **Teksti**-ominaisuudeksi **Tyhjennä**.
 
-3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
     **Määritä (RunningTotal, RunningTotal + TextInput1)**
 
@@ -125,13 +124,13 @@ Rakennetaan laskuri uudelleen käyttämällä yleistä muuttujaa:
 
     ![Lisää-painikkeen OnSelect-ominaisuuden asetus on joukko-funktio](media/working-with-variables/global-variable-1.png)
 
-4. Jotta juokseva summa määritetään **nollaksi** aina, kun käyttäjä valitsee **Tyhjennä**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+4. Jotta juokseva summa määritetään **nollaksi** aina, kun käyttäjä valitsee **Tyhjennä**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **Set( RunningTotal; 0 )**
+    **Set( RunningTotal, 0 )**
 
     ![Tyhjennä-painike OnSelect-ominaisuus määritetään joukko-funktio](media/working-with-variables/global-variable-2.png)
 
-5. Lisää **[Nimi](controls/control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **RunningTotal**.
+5. Lisää **[Nimi](controls/control-text-box.md)** -ohjausobjekti ja määritä sen **[Teksti](controls/properties-core.md)** -ominaisuudeksi **RunningTotal**.
 
     Tämä kaava lasketaan automaattisesti uudelleen, ja se näyttää käyttäjälle **RunningTotal**-arvon sen muuttuessa sen mukaan, mitä painikkeita käyttäjä valitsee.
 
@@ -163,9 +162,9 @@ Powerappsissa on kolme muuttujatyyppiä:
 
 Kaikki muuttujat luodaan implisiittisesti, kun ne näkyvät **määrittää**, **UpdateContext**, **Navigate**, **kerätä**, tai  **ClearCollect** funktio. Muuttuja ja tyyppi ilmoittamaan sinulle on vain siihen näistä funktioista missä tahansa sovelluksessa. Mikään näistä funktioista luoda muuttujia. he vain täyttää muuttujien arvot. Älä koskaan kielessä muuttujia eksplisiittisesti sillä ehkä toista ohjelmointityökalua, ja kaikki kirjoittamalla on implisiittinen käyttöön.
 
-Esimerkiksi voi olla Painikeohjausobjekti, jolla **OnSelect** kaava on yhtä suuri kuin **Set (X, 1)**. Tämä kaava määrittää **X** muuttujaksi, jonka tyyppi on numero. Voit käyttää **X** kaavoissa luku ja kyseisen muuttujan on *tyhjä* sen jälkeen, kun avaat sovelluksen, mutta ennen kuin valitset painikkeen. Kun valitset painikkeen, voit antaa **X** arvo **1**.
+Esimerkiksi voi olla Painikeohjausobjekti, jolla **OnSelect** kaava on yhtä suuri kuin **Set (X, 1)** . Tämä kaava määrittää **X** muuttujaksi, jonka tyyppi on numero. Voit käyttää **X** kaavoissa luku ja kyseisen muuttujan on *tyhjä* sen jälkeen, kun avaat sovelluksen, mutta ennen kuin valitset painikkeen. Kun valitset painikkeen, voit antaa **X** arvo **1**.
 
-Jos olet lisännyt toinen painike ja määritä sen **OnSelect** ominaisuudeksi **Set (X, ”Hei”)**, ilmetä virhe, koska (merkkijono) ei vastaa tyyppi edellisten **määrittää**(luku). Muuttujan implisiittinen määritelmät on hyväksyttävä tyypin. Uudelleen, kaikki tämä tapahtui, koska olet mainitaan **X** kaavoissa ei, koska jokin kaavojen oli itse asiassa suoritetaan.
+Jos olet lisännyt toinen painike ja määritä sen **OnSelect** ominaisuudeksi **Set (X, ”Hei”)** , ilmetä virhe, koska (merkkijono) ei vastaa tyyppi edellisten **määrittää**(luku). Muuttujan implisiittinen määritelmät on hyväksyttävä tyypin. Uudelleen, kaikki tämä tapahtui, koska olet mainitaan **X** kaavoissa ei, koska jokin kaavojen oli itse asiassa suoritetaan.
 
 Poista muuttujan poistamalla kaikki **määrittää**, **UpdateContext**, **Navigate**, **kerätä**, tai **ClearCollect**  funktioita, jotka vahvistavat implisiittisesti muuttujan. Nämä funktiot ilman muuttujaa ei ole. Sinun on poistettava myös muuttujan viittauksia, koska ne aiheuttaa virheen.
 
@@ -181,13 +180,13 @@ Kun käyttäjä avaa sovelluksen, Kaikilla muuttujilla on alkuarvo, *tyhjä*.
 
 Arvo luetaan sen muuttujan nimen avulla. Voit esimerkiksi määrittää muuttuja on tämä kaava:
 
-`Set( Radius; 12 )`
+`Set( Radius, 12 )`
 
 Sitten voit käyttää **Radius** tahansa voit määrittää luvun, että se korvataan **12**:
 
-`Pi() * Power( Radius; 2 )`
+`Pi() * Power( Radius, 2 )`
 
-Jos annat kontekstimuuttujan on sama nimi kuin yleisen muuttujan tai kokoelmaan, kontekstimuuttujan etusijalla. Voit edelleen viitata yleisen muuttujan tai kokoelmassa käytettäessä [selvitysoperaattoria](functions/operators.md#disambiguation-operator) **@[Radius]**.
+Jos annat kontekstimuuttujan on sama nimi kuin yleisen muuttujan tai kokoelmaan, kontekstimuuttujan etusijalla. Voit edelleen viitata yleisen muuttujan tai kokoelmassa käytettäessä [selvitysoperaattoria](functions/operators.md#disambiguation-operator) **@[Radius]** .
 
 ## <a name="use-a-context-variable"></a>Käytät kontekstimuuttujaa
 
@@ -198,16 +197,16 @@ Näin kontekstimuuttujat toimivat:
 * Implisiittisesti muodostaa ja määrittää kontekstimuuttujan **[UpdateContext](functions/function-updatecontext.md)** tai **[Navigate](functions/function-navigate.md)** funktio. Kun sovellus käynnistyy, kaikki kontekstimuuttujat alkuarvo on *tyhjä*.
 * Kontekstimuuttujat päivitetään tietueiden kanssa. Muissa ohjelmointityökaluissa voidaan yleisesti käyttää merkkiä ”=” vastaamaan varausta, kuten ”x = 1”. Kontekstimuuttujien, käytä **{x: 1}** sen sijaan. Kun käytät kontekstimuuttujaa, käytä suoraan ilman tietueen syntaksi sen nimeä.
 * Voit myös määrittää kontekstimuuttujan käytettäessä **[Navigate](functions/function-navigate.md)** näyttö-toiminnon. Jos kuvittelet näytön olevan eräänlainen toimintosarja tai aliohjelma, tämä menetelmä muistuttaa parametrin välittämistä muissa ohjelmointityökaluissa.
-* Paitsi **[Siirry](functions/function-navigate.md)**-funktio, kontekstimuuttujat on rajoitettu yhden näytön kontekstiin, jossa ne saavat nimensä. Niitä ei voi käyttää tai määrittää tämän kontekstin ulkopuolella.
+* Paitsi **[Siirry](functions/function-navigate.md)** -funktio, kontekstimuuttujat on rajoitettu yhden näytön kontekstiin, jossa ne saavat nimensä. Niitä ei voi käyttää tai määrittää tämän kontekstin ulkopuolella.
 * Kontekstimuuttujat voivat sisältää mitä tahansa arvoja, mukaan lukien merkkijonoja, lukuja, tietueita ja [taulukkoja](working-with-tables.md).
 
 Rakennetaan laskuri uudelleen käyttämällä kontekstimuuttujaa:
 
 1. Lisää tekstisyötteen ohjausobjekti nimeltä **TextInput1** ja kaksi painiketta nimeltä **Button1** ja **Button2**.
 
-2. Määritä **Button1**-painikkeen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **Lisää** ja **Button2**-painikkeen **Teksti**-ominaisuudeksi **Tyhjennä**.
+2. Määritä **Button1**-painikkeen **[Teksti](controls/properties-core.md)** -ominaisuudeksi **Lisää** ja **Button2**-painikkeen **Teksti**-ominaisuudeksi **Tyhjennä**.
 
-3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
     **UpdateContext ({RunningTotal: RunningTotal + TextInput1})**
 
@@ -217,15 +216,15 @@ Rakennetaan laskuri uudelleen käyttämällä kontekstimuuttujaa:
 
     ![Lisää OnSelect-ominaisuudessa](media/working-with-variables/context-variable-1.png)
 
-4. Jotta juokseva summa määritetään **nollaksi** aina, kun käyttäjä valitsee **Tyhjennä**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+4. Jotta juokseva summa määritetään **nollaksi** aina, kun käyttäjä valitsee **Tyhjennä**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
     **UpdateContext ({RunningTotal: 0 } )**
 
-    Uudelleen **[UpdateContext](functions/function-updatecontext.md)** käytetään kaavan **UpdateContext ({RunningTotal: 0 } )**.
+    Uudelleen **[UpdateContext](functions/function-updatecontext.md)** käytetään kaavan **UpdateContext ({RunningTotal: 0 } )** .
 
     ![OnSelect-ominaisuudessa Tyhjennä-painike](media/working-with-variables/context-variable-2.png)
 
-5. Lisää **[Nimi](controls/control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **RunningTotal**.
+5. Lisää **[Nimi](controls/control-text-box.md)** -ohjausobjekti ja määritä sen **[Teksti](controls/properties-core.md)** -ominaisuudeksi **RunningTotal**.
 
     Tämä kaava lasketaan automaattisesti uudelleen, ja se näyttää käyttäjälle **RunningTotal**-arvon sen muuttuessa sen mukaan, mitä painikkeita käyttäjä valitsee.
 
@@ -237,7 +236,7 @@ Rakennetaan laskuri uudelleen käyttämällä kontekstimuuttujaa:
 
 7. Voit määrittää kontekstimuuttujan arvon siirtyessäsi näyttöön. Tästä on hyötyä välitettäessä kontekstia tai parametreja näytöstä toiseen. Tätä tapaa osoittamaan Lisää näyttö, Lisää painike ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-    **Navigate( Screen1; None; { RunningTotal: -1000 } )**
+    **Navigate( Screen1, None, { RunningTotal: -1000 } )**
 
     ![Painikkeen OnSelect-ominaisuus](media/working-with-variables/context-variable-5.png)
 
@@ -259,19 +258,19 @@ Tutustutaan lopuksi laskimen lisäämiseen kokoelman avulla.  Koska kokoelma sis
 
 Näin kokoelmat toimivat:
 
-* Luo ja määritä kokoelmia **[ClearCollect](functions/function-clear-collect-clearcollect.md)**-funktiolla.  Voit vaihtoehtoisesti käyttää **[Collect](functions/function-clear-collect-clearcollect.md)**-funktiota, mutta periaatteessa se edellyttää toista muuttujaa vanhan muuttujan korvaamisen sijasta.  
-* Kokoelma on eräänlainen tietolähde ja näin ollen taulukko. Voit käyttää kokoelman yhtä arvoa **[First](functions/function-first-last.md)**-funktion avulla ja poimia yhden kentän tuloksena saatavasta tietueesta. Jos käytit yksittäistä arvoa **[ClearCollect](functions/function-clear-collect-clearcollect.md)**-funktion kanssa, tämä on **Arvo**-kenttä, kuten tässä esimerkissä:<br>
+* Luo ja määritä kokoelmia **[ClearCollect](functions/function-clear-collect-clearcollect.md)** -funktiolla.  Voit vaihtoehtoisesti käyttää **[Collect](functions/function-clear-collect-clearcollect.md)** -funktiota, mutta periaatteessa se edellyttää toista muuttujaa vanhan muuttujan korvaamisen sijasta.  
+* Kokoelma on eräänlainen tietolähde ja näin ollen taulukko. Voit käyttää kokoelman yhtä arvoa **[First](functions/function-first-last.md)** -funktion avulla ja poimia yhden kentän tuloksena saatavasta tietueesta. Jos käytit yksittäistä arvoa **[ClearCollect](functions/function-clear-collect-clearcollect.md)** -funktion kanssa, tämä on **Arvo**-kenttä, kuten tässä esimerkissä:<br>
 **First(** *VariableName* **).Value**
 
 Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 1. Lisää **[tekstisyötteen](controls/control-text-input.md)** ohjausobjekti nimeltä **TextInput1** ja kaksi painiketta nimeltä **Button1** ja **Button2**.
 
-2. Määritä **Button1**-painikkeen **[Teksti](controls/properties-core.md)**-ominaisuudeksi **Lisää** ja **Button2**-painikkeen **Teksti**-ominaisuudeksi **Tyhjennä**.
+2. Määritä **Button1**-painikkeen **[Teksti](controls/properties-core.md)** -ominaisuudeksi **Lisää** ja **Button2**-painikkeen **Teksti**-ominaisuudeksi **Tyhjennä**.
 
-3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **Collect( PaperTape; TextInput1.Text )**
+    **Collect( PaperTape, TextInput1.Text )**
 
     Tämä kaava pelkkä olemassaolo määrittää **PaperTape** kuin kokoelma, jossa tekstimerkkijonoa yksisarakkeisen taulukon. Voit viitata **PaperTape** missä tahansa sovelluksessa. Aina, kun käyttäjä avaa sovelluksessa **PaperTape** on tyhjä taulukko.
 
@@ -285,9 +284,9 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
     ![OnSelect-ominaisuudessa Tyhjennä-painike](media/working-with-variables/papertape-2.png)
 
-5. Näytä juokseva summa lisäämällä nimi, ja määritä sen **[Teksti](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+5. Näytä juokseva summa lisäämällä nimi, ja määritä sen **[Teksti](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **Sum( PaperTape; Value )**
+    **Sum( PaperTape, Value )**
 
     ![Otsikon tekstin ominaisuutta](media/working-with-variables/papertape-3.png)
 
@@ -297,7 +296,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 7. Palaa oletustyötilaan painamalla Esc-näppäintä.
 
-8. Näytä paperinauha lisäämällä **Arvotaulukko**-ohjausobjekti ja määritä sen **[Kohteet](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+8. Näytä paperinauha lisäämällä **Arvotaulukko**-ohjausobjekti ja määritä sen **[Kohteet](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
     **PaperTape**
 
@@ -311,7 +310,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 10. Tallentaa ja Nouda kokoelma lisäämällä kaksi muuta painikeohjausobjektia ja määrittämällä niiden **tekstin** ominaisuudet, jotta voit **lataaminen** ja **Tallenna**. Määritä **OnSelect** -ominaisuuden **lataaminen** painike Tämä kaava:
 
-     **Clear( PaperTape );; LoadData( PaperTape; "StoredPaperTape"; true )**
+     **Clear( PaperTape ); LoadData( PaperTape, "StoredPaperTape", true )**
 
      Haluat tyhjentää kokoelman ensin, koska **LoadData** liittää tallennetut arvot kokoelman loppuun.
 
@@ -319,7 +318,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 11. Määritä **OnSelect** -ominaisuuden **Tallenna** painike Tämä kaava:
 
-     **SaveData( PaperTape; "StoredPaperTape" )**
+     **SaveData( PaperTape, "StoredPaperTape" )**
 
      ![Ominaisuuden OnSelect * Tallenna-painiketta](media/working-with-variables/papertape-6.png)
 

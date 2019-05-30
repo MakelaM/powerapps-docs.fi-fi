@@ -30,8 +30,8 @@ Pohjaan perustuvissa sovelluksissa käytettävien värien tulisi olla sellaisia,
 
 Vuorovaikutteisten ohjausobjektien seuraavien osien välillä on oltava riittävä värikontrasti:
 * **[Väri](controls/properties-color-border.md)** ja **[täyttö](controls/properties-color-border.md)**
-* **[PressedColor](controls/properties-color-border.md)**-väri ja  **[PressedFill](controls/properties-color-border.md)**-täyttö
-* **[HoverColor](controls/properties-color-border.md)**-väri ja **[HoverFill](controls/properties-color-border.md)**-täyttö
+* **[PressedColor](controls/properties-color-border.md)** -väri ja  **[PressedFill](controls/properties-color-border.md)** -täyttö
+* **[HoverColor](controls/properties-color-border.md)** -väri ja **[HoverFill](controls/properties-color-border.md)** -täyttö
 
 ## <a name="minimum-contrast-for-non-text"></a>Ei-tekstisisällön vähimmäiskontrasti
 
@@ -40,29 +40,29 @@ Vuorovaikutteisten ohjausobjektien seuraavien osien välillä on oltava riittäv
 
 ### <a name="user-interface-components"></a>Käyttöliittymän osat
 Vuorovaikutteisten ohjausobjektien seuraavien osien välillä on oltava riittävä värikontrasti:
-* **[FocusedBorderColor](controls/properties-color-border.md)**-väri ja ohjausobjektin ulkopuolinen väri
+* **[FocusedBorderColor](controls/properties-color-border.md)** -väri ja ohjausobjektin ulkopuolinen väri
 
-Värikontrastien lisätarkistukset koskevat ohjausobjekteja, joissa koko alue sisältää tietoa tai on vuorovaikutteinen. Tällainen voi olla esimerkiksi **[painike](controls/control-button.md)** tai **[kuvake](controls/control-shapes-icons.md)**, jota käytetään painikkeena. Näin voit varmistaa, että ohjausobjektin rajat ovat selkeät ja että käyttäjät tietävät, mitä kohtaa he voivat napsauttaa tai napauttaa.
+Värikontrastien lisätarkistukset koskevat ohjausobjekteja, joissa koko alue sisältää tietoa tai on vuorovaikutteinen. Tällainen voi olla esimerkiksi **[painike](controls/control-button.md)** tai **[kuvake](controls/control-shapes-icons.md)** , jota käytetään painikkeena. Näin voit varmistaa, että ohjausobjektin rajat ovat selkeät ja että käyttäjät tietävät, mitä kohtaa he voivat napsauttaa tai napauttaa.
 
 Jos tällaisilla ohjausobjekteilla on reuna, seuraavien värikontrastien pitäisi olla riittävät:
-* **[BorderColor](controls/properties-color-border.md)**-väri ja ohjausobjektin ulkopuolinen väri
-* **[BorderColor](controls/properties-color-border.md)**-väri ja ohjausobjektin ulkopuolinen väri
-* **[HoverBorderColor](controls/properties-color-border.md)**-väri ja ohjausobjektin ulkopuolinen väri
+* **[BorderColor](controls/properties-color-border.md)** -väri ja ohjausobjektin ulkopuolinen väri
+* **[BorderColor](controls/properties-color-border.md)** -väri ja ohjausobjektin ulkopuolinen väri
+* **[HoverBorderColor](controls/properties-color-border.md)** -väri ja ohjausobjektin ulkopuolinen väri
 
 Jos tällaisilla ohjausobjekteilla ei ole reunaa, seuraavien värikontrastien pitäisi olla riittävät:
 * **[Täyttö](controls/properties-color-border.md)** ja ohjausobjektin ulkopuolinen väri
-* **[PressedFill](controls/properties-color-border.md)**-täyttö ja ohjausobjektin ulkopuolinen väri
-* **[HoverFill](controls/properties-color-border.md)**-täyttö ja ohjausobjektin ulkopuolinen väri
+* **[PressedFill](controls/properties-color-border.md)** -täyttö ja ohjausobjektin ulkopuolinen väri
+* **[HoverFill](controls/properties-color-border.md)** -täyttö ja ohjausobjektin ulkopuolinen väri
 
 ### <a name="graphical-objects"></a>Graafiset objektit
-Jos kuva välittää tärkeitä tietoja, tarkista, esiintyykö siinä kontrastiongelmia. Tämä koskee ohjausobjekteja, joissa voidaan näyttää kuva: **[Ääni](controls/control-audio-video.md)**,  **[kuvan](controls/control-image.md)**,  **[mikrofoni](controls/control-microphone.md)**, ja **[videon](controls/control-audio-video.md)**.
+Jos kuva välittää tärkeitä tietoja, tarkista, esiintyykö siinä kontrastiongelmia. Tämä koskee ohjausobjekteja, joissa voidaan näyttää kuva: **[Ääni](controls/control-audio-video.md)** ,  **[kuvan](controls/control-image.md)** ,  **[mikrofoni](controls/control-microphone.md)** , ja **[videon](controls/control-audio-video.md)** .
 
 Tarkista, esiintyykö videosisällössä kontrastiongelmia. Voit vaihtoehtoisesti tai lisäksi lisätä videota kuvaavan [tekstityksen](controls/control-audio-video.md).
 
 ## <a name="provide-other-visual-cues"></a>Muiden visuaalisten elementtien lisääminen
 Varmista, että sovellus välittää tietoa muillakin keinoilla kuin värillä. Esimerkiksi punavihervärisokeat käyttäjät eivät pysty erottamaan virheestä kertovaa punaista ilmoitusta onnistumisesta kertovasta vihreästä ilmoituksesta.
 
-Voit välittää merkityksen lisäelementeillä, kuten **[kuvakkeilla](controls/control-shapes-icons.md)**, tai tekstityyleillä, kuten **[kursivoinnilla](controls/properties-text.md)** ja **[alleviivauksella](controls/properties-text.md)**.
+Voit välittää merkityksen lisäelementeillä, kuten **[kuvakkeilla](controls/control-shapes-icons.md)** , tai tekstityyleillä, kuten **[kursivoinnilla](controls/properties-text.md)** ja **[alleviivauksella](controls/properties-text.md)** .
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 Lue lisää [Helppokäyttöisyysasetuksista](controls/properties-accessibility.md) PowerAppsin ohjausobjekteista ja kokeile [helppokäyttöisyyden tarkistusta](accessibility-checker.md).

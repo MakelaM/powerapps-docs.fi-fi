@@ -54,7 +54,7 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
@@ -72,7 +72,7 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 **Keskeytetty** – *True*, jos median toisto -ohjausobjekti on sillä hetkellä keskeytetty, muuten *false*.
 
-**[Nollaa](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
+**[Nollaa](properties-core.md) ** – Palautuuko ohjausobjekti oletusarvoonsa.
 
 **Start** – Toistetaanko ääni- tai videoleike.
 
@@ -133,7 +133,7 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 ### <a name="color-contrast"></a>Värikontrasti
 Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
-* **[FocusedBorderColor](properties-color-border.md)**  ja ulkopuolinen väri
+* **[FocusedBorderColor](properties-color-border.md) ** ja ulkopuolinen väri
 * **[Kuva](properties-visual.md)** ja multimediasoittimen ohjausobjektit (jos sovellettavissa)
 * **[Täyttö](properties-color-border.md)** ja multimediasoittimen ohjausobjektit (jos täyttö on näkyvissä)
 

@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544656"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="add-picture-control-in-powerapps"></a>Lisää kuva -ohjausobjekti PowerAppsissa
 Ottaa valokuvan tai lataa kuvat paikallisesta laitteesta.
@@ -46,11 +45,11 @@ Katso [kuvan ohjausobjektin viittauksesta](control-image.md) **kuvan** ominaisuu
 
 **[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella tietoja (**View**), vai onko ominaisuus poistettu käytöstä (**Disabled**).
 
@@ -115,7 +114,7 @@ Katso [kuvan ohjausobjektin viittauksesta](control-image.md) **kuvan** ominaisuu
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="add-images-to-an-image-gallery-control"></a>Lisää kuvia Kuvavalikoima-ohjausobjektiin
@@ -123,24 +122,24 @@ Katso [kuvan ohjausobjektin viittauksesta](control-image.md) **kuvan** ominaisuu
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Napsauta tai napauta **Avaa**-valintaikkunassa kuvatiedostoa ja valitse sitten **Avaa**.
-3. Lisää **[Painike](control-button.md)**-ohjausobjekti, siirrä se **Lisää kuva** -ohjausobjektin alle ja määritä **[Painike](control-button.md)**-ohjausobjektin **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
-   **Collect(MyPix; AddMediaButton1.Media)**
+3. Lisää **[Painike](control-button.md)** -ohjausobjekti, siirrä se **Lisää kuva** -ohjausobjektin alle ja määritä **[Painike](control-button.md)** -ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
+   **Collect(MyPix, AddMediaButton1.Media)**
    
-    Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
-4. Lisää **Kuvavalikoima**-ohjausobjekti ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi **MyPix**.
-5. Paina F5-näppäintä ja napsauta tai napauta sitten **[Painike](control-button.md)**-ohjausobjektia.
+    Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
+4. Lisää **Kuvavalikoima**-ohjausobjekti ja aseta sen **[Items](properties-core.md)** -ominaisuudeksi **MyPix**.
+5. Paina F5-näppäintä ja napsauta tai napauta sitten **[Painike](control-button.md)** -ohjausobjektia.
    
-    **Lisää kuva** -ohjausobjektilta tuleva kuva näkyy **Kuvavalikoima**-ohjausobjektissa. Jos kuvasi kuvasuhde ei ole sama kuin **Kuvavalikoima**-ohjausobjektissa olevalla **[Kuva](control-image.md)**-ohjausobjektilla, määritä **[Kuva](control-image.md)**-ohjausobjektin **[ImagePosition](properties-visual.md)**-ominaisuudeksi **Sovita**.
-6. Napsauta tai napauta **Lisää kuva** -ohjausobjektia, napsauta tai napauta toista kuvatiedostoa, napsauta tai napauta kohtaa **Avaa** ja napsauta tai napauta sitten lisäämääsi **[Painike](control-button.md)**-ohjausobjektia.
+    **Lisää kuva** -ohjausobjektilta tuleva kuva näkyy **Kuvavalikoima**-ohjausobjektissa. Jos kuvasi kuvasuhde ei ole sama kuin **Kuvavalikoima**-ohjausobjektissa olevalla **[Kuva](control-image.md)** -ohjausobjektilla, määritä **[Kuva](control-image.md)** -ohjausobjektin **[ImagePosition](properties-visual.md)** -ominaisuudeksi **Sovita**.
+6. Napsauta tai napauta **Lisää kuva** -ohjausobjektia, napsauta tai napauta toista kuvatiedostoa, napsauta tai napauta kohtaa **Avaa** ja napsauta tai napauta sitten lisäämääsi **[Painike](control-button.md)** -ohjausobjektia.
    
     Toinen kuva tulee näkyviin **Kuvavalikoima**-ohjausobjektiin.
 7. (valinnainen) Toista edellinen vaihe yhden tai useamman kerran ja palaa sitten oletustyötilaan painamalla ESC-näppäintä.
 
-Tallenna kuvat paikallisesti **[SaveData](../functions/function-savedata-loaddata.md)**-funktiolla tai päivitä tietolähde **[Patch](../functions/function-patch.md)**-funktiolla.
+Tallenna kuvat paikallisesti **[SaveData](../functions/function-savedata-loaddata.md)** -funktiolla tai päivitä tietolähde **[Patch](../functions/function-patch.md)** -funktiolla.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
-Samat ohjeet koskevat sekä **[Painiketta](control-button.md)** että **[Kuvaa](control-image.md)**. Huomioi lisäksi seuraavat asiat:
+Samat ohjeet koskevat sekä **[Painiketta](control-button.md)** että **[Kuvaa](control-image.md)** . Huomioi lisäksi seuraavat asiat:
 
 ### <a name="color-contrast"></a>Värikontrasti
 * **Lisää mediasisältö -painikkeen** tekstin ja taustan välisen kontrastin on oltava riittävän suuri. Koska ladatussa kuvassa voi olla eri värejä, käytä läpinäkymätöntä **[täyttöä](properties-color-border.md)** **Lisää mediasisältöä -painikkeessa** yhtenäisen kontrastin varmistamiseksi.
@@ -149,6 +148,6 @@ Samat ohjeet koskevat sekä **[Painiketta](control-button.md)** että **[Kuvaa](
 * **Lisää mediasisältö -painikkeessa** on oltava **teksti** ja **ChangePictureText**, jotka kehottavat käyttäjää lisäämään tai vaihtamaan kuvan.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **Lisää mediasisältöä -painikkeen** **[TabIndex](properties-accessibility.md)**-arvon on oltava nolla tai suurempi, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **Lisää mediasisältöä -painikkeen** **[TabIndex](properties-accessibility.md)** -arvon on oltava nolla tai suurempi, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * **Lisää mediasisältöä -painikkeessa** on oltava selvästi näkyvät kohdistuksen ilmaisimet. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
  

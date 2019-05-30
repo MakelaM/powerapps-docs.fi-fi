@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544242"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="gallery-control-in-canvas-apps"></a>Valikoima-ohjausobjektin pohjaan perustuvat sovellukset
 
@@ -45,7 +44,7 @@ Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 
-**[AccessibleLabel](properties-accessibility.md)**  – näytönlukuohjelmien valikoiman (ei sen sisältämät kohteet) nimen. Käytetään kuvaamaan kohteiden luetteloa.
+**[AccessibleLabel](properties-accessibility.md) ** – näytönlukuohjelmien valikoiman (ei sen sisältämät kohteet) nimen. Käytetään kuvaamaan kohteiden luetteloa.
 
 **AllItems** – Kaikki valikoiman kohteet, mukaan lukien lisäohjausarvot, jotka ovat osa valikoiman mallipohjaa.
 
@@ -93,7 +92,7 @@ Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Filter**( *Tietolähde*; *Kaava* )](../functions/function-filter-lookup.md)
+[**Filter**( *Tietolähde*, *Kaava* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Esimerkkejä
 
