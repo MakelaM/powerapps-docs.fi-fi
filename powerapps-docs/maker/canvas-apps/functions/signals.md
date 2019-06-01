@@ -7,29 +7,34 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 18bd89549aa330b5da333dccfd723887db38a36e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d375adeb8a20dfe2d9629a9c34944a8dcd80a8e7
+ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61553910"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451445"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Acceleration-, App-, Compass-, Connection- ja Location-signaalit PowerAppsissa
-Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.  
+
+Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin maailmassa ja tiedon siitä, mikä näyttö näytetään.
 
 ## <a name="description-and-syntax"></a>Kuvaus ja syntaksi
-Kaikki signaalit palauttavat [tietueen](../working-with-tables.md#records) tiedoista. Voit käyttää tietoja ja tallentaa ne tietueeksi. Voit myös poimia yksittäisiä ominaisuuksia käyttämällä **.** [-operaattoria](operators.md).
+
+Signaalit ovat arvoa, voit muuttaa milloin tahansa riippumaton miten käyttäjä voi käyttää sovelluksen kanssa. Kaavat, jotka perustuvat signaalit automaattisesti laskea uudelleen, kun nämä arvot muuttuvat.
+
+Signaalit palauttavat yleensä [tietueen](../working-with-tables.md#records) tietoja. Voit käyttää tietoja ja tallentaa ne tietueeksi. Voit myös poimia yksittäisiä ominaisuuksia käyttämällä **.** [-operaattoria](operators.md).
 
 > [!NOTE]
 > **Acceleration** ja **kompassi** funktiot palauttavat tarkat arvot soitin, kuten iOS: lle tai Androidille, mutta kun ne palauttavat nolla-arvojen luot tai muokkaat sovelluksen selaimessa.
 
 ### <a name="acceleration"></a>Acceleration
+
 **Acceleration**-signaali palauttaa laitteen kiihtyvyyden kolmessa ulottuvuudessa suhteessa laitteen näyttöön. Kiihtyvyys mitataan *g*-yksikköinä 9,81 m/s<sup>2</sup> tai 32,2 ft/s<sup>2</sup> (maan vetovoiman aiheuttama kiihtyvyys maan pinnalla).
 
 | Ominaisuus | Kuvaus |
@@ -39,28 +44,14 @@ Kaikki signaalit palauttavat [tietueen](../working-with-tables.md#records) tiedo
 | **Acceleration.Z** |Ylös ja alas.  Ylös on positiivinen luku. |
 
 ### <a name="app"></a>App
-**App**-signaali palauttaa tietoja käynnissä olevasta sovelluksesta.
+
+Mm **sovelluksen** objekti sisältää signaalin, joka ilmaisee, mikä näyttö näytetään.
 
 | Ominaisuus | Kuvaus |
 | --- | --- |
-| **App.ActiveScreen** | Näkyvissä oleva näyttö. Palauttaa näytön ohjausobjektin, jota voit käyttää viittaamaan näytön ominaisuuksiin tai vertaamaan toiseen näyttöön määrittääksesi, mikä näyttö näytetään. Voit muuttaa näytettävää näyttöä **[takaisin](function-navigate.md)** tai **[Navigate](function-navigate.md)** funktio. |
-| **App.Width** | Palauttaa leveys-ikkunan, jossa sovellus on käynnissä. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **leveys** reagoiva sovelluksen rakentaminen näytön ominaisuus.  |
-| **App.Height** | Palauttaa ikkunan, jossa sovellus on käynnissä korkeuden. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** reagoiva sovelluksen rakentaminen näytön ominaisuus. |
-| **App.DesignWidth** | Palauttaa sovelluksen leveys PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **leveys** näytön Vähimmäisleveys reagoiva sovelluksessa varmistamiseksi ominaisuus.  |
-| **App.DesignHeight** | Palauttaa sovelluksen korkeus PowerApps Studio. Voit käyttää tätä ominaisuutta kaavassa, kun määrität **korkeus** näytön vähimmäiskorkeus reagoiva sovelluksessa varmistamiseksi ominaisuus.  |
-| **App.SizeBreakpoints** | Yhden sarakkeen taulukon, joka rajoittaa ikkunan koon lukujen välillä, joka [ **Screen.Size** ](../controls/control-screen.md) ominaisuus palauttaa. Mukauta, että kaikki sovelluksen näyttöjä, käytä keskeytyskohtien voi muuttaa tämän taulukon arvot.
+| **App.ActiveScreen** |Näyttö, joka näyttää. Palauttaa näytön ohjausobjektin, jota voit käyttää viittaamaan näytön ominaisuuksiin tai vertaamaan toiseen näyttöön määrittääksesi, mikä näyttö näytetään. Voit määrittää **[takaisin](function-navigate.md)** tai **[Navigate](function-navigate.md)** funktiota muuttaaksesi näyttö, joka näyttää. |
 
-**Sovelluksen** objekti on myös [toimintakaavassa](../working-with-formulas-in-depth.md) , johon voit asettaa.
-
-| Ominaisuus  | Kuvaus |
-| --- | --- |
-| **App.OnStart** | Sovellus, kun käyttäjä käynnistää sen toiminta. Tekijät usein tämän ominaisuuden avulla ja noutaa tietoja välimuistiin kokoelmiin kanssa **[kerätä](function-clear-collect-clearcollect.md)** funktio, Määritä muuttujat **[määrittää](function-set.md)** funktio ja ensimmäinen näyttö ja siirry **[Navigate](function-navigate.md)** funktio. Kaava lasketaan, ennen kuin ensimmäinen näyttö näytetään. Yhtään näyttöä ei ladattu, joten et voi määrittää kontekstimuuttujan kanssa **[UpdateContext](function-updatecontext.md)** funktio. Voit kuitenkin välittää kontekstimuuttujia kanssa **Navigate** funktio. |
-
-**Sovelluksen** näkyy vasemmassa siirtymisruudussa ohjausobjektien hierarkkisessa luettelossa yläosassa ja voit valita tämän objektin näytössä on ohjausobjekti, kuten. Kun olet valinnut objektia, voit tarkastella ja muokata sen ominaisuuksia, jos valitset kyseisen ominaisuuden vasemmalla puolella kaavarivin avattavasta-luettelosta.  
-
-Kun muutat **OnStart** ominaisuutta, voit testata sitä hiiri **sovelluksen** objektin vasemmasta siirtymisruudusta, valitsemalla kolme pistettä (...), joka näkyy ja valitsemalla sitten **suorittaa OnStart**. Toisin kuin kun sovellusta ladataan ensimmäistä kertaa olemassa oleviin kokoelmiin ja muuttujat jo määritetään. Käytä **[ClearCollect](function-clear-collect-clearcollect.md)** funktion sijaan **kerätä** funktion tyhjä alkaa kokoelmat.
-
- ![Suorita OnStart kanssa sovelluksen kohteen pikavalikko](media/appobject-runonstart.png)
+Lisätietoja: [**Sovelluksen** objektin](object-app.md) dokumentaatio.
 
 ### <a name="compass"></a>Compass
 **Compass**-signaali palauttaa näytön ylälaidan kompassisuunnan. Suunta perustuu magneettiseen pohjoiseen.
@@ -82,7 +73,7 @@ Kun muutat **OnStart** ominaisuutta, voit testata sitä hiiri **sovelluksen** ob
 
 Kun käyttäjä käyttää sijaintitietoja ensimmäisen kerran, laite voi pyytää käyttäjää sallimaan näiden tietojen käytön.
 
-Kun sijainti muuttuu, sijainnin riippuvaisuudet lasketaan jatkuvasti uudelleen. Tämä kuluttaa laitteen akun virtaa. Akun säästämiseksi voit käyttää **[Enable](function-enable-disable.md)**- ja **[Disable](function-enable-disable.md)**-funktioita ottaaksesi sijaintipäivitykset käyttöön ja poistaaksesi ne käytöstä. Sijainti on automaattisesti poistettu käytöstä, jos näytetty näyttö ei ole riippuvainen sijaintitiedoista.
+Kun sijainti muuttuu, sijainnin riippuvaisuudet lasketaan jatkuvasti uudelleen. Tämä kuluttaa laitteen akun virtaa. Akun säästämiseksi voit käyttää **[Enable](function-enable-disable.md)** - ja **[Disable](function-enable-disable.md)** -funktioita ottaaksesi sijaintipäivitykset käyttöön ja poistaaksesi ne käytöstä. Sijainti on automaattisesti poistettu käytöstä, jos näytetty näyttö ei ole riippuvainen sijaintitiedoista.
 
 | Ominaisuus | Kuvaus |
 | --- | --- |
