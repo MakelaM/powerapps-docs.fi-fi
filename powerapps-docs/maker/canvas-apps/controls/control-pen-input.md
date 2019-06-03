@@ -78,20 +78,20 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
 1. Lisää **Kynän syöte** -ohjausobjekti, anna sille nimi **MyDoodles** ja aseta sen **ShowControls**-ominaisuudeksi **true**.
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **[Painike](control-button.md)**-ohjausobjekti, siirrä se **MyDoodles**-kohdan alle ja aseta **[Painike](control-button.md)**-ohjausobjektin **[Teksti](properties-core.md)**-ominaisuudeksi **Lisää**.
-3. Määritä **[Painikkeen](control-button.md)** **[OnSelect](properties-core.md)**-ominaisuudeksi tämä kaava:<br>
+2. Lisää **[Painike](control-button.md)** -ohjausobjekti, siirrä se **MyDoodles**-kohdan alle ja aseta **[Painike](control-button.md)** -ohjausobjektin **[Teksti](properties-core.md)** -ominaisuudeksi **Lisää**.
+3. Määritä **[Painikkeen](control-button.md)** **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
    **Collect(Doodles, {Sketch:MyDoodles.Image})**
-4. Lisää **Kuvavalikoima**-ohjausobjekti, siirrä se **[Painike](control-button.md)**-ohjausobjektin alle ja pienennä **Kuvavalikoima**-ohjausobjektin kokoa, kunnes se näyttää vain kolme kohdetta.
-5. Määritä **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)**-ominaisuudeksi **Doodles** ja paina F5-näppäintä.
-6. Piirrä **MyDoodles**-kohtaan kuva ja napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia.
+4. Lisää **Kuvavalikoima**-ohjausobjekti, siirrä se **[Painike](control-button.md)** -ohjausobjektin alle ja pienennä **Kuvavalikoima**-ohjausobjektin kokoa, kunnes se näyttää vain kolme kohdetta.
+5. Määritä **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)** -ominaisuudeksi **Doodles** ja paina F5-näppäintä.
+6. Piirrä **MyDoodles**-kohtaan kuva ja napsauta tai napauta **[Painike](control-button.md)** -ohjausobjektia.
    
     Piirtämäsi kuva näkyy **Kuvavalikoima**-ohjausobjektissa.
-7. (valinnainen) Napsauta tai napauta **Kynän syöte** -ohjausobjektissa kuvaketta, niin piirtämäsi kuva poistetaan. Piirrä toinen kuva ja sitten napsauta tai napauta **[Painike](control-button.md)**-ohjausobjektia.
-8. Aseta **Kuvavalikoima**-ohjausobjektissa **[Kuva](control-image.md)**-ohjausobjektin **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
+7. (valinnainen) Napsauta tai napauta **Kynän syöte** -ohjausobjektissa kuvaketta, niin piirtämäsi kuva poistetaan. Piirrä toinen kuva ja sitten napsauta tai napauta **[Painike](control-button.md)** -ohjausobjektia.
+8. Aseta **Kuvavalikoima**-ohjausobjektissa **[Kuva](control-image.md)** -ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
    **Remove(Doodles, ThisItem)**
 9. Poista piirustus napsauttamalla tai napauttamalla sitä **Kuvavalikoima**-ohjausobjektissa.
 
-Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)**-funktiota piirustusten paikalliseen tallentamiseen tai **[Ohjelmakorjaus](../functions/function-patch.md)**-funktiota niiden tallentamiseksi tietolähteeseen.
+Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)** -funktiota piirustusten paikalliseen tallentamiseen tai **[Ohjelmakorjaus](../functions/function-patch.md)** -funktiota niiden tallentamiseksi tietolähteeseen.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
@@ -109,4 +109,4 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 
 > [!IMPORTANT]
-> Näppäimistöä käyttävät eivät voi käyttää **kynäsyötettä**. Anna aina vaihtoehtoinen syöttötapa. Esimerkiksi jos allekirjoitus on pakollinen, suosittelemme lisäämään **[Tekstisyöte](control-text-input.md)**-ohjausobjektin, jolla käyttäjät voivat kirjoittaa nimensä. Molemmat tavat voidaan tarjota samanaikaisesti, ja käyttäjä voi valita haluamansa.
+> Näppäimistöä käyttävät eivät voi käyttää **kynäsyötettä**. Anna aina vaihtoehtoinen syöttötapa. Esimerkiksi jos allekirjoitus on pakollinen, suosittelemme lisäämään **[Tekstisyöte](control-text-input.md)** -ohjausobjektin, jolla käyttäjät voivat kirjoittaa nimensä. Molemmat tavat voidaan tarjota samanaikaisesti, ja käyttäjä voi valita haluamansa.

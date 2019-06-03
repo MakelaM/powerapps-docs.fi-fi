@@ -26,7 +26,7 @@ Ohjausobjekti, joka näyttää suhteellisia arvoja verrattuna toisiinsa.
 ## <a name="description"></a>Kuvaus
 Lisää **Ympyräkaavio**-ohjausobjekti, jos haluat näyttää suhteellisia tietoja taulukosta, joka sisältää selitteet kauimpana vasemmalla olevassa sarakkeessa ja arvot siitä seuraavassa sarakkeessa.
 
-Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)**, kuvan kaaviosta ja kaavion **selitteen**.
+Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)** , kuvan kaaviosta ja kaavion **selitteen**.
 
 ## <a name="chart-key-properties"></a>Kaavion tärkeimmät ominaisuudet
 **[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
@@ -40,15 +40,15 @@ Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjauso
 
 **[BorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus.
 
-**[Väri](properties-color-border.md) ** – Ohjausobjektin tekstin väri.
+**[Väri](properties-color-border.md)**  – Ohjausobjektin tekstin väri.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Poistettu käytöstä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Ei käytössä**.
 
 **Explode** – Lohkojen etäisyys toisistaan ympyräkaaviossa.
 
-**[Font](properties-text.md) ** – Näytössä näkyvän fonttiperheen nimi.
+**[Font](properties-text.md)**  – Näytössä näkyvän fonttiperheen nimi.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -82,14 +82,14 @@ Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjauso
 [**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **[Painike](control-button.md)**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
+1. Lisää **[Painike](control-button.md)** -ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
    **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
    
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
    
-    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 2. Palaa oletustyötilaan painamalla F5, napsauta tai napauta **[painike](control-button.md)** ohjausobjektia ja paina sitten Esc.
-3. Lisää **Ympyräkaavio**-ohjausobjekti ja aseta sen **[Items](properties-core.md)**-ominaisuudeksi **Revenue2015**.
+3. Lisää **Ympyräkaavio**-ohjausobjekti ja aseta sen **[Items](properties-core.md)** -ominaisuudeksi **Revenue2015**.
    
     **Ympyräkaavio**-ohjausobjekti näyttää tuotteiden liikevaihtotiedot verrattuna muihin tuotteisiin.
 
@@ -113,7 +113,7 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * Suosittelemme asettamaan **LabelPosition**-ominaisuuden arvoksi **LabelPosition.Outside**. Tämä parantaa selitteiden luettavuutta yhtenäistämällä värikontrastia.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 
     > [!NOTE]
   > Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.

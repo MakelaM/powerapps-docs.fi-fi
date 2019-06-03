@@ -30,7 +30,7 @@ Palauttaa tietoja nykyisestä käyttäjästä.
 | --- | --- |
 | **User().Email** |Nykyisen käyttäjän sähköpostiosoite. |
 | **User().FullName** |Nykyisen käyttäjän koko nimi, mukaan lukien etu- ja sukunimet. |
-| **User().Image** |Nykyisen käyttäjän kuva. Tämä on kuva-URL muodossa "blob:*identifier*". Määritä **[Kuva](../controls/control-image.md)**-ohjausobjektin **[Kuva](../controls/properties-visual.md)**-ominaisuudelle tämä arvo, jos haluat näyttää kuvan sovelluksessa. |
+| **User().Image** |Nykyisen käyttäjän kuva. Tämä on kuva-URL muodossa "blob:*identifier*". Määritä **[Kuva](../controls/control-image.md)** -ohjausobjektin **[Kuva](../controls/properties-visual.md)** -ominaisuudelle tämä arvo, jos haluat näyttää kuvan sovelluksessa. |
 
 > [!NOTE]
 > Palautetut tiedot koskevat PowerAppsin nykyistä käyttäjää.  Se vastaa ”Tili”-tietoja, jotka näytetään PowerAppsin soittimissa ja studiossa, jotka löytyvät muualta kuin laadituista sovelluksista.  Tämä ei välttämättä vastaa nykyisen käyttäjän tietoja Office 365:ssä tai muissa palveluissa.

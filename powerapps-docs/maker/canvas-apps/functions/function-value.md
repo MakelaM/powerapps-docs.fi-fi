@@ -31,7 +31,7 @@ Eri kielissä merkit **,** ja **.** tulkitaan eri tavalla.  Oletusarvoisesti tek
 Merkkijonon muotoa koskevat huomautukset:
 
 * Merkkijonossa voi olla etuliitteenä nykyisen kielen mukainen valuuttasymboli.  Valuuttasymboli ohitetaan.  Muiden kielten valuuttasymboleja ei jätetä huomioimatta.
-* Merkkijonon loppuun voi sisältyä prosenttimerkki (**%**), joka ilmaisee, että kyseessä on prosenttiluku.  Luku jaetaan sadalla ennen tuloksen palauttamista.  Prosentti- ja valuuttasymboleita ei voi sekoittaa.
+* Merkkijonon loppuun voi sisältyä prosenttimerkki ( **%** ), joka ilmaisee, että kyseessä on prosenttiluku.  Luku jaetaan sadalla ennen tuloksen palauttamista.  Prosentti- ja valuuttasymboleita ei voi sekoittaa.
 * Merkkijonossa voidaan käyttää tieteellistä merkintätapaa, jossa 12 x 10<sup>3</sup> ilmaistaan muodossa "12e3".
 
 Jos luku ei ole oikeassa muodossa, **Value** palauttaa *tyhjän*.

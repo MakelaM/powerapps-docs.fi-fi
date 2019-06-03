@@ -31,7 +31,7 @@ Palauttaa pseudosatunnaisluvun.
 
 Kun muuttuvaa funktiota käytetään tietotyönkulun kaavassa, muuttuva funktio palauttaa eri arvon vain arvioitaessa uudelleen kaavaa, jossa se esiintyy.  Jos mitään muuta ei muuteta kaavassa, sillä on sama arvo koko sovelluksesi suorittamisen ajan.
 
-Esimerkiksi selitteen ohjausobjekti, jossa **Label1.Text = Now()**, ei muutu, kun sovelluksesi on aktiivinen.  Uusi arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
+Esimerkiksi selitteen ohjausobjekti, jossa **Label1.Text = Now()** , ei muutu, kun sovelluksesi on aktiivinen.  Uusi arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
 
 Funktio arvioidaan uudelleen, jos se on osa kaavaa, jossa jotakin muuta kohtaa on muutettu.  Jos lisäämme esimerkkiimme liukusäätimen ohjausobjektin, jossa **Label1.Text = Slider1.Value + Rand()** uusi satunnaisluku luodaan aina, kun liukusäätimen ohjausobjektin arvo muuttuu ja selitteen tekstin ominaisuutta arvioidaan uudelleen.  Katso esimerkki alta.
 
@@ -43,9 +43,9 @@ Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md),
 ## <a name="examples"></a>Esimerkkejä
 
 #### <a name="display-a-different-random-number-as-user-input-changes"></a>Eri satunnaisluvun näyttäminen käyttäjäsyötteen muuttuessa
-1. Lisää **[Liukusäädin](../controls/control-slider.md)**-ohjausobjekti ja nimeä se uudelleen **Slider1**, jos sillä on eri nimi.
+1. Lisää **[Liukusäädin](../controls/control-slider.md)** -ohjausobjekti ja nimeä se uudelleen **Slider1**, jos sillä on eri nimi.
 
-1. Lisää **[Selite](../controls/control-text-box.md)**-ohjausobjekti ja määritä sen **Text**-ominaisuus tähän kaavaan:
+1. Lisää **[Selite](../controls/control-text-box.md)** -ohjausobjekti ja määritä sen **Text**-ominaisuus tähän kaavaan:
 
     **Slider1.Value + Rand()**
 
@@ -60,13 +60,13 @@ Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md),
     ![Neljä näyttöä, jotka näyttävät selitteen ohjausobjektin ja neljä eri satunnaista desimaaliarvoa kullekin neljälle erilaiselle liukusäätimen asetukselle 70.899, 84.667, 90.134, 99.690](media/function-rand/rand-slider-results.png)
 
 #### <a name="create-a-table-of-random-numbers"></a>Satunnaislukujen taulukon luominen
-1. Lisää **[painike](../controls/control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:
+1. Lisää **[painike](../controls/control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:
 
     **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() ))**
 
     Tämä kaava luo yksisarakkeisen taulukon, joka toistetaan viisi kertaa, ja tuloksesi saadaan viisi satunnaislukua.
 
-1. Lisää **[tietotaulukko](../controls/control-data-table.md)**, määritä sen **Items**-ominaisuudeksi **RandomNumbers** ja näytä **Arvo**-kenttä.
+1. Lisää **[tietotaulukko](../controls/control-data-table.md)** , määritä sen **Items**-ominaisuudeksi **RandomNumbers** ja näytä **Arvo**-kenttä.
 
     ![Näyttö, jossa näytetään tietotaulukko, jossa on viisi erilaista desimaaliarvoa 0.857, 0.105, 0.979, 0.167, 0.814](media/function-rand/set-show-data.png)
 
@@ -80,4 +80,4 @@ Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md),
 
     ![Näyttö, jossa näytetään tietotaulukko, jossa on viisi erilaista desimaaliarvojoukkoa 0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
-Voit luoda yksittäisen satunnaisluvun taulukon sijasta käyttämällä kaavaa **Set( RandomNumber, Rand() )**.
+Voit luoda yksittäisen satunnaisluvun taulukon sijasta käyttämällä kaavaa **Set( RandomNumber, Rand() )** .

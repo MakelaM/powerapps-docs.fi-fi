@@ -30,7 +30,7 @@ Testaa, alkaako tekstimerkkijono toisella merkkijonolla tai päättyykö se tois
 
 Funktioiden testien kirjainkoko ei ole merkitsevä.  Palautusarvo on totuusarvo **true** tai **false**.  
 
-Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suodatin](function-filter-lookup.md)**-funktioon. Voit etsiä mistä tahansa tekstijonojen sisältä, ei pelkästään alusta tai lopusta, käyttämällä **[in](operators.md#in-and-exactin-operators)**-operaattoria tai **[Search](function-filter-lookup.md)**-funktiota.  Funktioiden valinta riippuu sovelluksesi tarpeista ja siitä, mikä funktio tietolähteellesi voidaan [delegoida](../delegation-overview.md).  Jos jotakin näistä funktioista ei voi delegoida, näyttöön ilmestyy muokkaamisen aikana delegointivaroitus, joka varoittaa tästä rajoituksesta.
+Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suodatin](function-filter-lookup.md)** -funktioon. Voit etsiä mistä tahansa tekstijonojen sisältä, ei pelkästään alusta tai lopusta, käyttämällä **[in](operators.md#in-and-exactin-operators)** -operaattoria tai **[Search](function-filter-lookup.md)** -funktiota.  Funktioiden valinta riippuu sovelluksesi tarpeista ja siitä, mikä funktio tietolähteellesi voidaan [delegoida](../delegation-overview.md).  Jos jotakin näistä funktioista ei voi delegoida, näyttöön ilmestyy muokkaamisen aikana delegointivaroitus, joka varoittaa tästä rajoituksesta.
 
 ## <a name="syntax"></a>Syntaksi
 **EndsWith**( *Text*, *EndText* )
@@ -47,16 +47,16 @@ Hae tietoa sovelluksestasi yhdistämällä **EndsWith** ja **StartsWith** **[Suo
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **EndsWith( "Hei, Maailma", "maailma" )** |Testaa, päättyykö **”Hei, Maailma”** tekstiin **”maailma”**.  Testin kirjainkoolla ei ole merkitystä. |**true** |
-| **EndsWith( "Näkemiin", "näke" )** |Testaa, päättyykö **”Näkemiin”** tekstiin **”näke”**.  *EndText*-argumentti (**”näke”**) esiintyy tekstissä, mutta ei sen lopussa. |**false** |
-| **EndsWith( "Sano aina hei", "hei" )** |Testaa, päättyykö **”Sano aina hei”** tekstiin **”hei”**. |**true** |
+| **EndsWith( "Hei, Maailma", "maailma" )** |Testaa, päättyykö **”Hei, Maailma”** tekstiin **”maailma”** .  Testin kirjainkoolla ei ole merkitystä. |**true** |
+| **EndsWith( "Näkemiin", "näke" )** |Testaa, päättyykö **”Näkemiin”** tekstiin **”näke”** .  *EndText*-argumentti ( **”näke”** ) esiintyy tekstissä, mutta ei sen lopussa. |**false** |
+| **EndsWith( "Sano aina hei", "hei" )** |Testaa, päättyykö **”Sano aina hei”** tekstiin **”hei”** . |**true** |
 | **Endswith( "Hei hei", "" )** |Testaa, päättyykö **”Hei hei”** tyhjään tekstimerkkijonoon (**Len** palauttaa arvon 0).  Jotta **EndsWith**-funktiota olisi helpompi käyttää **Suodatin**-lausekkeissa, se on määritetty palauttamaan tässä tapauksessa arvo **true**. |**true** |
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **StartsWith( "Hei, Maailma", "hei" )** |Testaa, alkaako **”Hei, Maailma”** tekstillä **”hei”**.  Testin kirjainkoolla ei ole merkitystä. |**true** |
-| **StartsWith( "Näkemiin", "hei" )** |Testaa, alkaako **”Näkemiin”** tekstillä **”hei”**. |**false** |
-| **StartsWith( "Sano aina hei", "hei" )** |Testaa, alkaako **”Sano aina hei”** tekstillä **”hei”**.  **”Hei”** esiintyy tekstissä, mutta ei sen alussa. |**false** |
+| **StartsWith( "Hei, Maailma", "hei" )** |Testaa, alkaako **”Hei, Maailma”** tekstillä **”hei”** .  Testin kirjainkoolla ei ole merkitystä. |**true** |
+| **StartsWith( "Näkemiin", "hei" )** |Testaa, alkaako **”Näkemiin”** tekstillä **”hei”** . |**false** |
+| **StartsWith( "Sano aina hei", "hei" )** |Testaa, alkaako **”Sano aina hei”** tekstillä **”hei”** .  **”Hei”** esiintyy tekstissä, mutta ei sen alussa. |**false** |
 | **StartsWith( "Hei hei", "" )** |Testaa, alkaako **”Hei hei”** tyhjällä merkkijonolla (**Len** palauttaa arvon 0).  Jotta **StartsWith**-funktiota olisi helpompi käyttää **Suodatin**-lausekkeissa, se on määritetty palauttamaan tässä tapauksessa arvo **true**. |**true** |
 
 ### <a name="search-user-experience"></a>Haun käyttökokemus
@@ -66,7 +66,7 @@ Loput tämän ohjeaiheen esimerkeistä näyttävät hakutuloksia luettelosta, jo
 
 ![](media/function-startswith/customers.png)
 
-Luo tämä tietolähde kokoelmana luomalla **[Painike](../controls/control-button.md)**-ohjausobjekti ja määrittämällä sen **OnSelect**-ominaisuuden arvoksi tämä kaava:
+Luo tämä tietolähde kokoelmana luomalla **[Painike](../controls/control-button.md)** -ohjausobjekti ja määrittämällä sen **OnSelect**-ominaisuuden arvoksi tämä kaava:
 
 **ClearCollect (asiakkaisiin, taulukon ({nimi: ”Fred Suominen”, yrityksen: ”Northwind Traders”}, {nimi: ”Cole Miller” yrityksen: ”Contoso”}, {nimi: ”Glenda Lahti”, yrityksen: ”Contoso”}, {nimi: ”Mike Collins”, yrityksen: ”Adventure Works”}, {nimi: ”Colleen Jones”, yrityksen: "Adventure Works" } ) )**
 
@@ -90,7 +90,7 @@ Voit laajentaa haun sisältämään sekä **Company**-sarakkeen että **Name**-s
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarake tai **Company**-sarake alkaa hakumerkkijonolla (esimerkiksi **co**).  [**&#124;&#124;**-operaattori ](operators.md) on *true*, jos jompikumpi **StartsWith**-funktio on *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
+| **Filter( Customers, StartsWith( Name, SearchInput.Text ) &#124;&#124; StartsWith( Company, SearchInput.Text ) )** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarake tai **Company**-sarake alkaa hakumerkkijonolla (esimerkiksi **co**).  [ **&#124;&#124;** -operaattori ](operators.md) on *true*, jos jompikumpi **StartsWith**-funktio on *true*. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-startswith.png) |
 | **Filter( Customers, hakusyöte.Text in Nimi &#124;&#124; hakusyöte.Text in Yritys)** |Suodattaa **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
 | **Search( Customers, SearchInput.Text, "Name", "Company" )** |Samoin kuin **in**-operaattori, **Search**-funktio hakee **Customers**-tietolähteestä tietueet, joiden **Name**-sarakkeen tai **Company**-sarakkeen jossain kohdassa esiintyy hakumerkkijono (esimerkiksi **co**). **Search**-funktio on helpompi lukea ja kirjoittaa kuin **Filter**-funktio, jos haluat määrittää useita sarakkeita ja useita **in**-operaattoreita. Huomaa, että sarakkeiden nimet on kirjoitettava lainausmerkkeihin. |<style> img { max-width: none } </style> ![](media/function-startswith/customers-all-co-contains.png) |
 

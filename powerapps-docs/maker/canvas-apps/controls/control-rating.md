@@ -44,13 +44,13 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**[OnChange](properties-core.md) ** – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
+**[OnChange](properties-core.md)**  – Miten sovellus reagoi, kun käyttäjä muuttaa ohjausobjektin arvoa (esimerkiksi säätämällä liukusäädintä).
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -81,17 +81,17 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 1. Lisää **Luokitus**-ohjausobjekti ja anna sille nimeksi **Kvantitatiivinen**.
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **[Tekstisyöte](control-text-input.md)**-ohjausobjekti, anna sen nimeksi **Kvalitatiivinen** ja siirrä se **Luokitus**-ohjausobjektin alapuolelle.
-3. Määritä **[Tekstisyöte](control-text-input.md)**-ohjausobjektin **[Default](properties-core.md)**-ominaisuudeksi **""** ja määritä sen **HintText**-ominaisuudeksi tämä kaava:
+2. Lisää **[Tekstisyöte](control-text-input.md)** -ohjausobjekti, anna sen nimeksi **Kvalitatiivinen** ja siirrä se **Luokitus**-ohjausobjektin alapuolelle.
+3. Määritä **[Tekstisyöte](control-text-input.md)** -ohjausobjektin **[Default](properties-core.md)** -ominaisuudeksi **""** ja määritä sen **HintText**-ominaisuudeksi tämä kaava:
    <br>**If(Kvantitatiivinen.Value > 3, "Mistä erityisesti pidit", "Missä meillä olisi parantamisen varaa?")**
    
-    Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 4. Paina F5-näppäintä ja napsauta tai napauta sen jälkeen neljä tai viisi tähteä **Luokitus**-ohjausobjektissa.
    
-    **[Tekstisyöte](control-text-input.md)**-ohjausobjektin vihjeteksti muuttuu korkeaa luokitusta vastaavaksi.
+    **[Tekstisyöte](control-text-input.md)** -ohjausobjektin vihjeteksti muuttuu korkeaa luokitusta vastaavaksi.
 5. Napsauta tai napauta vähemmän kuin neljä tähteä kohdassa **Kvantitatiivinen**.
    
-    **[Tekstisyöte](control-text-input.md)**-ohjausobjektin vihjeteksti muuttuu alhaista luokitusta vastaavaksi.
+    **[Tekstisyöte](control-text-input.md)** -ohjausobjektin vihjeteksti muuttuu alhaista luokitusta vastaavaksi.
 6. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
@@ -109,7 +109,7 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
   > Näytönlukuohjelmat käsittelevät **Rating** -ohjausobjektin valintanappeina.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 * Jos tähtiä on liikaa, harkitse eri ohjausobjektin käyttämistä. Muuten käyttö näppäimistöllä voi olla vaikeaa ja valinnan tekeminen tarkasti kosketusnäytöllä vaikeaa.
 

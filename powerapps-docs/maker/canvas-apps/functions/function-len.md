@@ -54,5 +54,5 @@ Tämän osion ensimmäisessä esimerkissä tietolähteen nimi on **People** ja s
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
 | **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |**People**-taulukon **Address**[-sarakkeessa](../working-with-tables.md#columns):<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
-| **Len( [ "Hello", "to the", "World", "" ] )** |Sisäisen taulukon **[Value](function-value.md)**-sarakkeessa:<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |![](media/function-len/people-table-len-inline.png) |
+| **Len( [ "Hello", "to the", "World", "" ] )** |Sisäisen taulukon **[Value](function-value.md)** -sarakkeessa:<br><ul><li>Mittaa jokaisen merkkijonon pituuden.</li><li>Palauttaa yksisarakkeisen taulukon, joka sisältää jokaisen merkkijonon pituuden.</li> |![](media/function-len/people-table-len-inline.png) |
 

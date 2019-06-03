@@ -32,7 +32,7 @@ Muuntaa päivämäärän ja kellonajan komponentit päivämäärä/aika-arvoksi.
 
 **Time**-funktio muuntaa yksittäiset tunti-, minuutti- ja sekuntiarvot päivämäärä/aika-arvoksi.  Tulokseen ei liity päivämäärää.
 
-Katso **[DateValue](function-datevalue-timevalue.md)**-, **[TimeValue](function-datevalue-timevalue.md)**- ja **[DateTimeValue](function-datevalue-timevalue.md)**-funktioiden kohdalta tietoja siitä, miten voit muuntaa merkkijonon arvoksi.  
+Katso **[DateValue](function-datevalue-timevalue.md)** -, **[TimeValue](function-datevalue-timevalue.md)** - ja **[DateTimeValue](function-datevalue-timevalue.md)** -funktioiden kohdalta tietoja siitä, miten voit muuntaa merkkijonon arvoksi.  
 
 Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](../show-text-dates-times.md).
 

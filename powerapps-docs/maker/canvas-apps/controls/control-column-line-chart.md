@@ -24,7 +24,7 @@ ms.locfileid: "61559376"
 Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 
 ## <a name="description"></a>Kuvaus
-**Pylväskaavio** ja **Viivakaavio** ovat ryhmiteltyjä ohjausobjekteja. Kukin ryhmä sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)**, kuvan kaaviosta ja kaavion **selitteen**.
+**Pylväskaavio** ja **Viivakaavio** ovat ryhmiteltyjä ohjausobjekteja. Kukin ryhmä sisältää kolme ohjausobjektia: otsikon **[selitteen](control-text-box.md)** , kuvan kaaviosta ja kaavion **selitteen**.
 
 ## <a name="chart-key-properties"></a>Kaavion tärkeimmät ominaisuudet
 **[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
@@ -40,7 +40,7 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 
 **[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella tietoja (**View**), vai onko ominaisuus poistettu käytöstä (**Disabled**).
 
@@ -116,14 +116,14 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 [**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **[painike](control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
+1. Lisää **[painike](control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
    **Collect(Tuotto, {Vuosi:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Vuosi:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Vuosi:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
    
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
    
-    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[Kerää](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 2. Palaa oletustyötilaan painamalla F5, napsauta tai napauta **[painike](control-button.md)** ohjausobjektia ja paina sitten Esc.
-3. Lisää **pylväskaavio**- tai **viivakaavio**-ohjausobjekti, määritä sen **[Kohteet](properties-core.md)**-ominaisuuden arvoksi **Tuotto** ja määritä sen **NumberOfSeries** -ominaisuuden arvoksi **3**.
+3. Lisää **pylväskaavio**- tai **viivakaavio**-ohjausobjekti, määritä sen **[Kohteet](properties-core.md)** -ominaisuuden arvoksi **Tuotto** ja määritä sen **NumberOfSeries** -ominaisuuden arvoksi **3**.
    
     Ohjausobjekti näyttää kunkin tuotteen tuottotiedot kolmen vuoden ajalta.
 
@@ -148,7 +148,7 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **Pylväskaavion** **Merkit**-ominaisuudeksi kannattaa määrittää **true**. Tämä auttaa heikkonäköisiä käyttäjiä määrittämään sarakkeen arvon.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 
     > [!NOTE]
   > Kun näppäimistön käyttäjät siirtyvät kaaviossa, he voivat käydä läpi painikkeita, joilla valitaan kaavion tietoja.

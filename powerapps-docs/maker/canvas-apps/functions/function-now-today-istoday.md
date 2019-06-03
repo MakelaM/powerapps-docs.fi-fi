@@ -39,9 +39,9 @@ Lisätietoja on kohdassa [Päivämäärien ja kellonaikojen käsitteleminen](../
 
 Kun muuttuvaa funktiota käytetään työnkulun kaavassa, muuttuva funktio palauttaa eri arvon vain arvioitaessa uudelleen kaavaa, jossa se esiintyy.  Jos mitään muuta ei muuteta kaavassa, sillä on sama arvo koko sovelluksesi suorittamisen ajan.
 
-Esimerkiksi nimen ohjausobjekti, jossa **Label1.Text = Now()**, ei muutu, kun sovelluksesi on aktiivinen.  Uusi arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
+Esimerkiksi nimen ohjausobjekti, jossa **Label1.Text = Now()** , ei muutu, kun sovelluksesi on aktiivinen.  Uusi arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
 
-Funktio arvioidaan uudelleen, jos se on osa kaavaa, jossa jotakin muuta kohtaa on muutettu.  Jos lisäämme esimerkkiimme liukusäätimen ohjausobjektin, jossa **Label1.Text = DateAdd (Now(), Slider1.Value, Minutes)**, senhetkinen aika noudetaan aina, kun liukusäätimen ohjausobjektin arvo muuttuu ja otsikon tekstin ominaisuutta arvioidaan uudelleen.
+Funktio arvioidaan uudelleen, jos se on osa kaavaa, jossa jotakin muuta kohtaa on muutettu.  Jos lisäämme esimerkkiimme liukusäätimen ohjausobjektin, jossa **Label1.Text = DateAdd (Now(), Slider1.Value, Minutes)** , senhetkinen aika noudetaan aina, kun liukusäätimen ohjausobjektin arvo muuttuu ja otsikon tekstin ominaisuutta arvioidaan uudelleen.
 
 Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md), muuttuvia funktioita arvioidaan aina, kun käytöskaavaa arvioidaan.  Katso esimerkki alta.
 
@@ -70,7 +70,7 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
 #### <a name="display-a-clock-that-updates-in-real-time"></a>Reaaliaikaisesti päivittyvän kellon näyttäminen
 
-1. Lisää **[Ajastin](../controls/control-timer.md)**-ohjausobjekti, määritä sen **Duration**-ominaisuuden arvoksi **1000** ja sen **Repeat**-ominaisuudeksi **true**.
+1. Lisää **[Ajastin](../controls/control-timer.md)** -ohjausobjekti, määritä sen **Duration**-ominaisuuden arvoksi **1000** ja sen **Repeat**-ominaisuudeksi **true**.
 
     Ajastin käy sekunnin ja aloittaa automaattisesti alusta jatkaen tätä mallia. 
 
@@ -82,11 +82,11 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
     ![Näyttö, joka sisältää ajastimen ohjausobjektin ja kaavan OnTimerEnd = Set(CurrentTime, Now())](media/function-now-today-istoday/now-set-currenttime.png)
 
-1. Lisää **[Selite](../controls/control-text-box.md)**-ohjausobjekti ja määritä sen **Text**-ominaisuus tähän kaavaan:
+1. Lisää **[Selite](../controls/control-text-box.md)** -ohjausobjekti ja määritä sen **Text**-ominaisuus tähän kaavaan:
 
     **Text( CurrentTime, LongTime24 )**
 
-    Voit **[Text](function-text.md)**-funktion avulla muotoilla päivämäärän ja ajan haluamaksesi tai määrittää täksi ominaisuudeksi **CurrentTime**, jotta se näyttää tunnit ja minuutit sekuntien sijasta.
+    Voit **[Text](function-text.md)** -funktion avulla muotoilla päivämäärän ja ajan haluamaksesi tai määrittää täksi ominaisuudeksi **CurrentTime**, jotta se näyttää tunnit ja minuutit sekuntien sijasta.
 
     ![Näyttö, joka sisältää selitteen ohjausobjektin, jossa Text-ominaisuudeksi on määritetty Text( CurrentTime, LongTime24)](media/function-now-today-istoday/now-use-currenttime.png)
 
@@ -100,7 +100,7 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
     Ajastin on näkymätön ja käynnistyy automaattisesti.
 
-1. Määritä näytön **[OnStart](../controls/control-screen.md)**-ominaisuus, jotta **CurrentTime**-muuttujalla on voimassaoleva arvo, kuten seuraavassa esimerkissä:
+1. Määritä näytön **[OnStart](../controls/control-screen.md)** -ominaisuus, jotta **CurrentTime**-muuttujalla on voimassaoleva arvo, kuten seuraavassa esimerkissä:
 
     **Set(CurrentTime, Now())**
 

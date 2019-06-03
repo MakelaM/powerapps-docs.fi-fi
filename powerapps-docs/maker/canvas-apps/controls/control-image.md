@@ -46,9 +46,9 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **[DisplayMode](properties-core.md)** – Määrittää ohjausobjektin näyttötilan: onko käyttäjällä oikeus muokata (**Edit**) tai vain tarkastella (**View**) vai onko ominaisuus kokonaan poissa käytöstä (**Disabled**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Ei käytössä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Disabled** (ei käytössä).
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -56,7 +56,7 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 **FlipVertical** – Määrittää, käännetäänkö kuva pystysuunnassa ennen sen näyttämistä.
 
-**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
@@ -130,7 +130,7 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
     Jos **Lisää tietolähde** ei näy oikeanpuoleisessa ruudussa, napsauta tai napauta vasemmassa siirtymispalkissa olevaa näyttöä.
 3. Valitse **Lisää sovellukseen staattisia tietoja** (Add static data to your app). Napsauta tai napauta lataamaasi Excel-tiedostoa ja valitse sitten **Avaa**.
 4. Valitse **Flooring Estimates** (lattia-arviot) -valintaruutu ja sitten **Yhdistä**.
-5. Lisää kuvallinen **Valikoima**-ohjausobjekti ja määritä sen **[Items](properties-core.md)**-ominaisuudeksi **FlooringEstimates**.
+5. Lisää kuvallinen **Valikoima**-ohjausobjekti ja määritä sen **[Items](properties-core.md)** -ominaisuudeksi **FlooringEstimates**.
 
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
@@ -144,15 +144,15 @@ Jos lisäät sovellukseen vähintään yhden **kuva**-ohjausobjektin, voit näyt
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
 * **[AccessibleLabel](properties-accessibility.md)** on oltava olemassa, jos kuvaa käytetään painikkeena tai muussa kuin koristeellisessa tarkoituksessa.
-* **[AccessibleLabel](properties-accessibility.md)** on oltava tyhjä tai tyhjä merkkijono **""**, jos kuva on pelkästään koristeena. Näin näytönlukuohjelmat voivat ohittaa kuvan.
-* **[AccessibleLabel](properties-accessibility.md)** voi olla tyhjä tai tyhjä merkkijono **""**, jos kuvassa esitetään tarpeetonta tietoa.
-  * Esimerkiksi **kuva** rataksista yhdessä **[AccessibleLabel](properties-accessibility.md)**-objektin kanssa, jonka arvo on **Asetukset**. Kuvaa ei käytetä painikkeena. Se on **[selitteen](control-text-box.md)** vieressä, jossa lukee myös **Asetukset**. Näytönlukuohjelmat lukevat kuvan tekstinä **Asetukset**, ja sitten myös selitteen tekstinä **Asetukset**. Tämä on tarpeetonta. Tässä tapauksessa **kuva** ei tarvitse **[AccessibleLabel](properties-accessibility.md)**-objektia.
+* **[AccessibleLabel](properties-accessibility.md)** on oltava tyhjä tai tyhjä merkkijono **""** , jos kuva on pelkästään koristeena. Näin näytönlukuohjelmat voivat ohittaa kuvan.
+* **[AccessibleLabel](properties-accessibility.md)** voi olla tyhjä tai tyhjä merkkijono **""** , jos kuvassa esitetään tarpeetonta tietoa.
+  * Esimerkiksi **kuva** rataksista yhdessä **[AccessibleLabel](properties-accessibility.md)** -objektin kanssa, jonka arvo on **Asetukset**. Kuvaa ei käytetä painikkeena. Se on **[selitteen](control-text-box.md)** vieressä, jossa lukee myös **Asetukset**. Näytönlukuohjelmat lukevat kuvan tekstinä **Asetukset**, ja sitten myös selitteen tekstinä **Asetukset**. Tämä on tarpeetonta. Tässä tapauksessa **kuva** ei tarvitse **[AccessibleLabel](properties-accessibility.md)** -objektia.
 
     > [!IMPORTANT]
-    > Näytönlukuohjelmat lukevat aina **kuva**t, joilla **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, riippumatta siitä, onko **[AccessibleLabel](properties-accessibility.md)** tyhjä vai ei. Tämä johtuu siitä, että ne hahmonnetaan painikkeina. Jos **[AccessibleLabel](properties-accessibility.md)**-objektia ei ole, näytönlukuohjelmat lukevat kuvan **painikkeena**.
+    > Näytönlukuohjelmat lukevat aina **kuva**t, joilla **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, riippumatta siitä, onko **[AccessibleLabel](properties-accessibility.md)** tyhjä vai ei. Tämä johtuu siitä, että ne hahmonnetaan painikkeina. Jos **[AccessibleLabel](properties-accessibility.md)** -objektia ei ole, näytönlukuohjelmat lukevat kuvan **painikkeena**.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-objektin arvo on oltava suurempi tai yhtä suuri kuin 0, jos kuvaa käytetään painikkeena. Näin näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -objektin arvo on oltava suurempi tai yhtä suuri kuin 0, jos kuvaa käytetään painikkeena. Näin näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistusilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
     > [!NOTE]

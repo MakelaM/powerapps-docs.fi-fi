@@ -41,7 +41,7 @@ Voit käyttää molempia funktioita [toimintakaavoissa](../working-with-formulas
 ## <a name="syntax"></a>Syntaksi
 **If**( *Condition*, *ThenResult* [, *DefaultResult* ] )<br>**If**( *Condition1*, *ThenResult1* [, *Condition2*, *ThenResult2*, ... [ , *DefaultResult* ] ] )
 
-* *Condition(s)* – Pakollinen. Kaavat, jotka testaavat arvoa **tosi**. Tällaiset kaavat sisältävät usein [vertailuoperaattoreita](operators.md) (kuten **<**, **>** ja **=**) ja testausfunktioita kuten **[IsBlank](function-isblank-isempty.md)** ja **[IsEmpty](function-isblank-isempty.md)**.
+* *Condition(s)* – Pakollinen. Kaavat, jotka testaavat arvoa **tosi**. Tällaiset kaavat sisältävät usein [vertailuoperaattoreita](operators.md) (kuten **<** , **>** ja **=** ) ja testausfunktioita kuten **[IsBlank](function-isblank-isempty.md)** ja **[IsEmpty](function-isblank-isempty.md)** .
 * *ThenResult(s)* – Pakollinen. Vastaava arvo, joka palautetaan arvon **tosi** antavalle ehdolle.
 * *DefaultResult* – Valinnainen. Palautettava arvo, jos mikään ehto ei anna arvoa **tosi**.  Jos et määritä tätä argumenttia, palautetaan arvo *tyhjä*.
 
@@ -70,18 +70,18 @@ Seuraavissa esimerkeissä **Slider**-ohjausobjektin (nimeltä **Slider1**) arvo 
 | **Switch( Slider1.Value, 20, "Result1", 10, "Result2", 0, "Result3", "DefaultResult" )** |Liukusäätimen arvo ei vastaa mitään tarkistettavaa arvoa.  *DefaultResult* on annettu, joten se palautetaan. |"DefaultResult" |
 
 ### <a name="branching-in-behavior-formulas"></a>Haarautuminen toimintakaavioissa
-Seuraavissa esimerkeissä **[tekstisyöte](../controls/control-text-input.md)**-ohjausobjektilla nimeltä **Etunimi** on arvo ”John”.
+Seuraavissa esimerkeissä **[tekstisyöte](../controls/control-text-input.md)** -ohjausobjektilla nimeltä **Etunimi** on arvo ”John”.
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **If( ! IsBlank( Etunimi.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** |Ehto on **tosi**, joten **[Navigate](function-navigate.md)**-funktio suoritetaan. Voit testata, onko pakollinen lomakekenttä täytetty käyttämällä **[IsBlank](function-isblank-isempty.md)**-funktiota.  Jos **Etunimi** on [tyhjä](function-isblank-isempty.md), kaavalla ei ole vaikutusta. |**tosi**<br><br>Näytöksi vaihdetaan **Screen1**. |
-| **If( IsBlank( Etunimi.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** |Ilman **!**-operaattoria ehto on **epätosi**, joten **[Navigate](function-navigate.md)**-funktiota ei suoriteta. Annettu *OletusTulos* on **[Back](function-navigate.md)**-funktio, joten se suoritetaan. |**tosi**<br><br>Näyttö siirtyy takaisin aiemmin näytettyyn näyttöön. |
+| **If( ! IsBlank( Etunimi.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ) )** |Ehto on **tosi**, joten **[Navigate](function-navigate.md)** -funktio suoritetaan. Voit testata, onko pakollinen lomakekenttä täytetty käyttämällä **[IsBlank](function-isblank-isempty.md)** -funktiota.  Jos **Etunimi** on [tyhjä](function-isblank-isempty.md), kaavalla ei ole vaikutusta. |**tosi**<br><br>Näytöksi vaihdetaan **Screen1**. |
+| **If( IsBlank( Etunimi.Text ), Navigate(&nbsp;Screen1, ScreenTransition.None ), Back() )** |Ilman **!** -operaattoria ehto on **epätosi**, joten **[Navigate](function-navigate.md)** -funktiota ei suoriteta. Annettu *OletusTulos* on **[Back](function-navigate.md)** -funktio, joten se suoritetaan. |**tosi**<br><br>Näyttö siirtyy takaisin aiemmin näytettyyn näyttöön. |
 | **Switch( Etunimi.Text, "Carlos", Navigate(&nbsp;Screen1, ScreenTransition.None ), "Kirstin", Navigate( Screen2, ScreenTransition.None ), "John", Navigate( Screen3, ScreenTransition.None ) )** |**Etunimi.Text**-arvoa verrataan nimiin ”Carlos”, ”Kirstin” ja ”John” tässä järjestyksessä. Vastaavuus löytyy nimellä ”John”, joten sovellus siirtyy näyttöön **Screen3**. |**tosi**<br><br>Näytöksi vaihdetaan **Screen3**. |
 
 ### <a name="step-by-step"></a>Vaihe vaiheelta
-1. Lisää **[Tekstisyöte](../controls/control-text-input.md)**-ohjausobjekti ja anna sille nimeksi **Text1**, jos tämä ei ole sen oletusnimi.
+1. Lisää **[Tekstisyöte](../controls/control-text-input.md)** -ohjausobjekti ja anna sille nimeksi **Text1**, jos tämä ei ole sen oletusnimi.
 2. Kirjoita kohtaan **Text1** teksti **30**.
-3. Lisää **Selite**-ohjausobjekti ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
+3. Lisää **Selite**-ohjausobjekti ja määritä sen **[Text](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
    **If( Value(Text1.Text) < 20, "Tilaa PALJON enemmän!", Value(Text1.Text) < 40, "Tilaa enemmän!", Text1.Text )**
    
     **Selite**-ohjausobjektissa näytetään **Tilaa enemmän!** koska kohdan **Text1** arvo on suurempi kuin 20 mutta pienempi kuin 40.
