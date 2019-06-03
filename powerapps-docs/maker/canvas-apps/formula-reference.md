@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 85ab89641fd29fa91e8c5b5d7b3d36e9cddedaf2
-ms.sourcegitcommit: 6b75019dccc5296a313f9ff0eb397003f13ce737
+ms.openlocfilehash: ec035ca959f29832e2ba0bbb2250a24c11f1692e
+ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65940495"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451412"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -26,7 +26,7 @@ Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
 * **Funktiot** käyttävät parametreja, suorittavat toiminnon ja palauttavat arvon. Esimerkiksi **Sqrt(25)** palauttaa arvon **5**. Funktiot on mallinnettu Microsoft Excelin funktioiden mukaan.  Joillakin funktioilla on sivuvaikutuksia, kuten **SubmitForm**eilla, jotka sopivat vain **Button.OnSelect**in kaltaiseen [toimintakaavaan](working-with-formulas-in-depth.md).
 * **Signaalit** palauttavat tietoja ympäristöstä. Esimerkiksi **[Location](functions/signals.md)** palauttaa laitteen nykyiset GPS-koordinaatit. Signaalit eivät käytä parametreja, eikä niillä ole sivuvaikutuksia.
 * **Luetteloinnit** palauttavat valmiiksi määritetyn vakioarvon. Esimerkiksi **[Color](functions/function-colors.md)** on luettelointi, jolla on ennalta määritetyt arvot **Color.Red**, **Color.Blue** ja niin edelleen.  Yleiset luetteloinnit ovat mukana tässä. Funktiokohtaiset luetteloinnit on kuvattu funktion yhteydessä.
-* **Nimettyjen operaattorien**, kuten **[ThisItem](functions/operators.md#thisitem-operator)** ja **[Parent](functions/operators.md#parent-operator)**, avulla päästään käsiksi tietoihin säiliön sisältä.
+* **Nimettyjen operaattorien**, kuten **[ThisItem](functions/operators.md#thisitem-operator)** ja **[Parent](functions/operators.md#parent-operator)** , avulla päästään käsiksi tietoihin säiliön sisältä.
 
 Muita elementtejä ovat:
 
@@ -45,9 +45,9 @@ Muita elementtejä ovat:
 
 **[AddColumns](functions/function-table-shaping.md)** – palauttaa taulukon, johon on lisätty [sarakkeita](working-with-tables.md#columns).
 
-**[And](functions/function-logicals.md)** – totuusarvoehdon AND-operaattori.  Palauttaa arvon **tosi**, jos kaikkien argumenttien arvo on **tosi**.  Voit käyttää myös [**&&**-operaattoria](functions/operators.md).
+**[And](functions/function-logicals.md)** – totuusarvoehdon AND-operaattori.  Palauttaa arvon **tosi**, jos kaikkien argumenttien arvo on **tosi**.  Voit myös käyttää [ **&&** -operaattoria](functions/operators.md).
 
-**[App](functions/signals.md)** – palauttaa tietoja käynnissä olevasta sovelluksesta, kuten sen, mikä näyttö on näkyvissä.
+**[Sovelluksen](functions/object-app.md)**  – sisältää tietoja käynnissä sovelluksen ja hallita sovelluksen toiminnan.
 
 **[Asin](functions/function-trig.md)** – palauttaa luvun arkussinin radiaaneina.
 
@@ -128,7 +128,7 @@ Muita elementtejä ovat:
 
 **[Degrees](functions/function-trig.md)** – muuntaa radiaanit asteiksi.
 
-**[Disable](functions/function-enable-disable.md)** – poistaa käytöstä signaalin, kuten GPS:n lukemisen **[Location](functions/signals.md)**.
+**[Disable](functions/function-enable-disable.md)** – poistaa käytöstä signaalin, kuten GPS:n lukemisen **[Location](functions/signals.md)** .
 
 **[Distinct](functions/function-distinct.md)** – tekee taulukon tietueista yhteenvedon ja poistaa kaksoiskappaleet.  
 
@@ -139,7 +139,7 @@ Muita elementtejä ovat:
 ## <a name="e"></a>E
 **[EditForm](functions/function-form.md)** – nollaa lomakkeen ohjausobjektin kohteen muokkaamista varten.
 
-**[Enable](functions/function-enable-disable.md)** – ottaa käyttöön signaalin, kuten GPS:n lukemisen **[Location](functions/signals.md)**.
+**[Enable](functions/function-enable-disable.md)** – ottaa käyttöön signaalin, kuten GPS:n lukemisen **[Location](functions/signals.md)** .
 
 **[EndsWith](functions/function-startswith.md)** – tarkistaa, päättyykö tekstimerkkijono toiseen merkkijonoon.
 
@@ -234,14 +234,14 @@ Muita elementtejä ovat:
 
 **[NewForm](functions/function-form.md)** – nollaa lomakkeen ohjausobjektin kohteen luomista varten.
 
-**[Not](functions/function-logicals.md)** – totuusarvoehdon NOT-operaattori.  Palauttaa arvon **tosi**, jos sen argumentti on **epätosi**, ja palauttaa arvon **epätosi**, jos sen argumentti on **tosi**.  Voit myös käyttää [**!**-operaattoria](functions/operators.md).
+**[Not](functions/function-logicals.md)** – totuusarvoehdon NOT-operaattori.  Palauttaa arvon **tosi**, jos sen argumentti on **epätosi**, ja palauttaa arvon **epätosi**, jos sen argumentti on **tosi**.  Voit myös käyttää [ **!** -operaattoria](functions/operators.md).
 
 **[Notify](functions/function-showerror.md)** – Näyttää ilmoitussanoman käyttäjälle.
 
 **[Now](functions/function-now-today-istoday.md)** – Palauttaa nykyisen päivämäärä- ja aika-arvon.
 
 ## <a name="o"></a>O
-**[Or](functions/function-logicals.md)** – totuusarvoehdon OR-operaattori.  Palauttaa arvon **tosi**, jos jonkin sen argumentin arvo on **tosi**.  Voit myös käyttää [**||**-operaattoria](functions/operators.md).
+**[Or](functions/function-logicals.md)** – totuusarvoehdon OR-operaattori.  Palauttaa arvon **tosi**, jos jonkin sen argumentin arvo on **tosi**.  Voit myös käyttää [ **||** -operaattoria](functions/operators.md).
 
 ## <a name="p"></a>P
 **[Param](functions/function-param.md)** – tarjoaa pääsyn sovellukseen välitettyihin parametreihin, kun käyttäjä on avannut sen.
@@ -254,7 +254,7 @@ Muita elementtejä ovat:
 
 **[PlainText](functions/function-encode-decode.md)** – poistaa HTML- ja XML-tunnisteet merkkijonosta.
 
-**[Power](functions/function-numericals.md)** – palauttaa luvun korotettuna haluttuun potenssiin.  Voit myös käyttää [**^**-operaattoria](functions/operators.md).
+**[Power](functions/function-numericals.md)** – palauttaa luvun korotettuna haluttuun potenssiin.  Voit myös käyttää [ **^** -operaattoria](functions/operators.md).
 
 **[Proper](functions/function-lower-upper-proper.md)** – muuntaa merkkijonon kunkin sanan ensimmäisen kirjaimen isoksi kirjaimeksi ja loput pieniksi kirjaimiksi.
 
