@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61558983"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-canvas-app-variables-in-powerapps"></a>Pohjaan perustuvan sovelluksen muuttujien ymmärtäminen PowerAppsissa
 
@@ -58,7 +59,7 @@ Kaava **Label1** on automaattisesti uudelleen, näemme uuden arvon.
 
 PowerAppsissa voidaan käyttää kaavoja määrittämään ohjausobjektin ensisijaisen arvon lisäksi myös ominaisuuksia, kuten muotoilun. Seuraavassa esimerkissä kaava nimen **[Väri](controls/properties-color-border.md)** -ominaisuudelle näyttää negatiiviset arvot automaattisesti punaisella. **[If](functions/function-if.md)** -funktio näyttää hyvin tutulta Excelistä:
 
-`If( Value(Label1.Text) < 0, Red, Black )`
+`If( Value(Label1.Text) < 0; Red; Black )`
 
 ![Animaation ehdollinen muotoilu](media/working-with-variables/recalc-color.gif)
 
@@ -104,7 +105,7 @@ Jotta voimme luoda laskimen, tarvitsemme muuttujan, joka sisältää juoksevan s
 
 Näin yleiset muuttujat toimivat:
 
-* Yleisen muuttujan arvo asetetaan **[Set](functions/function-set.md)** -funktiolla.  **Set( MyVar, 1 )** asettaa yleisen muuttujan **MyVar** arvoon **1**.
+* Yleisen muuttujan arvo asetetaan **[Set](functions/function-set.md)** -funktiolla.  **Set( MyVar; 1 )** asettaa yleisen muuttujan **MyVar** arvoon **1**.
 * Yleistä muuttujaa käytetään viittaamalla nimeen, jota käytetään **Set**-funktion kanssa.  Tässä tapauksessa **MyVar** palauttaa arvon **1**.
 * Yleiset muuttujat voivat sisältää mitä tahansa arvoja, mukaan lukien merkkijonoja, lukuja, tietueita ja [taulukkoja](working-with-tables.md).
 
@@ -126,7 +127,7 @@ Rakennetaan laskuri uudelleen käyttämällä yleistä muuttujaa:
 
 4. Jotta juokseva summa määritetään **nollaksi** aina, kun käyttäjä valitsee **Tyhjennä**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **Set( RunningTotal, 0 )**
+    **Set( RunningTotal; 0 )**
 
     ![Tyhjennä-painike OnSelect-ominaisuus määritetään joukko-funktio](media/working-with-variables/global-variable-2.png)
 
@@ -180,11 +181,11 @@ Kun käyttäjä avaa sovelluksen, Kaikilla muuttujilla on alkuarvo, *tyhjä*.
 
 Arvo luetaan sen muuttujan nimen avulla. Voit esimerkiksi määrittää muuttuja on tämä kaava:
 
-`Set( Radius, 12 )`
+`Set( Radius; 12 )`
 
 Sitten voit käyttää **Radius** tahansa voit määrittää luvun, että se korvataan **12**:
 
-`Pi() * Power( Radius, 2 )`
+`Pi() * Power( Radius; 2 )`
 
 Jos annat kontekstimuuttujan on sama nimi kuin yleisen muuttujan tai kokoelmaan, kontekstimuuttujan etusijalla. Voit edelleen viitata yleisen muuttujan tai kokoelmassa käytettäessä [selvitysoperaattoria](functions/operators.md#disambiguation-operator) **@[Radius]** .
 
@@ -236,7 +237,7 @@ Rakennetaan laskuri uudelleen käyttämällä kontekstimuuttujaa:
 
 7. Voit määrittää kontekstimuuttujan arvon siirtyessäsi näyttöön. Tästä on hyötyä välitettäessä kontekstia tai parametreja näytöstä toiseen. Tätä tapaa osoittamaan Lisää näyttö, Lisää painike ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-    **Navigate( Screen1, None, { RunningTotal: -1000 } )**
+    **Navigate( Screen1; None; { RunningTotal: -1000 } )**
 
     ![Painikkeen OnSelect-ominaisuus](media/working-with-variables/context-variable-5.png)
 
@@ -270,7 +271,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 3. Jotta juokseva summa päivittyy aina, kun käyttäjä valitsee **Lisää**-painikkeen, määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **Collect( PaperTape, TextInput1.Text )**
+    **Collect( PaperTape; TextInput1.Text )**
 
     Tämä kaava pelkkä olemassaolo määrittää **PaperTape** kuin kokoelma, jossa tekstimerkkijonoa yksisarakkeisen taulukon. Voit viitata **PaperTape** missä tahansa sovelluksessa. Aina, kun käyttäjä avaa sovelluksessa **PaperTape** on tyhjä taulukko.
 
@@ -286,7 +287,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 5. Näytä juokseva summa lisäämällä nimi, ja määritä sen **[Teksti](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **Sum( PaperTape, Value )**
+    **Sum( PaperTape; Value )**
 
     ![Otsikon tekstin ominaisuutta](media/working-with-variables/papertape-3.png)
 
@@ -310,7 +311,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 10. Tallentaa ja Nouda kokoelma lisäämällä kaksi muuta painikeohjausobjektia ja määrittämällä niiden **tekstin** ominaisuudet, jotta voit **lataaminen** ja **Tallenna**. Määritä **OnSelect** -ominaisuuden **lataaminen** painike Tämä kaava:
 
-     **Clear( PaperTape ); LoadData( PaperTape, "StoredPaperTape", true )**
+     **Clear( PaperTape );; LoadData( PaperTape; "StoredPaperTape"; true )**
 
      Haluat tyhjentää kokoelman ensin, koska **LoadData** liittää tallennetut arvot kokoelman loppuun.
 
@@ -318,7 +319,7 @@ Luodaan seuraavaksi laskin uudelleen kokoelman avulla:
 
 11. Määritä **OnSelect** -ominaisuuden **Tallenna** painike Tämä kaava:
 
-     **SaveData( PaperTape, "StoredPaperTape" )**
+     **SaveData( PaperTape; "StoredPaperTape" )**
 
      ![Ominaisuuden OnSelect * Tallenna-painiketta](media/working-with-variables/papertape-6.png)
 

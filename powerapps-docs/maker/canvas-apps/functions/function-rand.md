@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61563962"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="rand-function-in-powerapps"></a>PowerAppsin Rand-funktio
 Palauttaa pseudosatunnaisluvun.
@@ -62,7 +63,7 @@ Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md),
 #### <a name="create-a-table-of-random-numbers"></a>Satunnaislukujen taulukon luominen
 1. Lisää **[painike](../controls/control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-    **ClearCollect( RandomNumbers, ForAll( [ 1, 2, 3, 4, 5 ], Rand() ))**
+    **ClearCollect( RandomNumbers; ForAll( [ 1; 2; 3; 4; 5 ]; Rand() ))**
 
     Tämä kaava luo yksisarakkeisen taulukon, joka toistetaan viisi kertaa, ja tuloksesi saadaan viisi satunnaislukua.
 
@@ -80,4 +81,4 @@ Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md),
 
     ![Näyttö, jossa näytetään tietotaulukko, jossa on viisi erilaista desimaaliarvojoukkoa 0.414, 0.128, 0.860, 0.303, 0.568](media/function-rand/rand-collection-2.png)
 
-Voit luoda yksittäisen satunnaisluvun taulukon sijasta käyttämällä kaavaa **Set( RandomNumber, Rand() )** .
+Voit luoda yksittäisen satunnaisluvun taulukon sijasta käyttämällä kaavaa **Set( RandomNumber; Rand() )** .

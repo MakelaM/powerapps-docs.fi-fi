@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/28/2019
 ms.locfileid: "66265780"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="develop-offline-capable-canvas-apps"></a>Kehitä offline-tilassa toimivia pohjaan perustuvia sovelluksia
 
@@ -78,14 +79,14 @@ Korkean tason, sovelluksen suorittaa seuraavia tehtäviä:
 
 1. - **Puu näkymän** ruudussa **sovelluksen**, ja aseta sen **OnStart** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
-            Set( statusText, "Online data" ),
-        LoadData( LocalTweets, "LocalTweets", true );
-            Set( statusText, "Local data" )
-    );
-    SaveData( LocalTweets, "LocalTweets" );
+    ```powerapps-comma
+    If( Connection.Connected;
+        ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 10} ) );;
+            Set( statusText; "Online data" );
+        LoadData( LocalTweets; "LocalTweets"; true );;
+            Set( statusText; "Local data" )
+    );;
+    SaveData( LocalTweets; "LocalTweets" );;
     ```
 
     > [!div class="mx-imgBorder"]
@@ -113,7 +114,7 @@ Tämä kaava tarkistaa, onko laite online:
 1. Valikoiman mallipohja, Lisää kolme [ **nimen** ](controls/control-text-box.md) ohjausobjekteja ja määritä **teksti** ominaisuuden jokaisen selitteen jokin näistä arvoista:
 
     - `ThisItem.UserDetails.FullName & " (@" & ThisItem.UserDetails.UserName & ")"`
-    - `Text(DateTimeValue(ThisItem.CreatedAtIso), DateTimeFormat.ShortDateTime)`
+    - `Text(DateTimeValue(ThisItem.CreatedAtIso); DateTimeFormat.ShortDateTime)`
     - `ThisItem.TweetText`
 
 1. Lihavoi tekstin viimeisen selitteen niin, että valikoiman muistuttaa tätä esimerkkiä.
@@ -127,7 +128,7 @@ Tämä kaava tarkistaa, onko laite online:
 
 1. Määritä uusin nimen **tekstin** -ominaisuuden arvoksi tämä kaava:
 
-    `If( Connection.Connected, "Connected", "Offline" )`
+    `If( Connection.Connected; "Connected"; "Offline" )`
 
 Tämä kaava määrittää, onko laite online-tilassa. Jos se on, selite näyttää **yhdistetty**; muussa tapauksessa se näyttää **Offline**.
 
@@ -148,26 +149,26 @@ Tämä kaava määrittää, onko laite online-tilassa. Jos se on, selite näytt�
 
 1. Määritä painikkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        Twitter.Tweet( "", {tweetText: NewTweetTextInput.Text} ),
-        Collect( LocalTweetsToPost, {tweetText: NewTweetTextInput.Text} );
-            SaveData( LocalTweetsToPost, "LocalTweetsToPost" )
-    );
-    Reset( NewTweetTextInput );
+    ```powerapps-comma
+    If( Connection.Connected;
+        Twitter.Tweet( ""; {tweetText: NewTweetTextInput.Text} );
+        Collect( LocalTweetsToPost; {tweetText: NewTweetTextInput.Text} );;
+            SaveData( LocalTweetsToPost; "LocalTweetsToPost" )
+    );;
+    Reset( NewTweetTextInput );;
     ```  
 
 1. - **OnStart** -ominaisuuden **sovelluksen**, Lisää rivi kaavan lopussa:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 100} ) );
-            Set( statusText, "Online data" ),
-        LoadData( LocalTweets, "LocalTweets", true );
-            Set( statusText, "Local data" )
-    );
-    SaveData( LocalTweets, "LocalTweets" );
-    LoadData( LocalTweetsToPost, "LocalTweetsToPost", true );  // added line
+    ```powerapps-comma
+    If( Connection.Connected;
+        ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 100} ) );;
+            Set( statusText; "Online data" );
+        LoadData( LocalTweets; "LocalTweets"; true );;
+            Set( statusText; "Local data" )
+    );;
+    SaveData( LocalTweets; "LocalTweets" );;
+    LoadData( LocalTweetsToPost; "LocalTweetsToPost"; true );;  // added line
     ```
 
     > [!div class="mx-imgBorder"]
@@ -193,12 +194,12 @@ Sitten kaava palauttaa tekstiruudun tekstin syötön.
 
 1. Määritä ajastimen **OnTimerEnd** tämä kaava:
 
-    ```powerapps-dot
-    If( Connection.Connected,
-        ForAll( LocalTweetsToPost, Twitter.Tweet( "", {tweetText: tweetText} ) );
-        Clear( LocalTweetsToPost );
-        ClearCollect( LocalTweets, Twitter.SearchTweet( "PowerApps", {maxResults: 10} ) );
-        SaveData( LocalTweets, "LocalTweets" );
+    ```powerapps-comma
+    If( Connection.Connected;
+        ForAll( LocalTweetsToPost; Twitter.Tweet( ""; {tweetText: tweetText} ) );;
+        Clear( LocalTweetsToPost );;
+        ClearCollect( LocalTweets; Twitter.SearchTweet( "PowerApps"; {maxResults: 10} ) );;
+        SaveData( LocalTweets; "LocalTweets" );;
    )
     ```
 

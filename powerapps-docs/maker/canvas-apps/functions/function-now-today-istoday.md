@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544161"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="now-today-and-istoday-functions-in-powerapps"></a>Now-, Today- ja IsToday-funktiot PowerAppsissa
 Palauttaa nykyisen päivämäärän ja ajan ja testaa, vastaako päivämäärä/aika-arvo tätä päivää.
@@ -41,7 +42,7 @@ Kun muuttuvaa funktiota käytetään työnkulun kaavassa, muuttuva funktio palau
 
 Esimerkiksi nimen ohjausobjekti, jossa **Label1.Text = Now()** , ei muutu, kun sovelluksesi on aktiivinen.  Uusi arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
 
-Funktio arvioidaan uudelleen, jos se on osa kaavaa, jossa jotakin muuta kohtaa on muutettu.  Jos lisäämme esimerkkiimme liukusäätimen ohjausobjektin, jossa **Label1.Text = DateAdd (Now(), Slider1.Value, Minutes)** , senhetkinen aika noudetaan aina, kun liukusäätimen ohjausobjektin arvo muuttuu ja otsikon tekstin ominaisuutta arvioidaan uudelleen.
+Funktio arvioidaan uudelleen, jos se on osa kaavaa, jossa jotakin muuta kohtaa on muutettu.  Jos lisäämme esimerkkiimme liukusäätimen ohjausobjektin, jossa **Label1.Text = DateAdd (Now(); Slider1.Value; Minutes)** , senhetkinen aika noudetaan aina, kun liukusäätimen ohjausobjektin arvo muuttuu ja otsikon tekstin ominaisuutta arvioidaan uudelleen.
 
 Kun sitä käytetään [käytöskaavassa](../working-with-formulas-in-depth.md), muuttuvia funktioita arvioidaan aina, kun käytöskaavaa arvioidaan.  Katso esimerkki alta.
 
@@ -59,14 +60,14 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Text( Now(), "mm/dd/yyyy hh:mm:ss" )** |Hakee nykyisen päivämäärän ja ajan ja näyttää sen merkkijonona. |"02/12/2015 03:59:00" |
-| **Text( Today(), "mm/dd/yyyy hh:mm:ss" )** |Hakee vain nykyisen päivämäärän, jättää aikaosan keskiyöhön ja näyttää tuloksen merkkijonona. |"02/12/2015 00:00:00" |
+| **Text( Now(); "mm/dd/yyyy hh:mm:ss" )** |Hakee nykyisen päivämäärän ja ajan ja näyttää sen merkkijonona. |"02/12/2015 03:59:00" |
+| **Text( Today(); "mm/dd/yyyy hh:mm:ss" )** |Hakee vain nykyisen päivämäärän, jättää aikaosan keskiyöhön ja näyttää tuloksen merkkijonona. |"02/12/2015 00:00:00" |
 | **IsToday( Now() )** |Testaa, onko nykyinen päivämäärä ja aika tämän päivän keskiyön ja huomisen keskiyön välillä. |**true** |
 | **IsToday( Today() )** |Testaa, onko nykyinen päivämäärä tämän päivän keskiyön ja huomisen keskiyön välillä. |**true** |
-| **Text( DateAdd( Now(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Hakee nykyisen päivämäärän ja ajan, lisää tulokseen 12 päivää ja näyttää tuloksen merkkijonona. |"02/24/2015 03:59:00" |
-| **Text( DateAdd( Today(), 12 ), "mm/dd/yyyy hh:mm:ss" )** |Hakee nykyisen päivämäärän, lisää tulokseen 12 päivää ja näyttää tuloksen merkkijonona. |"02/24/2015 00:00:00" |
-| **IsToday( DateAdd( Now(), 12 ) )** |Testaa, onko nykyinen päivämäärä ja aika plus 12 päivää tämän päivän keskiyön ja huomisen keskiyön välillä. |**false** |
-| **IsToday( DateAdd( Today(), 12 ) )** |Testaa, onko nykyinen päivämäärä plus 12 päivää tämän päivän keskiyön ja huomisen keskiyön välillä. |**false** |
+| **Text( DateAdd( Now(); 12 ); "mm/dd/yyyy hh:mm:ss" )** |Hakee nykyisen päivämäärän ja ajan, lisää tulokseen 12 päivää ja näyttää tuloksen merkkijonona. |"02/24/2015 03:59:00" |
+| **Text( DateAdd( Today(); 12 ); "mm/dd/yyyy hh:mm:ss" )** |Hakee nykyisen päivämäärän, lisää tulokseen 12 päivää ja näyttää tuloksen merkkijonona. |"02/24/2015 00:00:00" |
+| **IsToday( DateAdd( Now(); 12 ) )** |Testaa, onko nykyinen päivämäärä ja aika plus 12 päivää tämän päivän keskiyön ja huomisen keskiyön välillä. |**false** |
+| **IsToday( DateAdd( Today(); 12 ) )** |Testaa, onko nykyinen päivämäärä plus 12 päivää tämän päivän keskiyön ja huomisen keskiyön välillä. |**false** |
 
 #### <a name="display-a-clock-that-updates-in-real-time"></a>Reaaliaikaisesti päivittyvän kellon näyttäminen
 
@@ -76,7 +77,7 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
 1. Määritä ohjausobjektin **OnTimerEnd**-ominaisuus tähän kaavaan:
 
-    **Set( CurrentTime, Now() )**
+    **Set( CurrentTime; Now() )**
 
     Aina, kun ajastin aloittaa alusta (jokaisen sekunnin jälkeen), tämä kaava määrittää yleisen **CurrentTime**-muuttujan **Now**-funktion nykyiseen arvoon.
 
@@ -84,7 +85,7 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
 1. Lisää **[Selite](../controls/control-text-box.md)** -ohjausobjekti ja määritä sen **Text**-ominaisuus tähän kaavaan:
 
-    **Text( CurrentTime, LongTime24 )**
+    **Text( CurrentTime; LongTime24 )**
 
     Voit **[Text](function-text.md)** -funktion avulla muotoilla päivämäärän ja ajan haluamaksesi tai määrittää täksi ominaisuudeksi **CurrentTime**, jotta se näyttää tunnit ja minuutit sekuntien sijasta.
 
@@ -102,6 +103,6 @@ Tämän osion esimerkkejä varten nykyinen aika on **03.59** **12. helmikuuta 20
 
 1. Määritä näytön **[OnStart](../controls/control-screen.md)** -ominaisuus, jotta **CurrentTime**-muuttujalla on voimassaoleva arvo, kuten seuraavassa esimerkissä:
 
-    **Set(CurrentTime, Now())**
+    **Set(CurrentTime; Now())**
 
     Selite tulee näkyviin heti, kun sovellus käynnistyy (ennen kuin ajastin käy koko sekunnin ajan).

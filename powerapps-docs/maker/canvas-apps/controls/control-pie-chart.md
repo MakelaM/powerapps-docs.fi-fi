@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548083"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="pie-chart-control-in-powerapps"></a>PowerAppsin Ympyräkaavio-ohjausobjekti
 Ohjausobjekti, joka näyttää suhteellisia arvoja verrattuna toisiinsa.
@@ -79,11 +80,11 @@ Tämä ohjausobjekti on ryhmitelty ohjausobjekti, joka sisältää kolme ohjauso
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
-[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
+[**Max**( *DataSource*; *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **[Painike](control-button.md)** -ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
-   **Collect(Revenue2015, {Product:"Europa", Revenue:27000}, {Product:"Ganymede", Revenue:26300}, {Product:"Callisto", Revenue:29200})**
+   **Collect(Revenue2015; {Product:"Europa"; Revenue:27000}; {Product:"Ganymede"; Revenue:26300}; {Product:"Callisto"; Revenue:29200})**
    
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
    

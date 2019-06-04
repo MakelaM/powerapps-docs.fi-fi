@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61559445"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="check-box-control-in-powerapps"></a>Valintaruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi valita tai tyhjentää ja asettaa siten sen arvoksi **tosi** tai **epätosi**.
@@ -121,14 +122,14 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
-[**If**( *Ehto*, *Tulos* )](../functions/function-if.md)
+[**If**( *Ehto*; *Tulos* )](../functions/function-if.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **valintaruutu**-ohjausobjekti, anna sen nimeksi **chkReserve**, ja määritä sen **[Teksti](properties-core.md)** -ominaisuus näyttämään teksti **Varaa nyt**.
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[päivämäärävalitsin](control-date-picker.md)** -ohjausobjekti ja määritä sen **[Näkyvä](properties-core.md)** -ominaisuudeksi tämä kaava:
-   <br>**If(chkReserve.Value = true, true)**
+   <br>**If(chkReserve.Value = true; true)**
    
     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä, napsauta tai napauta kohdetta **chkReserve** ja määritä sen **[Arvo](properties-core.md)** -ominaisuuden arvoksi **tosi**. Napsauta tai napauta sitten uudestaan **chkReserve**  ja määritä sen **[Arvo](properties-core.md)** -ominaisuuden arvoksi **epätosi**.

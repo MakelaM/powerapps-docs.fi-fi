@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61548439"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Trim- ja TrimEnds-funktiot PowerAppsissa
 Poistavat ylimääräiset välilyönnit tekstimerkkijonosta.
@@ -53,7 +54,7 @@ Seuraavissa esimerkeissä käytetään yksisarakkeista kokoelmaa, jonka nimi on 
 ![](media/function-trim/input-strings.png)
 
 Luo tämä kokoelma määrittämällä **[Painike](../controls/control-button.md)**-ohjausobjektin **OnSelect**-ominaisuudeksi tämä kaava avaamalla esikatselutila ja napsauttamalla tai napauttamalla painiketta:
-<br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
+<br>**ClearCollect( Spaces; [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;"; "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill"; "Already&nbsp;trimmed"; "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;"; "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |

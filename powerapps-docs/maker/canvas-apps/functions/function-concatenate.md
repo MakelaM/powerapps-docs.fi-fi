@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/24/2019
 ms.locfileid: "66216094"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Concat- ja Concatenate-funktiot PowerAppsissa
 
@@ -36,12 +37,12 @@ Käytä [ **Jaa** ](function-split.md) tai [ **MatchAll** ](function-ismatch.md)
 
 ## <a name="syntax"></a>Syntaksi
 
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*; *Formula* )
 
 - *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
 - *Formula* – Pakollinen.  Kaikkiin taulukon tietueisiin käytettävä kaava.
 
-**Concatenate**( *String1* [, *String2*, ...] )
+**Concatenate**( *String1* [; *String2*; ...] )
 
 - *String(s)* – Pakollinen.  Yksittäisten merkkijonojen tai yksisarakkeisen taulukon merkkijonojen yhdistelmä.
 
@@ -55,13 +56,13 @@ Tämän osion esimerkeissä käytetään näitä yleisiä muuttujia:
 
 Jos haluat luoda sovelluksen näitä yleisiä muuttujia, Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-```powerapps-dot
-Set( FirstName, "Jane" ); Set( LastName, "Doe" );
-Set( Products,
+```powerapps-comma
+Set( FirstName; "Jane" );; Set( LastName; "Doe" );;
+Set( Products;
     Table(
-        { Name: "Violin", Type: "String" },
-        { Name: "Cello", Type: "String" },
-        { Name: "Trumpet", Type: "Wind" }
+        { Name: "Violin"; Type: "String" };
+        { Name: "Cello"; Type: "String" };
+        { Name: "Trumpet"; Type: "Wind" }
     )
 )
 ```
@@ -118,4 +119,4 @@ Näissä esimerkeissä Lisää tyhjä, pystysuuntainen valikoima, määritä sen
 | Kaava | Kuvaus | Tulos |
 |---------|-------------|--------|
 | **Jaa (Concat (&nbsp;tuotteet,&nbsp;nimi&nbsp;&&nbsp;”,&nbsp;”&nbsp;), ””,)** | Jakaa merkkijonon erottimella **””,** . Merkkijonon lopussa pilkku ja välilyönti, joten tulos viimeistä riviä on tyhjä merkkijono.  | ![Table](media/function-concatenate/split.png) |
-| **MatchAll (Concat (&nbsp;tuotteet,&nbsp;nimi&nbsp;&&nbsp;”,&nbsp;”&nbsp;) ”, [^ \s,]+”). FullMatch** | Jakaa merkkijonon merkkejä, jotka eivät ole välilyöntejä tai pilkkuja perusteella. Tämä kaava poistaa ylimääräiset pilkuin ja tilaa merkkijonon lopussa. | ![Table](media/function-concatenate/matchall.png)
+| **MatchAll (Concat (&nbsp;tuotteet;&nbsp;nimi&nbsp;&&nbsp;”;&nbsp;”&nbsp;) ”; [^ \s;]+”). FullMatch** | Jakaa merkkijonon merkkejä, jotka eivät ole välilyöntejä tai pilkkuja perusteella. Tämä kaava poistaa ylimääräiset pilkuin ja tilaa merkkijonon lopussa. | ![Table](media/function-concatenate/matchall.png)

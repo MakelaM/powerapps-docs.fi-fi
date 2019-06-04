@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61544656"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="add-picture-control-in-powerapps"></a>Lisää kuva -ohjausobjekti PowerAppsissa
 Ottaa valokuvan tai lataa kuvat paikallisesta laitteesta.
@@ -114,7 +115,7 @@ Katso [kuvan ohjausobjektin viittauksesta](control-image.md) **kuvan** ominaisuu
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="add-images-to-an-image-gallery-control"></a>Lisää kuvia Kuvavalikoima-ohjausobjektiin
@@ -123,7 +124,7 @@ Katso [kuvan ohjausobjektin viittauksesta](control-image.md) **kuvan** ominaisuu
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Napsauta tai napauta **Avaa**-valintaikkunassa kuvatiedostoa ja valitse sitten **Avaa**.
 3. Lisää **[Painike](control-button.md)** -ohjausobjekti, siirrä se **Lisää kuva** -ohjausobjektin alle ja määritä **[Painike](control-button.md)** -ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **Collect(MyPix, AddMediaButton1.Media)**
+   **Collect(MyPix; AddMediaButton1.Media)**
    
     Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 4. Lisää **Kuvavalikoima**-ohjausobjekti ja aseta sen **[Items](properties-core.md)** -ominaisuudeksi **MyPix**.

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61555323"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-canvas-app-from-scratch-based-on-excel-data"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Excel-tietojen perusteella
 
@@ -111,17 +112,17 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
     Kaava vastaa tätä esimerkkiä:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SortByColumns(
         Search(
-            Schedule,
-            TextSearchBox1.Text,
+            Schedule;
+            TextSearchBox1.Text;
             "Volunteer"
-        ),
-        "Volunteer",
+        );
+        "Volunteer";
         If(
-            SortDescending1,
-            SortOrder.Descending,
+            SortDescending1;
+            SortOrder.Descending;
             SortOrder.Ascending
         )
     )
@@ -196,7 +197,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
+    `NewForm(EditForm1);;Navigate(ChangeScreen;ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, **ChangeScreen** näytetään kaikki kentät tyhjänä, jotta käyttäjä voi luoda tietueen helpommin.
 
@@ -206,7 +207,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä nuolen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)`
+    `EditForm(EditForm1);; Navigate(ChangeScreen; ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, **ChangeScreen** näytetään niin, että jokaisessa kentässä näkyvät valitun tietueen tiedot, jotta käyttäjä voi luoda tietueen tai muokata sitä helpommin.
 
@@ -218,7 +219,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
+    `ResetForm(EditForm1);;Navigate(ViewScreen; ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, kaikki käyttäjän tässä näytössä tekemät muutokset hylätään, ja tarkastelunäyttö avautuu.
 
@@ -228,7 +229,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä valintamerkin **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
+    `SubmitForm(EditForm1);; Navigate(ViewScreen; ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, kaikki käyttäjän tässä näytössä tekemät muutokset tallennetaan, ja tarkastelunäyttö avautuu.
 
@@ -246,7 +247,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä roskakorikuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
+    `Remove(Schedule; BrowseGallery1.Selected);; Navigate(ViewScreen; ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, valittu tietue poistetaan tietolähteestä ja tarkastelunäyttö avautuu.
 

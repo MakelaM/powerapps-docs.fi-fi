@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 05/31/2019
 ms.locfileid: "66451606"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="app-object-in-powerapps"></a>Sovelluksen objektin powerappsissa
 
@@ -101,7 +102,7 @@ Selaimessa vahvistusvalintaikkunassa saattaa näkyä yleinen viesti selaimesta.
 
 1. Määritä **sovelluksen** objektin **ConfirmExit** ominaisuudeksi seuraava lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     AccountForm.Unsaved Or ContactForm.Unsaved
     ```
 
@@ -112,9 +113,9 @@ Selaimessa vahvistusvalintaikkunassa saattaa näkyä yleinen viesti selaimesta.
 
 1. Määritä **sovelluksen** objektin **ConfirmExitMessage** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    If( AccountsForm.Unsaved,
-        "Accounts form has unsaved changes.",
+    ```powerapps-comma
+    If( AccountsForm.Unsaved;
+        "Accounts form has unsaved changes.";
         "Contacts form has unsaved changes."
     )
     ```

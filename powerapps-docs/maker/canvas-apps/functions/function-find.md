@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61551027"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="find-function-in-powerapps"></a>PowerAppsin Etsi-funktio
 Etsii toisen merkkijonon sisältä tekstimerkkijonon, jos se on olemassa.
@@ -29,7 +30,7 @@ Etsii toisen merkkijonon sisältä tekstimerkkijonon, jos se on olemassa.
 **Etsi** palauttaa löytyneen merkkijonon aloituskohdan.  Merkkijonon ensimmäinen merkki on kohta 1. **Etsi** palauttaa *tyhjän*, jos merkkijono, jossa suoritat haun, ei sisällä etsittävää merkkijonoa.
 
 ## <a name="syntax"></a>Syntaksi
-**Find**( *FindString*, *WithinString* [, *StartingPosition* ] )
+**Find**( *FindString*; *WithinString* [; *StartingPosition* ] )
 
 * *FindString* – pakollinen.  Haettava merkkijono.
 * *WithinString* – pakollinen.  Merkkijono, josta haetaan.
