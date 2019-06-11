@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 06/07/2019
 ms.locfileid: "66761001"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-an-order-gallery-in-a-canvas-app"></a>Luo pohjaan perustuva sovellus order-valikoima
 
@@ -105,8 +106,8 @@ Noudata vaiheittaiset ohjeet luoda tilauksen valikoiman pohjaan perustuvan sovel
 
 1. Kaavarivillä, Määritä valikoiman **kohteet** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    Sort( Orders, 'Order Number', Descending )
+    ```powerapps-comma
+    Sort( Orders; 'Order Number'; Descending )
     ```
 
     [ **Lajittele** ](functions/function-sort.md) funktio järjestää luettelossa niin, että uusin tilaus (jolla on suurin tilausnumero) näkyy ensimmäisen.
@@ -132,7 +133,7 @@ Noudata vaiheittaiset ohjeet luoda tilauksen valikoiman pohjaan perustuvan sovel
 
 1. Kaavarivillä, Määritä nimen **tekstin** ominaisuudeksi seuraava lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     "Order " & ThisItem.'Order Number'
     ```
 
@@ -148,7 +149,7 @@ Noudata vaiheittaiset ohjeet luoda tilauksen valikoiman pohjaan perustuvan sovel
 
 1. Kaavarivillä, Määritä nimen **tekstin** ominaisuudeksi seuraava lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Customer.Company
     ```
 
@@ -192,7 +193,7 @@ Tässä toimenpiteessä lisätään tilaa selitteen valikoimassa ja määritä s
 
 1. Määritä **tekstin** ominaisuudeksi uusi seuraava lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.'Order Status'
     ```
 
@@ -215,12 +216,12 @@ Tässä toimenpiteessä lisätään tilaa selitteen valikoimassa ja määritä s
 
 1. Määritä kaavarivillä **väri** ominaisuudeksi tila tämä kaava:
 
-    ```powerapps-dot
-    Switch( ThisItem.'Order Status',
-        'Orders Status'.Closed, Green,
-        'Orders Status'.New, Black,
-        'Orders Status'.Invoiced, Blue,
-        'Orders Status'.Shipped, Purple
+    ```powerapps-comma
+    Switch( ThisItem.'Order Status';
+        'Orders Status'.Closed; Green;
+        'Orders Status'.New; Black;
+        'Orders Status'.Invoiced; Blue;
+        'Orders Status'.Shipped; Purple
     )
     ```
 
@@ -250,8 +251,8 @@ Tässä toimenpiteessä lisätään tilaa selitteen valikoimassa ja määritä s
 
 1. Kaavarivillä, Määritä uusi otsikko **tekstin** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    Text( Sum( ThisItem.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -282,8 +283,8 @@ Recap, voit aloittaa luo yhden näytön pohjaan perustuvan sovelluksen lisääm�
 - Lausekkeen näyttämään tilausnumero: `"Orders " & ThisItem.OrderNumber`
 - Monta yhteen-suhde kenttä: `ThisItem.Customer.Company`
 - Otsikko, joka sisältää joukon vaihtoehto nimi: `ThisItem.'Order Status'`
-- Otsikko, joka muuttaa minkä vaihtoehdon joukon selite näyttää-muodossa: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
-- Monimutkainen koostefunktion yksi-moneen-suhteen päälle: `Sum( ThisItem.'Order Details', Quantity * 'Unit Price' )`
+- Otsikko, joka muuttaa minkä vaihtoehdon joukon selite näyttää-muodossa: `Switch( ThisItem.'Order Status'; 'Orders Status'.Closed; Green; ...`
+- Monimutkainen koostefunktion yksi-moneen-suhteen päälle: `Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' )`
 
 ## <a name="next-topic"></a>Seuraavassa aiheessa
 

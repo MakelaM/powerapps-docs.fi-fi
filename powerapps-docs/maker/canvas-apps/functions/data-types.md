@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66736243"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="data-types-in-canvas-apps"></a>Tietotyypit pohjaan perustuvat sovellukset
 
@@ -39,9 +40,9 @@ Tämä artikkeli sisältää tiedot tietotyypit, jotka pohjaan sovellusten tuki.
 | **Media** | Video- tai tallennus URI tekstimerkkijono. | **MyVideo** lisätä app-resursseina<br>**"https://northwindtraders.com/intro.mp4"**<br>**”appres://blobmanager/3ba411c...”** |
 | **Numero** | Liukuluku. | **123**<br>**-4.567**<br>**8.903e121** |
 | **Asetusjoukko** | Valinta joukon vaihtoehtojen luku tukena. Tämän tietotyypin yhdistää lokalisoitavan tekstiotsikko numeerinen arvo. Otsikko näkyy sovelluksen ja numeerinen arvo tallennetaan ja käyttää vertailujen. | **ThisItem.OrderStatus** |
-| **Tietue** | Tietueen tietojen arvoista. Tämä peräkkäisillä tietotyyppi on muiden tietotyyppien on lueteltu tässä ohjeaiheessa esiintymiä. Lisätietoja: [Taulukoiden](../working-with-tables.md). | **{Yrityksen: "Northwind Traders",<br>Staff: 35 <br>NonProfit: false}** |
+| **Tietue** | Tietueen tietojen arvoista. Tämä peräkkäisillä tietotyyppi on muiden tietotyyppien on lueteltu tässä ohjeaiheessa esiintymiä. Lisätietoja: [Taulukoiden](../working-with-tables.md). | **{Yrityksen: "Northwind Traders";<br>Staff: 35 <br>NonProfit: false}** |
 | **Tietueen viittaus** | Viittaus tietueen entiteetissä. Viittaukset käytetään usein polymorfinen hakuja. Lisätietoja: [Viittaukset käsitteleminen](../working-with-references.md).| **First(accounts). Omistaja** |
-| **Taulukko** | Tietueiden taulukko.  Kaikki tietueet on oltava samat nimet kenttien käyttäen samaa tietotyyppejä ja puuttuu kentät käsitellään *tyhjä*. Tämä peräkkäisillä tietotyyppi on muiden tietotyyppien on lueteltu tässä ohjeaiheessa esiintymiä. Lisätietoja: [Taulukoiden](../working-with-tables.md). | **TABLE ({FirstName: "Sidney",<br>LastName: ”Higa”}, <br>{FirstName: "Nancy",<br>LastName: ”Andersonin”})**
+| **Taulukko** | Tietueiden taulukko.  Kaikki tietueet on oltava samat nimet kenttien käyttäen samaa tietotyyppejä ja puuttuu kentät käsitellään *tyhjä*. Tämä peräkkäisillä tietotyyppi on muiden tietotyyppien on lueteltu tässä ohjeaiheessa esiintymiä. Lisätietoja: [Taulukoiden](../working-with-tables.md). | **TABLE ({FirstName: "Sidney";<br>LastName: ”Higa”}; <br>{FirstName: "Nancy";<br>LastName: ”Andersonin”})**
 | **Teksti** | Unicode-merkkijono. | **"Hello, World"** |
 | **Time** | Ilman päivämäärää, sovelluksen käyttäjän aikavyöhykkeen ajan. | **Aika (11, 23, 45)** |
 | **Kaksi vaihtoehtoa** | Valinta kaksi vaihtoehtoa, totuusarvo tukena joukosta. Tämän tietotyypin yhdistää lokalisoitavan tekstiotsikko totuusarvo. Otsikko näkyy sovelluksen ja looginen arvo tallennetaan ja käyttää vertailujen. | **ThisItem.Taxable** |
@@ -52,7 +53,7 @@ Monet näistä tietotyypit ovat samankaltaisia ja on sama pohjana esityksen, kut
 
 Kaikki tietotyypit voi olla arvoa *tyhjä* (toisin sanoen ei arvoa). Termillä ”null” käytetään usein tietokantoihin tämä konsepti.  
 
-Käytä **tyhjä** funktio **määrittää** tai **Patch** -funktio määrittää muuttuja tai -kentän *tyhjä*. Esimerkiksi **Set (x, kohteen Blank())** poistaa mikä tahansa arvo yleisen muuttujan **x**.  
+Käytä **tyhjä** funktio **määrittää** tai **Patch** -funktio määrittää muuttuja tai -kentän *tyhjä*. Esimerkiksi **Set (x; kohteen Blank())** poistaa mikä tahansa arvo yleisen muuttujan **x**.  
 
 Testaa *tyhjä* arvon käyttämällä [ **IsBlank** ](function-isblank-isempty.md) funktio. Korvaa mahdollista *tyhjä* arvot, joilla on muita kuin*tyhjä* arvoja käyttämällä [ **Coalesce** ](function-isblank-isempty.md) funktio.
 
@@ -82,7 +83,7 @@ Pohjaan perustuvat sovellukset kunkin kuvan tai viitata muihin mediatiedosto on 
 
 Esimerkiksi **kuvan** kuvan ohjausobjektin ominaisuus hyväksyy sovelluksen resurssien paitsi myös linkkejä kuviin verkossa, kuten ”https://northwindtraders.com/logo.jpg”. Ominaisuus hyväksyy myös inline-kuvia, jotka käyttävät [tietojen URI-rakennetta](https://en.wikipedia.org/wiki/Data_URI_scheme), kuten tässä esimerkissä:
 
-```powerapps-dot
+```powerapps-comma
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
@@ -173,11 +174,11 @@ Pohjaan perustuvat sovellukset käyttää sisältyvät aikavyöhykkeen tiedot **
 
 Kaaviosovellusten lukeminen ja kirjoittaminen arvojen [ **aika** ](https://docs.microsoft.com/en-us/sql/t-sql/data-types/time-transact-sql) tyyppi on SQL Server merkkijonoja [kesto ISO 8601-muodossa](https://en.wikipedia.org/wiki/ISO_8601#Durations). On esimerkiksi jäsentää merkkijonon muodossa ja käyttää [ **aika** ](function-date-time.md) funktiota muuntamaan merkkijono **”PT2H1M39S”** - **aika** arvo:
 
-```powerapps-dot
+```powerapps-comma
 First(
     ForAll(
-        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-        Time( Value( hours ), Value( minutes ), Value( seconds ) )
+        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
+        Time( Value( hours ); Value( minutes ); Value( seconds ) )
     )
 ).Value
 ```
@@ -200,18 +201,18 @@ Kun sovellus käyttäjä valitsee vaihtoehdon ja tallentaa muutokset, sovellus l
 
 Otsikot ovat vain näyttötarkoituksia varten. Suora vertailuja nimien ei voi suorittaa, koska ne ovat tietyn kielelle. Sen sijaan kullekin asetusjoukon on luettelointi, joka toimii taustalla oleva numero tai totuusarvo. Ei voi käyttää esimerkiksi Tämä kaava:
 
-`If( ThisItem.OrderStatus = "Active", ...`
+`If( ThisItem.OrderStatus = "Active"; ...`
 
 Mutta voit käyttää tätä kaavaa:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
 
 -Yleisiä asetusjoukkoja (entiteeteille jakaa), asetusjoukko luetteloinnin nimi vastaa yleinen asetusjoukko nimi. Paikallisia asetusjoukkoja (joka on rajoitettu entiteetti),-nimi saattaa sisältää entiteetin nimi. Näin vältetään ristiriidassa, jos useita entiteettejä on asetusjoukkoja, joilla on sama nimi. Esimerkiksi **tilit** entiteetillä voi olla **OrderStatus** asetusjoukon ja sen nimi voi olla **OrderStatus (tiliä)** . Kyseistä nimeä sisältää yhden tai useamman välilyöntejä ja sulkeet, joten ympäröi se heittomerkit Jos viitata kaavassa.
 
 Kaksi asetusta arvot voivat lisäksi myös toimivat totuusarvoja. Esimerkiksi nimeltä kaksi asetusta arvo **TaxStatus** voi olla nimien **verollisen** ja **verottoman**, jotka vastaavat *true* ja *false* vastaavasti. Mallitiedoilla, voit käyttää tätä kaavaa:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
 
 Voit käyttää myös vastaava kaava:
 
-`If( ThisItem.Taxable, ...`
+`If( ThisItem.Taxable; ...`

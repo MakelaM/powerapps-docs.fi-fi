@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 06/06/2019
 ms.locfileid: "66736395"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="json-function-in-powerapps"></a>JSON-funktio powerappsissa
 
@@ -34,16 +35,16 @@ Pohjaan sovellusten tuki [tietotyyppejä](data-types.md) , joka tässä taulukos
 |-----------|-------------|---------|
 | **Boolean** | *TRUE* tai *false*. | `true` |
 | **Väri** | Merkkijono, joka sisältää 8-numeroinen heksadesimaalimuodossa värin. Tämän esityksen käyttää muotoa #*rrggbbaa*, jossa *rr* on punainen komponentti, *gg* on vihreä, *bb* on sininen ja *aa* on alfa-kanavaa. Alfa kanavan **00** on täysin läpinäkyvä ja **ff** on täysin läpinäkymätön. Voit välittää merkkijono [ **ColorValue** ](function-colors.md) funktio.  | `"#102030ff"` |
-| **Valuutta** | Luku, joka käyttää asianmukaisen desimaalierottimena käyttäjän kielen. Tieteellistä merkintätapaa käytetään tarvittaessa. | `1.345` |
+| **Valuutta** | Luku, joka käyttää asianmukaisen desimaalierottimena käyttäjän kielen. Tieteellistä merkintätapaa käytetään tarvittaessa. | `1,345` |
 | **Päivämäärä** | Merkkijono, joka sisältää ISO 8601-kalenterin päivämäärää **VVVV-KK-PP** muodossa. | `"2019-03-31"` |
 | **DateTime** | Merkkijono, joka sisältää ISO 8601-päivämäärä ja aika. Päivämäärä ja aika-arvot ovat UTC-muodossa, kuten lopun ”Z” ilmaisee.  | `"2019-03-31T22:32:06.822Z"`  |
 | **GUID** | Merkkijono, joka sisältää GUID-arvon. Kirjaimet ovat pieniä. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
 | **Kuva, Media** | Jos **IncludeBinaryData** on määritetty, mediatiedostoja on koodattu merkkijono. WWW-viittauksia, jotka käyttävät http: tai HTTPS-protokollaa: URL-rakenteen ei muokata. Muistissa binaaritiedot viittaukset ovat koodattu [”tietoja:*mimetype*; base64...”](https://en.wikipedia.org/wiki/Data_URI_scheme) muodossa. Muistin tiedot sisältävät kuvia, jotka käyttäjät siepata käyttämällä [ **kameran** ](../controls/control-camera.md) ohjausobjekti ja muut viittaukset kanssa appres: ja BLOB-objekti: URL-mallit.| `"data:image/jpeg;base64,/9j/4AA..."` |
-| **Numero** | Luku, joka käyttää asianmukaisen desimaalierottimena käyttäjän kielen. Tieteellistä merkintätapaa käytetään tarvittaessa. | `1.345` |
+| **Numero** | Luku, joka käyttää asianmukaisen desimaalierottimena käyttäjän kielen. Tieteellistä merkintätapaa käytetään tarvittaessa. | `1,345` |
 | **Asetus&nbsp;määrittää** | Numeerinen asetusta arvo, ei otsikko, jota käytetään näyttämistä varten. Numeerinen arvo käytetään, koska se on riippumaton kieli.  | `1001` |
 | **Time** | Merkkijono, joka sisältää ISO 8601-kalenterin *hh:mm:ss.fff* muodossa.  | `"23:12:49.000"` |
-| **Tietue** | Pilkuin erotettu luettelo välillä **{** ja **}** , kentät ja niiden arvojen. Tämä merkintä muistuttaa tietueet pohjaan perustuvat sovellukset, mutta nimi on aina lainausmerkeissä. Tätä muotoa ei tue tietueet, jotka perustuvat monta yhteen-suhteita.  | `{ "First Name": "Fred", "Age": 21 }` |
-| **Taulukko** | Pilkuin erotettu luettelo välillä **[** ja **]** , tietueet. Tätä muotoa ei tue taulukoita, jotka perustuvat yksi-moneen-suhteita.  | `[ { "First Name": "Fred", "Age": 21 }, { "First Name": "Jean", "Age": 20 } ]` |
+| **Tietue** | Pilkuin erotettu luettelo välillä **{** ja **}** , kentät ja niiden arvojen. Tämä merkintä muistuttaa tietueet pohjaan perustuvat sovellukset, mutta nimi on aina lainausmerkeissä. Tätä muotoa ei tue tietueet, jotka perustuvat monta yhteen-suhteita.  | `{ "First Name": "Fred"; "Age": 21 }` |
+| **Taulukko** | Pilkuin erotettu luettelo välillä **[** ja **]** , tietueet. Tätä muotoa ei tue taulukoita, jotka perustuvat yksi-moneen-suhteita.  | `[ { "First Name": "Fred"; "Age": 21 }; { "First Name": "Jean"; "Age": 20 } ]` |
 | **Kaksi&nbsp;vaihtoehto** | Kaksi vaihtoehtoa totuusarvo *true* tai *false*, ei otsikko, jota käytetään näyttämistä varten. Looginen arvo käytetään, koska se on riippumaton kieli. | `false` |
 | **Hyperlinkin, teksti** | Merkkijono lainausmerkeissä. Funktio escapes upotetun lainausmerkit kenoviivalla, korvaa newlines ”\n” ja tekee muita standard JavaScript-korvausta. | `"This is a string."` |
 
@@ -65,7 +66,7 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
 
 ## <a name="syntax"></a>Syntaksi
 
-**JSON**( *DataStructure* [, *muodossa* ])
+**JSON**( *DataStructure* [; *muodossa* ])
 
 * *DataStructure* – pakollinen. Muunnettava JSON-tietorakenne.  Taulukoiden, tietueita ja primitiivi arvoja tuetaan, satunnaisia sisäkkäin.
 * *Muotoile* – valinnainen.  **JSONFormat** luettelointiarvo. Oletusarvo on **Compact**, joka ei lisää newlines tai välilyöntejä ja estää binaaritiedot ja sarakkeita ei tueta.
@@ -76,16 +77,16 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
 
 1. Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava.
 
-    ```powerapps-dot
-    ClearCollect( CityPopulations,
-        { City: "London",    Country: "United Kingdom", Population: 8615000 },
-        { City: "Berlin",    Country: "Germany",        Population: 3562000 },
-        { City: "Madrid",    Country: "Spain",          Population: 3165000 },
-        { City: "Hamburg",   Country: "Germany",        Population: 1760000 },
-        { City: "Barcelona", Country: "Spain",          Population: 1602000 },
-        { City: "Munich",    Country: "Germany",        Population: 1494000 }
-    );
-    ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )
+    ```powerapps-comma
+    ClearCollect( CityPopulations;
+        { City: "London";    Country: "United Kingdom"; Population: 8615000 };
+        { City: "Berlin";    Country: "Germany";        Population: 3562000 };
+        { City: "Madrid";    Country: "Spain";          Population: 3165000 };
+        { City: "Hamburg";   Country: "Germany";        Population: 1760000 };
+        { City: "Barcelona"; Country: "Spain";          Population: 1602000 };
+        { City: "Munich";    Country: "Germany";        Population: 1494000 }
+    );;
+    ClearCollect( CitiesByCountry; GroupBy( CityPopulations; "Country"; "Cities" ) )
     ```
 
 1. Valitse painike, kun pidät alhaalla Alt-näppäintä.
@@ -102,8 +103,8 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
 
 1. Lisää toinen painike ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
 
-    ```powerapps-dot
-    Set( CitiesByCountryJSON, JSON( CitiesByCountry ) )
+    ```powerapps-comma
+    Set( CitiesByCountryJSON; JSON( CitiesByCountry ) )
     ```
 
     Tämä kaava määrittää yleisen muuttujan **CitiesByCountryJSON** -for JSON-esityksen **Kaupungitmaittain**.
@@ -112,7 +113,7 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
 
 1. Lisää [ **nimen** ](../controls/control-text-box.md) ohjausobjekti ja määritä sen **tekstin** -ominaisuuden arvoksi tämä muuttujaa.
 
-    ```powerapps-dot
+    ```powerapps-comma
     CitiesByCountryJSON
     ```
 
@@ -124,8 +125,8 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
 
 1. Muuta toista painiketta kaava tulos helpommin luettavan.
 
-    ```powerapps-dot
-    Set( CitiesByCountryJSON, JSON(CitiesByCountry, JSONFormat.IndentFour ))
+    ```powerapps-comma
+    Set( CitiesByCountryJSON; JSON(CitiesByCountry; JSONFormat.IndentFour ))
     ```
 
 1. Valitse toinen painike, kun pidät alhaalla Alt-näppäintä.
@@ -184,15 +185,15 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
 
 1. Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava.
 
-    ```powerapps-dot
-    Set( ImageJSON, JSON( SampleImage, JSONFormat.IncludeBinaryData ) )
+    ```powerapps-comma
+    Set( ImageJSON; JSON( SampleImage; JSONFormat.IncludeBinaryData ) )
     ```
 
 1. Valitse painike, kun pidät alhaalla Alt-näppäintä.
 
 1. Lisää selite ja aseta sen **tekstin** -ominaisuuden arvoksi tämä muuttujaa.
 
-    ```powerapps-dot
+    ```powerapps-comma
     ImageJSON
     ```
 
