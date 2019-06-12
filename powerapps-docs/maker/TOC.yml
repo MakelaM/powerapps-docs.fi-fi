@@ -82,18 +82,23 @@
             - name: Työnkulkujen käyttäminen
               href: ../user/use-flows.md
 - name: Sovellusten luominen
-  href: index.md
   items:
+    - name: Yleiskatsaus
+      href: index.md
     - name: PowerAppsiin kirjautuminen
       href: ./canvas-apps/intro-maker-portal.md
 - name: Pohjaan perustuvat sovellukset
-  href: ./canvas-apps/getting-started.md
   items:
+    - name: Mitä ovat pohjaan perustuvat sovellukset?
+      href: ./canvas-apps/getting-started.md
     - name: 'Järjestelmävaatimukset, rajoitukset ja konfigurointi'
       href: ./canvas-apps/limits-and-config.md
+    - name: Näppäimistön pikanäppäimet
+      href: ./canvas-apps/keyboard-shortcuts.md
     - name: Tutustu mallisovelluksiin
-      href: ./canvas-apps/open-and-run-a-sample-app.md
       items:
+        - name: Kangassovelluksen poistaminen mallista
+          href: ./canvas-apps/open-and-run-a-sample-app.md
         - name: Kuluraporttisovellus
           href: ./canvas-apps/expense-report-install.md
         - name: Tukipalvelusovellus
@@ -129,8 +134,9 @@
     - name: Sovelluksen suunnitteleminen ja rakentaminen
       items:
         - name: Yhdistä tietoihin
-          href: ./canvas-apps/connections-list.md
           items:
+            - name: Yhteyksien luettelo
+              href: ./canvas-apps/connections-list.md
             - name: Suositut liittimet
               items:
                 - name: Common Data Service
@@ -165,12 +171,18 @@
               href: ./canvas-apps/working-with-data-sources.md
             - name: Tutustu taulukkoihin ja tietueisiin
               href: ./canvas-apps/working-with-tables.md
+            - name: Tutustu tietueen viittauksiin
+              href: ./canvas-apps/working-with-references.md
         - name: Käyttöliittymän suunnitteleminen
-          href: ./canvas-apps/add-configure-controls.md
           items:
-            - name: Lisää näyttö
-              href: ./canvas-apps/add-screen-context-variables.md
+            - name: Ohjausobjektin lisääminen ja määrittäminen
+              href: ./canvas-apps/add-configure-controls.md
+            - name: Näytön lisääminen ja määrittäminen
               items:
+                - name: Lisää näyttö
+                  href: ./canvas-apps/add-screen-context-variables.md
+                - name: Lisää vieritysnäyttö
+                  href: ./canvas-apps/add-scrolling-screen.md
                 - name: Määritä Office 365 -näytöt
                   items:
                     - name: Kalenterinäytön yleiskatsaus
@@ -189,16 +201,16 @@
                       href: ./canvas-apps/screen-templates/people-screen-overview.md
                     - name: Henkilönäytön viittaus
                       href: ./canvas-apps/screen-templates/people-screen-reference.md
-                - name: Lisää vieritysnäyttö
-                  href: ./canvas-apps/add-scrolling-screen.md
             - name: Näytä kohteiden taulukko
-              href: ./canvas-apps/add-gallery.md
               items:
-                - name: Näytä erikorkuisia kohteita
+                - name: Lisää valikoima
+                  href: ./canvas-apps/add-gallery.md
+                - name: 'Lisää galleria, jonka korkeutta voi muuttaa'
                   href: ./canvas-apps/gallery-dynamic-sizing.md
-            - name: Lomakkeen lisääminen
-              href: ./canvas-apps/add-form.md
+            - name: Lisää ja määritä lomake
               items:
+                - name: Lomakkeen lisääminen
+                  href: ./canvas-apps/add-form.md
                 - name: Tutustu lomakkeisiin
                   href: ./canvas-apps/working-with-forms.md
                 - name: Tutustu lomakkeiden asetteluun
@@ -206,8 +218,9 @@
                 - name: Tutustu kortteihin
                   href: ./canvas-apps/working-with-cards.md
             - name: Luettelon lisääminen
-              href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
               items:
+                - name: 'Lisää luetteloruutu, avattava luettelo tai valintanapit'
+                  href: ./canvas-apps/add-list-box-drop-down-list-radio-button.md
                 - name: Riippuvaisten avattavien luetteloiden luominen
                   href: ./canvas-apps/dependent-drop-down-lists.md
             - name: Lisää kaavio
@@ -217,8 +230,9 @@
             - name: Lisää Power BI -tietoja
               href: ./canvas-apps/powerapps-custom-visual.md
             - name: Ohjausobjektiviittaus
-              href: ./canvas-apps/reference-properties.md
               items:
+                - name: Ohjausobjektien ja ominaisuuksien luettelo
+                  href: ./canvas-apps/reference-properties.md
                 - name: Lisää kuva
                   href: ./canvas-apps/controls/control-add-picture.md
                 - name: Liitteet
@@ -302,8 +316,9 @@
                 - name: Verkossa käytettävä viivakoodiskanneri (kokeellinen)
                   href: ./canvas-apps/controls/control-barcodescanner.md
         - name: Määritä sovelluksen toiminnot
-          href: ./canvas-apps/working-with-formulas.md
           items:
+            - name: Aloita kaavojen käyttäminen
+              href: ./canvas-apps/working-with-formulas.md
             - name: Tutustu muuttujiin
               href: ./canvas-apps/working-with-variables.md
             - name: Tutustu toimintakaavoihin
@@ -319,8 +334,9 @@
             - name: Lisää työnkulku
               href: ./canvas-apps/using-logic-flows.md
             - name: Lisätietoja kaavasta
-              href: ./canvas-apps/formula-reference.md
               items:
+                - name: Yleiskatsaus
+                  href: ./canvas-apps/formula-reference.md
                 - name: Abs
                   href: ./canvas-apps/functions/function-numericals.md
                 - name: Acceleration
@@ -334,9 +350,11 @@
                 - name: And
                   href: ./canvas-apps/functions/function-logicals.md
                 - name: App
-                  href: ./canvas-apps/functions/signals.md
+                  href: ./canvas-apps/functions/object-app.md
                 - name: Asin
                   href: ./canvas-apps/functions/function-trig.md
+                - name: AsType
+                  href: ./canvas-apps/functions/function-astype-istype.md
                 - name: Atan
                   href: ./canvas-apps/functions/function-trig.md
                 - name: Atan2
@@ -391,6 +409,8 @@
                   href: ./canvas-apps/functions/function-table-counts.md
                 - name: CountRows
                   href: ./canvas-apps/functions/function-table-counts.md
+                - name: Tietotyyppi
+                  href: ./canvas-apps/functions/data-types.md
                 - name: DataSourceInfo
                   href: ./canvas-apps/functions/function-datasourceinfo.md
                 - name: Date
@@ -463,6 +483,10 @@
                   href: ./canvas-apps/functions/function-isnumeric.md
                 - name: IsToday
                   href: ./canvas-apps/functions/function-now-today-istoday.md
+                - name: AsType
+                  href: ./canvas-apps/functions/function-astype-istype.md
+                - name: JSON
+                  href: ./canvas-apps/functions/function-json.md
                 - name: Language
                   href: ./canvas-apps/functions/function-language.md
                 - name: Last
@@ -641,11 +665,24 @@
                   href: ./canvas-apps/functions/function-datetime-parts.md
         - name: Luo sovellus ratkaisussa
           href: ./canvas-apps/add-app-solution.md
+        - name: Luo sovellus relaatiotietojen avulla
+          items:
+            - name: Asenna tiedot
+              href: ./canvas-apps/northwind-install.md
+            - name: Kaaviosovelluksen yleiskatsaus
+              href: ./canvas-apps/northwind-orders-canvas-overview.md
+            - name: 1 - Luo tilausvalikoima
+              href: ./canvas-apps/northwind-orders-canvas-part1.md
+            - name: 2 - Luo yhteenvetolomake
+              href: ./canvas-apps/northwind-orders-canvas-part2.md
+            - name: 3 - Luo tietovalikoima
+              href: ./canvas-apps/northwind-orders-canvas-part3.md
         - name: Luo yleinen sovellus
           href: ./canvas-apps/global-apps.md
         - name: Tee sovelluksesta helppokäyttöinen
-          href: ./canvas-apps/accessible-apps.md
           items:
+            - name: Luo helppokäyttöinen sovellus
+              href: ./canvas-apps/accessible-apps.md
             - name: Löydä helppokäyttötoimintojen ongelmat
               href: ./canvas-apps/accessibility-checker.md
             - name: Käytä värejä helppokäyttötoiminnoissa
@@ -655,18 +692,21 @@
             - name: Ilmoita dynaamisista muutoksista dynaamisilla alueilla
               href: ./canvas-apps/accessible-apps-live-regions.md
         - name: Kokeelliset ja esikatseluominaisuudet
-          href: ./canvas-apps/working-with-experimental.md
+          href: ./canvas-apps/working-with-experimental-preview.md
     - name: Tallenna ja julkaise sovellus
       href: ./canvas-apps/save-publish-app.md
-    - name: Sovelluksen jakaminen
-      href: ./canvas-apps/share-app.md
+    - name: Jaa sovellus ja sen riippuvuudet
       items:
+        - name: Sovelluksen jakaminen
+          href: ./canvas-apps/share-app.md
         - name: Jaa Excel-tiedot
           href: ./canvas-apps/share-app-data.md
         - name: Sovelluksen resurssien jakaminen
           href: ./canvas-apps/share-app-resources.md
         - name: 'Upota sovellus Power BI:ssä'
           href: ./canvas-apps/embed-powerapps-powerbi.md
+        - name: Upota Teams-sovellus
+          href: ./canvas-apps/embed-teams-app.md
     - name: Sovelluksen hallinta
       items:
         - name: Muokkaa sovellusta
@@ -677,21 +717,23 @@
           href: ./canvas-apps/restore-an-app.md
         - name: Muuta sovelluksen nimeä ja sovellusruutua
           href: ./canvas-apps/set-name-tile.md
-        - name: Muuta näytön kokoa ja suuntaa
-          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+        - name: Hallinnoi näyttöjä
           items:
+            - name: Muuta näytön kokoa ja suuntaa
+              href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
             - name: Luo reagoiva asettelu
               href: ./canvas-apps/create-responsive-layout.md
     - name: Mukauta SharePointin luettelolomake
-      href: ./canvas-apps/customize-list-form.md
       items:
+        - name: Tee perustason muutoksia
+          href: ./canvas-apps/customize-list-form.md
         - name: Tutustu SharePoint-lomakkeiden integrointiin
           href: ./canvas-apps/sharepoint-form-integration.md
     - name: Integroi muiden tekniikoiden kanssa
       items:
         - name: SharePoint Online
           items:
-            - name: SharePoint Onlinen integroinnin yleiskuvaus
+            - name: Yleiskatsaus
               href: ./canvas-apps/sharepoint-scenario-intro.md
             - name: Määritä SharePoint Online -luetteloita
               href: ./canvas-apps/sharepoint-scenario-setup.md
@@ -716,8 +758,9 @@
         - name: InfoPath-lomakkeiden muuntaminen PowerAppsiin
           href: ./canvas-apps/transform-infopath.md
     - name: Kehittäjiä varten
-      href: ./canvas-apps/dev-enterprise-intro.md
       items:
+        - name: 'Kaaviosovellus yritysten kehittäjille, kumppaneille ja ohjelmistotoimittajille'
+          href: ./canvas-apps/dev-enterprise-intro.md
         - name: Luo ja sertifioi mukautettuja liittimiä
           href: ./canvas-apps/register-custom-api.md
         - name: Integroi verkkosivustojen ja muiden tekniikoiden kanssa
@@ -727,7 +770,13 @@
         - name: Anna asiakkaiden koekäyttää sovelluksiasi
           href: ./canvas-apps/dev-appsource-test-drive.md
         - name: Luo komponentti
-          href: ./canvas-apps/create-component.md
+          items:
+            - name: Yleiskatsaus
+              href: ./canvas-apps/create-component.md
+            - name: Toimintakaaviot
+              href: ./canvas-apps/component-behavior.md
+        - name: Upota kaaviosovelluksia sovelluksiin
+          href: ./canvas-apps/embedding-sdk.md
 - name: Mallipohjaiset sovellukset
   href: ./model-driven-apps/model-driven-app-overview.md
   items:
@@ -767,8 +816,16 @@
                   items:
                     - name: Lomakkeiden luominen tai muokkaaminen
                       href: ./model-driven-apps/create-and-edit-forms.md
+                    - name: 'Lisää, siirrä tai poistaa kenttiä'
+                      href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
+                    - name: 'Lisää, siirtää tai poistaa osia'
+                      href: ./model-driven-apps/add-move-or-delete-sections-on-form.md
+                    - name: 'Lisää, siirtää tai poistaa välilehtiä'
+                      href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
                     - name: Lomakkeen suunnittelutyökalun ominaisuudet
                       href: ./model-driven-apps/form-designer-properties.md
+                    - name: Puunäkymän käyttö
+                      href: ./model-driven-apps/using-tree-view-on-form.md
                 - name: Lomaketyypit
                   href: ./model-driven-apps/types-forms.md
                   items:
@@ -891,6 +948,8 @@
                   href: ./model-driven-apps/timer-control-legacy.md
             - name: Mukautettujen ohjausobjektien käyttäminen tietojen visualisointiin
               href: ./model-driven-apps/use-custom-controls-data-visualizations.md
+        - name: Excel- ja Word-mallien käyttö
+          href: ./model-driven-apps/templates-overview.md
         - name: Teemojen käyttäminen organisaation tuotemukauttamiseen
           href: ./model-driven-apps/create-themes-organization-branding.md
     - name: Sovelluksen tarkistaminen ja julkaiseminen
@@ -918,6 +977,8 @@
           href: ./model-driven-apps/change-custom-entity-icons.md
         - name: Sovelluksen jakaminen ratkaisujen avulla
           href: ./model-driven-apps/distribute-model-driven-app.md
+        - name: Ohjatun ohjeen luominen
+          href: ./model-driven-apps/create-guided-help-learning-path.md
     - name: PowerAppsin sovellusten suunnitteluohjelman helppokäyttötoiminnot
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
     - name: Kehittäjiä varten
@@ -1070,6 +1131,8 @@
           href: ./common-data-service/create-solution.md
         - name: Näytä ratkaisun kerrokset
           href: ./common-data-service/solution-layers.md
+        - name: Näytä ratkaisuhistoria
+          href: ./common-data-service/solution-history.md
         - name: Ratkaisun tarkistustoiminnon käyttäminen
           href: ./common-data-service/use-powerapps-checker.md
         - name: Segmentoitujen ratkaisujen käyttäminen
@@ -1095,6 +1158,10 @@
       href: ./common-data-service/import-translated-entity-field-text.md
     - name: Kehittäjiä varten
       href: ../developer/common-data-service/overview.md
+- name: AI-muodostin
+  items:
+    - name: AI-muodostimen käyttäminen PowerAppsissa
+      href: ../use-ai-builder.md
 - name: Opi muilta
   items:
     - name: Verkkoseminaarit
