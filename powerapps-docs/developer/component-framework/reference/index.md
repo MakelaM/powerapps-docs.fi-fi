@@ -8,14 +8,14 @@ ms.assetid: ''
 author: nkrb
 ms.author: nabuthuk
 manager: Jdaly
-ms.openlocfilehash: 4e84956807b91e535e709aa2e0739fdf121bc2f7
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: 5851074cffa68bdfc0ee428e99bba100803f5ba5
+ms.sourcegitcommit: f36b9888f2a638bfe81172841f0da31e90390bb8
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/26/2019
-ms.locfileid: "64524282"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66835526"
 ---
-# <a name="powerapps-component-framework-api-reference"></a>PowerApps-osakehyksen API-tietoja
+# <a name="powerapps-component-framework-api-reference"></a>Powerappsin osa framework ohjelmointirajapintaviittaukset
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -45,5 +45,3 @@ Tämä osio sisältää viitetiedot mukautettujen osien luomiseen PowerApps-osak
 |[UserSettings](usersettings.md)|[!INCLUDE [usersettings-description](includes/usersettings-description.md)]|
 |[Utility](utility.md)|[!INCLUDE [utility-description](includes/utility-description.md)]|
 |[WebApi](webapi.md)|[!INCLUDE [webapi-description](includes/webapi-description.md)]|
-
-
