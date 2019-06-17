@@ -15,7 +15,7 @@ ms.contentlocale: fi-FI
 ms.lasthandoff: 06/11/2019
 ms.locfileid: "66835526"
 ---
-# <a name="powerapps-component-framework-api-reference"></a>Powerappsin osa framework ohjelmointirajapintaviittaukset
+# <a name="powerapps-component-framework-api-reference"></a>PowerApps-osakehyksen API-tietoja
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 

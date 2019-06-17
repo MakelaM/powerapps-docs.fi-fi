@@ -2,33 +2,33 @@
   items:
     - name: Yleiskatsaus
       href: overview.md
-    - name: Mitä ovat mukautettujen osien?
+    - name: Mitä ovat mukautetut osat?
       href: custom-controls-overview.md
-    - name: Hae työkaluilla
+    - name: Käytä työkaluja
       href: get-powerapps-cli.md
     - name: Opetusohjelma
       items:
-        - name: Ota käyttöön mallin osa
+        - name: Ota malliosa käyttöön
           href: implementing-controls-using-typescript.md
-    - name: Toimintaohjeet
+    - name: Ohjeet
       items:
-        - name: Luoda ja rakentaa mukautettu osa
+        - name: Mukautetun osan luominen ja rakentaminen
           href: create-custom-controls-using-pcf.md
-        - name: Mukautettu osa virheenkorjaus
+        - name: Mukautetun osan virheenkorjaus
           href: debugging-custom-controls.md
-        - name: Paketin mukautettu osa
+        - name: Mukautetun osan pakkaus
           href: import-custom-controls.md
-        - name: Komponenttien lisääminen entiteettien tai kenttien
+        - name: Osien lisääminen entiteetteihin tai kenttiin
           href: add-custom-controls-to-a-field-or-entity.md
-        - name: Päivitä olemassa oleva mukautettujen osien
+        - name: Aiemmin luotujen mukautettujen osien päivittäminen
           href: updating-existing-controls.md
-        - name: Julkaise mukautettujen osien appsourcessa
+        - name: Mukautettujen osien julkaiseminen AppSourcessa
           href: publish-components-app-source.md
     - name: Rajoitukset
       href: limitations.md
     - name: UKK
       href: faq.md
-    - name: Mallin osat
+    - name: Malliosat
       items:
         - name: Lisäävä osa
           href: sample-controls/increment-control.md
