@@ -70,16 +70,16 @@
   items:
     - name: Kyselyiden luominen LINQillä (.NET-kieli-integroitu kysely)
       href: build-queries-with-linq-net-language-integrated-query.md
-    - name: LINQ-kyselyiden esimerkkejä
-      href: linq-query-examples.md
+    - name: Kyselyn luominen LINQillä
+      href: use-linq-construct-query.md
+    - name: Late-sidotun entiteettiluokan käyttäminen LINQ-kyselyllä
+      href: use-late-bound-entity-class-linq-query.md
     - name: Tulosten järjestäminen LINQillä entiteettiominaisuuksien avulla
       href: order-results-entity-attributes-linq.md
     - name: Suurien tulosjoukkojen sivuttaminen LINQillä
       href: page-large-result-sets-linq.md
-    - name: Late-sidotun entiteettiluokan käyttäminen LINQ-kyselyllä
-      href: use-late-bound-entity-class-linq-query.md
-    - name: Kyselyn luominen LINQillä
-      href: use-linq-construct-query.md
+    - name: LINQ-kyselyiden esimerkkejä
+      href: linq-query-examples.md
 - name: Tietojen kaksoiskappaleen tunnistaminen
   href: detect-duplicate-data.md
 - name: Luokkien luominen Early-sidottuun ohjelmointiin
