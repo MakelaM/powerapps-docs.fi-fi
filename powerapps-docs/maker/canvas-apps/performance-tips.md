@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 08/31/2018
+ms.date: 06/17/2019
 ms.author: yingchin
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6406afad9079895a0da38c7f1f6e3961f2e37fa1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c0926c2c38adac6b3377de9a87eef4dd7d7a7cf7
+ms.sourcegitcommit: 9c4d95eeace85a3e91a00ef14fefe7cce0af69ec
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61536364"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67349817"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Kangassovellusten suorituskyvyn optimointi PowerAppsissa
 Microsoft tekee kaikkensa parantaakseen kaikkien PowerApps-ympäristössä toimivien sovellusten suorituskykyä. Tämän aiheen parhaiden käytäntöjen avulla voit myös tehostaa luomiesi sovellusten suorituskykyä.
@@ -79,10 +79,11 @@ Käytä **Joukko**-funktiota tallentaaksesi hakutaulukkotietoja välimuistiin pa
 Yhteystiedot, oletusarvot ja käyttäjätiedot eivät muutu usein. Siksi voit yleisesti ottaen käyttää tätä menetelmää myös **Defaults**- ja **Käyttäjä**-funktioiden kanssa. 
 
 ## <a name="avoid-controls-dependency-between-screens"></a>Vältä näyttöjen välistä ohjausobjektiriippuvuutta
-Jos ohjausobjektin arvo riippuu eri näytössä olevan ohjausobjektin arvosta, hallinnoi tätä tietoa muuttujan, kokoelman tai tietolähdeviittauksen avulla.
+Voit parantaa suorituskykyä sovelluksen näytöt ladataan muistiin, vain, kun niitä tarvitaan. Tämä optimointi voit mallisuoja, jos esimerkiksi näytön 1 on ladattu ja sen kaavoista käyttää näytöstä 2 ohjausobjektin ominaisuuden. Nyt näytön 2 on ladattava täyttämiseksi riippuvuuden, ennen kuin näyttö 1 voidaan näyttää. Kuvittele näytön 2 on riippuvaista näytössä 3, jossa on toinen riippuvuus näytön 4 ja niin edelleen. Tämä riippuvuusketju voi aiheuttaa ladata useita näyttöjä.
 
-## <a name="use-global-variables"></a>Käytä yleisiä muuttujia
-Jotta voit välittää sovelluksen tilan näytöstä toiseen, luo tai muokkaa yleistä muuttuja-arvoa [**Joukko**](functions/function-set.md)-funktion avulla **Navigate**- ja **UpdateContext)**-funktioiden sijaan.
+Tästä syystä Vältä kaavan riippuvuudet näyttöjen välillä. Joissakin tapauksissa voit käyttää yleistä muuttujaa tai kokoelma jakaa tietoja näyttöjen välillä.
+
+On poikkeuksen. Edellisessä esimerkissä imagine, ainoa tapa näytön 1 on siirtymällä näytöstä 2. Sitten näytön 2 on jo ladattu muistiin 1 näytön ollessa voi ladata. Ei ole muita toimia ei tarvita täyttämiseksi näytön 2 kokoonpanoresurssin ja näin ollen ei ole suorituskykyyn.
 
 ## <a name="use-delegation"></a>Käytä delegointia
 Mikäli mahdollista, käytä funktioita, jotka delegoivat tietojen käsittelyä tietolähteeseen sen sijaan, että ne noutaisivat tietoja paikallisen laitteen käsiteltäväksi. Jos sovelluksen on käsiteltävä tietoja paikallisesti, toiminto vaatii paljon enemmän käsittelytehoa, muistia ja verkon kaistanleveyttä, erityisesti jos tietojoukko on suuri.
