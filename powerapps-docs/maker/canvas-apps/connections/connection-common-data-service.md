@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c521fd5961bc9b8d940a374383baca1aeef0cbe4
-ms.sourcegitcommit: 93096dfa1aadba77159db1e5922f3d5528eecb7a
+ms.openlocfilehash: da68abeec51df102647ea32a17b3d76451f2f1aa
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65986434"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67456745"
 ---
 # <a name="connect-to-common-data-service"></a>Yhdistä Common Data Service
 
 Voit turvallisesti tallentaa yrityksen tietoja Common Data Service-ja rakentaa monipuolisia sovelluksia powerappsissa, niin, että käyttäjät voivat hallita tiedot. Tiedot voidaan integroida ratkaisuja, jotka sisältävät Microsoft Flow-, Power BI-ja Dynamics 365-tiedot.
 
-Oletusarvon mukaan Common Data Service-yhdistin muodostaa yhteyden sovelluksen nykyisen environmnent. Jos sovellus siirtyy toiseen ympäristöön, kytkentä muodostaa yhteyden uuteen ympäristöön. Tämä ongelma toimii hyvin yhdessä ympäristössä tai sovelluksen, joka noudattaa ALM isäntäprosessin siirtämisestä kehityksen Test tuotantoon avulla.
+Oletusarvon mukaan Common Data Service-yhdistin muodostaa yhteyden tietoihin sovelluksesi nykyisessä ympäristössä. Jos sovellus siirtyy toiseen ympäristöön, kytkentä muodostaa yhteyden uuteen ympäristöön. Tämä ongelma toimii hyvin yhdessä ympäristössä tai sovelluksen, joka noudattaa ALM isäntäprosessin siirtämisestä kehityksen Test tuotantoon avulla.
 
 Kun lisäät tietolähteen Common Data Service-liittimellä, voit muuttaa ympäristön ja valitse vähintään yksi entiteetti. Oletusarvon mukaan sovellus muodostaa yhteyden tietoihin nykyisessä ympäristössä ja Käyttöliittymän näyttää **(nykyinen)** entiteettien luettelon kautta.
 
