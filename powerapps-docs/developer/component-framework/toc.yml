@@ -52,6 +52,8 @@
           href: sample-controls/map-control.md
         - name: Siirtymisen API-osa
           href: sample-controls/navigation-api-control.md
+        - name: React Facepile -osa
+          href: sample-controls/react-facepile-control.md
         - name: Taulukko-osa
           href: sample-controls/table-control.md
         - name: Taulukon ruudukko -osa

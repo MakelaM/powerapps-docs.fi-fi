@@ -26,8 +26,8 @@
       href: use-editable-grids.md
     - name: Organisaation teeman kyseleminen ja muokkaaminen
       href: query-and-edit-an-organization-theme.md
-    - name: Luo mukautettuja ohjausobjekteja PowerApps Component Frameworkin avulla
-      href: /powerapps/developer/control-framework/overview
+    - name: Mukautettujen osien luominen PowerApps-osakehyksen avulla
+      href: /powerapps/developer/component-framework/overview
 - name: Tietojen visualisointien käyttäminen koodin avulla
   href: customize-visualizations-dashboards.md
   items:
@@ -757,9 +757,9 @@
             - name: isAvailableOffline
               href: clientapi/reference/xrm-webapi/isAvailableOffline.md
             - name: execute
-              href: clientapi/reference/xrm-webapi/execute.md
+              href: clientapi/reference/xrm-webapi/online/execute.md
             - name: executeMultiple
-              href: clientapi/reference/xrm-webapi/executeMultiple.md
+              href: clientapi/reference/xrm-webapi/online/executeMultiple.md
     - name: Parhaat käytännöt
       href: best-practices/business-logic/index.md
 - name: Komentojen ja valintanauhan mukauttaminen

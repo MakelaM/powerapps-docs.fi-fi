@@ -79,7 +79,7 @@
           href: write-plug-in.md
         - name: Poikkeusten käsittely
           href: handle-exceptions.md
-        - name: Käyttäjäksi tekeytyminen
+        - name: Toiseksi käyttäjäksi tekeytyminen
           href: impersonate-a-user.md
         - name: Laajennuksen rekisteröiminen
           href: register-plug-in.md
@@ -328,6 +328,20 @@
           href: use-source-control-solution-files.md
     - name: Package Deployer -työkalu
       href: package-deployer/create-packages-package-deployer.md
+    - name: Tarkista ratkaisujen ja pakettien laatu
+      items:
+        - name: Käytä Powerappsin tarkistuksen WWW-ohjelmointirajapintaa
+          href: checker/webapi/overview.md
+        - name: Käynnistä analyysi
+          href: checker/webapi/analyze.md
+        - name: Tarkista analyysin tila
+          href: checker/webapi/check-status.md
+        - name: Nouda sääntöluettelo
+          href: checker/webapi/retrieve-rules.md
+        - name: Nouda sääntöjoukkoluettelo
+          href: checker/webapi/retrieve-rulesets.md
+        - name: Lataa tiedosto analyysia varten
+          href: checker/webapi/upload-file.md
     - name: Sovelluksesi julkaiseminen AppSourceen
       href: publish-app-appsource.md
       items:

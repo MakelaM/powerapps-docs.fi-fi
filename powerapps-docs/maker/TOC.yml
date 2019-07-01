@@ -81,6 +81,8 @@
               href: ../user/work-with-business-processes.md
             - name: Työnkulkujen käyttäminen
               href: ../user/use-flows.md
+    - name: Dynamics 365 App for Outlookin käyttäminen
+      href: ../user/use-outlook-app.md
 - name: Sovellusten luominen
   items:
     - name: Yleiskatsaus
@@ -981,6 +983,8 @@
           href: ./model-driven-apps/create-guided-help-learning-path.md
     - name: PowerAppsin sovellusten suunnitteluohjelman helppokäyttötoiminnot
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
+    - name: Dynamics 365 App for Outlookin mukauttaminen
+      href: ./model-driven-apps/app-for-outlook-customize.md
     - name: Kehittäjiä varten
       href: ../developer/model-driven-apps/overview.md
 - name: Common Data Service
@@ -1156,6 +1160,8 @@
       href: ./common-data-service/export-customized-entity-field-text-translation.md
     - name: Entiteettien ja kenttien käännettyjen tekstien tuominen sovellukseen
       href: ./common-data-service/import-translated-entity-field-text.md
+    - name: Common Data Servicen suojaus
+      href: /power-platform/admin/wp-security
     - name: Kehittäjiä varten
       href: ../developer/common-data-service/overview.md
 - name: AI-muodostin
