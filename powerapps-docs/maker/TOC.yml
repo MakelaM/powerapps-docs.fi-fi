@@ -75,6 +75,18 @@
               href: ../user/export-excel-static-worksheet.md
             - name: Vieminen Excelin pivot-taulukkoon
               href: ../user/export-excel-pivottable.md
+        - name: Raportit
+          items:
+            - name: Raporttien käsitteleminen
+              href: ../user/work-with-reports.md
+            - name: Raportin luominen Raportin ohjatun toiminnon avulla
+              href: ../user/create-report-with-wizard.md
+            - name: Aiemmin luodun raportin lisääminen
+              href: ../user/add-existing-report.md
+            - name: Raportin oletussuodattimen muokkaaminen
+              href: ../user/edit-report-filter.md
+            - name: Raporttien vianmääritys
+              href: ../user/troubleshoot-reports.md
         - name: Prosessien automatisoiminen
           items:
             - name: Liiketoimintaprosessien käsitteleminen
@@ -883,19 +895,25 @@
                       href: ./model-driven-apps/configure-event-handlers-legacy.md
                     - name: Automaattisen tallennuksen poistaminen käytöstä lomakkeessa
                       href: ./model-driven-apps/manage-auto-save.md
-            - name: Pohjaan perustuvan sovelluksen upottaminen lomakkeeseen
+            - name: Pohjaan perustuvan sovelluksen upottaminen mallipohjaiseen lomakkeeseen
               href: ./model-driven-apps/embed-canvas-app-in-form.md
               items:
-                - name: Nykyisen tietueen välittäminen upotettuun pohjaan perustuvaan sovellukseen
-                  href: ./model-driven-apps/pass-current-embedded-canvas-app.md
-                - name: Liittyvien tietueiden välittäminen upotettuun pohjaan perustuvaan sovellukseen
-                  href: ./model-driven-apps/pass-related-embedded-canvas-app.md
+                - name: Upotetun pohjan sovelluksen lisääminen
+                  href: ./model-driven-apps/embedded-canvas-app-add-classic-designer.md
+                - name: Upotetun pohjan sovelluksen muokkaaminen
+                  href: ./model-driven-apps/embedded-canvas-app-edit-classic-designer.md
+                - name: Näytön koon ja suunnan muuttaminen
+                  href: ./model-driven-apps/embedded-canvas-app-customize-screen.md
                 - name: Ennalta määritettyjen toimintojen suorittaminen isäntälomakkeessa
                   href: ./model-driven-apps/embedded-canvas-app-actions.md
+                - name: ModelDrivenFormIntegration-ohjausobjekti
+                  href: ./model-driven-apps/embedded-canvas-app-properties-actions.md
                 - name: Upotetun pohjan sovelluksen jakaminen
                   href: ./model-driven-apps/share-embedded-canvas-app.md
                 - name: Upotetun pohjan sovelluksen ohjeet
                   href: ./model-driven-apps/embedded-canvas-app-guidelines.md
+                - name: Upotetun pohjan siirtyminen julkisesta esikatselusta
+                  href: ./model-driven-apps/embedded-canvas-app-migrate-from-preview.md
             - name: Power BI -raportin upottaminen lomakkeeseen
               href: ./model-driven-apps/embed-powerbi-report-in-system-form.md
             - name: Näkymien käsitteleminen
@@ -954,6 +972,8 @@
           href: ./model-driven-apps/templates-overview.md
         - name: Teemojen käyttäminen organisaation tuotemukauttamiseen
           href: ./model-driven-apps/create-themes-organization-branding.md
+        - name: Raportoinnin lisääminen sovellukseen
+          href: ./model-driven-apps/add-reporting-to-app.md
     - name: Sovelluksen tarkistaminen ja julkaiseminen
       href: ./model-driven-apps/validate-app.md
     - name: Sovelluksen jakaminen
