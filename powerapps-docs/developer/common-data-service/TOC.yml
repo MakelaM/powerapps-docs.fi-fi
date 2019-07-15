@@ -321,6 +321,14 @@
               href: create-patches-simplify-solution-updates.md
             - name: Milloin muokata mukautustiedostoa
               href: when-edit-customization-file.md
+    - name: Koontityökalut Azure DevOpsille
+      items:
+        - name: Yleiskatsaus
+          href: build-tools-overview.md
+        - name: Tehtävät
+          href: build-tools-tasks.md
+        - name: Opetusohjelma ja usein kysytyt kysymykset
+          href: build-tools-tutorial-faq.md
     - name: Ratkaisun pakkaajatyökalu
       href: compress-extract-solution-file-solutionpackager.md
       items:
@@ -361,6 +369,16 @@
           href: appendix-app-design-best-practices-checklist.md
         - name: 'Liite: Sovellusten sertifioinnin tarkistusluettelo'
           href: appendix-app-certification-checklist.md
+    - name: ISV-sovellushallinta ja -valvonta
+      items:
+        - name: ISV Studion esittely
+          href: isv-app-management.md
+        - name: Etusivu
+          href: isv-app-management-homepage.md
+        - name: Sovellussivu
+          href: isv-app-management-apppage.md
+        - name: Vuokraajasivu
+          href: isv-app-management-tenantpage.md
 - name: Asiakassovellusten luominen
   href: connect-cds.md
   items:
