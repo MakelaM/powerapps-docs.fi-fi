@@ -26,6 +26,8 @@
           href: use-fetchxml-fiscal-date-older-datetime-query-operators.md
         - name: 'Käytä vasenta ulkoliitosta FetchXML:ssä ”ei sisälly” -tietueiden kyselyssä'
           href: use-fetchxml-left-outer-join-query-records-not-in.md
+        - name: 'Suurien tulosjoukkojen sivuttaminen FetchXML:llä'
+          href: org-service/page-large-result-sets-with-fetchxml.md
     - name: Tallennetut kyselyt
       href: saved-queries.md
     - name: Kyselyn tekeminen hierarkkisista tiedoista
