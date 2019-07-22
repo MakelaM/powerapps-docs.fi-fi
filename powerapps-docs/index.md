@@ -9,12 +9,12 @@ featureFlags:
 ms.service: powerapps
 ms.custom:
 - powerapps-hub
-ms.openlocfilehash: b4832962165c9d275cbee9aa76ad1dc21e3d1d67
-ms.sourcegitcommit: ec05425ad7baf4102da95a071c11b5bb4381ed53
+ms.openlocfilehash: 62e6db1361664f8ccce38080e07908237aac5f50
+ms.sourcegitcommit: 9cce0d57113705254c109e6c38fc57a8bd4ef6cf
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229664"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313302"
 ---
 <div id="main"
    class="v2">
@@ -25,7 +25,7 @@ ms.locfileid: "68229664"
             <a href="#home"></a>
             <ul id="home">
                <li>
-                  <a href="#getstarted"><strong>Aloita</strong></a>
+                  <a href="#getstarted"><strong>Aloitus</strong></a>
                   <ul id="getstarted"
                      class="cardsC">
                      <br/>                            
@@ -215,7 +215,7 @@ ms.locfileid: "68229664"
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Sovellusten tekijät voivat hallinnoida organisaationsa toiminnan kannalta kriittisiä tietoja luomalla mukautettuja yrityssovelluksia nopeasti koodia kirjoittamatta. Voit luoda kahdenlaisia sovelluksia PowerAppsissa: <strong>Pohjan sovellus</strong> ja <strong>malliin perustuva sovellus</strong>. <strong>Common Data Service</strong> on tietojen käyttöympäristö, jolla voit tallentaa ja hallinnoida yrityssovellusten käyttämiä tietoja suojatusti. Lisätietoja: <a href="/powerapps/maker">Sovellusten luominen</a>.</p>
+                           <p>Sovellusten tekijät voivat hallinnoida organisaationsa toiminnan kannalta kriittisiä tietoja luomalla mukautettuja yrityssovelluksia nopeasti koodia kirjoittamatta. Voit luoda kolmenlaisia sovelluksia PowerAppsissa: <strong>Pohjan sovellus</strong>, <strong>malliin perustuva sovellus</strong> ja <strong>portaali</strong>. <strong>Common Data Service</strong> on tietojen käyttöympäristö, jolla voit tallentaa ja hallinnoida yrityssovellusten käyttämiä tietoja suojatusti. Lisätietoja: <a href="/powerapps/maker">Sovellusten luominen</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -273,6 +273,28 @@ ms.locfileid: "68229664"
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-themes-organization-branding">Teemojen käyttäminen mukauttamisen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Sovelluksen jakaminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Sovelluksen jakaminen</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="Customize icon" src="media/index/i_portals.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.15rem">Portaalien</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/overview">Mitä PowerApps-portaalit ovat?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/create-portal">Portaalin luominen</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/manage-existing-portals">Olemassa olevien portaalien hallinta</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/admin/admin-overview">Portaalien hallinta</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/portals/faq">PowerApps-portaalien UKK</a></p>
                                  </div>
                               </div>
                            </div>

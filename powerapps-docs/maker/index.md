@@ -6,22 +6,23 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 03/18/2018
+ms.date: 07/18/2018
 ms.author: anneta
 ms.reviewer: ''
-ms.openlocfilehash: 6a8432e93f854b1c0794512da42ef25c9aa02adc
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: cfc849574153ea4ab983112528a91974d80dea7f
+ms.sourcegitcommit: 1c0b01ab9c76ac353854f7b61d5a9ef13e8b093f
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61528592"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68308741"
 ---
 # <a name="overview-of-creating-apps-in-powerapps"></a>Yleiskuvaus sovellusten luomisesta PowerAppsissa
 
-PowerApps on erittäin tehokas liiketoimintasovellusten kehitysalusta, johon kuuluu kolme keskeistä osaa:
+PowerApps on erittäin tehokas liiketoimintasovellusten kehitysalusta, johon kuuluu neljä keskeistä osaa:
 
 - [Pohjaan perustuvien sovellusten](canvas-apps/getting-started.md) lähtökohta on käyttökokemuksessa. Tyhjiin pohjiin laaditaan erittäin mukautettu rajapinta, joka voidaan yhdistää 200 tietolähteen valikoimaan. Voit käyttää pohjia verkko-, mobiili- ja tablettisovellusten luomiseen.
 - [Mallipohjaisten sovellusten](model-driven-apps/model-driven-app-overview.md) lähtökohta on oman organisaatiosi tietomallissa. Sovellus kehitetään keskeisten liiketoimintatietojenne ja -prosessienne perusteella Common Data Servicessa, ja sitä käytetään lomakkeiden, näkymien ja muiden osien mallintamiseen. Mallipohjaiset sovellukset luovat automaattisesti erinomaisen, kaikkiin laitteisiin sopivan käyttöliittymän.
+- [Portaalien](portals/overview.md) avulla voit luoda verkkosivustoja, joiden avulla organisaatiosi ulkopuoliset käyttäjät voivat kirjautua sisään erilaisilla käyttäjätiedoilla, luoda ja tarkastella Common Data Service -palvelussa olevia tietoja ja jopa selata sisältöä anonyymisti.
 - [Common Data Service](common-data-service/data-platform-intro.md) on PowerAppsin mukana tuleva tietoalusta, jonka avulla voit varastoida ja mallintaa liiketoimintatietoja. Dynamics 365 -sovellukset on kehitetty tällä alustalla. Jos olet Dynamics-asiakas, tietosi ovat jo valmiiksi Common Data Servicessa.
 
 Ensimmäisen sovelluksesi luominen on helppoa ja yksinkertaista. Tarjoamme 30 päivän kokeiluversion ja ilmaisen yhteisöversion. Tutki, mikä sopii sinulle parhaiten, ja aloita käyttö.
