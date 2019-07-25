@@ -1,6 +1,6 @@
 ---
-title: Luo pohjaan perustuvan sovelluksen tietoja-valikoiman | Microsoft Docs
-description: Luo tietoja-valikoiman pohjaan perustuvan sovelluksen Northwind Traders tietojen hallintaan
+title: Yksityiskohta valikoiman luominen kangas sovelluksessa | Microsoft Docs
+description: Yksityiskohta valikoiman luominen kangas sovelluksessa Northwind Traders-tietojen hallintaa varten
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,603 +13,602 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9549b8f389cf696cf3fc8e4659da6b418383ac6e
-ms.sourcegitcommit: e85072f7a80da308c4caabe20adbf2509588ca57
+ms.openlocfilehash: 36fc8c552dea9331ff5ffbaa2dca3bdac5508306
+ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66760955"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475429"
 ---
-# <a name="create-a-detail-gallery-in-a-canvas-app"></a>Luo tietoja-valikoiman pohjaan perustuva sovellus
+# <a name="create-a-detail-gallery-in-a-canvas-app"></a>Yksityiskohta valikoiman luominen kangas sovelluksessa
 
-Noudata vaiheittaiset ohjeet tietoja-valikoiman luomiseen pohjaan perustuvan sovelluksen hallintaan kuvitteellisia tietoja Northwind Traders tietokannassa. Tämä ohjeaihe on osa pidempää sarjaa, jossa selitetään business-sovelluksen rakentaminen Common Data Service-relaatiotietoja. Saat parhaat tulokset Tutustu aiheet tässä järjestyksessä:
+Noudata vaiheittaisia ohjeita luodaksesi yksityiskohta valikoiman kangas sovellukseen, jotta voit hallita kuvitteellisia tietoja Northwind Traders-tieto kannassa. Tämä ohje aihe on osa sarjaa, jossa kerrotaan, miten voit luoda liiketoiminta sovelluksen relaatio tietoihin Common Data Service. Parhaat tulokset saat tutustumalla seuraaviin aihe isiin:
 
-1. [Luo order-valikoima](northwind-orders-canvas-part1.md).
-1. [Luo yhteenveto lomake](northwind-orders-canvas-part2.md).
-1. Luo valikoima tiedot (**tässä ohjeaiheessa**).
+1. [Luo tilaus valikoima](northwind-orders-canvas-part1.md).
+1. [Luo Yhteenveto lomake](northwind-orders-canvas-part2.md).
+1. Luo yksityiskohta valikoima (**Tämä aihe**).
 
 > [!div class="mx-imgBorder"]
-> ![Näytön alueiden määritys](media/northwind-orders-canvas-part1/orders-parts.png)
+> ![Näyttö alueiden määrittäminen](media/northwind-orders-canvas-part1/orders-parts.png)
 
 ## <a name="prerequisites"></a>Edellytykset
 
-Ennen kuin aloitat tässä ohjeaiheessa, sinun on asennettava tietokanta, jotka kuvattiin aiemmin tässä ohjeaiheessa. Voit sitten Luo order-valikoimassa ja yhteenveto lomakkeen tai avaa **Northwind tilaukset (pohjaan perustuvat) - Aloita osa 3** sovelluksen, joka sisältää jo valikoiman ja lomakkeen.
+Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä kuvatulla tavalla. Sen jälkeen sinun täytyy joko luoda tilaus valikoima ja yhteenveto lomake tai avata **Northwind-tila ukset (piirto alusta)-BEGIN Part 3-** sovellus, joka sisältää jo kyseisen valikoiman ja kyseisen lomakkeen.
 
-## <a name="create-another-title-bar"></a>Luo toinen otsikkorivi
+## <a name="create-another-title-bar"></a>Luo toinen otsikko rivi
 
-1. Valitse näytön yläreunassa [ **nimen** ](controls/control-text-box.md) ohjausobjekti, joka toimii otsikkorivi, kopioi se painamalla Ctrl + C ja liitä se painamalla Ctrl-V:
-
-    > [!div class="mx-imgBorder"]
-    > ![Kopioi ja liitä otsikkorivi](media/northwind-orders-canvas-part3/details-01.png)
-
-1. Kokoa ja Siirrä kopion, niin, että se ilmaantuu Yhteenveto lomakkeen.
-
-1. Poista teksti kopiosta jommankumman seuraavista tavoista:
-
-    - Kaksoisnapsauta valitsemalla se ja paina sitten Poista.
-    - Määritä selitteen **tekstin** ominaisuus tyhjäksi merkkijonoksi ( **””** ).
+1. Valitse näytön yläreunassa [**Selite**](controls/control-text-box.md) -ohjaus objekti, joka toimii otsikko rivillä, kopioi se painamalla CTRL-C ja liitä se sitten painamalla CTRL-V:
 
     > [!div class="mx-imgBorder"]
-    > ![Poista teksti otsikkorivin alapuolella kopiosta](media/northwind-orders-canvas-part3/details-02.png)
+    > ![Kopioi ja liitä otsikko rivi](media/northwind-orders-canvas-part3/details-01.png)
+
+1. Muuta kopion kokoa ja siirrä se niin, että se näkyy vain yhteenveto-lomakkeessa.
+
+1. Poista teksti kopiosta jommallakummalla seuraavista tavoista:
+
+    - Valitse teksti kaksoisnapsauttamalla sitä ja paina sitten Delete-näppäintä.
+    - Valitse selitteen **teksti** -ominaisuudeksi tyhjä merkki jono ( **""** ).
+
+    > [!div class="mx-imgBorder"]
+    > ![Poista teksti otsikko rivin kopiosta](media/northwind-orders-canvas-part3/details-02.png)
 
 ## <a name="add-a-gallery"></a>Lisää valikoima
 
-1. Lisää [ **valikoiman** ](controls/control-gallery.md) ohjausobjektin **tyhjä, pysty** asettelu:
+1. Lisää [**valikoima**](controls/control-gallery.md) -ohjaus objekti, jossa on **tyhjä pystysuuntainen** rakenne:
 
     > [!div class="mx-imgBorder"]
     > ![Lisää tyhjä pystysuuntainen valikoima](media/northwind-orders-canvas-part3/details-03.png)
 
-    Uusi valikoima, jossa näkyvät tilaustiedot, näkyy vasemmassa yläkulmassa:
+    Vasemmassa yläkulmassa näkyy uusi valikoima, joka näyttää tila uksen tiedot:
 
     > [!div class="mx-imgBorder"]
-    > ![Tilauksen tiedot valikoiman oletussijainti](media/northwind-orders-canvas-part3/details-04.png)
+    > ![Tila uksen oletus sijainti-tieto valikoima](media/northwind-orders-canvas-part3/details-04.png)
 
-1. Sulje **tietojen** ruudussa ja muuta kokoa ja Siirrä tietoja-valikoiman oikeassa alakulmassa, uusi otsikkorivin alapuolella:
+1. Sulje **tiedot** -ruutu ja muuta sitten tieto valikoiman kokoa ja siirrä sitä oikeaan alakulmaan uuden otsikko rivin alapuolelle:
 
     > [!div class="mx-imgBorder"]
-    > ![Tilauksen tiedot valikoiman lopullisen sijainti](media/northwind-orders-canvas-part3/details-05.png)
+    > ![Tila uksen lopullinen sijainti-tieto valikoima](media/northwind-orders-canvas-part3/details-05.png)
 
-1. Määritä **kohteet** ominaisuus tiedot tämä kaava:
+1. Valitse tieto valikoiman **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gallery1.Selected.'Order Details'
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Tietoja-valikoiman Items-ominaisuuden asettaminen](media/northwind-orders-canvas-part3/details-06.png)
+    > ![Tieto valikoiman Items-ominaisuuden asetukset](media/northwind-orders-canvas-part3/details-06.png)
 
-    Jos näyttöön tulee virhesanoma, Vahvista, että tilauksen valikoima nimeltä **Gallery1** (- **puu näkymän** ruudussa lähellä vasenta reunaa). Jos valikoiman on eri nimi, nimeä se uudelleen **Gallery1**.
+    Jos näkyviin tulee virhe, varmista, että tilaus valikoiman nimi on **Gallery1** ( **puun näkymä** ruudussa lähellä vasenta reunaa). Jos kyseisellä valikoimalla on eri nimi, nimeä se uudelleen **Gallery1**.
 
-    Olet juuri yhdistänyt kaksi valikoimat. Kun käyttäjä valitsee tilauksen tilauksen valikoimassa, valinta tunnistaa tietueen **tilaukset** entiteetin. Jos tilaus sisältää vähintään yhden rivin kohdetta, tietueen **tilaukset** entiteetti on linkitetty yksi tai useampi tietueiden **Tilaustiedot** entiteettien ja tietojen tietueet näkyvät tietoja-valikoiman. Toiminta vastaa yksi-moneen-suhde, joka on luotu puolestasi **tilaukset** ja **Tilaustiedot** entiteettejä. Kaava, jonka määritit ”ohjaa” suhteen piste merkintätapaa käyttämällä:
-
-    > [!div class="mx-imgBorder"]
-    > ![Yksi moneen suhde tilaukset-kohteen ja Tilaustiedot-kohteen](media/northwind-orders-canvas-part3/schema-orders-rel.png)
-
-## <a name="show-product-names"></a>Näytä tuotenimiä
-
-1. Valitse valikoiman tiedot **Lisää kohde Lisää-välilehdestä** ja valitse haluamasi valikoiman mallipohja:
+    Olet juuri linkittänyt kaksi galleriaa. Kun käyttäjä valitsee järjestys valikoimassa järjestyksen, kyseinen valinta tunnistaa tietueen Order-entiteetissä. Jos tässä järjestyksessä on yksi tai useampi Line-kohde, Order **-entiteetin** tietue on linkitetty yhteen tai useaan **Order Details** -entiteetin tietueeseen, ja näiden tietueiden tiedot näkyvät tieto valikoimassa. Tämä toiminta kuvastaa yksi moneen-suhdetta, joka luotiin sinulle **tila ukset** -ja **tilaus tiedot** -entiteettien välillä. Kaava, jonka määritit "kävelee", tuo suhde käyttämällä piste merkintää:
 
     > [!div class="mx-imgBorder"]
-    > ![Valitse malli, tietoja-valikoiman](media/northwind-orders-canvas-part3/details-07.png)
+    > ![Tila ukset-entiteetin ja Order Details-entiteetin välillä on yksi-moneen-suhde](media/northwind-orders-canvas-part3/schema-orders-rel.png)
 
-    Varmista, että olet valinnut valikoiman mallipohja on sen sijaan, että itse valikoima. Määritetyissä tulee olla hieman raja valikoiman sisällä ja todennäköisesti lyhyempi kuin valikoiman korkeus. Kun lisäät ohjausobjekteja tätä mallia, ne toistuvat kunkin kohteen valikoimassa.
+## <a name="show-product-names"></a>Näytä tuote nimet
 
-1. Valitse **Lisää** Lisää selitteenä valikoiman tiedot-välilehdessä.
-
-    Että selite näytetään; valikoiman sisällä Jos näin ei ole, yritä uudelleen, mutta valitse valikoiman mallipohjaa, ennen kuin lisäät nimen.
+1. Valitse tieto valikoimasta **Lisää kohde Lisää-väli lehdestä** ja valitse valikoiman malli:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää selite valikoiman tiedot](media/northwind-orders-canvas-part3/details-08.png)
+    > ![Valitse tieto valikoiman malli](media/northwind-orders-canvas-part3/details-07.png)
 
-1. Määritä uuden nimen **tekstin** -ominaisuuden arvoksi tämä kaava:
+    Varmista, että olet valinnut valikoima-mallin itse valikoiman sijaan. Muokkaus alueen tulee olla hieman valikoiman reunan sisäpuolella ja todennäköisesti lyhyempi kuin valikoiman korkeus. Kun lisäät ohjaus objektit tähän malliin, ne toistetaan valikoiman kullekin kohteelle.
 
-    ```powerapps-comma
+1. Lisää selite **Lisää** -väli lehden yksityiskohta valikoimaan.
+
+    Otsikon pitäisi näkyä valikoimassa; Jos näin ei tapahdu, yritä uudelleen, mutta varmista, että valitset valikoiman mallin ennen selitteen lisäämistä.
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää selite yksityiskohta valikoimaan](media/northwind-orders-canvas-part3/details-08.png)
+
+1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
     ThisItem.Product.'Product Name'
     ```
 
-    Jos tekstiä ei ole, valitsemalla nuoli **tilauksen 0901** tilauksen valikoiman alaosassa.
+    Jos tekstiä ei tule näkyviin, valitse nuoli järjestys **0901** , joka on lähellä tilaus valikoiman alareunaa.
 
-1. Muuttaa selitteen kokoa siten, että koko teksti näkyy:
-
-    > [!div class="mx-imgBorder"]
-    > ![Näytä tuotteen nimen tilauksen tiedot](media/northwind-orders-canvas-part3/details-09.png)
-
-    Tämä lauseke ohjaa tietueesta **Tilaustiedot** entiteetin. Tietueen säilytetään **ThisItem** over- **tilata tuotteita** entiteetin monta yhteen-suhteen kautta:
+1. Muuta selitteen kokoa niin, että koko teksti tulee näkyviin:
 
     > [!div class="mx-imgBorder"]
-    > ![Tilauksen tiedot entiteetin ja tilauksen tuote-entiteetin monta yhteen suhde](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
+    > ![Näytä tuotteen nimi tila uksen tiedot-kohdassa](media/northwind-orders-canvas-part3/details-09.png)
 
-    **Tuotenimi** kenttä (ja muut kentät, jotka olet käyttämässä) poimitaan:
-
-    > [!div class="mx-imgBorder"]
-    > ![Tilauksen tuotteiden entiteetin kenttien](media/northwind-orders-canvas-part3/schema-products-fields.png)
-
-## <a name="show-product-images"></a>Tuotekuvien näyttäminen
-
-1. Käyttöön **Lisää** Lisää-välilehdessä [ **kuvan** ](controls/control-image.md) tietoja-valikoiman komponentin:
+    Tämä lauseke kävelee **Order Details** -entiteetin tietueesta. Tietue säilytetään Thisitem-  kohteessa **Order Products** -entiteetin kautta monta yhteen-suhteen kautta:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää kuva-ohjausobjekti](media/northwind-orders-canvas-part3/details-10.png)
+    > ![Monta yhteen-suhde Order Details-entiteetin ja Order Product-entiteetin välillä](media/northwind-orders-canvas-part3/schema-orderdetails-rel.png)
 
-1. Kokoa ja Siirrä kuva ja otsikko on rinnakkain.
+    **Tuote nimi** kenttä (ja muut kentät, joita aiot käyttää) poimitaan:
+
+    > [!div class="mx-imgBorder"]
+    > ![Tila uksen tuotteet-entiteetin kentät](media/northwind-orders-canvas-part3/schema-products-fields.png)
+
+## <a name="show-product-images"></a>Näytä tuote kuvat
+
+1. Lisää **Lisää** -väli lehdessä [**kuva**](controls/control-image.md) -ohjaus objekti tieto valikoimaan:
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää kuva-ohjaus objekti](media/northwind-orders-canvas-part3/details-10.png)
+
+1. Muuta kuvan kokoa ja siirrä sitä vierekkäin.
 
     > [!TIP]
-    > Yksityiskohtaisemman ohjausobjektin koon ja sijainnin ohjausobjektin Aloita kokoa tai siirtää ilman painamalla Alt-näppäintä ja jatka kokoa tai siirtää ohjausobjektia, kun pidät Alt-näppäintä:
+    > Jos haluat hienosäätää ohjaus objektin kokoa ja sijaintia, ala muuttaa sen kokoa tai siirtää sitä painamatta Alt-näppäintä ja muuta sen kokoa tai Siirrä ohjaus objektia samalla, kun painat Alt-näppäintä:
 
     > [!div class="mx-imgBorder"]
-    > ![Siirrä kuva-ohjausobjekti](media/northwind-orders-canvas-part3/details-11.png)
+    > ![Siirrä kuva-ohjaus objekti](media/northwind-orders-canvas-part3/details-11.png)
 
-1. Määrittää kuvan **kuvan** -ominaisuuden arvoksi tämä kaava:
+1. Valitse kuvan **kuva** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ThisItem.Product.Picture
     ```
 
-    Uudelleen tuotteen, joka on liitetty tämä lauseke viittaa tilauksen tiedot ja poimitaan **kuvan** kenttää sen näyttämiseksi.
+    Lauseke viittaa jälleen tuotteeseen, joka liittyy tähän tila uksen yksityiskohtiin, ja poimii näytettävän **kuva** -kentän.
 
     > [!div class="mx-imgBorder"]
-    > ![Näytä kuva](media/northwind-orders-canvas-part3/details-12.png)
+    > ![Näytä tuote kuva](media/northwind-orders-canvas-part3/details-12.png)
 
-1. Pienennä valikoiman mallipohjaa niin, että enemmän kuin yksi korkeutta **tilauksen tiedot** tietue näytetään yhdellä kertaa:
+1. Pienennä valikoiman mallin korkeutta niin, että kerrallaan näkyy useampi kuin yksi **tilaus tieto** tietue:
 
     > [!div class="mx-imgBorder"]
-    > ![Lyhennä valikoiman mallipohjaa](media/northwind-orders-canvas-part3/details-13.png)
+    > ![Lyhennä valikoiman mallia](media/northwind-orders-canvas-part3/details-13.png)
 
-## <a name="show-product-quantity-and-cost"></a>Näytä tuotteen määrä ja kustannukset
+## <a name="show-product-quantity-and-cost"></a>Näytä tuotteen määrä ja hinta
 
-1. Valitse **Lisää** välilehti, Lisää toinen selite tietoja-valikoiman ja kokoa ja Siirrä uusi otsikko tuotetiedot oikealla.
+1. Lisää **Lisää** -väli lehdessä toinen selite yksityiskohta valikoimaan ja muuta sen kokoa ja Siirrä uusi selite tuote tietojen oikealle puolelle.
 
-1. Määritä uuden nimen **tekstin** ominaisuudeksi seuraava lauseke:
+1. Valitse uuden nimen **teksti** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-comma
+    ```powerapps-dot
     ThisItem.Quantity
     ```
 
-    Tämä kaava hakee tiedot suoraan **Tilaustiedot** entiteetin (ei pakollinen suhde).
+    Tämä kaava hakee tiedot suoraan **Order Details** -entiteetistä (suhdetta ei vaadita).
 
     > [!div class="mx-imgBorder"]
-    > ![Näytä tuotteen määrä](media/northwind-orders-canvas-part3/details-13b.png) 
+    > ![Näytä tuote määrä](media/northwind-orders-canvas-part3/details-13b.png) 
 
-1. Käyttöön **aloitus** muuttaa tämän ohjausobjektin tasaus-välilehden **oikealle**:
+1. Muuta **Aloitus** -väli lehdellä tämän ohjaus objektin tasaus **oikealle**:
 
     > [!div class="mx-imgBorder"]
-    > ![Tasauksen muuttaminen](media/northwind-orders-canvas-part3/details-14.png)
+    > ![Muuta tasausta](media/northwind-orders-canvas-part3/details-14.png)
 
-1. Valitse **Lisää** välilehti, Lisää toinen selite tietoja-valikoiman ja kokoa ja Siirrä selite määrä nimen oikealle puolelle.
+1. Lisää **Lisää** -väli lehdessä toinen selite tieto valikoimaan ja muuta sen kokoa ja siirrä selite määrän nimen oikealle puolelle.
 
-1. Määritä uuden nimen **tekstin** -ominaisuuden arvoksi tämä kaava:
+1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Text( ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
-    Jos et määritä kielitunnisteen ( **[$-en-US]** ), se lisätään kielen ja alueen perusteella. Jos käytät eri kielitunnisteen, haluat poistaa **$** vain jälkeen Sulje hakasulje ( **]** ), ja lisää sitten oman valuuttasymbolin tässä asemassa.
+    Jos et sisällytä kieli koodia ( **[$-en-US]** ), se lisätään sinulle kielen ja alueen perusteella. Jos käytät eri kieli koodia, sinun kannattaa poistaa **$** heti Close Square-Haka Sulje ( **]** ) ja lisätä sitten oma valuutta-symboli kyseiseen sijaintiin.
 
     > [!div class="mx-imgBorder"]
-    > ![Näytä Yksikköhinta](media/northwind-orders-canvas-part3/details-15.png)
+    > ![Näytä yksikkö hinta](media/northwind-orders-canvas-part3/details-15.png)
 
-1. Käyttöön **aloitus** muuttaa tämän ohjausobjektin tasaus-välilehden **oikealle**:
+1. Muuta **Aloitus** -väli lehdellä tämän ohjaus objektin tasaus **oikealle**:
 
     > [!div class="mx-imgBorder"]
-    > ![Tasauksen muuttaminen](media/northwind-orders-canvas-part3/details-16.png)
+    > ![Muuta tasausta](media/northwind-orders-canvas-part3/details-16.png)
 
-1. Valitse **Lisää** välilehti, Lisää toinen tietoja-valikoiman ja kokoa ja Siirrä uusi otsikko Yksikköhinta oikealla.
+1. Lisää **Lisää** -väli lehdessä toinen selite-ohjaus objekti tieto valikoimaan ja muuta sen kokoa ja Siirrä uusi selite yksikkö hinnan oikealle puolelle.
 
-1. Määritä uuden nimen **tekstin** -ominaisuuden arvoksi tämä kaava:
+1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Text( ThisItem.Quantity * ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
     ```
 
-    Uudelleen, jos et määritä kielitunnisteen ( **[$-en-US]** ), se lisätään kielen ja alueen perusteella. Tunniste on erilainen, jos haluat käyttää omia valuuttasymbolia sijasta **$** vain jälkeen Sulje hakasulje ( **]** ).
+    Jos et sisällytä kieli koodia ( **[$-en-US]** ), se lisätään puolestasi oman kielesi ja alueesi mukaan. Jos koodi on erilainen, sinun kannattaa käyttää omaa valuutta symbolia **$** heti Close Square kiinnike ( **]** )-kohteen sijaan.
 
     > [!div class="mx-imgBorder"]
     > ![Näytä kokonaishinta](media/northwind-orders-canvas-part3/details-17.png)
 
-1. Käyttöön **aloitus** muuttaa tämän ohjausobjektin tasaus-välilehden **oikealle**:
+1. Muuta **Aloitus** -väli lehdellä tämän ohjaus objektin tasaus **oikealle**:
 
     > [!div class="mx-imgBorder"]
-    > ![Tasauksen muuttaminen](media/northwind-orders-canvas-part3/details-18.png)
+    > ![Muuta tasausta](media/northwind-orders-canvas-part3/details-18.png)
 
-    Nyt olet valmis tietoja-valikoiman lisääminen ohjausobjekteja.
+    Olet lisännyt ohjaus objektin tieto valikoimaan nyt.
 
-1. - **Puu näkymän** ruudussa **Screen1** sen varmistamiseksi, että tietoja-valikoiman ei ole enää valittuna.
+1. Varmista, että tieto valikoima ei ole enää valittuna, valitsemalla **puunäkymä** -ruudussa **Screen1** .
 
-## <a name="add-text-to-the-new-title-bar"></a>Lisää uusi otsikkorivin teksti
+## <a name="add-text-to-the-new-title-bar"></a>Lisää teksti uuteen otsikko riville
 
-1. Valitse **Lisää** -välilehden Lisää toinen selite näytön seuraavaan:
-
-    > [!div class="mx-imgBorder"]
-    > ![Lisää otsikko](media/northwind-orders-canvas-part3/details-19.png)
-
-1. Kokoa ja Siirrä uusi selite tuotteiden kuvat yllä toinen otsikkorivillä ja muuta sitten tekstin väri valkoinen **aloitus** välilehti.
-
-1. Kaksoisnapsauta otsikon teksti ja kirjoita sitten **tuotteen**:
+1. Lisää toinen selite näyttöön **Lisää** -väli lehdessä:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta tuotteen nimen teksti](media/northwind-orders-canvas-part3/details-20.png)
+    > ![Lisää selite](media/northwind-orders-canvas-part3/details-19.png)
 
-1. Kopioi ja liitä tuotteen nimen, ja sitten kokoa ja Siirrä kopion määrä-sarakkeessa yläpuolella.
+1. Muuta uuden selitteen kokoa ja siirrä se toisen otsikko rivin tuotteiden kuvien yläpuolelle ja muuta sitten **Aloitus** -väli lehden tekstin väriksi valkoinen.
 
-1. Kaksoisnapsauta uuden nimen teksti ja kirjoita sitten **määrä**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Muuta nimen teksti määrä](media/northwind-orders-canvas-part3/details-21.png)
-
-1. Kopioi ja liitä määrä, nimen ja sitten kokoa ja Siirrä kopion Yksikköhinta sarakkeen yläpuolella.
-
-1. Kaksoisnapsauta uuden nimen teksti ja kirjoita sitten **Yksikköhinta**:
+1. Kaksoisnapsauta otsikon tekstiä ja kirjoita sitten **tuote**:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta Yksikköhinta nimen teksti](media/northwind-orders-canvas-part3/details-22.png)
+    > ![Muuta otsikon teksti tuotteeksi](media/northwind-orders-canvas-part3/details-20.png)
 
-1. Kopioi ja liitä Yksikköhinta nimen ja sitten kokoa ja Siirrä kopion Laajennettu hinta-sarakkeen yläpuolella.
+1. Kopioi ja liitä tuotteen nimi ja muuta sen kokoa ja siirrä kopio määrä-sarakkeen yläpuolelle.
 
-1. Kaksoisnapsauta uuden nimen teksti ja kirjoita sitten **laajennettua**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Muuta laajennettua nimen teksti](media/northwind-orders-canvas-part3/details-23.png)
-
-## <a name="display-order-totals"></a>Näytä kokonaissummat
-
-1. Pienennä tehdäksemme tilausten kokonaissummat näytön alareunassa tietoja-valikoiman korkeutta:
+1. Kaksoisnapsauta uuden nimen tekstiä ja kirjoita sitten **määrä**:
 
     > [!div class="mx-imgBorder"]
-    > ![Lyhennä Tilaustiedot valikoima](media/northwind-orders-canvas-part3/sum-01.png)
+    > ![Muuta otsikon teksti määräksi määrä](media/northwind-orders-canvas-part3/details-21.png)
 
-1. Kopioi ja Liitä näytön keskellä otsikkorivin ja siirrä sitten näytön alareunasta kopion:
+1. Kopioi ja liitä määrän nimi ja muuta sen kokoa ja siirrä kopio yksikkö hinta-sarakkeen yläpuolelle.
 
-    > [!div class="mx-imgBorder"]
-    > ![Kopioi otsikkorivi ja Siirrä kopioi alareunaan](media/northwind-orders-canvas-part3/sum-02.png)
-
-1. Kopioi ja liitä Keskimmäinen otsikkorivin tuotteen selite ja siirrä sitten kopion alareunan otsikkorivillä, joka vasemmalla puolella **määrä** sarake.
-
-1. Kaksoisnapsauta uuden nimen teksti ja kirjoita tämä teksti:<br>**Tilauksen yhteensä:**
+1. Kaksoisnapsauta uuden nimen tekstiä ja kirjoita sitten **yksikkö hinta**:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää otsikko kokonaissummat](media/northwind-orders-canvas-part3/sum-03.png)
+    > ![Muuta otsikon teksti yksikkö hinnaksi](media/northwind-orders-canvas-part3/details-22.png)
 
-1. Kopioi ja liitä-kokonaissummat, nimen ja sitten kokoa ja Siirrä kopion kokonaissummat otsikon oikealla puolella.
+1. Kopioi ja liitä yksikkö hinnan nimi ja muuta sen kokoa ja siirrä kopio laajennetun hinnan sarakkeen yläpuolelle.
 
-1. Määritä uuden nimen **tekstin** -ominaisuuden arvoksi tämä kaava:
+1. Kaksoisnapsauta uuden nimen tekstiä ja kirjoita sitten **Extended**:
 
-    ```powerapps-comma
-    Sum( Gallery1.Selected.'Order Details'; Quantity )
+    > [!div class="mx-imgBorder"]
+    > ![Muuta otsikon teksti laajennettuna](media/northwind-orders-canvas-part3/details-23.png)
+
+## <a name="display-order-totals"></a>Näytä tilausten kokonaissummat
+
+1. Pienennä tieto valikoiman korkeutta niin, että tilaa tila uksen kokonaisarvoiksi näytön alareunassa:
+
+    > [!div class="mx-imgBorder"]
+    > ![Lyhennä tilaus-tieto valikoima](media/northwind-orders-canvas-part3/sum-01.png)
+
+1. Kopioi ja liitä otsikko rivi näytön keskelle ja siirrä sitten kopio näytön alareunaan:
+
+    > [!div class="mx-imgBorder"]
+    > ![Kopioi otsikko rivi ja siirrä kopio alareunaan](media/northwind-orders-canvas-part3/sum-02.png)
+
+1. Kopioi ja liitä tuote selite keskimmäisestä otsikko palkista ja siirrä sitten kopio alimmalle otsikko riville, joka on vain **määrä** -sarakkeen vasemmalla puolella.
+
+1. Kaksoisnapsauta uuden nimen tekstiä ja kirjoita sitten seuraava teksti:<br>**Tila uksen summat:**
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää otsikko tilausten kokonaisarvoiksi](media/northwind-orders-canvas-part3/sum-03.png)
+
+1. Kopioi ja liitä tila uksen summa-otsikko ja muuta sen kokoa ja siirrä kopio tila uksen summa-otsikon oikealle puolelle.
+
+1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
+    Sum( Gallery1.Selected.'Order Details', Quantity )
     ```
 
-    Tämä kaava näyttää delegointia varoitus, mutta voit ohittaa koska ei ole yhdessä tilauksessa sisältää enemmän kuin 500 tuotteita.
+    Tämä kaava näyttää delegointi varoituksen, mutta voit ohittaa sen, koska mikään yksittäinen tilaus ei sisällä enempää kuin 500 tuotetta.
 
-1. Käyttöön **aloitus** asetettu uuden otsikon tekstin tasaus-välilehden **oikealle**:
+1. Valitse **Aloitus** -väli lehdeltä uuden nimen tekstin tasaus **oikealle**:
 
     > [!div class="mx-imgBorder"]
-    > ![Tasauksen muuttaminen](media/northwind-orders-canvas-part3/sum-04.png)
+    > ![Muuta tasausta](media/northwind-orders-canvas-part3/sum-04.png)
 
-1. Kopioi ja Liitä tämä Selite-ohjausobjekti ja kokoa ja Siirrä kohdassa kopion **laajennettua** sarake.
+1. Kopioi ja liitä tämä selite-ohjaus objekti ja muuta sen kokoa ja siirrä kopiota **laajennetussa** sarakkeessa.
 
-1. Määritä kopioi **tekstin** -ominaisuuden arvoksi tämä kaava:
+1. Valitse kopion **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Text( Sum( Gallery1.Selected.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( Sum( Gallery1.Selected.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
     ```
 
-    Tämä kaava näyttää delegointia varoitus, mutta voit ohittaa koska ei ole yhdessä tilauksessa sisältää enemmän kuin 500 tuotteita.
+    Tämä kaava näyttää delegointi varoituksen, mutta voit ohittaa sen, koska mikään yksittäinen tilaus ei sisällä enempää kuin 500 tuotetta.
 
     > [!div class="mx-imgBorder"]
-    > ![Näytä tilauksen kokonaiskustannukset](media/northwind-orders-canvas-part3/sum-05.png)
+    > ![Näytä tila uksen kokonaiskustannukset](media/northwind-orders-canvas-part3/sum-05.png)
 
-## <a name="add-space-for-new-details"></a>Lisää uusi saat
+## <a name="add-space-for-new-details"></a>Lisää tilaa uusille tiedoissa
 
-Minkä tahansa valikoiman voit näyttää tiedot mutta et voi päivittää tai lisätä tietueita. Tietoja-valikoiman alle lisäät on alue, jossa käyttäjä voi määrittää tietueen **Tilaustiedot** entiteetin ja lisää joka tallentaa tilaukseksi.
+Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää sitä tai lisätä tietueita. Lisää tiedot-valikoimaan alue, jossa käyttäjä voi määrittää tietueen **Order Details** -entiteetissä ja lisätä kyseisen tietueen tila uksen.
 
-1. Pienennä tiedot valikoiman tarpeeksi tilaa yhden kohteen muokkaamisen tilaa kohdassa valikoiman korkeutta.
+1. Pienennä tieto valikoiman korkeutta niin, että se tekee tilaa yksittäisen kohteen muokkaus tilaan kyseisen valikoiman alla.
 
-    Tähän lisäät ohjausobjekteja siten, että käyttäjä voi lisätä tilauksen tiedot:
-
-    > [!div class="mx-imgBorder"]
-    > ![Lyhennä valikoiman tiedot](media/northwind-orders-canvas-part3/add-details-01.png)
-
-1. Valitse **Lisää** välilehti, Lisää selite, ja kokoa ja Siirrä tietoja-valikoiman alle.
+    Tässä tilassa lisäät ohjaus objektin, jotta käyttäjä voi lisätä tila uksen tiedot:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää selite](media/northwind-orders-canvas-part3/add-details-02.png)
+    > ![Lyhennä tieto valikoimaa](media/northwind-orders-canvas-part3/add-details-01.png)
 
-1. Uusi selitteen tekstinä, ja paina sitten Poista.
-
-1. Valitse **aloitus** välilehti, Määritä uusi otsikko **Täytä** väri, jota **LightBlue**:
+1. Lisää otsikko **Lisää** -väli lehteen ja muuta sen kokoa ja siirrä se yksityiskohta valikoiman alapuolelle.
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta otsikon täyttö Vaaleansininen](media/northwind-orders-canvas-part3/add-details-03.png)
+    > ![Lisää otsikko](media/northwind-orders-canvas-part3/add-details-02.png)
 
-## <a name="add-the-order-details-data-source"></a>Lisää Tilaustiedot tietolähde
+1. Kaksoisnapsauta uuden nimen tekstiä ja paina sitten Delete-näppäintä.
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**, ja valitse sitten **Lisää tietolähde** - **tietojen** ruudussa:
+1. Määritä **Aloitus** -väli lehdessä uuden nimen **täyttö** väriksi **lightblue**:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää tietolähde](media/northwind-orders-canvas-part3/add-details-04.png)
+    > ![Muuta otsikon täyttö vaaleansini seksi](media/northwind-orders-canvas-part3/add-details-03.png)
 
-1. Valitse **Common Data Service-** :
+## <a name="add-the-order-details-data-source"></a>Lisää tilaus tietojen tieto lähde
+
+1. Valitse **näkymä** -väli lehdeltä **tieto lähteet**ja valitse sitten **tieto** ruudusta **Lisää tieto lähde** :
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää tieto lähde](media/northwind-orders-canvas-part3/add-details-04.png)
+
+1. Valitse **Common Data Service**:
 
     > [!div class="mx-imgBorder"]
     > ![Valitse Common Data Service](media/northwind-orders-canvas-part3/add-details-05.png)
 
-1. Yläosassa **tietojen** ruudussa, tyyppi **tilauksen** hakuruutuun, valitse **Tilaustiedot** valintaruutu ja valitse sitten **Yhdistä** osoitteessa -ruudun alaosassa:
+1. Kirjoita **tiedot** -ruudun yläreunaan haku-ruutuun **järjestys** , valitse **tila uksen tiedot** -valinta ruutu ja valitse sitten **Yhdistä** ruudun alareunasta:
 
     > [!div class="mx-imgBorder"]
-    > ![Tilauksen tietojen entiteetti](media/northwind-orders-canvas-part3/add-details-06.png)
+    > ![Määritä tilaus tietojen entiteetti](media/northwind-orders-canvas-part3/add-details-06.png)
 
-    Olet juuri lisäämäsi toiseen tietolähteeseen sovellukseen:
+    Olet juuri lisännyt toisen tieto lähteen sovellukseen:
 
     > [!div class="mx-imgBorder"]
-    > ![Tietolähteiden luettelo](media/northwind-orders-canvas-part3/add-details-07.png)
+    > ![Tieto lähteiden luettelo](media/northwind-orders-canvas-part3/add-details-07.png)
 
-    Sinun on lisättävä tätä tietolähdettä, koska sovelluksen lukea yksi-moneen-suhde, vaikka sovellus ei ole vielä takaisinkirjoittamiseen. Sovellus täytyy tehdä muutoksia suoraan liittyvän entiteetin kanssa.
+    Sinun täytyy lisätä tämä tieto lähde, koska vaikka sovellus voi lukea yksi-moneen-suhteen, sovellus ei voi vielä kirjoittaa muutoksia takaisin. Sovelluksen on tehtävä muutoksia suoraan liittyvän entiteetin kanssa.
 
-1. Sulje **tietojen** ruudussa.
+1. Sulje **tiedot** -ruutu.
 
 ## <a name="select-a-product"></a>Valitse tuote
 
-1. Valitse **Lisää** -välilehden **ohjausobjekteja** > **yhdistelmäruudun**:
+1. Valitse **Lisää** -väli lehdeltä **ohjaus objektin** > **yhdistelmä ruutu**:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää yhdistelmäruutu](media/northwind-orders-canvas-part3/add-details-08.png)
+    > ![Lisää yhdistelmä ruutu](media/northwind-orders-canvas-part3/add-details-08.png)
 
-    [ **Yhdistelmäruudun** ](controls/control-combo-box.md) ohjausobjekti näkyy vasemmassa yläkulmassa.
+    [**Yhdistelmä ruutu**](controls/control-combo-box.md) -ohjaus objekti näkyy vasemmassa yläkulmassa.
 
-1. Määritä yhdistelmäruudun **kohteet** -ominaisuuden arvoksi tämä kaava:
+1. Valitse yhdistelmä ruudun **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Choices( 'Order Details'.Product )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Ruudun Items-ominaisuuden asettaminen yhdistelmäruutu](media/northwind-orders-canvas-part3/add-details-09.png)
+    > ![Yhdistelmä ruudun Items-ominaisuuden asetukset](media/northwind-orders-canvas-part3/add-details-09.png)
 
-    [ **Vaihtoehtoja** ](functions/function-choices.md) funktio palauttaa kaikki mahdolliset arvot **tuotteen** kenttää **Tilaustiedot** entiteetin. Tämä kenttä on niin monta yhteen-suhteen haun **vaihtoehtoja** palauttaa kaikki tietueet **tilata tuotteita** entiteetin.
+    [**Choices**](functions/function-choices.md) -funktio palauttaa **tila uksen tiedot** -entiteetin **tuote** -kentän kaikkien mahdollisten arvojen taulukon. Tämä kenttä on monta yhteen-suhteen haku, joten **valinnat** palauttavat kaikki **Order Products** -entiteetin tietueet.
 
     > [!NOTE]
-    > Voit myös käyttää **vaihtoehtoja** Asetusjoukot palautettavien taulukon kaikki asetukset. Vaiheet ei mainita tietueryhmän, mutta se käyttää jo, kun olet lisännyt yhdistelmäruudun, joka näyttää **tilauksen tila** yhteenveto muodossa.
+    > Voit myös käyttää vaihto ehtoja asetus **joukkojen kanssa,** jos haluat palauttaa taulukon kaikista vaihto ehdoista. Näissä vaiheissa ei mainittu tätä lähestymis tapaa, mutta käytit sitä jo, kun lisäsit yhdistelmä ruudun, joka näyttää **tila uksen tilan** yhteenveto lomakkeessa.
 
-1. - **Tietojen** ruutu, avattuna **ensisijainen tekstin** luettelo ja valitse sitten **nwind_productname**. 
+1. Avaa **tiedot** -ruudussa **ensisijainen teksti** -lista ja valitse sitten **nwind_productname**. 
 
-1. Avaa **käyttämällä SearchField** luettelo ja valitse sitten **nwind_productname**.
+1. Avaa **Searchfield** -luettelosta ja valitse sitten **nwind_productname**.
 
-    Määritä looginen nimi, koska **tietojen** ruudussa ei tue näyttönimiä tässä tapauksessa vielä:
-
-    > [!div class="mx-imgBorder"]
-    > ![Määritä ensisijainen teksti-yhdistelmäruutu](media/northwind-orders-canvas-part3/add-details-10.png)
-
-1. Sulje **tietojen** ruudussa.
-
-1. - **Ominaisuudet** lähellä oikeaa reunaa, Vieritä alaspäin välilehdeltä käytöstä **Monivalinnan salliminen**, ja varmista, että **Salli haun** on otettu käyttöön:
+    Voit määrittää loogisen nimen, koska **tieto** ruutu ei tue näyttö nimiä tässä tapa uksessa vielä:
 
     > [!div class="mx-imgBorder"]
-    > ![Monivalinta käytöstä ja ota käyttöön](media/northwind-orders-canvas-part3/add-details-12.png)
+    > ![Yhdistelmä ruudun ensisijaisen tekstin asetukset](media/northwind-orders-canvas-part3/add-details-10.png)
 
-1. Kokoa ja Siirrä yhdistelmäruudun vaaleansinisen alue, vain tietoja-valikoiman tuotteen nimi-sarakkeen:
+1. Sulje **tiedot** -ruutu.
+
+1. Valitse **Ominaisuudet** -väli lehden lähellä oikeaa reunaa, vieritä alas, poista **Salli useita valintoja**-vaihto ehto ja varmista, että **Salli hakeminen** on käytössä:
 
     > [!div class="mx-imgBorder"]
-    > ![Siirrä yhdistelmäruutu](media/northwind-orders-canvas-part3/add-details-13.png)
+    > ![Poista käytöstä useita valintoja ja ota hakeminen käyttöön](media/northwind-orders-canvas-part3/add-details-12.png)
 
-    Tämä yhdistelmäruutu käyttäjän määrittää tietueen **tuotteen** entiteetin **Tilaustiedot** tietueen, joka luo sovelluksen.
+1. Muuta yhdistelmä ruudun kokoa ja siirrä se vaaleansinisellä alueella juuri tuote nimi-sarakkeessa tieto valikoimassa:
 
-1. Kun pidät alhaalla Alt-näppäintä, valitse yhdistelmäruudun alanuolta.
+    > [!div class="mx-imgBorder"]
+    > ![Siirrä yhdistelmä ruutu](media/northwind-orders-canvas-part3/add-details-13.png)
+
+    Tässä yhdistelmä ruudussa käyttäjä määrittää tietueen **tuote** -entiteetissä sen **tilaus tietojen** tietueelle, jonka sovellus luo.
+
+1. Pidä Alt-näppäintä painettuna ja valitse yhdistelmä ruudun alanuoli.
 
     > [!TIP]
-    > Pitämällä Alt-näppäintä voit käsitellä PowerApps Studio-ohjausobjektit avaamatta esikatselutilassa.
+    > Pitämällä Alt-näppäintä painettuna voit käsitellä ohjaus objektien PowerApps Studio avaamatta esikatselutilaa.
 
-1. Luettelossa olevien tuotteiden, joka tulee näkyviin Valitse tuote:
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse tuote-yhdistelmäruutu](media/northwind-orders-canvas-part3/add-details-14.png)
-
-## <a name="add-a-product-image"></a>Lisää tuotteen kuva
-
-1. Valitse **Lisää** -välilehden **Media** > **kuvan**:
+1. Valitse näkyviin tulevasta tuote luettelosta tuote:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää kuva-ohjausobjekti](media/northwind-orders-canvas-part3/add-details-15.png)
+    > ![Valitse tuote yhdistelmä ruudusta](media/northwind-orders-canvas-part3/add-details-14.png)
 
-    [ **Kuvan** ](controls/control-image.md) ohjausobjekti näkyy vasemmassa yläkulmassa:
+## <a name="add-a-product-image"></a>Lisää tuote kuva
+
+1. Valitse **Lisää** -väli lehdeltä **tieto väline** > **kuva**:
 
     > [!div class="mx-imgBorder"]
-    > ![Kuva-ohjausobjektin oletussijainti](media/northwind-orders-canvas-part3/add-details-16.png)
+    > ![Lisää kuva-ohjaus objekti](media/northwind-orders-canvas-part3/add-details-15.png)
 
-1. Kokoa ja Siirrä kuvaa vaaleansinisen alueelta, valitse muita tuotekuvien yhdistelmäruudun vieressä.
+    [**Kuva**](controls/control-image.md) -ohjaus objekti näkyy vasemmassa yläkulmassa:
 
-1. Määritä **kuvan** ominaisuuden kuva:
+    > [!div class="mx-imgBorder"]
+    > ![Kuva ohjaus objektin oletus sijainti](media/northwind-orders-canvas-part3/add-details-16.png)
 
-    ```powerapps-comma
+1. Muuta kuvan kokoa ja siirrä se vaaleansinisellä alueella muiden tuote kuvien alapuolelle ja valitse yhdistelmä ruudun vierestä.
+
+1. Valitse kuvan **ominaisuudeksi** :
+
+    ```powerapps-dot
     ComboBox1.Selected.Picture
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määrittää kuvan Image-ominaisuus](media/northwind-orders-canvas-part3/add-details-17.png)
+    > ![Kuvan kuva-ominaisuuden asetukset](media/northwind-orders-canvas-part3/add-details-17.png)
 
-    Käytät samaan ajaa saman asian sinuna käytetään näyttämään työntekijän kuva yhteenveto muodossa. **Valittu** yhdistelmäruudun-ominaisuus palauttaa koko tietueen haluamasi käyttäjä valitsee, tuotteen **kuvan** kenttä.
+    Käytät samaa temppua, jota käytit näyttääksesi työn tekijän kuvan yhteenveto lomakkeessa. Yhdistelmä ruudun **valittu** ominaisuus palauttaa koko tietueen riippumatta siitä, mitä tuotetta käyttäjä valitsee, mukaan lukien **kuva** -kentän.
 
-## <a name="add-a-quantity-box"></a>Lisää määrä-ruutu
+## <a name="add-a-quantity-box"></a>Lisää määrä ruutu
 
-1. Valitse **Lisää** -välilehden **tekstin** > **Tekstisyöte**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Lisää tekstisyötteen ruutu](media/northwind-orders-canvas-part3/add-details-18.png)
-
-    [ **Tekstisyöte** ](controls/control-text-input.md) ohjausobjekti näkyy vasemmassa yläkulmassa:
+1. Valitse **Lisää** -väli lehdeltä **teksti** > **teksti syöte**:
 
     > [!div class="mx-imgBorder"]
-    > ![Oletussijainti tekstisyötteen ruutu](media/northwind-orders-canvas-part3/add-details-19.png)
+    > ![Lisää teksti syöte ruutu](media/northwind-orders-canvas-part3/add-details-18.png)
 
-1. Kokoa ja Siirrä tekstisyötteen ruutua yhdistelmäruudun tietoja-valikoiman määrä-sarakkeen oikealla:
-
-    > [!div class="mx-imgBorder"]
-    > ![Kokoa ja Siirrä tekstisyötteen ruutua](media/northwind-orders-canvas-part3/add-details-20.png)
-
-    Tämä tekstisyötteen ruutu avulla käyttäjä määrittää **määrä** kenttään **Tilaustiedot** tietueen.
-
-1. Määritä **oletus** tämän ohjausobjektin ominaisuuden **””** :
+    [**Teksti syöte**](controls/control-text-input.md) -ohjaus objekti näkyy vasemmassa yläkulmassa:
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä ** ominaisuuden oletusarvon ** tekstisyötteen ruutu](media/northwind-orders-canvas-part3/add-details-21.png)
+    > ![Teksti syöte ruudun oletus sijainti](media/northwind-orders-canvas-part3/add-details-19.png)
 
-1. Valitse **aloitus** Määritä tämän ohjausobjektin tekstin tasaus-välilehden **oikealle**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Tasauksen muuttaminen](media/northwind-orders-canvas-part3/add-details-22.png)
-
-## <a name="show-the-unit-and-extended-prices"></a>Näytä yksikkö ja laajennettu hinnat
-
-1. Käyttöön **Lisää** Lisää-välilehdessä **nimen** ohjausobjektin.
-
-    Selite tulee näkyviin näytön vasemmassa yläkulmassa:
+1. Muuta kokoa ja Siirrä teksti syöte ruutu yhdistelmä ruudun oikealla puolella tieto valikoiman määrä-sarakkeessa:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää selite](media/northwind-orders-canvas-part3/add-details-23.png)
+    > ![Muuta teksti syöte ruudun kokoa ja siirrä sitä](media/northwind-orders-canvas-part3/add-details-20.png)
 
-1. Kokoa ja Siirrä selite oikealla puolella Tekstisyöte-ohjausobjekti ja määritä selitteen **tekstin** -ominaisuuden arvoksi tämä kaava:
+    Käyttämällä tätä teksti syöte ruutua käyttäjä määrittää **tilaus tiedot** -tietueen **määrä** -kentän.
 
-    ```powerapps-comma
-    Text( ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
+1. Määrittää tämän ohjaus objektin **oletus** ominaisuudeksi **""** :
+
+    > [!div class="mx-imgBorder"]
+    > ![Valitse teksti syöte ruudun * * default * *-ominaisuus](media/northwind-orders-canvas-part3/add-details-21.png)
+
+1. Valitse **Aloitus** -väli lehdeltä tämän ohjaus objektin tekstin tasaus **oikealle**:
+
+    > [!div class="mx-imgBorder"]
+    > ![Muuta tasausta](media/northwind-orders-canvas-part3/add-details-22.png)
+
+## <a name="show-the-unit-and-extended-prices"></a>Näytä yksikkö ja laajennetut hinnat
+
+1. Lisää **Selite** -ohjaus objekti **Lisää** -väli lehteen.
+
+    Selite näkyy näytön vasemmassa yläkulmassa:
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää otsikko](media/northwind-orders-canvas-part3/add-details-23.png)
+
+1. Muuta tekstin syöttö-ohjaus objektin oikealla puolella olevaa otsikkoa ja siirrä sen **teksti** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
+    Text( ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määrittää selitteen tekstin ominaisuutta](media/northwind-orders-canvas-part3/add-details-24.png)
+    > ![Nimen teksti-ominaisuuden asetukset](media/northwind-orders-canvas-part3/add-details-24.png)
 
-    Tämä ohjausobjekti näyttää **luettelon hinta** - **tilata tuotteita** entiteetin. Tämä arvo määrittää **Yksikköhinta** kenttää **Tilaustiedot** tietueen.
+    Tämä ohjaus objekti esittää **tilaus tuotteet** -entiteetin **lista hinnan** . Tämä arvo ratkaisee **tilaus tiedot** -tietueen **yksikkö hinta** -kentän.
 
     > [!NOTE]
-    > Tämän skenaarion arvo on vain luku-tilassa, mutta muut skenaarioita voi kutsua sovelluksen käyttäjä voi muokata sitä. Tässä tapauksessa käyttää **Tekstisyöte** ohjausobjekti ja määritä sen **oletus** ominaisuudeksi **luettelon hinta**.
+    > Tässä skenaariossa arvo on vain luku-tilassa, mutta muut skenaariot saattavat kutsua sovelluksen käyttäjää muokkaamaan sitä. Käytä siinä tapa uksessa **teksti syöte** -ohjaus objektia ja määritä sen **default** -ominaisuudeksi **List Price**.
 
-1. Valitse **aloitus** Määritä luettelon hinta selitteen tekstin tasaus-välilehdessä **oikeassa**:
+1. Valitse **Aloitus** -väli lehdeltä luettelo hinta-otsikon tekstin tasaus **oikealle**:
 
     > [!div class="mx-imgBorder"]
-    > ![Tasauksen muuttaminen](media/northwind-orders-canvas-part3/add-details-25.png)
+    > ![Muuta tasausta](media/northwind-orders-canvas-part3/add-details-25.png)
 
-1. Kopioi ja liitä luettelon hinta-nimen ja sitten kokoa ja Siirrä kopion luettelon hinta-otsikon oikealla.
+1. Kopioi ja liitä luettelo hinta-otsikko ja muuta sen kokoa ja siirrä kopio luettelo – hinta-otsikon oikealle puolelle.
 
-1. Määritä uuden nimen **tekstin** -ominaisuuden arvoksi tämä kaava:
+1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
+    ```powerapps-dot
+    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä uusi selitteen tekstin ominaisuutta](media/northwind-orders-canvas-part3/add-details-27.png)
+    > ![Uuden nimen teksti-ominaisuuden asetukset](media/northwind-orders-canvas-part3/add-details-27.png)
 
-    Tämä ohjausobjekti näyttää kokonaishinta määrä, joka sovelluksen käyttäjälle määritetty ja tuotteen, sovelluksen käyttäjä valitsi luettelon hinnan perusteella. On vain tiedoksi sovelluksen käyttäjälle.
+    Tämä ohjaus objekti esittää laajennetun hinnan sovelluksen käyttäjän määrittämän määrän ja sovelluksen käyttäjän valitseman tuotteen luettelo hinnan perusteella. Se on puhtaasti Tiedottava sovellus käyttäjälle.
 
-1. Kaksoisnapsauta Tekstisyöte-ohjausobjektiin, määrä ja kirjoita sitten luku.
+1. Kaksoisnapsauta määrän teksti syöte-ohjaus objektia ja kirjoita sitten luku.
 
-    **Laajennettua** nimen hinta laskee uudelleen näyttämään uusi arvo:
-
-    > [!div class="mx-imgBorder"]
-    > ![Määrittää määrän ja näyttää Laajennettu hinta](media/northwind-orders-canvas-part3/add-details-28.png)
-
-## <a name="add-an-add-icon"></a>Lisää Lisää-kuvake
-
-1. Valitse **Lisää** -välilehden **kuvakkeet** > **Lisää**:
+    **Laajennetun** hinnan nimi lasketaan uudelleen näyttämään uusi arvo:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää Lisää kuvake](media/northwind-orders-canvas-part3/add-details-29.png)
+    > ![Määritä määrä ja Näytä kokonaishinta](media/northwind-orders-canvas-part3/add-details-28.png)
+
+## <a name="add-an-add-icon"></a>Lisää kuvake
+
+1. Valitse **Lisää** -väli lehdeltä **kuvakkeet** > **Lisää**:
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää kuvake](media/northwind-orders-canvas-part3/add-details-29.png)
 
     Kuvake näkyy näytön vasemmassa yläkulmassa.
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää kuvake oletussijainti](media/northwind-orders-canvas-part3/add-details-30.png)
+    > ![Add-kuvakkeen oletus sijainti](media/northwind-orders-canvas-part3/add-details-30.png)
 
-1. Kokoa ja Siirrä tämä kuvake oikeassa reunassa vaaleansinisen aluetta ja määritä sitten kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+1. Muuta tämän kuvakkeen kokoa ja siirrä se vaaleansinisen alueen oikeaan reunaan ja aseta kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Patch( 'Order Details';
-        Defaults('Order Details');
+    ```powerapps-dot
+    Patch( 'Order Details',
+        Defaults('Order Details'),
         {
-            Order: Gallery1.Selected;
-            Product: ComboBox1.Selected;
-            Quantity: Value(TextInput1.Text);
+            Order: Gallery1.Selected,
+            Product: ComboBox1.Selected,
+            Quantity: Value(TextInput1.Text),
             'Unit Price': ComboBox1.Selected.'List Price'
         }
-    );;
-    Refresh( Orders );;
-    Reset( ComboBox1 );;
+    );
+    Refresh( Orders );
+    Reset( ComboBox1 );
     Reset( TextInput1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Kuvakkeen OnSelect-ominaisuuden](media/northwind-orders-canvas-part3/add-details-31.png)
+    > ![Määritä kuvakkeen OnSelect-ominaisuus](media/northwind-orders-canvas-part3/add-details-31.png)
 
-    Yleisesti ottaen [ **Patch** ](functions/function-patch.md) funktio päivittää ja luo tietueita ja tietyt määritteet Tässä kaavassa Määritä tarkka muutokset, jotka funktio tekee.
+    Yleensä [**patch**](functions/function-patch.md) -toiminto päivittää ja luo tietueita, ja tämän kaavan tietyt argumentit määrittävät ne tarkat muutokset, jotka toiminto tekee.
 
-    - Ensimmäinen argumentti määrittää tietolähteen (Tässä tapauksessa, **Tilaustiedot** entiteetin), funktio päivittää tai luoda tietueen.
-    - Toinen argumentti määrittää, että funktio luo tietueen oletusarvoilla varten **Tilaustiedot** entiteetin ellei muuta ilmoiteta kolmannen argumentin.
-    - Kolmas argumentti määrittää, neljän sarakkeen uusi tietue sisältää arvoja käyttäjältä.
+    - Ensimmäinen argumentti määrittää tieto lähteen (tässä tapa uksessa **tila uksen tiedot** -entiteetin), jossa funktiolla päivitetään tai luodaan tietue.
+    - Toinen argumentti määrittää, että-funktiolla luodaan **tila uksen tiedot** -entiteetin oletus arvot sisältävä tietue, ellei kolmannessa argumentissa toisin määritetä.
+    - Kolmas argumentti määrittää, että uudessa tietueessa on neljä saraketta, jotka sisältävät käyttäjän arvoja.
 
-      - **Tilauksen** sarake sisältää, jonka käyttäjä valitsi tilauksen valikoiman tilauksen määrä.
-      - **Tuotteen** sarake sisältää, yhdistelmäruudun valitulle käyttäjälle, joka näkyy tuotteiden tuotteen nimi.
-      - **Määrä** sarake sisältää arvon, joka määritettiin tekstisyötteen ruutua.
-      - **Yksikköhinta** sarake sisältää tuotteen, jonka käyttäjä valitsi tämän tilauksen saat luettelon hinnan.
+      - **Order** -sarake sisältää sen järjestyksen numeron, jonka käyttäjä valitsi Order Galleryssa.
+      - **Tuote** -sarake sisältää tuotteen nimen, jonka käyttäjä valitsi yhdistelmä ruudussa, joka näyttää tuotteet.
+      - **Määrä** -sarake sisältää arvon, jonka käyttäjä määritti teksti syöte-ruudussa.
+      - **Yksikkö hinta** -sarake sisältää sen tuotteen luettelo hinnan, jonka käyttäjä valitsi tälle tila uksen tiedoille.
 
     > [!NOTE]
-    > Voit luoda kaavoja, jotka käyttävät minkä tahansa sarakkeen tiedot (- **tilata tuotteita** entiteetin) haluamasi tuotteen sovelluksen käyttäjä valitsee yhdistelmäruutu, joka sisältää tuotteita. Kun käyttäjä valitsee tietueen **tilata tuotteita** entiteetin tuotteen nimen näkyvät kyseisen yhdistelmäruudun tuotolla myös tuotteen yksikköhinta näkyviin. Pohjaan perustuvan sovelluksen lookup kunkin arvon viittaa koko tietueen, ei ainoastaan ensisijainen avain.
+    > Voit luoda kaavoja, jotka käyttävät tietoja mistä tahansa sarakkeesta ( **Order Products** -entiteetissä) mistä tahansa tuotteesta, jonka sovellus käyttäjä valitsee tuotteet-yhdistelmä ruudusta. Kun käyttäjä valitsee tietueen **Order Products** -entiteetistä, tuote nimi näkyy tässä yhdistelmä ruudussa, mutta myös tuotteen yksikkö hinta näkyy selitteessä. Jokainen kangas sovelluksen haku arvo viittaa koko tietueeseen, ei vain ensisijaiseen avaimeen.
 
-    **Päivitä** funktio varmistaa, että **tilaukset** entiteetin kuvastaa, jotka olet juuri lisäämäsi tietue **Tilaustiedot** entiteetin. **Vaihtaa** funktio poistaa tuotteen, määrä ja Yksikköhinta tiedot, niin, että käyttäjä voi helpommin luoda toisen tilauksen-tiedot samassa järjestyksessä.
+    **Refresh** -funktiolla varmistetaan, että **tila ukset** -entiteetti heijastaa tietuetta, jonka olet juuri lisännyt **tila uksen tiedot** -entiteettiin. **Reset** -funktiolla tyhjennetään tuote-, määrä-ja yksikkö hinta-tiedot niin, että käyttäjä voi helpommin luoda toisen tila uksen tiedot samalle tilaukselle.
 
-1. Paina F5-näppäintä ja valitse sitten **Lisää** kuvake.
+1. Paina F5-näppäintä ja valitse sitten **Lisää** -kuvake.
 
-    Tilauksen kuvastaa, jonka määritit tiedot:
+    Järjestys vastaa määrittämiasi tietoja:
 
     > [!div class="mx-imgBorder"]
-    > ![Animaatio lisäämällä tilauksen tiedot](media/northwind-orders-canvas-part3/add-details.gif)
+    > ![Animaatio tila uksen tietojen lisäämisestä](media/northwind-orders-canvas-part3/add-details.gif)
 
-1. (valinnainen) Lisää toinen kohde tilauksen.
+1. valinnainen Lisää toinen kohde järjestykseen.
 
 1. Sulje esikatselutila painamalla ESC-näppäintä.
 
-## <a name="remove-an-order-detail"></a>Poista tilauksen tiedot
+## <a name="remove-an-order-detail"></a>Tila uksen tietojen poistaminen
 
-1. Valitse näytön keskellä tietoja-valikoiman malli:
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse valikoiman mallipohja](media/northwind-orders-canvas-part3/remove-details-01.png)
-
-1. Valitse **Lisää** -välilehden **kuvakkeet** > **roskakori**:
+1. Valitse näytön keskeltä tieto valikoiman malli:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää roskakorikuvake](media/northwind-orders-canvas-part3/remove-details-02.png)
+    > ![Valitse valikoima malli](media/northwind-orders-canvas-part3/remove-details-01.png)
 
-    Roskakori-kuvake vasemmassa yläkulmassa valikoiman mallipohjaa.
+1. Valitse **Lisää** -väli lehdeltä **kuvakkeet** > ,**roska kori**:
 
     > [!div class="mx-imgBorder"]
-    > ![Oletussijainti kuvake](media/northwind-orders-canvas-part3/remove-details-03.png)
+    > ![Lisää roska kori-kuvake](media/northwind-orders-canvas-part3/remove-details-02.png)
 
-1. Kokoa ja Siirrä tietoja-valikoiman mallipohja oikealla puolella Roskakorin kuvaketta ja määritä kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+    Roska kori-kuvake näkyy valikoiman mallin vasemmassa yläkulmassa.
 
-    ```powerapps-comma
-    Remove( 'Order Details'; ThisItem );; Refresh( Orders )
+    > [!div class="mx-imgBorder"]
+    > ![Kuvakkeen oletus sijainti](media/northwind-orders-canvas-part3/remove-details-03.png)
+
+1. Muuta ja siirrä roska kori-kuvake tieto valikoiman mallin oikealle puolelle ja määritä kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
+    Remove( 'Order Details', ThisItem ); Refresh( Orders )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Kuvakkeen OnSelect-ominaisuuden](media/northwind-orders-canvas-part3/remove-details-04.png)
+    > ![Määritä kuvakkeen OnSelect-ominaisuus](media/northwind-orders-canvas-part3/remove-details-04.png)
 
-    Tätä kirjoitettaessa tietuetta ei voi poistaa suoraan suhteen, joten [ **poistaa** ](functions/function-remove-removeif.md) -funktio poistaa tietueen suoraan liittyvässä entiteetissä. **ThisItem** määrittää poistaa tietueen tietoja-valikoiman Roskakorin kuvaketta esiintyvien samaa tietuetta.
+    Tätä kirjoitettaessa et voi poistaa tietuetta suoraan suhteesta, joten [**Remove**](functions/function-remove-removeif.md) -funktiolla poistetaan tietue suoraan liittyvästä entiteetistä. **Thisitem** määrittää poistettavan tietueen, joka on perä isin samasta tietueesta tieto valikoimassa, jossa roska kori-kuvake tulee näkyviin.
 
-    Uudelleen, toiminto käyttää välimuistiin tallennettuja tietoja, joten **Päivitä** funktio ilmoittaa **tilaukset** entiteetin, sovelluksella on muuttunut jokin sen liittyvät entiteetit.
+    Toiminto käyttää väli muistissa olevia tietoja, joten Refresh  -toiminto ilmoittaa **tila ukset** -entiteetille, että sovellus on muuttanut jotakin siihen liittyvistä entiteeteistä.
 
-1. Paina F5-näppäintä, Avaa esikatselutila ja valitse sitten kunkin Roskakori-kuvaketta **Tilaustiedot** tietueen, jonka haluat poistaa tilauksen.
+1. Avaa esikatselutila painamalla F5-näppäintä ja valitse sitten roska kori kuvake kunkin tila uksen **tieto** tietueen vierestä, jonka haluat poistaa tila uksen avulla.
 
-1. Yritä lisätä ja eri tilauksen tiedot poistetaan tilauksesi:
+1. Kokeile lisätä ja poistaa tila uksen eri tilaus tietoja:
 
     > [!div class="mx-imgBorder"]
-    > ![Animaation lisäämällä ja poistamalla Tilaustiedot](media/northwind-orders-canvas-part3/remove-details.gif)
+    > ![Animaatio tila uksen tietojen lisäämisestä ja poistamisesta](media/northwind-orders-canvas-part3/remove-details.gif)
 
-## <a name="in-conclusion"></a>Erityisesti
+## <a name="in-conclusion"></a>Lopuksi
 
-Recap, lisätä toisen valikoima näyttämään Tilaustiedot ja ohjausobjektien lisääminen ja poistaminen sovelluksessa tilauksen tiedot. Voit käyttää näitä elementtejä:
+Voit lisätä uuden valikoiman, joka näyttää tila uksen tiedot sekä ohjaus objektin, joka lisää ja poistaa tila uksen tiedot sovelluksessa. Käytit näitä elementtejä:
 
-- Toinen Valikoimaohjausobjekti, linkitetty tilauksen valikoiman yksi-moneen-suhteen kautta: **Gallery2.items** = `Gallery1.Selected.'Order Details'`
-- Monta yhteen suhteen **Tilaustiedot** entiteetti **tilata tuotteita** entiteetin: `ThisItem.Product.'Product Name'` ja `ThisItem.Product.Picture`
-- **Vaihtoehtoja** toimintoa käytetään saamaan olevien tuotteiden luettelosta: `Choices( 'Order Details'.Product' )`
-- **Valittu** yhdistelmäruudun kuin valmis monta-yhteen-ominaisuuden liittyvä tietue: `ComboBox1.Selected.Picture` ja `ComboBox1.Selected.'List Price'`
-- **Patch** toiminto **Tilaustiedot** tietueen: `Patch( 'Order Details'; Defaults( 'Order Details' ); ... )`
-- **Poistaa** funktio poistaa **Tilaustiedot** tietueen: `Remove( 'Order Details'; ThisItem )`
+- Toinen valikoima-ohjaus objekti, joka on linkitetty tilaus valikoimaan yksi moneen-suhteen kautta: **Gallery2. Items** = `Gallery1.Selected.'Order Details'`
+- Monta yhteen-suhde **Order Details** -entiteetistä **Order Products** -entiteettiin: `ThisItem.Product.'Product Name'` ja`ThisItem.Product.Picture`
+- **Choices** -funktiolla saadaan tuote luettelo:`Choices( 'Order Details'.Product' )`
+- Yhdistelmä ruudun **valittu** ominaisuus, joka on valmiiksi monta yhteen liittyvä tietue: `ComboBox1.Selected.Picture` ja`ComboBox1.Selected.'List Price'`
+- **Patch** -funktiolla luodaan **tilaus tietojen** tietue:`Patch( 'Order Details', Defaults( 'Order Details' ), ... )`
+- **Poista** -funktiolla voit poistaa **tilaus tiedot** -tietueen:`Remove( 'Order Details', ThisItem )`
 
-Tämän sarjan aiheet on nopea vaiheittaiset ohjeet käyttämällä Common Data Service-suhteita ja asetusjoukkojen pohjaan perustuvassa sovelluksessa opetustarkoituksiin. Ennen kuin vapautat mikä tahansa sovellus tuotantoon, sinun kannattaa harkita Kenttävahvistus Virheenkäsittely ja muiden tekijöiden.
+Tämä aiheiden sarja on ollut nopea vaihe vaiheelta, miten voit käyttää Common Data Service suhteita ja asetus joukkoja pohjaan sovelluksena opetus tarkoituksiin. Ennen kuin vapautat minkä tahansa sovelluksen tuotantoon, harkitse kentän tarkistamista, virheiden käsittelyä ja monia muita tekijöitä.

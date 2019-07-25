@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ed555f5de4abc1e29b7d2a637413c440bd882f13
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c9d3e9c6c408d70e22d566855e5899a0f5b0fae7
+ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61546740"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473955"
 ---
 # <a name="choices-function-in-powerapps"></a>PowerAppsin Choices-funktio
 Palauttaa hakusarakkeen mahdollisten arvojen taulukon.
@@ -38,7 +38,7 @@ Tällä hetkellä et voi [delegoida](../delegation-overview.md) **Choices**-funk
 
 Sarakeviittausten on viitattava suoraan tietolähteeseen. Jos tietolähde on esimerkiksi **Accounts** ja haku on **SLA**, sarakeviittaus on **Accounts.SLA**. Viittausta ei voi välittää funktion, muuttujan tai ohjausobjektin kautta. Jos tätä esimerkkiä laajentaen **Accounts** syötetään **Valikoima**-ohjausobjektiin, viittaa valittuun tiliin käyttämällä kaavaa **Gallery.Selected.SLA**. Tämä viittaus on kuitenkin välitetty ohjausobjektin kautta, joten sitä ei voida välittää **Columns**-funktioon. Sinun on silti käytettävä kaavaa **Accounts.SLA**.
 
-Tällä hetkellä voit hakusarakkeita vain SharePoint- ja Common Data Service-kanssa.
+Tällä hetkellä voit käyttää haku sarakkeita vain SharePointin ja Common Data Service kanssa.
 
 ## <a name="syntax"></a>Syntaksi
 **Choices**( *column-reference* )
@@ -49,17 +49,17 @@ Tällä hetkellä voit hakusarakkeita vain SharePoint- ja Common Data Service-ka
 
 #### <a name="choices-for-a-lookup"></a>Hakuvaihtoehdot
 
-1. [Luo tietokanta](../../../administrator/create-database.md) Common Data Service-ja valitse **Sisällytä Mallisovellukset ja tiedot** ruutuun.
+1. [Luo tieto kanta](../../../administrator/create-database.md) Common Data Service ja valitse **Sisällytä malli sovellukset ja tiedot** -ruutu.
 
     Useita entiteettejä luodaan, kuten **Accounts**.
 
-    **Huomautus**: Entiteettien nimien on yksittäinen osoitteessa web.powerapps.com ja plural PowerApps Studio.
+    **Huomautus**: Entiteettien nimet ovat yksikössä Web.powerapps.com ja monikko PowerApps Studio.
 
-    ![Common Data Service for Apps -palvelun Account-entiteetin kenttien osittainen luettelo, josta näkyy, että Ensisijainen yhteyshenkilö on hakukenttä](media/function-choices/entity-account.png)
+    ![Common Data Service for Appsin tili-entiteetin kenttien osittainen luettelo, jossa korostetaan, että ensisijainen yhteys henkilö on haku kenttä](media/function-choices/entity-account.png)
 
     **Accounts**-entiteetissä on **Ensisijainen yhteyshenkilö** -sarake, joka on haku **Contacts**-entiteettiin.  
 
-    ![Common Data Service -palvelun Contact-entiteetin kenttien osittainen luettelo](media/function-choices/entity-contact.png)
+    ![Common Data Service yhteys henkilö-entiteetin kenttien osittainen luettelo](media/function-choices/entity-contact.png)
 
     Jokaisessa tilissä jokin yhteystieto on nimetty ensisijaiseksi yhteyshenkilöksi, tai ensisijainen yhteyshenkilö on *tyhjä*.
 
@@ -69,37 +69,37 @@ Tällä hetkellä voit hakusarakkeita vain SharePoint- ja Common Data Service-ka
 
     ![Valitse vasemmassa siirtymispalkissa EditForm1 kohdassa EditScreen1](media/function-choices/select-editform.png)
 
-1. Valitse **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä**.
+1. Valitse oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdeltä **Muokkaa kenttiä**.
 
     ![Avaa tiedot-ruutu](media/function-choices/open-data-pane.png)
 
-1. Tässä **kentät** ruudussa **Lisää kenttä**.
+1. Valitse **kentät** -ruudussa **Lisää kenttä**.
 
-1. Hae **ensisijaisen yhteyshenkilön** -kentän valitsemalla sen valintaruudun ja valitse sitten **Lisää**.
+1. Hae **ensisijaista yhteys tieto** kenttää, valitse sen valinta ruutu ja valitse sitten **Lisää**.
 
     ![Tiedot-ruudun avaaminen valitsemalla Accounts](media/function-choices/field-list.png)
 
-    **Ensisijaisen yhteyshenkilön** kenttä näkyy lomakkeen alaosasta. Jos kentässä on virhe, valitse **tietolähteet** - **Näytä** välilehdeltä kolme pistettä (...) kohdassa **tilit** tietolähde ja valitse sitten **päivitys** .
+    **Ensisijainen yhteys henkilö** -kenttä näkyy lomakkeen alaosassa. Jos kentässä lukee virhe, valitse **tieto lähteet** **näkymä** -väli lehdeltä, valitse **tili** tieto lähteelle kolme pistettä (...) ja valitse sitten **Päivitä**.
 
 1. (valinnainen) Vedä **Ensisijainen yhteyshenkilö** -kenttä kenttäluettelon alkuun.
 
 1. Valitse **Ensisijainen yhteyshenkilö** -kortissa **Yhdistelmäruutu**-ohjausobjekti.
 
-    **Kohteet** kyseisen ohjausobjektin asetuksena on kaava, joka tunnistaa sarakkeen sen näyttönimi, kuten ensimmäisessä esimerkissä tai sen looginen nimi, kuten toisessa esimerkissä:
+    Tämän ohjaus objektin **Items** -ominaisuudeksi on määritetty kaava, joka yksilöi sarakkeen joko sen näyttö nimen mukaan, kuten ensimmäisessä esimerkissä tai sen loogisessa nimessä, kuten toisessa esimerkissä:
 
    - **Choices( Accounts.'Primary Contact' )**
    - **Choices( Accounts.primarycontactid )**
 
-     ![Kaavionäyttö ja lomakeohjausobjekti. Yhdistelmäruudun ensisijainen yhteyshenkilö-kortin ohjausobjekti on valittuna ja kohteet-ominaisuus, jonka kaavan vaihtoehtoja (tilien. ”ensisijainen yhteyshenkilö') näkyy](media/function-choices/accounts-primary-contact.png)
+     ![Kaavionäyttö ja lomakeohjausobjekti. Ensisijaisen yhteys tieto kortin yhdistelmä ruutu-ohjaus objekti on valittuna ja Items-ominaisuus, jossa on kaava vaihtoehdot (accounts. ' Primary Contact '), näkyy](media/function-choices/accounts-primary-contact.png)
 
 1. Valitse **Aloitus**-välilehdessä **Uusi näyttö** ja valitse sitten **Blank**.
 
 1. Valitse **Lisää**-välilehdestä **Arvotaulukko**.
 
-1. Määritä **kohteet** -ominaisuuden **tietotaulukko** ominaisuudeksi tämä kaava:
+1. Valitse **tieto taulukko** -ohjaus objektin **Items** -ominaisuudeksi Tämä kaava:
 
      **Choices( Accounts.'Primary Contact' )**
 
-1. Keskellä **tietotaulukko** ohjausobjekti, valitse linkki, joka alkaa **Valitse kentät...** , ja valitse kenttä tai kentät, jotka haluat näyttää valintaruudut (esimerkiksi **Etunimi** ja **Sukunimi**).
+1. Valitse **tieto taulukko** -ohjaus objektin keskeltä linkki, joka alkaa **valita kentät...** ja valitse sitten niiden kenttien tai kenttien valinta ruudut, jotka haluat näyttää (esimerkiksi **Etunimi** ja **suku nimi**).
 
      ![Kaavionäyttö ja arvotaulukko-ohjausobjekti. Items-ominaisuudeksi on määritetty kaava Choices( Accounts.'Primary Contact' ), ja taulukossa näkyvät Contacts-entiteetin ensimmäisen tietuejoukon firstname- ja lastname-sarakkeet](media/function-choices/full-accounts-pc.png)

@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 29de71e413a83a1c0939796f7b65bd42d4aca3c4
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 05d02dca1afe6eba0864e7a1da6281998f62b398
+ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61556559"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473995"
 ---
 # <a name="overview-of-canvas-app-connectors-for-powerapps"></a>PowerAppsin kangassovellusten liitinten yleiskatsaus
 Tietojenkäsittely on useimpien sovellusten keskiössä, myös PowerAppsissa luotujen. Tiedot varastoidaan *tietolähteeseen* ja tiedot haetaan sovellukseesi luomalla *yhteys*. Yhteys käyttää tiettyä *liitintä* tietolähteen kanssa kommunikointiin. PowerApps sisältää liittimet useille suosituille palveluille ja paikallisille tietolähteille, kuten SharePoint, SQL Server, Office 365, Salesforce ja Twitter. Katso aloitusopas tietojen lisäämiseksi kangassovellukseen kohdasta [Tietoyhteyden lisääminen PowerAppsissa](add-data-connection.md).
@@ -31,11 +31,11 @@ Jos liitin tarjoaa taulukoita, voit lisätä tietolähteesi ja valita sitten tie
 
  ![Tavallisen tietolähteen Kohteet-ominaisuus](./media/connections-list/ItemPropertyPlain.png)
 
-Voit määrittää, mitä tietoja sovelluksesi noutaa muokkaamalla tietojasi näyttävän ohjausobjektin **Kohteet**-ominaisuutta. Edellisen esimerkin perusteella voisit siis lajitella tai suodattaa **Oppitunnit**-taulukon tietoja käyttämällä kyseistä nimeä argumenttina **Hae**- ja **SortByColumn**-funktioissa. Tässä kuvassa kaava, johon **Kohteet**-ominaisuus on asetettu, määrittää ne tiedot, jotka lajitellaan ja suodatetaan **TextSearchBox1**:ssä olevan tekstin perusteella. 
+Voit määrittää tiedot, jotka sovelluksesi noutaa mukauttamalla tiedot sisältävän ohjaus objektin **Items** -ominaisuuden. Edellisen esimerkin perusteella voisit siis lajitella tai suodattaa **Oppitunnit**-taulukon tietoja käyttämällä kyseistä nimeä argumenttina **Hae**- ja **SortByColumn**-funktioissa. Tässä kuvassa kaava, johon **Kohteet**-ominaisuus on asetettu, määrittää ne tiedot, jotka lajitellaan ja suodatetaan **TextSearchBox1**:ssä olevan tekstin perusteella. 
 
  ![Laajennetun tietolähteen Kohteet-ominaisuus](./media/connections-list/ItemPropertyExpanded.png)
 
-Saat lisätietoja siitä, miten voit mukauttaa kaavan taulukoilla on seuraavissa ohjeaiheissa:
+Jos haluat lisä tietoja siitä, miten voit mukauttaa kaavaa taulu koilla, tutustu seuraaviin aihe isiin:
 
   [Tutustu tietolähteisiin PowerAppsissa](working-with-data-sources.md)<br> 
   [Sovelluksen luominen Excel-tiedoista](get-started-create-from-data.md)<br> 
@@ -53,12 +53,12 @@ Jos liittimesi tarjoaa toimintoja, sinun on silti valittava tietolähde kuten ai
 
 Jos haluat käsitellä mukautettuja tietopäivityksiä toimintoliittimissä, luo **Patch**-funktion sisältävän kaavan. Määritä kaavassa toiminto ja kentät, jotka sidotaan toimintoon.  
 
-Saat lisätietoja mukauttamisesta kaavan mukautetun päivitykset on seuraavissa ohjeaiheissa:
+Lisä tietoja mukautettujen päivitysten kaavan mukauttamisesta on seuraavissa ohje aiheissa:
 
 [Patch](functions/function-patch.md)<br>[Collect](functions/function-clear-collect-clearcollect.md)<br>[Päivitä](functions/function-update-updateif.md)
 
 > [!NOTE]
->  **PowerApps ei toimi dynaamisen rakenteen**. Lauseen dynaamisen rakenteen viittaa saman toiminnon saattaa palauttaa eri taulukkoon, jossa on erilaisia sarakkeita. Ehtoja, jotka saattavat aiheuttaa sarakkeet vaihdella taulukot ovat toiminnon syöteparametrit, käyttäjä tai rooli, joka suorittaa toiminnon ja ryhmä, jossa käyttäjä toimii, mm. Esimerkiksi SQL Server-tallennettuja toimintosarjoja saattaa palauttaa erilaisia sarakkeita, jos käyttää eri syötteitä. Dynaamisen rakenteen toimintojen connector-dokumentaatio näyttää **tämän toiminnon tulokset ovat dynaamisia.** palautusarvoja. Sen sijaan Microsoft Flow toimii dynaamisen rakenteen ja voi tarjota tarpeisiin työ-ympärille.
+>  **Powerapps ei toimi dynaamisen rakenteen kanssa**. Lauseke dynaaminen rakenne viittaa mahdollisuuteen, että sama toiminto voi palauttaa eri taulukon, jolla on eri sarakkeet. Ehdot, jotka saattavat aiheuttaa taulu koiden sarakkeiden poikkeavan, ovat toiminnon syöte parametreja, käyttäjän tai roolin, joka suorittaa toiminnon, ja ryhmän, jossa käyttäjä työskentelee. Esimerkiksi SQL Server tallennetut toiminto sarjat saattavat palauttaa eri sarakkeita, jos ne suoritetaan eri syöttein. Jos kyseessä on dynaaminen rakenne, liittimen dokumentaatio ilmaisee, **että tämän toiminnon tulokset ovat dynaamisia.** Paluu arvona. Sen sijaan Microsoft Flow toimii dynaamisen rakenteen kanssa, ja se saattaa tarjota sinulle työskenaarion.
 
 ## <a name="popular-connectors"></a>Suositut liittimet
 

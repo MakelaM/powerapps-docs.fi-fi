@@ -1,6 +1,6 @@
 ---
 title: Count-, CountA-, CountIf- ja CountRows-funktiot | Microsoft Docs
-description: PowerAppsin Count-, CountA-, CounfIf- ja CountRows-funktioiden viitetiedot, mukaan lukien syntaksi ja esimerkki
+description: Powerappsin Count-, CountA-, CountIf-ja CountRows-funktioiden viite tiedot, mukaan lukien syntaksi ja esimerkki
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 717baab028b480063f76b799a1267155464d8ac3
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 8a904db98226152a5e485184e82461634902d6b9
+ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61543509"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473931"
 ---
 # <a name="count-counta-countif-and-countrows-functions-in-powerapps"></a>PowerAppsin Count-, CountA-, CountIf- ja CountRows-funktiot
 Laskee kaikki [tietueet](../working-with-tables.md#records) [taulukossa](../working-with-tables.md), tai laskee kaikki tietueet, jotka täyttävät ehdon.
@@ -43,7 +42,7 @@ Kaikki nämä funktiot palauttavat luvun.
 
 * *SingleColumnTable* – Pakollinen.  Laskettava tietuesarake.  
 
-**CountIf**( *Table*; *LogicalFormula* )
+**CountIf**( *Table*, *LogicalFormula* )
 
 * *Table* – Pakollinen.  Laskettava tietuetaulukko.
 * *LogicalFormula* – Pakollinen.  Kullekin taulukon tietueelle arvioitava kaava.  Tietueet, jotka palauttavat arvon **tosi** tälle kaavalle, lasketaan.  Kaava voi viitata taulukon sarakkeisiin.
@@ -54,17 +53,17 @@ Kaikki nämä funktiot palauttavat luvun.
 
 ## <a name="example"></a>Esimerkki
 1. Tuo tai luo [kokoelma](../working-with-data-sources.md#collections), jonka nimi on **Inventory** (katso kohdan [Kuvien ja tekstin näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) ensimmäinen alitoimintosarja).
-2. Lisää selite ja aseta sen **[Teksti](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+2. Lisää selite ja aseta sen **[Teksti](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
-    **CountIf(Inventory; UnitsInStock < 30)**
+    **CountIf(Inventory, UnitsInStock < 30)**
    
     Selite näyttää luvun **2**, koska kahdella tuotteella (Ganymede ja Callisto) on alle 30 yksikköä varastossa.
-3. Lisää toinen selite ja aseta sen **[Teksti](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+3. Lisää toinen selite ja aseta sen **[Teksti](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
     **CountA(Inventory.UnitsInStock)**
    
     Selite näyttää luvun **5**, joka on ei-tyhjien solujen lukumäärä **UnitsInStock**-sarakkeessa.
-4. Lisää toinen selite ja aseta sen **[Teksti](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+4. Lisää toinen selite ja aseta sen **[Teksti](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
     **CountRows(Inventory)**
    
