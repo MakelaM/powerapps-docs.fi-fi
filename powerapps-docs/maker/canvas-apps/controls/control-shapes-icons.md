@@ -13,32 +13,31 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 88e0a74d2c25d1d2f5f571f4d1850417d1aab9ca
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 54ab2ba2186f68fcb68b9aa59729933af5d04652
+ms.sourcegitcommit: 39b32abb19ad9fae98ca986ded6974bcbbb3cea7
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318425"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68473900"
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Muoto- ja kuvakeohjausobjektit PowerAppsissa
 Grafiikkoja, joille voi määrittää ulkoasu- ja toimintaominaisuuksia.
 
 ## <a name="description"></a>Kuvaus
-Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toimintokuvakkeet ja symbolit, joille voi määrittää täytön, koon ja sijainnin kaltaisia ominaisuuksia. Voit myös määrittää niiden **[OnSelect](properties-core.md)** ominaisuus niin, että sovellus reagoi, jos käyttäjä valitsee ohjausobjektin.
+Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toimintokuvakkeet ja symbolit, joille voi määrittää täytön, koon ja sijainnin kaltaisia ominaisuuksia. Voit myös määrittää niiden **[onselect](properties-core.md)** -ominaisuuden niin, että sovellus reagoi, jos käyttäjä valitsee ohjaus objektin.
 
-## <a name="key-properties-icons-and-shapes"></a>Tärkeimmät ominaisuudet (kuvakkeet ja muodot)
+## <a name="key-properties-icons-and-shapes"></a>Avain ominaisuudet (kuvakkeet ja muodot)
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[OnSelect](properties-core.md)**  – miten sovellus reagoi, kun käyttäjä valitsee ohjausobjektin.
+**[Onselect](properties-core.md)** – miten sovellus reagoi, kun käyttäjä valitsee ohjaus objektin.
 
-## <a name="key-properties-icons-only"></a>Tärkeimmät ominaisuudet (vain kuvakkeet)
+## <a name="key-properties-icons-only"></a>Avain ominaisuudet (vain kuvakkeet)
 
-**Kuvake** -kuvaketta näyttääksesi tyyppi (esimerkiksi **ArrowDown** tai **ShoppingCart**). 
+**Kuvake** – näytettävän kuvakkeen tyyppi (esimerkiksi **nuoli alas** tai **shopptingcart**). 
 
-**Kierto** -arvo Kierrä kuvaketta. 
+**Kierto** – kuvakkeen kiertämisen asteiden määrä. 
 
-**Väri** -kuvake nimen tai RGBA arvojen väri.
+**Color** – kuvakkeen värin nimen tai RGBA-arvon mukaan.
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
@@ -53,9 +52,9 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 **[HoverFill](properties-color-border.md)**  – Ohjausobjektin taustaväri, kun hiiren kohdistin on sen päällä.
 
-**[PressedBorderColor](properties-color-border.md)**  – kun käyttäjä valitsee tämän ohjausobjektin ohjausobjektin reunan väri.
+**[Pressedbordercolor](properties-color-border.md)** – ohjaus objektin reunan väri, kun käyttäjä valitsee kyseisen ohjaus objektin.
 
-**[PressedFill](properties-color-border.md)**  – ohjausobjektiin, kun käyttäjä valitsee tämän ohjausobjektin taustaväri.
+**[Pressedfill](properties-color-border.md)** – ohjaus objektin tausta väri, kun käyttäjä valitsee kyseisen ohjaus objektin.
 
 **[TabIndex](properties-accessibility.md)** – Näppäimistön siirtymisjärjestys suhteessa muihin ohjausobjekteihin.
 
@@ -69,7 +68,7 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Navigate**( *ScreenName*; *ScreenTransition* )](../functions/function-navigate.md)
+[**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
 
 ## <a name="example"></a>Esimerkki
 
@@ -81,15 +80,15 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 1. Lisää **Lähde**-ohjausobjektiin **Muoto**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-  `Navigate(Target; ScreenTransition.Fade)`
+  `Navigate(Target, ScreenTransition.Fade)`
   
-1. Paina F5-näppäintä ja valitse sitten **muodon** ohjausobjektin.
+1. Paina F5-näppäintä ja valitse sitten **muoto** -ohjaus objekti.
 
     **Kohde**-näyttö tulee näkyviin.
 
 1. (valinnainen) Palaa oletustyötilaan painamalla Esc-näppäintä. Lisää **Muoto**-ohjausobjekti **Kohde**-näyttöön ja määritä **Muoto**-ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-  `Navigate(Source; ScreenTransition.Fade)`
+  `Navigate(Source, ScreenTransition.Fade)`
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 
@@ -111,19 +110,19 @@ Muodot, jotka eivät sisällä reunoja:
 - **[HoverFill](properties-color-border.md)** ja väri ohjausobjektin ulkopuolella (käytettäessä painikkeena)
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelmien tuki
-- **[AccessibleLabel](properties-accessibility.md)**  on määritettävä muu kuin tyhjä merkkijono, jos kuvaa käytetään painikkeena tai muussa kuin koristeellisessa tarkoituksessa.
+- **[AccessibleLabel](properties-accessibility.md)** -asetuksena on oltava muu kuin tyhjä merkki jono, jos kuvaa käytetään painikkeena tai muuten ei pelkästään koriste luun.
 
-- **[AccessibleLabel](properties-accessibility.md)**  on oltava tyhjä tai tyhjä merkkijono **””** Jos kuvaa esitetään tarpeetonta tietoa tai pelkästään koristeena. Tämä arvo aiheuttaa näytönlukuohjelmat voivat ohittaa kuvan.
+- **[AccessibleLabel](properties-accessibility.md)** -arvon on oltava tyhjä tai tyhjä **merkki jono** , jos grafiikka antaa tarpeettomia tietoja tai on puhtaasti koriste. Tämä arvo saa näytön luku ohjelmat ohittamaan grafiikan.
 
-Voit esimerkiksi määrittää **[AccessibleLabel](properties-accessibility.md)** ominaisuus **asetukset** kuvakkeen **asetukset**. Kuvaketta ei käytetä painikkeena. Se on vieressä **[nimen](control-text-box.md)** , joka lukee myös **asetukset**. Näytönlukuohjelmat lukevat kuvakkeen ja sitten myös selitteen tekstinä **asetukset**, joka on tarpeetonta. Tässä tapauksessa kuvake ei tarvitse  **[AccessibleLabel](properties-accessibility.md)** .
+Voit esimerkiksi valita **Asetukset** -kuvakkeen **[AccessibleLabel](properties-accessibility.md)** -ominaisuudeksi **Asetukset**. Tätä kuvaketta ei käytetä painikkeena. Se on **[otsikon](control-text-box.md)** vieressä, jossa lukee myös **Asetukset**. Näytön luku ohjelmat lukevat sekä kuvakkeen että otsikon asetuksina, mikä on tarpeettoman monisanainen. Tässä tapa uksessa kuvake ei tarvitse **[AccessibleLabel](properties-accessibility.md)** .
 
 > [!IMPORTANT]
-> Näytönlukuohjelmat lukevat kuvakkeen tai muodon kuin lukea **painike** Jos sen **[AccessibleLabel](properties-accessibility.md)** on asetettu tyhjä merkkijono, ja sen **[Sarkainindeksi ](properties-accessibility.md)** asetetaan nolla tai suurempi. Tällaiset kuvakkeet ja muodot hahmonnetaan painikkeina. 
+> Näytön luku ohjelmat lukevat kuvakkeen tai muodon painikkeena  , jos sen **[AccessibleLabel](properties-accessibility.md)** -asetus on tyhjä merkki jono ja sen **[tabdex](properties-accessibility.md)** -arvo on nolla tai suurempi. Tällaiset kuvakkeet tai muodot hahmonnetaan painikkeina. 
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-- **[TabIndex](properties-accessibility.md)**  on oltava nolla tai suurempi, jos kuvaa käytetään painikkeena. Jos määrität tämän arvon kuvakkeen tai muodon, näppäimistön käyttäjät voivat siirtyä siihen.
+- **[Tabdex](properties-accessibility.md)** -arvon on oltava nolla tai suurempi, jos kuvaa käytetään painikkeena. Jos määrität tämän arvon kuvakkeelle tai muodolle, näppäimistön käyttäjät voivat siirtyä siihen.
 
-- Kohdistusilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Käytä **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** saavutat tämän tuloksen.
+- Kohdistus ilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Käytä **[Focusedbordercolor](properties-color-border.md)** ja focusedborderthickness tämän tuloksen saavuttamiseksi. **[](properties-color-border.md)**
 
     > [!NOTE]
-    > Jos **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, kuvake tai muoto hahmonnetaan painikkeena. Sen ulkoasu ei muutu, mutta näytönlukuohjelmat tunnistavat kuvan painikkeena oikein. Jos **[TabIndex](properties-accessibility.md)** on pienempi kuin 0, kuvake tai muoto tunnistetaan kuvana.
+    > Jos **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, kuvake tai muoto hahmonnetaan painikkeena. Sen ulkoasu ei muutu, mutta näytön luku ohjelmat tunnistavat kuvan oikein painikkeena. Jos **[TabIndex](properties-accessibility.md)** on pienempi kuin 0, kuvake tai muoto tunnistetaan kuvana.

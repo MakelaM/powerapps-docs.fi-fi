@@ -1001,6 +1001,16 @@
           href: ./model-driven-apps/distribute-model-driven-app.md
         - name: Ohjatun ohjeen luominen
           href: ./model-driven-apps/create-guided-help-learning-path.md
+    - name: Siirtymän verkkoasiakassovellukset
+      items:
+        - name: Siirtymän pikakäynnistys
+          href: ./model-driven-apps/transition-web-app.md
+        - name: Käytä olemassa olevaa ympäristöä siirtymän pikakäynnistykseen
+          href: ./model-driven-apps/transition-web-app-existing.md
+        - name: Unified Interface -käsikirja
+          href: ./model-driven-apps/unified-interface-playbook.md
+        - name: Kohti Unified Interface -siirtymää
+          href: ./model-driven-apps/approaching-unified-interface.md
     - name: PowerAppsin sovellusten suunnitteluohjelman helppokäyttötoiminnot
       href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
     - name: Dynamics 365 App for Outlookin mukauttaminen
