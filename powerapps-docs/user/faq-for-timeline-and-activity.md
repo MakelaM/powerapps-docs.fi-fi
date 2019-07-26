@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: e79412c79a3b2a6d5c7f7f51c8cfcad8e4f5cc78
-ms.sourcegitcommit: 826bde1eab3dd32d7bf9fa3f43ea069694845597
-ms.translationtype: HT
+ms.openlocfilehash: 08859f70e047d1c53379e8a79f56997d6beedc58
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290948"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67457019"
 ---
 # <a name="frequently-asked-questions-about-activities-and-the-timeline-wall"></a>Usein kysyttyjä kysymyksiä toiminnoista ja aikajanaseinästä  
 
@@ -38,7 +38,7 @@ Kyllä. Voit lisätä vain luku -muotoisiin entiteetteihin toimintoja, kuten mui
 
 ## <a name="are-html-tags-supported-in-notes"></a>Tukevatko **muistiinpanot** HTML-tunnisteita?
 
-Ei. Tunnisteille tai entiteeteille luotavat muistiinpanot eivät tue HTML-tunnisteita. Jos esimerkiksi lisäät muistiinpanokenttään <TAG> </TAG>, se näkyy muodossa <TAG_XXX="XX"> </TAG>.
+Ei. Tunnisteille tai entiteeteille luotavat muistiinpanot eivät tue HTML-tunnisteita. Jos esimerkiksi lisäät `<TAG> </TAG>` muistiinpano-kenttään, se näytetään muodossa `<TAG_XXX="XX"> </TAG>`.
 
 ## <a name="how-can-i-improve-performance-on-timeline-wall"></a>Miten voin parantaa aikajanaseinän suorituskykyä?
 

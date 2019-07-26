@@ -1,1 +1,9 @@
-Dynamics 365:n joulukuun 2016 päivitys (verkko ja paikallinen)
+---
+ms.openlocfilehash: 98350fa34c328f7db693094a4ff9d077442db185
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67234405"
+---
+Joulukuun 2016 Dynamics 365 -päivitys (online ja paikallinen)

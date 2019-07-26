@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 01/18/2018
+ms.date: 11/16/2018
 ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 0e98f22c3dc0f66893e0cc027488ced5d1dd3535
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 34fc4f9603ebfcb9944b871f211a6b1541235ed5
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850457"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "63321680"
 ---
 # <a name="add-an-app-to-microsoft-teams"></a>Sovelluksen lisääminen Microsoft Teamsiin
 
@@ -45,7 +45,7 @@ Kirjaudu sisään PowerAppsiin osoitteessa [https://web.powerapps.com](https://w
 
     ![](./media/open-app-embedded-in-teams/teams-select-channel.png)
 
-2. Lisää välilehti valitsemalla **+**.
+2. Lisää välilehti valitsemalla **+** .
 
     ![](./media/open-app-embedded-in-teams/teams-add-tab.png)
 
@@ -84,7 +84,7 @@ Microsoft Teams työpöytäsovelluksessa:
 
 * Sovellusten on ladattava sisältö, kuten kuvat ja .pdf-tiedostot suojatun yhteyden (https) kautta.
 * Kaikkia tunnistimia, kuten **kiihtyvyysanturia**, **kompassia** ja **sijaintia** ei tueta.
-* Vain seuraavia äänimuotoja tuetaan: AAC, H264, OGG Vorbis ja WAV.
+* Vain näitä ääni muotoja tuetaan: AAC, H264, OGG Vorbis ja WAV.
 
 ## <a name="clean-up-resources"></a>Puhdista resurssit
 

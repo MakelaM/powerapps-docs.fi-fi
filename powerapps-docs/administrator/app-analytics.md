@@ -15,11 +15,11 @@ search.app:
 - PowerApps
 - Powerplatform
 ms.openlocfilehash: 0f376d8e6b86a7abf65e744275fc4e90beabde43
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42850026"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "61526447"
 ---
 # <a name="view-analytics-reports-for-your-app"></a>Sovelluksesi analytiikkaraporttien tarkastelu
 Oletko rakentanut sovelluksen ja jakanut sen organisaatiossasi?  Haluatko tietää, kuinka moni työtoverisi käyttää sovellusta päivittäin?

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 252f09737dbf55309a64ef5d02d479fde0e61c0e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61571884"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224851"
 ---
 Kun otat käyttöön sähköpostin seurannan (se on upotettu älykäs toiminto) ja **Seuraa**-asetuksella merkitty sähköposti lähetetään palvelusta [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], tiedot vastaanottajien toimista sähköpostille kerätään ja tallennetaan palveluun [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Tämän avulla voidaan laskea seurattujen sähköpostien vastaanottajien toimien suorituskykyilmaisimet ja toimet seuratuille sähköposteille.  
   

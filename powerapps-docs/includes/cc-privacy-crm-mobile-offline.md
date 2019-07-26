@@ -1,49 +1,57 @@
-Kun otat Dynamics 365 Mobile Offline -sovelluksen käyttöön, offline-käytössä oleviin entiteetteihin perustuvat Dynamics 365 (online) -tiedot ladataan Azure-pilvipalvelun avulla SQL Azure -tietokantaan. Kun käyttäjä ottaa yhteyden tähän Azure Cloud -palveluun mobiilisovelluksesta, jossa on offline-ominaisuus, tiedot ladataan SQL Azure -tietokannasta mobiililaitteen paikalliseen tietokantaan. Tietojen siirtämiseen Azure-pilvipalvelun SQL Azure -tietokannan ja offline-ominaisuuden sisältävän Dynamics 365 Mobile -sovelluksen välillä käytetään suojattua SSL-yhteyttä. Näin asiakastiedot tallennetaan sekä SQL Azure -tietokantaan että mobiililaitteeseen.  
+---
+ms.openlocfilehash: 787ff9592604f9a9bce1929e4d429a39da5ec48a
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.translationtype: MT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67456836"
+---
+Kun otat käyttöön Dynamics 365 Mobile Offlinen, Dynamics 365 Online -tiedot ladataan SQL Azure -tietokantaan Azure-pilvipalvelun avulla sen perusteella, mille entiteeteille otat offline-käytön käyttöön. Kun käyttäjä muodostaa yhteyden Azure-pilvipalveluun mobiilisovelluksella, joka tukee offline-käyttöä, tiedot ladataan Azure SQL -tietokannasta mobiililaitteen paikalliseen tietokantaan. Tiedonsiirto SQL Azure -tietokannan ja Azure-pilvipalvelun sekä offline-käyttöä tukevan Dynamics 365 -mobiilisovelluksen välillä tehdään suojatulla SSL-yhteydellä. Asiakastiedot tallennetaan lopulta SQL Azure -tietokantaan ja mobiililaitteeseen.  
   
- Järjestelmänvalvoja määrittää käyttöoikeusroolien ja Dynamics 365 Mobilen profiilin mukautuksen avulla, onko organisaatioon kuuluvilla käyttäjillä oikeus siirtyä offline-tilaan Microsoft Dynamics 365 Mobile Offline -sovelluksella. Dynamics 365 -järjestelmänvalvojat voivat määrittää offline-synkronoinnin kautta ladattavat entiteetit Asetus – Mobile Offline -valintaikkunan Synkronointisuodattimet-asetuksen avulla.  
+ Järjestelmänvalvoja määrittää käyttöoikeusrooleilla ja Dynamics 365 Mobile -profiilia mukauttamalla, onko organisaation käyttäjillä oikeus käyttää tietoja offline-tilassa Microsoft Dynamics 365 Mobile Offline -sovelluksella. Dynamics 365 -järjestelmänvalvojat voivat määrittää, mitkä entiteetit ladataan offline-synkronoinnissa. Tämä on mahdollista asetusten valintaikkunan Mobile Offline -asetuksella.  
   
- Huomaa, että käyttäjän laitteelle tallennettuja tietoja hallitsee käyttäjä, ei Microsoft. Järjestelmänvalvojalla on purettavien tietojen täydet hallintaoikeudet käyttöoikeusroolitasolla ja entiteettitasolla. Tiedot eivät ole enää purkamisen jälkeen suojatussa Dynamics 365 Online -ympäristössä.  
+ Ota huomioon, että käyttäjän laitteeseen tallennettuja tietoja hallitsee asiakas, ei Microsoft. Järjestelmänvalvoja voi hallita käyttöoikeusrooli- ja entiteettitasolla täysin sitä, mitä tietoja voidaan hakea. Kun tiedot on haettu järjestelmästä, ne eivät kuitenkaan enää ole Dynamics 365 Onlinen suojauksen piirissä.  
   
- Luettelo Mobile offline -toimintoon liittyvistä Azure-komponentit ja -palveluista on jäljempänä.  
+ Mobile Offline -toimintoon liittyvät Azure-komponentit ja palvelut on lueteltu alla.  
   
- **Huomautus:** Katso lisätietoja muista Azure-palveluista [Microsoft Azure Trust Centerissä](https://azure.microsoft.com/en-us/support/trust-center/).  
+ **Huomautus:** Jos haluat lisätietoja muista Azure-palveluista, siirry [Microsoft Azuren luottamuskeskukseen](https://azure.microsoft.com/support/trust-center/).  
   
  **Pilvipalvelut (verkkorooli)**  
   
- Mobile Offline hyödyntää kahta pilvipalvelua. Toista palvelua käytetään valmistelussa ja toista tietojen synkronoinnissa.  
+ Mobile Offline hyödyntää kahta pilvipalvelua: yhtä valmisteluun ja toista tietojen synkronointiin.  
   
- Valmistelupalvelu sisältää yhden verkkoroolin, joka lukee Dynamics 365:stä saapuvat palveluväylän jonon eri tapahtumien viestit. Nämä viestit voivat koskea esimerkiksi valmistelua tai valmistelun peruutusta. Tämän jälkeen se käsittelee viestit luomalla organisaation tietokannat tai poistamalla ne ja lähettämällä toistuvat työkohteet (viestit) tietojen synkronoinnin palveluväylän jonoon. Tämän prosessin aikana se lukee ja kirjoittaa määritystiedot joko CSCFG-tiedostosta tai Dynamics 365 SW -ohjelmointirajapinnasta.  
+ Valmistelupalvelulla on yksi verkkorooli, joka lukee palveluväylän jonosta Dynamics 365:stä tulevien tapahtumien viestit (esimerkiksi valmistelu ja valmistelun purkaminen). Sitten se käsittelee nämä viestit luomalla ja poistamalla organisaatiotietokantoja sekä lähettämällä toistuvat työkohteet (viestit) tietojen synkronoinnin palveluväylän jonoon. Tässä yhteydessä se lukee ja kirjoittaa määritystiedostoja CSCFG-tiedoston tai Dynamics 365 -ohjelmiston ohjelmointirajapinnan avulla.  
   
- Tietojen synkronointipalvelulla on kaksi verkkoroolia. Toinen pitää rakenteen ja väliaikaisen tietokannan tiedot synkronoituina Dynamics 365 -organisaation metatietojen ja tietojen kanssa. Samalla toinen rooli suorittaa synkronointipalvelinta ja käsittelee asiakkaan synkronointipalveluita. Ensimmäinen verkkorooli käsittelee eri organisaatioiden tietojen synkronoinnin palveluväylän jonon viestit ja ottaa sitten yhteyden Dynamics 365:een noutaakseen metatietojen ja tietojen muutokset, ennen kuin ne vahvistetaan väliaikaista tietokantaa varten. Se myös määrittää synkronointipalvelimen sekä järjestelmään saapuvat ja sieltä lähtevät organisaatiot ja niiden asiakasmallit. Toinen verkkorooli käyttää synkronointipalvelinta (hallitsematon koodi) järjestelmänvalvojan ja synkronoinnin päätepisteiden isännöintiin. Toinen WWW-rooli käyttää järjestelmänvalvojan päätepistettä määritystietojen lähettämisessä. Ulkoiset asiakkaat (Dynamics 365 Mobile -sovellus) käyttävät synkronoinnin päätepistettä tietojen synkronoinnissa. Kuten valmistelupalvelussakin, nämä roolit lukevat/kirjoittavat määritystietoja joko CSCFG-tiedostosta tai Dynamics 365 SW -ohjelmointirajapinnasta.  
+ Tietojen synkronointipalvelulla on kaksi verkkoroolia. Toinen pitää väliaikaisen tietokannan rakenteen ja tiedot synkronoituna Dynamics 365:n organisaation metatietojen ja tietojen kanssa, kun taas toinen verkkorooli huolehtii synkronointipalvelimen suorittamisesta ja asiakasohjelmien synkronointipyyntöjen käsittelystä. Ensimmäinen verkkorooli käsittelee eri organisaatioiden viestit tietojen synkronoinnin palveluväylän jonosta ja ottaa sitten yhteyttä Dynamics 365:een hakeakseen metatietojen ja tietojen muutokset ennen niiden vahvistamista väliaikaiseen tietokantaan. Se myös määrittää synkronointipalvelimeen järjestelmästä tulevat ja järjestelmään lähetettävät organisaatiot sekä niiden asiakasmallit. Toinen verkkorooli suorittaa synkronointipalvelinta (hallitsematon koodi) hallinnan ja synkronoinnin päätepisteiden isännöimiseksi. Toinen verkkorooli lähettää hallinnan päätepisteen avulla määritystiedot. Ulkoiset asiakkaat (Dynamics 365 -mobiilisovellus) synkronoivat tietoja synkronoinnin päätepisteen avulla. Aivan kuten valmistelupalvelussa, molemmat roolit lukevat ja kirjoittavat määritystiedostoja CSCFG-tiedoston tai Dynamics 365 -ohjelmiston ohjelmointirajapinnan avulla.  
   
  **Jono**  
   
- Mobile Offline käyttää Azuren jonoja Dynamics 365:n ja Azuren välisessä viestien vaihdossa. Sen avulla ylläpidetään pilvipalveluiden käsittelemiä työkohteita. Jokainen viesti sisältää tietoja, kuten organisaation tunnuksen, sen entiteetin nimen, johon tiedot synkronoidaan, ja organisaation OData-päätepisteen yhteysmerkkijonon.  
+ Mobile Offline käyttää Azure-jonoja viestinsiirrossa Dynamics 365:n ja Azuren välillä. Sitä käytetään pilvipalveluiden käsittelemien työkohteiden ylläpitoon. Jokaiseen viestiin tallennetaan tietoja (esimerkiksi organisaatiotunnus, sen entiteetin nimi, johon tiedot synkronoidaan, ja organisaation OData-päätepisteen yhteysmerkkijono).  
   
  **SQL-tietokanta**  
   
- Mobile Offline tallentaa Azuren SQL -tietokantaan:  
+ Mobile Offline tallentaa Azure SQL -tallennuksen avulla  
   
--   Dynamics 365 -organisaatioista replikoidut tiedot ja palveluasiakkaan synkronointipyynnöt  
+-   Dynamics 365 -organisaatioista replikoidut tiedot ja asiakkaiden synkronointipyyntöjen toteuttamisen tiedot  
   
--   määritystiedot, kuten organisaation tietokannan yhteysmerkkijonot.  
+-   määritystiedot, esimerkiksi organisaatioiden tietokantojen yhteysmerkkijonot.  
   
- **Tallennustila**  
+ **Tallennus**  
   
- Mobile Offline käyttää Azure Blob storage pilvipalvelun luomien loki- ja seurantatiedostojen tallentamiseen.  
+ Mobile Offline tallentaa Azure Blob -säilön avulla pilvipalvelun luomat lokit ja jäljitystiedot.  
   
  **Active Directory -palvelu**  
   
- Mobile Offline käyttää Azure Active Directory -palvelua muiden palveluiden, kuten Dynamics 365:n, SW-ohjelmointirajapinnan tai Azure-hallinnan ohjelmointirajapintojen todentamiseen.  
+ Mobile Offline todentautuu muihin palveluihin (esimerkiksi Dynamics 365, ohjelmiston ohjelmointirajapinta tai Azure-hallintaohjelmointirajapinnat) Azure Active Directory -palvelun avulla.  
   
  **Azure DNS**  
   
- Mobile Offline korjaa pilvipalvelujen päätepisteet käyttämällä Azure DNS:ää asiakkaiden pyyntöjen uudelleenohjaamiseen organisaatioiden nimien perusteella.  
+ Mobile Offline uudelleenohjaa asiakaspyynnöt organisaatioiden nimien perusteella oikeisiin pilvipalvelun päätepisteisiin Azure DNS:n avulla.  
   
  **Azure-näennäisverkko**  
   
- Azure-näennäisverkko (VNet) on oman verkon esitys pilvipalvelussa. Dynamics 365 -tuotetiimi voi hallita Azure-verkkoasetuksia ja määrittää DHCP-osoitelohkot, DNS-asetukset, suojauskäytännöt ja reitityksen.  
+ Azure-näennäisverkko (VNet) edustaa omaa verkkoasi pilvessä. Dynamics 365 -tuotetiimi voi hallita Azure-verkkosi asetuksia ja määrittää DHCP-osoitealueet, DNS-asetukset, suojauskäytännöt ja reitityksen.  
   
- **Azuren kuormituksen tasaus**  
+ **Azuren kuormituksentasain**  
   
- Azuren kuormituksen tasaus parantaa sovellusten käytettävyyttä ja verkon suorituskykyä. Se on taso 4 (TCP, UDP) -tyyppinen kuormituksen tasapainottaja, joka jakaa saapuvaa liikennettä pilvipalveluiden toimiville palveluesiintymille tai kuormituksen tasapainotuksen joukossa määritetyille näennäiskoneille. Sitä käytetään tasattaessa kuormitusta käyttöönoton päätepisteissä.
+ Azuren kuormituksentasain tarjoaa suuren käytettävyyden ja verkon erinomaisen suorituskyvyn sovelluksillesi. Se on Layer-4 (TCP, UDP) -tyyppinen kuormituksentasain, joka jakaa saapuva liikenteen pilvipalveluiden hyvässä toimintakunnossa oleviin palveluesiintymiin tai virtuaalikoneisiin, jotka on määritetty kuormituksentasainjoukossa. Tasapainotamme käyttöönoton päätepisteitä sen avulla.

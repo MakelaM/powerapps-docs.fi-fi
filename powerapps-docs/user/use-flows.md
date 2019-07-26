@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 3041b6cb230aec72a5c3609ef1ea63443bd4a2cc
-ms.sourcegitcommit: a99f9458a50f6fa64706200bec97273aac20036d
+ms.openlocfilehash: 0ecf255ab6e710bf65bd60e39b6dc9b8023876f6
+ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66034827"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67457203"
 ---
 # <a name="use-microsoft-flow-to-automate-processes"></a>Prosessien automatisoiminen Microsoft Flow’n avulla
 
@@ -34,7 +34,7 @@ Hallitse työnkulkuja muodostamalla yhteys Microsoft Flow’hun sovelluksestasi.
 > [!NOTE]
 > Jotta voit hallita Microsoft Flow’ta ja suorittaa sen sovelluksesta, Microsoft Flow on otettava käyttöön organisaatiollesi järjestelmäasetuksissa. Lisätietoja:  [Organisaatiosi työnkulut](https://docs.microsoft.com/flow/organization-q-and-a) 
   
-1. Valitse komentopalkissa **Flow**.  
+1. Valitse komento palkissa **työn kulku**.  
   
    > [!div class="mx-imgBorder"]
    > ![Microsoft Flow -valikko](media/flow.png "Microsoft Flow -valikko") 
@@ -47,7 +47,7 @@ Hallitse työnkulkuja muodostamalla yhteys Microsoft Flow’hun sovelluksestasi.
   
    -   Valitse **Kirjaudu sisään työnkulkuun**, jos haluat muodostaa yhteyden Microsoft Flow’hun ja näyttää suoritettavissa olevat työnkulut. Tämä näkyy vain, jos et ole tällä hetkellä kirjautuneena sisään Microsoft Flow’hun.   
 
-    Katso lisätietoja työnkulun luomisesta kohdassa [Aloita Microsoft Flow -sovelluksen käyttö](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)  
+    Katso lisätietoja työnkulun luomisesta kohdassa [Aloita Microsoft Flow -sovelluksen käyttö](https://docs.microsoft.com/powerapps/maker/canvas-apps/using-logic-flows#create-a-flow)  
     
  
     
