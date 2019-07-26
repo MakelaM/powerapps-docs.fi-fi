@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/09/2018
+ms.date: 11/16/2018
 ms.author: matp
 manager: kvivek
 ms.custom: ''
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: f72d4b5192bd30da676e65e232bc2a3090cb77bb
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 31bef01ef46fd0fe2ed7bae30e63d53c169812db
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42832421"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "63321591"
 ---
 # <a name="run-an-app-in-a-web-browser"></a>Sovelluksen suorittaminen selaimessa
 Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä ohjeaiheessa opimme suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa [Dynamics 365 -aloitussivulta](https://home.dynamics.com).
@@ -30,8 +30,8 @@ Tarvitset tämän pikaoppaan seuraamisessa seuraavat:
 - PowerApps-käyttöoikeus. Tämä on saatavissa PowerApps-palvelupaketissa, kuten [PowerApps-palvelupaketin 2 kokeiluversiossa](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps) tai missä tahansa [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1)- tai [Dynamics 365](https://dynamics.microsoft.com/pricing/) -palvelupaketissa, joka sisältää PowerAppsin. 
 - Käyttöoikeus luomaasi tai jonkun muun luomaan ja kanssasi jakamaan sovellukseen.
 - Käyttöoikeus tuettuun selaimeen ja käyttöjärjestelmään.
-   - Kaaviosovelluksista on tietoja artikkelissa [Järjestelmävaatimukset, rajoitukset ja konfigurointiarvot](../maker/canvas-apps/limits-and-config.md)
-   - Malliin perustuvista sovelluksista on tietoja artikkelissa [Tuetut selaimet ja mobiililaitteet](https://docs.microsoft.com/dynamics365/customer-engagement/admin/supported-web-browsers-and-mobile-devices)
+   - Jos kyseessä on kangas sovellus, lue: [Järjestelmä vaatimukset, rajoitukset ja määritys arvot](../maker/canvas-apps/limits-and-config.md)
+   - Mallipohjaisilla sovelluksilla on lisä tietoja: [Tuetut selaimet ja mobiililaitteet](https://docs.microsoft.com/dynamics365/customer-engagement/admin/supported-web-browsers-and-mobile-devices)
 
 
 ## <a name="sign-in-to-dynamics-365"></a>Kirjaudu Dynamics 365:een
@@ -67,7 +67,8 @@ Jos sovellus vaatii yhteyden tietolähteeseen tai luvan käyttää laitteen omin
 Sulje sovellus kirjautumalla ulos Dynamics 365 -aloitussivulta tai avaamalla toinen sovellus.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä ohjeaiheessa opit suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa. Tutustu pohjaan perustuvan sovelluksen suorittamiseen mobiililaitteessa jatkamalla seuraavaan ohjeaiheeseen.
+Tässä ohjeaiheessa opit suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa. Ohjeet:
+- Suorita pohjaan perustuva sovellus mobiililaitteessa, Lue artikkeli [kangas sovelluksen suorittaminen mobiililaitteessa](run-app-client.md)
+- Suorita mallipohjainen sovellus mobiililaitteessa, lisä tietoja on Ohje aiheessa [mallipohjaisen sovelluksen suorittaminen mobiililaitteessa](run-app-client-model-driven.md)
+- Käytä mallipohjaista sovellusta, tutustu [malliin perustuvien sovellusten käyttämiseen](use-model-driven-apps.md)
 
-> [!div class="nextstepaction"]
-> [Suorita pohjaan perustuva sovellus mobiililaitteella](run-app-client.md)
