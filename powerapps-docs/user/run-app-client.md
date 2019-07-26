@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 07/09/2018
+ms.date: 11/16/2018
 ms.author: matp
 ms.custom: ''
 ms.reviewer: ''
@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: ace1a40e8d7900d93e2ff902705f6f50e1d7a193
-ms.sourcegitcommit: 429b83aaa5a91d5868e1fbc169bed1bac0c709ea
-ms.translationtype: HT
+ms.openlocfilehash: 9f951167f56ffd3d211182a89a21d54916ee6b6e
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42851880"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "61531900"
 ---
 # <a name="run-a-canvas-app-on-a-mobile-device"></a>Pohjaan perustuvan sovelluksen suorittaminen mobiililaitteessa
 Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä ohjeaiheessa opimme suorittamaan pohjaan perustuvan sovelluksen mobiililaitteessa. Sovellukset, jotka toimivat mobiililaitteessa, voivat hyödyntää laitteen ominaisuuksia, kuten sijaintipalveluja ja kameraa.
@@ -41,13 +41,13 @@ Voit helpottaa sovelluksen löytämistä avaamalla **PowerApps**-valikon ja vali
 
 Seuraavat suodattimet ovat käytettävissä:
 
-* **Kaikki sovellukset**: Näyttää kaikki sovellukset, joihin sinulla on käyttöoikeus, mukaan lukien luomasi sovellukset ja muiden kanssasi jakamat sovellukset.
+* **Kaikki sovellukset**: Näyttää kaikki sovellukset, joihin sinulla on käyttö oikeus, mukaan lukien luomasi sovellukset ja muiden kanssasi jakamat sovellukset.
 
-* **Omat sovellukset**: Näyttää sovellukset, joita olet käyttänyt ainakin yhden kerran.
+* **Omat sovellukset**: Näyttää sovellukset, jotka olet suorittanut vähintään kerran.
 
-* **Esimerkkisovellukset**: Näyttää Microsoftin esimerkkisovellukset, jotka esittelevät todellisia sovellustilanteita ja sisältävät kuvitteellisia tietoja. Ne auttavat tutustumaan suunnittelumahdollisuuksiin.
+* **Esimerkki sovellukset**: Näyttää Microsoftin esimerkki sovellukset, jotka esittelevät todellisia sovellus tilanteita, joissa on kuvitteellisia tietoja, joiden avulla voit tutustua suunnittelu mahdollisuuksiin.
 
-* **Suosikit**: Näyttää sovellukset, jotka olet merkinnyt napauttamalla sovelluksen ruudun kolmea pistettä (...) ja sitten kohtaa **Suosikit**. Voit poistaa sovelluksen tästä luettelosta napauttamalla sovelluksen ruudun kolmea pistettä (...) ja napauttamalla sitten **Poista suosikeista**.
+* **Suosikit**: Näyttää sovellukset, jotka olet merkinnyt napauttamalla sovellus ruudun kolmea pistettä (...) ja napauttamalla sitten **suosikki**. Voit poistaa sovelluksen tästä luettelosta napauttamalla sovelluksen ruudun kolmea pistettä (...) ja napauttamalla sitten **Poista suosikeista**.
 
     ![Merkitse suosikiksi](./media/run-app-client/favorite.png)
 
@@ -57,7 +57,7 @@ Suodatettuasi sovellukset voit lajitella suodatettua luetteloa sen päivämäär
 
 Jos tiedät käytettävän sovelluksen nimen, voit napauttaa PowerAppsin yläosassa olevaa hakukuvaketta ja kirjoittaa sitten osan sen nimestä hakuruutuun.
 
-![Haku](./media/run-app-client/search.png)
+![Search](./media/run-app-client/search.png)
 
 Jos suodatit sovellukset, suodatettu luettelo käydään ensin läpi.
 

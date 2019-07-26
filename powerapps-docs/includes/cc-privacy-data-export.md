@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e9b0446c2fb09cad33f5a3ae4bb69103f7d07d70
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61572689"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67212640"
 ---
 Kun käytät tietojen vientipalvelua ja aktivoit tietojen vientiprofiilin [!INCLUDE[pn_microsoftcrm](pn-microsoftcrm.md)] -palvelussa, profiiliin lisättyjen entiteettien tiedot lähetetään [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-palveluun. Ensimmäinen synkronointi sisältää kaikki vientiprofiiliin lisättyjen entiteettien tiedot, mutta seuraavat synkronoinnit sisältävät vain uudet muutokset, joita lähetetään jatkuvasti tietojen vientipalveluun. Tietojen vientipalveluun lähetetyt tiedot tallennetaan väliaikaisesti [!INCLUDE[pn_azure_service_bus](pn_azure_service_bus.md)] -palveluun ja [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tallennukseen, käsitellään [!INCLUDE[pn_azure_service_fabric](pn_azure_service_fabric.md)] -palvelussa, ja lopuksi tiedot synkronoidaan (lisätään, päivitetään tai poistetaan) [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tilauksessa määritetyn kohdetietokannan kanssa. Kun tiedot on synkronoitu, ne poistetaan [!INCLUDE[pn_azure_service_bus](pn_azure_service_bus.md)] -palvelusta ja [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tallennuksesta. Jos tietojen synkronoinnin aikana tapahtuu virhe, lyhyet tiedot (entiteettityyppi, tietuetunnus ja synkronoinnin aikaleima) tallennetaan [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tallennukseen, jotta käyttäjä voi ladata luettelon tietueista, joita ei päivitetty.  
   

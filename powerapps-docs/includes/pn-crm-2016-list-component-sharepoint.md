@@ -1,1 +1,9 @@
-Microsoft Dynamics CRM 2016:n luettelo-osa Microsoft SharePointille
+---
+ms.openlocfilehash: eb8740d2a535b8c863b6cf112a89bffd5d0e4ca4
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67222465"
+---
+Microsoft Dynamics CRM 2016 -luettelon osa Microsoft SharePointille

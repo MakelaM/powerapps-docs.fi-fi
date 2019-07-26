@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 747ea34b784b852261debe91f587d64ee3277804
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61570601"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67212502"
 ---
 Kun [!INCLUDE[pn_gamification](pn-gamification.md)]-ratkaisu asennetaan ja otetaan käyttöön, käyttöönoton suorittavan käyttäjän tilitunnisteet (kuten etunimi, sukunimi ja sähköpostiosoite) tallennetaan kohteeseen [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)], jotta valtuutus voidaan tehdä [!INCLUDE[pn_gamification_shortest](pn-gamification-shortest.md)]-palvelussa, joka sijaitsee kohteessa [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]. Tämä koskee kaikkia käyttäjiä, jotka järjestelmänvalvoja on ottanut käyttöön [!INCLUDE[pn_gamification_shortest](pn-gamification-shortest.md)]-palvelussa. [!INCLUDE[pn_gamification_shortest](pn-gamification-shortest.md)]-ratkaisu lähettää järjestelmänvalvojan määrittämät KPI-tiedot [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-palveluun, ja kyseiset tiedot tallennetaan kohteen [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] rakenteiseen tallennustilaan sekä blob-säilöön.  Kunkin käyttäjän Avatar, mukautetut palkinnot ja yrityksen logo tallennetaan kohteeseen [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)], mutta tietoja ei palauteta kohteeseen [!INCLUDE[pn_crm_shortest](pn-crm-shortest.md)].  
   

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ce9db35844f46e9779055ec30dcba0f9459c3a16
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61570892"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67225794"
 ---
 Kun asennat [!INCLUDE[pn_connected_field_service_msdyn365](pn-connected-field-service-msdyn365.md)] -sovelluksen [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tilauksen tietojen antamisen yhteydessä, vaaditut [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-resurssit (lueteltu alla) otetaan käyttöön ja [!INCLUDE[pn_dynamics_crm_online](pn-dynamics-crm-online.md)] -esiintymä lähettää tiedot (kuten komennot ja rekisteröinnit) [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]lle. Näin otetaan käyttöön skenaariot, joissa on käytössä IoT ja jotka rekisteröivät laitteet ja lähettävät komennot rekisteröityihin laitteisiin ja vastaanottavat niitä. Järjestelmänvalvoja voi poistaa toiminnot poistamalla Connected Field Service -sovelluksen asennuksen, ja siirtyä sitten [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-portaaliin, jossa hän voi hallita liittyviä [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-palveluja, joita ei enää tarvita.  
   

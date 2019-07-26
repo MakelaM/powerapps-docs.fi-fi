@@ -1,7 +1,15 @@
-Microsoft Social Engagement tarjoaa isännöityjä verkkopalveluja, jotka ovat monenlaisten asiakkaiden käytettävissä ja koostuvat seuraavista sovelluksen sisältämistä yhteisöpalveluominaisuuksien komponenteista:  
+---
+ms.openlocfilehash: 3f72280d7c47394ea47b8ebdc3620a9db5bffd1c
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67225012"
+---
+Microsoft Social Engagement tarjoaa isännöityjä online-palveluja useille käyttäjille. Ratkaisu koostuu seuraavista ohjelmiston yhteisöpalveluosista:  
   
-**Yhteisöpalveluseuranta** – mahdollisuus seurata julkisesti saatavilla olevia yhteisöpalvelujen viestejä julkisissa ja kolmansien osapuolten hallitsemissa verkoissa.  
+**Social Media Monitoring** – Julkisten yhteisöpalvelujen seuranta julkisissa ja hallituissa verkoissa, joita ylläpitävät kolmannet osapuolet.  
   
-**Yhteisöpalveluanalyysit** – mahdollisuus tunnistaa, laskea ja ennustaa kyselyitä, jotka liittyvät julkisesti saatavilla oleviin asiakirjoihin ja viesteihin.  
+**Social Analytics** – Julkisten tiedostojen ja julkaisujen tunnistaminen, laskenta ja kyselyt.  
   
- Huomaa, että Microsoft Social Engagementin kautta voi käyttää kolmansien osapuolten palveluita, kuten Twitteriä, Facebookia, Tumblria, YouTubea ja blogeja, joiden tietosuojakäytännöt voivat poiketa Social Engagementin käytännöistä. Tällaisten palvelujen käyttöön ja niille antamiisi tietoihin sovelletaan kyseisten palvelujen tietosuojatietoja. Tietyt tiedot, kuten yhteisöpalvelun sisällön ja IP-osoitteen noutamisessa käytettävä hakukysely, saatetaan jakaa kyseisten palveluiden kanssa yhteyksien muodostamisen yhteydessä. Suosittelemme näiden muiden tietosuojatietojen lukemista. Suosittelemme lukemaan myös Microsoft Online Services -palveluiden käyttöehdot.
+ Huomaa, että Microsoft Social Engagement voi muodostaa yhteyden kolmannen osapuolen palveluihin, kuten Twitteriin, Facebookiin, Tumblriin, YouTubeen ja blogeihin, joiden tietosuojakäytännöt voivat olla erilaiset kuin Social Engagementin. Näiden palvelujen käyttöön ja niihin toimittamiisi tietoihin sovelletaan niiden omia palvelukohtaisia tietosuojalausekkeita. Kun muodostat tällaisia yhteyksiä, joitakin tietoja, kuten yhteisöpalvelun sisällön kyselyjä ja IP-osoitteesi, voidaan jakaa kyseisiin palveluihin. Suosittelemme, että tutustut näiden muiden palvelujen tietosuojalausekkeisiin. Lue myös Microsoft Online Services -ehdot.
