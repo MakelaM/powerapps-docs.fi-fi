@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 80f59be59cfcbd12c6a75748f4110a87dfb385e9
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.sourcegitcommit: ad203331ee9737e82ef70206ac04eeb72a5f9c7f
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61571876"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67212111"
 ---
 Ottamalla resurssiaikataulutuksen optimoinnin käyttöön, kaikki tiedot, mukaan lukien ajoitusmääritystiedot ja työtilaustiedot (sijaintiin liittyvät osoitetiedot, kuten tilin osoite ja resurssin osoite) lähetetään kohteesta [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] kohteeseen [!INCLUDE[pn_bing_maps](pn-bing-maps.md)], jolloin mahdollistetaan:  
   

@@ -16,11 +16,11 @@ search.app:
 - PowerApps
 - D365CE
 ms.openlocfilehash: 7dd418db04f72310210925345611bc1a0b2a6f17
-ms.sourcegitcommit: 4db9c763455d141a7e1dd569a50c86bd9e50ebf0
-ms.translationtype: HT
+ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444405"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "63318527"
 ---
 # <a name="share-records-using-access-team"></a>Tietueiden jakaminen käyttämällä käyttöoikeusryhmää
 
@@ -35,7 +35,7 @@ Käyttöoikeusryhmä myöntää tietueiden käyttöoikeuden tietueiden jakamisen
   > [!div class="mx-imgBorder"]
   > ![Omat aktiiviset tilit](media/AccessTeam1.png "Omat aktiiviset tilit")
 
-3. **Käyttöoikeusryhmän jäsenet** -osassa valitse **Lisää komentoja** (**...** ) > **Lisää käyttäjä**.
+3. **Käyttöoikeusryhmän jäsenet** -osassa valitse **Lisää komentoja** ( **...** ) > **Lisää käyttäjä**.
 
   > [!div class="mx-imgBorder"]
   > ![Käyttäjän lisääminen käyttöoikeusryhmään](media/AccessTeam2.png "Käyttäjän lisääminen käyttöoikeusryhmään")
