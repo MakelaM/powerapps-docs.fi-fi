@@ -67,7 +67,7 @@ Kaaviot tarjoavat sinulle nopean näkymän siitä, miten seuraat tavoitteitasi. 
 
 -   Viemällä hiiren osoittimen kaavion päälle saat näkyviin työkalu vihjeen, joka antaa nopeasti tietoja kaavion alueesta.
 -   Napsauttamalla kaavion aluetta saat näkyviin ruudukko näkymän, jossa on lisä tietoja kaavion tiedoista.
--   Jos haluat laajentaa kaaviota, valitse Laajenna kaavion![laajennus kaavio näkymä]Laajenna(media/expandviewbutton.png "kaavio näkymä") -painike.
+-   Jos haluat laajentaa kaaviota, valitse Laajennakaavion![laajennus kaavio näkymä](media/expandviewbutton.png " Laajenna kaavio näkymä") -painike.
 -   Jos haluat tarkastella kaavion tietueita tai päivittää kaaviota, valitse ![Lisää komentoja](media/MoreButton.png "Lisää komentoja") ja valitse sitten toiminto: **Päivitä** tai **Näytä tietueet**.
      
      > [!div class="mx-imgBorder"]
