@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68475429"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-detail-gallery-in-a-canvas-app"></a>Yksityiskohta valikoiman luominen kangas sovelluksessa
 
@@ -71,7 +72,7 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse tieto valikoiman **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected.'Order Details'
     ```
 
@@ -103,7 +104,7 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Product.'Product Name'
     ```
 
@@ -141,7 +142,7 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse kuvan **kuva** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Product.Picture
     ```
 
@@ -161,7 +162,7 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse uuden nimen **teksti** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Quantity
     ```
 
@@ -179,8 +180,8 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Text( ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
     ```
 
     Jos et sisällytä kieli koodia ( **[$-en-US]** ), se lisätään sinulle kielen ja alueen perusteella. Jos käytät eri kieli koodia, sinun kannattaa poistaa **$** heti Close Square-Haka Sulje ( **]** ) ja lisätä sitten oma valuutta-symboli kyseiseen sijaintiin.
@@ -197,8 +198,8 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Text( ThisItem.Quantity * ThisItem.'Unit Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( ThisItem.Quantity * ThisItem.'Unit Price'; "[$-en-US]$ #,###.00" )
     ```
 
     Jos et sisällytä kieli koodia ( **[$-en-US]** ), se lisätään puolestasi oman kielesi ja alueesi mukaan. Jos koodi on erilainen, sinun kannattaa käyttää omaa valuutta symbolia **$** heti Close Square kiinnike ( **]** )-kohteen sijaan.
@@ -273,8 +274,8 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Sum( Gallery1.Selected.'Order Details', Quantity )
+    ```powerapps-comma
+    Sum( Gallery1.Selected.'Order Details'; Quantity )
     ```
 
     Tämä kaava näyttää delegointi varoituksen, mutta voit ohittaa sen, koska mikään yksittäinen tilaus ei sisällä enempää kuin 500 tuotetta.
@@ -288,8 +289,8 @@ Ennen kuin aloitat tämän ohje aiheen, sinun on asennettava tieto kanta edellä
 
 1. Valitse kopion **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Text( Sum( Gallery1.Selected.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Sum( Gallery1.Selected.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
     ```
 
     Tämä kaava näyttää delegointi varoituksen, mutta voit ohittaa sen, koska mikään yksittäinen tilaus ei sisällä enempää kuin 500 tuotetta.
@@ -357,7 +358,7 @@ Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää s
 
 1. Valitse yhdistelmä ruudun **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Choices( 'Order Details'.Product )
     ```
 
@@ -418,7 +419,7 @@ Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää s
 
 1. Valitse kuvan **ominaisuudeksi** :
 
-    ```powerapps-dot
+    ```powerapps-comma
     ComboBox1.Selected.Picture
     ```
 
@@ -467,8 +468,8 @@ Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää s
 
 1. Muuta tekstin syöttö-ohjaus objektin oikealla puolella olevaa otsikkoa ja siirrä sen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Text( ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -488,8 +489,8 @@ Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää s
 
 1. Valitse uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price', "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Value(TextInput1.Text) * ComboBox1.Selected.'List Price'; "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -518,18 +519,18 @@ Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää s
 
 1. Muuta tämän kuvakkeen kokoa ja siirrä se vaaleansinisen alueen oikeaan reunaan ja aseta kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Patch( 'Order Details',
-        Defaults('Order Details'),
+    ```powerapps-comma
+    Patch( 'Order Details';
+        Defaults('Order Details');
         {
-            Order: Gallery1.Selected,
-            Product: ComboBox1.Selected,
-            Quantity: Value(TextInput1.Text),
+            Order: Gallery1.Selected;
+            Product: ComboBox1.Selected;
+            Quantity: Value(TextInput1.Text);
             'Unit Price': ComboBox1.Selected.'List Price'
         }
-    );
-    Refresh( Orders );
-    Reset( ComboBox1 );
+    );;
+    Refresh( Orders );;
+    Reset( ComboBox1 );;
     Reset( TextInput1 )
     ```
 
@@ -582,8 +583,8 @@ Voit näyttää tietoja missä tahansa valikoimassa, mutta et voi päivittää s
 
 1. Muuta ja siirrä roska kori-kuvake tieto valikoiman mallin oikealle puolelle ja määritä kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Remove( 'Order Details', ThisItem ); Refresh( Orders )
+    ```powerapps-comma
+    Remove( 'Order Details'; ThisItem );; Refresh( Orders )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -608,7 +609,7 @@ Voit lisätä uuden valikoiman, joka näyttää tila uksen tiedot sekä ohjaus o
 - Monta yhteen-suhde **Order Details** -entiteetistä **Order Products** -entiteettiin: `ThisItem.Product.'Product Name'` ja`ThisItem.Product.Picture`
 - **Choices** -funktiolla saadaan tuote luettelo:`Choices( 'Order Details'.Product' )`
 - Yhdistelmä ruudun **valittu** ominaisuus, joka on valmiiksi monta yhteen liittyvä tietue: `ComboBox1.Selected.Picture` ja`ComboBox1.Selected.'List Price'`
-- **Patch** -funktiolla luodaan **tilaus tietojen** tietue:`Patch( 'Order Details', Defaults( 'Order Details' ), ... )`
-- **Poista** -funktiolla voit poistaa **tilaus tiedot** -tietueen:`Remove( 'Order Details', ThisItem )`
+- **Patch** -funktiolla luodaan **tilaus tietojen** tietue:`Patch( 'Order Details'; Defaults( 'Order Details' ); ... )`
+- **Poista** -funktiolla voit poistaa **tilaus tiedot** -tietueen:`Remove( 'Order Details'; ThisItem )`
 
 Tämä aiheiden sarja on ollut nopea vaihe vaiheelta, miten voit käyttää Common Data Service suhteita ja asetus joukkoja pohjaan sovelluksena opetus tarkoituksiin. Ennen kuin vapautat minkä tahansa sovelluksen tuotantoon, harkitse kentän tarkistamista, virheiden käsittelyä ja monia muita tekijöitä.
