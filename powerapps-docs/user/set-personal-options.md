@@ -29,7 +29,7 @@ Muuta sovelluksen näyttö asetuksia haluamallasi tavalla. Voit esimerkiksi vali
     
 ## <a name="to-set-personal-options"></a>Henkilökohtaisten asetusten asetukset  
   
-1.  Valitse **Asetukset** - ![]painikkeen asetukset-painike powerappsin asetukset-(media/options-button.png "painikkeelle") näytön oikeassa yläkulmassa.  
+1.  Valitse **Asetukset** - ![](media/options-button.png "painikkeen asetukset-painike powerappsin asetukset-painikkeelle") näytön oikeassa yläkulmassa.  
   
 2.  Valitse **mukautus asetukset**.  
   
