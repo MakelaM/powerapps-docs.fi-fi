@@ -822,6 +822,8 @@
                   href: ./model-driven-apps/create-site-map-app.md
                 - name: Sovelluksen osien lisääminen tai muokkaaminen
                   href: ./model-driven-apps/add-edit-app-components.md
+                - name: Lisää tiimiyksikkö hakuvaihtiehdoksi
+                  href: ./model-driven-apps/team-entity-lookup.md
             - name: Lomakkeiden käsitteleminen
               href: ./model-driven-apps/create-design-forms.md
               items:
