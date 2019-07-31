@@ -122,7 +122,7 @@ Voit esimerkiksi valita **Asetukset** -kuvakkeen **[AccessibleLabel](properties-
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 - **[Tabdex](properties-accessibility.md)** -arvon on oltava nolla tai suurempi, jos kuvaa käytetään painikkeena. Jos määrität tämän arvon kuvakkeelle tai muodolle, näppäimistön käyttäjät voivat siirtyä siihen.
 
-- Kohdistus ilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Käytä **[Focusedbordercolor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** focusedborderthickness tämän tuloksen saavuttamiseksi.
+- Kohdistus ilmaisimien on oltava selvästi näkyvissä, jos kuvaa käytetään painikkeena. Käytä **[Focusedbordercolor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** tämän tuloksen saavuttamiseksi.
 
     > [!NOTE]
     > Jos **[TabIndex](properties-accessibility.md)** on suurempi tai yhtä suuri kuin 0, kuvake tai muoto hahmonnetaan painikkeena. Sen ulkoasu ei muutu, mutta näytön luku ohjelmat tunnistavat kuvan oikein painikkeena. Jos **[TabIndex](properties-accessibility.md)** on pienempi kuin 0, kuvake tai muoto tunnistetaan kuvana.

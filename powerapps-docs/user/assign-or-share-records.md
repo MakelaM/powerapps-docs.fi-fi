@@ -35,7 +35,7 @@ Käytä **jakamis** asetusta, jos haluat säilyttää tietueen omistajuuden, mut
 3. Valitse komento palkissa **Määritä**.
 
    > [!div class="mx-imgBorder"]
-   > ![Määritä tietue] uudelleen (media/assign1.png "Määritä tietue") uudelleen
+   > ![Määritä tietue](media/assign1.png "Määritä tietue") uudelleen
 
    > [!NOTE]
    > Jos haluat säilyttää tietueen omistajuuden, mutta antaa jonkun muun työskennellä sen kanssa, valitse **jako**. Käytä sitten työkalu vihjeitä, jotka ohjaavat sinua **jakamis** asetuksen kautta. 
@@ -74,7 +74,7 @@ Hae tietueita erikoishaun avulla ja määritä ne sitten jollekulle muulle. Lis�
  3. Valitse komento palkissa **Määritä tietueet**uudelleen.
  
    > [!div class="mx-imgBorder"]
-   > ![Määritä kaikki tietueet] uudelleen (media/assign5.png "Määritä kaikki tietueet") uudelleen
+   > ![Määritä kaikki tietueet](media/assign5.png "Määritä kaikki tietueet") uudelleen
    
  4. Valitse **Määritä tietueet** uudelleen-valinta ikkunassa, miten haluat määrittää kaikki tietueet uudelleen, ja valitse sitten **OK**.
  
