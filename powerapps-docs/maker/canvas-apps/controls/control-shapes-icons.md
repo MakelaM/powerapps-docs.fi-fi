@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68473900"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="shape-controls-and-icon-controls-in-powerapps"></a>Muoto- ja kuvakeohjausobjektit PowerAppsissa
 Grafiikkoja, joille voi määrittää ulkoasu- ja toimintaominaisuuksia.
@@ -68,7 +69,7 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Navigate**( *ScreenName*, *ScreenTransition* )](../functions/function-navigate.md)
+[**Navigate**( *ScreenName*; *ScreenTransition* )](../functions/function-navigate.md)
 
 ## <a name="example"></a>Esimerkki
 
@@ -80,7 +81,7 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 1. Lisää **Lähde**-ohjausobjektiin **Muoto**-ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-  `Navigate(Target, ScreenTransition.Fade)`
+  `Navigate(Target; ScreenTransition.Fade)`
   
 1. Paina F5-näppäintä ja valitse sitten **muoto** -ohjaus objekti.
 
@@ -88,7 +89,7 @@ Tällaisia ohjausobjekteja ovat muun muassa nuolet, geometriset muodot, toiminto
 
 1. (valinnainen) Palaa oletustyötilaan painamalla Esc-näppäintä. Lisää **Muoto**-ohjausobjekti **Kohde**-näyttöön ja määritä **Muoto**-ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-  `Navigate(Source, ScreenTransition.Fade)`
+  `Navigate(Source; ScreenTransition.Fade)`
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 
