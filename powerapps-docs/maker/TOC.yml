@@ -51,6 +51,8 @@
               href: ../user/assign-or-share-records.md
             - name: Tietueiden jakaminen käyttämällä käyttöoikeusryhmää
               href: ../user/Access-team.md
+            - name: Yhteysroolin lisääminen
+              href: ../user/add-connection-role.md
             - name: Tilien tai yhteystietojen poistaminen käytöstä
               href: ../user/deactivate-activate-account-contact.md
             - name: Oman edistymisen seuraaminen kaavioilla ja koontinäytöillä
@@ -1242,6 +1244,8 @@
           href: ./common-data-service/data-platform-complex-entities.md
         - name: 'Rajoitetut entiteetit, jotka vaativat Dynamics 365 -käyttöoikeuksia'
           href: ./common-data-service/data-platform-restricted-entities.md
+    - name: 'SharePoint-, OneNote- ja OneDrive-integraatio'
+      href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
     - name: Luo Power BI -raportti
       href: ./common-data-service/data-platform-powerbi-connector.md
     - name: Mukautettujen entiteettien ja kenttien tekstien kääntäminen

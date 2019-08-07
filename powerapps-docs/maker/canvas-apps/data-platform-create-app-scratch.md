@@ -7,19 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 09/21/2019
+ms.date: 05/21/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 23c5ead5e8dde0b781c0c83b366baea0a199a56e
-ms.sourcegitcommit: 0272fc5beac5bace5781b1de986a0e2703dd5ddc
+ms.openlocfilehash: 482a5a91c241aa9fd8c85dfb970cf692cd2ab1a3
+ms.sourcegitcommit: 38270060d2d0b784fe065164e6112c011b26e17c
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65974427"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68830465"
 ---
 # <a name="create-a-canvas-app-from-scratch-using-common-data-service"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Common Data Servicen avulla
 
@@ -61,7 +60,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 1. Valitse vasemmassa siirtymäpalkissa **BrowseGallery1**-kohta ja aseta sen **Items**-ominaisuuden arvoksi tämä kaava:
 
-    `SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; SortOrder.Descending; SortOrder.Ascending))`
+    `SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))`
 
     Tämä kaava määrittää seuraavat:
 
@@ -93,7 +92,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
     ![Lomakkeen Datasource- ja Item-ominaisuuden asettaminen](./media/data-platform-create-app-scratch/form-datasource.png)
 
-1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä** avaamiseen **kentät** ruudussa.
+1. Avaa **kentät** -ruutu valitsemalla oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdestä **Muokkaa kenttiä** .
 
 1. Valitse **Lisää kenttä**, ja valitse sitten seuraavien kenttien valintaruudut:
 
@@ -105,7 +104,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
     - **Vuosittainen tuotto**
 
     > [!NOTE]
-    > Tässä skenaariossa ulkopuolella voit luoda mukautetun kentän valitsemalla **uuden kentän**antanut vaaditut tiedot ja valitsemalla sitten **valmis**. Lisätietoja: [Luo kenttä](../common-data-service/create-edit-field-portal.md#create-a-field).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Valitse ja Lisää kenttä")
+    > Tämän skenaarion ulkopuolella voit luoda mukautetun kentän valitsemalla **uusi kenttä**, antamalla tarvittavat tiedot ja valitsemalla sitten **Done**. Lisätietoja: [Luo kenttä](../common-data-service/create-edit-field-portal.md#create-a-field).<br><br>![](media/data-platform-create-app-scratch/choose-or-add-fields.png "Kentän valitseminen ja lisääminen")
 
 1. Valitse **Lisää**.
 
@@ -127,25 +126,25 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 1. Aseta plus-kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `NewForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `NewForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Lisäämiskuvake](./media/data-platform-create-app-scratch/plus-icon.png)
 
 1. Aseta ensimmäisen oikealle osoittavan nuolen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `EditForm(EditForm1);; Navigate(FormScreen; ScreenTransition.None)`
+    `EditForm(EditForm1); Navigate(FormScreen, ScreenTransition.None)`
 
     ![Seuraava-kuvake](./media/data-platform-create-app-scratch/next-icon.png)
 
 1. Aseta **FormScreen**-kohdassa peruutuskuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `ResetForm(EditForm1);;Navigate(BrowseScreen; ScreenTransition.None)`
+    `ResetForm(EditForm1);Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Peruutuskuvake](./media/data-platform-create-app-scratch/cancel-icon.png)
 
 1. Aseta valintamerkkikuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `SubmitForm(EditForm1);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `SubmitForm(EditForm1); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Valintamerkkikuvake](./media/data-platform-create-app-scratch/checkmark-icon.png)
 
@@ -153,7 +152,7 @@ Kun luot sovelluksen Common Data Servicestä, sinun ei tarvitse luoda yhteyttä 
 
 1. Aseta **Roskakori**-kuvakkeen **Color**-ominaisuudeksi **White** ja sen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `Remove(Accounts; BrowseGallery.Selected);; Navigate(BrowseScreen; ScreenTransition.None)`
+    `Remove(Accounts, BrowseGallery.Selected); Navigate(BrowseScreen, ScreenTransition.None)`
 
     ![Roskakorikuvake](./media/data-platform-create-app-scratch/trash-icon.png)
 

@@ -57,11 +57,11 @@ Lisä tietoja mukautetun raportin luomisesta on kohdassa [Reporting and Analytic
   
    2.  **Pääraportin** teksti ruutu näyttää nykyisen raportin pääraportin, jos sellainen on olemassa.  
   
-   3. **Luokkia**. Valitse **Valitse tai muuta tämän kentän arvot** ![kolme pistettä painiketta](media/ellipsis-button.png "") ja määritä sitten tähän raporttiin sisällytettävät luokat.  
+   3. **Luokkia**. Valitse **Valitse tai muuta tämän kentän arvot** ![kolme pistettä painiketta](media/ellipsis-button.png "kolme pistettä painiketta") ja määritä sitten tähän raporttiin sisällytettävät luokat.  
   
-   4. **Liittyvät tietue tyypit**. Jos haluat raportin näkyvän tiettyjen tietue tyyppien sivulla olevien raporttien luettelossa, valitse **Valitse tai muuta tämän kentän arvot** ![kolme pistettä painiketta](media/ellipsis-button.png "") ja valitse sitten tietue tyypit.  
+   4. **Liittyvät tietue tyypit**. Jos haluat raportin näkyvän tiettyjen tietue tyyppien sivulla olevien raporttien luettelossa, valitse **Valitse tai muuta tämän kentän arvot** ![kolme pistettä painiketta](media/ellipsis-button.png "kolme pistettä painiketta") ja valitse sitten tietue tyypit.  
   
-   5. **Näytä kohteessa**. Jos haluat määrittää, missä raporttien tulee olla näkyvissä, valitse **Valitse tai muuta tämän kentän arvot** ![kolme pistettä painiketta](media/ellipsis-button.png "") ja valitse sitten yksi tai useampi vaihto ehto.  
+   5. **Näytä kohteessa**. Jos haluat määrittää, missä raporttien tulee olla näkyvissä, valitse **Valitse tai muuta tämän kentän arvot** ![kolme pistettä painiketta](media/ellipsis-button.png "kolme pistettä painiketta") ja valitse sitten yksi tai useampi vaihto ehto.  
   
         Jos arvoja ei ole valittu, raportti ei näy loppu käyttäjille.  
   
