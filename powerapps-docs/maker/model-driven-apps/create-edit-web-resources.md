@@ -4,7 +4,7 @@ description: Tietoja verkkoresurssien luomisesta tai muokkaamisesta
 ms.custom: ''
 ms.date: 06/02/2018
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -38,7 +38,7 @@ Verkkoresurssit ovat järjestelmään tallennettuja virtuaalitiedostoja. Kullaki
   
 Jos esimerkiksi luot HTML-sivun new_myWebResource.htm-nimisenä verkkoresurssina, voit avata kyseisen sivun selaimessa käyttämällä seuraavanlaista URL-osoitetta:  
  
-`<base URL>/WebResources/new_myWebResource.htm   `
+`<base URL>/WebResources/new_myWebResource.htm`
   
 jossa *\<URL-perusosoite>* on sen URL-osoitteen osa, joiden avulla tarkastellaan sovelluksia, joiden lopussa on `dynamics.com`. Koska verkkoresurssi on järjestelmässä olevaa tietoa, vain organisaation käyttöoikeuden omaavat käyttäjät voivat käyttää niitä tällä tavoin. Yleensä verkkoresurssit sisältyvät lomakkeisiin sen sijaan, että niihin viitattaisiin suoraan. Yleisimmin niitä käytetään lomakkeiden komentosarjojen JavaScript-kirjastoina.  
     
@@ -92,7 +92,7 @@ Sovelluksessa olevalla verkkoresurssien tekstieditorilla pitäisi tehdä tekstit
 > Jos HTML-verkkoresurssin sisältöä ei ole luotu tekstieditorissa, älä muokkaa sitä tekstieditorissa.  
 > Tekstieditori käyttää ohjausobjektia, joka muokkaa HTML-lähteen muokattavaan muotoon. Sivu voi käyttäytyä näiden muutosten vuoksi selaimessa eri tavoin ja estää monimutkaisemman koodin toiminnan. HTML-verkkoresurssin avaaminen tekstieditorissa ja sen tallentaminen muutoksia tekemättä voi vaurioittaa joitakin HTML-verkkoresursseja.  Lisätietoja: [Sovelluskehittäjän dokumentaatio: HTML:n WWW-resurssien tekstieditorin käyttö](/dynamics365/customer-engagement/developer/webpage-html-web-resources#use-the-text-editor-for-html-web-resources)
   
-Tekstitiedostojen muokkaamiseen onkin suositeltavaa käyttää ulkoista editoria. Tiedostot on myös hyvä tallentaa ensin paikallisesti ennen niiden lataamista **Lataa tiedosto** -painikkeella. Tällä tavoin sinulla on verkkoresurssin kopio, jos sinun on palattava aiempaan versioon. Voit käyttää yksinkertaista editoria, kuten Muistiota, mutta toiminnoiltaan monipuolisemman tekstieditorin käyttö on suositeltavaa. [Visual Studio -yhteisö](https://www.visualstudio.com/vs/community/) ja [Visual Studio -koodi](https://code.visualstudio.com/) ovat ilmaisia. Niiden avulla voi muokata WWW-resursseissa käytettäviä tekstipohjaisia tiedostoja tehokkaasti..  
+Tekstitiedostojen muokkaamiseen onkin suositeltavaa käyttää ulkoista editoria. Tiedostot on myös hyvä tallentaa ensin paikallisesti ennen niiden lataamista **Lataa tiedosto** -painikkeella. Tällä tavoin sinulla on verkkoresurssin kopio, jos sinun on palattava aiempaan versioon. Voit käyttää yksinkertaista editoria, kuten Muistiota, mutta toiminnoiltaan monipuolisemman tekstieditorin käyttö on suositeltavaa. [Visual Studio -yhteisö](https://www.visualstudio.com/vs/community/) ja [Visual Studio -koodi](https://code.visualstudio.com/) ovat ilmaisia. Niiden avulla voi muokata WWW-resursseissa käytettäviä tekstipohjaisia tiedostoja tehokkaasti.  
 
 <a name="BKMK_CreateAndEditFormWebResources"></a>
  

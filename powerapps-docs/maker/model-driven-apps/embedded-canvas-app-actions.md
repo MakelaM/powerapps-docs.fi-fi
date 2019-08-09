@@ -1,7 +1,7 @@
 ---
-title: Toimintojen suorittaminen upotetun kaaviosovelluksen isäntälomakkeessa | MicrosoftDocs
+title: Toimintojen suorittaminen upotetun mallipohjaisen kaaviosovelluksen isäntälomakkeessa | MicrosoftDocs
 ms.custom: ''
-ms.date: 03/29/2019
+ms.date: 06/25/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -23,17 +23,13 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="perform-predefined-actions-on-the-host-form-from-within-an-embedded-canvas-app"></a>Ennalta määritettyjen toimintojen suorittaminen upotetun kaaviosovelluksen isäntälomakkeessa
-Upotetut kaaviosovellukset mahdollistavat ennalta määritettyjen toimintojen suorittamisen isäntälomakkeessa. Näiden toimintojen avulla tekijät voivat siirtyä, päivittää ja tallentaa isäntälomakkeen. Näiden toimintojen avulla upotettu kaaviosovellus voi toimia lomakkeen ja mallipohjaisen sovelluksen aiempaa integroidumpana osana.  
+# <a name="perform-predefined-actions-on-the-host-model-driven-form-from-within-an-embedded-canvas-app"></a>Ennalta määritettyjen toimintojen suorittaminen upotetun mallipohjaisen kaaviosovelluksen isäntälomakkeessa
+Upotetut kaaviosovellukset mahdollistavat ennalta määritettyjen toimintojen suorittamisen mallipohjaisessa isäntälomakkeessa. Näiden toimintojen avulla tekijät voivat siirtyä, päivittää ja tallentaa mallipohjaisen isäntälomakkeen. Näiden toimintojen avulla upotettu kaaviosovellus voi toimia mallipohjaisen lomakkeen ja mallipohjaisen sovelluksen aiempaa integroidumpana osana.  
 
-> [!NOTE]
-> Tämä ominaisuus on käytettävissä vain esiversiona. <br />
-> [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)] 
-
-**ModelDrivenFormIntegration**-objekti sisältää nyt seuraavat uudet menetelmät, joiden avulla tekijät voivat suorittaa toimintoja isäntälomakkeessa.  
+**ModelDrivenFormIntegration**-objekti sisältää nyt seuraavat uudet menetelmät, joiden avulla tekijät voivat suorittaa toimintoja mallipohjaisessa isäntälomakkeessa.  
   
 ### <a name="navigatetomainformentityname-mainformname-recordid"></a>NavigateToMainForm(entityName, mainFormName, recordId)
-Siirtyy isäntälomakkeesta päälomakkeeseen ja näyttää määritetyn tietueen.  
+Siirtyy mallipohjaista isäntälomakkeesta päälomakkeeseen ja näyttää määritetyn tietueen.  
 * **entityName** - Pakollinen merkkijonoparametri, joka määrittää päälomakkeen pääentiteetin.  
 * **formName** - Pakollinen merkkijonoparametri, joka määrittää sen päälomakkeen nimen, johon siirrytään.  
 * **recordId** - Pakollinen merkkijonoparametri, joka määrittää päälomakkeessa näytettävän tietueen tunnuksen.  
@@ -48,7 +44,7 @@ NavigateToMainForm-menetelmän kutsuminen voi tuoda esille seuraavat virhesanoma
   
   
 ### <a name="navigatetoviewentityname-viewname"></a>NavigateToView(entityName, viewName)
-Siirtyy näkymän isäntälomakkeeseen.  
+Siirtyy näkymän mallipohjaiseen isäntälomakkeeseen.  
 * **entityName** - Pakollinen merkkijonoparametri, joka määrittää näkymän pääentiteetin.  
 * **viewName** - Pakollinen merkkijonoparametri, joka määrittää sen päälomakkeen nimen, johon siirrytään.  
  
@@ -72,8 +68,8 @@ OpenQuickCreateForm-menetelmän kutsuminen voi tuoda esille seuraavat virhesanom
   
   
 ### <a name="refreshformshowprompt"></a>RefreshForm(showPrompt)  
-Päivittää isäntälomakkeen tiedot.  
-* **showPrompt** - Pakollinen totuusarvoparametri, joka osoittaa, näytetäänkö vahvistuskehote käyttäjälle ennen isäntälomakkeen tallentamattomien tietojen tallentamista. Arvo voi olla Tosi tai Epätosi.
+Päivittää mallipohjaisen isäntälomakkeen tiedot.  
+* **showPrompt** - Pakollinen totuusarvoparametri, joka osoittaa, näytetäänkö vahvistuskehote käyttäjälle ennen mallipohjaisen isäntälomakkeen tallentamattomien tietojen tallentamista. Arvo voi olla Tosi tai Epätosi.
  
 RefreshForm-menetelmän kutsuminen voi tuoda esille seuraavat virhesanomat.
   
@@ -83,7 +79,7 @@ RefreshForm-menetelmän kutsuminen voi tuoda esille seuraavat virhesanomat.
   
   
 ### <a name="saveform"></a>SaveForm()  
-Tallentaa isäntälomakkeen tiedot.  
+Tallentaa mallipohjaisen isäntälomakkeen tiedot.  
 
 
 > [!NOTE]
@@ -91,7 +87,10 @@ Tallentaa isäntälomakkeen tiedot.
 
 ## <a name="see-also"></a>Katso myös
 [Kaaviosovelluksen upottaminen mallipohjaiseen lomakkeeseen](embed-canvas-app-in-form.md) <br />
-[Nykyisen tietueen välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-current-embedded-canvas-app.md) <br />
-[Liittyvien tietueiden luettelon välittäminen tietokontekstina upotettuun kaaviosovellukseen](pass-related-embedded-canvas-app.md) <br />
+[Upotetun kaaviosovelluksen lisääminen malliin perustuvaan lomakkeeseen](embedded-canvas-app-add-classic-designer.md) <br />
+[Upotetun kaaviosovelluksen muokkaaminen malliin perustuvaan lomakkeeseen](embedded-canvas-app-edit-classic-designer.md) <br />
+[Mallin mukaiseen lomakkeeseen upotetun kaaviosovelluksen näytön koon ja suunnan mukauttaminen](embedded-canvas-app-customize-screen.md) <br />
+[ModelDrivenFormIntegration-ohjausobjektin ominaisuudet ja toiminnot](embedded-canvas-app-properties-actions.md) <br />
 [Upotetun sovelluksen jakaminen](share-embedded-canvas-app.md) <br />
-[Upotettujen kaaviosovellusten käsittelyohjeita](embedded-canvas-app-guidelines.md)
+[Upotettujen kaaviosovellusten käsittelyohjeita](embedded-canvas-app-guidelines.md) <br />
+[Upotettujen kaaviosovellusten siirtäminen mallipohjaisista lomakkeista, jotka on luotu julkista esikatseluversiota käyttäen uusimpaan](embedded-canvas-app-migrate-from-preview.md) <br />

@@ -2,7 +2,7 @@
 title: Mallipohjaisen sovelluksen lomakkeiden käytön hallinta PowerAppsissa | MicrosoftDocs
 description: Päälomakkeiden käytön hallinta
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 06/18/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -71,11 +71,15 @@ search.app:
   
 <a name="BKMK_UseFormScripting"></a>   
 ## <a name="use-form-scripting"></a>Käytä lomakkeen komentosarjaa  
+Asiakkaan API-lomakekonteksti (formContext) sisältää viitteen lomakkeeseen tai lomakkeen kohteeseen, kuten pikanäkymän ohjausobjektin tai muokattavan ruudukon rivin, jota vasten nykyinen koodi suoritetaan. Lisätietoja: [Asiakasohjelman ohjelmointirajapinnan lomakekonteksti](/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context)
 
- Lopuksi verkkosovelluksessa on mahdollista, mutta ei suositeltavaa, että kehittäjä käyttää komentosarjoja lomakkeen Onload-tapahtumassa käyttääkseen [Xrm.Page.ui.formSelector.items -kokoelmaa](http://go.microsoft.com/fwlink/p/?LinkID=513300) kyselläkseen käytettäviä lomakkeita ja käyttää navigointimenetelmää ohjatakseen käyttäjät tiettyyn lomakkeeseen. Muista, että [navigointimenetelmä](http://go.microsoft.com/fwlink/p/?LinkID=513301) aiheuttaa sen, että lomake ladataan uudelleen (ja Onload-tapahtuma toteutuu uudelleen). Tapahtumakäsittelijän oman logiikan tulee aina tarkistaa jokin ehto ennen kuin navigointimenetelmää käytetään, jotta vältetään päättymätön silmukka tai tarpeettomasti rajoitetaan käyttäjien asetuksia navigoida lomakkeiden välillä.  
+> [!IMPORTANT]
+> Dynamics 365 for Customer Engagement -sovelluksen version 9.0 Xrm.Page-objekti on [vanhentunut](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) ja sinun on käytettävä välitetyn suorituksen kontekstiobjektin [getFormContext](/dynamics365/customer-engagement/developer/clientapi/reference/executioncontext/getformcontext)-menetelmää, jotta voit palauttaa viitteen asianmukaiseen lomakkeeseen tai lomakkeessa olevaan kohteeseen.
+<!-- 
+ Finally, in the web application it is possible, but not recommended, for a developer to use scripts in the form Onload event to use the [Xrm.Page.ui.formSelector.items collection](http://go.microsoft.com/fwlink/p/?LinkID=513300) to query available forms and use the navigate method to direct users to a specific form. Remember that the [navigate method](http://go.microsoft.com/fwlink/p/?LinkID=513301) will cause the form to load again (and the Onload event to occur again). Your logic in the event handler should always check some condition before you use the navigate method to avoid an endless loop or unnecessarily restrict users options to navigate between forms.  
   
- Tämä lähestymistapa ei toimi Dynamics 365 for tablets -sovelluksessa, koska useita lomakkeita ei ole valittavissa.  
+ This approach will not work for Dynamics 365 for tablets because multiple forms are not available for selection.  -->
 
-### <a name="next-steps"></a>Seuraavat vaiheet  
+### <a name="see-also"></a>Katso myös  
 
 [Käyttöoikeusroolien liittäminen lomakkeisiin](https://docs.microsoft.com/dynamics365/customer-engagement/admin/assign-security-roles-form)

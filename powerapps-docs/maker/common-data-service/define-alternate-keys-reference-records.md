@@ -1,8 +1,8 @@
 ---
-title: Viitetietueiden vaihtoehtoisten avainten määrittäminen Common Data Servicessä | MicrosoftDocs
+title: Tietueisiin viittaavien vaihtoehtoisten avainten määrittäminen Common Data Servicen kanssa | MicrosoftDocs
 description: Tietoja tietueisiin viittaavien vaihtoehtoisten avainten määrittämisestä Common Data Servicessä
 ms.custom: ''
-ms.date: 06/06/2018
+ms.date: 06/04/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -61,7 +61,7 @@ Tämän ohjeaiheen tietojen avulla voit valita käytettävän suunnitteluohjelma
 
 Luo vaihtoehtoisia avaimia [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla, jos seuraavia vaatimuksia ei tarvitse ottaa huomioon:
 
-- Luo vaihtoehtoinen avain ratkaisussa, joka on jokin muu kuin Common Data Servicen oletusratkaisu.
+- Luo vaihtoehtoinen avain ratkaisussa, joka on jokin muu kuin Common Data Servicen oletusratkaisu
 - Seuraa helposti luotua järjestelmätyötä, joka seuraa tuki-indeksien luomisen edistymistä
 
 
@@ -75,6 +75,9 @@ Vain näitä kenttiä voi käyttää vaihtoehtoisten kenttien luomisessa:
  - Desimaali
  - Kokonaisluku (kokonaisluku)
  - Yksi tekstirivi (merkkijono)
+ - Päivämäärä ja aika
+ - Valinta
+ - Asetusjoukko
 
 ### <a name="number-of-keys"></a>Avainten määrä
 

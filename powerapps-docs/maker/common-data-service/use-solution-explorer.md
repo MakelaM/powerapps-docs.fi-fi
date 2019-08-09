@@ -2,7 +2,7 @@
 title: Ratkaisujen käyttäminen PowerAppsissa | MicrosoftDocs
 description: Lisätietoja sovellusten luomisesta ja muokkaamisesta ratkaisujen avulla
 ms.custom: ''
-ms.date: 10/29/2018
+ms.date: 06/17/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -12,10 +12,10 @@ applies_to:
   - Dynamics 365 (online)
   - Dynamics 365 Version 9.x
   - powerapps
-author: Mattp123
+author: caburk
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
-ms.author: matp
+ms.author: caburk
 manager: kvivek
 search.audienceType:
   - maker
@@ -93,16 +93,17 @@ Voit avata PowerAppsissa perinteisen ratkaisunhallinnan valitsemalla vasemmassa 
 
 - Ratkaisussa ei voi käyttää mukautettuja yhdysohjelmia.
 - Kaaviosovellukset on avattava ratkaisun tuonnin jälkeen, jotta yhteyden päivittyvät.
-- Vaikka kaaviosovellus olisi pakattu hallittuna ratkaisuna, sitä voi silti muokata kohdeympäristössä.
+- Vaikka kaaviosovellus olisi pakattu hallittuna ratkaisuna, sitä voi silti muokata kohdeympäristössä, mutta ei julkaista uudelleen.
 - Riippuvuuksia ei voi käyttää kaaviosovelluksissa.
 - Hallitun ratkaisun poistaminen ei johda palautumiseen toiseen kaaviosovelluksen versioon. 
--   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service (CDS) -tietokannasta.
--   Common Data Servicen ohjelmointirajapinnat, joilla kaaviosovelluksia kutsutaan, on estetty eikä niiden kautta palauteta mitään. 
+-   Kaaviosovelluksen käyttöoikeuksia (CRUD ja suojaus) hallitaan kokonaisuudessaan PowerApps-tietokannasta eikä Common Data Service (Common Data Service) -tietokannasta.
+-   Common Data Service -ohjelmointirajapinnat, joilla kaaviosovelluksia kutsutaan, on estetty eikä niiden kautta palauteta mitään. 
 -   Ratkaisussa luotuja kaaviosovelluksia ja työnkulkuja ei voi jakaa rinnakkaisomistajana AAD-käyttöoikeusryhmälle.
 -   Kaaviosovellukset eivät näy perinteisessä ratkaisunhallinnassa.
 - Painikkeen avulla käynnistettävät työnkulut eivät ole käytettävissä ratkaisuissa.
 - Kaaviosovelluksen avulla käynnistettävät työnkulut eivät ole käytettävissä ratkaisuissa.
 - Microsoft 365 -sovellusten, kuten SharePointin ja Excelin, käynnistämät työnkulut eivät ole käytettävissä ratkaisuissa.
+- Ratkaisujen kulut eivät tue delegoitua todennusta. Esimerkiksi työnkulun käyttöoikeutta ei myönnetä automaattisesti sen perusteella, että työnkulku luotiin SharePoint-luettelosta.
 
  Lisätietoja ratkaisun yksittäisten osien mukauttamisesta on seuraavissa ohjeaiheissa:  
   

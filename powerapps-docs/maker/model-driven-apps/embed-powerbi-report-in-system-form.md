@@ -29,9 +29,9 @@ search.app:
 Kun Power BI -raportteja käytetään PowerAppsin mallipohjaisissa sovelluksissa, järjestelmälomakkeisiin saadaan monipuoliset raportti- ja analyysitoiminnot, minkä ansiosta käyttäjät saavat tehtyä enemmän. Tällä tavoin tietoja voidaan kerätä eri järjestelmistä ja mukauttaa ne yhden tietueen kontekstitasolle.
  
 ## <a name="prerequisites"></a>Edellytykset
-Power BI -sisällön upottaminen on valinnainen ominaisuus, ja se on poistettu oletusarvoisesti käytöstä kaikissa ympäristöissä. Se on otettava käyttöön, ennen kuin voit upottaa Power BI -sisällön. Lisätietoja: [Power BI -visualisointien ottaminen käyttöön organisaatiossa](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization).
+Power BI -sisällön upottaminen on valinnainen ominaisuus, ja se on poistettu oletusarvoisesti käytöstä kaikissa ympäristöissä. Se on otettava käyttöön, ennen kuin voit upottaa Power BI -sisällön. Lisätietoja: [Power BI -visualisointien ottaminen käyttöön organisaatiossa](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization).
 
-Tämä ominaisuus edellyttää ratkaisun vientiä, sen muokkaamista xml-koodikatkelman lisäämiseksi ja tuomista takaisin ympäristöön. Varmista, että tuot muutokset kohdeympäristöön käyttämällä ainoastaan hallittua ratkaisua. Lisätietoja päivityksen asentamisesta aiemmin luotuun hallittuun ratkaisuun on kohdassa [Ratkaisujen tuominen. päivittäminen ja vieminen](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/import-update-export-solutions).
+Tämä ominaisuus edellyttää ratkaisun vientiä, sen muokkaamista xml-koodikatkelman lisäämiseksi ja tuomista takaisin ympäristöön. Varmista, että tuot muutokset kohdeympäristöön käyttämällä ainoastaan hallittua ratkaisua. Lisätietoja päivityksen asentamisesta aiemmin luotuun hallittuun ratkaisuun on kohdassa [Ratkaisujen tuominen. päivittäminen ja vieminen](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions).
 
 ## <a name="embed-without-contextual-filtering"></a>Upottaminen ilman tilannekohtaista suodatusta
 Voit käyttää Power BI -raportteja ja -ruutuja yksinkertaisesti upottamalla ne, jonka jälkeen saat täsmälleen saman raportin. Tämä ei tarkoita niiden muuttamista nykyisen tilannekohtaisen mallipohjaisen lomakkeen mukaiseksi, joten saat saman raportin tai ruudun entiteetin kaikissa tietueissa. Seuraavassa raportissa näkyy esimerkiksi kaikkien asiakkaiden maantieteellinen sijainti kerralla, ja se kätevä yhteenvetotietojen näyttämiseen.
@@ -39,7 +39,7 @@ Voit käyttää Power BI -raportteja ja -ruutuja yksinkertaisesti upottamalla ne
 > [!div class="mx-imgBorder"] 
 > ![](media/embed-powerbi/embed-powerbi-report-in-system-form-unfiltered.png "Embed-powerbi-report-in-system-form-unfiltered")
 
-Voit upottaa järjestelmälomakkeisiin osa, joka isännöi Power BI -raportteja ja -ruutuja lisäämällä seuraavan koodikatkelman lomalleen XML-tiedoston `<sections>`-lohkoon. Tuo sitten ratkaisu kohdeympäristössä. 
+Voit upottaa järjestelmälomakkeisiin osa, joka isännöi Power BI -raportteja ja -ruutuja lisäämällä seuraavan koodikatkelman lomakkeen XML-tiedoston `<sections>`-lohkoon. Tuo sitten ratkaisu kohdeympäristössä. 
 
 ```xml
 <section id="{d411658c-7450-e1e3-bc80-07021a04bcc2}" locklevel="0" showlabel="true" IsUserDefined="0" name="tab_4_section_1" labelwidth="115" columns="1" layout="varwidth" showbar="false">
@@ -90,7 +90,7 @@ Suodatus tehdään lisäämällä `<PowerBIFilter>`-elementti `<parameter>`-lohk
         <PowerBIGroupId>00000000-0000-0000-0000-000000000000</PowerBIGroupId>
         <PowerBIReportId>544c4162-6773-4944-900c-abfd075f6081</PowerBIReportId>
         <TileUrl>https://xyz.powerbi.com/reportEmbed?reportId=544c4162-6773-4944-900c-abfd075f6081</TileUrl>
-        <PowerBIFilter>{"Filter": "[{\"$schema\":\"basic\",\"target\":{\"table\":\"My Active Accounts\",\"column\":\"Account Name\"},\"operator\":\"In\",\"values\":[$a],\"filterType\":1}]", "Alias": {"$a": "name"</PowerBIFilter>
+        <PowerBIFilter>{"Filter": "[{\"$schema\":\"basic\",\"target\":{\"table\":\"My Active Accounts\",\"column\":\"Account Name\"},\"operator\":\"In\",\"values\":[$a],\"filterType\":1}]", "Alias": {"$a": "name"}}</PowerBIFilter>
     </parameters>
 </control>
 ```
@@ -120,7 +120,7 @@ Seuraava taulukko sisältää ominaisuudet, joita ei käytetty edellisessä esim
             }
     }
 
-Edellisen lausekkeen kohdeosa määrittää taulukon ja sarakkeen, joissa suodattimia käytetään. Operaattori määrittää logiikan ja arvot, joilla PowerAppsin mallipohjaisesta sovelluksessa välitetyt tiedot määritetään. Yleisessä parametroinnissa arvot muodostetaan määrittämällä tunnus. Edellisessä lausekkeessa asiakkaan **firstname**- ja **lastname**-arvot välitetään ja jompikumpi niistä haetaan Power BI -raportin **Asiakkaan nimi** -sarakkeessa. Huomaa, että **firstname** ja **lastname** ovat asiakasentiteetin määritteiden yksilöiviä nimiä, joiden arvo välitetään tässä. 
+Edellisen lausekkeen kohdeosa määrittää taulukon ja sarakkeen, joissa suodattimia käytetään. Operaattori määrittää logiikan ja arvot, joilla PowerAppsin mallipohjaisesta sovelluksessa välitetyt tiedot määritetään. Yleisessä parametroinnissa arvot muodostetaan määrittämällä tunnus. Edellisessä lausekkeessa asiakkaan **firstname** ja **lastname** -arvot välitetään ja jompikumpi niistä haetaan **Asiakkaan nimi** -sarakkeesta Power BI -raportissa. Huomaa, että **firstname** ja **lastname** ovat asiakasentiteetin määritteiden yksilöiviä nimiä, joiden arvo välitetään tässä. 
 
 Voit luoda monimutkaisia suodatinlausekkeita tutustumalla esimerkkeihin kohdassa [Suodattimien muodostaminen](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) ja antamalla soveltuvat $schema- ja filterType-arvot. Varmista, että käytät jokaisessa suodatinosan literaalissa ohjausmerkkiä *\"*, jotta JSON muodostetaan oikein.
 
@@ -140,14 +140,14 @@ Voit luoda monimutkaisia suodatinlausekkeita tutustumalla esimerkkeihin kohdassa
    > [!div class="mx-imgBorder"] 
    > ![](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "Embed-powerbi-report-in-system-form-auth-3")
 
-5. Raporttitietojen PowerAppsissa näytettävä näkymä on sama kuin Power BI:ssä eivätkä PowerAppsin käyttöoikeusroolit ja oikeudet vaikuta näytettäviin tietoihin. Tiedot ovatkin käytännössä samat, jotka Power BI -tietojoukon tekijä näkisi. Jos haluat käyttää PowerAppsin käyttöoikeusroolien ja ryhmien kaltaisia tietojen käyttöoikeusrajoituksia, käytä [Power BI:n rivitason suojausta](https://docs.microsoft.com/en-us/power-bi/service-admin-rls).
+5. Raporttitietojen PowerAppsissa näytettävä näkymä on sama kuin Power BI:ssä eivätkä PowerAppsin käyttöoikeusroolit ja oikeudet vaikuta näytettäviin tietoihin. Tiedot ovatkin käytännössä samat, jotka Power BI -tietojoukon tekijä näkisi. Jos haluat käyttää PowerAppsin käyttöoikeusroolien ja ryhmien kaltaisia tietojen käyttöoikeusrajoituksia, käytä [Power BI:n rivitason suojausta (RLS)](https://docs.microsoft.com/power-bi/service-admin-rls).
 6. Jos lomake ei näytä Power BI -raporttia ratkaisun tuomisen ja mukautusten julkaisemisen jälkeen, avaa se mallipohjaisessa lomake-editorissa ja tallenna se, jolloin lomakkeen JSON luodaan uudelleen.
 
 
 ### <a name="see-also"></a>Katso myös
 
-[Power BI -koontinäytön upottaminen PowerAppsin omaan mallipohjaiseen koontinäyttöön](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
+[Power BI -koontinäytön upottaminen PowerAppsin omaan mallipohjaiseen koontinäyttöön](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
 
-[Power BI:n käyttäminen Dynamics 365 for Customer Engagementin kanssa](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/use-power-bi)
+[Käytä Power BI:tä Dynamics 365 for Customer Engagement -sovelluksen kanssa](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
 
 [Ratkaisujen tuominen. päivittäminen ja vieminen](../common-data-service/import-update-export-solutions.md)

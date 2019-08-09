@@ -2,7 +2,7 @@
 title: Ratkaisun tasojen tarkasteleminen | MicrosoftDocs
 description: Lisätietoja ratkaisun tasojen käyttämisestä
 keywords: null
-ms.date: 04/10/2019
+ms.date: 04/18/2019
 ms.service: powerapps
 ms.custom: null
 ms.topic: article
@@ -26,10 +26,12 @@ search.app:
   - D365CE
 ---
 
+<!--note from editor: Best practice is that H1 title and title in metadata are different.    -->
+
 # <a name="view-solution-layers"></a>Ratkaisun tasojen tarkasteleminen
 Ratkaisun tasojen avulla voi tarkastella kaikkia osan muutoksia, jotka tapahtuvat ajan kuluessa ratkaisun muutosten vuoksi. Ratkaisun tasolla voi porautua tietyn osan muutetun tai muuttumattoman ominaisuuden tietoihin ja tarkastella niitä. 
 
-Ratkaisun tasojen avulla voi tehdä seuraavaa: 
+Ratkaisun tasot: 
 -   Voit tarkastella järjestystä, jossa ratkaisu on muuttanut osaa. 
 -   Voit tarkastella osan kaikkia ominaisuuksia tietyssä ratkaisussa. Voit tarkastella myös osaan tehtyjä muutoksia. 
 -   Ratkaisun tasojen avulla voi tehdä vianmäärityksen riippuvuudesta tai ratkaisun tasoihin liittyvistä ongelmista, kun ratkaisun muutoksesta kertovassa kohdassa esitellyn osan muutostiedot näytetään.
@@ -37,25 +39,27 @@ Ratkaisun tasojen avulla voi tehdä seuraavaa:
 ## <a name="view-the-solution-layers-for-a-component"></a>Osan ratkaisun tasojen tarkasteleminen
 Voit käyttää ratkaisun tasoja ratkaisunhallinnan **Osat**-luettelosta tai **Riippuvuuden tiedot** -valintaikkunasta. 
 
-1. Jos haluat tarkastella ratkaisun osia **Osat**-luettelosta, [avaa ratkaisunhallinta](../model-driven-apps/advanced-navigation.md#solution-explorer), valitse **Osat**-luettelosta osa, esimerkiksi **Asiakas**, ja valitse sitten työkalurivin **Ratkaisun tasot**. 
+<!--note from editor: In step 2 below, does the page display a name at top? If so, use the same capitalization in text. -->
+
+1. Jos haluat tarkastella ratkaisutasoja **Komponentti**-luettelossa, avaa [ratkaisun hallinta](../model-driven-apps/advanced-navigation.md#solution-explorer). Valitse **Komponentit**-luettelosta komponentti, esimerkiksi **Asiakkuus**, ja valitse sitten työkaluriviltä **ratkaisun tasot**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-toolbar.png "Ratkaisun tasot -painike")
+   > ![Ratkaisun tasot -painike](media/solution-layers-toolbar.png "Ratkaisun tasot -painike")
 
-2. Näyttöön avautuu Ratkaisun tasot -sivu, jolla näkyvät osan kaikki tasot, kuten tässä näytetty asiakasentiteetti. Uusin taso näkyy ylimpänä. Valitse ratkaisun taso, jos haluat tarkastella sen tietoja. 
+2. Ratkaisun taso -sivu tulee näkyviin. Se näyttää komponentin jokaisen tason, kuten **Asiakkuus**-entiteetti, joka esitetään tässä. Uusin taso näkyy ylimpänä. Valitse ratkaisun taso, jos haluat tarkastella sen tietoja. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-list.png "Ratkaisun tasot -luettelo")
+   > ![Ratkaisun tasojen luettelo](media/solution-layers-list.png "Ratkaisun tasojen luettelo")
 
 3. **Ratkaisun taso** -valintaikkunan **Muutetut ominaisuudet** -välilehti sisältää vain ne ominaisuudet, joita on muokattu ratkaisun tietyn tason osana. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-change-prop.png "Ratkaisun tason muutetut ominaisuudet")
+   > ![Ratkaisun tasojen muuttuneet ominaisuudet](media/solution-layers-change-prop.png "Ratkaisun tasojen muuttuneet ominaisuudet")
 
 4. Valitse **Kaikki ominaisuudet** -välilehti, jos haluat tarkastella ratkaisun tason kaikkia ominaisuuksia, esimerkiksi muutettuja ja muuttamattomia ominaisuuksia. 
 
    > [!div class="mx-imgBorder"] 
-   > ![](media/solution-layers-all-prop.png "Ratkaisun tason kaikki ominaisuudet")
+   > ![Ratkaisun tasojen kaikki ominaisuudet](media/solution-layers-all-prop.png "Ratkaisun tasojen kaikki ominaisuudet")
 
-## <a name="see-also"></a>Katso myös
+### <a name="see-also"></a>Katso myös
 [Ratkaisujen yleiskatsaus](solutions-overview.md)

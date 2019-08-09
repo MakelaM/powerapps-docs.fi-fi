@@ -4,7 +4,7 @@ description: 'Tietoja siitä, miten voit näyttää näkymässä mukautettuja ku
 ms.custom: ''
 ms.date: 02/14/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -104,7 +104,7 @@ search.app:
 > [!IMPORTANT]
 > Tässä mallissa tarvitaan mahdollisuusentiteetti, joka on käytettävissä Dynamics 365 for Customer Engagement -sovelluksissa.
   
-```  
+```javascript
 function displayIconTooltip(rowData, userLCID) {      
     var str = JSON.parse(rowData);  
     var coldata = str.opportunityratingcode_Value;  

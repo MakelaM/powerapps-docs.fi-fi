@@ -2,8 +2,8 @@
 title: Mallipohjaisten Unified Interface -sovellusten ominaisuuksien määrittäminen PowerAppsissa | MicrosoftDocs
 description: Tietoja sovelluksen ruudukko-ohjausobjektin määrittämisestä
 keywords: ''
-ms.date: 06/06/2018
-ms.service: crm-online
+ms.date: 06/03/2019
+ms.service: powerapps
 ms.custom: null
 ms.topic: article
 applies_to:
@@ -74,7 +74,8 @@ Vain luku -ruudukon ohjausobjektien lisäämisen avulla voit määrittää seura
 
     ![Muokkaa käyttäytymisen muuttumista](media/UnifiedInterface_ReadOnlyGrid_EditReflow.png "Muokkaa käyttäytymisen muuttumista")
 
-    b. Valitse ruudukon muutostyyppi **staattiseen asetukseen sitominen** avattavasta luettelosta.
+    b. Valitse ruudukon muutostyyppi **staattiseen asetukseen sitominen** avattavasta luettelosta. 
+
     |Muutostyyppi|Kuvaus|
     |--------------|--------------------|
     |**Suorita työnkulku uudelleen**|Toiminnolla voi tehdä ruudukosta luettelotilan sen mukaan, kun ei ole riittävästi näyttötilaa.|

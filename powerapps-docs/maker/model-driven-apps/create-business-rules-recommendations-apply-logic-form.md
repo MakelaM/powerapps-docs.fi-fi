@@ -26,7 +26,7 @@ search.app:
 ---
 # <a name="create-business-rules-and-recommendations-to-apply-logic-in-a-model-driven-app-form"></a>Liiketoimintasääntöjen ja suositusten luominen mallipohjaisen sovelluksen lomakkeen logiikan käyttämiseksi
 
-Tässä ohjeaiheessa kerrotaan, miten liiketoimintasääntöjä ja -suosituksia luodaan käyttämällä lomakelogiikka mallipohjaisessa sovelluksessa ilman, että on kirjoitettava JavaScript-koodia tai luotava laajennuksia. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Niitä voidaan käyttää pää- ja pikalomakkeissa. Ne toimivat mallipohjaisissa sovelluksissa, Dynamics 365 Customer Engagement -verkkosovelluksissa, Dynamics 365 for tablets- ja Dynamics 365 for Outlook (online ja offline-tila) -sovelluksissa.
+Tässä ohjeaiheessa kerrotaan, miten liiketoimintasääntöjä ja -suosituksia luodaan käyttämällä lomakelogiikka mallipohjaisessa sovelluksessa ilman, että on kirjoitettava JavaScript-koodia tai luotava laajennuksia. Liiketoimintasäännöt on yksinkertainen käyttöliittymä, jossa voi ottaa käyttöön ja ylläpitää nopeasti muuttuvia ja yleisesti käytettyjä sääntöjä. Niitä voidaan käyttää pää- ja pikaluontilomakkeissa ja ne toimivat mallipohjaiset sovelluksissa, Dynamics 365 for Customer Engagement -verkkosovelluksissa, Dynamics 365 for tablets -ratkaisussa ja Dynamics 365 for Outlookissa (online- tai offline-tilassa).
 
 > [!NOTE]
 > Lisätietoja entiteetin liiketoimintasäännön määrittämisestä siten, että sittä käytetään kaikissa lomakkeissa ja palvelimessa on kohdassa [Entiteetin liiketoimintasäännön luominen](/powerapps/maker/common-data-service/data-platform-create-business-rule).
@@ -150,7 +150,14 @@ Liiketoimintasääntö saattaa jäädä suorittamatta, koska sääntö, johon ke
      > [!div class="mx-imgBorder"] 
      > ![](media/account-name-on-form.png "Asiakkaan nimi -kenttä lomakkeessa")
 
-## <a name="next-steps"></a>Seuraavat vaiheet  
+## <a name="frequently-asked-questions-faq"></a>Usein kysyttyjä kysymyksiä (FAQ)
+*Voivatko liiketoimintasäännöt avata kenttiä vain luku -muodossa?*
+- Kyllä, liiketoimintasääntö voi poistaa kenttien lukituksen ja muokata toimintoja vain luku -muodossa.
+
+*Miten voin tehdä vianmäärityksen liiketoimintasäännölle, joka ei toimi?* 
+- Katso [Jääkö lomakkeen liiketoimintasääntö käynnistymättä?](#is-your-business-rule-not-firing-for-a-form) tässä ohjeaiheessa.
+
+## <a name="see-also"></a>Katso myös  
  [Mukautetun liiketoimintalogiikan luominen prosessien avulla](guide-staff-through-common-tasks-processes.md)   
  [Liiketoimintaprosessin luominen](/flow/create-business-process-flow)   
 

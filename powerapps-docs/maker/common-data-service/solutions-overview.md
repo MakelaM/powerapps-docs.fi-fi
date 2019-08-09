@@ -2,7 +2,7 @@
 title: Ratkaisujen kanssa työskentely PowerAppsissa | MicrosoftDocs
 description: 'Tietoja siitä, miten ratkaisut jaetaan'
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 05/28/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -26,7 +26,7 @@ search.app:
    
 # <a name="solutions-overview"></a>Ratkaisujen yleiskatsaus  
 
-  PowerAppsissa ratkaisuja käytetään siirtämään sovelluksia ja komponentteja ympäristöstä toiseen tai käyttämään mukautussarjoja aiemmin luoduissa sovelluksissa. Ratkaisuun sisältyy vähintään yksi sovellus ja muita osia, kuten entiteettejä ja asetusjoukkoja. Voit hankkia ratkaisun [AppSourcesta](https://appsource.microsoft.com/) tai riippumattomalta ohjelmistotoimittajalta.
+  PowerAppsissa ratkaisuja käytetään siirtämään sovelluksia ja komponentteja ympäristöstä toiseen tai käyttämään mukautussarjoja aiemmin luoduissa sovelluksissa. Ratkaisuun sisältyy vähintään yksi sovellus ja muita osia, kuten entiteettejä ja asetusjoukkoja. Voit hankkia ratkaisun [AppSourcesta](https://appsource.microsoft.com/) tai riippumattomalta ohjelmistotoimittajalta (ISV).
   
 Lisätietoja: [Raportti: Ratkaisun elinkaaren hallinta](https://www.microsoft.com/en-us/download/details.aspx?id=57777)  
   
@@ -37,7 +37,7 @@ Lisätietoja: [Raportti: Ratkaisun elinkaaren hallinta](https://www.microsoft.co
   
 -   Ratkaisujen luominen on valinnaista. Voit luoda kaikki PowerApps-ympäristön sovellukset tai mukauttaa niitä suoraan ilman ratkaisun luomista.  
   
--   Kun mukautat PowerApps-ympäristöä suoraan ratkaisua luomatta, käsittelet erityisratkaisua, jonka nimi on **Common Data Services -oletusratkaisu**. Tämä ratkaisu sisältää kaikki PowerApps-ympäristössä tekemäsi mukautukset.  
+-   Kun mukautat PowerApps-ympäristöä suoraan ratkaisua luomatta, käsittelet erityisratkaisua, jonka nimi on **Common Data Service -oletusratkaisu**. Tämä ratkaisu sisältää kaikki PowerApps-ympäristössä tekemäsi mukautukset.  
   
 -   Käytössä on myös toinen erityisratkaisu, **Oletusratkaisu**. Tämä ratkaisu sisältää järjestelmän kaikki osat riippumatta siitä, kuka ne on luonut. Voit viedä **oletusratkaisun** ja luoda varmuuskopion organisaatiossa määritetyistä mukautuksista. Muutosten varmuuskopiointi varmuuden vuoksi on hyvä käytäntö.  
   

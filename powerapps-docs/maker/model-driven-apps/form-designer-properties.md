@@ -82,4 +82,4 @@ Mallipohjaisen lomakkeiden suunnitteluohjelman oikeassa ruudussa on ominaisuusru
 
 ## <a name="see-also"></a>Katso myös
 [Mallipohjaisen sovelluksen lomakkeen suunnitteluohjelman yleiskatsaus](form-designer-overview.md) <br />
-[Lomakkeiden luominen ja muokkaaminen lomakkeiden suunnitteluohjelman avulla](create-and-edit-forms.md)
+[Lomakkeiden luominen tai muokkaaminen lomakkeiden suunnitteluohjelman avulla](create-and-edit-forms.md)

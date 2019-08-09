@@ -24,7 +24,7 @@ search.app:
 ---
 # <a name="types-of-entities"></a>Entiteettien tyypit
 
-Ennen entiteettien luomista ja muokkaamista Common Data Servicessä on tiedettävä, että olemassa on erityyppisiä entiteettejä. Kun mukautettu entiteetti on luotu, näitä tyyppejä ei voi muuttaa. Kaksi tärkeintä divisioonaa perustuvat entiteetin omistukseen ja siihen, ovatko entiteetit aktiviteettientiteettejä.  
+Ennen entiteettien luomista ja muokkaamista Common Data Service:ssa on tiedettävä, että olemassa on erityyppisiä entiteettejä. Kun mukautettu entiteetti on luotu, näitä tyyppejä ei voi muuttaa. Kaksi tärkeintä divisioonaa perustuvat entiteetin omistukseen ja siihen, ovatko entiteetit aktiviteettientiteettejä.  
   
 <a name="BKMK_EntityOwnership"></a>
 
@@ -56,10 +56,10 @@ Seuraavassa taulukossa on Common Data Service -oletusympäristön käytettäviss
 |Nimi|Kuvaus|Näytä aktiviteettivalikoissa|Viite|
 |----------|-----------------|----------------|---------------|  
 |**Tapaaminen**|Sitoutuminen, jolle on määritetty aikaväli aloitus- ja päättymisaikoineen sekä kestoineen.|Kyllä|[Tapaaminen](/powerapps/developer/common-data-service/reference/entities/appointment)|
-|**Sähköposti**|Sähköpostiprotokollia käyttämällä toimitettava aktiviteetti.|Kyllä|[Sähköposti ](/powerapps/developer/common-data-service/reference/entities/email)|
+|**Sähköposti**|Sähköpostiprotokollia käyttämällä toimitettava aktiviteetti.|Kyllä|[Sähköposti](/powerapps/developer/common-data-service/reference/entities/email)|
 |**Faksi**|Aktiviteetti, joka seuraa puhelun tulosta ja faksin sivumäärää sekä tallentaa haluttaessa tiedostosta sähköisen kopion.|Kyllä|[Faksi](/powerapps/developer/common-data-service/reference/entities/fax)|
 |**Kirje**|Kirjeen toimittamista seuraava aktiviteetti. Aktiviteetti voi sisältää kirjeen sähköisen kopion.|Kyllä|[Kirje](/powerapps/developer/common-data-service/reference/entities/letter)|
-|**Phone Call**|Aktiviteetti, jolla seurataan puhelua.|Kyllä|[PhoneCall ](/powerapps/developer/common-data-service/reference/entities/phonecall)|
+|**Phone Call**|Aktiviteetti, jolla seurataan puhelua.|Kyllä|[PhoneCall](/powerapps/developer/common-data-service/reference/entities/phonecall)|
 |**Toistuva tapaaminen**|Toistuvien tapaamisten sarjan pääkohde.|Kyllä|[RecurringAppointmentMaster](/powerapps/developer/common-data-service/reference/entities/recurringappointmentmaster)|
 |**Tehtävä**|Yleinen aktiviteetti, joka tarkoittaa tehtävää työtä.|Kyllä|[Tehtävä](/powerapps/developer/common-data-service/reference/entities/task)|
   

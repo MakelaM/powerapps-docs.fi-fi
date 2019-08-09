@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ''
-ms.date: 04/11/2019
+ms.date: 05/14/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -64,11 +64,11 @@ Asetusten alueen avulla voit esimerkiksi määrittää ympäristön asetuksia, a
 Tarkista ensin, onko tarvitsemasi asetus ![Asetukset-kuvake](media/powerapps-gear.png)  > **Lisämukautukset**-valikossa.
 
 Voit etsiä asetuksia, joita ei ole **Lisämukautukset**-kohdassa, seuraavasti:  
-1.  Käytä ympäristöä Dynamics 365 Administration Center -sovelluksen avulla. Jos ympäristöt sijaitsevat Pohjois-Amerikassa, siirry kohtaan [https://port.crm.dynamics.com/G/instances/InstancePicker.aspx](https://port.crm.dynamics.com/G/instances/InstancePicker.aspx). Jos ympäristöt sijaitsevat muualla, saat lisätietoja Suora kirjautuminen Dynamics 365 Administration Center .sovellukseen -kohdasta.
-2.  Valitse haluamasi ympäristö ja valitse sitten **Avaa**.
+1.  Valitse PowerApps -mallipohjaisen sovelluksen sovellustyökaluriviltä **Asetukset** ![Asetukset](../model-driven-apps/media/powerapps-gear.png) ja valitse sitten **Lisäasetukset**. 
+2.  Valitse **Asetukset** ja valitse sitten haluamasi asetusalue.
 
     > [!div class="mx-imgBorder"] 
-    > ![Avoin ympäristö](media/open-environment.png)
+    > ![Asetusalueet](media/settings-areas.png) 
 
 ## <a name="see-also"></a>Katso myös
 [Mallipohjaisen sovelluksen luominen tai muokkaaminen sovellusten suunnitteluohjelmalla](create-edit-app.md)

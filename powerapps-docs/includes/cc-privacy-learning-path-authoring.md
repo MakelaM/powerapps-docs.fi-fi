@@ -1,65 +1,57 @@
----
-ms.openlocfilehash: 509ad3f5b1b94378b2c6fd7661510b7aef0e3a23
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
-ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61570593"
----
-Kun otat oppimispolun laatimisen käyttöön organisaatiolle palvelussa [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)], käyttäjien luoma (oikeilla käyttöoikeuksilla) oppimispolkusisältö (julkaistu tai luonnosvaiheessa oleva) tallennetaan palveluun [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)]. Kun otat toiminnon käyttöön, [!INCLUDE[pn_azure_cloud_services](pn-azure-cloud-services.md)] voi tallentaa myös seuraavat organisaatioon liittyvät tiedot palvelussa [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]:  
+Kun [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] -organisaation oppimispolun laatimistyökalu otetaan käyttöön, vaaditut käyttöoikeudet omaavien käyttäjien luoma oppimispolun sisältö (julkaistu tai luonnostilassa oleva) tallennetaan [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] -sovellukseen. Kun toiminto otetaan käyttöön, [!INCLUDE[pn_azure_cloud_services](pn-azure-cloud-services.md)] voi myös siepata seuraavat [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] -organisaatioon liittyvät tiedot:  
   
--   vuokraajan organisaatioiden luettelo  
+-   Vuokraajan organisaatioluettelo  
   
--   loppukäyttäjien asiakasohjelmaversiot ([!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]) ja soveltuvat selain- ja käyttöjärjestelmätiedot  
+-   Loppukäyttäjien [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] -asiakasohjelma ja käytettävissä oleva selain- ja käyttöjärjestelmämääritys  
   
--   loppukäyttäjien käyttötiedot, esimerkiksi oppimispolussa käytetty aika tai tallennetut napsautukset  
+-   Loppukäyttäjien käyttötiedot, kuten oppimispoluilla käytetty aika ja tallennetut napsautukset  
   
--   koostetut loppukäyttäjien käyttötiedot, esimerkiksi sijainti, käyttöoikeusrooli ja kieli  
+-   Loppukäyttäjän koostetut tiedot – sijainti, käyttöoikeusrooli, käyttäjän kieli  
   
--   koostetut loppukäyttäjien käyttötiedot, esimerkiksi sijainti, käyttöoikeusrooli ja kieli  
+-   Loppukäyttäjän koostetut tiedot – sijainti, käyttöoikeusrooli, käyttäjän kieli  
   
--   sanatarkka palaute loppukäyttäjiltä.  
+-   Loppukäyttäjien sanallinen palaute  
   
- Järjestelmänvalvoja voi ottaa oppimispolun laatimisen käyttöön (ja myöhemmin poistaa sen käytöstä) **järjestelmäasetusten** valintaikkunan **Yleinen**-välilehdessä.  
+ Järjestelmänvalvoja voi ottaa käyttöön (ja myös poistaa käytöstä) oppimispolun laatimistyökalun **Yleinen**-välilehdessä **Järjestelmäasetukset**-valintaikkunassa.  
   
- Seuraavissa osioissa esitellään oppimispolun laadintaan liittyvät palvelun [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]komponentit ja palvelut.  
+ Seuraavissa osissa esitellään oppimispolun laatimistoimintoon liittyvät [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-komponentit ja -palvelut.  
   
  [!INCLUDE[cc_privacy_note_azure_trust_center](cc-privacy-note-azure-trust-center.md)]  
   
- [Pilvipalvelut](https://azure.microsoft.com/en-us/services/cloud-services/)  
+ [Pilvipalvelut](https://azure.microsoft.com/services/cloud-services/)  
   
- **Verkkopalvelu**  
+ **WWW-palvelu**  
   
- Verkkopalvelu tarjoaa ohjausobjektit, jotka oppimispolun suorituspalvelu näyttää. Verkkopalvelu tukee myös suunnitteluohjelman ohjelmointirajapintaa, jota oppimispolun laadinta käyttää. Palvelu tallentaa nämä ohjausobjektit palveluun [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)].  
+ WWW-palvelut palvelevat ohjausobjekteja, jotka on hahmonnettu asiakasohjelmassa oppimispolun suorituspalvelun avulla. WWW-palvelu tukee myös suunnitteluohjelman ohjelmointirajapintaa, jota oppimispolun laatimistyökalu käyttää. Palvelu tallentaa ohjausobjektit [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] sovellukseen.  
   
- **Kääntäjä (työntekijän rooli)**  
+ **Kääntäjä (työrooli)**  
   
- Kääntäjärooli hallitsee ohjausobjektin julkaisua julkaisuryhmään. Kääntäjää tallentaa viestit julkaisutyöstä jonoon. Tulokset tallennetaan palveluun [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)].  
+ Kääntäjän rooli hallitsee ohjausobjektin julkaisua julkaisuryhmään. Kääntäjä tallentaa julkaisutyöhön liittyvät viestit jonon avulla. Tulosten tallennuspaikka on [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)].  
   
- [Azure SQL -tietokanta](https://azure.microsoft.com/en-us/services/sql-database/)  
+ [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)  
   
- Oppimispolku tallentaa palvelun [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] avulla  
+ Oppimispolku tallentaa seuraavat kohteet [!INCLUDE[pn_Azure_SQL_Database_long](pn-azure-sql-database-long.md)] -tietokannan avulla:  
   
--   oppimispolun luomat ohjausobjektit  
+-   Oppimispolun avulla luodut ohjausobjektit.  
   
--   oppimispolun laadintaan liittyvät määritykset.  
+-   Määritykseen liittyvä oppimispolun laatimistyökalu.  
   
- [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/)  
+ [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)  
   
- Oppimispolku todentaa verkkopalvelun palvelun [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] avulla.  
+ Oppimispolku todentaa WWW-palvelun [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] -sovelluksen avulla.  
   
- [Azure-liikennehallinta](https://azure.microsoft.com/en-us/services/traffic-manager/)  
+ [Azure-liikenteenhallinta](https://azure.microsoft.com/services/traffic-manager/)  
   
- Oppimispolku käyttää palvelun [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] liikennehallintaa, jolla se tasapainottaa verkkopalvelun kuormituksen käytettävyyden ja suorituskyvyn takaamiseksi.  
+ Oppimispolku käyttää [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-liikenteenhallintaa WWW-palvelun kuormituksen tasapainotuksessa. Tämä varmistaa käytettävyyden ja suorituskyvyn säilymisen.  
   
- [Azure-tallennusjono](https://azure.microsoft.com/en-us/services/storage/)  
+ [Azure-tallennuksen jono](https://azure.microsoft.com/services/storage/)  
   
- Palvelun [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)] tallennusjonon avulla koordinoidaan viestintää verkkopalvelun ja kääntäjäroolien välillä.  
+ [!INCLUDE[pn_azure_shortest](pn-azure-shortest.md)]-tallennuksen jonoa käytetään WWW-palvelun ja kääntäjän roolien välisen tietoliikenteen koordinoimisessa.  
   
- [Azure Blob -säilö](https://azure.microsoft.com/en-us/services/storage/)  
+ [Azure Blob -säilö](https://azure.microsoft.com/services/storage/)  
   
- Oppimispolku tallentaa staattisen sisällön (asiakaspään [!INCLUDE[pn_JavaScript](pn-javascript.md)], kuvat, CSS-sisältö) palvelun [!INCLUDE[pn_azure_blob_storage](pn-azure-blob-storage.md)] avulla.  
+ Oppimispolku käyttää [!INCLUDE[pn_azure_blob_storage](pn-azure-blob-storage.md)] -sovellusta staattisen sisällön (asiakkaan [!INCLUDE[pn_JavaScript](pn-javascript.md)], kuvat, CSS-sisältö) tallentamisessa.  
   
- [Azure-sisältöverkko (CDN)](https://azure.microsoft.com/en-us/services/cdn/)  
+ [Azuren sisällön jakeluverkko (CDN)](https://azure.microsoft.com/services/cdn/)  
   
- Asiakaspään staattinen sisältö ([!INCLUDE[pn_JavaScript](pn-javascript.md)], kuvat ja CSS-tiedostot) tallennetaan välimuistiin CDN:n avulla, jotta ne voidaan tarjota maailmanlaajuisen CDN-verkon kautta.
+ CDN:n avulla asiakkaan staattinen sisältö ([!INCLUDE[pn_JavaScript](pn-javascript.md)], kuvat ja CSS-tiedostot) tallennetaan välimuistiin yleisen CDN-verkon käyttöä varten.

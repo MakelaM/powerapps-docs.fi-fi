@@ -2,7 +2,7 @@
 title: Mallipohjaisten sovellusten hierarkiatietojen visualisoiminen | MicrosoftDocs
 description: 'Tietoja siitä, miten voit tehdä kyselyjä ja visualisoida hierarkiaan liittyviä tietoja'
 ms.custom: ''
-ms.date: 09/19/2018
+ms.date: 05/28/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''

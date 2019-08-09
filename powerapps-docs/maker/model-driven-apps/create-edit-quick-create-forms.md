@@ -2,9 +2,9 @@
 title: Mallipohjaisen sovelluksen pikaluontilomakkeiden luominen tai muokkaaminen PowerAppsissa | MicrosoftDocs
 description: Tietoja pikaluontilomakkeen luomisesta tai muokkaamisesta
 ms.custom: ''
-ms.date: 01/25/2019
+ms.date: 05/14/2019
 ms.reviewer: ''
-ms.service: crm-online
+ms.service: powerapps
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
@@ -108,6 +108,63 @@ Jos lisäät yhdistelmäkentän pikaluontilomakkeeseen, se näytetään erillisi
 4.  Kun olet valmis, valitse **Tallenna**.  
   
 5.  Valitse **Julkaise**, kun haluat nähdä sovelluksen muokatun lomakkeen.  
+
+## <a name="allow-quick-create-property-form-behavior-for-activities"></a>Salli pikaluonti -ominaisuuden käyttö aktiviteettien lomakkeissa
+Päivityksessä 9.1.0.2007 käyttöotettu **Salli pikaluonti** -ominaisuus voidaan ottaa tai poistaa käytöstä kaikissa muissa vakioaktiviteeteissa paitsi toistuvissa tapaamisissa. Voit muuttaa tällä ominaisuudella useimmissa aktiviteeteissa oletusarvoisesti näkyvää lomaketta. **Salli pikaluonti** -ominaisuus on oletusarvoisesti otettu käyttöön ja juuri pikaluontilomake näkyy sovellusalueilla ja sitä tukevissa aktiviteettientiteeteissä. 
+
+> [!div class="mx-imgBorder"] 
+> ![](media/allow-quick-create.png "Salli pikaluonti -ominaisuus tapaamisentiteetissä")
+
+
+### <a name="unified-interface-client-form-display-behavior"></a>Unified Interface -asiakkaan lomakkeen näyttötapa
+Seuraavassa taulukossa ilmoitetaan, mikä lomake näytetään oletusarvoisesti, kun **Salli pikaluonti** -ominaisuus on *käytössä* Unified Interface -asiakasohjelmassa.
+ 
+|Sijainti, josta lomaketta käytetään  |Näytetty lomake  |
+|---------|---------|
+|Tiettyyn aktiviteettiin liitetty ruudukko  | Pikaluonti      |
+|Tiettyyn aktiviteettiin liitetty aliruudukko   |  Pikaluonti     |
+|Aktiviteettien (activitypointer) ruudukko     | Pikaluonti     |
+|Aktiviteettien (activitypointer) liitetty ruudukko   | Pikaluonti    |
+|Aktiviteettien (activitypointer) aliruudukko  | Pikaluonti    |
+|Yleisen komentopalkin +-painike<sup>1</sup>    | Pikaluonti    |
+|Aikajanaseinä   | Pikaluonti    |
+|Aktiviteettien (activitypointer) ruudukko   | Ensisijainen   |
+|Tiettyyn aktiviteettiin liitetty ruudukko    | Ensisijainen   |
+
+<sup>1</sup>Aktiviteetit näkyvät yleisissä**Luo**- tai **+ Uusi** -painikkeissa, kun **Salli pikaluonti** -ominaisuus on käytössä. Tässä tapauksessa käytetään pikaluontilomaketta, jos sellainen on luotu, tai päälomaketta, jos pikaluontilomaketta ei ole. Jos **Salli pikaluonti** on poistettu käytöstä, entiteetin merkintä ei näy.
+
+### <a name="classic-web-client-form-display-behavior"></a>Perinteisen verkkoasiakaslomakkeen toiminta
+
+Seuraavassa taulukossa ilmoitetaan, mikä lomake näytetään oletusarvoisesti, kun **Salli pikaluonti** -ominaisuus on *käytössä* perinteisessä verkkoasiakasohjelmassa.
+
+|Sijainti, josta lomaketta käytetään  |Näytetty lomake  |
+|---------|---------|
+|Tiettyyn aktiviteettiin liitetty ruudukko  | Pikaluonti      |
+|Tiettyyn aktiviteettiin liitetty aliruudukko   |  Pikaluonti     |
+|Aktiviteettien (activitypointer) ruudukko     | Ensisijainen     |
+|Aktiviteettien (activitypointer) liitetty ruudukko   | Ensisijainen    |
+|Aktiviteettien (activitypointer) aliruudukko  | Ensisijainen    |
+|Yleisen komentopalkin +-painike    | Ensisijainen    |
+|Tiettyyn aktiviteettiin liitetty ruudukko   | Ensisijainen    |
+
+ #### <a name="classic-web-client-social-pane-behavior"></a>Perinteisen verkkoasiakasohjelman yhteisöruudun toiminta
+ 
+Yhteisöruutu on erikoistapaus, sillä se ei käytä **Salli pikaluonti** -ominaisuutta vaan eri lomakkeita eri aktiviteettientiteeteissä osoitetulla tavalla.
+
+
+|Aktiviteetti  |Näytetty lomake  |
+|---------|---------|
+|Tehtävä     | Pikaluonti    |
+|Phone Call   | Pikaluonti     |
+|Sähköposti   | Ensisijainen     |
+|Tapaaminen  | Ensisijainen     |
+|Mukautettu aktiviteetti     | Ensisijainen      |
+
+### <a name="solution-import-allow-quick-create-value-behavior"></a>Ratkaisun tuoman Salli pikaluonti -arvon käyttö
+
+Jos tuot arvon versiosta 8.2, seuraavat entiteetit palautetaan lomakkeen oletusnäyttöarvoon riippumatta siitä, mikä on **Salli pikaluonti** -ominaisuuden arvo ratkaisussa, ja päälomake näytetään: tehtävä, puhelu, sähköposti ja tapaaminen. Tässä tilanteessa näiden aktiviteettientiteettien **Salli pikaluonti** -asetuksen arvoksi on palautettava tuonnin jälkeen *käytössä*.
+ 
+Jos version 9.0 ratkaisussa on mukautettu entiteettejä, joissa **Salli pikaluonti** on käytössä, arvo ei muutu tuonnin jälkeen.  Jos tehtävä-, puhelu-, sähköposti- ja tapaamisentiteetin **Salli pikaluonti** -asetukseksi on määritetty *poistettu käytöstä*, tämä arvo korvautuu käytössä-arvolla. Tässä tilanteessa näiden aktiviteettientiteettien **Salli pikaluonti** -asetuksen arvoksi on palautettava tuonnin jälkeen poistettu käytöstä. 
   
-### <a name="next-steps"></a>Seuraavat vaiheet  
+### <a name="see-also"></a>Katso myös  
 [Lomake-editorin käyttöliittymän yleiskatsaus](form-editor-user-interface-legacy.md)

@@ -16,7 +16,7 @@ search.app:
   - D365CE
 ---
 
-# <a name="add-data-to-an-entity-in-common-data-service-by-using-power-query"></a>Tietojen lisääminen Common Data Servicen entiteettiin Power Queryn avulla
+# <a name="add-data-to-an-entity-in-common-data-service-by-using-power-query"></a>Tietojen lisääminen entiteettiin Common Data Servicessä Power Queryn avulla
 Tämän toimintosarjan avulla luodaan entiteetti [Common Data Servicessä](data-platform-intro.md) ja täytetään entiteetin tiedot OData-syötteestä Power Queryn avulla. Voit integroida tiedot esimerkiksi näistä online-lähteistä ja paikallisista lähteistä käyttämällä samoja tekniikoita:
 
 * SQL Server
@@ -67,7 +67,7 @@ Voit seurata tätä ohjeaihetta, jos vaihdat [ympäristöön](../canvas-apps/wor
 
 1. Napsauta tai napauta **Ensisijainen nimi -kenttä** -luettelossa **Yhteyshenkilön nimi** ja napsauta tai napauta sitten oikeassa alakulmassa oleva **Seuraava**.
 
-    Voit määrittää toisen ensisijaisen nimen kentälle, määrittää lähdetaulukon toisen sarakkeen entiteetin jokaiseen kenttään, jotka luot, tai molemmat. Voit myös määrittää, luodaanko kyselyn tekstisarakkeet usean rivin vain yhden rivin tekstinä Common Data Service -palvelussa. Jos haluat noudattaa täysin tätä opetusohjelmaa, jätä sarakkeen oletusvastaavuus.
+    Voit määrittää toisen ensisijaisen nimen kentälle, määrittää lähdetaulukon toisen sarakkeen entiteetin jokaiseen kenttään, jotka luot, tai molemmat. Voit myös määrittää, luodaanko kyselyn tekstisarakkeet usean rivin vai yhden rivin tekstinä Common Data Service -palvelussa. Jos haluat noudattaa täysin tätä opetusohjelmaa, jätä sarakkeen oletusvastaavuus.
 
 1. Kun **Latauksen tila** on **Valmis**, valitse oikeassa alakulmassa oleva **Valmis**.
 
@@ -87,3 +87,6 @@ Jos valitset **Lataa olemassa olevaan entiteettiin** -kohdan, voit määrittää
 Olemme innoissamme näistä toiminnoista ja odotamme kuulevamme palautteesi. [Lähetä meille näitä toimintoja koskevia ehdotuksia ja palautetta](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1)!
 
 Jos näyttöön tulee [oikeuksia koskeva virhesanoma](data-platform-cds-newentity-troubleshooting-mashup.md), ota yhteyttä järjestelmänvalvojaan.
+
+> [!WARNING]
+> Tällä toiminnolla voi ladata enintään 500 000 riviä suoritusta ja projektia kohti.

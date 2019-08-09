@@ -1,5 +1,6 @@
 ---
-title: Entiteettisuhteiden käyttäytyminen (Common Data Service) | MicrosoftDocs
+redirect_url: 'create-edit-entity-relationships#entity-relationship-behavior'
+title: Entiteetin suhteen toiminta (Common Data Service) | Microsoft-dokumentit
 description: <Description>
 ms.custom: ''
 ms.date: 08/01/2018

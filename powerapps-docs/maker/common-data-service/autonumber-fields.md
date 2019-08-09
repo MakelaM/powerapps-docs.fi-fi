@@ -1,5 +1,5 @@
 ---
-title: Kenttien automaattinen numerointi Common Data Servicessä | MicrosoftDocs
+title: Laskurikentät kohteessa Common Data Service | MicrosoftDocs
 description: 'Tietoja automaattisesti numeroitujen kenttien luonnista, hallinnasta ja käytöstä'
 keywords: ''
 ms.date: 02/26/2019
@@ -49,7 +49,7 @@ Numero, jossa on päivämääräetuliite, muodostaa esimerkiksi seuraavanlaisia 
 ### <a name="custom"></a>Mukautettu
 
 Kehittyneiden käyttäjien erikoiskäyttötapauksia varten on mahdollista mukauttaa automaattisesti numeroidun kentän muoto kokonaisuudessaan. Muoto voi koostua merkkijonovakioista, automaattisesti kasvavista numeroista, muotoilluista päivämääristä tai satunnaisista aakkosnumeerisista sarjoista.
-Lisätietoja mukautettujen muotojen määrittämisestä on kohdassa [AutoNumberFormat-asetukset](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
+Lisätietoja mukautettujen muotojen määrittämisestä on kohdassa [AutoNumberFormat-asetukset](https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-auto-number-attributes#autonumberformat-options).
 
 ## <a name="seed-values"></a>Alkuarvot
 
@@ -57,9 +57,7 @@ Automaattisesti numeroidun kentän alkuarvo on ensimmäinen numero, jota käytet
 
 
 > [!IMPORTANT]
-> Mukautetun alkuarvon määrittämistä tuetaan tällä hetkellä vain uutta automaattisesti numeroitua kenttää luotaessa. 
->
-> Alkuarvon määrittäminen muuttaa vain määritetyn määritteen nykyisen numeroarvon nykyisessä ympäristössä. Se ei tarkoita määritteen yleistä aloitusarvoa. Alkuarvo ei sisälly ratkaisuun, kun se tuodaan toiseen ympäristöön. 
+> Alkuarvon määrittäminen muuttaa vain määritetyn määritteen nykyisen numeroarvon nykyisessä ympäristössä. Alkuarvo ei sisälly ratkaisuun, kun se tuodaan toiseen ympäristöön. 
 
 ## <a name="create-an-autonumber-field"></a>Automaattisesti numeroiden kentän luominen
   
@@ -85,4 +83,4 @@ Automaattisesti numeroidun kentän alkuarvo on ensimmäinen numero, jota käytet
 9. Valitse **Valmis**.
 
 ## <a name="see-also"></a>Katso myös
- [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla](create-edit-field-portal.md)
+ [Kenttien luominen ja muokkaaminen Common Data Serviceen PowerApps-portaalin avulla](create-edit-field-portal.md)

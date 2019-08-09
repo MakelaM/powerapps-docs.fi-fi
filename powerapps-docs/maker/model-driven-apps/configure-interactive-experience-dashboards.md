@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ''
-ms.date: 05/21/2018
+ms.date: 04/19/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -46,110 +46,97 @@ Vuorovaikutteisen kokemuksen koontinäytöt tuovat sovelluskäyttäjille, kuten 
 ### <a name="multi-stream-dashboard-standard-view"></a>Monen virran koontinäyttö vakionäkymä  
  Monen virran koontinäytössä on Visuaaliset suodattimet rivin yläosassa ja alla tietovirtoja.  
  
-![Monen viestivirran vuorovaikutteinen koontinäyttö](../model-driven-apps/media/interactive-dashboards-multi-stream.png) 
+![Monen viestivirran vuorovaikutteinen koontinäyttö](media/interactive-dashboards-multi-stream.png) 
    
 ### <a name="multi-stream-dashboard-tile-view"></a>Monen virran koontinäyttö ruutunäkymä  
  Sama koontinäyttö, vain ruutunäkymässä.  
   
- ![Usean viestivirran koontinäytön ruutunäkymä](../model-driven-apps/media/interactive-dashboards-multi-stream-tiles.png "Usean viestivirran koontinäytön ruutunäkymä")  
+ ![Usean viestivirran koontinäytön ruutunäkymä](media/interactive-dashboards-multi-stream-tiles.png "Usean viestivirran koontinäytön ruutunäkymä")  
   
 ### <a name="multi-stream-dashboard-layouts"></a>Monen virran koontinäyttö asettelut  
  Monen virran koontinäyttö voidaan valita neljästä eri asettelusta.  
 
  > [!div class="mx-imgBorder"] 
- > ![Usean viestivirran koontinäyttöjen asetteluja](../model-driven-apps/media/interactive-dashboards-multi-stream-layout.png "Usean viestivirran koontinäyttöjen asetteluja")  
+ > ![Usean viestivirran koontinäyttöjen asetteluja](media/interactive-dashboards-multi-stream-layout.png "Usean viestivirran koontinäyttöjen asetteluja")  
   
 ### <a name="multi-stream-entity-specific-dashboard"></a>Monen virran entiteettikohtainen koontinäyttö  
- Entiteettikohtainen koontinäyttö `Case`-entiteetille näkyy tässä.  
+ Palvelupyyntö-entiteetin entiteettikohtainen koontinäyttö näkyy tässä.  
   
- ![Avointen palvelupyyntöjen koontinäyttö](../model-driven-apps/media/interactive-dashboard-cases-dashboard.PNG "Avointen palvelupyyntöjen koontinäyttö")  
+ ![Avointen palvelupyyntöjen koontinäyttö](media/interactive-dashboard-cases-entity-specific.png "Avointen palvelupyyntöjen koontinäyttö")  
   
 ### <a name="single-stream-dashboard"></a>Yhden virran koontinäyttö  
  Yhden virran koontinäyttö sisältää vasemmalla tietovirrat ja oikealla Visuaaliset suodattimet ja ruudut.  
   
- ![yhden viestivirran interaktiivisen palvelukeskuksen koontinäyttö](../model-driven-apps/media/interactive-dashboards-single-stream.png "yhden viestivirran interaktiivisen palvelukeskuksen koontinäyttö")  
+ ![yhden viestivirran interaktiivisen palvelukeskuksen koontinäyttö](media/interactive-dashboards-single-stream.png "yhden viestivirran interaktiivisen palvelukeskuksen koontinäyttö")  
   
 ### <a name="single-stream-dashboard-layouts"></a>Yhden virran koontinäyttö asettelut  
  Yhden virran koontinäyttö voidaan valita neljästä eri asettelusta.  
  
  > [!div class="mx-imgBorder"] 
- > ![Yhden viestivirran koontinäyttöjen asetteluja](../model-driven-apps/media/interactive-dashboards-single-stream-layout.png "Yhden viestivirran koontinäyttöjen asetteluja")  
+ > ![Yhden viestivirran koontinäyttöjen asetteluja](media/interactive-dashboards-single-stream-layout.png "Yhden viestivirran koontinäyttöjen asetteluja")  
   
 <a name="BKMK_Enable"></a>   
-## <a name="configure-entities-fields-and-security-roles-for-the-interactive-dashboards"></a>Entiteetit, kentät ja vuorovaikutteisten koontinäyttöjen käyttöoikeusroolien määrittäminen  
- Kun määrität vuorovaikutteiset koontinäytöt, ensimmäinen tehtävä on ottaa käyttöön entiteettejä, kenttiä ja vuorovaikutteinen kokemuksen käyttöoikeusrooleja.  
+## <a name="configure-fiter-fields-and-security-roles-for-the-interactive-dashboards"></a>Suodatuskenttien ja käyttöoikeusroolien määrittäminen vuorovaikutteisille koontinäytöille  
+ Kun määrität vuorovaikutteiset koontinäytöt, ensimmäinen tehtävä on ottaa käyttöön suodatuskenttiä ja käyttöoikeusrooleja, jotta niille voidaan määrittää vuorovaikutteiset koontinäytöt. Huomaa, että vuorovaikutteiset koontinäytöt otetaan käyttöön oletusarvoisesti kaikille entiteeteille ja mukautetuille entiteeteille. 
   
-### <a name="entities-enabled-for-interactive-experience"></a>Entiteetit otettu käyttöön vuorovaikutteista kokemusta varten
- Kaikki Unified Interface -liittymän tukemat entiteetit on otettu käytettöön vuorovaikutteisten käyttöpaneelien kautta.
-  
-### <a name="configure-fields"></a>Kenttien määrittäminen  
- Jotta kenttä näkyisi yleisessä suodatuksessa ja olisi mukana viestivirran lajittelussa, voit määrittää kaksi merkintää alla olevan esimerkin mukaisesti palvelupyyntöentiteetin **IsEscalated**-kenttään.  
+### <a name="configure-filter-fields"></a>Suodatuskenttien määrittäminen  
+ Sinun on määritettävä kaksi merkintää, jos haluat, että kenttä näkyy yleisessä suodatuksessa ja että sisällytetään tietovirran lajitteluun:
+
+- Näkyy yleisessä suodatuksessa vuorovaikutteisessa kokemuksessa
+- Lajiteltavissa vuorovaikutteisen kokemuksen koontinäytössä
+
+Tässä esimerkissä **IsEscalated**-kentän palvelupyyntöentiteetissä on käytettävissä kaksi vuorovaikutteisen koontinäytön asetusta.  
 
  > [!div class="mx-imgBorder"] 
- > ![Ota käyttöön yleisen suodatuksen ja lajittelun kenttä käyttöön](../model-driven-apps/media/global-filter-sort-8.png "Ota käyttöön yleisen suodatuksen ja lajittelun kenttä käyttöön")  
+ > ![Ota käyttöön yleisen suodatuksen ja lajittelun kenttä käyttöön](media/enable-filter-sort.png "Ota käyttöön yleisen suodatuksen ja lajittelun kenttä käyttöön")  
   
-### <a name="configure-global-filter-fields"></a>Yleinen suodatus kenttien määrittäminen  
- Jotta kenttä näkyy yleisessä suodattimessa, sinun tulee määrittää **Näkyy yleisessä suodatuksessa vuorovaikutteisessa kokemuksessa** -lippu tähän kenttään. Kentät, jotka olet määrittänyt, näkyy yleinen suodatus pikaikkunassa, kun yleinen suodatus -kuvaketta napsautetaan koontinäyttöotsikossa. Pikaikkunassa palveluneuvoja voi valita kentät, jotka haluavat suodattaa yleisesti, kaavioissa ja myös virroissa ja ruuduissa, jotka perustuvat suodattimen entiteettiin. Lisätietoja suodattimen entiteetistä on tämän ohjeaiheen kohdassa "Monen viestivirran koontinäytön määrittäminen".  
+### <a name="configure-the-appears-in-global-filter-in-interactive-experience-option"></a>Näkyy yleisessä suodatuksessa vuorovaikutteisessa kokemuksessa -vaihtoehdon määrittäminen
+
+1. Avaa [ratkaisunhallinta](advanced-navigation.md#solution-explorer).  
+2. Laajenna **Osat**-kohdasta **Entiteetit** ja laajenna sitten haluamasi entiteetti.
+3. Valitse siirtymisruudussa **Kentät** ja kaksoisnapsauta ruudukossa kenttää, jonka haluat ottaa käyttöön.
+4. Valitse **Yleinen**-välilehdessä **Näkyy yleisessä suodatuksessa vuorovaikutteisessa kokemuksessa** -valintaruutu. Valitse **Tallenna ja sulje**.
+5. Valitse **Julkaise kaikki mukautukset**, jotta muutokset tulevat voimaan.
+  
+ Kentät, jotka otat käyttöön **Näkyvät yleisessä suodattimessa vuorovaikutteisessa** -käyttöympäristössä, näkyvät globaalissa suodattimen hajautusikkunassa, kun yleisen suodattimen kuvaketta napsautetaan koontinäytön otsikossa. Pikaikkunassa palveluneuvoja voi valita kentät, jotka haluavat suodattaa yleisesti, kaavioissa ja myös virroissa ja ruuduissa, jotka perustuvat suodattimen entiteettiin.   
   
  Yleisen suodatuksen pikaikkuna näytetään täällä:  
   
- ![Lisää kaksi yleistä suodatuskenttää](../model-driven-apps/media/interactive-dashboards-global-filter-two-fields.png "Lisää kaksi yleistä suodatuskenttää")  
+ ![Lisää kaksi yleisen suodatuksen kenttää](media/global-filter-escalated.png "Yleisen suodatuksen kentät")  
   
-> [!NOTE]
->  Kun määrität visuaalinen suodatin (vuorovaikutteinen kaavio) kenttien (esimerkiksi prioriteetti tai tila) mukaan, paras käytäntö on myös ottaa käyttöön nämä kentät (prioriteetti, tila) näkymään yleisessä suodattimessa.  
+> [!TIP]
+>  Kun määrität visuaalinen suodattimen kenttien, kuten prioriteetin tai tilan, mukaan, paras käytäntö on näiden kenttien (prioriteetti, tila) näkyminen otetaan käyttöön myös yleisessä suodatuksessa.  
   
-Seuraava toimintosarja sisältää vaiheet yleisen suodattimen lipun määrittämistä varten:
+### <a name="configure-the-sortable-in-interactive-experience-dashboard-option"></a>Lajiteltavissa vuorovaikutteisen kokemuksen koontinäytössä -vaihtoehdon määrittäminen
   
 1. Avaa [ratkaisunhallinta](advanced-navigation.md#solution-explorer).  
+2. Laajenna **Osat**-kohdasta **Entiteetit** ja laajenna sitten haluamasi entiteetti.
+3. Valitse siirtymisruudussa Kentät ja kaksoisnapsauta ruudukossa kenttää, jonka haluat ottaa käyttöön.
+4. Valitse **Yleinen**-välilehdessä **Lajiteltavissa vuorovaikutteisen kokemuksen koontinäytössä** -valintaruutu. Valitse **Tallenna ja sulje**.
+5. Valitse **Julkaise kaikki mukautukset**, jotta muutokset tulevat voimaan.
   
-2. Laajenna **Osat**-kohdasta **Entiteetit** ja laajenna sitten haluamasi entiteetti. Jos entiteetti ei ole näkyvissä, valitse **Lisää olemassa oleva** lisätäksesi sen.  
+Lajittelua varten määritetyt kentät näkyvät avattavan luettelon virran otsikossa. 
+
+Seuraavassa kuvassa näkyy pikaikkuna, jossa on luettelo avattavassa luettelossa olevista lajittelussa käytettävistä kentistä. Oletuslajittelu määritetään aina **Muokattu**-kenttään.  
   
-3.  Valitse siirtymisruudussa **Kentät** ja kaksoisnapsauta ruudukossa kenttää, jonka haluat ottaa käyttöön.  
-  
-4.  Valitse **Yleinen**-välilehdessä **Näkyy yleisessä suodatuksessa vuorovaikutteisessa kokemuksessa** -valintaruutu. Valitse **Tallenna ja sulje**.  
-  
-5.  Valitse **Julkaise**, jotta muutokset tulevat voimaan.  
-  
-6.  Valitse **Asiakkaan mukautusten valmistelu**.  
-  
-### <a name="configure-sortable-fields"></a>Järjestyskenttien määrittäminen  
- Tietovirran lajitteluun käytettävään kenttään tulee määrittää **Lajiteltavissa vuorovaikutteisen kokemuksen koontinäytössä** lippu. Kentät, jotka määrität lajitteluun, näkyvät avattavassa luetteloruudussa **Muokkaa ominaisuutta** -pikaikkunassa, kun käyttäjä valitsee **Lisää (...)** viestivirtaotsikossa. Seuraavassa kuvassa näkyy pikaikkunassa luettelo lajittelussa käytettävissä olevista kentistä avattavassa **Lajitteluperuste**-luettelosta. Oletuslajittelu määritetään aina **Muokattu**-kenttään.  
-  
- ![Lajittele avattavasta luettelosta](../model-driven-apps/media/interactive-dashboard-sortable-fields-dropdown.png "Lajittele avattavasta luettelosta")  
-  
-Seuraava toimintosarja sisältää vaiheet lajittelulipun määrittämistä varten:
-  
-1. Avaa [ratkaisunhallinta](advanced-navigation.md#solution-explorer).   
-2. Laajenna **Osat**-kohdasta **Entiteetit** ja laajenna sitten haluamasi entiteetti. Jos standardi entiteetti ei ole näkyvissä, valitse **Lisää olemassa oleva** lisätäksesi sen.  
-  
-3.  Valitse siirtymisruudussa **Kentät** ja kaksoisnapsauta ruudukossa kenttää, jonka haluat ottaa käyttöön.  
-  
-4.  Valitse **Yleinen**-välilehdessä **Lajiteltavissa vuorovaikutteisen kokemuksen koontinäytössä** -valintaruutu. Valitse **Tallenna ja sulje**.  
-  
-5.  Valitse **Julkaise**, jotta muutokset tulevat voimaan.  
-  
-6.  Valitse **Asiakkaan mukautusten valmistelu**.  
-  
+ ![Lajittele avattavasta luettelosta](media/sort-field.png "Lajittele avattavasta luettelosta")    
+    
 ### <a name="enable-security-roles"></a>Ota käyttöön tietosuojaroolit  
  Valitse ja ota käyttöön käyttöoikeusroolit, jotka voivat tarkastella vuorovaikutteisia raporttinäkymiä.  
   
-Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien ottamiseksi käyttöön:
-  
+#### <a name="enable-security-roles-for-interactive-dashboards"></a>Ota käyttöön käyttöoikeusroolit interaktiivisille koontinäytöille
+
 1. Avaa [ratkaisunhallinta](advanced-navigation.md#solution-explorer).  
   
 2. Valitse **Osat**-kohdassa **Koontinäytöt**.  
   
-4.  Valitse ruudukosta ensin haluamasi vuorovaikutteinen koontinäyttö ja sitten tehtäväpalkissa **Ota käyttöön käyttöoikeusroolit**.  
+3.  Valitse ruudukosta ensin haluamasi vuorovaikutteinen koontinäyttö ja sitten tehtäväpalkissa **Ota käyttöön käyttöoikeusroolit**.  
   
-5.  Valitse **Määritä käyttöoikeusroolit** -valintaikkunassa **Näytä vain näille valituille käyttöoikeusrooleille** -vaihtoehto ja lisää sitten valintamerkki vain niille rooleille, joille haluat antaa käyttöoikeuden. Valitse **OK**.  
+4.  Valitse **Määritä käyttöoikeusroolit** -valintaikkunassa **Näytä vain näille valituille käyttöoikeusrooleille** -vaihtoehto ja lisää sitten valintamerkki vain niille rooleille, joille haluat antaa käyttöoikeuden. Valitse **OK**.  
   
-6.  Valitse **Julkaise**, jotta muutokset tulevat voimaan.  
+5.  Valitse **Julkaise kaikki mukautukset**, jotta muutokset tulevat voimaan.    
   
-7.  Valitse **Asiakkaan mukautusten valmistelu**.  
-  
- ![Ota käyttöön käyttöoikeusroolit](../model-driven-apps/media/interactive-dashboards-enable-security-roles.png "Ota käyttöön käyttöoikeusroolit")  
-  
- ![käyttöoikeusroolien määrittäminen](../model-driven-apps/media/interactive-dashboards-assign-security-roles.png "käyttöoikeusroolien määrittäminen")  
+ ![Ota käyttöön käyttöoikeusroolit](media/security-roles.png "Ota käyttöön käyttöoikeusroolit")    
   
 <a name="BKMK_Configure"></a>   
 ## <a name="configure-interactive-experience-dashboards"></a>Vuorovaikutteisen kokemuksen koontinäyttöjen määrittäminen  
@@ -161,29 +148,29 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
   
 2.  Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. 
 
-3.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**.  
+3.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**. 
   
 4.  Valitse asettelu, 2, 3 tai 4 sarakeleveyttä.  
   
 5.  Kun koontinäyttölomake avautuu, täytä suodattamista tiedot lomakkeen yläosassa seuraavasti.  
  
  > [!div class="mx-imgBorder"] 
- > ![Lisää visuaaliset suodattimet](../model-driven-apps/media/interactive-dashboards-add-visual-filters.png "Lisää visuaaliset suodattimet")  
+ > ![Lisää visuaaliset suodattimet](media/interactive-dashboards-add-visual-filters.png "Lisää visuaaliset suodattimet")  
   
-   - **Suodata entiteetti**: Visuaaliset suodattimet (vuorovaikutteisia kaavioita) ja yleinen suodatus määritteet perustuvat tähän entiteettiin.  
+   - **Suodata entiteetti**: visuaaliset suodattimet ja yleisen suodatuksen määritteet perustuvat tähän entiteettiin.  
       
-    - **Entiteettinäkymä**: Visuaaliset suodattimet (vuorovaikutteisia kaavioita) perustuvat tähän näkymään.  
+    - **Entiteettinäkymä**: visuaaliset suodattimet perustuvat tähän näkymään.  
       
     - **Suodatusperuste**: kenttä, johon aikavälisuodatinta käytetään.  
       
     - **Aikaväli**: aikavälisuodattimen oletusarvo **Suodatusperuste**-kenttään.  
       
- Kun olet määrittänyt tietoja suodattamista, käynnistä komponenttien lisääminen kaavioihin ja tietovirtoihin. Jos haluat lisätä komponentin, napsauta elementtiä kaavion tai viestivirran keskellä, ja kun näyttöön tulee valintaikkuna, anna tarvittavat tiedot seuraavassa kuvassa esitetyllä tavalla.  
+ Kun olet määrittänyt tietoja suodattamista, käynnistä komponenttien lisääminen kaavioihin ja tietovirtoihin. Jos haluat lisätä osan, valitse elementti kaavion tai viestivirran keskellä, ja kun näyttöön tulee valintaikkuna, valitse tarvittavat tiedot avattavasta luettelosta seuraavassa kuvassa esitetyllä tavalla.  
   
  Lisää **Palvelupyynnöt prioriteetin mukaan** -rengaskaavio.
   
  > [!div class="mx-imgBorder"] 
- > ![Lisää rengaskaavio-osa.](../model-driven-apps/media/interactive-dashboards-add-chart-circle.png "Lisää rengaskaavio-osa.")  
+ > ![Lisää rengaskaavio-osa.](media/interactive-dashboards-add-chart-circle.png "Lisää rengaskaavio-osa.")  
   
  Joissakin kaavioissa, kuten palkkikaavioissa tai ympyräkaavioita, tehdä järjestelmään tallennetut tiedot näytetään. Rengaskaaviot ja tunnistekaaviot latautuvat staattisina kuvina ja eivät näytä todellisten tietojen esikatselua.  
   
@@ -191,28 +178,23 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
 >  Visuaalisille suodattimia määritetyt kaaviot voivat käyttää **Suodatin**-entiteettien sekä liittyvien entiteettien kenttiä. Kun käytät entiteetin kenttiin perustuvia kaavioita, asiakaspalvelijat voivat suodattaa kaavioita käyttämällä liittyvän entiteetin kenttiä. Liittyvään entiteettiin perustuvissa kentissä on yleensä seuraava muoto kaavion määritysikkunassa: "kenttänimi (kohteen nimi)", kuten **Muokkaaja (delegoitu käyttäjä)** -kenttä. Monientiteettikaavioita luotaessa pitää lisätä liittyvän entiteetin kenttiä kaikkiin näkymiin ja sitten käyttää näitä kenttiä kaavioita luotaessa.  
  
  > [!div class="mx-imgBorder"] 
- > ![Kaavioiden luominen visuaalisille suodattimille](../model-driven-apps/media/interactive-dashboard-visual-charts-x-y-axes.PNG "Kaavioiden luominen visuaalisille suodattimille")  
+ > ![Kaavioiden luominen visuaalisille suodattimille](media/interactive-dashboard-visual-charts-x-y-axes.PNG "Kaavioiden luominen visuaalisille suodattimille")  
   
- Seuraavaksi määritetään Viestivirrat. Valitse elementti viestivirtapaneelissa aivan kuten lisättäessä osia kaavioihin. Kun näyttöön tulee valintaikkuna, valitse **Tarkastele** tai **Jono** sen mukaan, mitä osaa haluat viestivirran käyttävän. Kirjoita vaaditut tiedot seuraavien kuvien mukaisesti.  
-  
-> [!NOTE]
->  **Jono**-asetus on käytettävissä valintaikkunassa vain entiteeteille, joissa jono on otettu käyttöön. Jos jono ei ole käytössä entiteetissä, **jono**-asetus ei näy valintaikkunassa entiteetin raporttinäkymille. Voit käyttää ainoastaan **Näytä-vaihtoehtoa** raporttinäkymän tietovirrassa entiteeteille, joissa jono ei ole käytössä.  
+ Seuraavaksi määritetään Viestivirrat. Valitse elementti viestivirtapaneelissa aivan kuten lisättäessä osia kaavioihin. Kun näyttöön tulee valintaikkuna, valitse **Tarkastele** tai **Jono** sen mukaan, mitä osaa haluat viestivirran käyttävän. Anna vaaditut tiedot kuten seuraavassa kuvassa.  
   
  **Käsiteltävissä olevat kohteet** -viestivirran määrittäminen näytetään seuraavaksi:  
   
- ![Lisää omien aktiivisten palvelupyyntöjen viestivirta.](../model-driven-apps/media/interactive-dashboards-add-stream-case.png "Lisää omien aktiivisten palvelupyyntöjen viestivirta.")  
-  
- Seuraavassa kuvassa on esimerkki kaaviopaneelista vasemmalta oikealle: rengaskaavio, tunnistekaavio ja pylväskaavio:  
+ ![Lisää omien aktiivisten palvelupyyntöjen viestivirta.](media/add-stream-dashboard.png "Lisää omien aktiivisten palvelupyyntöjen viestivirta.")  
+
+> [!NOTE]
+>  **Jono**-asetus on käytettävissä valintaikkunassa vain entiteeteille, joissa jono on otettu käyttöön. Jos jono ei ole käytössä entiteetissä, **jono**-asetus ei näy valintaikkunassa entiteetin raporttinäkymille. Voit käyttää ainoastaan **Näytä-vaihtoehtoa** raporttinäkymän tietovirrassa entiteeteille, joissa jono ei ole käytössä.    
+ 
+Seuraavassa kuvassa on esimerkki kokonaan määritetystä kaaviopaneelista ja viestivirtapaneelista:  
  
  > [!div class="mx-imgBorder"] 
- > ![Kaikki vuorovaikutteiset kaaviot](../model-driven-apps/media/interactive-dashboards-add-all-charts.png "Kaikki vuorovaikutteiset kaaviot")  
+ > ![Kokonaan määritetty koontinäyttö](media/example-stream-visual.png "Kokonaan määritetty koontinäyttö")  
   
- Tässä kuvassa on esimerkki viestivirtapaneelista, jossa on useita virtoja:  
- 
- > [!div class="mx-imgBorder"] 
- > ![kaikkien viestivirtojen lisääminen](../model-driven-apps/media/interactive-dashboards-add-all-streams.png "kaikkien viestivirtojen lisääminen")  
-  
- Kun olet suorittanut määrittänyt koontinäytön, tallenna se ja julkaista mukautukset, jotta muutokset tulevat voimaan. Varmista myös, että valitset **Valmistele asiakkaan mukautukset**.  
+ Kun olet suorittanut määrittänyt koontinäytön, tallenna se ja julkaista mukautukset, jotta muutokset tulevat voimaan.   
   
 #### <a name="edit-or-delete-individual-streams-of-an-existing-dashboard"></a>Muokkaa tai poista yksittäisiä viestivirtoja koontinäytössä  
   
@@ -235,14 +217,15 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
  Voit myös poistaa yksittäisen viestivirran koontinäytöstä. Valitse ensin virta ja sitten komentopalkissa **Poista**.  
   
 ### <a name="configure-an-entity-specific-dashboard"></a>Määritä entiteettikohtainen koontinäyttö  
- Entiteettikohtainen koontinäyttö on monen virran koontinäyttö. Tämän koontinäytön määrittäminen on samanlainen kuin kotisivun määrittäminen Monen virran koontinäyttöön, mutta se tehdään käyttöliittymän eri paikassa ja siinä on muita vähäisiä eroja. Esimerkiksi sen sijaan, että valitaan entiteetti, jotkin kentät entiteettikohtaisessa koontinäytössä on asetettu valmiiksi entiteettiin, johonka koontinäyttöä luodaan.  
+ Entiteettikohtainen koontinäyttö on monen virran koontinäyttö. Tämän koontinäytön määrittäminen on samanlainen kuin kotisivun määrittäminen Monen virran koontinäyttöön, mutta se tehdään käyttöliittymän eri paikassa ja siinä on muita vähäisiä eroja. 
+
+Esimerkiksi sen sijaan, että valitaan entiteetti, jotkin kentät entiteettikohtaisessa koontinäytössä on asetettu valmiiksi entiteettiin, johonka koontinäyttöä luodaan.  
   
 1.  Kirjaudu sisään [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) -sovellukseen.
 
 2.  Valitse **Data** > **Entiteetit** > valitse haluamasi entiteetti. 
 
 3.  Valitse **koontinäytöt**-välilehti ja valitse sitten työkaluriviltä **Lisää koontinäyttö**.  
-  
 4.  Valitse asettelu, 2, 3 tai 4 sarakeleveyttä.    
   
 5.  Kun koontinäyttölomake avautuu, **Suodata entiteetti** on valmiiksi asetettu entiteettiin, jolle olet luomassa koontinäytön. **Entiteettinäkymän** avattava luettelo sisältää entiteetin käytettävissä olevat näkymät. Valitse näkymä ja Täytä loput tarvittavat tiedot sivulla.  
@@ -252,11 +235,11 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
 ### <a name="configure-a-single-stream-dashboard"></a>Yhden virran koontinäytön määrittäminen  
  Yhden virran koontinäyttö määrittäminen vastaa Monen virran koontinäyttöä. Kaikki Käyttöliittymän siirtymisen vaiheet ovat samat kuin Monen virran koontinäytössä. Voit valita asettelun, joka sisältää ruudut, tai rakenteen, joka ei sisällä ruutuja. Jos ruudut ovat mukana, ne näkyvät aina koontinäytössä. Määritä ruutu valitsemalla kuvake ruudun keskellä. Kun **Lisää ruutu**ikkuna avautuu, täytä tarvittavat tiedot. Seuraavassa kuvassa näkyy esimerkki ruudun määrittämisestä.  
   
- ![Lisää yhden viestivirran raporttinäkymiin ruutu](../model-driven-apps/media/interactive-dashboard-add-tile-single-stream.png "Lisää yhden viestivirran raporttinäkymiin ruutu")  
+ ![Lisää yhden viestivirran raporttinäkymiin ruutu](media/add-tile.png "Lisää yhden viestivirran raporttinäkymiin ruutu")  
   
 <a name="BKMK_ConfigureColors"></a>   
 ## <a name="configure-dashboard-colors"></a>Määritä koontinäytön värit  
- Voit määrittää kaikille **Asetusjoukko**- ja **Kaksi asetusta** -tyyppisille kentille, kuten **Palvelupyynnön tyyppi**, **IsEscalated** tai **Prioriteetti** `Case`-entiteetissä, tietyn värin näkymään kaavioissa ja Viestivirroissa tietyillä kentän arvoilla. Esimerkiksi tärkeät tapaukset voidaan näyttää punainen, Normaali prioriteetti tapaukset sinisenä ja matalan prioriteetin tapaukset vihreänä vuorovaikutteisissa kaavioissa. Viestivirroissa väri näkyy vasemmalla puolella työn kohteen kuvaus ohut pystysuora viiva.  
+ Voit määrittää kaikille **Asetusjoukko**- ja **Kaksi asetusta** -tyyppisille kentille, kuten **Palvelupyyntö**-entiteetin **Palvelupyynnön tyyppi**, **IsEscalated** tai **Prioriteetti**, tietyn värin näkymään kaavioissa ja viestivirroissa tietyillä kentän arvoilla. Esimerkiksi tärkeät tapaukset voidaan näyttää punainen, Normaali prioriteetti tapaukset sinisenä ja matalan prioriteetin tapaukset vihreänä vuorovaikutteisissa kaavioissa. Viestivirroissa väri näkyy vasemmalla puolella työn kohteen kuvaus ohut pystysuora viiva.  
   
 > [!NOTE]
 >  Värikoodaus ei ole käytettävissä tunniste- ja rengaskaavioissa. Nämä kaaviot näkyvät koontinäyttö valkoisen, harmaan ja mustan sävyt.  
@@ -277,13 +260,17 @@ Seuraavassa kuvataan vaiheet vuorovaikutteisen kokemuksen käyttöoikeusroolien 
 Seuraavassa esimerkissä olemme muuttamassa väri **IsEscalated**-kenttään. **Muokkaa luetteloarvoa** -valintaikkuna **Muokkaa**-painikkeella:  
  
  > [!div class="mx-imgBorder"] 
- > ![Koontinäytön värin muuttaminen](../model-driven-apps/media/interactive-dashboards-change-color-edit-button.PNG "Koontinäytön värin muuttaminen")  
+ > ![Koontinäytön värin muuttaminen](media/edit-color.png "Koontinäytön värin muuttaminen")  
   
 Kun **Muokkaa luetteloarvoa** -valintaikkuna avautuu, valitse väri seuraavalla tavalla:  
   
- ![Muokkaa koontinäytön väriä](../model-driven-apps/media/interactive-dashboards-modify-color-value.png "Muokkaa koontinäytön väriä")  
+ ![Muokkaa koontinäytön väriä](media/modify-color.png "Muokkaa koontinäytön väriä")  
+
+Jos vastaavasti muokkaat palvelupyynnön prioriteettiasetuksia **Prioriteetti**-kentässä, valitse väri **Yleiset**-välilehden **Asetukset**-alialueella, kuten seuraavassa kuvassa:
+
+ ![Koontinäytön värin muokkaaminen](media/priority-color-modify.png "Vaihda koontinäytön väri palvelupyynnön prioriteettia varten")  
   
-### <a name="next-steps"></a>Seuraavat vaiheet  
+### <a name="see-also"></a>Katso myös  
  
 [Koontinäyttöjen luominen tai muokkaaminen](create-edit-dashboards.md)
  

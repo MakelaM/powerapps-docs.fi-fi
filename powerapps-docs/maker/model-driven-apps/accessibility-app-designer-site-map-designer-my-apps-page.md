@@ -1,11 +1,11 @@
 ---
 title: 'PowerAppsin sovellusten suunnitteluohjelman, sivustokartan suunnitteluohjelman ja Omat sovellukset -sivun helppokäyttötoiminnot | MicrosoftDocs'
-description: 'PowerAppsin sovellusten suunnitteluohjelman, sivustokartan suunnitteluohjelman ja Omat sovellukset -sivun helppokäyttötoiminnot'
+description: 'PowerAppsin sovellusten suunnitteluohjelman mallikohtaisten sovellusten, sivustokartan suunnitteluohjelman ja Omat sovellukset -sivun helppokäyttötoiminnot'
 keywords: Sovellusten suunnitteluohjelma; sivustokartan suunnitteluohjelma; omat sovellukset; Dynamics 365
 author: Mattp123
 ms.author: matp
 manager: kvivek
-ms.date: 06/18/2018
+ms.date: 05/20/2019
 ms.topic: article
 applies_to:
   - Dynamics 365 (online)
@@ -22,7 +22,8 @@ search.app:
 # <a name="accessibility-in-powerapps-app-designer-site-map-designer-and-my-apps-page"></a>PowerAppsin sovellusten suunnitteluohjelman, sivustokartan suunnitteluohjelman ja Omat sovellukset -sivun helppokäyttötoiminnot
 
 Microsoft on sitoutunut tekemään tuotteistaan ja palveluistaan helppokäyttöisiä kaikille. Lisätietoja: [Microsoftin helppokäyttötoiminnot](http://www.microsoft.com/enable/default.aspx)  
-  
+ 
+Tässä ohjeaiheessa kuvataan mallipohjaisia sovelluksia varten käytettävissä olevat helppokäyttöominaisuudet.  
   
 ## <a name="keyboard-shortcuts"></a>Näppäimistön pikanäppäimet  
 PowerAppsissa on järjestelmän käyttöä helpottavia pikanäppäimiä käyttäjille, joilla on liikuntarajoitteita.  
@@ -105,4 +106,4 @@ PowerAppsissa on järjestelmän käyttöä helpottavia pikanäppäimiä käyttä
 
 ## <a name="see-also"></a>Katso myös
 
-[Dynamics 365 Customer Engagement -sovellusten pikanäppäinten käyttö](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/basics/keyboard-shortcuts)
+[Dynamics 365 Customer Engagement -sovellusten pikanäppäinten käyttäminen](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts)

@@ -1,5 +1,5 @@
 ---
-title: Virtuaalisen entiteetin OData v4 -tietojen tarjoajan käyttäminen Common Data Servicen kanssa | MicrosoftDocs
+title: Virtuaalientiteetti OData v4 -tietopalvelun käyttäminen Common Data Servicen kanssa | MicrosoftDocs
 ms.custom: ''
 ms.date: 06/04/2018
 ms.reviewer: ''
@@ -28,16 +28,16 @@ Tässä ohjeaiheessa kerrotaan, miten OData v4 -tietojen tarjoaja ja OData v4 -t
 
 ## <a name="odata-v4-data-provider-best-practices"></a>OData v4 -tietojen tarjoajan parhaat käytännöt
 
-- Common Data Service edellyttää, että kaikilla entiteeteillä on ID-määrite. ID on sama kuin yksilöivä tunnus. Arvon on oltava guid.  Voit yhdistää ID-kentät vain sellaisiin ulkoisiin kenttiin, joiden tietotyyppi on `Edm.Guid`.  Et voi liittää tietotyyppiä `Edm.Int32` yksilöllisen tunnuksen tietotyypin kenttään Common Data Servicessä.
--  OData-entiteetit, joilla on tyhjä arvo -ominaisuuksia, on määritettävä vastaamaan virtuaalisen entiteetin yhdistettyä kenttää. Esimerkiksi OData-entiteetin ominaisuuden, jonka tyhjä arvo = epätosi, Common Data Servicen yhdistetyn kentän **Kenttävaatimus**-määritteen arvoksi on annettava **Pakollinen**. 
+- Common Data Service edellyttää, että kaikilla entiteeteillä on ID-määrite. ID on sama kuin yksilöivä tunnus. Arvon on oltava guid.  Voit yhdistää ID-kentät vain sellaisiin ulkoisiin kenttiin, joiden tietotyyppi on `Edm.Guid`.  Et voi liittää tietotyyppiä `Edm.Int32` yksilöllisen tunnuksen tietotyypin kenttään Common Data Service -ratkaisussa.
+-  OData-entiteetit, joilla on tyhjä arvo -ominaisuuksia, on määritettävä vastaamaan virtuaalisen entiteetin yhdistettyä kenttää. Esimerkiksi OData-entiteetin ominaisuuden, jonka tyhjä arvo = epätosi, on oltava yhdistetty kenttä Common Data Servicessä ja **Kenttävaatimus**-määritteeksi on annettava **Pakollinen**. 
 - Voit hakea useita kyselyjä esimerkiksi ladatessasi tietoja ruudukkoon, jos ohjaat ulkoisesta tietolähteestä palautettavan tietojoukon kokoa käyttämällä kyselyparametrien valintaa ja suodatusta.
 - Jos tämä ei ole käytössä, järjestelmänvalvoja voi ottaa laajennuksen seurannan käyttöön. Kun tämä on käytössä, kaikki OData-päätepisteen virheet kerätään laajennuksen seurantalokiin. Lisätietoja: [Järjestelmänvalvojan opas: Järjestelmäasetukset-valintaikkuna – Mukauttaminen-välilehti](/dynamics365/customer-engagement/admin/system-settings-dialog-box-customization-tab) 
 
 ## <a name="data-type-mapping"></a>Tietotyyppien yhdistämismääritys
 
-Seuraavassa taulukossa ovat OData Entity Data Model (EDM) -tietotyyppien yhdistämismääritykset ja Common Data Servicen tietotyypit. 
+Seuraavassa taulukossa ovat OData Entity Data Model (EDM) -tietotyyppien yhdistämismääritykset ja Dynamics 365 Customer Engagementin  Common Data Service tietotyypit.. 
 
-|OData-tietotyyppi|Common Data Servicen tietotyyppi  |
+|OData-tietotyyppi|Common Data Service:n tietotyyppi  |
 |---------|---------|
 |`Edm.Boolean`|Kaksi asetusta|
 |`Edm.DateTime`|Päivämäärä ja aika|
@@ -52,9 +52,9 @@ Seuraavassa taulukossa ovat OData Entity Data Model (EDM) -tietotyyppien yhdist�
 
 ### <a name="odata-edm-data-types-that-are-not-supported-for-mapping-with-virtual-entities"></a>OData EDM -tietotyypit, joita ei tueta virtuaalisten entiteettien vastaavuusmäärityksissä 
 
-- `Edm.Binary `
+- `Edm.Binary`
 - `Edm.Time` 
-- `Edm.Float `
+- `Edm.Float`
 - `Edm.Single` 
 - `Edm.Int16` 
 - `Edm.Byte` 
@@ -69,7 +69,7 @@ Tässä toimintosarjassa on esitetty, miten voit käyttää virtuaalisen entitee
 1. Valitse Toiminnot-työkaluriviltä **Uusi**.  
 1. Valitse seuraavista tietolähteistä **Valitse tietojen tarjoaja** -valintaikkunassa ja valitse sitten **OK**.  
   
-    - **OData v4 -tietojen tarjoaja**. Common Data Service sisältää Odata-v4 -tietojen toimittajan, jonka avulla voidaan muodostaa yhteys tietolähteiden tietoihin, jotka tukevat avointa OData v4 -standardia.  
+    - **OData v4 -tietojen tarjoaja**. Common Data Service sisältää Odata-v4 -tietojen toimittajan, jonka avulla voidaan muodostaa yhteys tietolähteiden tietoihin, jotka tukevat OData v4 avoin standardia.  
     - *Mukautettujen tietojen tarjoaja*. Jos olet tuonut tietopalvelulaajennuksen, tietopalvelu tulee näkyviin tähän. Lisätietoja:  [Sovelluskehittäjän dokumentaatio: Virtuaalientiteettien käytön aloittaminen](/dynamics365/customer-engagement/developer/virtual-entities/get-started-ve)  
     
 1. Täytä seuraavat kentät **Uusi tietolähde ominaisuudet** -sivulla ja tallenna tietue.  
