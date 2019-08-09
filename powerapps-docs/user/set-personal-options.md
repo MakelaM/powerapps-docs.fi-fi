@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 08/01/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,15 +15,17 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: e3894efdf379c5568ae6f95baa87e9ec77dae5d8
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 11d9318ac06e264b6b917c81358d060d97864eb8
+ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61564393"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783553"
 ---
 # <a name="set-personal-options"></a>Omien asetusten määrittäminen
 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Muuta sovelluksen näyttö asetuksia haluamallasi tavalla. Voit esimerkiksi valita sivun, jonka haluat näkyviin heti, kun kirja udut sisään sovellukseen. Voit myös mukauttaa monia muita asetuksia, kuten kielen, valuutan ja aika vyöhykkeen.  
     
@@ -111,6 +113,7 @@ Muuta sovelluksen näyttö asetuksia haluamallasi tavalla. Voit esimerkiksi vali
 |                                                                                           Määritä kansion seuranta säännöt                                                                                           |                                                                                                                                        Määritä kansiot automaattisesti saapuvan sähkö postin seuraamista varten.                                                                                                                                          |
 |                                                           **Luo tietueita automaattisesti Dynamics 365**                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |                                                                                                       Luoda                                                                                                        |                                                                                                                                                                                 Valitse tämä vaihto ehto, jos haluat, että Dynamics 365 luo liidejä tai yhteyshenkilöitä automaattisesti seurattujen Sähkö posti viestien tiedoista.                                                                                                                                                                                  |
+|                                                                                                  Näytä Sähkö posti viestit keskusteluna aika janalla                                                                                                 |                                                                                                                                                                                                                                                    Valitse tämä, jos haluat näyttää keskustelu säikeen Sähkö posti viestit, miten monet Sähkö posti sovellukset toimivat, kun tarkastelet Sähkö posti viestejä keskustelussa.                                                                                                                                                                                                                                                    |
 |                                                                                                  Tarkastele posti Laatikkoasi                                                                                                  |                                                                                                                                                                                                                                                    Valitse tämä linkki, jos haluat tarkastella posti laatikkosi tietoja.                                                                                                                                                                                                                                                    |
   
 ## <a name="privacy-tab-options"></a>Tieto suoja-väli lehden asetukset  

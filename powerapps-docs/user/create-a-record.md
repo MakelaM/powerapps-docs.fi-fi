@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 3/13/2019
+ms.date: 8/01/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,24 +15,26 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: d2f2ccd462627fbcf6ab628217e5d53a57127cae
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: e21c9763e42dd45c7bed4691dfc27899263bef00
+ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61545058"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783595"
 ---
 # <a name="create-a-new-record"></a>Luo uusi tietue
 
 
-**Luo uusi tietue** -komennon tai **Pikaluonti**-valinnan avulla järjestelmään voi lisätä nopeasti ja vaivattomasti lähes millaisia tietoja tahansa. Komento on siirtymispalkissa, joten se on käytettävissä aina, kun haluat lisätä uutta tietoa järjestelmään. Tätä vaihtoehtoa käytettäessä tarvitsee täyttää vain muutamia kenttiä. Voit myöhemmin antaa lisätietoja, kun käytettävissäsi on enemmän aikaa tai tietoja.  
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
+**Luo uusi tietue** -komennon tai **Pikaluonti**-valinnan avulla järjestelmään voi lisätä nopeasti ja vaivattomasti lähes millaisia tietoja tahansa. Komento on siirtymispalkissa, joten se on käytettävissä aina, kun haluat lisätä uutta tietoa järjestelmään. Voit myös tallentaa tietueen ja luoda uuden tietueen suoraan **Create** -lomakkeesta.
 
 > [!NOTE]
 > **Pikaluonti**-valinta on käytettävissä vain niissä tietueissa, jotka järjestelmänvalvoja on ottanut käyttöön.
     
 1. Valitse siirtymispalkissa **plusmerkki** ![Luo tietue -painike](media/create-record-button.png "Luo tietue -painike") ja valitse sitten haluamasi kohde.  
   
-2.  Täytä kentät ja valitse sitten **Tallenna ja sulje**.  
+2.  Täytä kentät ja valitse sitten **Tallenna ja sulje**. Jos haluat tallentaa ja luoda toisen tietueen, valitse alanuoli ja valitse sitten **tallenna & Luo uusi**.
 
   ![Tietueen tallentaminen](media/quick_create.png "Tietueen tallentaminen")
   

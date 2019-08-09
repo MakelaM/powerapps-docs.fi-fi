@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/26/2018
+ms.date: 8/02/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,14 +15,16 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 308e36938c673a5f6ba83be02591a7199af20432
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 8f061078b4401ee1ea2db9a2e7e6a4443bd053b6
+ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61529461"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783770"
 ---
 # <a name="add-an-appointment-email-phone-call-note-or-task-activity-to-the-timeline"></a>Tapaamisen, sähköpostin, puhelun, huomautuksen tai tehtävän lisääminen aikajanaan 
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Lisää **Aktiviteetit** **Aikajana**-seinälle seurataksesi viestintää asiakkaan tai yhteyshenkilön kanssa. Voit esimerkiksi tehdä muistiinpanoja, lisätä julkaisuja ja tehtäviä, lähettää sähköpostiviestejä, lisätä puhelutietoja tai määrittää tapaamisia. Järjestelmä lisää aikaleiman automaattisesti jokaiseen aktiviteettiin ja näyttää, kuka sen on luonut. Sinä ja muut ryhmäsi jäsenet voitte selata aktiviteetteja ja tarkastella historiaa työskentelyn aikana asiakkaan kanssa. 
 
@@ -30,6 +32,7 @@ Lisää **Aktiviteetit** **Aikajana**-seinälle seurataksesi viestintää asiakk
 - Jos aktiviteetin **Liittyy**-kenttä on määritetty, aktiviteetti näkyy siinä tietueessa, johon se on liitetty. 
 - Voit myös suodattaa aktiviteetit tietuetyypin ja päivämäärän mukaan valitsemalla suodatusruudun. 
 - Kun uusi tehtävä luodaan, saat **Huomaamatta jääneet** -ilmoituksen **Aikajana**-seinälle.
+- Sähkö posti viesti, jossa on liitetty kuva, näytetään Sähkö posti viestin leipä tekstin sisällä.
 
   > [!div class="mx-imgBorder"]
   > ![Aktiviteettien aikajananäkymä PowerAppsissa](media/TimelineViewOfActivity.png "Aktiviteettien aikajananäkymä PowerAppsissa")  
@@ -95,6 +98,17 @@ Jos haluat lisätä tietueeseen sähköpostiaktiviteetin, sinun on ensin tallenn
 5. Jos haluat käyttää mallia sähköpostiviestin leipätekstissä, valitse komentopalkissa **Lisää malli** ja valitse sitten malli.   
   
 6. Kun olet täyttänyt lomakkeen,valitse **Lähetä**. 
+
+
+    > [!NOTE]
+    > Jos haluat luetella keskustelu näkymässä olevat Sähkö posti viestit, siirry kohtaan **Asetukset** > **mukautus asetukset** > **Sähkö posti** -väli lehti ja valitse sitten **Näytä Sähkö posti keskusteluna aika janalla**. Lisä tietoja henkilökohtaisista asetuksista on kohdassa [henkilökohtaisten asetusten asetukset](set-personal-options.md).
+
+   > [!div class="mx-imgBorder"]
+   > ![Henkilökohtaisten asetusten asetus](media/emailsettings1.png "Henkilökohtaisten asetusten asetus")
+   
+    > [!div class="mx-imgBorder"]
+    > ![Henkilökohtaisten asetusten sähkö postin asetukset](media/emailsettings2.png "Henkilökohtaisten asetusten asetus Sähkö posti osoitteille")
+
   
 ## <a name="add-an-appointment"></a>Tapaamisen lisääminen  
 
@@ -118,10 +132,14 @@ Voit myös helposti lisätä huomautuksia aktiviteettien alueelle.
 
 3. Kun olet täyttänyt lomakkeen, tallenna huomautus valitsemalla **Lisää huomautus**.
 
+
+> [!NOTE]
+> Voit myös lisätä huomautuksen käyttämällä **plusmerkkiä** **Aikajana**-seinän yläosassa.
+
    > [!div class="mx-imgBorder"]
    > ![Huomautuksen lisääminen](media/addnote.png "Huomautuksen lisääminen")
 
-Kun huomautus on lisätty, voit poistaa sen tai muokata sitä. Voit myös lisätä huomautuksen käyttämällä **plusmerkkiä** **Aikajana**-seinän yläosassa.
+Kun huomautus on lisätty, voit poistaa sen tai muokata sitä.
 
 
 > [!div class="mx-imgBorder"]
@@ -154,17 +172,13 @@ Valitse **Aikajana**-seinällä ![Lisää-painike ](media/MoreButton.png "Lisä�
 
 ## <a name="use-the-filter-pane"></a>Suodatinruudun käyttäminen
 
-Suodatinruudun avulla voit suodattaa nopeasti aktiviteetteja, huomautuksia tai julkaisuja Aikajana-seinällä tietue- tai aktiviteettityypin sekä päivämäärän mukaan.
+Suodatinruudun avulla voit suodattaa nopeasti aktiviteetteja, huomautuksia tai julkaisuja Aikajana-seinällä tietue- tai aktiviteettityypin sekä päivämäärän mukaan. Voit valita useita suodattimia ja suodatus asetuksia yhtä aikaa. Voit suodattaa ja tarkastella tehtävän määrä päivää, muokkaus päivämäärää tai tehtävän tilaa.
 
-1. Valitse **Aikajana**-seinällä ![Lisää-painike ](media/MoreButton.png "Lisää-painike") ja valitse sitten **Avaa suodatinruutu**.
+- Valitse **aika janalla** **Avaa suodatin ruudun** suppilo kuvake.
 
 > [!div class="mx-imgBorder"]
 > ![Suodatinruutu aikajanalla ](media/filterpane.png "Suodatinruutu aikajanalla")
 
-2. Kun et enää halua tarkastella suodatettuja tietoja, voit tyhjentää suodattimen valitsemalla **Tyhjennä kaikki suodattimet** -suppilokuvakkeen. Suodatin näyttää nyt kaikki Aikajana-seinän tiedot.
-
-> [!div class="mx-imgBorder"]
-> ![Suodattimen palauttaminen](media/resetfilter.png "Suodattimen palauttaminen")
 
 ## <a name="manage-activities"></a>Aktiviteettien hallinta
 Voit hallita aktiviteetteja suoraan Aikajana-seinällä. Voit esimerkiksi määrittää aktiviteetin toiselle henkilölle, poistaa tai sulkea aktiviteetin, lisätä aktiviteetin jonoon, avata liittyvän tietueen tai muokata huomautuksia ja julkaisuja.

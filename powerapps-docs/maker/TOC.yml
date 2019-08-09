@@ -842,6 +842,8 @@
                       href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
                     - name: Lomakkeen suunnittelutyökalun ominaisuudet
                       href: ./model-driven-apps/form-designer-properties.md
+                    - name: Määritetään ylätunnisteen ominaisuuksia
+                      href: ./model-driven-apps/form-designer-header-properties.md
                     - name: Puunäkymän käyttö
                       href: ./model-driven-apps/using-tree-view-on-form.md
                 - name: Lomaketyypit
