@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 11/28/2018
+ms.date: 08/09/2019
 ms.author: anneta
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b070dfad61f3e53e313d4e8891dc44507a910292
-ms.sourcegitcommit: edf79033111b50aa3015b55929ce689474edba2d
+ms.openlocfilehash: ecb3e7aa6db1100f33a3c80a0518166b035d2b32
+ms.sourcegitcommit: 988aa08353864f8177725262468c07abe75549f5
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917401"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68961493"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
@@ -117,8 +117,8 @@ Jotta voit määrittää roolin, sinulla on oltava järjestelmänvalvojan oikeud
 1. Valitse jako-paneelissa Määritä käyttö **oikeus rooli** **tietojen käyttö oikeudet**-kohdassa.
 
 1. Valitse Common Data Service rooli tai roolit, jotka haluat määrittää käyttäjälle tai käyttö oikeus ryhmälle Azure AD:ssä, jonka kanssa haluat jakaa sovelluksen.
-
-    ![Käyttö oikeus roolien luettelot](media/share-app/cds-assign-security-role-list.png)
+     > [!div class="mx-imgBorder"] 
+     > ![Käyttö oikeus roolien luettelot](media/share-app/cds-assign-security-role-list.png "Käyttö oikeus roolien luettelot")
 
 ### <a name="common-data-service-previous-version"></a>Common Data Service (aiempi versio)
 
@@ -132,36 +132,44 @@ Kun jaat sovelluksen, joka perustuu Common Data Service vanhempaan versioon, sin
 
 Powerappsin pohjaan liittyvät sovellukset voidaan jakaa Azure Active Directory vuokra ajan vierailevien käyttäjien kanssa. Tämän avulla ulkoiset liike kumppanit, alihankkijat ja kolmannet osapuolet voivat suorittaa yrityksesi kangas sovelluksia. 
 
-Huomioi, että vieraille voidaan määrittää vain käyttäjä rooli, ei osaomistaja-roolia, heidän kanssaan jaetuille sovelluksille.
+> [!NOTE]
+> Vieraille voidaan määrittää vain **käyttäjä** rooli, ei **osaomistaja-** roolia, heidän kanssaan jaetuille sovelluksille.
 
 ### <a name="prerequisites"></a>Edellytykset
-1. [Ota käyttöön Azure Active Directory B2B-ulkoinen yhteistyö](https://docs.microsoft.com/en-us/azure/active-directory/b2b/delegate-invitations) vuokra ajalle.  
-- Tämä on oletus arvon mukaan vuokra ajan järjestelmänvalvoja voi muuttaa asetuksia.  
-- Lisä tietoja Azure AD B2B-lähtö tilasta: [Mikä on vieras käyttö oikeus Azure AD B2B-sovelluksessa?](https://docs.microsoft.com/en-us/azure/active-directory/b2b/what-is-b2b)  
-2. Käyttö oikeus tiliin, joka voi lisätä vieras käyttäjiä AAD-vuokraajaan. Järjestelmänvalvojat ja käyttäjät, joilla on vieras-Invaiter-rooli, voivat lisätä vieraita vuokraajaan.   
+1. Ota käyttöön Azure Active Directory (Azure AD) vuokraajaan B2B-ulkoinen yhteistyö. Lisätietoja: [Ota käyttöön B2B-ulkoinen yhteistyö ja hallitse, ketkä voivat kutsua vieraita](/azure/active-directory/b2b/delegate-invitations)
+    - Ota käyttöön B2B-ulkoinen yhteistyö on oletus arvon mukaan käytössä. Vuokra ajan järjestelmänvalvoja voi kuitenkin muuttaa asetuksia.  Lisä tietoja Azure AD B2B-artikkelista on Ohje aiheessa [mikä on vieras käyttö oikeus Azure AD B2B](/azure/active-directory/b2b/what-is-b2b) -sovelluksessa?  
+2. Käyttö oikeus tiliin, joka voi lisätä vieras käyttäjiä Azure AD-vuokraajaan. Järjestelmänvalvojat ja käyttäjät, joilla on vieras-Invaiter-rooli, voivat lisätä vieraita vuokraajaan.   
 3. PowerApps-käyttö oikeus on määritettävä vieras käyttäjälle jaettavan sovelluksen yhteydessä. Ennen kuin kangas sovelluksen vieras käyttö on yleisesti saatavilla, Asiakkaat, joilla on PowerApps-käyttö oikeus koti vuokraajaan, eivät saa määrittää käyttö oikeutta vuokraajaan, jonka he ovat vieras.
 
-### <a name="steps"></a>Vaiheet
-1. Lisää vieras käyttäjiä Azure Active Directory.  
-- Tämä on esitelty artikkelissa: [Pikaopas: Lisää uusi vieras käyttäjä Azure](https://docs.microsoft.com/en-us/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)AD:ssä.
-![Lisää vieras Azure AD:ssä](media/share-app/guest_access_doc_1.png)
+### <a name="steps-to-grant-guest-access"></a>Vieras käyttö oikeuksien myöntämisen vaiheet
+1. Valitse **Uusi vieras käyttäjä** , jos haluat lisätä vieras käyttäjiä Azure AD:ssä. Lisätietoja: [Pikaopas: Lisää uusi vieras käyttäjä Azure](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)AD:ssä.
+    > [!div class="mx-imgBorder"] 
+    > ![Lisää vieras Azure] AD:ssä (media/share-app/guest_access_doc_1.png "Lisää vieras Azure") AD:ssä
 2. Määritä käyttö oikeus vieras käyttäjälle. 
-- Tämä on esitelty artikkeleissa: [Määritä käyttö oikeudet yhdelle käyttäjälle](https://docs.microsoft.com/en-us/office365/admin/subscriptions-and-billing/assign-licenses-to-users?view=o365-worldwide#assign-licenses-to-one-user) tai [Määritä tai poista käyttö oikeuksia](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/license-users-groups) käyttäjiltä https://admin.microsoft.com -ja https://portal.azure.com -kohdassa.  
-- Sinun on ehkä poistettava Microsoft 365 hallinta keskuksen esikatselu käytöstä, jotta voit antaa käyttö oikeuden vieras-kohteelle. 
+   - Lisä tietoja vieras käyttäjien määrittämisestä osoitteesta admin.microsoft.com on kohdassa [käyttö oikeuksien määritteleminen yhdelle käyttäjälle](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   - Lisä tietoja vieras käyttäjien määrittämisestä osoitteesta portal.azure.com on kohdassa [käyttö oikeuksien määritteleminen tai poistaminen](/azure/active-directory/fundamentals/license-users-groups).
+ 
+   > [!IMPORTANT]
+   > Saatat joutua poistamaan Microsoft 365 hallinta keskuksen esikatselun käytöstä, jotta voit antaa käyttö oikeuden vieras-kohteelle. 
+
 3. Jako kangas sovellus. 
-- Kirjaudu sisään kohteeseen https://make.powerapps.com  
-- Valitse sovellus, valitse jako. 
-![Kerro vieras](media/share-app/guest_access_doc_2.png)
-![vieraille voi olla vain käyttäjiä](media/share-app/guest_access_doc_3.png)
-4. Asiakkaat voivat löytää ja käyttää heille jaettuja sovelluksia Sähkö posti viestistä, joka lähetetään heille osana jakamista.
-![Asiakkaat saavat sovelluksen jakamisen Sähkö posti viestin](media/share-app/guest_access_doc_4.png)
+    1. Kirjaudu sisään kohteeseen https://make.powerapps.com  
+    2. Siirry **sovelluksiin**, valitse pohjaan perustuva sovellus ja valitse sitten komento palkissa **jako**. 
+    3. Anna vieras käyttäjän Sähkö posti osoite Azure AD-vuokraajalta. Lisätietoja: [Mikä on vieras käyttö oikeus Azure AD B2B-sovelluksessa?](/azure/active-directory/b2b/what-is-b2b)
+          > [!div class="mx-imgBorder"] 
+          > ![Kerro vierailijoille](media/share-app/guest_access_doc_2.png "Kerro vierailijoille")
+ 
+Kun olet jakanut sovelluksen vieras käyttöä varten, asiakkaat voivat etsiä ja käyttää heidän kanssaan jaettuja sovelluksia Sähkö posti viestistä, joka lähetetään heille osana jakamista.
+
+> [!div class="mx-imgBorder"]  
+> ![Asiakkaat saavat sovelluksen jakamisen Sähkö posti viestin](media/share-app/guest_access_doc_4.png "Asiakkaat saavat sovelluksen jakamisen Sähkö posti viestin")
 
 ### <a name="frequently-asked-questions"></a>Usein kysytyt kysymykset
 
-#### <a name="whats-the-difference-between-canvas-app-guest-access-and-powerapps-portal"></a>Mitä eroa on kangas sovelluksen vieras käyttö-ja PowerApps-portaalissa? 
-Canvas-sovellusten avulla voit luoda sovelluksen, joka on räätälöity liiketoiminta prosessien digitointiin kirjoittamatta koodia perinteisellä ohjelmointi kielellä, kuten C#. Kangas sovellusten vieras käyttö mahdollistaa sen, että työryhmät, jotka koostuvat eri organisaatioista, jotka osallistuvat yhteiseen liiketoiminta prosessiin, voivat käyttää samoja sovellus resursseja, jotka voidaan integroida [useisiin erilaisiin Microsoftin ja kolmannen osapuolen lähteisiin](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/connections-list).
+#### <a name="whats-the-difference-between-canvas-app-guest-access-and-powerapps-portals"></a>Mitä eroa on kangas sovelluksen vieras käyttö-ja PowerApps-portaalien välillä? 
+Canvas-sovellusten avulla voit luoda sovelluksen, joka on räätälöity liiketoiminta prosessien digitointiin kirjoittamatta koodia perinteisellä ohjelmointi kielellä, kuten C#. Kangas sovellusten vieras käyttö mahdollistaa sen, että työryhmät, jotka koostuvat eri organisaatioista, jotka osallistuvat yhteiseen liiketoiminta prosessiin, voivat käyttää samoja sovellus resursseja, jotka voidaan integroida useisiin erilaisiin Microsoftin ja kolmannen osapuolen lähteisiin. Lisätietoja: [Powerappsin kangas sovellusten liittimien yleiskatsaus](/powerapps/maker/canvas-apps/connections-list).
 
-[Powerapps-portaalien](https://docs.microsoft.com/en-us/powerapps/maker/portals/overview) avulla voit luoda pienikoodisia, reagoivia sivustoja, joiden avulla ulkoiset käyttäjät voivat käsitellä Common Data Service tallennettuja tietoja. Sen avulla organisaatiot voivat luoda sivustoja, jotka voidaan jakaa organisaationsa ulkopuolisten käyttäjien kanssa joko anonyymisti tai heidän valitsemansa kirjautumispalvelun kautta, kuten LinkedIn, Microsoft-tili ja muut kaupalliset kirjautumispalveluntarjoajat. 
+[Powerapps-portaalien](/powerapps/maker/portals/overview) avulla voit luoda pienikoodisia, reagoivia sivustoja, joiden avulla ulkoiset käyttäjät voivat käsitellä Common Data Service tallennettuja tietoja. Sen avulla organisaatiot voivat luoda sivustoja, jotka voidaan jakaa organisaationsa ulkopuolisten käyttäjien kanssa joko anonyymisti tai heidän valitsemansa kirjautumispalvelun kautta, kuten LinkedIn, Microsoft-tili tai muu kaupallinen kirjautumispalvelu. 
 
 Seuraavassa taulukossa esitellään joitakin perusominaisuuksien eroja PowerApps-portaalien ja Canvas-sovellusten välillä.  
 
@@ -175,13 +183,15 @@ Seuraavassa taulukossa esitellään joitakin perusominaisuuksien eroja PowerApps
 Kyllä. Kuka tahansa käyttäjä, joka voi käyttää mukautettua lomaketta käyttäviä SharePoint-luettelo tietoja, voi luoda ja muokata kohteita-lomakkeessa ilman PowerApps-käyttö oikeutta.
 
 #### <a name="can-guests-access-apps-embedded-in-sharepoint"></a>Voimmeko käyttää SharePointiin upotettuja sovelluksia? 
-Kyllä. Käyttö oikeus pohjaan erillisiin sovelluksiin edellyttää kuitenkin Powerappsin käyttö oikeutta, mukaan lukien upotettuja sovelluksia. Kun upotat pohjaan liitettävän sovelluksen SharePointissa Microsoft PowerApps-upotus ohjaus objektin kopioinnin avulla, liitä sovellus tunnus. 
+Kyllä. Käyttö oikeus pohjaan erillisiin sovelluksiin edellyttää kuitenkin Powerappsin käyttö oikeutta, mukaan lukien upotettuja sovelluksia. Kun upotat pohjaan linkitetyn sovelluksen SharePointissa Microsoft PowerApps upotus-ohjaus objektin avulla, anna sovellus tunnus. Voit tehdä tämän kirjoittamalla sovelluksen tunnuksen **sovelluksen verkko linkki-tai tunnus** -ruutuun. 
 
-![Upota pohjaan-sovellus SharePointissa vieraille](media/share-app/guest_access_doc_5.PNG)
+> [!div class="mx-imgBorder"]  
+> ![Upota pohjaan-sovellus SharePointissa vieraille](media/share-app/guest_access_doc_5.PNG "Upota pohjaan-sovellus SharePointissa vieraille")
 
-Kun upotat pohjaan kuuluvan sovelluksen SharePointissa iframe-HTML-tunnisteen kautta, viittaa sovellukseen käyttäen täydellistä verkko linkkiä, joka löytyy http://make.powerapps.com > Valitse sovellus > tiedot > verkko linkki.
+Kun upotat pohjaan kuuluvan sovelluksen SharePointissa iFrame-HTML-tunnisteen kautta, viittaa sovellukseen käyttäen täydellistä verkko-URL-osoitetta. Jos haluat löytää URL-osoitteen, http://make.powerapps.com Siirry, valitse sovellus, valitse **tiedot** -väli lehti ja URL-osoite näytetään kohdassa **verkko linkki**.
 
-![Kangas sovelluksen tiedot](media/share-app/guest_access_doc_6.PNG)
+> [!div class="mx-imgBorder"]  
+> ![Kangas sovelluksen tiedot](media/share-app/guest_access_doc_6.PNG "Kangas sovelluksen tiedot")
 
 #### <a name="how-come-guests-can-launch-the-app-shared-with-them-but-connections-fail-to-be-created"></a>Miten tulevat asiakkaat voivat käynnistää sovelluksen, joka on jaettu heidän kanssaan, mutta yhteyksiä ei luoda?
 Kuten muidenkin kuin asiakkaiden, myös sovelluksen käyttämät pohjana olevat tieto lähteet on asetettava asiakkaan saataville.
@@ -209,7 +219,7 @@ Ei. Jos vieras käynnistää heidän kanssaan jaetun sovelluksen ennen vieras ku
 #### <a name="what-azure-ad-tenant-are-connections-for-a-guest-user-created-in"></a>Mitä Azure AD-vuokraaja on yhteydessä luotavaan vieras käyttäjään?
 Sovelluksen yhteydet tehdään aina Azure AD-vuokra ajan yhteydessä, johon sovellus liittyy. Jos sovellus luodaan esimerkiksi contoso-vuokra ajassa, contoso-vuokraajaan liittyvät yhteydet tehdään contoso-vuokra ajan yhteydessä.
 
-#### <a name="can-guests-use-microsoft-graph-via-microsoft-security-graph-connectorhttpsdocsmicrosoftcomen-usconnectorsmicrosoftgraphsecurity-or-a-custom-connector-using-microsoft-graph-apishttpsdevelopermicrosoftcomen-usgraph"></a>Voiko asiakkaat käyttää Microsoft Graph [Microsoft Security Graph Connectorin](https://docs.microsoft.com/en-us/connectors/microsoftgraphsecurity/) kautta tai mukautettua liitintä [Microsoft Graph ohjelmointi raja pintojen](https://developer.microsoft.com/en-us/graph)avulla?
+#### <a name="can-guests-use-microsoft-graph-via-microsoft-security-graph-connector-or-a-custom-connector-using-microsoft-graph-apis"></a>Voiko asiakkaat käyttää Microsoft Graph Microsoft Security Graph Connectorin kautta tai mukautettua liitintä Microsoft Graph ohjelmointi raja pintojen avulla?
 Ei, Azure AD-asiakkaat eivät voi tehdä kyselyitä Microsoft Graph hake maan tietoja vuokraajalta, jossa he ovat vieras.
 
 #### <a name="what-intune-policies-apply-to-guests-using-my-powerapps"></a>Mitä InTune-käytännöt koskevat asiakkaita, jotka käyttävät Powerappsia?
