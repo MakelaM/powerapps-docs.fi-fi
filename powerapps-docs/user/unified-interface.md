@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 8/14/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,12 +15,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 931efa2fcb2f30dcba7b1eef0118e734399e503e
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: f40a153ef20df0bccbdee915efe9af6aa88cb754
+ms.sourcegitcommit: f2ca557e43ab38c169eb3b754ac02c9321f9285f
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61563144"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69030557"
 ---
 #  <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Parannettu käyttö kokemus mallipohjaisten sovellusten yhdistetyn liittymän avulla 
 
@@ -55,3 +55,7 @@ Telakointi mekanismi on parantanut liiketoiminta prosessin kulkua. Voit kiinnitt
 
 ## <a name="accessibility"></a>Helppokäyttötoimintojen
 Parannetun helppokäyttöisyyden avulla voit näytön luku ohjelmien avulla kääntää näytön tiedot ääni ääneksi ja tulostaa piste kirjoitus lukijaan, jotta useammat käyttäjät voivat käyttää sovellusta. Lisä tietoja [on kohdassa näytön luku ohjelman käyttäminen](screen-reader.md).
+
+##  <a name="unified-interface-community"></a>Unified Interface-yhteisö
+
+Siirry [Unified Interface-yhteisön sivustoon](https://community.dynamics.com/365/unified-interface/) , niin saat ohjeita, joiden avulla voit suunnitella ja suorittaa sujuvan siirtymisen yhdistettyyn käyttö liittymään ja osallistua asiantuntijoiden ja vertaiskoneiden kanssa blogeissa, verkko seminaareissa, videoissa ja tapahtumissa.
