@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c304a313032e00af81181ca71b39e7aa7de9fc8f
-ms.sourcegitcommit: c0edddb287b3d3db56f60bdb46fe971e26e85e9d
+ms.openlocfilehash: 03c520d1cdf8655e93b1f5b74d687cd0abfa533f
+ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66224644"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529788"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -92,18 +92,19 @@ Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studio
 | management.azure.com |https |RP |
 | msmanaged-na.azure-apim.net |https |Yhdistimien/ohjelmointirajapintojen suorituspalvelu |
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
-| graph.microsoft.com<br>graph.windows.net |https |Azure Graph – käyttäjätietojen hankkimiseen profiilikuvat (esimerkiksi) |
+| graph.microsoft.com<br>graph.windows.net |https |Azure Graph – käyttäjä tietojen hakeminen (esimerkiksi profiili kuva) |
 | gallery.azure.com |https |Esimerkki- ja mallisovellukset |
-| \*.azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
-| \*.blob.core.windows.net |https | Blob-objektisäilö |
-| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and web.powerapps.com |
+| \*. azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
+| \*. powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*. azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*. blob.core.windows.net |https | Blob-objektisäilö |
+| \*. flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetria |
+| localhost | https | PowerApps Mobile
 
 > [!NOTE]
 > Jos käytät VPN:ää, se on määritettävä niin, että se ei sisällä PowerApps Mobilen tunneloinnin localhostia.
 
-## <a name="size-limits"></a>Kokorajoitukset
+## <a name="size-limits"></a>Koko rajoitukset
 
-Voit etsiä tietoja tekstiä, hyperlinkit, kuvia ja mediasisällön kokorajoitukset [tietotyyppejä](functions/data-types.md#text-hyperlink-image-and-media).
+Saat lisä tietoja teksti-, hyperlinkit-, kuvat-ja tieto väline- [tieto tyyppien](functions/data-types.md#text-hyperlink-image-and-media)koko rajoituksista.

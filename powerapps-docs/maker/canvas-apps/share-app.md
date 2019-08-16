@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ecb3e7aa6db1100f33a3c80a0518166b035d2b32
-ms.sourcegitcommit: 988aa08353864f8177725262468c07abe75549f5
+ms.openlocfilehash: bfe5b35ebfddfe17cbf3898cc6f68f1a91d0b5e0
+ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68961493"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530249"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
@@ -139,7 +139,7 @@ Powerappsin pohjaan liittyvät sovellukset voidaan jakaa Azure Active Directory 
 1. Ota käyttöön Azure Active Directory (Azure AD) vuokraajaan B2B-ulkoinen yhteistyö. Lisätietoja: [Ota käyttöön B2B-ulkoinen yhteistyö ja hallitse, ketkä voivat kutsua vieraita](/azure/active-directory/b2b/delegate-invitations)
     - Ota käyttöön B2B-ulkoinen yhteistyö on oletus arvon mukaan käytössä. Vuokra ajan järjestelmänvalvoja voi kuitenkin muuttaa asetuksia.  Lisä tietoja Azure AD B2B-artikkelista on Ohje aiheessa [mikä on vieras käyttö oikeus Azure AD B2B](/azure/active-directory/b2b/what-is-b2b) -sovelluksessa?  
 2. Käyttö oikeus tiliin, joka voi lisätä vieras käyttäjiä Azure AD-vuokraajaan. Järjestelmänvalvojat ja käyttäjät, joilla on vieras-Invaiter-rooli, voivat lisätä vieraita vuokraajaan.   
-3. PowerApps-käyttö oikeus on määritettävä vieras käyttäjälle jaettavan sovelluksen yhteydessä. Ennen kuin kangas sovelluksen vieras käyttö on yleisesti saatavilla, Asiakkaat, joilla on PowerApps-käyttö oikeus koti vuokraajaan, eivät saa määrittää käyttö oikeutta vuokraajaan, jonka he ovat vieras.
+3. PowerApps-käyttö oikeus on määritettävä vieras käyttäjälle jaettavan sovelluksen yhteydessä. Vaikka ei olekaan vielä mahdollista, ennen kuin kangas sovelluksen vieras käyttö on yleisesti saatavilla, Asiakkaat, joilla on PowerApps-käyttö oikeus koti vuokraajaan, eivät saa määrittää käyttö oikeutta vuokraajaan, jonka he ovat vieras.
 
 ### <a name="steps-to-grant-guest-access"></a>Vieras käyttö oikeuksien myöntämisen vaiheet
 1. Valitse **Uusi vieras käyttäjä** , jos haluat lisätä vieras käyttäjiä Azure AD:ssä. Lisätietoja: [Pikaopas: Lisää uusi vieras käyttäjä Azure](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)AD:ssä.
