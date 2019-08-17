@@ -1,68 +1,67 @@
 ---
-title: IsMatch, vastaavuus ja MatchAll | Microsoft Docs
-description: Viitetiedot, mukaan lukien syntaksi IsMatch ja MatchAll Match-Funktiot powerappsissa
+title: Onmatch-, Match-ja MatchAll-Funktiot | Microsoft Docs
+description: Powerappsin Onmatch-, Match-ja MatchAll-funktioiden viite tiedot, mukaan lukien syntaksi
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 01/15/2019
+ms.date: 08/15/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2cfa2a93e7bb33dc2c1b26c266b1ecf6680938c4
-ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.openlocfilehash: b9496964b2a11195d3adb561817fec0f9bf11f47
+ms.sourcegitcommit: 9163abbe9a24298f216f15139f977adfd2c3f2ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67457065"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546001"
 ---
-# <a name="ismatch-match-and-matchall-functions-in-powerapps"></a>IsMatch ja MatchAll Match-Funktiot powerappsissa
-Testaa vastaavuus tai otteet osan merkkijonon kuviota perusteella.
+# <a name="ismatch-match-and-matchall-functions-in-powerapps"></a>Enmatch-, Match-ja MatchAll-Funktiot Powerappsissa
+Testaa vastaavuuden tai poimii teksti merkki jonon osat malliin pohjautuen.
 
 ## <a name="description"></a>Kuvaus
-**IsMatch**-funktio testaa, vastaako merkkijono hakuarvoa, joka voi koostua normaaleista merkeistä, esimääritetyistä malleista tai [säännönmukaisesta lausekkeesta](#regular-expressions).  **Vastaavuus** ja **MatchAll** funktiot palauttavat mitä oli määritetty, mukaan lukien alimerkkijonon vastaavuudet.  
+**IsMatch**-funktio testaa, vastaako merkkijono hakuarvoa, joka voi koostua normaaleista merkeistä, esimääritetyistä malleista tai [säännönmukaisesta lausekkeesta](#regular-expressions).  **Match** -ja **matchall** -funktiot palauttavat vastaavuudet, mukaan lukien alivastineita.  
 
 Käytä **IsMatch**-funktiota vahvistamaan käyttäjän **[Tekstisyöte](../controls/control-text-input.md)** -ohjausobjektiin syöttämä sisältö. Voit esimerkiksi vahvistaa, onko käyttäjä syöttänyt kelvollisen sähköpostiosoitteen, ennen kuin tulokset tallennetaan tietolähteeseesi. Jos tietue ei vastaa kriteereitäsi, lisää muita ohjausobjekteja, jotka kehottavat käyttäjää korjaamaan sen.
 
-Käytä **vastaa** poimia ensimmäinen tekstimerkkijono, joka vastaa kuviota ja **MatchAll** Pura kaikki, jotka vastaavat merkkijonoja. Voit myös poimia alimerkkijonon vastaavuudet jäsentäminen monimutkaisia merkkijonoja.   
+Poimi **vastaavuus** -komennolla ensimmäinen teksti merkki jono, joka vastaa kaavaa ja **matchall** -menetelmää, poimimaan kaikki vastaavat teksti merkki jonot. Voit myös noutaa alivastineita monitasoisten merkki jonojen jäsentämiseen.   
 
-**Vastaa** palauttaa tietueen, ensimmäinen vastaavuus löytyi, tiedon ja **MatchAll** palauttaa tietueet taulukon jokainen vastaavuus löytyi. Tietue tai tietueet sisältää:
+**Match** palauttaa ensimmäisen löydettyjen tietojen tietueen, ja **matchall** palauttaa tietueiden taulukon jokaisesta löydetystä vastaavu usta. Tietue tai tietueet sisältävät seuraavat:
 
 | Sarake | Tyyppi | Kuvaus |
 |----|----|----|
-| *nimeltä sub&#8209;vastaa tai sub&#8209;vastaa* | Text | Kukin nimetty alimerkkijonon vastaavuus on oma sarake. Luo nimetty alimerkkijonon vastaavuus käyttämällä **(?&lt; *nimi*&gt;** ... **)** säännöllisessä lausekkeessa. Jos nimettyä alimerkkijonon vastaavuus on sama nimi kuin yksi ennalta määritetyt sarakkeet (alla), alimerkkijonon vastaavuus on etusijalla ja varoitus luodaan. Tämä varoitus välttämiseksi nimeä alimerkkijonon vastaavuus. |
-| **FullMatch** | Text | Kaikki merkkijono, joka on kohdistettu. |
-| **StartMatch** | Luku | Syötteen merkkijonosta vastaavuus aloituskohta. Merkkijonon ensimmäinen merkki palauttaa 1. | 
-| **Alivastineiden** | Tekstin yhden sarakkeen taulukko (sarake **arvo**) | Nimettyjä ja nimeämättömiä järjestyksessä, jossa ne näkyvät säännönmukainen lauseke alimerkkijonon vastaavuudet taulukko. Yleensä nimetty alimerkkijonon vastaavuudet on helpompi käyttää, ja kehotetaan valmistautumaan. Käytä [ **ForAll** ](function-forall.md) funktio tai [ **viimeisen**](function-first-last.md)( [ **FirstN**](function-first-last.md)() **...**  )) funktioita yksittäisten alimerkkijonon vastaavuus käsittelemiseen. Jos aliraportti vastaavuuksia ei määritetty säännönmukainen lauseke, tämä taulukko on olemassa, mutta se on tyhjä. |
+| *nimetyt Sub&#8209;Match-tai&#8209;Sub-vastineita* | Text | Kullakin nimettyyn aliotteluun on oma sarakkeensa. Luo nimetty aliottelu käyttämällä **(?&lt; *nimi* &gt;** ... **)** säännönmukaisessa lausekkeessa. Jos nimettyyn aliotteluun on sama nimi kuin jollakin esimääritetystä sarakkeesta (alla), alivastaavuus on etusijalla ja varoitus luodaan. Jos haluat välttää tämän varoituksen, nimeä alivastaavuus uudelleen. |
+| **FullMatch** | Text | Kaikki täsmäytettiin teksti merkki jono. |
+| **StartMatch** | Luku | Vastaavuuden aloitus kohta syöte teksti merkki jonossa. Merkki jonon ensimmäinen merkki palauttaa arvon 1. | 
+| **Osavastaavuudet** | Yksisarakkeinen teksti taulukko (sarake **arvo**) | Nimettyjen ja nimeämättömien alivastaavu uksien taulukko siinä järjestyksessä, jossa ne näkyvät säännönmukaisessa lausekkeessa. Yleensä nimetyt alivastineita on helpompi käsitellä, ja niitä kannustetaan. Käytä [**kokeilu**](function-forall.md) funktioita tai [**Last**](function-first-last.md)( [**firstn**](function-first-last.md)( **...** ))-funktioita, jotka toimivat yksittäisellä alivastaavu-funktiolla. Jos säännöllisessä lausekkeessa ei määritetä alivastaavu uksia, tämä taulukko on olemassa, mutta se on tyhjä. |
 
-Nämä funktiot tue [ **MatchOptions**](#match-options). Oletusarvoisesti: 
-- Nämä funktiot suorittaa kirjainkoko. Käytä **IgnoreCase** kirjainkoko ei merkitsevä vastaavuudet suorittamiseen.    
-- **IsMatch** vastaa koko merkkijono (**valmiina** MatchOption), kun **vastaa** ja **MatchAll** Hae merkkijono (vastaavuutta **Sisältää** MatchOption). Käytä **valmiina**, **sisältää**, **BeginsWith**, tai **EndsWith** tapauksen tarpeisiin.
+Nämä funktiot tukevat [**Matchoptions**](#match-options)-ominaisuuksia. Oletus arvon mukaan: 
+- Nämä funktiot suorittavat kirjain koon mukaisen vastaavuuden. Käytä **IgnoreCase** -kohdetta kirjain koolla olevien vastaavu uksien suorittamiseen.    
+- **Onmatch** vastaa koko teksti merkki jonoa (**Complete** matchoption), kun taas **Match** -ja **matchall** -haku vastaavat mitä tahansa teksti merkki jonon kohtaa (**sisältää** matchoptiota). Käytä **valmis**-, **sisältää**-, **Beginswith**-tai **EndsWith** -menetelmää skenaariosi mukaan.
 
-**IsMatch** palauttaa arvon *tosi*, jos merkkijono vastaa mallia ja arvon *epätosi*, jos se ei vastaa sitä. **Vastaa** palauttaa *tyhjä* Jos vastaavuutta ei löydy, sitä voidaan testata [ **IsBlank** ](function-isblank-isempty.md) funktio. **MatchAll** palauttaa tyhjän taulukon, jos vastaavuutta ei löydy, sitä voidaan testata [ **IsEmpty** ](function-isblank-isempty.md) funktio.
+**IsMatch** palauttaa arvon *tosi*, jos merkkijono vastaa mallia ja arvon *epätosi*, jos se ei vastaa sitä. **Match** palauttaa arvon *tyhjä* , jos vastaavuutta ei löydy, jota voidaan testata käyttämällä [**onblank**](function-isblank-isempty.md) -toimintoa. **Matchall** palauttaa tyhjän taulukon, jos vastaavuutta ei löydy, jota voidaan testata [**IsEmpty**](function-isblank-isempty.md) -funktiolla.
 
-Jos käytät **MatchAll** jakaa merkkijonon, harkitse **[Jaa](function-split.md)** funktio, joka käyttää helpompi ja nopeampi.
+Jos käytät **Matchall** -kohdetta teksti merkki jonon jakamiseen, harkitse **[Split](function-split.md)** -toiminnon käyttämistä, mikä on helppokäyttöisempi ja nopeampi.
 
 ## <a name="patterns"></a>Mallit
-Näiden funktioiden käyttäminen avain on tärkeää kuvailla malli, johon syötettä verrataan. Malli kuvaillaan merkkijonona, joka voi sisältää yhdistelmän seuraavia:
+Näiden funktioiden käyttämisen avain on kuvaavassa rakenteessa. Malli kuvaillaan merkkijonona, joka voi sisältää yhdistelmän seuraavia:
 
 * Tavalliset merkit, kuten **"abc"** tai **"123"** .
 * Esimääritetyt mallit, kuten **Letter**, **MultipleDigits** tai **Email**. (**Match**-luettelointi määrittelee nämä mallit.)
-* Säännöllinen lauseke koodit, kuten **”\d+\s+\d+”** tai **”[a – z] +”** .
+* Säännönmukaiset lauseke koodit, kuten **"\d + \s + \d +"** tai **"[a-z] +"** .
 
-Yhdistä näitä elementtejä käyttämällä [merkkijonon yhdistämisoperaattoria **&** ](operators.md). Esimerkiksi **"abc" & Digit & "\s+"** on kelvollinen kaava, joka vastaa merkkijonoa, jonka alussa on "a", "b" tai "c", jonka jälkeen on numero väliltä 0–9 ja sitten vähintään yksi välilyöntimerkki.
+Yhdistä nämä elementit käyttämällä [merkki jono- **&** liittämis operaattoria ](operators.md). Esimerkiksi **"abc" & Digit & "\s+"** on kelvollinen kaava, joka vastaa merkkijonoa, jonka alussa on "a", "b" tai "c", jonka jälkeen on numero väliltä 0–9 ja sitten vähintään yksi välilyöntimerkki.
 
 ### <a name="ordinary-characters"></a>Tavalliset merkit
 Yksinkertaisin malli on sarja tavallisia merkkejä, joille haetaan täyttä vastaavuutta.
 
-Esimerkiksi käytettäessä **IsMatch** funktio, merkkijono ”Hei” vastaa mallia **”Hello”** tarkalleen. Ei enempää tai vähempää. Merkkijono ”hei!” ei vastaa mallia vuoksi pään huutomerkin ja ”h”-kirjaimen väärän. (Katso kohdasta [Vastaavuusvalinnat](#match-options) tapoja tämän toiminnon muokkaamiseksi.)
+Esimerkiksi kun käytetään yhdessä Onmatch- funktion kanssa, merkki jono "Hello" vastaa kaavaa **"Hello"** tarkalleen. Ei enempää tai vähempää. Merkkijono ”hei!” ei vastaa kaavaa, koska lopussa on huuto merkki, ja koska kirjain "h" on virheellinen. (Katso kohdasta [Vastaavuusvalinnat](#match-options) tapoja tämän toiminnon muokkaamiseksi.)
 
-Mallikielessä tietyt merkit on varattu erityistoimintoja varten. Jos haluat käyttää näitä merkkejä, joko etuliite-merkin **\\** (kenoviiva) ilmaisemaan, että merkki tulee tulkita kirjaimellisesti tai käytä jotakin esimääritetyt mallit, jotka kuvataan myöhemmin tässä aiheessa. Erikoismerkit on lueteltu tässä taulukossa:
+Mallikielessä tietyt merkit on varattu erityistoimintoja varten. Jos haluat käyttää näitä merkkejä, määritä merkki merkkiin **\\** (Keno viiva) osoittamaan, että merkki tulee ottaa kirjaimellisesti, tai käytä jotakin myöhemmin tässä ohje aiheessa kuvattua ennalta määritettyä kaavaa. Erikoismerkit on lueteltu tässä taulukossa:
 
 | Erikoismerkki | Kuvaus |
 | --- | --- |
@@ -70,7 +69,7 @@ Mallikielessä tietyt merkit on varattu erityistoimintoja varten. Jos haluat kä
 | **?** |kysymysmerkki |
 | **&#42;** |tähti |
 | **\+** |plus |
-| **( )** |Sulkeiden |
+| **( )** |sulkeissa |
 | **[ ]** |hakasulkeet |
 | **{ }** |kaarisulkeet |
 | **^** |sirkumfleksi |
@@ -81,21 +80,21 @@ Mallikielessä tietyt merkit on varattu erityistoimintoja varten. Jos haluat kä
 Voit esimerkiksi saada vastaavuuden ”Hei?” käyttämällä mallia **"Hei\\?"** , jossa on kenoviiva ennen kysymysmerkkiä.
 
 ### <a name="predefined-patterns"></a>Esimääritetyt mallit
-Esimääritetyt mallit tarjoavat yksinkertaisen tavan vastaamaan joko yksi merkeistä tai usean merkin sarjalle jakson. Käytä [merkkijonon yhdistämisoperaattoria **&** ](operators.md) omien merkkijonojen jäsenten kanssa **vastaavuus** enum:
+Esimääritetyt kuviot tarjoavat yksinkertaisen tavan sovittaa yhteen merkki joukosta tai useista merkeistä. Käytä [merkki jono-liittämis operaattoria **&** ](operators.md) yhdistämään omat teksti merkki jonot **Match** Enum-kohteen jäseniin:
 
-| Match-luettelointi | Kuvaus | Säännönmukainen lauseke |
+| Täsmää luettelointi | Kuvaus | Säännönmukainen lauseke |
 | --- | --- | --- |
 | **Any** |Vastaa mitä tahansa merkkiä. |`.` |
-| **Comma** |Vastaa pilkkua. |`;` |
+| **Comma** |Vastaa pilkkua. |`,` |
 | **Digit** |Vastaa yhtä numeroa (0–9). |`\d` |
-| **Email** |Vastaa sähköpostiosoitetta, joka sisältää ”at”-merkin (”\@”) ja toimialuenimen, joka sisältää pisteen (”.”) |`.+\@.+\\.[^\\.]{2;}` |
+| **Email** |Vastaa sähköpostiosoitetta, joka sisältää ”at”-merkin (”\@”) ja toimialuenimen, joka sisältää pisteen (”.”) |`.+\@.+\\.[^\\.]{2,}` |
 | **Hyphen** |Vastaa yhdysmerkkiä. |`\-` |
 | **LeftParen** |Vastaa vasenta suljetta ”(”. |`\(` |
 | **Letter** |Vastaa kirjainta. |`\p{L}` |
-| **MultipleDigits** |Vastaa yhtä tai useampaa numeroa. |`\d+` |
+| **MultipleDigits** |Vastaa yhtä tai useampaa merkkiä. |`\d+` |
 | **MultipleLetters** |Vastaa yhtä tai useampaa kirjainta. |`\p{L}+` |
-| **MultipleNonSpaces** |Vastaa vähintään yhden merkin, joka ei ole välilyöntimerkki (ei välilyönti, SARKAIN tai rivivaihto). |`\S+` |
-| **MultipleSpaces** |Vastaa vähintään yhden merkin, joka välilyöntimerkki (välilyönti, SARKAIN tai rivivaihto). |`\s+` |
+| **MultipleNonSpaces** |Vastaa yhtä tai useampaa merkkiä, jotka eivät lisää väli lyöntejä (ei väliä, väli lehteä tai NewLine-kohdetta). |`\S+` |
+| **MultipleSpaces** |Vastaa yhtä tai useampaa merkkiä, jotka lisäävät väli lyöntejä (väli lyönti, SARKAIN tai NewLine). |`\s+` |
 | **NonSpace** |Vastaa yhtä merkkiä, joka ei ole välilyöntimerkki. |`\S` |
 | **OptionalDigits** |Vastaa nollaa, yhtä tai useampaa merkkiä. |`\d*` |
 | **OptionalLetters** |Vastaa nollaa, yhtä tai useampaa kirjainta. |`\p{L}*` |
@@ -108,51 +107,51 @@ Esimääritetyt mallit tarjoavat yksinkertaisen tavan vastaamaan joko yksi merke
 Esimerkiksi malli **"A" & MultipleDigits** vastaa kirjainta ”A”, jonka jälkeen esiintyy yksi tai useampi numero.  
 
 ### <a name="regular-expressions"></a>Säännönmukaiset lausekkeet
-Malli, joka käyttää näitä funktioita on [säännönmukainen lauseke](https://en.wikipedia.org/wiki/Regular_expression). Tavalliset merkit ja esimääritetyt mallit, jotka on kuvattu aiemmin tässä aiheessa apua rakentamaan säännönmukaisen lausekkeen.  
+Näiden funktioiden käyttöön käytettävä muoto on säännönmukainen [lauseke](https://en.wikipedia.org/wiki/Regular_expression). Tavalliset merkit ja ennalta määritetyt kuviot, jotka on kuvattu aiemmin tässä ohje aiheessa, helpottavat säännönmukaisten lausekkeiden luomista.  
 
-Säännönmukaiset lausekkeet ovat hyvin tehokkaita, ne ovat saatavilla useissa ohjelmointikielissä ja niitä käytetään useisiin eri tarkoituksiin. Ne näyttävät myös usein välimerkkien satunnaisen järjestyksen. Tässä artikkelissa ei kuvailla kaikkia Säännönmukaisten lausekkeiden ominaisuuksia, mutta paljon tietoja, opetusohjelmia, ja työkalut ovat käytettävissä verkossa.  
+Säännönmukaiset lausekkeet ovat hyvin tehokkaita, ne ovat saatavilla useissa ohjelmointikielissä ja niitä käytetään useisiin eri tarkoituksiin. Ne voivat myös usein näyttää satunnaisen väli merkki sarjan. Tässä artikkelissa ei kuvailla säännönmukaisten lausekkeiden kaikkia puolia, mutta verkossa on käytettävissä runsaasti tietoja, opetus ohjelmia ja työkaluja.  
 
-Säännönmukaiset lausekkeet ovat eri kielioppivaihtoehtoja PowerApps käyttää-JavaScript-kieliopin muunnelmaa. Katso [regular lausekkeen syntaksi](https://msdn.microsoft.com/library/1400241x.aspx) johdanto syntaksi. Nimetty alimerkkijonon vastaavuudet (kutsutaan nimetty sieppaus ryhmät) tuetaan:
+Säännönmukaisia lausekkeita on eri murteissa, ja PowerApps käyttää JavaScript-murteen varianttia. Lisä tietoja syntaksi on Ohje aiheessa [säännönmukaisen lausekkeen syntaksi](https://msdn.microsoft.com/library/1400241x.aspx) . Nimettyjä alivastaavu uksia (kutsutaan joskus nimettyihin sieppaus ryhmiksi) tuetaan:
 
-- Nimeltä alimerkkijonon vastaavuudet: **(?&lt; *nimi* &gt; ...)**
-- Nimeltä backreferences:  **\\k&lt;*nimi*&gt;**
+- Nimetyt alivastaavuudet: **(?&lt; *nimi* &gt; ...)**
+- Nimetyt backreferences  **\\:&lt;k-*nimi*&gt;**
 
-Tässä **vastaavuus** luetteloinnin taulukon tämän ohjeaiheen luetteloinnit näkyy samalle riville kuin sen vastaava säännönmukainen lauseke.
+Aiemmin tässä ohje aiheessa olevassa **Match** Enum-taulukossa jokainen luettelointi näkyy samalla rivillä kuin vastaava säännönmukainen lauseke.
 
 ## <a name="match-options"></a>Vastaavuusvalinnat
-Voit muokata näitä funktioita toimintaa määrittämällä yhden tai useamman valinnan, joita voidaan yhdistellä käyttämällä merkkijonon-yhdistämisoperaattoria ( **&amp;** ).  
+Voit muokata näiden funktioiden toimintaa määrittämällä yhden tai useamman vaihto ehdon, jotka voit yhdistää käyttämällä merkki jono-liittämis operaattoria ( **&amp;** ).  
 
-| MatchOptions-luettelointi | Kuvaus | Vaikutus säännönmukaiseen lausekkeeseen |
+| MatchOptions-luettelointi | Kuvaus | Vaikutus säännöllisessä lausekkeessa |
 | --- | --- | --- |
 | **BeginsWith** |Mallin on vastattava tekstin alkua. |Lisää säännönmukaisen lausekkeen alkuun **^** -merkin. |
-| **Complete** |Oletusarvo **IsMatch**. Tämän mallin täytyy vastata koko tekstiä alusta loppuun-merkkijonon. |Lisää **^** alkuun ja **$** säännönmukaisen lausekkeen loppuun. |
-| **Contains** |Oletusarvo **vastaavuus** ja **MatchAll**. Tämän mallin täytyy olla jossakin kohdassa tekstiä mutta sen ei tarvitse olla alussa tai lopussa. |Ei muokkaa säännönmukaista lauseketta. |
-| **EndsWith** |Tämän mallin täytyy vastata tekstin merkkijonon loppuun. |Lisää säännönmukaisen lausekkeen loppuun **$** -merkin. |
-| **IgnoreCase** |Käsittelee isoja ja pieniä kirjaimia kuin identtiset. Oletuksena vastaavuuksissa kirjainkoko on merkitsevä. |Ei muokkaa säännönmukaista lauseketta. Tämä vaihtoehto on vastaava säännönmukaiset lausekkeet standard ”i”-määrite.  |
-| **Multiline** |Etsii vastaavuutta useilta riveiltä. |Ei muokkaa säännönmukaista lauseketta. Tämä vaihtoehto on vastaava säännönmukaiset lausekkeet standard ”m”-määrite. |
+| **Complete** |Oletus kohteelle **Istmatch**. Rakenteen on vastattava koko teksti merkki jonoa alusta loppuun. |Lisää a **^** -kohteen aloitus-ja **$** a-kohdan säännönmukaisen lausekkeen loppuun. |
+| **Contains** |Oletus arvo kohteelle **Match** ja **matchall**. Tämän mallin täytyy olla jossakin kohdassa tekstiä mutta sen ei tarvitse olla alussa tai lopussa. |Ei muokkaa säännönmukaista lauseketta. |
+| **EndsWith** |Rakenteen on vastattava teksti merkki jonon loppua. |Lisää säännönmukaisen lausekkeen loppuun **$** -merkin. |
+| **IgnoreCase** |Käsittelee isoja ja pieniä kirjaimia identtinä. Oletuksena vastaavuuksissa kirjainkoko on merkitsevä. |Ei muokkaa säännönmukaista lauseketta. Tämä asetus vastaa vakio lausekkeiden i-määritettä.  |
+| **Multiline** |Etsii vastaavuutta useilta riveiltä. |Ei muokkaa säännönmukaista lauseketta. Tämä asetus vastaa säännönmukaisten lausekkeiden vakio-m-määritettä. |
 
-Käyttämällä **MatchAll** vastaa standard ”g” muokkaaja säännönmukaiset lausekkeet varten.
+**Matchall** -menetelmän käyttäminen vastaa vakio lausekkeiden g-määritettä.
 
 ## <a name="syntax"></a>Syntaksi
-**IsMatch**( *Text*; *Pattern* [; *Options* ] )
+**IsMatch**( *Text*, *Pattern* [, *Options* ] )
 
 * *Text* – Pakollinen. Testattava merkkijono.
-* *Pattern* – Pakollinen. Testattava merkkijonona malli. Yhdistä esimääritetyt mallit, joka **vastaavuus** enum määrittää tai anna säännönmukainen lauseke. *Malli* on oltava yhtenäinen kaavan ilman muuttujia, tietolähteitä tai muita dynamic viittaa muutokset sovelluksen suorittamiseksi.
-* *Options* – Valinnainen. Merkkijono yhdistelmän **MatchOptions** luetteloinnin arvoista. Oletuksena käytetään valintaa **MatchOptions.Complete**.
+* *Pattern* – Pakollinen. Teksti merkki jonona testattava rakenne. Yhdistä määritetyt kuviot, jotka **täsmäävät** -luettelointi määrittää, tai anna säännönmukainen lauseke. *Mallin* on oltava vakio kaava ilman muuttujia, tieto lähteitä tai muita dynaamisia viitta uksia, jotka muuttuvat sovelluksen suorittamisen yhteydessä.
+* *Options* – Valinnainen. **Matchoptions** -luettelointi arvojen teksti merkki jono yhdistelmä. Oletuksena käytetään valintaa **MatchOptions.Complete**.
 
-**Vastaavuus**( *tekstin*; *malli* [; *asetukset* ])
+**Täsmää** ( *Teksti*, *muoto* [, *Asetukset* ])
 
-* *Text* – Pakollinen. Vastaamaan merkkijono.
-* *Pattern* – Pakollinen. Malli, johon merkkijonona. Yhdistä esimääritetyt mallit, joka **vastaavuus** enum määrittää tai anna säännönmukainen lauseke. *Malli* on oltava yhtenäinen kaavan ilman muuttujia, tietolähteitä tai muita dynamic viittaa muutokset sovelluksen suorittamiseksi.
-* *Options* – Valinnainen. Merkkijono yhdistelmän **MatchOptions** luetteloinnin arvoista. Oletusarvon mukaan **MatchOptions.Contains** käytetään.
+* *Text* – Pakollinen. Vastaavuus teksti merkki jono.
+* *Pattern* – Pakollinen. Teksti merkki jonona käytettävä muoto. Yhdistä määritetyt kuviot, jotka **täsmäävät** -luettelointi määrittää, tai anna säännönmukainen lauseke. *Mallin* on oltava vakio kaava ilman muuttujia, tieto lähteitä tai muita dynaamisia viitta uksia, jotka muuttuvat sovelluksen suorittamisen yhteydessä.
+* *Options* – Valinnainen. **Matchoptions** -luettelointi arvojen teksti merkki jono yhdistelmä. Oletuksena käytetään **Matchoptions. contains** -arvoa.
 
-**MatchAll**( *tekstin*; *malli* [; *asetukset* ])
+**Matchall** ( *Teksti*, *muoto* [, *Asetukset* ])
 
-* *Text* – Pakollinen. Vastaamaan merkkijono.
-* *Pattern* – Pakollinen. Malli, johon merkkijonona. Yhdistä esimääritetyt mallit, joka **vastaavuus** enum määrittää tai anna säännönmukainen lauseke. *Malli* on oltava yhtenäinen kaavan ilman muuttujia, tietolähteitä tai muita dynamic viittaa muutokset sovelluksen suorittamiseksi.
-* *Options* – Valinnainen. Merkkijono yhdistelmän **MatchOptions** luetteloinnin arvoista. Oletusarvon mukaan **MatchOptions.Contains** käytetään.
+* *Text* – Pakollinen. Vastaavuus teksti merkki jono.
+* *Pattern* – Pakollinen. Teksti merkki jonona käytettävä muoto. Yhdistä määritetyt kuviot, jotka **täsmäävät** -luettelointi määrittää, tai anna säännönmukainen lauseke. *Mallin* on oltava vakio kaava ilman muuttujia, tieto lähteitä tai muita dynaamisia viitta uksia, jotka muuttuvat sovelluksen suorittamisen yhteydessä.
+* *Options* – Valinnainen. **Matchoptions** -luettelointi arvojen teksti merkki jono yhdistelmä. Oletuksena käytetään **Matchoptions. contains** -arvoa.
 
-## <a name="ismatch-examples"></a>IsMatch esimerkkejä
+## <a name="ismatch-examples"></a>Onmatch-esimerkit
 ### <a name="ordinary-characters"></a>Tavalliset merkit
 Kuvitellaan, että sovelluksesi sisältää **Tekstisyöte**-ohjausobjektin nimeltä **TextInput1**. Käyttäjä syöttää tähän ohjausobjektiin arvoja, jotka tallennetaan tietokantaan.   
 
@@ -160,80 +159,78 @@ Käyttäjä kirjoittaa **TextInput1**-kohtaan **Hei maailma**.
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| `IsMatch( TextInput1.Text; "Hello world" )` |Testaa, käyttäjä, vastaako käyttäjän syöte tarkalleen merkkijonoa ”Hei maailma”. |**tosi** |
-| `IsMatch( TextInput1.Text; "Good bye" )` |Testaa, käyttäjä, vastaako käyttäjän syöte tarkalleen merkkijonoa ”Hyvästi”. |**epätosi** |
-| `IsMatch( TextInput1.Text; "hello"; Contains )` |Testaa, sisältääkö käyttäjän syöte sanan ”Hei” (kirjainkoko on merkitsevä). |**epätosi** |
-| `IsMatch( TextInput1.Text; "hello"; Contains & IgnoreCase )` |Testaa, sisältääkö käyttäjän syöte sanan ”hei” (kirjainkoko ei ole merkityksellinen). |**tosi** |
+| `IsMatch( TextInput1.Text, "Hello world" )` |Testaa, vastaako käyttäjän syöte tarkalleen merkki jonoa "Hello World". |**tosi** |
+| `IsMatch( TextInput1.Text, "Good bye" )` |Testaa, vastaako käyttäjän syöte tarkalleen merkki jonoa "Good Bye". |**epätosi** |
+| `IsMatch( TextInput1.Text, "hello", Contains )` |Testaa, sisältääkö käyttäjän syöte sanan "Hello" (kirjain koko on merkitsevä). |**epätosi** |
+| `IsMatch( TextInput1.Text, "hello", Contains & IgnoreCase )` |Testaa, sisältääkö käyttäjän syöte sanan ”hei” (kirjainkoko ei ole merkityksellinen). |**tosi** |
 
 ### <a name="predefined-patterns"></a>Esimääritetyt mallit
 
 |                                                            Kaava                                                            |                                                                Kuvaus                                                                |  Tulos   |
 |-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| `IsMatch( "123-45-7890"; Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )` |                                              Vastaa Yhdysvaltojen sosiaaliturvatunnusta                                               | **tosi**  |
-|                                           `IsMatch( "joan@contoso.com"; Email )`                                            |                                                         Vastaa sähköpostiosoitetta                                                          | **tosi**  |
-|                              `IsMatch( "123.456"; MultipleDigits & Period & OptionalDigits )`                               |                                   Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita.                                   | **tosi**  |
-|                                `IsMatch( "123"; MultipleDigits & Period & OptionalDigits )`                                 | Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. Ajan ei näy teksti, joka vastaa, jotta tämä malli ei vastannut. | **epätosi** |
+| `IsMatch( "123-45-7890", Digit & Digit & Digit & Hyphen & Digit & Digit & Hyphen & Digit & Digit & Digit & Digit )` |                                              Vastaa Yhdysvaltojen sosiaaliturvatunnusta                                               | **tosi**  |
+|                                           `IsMatch( "joan@contoso.com", Email )`                                            |                                                         Vastaa sähköpostiosoitetta                                                          | **tosi**  |
+|                              `IsMatch( "123.456", MultipleDigits & Period & OptionalDigits )`                               |                                   Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita.                                   | **tosi**  |
+|                                `IsMatch( "123", MultipleDigits & Period & OptionalDigits )`                                 | Vastaa, kun kyseessä on numerojono, jonka jälkeen on piste ja sitten nolla tai useampia numeroita. Teksti ei näy piste luettelossa, joten tätä kaavaa ei ole täsmäytetty. | **epätosi** |
 
 ### <a name="regular-expressions"></a>Säännönmukaiset lausekkeet
 
 |                                                                              Kaava                                                                              |                                                                                                                                  Kuvaus                                                                                                                                   |  Tulos   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-|                                                                    `IsMatch( "986"; "\d+" )`                                                                   |                                                                                                                    Vastaa kokonaisluku, joka on suurempi kuin nolla.                                                                                                                     | **tosi**  |
-|                                                               `IsMatch( "1.02"; "\d+(\.\d\d)?" )`                                                              |                                        Vastaa positiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää kaksi numeroa desimaalipisteen jälkeen. Esimerkiksi 3.00 on kelvollinen, mutta 3.1 ei.                                         | **tosi**  |
-|                                                            `IsMatch( "-4.95"; "(-)?\d+(\.\d\d)?" )`                                                             |                                                        Vastaa positiivista tai negatiivista valuuttasummaa. Jos syöte sisältää desimaalierottimen, syötteen täytyy myös sisältää kaksi numeroa desimaalipisteen jälkeen.                                                        | **tosi**  |
-|                                                         `IsMatch( "111-11-1111"; "\d{3}-\d{2}-\d{4}" )`                                                        | Vastaa Yhdysvaltojen sosiaaliturvatunnusta. Vahvistaa annetun syötekentän muodon, tyypin ja pituuden. Vastattavan merkkijonon täytyy sisältää kolme numeroa, viiva, sitten kaksi numeroa, viiva mukaan ja sitten neljä numeroa. | **tosi**  |
-|                                                         `IsMatch( "111-111-111"; "\d{3}-\d{2}-\d{4}" )`                                                         |                                                                                               Sama kuin edellisessä esimerkissä, mutta yksi syötteen viiva on väärässä paikassa.                                                                                               | **epätosi** |
-|                                         `IsMatch( "AStrongPasswordNot"; "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Vahvistaa vahvan salasanan, jonka täytyy sisältää 8, 9 tai 10 merkkiä sekä vähintään yhden numeron ja vähintään yhden kirjaimen. Merkkijono ei saa sisältää erikoismerkkejä.                                        | **epätosi** |
-| `IsMatch( "<http://microsoft.com>"; "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]\*)?" )` |                                                                                                                     Vahvistaa http-, https- tai ftp-url-osoitteen.                                                                                                                      | **tosi**  |
+|                                                                    `IsMatch( "986", "\d+" )`                                                                   |                                                                                                                    Vastaa nollaa suurempaa kokonaislukua.                                                                                                                     | **tosi**  |
+|                                                               `IsMatch( "1.02", "\d+(\.\d\d)?" )`                                                              |                                        Vastaa positiivista valuuttasummaa. Jos syöte sisältää desimaalimuodon, syötteen on sisällettävä myös kaksi aakkosto-merkkiä. Esimerkiksi 3.00 on kelvollinen, mutta 3.1 ei.                                         | **tosi**  |
+|                                                            `IsMatch( "-4.95", "(-)?\d+(\.\d\d)?" )`                                                             |                                                        Vastaa positiivista tai negatiivista valuuttasummaa. Jos syöte sisältää desimaalimuodon, syötteen on sisällettävä myös kaksi aakkosto-merkkiä.                                                        | **tosi**  |
+|                                                         `IsMatch( "111-11-1111", "\d{3}-\d{2}-\d{4}" )`                                                        | Vastaa Yhdysvaltojen sosiaaliturvatunnusta. Vahvistaa annetun syötekentän muodon, tyypin ja pituuden. Vastaavuus merkki jonon on koostuttava kolmesta numealisesta merkistä, joita seuraa viiva, ja sitten kaksi merkkiä, joita seuraa viiva, ja sitten neljä numeroa. | **tosi**  |
+|                                                         `IsMatch( "111-111-111", "\d{3}-\d{2}-\d{4}" )`                                                         |                                                                                               Sama kuin edellisessä esimerkissä, mutta yksi syötteen viiva on väärässä paikassa.                                                                                               | **epätosi** |
+|                                         `IsMatch( "AStrongPasswordNot", "(?!^[0-9]\*$)(?!^[a-zA-Z]\*$)([a-zA-Z0-9]{8,10})" )`                                        |                                        Vahvistaa vahvan Sala sanan, jonka on sisällettävä kahdeksan, yhdeksän tai kymmenen merkkiä, ja lisäksi siinä on oltava vähintään yksi numero ja vähintään yksi aakkos merkki. Merkkijono ei saa sisältää erikoismerkkejä.                                        | **epätosi** |
+| `IsMatch( "<http://microsoft.com>", "(ht&#124;f)tp(s?)\:\/\/\[0-9a-zA-Z\]([-.\w]\*[0-9a-zA-Z])\*(:(0-9)\*)\*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]\*)?" )` |                                                                                                                     Vahvistaa http-, https- tai ftp-url-osoitteen.                                                                                                                      | **tosi**  |
 
-## <a name="match-and-matchall-examples"></a>Vastaavuus ja MatchAll esimerkkejä
+## <a name="match-and-matchall-examples"></a>Match-ja MatchAll-esimerkit
 
 | Kaava | Kuvaus | Tulos |
 |--------|------------|-----------|
-| `Match( "Bob Jones <bob.jones@contoso.com>"; "<(?<email>" & Match.Email & ")>"` | Poimii vain sähköposti osuus yhteystiedot.  | {<br>sähköposti:&nbsp;”bob.jones@contoso.com”,<br>FullMatch:&nbsp;"&lt;bob.jones@contoso.com>",<br>Alivastineiden:&nbsp;[&nbsp;”bob.jones@contoso.com”&nbsp;],<br>StartMatch: 11<br>}  
-| `Match( "Bob Jones <InvalidEmailAddress>"; "<(?<email>" & Match.Email & ")>"` | Poimii vain sähköposti osuus yhteystiedot. Juridiset osoitetta ei löydy (ei ole @-merkkiä), joten funktio palauttaa *tyhjä*. | *tyhjä* |  
-| `Match( Language(); "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | Otteet kielen kielen, komentosarjan ja alueen osan tunniste, **[kielen](function-language.md)** funktio palauttaa. Nämä tulokset kuvastavat Yhdysvallat. Katso [ **kielen** funktion dokumentaatio](function-language.md) Lisää esimerkkejä.  **(?:** Operaattorin ryhmät merkkiä luomatta toinen alimerkkijonon vastaavuus. | {<br>kieli: ”en”<br>komentosarjan: *tyhjä*, <br>alue: "US",<br>FullMatch: "en-US", <br>Alivastineiden: [”en” ”,”, ”US”], <br>StartMatch: 1<br>} 
-| `Match( "PT2H1M39S"; "PT(?:(<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | Poimii tunnit, minuutit ja sekunnit ISO 8601-kestoarvo. Poimittu numerot ovat edelleen merkkijonossa. Käytä [ **arvo** ](function-value.md) funktio muuntaa luvuksi, ennen kuin se suoritetaan matemaattiset laskutoimitukset.  | {<br> tunnit: "2",<br>minuuttia: "1",<br>sekuntia: "39",<br>FullMatch: ”PT2H1M39S”<br>Alivastineiden:&nbsp;[&nbsp;”2”&nbsp;”1”&nbsp;”39”&nbsp;],<br>StartMatch: 1<br>} |
+| `Match( "Bob Jones <bob.jones@contoso.com>", "<(?<email>" & Match.Email & ")>"` | Poimii vain yhteys tietojen Sähkö posti osan.  | {<br>Sähkö posti&nbsp;:bob.jones@contoso.com"",<br>Fullmatch:&nbsp;"&lt;bob.jones@contoso.com>",<br>Osavastaavuudet&nbsp;:&nbsp;[bob.jones@contoso.com"&nbsp;"],<br>StartMatch: 11<br>}  
+| `Match( "Bob Jones <InvalidEmailAddress>", "<(?<email>" & Match.Email & ")>"` | Poimii vain yhteys tietojen Sähkö posti osan. Mitään oikeudellista osoitetta ei löydy (@-merkki ei ole), joten funktio palauttaa *tyhjän*. | *tyhjä* |  
+| `Match( Language(), "(<language>\w{2})(?:-(?<script>\w{4}))?(?:-(?<region>\w{2}))?" )` | Poimii kieli-funktiolla palauttavan kieli merkinnän kieli-, komento sarja-ja **[](function-language.md)** alue osat. Nämä tulokset kuvastavat Yhdysvallat; Lue lisää esimerkkejä [ **kieli** funktioiden ohjeista](function-language.md) .  **(?:** Operaattori ryhmittelee merkit luomatta toista alivastaavuutta. | {<br>kieli: "En",<br>komento sarja: *tyhjä*, <br>alue "US",<br>FullMatch: "en-US", <br>Osavastaavuudet: ["En", "", "US"], <br>StartMatch: 1<br>} 
+| `Match( "PT2H1M39S", "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" )` | Poimii tunnit, minuutit ja sekunnit ISO 8601-kesto arvosta. Poimitut luvut ovat yhä teksti merkki jonossa; Muunna [**arvo**](function-value.md) -funktiolla luku-funktiolla ennen matemaattisten toimintojen suorittamista.  | {<br> tunnit "2",<br>minuuttia "1",<br>sekuntia "39",<br>FullMatch: "PT2H1M39S",<br>Osavastaavuudet&nbsp;:&nbsp;["2"&nbsp;, "1"&nbsp;, "39&nbsp;"],<br>StartMatch: 1<br>} |
 
-Oletetaan, että porautua kyseiseen viimeinen esimerkki. Halua päivämäärä/aika-arvo käyttämällä tämän merkkijonon muuntaminen **[aika](function-date-time.md)** funktio, sinun on välitettävä-nimetty alimerkkijonon vastaavuudet erikseen. Voit tehdä tämän, voit määrittää **[ForAll](function-forall.md)** funktio käsittelee ensimmäisen tietueen, jotka **MatchAll** palauttaa:
+Let's siirtyä tähän viimeiseen esimerkkiin. Jos halusit muuntaa tämän merkki jonon päivä määrä-ja aika-arvoksi käyttämällä **[Time](function-date-time.md)** -funktiolla, sinun on välitettävä nimetyt alivastaavuudet yksitellen. Voit tehdä tämän käyttämällä **[with-](function-with.md)** toimintoa, joka toimii palautusten täsmäävän tietueen kanssa:
 
-``` powerapps-comma
-First( 
-    ForAll( 
-        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ); 
-        Time( Value( hours ); Value( minutes ); Value( seconds ) )
-    )
-).Value
+``` powerapps-dot
+With( 
+    Match( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ), 
+    Time( Value( hours ), Value( minutes ), Value( seconds ) )
+)
 ```
 
-Näissä esimerkeissä Lisää [painike](../controls/control-button.md) ohjausobjekti, määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava ja valitse sitten painike:
+Lisää näitä esimerkkejä varten [painike](../controls/control-button.md) -ohjaus objekti, määritä sen **onselect** -ominaisuudeksi Tämä kaava ja valitse sitten painike:
 
-``` powerapps-comma
-Set( pangram; "The quick brown fox jumps over the lazy dog." )
+``` powerapps-dot
+Set( pangram, "The quick brown fox jumps over the lazy dog." )
 ```
  
 | Kaava | Kuvaus | Tulos |
 |---------|-------------|--------|
-| `Match( pangram; "THE"; IgnoreCase )` | Etsi teksti ”niitä” kaikki vastaavuudet merkkijono, joka **pangram** muuttujan sisältää. Merkkijono sisältää kaksi vastaavuuksia, mutta vain ensimmäinen palautetaan, koska käytät **vastaavuus** ja ei **MatchAll**. Alivastineiden-sarake on tyhjä, koska alimerkkijonon vastaavuuksia ei määritetty.  | {<br>FullMatch: ””<br>Alivastineiden: [&nbsp;],<br>StartMatch: 32<br>} |
-| `MatchAll( pangram; "the" )` | Näytä kaikki kohteet tekstin ”the”-merkkijono, joka **pangram** muuttujan sisältää. Testaa kirjainkoko on merkitsevä, joten vain toinen kohteen ”the” esiintymä löytyi. Alivastineiden-sarake on tyhjä, koska alimerkkijonon vastaavuuksia ei määritetty.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram; "the"; IgnoreCase )` | Näytä kaikki kohteet tekstin ”the”-merkkijono, joka **pangram** muuttujan sisältää. Tässä tapauksessa testin on kirjainkoko ei ole merkitsevä, joten sekä sanan esiintymät. Alivastineiden-sarake on tyhjä, koska alimerkkijonon vastaavuuksia ei määritetty.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
-| `MatchAll( pangram; "\b\wo\w\b" )` | Etsii kaikkia kolmikirjaiminen sanoja, jotka ”o” keskellä. Huomaa, että ”tummanruskea” on pois, koska se ei ole kolmikirjaiminen sanan ja vuoksi epäonnistuu vastaamaan ”\b” (word raja).  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
-| `Match( pangram; "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Vastaa kaikki merkit välillä ”fox” ja ”koira”. | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>Alivastineiden: [”Hyppää kautta palvelinrakenteen”],<br>StartMatch: 17<br> } |
+| `Match( pangram, "THE", IgnoreCase )` | Etsi kaikki kohteen "THE" vastaavuudet **panggram** -muuttujan sisältämistä teksti merkki jonosta. Merkki jono sisältää kaksi vastaavuutta, mutta vain ensimmäinen palautetaan, koska käytät **vastaavuutta** etkä **matchall**-kohdetta. SubMatches-sarake on tyhjä, koska alivastaavu uksia ei määritetty.  | {<br>FullMatch: "The",<br>Osavastaavuudet:&nbsp;[],<br>StartMatch: 32<br>} |
+| `MatchAll( pangram, "the" )` | Etsi kaikki kohteen "The" vastaavuudet **panggram** -muuttujan sisältämistä teksti merkki jonosta. Testissä kirjain koko on merkitsevä, joten vain toinen esiintymä löytyi. SubMatches-sarake on tyhjä, koska alivastaavu uksia ei määritetty.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
+| `MatchAll( pangram, "the", IgnoreCase )` | Etsi kaikki kohteen "The" vastaavuudet **panggram** -muuttujan sisältämistä teksti merkki jonosta. Tässä tapa uksessa testissä kirjain koolla ei ole merkitystä, joten sanan molemmat esiintymät löytyvät. SubMatches-sarake on tyhjä, koska alivastaavu uksia ei määritetty.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram, "\b\wo\w\b" )` | Etsii kaikki kolmikirjaimiset sanat, joiden keskellä on "o". Ota huomioon, että "Brown" ohitetaan, koska se ei ole kolmikirjaiminen sana, joten se ei vastaa "\b" (sanan rajaa).  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
+| `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Vastaa kaikkia merkkejä "Fox" ja "Dog" välillä. | {<br>välillä:&nbsp;"hyppää&nbsp;yli&nbsp;laiska",&nbsp;<br>Fullmatch:&nbsp;"Fox&nbsp;hyppää&nbsp;&nbsp;laiska&nbsp;koiranpäälle",&nbsp;<br>Osavastaavuudet: ["hyppää yli laiska"],<br>StartMatch: 17<br> } |
 
-Jotta näet tulokset **MatchAll** valikoimassa:
+Jos haluat tarkastella valikoiman **Matchall** -tuloksia valikoimassa:
 
-1. Lisää tyhjä näyttö, tyhjä pystysuuntainen **[valikoiman](../controls/control-gallery.md)** ohjausobjektin.
+1. Lisää tyhjään näyttöön tyhjä pystysuuntainen **[valikoima](../controls/control-gallery.md)** -ohjaus objekti.
 
-2. Määritä valikoiman **kohteet** ominaisuudeksi **MatchAll (pangram, ”\w+”)** tai **MatchAll (pangram MultipleLetters)** .
+2. Valitse valikoiman **Items** -ominaisuudeksi **matchall (pangram, "\w +")** tai **Matchall (Pangram, multipleelementers)** .
 
     ![](media/function-ismatch/pangram-gallery1.png)
 
-3. Valitse ”Lisää kohde Lisää-välilehdestä” ja valitse haluamasi valikoiman mallipohja valikoima-ohjausobjektin keskellä. 
+3. Valitse valikoiman malli valitsemalla Lisää kohde Lisää-väli lehdestä valikoima-ohjaus objektin keskeltä. 
 
-5. Lisää **[nimen](../controls/control-text-box.md)** ohjausobjektin valikoiman mallipohjaa.  
+5. Lisää **[otsikko](../controls/control-text-box.md)** -ohjaus objekti valikoiman malliin.  
 
-4. Määritä selitteen **tekstin** ominaisuudeksi **ThisItem.FullMatch**.  
+4. Valitse otsikon **teksti** -ominaisuudeksi **Thisitem. fullmatch**.  
  
-    Valikoiman tulee kunkin sanan parantaakseen esimerkkiteksti.  Muuta valikoiman mallipohjaa ja nimi-ohjausobjektin näkyviin kaikki sanat yhdessä näytössä.
+    Valikoima on täytetty esimerkki tekstin jokaisella sanalla.  Muuta valikoiman mallin ja selite-ohjaus objektin kokoa, jotta voit tarkastella kaikkia sanoja yhdessä näytössä.
 
     ![](media/function-ismatch/pangram-gallery2.png)

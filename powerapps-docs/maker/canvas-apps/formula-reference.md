@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 11/14/2018
+ms.date: 08/15/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f7cf23c03f68efc5e5b553a05d7f546373b636c9
-ms.sourcegitcommit: 2084789802fc5134dbeb888e759cced46019a017
+ms.openlocfilehash: f934730ec6ca432f1da4106c535cf5967f883070
+ms.sourcegitcommit: 9163abbe9a24298f216f15139f977adfd2c3f2ae
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66736213"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550333"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -32,7 +32,7 @@ Muita elementtejä ovat:
 
 * [Kaikki operaattorit](functions/operators.md)
 * [Ohjausobjektit ja niiden ominaisuudet](reference-properties.md)
-* [Tietotyypit](functions/data-types.md)
+* [Tieto tyypit](functions/data-types.md)
 
 ## <a name="a"></a>A
 **[Abs](functions/function-numericals.md)** – luvun itseisarvo.  
@@ -47,11 +47,11 @@ Muita elementtejä ovat:
 
 **[And](functions/function-logicals.md)** – totuusarvoehdon AND-operaattori.  Palauttaa arvon **tosi**, jos kaikkien argumenttien arvo on **tosi**.  Voit myös käyttää [ **&&** -operaattoria](functions/operators.md).
 
-**[Sovelluksen](functions/object-app.md)**  – sisältää tietoja käynnissä sovelluksen ja hallita sovelluksen toiminnan.
+**[Sovellus](functions/object-app.md)** – tarjoaa tietoja käynnissä olevasta sovelluksesta ja valvoo sovelluksen toimintaa.
 
 **[Asin](functions/function-trig.md)** – palauttaa luvun arkussinin radiaaneina.
 
-**[AsType](functions/function-astype-istype.md)**  – käsittelee tietueen viittaus tietyn entiteettityyppi.
+**[Asttype](functions/function-astype-istype.md)** – käsittelee tietue viittausta tiettynä entiteettityypinä.
 
 **[Atan](functions/function-trig.md)** – palauttaa luvun arkustangentin radiaaneina.
 
@@ -187,10 +187,10 @@ Muita elementtejä ovat:
 
 **[IsToday](functions/function-now-today-istoday.md)** – tarkistaa, onko päivämäärä- ja aika-arvo jossain vaiheessa tämän päivän aikana.
 
-**[IsType](functions/function-astype-istype.md)**  – tarkistaa tietueen viittaus viittaa tietyn entiteettityyppi.
+**[Istype](functions/function-astype-istype.md)** – tarkistaa, viittaeko tietue viittaus tiettyyn entiteettityypin.
 
 ## <a name="j"></a>J
-**[JSON](functions/function-json.md)**  – luo taulukon, tietueen tai arvo JSON-merkkijonon.
+**[JSON](functions/function-json.md)** – luo JSON-teksti merkki jonon taulukolle, tietueelle tai arvolle.
 
 ## <a name="l"></a>L
 **[Language](functions/function-language.md)** – palauttaa nykyisen käyttäjän kielitunnisteen.
@@ -216,9 +216,9 @@ Muita elementtejä ovat:
 **[Lower](functions/function-lower-upper-proper.md)** – muuntaa tekstimerkkijonon kirjaimet pieniksi kirjaimiksi.
 
 ## <a name="m"></a>M
-**[Vastaavuus](functions/function-ismatch.md)**  – poimii perusteella, alimerkkijonon.  Säännönmukaisia lausekkeita voidaan käyttää.
+**[Match](functions/function-ismatch.md)** – poimii malliin perustuvan alimerkkijonon.  Säännönmukaisia lausekkeita voidaan käyttää.
 
-**[MatchAll](functions/function-ismatch.md)**  – poimii perusteella, useita alimerkkijonoja.  Säännönmukaisia lausekkeita voidaan käyttää.
+**[Matchall](functions/function-ismatch.md)** – poimii useita malliin perustuvia osamerkki jonoja.  Säännönmukaisia lausekkeita voidaan käyttää.
 
 **[Max](functions/function-aggregates.md)** – taulukon lausekkeen tai argumenttijoukon suurin arvo.
 
@@ -268,7 +268,7 @@ Muita elementtejä ovat:
 
 **[Refresh](functions/function-refresh.md)** – päivittää tietolähteen tietueita.
 
-**[Liittyvät](functions/function-relate-unrelate.md)**  – liittyy kautta yksi-moneen- tai monta-moneen-suhteen kahden entiteetin tietueet.
+**[Relate – liittää](functions/function-relate-unrelate.md)** Kahden entiteetin tietueet yksi moneen-tai monta-moneen-suhteen kautta.
 
 **[Remove](functions/function-remove-removeif.md)** – poistaa yhden tai useita määrättyjä tietueita tietolähteestä.
 
@@ -336,7 +336,7 @@ Muita elementtejä ovat:
 
 **[Tan](functions/function-trig.md)** – palauttaa radiaaneina määritetyn kulman tangentin.
 
-**[Tekstin](functions/function-text.md)**  – muuntaa mitään arvoa ja alustaa tekstimerkkijonon numeron tai päivämäärän/ajan arvo.
+**[Text](functions/function-text.md)** – muuntaa minkä tahansa arvon ja muotoilee luvun tai päivä määrä-ja aika-arvon teksti merkki jonoksi.
 
 **[ThisItem](functions/operators.md#thisitem-operator)** – jos ollaan valikoimassa tai lomakkeessa, palauttaa nykyisen kohteen tiedot säilöstä.
 
@@ -355,7 +355,7 @@ Muita elementtejä ovat:
 ## <a name="u"></a>U
 **[Ungroup](functions/function-groupby.md)** – poistaa ryhmittelyn.
 
-**[Unrelate](functions/function-relate-unrelate.md)**  – Unrelates kahden entiteetin tietueiden yksi-moneen- tai monta-moneen-suhde.
+**[Unrelate](functions/function-relate-unrelate.md)** – poistaa Kahden entiteetin tietueet yhdestä moneen-tai monta moneen-suhteesta.
 
 **[Update](functions/function-update-updateif.md)** – korvaa tietolähteen tietueen.
 
@@ -378,6 +378,8 @@ Muita elementtejä ovat:
 
 ## <a name="w"></a>W
 **[Weekday](functions/function-datetime-parts.md)** – noutaa päivämäärä- ja aika-arvon viikonpäiväosan.
+
+**[With](functions/function-with.md)** – laskee arvot ja suorittaa toimintoja yksittäiselle tietueelle, mukaan lukien nimettyjen arvojen sisäiset tietueet.
 
 ## <a name="y"></a>Y
 **[Year](functions/function-datetime-parts.md)** – noutaa päivämäärä- ja aika-arvon vuosiosan.  
