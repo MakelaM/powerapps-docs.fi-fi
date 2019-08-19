@@ -677,6 +677,8 @@
                   href: ./canvas-apps/functions/function-form.md
                 - name: Weekday
                   href: ./canvas-apps/functions/function-datetime-parts.md
+                - name: Seuraavan kanssa
+                  href: ./canvas-apps/functions/function-with.md
                 - name: Year
                   href: ./canvas-apps/functions/function-datetime-parts.md
         - name: Luo sovellus ratkaisussa
@@ -842,7 +844,7 @@
                       href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
                     - name: Lomakkeen suunnittelutyökalun ominaisuudet
                       href: ./model-driven-apps/form-designer-properties.md
-                    - name: Määritetään ylätunnisteen ominaisuuksia
+                    - name: Ylätunnisteen ominaisuuksien määrittäminen
                       href: ./model-driven-apps/form-designer-header-properties.md
                     - name: Puunäkymän käyttö
                       href: ./model-driven-apps/using-tree-view-on-form.md
