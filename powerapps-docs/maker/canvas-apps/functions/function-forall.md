@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 08/16/2019
 ms.locfileid: "69550365"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="forall-function-in-powerapps"></a>ForAll-funktio PowerAppsissa
 Laskee arvot ja suorittaa toiminnot [taulukon](../working-with-tables.md) kaikille [tietueille](../working-with-tables.md#records).
@@ -51,7 +52,7 @@ Toinen huomioon otettava seikka on, että **ForAll** ei ole delegoitavissa, tois
 [!INCLUDE [delegation-no-one](../../../includes/delegation-no-one.md)]
 
 ## <a name="syntax"></a>Syntaksi
-**ForAll**( *Taulukko*, *Kaava* )
+**ForAll**( *Taulukko*; *Kaava* )
 
 * *Taulukko* – Pakollinen. Taulukko, jolle toiminto suoritetaan.
 * *Kaava* – Pakollinen.  *Taulukon* kaikkien tietueiden arviointiin käytettävä kaava.
@@ -64,12 +65,12 @@ Seuraavissa esimerkeissä käytetään **Squares**-[tietolähdettä](../working-
 
 Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painike**-ohjausobjektin **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
 
-`ClearCollect( Squares, [ "1", "4", "9" ] )`
+`ClearCollect( Squares; [ "1"; "4"; "9" ] )`
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |Laskee kaikille syöttötaulukon tietueille **Value**-sarakkeen neliöjuuren.  **Sqrt**-funktiota voidaan käyttää yhden sarakkeen taulukolle, joten tämä esimerkki voidaan toteuttaa käyttämättä **ForAll**-funktiota. |<style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) |
-| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |Nostaa kaikkien syöttötaulukon tietueiden **Value**-sarakkeen kolmanteen potenssiin.  **Power**-funktio ei tue yhden sarakkeen taulukoita. Siksi tässä tapauksessa täytyy käyttää **ForAll**-funktiota. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
+| **ForAll(&nbsp;Squares; Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |Laskee kaikille syöttötaulukon tietueille **Value**-sarakkeen neliöjuuren.  **Sqrt**-funktiota voidaan käyttää yhden sarakkeen taulukolle, joten tämä esimerkki voidaan toteuttaa käyttämättä **ForAll**-funktiota. |<style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) |
+| **ForAll(&nbsp;Squares; Power(&nbsp;Value;&nbsp;3&nbsp;)&nbsp;)** |Nostaa kaikkien syöttötaulukon tietueiden **Value**-sarakkeen kolmanteen potenssiin.  **Power**-funktio ei tue yhden sarakkeen taulukoita. Siksi tässä tapauksessa täytyy käyttää **ForAll**-funktiota. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
 
 ### <a name="using-a-connection"></a>Yhteyden käyttäminen
 Seuraavissa esimerkeissä käytetään **Expressions**[-tietolähdettä](../working-with-data-sources.md):
@@ -78,14 +79,14 @@ Seuraavissa esimerkeissä käytetään **Expressions**[-tietolähdettä](../work
 
 Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painike**-ohjausobjektin **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
 
-`ClearCollect( Expressions, [ "Hello", "Good morning", "Thank you", "Goodbye" ] )`
+`ClearCollect( Expressions; [ "Hello"; "Good morning"; "Thank you"; "Goodbye" ] )`
 
 Tämä esimerkki käyttää myös [Microsoft Translator](../connections/connection-microsoft-translator.md) -yhteyttä.  Katso tämän yhteyden lisäämiseksi sovellukseesi [yhteyksien hallintaa](../add-manage-connections.md) käsittelevä aihe.
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "es" ) )** |Kaikkien Expressions-taulukon tietueiden **Value**-sarakkeen sisältö käännetään espanjaksi (lyhenne ”es”). |<style> img { max-width: none } </style> ![](media/function-forall/translate-es.png) |
-| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "fr" ) )** |Kaikkien Expressions-taulukon tietueiden **Value**-sarakkeen sisältö käännetään ranskaksi (lyhenne ”fr”). |<style> img { max-width: none } </style> ![](media/function-forall/translate-fr.png) |
+| **ForAll( Expressions; MicrosoftTranslator.Translate( Value; "es" ) )** |Kaikkien Expressions-taulukon tietueiden **Value**-sarakkeen sisältö käännetään espanjaksi (lyhenne ”es”). |<style> img { max-width: none } </style> ![](media/function-forall/translate-es.png) |
+| **ForAll( Expressions; MicrosoftTranslator.Translate( Value; "fr" ) )** |Kaikkien Expressions-taulukon tietueiden **Value**-sarakkeen sisältö käännetään ranskaksi (lyhenne ”fr”). |<style> img { max-width: none } </style> ![](media/function-forall/translate-fr.png) |
 
 ### <a name="copying-a-table"></a>Taulukon kopioiminen
 Joskus tietoja täytyy suodattaa, muovata, lajitella tai muokata.  PowerAppsissa on tätä varten useita funktioita, kuten **Filter**, **AddColumns**, ja **Sort**.  PowerApps käsittelee jokaista taulukkoa arvona ja mahdollistaa sen kulun kaavojen läpi helposti.      
@@ -104,13 +105,13 @@ Seuraavissa esimerkeissä käytetään **Products**[-tietolähdettä](../working
 
 Voit luoda tämän tietolähteen kokoelmana asettamalla jonkin **painike**-ohjausobjektin **OnSelect**-ominaisuudeksi tämän kaavan, avaamalla esikatselutilan ja sitten napsauttamalla tai napauttamalla painiketta:
 
-```powerapps-dot
-ClearCollect( Products, 
+```powerapps-comma
+ClearCollect( Products; 
     Table( 
-        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 }, 
-        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
-        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
-        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 } 
+        { Product: "Widget";    'Quantity Requested': 6;  'Quantity Available': 3 }; 
+        { Product: "Gadget";    'Quantity Requested': 10; 'Quantity Available': 20 };
+        { Product: "Gizmo";     'Quantity Requested': 4;  'Quantity Available': 11 };
+        { Product: "Apparatus"; 'Quantity Requested': 7;  'Quantity Available': 6 } 
     )
 )
 ```
@@ -124,14 +125,14 @@ Voimme suorittaa tämän tehtävän eri tavoilla, joista kaikki tuottavat saman 
 #### <a name="table-shaping-on-demand"></a>Taulukon muovaaminen pyydettäessä
 Älä tee kopiota!  Voimme käyttää seuraavaa kaavaa kaikkialla, missä sitä tarvitsemme:
 
-```powerapps-dot
-// Table shaping on demand, no need for a copy of the result
+```powerapps-comma
+// Table shaping on demand; no need for a copy of the result
 ShowColumns( 
     AddColumns( 
-        Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-        "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
-    ), 
-    "Product", 
+        Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
+        "Quantity To Order"; 'Quantity Requested' - 'Quantity Available' 
+    ); 
+    "Product"; 
     "Quantity To Order"
 )
 ```
@@ -145,11 +146,11 @@ Ja koska emme tehneet kopiota, ei ole olemassa ylimääräistä tietojen kopiota
 #### <a name="forall-on-demand"></a>ForAll pyydettäessä
 Toinen menetelmä on käyttää **ForAll**-funktiota taulukkoa muovaavien funktioiden korvikkeena:
 
-```powerapps-dot
-ForAll( Products, 
-    If( 'Quantity Requested' > 'Quantity Available', 
+```powerapps-comma
+ForAll( Products; 
+    If( 'Quantity Requested' > 'Quantity Available'; 
         { 
-            Product: Product, 
+            Product: Product; 
             'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
         } 
     ) 
@@ -165,25 +166,25 @@ Joissakin tapauksissa voi olla tarpeen kopioida tiedot.  Tietoja voi olla tarpee
 
 Käytämme samaa taulukon muovaamista kuin kahdessa edellisessä esimerkissä, mutta kaappaamme tulokset kokoelmaan:
 
-```powerapps-dot
-ClearCollect( NewOrder, 
+```powerapps-comma
+ClearCollect( NewOrder; 
     ShowColumns( 
         AddColumns( 
-            Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-            "Quantity To Order", 'Quantity Requested' - 'Quantity Available' 
-        ), 
-        "Product", 
+            Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
+            "Quantity To Order"; 'Quantity Requested' - 'Quantity Available' 
+        ); 
+        "Product"; 
         "Quantity To Order"
     )
 )
 ```
 
-```powerapps-dot
-ClearCollect( NewOrder, 
-    ForAll( Products, 
-        If( 'Quantity Requested' > 'Quantity Available', 
+```powerapps-comma
+ClearCollect( NewOrder; 
+    ForAll( Products; 
+        If( 'Quantity Requested' > 'Quantity Available'; 
             { 
-                Product: Product, 
+                Product: Product; 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
         } 
@@ -196,13 +197,13 @@ ClearCollect( NewOrder,
 #### <a name="collect-within-forall"></a>ForAll-funktion sisäinen Collect-funktio
 Lopuksi voimme suorittaa **Collect**-funktion suoraan **ForAll**-funktion sisällä:
 
-```powerapps-dot
-Clear( ProductsToOrder ); 
-ForAll( Products, 
-    If( 'Quantity Requested' > 'Quantity Available', 
-        Collect( NewOrder,  
+```powerapps-comma
+Clear( ProductsToOrder );; 
+ForAll( Products; 
+    If( 'Quantity Requested' > 'Quantity Available'; 
+        Collect( NewOrder;  
             { 
-                Product: Product, 
+                Product: Product; 
                 'Quantity To Order': 'Quantity Requested' - 'Quantity Available' 
             } 
         )

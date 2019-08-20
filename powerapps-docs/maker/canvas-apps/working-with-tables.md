@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 08/16/2019
 ms.locfileid: "69550384"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-canvas-app-tables-and-records-in-powerapps"></a>Pohjaan perustuvan sovelluksen taulukoiden ja tietueiden ymmärtäminen PowerAppsissa
 
@@ -40,7 +41,7 @@ Voit luoda erilaisia kaavoja, joille taulukon nimi annetaan argumenttina samalla
 ### <a name="records"></a>Tietueet
 Kukin tietue sisältää vähintään yhden henkilön, sijainnin tai asian tietoluokan. Edellä olevassa esimerkissä näkyy tietue kullekin tuotteelle (**Suklaa**, **Leipä** ja **Vesi**) ja sarakkeet kullekin tietoluokalle (**Hinta**, **Saatavilla oleva määrä** ja **Tilattu määrä**).
 
-Jos haluat viitata kaavassa johonkin tietueeseen yksinään taulukon kontekstin ulkopuolella, voit käyttää aaltosulkeita. Esimerkiksi tämä tietue **{Name: "Mansikat", hinta: 7,99}** ei liity taulukkoon. Huomaa, että kyseisessä esimerkissä olevat kenttien nimet, kuten **Nimi** ja **Hinta**, eivät ole lainausmerkeissä.
+Jos haluat viitata kaavassa johonkin tietueeseen yksinään taulukon kontekstin ulkopuolella, voit käyttää aaltosulkeita. Esimerkiksi tämä tietue **{Name: "Mansikat"; hinta: 7;99}** ei liity taulukkoon. Huomaa, että kyseisessä esimerkissä olevat kenttien nimet, kuten **Nimi** ja **Hinta**, eivät ole lainausmerkeissä.
 
 ### <a name="fields"></a>Kentät
 Kenttä on yksittäinen tieto-osio tietueessa. Voit määrittää tämän tyyppisen kentän näkymään arvona tietyssä tietueessa olevassa sarakkeessa.
@@ -73,11 +74,11 @@ Kaikilla tietolähteeseen tai kokoelmaan tallennetuilla taulukoilla on nimi, jol
 
 Seuraavassa esimerkissä taulukko ilmaistaan kaavassa käyttämällä **[Table](functions/function-table.md)** -funktiota, ja funktion tietojoukko ilmaistaan aaltosulkeilla:
 
-`Table( { Value: "Strawberry" }, { Value: "Vanilla" } )`
+`Table( { Value: "Strawberry" }; { Value: "Vanilla" } )`
 
 Voit myös määrittää yksisarakkeisen taulukon käyttämällä hakasulkeita.  Edellisen kaavan voi kirjoittaa myös näin:
 
-`[ "Strawberry", "Vanilla" ]`
+`[ "Strawberry"; "Vanilla" ]`
 
 ## <a name="table-formulas"></a>Taulukkokaavat
 Excelissä ja PowerAppsissa käytetään kaavoja, joilla käsitellään numeroita ja tekstimerkkijonoja samalla tavoin:
@@ -87,7 +88,7 @@ Excelissä ja PowerAppsissa käytetään kaavoja, joilla käsitellään numeroit
 
 Kummassakin tapauksessa laskettu arvo muuttuu automaattisesti, jos muutat argumenttien arvoja (esimerkiksi numeroa solussa **A1** tai **Slider1**:n arvoa).
 
-Samalla tavoin voit käyttää kaavoja taulukoissa ja tietueissa olevien tietojen käyttöönottoon ja käsittelyyn. Voit käyttää taulukoiden nimiä argumentteina joissakin kaavoissa. Esimerkiksi käyttämällä kaavaa **Min(Tuoteluettelo, Hinta)** voit näyttää **Tuoteluettelo**-taulukon pienimmän arvon **Hinta**-sarakkeessa. Lisäksi on kaavoja, jotka tarjoavat palautusarvoina kokonaisia taulukkoja. Esimerkiksi **RenameColumns(Tuoteluettelo, "Hinta", "Kustannus")** -kaava palauttaa kaikki tietueet **Tuoteluettelo**-taulukosta, mutta muuttaa**Hinta**-sarakkeen nimeksi **Kustannus**.
+Samalla tavoin voit käyttää kaavoja taulukoissa ja tietueissa olevien tietojen käyttöönottoon ja käsittelyyn. Voit käyttää taulukoiden nimiä argumentteina joissakin kaavoissa. Esimerkiksi käyttämällä kaavaa **Min(Tuoteluettelo; Hinta)** voit näyttää **Tuoteluettelo**-taulukon pienimmän arvon **Hinta**-sarakkeessa. Lisäksi on kaavoja, jotka tarjoavat palautusarvoina kokonaisia taulukkoja. Esimerkiksi **RenameColumns(Tuoteluettelo; "Hinta"; "Kustannus")** -kaava palauttaa kaikki tietueet **Tuoteluettelo**-taulukosta, mutta muuttaa**Hinta**-sarakkeen nimeksi **Kustannus**.
 
 Numeroiden tavoin myös taulukkoihin ja tietueisiin liittyvät kaavat lasketaan automaattisesti uudelleen, jos niiden pohjana oleva taulukko tai tietue muuttuu. Jos **Tuoteluettelo**-taulukossa olevan tuotteen aiheuttama kustannus laskee edellistä vähimmäisarvoa pienemmäksi, **[Min](functions/function-aggregates.md)** -kaavan palautusarvo muuttuu automaattisesti tätä vastaavaksi.
 
@@ -104,7 +105,7 @@ Katsotaan joitakin yksinkertaisia esimerkkejä.
 
 2. Sen sijaan, että määrittäisit **[Kohteet](controls/properties-core.md)** -ominaisuuden taulukon nimelle, määritä se kaavalle, jossa taulukon nimi annetaan argumenttina tämän esimerkin mukaisesti:
 
-    `Sort(CustomGallerySample, SampleHeading, Descending)`
+    `Sort(CustomGallerySample; SampleHeading; Descending)`
 
     Tämä kaava sisältää **[Sort](functions/function-sort.md)** -funktion, jossa taulukon nimi (TextualGallerySample) on ensimmäinen argumentti ja taulukossa olevan sarakkeen nimi (Heading) toinen argumentti. Funktio tukee myös valinnaista kolmatta argumenttia, joka määrää, että tietojen lajittelu tehdään laskevassa järjestyksessä (Descending).
 
@@ -112,7 +113,7 @@ Katsotaan joitakin yksinkertaisia esimerkkejä.
 
 3. Aseta **[Kohteet](controls/properties-core.md)** -ominaisuudeksi kaava, jolle edellisen vaiheen kaava annetaan argumenttina. Kaava palauttaa taulukon tämän esimerkin mukaisesti:
 
-    `FirstN(Sort(CustomGallerySample, SampleHeading, Descending), 2)`
+    `FirstN(Sort(CustomGallerySample; SampleHeading; Descending); 2)`
 
     Tässä kaavassa käytetään **[FirstN](functions/function-first-last.md)** -funktiota näyttämään taulukossa tietty määrä tietueita. **[Sort](functions/function-sort.md)** -funktio on **[FirstN](functions/function-first-last.md)** -funktion ensimmäinen argumentti, ja numero (tässä tapauksessa **2**) on toinen argumentti, joka määrittää, kuinka monta tietuetta näytetään.
 
@@ -161,7 +162,7 @@ Muut funktiot on erityisesti suunniteltu muuttamaan tietoja ja niillä on sivu v
 Voit myös luoda kaavan, joka laskee yksittäisen tietueen tiedot, määrittää argumentiksi yksittäisen tietueen ja tarjoaa yksittäisen tietueen palautusarvona. Katsotaan uudestaan edellistä valikoimaesimerkkiä. Käytetään **Gallery1.Selected**-ominaisuutta näyttämään tiedot mistä tahansa tietueesta, jonka käyttäjä valitsee kyseisestä valikoimasta.
 
 1. Lisää [**painike**](controls/control-button.md)ja määritä sen **[onselect](controls/properties-core.md)** -ominaisuudeksi Tämä kaava:<br>
-    **Collect( SelectedRecord, Gallery1.Selected )**
+    **Collect( SelectedRecord; Gallery1.Selected )**
 
 2. Pidä Alt-näppäintä painettuna ja valitse painike.
 
@@ -228,20 +229,20 @@ Katsotaan esimerkiksi **Tuotteet**-taulukkoa:
 
 Jos haluat luoda tämän esimerkki taulukon sovelluksessasi, Lisää painike, määritä sen **onselect** -ominaisuudeksi Tämä kaava ja valitse sitten painike (napsauta sitä, kun alhaalla Alt-näppäintä PowerApps Studio):
 
-```powerapps-dot
-Set( Products,
+```powerapps-comma
+Set( Products;
     Table(
-        { Product: "Widget",    'Quantity Requested': 6,  'Quantity Available': 3 },
-        { Product: "Gadget",    'Quantity Requested': 10, 'Quantity Available': 20 },
-        { Product: "Gizmo",     'Quantity Requested': 4,  'Quantity Available': 11 },
-        { Product: "Apparatus", 'Quantity Requested': 7,  'Quantity Available': 6 }
+        { Product: "Widget";    'Quantity Requested': 6;  'Quantity Available': 3 };
+        { Product: "Gadget";    'Quantity Requested': 10; 'Quantity Available': 20 };
+        { Product: "Gizmo";     'Quantity Requested': 4;  'Quantity Available': 11 };
+        { Product: "Apparatus"; 'Quantity Requested': 7;  'Quantity Available': 6 }
     )
 )
 ```
 
 Sen selvittäminen, onko mitään näistä tuotteista pyydetty enemmän kuin on käytettävissä:
 
-`Filter( Products, 'Quantity Requested' > 'Quantity Available' )`
+`Filter( Products; 'Quantity Requested' > 'Quantity Available' )`
 
 **Filter**-kaavan ensimmäinen argumentti on käsiteltävänä oleva tietuetaulukko, ja toinen argumentti on kaava.  **Filter**-kaava luo tietueen vaikutusalueen, jonka perusteella määritetään tämä kaava, jossa kunkin tietueen kentät ovat käytettävissä. Tässä tapauksessa näitä kenttiä ovat **Tuote**, **Pyydetty määrä** ja **Käytettävissä oleva määrä**.  Vertailun tulos määrittää, sisällytetäänkö kukin tietue funktion tulokseen:
 
@@ -249,10 +250,10 @@ Sen selvittäminen, onko mitään näistä tuotteista pyydetty enemmän kuin on 
 
 Laajennetaan esimerkkiä laskemalla, kuinka paljon kutakin tuotetta on tilattava:
 
-```powerapps-dot
+```powerapps-comma
 AddColumns( 
-    Filter( Products, 'Quantity Requested' > 'Quantity Available' ), 
-    "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
+    Filter( Products; 'Quantity Requested' > 'Quantity Available' ); 
+    "Quantity To Order"; 'Quantity Requested' - 'Quantity Available'
 )
 ```
 
@@ -262,13 +263,13 @@ Tässä lisäämme lasketun sarakkeen tulokseen. **AddColumns**-ominaisuudella o
 
 Lopuksi voimme pienentää tulos taulukkoa vain haluamille sarakkeille:
 
-```powerapps-dot
+```powerapps-comma
 ShowColumns(
     AddColumns(
-        Filter( Products, 'Quantity Requested' > 'Quantity Available' ),
-        "Quantity To Order", 'Quantity Requested' - 'Quantity Available'
-    ),
-    "Product",
+        Filter( Products; 'Quantity Requested' > 'Quantity Available' );
+        "Quantity To Order"; 'Quantity Requested' - 'Quantity Available'
+    );
+    "Product";
     "Quantity To Order"
 )
 ```
@@ -290,25 +291,25 @@ Kuvitellaan esimerkiksi kokoelma **X**:
 
 ![](media/working-with-tables/X.png)
 
-Voit luoda tämän kokoelman käyttämällä kaavaa **ClearCollect( X, \[1, 2\] )** .
+Voit luoda tämän kokoelman käyttämällä kaavaa **ClearCollect( X; \[1; 2\] )** .
 
 Ja toinen kokoelma **Y**:
 
 ![](media/working-with-tables/Y.png)
 
-Voit luoda tämän kokoelman käyttämällä kaavaa **ClearCollect( Y, ["A", "B"] )** .
+Voit luoda tämän kokoelman käyttämällä kaavaa **ClearCollect( Y; ["A"; "B"] )** .
 
 Määritä lisäksi kontekstin muuttuja nimeltä **Value** käyttäen tätä kaavaa: **UpdateContext ({arvo: "!"})**
 
 Kootaan nyt kaikki tiedot yhteen. Tässä kontekstissa seuraava kaava:
 
-```powerapps-dot
+```powerapps-comma
 Ungroup(
-    ForAll( X,
-        ForAll( Y,
+    ForAll( X;
+        ForAll( Y;
             Y[@Value] & Text( X[@Value] ) & [@Value]
         )
-    ),
+    );
     "Value"
 )
 ```
@@ -323,13 +324,13 @@ Sisin **ForAll**-funktio määrittää toisen tietuealueen **Y**:lle.  Koska my�
 
 Koska **Y** on alueen sisin tietuealue, tämän taulukon tietueiden käyttämiseen ei tarvita selvitystä. Näin ollen voimme käyttää tätä kaavaa ja samaa tulosta:
 
-```powerapps-dot
+```powerapps-comma
 Ungroup(
-    ForAll( X,
-        ForAll( Y,
+    ForAll( X;
+        ForAll( Y;
             Value & Text( X[@Value] ) & [@Value]
         )
-    ),
+    );
     "Value"
 )
 ```
@@ -342,8 +343,8 @@ Kaikki **ForAll**-tietuealueet ohittavat yleisen vaikutusalueen. Määrittämäs
 
 Jos haluat käyttää yksittäistä saraketta taulukosta, käytä **Showcolumns** -funktioita seuraavassa esimerkissä:
 
-```powerapps-dot
-ShowColumns( Products, "Product" )
+```powerapps-comma
+ShowColumns( Products; "Product" )
 ```
 
 Tämä kaava tuottaa tämän yksisarakkeisen taulukon:
@@ -352,7 +353,7 @@ Tämä kaava tuottaa tämän yksisarakkeisen taulukon:
 
 Jos kyseessä on lyhyempi vaihto ehto, Määritä *Table. Column*, joka poimii yksisarakkeisen taulukon vain *sarakkeesta* taulukosta. Tämä kaava tuottaa esimerkiksi täsmälleen saman tuloksen kuin **Showcolumns**.
 
-```powerapps-dot
+```powerapps-comma
 Products.Product
 ```
 
@@ -360,15 +361,15 @@ Products.Product
 
 Tietueita ilmaistaan aaltosulkeilla, jotka sisältävät nimetyt kenttäarvot.  Voit esimerkiksi ilmaista tämän ohjeaiheen alussa olevan taulukon ensimmäisen tietueen käyttämällä seuraavaa kaavaa:
 
-`{ Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 }`
+`{ Name: "Chocolate"; Price: 3,95; 'Quantity on Hand': 12; 'Quantity on Order': 10 }`
 
 Voit myös upottaa kaavoja muihin kaavoihin tämän esimerkin mukaan:
 
-`{ Name: First(Products).Name, Price: First(Products).Price * 1.095 }`
+`{ Name: First(Products).Name; Price: First(Products).Price * 1,095 }`
 
 Voit sijoittaa tietueita sisäkkäin käyttämällä aaltosulkeita sisäkkäin tämän esimerkin mukaisesti:
 
-`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand, 'OnOrder': ThisItem.QuantOnOrder } }`
+`{ 'Quantity': { 'OnHand': ThisItem.QuantOnHand; 'OnOrder': ThisItem.QuantOnOrder } }`
 
 Lisää heittomerkkien sisään jokainen sarakkeen nimi, joka sisältää erikoismerkin, kuten välilyönnin tai kaksoispisteen.  Kun haluat käyttää heittomerkkiä sarakkeen nimen sisällä, tuplaa se.
 
@@ -377,21 +378,21 @@ Huomaa, että **Hinta**-sarakkeessa oleva arvo ei sisällä valuuttasymbolia, ku
 ## <a name="inline-tables"></a>Sisäiset taulukot
 Voit luoda taulukon käyttämällä **[Table](functions/function-table.md)** -funktiota ja tietuejoukkoa. Voit ilmaista tämän ohjeaiheen alussa olevan taulukon käyttämällä seuraavaa kaavaa:
 
-```powerapps-dot
+```powerapps-comma
 Table( 
-    { Name: "Chocolate", Price: 3.95, 'Quantity on Hand': 12, 'Quantity on Order': 10 },
-    { Name: "Bread", Price: 4.95, 'Quantity on Hand': 34, 'Quantity on Order': 0 },
-    { Name: "Water", Price: 4.95, 'Quantity on Hand': 10, 'Quantity on Order': 0 } 
+    { Name: "Chocolate"; Price: 3,95; 'Quantity on Hand': 12; 'Quantity on Order': 10 };
+    { Name: "Bread"; Price: 4,95; 'Quantity on Hand': 34; 'Quantity on Order': 0 };
+    { Name: "Water"; Price: 4,95; 'Quantity on Hand': 10; 'Quantity on Order': 0 } 
 )
 ```
 
 Voit myös asettaa taulukkoja sisäkkäin:
 
-```powerapps-dot
+```powerapps-comma
 Table( 
-    { Name: "Chocolate", 
-      'Quantity History': Table( { Quarter: "Q1", OnHand: 10, OnOrder: 10 },
-                                 { Quarter: "Q2", OnHand: 18, OnOrder: 0 } ) 
+    { Name: "Chocolate"; 
+      'Quantity History': Table( { Quarter: "Q1"; OnHand: 10; OnOrder: 10 };
+                                 { Quarter: "Q2"; OnHand: 18; OnOrder: 0 } ) 
     }
 )
 ```
@@ -399,7 +400,7 @@ Table(
 ## <a name="inline-value-tables"></a>Sisäiset arvo taulukot
 Voit luoda yksisarakkeisia taulukkoja määrittämällä arvot hakasulkeisissa. Tuloksena saatavassa taulukossa on yksittäinen sarake, jonka nimi on **Arvo**.
 
-`[ 1, 2, 3, 4 ]` On esimerkiksi sama kuin `Table( { Value: 1 }, { Value: 2 }, { Value: 3 }, { Value: 4 } )` ja palauttaa tämän taulukon:
+`[ 1; 2; 3; 4 ]` On esimerkiksi sama kuin `Table( { Value: 1 }; { Value: 2 }; { Value: 3 }; { Value: 4 } )` ja palauttaa tämän taulukon:
 
 ![](media/working-with-tables/inline-table.png)
 
