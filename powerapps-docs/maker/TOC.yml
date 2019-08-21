@@ -1009,7 +1009,7 @@
           href: ./model-driven-apps/distribute-model-driven-app.md
         - name: Ohjatun ohjeen luominen
           href: ./model-driven-apps/create-guided-help-learning-path.md
-    - name: Siirtymän verkkoasiakassovellukset
+    - name: Siirtyminen käyttämään Unified Interface -infrastruktuuria
       items:
         - name: Siirtymän pikakäynnistys
           href: ./model-driven-apps/transition-web-app.md
