@@ -1,42 +1,44 @@
 ---
 title: Yleisiä PowerAppsin ongelmia ja ratkaisuja| Microsoft Docs
 description: Luettelo yleisistä PowerAppsin ongelmista ja ratkaisuista
-author: AFTOwen
+author: KumarVivek
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 11/09/2018
-ms.author: anneta
+ms.date: 08/21/2019
+ms.author: kvivek
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3c3b559be5f27c6ead9a4ea2f02027637c8aea8e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ef5da72c39d06d021765500fb5d1e55299dfb1cc
+ms.sourcegitcommit: d6b7f98b4ae011a753c1e72d7708f0f8dfbfb1fb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551625"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896243"
 ---
 # <a name="common-issues-and-resolutions-for-powerapps"></a>Yleisiä PowerAppsin ongelmia ja ratkaisuja
 
 Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttäjät saattavat kohdata PowerAppsia käyttäessään. Tarvittaessa annetaan ratkaisuehdotuksia.
 
-## <a name="added-after-february-2018"></a>Lisätty helmikuun 2018 jälkeen
+1. **Kirjautumisongelma tietyillä Android-mobiililaitteilla todentajaa käytettäessä** (21. elokuuta 2019)
 
-1. **Kameran ongelma Android-mobiililaitteiden** (1. tämän 2019)
+    Joissakin laitteissa ja tilanteissa kirjautumisvirheitä voi ilmetä käytettäessä todentajaa. Tämä johtuu siitä, että OEM-valmistajat rajoittavat tätä toimintoa. Saat lisä tietoja virheestä ja mahdollisista lieventämis virheistä [täältä](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).    
 
-    Jos kameran ohjausobjekti lakkaa toimimasta Android-laitteessa, Julkaise sovelluksesi uudelleen ja avaa se uudelleen laitteessa. Kamera-ohjausobjektin päivitettiin vastauksena Android-käyttöjärjestelmän muutos ja sovelluksesi tehdään, etuna päivitys julkaistessasi.
+1. **Kamera ongelma Android-mobiililaitteissa** (Tammikuu 1, 2019)
 
-1. **Joustava korkeus valikoimat vierittäminen** (27. Nov. 2018)
+    Jos kameran ohjaus objekti lakkaa toimimasta Android-laitteessa, julkaise sovelluksesi uudelleen ja avaa se uudelleen laitteessa. Kamera-ohjaus objekti päivitettiin vasta uksena Android-käyttö järjestelmän muutokseen, ja sovelluksesi hyötyy päivityksestä, kun julkaiset uudelleen.
 
-    Jos kohtaat rajoitus, vieritettäessä sormella, nosta ja Käynnistä vieritettävä uudelleen.
+1. **Joustava korkeus-valikoimien vierittäminen** (27. marraskuuta 2018)
 
-1. **Piirustuksen hiirtä tai kosketus-syöte ei ole tasainen PowerApps for Windows** (Separated 24, 2018)
+    Jos suoritat rajoituksen, Kun vierität sormella, nosta se ja aloita vierittäminen uudelleen.
 
-    Kynä-ohjausobjekti on vain osittain tuki piirtäminen hiiren avulla tai kosketuksella Windows-sovelluksessa. Oletuskynänvedot voi olla ajoittaisia. Tasoitettu viivatyyliä kynällä tai suorittaa sovelluksen selaimessa.
+1. **Piirtäminen hiirellä tai kosketuksella ei ole sujuvaa Powerappsissa Windowsissa** Ke. 24, 2018)
+
+    Kynä-ohjaus objektissa on vain osittainen tuki piirustuksessa hiiren tai kosketuksen avulla Windows-sovelluksessa. Viivat saattavat olla ajoittaisia. Voit käyttää pehmeää piirtämistä kynällä tai suorittamalla sovelluksen selaimessa.
 
 1. **Useita mediaohjausobjekteja PowerApps Mobilessa** (2.8.2018)
 
@@ -51,7 +53,7 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 1. <a name="out-of-memory"></a>**Selaimen muisti on loppumassa** (23.7.2018)
 
-    Jos suoritat muisti ei riitä Powerappsia käyttäessään, harkitse 64-bittinen versio Chrome, Microsoft Edgen tai Internet Explorerin ladataan.
+    Jos muisti loppuu, kun käytät Powerappsia, harkitse 64-bittisen version lataamista Chromesta, Microsoft Edgestä tai Internet Explorerista.
 
 1. **Sivuston käynnistäminen upotetusta sovelluksesta** (10.5.2018)
 
@@ -72,8 +74,6 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 1. **SharePoint-lomakkeiden asettelun muuttaminen** (7.3.2018)
 
     Kun SharePoint-lomakkeen asetuksia muokataan ja lomakkeen asettelu halutaan vaihtaa (oletusmuotoisesta) pystysuorasta vaakasuoraan, näyttöön voi joissakin kieliversioissa ilmaantua useita virhesymboleja (keltaisia kolmioita ohjausobjektien kohdalla). Voit korjata nämä virheet ja säilyttää vaaka-asettelun napsauttamalla **Kumoa**.
-
-## <a name="added-in-or-before-february-2018"></a>Lisätty helmikuussa 2018 tai sitä ennen
 
 1. **Tietotaulukko-ohjausobjekti**
 
@@ -99,13 +99,13 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
     Jos PowerApps-sovelluksen luomiseen on käytetty koontiversiota 2.0.540 tai aiempaa ja se käyttää Common Data Service -tietokantaa, ja vähintään yksi mukautettu liitin on eri ympäristössä, ota tämä liitin käyttöön samassa ympäristössä kuin tietokanta ja päivitä sovellus käyttämään uutta liitintä. Muussa tapauksessa näyttöön avautuu valintaikkuna, joka ilmoittaa, että API:a ei löytynyt. Lisätietoja on [ympäristöjen yleiskuvauksessa](../../administrator/environments-overview.md).
 
-1. **Sovelluksen suorittaminen Windows 8.1:ssä** 
+1. **Sovelluksen suorittaminen Windows 8.1:ssä**
 
     Jos asennat [tämän päivityksen Windows 8.1:een](https://technet.microsoft.com/library/security/ms16-118), et voi suorittaa PowerApps Studiossa avaamiasi sovelluksia tässä käyttöjärjestelmässä. Voit kuitenkin edelleen suorittaa sovelluksia, jotka avaat [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)-sivulla tai käyttämällä PowerApps Mobilea.
 
 1. **Välilyönneillä varustetut sarakenimet**
 
-    Jos käytät SharePoint-luetteloa tai Excel-taulukkoa, jonka sarakenimessä on välilyönti, PowerApps korvaa sen arvolla **”\_x0020\_”**. Esimerkiksi SharePointissa tai Excelissä näkyvä **"Sarakkeen Nimi"** näkyy PowerAppsissa muodossa **"Sarakkeen_x0020_Nimi"**, kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
+    Jos käytät SharePoint-luetteloa tai Excel-taulukkoa, jonka sarakenimessä on välilyönti, PowerApps korvaa sen arvolla **”\_x0020\_”** . Esimerkiksi SharePointissa tai Excelissä näkyvä **"Sarakkeen Nimi"** näkyy PowerAppsissa muodossa **"Sarakkeen_x0020_Nimi"** , kun se näytetään tietoasettelussa tai sitä käytetään kaavassa.
 
 1. **Työnkulun muuttaminen jaetussa sovelluksessa**
 
@@ -143,7 +143,7 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 1. **Kun PowerApps luo sovelluksen tietojen pohjalta, lajitteluun ja etsimiseen käytettävää kenttää ei määritetä automaattisesti**.
 
-   Jos haluat määrittää tämän kentän, muokkaa **[Items](controls/properties-core.md)**-kaavaa. Katso suodatusta ja lajittelua koskevat ohjeet kohdasta [Valikoiman lisääminen](add-gallery.md).
+   Jos haluat määrittää tämän kentän, muokkaa **[Items](controls/properties-core.md)** -kaavaa. Katso suodatusta ja lajittelua koskevat ohjeet kohdasta [Valikoiman lisääminen](add-gallery.md).
 
 1. **Tietojen pohjalta luoduissa sovelluksissa voidaan käyttää vain tietolähteen 500 ensimmäistä tietuetta**.
 
@@ -167,7 +167,7 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 1. **Et voi muuttaa tietoja [Lomake-ohjausobjektissa](controls/control-form-detail.md)käyttämällä mukautettua korttia**.
 
-     Varaston mukautetusta kortista puuttuu **[Päivitys](controls/control-card.md)**-ominaisuus, joka vaaditaan muutosten takaisinkirjoittamiseen. Voit kiertää ongelman seuraavasti:
+     Varaston mukautetusta kortista puuttuu **[Päivitys](controls/control-card.md)** -ominaisuus, joka vaaditaan muutosten takaisinkirjoittamiseen. Voit kiertää ongelman seuraavasti:
 
     * Valitse Lomake-ohjausobjekti ja lisää kortti käyttämällä oikeanpuoleista ruutua sen kentän perusteella, jonka haluat kortin näyttävän.  
     * Avaa kortin lukitus. Katso ohjeet kohdasta [Tietokorttien esittely](working-with-cards.md#unlock-a-card).
@@ -185,4 +185,4 @@ Tässä artikkelissa on luettelo joistakin yleisistä ongelmista, joita käyttä
 
 1. **Kortin valikoima on syrjäytetty**.
 
-     Nykyisiä sovelluksia, jotka käyttävät tätä ominaisuutta, voidaan toistaiseksi edelleen suorittaa, mutta korttivalikoimaa ei voi lisätä. Korvaa korttivalikoimat uusilla **[Muokkauslomake](controls/control-form-detail.md)**- ja **[Näyttölomake](controls/control-form-detail.md)**-ohjausobjekteilla.
+     Nykyisiä sovelluksia, jotka käyttävät tätä ominaisuutta, voidaan toistaiseksi edelleen suorittaa, mutta korttivalikoimaa ei voi lisätä. Korvaa korttivalikoimat uusilla **[Muokkauslomake](controls/control-form-detail.md)** - ja **[Näyttölomake](controls/control-form-detail.md)** -ohjausobjekteilla.
