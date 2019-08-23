@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/16/2018
+ms.date: 8/21/2019
 ms.author: matp
 manager: kvivek
 ms.custom: ''
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 31bef01ef46fd0fe2ed7bae30e63d53c169812db
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: 00b7d5dc7960429f7cc13215cd118e26e206d7d4
+ms.sourcegitcommit: d6b7f98b4ae011a753c1e72d7708f0f8dfbfb1fb
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "63321591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896195"
 ---
 # <a name="run-an-app-in-a-web-browser"></a>Sovelluksen suorittaminen selaimessa
 Kun luot sovelluksen tai joku jakaa sovelluksen kanssasi, voit suorittaa sovelluksen Windows-, iOS- tai Android-laitteessa tai verkkoselaimessa. Tässä ohjeaiheessa opimme suorittamaan pohjaan perustuvan tai mallipohjaisen sovelluksen verkkoselaimessa [Dynamics 365 -aloitussivulta](https://home.dynamics.com).
@@ -38,23 +38,15 @@ Tarvitset tämän pikaoppaan seuraamisessa seuraavat:
 Kirjaudu Dynamics 365:een osoitteessa [https://home.dynamics.com](https://home.dynamics.com).
 
 ## <a name="find-an-app-on-the-home-page"></a>Sovelluksen etsiminen aloitussivulta
-Aloitussivulla voi olla useita yrityssovelluksia. Voit etsiä tietyn sovelluksen kirjoittamalla osan sen nimestä hakuruutuun. Voit myös suodattaa luetteloa ja näyttää vain tietyn lähteen luomat sovellukset, kuten PowerAppsin. Tee tämä napsauttamalla tai napauttamalla **Suodatin** ja valitsemalla sitten lähteen.
+Aloitussivulla voi olla useita yrityssovelluksia. Voit etsiä tietyn sovelluksen kirjoittamalla osan sen nimestä hakuruutuun. Voit myös suodattaa luetteloa ja näyttää vain tietyn lähteen luomat sovellukset, kuten PowerAppsin. Jos haluat tehdä tämän, valitse **suodatin** ja valitse sitten lähde.
 
-Jos olet asentanut sovelluksen äskettäin, se ei ehkä heti näy sovellusluettelossa. Näytä kaikki sovellukset napsauttamalla tai napauttamalla **Synkronoi**. Tämä prosessi saattaa kestää jopa minuutin.
+Jos olet asentanut sovelluksen äskettäin, se ei ehkä heti näy sovellusluettelossa. Valitse **Synkronoi** , jos haluat näyttää kaikki sovelluksesi. Tämä prosessi saattaa kestää jopa minuutin.
 
 ![](./media/run-app-browser/dynamics-365-home.png)
 
-## <a name="run-an-app-from-the-task-pane"></a>Sovelluksen suorittaminen tehtäväruudusta
-Kun löydät sovelluksen, voit kiinnittää sen tehtäväruutuun, jolloin sitä on helpompi käyttää. Kiinnitä sovellus napsauttamalla tai napauttamalla sovelluksen ruudussa (...), ja napsauta tai napauta sitten **Kiinnitä sovellus**.
-
-![](./media/run-app-browser/homepage-pin.png)
-
-Suorita kiinnitetty sovellus tehtäväruudusta napsauttamalla tai napauttamalla vasemmassa yläkulmassa **Dynamics 365**, etsi sovellus kohdasta **Omat sovellukset** ja napsauta tai napauta sitä.
-
-![](./media/run-app-browser/taskpane.png)
 
 ## <a name="run-an-app-from-a-url"></a>Sovelluksen suorittaminen URL-osoitteesta
-Voit tallentaa sovelluksen URL-osoitteen kirjanmerkiksi selaimeen ja suorittaa sen valitsemalla kirjanmerkin tai voit lähettää URL-osoitteen linkkinä sähköpostitse. Jos joku muu loi sovelluksen ja jakoi sen sähköpostitse, voit suorittaa sovelluksen napsauttamalla tai napauttamalla sähköpostiviestissä olevaa linkkiä. Kun suoritat sovelluksen URL-osoitteen kautta, sinua saatetaan kehottaa kirjautumaan Azure Active Directory -tunnistetiedoilla.
+Voit tallentaa sovelluksen URL-osoitteen kirjanmerkiksi selaimeen ja suorittaa sen valitsemalla kirjanmerkin tai voit lähettää URL-osoitteen linkkinä sähköpostitse. Jos joku muu on lähettänyt sovelluksen ja jakanut sen sähköpostitse, voit suorittaa sovelluksen valitsemalla linkin sähkö postissa. Kun suoritat sovelluksen URL-osoitteen kautta, sinua saatetaan kehottaa kirjautumaan Azure Active Directory -tunnistetiedoilla.
 
 ![](./media/run-app-browser/web-login.png)
 
