@@ -144,7 +144,7 @@ Powerappsin pohjaan liittyvät sovellukset voidaan jakaa Azure Active Directory 
 ### <a name="steps-to-grant-guest-access"></a>Vieras käyttö oikeuksien myöntämisen vaiheet
 1. Valitse **Uusi vieras käyttäjä** , jos haluat lisätä vieras käyttäjiä Azure AD:ssä. Lisätietoja: [Pikaopas: Lisää uusi vieras käyttäjä Azure](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)AD:ssä.
     > [!div class="mx-imgBorder"] 
-    > ![Lisää vieras Azure] AD:ssä (media/share-app/guest_access_doc_1.png "Lisää vieras Azure") AD:ssä
+    > ![Lisää vieras Azure AD:ssä](media/share-app/guest_access_doc_1.png "Lisää vieras Azure AD:ssä")
 2. Määritä käyttö oikeus vieras käyttäjälle. 
    - Lisä tietoja vieras käyttäjien määrittämisestä osoitteesta admin.microsoft.com on kohdassa [käyttö oikeuksien määritteleminen yhdelle käyttäjälle](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
    - Lisä tietoja vieras käyttäjien määrittämisestä osoitteesta portal.azure.com on kohdassa [käyttö oikeuksien määritteleminen tai poistaminen](/azure/active-directory/fundamentals/license-users-groups).
