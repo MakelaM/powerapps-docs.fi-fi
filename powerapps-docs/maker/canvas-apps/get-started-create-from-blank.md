@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee9ea62280b06b75bf71885c532659f0381e6d9a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c66277cbd0d0ded3bfe0bee942e9160a650d2a98
+ms.sourcegitcommit: 6dea3559e012e56fde09b95ea8a2af2a81b89a91
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61555323"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000091"
 ---
 # <a name="create-a-canvas-app-from-scratch-based-on-excel-data"></a>Pohjaan perustuvan sovelluksen luominen alusta alkaen Excel-tietojen perusteella
 
@@ -31,7 +30,7 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
 1. Kopioi nämä tiedot ja liitä ne Excel-tiedostoon.
 
-    | StartDay | StartTime | Vapaaehtoinen | Varmuuskopiointi |
+    | StartDay | StartTime | Vapaaehtoinen | Varmuus kopiointi |
     | --- | --- | --- | --- |
     | Lauantai |Klo 10–12 |Vasquez |Kumashiro |
     | Lauantai |Klo 12–14 |Ice |Singhal |
@@ -44,7 +43,7 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
     Lisätietoja on artikkelissa [Excel-taulukon muotoileminen](how-to-excel-tips.md).
 
-3. Tallenna tiedosto nimellä **eventsignup.xls**, sulje se ja lataa se sitten [pilvitallennustilille](connections/cloud-storage-blob-connections.md), kuten OneDriveen.
+3. Tallenna tiedosto nimellä **eventsignup. xlsx**, sulje se ja lataa se sitten [pilvi tallennus tilille](connections/cloud-storage-blob-connections.md), kuten OneDriveen.
 
 > [!IMPORTANT]
 > Voit käyttää omaa Excel-tiedostoasi ja katsoa opetusohjelmasta vain yleiset käsitteet. Excel-tiedoston tietojen täytyy kuitenkin olla taulukkomuodossa. Lisätietoja on artikkelissa [Excel-taulukon muotoileminen](how-to-excel-tips.md).
@@ -88,9 +87,9 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
 1. Valitse **Aloitus**-välilehdessä kohdan **Uusi näyttö** vieressä oleva alanuoli, jolloin näyttötyyppien luettelo avautuu, ja valitse sitten **Luettelo**.
 
-    Kun näyttö lisätään, siinä on useita oletusohjausobjekteja, kuten hakukenttä ja **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Valikoima kattaa koko näytön hakukentän alapuolella.
+    Kun näyttö lisätään, siinä on useita oletusohjausobjekteja, kuten hakukenttä ja **[Valikoima](controls/control-gallery.md)** -ohjausobjekti. Valikoima kattaa koko näytön hakukentän alapuolella.
 
-1. Valitse uuden näytön yläreunassa **[Selite](controls/control-text-box.md)**-ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Näytä tietueet**.
+1. Valitse uuden näytön yläreunassa **[Selite](controls/control-text-box.md)** -ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Näytä tietueet**.
 
      ![Muuta otsikkoriviä](./media/get-started-create-from-blank/change-title-bar.png)
 
@@ -112,17 +111,17 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
     Kaava vastaa tätä esimerkkiä:
 
-    ```powerapps-comma
+    ```powerapps-dot
     SortByColumns(
         Search(
-            Schedule;
-            TextSearchBox1.Text;
+            Schedule,
+            TextSearchBox1.Text,
             "Volunteer"
-        );
-        "Volunteer";
+        ),
+        "Volunteer",
         If(
-            SortDescending1;
-            SortOrder.Descending;
+            SortDescending1,
+            SortOrder.Descending,
             SortOrder.Ascending
         )
     )
@@ -130,7 +129,7 @@ Noudata tämän opetusohjelman ohjeita tarkasti luomalla ensin Excel-tiedosto, j
 
 1. Valitse oikeanpuoleisen ruudun **Ominaisuudet**-välilehdessä **Kentät**-otsikon vierestä **Muokkaa**.
 
-1. Valitse **Title2**-ruudusta **Vapaaehtoinen**.
+1. Valitse **Title2** -ruudussa **vapaaehtoinen**, valitse **Subtitle2** -ruudussa Startday jaValitse **Body1** -ruudusta **StartTime**.
 
 1. Sulje **Tiedot**-ruutu valitsemalla oikean yläkulman sulkemiskuvake (X).
 
@@ -163,7 +162,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
     `BrowseGallery1.Selected`
 
-1. Valitse näytön yläreunassa **[Selite](controls/control-text-box.md)**-ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Vaihda tietueet**.
+1. Valitse näytön yläreunassa **[Selite](controls/control-text-box.md)** -ohjausobjekti ja korvaa sitten **[Otsikko]** asetuksella **Vaihda tietueet**.
 
     ![Muuta otsikkoriviä](./media/get-started-create-from-blank/change-title-bar2.png)
 
@@ -197,7 +196,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `NewForm(EditForm1);;Navigate(ChangeScreen;ScreenTransition.None)`
+    `NewForm(EditForm1);Navigate(ChangeScreen,ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, **ChangeScreen** näytetään kaikki kentät tyhjänä, jotta käyttäjä voi luoda tietueen helpommin.
 
@@ -207,7 +206,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä nuolen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `EditForm(EditForm1);; Navigate(ChangeScreen; ScreenTransition.None)`
+    `EditForm(EditForm1); Navigate(ChangeScreen, ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, **ChangeScreen** näytetään niin, että jokaisessa kentässä näkyvät valitun tietueen tiedot, jotta käyttäjä voi luoda tietueen tai muokata sitä helpommin.
 
@@ -219,7 +218,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä kyseisen kuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `ResetForm(EditForm1);;Navigate(ViewScreen; ScreenTransition.None)`
+    `ResetForm(EditForm1);Navigate(ViewScreen, ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, kaikki käyttäjän tässä näytössä tekemät muutokset hylätään, ja tarkastelunäyttö avautuu.
 
@@ -229,7 +228,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä valintamerkin **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `SubmitForm(EditForm1);; Navigate(ViewScreen; ScreenTransition.None)`
+    `SubmitForm(EditForm1); Navigate(ViewScreen, ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, kaikki käyttäjän tässä näytössä tekemät muutokset tallennetaan, ja tarkastelunäyttö avautuu.
 
@@ -247,7 +246,7 @@ Lisätietoja näistä ja muista funktioista on artikkelissa [Lisätietoja kaavas
 
 1. Määritä roskakorikuvakkeen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    `Remove(Schedule; BrowseGallery1.Selected);; Navigate(ViewScreen; ScreenTransition.None)`
+    `Remove(Schedule, BrowseGallery1.Selected); Navigate(ViewScreen, ScreenTransition.None)`
 
     Kun käyttäjä valitsee tämän kuvakkeen, valittu tietue poistetaan tietolähteestä ja tarkastelunäyttö avautuu.
 

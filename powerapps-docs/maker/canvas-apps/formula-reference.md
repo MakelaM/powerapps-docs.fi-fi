@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f934730ec6ca432f1da4106c535cf5967f883070
-ms.sourcegitcommit: 9163abbe9a24298f216f15139f977adfd2c3f2ae
+ms.openlocfilehash: e0f40e6c04b776d2e8efb41353e0da8ced6fc7c5
+ms.sourcegitcommit: 07a0fcda31557ddbafba0ca0362765229ee2fdad
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550333"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70008987"
 ---
 # <a name="formula-reference-for-powerapps"></a>Kaavaviittaus PowerAppsia varten
 Kaavoissa yhdistetään useita elementtejä.  Alla on lueteltu:
@@ -304,6 +304,8 @@ Muita elementtejä ovat:
 **[Select](functions/function-select.md)** – Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**-kaavan laskennan.
 
 **[Set](functions/function-set.md)** – asettaa yleisen muuttujan arvon.
+
+**[SetFocus](functions/function-setfocus.md)** – siirtää syöte kohdistuksen tiettyyn ohjaus objektiin.
 
 **[ShowColumns](functions/function-table-shaping.md)** – palauttaa taulukon, jossa on vain valitut sarakkeet.
 
