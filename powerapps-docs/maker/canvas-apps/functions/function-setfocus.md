@@ -13,18 +13,18 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 471fa26b8eb36a26bd90eeab8df018ba6ca9349c
-ms.sourcegitcommit: 07a0fcda31557ddbafba0ca0362765229ee2fdad
+ms.openlocfilehash: fce0148e77432aa136a6279eb7fb69c0ca3b0846
+ms.sourcegitcommit: de77b6d5f77e84961fff9a399622ba8eeb48d4c3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70010051"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037048"
 ---
 # <a name="setfocus-function-in-powerapps"></a>SetFocus-funktion Powerappsissa
 Siirtää syöte kohdistuksen tiettyyn ohjaus objektiin. 
 
 ## <a name="description"></a>Kuvaus
-**SetFocus** -funktiolla hallitaan syöte kohdistusta.  Tämä ohjaus objekti vastaanottaa käyttäjän näppäin painallukset, jolloin he voivat kirjoittaa teksti syöte-ohjaus objektiin tai valita painikkeen *ENTER* -näppäimen avulla.  Käyttäjä voi myös siirtää syöte kohdistuksen itse käyttämällä *SARKAIN* -näppäintä, kosketus näyttöä, hiirtä tai muuta liikettä. 
+**SetFocus** -funktiolla hallitaan syöte kohdistusta.  Tämä ohjaus objekti vastaanottaa käyttäjän näppäin painallukset, jolloin he voivat kirjoittaa teksti syöte-ohjaus objektiin tai valita painikkeen *ENTER* -näppäimen avulla.  Käyttäjä voi myös siirtää syöte kohdistuksen itse käyttämällä *SARKAIN* -näppäintä, kosketus näyttöä, hiirtä tai muuta liikettä. *Sarkaimen* toimintaa säätelee [ **tabindexty** -ominaisuus](../controls/properties-accessibility.md).
 
 Aseta kohdistus **SetFocus** -funktiolla, kun (kukin esimerkki alla):
 - Äskettäin suojaamaton tai käytössä oleva syöte ohjaus objekti, joka opastaa käyttäjää seuraavassa ja nopeammassa tietojen syötössä.
@@ -112,10 +112,10 @@ If( IsBlank( Name ),
         Notify( "City requires a value", Error ); SetFocus( City ),
     IsBlank( County ), 
         Notify( "County requires a value", Error ); SetFocus( County ),
-    IsBlank( AddressState ), 
-        Notify( "State requires a value", Error ); SetFocus( AddressState ),
-    IsBlank( Zip ), 
-        Notify( "Zip requires a value", Error ); SetFocus( Zip ),
+    IsBlank( StateProvince ), 
+        Notify( "State or Province requires a value", Error ); SetFocus( StateProvince ),
+    IsBlank( PostalCode ), 
+        Notify( "Postal Code requires a value", Error ); SetFocus( PostalCode ),
     IsBlank( Phone ), 
         Notify( "Contact Phone requires a value", Error ); SetFocus( Phone ),
     Notify( "Form is Complete", Success )
@@ -125,9 +125,9 @@ If( IsBlank( Name ),
 Tämän esimerkin luominen:
 1. Luo uusi, tyhjä Puhelin sovellus.
 1. Valitse **Lisää** -valikosta **Uusi näyttö**ja valitse sitten **vieritettävä**.
-1. Lisää näytön Keski osassa **teksti syöte** -ohjaus objekti ja anna sille nimeksi nimi, **Street1**, **Street2**, **kaupunki**, **lääni**, osoite **tila** (koska nimi **tila** on jo käytössä), **zip**, ja **Puhelin**. Voit tunnistaa kentät lisäämällä niiden yläpuolelle **Selite** -ohjaus objektin.  Saatat joutua muuttamaan osan kokoa, jos se ei ole tarpeeksi pitkä sopimaan kaikkiin ohjaus objekteihin.
+1. Lisää näytön Keski osassa **teksti syöte** -ohjaus objekti ja anna sille nimeksi **nimi**, **Street1**, **Street2**, **kaupunki**, **maakunta**, osavaltio, **Posti numero**ja **Puhelin**numero. Voit tunnistaa kentät lisäämällä niiden yläpuolelle **Selite** -ohjaus objektin.  Saatat joutua muuttamaan osan kokoa, jos se ei ole tarpeeksi pitkä sopimaan kaikkiin ohjaus objekteihin.
 1. Lisää valinta merkki [ **kuvake** ohjaus objekti](../controls/control-shapes-icons.md) näytön yläreunaan vieritettävän osan yläpuolelle.  
-1. Määritä Icon-ohjaus objektin **onselect** -ominaisuudeksi yllä oleva kaava.
+1. Määritä Icon-ohjaus objektin **onselect** -ominaisuudeksi yllä esitetty `If( IsBlank( ...` kaava.
 
 ### <a name="focus-when-displaying-a-screen"></a>Kohdistus, kun näyttö näytetään
 
