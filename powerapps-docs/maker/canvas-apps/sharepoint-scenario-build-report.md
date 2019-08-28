@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64671040"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Power BI -raportin luominen projektien analysointiin
 > [!NOTE]
@@ -171,7 +170,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
 1. Napsauta tai napauta **Uusi taulukko**.
    
     ![Uusi taulukko](./media/sharepoint-scenario-build-report/05-02-05-modeling-table.png)
-2. Kirjoita kaavariville seuraava kaava: **Dates = CALENDARAUTO()**.
+2. Kirjoita kaavariville seuraava kaava: **Dates = CALENDARAUTO()** .
    
     ![Kaavarivi Dates = CALENDARAUTO()](./media/sharepoint-scenario-build-report/05-02-06-formula-bar.png)
    
@@ -186,7 +185,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
 1. Napsauta tai napauta päivämäärätaulukossa **Uusi sarake**.
    
     ![Uusi sarake](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
-2. Kirjoita kaavariville seuraava kaava: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]); 1;0;7;0;1)**.
+2. Kirjoita kaavariville seuraava kaava: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]), 1,0,7,0,1)** .
    
     Tämä kaava määrittää, onko **Päivämäärä**-sarakkeessa oleva päivä arkipäivä. Jos päivämäärä on arkipäivä, **IsWeekDay**-sarake saa arvon 1; muussa tapauksessa se saa arvon 0.
 3. Lisää **IsWeekDay**-sarake **Dates**-taulukkoon painamalla Enter.
@@ -233,10 +232,10 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
    
     ![Lisää RequestDateAge-sarake](./media/sharepoint-scenario-build-report/05-02-10-column-requestdateage.png)
 
-### <a name="add-a-measure-to-the-project-details-table"></a>Lisää mittayksikkö Projektin tiedot -taulukkoon
+### <a name="add-a-measure-to-the-project-details-table"></a>Lisää mittari Projektin tiedot -taulukkoon
 1. Napsauta tai napauta oikeassa ruudussa **Project Details** -taulukkoa ja sitten **Uusi mittari**.
    
-    ![Uusi mittayksikkö](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
+    ![Uusi mittari](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Kirjoita kaavariville seuraava kaava:
    
     ```dax
@@ -254,7 +253,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
 ### <a name="add-a-measure-to-the-project-requests-table"></a>Mittayksikön lisääminen Projektipyynnöt-taulukkoon
 1. Napsauta tai napauta oikeassa ruudussa **Project Requests** -taulukkoa ja sitten **Uusi mittari**.
    
-    ![Uusi mittayksikkö](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
+    ![Uusi mittari](./media/sharepoint-scenario-build-report/05-02-00-modeling-measure.png)
 2. Kirjoita kaavariville seuraava kaava:
    
     ```dax
@@ -265,9 +264,9 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
     ```
    
     Tämä kaava etsii aiemmin määritetyn lasketun sarakkeen perusteella projektin, joka on odottanut pisimpään.
-3. Lisää **MaxDaysPending**-mittayksikkö **Projektipyynnöt**-taulukkoon painamalla Enter.
+3. Lisää **MaxDaysPending**-mittari **Projektipyynnöt**-taulukkoon painamalla Enter.
    
-    ![Lisää MaxDaysPending-mittayksikkö](./media/sharepoint-scenario-build-report/05-02-12-measure-maxdayspending.png)
+    ![Lisää MaxDaysPending-mittari](./media/sharepoint-scenario-build-report/05-02-12-measure-maxdayspending.png)
 
 ## <a name="step-3-create-report-visualizations"></a>Vaihe 3: Raportin visualisointien luominen
 Nyt olemme vaiheessa, joka monelle tulee mieleen tietojen analysoinnista: visualisointien luomisessa. Visualisointi auttaa löytämään tiedoista toistuvia kuvioita. Tässä vaiheessa luomme neljä visualisointia:
@@ -359,7 +358,7 @@ Kun olemme luoneet raportin visualisoinnit Power BI Desktopissa, julkaisemme tie
 3. Vedä**PMAssigned**, **Title** ja **ApprovedStartDiff** **Kentät**-ruudun kohdasta **Projektin tiedot** **Visualisoinnit**-ruudun kohtaan **Arvot**.
    
     ![Arvot visualisointiruudussa](./media/sharepoint-scenario-build-report/05-03-16-value-diff.png)
-4. Vedä **ProjectedStartDate** **Kentät**-ruudun kohdasta **Projektin tiedot** **Visualisoinnit**-ruudun **Suodattimet**-alueelle, ja valitse sitten kaikki päivämäärät paitsi **(Tyhjä)**.
+4. Vedä **ProjectedStartDate** **Kentät**-ruudun kohdasta **Projektin tiedot** **Visualisoinnit**-ruudun **Suodattimet**-alueelle, ja valitse sitten kaikki päivämäärät paitsi **(Tyhjä)** .
    
     ![Suodata ProjectedStartDate-sarakkeen perusteella](./media/sharepoint-scenario-build-report/05-03-17-filters-diff.png)
 5. Muuta taulukon sarakkeiden kokoa siten, että näet kaikki tiedot, ja lajittele laskevasti **ApprovedStartDiff**-sarakkeen mukaan. Visualisoinnin pitäisi nyt näyttää samalta kuin seuraavassa kuvassa.
