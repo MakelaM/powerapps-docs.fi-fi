@@ -1,6 +1,6 @@
 ---
-title: Upota PowerApps-sovellus teamsissa | Microsoft Docs
-description: Voit upottaa sovelluksen powerappsissa ja jakaa sen Microsoft teamsissa.
+title: PowerApps-sovelluksen upottaminen tiimeihin | Microsoft Docs
+description: Voit upottaa Powerappsissa luodun sovelluksen Microsoft Teamsiin jakamaan sen.
 author: jimholtz
 manager: kvivek
 ms.service: powerapps
@@ -13,164 +13,164 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d17b02cc87bb219474aade955a2910f12fcf7f27
-ms.sourcegitcommit: 2376c1f1f3431bca52a8deb9b966ce1fe9f88da0
+ms.openlocfilehash: ca3430d6b639b7a4c3980f5bbb0ba202220f6d9e
+ms.sourcegitcommit: 935470edc7441b76533cc937e6f32229bfd6f11f
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66381382"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70117802"
 ---
-# <a name="embed-a-powerapps-app-in-teams"></a>Upota PowerApps-sovellus teamsissa 
+# <a name="embed-a-powerapps-app-in-teams"></a>PowerApps-sovelluksen upottaminen tiimeihin 
 
-Voit jakaa PowerApps, olet luonut upottamalla suoraan Microsoft Teamsissa. Kun valmis, käyttäjät voivat valita **+** Lisää sovelluksesi mihin tahansa **-** tiimin kanavat tai olet ryhmän keskustelut. Sovellus näkyy ruutuna **tiimisi välilehdet**. 
+Voit kertoa luomiasi PowerApps-sovelluksia upottamalla ne suoraan Microsoft Teamsiin. Kun käyttäjä on valmis, hän **+** voi lisätä sovelluksesi mihin tahansa ryhmäsi kanavasi tai keskustelujasi työryhmäänsä. Sovellus näkyy ruutuna **ryhmäsi väli lehtien**alla. 
 
-Järjestelmänvalvoja voit ladata sovelluksen, jotta se näyttää **kaikki** vuokraajasi teams **kaikki välilehdet kohdassa**. Katso [jakaa sovelluksen Microsoft teamsissa](https://review.docs.microsoft.com/en-us/power-platform/admin/embed-app-teams?branch=JimHoltzWorkBranch).
+Järjestelmänvalvoja voi ladata sovelluksen, jotta se näkyy **kaikissa** vuokra ajan tiimeissä **Kaikki väli lehdet-osiossa**. Tutustu [sovelluksen jakamiseen Microsoft teamsissa](https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams).
 
 > [!NOTE]
-> Ryhmän mukautettu sovellus käytännöt on määritettävä sallimaan ladataan mukautettuja sovelluksia. Jos sovelluksen upottaminen ryhmiä ei onnistu, ota yhteyttä järjestelmänvalvojaan nähdäksesi, jos ne määrittänyt [mukautetun sovelluksen asetuksissa](https://docs.microsoft.com/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings). 
+> Mukautettujen sovelluksien lataaminen on sallittu mukautetun ryhmän sovellus käytännöillä. Jos et voi upottaa sovellustasi tiimeihin, kysy järjestelmänvalvojaltasi, onko hän määrittänyt [mukautettuja sovellus asetuksia](https://docs.microsoft.com/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings). 
 
 ## <a name="prerequisites"></a>Edellytykset
 
-- [On PowerApps-käyttöoikeus](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
-- Luotu pohjaan perustuva sovellus
+- [Sinulla on PowerApps-käyttö oikeus](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+- Luo kangas sovellus
 
-## <a name="locate-your-powerapps-guid"></a>Etsi-PowerApp GUID-tunnus
+## <a name="locate-your-powerapps-guid"></a>Etsi Powerappin GUID
 
-Etsi ja muistiin-PowerApp käyttämään myöhemmin GUID-tunnus.
+Etsi ja pane muistiin Powerappin GUID, jota voit käyttää myöhemmässä vaiheessa.
 
-1. Kirjaudu sisään [ https://web.powerapps.com ](https://web.powerapps.com), ja valitse sitten **sovelluksia** -valikosta.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Näytä sovellusluettelo](./media/embed-teams-app/file-apps2.png "Näytä sovellusten luettelo")
-
-2. Valitse **Lisää komentoja** (...) haluat jakaa teamsissa ja valitse sitten sovelluksen **tiedot**.
+1. Kirjaudu sisään ja valitse sitten valikosta **sovellukset.** [https://web.powerapps.com](https://web.powerapps.com)
 
    > [!div class="mx-imgBorder"] 
-   > ![Sovelluksen tiedot](./media/embed-teams-app/app-details.png "sovelluksen tiedot")
+   > ![Näytä sovellusten luettelo](./media/embed-teams-app/file-apps2.png "Näytä sovellusten luettelo")
 
-3. Tietue **Sovellustunnus** myöhempää käyttöä varten.
-
-   > [!div class="mx-imgBorder"] 
-   > ![Sovelluksen tiedot](./media/embed-teams-app/app-details2.png "sovelluksen tiedot")
-
-## <a name="install-app-studio"></a>Asenna App Studio
-
-Voit ohittaa nämä vaiheet, jos App Studio on jo asennettu. 
-
-1. Valitse Teamsissa **sovelluksia** -vasemmassa alakulmassa Teams-valikon (![sovelluksia-kuvake](./media/embed-teams-app/apps-icon.png "sovelluksia-kuvake")).
-
-2. Hae ”App Studio-haku-ruutua ja valitse se.
+2. Valitse **Lisää komentoja** (...) sovellukselle, jonka haluat jaettavan teamsissa, ja valitse sitten **tiedot**.
 
    > [!div class="mx-imgBorder"] 
-   > ![App Studio](./media/embed-teams-app/store-app-studio.png "App Studio")
+   > ![Sovelluksen tiedot](./media/embed-teams-app/app-details.png "Sovelluksen tiedot")
 
-3. Valitse **asentaa**. 
 
-   > [!div class="mx-imgBorder"] 
-   > ![Asenna App Studio](./media/embed-teams-app/install-app-studio.png "Asenna App Studio")
-
-4. Valitse **Avaa** App-ominaisuuden.
+3. Tallenna **sovellus tunnus** myöhempää käyttöä varten.
 
    > [!div class="mx-imgBorder"] 
-   > ![Avaa App Studio](./media/embed-teams-app/open-app-studio.png "Avaa App Studio")
+   > ![Sovelluksen tiedot](./media/embed-teams-app/app-details2.png "Sovelluksen tiedot")
 
-## <a name="create-a-teams-app-for-your-powerapp"></a>Luo PowerApp-Teams-sovellus
+## <a name="install-app-studio"></a>Asenna sovellus Studio
 
-1. Avaa App Studio Teamsissa.
+Voit ohittaa nämä vaiheet, jos sovellus Studio on jo asennettuna. 
+
+1. Valitse tiimeissä joukkueet-valikon vasemmassa alakulmassa **sovellukset** (![apps Icon](./media/embed-teams-app/apps-icon.png "apps-kuvake")).
+
+2. Hae haku ruudusta "App Studio" ja valitse se.
 
    > [!div class="mx-imgBorder"] 
-   > ![Avaa App Studio](./media/embed-teams-app/open-app-studio2.png "Avaa App Studio")
+   > ![Sovellus Studio](./media/embed-teams-app/store-app-studio.png "Sovellus Studio")
 
-2. Valitse **tiedostojen editorin** välilehti ja valitse sitten **luomalla uusi sovellus** Tervetuloa-kohdassa.
+3. Valitse **Asenna**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![Asenna sovellus Studio](./media/embed-teams-app/install-app-studio.png "Asenna sovellus Studio")
+
+4. Valitse sovellus ominaisuudelle **Avaa** .
+
+   > [!div class="mx-imgBorder"] 
+   > ![Avaa sovellus Studio](./media/embed-teams-app/open-app-studio.png "Avaa sovellus Studio")
+
+## <a name="create-a-teams-app-for-your-powerapp"></a>Tiimi sovelluksen luominen Powerappille
+
+1. Avaa Teamsissa App Studio.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Avaa sovellus Studio](./media/embed-teams-app/open-app-studio2.png "Avaa sovellus Studio")
+
+2. Valitse **luettelo editori** -väli lehti ja valitse sitten **Luo uusi sovellus** Tervetuloa-kohdassa.
 
    > [!div class="mx-imgBorder"] 
    > ![Luo uusi sovellus](./media/embed-teams-app/create-new-app.png "Luo uusi sovellus")
 
-3. Täytä sovelluksesi tietoja **sovelluksen tiedot** sivun.  Sovelluksen tunnus GUID-tunnus on käyttää yllä kirjataan-PowerApp sovelluksen tunnuksen GUID.  Tämä välttämään Teams sovellusten tietyn PowerApp.
+3. Täytä tietoja sovelluksestasi **sovelluksen tiedot** -sivulla.  Jos kyseessä on sovellus tunnuksen GUID-tunnus, sinun tulee käyttää yllä tallentamasi Powerappin sovellus tunnuksen GUID-tunnusta.  Näin vältetään teamsin sovellusten päällekkäinen tietyn Powerappin kanssa.
  
    > [!div class="mx-imgBorder"] 
-   > ![Täytä tiedot](./media/embed-teams-app/fill-in-info-about-app.png "tiedot")
+   > ![Täytä tiedot](./media/embed-teams-app/fill-in-info-about-app.png "Täytä tiedot")
 
    |Kentät  |Kuvaus  |
    |---------|---------|
    |**Sovellusten nimet** |    |
-   |Lyhyt nimi     | Pakollinen. Sovelluksen lyhyt näyttönimi. 30 merkkiä.        |
-   |Pitkä nimi     | Koko nimi-sovelluksen käyttää, jos koko sovelluksen nimessä on yli 30 merkkiä.       | 
-   |**Tunnus**     |         |
-   |Sovelluksen tunnus     | Pakollinen. Microsoft luomien yksilöllinen tälle sovellukselle.        |
-   |Pakettinimi     | Pakollinen. Tämä sovellus yksilöivä tunnus. Suosittelemme käänteiseen toimialueen merkintätapaa; esimerkiksi com.example. <AppName>.       |
-   |Versio     | Pakollinen. Tietyn sovelluksen versio. Jos päivität jotakin-luettelo, versio on arvoon myös.     |
-   |**Kuvaukset**    |     |
-   | Lyhyt kuvaus    | Pakollinen. Sovelluksen käyttökokemus, käyttää, kun tila on rajallinen lyhyt kuvaus. 80 merkkiä.   |
-   | Pitkä kuvaus    | Pakollinen. Sovelluksesi täydellinen kuvaus.     |
-   | **Kehittäjille**    |     |
-   | Nimi    | Pakollinen. Yrityksen tai developer näyttönimi.     |
-   | Sivusto    | Pakollinen. Https:// URL-osoite sovelluksesi kautta powerapps.com-sivustossa. Kun joku asentaa sovelluksen ”sovelluksesta” sivu tulee näkyviin. Se olisi linkki sovelluksesi powerapps.comissa WWW-version.   |
-   | **Sovelluksen URL-osoitteet**    | Nämä linkit näytetään **tietoja** sivulla kanssa sivuston URL-osoite.     |
-   | Tietosuojatiedot    | Pakollinen. Https:// URL-osoite on kehittäjän tietosuojakäytäntö. [Esimerkki](https://go.microsoft.com/fwlink/p/?LinkID=698505).   |
-   | Käyttöehdot    | Pakollinen. Https:// URL-osoite on kehittäjän käyttöehdot.  [Esimerkki](https://go.microsoft.com/fwlink/p/?LinkID=698507).  |
+   |Lyhyt nimi     | Tarvitaan. Sovelluksen lyhyt näyttö nimi. 30 merkin enimmäisarvo.        |
+   |Pitkä nimi     | Sovelluksen koko nimi, jota käytetään, jos sovelluksen koko nimi ylittää 30 merkkiä.       | 
+   |**Tunnistus**     |         |
+   |Sovellus tunnus     | Tarvitaan. Tämän sovelluksen yksilöivä Microsoftin luoma tunnus.        |
+   |Paketin nimi     | Tarvitaan. Tämän sovelluksen yksilöivä tunnus. Suosittelemme käyttämään käänteisen toimi alueen merkintää; Esimerkki: com. esimerkki. <AppName>.       |
+   |Versio     | Tarvitaan. Määritetyn sovelluksen versio. Jos päivität jotakin luettelo tiedostosi, versio on myös suurennettava.     |
+   |**Kuva ukset**    |     |
+   | Lyhyt kuvaus    | Tarvitaan. Lyhyt kuvaus sovelluskokemuksestasi, jota käytetään, kun tilaa on rajoitetusti. 80-merkki rajoitusta.   |
+   | Pitkä kuvaus    | Tarvitaan. Sovelluksesi täydellinen kuvaus.     |
+   | **Kehittäjien tiedot**    |     |
+   | Nimi    | Tarvitaan. Yrityksen tai kehittäjän näyttö nimi.     |
+   | Sivuston    | Tarvitaan. Https://-URL-osoite sovelluksellesi powerapps.com-sivuston kautta. Kun joku asentaa sovelluksesi, näkyviin tulee "About Your App"-sivu. Sen pitäisi linkittää sovelluksesi verkko versioon osoitteessa powerapps.com.   |
+   | **Sovelluksen URL-osoitteet**    | Nämä linkit näkyvät **tietoja** -sivulla sivuston URL-osoitteen lisäksi.     |
+   | Tieto suoja tiedot    | Tarvitaan. Https://-URL-osoite kehittäjän tieto suoja käytäntöön. [Esimerkki](https://go.microsoft.com/fwlink/p/?LinkID=698505).   |
+   | Käyttöehdot    | Tarvitaan. Kehittäjän käyttö ehtojen https://URL-osoite.  [Esimerkki](https://go.microsoft.com/fwlink/p/?LinkID=698507).  |
    | **Mukauttamisen**    |     |
-   | Koko väri    | Koko väri 192 x 192 PNG-kuvake suhteellista tiedostopolkua.    |
-   | Läpinäkyvä Jäsennys    |Suhteellista tiedostopolkua läpinäkyvä 32 x 32-PNG jäsennys-kuvake.     |
-   | Korostuksen väri    | Ääriviivan kuvakkeiden yhteydessä ja taustana käytettävän värin.     |
+   | Nelivärinen    | Suhteellinen tiedosto polku neliväriseen 192x192 PNG-kuvakkeeseen.    |
+   | Läpinäkyvä ääri viiva    |Läpinäkyvä 32 x 32 PNG-jäsennys kuvakkeen suhteellinen tiedosto polku.     |
+   | Korostus väri    | Väri, jota käytetään jäsennys kuvakkeiden yhteydessä ja taustana.     |
 
-Jos haluat lisätietoja, katso [Manifest editorin](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-app-studio#manifest-editor) ja [luettelo rakenteen](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema).
+Lisä tietoja on kohdassa [luettelo editori](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-app-studio#manifest-editor) ja [luettelo rakenne](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema).
 
-4. Vieritä alas Tuotemerkkiohjeet osioon ja lisää-logoja ja sovelluksen desired korostuksen väri.  Nämä ovat tunnuksia, joka näkyy sovelluksen teamsissa. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Mukauttamisen ja kirjaa](./media/embed-teams-app/branding-tabs.png "mukauttamisen ja välilehdet")
-
-5. Valitse **ominaisuuksia**, valitse **välilehdet**.
-
-6. Valitse **tiimin välilehti** Valitse **Lisää**.
+4. Vieritä alaspäin branding-osioon ja lisää logot sekä sovelluksen korostus väri.  Nämä ovat logot, jotka näkyvät Sovelluksellesi tiimeissä. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Tiimin välilehti Lisää](./media/embed-teams-app/team-tab-add.png "tiimin Lisää-välilehti")
+   > ![Tuote merkki ja väli lehdet](./media/embed-teams-app/branding-tabs.png "Tuote merkki ja väli lehdet")
 
-7. Lisää sovelluksesi määrityksen URL-osoite ”määrityksen URL-osoite” syötekentän seuraavassa muodossa: `https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+5. Valitse **toiminnot**-kohdassa **väli lehdet**.
 
-   Korvaa `<PowerApp ID>` sovelluksen tunnus GUID-tunnuksella yllä kirjataan.
-
-   Valitse [vaikutusalueen](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview#tab-scope) sovelluksen näkyvät. Varmista, että **voi päivittää** on valittuna ja valitse sitten **Tallenna**.
+6. Valitse **Ryhmä-väli lehdeltä** **Lisää**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Määrityksen URL-osoite](./media/embed-teams-app/configuration-url.png "määrityksen URL-osoite")
+   > ![Ryhmän väli lehti lisää](./media/embed-teams-app/team-tab-add.png "Ryhmän väli lehti lisää")
 
-8. Valitse **valmis**, valitse **kelvollinen toimialueiden**. Lisää **apps.powerapps.com** ja **apps.preview.powerapps.com** kuin kelvollinen toimialueiden Teams-sovelluksen.
+7. Lisää sovelluksesi määrityksen URL-osoite "määrityksen URL-osoite"-syöte kenttään käyttäen seuraavaa muotoa:`https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+
+   Korvaa `<PowerApp ID>` yllä mainitulla sovellus tunnuksen GUID-tunnuksella.
+
+   Valitse sovelluksesi [vaikutus alue](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview#tab-scope) . Varmista, että **määritysten päivittäminen** on valittuna, ja valitse sitten **Tallenna**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Lisää kelvollinen toimialueet](./media/embed-teams-app/add-valid-domains.png "Lisää kelvollinen toimialueet")
+   > ![Määrityksen URL-osoite](./media/embed-teams-app/configuration-url.png "Määrityksen URL-osoite")
 
-9. Valitse **valmis**, valitse **Test ja jaella**. Valitse **asentaa**, valitse **asentaa**.
+8. Valitse **valmis**-kohdassa **kelvolliset verkko tunnukset**. Lisää **apps.powerapps.com** -ja **apps.Preview.powerapps.com** -käyttö ehdot tiimit-sovelluksen kelvollisiksi toimialueiksi.
 
    > [!div class="mx-imgBorder"] 
-   > ![Valitse Asenna](./media/embed-teams-app/test-distribute-app.png "valitsemalla Asenna")
+   > ![Lisää kelvolliset verkko tunnukset](./media/embed-teams-app/add-valid-domains.png "Lisää kelvolliset verkko tunnukset")
 
-10. Valitse haluat asentaa sovelluksen ryhmän ja valitse sitten **asentaa**.
+9. Valitse **valmis**-kohdassa **Testaa ja Jaa**. Valitse **Asenna**-kohdassa **Asenna**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Valitse Asenna](./media/embed-teams-app/test-distribute-app.png "Valitse Asenna")
+
+10. Valitse ryhmä, johon haluat asentaa sovelluksen, ja valitse sitten **Asenna**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Lisää ryhmän Asenna](./media/embed-teams-app/new-app-add-to-team.png "Lisää tiimin asennus")
-
-11. Jos haluat sovelluksen esiintymä lisääminen kanavaan heti, valitse kanava, jota haluat käyttää sovelluksen sisään ja valitse **määrittää**.
+    > ![Lisää ryhmän asennukseen](./media/embed-teams-app/new-app-add-to-team.png "Lisää ryhmän asennukseen")
+11. Jos haluat lisätä kyseisen sovelluksen esiintymän kanavalle heti, valitse kanava, johon haluat käyttää sovellusta, ja valitse **Määritä**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Valitse ylöspäin](./media/embed-teams-app/app-now-available.png "Valitse määrittäminen")
+    > ![Valitse Määritä](./media/embed-teams-app/app-now-available.png "Valitse Määritä")
 
 12. Valitse **Tallenna**.
 
-## <a name="add-the-app-as-a-tab"></a>Lisää sovellus välilehti
+## <a name="add-the-app-as-a-tab"></a>Lisää sovellus väli lehti
 
-Jos haluat lisätä välilehdeksi sovelluksen kanavan tai keskustelun, valitse **+** , ja valitse sitten **tiimisi välilehdet** Valitse sovelluksesi. 
-
-> [!div class="mx-imgBorder"] 
-> ![Lisää sovellus välilehti](./media/embed-teams-app/add-app-as-tab.png "välilehdessä Lisää sovellus")
-
-Sovellus näkyy nyt välilehti.
+Jos haluat lisätä sovelluksen väli lehdeksi mihin tahansa kanavaan tai keskusteluun, valitse **+** ja sitten kohdassa **väli lehdet joukkueellesi** Valitse sovelluksesi. 
 
 > [!div class="mx-imgBorder"] 
-> ![Sovelluksen kuin välilehdessä](./media/embed-teams-app/app-as-tab.png "välilehti sovellus")
+> ![Lisää sovellus väli lehdelle](./media/embed-teams-app/add-app-as-tab.png "Lisää sovellus väli lehdelle")
+
+Sovellus näkyy nyt väli lehdellä.
+
+> [!div class="mx-imgBorder"] 
+> ![Sovellus väli lehdeltä](./media/embed-teams-app/app-as-tab.png "Sovellus väli lehdeltä")
 
 ### <a name="see-also"></a>Katso myös
-[Tervetuloa Microsoft Teamsissa](https://docs.microsoft.com/MicrosoftTeams/teams-overview)<br />
-[Järjestelmänvalvojille: Upota sovellus Microsoft teamsissa](https://docs.microsoft.com/power-platform/admin/share-app-teams)
+[Tervetuloa Microsoft Teamsille](https://docs.microsoft.com/MicrosoftTeams/teams-overview)<br />
+[Järjestelmänvalvojille: Sovelluksen upottaminen Microsoft Teamsissa](https://docs.microsoft.com/power-platform/admin/share-app-teams)
