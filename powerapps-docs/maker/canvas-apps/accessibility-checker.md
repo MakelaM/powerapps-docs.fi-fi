@@ -10,12 +10,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 11ec805a713743e2524651128b036ccaaade69e3
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 05ac3d3705fc56b5714d6cb704d2d3cc3dc87124
+ms.sourcegitcommit: b4df7d781cda50dfe2f6609f1cc4d2b531428b3c
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61542482"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161289"
 ---
 # <a name="review-a-canvas-app-for-accessibility-in-powerapps"></a>Tarkista pohjaan perustuvan sovelluksen helppokäyttöisyys PowerAppsissa
 
@@ -70,7 +70,7 @@ Helppokäyttöisyyden tarkistus luokittelee jokaisen ongelman virheeksi, varoitu
 | **Poista automaattinen käynnistys käytöstä**                 | Varoitus  | Kun **Ääni**- tai **Video**-ohjausobjektin **Automaattinen käynnistys** -ominaisuuden arvoksi on asetettu **True** (tosi). | Määritä ohjausobjektin **Automaattinen käynnistys** -ominaisuuden arvoksi **False** (epätosi). | Automaattisesti käynnistyvät video- ja äänitiedostot voivat häiritä käyttäjiä. Anna heidän valita, haluavatko he toistaa tiedoston. |
 | **Muokkaa näyttönimeä**                 | Vihje      | Näytöllä on oletusnimi, jonka näytönlukija lukee, kun käyttäjät siirtyvät sovellukseen. | Anna näytölle nimi, joka kuvaa sitä, mitä näytössä on tai mihin sitä käytetään.| Sokeat, heikkonäköiset tai lukivaikeuksista kärsivät ovat navigoidessaan riippuvaisia näytönlukijan lukemista näyttönimistä. |
 | **Lisää tilan ilmaisemisen teksti**          | Vihje      |  Ohjausobjektilla on tila, kuten vaihtopainike, mutta arvo-otsikot ovat poissa käytöstä. | Määritä ohjausobjektin **ShowValue**-ominaisuuden arvoksi **True** (tosi), jotta sen tämänhetkinen tila näkyy. | Käyttäjät eivät saa vahvistusta toiminnoistaan, jos ohjausobjektin tila ei tule näkyviin. |
-| **Tarkista näytön kohteiden järjestys**| Vihje      | **TabIndex**-ominaisuus on suurempi kuin 1. Sovelluksen tekijä voi määrittää mukautettuja välilehtien järjestyksiä asettamalla **TabIndex**-ominaisuuden arvoksi numeerisen arvon, esimerkiksi 1, 2, 3 ja 4. Tämä vinkki muistuttaa sinua tarkistamaan näytön vuorovaikutteisen järjestyksen. Paras käytäntö on noudattaa rakennetta, jossa **TabIndex**-ominaisuuden arvo on 0.  | Varmista, että näyttösi elementit vastaavat järjestystä, jossa haluat käydä niitä läpi sarkainta käytettäessä. | Kun näytönlukija lukee sovelluksen osia, niiden pitäisi näkyä siinä järjestyksessä, jossa käyttäjä näkee ne, vähemmän intuitiivisen järjestyksen sijasta.  |
+| **Tarkista näytön kohteiden järjestys**| Vihje      | Kun **Tabdex** -ominaisuus on suurempi kuin 0. Sovelluksen luojat voivat määrittää mukautettuja SARKAIN tilauksia asettamalla **tabdex** -ominaisuuden arvoksi, joka on suurempi kuin 0, mutta se on erittäin masentuneena, koska on vaikea saada oikeaa, ylläpitää ja voi jakaa näytön luku ohjelmia. | Valitse kaikki **tabdex** -ominaisuudet arvoksi 0 tai-1 aina, kun se on mahdollista.  Sen sijaan,että käyttäisit tabindextä, muuta siirtymis järjestystä Oletus arvon mukaan **parannetun ryhmän** ohjaus objektin avulla.  Jos **Tabdex** -arvoja, jotka ovat suurempia kuin 0, on käytettävä, varmista, että näyttö elementit vastaavat järjestystä, jossa haluat väli lehtien näkyvän niissä. | Siirtymis järjestyksen tulee peilata ohjaus objektien näyttö järjestystä, joka on oletus arvo.  Jos tehdään manuaalisia muutoksia, on vaikea ylläpitää oikeaa järjestystä erityisesti selaimen osoite rivin ja muiden sovelluksen ulkopuolella olevien ohjaus objektien ollessa käytössä.  Tämä voi tehdä näytön luku ohjelman käytöstä erittäin vaikeaksi.  Kun näytönlukija lukee sen, ohjaus objektit tulee esitellä samassa järjestyksessä kuin ne näkyvät näytössä, ei vähemmän intuitiivisen järjestyksen sijaan.  |
 | **Lisää toinen syöttötapa**           | Vihje      | Sovellus sisältää **Kynä**-ohjausobjektin. Tämä vinkki muistuttaa sisällyttämään erillisen syöttömenetelmän. | Lisää **Tekstisyöte**-ohjausobjekti **Kynä**-ohjausobjektin lisäksi taataksesi helppokäyttöisen kokemuksen. | Kaikki käyttäjät eivät voi käyttää kynää ja tarvitsevat toisen tavan tietojen syöttämiseksi (esimerkiksi allekirjoituksen lisääminen näppäimistön avulla). |
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
