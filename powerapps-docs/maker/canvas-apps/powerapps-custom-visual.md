@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: ''
-ms.date: 03/15/2018
+ms.reviewer: tapanm
+ms.date: 08/30/2019
 ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bd4219a42b0674927370dfca1aa4ba681dd741bd
-ms.sourcegitcommit: e58a6d9c23445e6d00317ec990a8aa0c2650bf7f
+ms.openlocfilehash: 562811ebce59660d6033585868afd42da46442d5
+ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70201068"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70213931"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -70,15 +70,30 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
 ## <a name="limitations-of-the-powerapps-custom-visual"></a>PowerAppsin mukautetun visualisoinnin rajoitukset
 
-PowerAppsin mukautettu visualisointi on käytettävissä esikatselussa, ja visualisoinnilla on seuraavat rajoitukset:
+Seuraavat rajoitukset koskevat Powerappsin mukautettua visualisointia:
 
-- Sovellusten luomista, muokkaamista ja katselemista käytettäessä Powerappsin mukautettua visualisointia tuetaan vain Microsoft Edgessä ja Google Chrome-selaimissa. Suosittelemme, että julkaiset raporttisi ensin Power BI -palvelussa. Käytä sitten Microsoft Edgeä tai Google Chromea sovellusten luomiseen ja päivittämiseen.
 - Jos muutat visualisointiin liittyviä tietokenttiä, sinun on muokattava sovellusta Power BI -palvelussa valitsemalla kolme pistettä (...) ja **Muokkaa**. Muussa tapauksessa muutoksia ei lisätä PowerAppsiin, ja sovellus käyttäytyy odottamattomasti.
 - Powerappsin mukautettu visualisointi ei voi käynnistää Power BI raporttien ja Power BI tieto lähteiden päivittämistä Power BI Desktop sisältä. Jos kirjoitat tietoja sovelluksesta takaisin samaan tieto lähteeseen kuin raportti, muutoksesi eivät näy heti Power BI Desktop. Muutokset otetaan käyttöön seuraavassa ajoitetussa päivityksessä.
 - PowerAppsin mukautettu visualisointi ei voi suodattaa tietoa tai lähettää tietoa takaisin raporttiin.
 - Sinun on jaettava PowerApps-sovellus raportistasi erillisenä. Lue lisätietoja [sovellusten jakamisesta PowerAppsissa](share-app.md).
-- Nämä tekniikat eivät tue Powerappsin mukautettua visualisointia: Power BI-raporttipalvelin, Power BI ja Internet Explorerin mobiilisovellus.
-- Jos käytät PowerBIIntegration. Refresh ()-funktioita, sinun on käytettävä lähdettä, joka tukee [Directqueryä](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) , ja tieto yhteydet on luotava käyttämällä directquery-menetelmää. 
+- Power BI-raporttipalvelin ja mobiilisovellus Power BI eivät tue Powerappsin mukautettua visualisointia.
+- Jos käytät PowerBIIntegration. Refresh ()-funktioita, sinun on käytettävä lähdettä, joka tukee [Directqueryä](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) , ja tieto yhteydet on luotava käyttämällä directquery-menetelmää.
+
+> [!NOTE]
+> Suosittelemme, että julkaiset raporttisi ensin Power BI-palvelu ja sitten luot tai muokkaat sovelluksia.
+
+## <a name="browser-support"></a>Selain tuki
+
+Seuraavassa taulukossa on luettelo selain Supportability for View-, Create-ja muokata-toiminnoista powerappsin mukautetusta visualisoinnista. Tuetut selaimet ja toiminnot tunnistetaan valinta merkillä ( &check; ).
+
+|Selain|Näkymä|Luoda|Muokata
+|-|-|-|-
+|Microsoft Edge|&check;|&check;|&check;
+|Internet Explorer 11|&check;
+|Google Chrome|&check;|&check;|&check;
+|Safari|&check;
+|Mozilla Firefox
+|Kaikki muut selaimet
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

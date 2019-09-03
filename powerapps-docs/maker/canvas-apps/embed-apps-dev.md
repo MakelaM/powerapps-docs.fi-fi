@@ -7,21 +7,21 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 10/20/2017
+ms.date: 08/28/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ed812fb8da85d36ff7c0790fe401b33043786cb8
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: 3ff359b80dd7129ec91f987a367c1635143d8e5e
+ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670407"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70213836"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Pohjaan perustuvien sovellusten integroiminen verkkosivustoihin ja muihin palveluihin
-Sovellukset, jotka luot ovat usein hyödyllisimpiä, kun ne ovat käytettävissä siellä, missä käyttämissään työkaluissa. Upottamalla pohjaan perustuvia sovelluksia iframe voit voidaan integroida verkkosivustoihin ja muihin palveluihin, kuten Power BI tai SharePoint.
+Rakentamasi sovellukset ovat usein hyödyllisiä, kun ne ovat käytettävissä, kun käyttäjät tekevät työtään. Upottamalla pohjaan sovelluksia iframe-muodossa voit integroida kyseiset sovellukset verkko sivustoihin ja muihin palveluihin, kuten Power BI tai SharePointiin.
 
 Tässä ohjeaiheessa näytämme, miten määritetään parametrit sovelluksen upottamista varten. Sen jälkeen upotamme verkkosivulle resurssien järjestelysovelluksemme.
 
@@ -32,29 +32,34 @@ Ota huomioon seuraavat rajoitukset:
 - Vain saman vuokraajan PowerApps-käyttäjät voivat käyttää upotettua sovellusta.
 - Jos käytät PowerAppsia Internet Explorer 11 -selaimella, sinun on poistettava yhteensopivuusnäkymä käytöstä.
 
-Voit integroida pohjaan perustuvat sovellukset SharePoint Onlineen käyttämättä iframe. Lisätietoja: [PowerApps-web-osan](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
+Voit myös integroida Canvas-sovelluksia SharePoint Onlineen ilman iframe-toimintoa. Lisätietoja: [Käytä PowerApps-verkko-osaa](https://support.office.com/article/use-the-powerapps-web-part-6285f05e-e441-408a-99d7-aa688195cd1c).
 
 ## <a name="set-uri-parameters-for-your-app"></a>Sovelluksen URI-parametrien määrittäminen
 Jos haluat upottaa sovelluksen, ensimmäinen vaihe on määrittää parametrit Uniform Resource Identifierille (URI) niin, että iframe-kehys tietää, mistä sovellus löytyy. URI on seuraavassa muodossa:
 
 ```
-https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/[AppID]
+https://apps.powerapps.com/play/[AppID]?source=iframe
 ```
 
-> [!NOTE]
-> Olemme lisänneet rivinvaihdon, jotta URI-osoite näkyy sivulla paremmin.
+> [!IMPORTANT]
+> Elokuun 2019 alkaen URI-muoto on muuttunut- https://web.powerapps.com/webplayer https://apps.powerapps.com/play kohteesta. Päivitä upotettuja iframe-muotoja käyttämään uutta URI-muotoa. Viitta ukset edelliseen muotoiluun ohjataan uuteen URI-osoitteeseen yhteensopivuuden varmistamiseksi.
+>
+> Edellinen muoto:
+> 
+> https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/ AppID
 
 Sinun tarvitsee ainoastaan korvata sovelluksesi tunnus URI:ssä syötteellä [sovellustunnus] (mukaan lukien sulkeet ”[” ja ”]”). Näytämme pian, miten saat tämän arvon, mutta tässä on ensin kaikki URI:tä varten tarvittavat parametrit:
 
-* **[appID]** – On muodossa `/providers/Microsoft.PowerApps/apps/[AppID]`. Se antaa suorittamiseen vaadittavan sovellustunnuksen.
+* **[AppID]** – se antaa suoritettavana olevan sovelluksen tunnuksen.
+* **tenantid** – on valinnainen parametri, joka tukee vieraan käyttöä ja määrittää, mistä vuokraajasta sovellus avataan. 
 * **screenColor** – Tarjoaa käyttäjille paremman sovelluksen lataamiskokemuksen. Tämä parametri on muotoa [RGBA (punainen arvo, vihreä arvo, sininen arvo, alfa)](../canvas-apps/functions/function-colors.md) ja se määrää näytön värin sovelluksen latautumisen aikana. Se kannattaa määrittää sovelluksesi kuvakkeen väriseksi.
 * **source** – Ei vaikuta sovellukseen, mutta suosittelemme lisäämään upotuksen lähteeseen viittaavan kuvaavan nimen.
-* Lopuksi voit lisätä mitä tahansa mukautettuja parametreja käyttämällä [Param()-funktiota](../canvas-apps/functions/function-param.md), ja sovellus voi käyttää näitä arvoja. Ne lisätään URI:n loppuun, kuten `[AppID]&amp;param1=value1`. Nämä parametrit luetaan vain sovelluksen käynnistämisen aikana. Jos haluat muuttaa niitä, sinun on käynnistettävä sovellus uudelleen.
+* Lopuksi voit lisätä mitä tahansa mukautettuja parametreja käyttämällä [Param()-funktiota](../canvas-apps/functions/function-param.md), ja sovellus voi käyttää näitä arvoja. Ne lisätään URI:n loppuun, kuten `[AppID]&amp;param1=value1`. Nämä parametrit luetaan vain sovelluksen käynnistämisen yhteydessä. Jos sinun on muutettava niitä, sinun on käynnistettävä sovellus uudelleen. Huomioi, että vain ensimmäisellä kohteen [AppID] jälkeen tulee olla?. sen jälkeen käytä "&" tässä kuvatulla tavalla. 
 
 ### <a name="get-the-app-id"></a>Sovellustunnuksen hankkiminen
 Sovellustunnus on saatavilla powerapps.com-sivustolla. Sovellukselle, jonka haluat upottaa:
 
-1. Napsauta tai napauta [powerapps.com](https://powerapps.microsoft.com)-sivuston **Sovellukset**-välilehdessä kolmea pistettä (**...** ) ja sen jälkeen kohtaa **Tiedot**.
+1. Napsauta tai napauta [powerapps.com](https://powerapps.microsoft.com)-sivuston **Sovellukset**-välilehdessä kolmea pistettä ( **...** ) ja sen jälkeen kohtaa **Tiedot**.
    
     ![Siirry sovelluksen tietoihin](./media/embed-apps-dev/details.png)
 1. Kopioi **Sovellustunnus**.
@@ -63,14 +68,14 @@ Sovellustunnus on saatavilla powerapps.com-sivustolla. Sovellukselle, jonka halu
 1. Korvaa arvo `[AppID]` URI:ssä. Resurssien järjestelysovelluksemme URI näyttää tältä:
    
     ```
-    https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/76897698-91a8-b2de-756e-fe2774f114f2
+    https://apps.powerapps.com/play/76897698-91a8-b2de-756e-fe2774f114f2?source=iframe
     ```
 
 ## <a name="embed-your-app-in-a-website"></a>Sovelluksen upottaminen sivustoon
 Sovelluksen upottaminen on nyt yhtä helppoa kuin iframe-kehyksen lisääminen sivustosi HTML-koodiin (tai muuhun palveluun, joka tukee iframe-kehyksiä, kuten Power BI tai SharePoint):
 
 ```html
-<iframe width="[W]" height="[H]" src="https://web.powerapps.com/webplayer/iframeapp?source=website&screenColor=rgba(165,34,55,1)&appId=/providers/Microsoft.PowerApps/apps/[AppID]" allow="geolocation; microphone; camera"/>
+<iframe width="[W]" height="[H]" src="https://apps.powerapps.com/play/[AppID]?source=website&screenColor=rgba(165,34,55,1)" allow="geolocation; microphone; camera"/>
 ```
 
 Määritä arvot iframe-kehyksen leveydelle ja korkeudelle ja korvaa sovelluksesi tunnus kohteella `[AppID]`.
