@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64671040"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-power-bi-report-to-analyze-projects"></a>Power BI -raportin luominen projektien analysointiin
 > [!NOTE]
@@ -185,7 +186,7 @@ Kun Power BI Desktop toi luettelot, se loi niiden välille suhteen molempien tau
 1. Napsauta tai napauta päivämäärätaulukossa **Uusi sarake**.
    
     ![Uusi sarake](./media/sharepoint-scenario-build-report/05-02-00-modeling-column.png)
-2. Kirjoita kaavariville seuraava kaava: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]), 1,0,7,0,1)** .
+2. Kirjoita kaavariville seuraava kaava: **IsWeekDay = SWITCH(WEEKDAY(Dates[Date]); 1;0;7;0;1)** .
    
     Tämä kaava määrittää, onko **Päivämäärä**-sarakkeessa oleva päivä arkipäivä. Jos päivämäärä on arkipäivä, **IsWeekDay**-sarake saa arvon 1; muussa tapauksessa se saa arvon 0.
 3. Lisää **IsWeekDay**-sarake **Dates**-taulukkoon painamalla Enter.

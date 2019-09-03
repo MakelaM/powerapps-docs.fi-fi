@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70130329"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="with-function-in-powerapps"></a>Powerappsissa olevalla funktiolla
 Laskee arvot ja suorittaa toimintoja yksittäiselle [tietueelle](../working-with-tables.md#records), mukaan lukien nimettyjen arvojen sisäiset tietueet.
@@ -38,19 +39,19 @@ Jos *tietue* **-** argumentin arvona on virhe, funktio palauttaa tämän virheen
 ## <a name="syntax"></a>Syntaksi
 **Kanssa** ( *Tietue*, *kaava* )
 
-* *Tietue* – pakollinen. Tietue, jolle suoritetaan.  Käytä nimet-arvoissa inline-syntaksia`{ name1: value1, name2: value2, ... }`
+* *Tietue* – pakollinen. Tietue, jolle suoritetaan.  Käytä nimet-arvoissa inline-syntaksia`{ name1: value1; name2: value2; ... }`
 * *Formula* – pakollinen.  *Tietueen*arviointi kaava.  Kaava voi viitata mihin tahansa *tietue* kenttiin suoraan tietue alueena.
 
 ## <a name="examples"></a>Esimerkkejä
 
 ### <a name="simple-named-values"></a>Yksinkertaiset nimetyt arvot
 
-```powerapps-dot
-With( { radius: 10, 
-        height: 15 },
+```powerapps-comma
+With( { radius: 10; 
+        height: 15 };
     Pi() * (radius*radius) * height
 )
-// Result: 4712.38898038 (as shown in a label control)
+// Result: 4712,38898038 (as shown in a label control)
 ```
 
 Tässä esimerkissä käytetään nimettyjen arvojen tietuetta laskemaan sylin terin tilavuus.  **Kun-** arvoa käytetään kaikkien syöte arvojen sieppaamiseen, niiden erottaminen itse laskennasta on helppoa.  
@@ -59,14 +60,14 @@ Tässä esimerkissä käytetään nimettyjen arvojen tietuetta laskemaan sylin t
 
 ![Korko Laskin käyttäen funktiolla](media/function-with/interest-calculator.gif)
 
-```powerapps-dot
-With( { AnnualRate: RateSlider/8/100,        // slider moves in 1/8th increments and convert to decimal
-        Amount: AmountSlider*10000,          // slider moves by 10,000 increment
-        Years: YearsSlider,                  // slider moves in single year increments, no adjustment required
-        AnnualPayments: 12 },                // number of payments per year
-      With( { r: AnnualRate/AnnualPayments,  // interest rate
-              P: Amount,                     // loan amount
-              n: Years*AnnualPayments },     // number of payments
+```powerapps-comma
+With( { AnnualRate: RateSlider/8/100;        // slider moves in 1/8th increments and convert to decimal
+        Amount: AmountSlider*10000;          // slider moves by 10;000 increment
+        Years: YearsSlider;                  // slider moves in single year increments; no adjustment required
+        AnnualPayments: 12 };                // number of payments per year
+      With( { r: AnnualRate/AnnualPayments;  // interest rate
+              P: Amount;                     // loan amount
+              n: Years*AnnualPayments };     // number of payments
             r*P / (1 - (1+r)^-n)             // standard interest calculation
       )
 )  
@@ -94,12 +95,12 @@ Tässä on tarkat ohjeet tämän sovelluksen luomiseen:
 
 ### <a name="primary-key-returned-from-patch"></a>Korjaus tiedostosta palautettu perusavain
 
-```powerapps-dot
-With( Patch( Orders, Defaults( Orders ), { OrderStatus: "New" } ),
-      ForAll( NewOrderDetails, 
-              Patch( OrderDetails, Defaults( OrderDetails ), 
-                     { Order: OrderID,          // from With's first argument, primary key of Patch result
-                       Quantity: Quantity,      // from ForAll's NewOrderDetails table
+```powerapps-comma
+With( Patch( Orders; Defaults( Orders ); { OrderStatus: "New" } );
+      ForAll( NewOrderDetails; 
+              Patch( OrderDetails; Defaults( OrderDetails ); 
+                     { Order: OrderID;          // from With's first argument; primary key of Patch result
+                       Quantity: Quantity;      // from ForAll's NewOrderDetails table
                        ProductID: ProductID }   // from ForAll's NewOrderDetails table
               )
       )
@@ -110,12 +111,12 @@ Tämä esimerkki lisää tietueen SQL Server **Order** -taulukkoon.  Sen jälkee
 
 ### <a name="extracted-values-with-a-regular-expression"></a>Poimitut arvot Säännöllisellä lausekkeella
 
-```powerapps-dot
+```powerapps-comma
 With( 
-    Match( "PT2H1M39S", "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-    Time( Value( hours ), Value( minutes ), Value( seconds ) )
+    Match( "PT2H1M39S"; "PT(?:<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
+    Time( Value( hours ); Value( minutes ); Value( seconds ) )
 )
-// Result: 2:01 AM (as shown in a label control, use the Text function to see the seconds)
+// Result: 2:01 AM (as shown in a label control; use the Text function to see the seconds)
 ```
 
 Tämä esimerkki poimii tunnit, minuutit ja sekunnit ISO 8601-kesto arvosta ja käyttää sitten näitä alivastaavu uksia päivä määrä-ja aika-arvon luomiseen. 

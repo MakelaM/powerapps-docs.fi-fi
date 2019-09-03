@@ -20,6 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 08/28/2019
 ms.locfileid: "70064890"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="blank-coalesce-isblank-and-isempty-functions-in-powerapps"></a>PowerAppsin Blank-, Coalesce-, IsBlank- ja IsEmpty-funktiot
 Testaa, onko arvo tyhjä tai sisältääkö [taulukko](../working-with-tables.md) nolla [tietuetta](../working-with-tables.md#records), ja mahdollistaa *tyhjien* arvojen luomisen.
@@ -39,11 +40,11 @@ Tyhjä-funktiolla *tyhjä* on määritetty taulu koille, jotka eivät sisällä 
 ## <a name="description"></a>Kuvaus
 **Blank**-funktio palauttaa *tyhjän* arvon. Käytä tätä näitä arvoja tukevan tietolähteen NULL-arvon tallentamiseen, jolloin käytännössä poistetaan kentän arvo.
 
-*Tyhjän* arvon tai tyhjän merkki jonon **onblank** -funktioiden testit.  Testi sisältää tyhjiä merkki jonoja, jotka helpottavat sovelluksen luontia, koska jotkin tieto lähteet ja ohjaus toiminnot käyttävät tyhjää merkki jonoa, kun arvoa ei ole.  Voit testata erityisesti *tyhjää* arvoa käyttämällä `if( Value = Blank(), ...` **isblank**-kohteen asemesta.
+*Tyhjän* arvon tai tyhjän merkki jonon **onblank** -funktioiden testit.  Testi sisältää tyhjiä merkki jonoja, jotka helpottavat sovelluksen luontia, koska jotkin tieto lähteet ja ohjaus toiminnot käyttävät tyhjää merkki jonoa, kun arvoa ei ole.  Voit testata erityisesti *tyhjää* arvoa käyttämällä `if( Value = Blank(); ...` **isblank**-kohteen asemesta.
 
 **Conalesce** -funktio arvioi sen argumentit järjestyksessä ja palauttaa ensimmäisen arvon, joka ei ole *tyhjä* tai tyhjä merkki jono.  Tämän funktiolla korvataan *tyhjä* arvo tai tyhjä merkki jono, jolla on eri arvo, mutta jätetään muut kuin*Tyhjät* merkki jono arvot ennalleen.  Jos kaikki argumentit ovat *tyhjiä* tai tyhjiä merkki jonoja, funktio palauttaa *tyhjän*, jolloin **sulautuvat** oikein, jotta tyhjät merkki jonot voidaan muuntaa tyhjiksi arvoiksi.  Kaikkien **Coalesce**-funktion argumenttien täytyy olla samaa tyyppiä. Et voi esimerkiksi sekoittaa numeroita ja merkkijonoja.  
 
-`Coalesce( value1, value2 )`on ytimekkäämpää `If( Not IsBlank( value1 ), value1, Not IsBlank( value2 ), value2 )` , eikä vaadi **arvo1** -ja **arvo2** -laskentaa kahdesti.  [ **IF** -funktio](function-if.md) palauttaa *tyhjän* , jos ei ole muuta-kaavaa, kuten tässä tapa uksessa.
+`Coalesce( value1; value2 )`on ytimekkäämpää `If( Not IsBlank( value1 ); value1; Not IsBlank( value2 ); value2 )` , eikä vaadi **arvo1** -ja **arvo2** -laskentaa kahdesti.  [ **IF** -funktio](function-if.md) palauttaa *tyhjän* , jos ei ole muuta-kaavaa, kuten tässä tapa uksessa.
 
 **IsEmpty**-funktio testaa, sisältääkö taulukko yhtään tietuetta. Se vastaa **[CountRows](function-table-counts.md)** -funktion käyttämistä, kun haetaan nollaa. Voit tarkistaa, onko tietolähteessä virheitä, yhdistämällä **IsEmpty**-funktion **[Errors](function-errors.md)** -funktioon.
 
@@ -52,7 +53,7 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 ## <a name="syntax"></a>Syntaksi
 **Blank**()
 
-**Coalesce**( *Arvo1* [, *Arvo2*, ... ] )
+**Coalesce**( *Arvo1* [; *Arvo2*; ... ] )
 
 * *Arvo(t)* – Pakollinen. Testattavat arvot.  Jokainen arvo arvioidaan järjestyksessä, kunnes arvo ei ole *tyhjä* eikä tyhjää merkki jonoa löytynyt.  Tämän pisteen jälkeisiä arvoja ei lasketa.  
 
@@ -72,8 +73,8 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    ClearCollect( Cities, { Name: "Seattle", Weather: "Rainy" } )
+    ```powerapps-comma
+    ClearCollect( Cities; { Name: "Seattle"; Weather: "Rainy" } )
     ```
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 4. Napsauta tai napauta **Tiedosto**-valikosta **Kokoelmat**.
@@ -84,15 +85,15 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 5. Palaa oletustyötilaan napsauttamalla tai napauttamalla takaisin-nuolta.
 6. Lisää **Otsikko**-ohjausobjekti ja määritä sen **Text**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     IsBlank( First( Cities ).Weather )
     ```
 
     Otsikko näyttää arvon **epätosi**, koska **Weather** sisältää arvon ("Rainy").
 7. Lisää toinen painike ja aseta sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    Patch( Cities, First( Cities ), { Weather: Blank() } )
+    ```powerapps-comma
+    Patch( Cities; First( Cities ); { Weather: Blank() } )
     ```
 8. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 
@@ -115,8 +116,8 @@ Sekä **IsBlank**- että **IsEmpty**-funktion paluuarvo on totuusarvo, joka on j
 1. Luo sovellus alusta alkaen, lisää Tekstisyöte-ohjausobjekti ja anna sille nimeksi **FirstName**.
 2. Lisää otsikko ja aseta sen **[Text](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    ```powerapps-dot
-    If( IsBlank( FirstName.Text ), "First Name is a required field." )
+    ```powerapps-comma
+    If( IsBlank( FirstName.Text ); "First Name is a required field." )
     ```
 
     Oletuksena Tekstisyöte-ohjausobjektin **[Text](../controls/properties-core.md)** -ominaisuudeksi asetetaan **"Text input"** . Koska ominaisuus sisältää arvon, se ei ole tyhjä, eikä otsikko näytä mitään viestiä.
@@ -134,14 +135,14 @@ Muita esimerkkejä:
 | **IsBlank( "" )** |Merkkijono, joka ei sisällä merkkejä. |**tosi** |
 | **IsBlank( "Hei" )** |Merkkijono, joka sisältää yhden tai useamman merkin. |**epätosi** |
 | **IsBlank( *AnyCollection* )** |Koska [kokoelma](../working-with-data-sources.md#collections) on olemassa, se ei ole tyhjä, vaikka se ei sisältäisi tietueita. Jos haluat tarkistaa, onko kokoelma tyhjä, käytä **IsEmpty**-funktiota. |**epätosi** |
-| **IsBlank( Mid( "Hei", 17, 2 ) )** |**[Mid](function-left-mid-right.md)** -aloitusmerkki on merkkijonon jälkeen.  Tuloksena on tyhjä merkkijono. |**tosi** |
-| **IsBlank( If( false, false ) )** |**[If](function-if.md)** -funktio ilman *ElseResult*:ia.  Koska ehto on aina **epätosi**, tämä **[If](function-if.md)** palauttaa aina *tyhjän* arvon. |**tosi** |
+| **IsBlank( Mid( "Hei"; 17; 2 ) )** |**[Mid](function-left-mid-right.md)** -aloitusmerkki on merkkijonon jälkeen.  Tuloksena on tyhjä merkkijono. |**tosi** |
+| **IsBlank( If( false; false ) )** |**[If](function-if.md)** -funktio ilman *ElseResult*:ia.  Koska ehto on aina **epätosi**, tämä **[If](function-if.md)** palauttaa aina *tyhjän* arvon. |**tosi** |
 
 ### <a name="isempty"></a>IsEmpty
 1. Luo sovellus alusta alkaen ja lisää **Painike**-ohjausobjekti.
 2. Määritä painikkeen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:
 
-    **Collect (IceCream, {Flavor: "Mansikka", määrä: 300}, {Flavor: "Suklaa", määrä: 100})**
+    **Collect (IceCream; {Flavor: "Mansikka"; määrä: 300}; {Flavor: "Suklaa"; määrä: 100})**
 3. Esikatsele sovellustasi, napsauta tai napauta luomaasi painiketta ja sulje esikatselu.  
 
     Kokoelma nimeltä **IceCream** luodaan ja se sisältää nämä tiedot:
@@ -164,7 +165,7 @@ Voit testata **IsEmpty**-funktiolla, onko laskettu taulukko tyhjä, kuten seuraa
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **IsEmpty( [&nbsp;1,&nbsp;2,&nbsp;3 ] )** |Yhden sarakkeen taulukko sisältää kolme tietuetta, eikä se siis ole tyhjä. |**epätosi** |
+| **IsEmpty( [&nbsp;1;&nbsp;2;&nbsp;3 ] )** |Yhden sarakkeen taulukko sisältää kolme tietuetta, eikä se siis ole tyhjä. |**epätosi** |
 | **IsEmpty( [&nbsp;] )** |Yhden sarakkeen taulukko ei sisällä tietueita, joten se on tyhjä. |**tosi** |
-| **IsEmpty( Filter( [&nbsp;1,&nbsp;2,&nbsp;3&nbsp;], Value > 5 ) )** |Yhden sarakkeen taulukko ei sisällä tietueita, joiden arvo on suurempi kuin 5.  Suodattimen tulos ei sisällä tietueita, joten se on tyhjä. |**tosi** |
+| **IsEmpty( Filter( [&nbsp;1;&nbsp;2;&nbsp;3&nbsp;]; Value > 5 ) )** |Yhden sarakkeen taulukko ei sisällä tietueita, joiden arvo on suurempi kuin 5.  Suodattimen tulos ei sisällä tietueita, joten se on tyhjä. |**tosi** |
 
