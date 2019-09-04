@@ -13,31 +13,30 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: eb8835a2e5c66bb975bc384d9ca782cd3a0f7d85
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: ea41924c213adc6a2e0e72b906076a2d8e6783ff
+ms.sourcegitcommit: 488609d517816f296f8090a1cb643297fe3e8e85
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517430"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70237970"
 ---
 # <a name="date-picker-control-in-powerapps"></a>Päivämäärävalitsin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jota käyttäjä voi napsauttaa tai napauttaa päivämäärän määrittämiseksi.
 
 ## <a name="description"></a>Kuvaus
-Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control-text-input.md)**-ohjausobjektin sijaan, autat varmistamaan, että käyttäjä määrittää päivämäärän oikeassa muodossa.
+Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control-text-input.md)** -ohjausobjektin sijaan, autat varmistamaan, että käyttäjä määrittää päivämäärän oikeassa muodossa.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **DefaultDate** – Päivämäärän ohjausobjektin alkuarvo, ellei käyttäjä muuta sitä.
 
-**SelectedDate** – Tällä hetkellä päivämäärä-ohjausobjektissa valittu päivämäärä.
+**SelectedDate** – Tällä hetkellä päivämäärä-ohjausobjektissa valittu päivämäärä.  Tämä päivä määrä esitetään paikallisessa ajassa.
 
 **Muoto** – Tekstimuoto, jossa ohjausobjekti näyttää päivämäärän ja käyttäjä määrittää päivämäärän. Voit määrittää ominaisuudeksi **ShortDate** (oletus) tai **LongDate**, jonka mukaan päivämäärät muodostetaan tämän ohjausobjektin **Kieli**-ominaisuudessa. Voit myös määrittää ominaisuudeksi lausekkeen, kuten **vvvv/kk/pp**, jos haluat käyttää samaa muotoa kielestä riippumatta. Esimerkki:
 
 * Ohjausobjekti näyttää **12/31/2017**, jos käyttäjä napsauttaa tai napauttaa vuoden 2017 viimeistä päivää, **Muoto**-ominaisuudeksi määritetään **ShortDate** ja **Kieli**-ominaisuudeksi **en-us**.
 * Ohjausobjekti näyttää **dimanche 31 decembre 2017**, jos käyttäjä napsauttaa tai napauttaa vuoden 2017 viimeistä päivää, **Muoto**-ominaisuudeksi määritetään **LongDate** ja **Kieli**-ominaisuudeksi **fr-fr**.
 
-**Kielen** – määrittää kielen, jota käytetään päivämäärien muotoiluun, mukaan lukien kuukausien nimet. Jos tätä ominaisuutta ei ole määritetty, käyttäjän laitteen asetus määrittää kielen. Tuetut arvot ovat ”fi-us” ja ”FR”.
+**Language** – määrittää kielen, jota käytetään päivä määrien muotoiluun, mukaan lukien kuukausien nimet. Jos tätä ominaisuutta ei ole määritetty, käyttäjän laitteen asetus määrittää kielen. Tuetut arvot ovat "EN-US" ja "FR".
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[AccessibleLabel](properties-accessibility.md)** – Näytönlukuohjelmien nimi.
@@ -50,25 +49,25 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
 **[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
-**[DisplayMode](properties-core.md) ** – Salliiko ohjausobjekti käyttäjän syötettä (Muokkaa), vain tietojen tarkastelun (Näytä) vai onko se poissa käytöstä (Poistettu käytöstä).
+**[DisplayMode](properties-core.md)**  – Salliiko ohjausobjekti käyttäjän syötettä (Muokkaa), vain tietojen tarkastelun (Näytä) vai onko se poissa käytöstä (Poistettu käytöstä).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **EndYear** – Viimeisin vuosi, johon käyttäjä voi määrittää päivämäärävalitsin-ohjausobjektin arvon.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md) ** – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -76,9 +75,9 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 
 **IconBackground** – Päivämäärävalitsimen kuvakkeen taustaväri.
 
-**InputTextPlaceholder** – ohjeteksti, joka tulee näkyviin, jos et valitse päivämäärää.
+**Inputtextplaceholder** – ohje teksti, joka näytetään, jos päivä määriä ei ole syötetty.
 
-**[Italic](properties-text.md) ** – Onko ohjausobjektin teksti kursivoitu.
+**[Italic](properties-text.md)**  – Onko ohjausobjektin teksti kursivoitu.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
@@ -105,19 +104,19 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
-**[Year](../functions/function-datetime-parts.md)**( *DateTimeValue* )
+**[Year](../functions/function-datetime-parts.md)** ( *DateTimeValue* )
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **Päivämäärävalitsin**-ohjausobjekti ja anna sille nimeksi **Määräaika**.
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää **[Selite](control-text-box.md)**-ohjausobjekti ja määritä sen **[Teksti](properties-core.md)**-ominaisuudeksi seuraava kaava:
-   <br>**DateDiff(Today(); Deadline.SelectedDate) & " days to go!"**
+2. Lisää **[Selite](control-text-box.md)** -ohjausobjekti ja määritä sen **[Teksti](properties-core.md)** -ominaisuudeksi seuraava kaava:
+   <br>**DateDiff(Today(), Deadline.SelectedDate) & " days to go!"**
 
-    Haluatko lisätietoja **[DateDiff](../functions/function-dateadd-datediff.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[DateDiff](../functions/function-dateadd-datediff.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä, valitse päivämäärä kohdassa **Määräaika** ja napsauta tai napauta **OK**.
 
-    **[Selite](control-text-box.md)**-ohjausobjekti näyttää päivien lukumäärän tämän päivän ja valitsemasi päivämäärän välillä.
+    **[Selite](control-text-box.md)** -ohjausobjekti näyttää päivien lukumäärän tämän päivän ja valitsemasi päivämäärän välillä.
 4. Palaa oletustyötilaan painamalla ESC-näppäintä.
 
 
@@ -129,8 +128,8 @@ Jos lisäät **Päivämäärävalitsin**-ohjausobjektin **[Tekstisyöte](control
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
 > [!TIP]
-> Kun kalenterin on avoinna, paina **sivun ylös** ja **sivulla alaspäin** siirtyä kuukauden ja **VAIHTO + Page up** ja **VAIHTO + Page down** avulla Siirry vuoden.
+> Kun kalenteri on avoinna **, voit siirtyä** vuosien välillä painamalla **Page Up** -ja **Page Down** - **näppäimiä** kuukausien välillä.
