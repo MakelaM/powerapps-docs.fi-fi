@@ -840,14 +840,20 @@
                       href: ./model-driven-apps/create-and-edit-forms.md
                     - name: 'Lisää, siirrä tai poistaa kenttiä'
                       href: ./model-driven-apps/add-move-or-delete-fields-on-form.md
+                    - name: 'Osien lisääminen, siirtäminen tai poistaminen'
+                      href: ./model-driven-apps/add-move-configure-or-delete-components-on-form.md
                     - name: 'Lisää, siirtää tai poistaa osia'
                       href: ./model-driven-apps/add-move-or-delete-sections-on-form.md
                     - name: 'Lisää, siirtää tai poistaa välilehtiä'
                       href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
-                    - name: Lomakkeen suunnittelutyökalun ominaisuudet
-                      href: ./model-driven-apps/form-designer-properties.md
                     - name: Ylätunnisteen ominaisuuksien määrittäminen
                       href: ./model-driven-apps/form-designer-header-properties.md
+                    - name: Aliruudukon osan lisääminen ja määrittäminen
+                      href: ./model-driven-apps/form-designer-add-configure-subgrid.md
+                    - name: Pikanäkymän osan lisääminen ja määrittäminen
+                      href: ./model-driven-apps/form-designer-add-configure-quickview.md
+                    - name: Hakuosan määrittäminen
+                      href: ./model-driven-apps/form-designer-add-configure-lookup.md
                     - name: Puunäkymän käyttö
                       href: ./model-driven-apps/using-tree-view-on-form.md
                 - name: Lomaketyypit
@@ -1069,8 +1075,12 @@
           href: ./portals/admin/change-base-url.md
         - name: Ylläpitotilan käyttöönotto
           href: ./portals/admin/enable-maintenance-mode.md
-        - name: Power BI -integraation määrittäminen
-          href: ./portals/admin/set-up-power-bi-integration.md
+        - name: Power BI -integraatio
+          items:
+            - name: Power BI -integraation määrittäminen
+              href: ./portals/admin/set-up-power-bi-integration.md
+            - name: Power BI -raportin tai koontinäytön lisääminen verkkosivulle portaalissa
+              href: ./portals/admin/add-powerbi-report.md
         - name: Portaalin tarkistuksen suorittaminen
           href: ./portals/admin/portal-checker.md
         - name: Portaalin todentamisavaimen uusiminen
@@ -1079,6 +1089,56 @@
           href: ./portals/admin/ip-address-restrict.md
         - name: PowerApps-portaalien toimialueeseen päivittäminen
           href: ./portals/admin/update-portal-domain.md
+        - name: Palvelinpuolen välimuistin tyhjentäminen
+          href: ./portals/admin/clear-server-side-cache.md
+        - name: Dynamics 365 -portaalin määrityksen siirtäminen
+          href: ./portals/admin/migrate-portal-configuration.md
+    - name: Portaalin lisämukautukset
+      items:
+        - name: Liquid-mallien käsitteleminen
+          items:
+            - name: Yleiskatsaus
+              href: ./portals/liquid/liquid-overview.md
+            - name: Sisällön tallentaminen verkkomallien avulla
+              href: ./portals/liquid/store-content-web-templates.md
+            - name: Liquid-operaattorien ymmärtäminen
+              href: ./portals/liquid/liquid-operators.md
+            - name: Käytettävissä olevat Liquid-tyypit
+              href: ./portals/liquid/liquid-types.md
+            - name: Käytettävissä olevat ehdolliset Liquid-operaattorit
+              href: ./portals/liquid/liquid-conditional-operators.md
+            - name: Käytettävissä olevat Liquid-objektit
+              href: ./portals/liquid/liquid-objects.md
+            - name: Käytettävissä olevat Liquid-tunnisteet
+              items:
+                - name: Käytettävissä olevat Liquid-tunnisteet
+                  href: ./portals/liquid/liquid-tags.md
+                - name: Toiminnonkulkutunnisteet
+                  href: ./portals/liquid/control-flow-tags.md
+                - name: Iteraatiotunnisteet
+                  href: ./portals/liquid/iteration-tags.md
+                - name: Muuttujatunnisteet
+                  href: ./portals/liquid/variable-tags.md
+                - name: Mallitunnisteet
+                  href: ./portals/liquid/template-tags.md
+                - name: PowerAppsin yleisen datapalvelun entiteettitunnisteet
+                  href: ./portals/liquid/portals-entity-tags.md
+            - name: Käytettävissä olevat Liquid-suodattimet
+              href: ./portals/liquid/liquid-filters.md
+            - name: Kehittyneiden mallien luominen
+              items:
+                - name: Mukautetun sivumallin luominen
+                  href: ./portals/liquid/create-custom-template.md
+                - name: Sivuhierarkian hahmontaminen yhdistelmäsiirtymisen avulla
+                  href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
+                - name: Sivun entiteettiluettelon hahmontaminen
+                  href: ./portals/liquid/render-entity-list-current-page.md
+                - name: RSS-syötteen hahmontaminen mukautetun sivumallin avulla
+                  href: ./portals/liquid/render-rss-custom-page-template.md
+                - name: Sivuston ylätunnisteen ja ensisijaisen siirtymispalkin hahmontaminen
+                  href: ./portals/liquid/render-site-header-primary-navigation.md
+        - name: 'OAuth 2.0:n implicit grant -työnkulku'
+          href: ./portals/oauth-implicit-grant-flow.md
     - name: Tunnetut ongelmat
       href: ./portals/known-issues.md
     - name: PowerApps-portaalien UKK
