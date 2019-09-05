@@ -1,6 +1,6 @@
 ---
-title: Osien toimintakaavoissa | Microsoft Docs
-description: Käynnistä sovellus ja yhden tai useamman tehtävän osaa perustuvan toiminnon ilmetessä.
+title: Osien toiminta kaavat | Microsoft Docs
+description: Käynnistä sovellus suorittamaan vähintään yksi tehtävä, kun komponenttipohjainen toiminto suoritetaan.
 author: yifwang
 ms.service: powerapps
 ms.topic: article
@@ -10,28 +10,28 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7275395a4c21afaebc60e9635461afc08f5e84a0
-ms.sourcegitcommit: afe958805d8e1cfa4fdf02c7bceea947185f71f2
+ms.openlocfilehash: c8ec4edd835f12fb6fccf04ba0fb27f1e755cac0
+ms.sourcegitcommit: ea3ab5926541c60a9e7c17f52f937c9812d48c71
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66420310"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70310074"
 ---
-# <a name="behavior-formulas-for-components"></a>Toimintakaavoissa osia
+# <a name="behavior-formulas-for-components"></a>Komponenttien toiminta kaavat
 
 > [!IMPORTANT]
-> Tämä ominaisuus on edelleen kokeellinen ja käytöstä oletusarvon mukaan. Jos haluat lisätietoja, katso [kokeelliseen ja esikatselu](working-with-experimental.md).
+> Ominaisuus on edelleen kokeellinen, ja se on oletus arvon mukaan poistettu käytöstä. Lisä tietoja on kohdassa [Experimental-ja Preview-ominaisuudet](working-with-experimental.md).
 
-Määritä vähintään yksi [toimintakaavoissa](working-with-formulas-in-depth.md) , joka suoritetaan, kun tapahtuma käynnistää osa esiintymät muutos. Voit esimerkiksi määrittää komponentin **OnReset** kaavat, jotka suorittavat alustus, poista syöte ja nollaa ominaisuuden arvot, kun **vaihtaa** funktion suorittaminen osa-esiintymille.
+Määritä vähintään yksi [toiminta kaava](working-with-formulas-in-depth.md) , joka suoritetaan, kun tapahtuma käynnistää osan esiintymien muutoksen. Voit esimerkiksi määrittää komponentin **Onreset** -ominaisuudeksi yhden tai useamman kaavan, joka suorittaa alustuksen, tyhjentää syötteen ja nollata arvot, kun **reset** -funktiolla suoritetaan komponentti esiintymiä.
 
-## <a name="onreset"></a>OnReset ##
+## <a name="onreset"></a>OnReset
 
-Valitun osan, valitse **OnReset** avattavan luettelon ominaisuudet (oikeassa laidassa kaavarivin), ja kirjoita sitten yhden tai useamman kaavan.
+Kun osa on valittuna, valitse **Onreset** avattavasta ominaisuuksien luettelosta (kaava rivin oikealla puolella) ja kirjoita vähintään yksi kaava.
 
 > [!div class="mx-imgBorder"]
-> ![OnReset Esimerkki](./media/component-behavior/example-onreset.png)
+> ![OnReset-esimerkki](./media/component-behavior/example-onreset.png)
 
-Testattava **OnReset**, vaihtaa osa ohjausobjektin määrittäminen. Voit esimerkiksi määrittää **OnSelect** ominaisuuden painikkeen tämä kaava: **Palauta**(*ladattavissa*)
+Voit testata **Onreset**-määritystä määrittämällä ohjaus objektin nollaamaan komponentin. Voit esimerkiksi määrittää painikkeen **onselect** -ominaisuudeksi tämän kaavan: **Nollaa** (*Componentname*)
 
 > [!div class="mx-imgBorder"]
 > ![Palauta-painike](./media/component-behavior/reset-button.png)
