@@ -33,14 +33,7 @@ Lisätietoja: [Raportti: Ratkaisun elinkaaren hallinta](https://www.microsoft.co
 > [!NOTE]
 >  Jos olet riippumaton ohjelmistotoimittaja ja luot sovelluksen jaettavaksi, sinun on käytettävä ratkaisuja. Lisätietoja ratkaisujen käyttämisestä on kohdassa [Kehittäjän opas: Johdanto ratkaisuihin](/powerapps/developer/common-data-service/introduction-solutions).  
   
- Seuraavassa on lisätietoja ratkaisuista, jos olet kiinnostunut luomaan PowerApps-sovelluksia organisaatiota varten tai muokkaamaan Dynamics 365 for Customer Engagement -sovelluksia:  
-  
--   Ratkaisujen luominen on valinnaista. Voit luoda kaikki PowerApps-ympäristön sovellukset tai mukauttaa niitä suoraan ilman ratkaisun luomista.  
-  
--   Kun mukautat PowerApps-ympäristöä suoraan ratkaisua luomatta, käsittelet erityisratkaisua, jonka nimi on **Common Data Service -oletusratkaisu**. Tämä ratkaisu sisältää kaikki PowerApps-ympäristössä tekemäsi mukautukset.  
-  
--   Käytössä on myös toinen erityisratkaisu, **Oletusratkaisu**. Tämä ratkaisu sisältää järjestelmän kaikki osat riippumatta siitä, kuka ne on luonut. Voit viedä **oletusratkaisun** ja luoda varmuuskopion organisaatiossa määritetyistä mukautuksista. Muutosten varmuuskopiointi varmuuden vuoksi on hyvä käytäntö.  
-  
+
 <a name="BKMK_SolutionComponents"></a>   
 ### <a name="components"></a>Osat  
  Osa viittaa mukautettavaan osaan. Osia ovat kaikki, mitä voidaan ottaa mukaan ratkaisuun. Seuraavassa luettelossa on osia, joita voi tarkastella ratkaisussa:  

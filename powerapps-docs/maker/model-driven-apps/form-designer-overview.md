@@ -44,4 +44,11 @@ Lomakkeiden suunnitteluohjelman käyttöliittymässä on seuraavat alueet:
    ![Lomakkeiden suunnitteluohjelman asettelu](media/form-designer.png)
 
 ## <a name="see-also"></a>Katso myös
-[Lomakkeiden luominen tai muokkaaminen lomakkeiden suunnitteluohjelman avulla](create-and-edit-forms.md)
+[Lomakkeiden luominen tai muokkaaminen lomakkeiden suunnitteluohjelman avulla](create-and-edit-forms.md)  
+[Lomakkeiden kenttien lisääminen, siirtäminen tai poistaminen lomakkeiden suunnitteluohjelman avulla](add-move-or-delete-fields-on-form.md)  
+[Lomakkeiden osien lisääminen, siirtäminen tai poistaminen lomakkeiden suunnitteluohjelman avulla](add-move-or-delete-sections-on-form.md)  
+[Lomakkeiden välilehtien lisääminen, siirtäminen tai poistaminen lomakkeiden suunnitteluohjelman avulla](add-move-or-delete-tabs-on-form.md)  
+[Lomakkeiden suunnitteluohjelmassa käytettävissä olevat ominaisuudet](form-designer-properties.md)  
+[Ylätunnisteen ominaisuuksien määrittäminen lomakkeiden suunnitteluohjelmassa](form-designer-header-properties.md)    
+[Lomakkeen suunnitteluohjelman puunäkymän käyttäminen](using-tree-view-on-form.md)  
+[Kenttien luominen ja muokkaaminen](../common-data-service/create-edit-field-portal.md)

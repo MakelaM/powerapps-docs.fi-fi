@@ -15,6 +15,7 @@ ms.assetid: c765b6d9-4d87-4c2d-aae2-5b1c3b664a71
 caps.latest.revision: 28
 ms.author: matp
 manager: kvivek
+author: Mattp123
 search.audienceType:
   - maker
 search.app:
@@ -96,7 +97,7 @@ Seuraavat toiminnot voivat käynnistää tiettyjä toimintatapoja:
 |**Delegoi**|Mitä tapahtuu, kun ensisijainen entiteettitietue delegoidaan jollekin toiselle?|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
 |**Määritä ylätaso uudelleen**|Mitä tapahtuu, kun ylätason suhteen liittyvän entiteetin hakuarvoa muutetaan?<br />Lisätietoja: [Ylätason entiteettisuhteet](#parental-entity-relationships)|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
 |**Jaa**|Mitä tapahtuu, kun ensisijaisen entiteetin tietue jaetaan?|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
-|**Poista**|Mitä tapahtuu, kun ensisijainen entiteettitietue poistetaan?|Kaikki limittäin<br />Poista linkki<br />Rajoita|
+|**Poista**|Mitä tapahtuu, kun ensisijaisen entiteetin tietue poistetaan?|Kaikki limittäin<br />Poista linkki<br />Rajoita|
 |**Poista jako**|Mitä tapahtuu, kun ensisijaisen entiteettitietueen jako poistetaan?|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
 |**Yhdistäminen**|Mitä tapahtuu, kun ensisijainen entiteettitietue yhdistetään?|Kaikki limittäin<br />Ei mitään limittäin|
 |**Koostenäkymä**|Mikä on tähän suhteeseen liitetyn koostenäkymän haluttu toimintatapa? |Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|

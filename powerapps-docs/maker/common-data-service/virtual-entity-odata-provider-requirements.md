@@ -35,7 +35,7 @@ Tässä ohjeaiheessa kerrotaan, miten OData v4 -tietojen tarjoaja ja OData v4 -t
 
 ## <a name="data-type-mapping"></a>Tietotyyppien yhdistämismääritys
 
-Seuraavassa taulukossa ovat OData Entity Data Model (EDM) -tietotyyppien yhdistämismääritykset ja Dynamics 365 Customer Engagementin  Common Data Service tietotyypit.. 
+Seuraavassa taulukossa ovat OData Entity Data Model (EDM) -tietotyyppien yhdistämismääritykset ja Common Data Service tietotyypit.. 
 
 |OData-tietotyyppi|Common Data Service:n tietotyyppi  |
 |---------|---------|
@@ -78,7 +78,7 @@ Tässä toimintosarjassa on esitetty, miten voit käyttää virtuaalisen entitee
     - **Uri**. Jos käytössäsi on OData-tietojen tarjoaja, kirjoita OData-verkkopalvelun uri-arvo. Esimerkiksi käytettäessä OData-palvelua muodostamaan yhteyden azuren isännöimään WWW-palveluun, URI-osoite voi näyttää tällaiselta *`http://contosodataservice.azurewebsites.net/odata/`*.  
     - **Aikakatkaisu sekunteina**. Anna verkkopalvelun vastauksen odotusaika sekunteina. Tämän jälkeen tietopyyntö aikakatkaistaan. Voit esimerkiksi antaa arvoksi 30, jolloin odotusaika on enintään 30 sekuntia ennen aikakatkaisua.  
     - **Sivutustila**. Määritä, käytetäänkö kyselyn tulosten sivutuksessa asiakas- vai palvelinpuolen sivutusta. Oletusarvo on asiakaspuolen sivutus. Palvelinpuolen sivutuksessa palvelin ohjaa tulosten sivutusta $skiptoken-parametrin avulla. Parametri lisätään kyselymerkkijonoon. Lisätietoja: [Tunnusjärjestelmän kyselyvaihtoehdon ohittaminen ($skiptoken)](https://msdn.microsoft.com/library/dd942121.aspx)  
-        -  **Palauta sidottu määrä**. Palauttaa tulosjoukon tietueiden kokonaismäärän. Tätä asetusta käytetään, kun seuraava sivu -toiminto otetaan käyttöön palautettaessa tietoja ruudukkoon. Käytä epätosi-arvoa, jos OData-päätepiste ei tue ODatan $inclinecount-parametria. Oletusarvo on epätosi.
+        -  **Palauta sidottu määrä**. Palauttaa tulosjoukon tietueiden kokonaismäärän. Tätä asetusta käytetään, kun seuraava sivu -toiminto otetaan käyttöön palautettaessa tietoja ruudukkoon. Käytä epätosi-arvoa, jos OData-päätepiste ei tue ODatan $inlinecount-parametria. Oletusarvo on epätosi.
     - **Pyyntöparametrit**. Vaihtoehtoisesti voit lisätä oman otsikon tai kyselyn kyselymerkkijonon parametrit, joiden avulla voidaan muodostaa yhteys OData verkkopalveluun, kuten todennusparametrit ulkoisen palveluun. Valitse että **kyselymerkkijonon** avulla tila voidaan vaihdella ylätunniste- ja kyselyn kyselymerkkijonon parametrin ja arvo välillä. Enintään 10 ylätunniste- tai kyselymerkkijonoa voidaan lisätä. 
         > [!div class="mx-imgBorder"] 
         > ![Virtuaalisen entiteetin tietolähteen tietue](media/virtual-entity-data-source.png) 

@@ -1,5 +1,5 @@
 ---
-title: Common Data Servicen kenttien tietotyypit | MicrosoftDocs
+title: Common Data Service -palvelun kenttien tietotyypit | MicrosoftDocs
 description: Tietoja sovelluksen käytettävissä olevista kenttien tietotyypeistä
 keywords: ''
 ms.date: 06/27/2018
@@ -58,8 +58,8 @@ Tyyppien nimet riippuvat käytetystä suunnitteluohjelmasta. [PowerApps-portaali
 |**Kokonaisluku**|**Kokonaisluku**<br />*Ei mitään* -muoto|`IntegerType`|
 
 Lisätietoja lisättävistä ja muokattavista tyypeistä on vastaavan suunnitteluohjelman ohjeaiheessa:
- - [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla: Kentän tietotyypit](create-edit-field-portal.md#field-data-types)
- - [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla: Kentän tietotyypit](create-edit-field-solution-explorer.md#field-data-types)
+ - [Common Data Service -palvelun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla: Kenttien tietotyypit](create-edit-field-portal.md#field-data-types)
+ - [Common Data Service -palvelun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla: Kenttien tietotyypit](create-edit-field-solution-explorer.md#field-data-types)
 
 Lisätietoja kentän tietotyyppien määrittämisestä ohjelmointirajapinnassa on kohdassa [Määritteen metatiedot](/powerapps/developer/common-data-service/entity-attribute-metadata)
 
@@ -145,7 +145,7 @@ Muista kuitenkin, että kaikki valintakentät eivät toimi tällä tavalla. Seur
 |-----------------|-----------------|  
 |**Pelkistetty**|Sallii yhden viittauksen tiettyyn entiteettiin. Kaikki mukautetut valintakentät ovat tämän tyyppisiä.|  
 |**Asiakas**|Sallii yhden viittauksen joko asiakas- tai yhteyshenkilötietueeseen.|  
-|**Omistaja**|Sallii yhden viittauksen joko ryhmä- tai käyttäjätietueeseen. Kaikissa ryhmän tai käyttäjän omistamissa entiteeteissä on yksi näistä.|  
+|**Omistaja**|Sallii yhden viittauksen joko ryhmä- tai käyttäjätietueeseen. Kaikissa ryhmän tai käyttäjän omistamissa entiteeteissä on yksi näistä. Lisätietoja: [Ryhmäentiteetin lisääminen sovellukseen hakuvalintana](../model-driven-apps/team-entity-lookup.md)|  
 |**Osapuoliluettelo**|Sallii useat viittaukset useisiin entiteetteihin. Nämä valintakentät sijaitsevat sähköpostientiteetin **Vastaanottaja-** and **Kopio**-kentissä. Niitä käytetään myös puhelinnumero- ja tapaaminen-entiteeteissä.|  
 |**Liittyy**|Sallii yhden viittauksen useisiin entiteetteihin. Nämä valintakentät sijaitsevat aktiviteeteissa käytetyssä Liitteyen-kentässä.|  
 
@@ -177,4 +177,4 @@ Ladattavan kuvan koko muutetaan 144 x 144 kuvapisteen enimmäiskokoon. Käyttäj
 
 Seuraavassa on lisätietoja kuvatietoja käsitteleville sovelluskehittäjille:
 - [Entiteetin metatiedot > Entiteettikuvat](/powerapps/developer/common-data-service/entity-metadata#entity-images)
-- [Dynamics 365 Customer Engagementin sovelluskehittäjän opas: Kuvan määritteet](/dynamics365/customer-engagement/developer/image-attributes)
+- [Dynamics 365 Customer Engagement -sovelluksen kehittäjän opas: Kuvan määritteet](/dynamics365/customer-engagement/developer/image-attributes)

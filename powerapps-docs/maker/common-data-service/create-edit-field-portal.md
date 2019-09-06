@@ -1,7 +1,7 @@
 ---
-title: Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla | MicrosoftDocs
+title: Common Data Service -palvelun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla | MicrosoftDocs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 08/13/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -13,19 +13,20 @@ applies_to:
   - PowerApps
 ms.author: matp
 manager: kvivek
+author: Mattp123
 search.audienceType:
   - maker
 search.app:
   - PowerApps
   - D365CE
 ---
-# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-portal"></a>Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-portaalin avulla
+# <a name="create-and-edit-fields-for-common-data-service-using-powerapps-portal"></a>Common Data Service -palvelun kenttien luominen ja muokkaaminen PowerApps-portaalin avulla
 
-[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo luoda ja muokata entiteettikenttiä Common Data Servicen avulla.
+[PowerApps-portaalissa](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) on helppo luoda ja muokata entiteettikenttiä Common Data Service -palvelun avulla.
 
 Portaalin avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. <br />Lisätietoja: 
-- [Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)
-- [Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)
+- [Common Data Service -palvelun kenttien luominen ja muokkaaminen](create-edit-fields.md)
+- [Common Data Service -palvelun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)
 
 ## <a name="view-fields"></a>Näyttökentät
 
@@ -52,7 +53,7 @@ Alun perin käytettävissä on vain kolme kentän ominaisuutta:
  |Ominaisuus|Kuvaus|
  |--|--|
  |**Näyttönimi**|Käyttöliittymän kentässä näytettävä teksti.|
- |**Nimi**|Yksilöllinen nimi ympäristössä. Nimi luodaan annetun näyttönimen perusteella. Voit kuitenkin muokata sitä ennen tallennusta. Nimeä ei voi muuttaa kentän luomisen jälkeen, koska kenttään voidaan viitata sovelluksissa tai koodissa. Nimellä on mukautuksen etuliite **Common Data Servicen oletusjulkaisijan** alussa.|
+ |**Nimi**|Yksilöllinen nimi ympäristössä. Nimi luodaan annetun näyttönimen perusteella. Voit kuitenkin muokata sitä ennen tallennusta. Nimeä ei voi muuttaa kentän luomisen jälkeen, koska kenttään voidaan viitata sovelluksissa tai koodissa. Nimellä on mukautuksen etuliite **Common Data Service -palvelun oletusjulkaisijan** alussa.|
  |**Tietotyyppi**|Määrittää, miten arvot tallennetaan ja miten ne muotoillaan joissakin sovelluksissa. Kun kenttä on tallennettu, et voi muuttaa tietotyyppiä. Poikkeuksena on kuitenkin tekstikenttien muuntaminen automaattisesti numeroiduksi kentiksi.|
 
 Voit määrittää lisäasetuksia **tietotyypin** valinnasta riippuen.
@@ -88,7 +89,7 @@ Näihin kenttiin tallennetaan tiedot numeroina. Niiden esitystapa- ja vahvistusa
 |Tietotyyppi|Kuvaus|
 |--|--|
 |**Kokonaisluku**|Numeroarvo, joka esitetään tekstiruudussa.|
-|**Kesto**|Numeroarvo, joka esitetään aikavälit sisältävänä avattavana luettelona. Käyttäjä voi valita arvon luettelosta tai antaa kokonaislukuarvon, joka edustaa minuuttien määrää.|
+|**Kesto**|Numeroarvo, joka esitetään aikavälit sisältävänä avattavana luettelona. Käyttäjä voi valita arvon luettelosta tai antaa kokonaislukuarvon, joka edustaa minuuttien määrää. Kesto on ilmoitettava muodossa x minuuttia, x tuntia tai x päivää. Tunnit ja päivät voidaan ilmoittaa myös desimaalilukuina, kuten x,x tuntia tai x,x päivää. Annettujen arvojen on oltava minuutteja. Jos arvo on alle minuutin, se pyöristetään lähimpään minuuttiin.|
 |**Aikavyöhyke**|Numeroarvo, joka esitetään aikavyöhykeluettelon sisältävänä avattavana luettelona.|
 |**Kieli**|Numeroarvo, joka esitetään avattavana luettelona, joka sisältää ympäristössä käytössä olevien kielten luettelon. Jos muita kieliä ei ole otettu käyttöön, peruskieli on ainoa vaihtoehto. Tallennettu arvo on kielialueen tunnuksen arvo kieltä varten.|
 
@@ -171,7 +172,7 @@ Lisätietoja: [Arvot kokoavien koontikenttien määrittäminen](define-rollup-fi
 
 ## <a name="number-field-options"></a>Numerokentän asetukset
 
-Numerokentän jokaisella tyypillä on absoluuttiset vähimmäis- ja enimmäisarvot. Voit määrittää näille absoluuttisille arvoille soveltuvan **vähimmäis**- ja **enimmäisarvon**. Tee niin, jotta Common Data Service voi tarkistaa tietojen arvot, jotka haluat tallentaa kenttään.
+Numerokentän jokaisella tyypillä on absoluuttiset vähimmäis- ja enimmäisarvot. Voit määrittää näille absoluuttisille arvoille soveltuvan **vähimmäis**- ja **enimmäisarvon**. Tee niin, jotta Common Data Service voi tarkistaa kenttään tallennettavien tietojen arvot.
 
 Voit määrittää **Liukuluku**- ja **Desimaaliluku**-tietotyypeille useita **desimaalilukuja**.
 
@@ -225,8 +226,8 @@ Kaikissa kentissä, joihin voi kirjoittaa suoraan tekstiä, on IME-tila. IME-edi
 
 
 ### <a name="see-also"></a>Katso myös  
-[Common Data Servicen kenttien luominen ja muokkaaminen](create-edit-fields.md)<br />
-[Common Data Servicen kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
+[Common Data Service -palvelun kenttien luominen ja muokkaaminen](create-edit-fields.md)<br />
+[Common Data Service -palvelun kenttien luominen ja muokkaaminen PowerApps-ratkaisunhallinnan avulla](create-edit-field-solution-explorer.md)<br />
 [Kenttien tyypit ja kentän tietojen tyypit](types-of-fields.md)<br />
 [Voit automatisoida manuaalisen laskennan laskettujen kenttien määrittämiseen](define-calculated-fields.md)<br />
 [Määritä koontikenttiä, jotka kokoavat arvoja](define-rollup-fields.md)<br />

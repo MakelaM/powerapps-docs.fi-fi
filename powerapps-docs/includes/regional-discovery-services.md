@@ -9,4 +9,5 @@
 |Etelä-Amerikka|`https://disco.crm2.dynamics.com/XRMServices/2011/Discovery.svc`|
 |Intia (IND)|`https://disco.crm8.dynamics.com/XRMServices/2011/Discovery.svc`|
 |Kanada|`https://disco.crm3.dynamics.com/XRMServices/2011/Discovery.svc`|
-|Yhdistynyt kuningaskunta|`https://disco.crm11.dynamics.com/XRMServices/2011/Discovery.svc`|
+|Yhdistynyt kuningaskunta (UK)|`https://disco.crm11.dynamics.com/XRMServices/2011/Discovery.svc`|
+|Ranska|`https://disco.crm12.dynamics.com/XRMServices/2011/Discovery.svc`|

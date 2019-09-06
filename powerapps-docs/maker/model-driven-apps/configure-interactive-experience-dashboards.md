@@ -76,7 +76,7 @@ Vuorovaikutteisen kokemuksen koontinäytöt tuovat sovelluskäyttäjille, kuten 
  > ![Yhden viestivirran koontinäyttöjen asetteluja](media/interactive-dashboards-single-stream-layout.png "Yhden viestivirran koontinäyttöjen asetteluja")  
   
 <a name="BKMK_Enable"></a>   
-## <a name="configure-fiter-fields-and-security-roles-for-the-interactive-dashboards"></a>Suodatuskenttien ja käyttöoikeusroolien määrittäminen vuorovaikutteisille koontinäytöille  
+## <a name="configure-filter-fields-and-security-roles-for-the-interactive-dashboards"></a>Suodatuskenttien ja käyttöoikeusroolien määrittäminen vuorovaikutteisille koontinäytöille  
  Kun määrität vuorovaikutteiset koontinäytöt, ensimmäinen tehtävä on ottaa käyttöön suodatuskenttiä ja käyttöoikeusrooleja, jotta niille voidaan määrittää vuorovaikutteiset koontinäytöt. Huomaa, että vuorovaikutteiset koontinäytöt otetaan käyttöön oletusarvoisesti kaikille entiteeteille ja mukautetuille entiteeteille. 
   
 ### <a name="configure-filter-fields"></a>Suodatuskenttien määrittäminen  

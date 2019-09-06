@@ -1,7 +1,7 @@
 ---
 title: Upotettujen kaaviosovellusten käsittelyohjeita | MicrosoftDocs
 ms.custom: ''
-ms.date: 06/25/2019
+ms.date: 07/24/2019
 ms.reviewer: ''
 ms.service: powerapps
 ms.suite: ''
@@ -45,14 +45,14 @@ Tässä ohjeaiheessa on upotettujen kaaviosovellusten käsittelyohjeita sekä k�
 - Jos tarkastelet upotetun kaaviosovelluksen sisältävää mallipohjaista lomaketta ja näkyvissä on virhesanoma, jonka mukaan sinulla ei ilmeisesti ole tämän sovelluksen käyttöoikeutta ja kehottaa pyytämään, että omistaja jakaa sen kanssasi, varmista, että tekijä on jakanut upotetun kaaviosovelluksen kanssasi. Lisätietoja: [Upotetun kaaviosovelluksen jakaminen](share-embedded-canvas-app.md).
 
 ## <a name="enable-an-embedded-canvas-app"></a>Upotetun sovelluksen ottaminen käyttöön
-1. Valitse kentän tai aliruudukon ohjausobjekti, joka on mukautettu näkymään upotettuna kaaviosovelluksena.
-2. Valitse **Kentän ominaisuudet** -valintaikkunassa (tai aliruudukon **Määritä ominaisuudet** -valintaikkunassa) **Ohjausobjektit**-välilehti.
+1. Valitse kenttä, joka on mukautettu näkymään upotettuna kaaviosovelluksena.
+2. Valitse **Kentän ominaisuudet** -valintaikkunassa **Ohjausobjektit**-välilehti.
 3. Valitse ensin ohjausobjektiluettelossa **Kaaviosovellus** ja sitten **Verkko**-asetus.
 4. Valitse **OK**.
 
 ## <a name="disable-an-embedded-canvas-app"></a>Upotetun sovelluksen poistaminen käytöstä
-1. Valitse kentän tai aliruudukon ohjausobjekti, joka on mukautettu näkymään upotettuna kaaviosovelluksena.
-2. Valitse **Kentän ominaisuudet** -valintaikkunassa (tai aliruudukon **Määritä ominaisuudet** -valintaikkunassa) **Ohjausobjektit**-välilehti.
+1. Valitse kenttä, joka on mukautettu näkymään upotettuna kaaviosovelluksena.
+2. Valitse **Kentän ominaisuudet** -valintaikkunassa **Ohjausobjektit**-välilehti.
 3. Valitse ensin ohjausobjektiluettelossa oletusohjausobjekti ja sitten **Verkko**-asetus.
 4. Valitse **OK**.
 

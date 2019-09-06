@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 06/25/2019
+ms.date: 07/09/2019
 ms.author: matp
 search.audienceType:
   - maker
@@ -32,7 +32,7 @@ Ratkaisun tarkistustoimintoa voi käyttää sellaisissa hallitsemattomissa ratka
 > - Ratkaisun tarkistustoiminto ei toimi ratkaisuissa, jonka sisältämässä JavaScriptissä käytetään versiota ECMAScript 6 (2015) tai uudempia versioita. Jos havaitaan, että JavaScript käyttää jotakin näistä versioista, verkkoresurssin JS001-syntaksiongelma ilmoitetaan.
 
 ## <a name="enable-the-solution-checker"></a>Ratkaisun tarkistustoiminnon ottaminen käyttöön
-Ratkaisun tarkistustoiminto on käytettävissä PowerAppsin Ratkaisut-alueella sen jälkeen, kun PowerAppsin tarkistustoimintoratkaisu on asennettu. Huomaa, että se ei löydy selaamalla eikä hakemalla Microsoft AppSourcesta. Voit asentaa sen seuraavasti:  
+Ratkaisun tarkistustoiminto on otettu käyttöön oletusarvoisesti kaikissa Common Data Service -ympäristöissä. **Ratkaisun tarkistustoiminto** -valikkovaihtoehto on käytettävissä, kun valitset hallitsemattoman ratkaisun PowerAppsin **Ratkaisut**-alueella. Jos **Suorita**-vaihtoehto ei ole käytettävissä **Ratkaisun tarkistustoiminto** -valikossa, voit ottaa sen käyttöön asentamalla PowerAppsin tarkistustoimintoratkaisun. Voit asentaa sen seuraavasti:   
 
 1. Kirjaudu [PowerAppsiin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse Common Data Service -ympäristö, jossa haluat ottaa ratkaisun tarkistustoiminnon käyttöön. 
 2. Valitse vasemmassa siirtymisruudussa **Ratkaisut**.
@@ -43,12 +43,9 @@ Ratkaisun tarkistustoiminto on käytettävissä PowerAppsin Ratkaisut-alueella s
 
 4. Valitse **Ilmainen kokeiluversio** AppSource-sivulla. 
 
-
-<!--from editor: Should it be "solution checker" rather than "checker solution" in the following step?
-
-5. If you agree, accept the terms and conditions and select the environment to install the PowerApps checker solution. 
-6. When the installation is complete, refresh the **Solution** list on the PowerApps site to verify that the solution checker is available.  
-7. To check a solution, [Run the solution checker](#run-the-solution-checker).
+5. Hyväksy ehdot ja valitse ympäristö, johon PowerAppsin tarkistustoimintoratkaisu asennetaan. 
+6. Kun asennus on valmis, päivitä **Ratkaisu**-luettelo PowerApps-sivustossa. Tällä tavoin voit varmistaa, että ratkaisun tarkistustoiminto on käytettävissä.  
+7. Tarkista ratkaisu [suorittamalla ratkaisun tarkistustoiminto](#run-the-solution-checker).
 
 
 <!-- ### Components created with the PowerApps checker
@@ -106,10 +103,19 @@ Kun ratkaisun tarkistustoiminto asennetaan ympäristöön, **Ratkaisun tarkistus
 
 
 ## <a name="review-the-solution-checker-report"></a>Ratkaisun tarkistustoiminnon raportin tarkasteleminen
-Kun ratkaisun tarkistus on valmis, analyysiraportin voi ladata selaimessa. Raportti on [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)]-muotoinen, ja siinä on useita visualisointeja ja sarakkeita, jotka auttavat tunnistamaan jokaisen ratkaisussa havaitun ongelman vaikutuksen, tyypin ja sijainnin. Siinä on myös linkki yksityiskohtaiseen ohjeeseen, jolla ongelma voidaan ratkaista. 
+Kun ratkaisun tarkistus on suoritettu, voit tarkastella analyysiraporttia portaalissa tai ladata raportin selaimen avulla. Portaalissa on mahdollisuus suodattaa, ryhmitellä tulokset **ongelman**, **sijainnin** tai **vakavuusasteen** mukaan ja tarkastella ratkaisussa havaittujen ongelmien eriteltyjä tietoja. 
 
 1. Valitse vasemmassa ruudussa **Ratkaisut**.
-2. Valitse sen hallitsemattoman ratkaisun vieressä, jonka ratkaisun tarkistustoiminnon raportin haluat ladata, **…**, osoita **Ratkaisun tarkistustoiminto** -kohtaa ja valitse sitten **Lataa viimeisimmät tulokset palvelimesta**.  
+2. Valitse **…** sen hallitsemattoman ratkaisun vieressä, jonka ratkaisun tarkistustoiminnon raporttia haluat tarkastella. Osoita **Ratkaisun tarkistustoiminto** -kohtaa ja valitse sitten **Näytä tulokset**.  
+3. Valitse Ongelma, jos haluat tarkastella tietoja ja saada ohjeita ongelman ratkaisemiseksi.
+
+    > [!div class="mx-imgBorder"] 
+    > ![](media/solution-checker-viewresults.png "Ratkaisun tarkistustoiminnon näkymän tulokset")
+
+Ratkaisun tarkistuksen tulokset ovat myös ladattavissa. Ratkaisun tarkistustoiminnon zip-tiedosto ladataan selaimen määrittämään kansioon. Latausraportin muoto on [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)]. Se sisältää useita visualisointeja ja sarakkeita, joiden avulla voi määrittää ratkaisun kunkin ongelman vaikutuksen, tyypin ja sijainnin. Siinä on myös linkki yksityiskohtaiseen ohjeeseen, jolla ongelma voidaan ratkaista. 
+
+1. Valitse vasemmassa ruudussa **Ratkaisut**.
+2. Valitse sen hallitsemattoman ratkaisun vieressä, jonka ratkaisun tarkistustoiminnon raportin haluat ladata, **…**, osoita **Ratkaisun tarkistustoiminto** -kohtaa ja valitse sitten **Lataa tulokset**.  
 3. Ratkaisun tarkistustoiminnon zip-tiedosto ladataan selaimen määrittämään kansioon.
 
 Yhteenveto raportin sarakkeista:
@@ -168,10 +174,6 @@ Yhteenveto raportin sarakkeista:
 | WWW-resurssit  | [web-use-strict-mode](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-mode&client=PAChecker)  | Käytä strict-tilaa, kun mahdollista.  | 
 | WWW-resurssit  | [web-use-strict-equality-operators](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-use-strict-equality-operators&client=PAChecker)  | Käytä tarkkoja yhtäläisyysoperaattoreita.  | 
 | WWW-resurssit  | [web-avoid-eval](http://go.microsoft.com/fwlink/?LinkID=398563&error=web-avoid-eval&client=PAChecker)  | Älä käytä eval-funktiota tai sen toiminnallisia vastineita.  | 
-
-## <a name="limitations"></a>Rajoitukset
-
-Ratkaisun tarkistusta ei voi automatisoida tällä hetkellä. Se on suoritettava ohjelmasta https://web.powerapps.com. Lisätietoja: [Suorita ratkaisun tarkistus](#run-the-solution-checker)
 
 
 ### <a name="see-also"></a>Katso myös

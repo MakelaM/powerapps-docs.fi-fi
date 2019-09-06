@@ -81,5 +81,11 @@ Mallipohjaisen lomakkeiden suunnitteluohjelman oikeassa ruudussa on ominaisuusru
 
 
 ## <a name="see-also"></a>Katso myös
-[Mallipohjaisen sovelluksen lomakkeen suunnitteluohjelman yleiskatsaus](form-designer-overview.md) <br />
-[Lomakkeiden luominen tai muokkaaminen lomakkeiden suunnitteluohjelman avulla](create-and-edit-forms.md)
+[Mallipohjaisen sovelluksen lomakkeen suunnitteluohjelman yleiskatsaus](form-designer-overview.md)  
+[Lomakkeiden luominen tai muokkaaminen lomakkeiden suunnitteluohjelman avulla](create-and-edit-forms.md)  
+[Lomakkeiden kenttien lisääminen, siirtäminen tai poistaminen lomakkeiden suunnitteluohjelman avulla](add-move-or-delete-fields-on-form.md)  
+[Lomakkeiden osien lisääminen, siirtäminen tai poistaminen lomakkeiden suunnitteluohjelman avulla](add-move-or-delete-sections-on-form.md)  
+[Lomakkeiden välilehtien lisääminen, siirtäminen tai poistaminen lomakkeiden suunnitteluohjelman avulla](add-move-or-delete-tabs-on-form.md)  
+[Ylätunnisteen ominaisuuksien määrittäminen lomakkeiden suunnitteluohjelmassa](form-designer-header-properties.md)  
+[Lomakkeen suunnitteluohjelman puunäkymän käyttäminen](using-tree-view-on-form.md)  
+[Kenttien luominen ja muokkaaminen](../common-data-service/create-edit-field-portal.md)

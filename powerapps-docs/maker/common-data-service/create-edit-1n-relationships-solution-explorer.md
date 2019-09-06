@@ -24,7 +24,7 @@ search.app:
 
 # <a name="create-and-edit-1n-one-to-many-or-n1-many-to-one-entity-relationships-using-solution-explorer"></a>1:N (yksi moneen)- ja N:1 (monta yhteen) -entiteettisuhteiden luominen ja muokkaaminen ratkaisunhallinnan avulla 
 
-Ratkaisunhallinnan avulla voi luoda 1:N (yksi moneen)- ja N:1 (monta yhteen) -entiteettisuhteita ja muokata niitä Common Data Servicessä.
+Ratkaisunhallinnan avulla voi luoda 1:N (yksi moneen)- ja N:1 (monta yhteen) -entiteettisuhteita ja muokata niitä Common Data Service -palvelussa.
 
 [PowerApps-portaalin](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) avulla voi määrittää yleisimmät asetukset, mutta jotkin asetukset on määritettävä ratkaisunhallinnan avulla. Lisätietoja: 
 - [1:N (yksi moneen)- tai N:1 (monta yhteen) -suhteen luominen](create-edit-1n-relationships.md)

@@ -59,7 +59,7 @@ Seuraavat toiminnot voivat käynnistää tiettyjä toimintatapoja:
 |**Delegoi**|Mitä tapahtuu, kun ensisijainen entiteettitietue delegoidaan jollekin toiselle?|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
 |**Määritä ylätaso uudelleen**|Mitä tapahtuu, kun ylätason suhteen liittyvän entiteetin hakuarvoa muutetaan?<br />Lisätietoja: [Ylätason entiteettisuhteet](#parental-entity-relationships)|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
 |**Jaa**|Mitä tapahtuu, kun ensisijaisen entiteetin tietue jaetaan?|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
-|**Poista**|Mitä tapahtuu, kun ensisijainen entiteettitietue poistetaan?|Kaikki limittäin<br />Poista linkki<br />Rajoita|
+|**Poista**|Mitä tapahtuu, kun ensisijaisen entiteetin tietue poistetaan?|Kaikki limittäin<br />Poista linkki<br />Rajoita|
 |**Poista jako**|Mitä tapahtuu, kun ensisijaisen entiteettitietueen jako poistetaan?|Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
 |**Yhdistäminen**|Mitä tapahtuu, kun ensisijainen entiteettitietue yhdistetään?|Kaikki limittäin<br />Ei mitään limittäin|
 |**Koostenäkymä**|Mikä on tähän suhteeseen liitetyn koostenäkymän haluttu toimintatapa? |Kaikki limittäin<br />Limittäisyys<br />Käyttäjän omistamien limittäminen<br />Ei mitään limittäin|
