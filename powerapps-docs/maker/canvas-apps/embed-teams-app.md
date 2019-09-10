@@ -7,22 +7,22 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
-ms.date: 05/29/2019
+ms.date: 09/09/2019
 ms.author: jimholtz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ca3430d6b639b7a4c3980f5bbb0ba202220f6d9e
-ms.sourcegitcommit: 935470edc7441b76533cc937e6f32229bfd6f11f
+ms.openlocfilehash: ba08437dc144fc81aa9748163b1005222735cb69
+ms.sourcegitcommit: 86ed3ad487f31721155758aa9d87134bb10f8437
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70117802"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842244"
 ---
 # <a name="embed-a-powerapps-app-in-teams"></a>PowerApps-sovelluksen upottaminen tiimeihin 
 
-Voit kertoa luomiasi PowerApps-sovelluksia upottamalla ne suoraan Microsoft Teamsiin. Kun käyttäjä on valmis, hän **+** voi lisätä sovelluksesi mihin tahansa ryhmäsi kanavasi tai keskustelujasi työryhmäänsä. Sovellus näkyy ruutuna **ryhmäsi väli lehtien**alla. 
+Voit kertoa luomiasi PowerApps-sovelluksia upottamalla ne suoraan Microsoft Teamsiin. Kun käyttäjä on valmis, hän **+** voi lisätä sovelluksesi mihin tahansa ryhmäsi kanavasi tai **keskustelujasi työryhmäänsä** . Sovellus näkyy ruutuna **ryhmäsi väli lehtien**alla. 
 
 Järjestelmänvalvoja voi ladata sovelluksen, jotta se näkyy **kaikissa** vuokra ajan tiimeissä **Kaikki väli lehdet-osiossa**. Tutustu [sovelluksen jakamiseen Microsoft teamsissa](https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams).
 
@@ -129,7 +129,7 @@ Lisä tietoja on kohdassa [luettelo editori](https://docs.microsoft.com/microsof
    > [!div class="mx-imgBorder"] 
    > ![Ryhmän väli lehti lisää](./media/embed-teams-app/team-tab-add.png "Ryhmän väli lehti lisää")
 
-7. Lisää sovelluksesi määrityksen URL-osoite "määrityksen URL-osoite"-syöte kenttään käyttäen seuraavaa muotoa:`https://web.powerapps.com/webplayer/teamsapptabsettings?appid=<PowerApp ID>`
+7. Lisää sovelluksesi määrityksen URL-osoite "määrityksen URL-osoite"-syöte kenttään käyttäen seuraavaa muotoa:`https://apps.powerapps.com/teams/settings/<PowerApp ID>`
 
    Korvaa `<PowerApp ID>` yllä mainitulla sovellus tunnuksen GUID-tunnuksella.
 
