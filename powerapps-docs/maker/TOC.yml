@@ -1155,8 +1155,6 @@
           href: ./common-data-service/data-platform-create-entity.md
         - name: 'Luo mukautettu kohde, jossa on osia'
           href: ./common-data-service/create-custom-entity.md
-        - name: Tietojen lisääminen entiteettiin Power Queryn avulla
-          href: ./common-data-service/data-platform-cds-newentity-pq.md
         - name: Entiteetit ja metatiedot
           href: ./common-data-service/create-edit-metadata.md
         - name: Entiteettityypit
@@ -1305,6 +1303,17 @@
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: Julkaise muutokset
           href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+    - name: Tietovoiden käsitteleminen
+      href: ./common-data-service/self-service-data-prep-with-dataflows.md
+      items:
+        - name: Tietovoiden luominen ja käyttäminen
+          href: ./common-data-service/create-and-use-dataflows.md
+        - name: Tietojen lisääminen entiteettiin Power Queryn avulla
+          href: ./common-data-service/data-platform-cds-newentity-pq.md
+        - name: Azure Data Laken yhdistäminen tietovoiden tallentamista varten
+          href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md
+        - name: Paikallisen tietoyhdyskäytävän käyttäminen
+          href: ./common-data-service/using-dataflows-with-on-premises-data.md
     - name: Entiteettien käyttöoikeusvaatimukset
       href: ./common-data-service/data-platform-entity-licenses.md
       items:
