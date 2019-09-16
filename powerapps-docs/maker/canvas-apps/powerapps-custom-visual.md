@@ -19,7 +19,6 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70213931"
-ms.PowerAppsDecimalTransform: true
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -53,7 +52,7 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
     ![Mukautettu kaava](./media/powerapps-custom-visual/custom-formula.png)
 
-    Tämä kaava liittää Power BI -tiedon asiakkaan tietolähteeseen: `LookUp(Customer;Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
+    Tämä kaava liittää Power BI -tiedon asiakkaan tietolähteeseen: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
    Power BI -raportti ja käynnistetty PowerApps Studio -esiintymä jakavat reaaliaikaisen tietoyhteyden. Kun molemmat ovat avoinna, voit suodattaa tai muuttaa raportin tietoa ja nähdä, että päivitetty tieto vaikuttavaa välittömästi sovellukseesi PowerApps Studiossa.
 
@@ -99,4 +98,4 @@ Seuraavassa taulukossa on luettelo selain Supportability for View-, Create-ja mu
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
 * Käy läpi yksinkertainen [vaiheittainen opetusohjelma](embed-powerapps-powerbi.md).
-* Tutustu videoomme [](https://aka.ms/powerappscustomvisualvideo).
+* Tutustu  [videoomme](https://aka.ms/powerappscustomvisualvideo).
