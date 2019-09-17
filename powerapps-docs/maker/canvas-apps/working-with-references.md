@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71037947"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-record-references-and-polymorphic-lookups-in-canvas-apps"></a>Tutustu tietue viittauksiin ja polymorfisten hakujen pohjaan kangas sovelluksissa
 
@@ -78,10 +79,10 @@ Tarvitset kaavan, joka voi sopeutua tähän varianssiin. Sinun on myös lisätt�
 
 Kun näitä tieto lähteitä on käytössä, voit näyttää joko käyttäjän tai ryhmän nimen tämän kaavan avulla:
 
-```powerapps-dot
-If( IsType( ThisItem.Owner, [@Teams] ),
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+```powerapps-comma
+If( IsType( ThisItem.Owner; [@Teams] );
+    "Team: " & AsType( ThisItem.Owner; [@Teams] ).'Team Name';
+    "User: " & AsType( ThisItem.Owner; [@Users] ).'Full Name' )
 ```
 
 > [!div class="mx-imgBorder"]
@@ -100,10 +101,10 @@ Jos haluat käyttää tietue viittauksen kenttiä, sinun on ensin käytettävä 
 
 Korvaa sitten edellinen kaava tällä:
 
-```powerapps-dot
+```powerapps-comma
 IfError(
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+    "Team: " & AsType( ThisItem.Owner; [@Teams] ).'Team Name';
+    "User: " & AsType( ThisItem.Owner; [@Users] ).'Full Name' )
 ```
 
 ## <a name="filter-based-on-an-owner"></a>Suodata omistajan mukaan
@@ -120,8 +121,8 @@ Lisää **yhdistelmä ruutu** -ohjaus objekti valikoiman yläpuolelle ja määri
 
 Jos haluat suodattaa valikoiman tämän yhdistelmä ruudun valitun käyttäjän mukaan, valitse valikoiman **kohteet** -ominaisuudeksi Tämä kaava:
 
-```powerapps-dot
-Filter( Accounts, Owner = ComboBox1.Selected )
+```powerapps-comma
+Filter( Accounts; Owner = ComboBox1.Selected )
 ```
 
 > [!div class="mx-imgBorder"]
@@ -136,7 +137,7 @@ Voit saada hieman hienouuden tukemalla suodatusta joko käyttäjä tai ryhmä.
 
 1. Vapauta tilaa näytön yläreunassa muuttamalla valikoiman kokoa ja siirtämällä yhdistelmä ruutua, lisäämällä [ **valinta** ](controls/control-radio.md) merkki valikoiman yläpuolelle ja määrittämällä sitten nämä ominaisuudet uudelle ohjaus objektille:
 
-    - **Kohteet**:`[ "All", "Users", "Teams" ]`
+    - **Kohteet**:`[ "All"; "Users"; "Teams" ]`
     - **Ulkoasu**:`Layout.Horizontal`
 
 1. Määritä **yhdistelmä ruutu** -ohjaus objektille tämä ominaisuus (jos yhdistelmä ruutu katoaa, valitse Radio-ohjaus objektin **käyttäjät** ):
@@ -152,8 +153,8 @@ Voit saada hieman hienouuden tukemalla suodatusta joko käyttäjä tai ryhmä.
 
 1. Valitse lopuksi **valikoima** -ohjaus objektin **Items** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    Filter( Accounts,
+    ```powerapps-comma
+    Filter( Accounts;
         Radio1.Selected.Value = "All"
         Or (Radio1.Selected.Value = "Users" And Owner = ComboBox1.Selected)
         Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected)
@@ -179,8 +180,8 @@ Jos haluat suodattaa omistajan tyypin mukaan, voit käyttää **Istype** -toimin
 
 Voit päivittää **omistaja** -kentän samalla tavalla kuin mitä tahansa muuta hakua. Jos haluat, että valittuna olevan tilin omistaja on määritetty ensimmäiselle työryhmälle:
 
-```powerapps-dot
-Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
+```powerapps-comma
+Patch( Accounts; Gallery1.Selected; { Owner: First( Teams ) } )
 ```
 
 Tämä lähestymis tapa ei poikkea normaalista haku-tyypistä, koska sovellus tuntee **ensimmäisen (tiimit)** tyypin. Jos haluat sen sijaan ensimmäisen käyttäjän, korvaa kyseinen osa **ensin (käyttäjät)** . **Patch** -funktiolla tiedetään, että **omistaja** -kentän arvoksi voidaan valita jompikumpi näistä kahdesta entiteettityypistä.
@@ -206,8 +207,8 @@ Tämän ominaisuuden lisääminen sovellukseen:
 
 1. Valitse kopioitu **Radio** -ohjaus objekti ja muuta näitä ominaisuuksia:
 
-    - Kohteet`[ "Users", "Teams" ]`
-    - Oletus`If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
+    - Kohteet`[ "Users"; "Teams" ]`
+    - Oletus`If( IsType( Gallery1.Selected.Owner; Users ); "Users"; "Teams" )`
 
     > [!div class="mx-imgBorder"]
     > ![Poistettu kaikki valinta Radio-ohjaus objektista](media/working-with-references/patch-noall.png) 
@@ -216,9 +217,9 @@ Tämän ominaisuuden lisääminen sovellukseen:
 
 1. Valitse näkyvä **yhdistelmä ruutu** -ohjaus objekti ja Määritä **Defaulttselecteditems** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    If( IsType( Gallery1.Selected.Owner, Users ),
-        AsType( Gallery1.Selected.Owner, Users ),
+    ```powerapps-comma
+    If( IsType( Gallery1.Selected.Owner; Users );
+        AsType( Gallery1.Selected.Owner; Users );
         Blank()
     )
     ```
@@ -232,9 +233,9 @@ Tämän ominaisuuden lisääminen sovellukseen:
 
 1. Valitse ryhmien näkyvä **yhdistelmä ruutu** -ohjaus objekti ja aseta sen **Defaulselecteditems** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    If( IsType( Gallery1.Selected.Owner, Teams ),
-        AsType( Gallery1.Selected.Owner, Teams ),
+    ```powerapps-comma
+    If( IsType( Gallery1.Selected.Owner; Teams );
+        AsType( Gallery1.Selected.Owner; Teams );
         Blank()
     )
     ```
@@ -246,10 +247,10 @@ Tämän ominaisuuden lisääminen sovellukseen:
 
 1. Määritä painikkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Patch( Accounts, Gallery1.Selected,
-        { Owner: If( Radio1_1.Selected.Value = "Users",
-                ComboBox1_2.Selected,
+    ```powerapps-comma
+    Patch( Accounts; Gallery1.Selected;
+        { Owner: If( Radio1_1.Selected.Value = "Users";
+                ComboBox1_2.Selected;
                 ComboBox1_3.Selected ) } )
     ```
 
@@ -293,10 +294,10 @@ Voit näyttää **omistaja** -kentän lomakkeen sisällä lisäämällä mukaute
 
 1. Lisää **Selite** -ohjaus objekti mukautettuun korttiin ja määritä sitten selitteen **teksti** -ominaisuudeksi kaava, jota käytit valikoimassa:
 
-    ```powerapps-dot
-    If( IsType( ThisItem.Owner, Teams ),
-        "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
-        "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
+    ```powerapps-comma
+    If( IsType( ThisItem.Owner; Teams );
+        "Team: " & AsType( ThisItem.Owner; Teams ).'Team Name';
+        "User: " & AsType( ThisItem.Owner; Users ).'Full Name' )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -335,14 +336,14 @@ Voit lisätä entiteettiin Lisää **asiakkaan** haku kenttiä valitsemalla uude
 | Valikoiman **kohteet** -ominaisuus | **Tilit** | **Yhteys tiedot** |
 | Lomakkeen **Items** -ominaisuus | **Tilit** | **Yhteys tiedot** |
 | **Korjauksen** ensimmäinen argumentti<br>painikkeen **onselect** -ominaisuudessa | **Tilit** | **Yhteys tiedot** |
-| Suodata radion **kohteet** -ominaisuus | **[&nbsp;"Kaikki",&nbsp;"käyttäjät",&nbsp;"tiimit"&nbsp;]** | **[&nbsp;"Kaikki",&nbsp;"Accounts"&nbsp;, "Contacts"&nbsp;]** |
-| Patch radion **Items** -ominaisuus | **["Käyttäjät", "tiimit"]** | **["Accounts", "Contacts"]** |
+| Suodata radion **kohteet** -ominaisuus | **[&nbsp;"Kaikki";&nbsp;"käyttäjät";&nbsp;"tiimit"&nbsp;]** | **[&nbsp;"Kaikki";&nbsp;"Accounts"&nbsp;; "Contacts"&nbsp;]** |
+| Patch radion **Items** -ominaisuus | **["Käyttäjät"; "tiimit"]** | **["Accounts"; "Contacts"]** |
 | Yhdistelmä ruudun **näkyvä** ominaisuus | **"Käyttäjät"** ja **"tiimit"** | **"Accounts"** ja **"Contacts"** |
 
 Esimerkiksi uudella valikoimalla on oltava tämä **Items** -ominaisuus:
 
-```powerapps-dot
-Filter( Contacts,
+```powerapps-comma
+Filter( Contacts;
     Radio1.Selected.Value = "All"
     Or (Radio1.Selected.Value = "Accounts" And 'Company Name' = ComboBox1.Selected)
     Or (Radio1.Selected.Value = "Contacts" And 'Company Name' = ComboBox1_1.Selected)
@@ -354,17 +355,17 @@ Filter( Contacts,
 
 Kaksi tärkeää eroa **asiakkaan** ja **omistajan** välillä edellyttää päivitystä valikoiman ja lomakkeen sisällä oleviin kaavoihin:
 
-1. Yksi moneen-suhde **asiakkaiden** ja **yhteys henkilöiden** välillä on etusijalla, kun viittaat näihin entiteettityypin nimen mukaan. Käytä  **\[tilin sijaan accounts];yhteystietojensijastayhteystietoja].\@**  **\[ \@** Kun käytät maailmanlaajuista Saksan operaattoria, varmistat, että viittaat entiteettityypin **Istype-ja Astynpe** - [operaattoriin](functions/operators.md#disambiguation-operator). Tämä ongelma on vain valikoima-ja lomake-ohjaus objektien tietue kontekstista.
+1. Yksi moneen-suhde **asiakkaiden** ja **yhteys henkilöiden** välillä on etusijalla, kun viittaat näihin entiteettityypin nimen mukaan. Käytä  **\[tilin sijaan accounts];;yhteystietojensijastayhteystietoja].\@**  **\[ \@** Kun käytät maailmanlaajuista Saksan operaattoria, varmistat, että viittaat entiteettityypin **Istype-ja Astynpe** - [operaattoriin](functions/operators.md#disambiguation-operator). Tämä ongelma on vain valikoima-ja lomake-ohjaus objektien tietue kontekstista.
 
 1. **Omistaja** -kentällä on oltava arvo, mutta **asiakas** kentät voivat olla *tyhjiä*. Jos haluat näyttää oikean tuloksen ilman tyypin nimeä, testaa tätä tapausta [ **isblank** -funktiolla](functions/function-isblank-isempty.md)ja Näytä sen sijaan tyhjä teksti merkki jono.
 
 Molemmat näistä muutoksista ovat samassa kaavassa, joka näkyy lomakkeen mukautetussa kortissa sekä valikoiman nimi-ohjaus objektin **teksti** -ominaisuudessa:
 
-```powerapps-dot
-If( IsBlank( ThisItem.'Company Name' ), "",
-    IsType( ThisItem.'Company Name', [@Accounts] ),
-        "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+```powerapps-comma
+If( IsBlank( ThisItem.'Company Name' ); "";
+    IsType( ThisItem.'Company Name'; [@Accounts] );
+        "Account: " & AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
+    "Contact: " & AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
 )
 ```
 
@@ -396,12 +397,12 @@ Sinun on lisättävä tieto lähde: tällä kertaa **fakseja**varten. Valitse **
 
 Tärkeä **ero liittyy siihen** , että se ei rajoitu vain **asiakkuudet** ja **yhteys henkilöt**. Entiteettien luettelo on itse asiassa laajennettavissa mukautetuilla entiteeteillä. Suurin osa sovelluksesta mahtuu tähän pisteeseen ilman muokkausta, mutta sinun täytyy päivittää kaavan nimi valikoimassa ja lomakkeessa:
 
-```powerapps-dot
-If( IsBlank( ThisItem.Regarding ), "",
-    IsType( ThisItem.Regarding, [@Accounts] ),
-        "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
-    IsType( ThisItem.Regarding, [@Contacts] ),
-        "Contacts: " & AsType( ThisItem.Regarding, [@Contacts] ).'Full Name',
+```powerapps-comma
+If( IsBlank( ThisItem.Regarding ); "";
+    IsType( ThisItem.Regarding; [@Accounts] );
+        "Account: " & AsType( ThisItem.Regarding; [@Accounts] ).'Account Name';
+    IsType( ThisItem.Regarding; [@Contacts] );
+        "Contacts: " & AsType( ThisItem.Regarding; [@Contacts] ).'Full Name';
     ""
 )
 ```
@@ -502,11 +503,11 @@ Tietueet tulevat **Activity** -entiteetistä, mutta voit kuitenkin käyttää **
 
 Käyttämällä tätä kaavaa voit näyttää tietue tyypin valikoiman otsikko-ohjaus objektissa:
 
-```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+```powerapps-comma
+If( IsType( ThisItem; [@Faxes] ); "Fax";
+    IsType( ThisItem; [@'Phone Calls'] ); "Phone Call";
+    IsType( ThisItem; [@'Email Messages'] ); "Email Message";
+    IsType( ThisItem; [@Chats] ); "Chat";
     "Unknown"
 )
 ```
@@ -516,14 +517,14 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 
 Voit käyttää myös **asttype** -menetelmää tietyn tyypin kenttien käyttämiseen. Tämä kaava määrittää esimerkiksi kunkin tehtävän tyypin ja puhelin puheluiden puhelin numeron ja puhelu suunnan **Puhelin numerot** -entiteetistä:
 
-```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ),
+```powerapps-comma
+If( IsType( ThisItem; [@Faxes] ); "Fax";
+    IsType( ThisItem; [@'Phone Calls'] );
        "Phone Call: " &
-       AsType( ThisItem, [@'Phone Calls'] ).'Phone Number' &
-       " (" & AsType( ThisItem, [@'Phone Calls'] ).Direction & ")",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+       AsType( ThisItem; [@'Phone Calls'] ).'Phone Number' &
+       " (" & AsType( ThisItem; [@'Phone Calls'] ).Direction & ")";
+    IsType( ThisItem; [@'Email Messages'] ); "Email Message";
+    IsType( ThisItem; [@Chats] ); "Chat";
     "Unknown"
 )
 ```
@@ -559,7 +560,7 @@ Tätä eroa lukuun ottamatta käytät **liittyy** -hakua samalla tavalla kuin k�
 >
 > Käänteisen **huomautuksen** yksi-moneen-suhde on kuitenkin käytettävissä, joten voit suodattaa liite tietojen luettelon tietueelle, joka on otettu käyttöön liitteille. [**Relate**](functions/function-relate-unrelate.md) -funktiolla voit myös lisätä huomautuksen tietueen **Notes** -taulukkoon, mutta Huomautus täytyy luoda ensin, kuten tässä esimerkissä:
 >
->`Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )`
+>`Relate( ThisItem.Notes; Patch( Notes; Defaults( Notes ); { Title: "A new note" } ) )`
 
 ## <a name="activity-parties"></a>Aktiviteetti juhlat
 
