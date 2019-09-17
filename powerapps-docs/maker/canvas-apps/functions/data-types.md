@@ -1,6 +1,6 @@
 ---
-title: Tietotyypit | Microsoft Docs
-description: Tietotyypit pohjaan perustuvat sovellukset
+title: Tieto tyypit | Microsoft Docs
+description: Tieto tyypit kangas sovelluksissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,206 +13,207 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 85567e120754d4f82e13bd7d7dac9fa0f7c80cbd
-ms.sourcegitcommit: 982cab99d84663656a8f73d48c6fae03e7517321
+ms.openlocfilehash: 10c5ff9eaa709ab950fa3c3f0efce4f859a71dbc
+ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67456756"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038001"
 ---
-# <a name="data-types-in-canvas-apps"></a>Tietotyypit pohjaan perustuvat sovellukset
+# <a name="data-types-in-canvas-apps"></a>Tieto tyypit kangas sovelluksissa
 
-Kuten laskentataulukon solujen tiedot työnkulkuja pieni, erilliset arvot sovelluksen kautta hyvin. Esimerkiksi tiedot **Syntymäpäivä** kenttä ja **Anniversary** kentän sekä työnkulun kautta nimellä **päivämäärä** arvo, joka sisältää vuoden, kuukauden ja päivän. Sovelluksen tietää, miten nämä arvot Muotoile, rajoite siihen, mikä on asianmukainen kullekin ja jakaa arvot tietokannan kanssa. Syntymäpäivät eroavat vuosipäivistä henkilöille, mutta järjestelmä käsittelee niitä täsmälleen samalla tavalla. Tässä tapauksessa **päivämäärä** on esimerkki siitä [tietotyyppi](https://en.wikipedia.org/wiki/Data_type).
+Tieto kulkee sovelluksen kautta pienissä, erillisissä arvoissa, kuten laskenta taulukon soluissa. Esimerkiksi **syntymä** päivä-kentän ja **vuosi** päivä-kentän tiedot kulkevat sekä **päivämäärä** arvona, joka sisältää vuoden, kuukauden ja päivän. Sovellus osaa muotoilla näitä arvoja, rajoittaa syötteen kullekin sopivaan kohtaan ja kertoa arvot tieto kannan kanssa. Syntymä päivät eroavat eri merkki päivistä ihmisiin, mutta järjestelmä käsittelee ne täsmälleen samalla tavalla. Tässä tapa uksessa **päivä määrä** on esimerkki [tieto tyypistä](https://en.wikipedia.org/wiki/Data_type).
 
-Tämä artikkeli sisältää tiedot tietotyypit, jotka pohjaan sovellusten tuki. Kun sovellus muodostaa yhteyden ulkoiseen tietolähteeseen, lähteen kullekin tietotyypille on yhdistetty pohjaan perustuvat sovellukset tietotyyppi.
+Tässä artikkelissa on tietoja kangas sovellusten tukemista tieto tyypeistä. Kun sovellus muodostaa yhteyden ulkoiseen tieto lähteeseen, jokainen kyseisen lähteen tieto tyyppi on yhdistetty kangas sovellusten tieto tyyppiin.
 
 | Tietotyyppi | Kuvaus | Esimerkkejä |
 |-----------|-------------|---------|
-| **Boolean** | A *true* tai *false* arvo.  Voi käyttää suoraan **Jos**, **suodatin** ja muita funktioita ilman vertailu.  | *tosi* |
-| **Väri** | Värimäärityksen, mukaan lukien alfa-kanavaa. | **Color.Red**<br>**ColorValue (”#102030”)**<br>**RGBA (255, 128, 0, 0,5)** |
-| **Valuutta** | Valuutta-arvon, joka on tallennettu kaksoistarkkuuksinen liukuluku. Valuutta-arvot ovat samat kuin lukuarvot Valuuttamuotoilu asetuksilla.  | **123**<br>**4.56** |
-| **Päivämäärä** | Ilman aikaa, sovelluksen käyttäjän aikavyöhykkeen päivämäärä. | **Päivämäärä (2019, 5, 16)** |
-| **DateTime** | Sovelluksen käyttäjän aikavyöhykkeen ajan, päivämäärän. | **DateTimeValue (”16 toukokuun 2019:23 09 KLO”)** |
-| **GUID** | A [GUID-tunnus](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID()**<br>**GUID-tunnus (”123e4567-e89b-12d3-a456-426655440000”)** |
-| **Hyperlinkki** | Merkkijono, joka sisältää hyperlinkki. | **"http://powerapps.microsoft.com"** |
-| **Kuva** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) tekstimerkkijonon kuvan .jpeg, .png, .svg, .gif tai muita yleisiä WWW-muoto. | **MyImage** lisätä app-resursseina<br>**"https://northwindtraders.com/logo.jpg"**<br>**”appres://blobmanager/7b12ffa2...”** |
-| **Media** | Video- tai tallennus URI tekstimerkkijono. | **MyVideo** lisätä app-resursseina<br>**"https://northwindtraders.com/intro.mp4"**<br>**”appres://blobmanager/3ba411c...”** |
-| **Numero** | Liukuluku. | **123**<br>**-4.567**<br>**8.903e121** |
-| **Asetusjoukko** | Valinta joukon vaihtoehtojen luku tukena. Tämän tietotyypin yhdistää lokalisoitavan tekstiotsikko numeerinen arvo. Otsikko näkyy sovelluksen ja numeerinen arvo tallennetaan ja käyttää vertailujen. | **ThisItem.OrderStatus** |
-| **Tietue** | Tietueen tietojen arvoista. Tämä peräkkäisillä tietotyyppi on muiden tietotyyppien on lueteltu tässä ohjeaiheessa esiintymiä. Lisätietoja: [Taulukoiden](../working-with-tables.md). | **{Yrityksen: "Northwind Traders";<br>Staff: 35 <br>NonProfit: false}** |
-| **Tietueen viittaus** | Viittaus tietueen entiteetissä. Viittaukset käytetään usein polymorfinen hakuja. Lisätietoja: [Viittaukset käsitteleminen](../working-with-references.md).| **First(accounts). Omistaja** |
-| **Taulukko** | Tietueiden taulukko.  Kaikki tietueet on oltava samat nimet kenttien käyttäen samaa tietotyyppejä ja puuttuu kentät käsitellään *tyhjä*. Tämä peräkkäisillä tietotyyppi on muiden tietotyyppien on lueteltu tässä ohjeaiheessa esiintymiä. Lisätietoja: [Taulukoiden](../working-with-tables.md). | **TABLE ({FirstName: "Sidney";<br>LastName: ”Higa”}; <br>{FirstName: "Nancy";<br>LastName: ”Andersonin”})**
-| **Teksti** | Unicode-merkkijono. | **"Hello, World"** |
-| **Time** | Ilman päivämäärää, sovelluksen käyttäjän aikavyöhykkeen ajan. | **Aika (11, 23, 45)** |
-| **Kaksi vaihtoehtoa** | Valinta kaksi vaihtoehtoa, totuusarvo tukena joukosta. Tämän tietotyypin yhdistää lokalisoitavan tekstiotsikko totuusarvo. Otsikko näkyy sovelluksen ja looginen arvo tallennetaan ja käyttää vertailujen. | **ThisItem.Taxable** |
+| **Totuus arvo** | Arvo on *tosi* tai *Epätosi* .  Voidaan käyttää suoraan **IF**-, **Filter** -ja Other-funktioissa ilman vertailua.  | *tosi* |
+| **Väri** | Väri määritys, mukaan lukien alfa kanava. | **Color.Red**<br>**ColorValue ("#102030")**<br>**RGBA (255, 128, 0, 0,5)** |
+| **Valuutta** | Valuutan arvo, joka on tallennettu liuku luku numeroon. Valuutta-arvot ovat samat kuin luku arvot, joissa on valuutta muotoilu asetukset.  | **123**<br>**4,56** |
+| **Päivä määrä** | Päivä määrä ilman aikaa sovelluksen käyttäjän aika vyöhykkeellä. | **Päivä määrä (2019, 5, 16)** |
+| **DateTime** | Päivä määrä, joka on aika, sovelluksen käyttäjän aika vyöhykkeellä. | **Datetime Value ("16. toukokuuta 2019 1:23:09 PM")** |
+| **GUID** | [Globally Unique-tunnus](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID ()**<br>**GUID ("123e4567-e89b-12d3-A456-426655440000")** |
+| **HYPERLINK** | Teksti merkki jono, joka sisältää hyperlinkin. | **"http://powerapps.microsoft.com"** |
+| **Kuva** | [URI (Universal Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) -teksti merkki jono kuvaan kohteessa. JPEG,. png,. SVG,. gif tai muu yleinen www-kuva muoto. | **Myimage** lisättiin sovellus resurssina<br>**"https://northwindtraders.com/logo.jpg"**<br>**"appres://blobmanager/7b12ffa2..."** |
+| **Media** | URI-teksti merkki jono video-tai ääni tallenteeseen. | **MyVideo** lisättiin sovellus resurssina<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
+| **Numero** | Liuku luku numero. | **123**<br>**-4,567**<br>**8.903e121** |
+| **Asetus asetus** | Valinta vaihtoehto joukosta, jota tukee luku. Tämä tieto tyyppi yhdistää lokalisoitavan teksti nimen, jolla on luku arvo. Nimi näkyy sovelluksessa, ja numero-arvo tallennetaan ja sitä käytetään vertailuissa. | **ThisItem. OrderStatus** |
+| **Tietue** | Tieto arvojen tietue. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Yritys "Northwind Traders",<br>henkilöstö: 35, <br>kaupallinen: False}** |
+| **Tietue viittaus** | Viittaus entiteetin tietueeseen. Tällaisia viitta uksia käytetään usein polymorfisten hakujen yhteydessä. Lisätietoja: [Käsitellään viitta uksia](../working-with-references.md).| **First (accounts). Omistaja** |
+| **Taulukon** | Tietue taulukko.  Kaikilla tietueilla on oltava samat nimet kentissä, joilla on samat tieto tyypit, ja pois jätetyt kentät käsitellään *tyhjinä*. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Taulukko ({FirstName: "Sidney",<br>suku nimi: "Higa"}, <br>{firstname: "Nancy",<br>suku nimi: "Anderson"})**
+| **Teksti** | Unicode-teksti merkki jono. | **"Hei maailma"** |
+| **Aika** | Aika ilman päivä määrää sovelluksen käyttäjän aika vyöhykkeellä. | **Aika (11, 23, 45)** |
+| **Kaksi vaihto ehtoa** | Vaihto ehto kahdesta vaihto ehdosta, joiden tukena on totuus arvo. Tämä tieto tyyppi yhdistää lokalisoitavan teksti nimen, jolla on totuus arvo. Nimi näkyy sovelluksessa, ja totuus arvo tallennetaan ja sitä käytetään vertailuissa. | **ThisItem. verotettava** |
 
-Monet näistä tietotyypit ovat samankaltaisia ja on sama pohjana esityksen, kuten **hyperlinkki** kentän käsitellään erillisinä **tekstin**.  Lisää tietotyyppejä antaa paremman oletusarvon käyttökokemukset lomakkeet ja muita ohjausobjekteja.
+Monet näistä tieto tyypeistä ovat samankaltaisia ja niiden pohjana on sama esitys tapa, kuten **hyperlinkkikenttä** , jota käsitellään **tekstinä**.  Lisä tieto tyypit tarjoavat parempia oletus kokemuksia lomakkeissa ja muissa ohjaus objekteissa.
 
 ## <a name="blank"></a>Blank
 
-Kaikki tietotyypit voi olla arvoa *tyhjä* (toisin sanoen ei arvoa). Termillä ”null” käytetään usein tietokantoihin tämä konsepti.  
+Kaikkien tieto tyyppien arvo voi olla *tyhjä* (toisin sanoen ei arvoa). Käsitettä "Null" käytetään usein tieto kannoissa tätä käsitettä varten.  
 
-Käytä **tyhjä** funktio **määrittää** tai **Patch** -funktio määrittää muuttuja tai -kentän *tyhjä*. Esimerkiksi **Set (x; kohteen Blank())** poistaa mikä tahansa arvo yleisen muuttujan **x**.  
+Voit määrittää muuttujan tai kentän *tyhjäksi*käyttämällä **tyhjä** -funktiolla **joukko** -tai **patch** -funktiolla. Esimerkiksi **asetus (x, Blank ())** poistaa minkä tahansa arvon yleisestä muuttujasta **x**.  
 
-Testaa *tyhjä* arvon käyttämällä [ **IsBlank** ](function-isblank-isempty.md) funktio. Korvaa mahdollista *tyhjä* arvot, joilla on muita kuin*tyhjä* arvoja käyttämällä [ **Coalesce** ](function-isblank-isempty.md) funktio.
+Testaa *tyhjää* arvoa käyttämällä [**isblank**](function-isblank-isempty.md) -funktiolla. Korvaa mahdolliset *Tyhjät* arvot muilla kuin*tyhmillä* arvoilla käyttämällä [**conalesce**](function-isblank-isempty.md) -funktiolla.
 
-Koska kaikki tietotyypit tue *tyhjä*, **totuusarvo** ja **kaksi vaihtoehtoa** ole tehokkaasti kolme mahdolliset arvot.
+Koska kaikki tieto tyypit tukevat *tyhjää*, **Boolean** -ja **Two-asetus** tieto tyypeillä on todellisuudessa kolme mahdollista arvoa.
 
-## <a name="text-hyperlink-image-and-media"></a>Teksti, hyperlinkin, kuvan ja Media
+## <a name="text-hyperlink-image-and-media"></a>Teksti, hyperlinkki, kuva ja tieto väline
 
-Nämä tietotyypit neljä perustuvat [Unicode](https://en.wikipedia.org/wiki/Unicode) merkkijono.
+Kaikki neljä tieto tyyppiä perustuvat [Unicode](https://en.wikipedia.org/wiki/Unicode) -teksti merkki jonoon.
 
-### <a name="image-and-media-resources"></a>Kuva ja Media-resurssit
+### <a name="image-and-media-resources"></a>Kuva-ja Multimediaresurssit
 
-Kautta **tiedoston** -valikosta voit lisätä kuvan, videon ja äänen tiedostoja app-resursseina. Tuotu tiedosto nimen tulee resurssinimi sovelluksessa. Tässä kuvassa logon, jonka nimi on Northwind Traders **nwindlogo**, on lisätty sovellukseen:
+**Tiedosto** -valikon avulla voit lisätä kuva-, video-ja ääni tiedostoja sovellus resursseina. Tuodun tiedoston nimestä tulee sovelluksen resurssin nimi. Tässä kuvassa Northwind Traders-logo, jonka nimi on **nwindlogo**, on lisätty sovellukseen:
 
 ![](media/data-types/nwind-resource.png)
 
-Jos haluat käyttää tätä resurssia sovelluksessa, määritä sen **kuvan** ominaisuus [ **kuvan** ](../controls/control-image.md) ohjausobjektin:
+Jos haluat käyttää tätä resurssia sovelluksessa, määritä se [**kuva**](../controls/control-image.md) -ohjaus objektin **Image** -ominaisuudessa:
 
 ![](media/data-types/nwind-image.png)
 
-### <a name="uris-for-images-and-other-media"></a>URI-kuvia ja muuta mediasisältöä
+### <a name="uris-for-images-and-other-media"></a>Kuvien ja muiden tieto väline-URI-osoitteita
 
-Voit pureudut syvemmälle kyseisen viimeisen esimerkin asettamalla **tekstin** ominaisuus [ **nimen** ](../controls/control-text-box.md) ohjausobjektin **nwindlogo**. Selite näyttää merkkijonon:
+Voit kaivaa hieman syvemmälle tähän viimeiseen esimerkkiin asettamalla [**Label**](../controls/control-text-box.md) -ohjaus objektin **Text** -ominaisuudeksi **nwindlogo**. Selitteessä näytetään teksti merkki jono:
 
 ![](media/data-types/nwind-text.png)
 
-Pohjaan perustuvat sovellukset kunkin kuvan tai viitata muihin mediatiedosto on pilvipalvelu tai URI-merkkijonon lisännyt app-resursseina.
+Pohjaan liittyvät sovellukset viittaavat kuhunkin kuvaan tai muuhun multimediatiedostoon, olipa se pilvi palvelussa tai lisättynä sovellus resurssina URI-teksti merkki jonon avulla.
 
-Esimerkiksi **kuvan** kuvan ohjausobjektin ominaisuus hyväksyy sovelluksen resurssien paitsi myös linkkejä kuviin verkossa, kuten ”https://northwindtraders.com/logo.jpg”. Ominaisuus hyväksyy myös inline-kuvia, jotka käyttävät [tietojen URI-rakennetta](https://en.wikipedia.org/wiki/Data_URI_scheme), kuten tässä esimerkissä:
+Esimerkiksi kuva-ohjaus objektin **Image** -ominaisuus hyväksyy sovellus resurssien lisäksi myös linkit verkossa oleviin kuviin, kuten "https://northwindtraders.com/logo.jpg". Ominaisuus hyväksyy myös sisäiset kuvat, jotka käyttävät [tietojen URI-rakennetta](https://en.wikipedia.org/wiki/Data_URI_scheme), kuten tässä esimerkissä:
 
-```powerapps-comma
+```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
-Että URI-osoite näkyy kaksi purppura ruudut skaalataan ylös-versio:
+URI näyttää kahden purppuran timantin skaalatun version:
 
 ![](media/data-types/double-diamonds.png)
 
-Voit näyttää uusimmat kuva, joka siepataan [ **kameran** ](../controls/control-camera.md) ohjausobjektissa, jos määrität **kuvan** ominaisuuden kuva-ohjausobjektin **valokuva** kamera-ohjausobjektin ominaisuus. Sovellus sisältää kuvan muistissa, ja **valokuva** kamera-ohjausobjektin ominaisuus palauttaa URI-viittaus kuva. Esimerkiksi voi kestää kuvan ja kameran **valokuva** ominaisuus voi palauttaa **”appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1”** .
+Voit näyttää [**kamera**](../controls/control-camera.md) -ohjaus objektissa siepatun uusimman kuvan, jos asetat kuva-ohjaus objektin **kuva** -ominaisuudeksi kamera-ohjaus objektin **valo kuva** -ominaisuudeksi. Sovellus pitää kuvan muistissa, ja kamera-ohjaus objektin **valo kuva** -ominaisuus palauttaa kuvaan URI-viitta uksen. Voit esimerkiksi ottaa kuvan, ja kameran **valokuva** ominaisuus saattaa palauttaa kohteen **"appres://blobmanager/7b12ffa2ea4547e5b3812cb1c7b0a2a0/1"** .
 
-Voit viitata kuvan tai toiseen tietokantaan tallennetun mediatiedosto URI avulla. Näin sovelluksen ei noutaa todellisten tietojen kunnes se itse asiassa tarvitaan. Esimerkiksi liitteen Common Data Service-entiteetissä saattaa palauttaa **”appres://datasources/Contacts/table/...”** Kameran esimerkissä voit näyttää tämän kuvan asettamalla **kuvan** kuvan ohjausobjektin avulla viitettä, joka hakee binaaritiedot-ominaisuuden.
+URI-tunnuksessa viitataan kuvaan tai toiseen tieto kantaan tallennettuun tieto väline tiedostoon. Näin sovellus ei nouda todellisia tietoja, ennen kuin se on todella tarpeellinen. Esimerkiksi Common Data Service-entiteetin liite voi palauttaa kohteen **"appres://DataSources/Contacts/Table/..."** Kuten kamera esimerkissä, voit näyttää tämän kuvan asettamalla kuva-ohjaus objektin **Image** -ominaisuudeksi tämän viitta uksen, joka noutaa binaaritiedot.
 
-Kun tallennat media-tietotyyppi, kuten kuvan tietokanta, sovellus lähettää todellisen kuvan tai mediatietoja, ei URI-viittaus.
+Kun tallennat tieto kantaan tieto tyypin, kuten kuvan,, sovellus lähettää todelliset kuva-tai materiaali tiedot, ei URI-viittausta.
 
-### <a name="size-limits"></a>Kokorajoitukset
+### <a name="size-limits"></a>Koko rajoitukset
 
-Merkkijonoja ja URI nämä tietotyypit on pituudeltaan esiasetus rajaa.
+Teksti merkki jonoina ja URI-tietoina nämä tieto tyypit eivät sisällä niiden pituutta ennalta määritettyä rajaa.
 
-Binaaritiedot, jotka nämä tietotyypit viittaavat myös ei esiasetus rajaa koon. Esimerkiksi kamera-ohjausobjekti, joka viittaa nyt kautta siepattu kuvan **”appres: / /...”** voidaan suuri ja suuren tarkkuuden, kuten laitteen kameran voit muster. Tarkkuus, kehyksen määrä ja muita mediatiedostoja määritteet eivät ole rajoittaa tietotyyppi, mutta tiettyjen ohjausobjektien pelaamista ja tilastotietojen media voi olla omia rajoituksia.
+Binaaritiedot, joita nämä tieto tyypit viittaavat, eivät myöskään sisällä esimääritettyä rajoitusta koon mukaan. Esimerkiksi kamera-ohjaus objektin kautta siepattuun kuvaan, joka on nyt Viitattu nimellä **"appres://..."** , voi olla yhtä suuri ja korkea erotus kyky kuin laitteen kameralla voi koota. Tieto tyyppi ei rajoitu tarkkuutta, kehys nopeutta ja muita määritteitä, mutta tieto välineen toistamista ja sieppaamista varten voi olla omat rajoituksensa.
 
-Tietojen kaikenkokoisille koskevat kuitenkin sovelluksen käytettävissä oleva määrä. Selaimista pöytätietokone yleensä tue yli 100 megatavua. Käytettävissä olevan muistin määrän laitteessa, kuten puhelimessa saattaa kuitenkin olla paljon pienempi yleensä alueella 30 – 70 megatavua. Voit selvittää, onko sovelluksesi suoritetaan näiden rajojen, Testaa yleisiä skenaarioita, johon se tulee suorittaa kaikki laitteet.
+Kaikkiin tieto kokoihin sovelletaan kuitenkin käytettävissä olevan muistin määrää sovelluksessa. Pöytä tieto koneessa suoritettavat selaimet tukevat yleensä yli 100 Mega tavua tietoja. Laitteen, kuten puhelimen, käytettävissä olevan muistin määrä voi kuitenkin olla huomattavasti pienempi, yleensä 30-70 Mega tavun alueella. Jos haluat tarkistaa, toimiiko sovelluksesi näissä rajoissa, testaa yleisiä tilanteita kaikissa laitteissa, joissa se suoritetaan.
 
-Paras käytäntö säilyttävät tietoja muistissa vain niin kauan kuin on tarpeen. Lataa kuvat tietokannan heti, kun voit; Lataa kuvat, vain, kun sovelluksen käyttäjä pyytää niitä.
+Paras käytäntö on säilyttää tiedot muistissa vain niin kauan kuin on tarpeen. Lataa kuvat tieto kantaan niin pian kuin mahdollista; Lataa kuvat vain, kun sovelluksen käyttäjä pyytää niitä.
 
-## <a name="number-and-currency"></a>Luku- ja
+## <a name="number-and-currency"></a>Luku ja valuutta
 
-**Luku** ja **valuutan** tietotyyppejä käyttöä [754 Kahdeksantavuisen kaksoistarkkuuksisen kaksoistarkkuuksinen standard](https://en.wikipedia.org/wiki/IEEE_754). Tämä standardi sisältää erittäin numeroalueen, jossa toimimaan –1.79769 x 10<sup>308</sup> 1.79769 x 10<sup>308</sup>. Pienimmän arvon, joka voidaan esittää on 5 x 10<sup>–324</sup>.
+**Luku** -ja **Valuutta** tieto tyypeissä käytetään [IEEE 754-liuku luku standardia](https://en.wikipedia.org/wiki/IEEE_754). Tämä standardi tarjoaa erittäin suuren määrän erilaisia työmääriä – 1,79769 x 10<sup>308</sup> – 1,79769 x 10<sup>308</sup>. Pienin arvo, joka voidaan esittää, on 5 x 10<sup>– 324</sup>.
 
-Pohjaan perustuvia sovelluksia voi tarkalleen edustaa kokonaislukuja (tai kokonaislukuja) välillä –9,007,199,254,740,991 (– (2<sup>53</sup> – 1)) ja 9,007,199,254,740,991 (2<sup>53</sup> – 1), mukaan lukien. Tällä alueella on suurempi kuin 32-bittinen (tai 4-tavuinen) kokonaisluku tietotyypit, jotka yleisesti käytettävä. Kuitenkin pohjaan perustuvia sovelluksia ei voi edustaa 64-bittinen (tai 8 tavun) kokonaislukutietotyypeistä. Haluat ehkä Tallenna luku tekstikenttään tai avulla lasketun sarakkeen kopio määrä tekstikenttään, niin, että se on yhdistetty **tekstin** tietotyyppi kangas-sovellus. Tällä tavalla voit pidä, näyttää ja anna nämä arvot sekä vertailu niitä, jotta voit määrittää, onko ne ovat yhtä suuret; kuitenkin numeeristen laskutoimituksia ei voi suorittaa niitä tämän lomakkeen.
+Pohjaan viittaavat sovellukset voivat tarkalleen edustaa kokonaislukuja (tai kokonaislukuja) välillä – 9 007 199 254 740 991 (– (2<sup>53</sup> – 1)) ja 9 007 199 254 740 991 (2<sup>53</sup> – 1), mukaan lukien. Tämä alue on suurempi kuin tieto kantojen yleisesti käytössä 32-bittinen (tai 4-tavuinen) kokonaislukutieto tyyppi. Kangas sovellukset eivät kuitenkaan voi edustaa 64-bittisiä (tai 8-tavuisia) kokonaislukutietotyyppejä. Haluat ehkä tallentaa numeron teksti kenttään tai käyttää laskettua saraketta, jotta voit kopioida numeron teksti kenttään niin, että se on yhdistetty **teksti** -tieto tyyppiin kangas sovelluksessa. Tällä tavalla voit pitää, näyttää ja syöttää näitä arvoja sekä verrata niitä määrittääksesi, ovatko ne yhtä suuret. et voi kuitenkaan tehdä niille numeerisia lasku toimituksia tässä lomakkeessa.
 
-Kaksoistarkkuuksinen aritmeettisen on arvioitu, joten se joskus antaa odottamattomia tuloksia dokumentoitu esimerkkejä kanssa. Luonnollisesti kaavan **55 / 100 * 100** palautettavien tarkalleen 55 ja **(55 / 100 * 100) – 55** palautettavien tarkalleen nolla. Kuitenkin jälkimmäisessä kaava palauttaa 7.1054 x 10<sup>–15</sup>, joka on erittäin pieni, mutta ei nolla. Pieni ero ei tavallisesti aiheuttaa ongelmia ja sovelluksen pyöristää sen pois kun tulos näytetään. Pieniä eroja voi kuitenkin yhdistelmä myöhemmät laskutoimituksissa ja antaa väärän vastaukselle näkyvät.
+Liuku lukujen aritmeettinen arvo on likimääräinen, joten se voi toisinaan antaa odottamattomia tuloksia monilla dokumentoiduilla esimerkeillä. Saatat odottaa, että kaava **55/100 * 100** palauttaa tarkalleen 55 ja **(55/100 * 100)-55** , jos haluat palauttaa tarkalleen nollan. Jälkimmäinen kaava palauttaa kuitenkin 7,1054 x 10<sup>– 15</sup>, joka on hyvin pieni mutta ei nolla. Tämä pieni ero ei yleensä aiheuta ongelmia, ja sovellus pyöristää sen pois, kun tulos näytetään. Pienet erot voivat kuitenkin yhdistyä myöhemmissä laskelmissa, ja ne näyttävät antamaan väärän vasta uksen.
 
-Tietokannan järjestelmien tallentaa valuuttoja usein ja suorittavat laskutoimituksia käyttämällä desimaali matematiikka, joka tarjoaa pienempää aluetta, mutta tarkkuuden tarkemmin. Oletusarvon mukaan pohjaan sovelluksia kartan valuuttoja uloskirjautuminen kaksoistarkkuuksinen arvoille. Tämän vuoksi tulos eri laskutoimituksia, jotka tehdään alkuperäisen decimal-tietotyyppiä. Jos tämän tyyppisen tilitiimin aiheuttaa ongelmia, haluat ehkä näitä arvoja kuin **tekstin**, aivan kuten saattaa suuri kokonaislukuja, jotka on kuvattu aiemmin tässä osiossa kanssa.
+Tieto kanta järjestelmät tallentavat usein valuuttoja ja suorittavat lasku toimituksia käyttämällä desimaalimuotoista matematiikkaa, joka tarjoaa pienemmän alueen mutta enemmän tarkkuutta. Oletus arvon mukaan pohjaan liittyvät sovellukset kartan valuutat liuku luku arvoilla ja niiden ulkopuolella. Tästä syystä tulokset saattavat poiketa alkuperäisen kymmen järjestelmä tieto tyypin mukaisista laskelmista. Jos tämän tyyppinen risti riita aiheuttaa ongelmia, haluat ehkä käsitellä näitä arvoja **tekstinä**samalla tavalla kuin aiemmin tässä osiossa kuvatut suuret kokonaisluvut.
 
-## <a name="date-time-and-datetime"></a>Päivämäärä, aika ja päivämäärä ja aika
+## <a name="date-time-and-datetime"></a>Päivä määrä, kellon aika ja DateTime
 
 ### <a name="time-zones"></a>Aikavyöhykkeet
 
-Päivämäärän/kellonajan arvot nousua luokkaa:
+Päivä määrä-ja aika-arvot kuuluvat seuraaviin luokkiin:
 
-- **Käyttäjän paikallinen**: Nämä arvot tallennetaan [UTC-AIKAAN (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), mutta sovelluksen käyttäjän aikavyöhykkeen vaikuttaa siihen, miten sovellus näyttää nämä arvot ja miten sovelluksen käyttäjä määrittää ne. Esimerkiksi sama hetkellä näkyy eri tavalla Kanadassa käyttäjälle kuin Japanissa käyttäjälle.
-- **Aikavyöhykkeestä riippumaton**: Sovellus näyttää nämä arvot samalla tavalla kuin ja sovelluksen käyttäjälle määrittää samalla tavalla aikavyöhyke riippumatta. Sama hetkellä näkyy käyttäjälle Kanadassa samalla tavalla kuin Japanissa käyttäjälle. Tekijöihin, joka ei pitäisi sovelluksiaan suoritettavaksi eri aikavyöhykkeiden Käytä näitä arvoja, koska ne ovat yksinkertaisempi yleinen.
+- **Käyttäjä, paikallinen**: Nämä arvot tallennetaan [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), mutta sovelluksen käyttäjän aika vyöhyke vaikuttaa siihen, miten sovellus näyttää nämä arvot ja miten sovelluksen käyttäjä määrittää ne. Esimerkiksi sama hetki vaikuttaa Kanadassa eri tavalla kuin käyttäjälle Japanissa.
+- **Aika vyöhyke riippumaton**: Sovellus näyttää nämä arvot samalla tavalla ja sovelluksen käyttäjä määrittää ne samalla tavalla aika vyöhykkeestä riippumatta. Sama aika näkyy samalla tavalla Kanadassa käyttäjälle kuin Japanissa. Sovellusten tekijät, jotka eivät odota, että heidän sovelluksiaan suoritetaan eri aika vyöhykkeillä, käyttävät näitä arvoja, koska ne ovat yleisesti ottaen yksinkertaisempia.
 
 Tässä taulukossa on joitakin esimerkkejä:
 
-| Päivämäärä-ja aika-tyyppi | Arvo, joka on tallennettu tietokantaan | Näytetään ja annettu 7 tuntia länteen UTC | Näytetään ja annettu neljän tunnin linjan UTC |
+| Päivä määrän/kellon ajan tyyppi | Tieto kantaan tallennettu arvo | Arvo näytetään ja annettiin 7 tuntia UTC-aika länteen | Arvo näytetään ja annettiin 4 tuntia UTC-ajan itäpuolella |
 |--------------------------|------------------------------|------------------------------|
-| **Käyttäjän paikallinen** | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 | Lauantai,&nbsp;saattaa&nbsp;18&nbsp;2019: lle<br>9:00 PM | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>8\.00 |
-| **Aikavyöhykkeestä riippumaton** | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 | 
+| **Käyttäjän paikallinen** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Lauantai,&nbsp;18&nbsp;.toukokuuta2019&nbsp;<br>9:00 PM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>8:00 AM |
+| **Aika vyöhyke, riippumaton** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | 
 
-\- **Käyttäjän paikallisen** ja-aikoja, pohjaan perustuvat sovellukset käyttää selaimessa tai laitteessa aikavyöhyke, mutta mallipohjaisten sovellusten käyttää käyttäjän asetusta tässä Common Data Service. Nämä asetukset yleensä samat, mutta tulokset vaihtelevat, jos nämä asetukset ovat erilaiset.
+**Käyttäjän paikallisissa** päivä määrä-ja kellon aikoina pohjaan perustuvat sovellukset käyttävät selaimen tai laitteen aika vyöhykettä, mutta mallipohjaiset sovellukset käyttävät käyttäjän asetusta Common Data Service. Nämä asetukset ovat yleensä samat, mutta tulokset eroavat toisistaan, jos nämä asetukset eroavat toisistaan.
 
-### <a name="numeric-equivalents"></a>Numeerinen vastaavia kohteita
+Muunna paikallista aikaa UTC-ajaksi ja takaisin uudelleen [**DateAdd**](function-dateadd-datediff.md) -ja [**Time zoneinformation**](function-dateadd-datediff.md) -funktioiden avulla.  Tutustu näiden funktioiden dokumentaation lopussa oleviin esimerkkeihin.
 
-Pohjaan perustuvat sovellukset pitämällä ja laskea kaikki päivämäärä-ja aika arvoja, onko **käyttäjän paikallisen** tai **aikavyöhykkeestä riippumaton** UTC-muodossa. Sovelluksen kääntää perusteella sovelluksen käyttäjän aikavyöhykkeen, kun ne näytetään ja kun sovelluksen käyttäjä määrittää niiden arvot.
+### <a name="numeric-equivalents"></a>Numeric-vastineet
 
-Kun pohjaan perustuva sovellus lukee **aikavyöhykkeestä riippumaton** arvo tietolähteen tai kirjoittaa arvo tietolähteeseen, sovellus säätää automaattisesti korvaamaan sovelluksen käyttäjän aikavyöhykkeen arvon. Sovelluksen käsittelee arvo UTC-arvolle, kaikki muiden päivämäärä ja aika-arvojen sovelluksen kanssa. Tämä korvaaminen alkuperäisen vuoksi **aikavyöhykkeestä riippumaton** arvo tulee näkyviin, kun sovellus säätää sovelluksen käyttäjän aikavyöhykkeen UTC-arvo.
+Pohjaan liittyvät sovellukset omistavat ja laskevat kaikki päivä määrä-ja aika-arvot riippumatta siitä, onko **käyttäjä paikallinen** vai **aika vyöhyke** UTC-tilassa. Sovellus kääntää arvot sovelluksen käyttäjän aika vyöhykkeen mukaan, kun ne näytetään ja kun sovelluksen käyttäjä määrittää ne.
 
-Näin voit tutkia tarkemmin käyttämällä [ **arvo** ](function-value.md) funktio käyttää pohjana olevan numeroarvon päivämäärä ja aika-arvoa. Tämä funktio palauttaa päivämäärä/aika-arvoa millisekunteina jälkeen 1. tammikuuta 1970 00:00:00.000 UTC.
+Kun kangas sovellus lukee **aika vyöhykkeen riippumattoman** arvon tieto lähteestä tai kirjoittaa tällaisen arvon tieto lähteeseen, sovellus säätää automaattisesti arvoa, joka kompensoi sovelluksen käyttäjän aika vyöhykkeen. Sovellus käsittelee arvoa UTC-arvona, joka on johdonmukainen sovelluksen kaikkien muiden päivä määrä-ja aika-arvojen kanssa. Tämän korva uksen vuoksi alkuperäisen **aika vyöhykkeen riippumaton** arvo tulee näkyviin, kun sovellus muuttaa sovelluksen käyttäjän aika vyöhykkeen UTC-arvoa.
 
-Koska kaikki päivämäärä-ja aika-arvot säilytetään UTC-kaavan **arvo (päivämäärä (1970, 1, 1))** ei palauta nolla useimmat osia maailman, koska **päivämäärä** UTC-funktio palauttaa päivämäärä. Esimerkiksi kaavan, palautetaan 28,800,000 aikavyöhyke, jolla on siirtymä UTC kahdeksan tunnin mukaan. Määrä kuvastaa millisekunteina kahdeksan tunnin aikana.
+Voit tarkkailla tätä toimintaa tarkemmin käyttämällä [**Value**](function-value.md) -funktiolla pohjana olevaa numeerista arvoa päivä määrä-ja aika-arvolle. Tämä funktio palauttaa päivä määrä/aika-arvon Milli sekunteina, joka on 1. tammi kuuta 1970 00:00:00.000 UTC.
 
-Palaa yllä esimerkkiä:
+Koska jokainen päivä määrä-ja aika-arvo säilytetään UTC-tilassa, kaavan **arvo (Date (1970, 1, 1))** ei palauta nollaa Useimmissa osissa maailmaa, koska **Date** -funktio palauttaa päivä määrän UTC-aikana. Kaava palauttaisi esimerkiksi 28 800 000 aika vyöhykkeellä, joka on siirtymässä UTC-ajasta kahdeksalla tunnissa. Tämä luku ilmaisee kahdeksan tunnin Milli sekuntien määrän.
 
-| Päivämäärä-ja aika-tyyppi | Arvo, joka on tallennettu tietokantaan | Näytetään ja annettu 7 tuntia länteen UTC | **Arvo** funktio palauttaa |
+Palautetaan esimerkkiin ylhäältä:
+
+| Päivä määrän/kellon ajan tyyppi | Tieto kantaan tallennettu arvo | Arvo näytetään ja annettiin 7 tuntia UTC-aika länteen | **Value** -funktio palauttaa |
 |--------------------------|------------------------------|------------------------------|
-| **Käyttäjän paikallinen** | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 | Lauantai,&nbsp;saattaa&nbsp;18&nbsp;2019: lle<br>9:00 PM | 1,558,238,400,000<br> (Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4:00 AM UTC) |
-| **Aikavyöhykkeestä riippumaton** | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 | Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>4\.00 |1,558,263,600,000<br> (Sunnuntai,&nbsp;saattaa&nbsp;19&nbsp;2019: lle<br>11:00 AM UTC) |
+| **Käyttäjän paikallinen** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Lauantai,&nbsp;18&nbsp;.toukokuuta2019&nbsp;<br>9:00 PM | 1 558 238 400 000<br> (Sunnuntai&nbsp;19&nbsp;. toukokuuta 2019&nbsp;<br>4:00 UTC) |
+| **Aika vyöhyke, riippumaton** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM |1 558 263 600 000<br> (Sunnuntai&nbsp;19&nbsp;. toukokuuta 2019&nbsp;<br>11:00 UTC) |
 
-### <a name="converting-unix-times"></a>Muuntaminen Unix kertaa
+### <a name="converting-unix-times"></a>Muunnetaan UNIX-aikoja
 
-UNIX kertaa ilmaise 1. tammikuuta 1970 sekuntia määrää 00:00:00 UTC. Koska pohjaan perustuvat sovellukset käyttävät millisekuntia sekunnin sijaan, voit muuntaa kertomalla tai jakamalla 1 000 kahden välillä.
+UNIX-ajat kuvastavat sekuntien määrää 1. tammi kuuta 1970 00:00:00 UTC alkaen. Koska kangas sovellukset käyttävät Milli sekunteja sekuntien sijaan, voit muuntaa ne kahden mukaan kertomalla tai jakamalla 1 000.
 
-On esimerkiksi Unix-aika on 9. syyskuuta 2001 01:46:40 UTC kuin 1 000 000 000. Voit osoittaa, että päivämäärä-ja aika-arvoa pohjaan perustuvan sovelluksen, kerro numero 1 000 muuntaminen milliseconds ja käyttää sitä [ **tekstin** ](function-text.md) funktio. Kaava **teksti (1000000000 * 1 000, DateTimeFormat.UTC)** palauttaa merkkijonon **2001 – 09-09T01:46:40.000Z**.
+Esimerkiksi UNIX-aika on 9. syyskuuta 2001 kello 01:46:40 UTC as 1 000 000 000. Jos haluat näyttää päivä määrä-ja aika-arvon pohjaan nähden, kerro tämä luku arvolla 1 000, jos haluat muuntaa sen Milli sekunteina, ja käyttää sitä sitten [**teksti**](function-text.md) -funktiolla. Kaavan **teksti (1000000000 * 1000, DateTimeFormat. UTC)** palauttaa merkki jonon **2001-09-09T01:46:40.000 z**.
 
-Kuitenkin, että-funktio palauttaa **lauantai, syyskuun 8-2001 18:46:40** Jos käytät **DateTimeFormat.LongDateTime24** aikavyöhyke, jolla on siirtymä-7 tuntia (7 tuntia länteen UTC) UTC-muodossa. Tämä tulos näyttää **DateTime** arvon perusteella oikein paikallisen aikavyöhykkeen.
+Tämä funktio palauttaa kuitenkin **lauantai 8. syyskuuta 2001 18:46:40,** jos käytät **DateTime Format. LongDateTime24** -muotoa aika vyöhykkeellä, joka on-7 tuntia siirtymää UTC-ajasta (7 tuntia länteen UTC:sta). Tämä tulos esittää **DateTime** -arvon oikein paikallisen aika vyöhykkeen perusteella.
 
-Jaa muuntamaan Unix-aika-tulos **arvo** 1 000 mukaan:
-<br>**RoundDown (arvo (UnixTime) / 1 000, 0)**
+Jos haluat muuntaa UNIX-ajaksi, Jaa tulos **arvosta arvolla** 1 000:
+<br>**RoundDown (arvo (UnixTime)/1000, 0)**
 
-Jos tarvitset Unix-aika **päivämäärä** arvo muita laskutoimituksia tai näyttää powerappsissa, käyttää tätä kaavaa:
-<br>**DateAdd (päivämäärä (1970,1,1) UnixTime, sekuntia)**
+Jos tarvitset UNIX-ajan **Date** -arvossa lisä laskelmia tai powerappsin näyttämistä varten, käytä seuraavaa kaavaa:
+<br>**DateAdd (päivä määrä (1970, 1, 1), Uniqutime, Seconds)**
 
 ### <a name="sql-server"></a>SQL Server
 
-SQL Server on [ **Datetime**, **Datetime2**, ja muut päivämäärä/kellonaika-tietotyypit](https://docs.microsoft.com/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) , älä sisällytä aikavyöhykkeen siirtymä ja millä aikavyöhykkeellä ei määritä ne sisältyvät. Pohjaan perustuvat sovellukset oletetaan, että nämä arvot tallennetaan UTC- ja käsitellä niitä **käyttäjän paikallisen**. Jos arvot on tarkoitus aikavyöhykkeen riippumaton, korjaa UTC-käännösten käyttämällä [ **TimeZoneOffset** ](function-dateadd-datediff.md#converting-to-utc) funktio.
+SQL Server sisältää [ **DateTime**-, **Datetime2**-ja muita päivä määrä/aika-tieto tyyppejä,](https://docs.microsoft.com/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql?view=sql-server-2017) jotka eivät sisällä aika vyöhyke siirtymää, eivätkä ilmaise, missä aika vyöhykkeessä ne ovat. Pohjaan perustuvat sovellukset oletetaan, että nämä arvot on tallennettu UTC-muodossa ja että ne ovat **käyttäjän paikallisia**. Jos arvot on tarkoitettu aika vyöhykkeen mukaan riippumattomiksi, voit korjata UTC-käännökset käyttämällä Time [**Zoneoffset**](function-dateadd-datediff.md#converting-to-utc) -funktiolla.
 
-Pohjaan perustuvat sovellukset käyttää sisältyvät aikavyöhykkeen tiedot **Datetimeoffset** kentät muunnettaessa arvo sovelluksen sisäinen UTC-esityksen. Sovellusten käyttää aikavyöhyke (aikavyöhyke nollasiirtymää) UTC aina kun tietoja kirjoittaa.
+Canvas-sovellukset käyttävät **DateTime-offset** -kentissä olevia aika vyöhyke tietoja muunnettaessa arvoa sovelluksen sisäiseen UTC-esitykseen. Sovellukset käyttävät aina UTC-aikaa aika vyöhykkeenä (Zero Time Zone-siirtymä), kun he kirjoittavat tietoja.
 
-Kaaviosovellusten lukeminen ja kirjoittaminen arvojen [ **aika** ](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) tyyppi on SQL Server merkkijonoja [kesto ISO 8601-muodossa](https://en.wikipedia.org/wiki/ISO_8601#Durations). On esimerkiksi jäsentää merkkijonon muodossa ja käyttää [ **aika** ](function-date-time.md) funktiota muuntamaan merkkijono **”PT2H1M39S”** - **aika** arvo:
+Kangas sovellukset lukevat ja kirjoittavat [**Time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) -tieto tyypin arvoja SQL Server teksti merkki jonoina [ISO 8601-kesto muodossa](https://en.wikipedia.org/wiki/ISO_8601#Durations). Sinun täytyy esimerkiksi jäsentää tämä merkki jono muoto ja käyttää [**Time**](function-date-time.md) -funktiolla teksti merkki jonon **"PT2H1M39S"** muuntamista **Time** -arvoksi:
 
-```powerapps-comma
+```powerapps-dot
 First(
     ForAll(
-        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
-        Time( Value( hours ); Value( minutes ); Value( seconds ) )
+        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+        Time( Value( hours ), Value( minutes ), Value( seconds ) )
     )
 ).Value
 ```
 
-### <a name="mixing-date-and-time-information"></a>Kohdistinasetusten päivämäärä-ja aika
+### <a name="mixing-date-and-time-information"></a>Päivä määrän ja kellon ajan tietojen sekoittaminen
 
-**Päivämäärä**, **aika**, ja **DateTime** on eri nimet, mutta ne kaikki sisältää samat tiedot päivämäärät ja kellonajat. 
+**Päivä määrällä**, **ajalla**ja **DateTime** -kohteella on eri nimet, mutta niillä kaikilla on samat tiedot päivä määristä ja kellon ajoista. 
 
-A **päivämäärä** arvo voivat sisältää tiedot, joka on yleensä keskiyöhön. A **aika** arvo voi suorittaa päivämäärätiedot, joka on yleensä 1. tammikuuta 1970. Common Data Service-tallentaa myös ajan tiedot **vain päivämäärä** kentässä on kuitenkin vain päivämäärätiedot oletusarvon mukaan. Vastaavasti pohjaan perustuvat sovellukset joskus erottaa näitä tietotyyppejä määrittää oletusarvon muodot ja ohjausobjekteja.
+**Päivämäärä** arvo voi sisältää aika tietoja, jotka ovat yleensä Keski yöllä. **Aika** -arvo voi kuljettaa päivämäärä tietoja, jotka ovat yleensä 1. tammi kuuta 1970. Common Data Service myös tallentaa aika tiedot **vain päivä määrä** -kentän kanssa, mutta ne näyttävät vain päivämäärä tiedot Oletus arvon mukaan. Myös kangas sovellukset erottavat toisistaan nämä tieto tyypit määrittääkseen oletus muotoiluja ja-ohjaus objektin.
 
-Lisäämällä ja vähentämällä päivämäärä ja aika-arvoja suoraan ei suositella, koska aikavyöhyke- ja muut muunnosten saattaa aiheuttaa sekavalta tulokset. Käyttämällä **arvo** päivämäärä ja aika-arvoista muuntaminen milliseconds ensin ja otettava huomioon sovelluksen käyttäjän aikavyöhykkeen, tai käytä [ **DateAdd** ](function-dateadd-datediff.md) ja [ **DateDiff** ](function-dateadd-datediff.md) funktioita lisätä tai vähentää siitä jokin näistä arvoista.
+Päivä määrä-ja aika-arvojen lisäämistä ja vähentämistä suoraan ei suositella, koska aika vyöhyke ja muut muunnokset saattavat aiheuttaa hämmentäviä tuloksia. Käytä **Value** -funktiota päivä määrä/aika-arvojen muuntamiseen Milli sekunteina ja ota huomioon sovelluksen käyttäjän aika vyöhyke tai Lisää tai vähennä jostakin näistä arvoista [**DateAdd**](function-dateadd-datediff.md) -ja [**DateDiff**](function-dateadd-datediff.md) -funktioiden avulla.
 
-## <a name="option-sets-and-two-options"></a>Asetusjoukkoja ja kaksi vaihtoehtoa
+## <a name="option-sets-and-two-options"></a>Asetus joukot ja kaksi vaihto ehtoa
 
-Asetusjoukkoja ja kaksi asetusta tietotyyppien on vähintään kaksi vaihtoehtoa, sovellus-käyttäjä voi valita. Esimerkiksi **tilauksen tila** asetusjoukko saattaa tarjota vaihtoehtoja **uusi**, **Shipped**, **laskutettu**, ja **suljettu** . Kaksi asetusta tietotyyppi on vain kaksi vaihtoehtoa.
+Asetus joukot ja kahden vaihto ehdon tieto tyypit tarjoavat vähintään kaksi vaihto ehtoa, joiden avulla sovellus käyttäjä voi valita. Esimerkiksi tila **uksen tilan** asetus asetus voi tarjota vaihto ehtoja **Uusi**, **Lähetetty**, **Laskutettu**ja **suljettu**. Kahden vaihto ehdon tieto tyyppi tarjoaa vain kaksi vaihto ehtoa.
 
-Molemmat nämä tietotyypit Näytä niiden nimet-merkkijono kontekstissa. Esimerkiksi nimen ohjausobjekti näyttää yhden tilauksen tilan vaihtoehdot Jos ohjausobjektin **tekstin** asetuksena on kaava, joka viittaa kyseisen asetusjoukkoa. Asetuksen nimet saattaa lokalisoitu käyttäjillä eri sijainteihin.
+Molemmat näistä tieto tyypeistä näyttävät niiden nimet teksti merkki jonon yhteydessä. Esimerkiksi selite-ohjaus objektissa näkyy jokin tila uksen tilan vaihto ehdoista, jos ohjaus objektin **Text** -ominaisuudeksi on määritetty kaava, joka viittaa kyseiseen asetus joukkoon. Asetusten nimet voidaan lokalisoida sovelluksen käyttäjille eri sijainneissa.
 
-Kun sovellus käyttäjä valitsee vaihtoehdon ja tallentaa muutokset, sovellus lähettää tietokantaan, joka tallentaa tiedot, joka on riippumaton kielen esityksen tietoja. Asetusjoukon vaihtoehtoa lähetettyjen ja tallennettu lukuna ja kaksi asetusta tietotyyppi vaihtoehtoa lähetettyjen ja tallennettu totuusarvo.
+Kun sovelluksen käyttäjä valitsee vaihto ehdon ja tallentaa tämän muutoksen, sovellus lähettää tiedot tieto kantaan, joka tallentaa tiedot edustukseen, joka on riippumaton kielestä. Asetus joukon asetus lähetetään ja tallennetaan lukuna, ja kahden vaihto ehdon tieto tyypin vaihto ehto lähetetään ja tallennetaan totuus arvona.
 
-Otsikot ovat vain näyttötarkoituksia varten. Suora vertailuja nimien ei voi suorittaa, koska ne ovat tietyn kielelle. Sen sijaan kullekin asetusjoukon on luettelointi, joka toimii taustalla oleva numero tai totuusarvo. Ei voi käyttää esimerkiksi Tämä kaava:
+Nimet ovat vain näyttö tarkoituksia varten. Et voi tehdä suoria vertailuja otsikoihin, koska ne ovat kielikohtaisia. Sen sijaan kullakin asetus joukko sisältää luetteloinnin, joka toimii pohjana olevan luvun tai totuus arvon kanssa. Et voi esimerkiksi käyttää seuraavaa kaavaa:
 
-`If( ThisItem.OrderStatus = "Active"; ...`
+`If( ThisItem.OrderStatus = "Active", ...`
 
-Mutta voit käyttää tätä kaavaa:
+Voit kuitenkin käyttää seuraavaa kaavaa:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
--Yleisiä asetusjoukkoja (entiteeteille jakaa), asetusjoukko luetteloinnin nimi vastaa yleinen asetusjoukko nimi. Paikallisia asetusjoukkoja (joka on rajoitettu entiteetti),-nimi saattaa sisältää entiteetin nimi. Näin vältetään ristiriidassa, jos useita entiteettejä on asetusjoukkoja, joilla on sama nimi. Esimerkiksi **tilit** entiteetillä voi olla **OrderStatus** asetusjoukon ja sen nimi voi olla **OrderStatus (tiliä)** . Kyseistä nimeä sisältää yhden tai useamman välilyöntejä ja sulkeet, joten ympäröi se heittomerkit Jos viitata kaavassa.
+Yleisasetuksille (mitkä entiteetit jakavat) asetus joukon luetteloinnin nimi vastaa yleisen asetus joukon nimeä. Paikallisissa asetus joukoissa (jotka on määritetty entiteettiin) nimi voi sisältää entiteetin nimen. Tämä estää risti riidat, jos useilla entiteeteillä on asetus joukkoja, joilla on sama nimi. Esimerkiksi **accounts** -entiteetillä voi olla **orderstatus** -asetus asetus, ja sen nimi voi olla **orderstatus (accounts)** . Nimi sisältää vähintään yhden väli lyöntien ja sulkeiden, joten sinun on ympäröidä se heitto merkeillä, jos viittaat siihen kaavassa.
 
-Kaksi asetusta arvot voivat lisäksi myös toimivat totuusarvoja. Esimerkiksi nimeltä kaksi asetusta arvo **TaxStatus** voi olla nimien **verollisen** ja **verottoman**, jotka vastaavat *true* ja *false* vastaavasti. Mallitiedoilla, voit käyttää tätä kaavaa:
+Lisäksi kahden vaihto ehdon arvot voivat myös käyttäytyä totuus arvo-arvoina. Esimerkiksi kahden asetuksen **Taxstatus** -arvolla voi olla **verovelvolliset** ja **verottomat**nimet, jotka vastaavat arvoa *True* ja *false* . Voit osoittaa tätä kaavaa käyttämällä seuraavaa kaavaa:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
 
-Voit käyttää myös vastaava kaava:
+Voit myös käyttää tätä vastaavaa kaavaa:
 
-`If( ThisItem.Taxable; ...`
+`If( ThisItem.Taxable, ...`

@@ -1,11 +1,11 @@
 ---
-ms.openlocfilehash: fa9ebe8cae95b643ecbe33a170fc21f4d3e6181e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 4a05b19b983df65bc3a26d72323a683fe0f26f20
+ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66249914"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038026"
 ---
 
-Tätä funktiota ei voi delegoida tietolähdettä käytettäessä. Vain tietolähteen ensimmäinen osa noudetaan ja sen jälkeen funktio otetaan käyttöön. Tulos ei ehkä vastaa koko tarinaa.  Muokkaamisen aikana näyttöön ilmestyy sininen piste, joka muistuttaa tästä rajoituksesta ja ehdottaa mahdollisia delegoitavia vaihtoehtoja. Lisätietoja on artikkelissa [delegoinnin yleiskatsaus](../maker/canvas-apps/delegation-overview.md).
+Tätä funktiota ei voi delegoida tietolähdettä käytettäessä. Vain tietolähteen ensimmäinen osa noudetaan ja sen jälkeen funktio otetaan käyttöön. Tulos ei ehkä vastaa koko tarinaa.  Muokkaamisen aikana näyttöön tulee varoitus, joka muistuttaa tästä rajoituksesta ja ehdottaa mahdollisia delegoitavia vaihtoehtoja. Lisätietoja on kohdassa [Delegoinnin yleiskatsaus](../maker/canvas-apps/delegation-overview.md).
 

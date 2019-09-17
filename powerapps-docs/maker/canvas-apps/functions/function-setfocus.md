@@ -13,13 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fce0148e77432aa136a6279eb7fb69c0ca3b0846
-ms.sourcegitcommit: de77b6d5f77e84961fff9a399622ba8eeb48d4c3
+ms.openlocfilehash: cdf34c3c4909697b70a105e5145620ab5bd31ea9
+ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037048"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038147"
 ---
 # <a name="setfocus-function-in-powerapps"></a>SetFocus-funktion Powerappsissa
 Siirtää syöte kohdistuksen tiettyyn ohjaus objektiin. 
@@ -34,7 +33,7 @@ Aseta kohdistus **SetFocus** -funktiolla, kun (kukin esimerkki alla):
 
 Kohdistuksen ohjaus objekti voi olla visuaalisesti erilainen [**Focusedbordercolor**](../controls/properties-color-border.md) -ja [**Focusedborderpaksuus**](../controls/properties-color-border.md) -ominaisuuksien perusteella.
 
-## <a name="limitatoins"></a>Limatowins
+## <a name="limitations"></a>Rajoitukset
 
 **SetFocus** -kohdetta voi käyttää vain:
 - [**Painike**](../controls/control-button.md) -ohjaus objekti
@@ -77,18 +76,18 @@ SetFocus( BillingName )
 Tämän esimerkin luominen:
 1. Luo uusi sovellus.
 1. Lisää nimi- [ ohjaus objekteihin](../controls/control-text-box.md) teksti "toimitus osoite", "nimi:", "Osoite:", "laskutus osoite", "nimi:" ja "Osoite:" ja sijoita ne animaatiossa esitetyllä tavalla.
-1. Lisää [ **teksti syöte** -ohjaus objekti](../controls/control-text-input.md) ja nimeäse uudelleen.
-1. Lisää [ **teksti syöte** -ohjaus objekti](../controls/control-text-input.md) ja nimeäse uudelleen.
+1. Lisää [ **teksti syöte** -ohjaus objekti](../controls/control-text-input.md) ja nimeä **se uudelleen**.
+1. Lisää [ **teksti syöte** -ohjaus objekti](../controls/control-text-input.md) ja nimeä **se uudelleen**.
 1. Lisää [ **valinta ruutu** -ohjaus objekti](../controls/control-check-box.md) ja nimeä sen **syncaddresses**uudelleen.
 1. Määrittää tämän ohjaus objektin **Text** -ominaisuudeksi kaavan `"Use Shipping address as Billing address"`.
 1. Lisää [ **teksti syöte** -ohjaus objekti](../controls/control-text-input.md) ja nimeä se uudelleen **nimellä billingname**.
 1. Määrittää tämän ohjaus objektin **oletus** ominaisuudeksi kaavan `ShippingName`.
-1. Voit määrittää tämän ohjaus objektin **DisplayMode** -ominaisuudeksi `If( SyncAddresses.Value; DisplayMode.View; DisplayMode.Edit )`kaavan.  Tämä ottaa tämän ohjaus objektin automaattisesti käyttöön tai poistaa sen käytöstä valinta ruutu-ohjaus objektin tilan perusteella.
+1. Voit määrittää tämän ohjaus objektin **DisplayMode** -ominaisuudeksi `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`kaavan.  Tämä ottaa tämän ohjaus objektin automaattisesti käyttöön tai poistaa sen käytöstä valinta ruutu-ohjaus objektin tilan perusteella.
 1. Lisää [ **teksti syöte** -ohjaus objekti](../controls/control-text-input.md) ja anna sille nimeksi **billingaddress**.
 1. Määrittää tämän ohjaus objektin **oletus** ominaisuudeksi kaavan `ShippingAddress`.
-1. Voit määrittää tämän ohjaus objektin **DisplayMode** -ominaisuudeksi `If( SyncAddresses.Value; DisplayMode.View; DisplayMode.Edit )`kaavan.  Tämä ottaa tämän ohjaus objektin automaattisesti käyttöön tai poistaa sen käytöstä valinta ruutu-ohjaus objektin tilan perusteella.
+1. Voit määrittää tämän ohjaus objektin **DisplayMode** -ominaisuudeksi `If( SyncAddresses.Value, DisplayMode.View, DisplayMode.Edit )`kaavan.  Tämä ottaa tämän ohjaus objektin automaattisesti käyttöön tai poistaa sen käytöstä valinta ruutu-ohjaus objektin tilan perusteella.
 1. Valitse valinta ruudun **oletus** ominaisuudeksi kaava `true`.  Oletus arvon mukaan laskutus osoite käyttää samaa arvoa kuin toimitus osoite.
-1. Valitse valinta ruudun **onCheck** -ominaisuudeksi kaava `Reset( BillingName );; Reset( BillingAddress )`.  Jos käyttäjä haluaa synkronoida toimitus-ja laskutus osoitteita, se tyhjentää kaikki käyttäjän syötettä laskutus osoite-kenttiin, jolloin niiden **oletus** ominaisuudet ovat samat kuin vastaavien toimitus osoite kenttien arvot.
+1. Valitse valinta ruudun **onCheck** -ominaisuudeksi kaava `Reset( BillingName ); Reset( BillingAddress )`.  Jos käyttäjä haluaa synkronoida toimitus-ja laskutus osoitteita, se tyhjentää kaikki käyttäjän syötettä laskutus osoite-kenttiin, jolloin niiden **oletus** ominaisuudet ovat samat kuin vastaavien toimitus osoite kenttien arvot.
 1. Valitse valinta ruudun **Onunpoista** -ominaisuudeksi kaava `SetFocus( BillingName )`.  Jos käyttäjä haluaa käyttää eri laskutus osoitetta, kohdistus siirretään laskutus osoitteen ensimmäiseen ohjaus objektiin.  Ohjaimet on jo otettu käyttöön **DisplayMode** -ominaisuuksien vuoksi.
 
 ### <a name="focus-on-validation-issues"></a>Keskity vahvistus ongelmiin
@@ -102,24 +101,24 @@ Kun lomaketta vahvistetaan, voi olla hyödyllistä, että sanoma näytetään va
 
 Tässä animaatiossa vahvistus painiketta painetaan toistuvasti, kunnes kaikki kentät on täytetty oikein.  Ota huomioon, että hiiren osoitin ei siirry alas näytön yläreunasta.   Sen sijaan **SetFocus** -funktiolla on siirretty kohdistus ohjaus objektiin, joka vaatii huomiota tällä kaavalla:
 
-```powerapps-comma
-If( IsBlank( Name ); 
-        Notify( "Name requires a value"; Error );; SetFocus( Name );
-    IsBlank( Street1 ); 
-        Notify( "Street Address 1 requires a value"; Error );; SetFocus( Street1 );
-    IsBlank( Street2 ); 
-        Notify( "Street Address 2 requires a value"; Error );; SetFocus( Street2 );
-    IsBlank( City ); 
-        Notify( "City requires a value"; Error );; SetFocus( City );
-    IsBlank( County ); 
-        Notify( "County requires a value"; Error );; SetFocus( County );
-    IsBlank( StateProvince ); 
-        Notify( "State or Province requires a value"; Error );; SetFocus( StateProvince );
-    IsBlank( PostalCode ); 
-        Notify( "Postal Code requires a value"; Error );; SetFocus( PostalCode );
-    IsBlank( Phone ); 
-        Notify( "Contact Phone requires a value"; Error );; SetFocus( Phone );
-    Notify( "Form is Complete"; Success )
+```powerapps-dot
+If( IsBlank( Name ), 
+        Notify( "Name requires a value", Error ); SetFocus( Name ),
+    IsBlank( Street1 ), 
+        Notify( "Street Address 1 requires a value", Error ); SetFocus( Street1 ),
+    IsBlank( Street2 ), 
+        Notify( "Street Address 2 requires a value", Error ); SetFocus( Street2 ),
+    IsBlank( City ), 
+        Notify( "City requires a value", Error ); SetFocus( City ),
+    IsBlank( County ), 
+        Notify( "County requires a value", Error ); SetFocus( County ),
+    IsBlank( StateProvince ), 
+        Notify( "State or Province requires a value", Error ); SetFocus( StateProvince ),
+    IsBlank( PostalCode ), 
+        Notify( "Postal Code requires a value", Error ); SetFocus( PostalCode ),
+    IsBlank( Phone ), 
+        Notify( "Contact Phone requires a value", Error ); SetFocus( Phone ),
+    Notify( "Form is Complete", Success )
 )
 ```
 
@@ -143,7 +142,7 @@ Tässä animaatiossa vasemmalla oleva tietojen syöttäminen-näyttö ei käytä
 
 Oikealla on täsmälleen sama sovellus, jossa on Data Entry-näytön **Onvisible** -ominaisuus, joka on määritetty tähän kaavaan:
 
-```powerapps-comma
+```powerapps-dot
 SetFocus( Name )
 ```
 

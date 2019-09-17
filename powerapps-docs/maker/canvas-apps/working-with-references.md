@@ -1,160 +1,159 @@
 ---
-title: Tutustu tietueen viittaukset ja polymorfinen hakuja | Microsoft Docs
-description: Tietueen viittaukset ja polymorfinen hakujen pohjaan perustuvat sovellukset
+title: Tutustu tietue viittauksiin ja polymorfisten hakujen | Microsoft Docs
+description: Tietue viittausten ja polymorfisten hakujen käsitteleminen kangas sovelluksissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: anneta
-ms.date: 05/17/2019
+ms.date: 09/14/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 80755667a9c7c36eb47999f7f8b2f939eb032c69
-ms.sourcegitcommit: 93096dfa1aadba77159db1e5922f3d5528eecb7a
+ms.openlocfilehash: ebb7b9d5eb203a32ef0ec931a8f653125e8f5f26
+ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65986444"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71037947"
 ---
-# <a name="understand-record-references-and-polymorphic-lookups-in-canvas-apps"></a>Tutustu tietueen viittaukset ja polymorfinen hakujen pohjaan perustuvat sovellukset
+# <a name="understand-record-references-and-polymorphic-lookups-in-canvas-apps"></a>Tutustu tietue viittauksiin ja polymorfisten hakujen pohjaan kangas sovelluksissa
 
-Kun kirjoitit tutkimus paperin oppilaitoksen antamasi todennäköisesti loppuun suositukset luettelo. Hakuun ei sisällytetty kopiointi todellinen taustan materiaalia, voit käyttää sen sijaan Verkkolinkki, kirjan nimi ja tekijä tai muita tietoja, mutta niin, että joku voi jäljittää alkuperäiseen lähteeseen. Yhdistettyjä erilaisia tietolähteitä yksittäisen luettelon sanomalehti artikkelit äänitallenteita, jokainen omia tiedot-oikea lainaus vieressä. Esimerkiksi Wikipedia-artikkelit sisältävät usein [viittaukset pitkä luettelo](https://en.wikipedia.org/wiki/Microsoft#References).
+Kun kirjoitit tutkimus paperin koulussa, olet luultavasti antanut luettelon viittauksista lopussa. Et ole käyttänyt kopiota todellisesta tausta materiaalista, jota käytit, vaan ennemminkin verkko linkkiä, kirjan otsikkoa ja tekijää tai muita tietoja, jotta joku voisi jäljittää alkuperäisen lähteen. Olet sekoitettu erilaisia lähteitä yksittäisessä listassa, sanoma lehti artikkelit ääni tallenteiden vieressä, joista jokaisella on omat tarkat tiedot asianmukaisesta viitteestä. Esimerkiksi Wikipedia-artikkeleihin sisältyy usein [pitkä luettelo viitta uksista](https://en.wikipedia.org/wiki/Microsoft#References).
 
-Pohjaan perustuvat sovellukset voit usein käyttää ladattavien tietolähteistä tietueiden kopioita. Voit käyttää [ **LookUp** ](functions/function-filter-lookup.md) ja [ **suodatin** ](functions/function-filter-lookup.md) Funktiot ja [ **valikoiman** ](controls/control-gallery.md) ohjausobjektin **valittu** ominaisuus, jonka haluat tietyn tietueen tunnistamiseen. Kaikki tietueet **suodatin** tai **valittu** on saman tyyppinen entiteetti, joten voit käyttää kentät yksinkertainen. *Kentän* merkintätapaa. Nämä kopiot sisältävät usein tietoja, jotta voit käyttää [ **Patch** ](functions/function-patch.md) funktiota alkuperäisen tietolähteen päivittämiseksi.
+Kangas sovelluksissa käytät usein tieto lähteistä ladattujen tietueiden kopioita. Voit tunnistaa haluamasi tietueen käyttämällä [**haku**](functions/function-filter-lookup.md) -ja [**suodatus**](functions/function-filter-lookup.md) funktioita ja [**valikoima**](controls/control-gallery.md) -ohjaus objektin **valittua** ominaisuutta. Kaikkien **suodatinten** tai **valittujen** tietueiden entiteettityyppiä on sama, joten voit käyttää kenttiä yksinkertaisella. *Kentän* merkintä. Nämä kopiot sisältävät usein viite tietoja, joiden avulla voit päivittää alkuperäisen lähteen [**patch**](functions/function-patch.md) -funktiolla.
 
-Pohjaan perustuvat sovellukset tukevat myös *tietueen viittaukset*. Paljon tutkimus paperin viittausta, kuten tietueen viittaus viittaa tietueen ilman täydellisen kopion. Viittaukset voi viitata kaikki entiteetin tietueen. Myös tutkimus paperin viittaukset, kuten voit yhdistellä tietueita eri entiteettejä vain yksi sarake.
+Kangas sovellukset tukevat myös *tietue viittauksia*. Kuten tutkimus-paperi viittaus, tietue viittaus viittaa tietueeseen ilman, että se sisältää täydellisen kopion siitä. Tällainen viittaus voi viitata minkä tahansa entiteetin tietueeseen. Samoin kuin tutkimus-paperi viittaukset, voit sekoittaa tietueita eri entiteeteistä yhdestä sarakkeesta.
 
-Useita toimintoja tietueen viittaukset ovat samanlaisia kuin tietueiden käsittelemisestä. Voit verrata tietueen viittaukset toisiinsa ja koko tietueita. Voit määrittää tietueen viittaus-arvon **Patch** toimi samalla tavalla kuin haun koko tietueen kanssa.
+Monet tietue viittausten toiminnot ovat identtisiä tietueiden parissa työskentelemisen kanssa. Voit verrata tietue viittauksia toisiinsa ja koko tietue isiin. Voit valita tietue viittauksen arvon käyttämällä **patch** -funktiota samalla tavalla kuin haku, jolla on täydellinen tietue.
 
-On tärkeää käyttö yksi ero: viittaus tietueen kenttiä ei voi käyttää suoraan ilman ensimmäistä muodostamisen, mikä entiteettiin se viittaa. Tämä johtuu siitä pohjaan perustuvat sovellukset edellyttävät, että kaikki tunnetuksi kun kirjoitat kaavoja. Koska et ole varma tietueen viittauksen tyyppi, kunnes sovellus on käynnissä, et voi käyttää yksinkertaista. *Kentän* suoraan merkintätapaa. Sinun on määritettävä käyttäen entiteettityyppi dynaamisesti [ **IsType** ](functions/function-astype-istype.md) funktio ja käytä. *Kentän* notation-tuloksen [ **AsType** ](functions/function-astype-istype.md) funktio.
+On olemassa yksi tärkeä käyttö ero: et voi käyttää tietue viittauksen kenttiä suoraan muodostamatta ensin sitä, mihin entiteettiin se viittaa. Tämä johtuu siitä, että kangas sovellukset edellyttävät, että kaikki tyypit tunnetaan kaavojen kirjoittamisessa. Koska et tiedä tietue viittauksen tyyppiä, ennen kuin sovellus on käynnissä, et voi käyttää yksinkertaista. *Kentän* merkintä suoraan. Entiteettityyppiä on ensin määritettävä dynaamisesti [**Istype**](functions/function-astype-istype.md) -funktiolla ja sitten käytettävä. [**Astionpe**](functions/function-astype-istype.md) -funktion tuloksen *kenttä* merkintä.
 
-*Entiteettityyppi* viittaa jokainen tietue entiteetissä rakenteeseen. Jokainen entiteetti sisältää yksilöivä kentät, joissa on eri nimiä ja tietotyyppejä. Entiteetin tietueiden perii kyseisen rakenne. kaksi tietuetta on sama kohteen tyyppi, jos ne ovat peräisin samaan entiteettiin.
+*Entiteettityypin* viittaa entiteetin kunkin tietueen rakenteeseen. Kullakin entiteetillä on yksilöivä kenttä joukko, jolla on eri nimet ja tieto tyypit. Entiteetin jokainen tietue perii kyseisen rakenteen; kahdella tietueilla on sama entiteettityyppi, jos ne ovat perä isin samasta entiteetistä.
 
 ## <a name="polymorphic-lookups"></a>Polymorfinen haut
 
-Common Data Service tukee kenttien väliset yhteydet. Jokaiselle tietueelle **tilit** kohteella **ensisijaisen yhteyshenkilön** hakukentän tietueeseen **yhteystiedot** entiteetin. Hakukentän voi viitata vain tietueen **yhteystiedot** ja ei voi viitata tietueen, esimerkiksi **Teams** entiteetin. Viimeisin tiedot on tärkeä, koska aina tiedät, mitä kenttiä on käytettävissä hakua varten.
+Common Data Service tukee tietueiden välisiä suhteita. Jokaisella **accounts** -entiteetin tietueella on **ensisijainen yhteys henkilön** haku kenttä tietueeseen **yhteys tiedot** -entiteetissä. Haku voi viittaa vain **yhteys tiedoissa** olevaan tietueeseen, eikä se voi tarkoittaa esimerkiksi **teamsin** entiteetin tietuetta. Tämä viimeinen yksityiskohta on tärkeä, koska tiedät aina, mitkä kentät ovat käytettävissä hakua varten.
 
-Common Data Service tukee myös polymorfinen haut, joka voi viitata tietueen entiteetistä mitään joukon. Esimerkiksi **omistaja** voi viitata mihin tietueen **käyttäjät** entiteetin tai **Teams** entiteetin. Eri tietuetta samaan hakukenttään voi viitata eri entiteettien tietueiden. Tässä tapauksessa voit aina tiedä, mitkä kentät ovat käytettävissä.
+Common Data Service tukee myös polymorfisten hakujen tekemistä, mikä voi tarkoittaa tietueen mistä tahansa sarjan entiteetistä. **Omistaja** -kenttä voi esimerkiksi viittaa tietueeseen **käyttäjät** -entiteetissä tai **teams** -entiteetissä. Sama haku kenttä eri tietueissa voi koskea eri entiteettien tietueita. Tässä tapa uksessa et aina tiedä, mitkä kentät ovat käytettävissä.
 
-Pohjaan tietueen viittaukset suunniteltiin käsitteleminen polymorfinen hakuja tässä Common Data Service. Voit myös käyttää tietueen viittaukset kontekstissa, joka on kaksi käsitteitä suoratoistoon ulkopuolella.
+Piirto alustan tietue viittaukset suunniteltiin Common Data Service polymorfisten hakujen käsittelemistä varten. Voit myös käyttää tietue viittauksia tämän kontekstin ulkopuolella. Näin nämä kaksi käsitettä eroavat toisistaan.
 
-Seuraavassa osiossa, voit alkaa tutkia näistä käsitteistä käsitteleminen **omistaja** haku.
+Seuraavassa osiossa alat tutkia näitä käsitteitä käyttämällä **omistajan** hakua.
 
-## <a name="show-the-fields-of-a-record-owner"></a>Näytä tietueen omistajan kentät
+## <a name="show-the-fields-of-a-record-owner"></a>Tietueen omistajan kenttien näyttäminen
 
-Common Data Service-Jokainen entiteetti sisältää **omistaja** kenttä. Tämä kenttä ei voi poistaa, ei voi lisätä toisen ja se edellyttää aina arvo.
+Jokainen Common Data Service entiteetti sisältää **omistaja** -kentän. Tätä kenttää ei voi poistaa, et voi lisätä toista, ja se edellyttää aina arvoa.
 
-Näytä- **tilin** entiteetin:
+Kentän näyttäminen Tilientiteetissä:
 
-1. Avaa [PowerApps-sivusto](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-1. Valitse vasemmassa siirtymispalkissa **tietojen** > **entiteetit**.
-1. Valitse luettelossa, **tilin**.
-1. Oikeassa yläkulmassa, Avaa suodatinluettelon (joka on määritetty **oletusarvon** oletusarvon mukaan), ja valitse sitten **kaikki**.
-1. Vieritä alaspäin, kunnes **omistaja** kenttä tulee näkyviin.
+1. Avaa [Tämä PowerApps-sivusto](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Valitse vasemmassa siirtymis palkissa **tieto** > **entiteetit**.
+1. Valitse entiteettiluettelosta **tili**.
+1. Avaa oikean yläkulman suodatin lista (oletus asetus **on oletus arvo** ) ja valitse sitten **Kaikki**.
+1. Vieritä alaspäin, kunnes **omistaja** -kenttä tulee näkyviin.
 
  > [!div class="mx-imgBorder"]
- > ![Omistaja-kentästä tili-entiteetistä](media/working-with-references/owner-field.png)
+ > ![Tili-entiteetin omistaja-kenttä](media/working-with-references/owner-field.png)
 
-Tämän hakukentän voi viitata tietueen joko **Teams** entiteetin tai **käyttäjät** entiteetin. Nämä entiteetit ei jokaisessa tietueessa on oikeus voi **omistaja**; Tarkista tuettujen rooleja, jos kohtaat ongelman.
+Tämä haku kenttä voi viittaa tietueeseen joko **tiimit** -entiteetistä tai **käyttäjät** -entiteetistä. Kaikilla näiden entiteettien tietueella ei ole oikeutta olla **omistaja**; Tarkista Tuetut roolit, jos suoritat ongelman.
 
-Tässä kaaviossa näkyy yksinkertainen valikoiman **tilit**, jossa **tilit** entiteetti on lisätty sovellukseen tietolähde:
+Tässä kuvassa on yksinkertainen **tili**valikoima, jossa **accounts** -entiteetti on lisätty sovellukseen tieto lähteenä:
 
 > [!div class="mx-imgBorder"]
-> ![Tilit näkyvät valikoima-ohjausobjekti](media/working-with-references/accounts-gallery.png)
+> ![Valikoima-ohjaus objektissa näkyvät asiakkaat](media/working-with-references/accounts-gallery.png)
 
 > [!IMPORTANT]
-> Tässä ohjeaiheessa koko grafiikka Joidenkin nimien ja muiden arvojen näyttäminen, jotka eivät ole osa mallitietoja, joka toimitetaan Common Data Service. Ohjeita tarkasti esitellään määrittää tietyn tuloksen ohjausobjekteja, mutta kokemuksesi vaihtelee organisaatiosi tiedot.
+> Tässä ohje aiheessa grafiikka näyttää joitakin nimiä ja muita arvoja, jotka eivät ole osa Common Data Service mukana olevia malli tietoja. Vaiheet osoittavat tarkasti, miten voit määrittää ohjaus objektin tiettyä tulosta varten, mutta käyttö kokemuksesi vaihtelee organisaatiosi tietojen mukaan.
 
-Näyttää kunkin tilin omistajan valikoimassa, voit ehkä käyttää kaavaa tietoja **ThisItem.Owner.Name**. Kuitenkin nimikentän **ryhmän** entiteetti on **joukkueen nimi**, ja nimikentän **käyttäjän** entiteetti on **KokoNimi**. Sovellus ei voi, haku käyttämäsi käytät ennen kuin voit suorittaa sovelluksen ja tietueiden voi vaihdella **tilit** entiteetin.
+Jos haluat näyttää valikoiman kunkin tilin omistajan, saatat haluta käyttää kaavaa **ThisItem.Owner.name**. **Ryhmä** -entiteetin nimi-kenttä on kuitenkin **ryhmän nimi**, ja **käyttäjä** -entiteetin nimi-kenttä on **koko nimi**. Sovellus ei voi tietää, minkä tyyppistä hakua käytät, ennen kuin suoritat sovelluksen, ja se voi vaihdella tietueiden välillä **accounts** -entiteetissä.
 
-Sinun on kaava, joka voi sopeutua varianssi johtuu. Sinun on lisättävä tietolähteitä, entiteetin kirjoittaa, myös **omistaja** voitu (Tässä tapauksessa **käyttäjät** ja **Teams**). Näiden kolmen tietolähteiden lisääminen sovellukseen:
+Tarvitset kaavan, joka voi sopeutua tähän varianssiin. Sinun on myös lisättävä tieto lähteet entiteettityypsille, jotka **omistaja** voi olla (tässä tapa uksessa **käyttäjät** ja **tiimit**). Lisää nämä kolme tieto lähdettä sovellukseesi:
 
 > [!div class="mx-imgBorder"]
-> ![Tilit, ryhmiä ja käyttäjiä tietoruudun entiteetit](media/working-with-references/accounts-datasources.png)
+> ![Tieto ruudun accounts, teams ja users-entiteetit](media/working-with-references/accounts-datasources.png)
 
-Nämä tiedot tietolähteiden sijoittaa, tämä kaava avulla voit näyttää käyttäjän tai ryhmän nimi:
+Kun näitä tieto lähteitä on käytössä, voit näyttää joko käyttäjän tai ryhmän nimen tämän kaavan avulla:
 
-```powerapps-comma
-If( IsType( ThisItem.Owner; [@Teams] );
-    "Team: " & AsType( ThisItem.Owner; [@Teams] ).'Team Name';
-    "User: " & AsType( ThisItem.Owner; [@Users] ).'Full Name' )
+```powerapps-dot
+If( IsType( ThisItem.Owner, [@Teams] ),
+    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Omistaja-kenttä näkyy valikoima-ohjausobjektissa näkyy tilit](media/working-with-references/accounts-displayowner.png)
+> ![Valikoima-ohjaus objektissa näkyvät Asiakkaat, joiden omistaja-kenttä on näkyvissä](media/working-with-references/accounts-displayowner.png)
 
-Tässä kaavassa **IsType** funktio Testaa **omistaja** kentän vastaan **Teams** entiteetin. Jos se on kyseisen entiteetin tyyppiä **AsType** funktion valaistustiedot se **ryhmän** tietueen. Tässä vaiheessa voit käyttää kaikki kentät **Teams** entiteetin, mukaan lukien **joukkueen nimi**, käyttämällä *. Kentän* merkintätapaa. Jos **IsType** , joka määrittää **omistaja** ei ole tietuetta **Teams** entiteetin kyseisen kentän arvon täytyy olla tietueen **käyttäjät** entiteetin koska **omistaja** kenttä on pakollinen (ei voi olla *tyhjä*).
+Tässä kaavassa **Istype** -funktiolla testataan **omistaja** -kenttää **teamsin** entiteetille. Jos tämä entiteettityyppiä on, **Asitpe** -ominaisuus heittää sen **Ryhmä** tietueeseen. Tässä vaiheessa voit käyttää kaikkia **teamsin** entiteetin kenttiä, mukaan lukien **tiimin nimeä**, käyttämällä kohdetta *. Kentän* merkintä. Jos **Istype** määrittää, että **omistaja** ei ole tietue **teamsin** entiteetissä, kentän on oltava tietue **käyttäjä** -entiteetissä, koska **omistaja** -kenttä vaaditaan (ei voi olla *tyhjä*).
 
-Käytät [yleinen selvitysoperaattoria](functions/operators.md#disambiguation-operator) - **[@Teams]** ja **[@Users]** sen varmistamiseksi, että käytät Yleinen kohteen tyyppi. Et tarvitse sitä tässä tapauksessa, mutta se on hyvä hyvä lomakkeeseen. Valikoiman tietuealueen ristiriidassa usein yksi-moneen-suhteita, ja tämä käytäntö estää kyseistä vaikeutua.
+Käytät [Global-operaattoria](functions/operators.md#disambiguation-operator) **[@Teams]** ja **[@Users]** , jotta voit varmistaa, että käytät yleistä entiteettityyppiä. Et tarvitse sitä tässä tapa uksessa, mutta se on hyvä tapa muodostaa. Yksi moneen-suhteista on usein risti riidassa valikoiman tietue alueen kanssa, ja tämä käytäntö välttää sekaannuksen.
 
-Käyttää viittauksen tietueen kenttiä, sinun on ensin käytettävä **AsType** funktio muuntaa sen tietyn entiteettityyppi. Et voi käyttää suoraan kentät **omistaja** kenttää, koska järjestelmä ei tiedä, mitä kohteen tyyppi, jota haluat käyttää.
+Jos haluat käyttää tietue viittauksen kenttiä, sinun on ensin käytettävä **Asype** -funktiolla sitä tietyn entiteettityypin. Et voi käyttää kenttiä suoraan **omistaja** -kentästä, koska järjestelmä ei tiedä, mitä entiteettityyppiä haluat käyttää.
 
-**AsType** funktio palauttaa virheen, jos **omistaja** kenttä ei vastaa vaadittua-kohteen tyyppi, jotta voit käyttää **IfError** funktion yksinkertaista kaava. Ota ensin kokeellinen ominaisuus käyttöön **kaavatason virheiden hallinta**:
+**Asttype** -funktio palauttaa virheen, jos **omistaja** -kenttä ei vastaa pyydettyä entiteettityyppiä, joten voit yksinkertaistaa tätä kaavaa **iferror** -funktiolla. Ota ensin käyttöön kokeellisen ominaisuuden **kaava tason virheiden hallinta**:
 
 > [!div class="mx-imgBorder"]
-> ![Kokeellinen Vaihda käyttöön kaavatason virheiden hallinta](media/working-with-references/accounts-iferror.png)
+> ![Kokeellinen valitsin, jolla voidaan ottaa käyttöön kaava tason virheiden hallinta](media/working-with-references/accounts-iferror.png)
 
-Tällä tietojoukolla korvataan Edellinen kaava:
+Korvaa sitten edellinen kaava tällä:
 
-```powerapps-comma
+```powerapps-dot
 IfError(
-    "Team: " & AsType( ThisItem.Owner; [@Teams] ).'Team Name';
-    "User: " & AsType( ThisItem.Owner; [@Users] ).'Full Name' )
+    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
 ```
 
-## <a name="filter-based-on-an-owner"></a>Suodattaa omistajan mukaan
+## <a name="filter-based-on-an-owner"></a>Suodata omistajan mukaan
 
-Onnittelut – olet suorittanut vaikeimmista käsitteleminen tietueen viittaus osaan. Käytä muissa tapauksissa on suoraviivaisempaa, koska ne eivät käyttää tietueen kentät. Palvelupyynnön in-kohdan kestää suodatusta, joka tutustut tässä osassa.
+Onnittelut – olet saanut valmiiksi tietueen viitta uksen työstämistä koskevan vaikeimman näkö kohdan. Muut käyttö tapaukset ovat yksinkertaisemmin, koska ne eivät käytä tietueen kenttiä. Ota kohdassa huomioon suodatus, jota tutustut tässä osiossa.
 
-Lisää **yhdistelmäruudun** valikoiman yläpuolelta ohjausobjekti ja määritä uuden ohjausobjektin nämä ominaisuudet:
+Lisää **yhdistelmä ruutu** -ohjaus objekti valikoiman yläpuolelle ja määrittää nämä uuden ohjaus objektin ominaisuudet:
 
-- **Kohteet**: `Users`
-- **SelectMultiple**: `false`
+- **Kohteet**:`Users`
+- **Selectmultiple**:`false`
 
 > [!div class="mx-imgBorder"]
-> ![Lisätty yhdistelmäruutu ohjausobjekti yllä valikoiman kohteet-ominaisuuden arvoksi käyttäjät](media/working-with-references/filter-insert-combobox.png)
+> ![Lisätty yhdistelmä ruutu-ohjaus objekti valikoiman yläpuolelle, kun Items-ominaisuus on valittu käyttäjille](media/working-with-references/filter-insert-combobox.png)
 
-Voit suodattaa valikoiman tämä yhdistelmäruutu valinnut tietyn käyttäjän, Määritä valikoiman **kohteet** -ominaisuuden arvoksi tämä kaava:
+Jos haluat suodattaa valikoiman tämän yhdistelmä ruudun valitun käyttäjän mukaan, valitse valikoiman **kohteet** -ominaisuudeksi Tämä kaava:
 
-```powerapps-comma
-Filter( Accounts; Owner = ComboBox1.Selected )
+```powerapps-dot
+Filter( Accounts, Owner = ComboBox1.Selected )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Suodatettu valikoiman yhdistelmäruutu ohjausobjektin arvon perusteella](media/working-with-references/filter-accounts.png)
+> ![Suodatettu valikoima yhdistelmä ruutu-ohjaus objektissa määritetyn arvon perusteella](media/working-with-references/filter-accounts.png)
 
 > [!IMPORTANT]
-> Tämän aiheen ohjeita ovat oikein, jos noudatat tarkalleen. Kuitenkin mikä tahansa kaava, joka viittaa ohjausobjektiin sen nimen mukaan epäonnistuu, jos ohjausobjekti on eri nimi. Jos poistat ja Lisää ohjausobjekti samaa tyyppiä, niiden ohjausobjektin nimen lopussa muuttuu. Mikä tahansa kaava, joka näyttää virheen Varmista, että se sisältää kaikki ohjausobjektit oikeat nimet.
+> Tämän ohje aiheen ohjeet ovat tarkkoja, jos noudatat vaiheita tarkalleen. Mikä tahansa kaava, joka viittaa sen nimen mukaiseen ohjaus objektiin, epäonnistuu kuitenkin, jos ohjaus objektissa on eri nimi. Jos poistat ja lisäät samaa tyyppiä olevan ohjaus objektin, ohjaus objektin nimen lopussa oleva luku muuttuu. Jos kaava näyttää virheen, varmista, että se sisältää kaikkien ohjaus objektien oikeat nimet.
 
-Sinun ei tarvitse käyttää **IsType** tai **AsType** koska vertailet tietueen viittaukset tietueen viittaukset tai koko tietueita. Sovelluksen entiteettityyppi on määritetty **ComboBox1.Selected** koska se on johdettu **käyttäjät** entiteetin. Tilit, joiden omistaja on tiimin ei vastaa suodatuskriteeriä.
+Sinun ei tarvitse käyttää **istype-tai Astynpe** -menetelmää, koska vertaat tietue viittauksia muihin tietue viittauksiin tai täydellisiin tietue isiin. Sovellus tuntee entiteettityypin **ComboBox1. Selected** , koska se on johdettu **käyttäjät** -entiteetistä. Asiakkaat, joiden omistaja on ryhmä, eivät vastaa suodatus ehtoa.
 
-Voit saada hieman monimutkaisempi tukemalla suodatus käyttäjän tai ryhmän.
+Voit saada hieman hienouuden tukemalla suodatusta joko käyttäjä tai ryhmä.
 
-1. Vapauta levytilaa näytön yläreunan lähellä valikoiman koon muuttaminen ja siirtäminen yhdistelmäruudun, Lisää [ **Radio** ohjausobjektin](controls/control-radio.md) , valikoiman yläpuolelta ja määritä sitten uuden ohjausobjektin nämä ominaisuudet:
+1. Vapauta tilaa näytön yläreunassa muuttamalla valikoiman kokoa ja siirtämällä yhdistelmä ruutua, lisäämällä [ **valinta** ](controls/control-radio.md) merkki valikoiman yläpuolelle ja määrittämällä sitten nämä ominaisuudet uudelle ohjaus objektille:
 
-    - **Kohteet**: `[ "All"; "Users"; "Teams" ]`
-    - **Asettelu**: `Layout.Horizontal`
+    - **Kohteet**:`[ "All", "Users", "Teams" ]`
+    - **Ulkoasu**:`Layout.Horizontal`
 
-1. Varten **yhdistelmäruudun** ohjausobjekti, Määritä tämän ominaisuuden (Jos yhdistelmäruudun katoaa, valitse **käyttäjät** radio ohjausobjektin):
+1. Määritä **yhdistelmä ruutu** -ohjaus objektille tämä ominaisuus (jos yhdistelmä ruutu katoaa, valitse Radio-ohjaus objektin **käyttäjät** ):
 
-    - **Näkyvissä**: `Radio1.Selected.Value = "Users"`
+    - **Näkyvä**:`Radio1.Selected.Value = "Users"`
 
-1. Kopioi ja liitä **yhdistelmäruudun** ohjausobjekti, siirtää kopion suoraan alkuperäisen ja määritä sitten kopion nämä ominaisuudet:
+1. Kopioi ja liitä **yhdistelmä ruutu** -ohjaus objekti, siirrä kopio suoraan alkuperäisen päälle ja aseta sitten nämä ominaisuudet kopiolle:
 
-    - **Kohteet**: `Teams`
-    - **Näkyvissä**: `Radio1.Selected.Value = "Teams"`
+    - **Kohteet**:`Teams`
+    - **Näkyvä**:`Radio1.Selected.Value = "Teams"`
 
-    Sovellus näkyy vain yksi yhdistelmäruudun kerrallaan valintanappeja tilan mukaan. Koska ne ovat toisiinsa yläpuolella, ne näkyvät voi ohjausobjekti, joka muuttaa sen sisällön.
+    Sovellus näyttää vain yhden yhdistelmä ruudun kerrallaan Radio-ohjaus objektin tilan mukaan. Koska ne ovat suoraan toistensa yläpuolella, ne näyttävät olevan sama ohjaus objekti, joka muuttaa sen sisältöä.
 
-1. Lopuksi **kohteet** -ominaisuuden **valikoiman** ominaisuudeksi tämä kaava:
+1. Valitse lopuksi **valikoima** -ohjaus objektin **Items** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
-    Filter( Accounts;
+    ```powerapps-dot
+    Filter( Accounts,
         Radio1.Selected.Value = "All"
         Or (Radio1.Selected.Value = "Users" And Owner = ComboBox1.Selected)
         Or (Radio1.Selected.Value = "Teams" And Owner = ComboBox1_1.Selected)
@@ -162,188 +161,188 @@ Voit saada hieman monimutkaisempi tukemalla suodatus käyttäjän tai ryhmän.
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![suodatettu valikoima näyttää kaikki tietueet tai tietyn käyttäjän tai ryhmän](media/working-with-references/filter-combobox.png)
+    > ![Suodatettu valikoima, joka näyttää kaikki tietueet tai tietyn käyttäjän tai ryhmän](media/working-with-references/filter-combobox.png)
 
-Nämä muutokset voit näyttää kaikki tietueet tai suodattaa niitä käyttäjän tai ryhmän perusteella:
-
-> [!div class="mx-imgBorder"]
-> ![animaatio näyttää eri suodatetun tuloksen perusteella valintanappi ja yhdistelmäruutu ruudut](media/working-with-references/filter-allthree.gif)
-
-Kaava on täysin delegoitavat. Osa, joka on verrattaessa valintanapin arvoja on vakio kaikissa tietueissa ja arvioidaan, ennen kuin suodatin loput lähetetään Common Data Service.
-
-Jos haluat suodattaa omistajan tyyppi, voit käyttää **IsType** funktiota, mutta käyttäjän ei vielä ole delegoitavissa.
+Näiden muutosten avulla voit näyttää kaikki tietueet tai suodattaa ne joko käyttäjän tai ryhmän perusteella:
 
 > [!div class="mx-imgBorder"]
-> ![Suodattaa omistajatyypin mukaan käyttämällä IsType](media/working-with-references/filter-bytype.png)
+> ![Animaatio, joka näyttää eri suodatetut tulokset Radio-ohjaus objektin ja yhdistelmä ruutujen perusteella](media/working-with-references/filter-allthree.gif)
 
-## <a name="update-the-owner-by-using-patch"></a>Päivittää omistaja käyttämällä korjaustiedosto
+Kaava on täysin delegoitava. Osa, joka vertaa valinta nappi arvoja, on vakio kaikissa tietueissa, ja se arvioidaan, ennen kuin muut suodattimet lähetetään Common Data Service.
 
-Voit päivittää **omistaja** samalla tavalla kuin muita lookup kenttää. Määrittää ensimmäisen tiimille valittuna tilin omistaja:
+Jos haluat suodattaa omistajan tyypin mukaan, voit käyttää **Istype** -toimintoa, mutta sitä ei ole vielä delegoitava.
 
-```powerapps-comma
-Patch( Accounts; Gallery1.Selected; { Owner: First( Teams ) } )
+> [!div class="mx-imgBorder"]
+> ![Suodata omistajan tyypin mukaan IsType-toiminnon avulla](media/working-with-references/filter-bytype.png)
+
+## <a name="update-the-owner-by-using-patch"></a>Päivitä omistaja käyttämällä korjaus tiedostoa
+
+Voit päivittää **omistaja** -kentän samalla tavalla kuin mitä tahansa muuta hakua. Jos haluat, että valittuna olevan tilin omistaja on määritetty ensimmäiselle työryhmälle:
+
+```powerapps-dot
+Patch( Accounts, Gallery1.Selected, { Owner: First( Teams ) } )
 ```
 
-Tämä lähestymistapa ei erota hakusarakkeen Normaali koska sovelluksen tyyppi on määritetty **ensimmäisen (Teams)**. Jos haluat ensimmäinen käyttäjä sen sijaan, korvata kyseisen osan kanssa **ensimmäisen (käyttäjät)**. **Patch** funktio tietää, **omistaja** kahden entiteetin tällaisten voidaan määrittää kentän.
+Tämä lähestymis tapa ei poikkea normaalista haku-tyypistä, koska sovellus tuntee **ensimmäisen (tiimit)** tyypin. Jos haluat sen sijaan ensimmäisen käyttäjän, korvaa kyseinen osa **ensin (käyttäjät)** . **Patch** -funktiolla tiedetään, että **omistaja** -kentän arvoksi voidaan valita jompikumpi näistä kahdesta entiteettityypistä.
 
-Lisää tämän ominaisuuden sovellukseen:
+Tämän ominaisuuden lisääminen sovellukseen:
 
-1. - **Puu näkymän** ruudussa **Radio** ohjausobjektin ja kahden **yhdistelmäruudun** ohjausobjektit samaan aikaan.
+1. Valitse **puunäkymä** -ruudussa **Radio** -ohjaus objekti ja kaksi **yhdistelmä ruutu** -ohjaus objektia samalla kertaa.
 
-1. Valitse kolme pistettä-valikko **kopioi nämä kohteet**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Kopio puunäkymässä useita ohjausobjekteja](media/working-with-references/patch-copy.png)
-
-1. Valitse sama valikosta **Liitä**.
+1. Valitse kolme pistettä-valikosta **Kopioi nämä kohteet**.
 
     > [!div class="mx-imgBorder"]
-    > ![Liitä puunäkymässä useita ohjausobjekteja](media/working-with-references/patch-paste.png)
+    > ![Useiden ohjaus objektien kopio puunäkymän avulla](media/working-with-references/patch-copy.png)
 
-1. Siirrä kopioitujen ohjausobjektien oikealle valikoiman.
-
-    > [!div class="mx-imgBorder"]
-    > ![Siirtää oikealle valikoiman kopioitujen ohjausobjektien](media/working-with-references/patch-position.png)
-
-1. Valitse kopioitu **Radio** ohjausobjekti ja muuta sitten nämä ominaisuudet:
-
-    - Kohteet: `[ "Users"; "Teams" ]`
-    - Oletus: `If( IsType( Gallery1.Selected.Owner; Users ); "Users"; "Teams" )`
+1. Valitse samasta valikosta **Liitä**.
 
     > [!div class="mx-imgBorder"]
-    > ![Poistaa kaikki valinta valintanappi](media/working-with-references/patch-noall.png) 
+    > ![Useiden ohjaus objektien liittäminen puunäkymän avulla](media/working-with-references/patch-paste.png)
 
-1. - **Radio** , ohjausobjektin **käyttäjät** niin, että **yhdistelmäruudun** ohjausobjekti, joka on luettelo käyttäjistä, on näkyvissä.
+1. Siirrä kopio idut ohjaus painikkeet valikoiman oikealle puolelle.
 
-1. Valitse näkyvissä **yhdistelmäruudun** ohjausobjekti ja määritä sitten **DefaultSelectedItems** -ominaisuuden arvoksi tämä kaava:
+    > [!div class="mx-imgBorder"]
+    > ![Siirretty kopio idut ohjaus painikkeet valikoiman oikealle puolelle](media/working-with-references/patch-position.png)
 
-    ```powerapps-comma
-    If( IsType( Gallery1.Selected.Owner; Users );
-        AsType( Gallery1.Selected.Owner; Users );
+1. Valitse kopioitu **Radio** -ohjaus objekti ja muuta näitä ominaisuuksia:
+
+    - Kohteet`[ "Users", "Teams" ]`
+    - Oletus`If( IsType( Gallery1.Selected.Owner, Users ), "Users", "Teams" )`
+
+    > [!div class="mx-imgBorder"]
+    > ![Poistettu kaikki valinta Radio-ohjaus objektista](media/working-with-references/patch-noall.png) 
+
+1. Valitse **Radio** -ohjaus objektissa **käyttäjät** niin, että luettelo käyttäjistä on näkyvissä **yhdistelmä ruutu** -ohjaus objekti.
+
+1. Valitse näkyvä **yhdistelmä ruutu** -ohjaus objekti ja Määritä **Defaulttselecteditems** -ominaisuudeksi seuraava kaava:
+
+    ```powerapps-dot
+    If( IsType( Gallery1.Selected.Owner, Users ),
+        AsType( Gallery1.Selected.Owner, Users ),
         Blank()
     )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Default-ominaisuus määrittää käyttäjät-yhdistelmäruutu](media/working-with-references/patch-default-users.png)
+    > ![Käyttäjien yhdistelmä ruutuun määritetty oletus ominaisuus](media/working-with-references/patch-default-users.png)
 
-1. - **Radio** , ohjausobjektin **Teams** niin, että **yhdistelmäruudun** ohjausobjekti, joka näyttää ryhmien luettelon on näkyvissä.
+1. Valitse **Radio** -ohjaus objektissa **joukkueet** , jotta **yhdistelmä ruutu** -ohjaus objekti, joka luetteloi tiimit, on näkyvissä.
 
-1. Valitse **Radio** ottamiseksi pois nyt-näkymätön valinta valvonta **yhdistelmäruudun** ohjausobjektin, jolla käyttäjät.
+1. Valitse valinta **nappi** , jos haluat ottaa valinnan pois käyttäjien nyt näkymätön- **yhdistelmä ruutu** -ohjaus objektista.
 
-1. Valitse näkyvissä **yhdistelmäruudun** tiimeille ohjausobjekti ja määritä sitten sen **DefaultSelectedItems** -ominaisuuden arvoksi tämä kaava:
+1. Valitse ryhmien näkyvä **yhdistelmä ruutu** -ohjaus objekti ja aseta sen **Defaulselecteditems** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
-    If( IsType( Gallery1.Selected.Owner; Teams );
-        AsType( Gallery1.Selected.Owner; Teams );
+    ```powerapps-dot
+    If( IsType( Gallery1.Selected.Owner, Teams ),
+        AsType( Gallery1.Selected.Owner, Teams ),
         Blank()
     )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Default-ominaisuus määrittää Teams-yhdistelmäruutu](media/working-with-references/patch-default-teams.png)
+    > ![Teamsin yhdistelmä ruutuun määritetty oletus ominaisuus](media/working-with-references/patch-default-teams.png)
 
-1. Lisää **painike** ohjausobjekti, siirrä se **yhdistelmäruudun** ohjausobjekti ja määritä sitten painikkeen **tekstin** ominaisuudeksi `"Patch Owner"`.
+1. Lisää **painike** -ohjaus objekti, siirrä se **yhdistelmä ruutu** -ohjaus objektin alle ja Aseta painikkeen **teksti** -ominaisuudeksi `"Patch Owner"`.
 
-1. Määritä **OnSelect** ominaisuuden painikkeen tämä kaava:
+1. Määritä painikkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Patch( Accounts; Gallery1.Selected;
-        { Owner: If( Radio1_1.Selected.Value = "Users";
-                ComboBox1_2.Selected;
+    ```powerapps-dot
+    Patch( Accounts, Gallery1.Selected,
+        { Owner: If( Radio1_1.Selected.Value = "Users",
+                ComboBox1_2.Selected,
                 ComboBox1_3.Selected ) } )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Kaava määrittää painike-ohjausobjekti](media/working-with-references/patch-button.png)
+    > ![Painikkeen ohjaus objektin kaava](media/working-with-references/patch-button.png)
 
-Kopioitu **Radio** ja **yhdistelmäruudun** ohjausobjektit sisältävät valittuna tilin omistajan valikoimassa. Samoja ohjausobjekteja voit määrittää tilin omistajan ryhmän tai käyttäjän valitsemalla painiketta:
+Kopioitu **Radio** -ja **yhdistelmä ruutu** -ohjaus objekti näyttää valikoiman valittuna olevan tilin omistajan. Samoilla ohjaus objekteilla voit määrittää tilin omistajan mille tahansa työryhmälle tai käyttäjälle valitsemalla painikkeen:
 
 > [!div class="mx-imgBorder"]
-> ![Animaatio näytetään patch käyttäjän tai ryhmän omistajan](media/working-with-references/patch-allthree.gif)
+> ![Animaatio, joka näyttää omistajan, joko käyttäjän tai ryhmän, korjauksen](media/working-with-references/patch-allthree.gif)
 
-## <a name="show-the-owner-by-using-a-form"></a>Näytä omistajan mukaan lomakkeen avulla
+## <a name="show-the-owner-by-using-a-form"></a>Omistajan näyttäminen lomakkeen avulla
 
-Voit näyttää **omistaja** kentän lisäämällä mukautettu kortti lomakkeen sisällä. Tätä kirjoitettaessa kenttä, jonka lomakkeen ohjausobjektin arvoa ei voi muuttaa.
+Voit näyttää **omistaja** -kentän lomakkeen sisällä lisäämällä mukautetun kortin. Tätä kirjoitettaessa et voi muuttaa kentän arvoa lomake-ohjaus objektin avulla.
 
-1. Lisää **muokkauslomake** ohjausobjekti, kokoa ja siirrä se oikeaan yläkulmaan.
+1. Lisää **Muokkaa lomaketta** -ohjaus objekti ja muuta sen kokoa ja siirrä se oikeaan alakulmaan.
 
-1. Käyttöön **ominaisuudet** välilehti lähellä näytön, Avaa oikealla puolella **tietolähteen** luettelo ja valitse sitten **tilit**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Lomake-ohjausobjekti näyttää lisäkenttiä tyhjillä arvoilla](media/working-with-references/form-insert.png)  
-
-1. Määritä lomakkeen **kohteen** ominaisuudeksi `Gallery1.Selected`.
+1. Avaa **Ominaisuudet** -väli lehden näytön oikean puolen lähellä oleva **tieto lähde** luettelo ja valitse sitten **accounts**.
 
     > [!div class="mx-imgBorder"]
-    > ![Entiteettilomakkeen ohjausobjektin lisäkenttiä, täytetty valitusta kohteesta valikoimassa näytetään](media/working-with-references/form-item.png)
+    > ![Lomake-ohjaus objekti, joka näyttää tyhjät arvot sisältäviä lisä kenttiä](media/working-with-references/form-insert.png)  
 
-1. Valitse **ominaisuudet** välilehti lähellä näytön, valitse oikealla puolella **Muokkaa kenttiä**.
-
-1. Tässä **kentät** ruudussa, valitse kolme pistettä ja valitse sitten **Lisää mukautettu kortti**.
+1. Valitse lomakkeen **Item** - `Gallery1.Selected`ominaisuudeksi.
 
     > [!div class="mx-imgBorder"]
-    > ![Komentoa lisäämällä mukautettu kortti](media/working-with-references/form-customcard.png)
+    > ![Lomake-ohjaus objekti, joka näyttää valikoiman valitusta kohteesta asuttuja lisä kenttiä](media/working-with-references/form-item.png)
 
-    Uuden kortin tulee lomake-ohjausobjektin alareunassa.
+1. Valitse **Ominaisuudet** -väli lehdeltä näytön oikean puolen lähellä **Muokkaa kenttiä**.
 
-1. Muuta kortti näyttää kaikki teksti tarvittaessa.
+1. Valitse **kentät** -ruudussa kolme pistettä ja valitse sitten **Lisää mukautettu kortti**.
 
     > [!div class="mx-imgBorder"]
-    > ![Lisätty mukautettu kortti, tyhjä](media/working-with-references/form-inserted-customcard.png)
+    > ![Komento mukautetun kortin lisäämistä varten](media/working-with-references/form-customcard.png)
 
-1. Lisää **nimen** mukautetun korttiin ohjausobjekti ja määritä sitten selitteen **tekstin** ominaisuudeksi kaava, jota käytit valikoimassa:
+    Uusi kortti näkyy lomake-ohjaus objektin alaosassa.
 
-    ```powerapps-comma
-    If( IsType( ThisItem.Owner; Teams );
-        "Team: " & AsType( ThisItem.Owner; Teams ).'Team Name';
-        "User: " & AsType( ThisItem.Owner; Users ).'Full Name' )
+1. Muuta kortin kokoa tarvittaessa, jotta näet kaiken tekstin.
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisätyn mukautetun kortin, tyhjä](media/working-with-references/form-inserted-customcard.png)
+
+1. Lisää **Selite** -ohjaus objekti mukautettuun korttiin ja määritä sitten selitteen **teksti** -ominaisuudeksi kaava, jota käytit valikoimassa:
+
+    ```powerapps-dot
+    If( IsType( ThisItem.Owner, Teams ),
+        "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
+        "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Näytetään omistaja-kentän nimi-ohjausobjektin mukautettu kortti](media/working-with-references/form-displayowner.png)
+    > ![Mukautettu kortti, joka näyttää omistaja-kentän selite ohjaus objektissa](media/working-with-references/form-displayowner.png)
 
-Valikoiman jokaisen valinnan tilin omistajan tietueen kenttiä näkyvät lomakkeessa. Jos omistaja muuttaa käyttämällä **Patch** painikkeen, lomakeohjausobjekti näyttää myös muutokset.
+Valikoiman kullekin valinnalle näytetään-lomakkeessa Lisää tilin kenttiä, mukaan lukien tietueen omistaja. Jos muutat omistajaa käyttämällä **patch** -painiketta, myös lomake-ohjaus objekti ilmaisee muutoksen.
 
 > [!div class="mx-imgBorder"]
-> ![Animaatio näytetään lomake-ohjausobjektin, muutokset valikoiman vastaaminen](media/working-with-references/form-allthree.gif)
+> ![Animaatio, joka näyttää lomake-ohjaus objektin, joka vastaa valikoiman muutoksiin](media/working-with-references/form-allthree.gif)
 
 ## <a name="show-the-fields-of-a-customer"></a>Näytä asiakkaan kentät
 
-Common Data Service- **asiakkaan** hakukenttä on toinen polymorfinen haku, joka muistuttaa **omistaja**.
+Common Data Service **asiakas** haku kenttä on toinen polymorfinen haku, joka on hyvin samankaltainen kuin **omistaja**.
 
-**Omistajan** on rajoitettu yhden entiteetin, mutta entiteetit voivat sisältää nolla, yksi tai useampi **asiakkaan** hakukenttiä. **Yhteystiedot** järjestelmäentiteetti sisältää **yrityksen nimi** kenttä, joka on **asiakkaan** hakukentän.
-
-> [!div class="mx-imgBorder"]
-> ![Yrityksen nimi-kenttä näkyy asiakkaan tietotyyppi, joka ei ole pakollinen yhteystietoentiteetti](media/working-with-references/customer-companyname.png)
-
-Voit lisätä Lisää **asiakkaan** hakukenttien entiteettiin valitsemalla **asiakkaan** uuden kentän tietotyyppi.
-
-![Asiakkaan tietotyyppi tietotyyppejä luettelosta luotaessa kenttä](media/working-with-references/customer-datatype.png)
-
-A **asiakkaan** hakukentän voi viitata tietueen joko **tilit** entiteetin tai **yhteystiedot** entiteetin. Käytät **IsType** ja **AsType** Funktiot näihin entiteetteihin nyt on hyvä lisätä ne tietolähteinä (Voit jättää **Teams** ja **käyttäjät**  paikkaan).
+**Omistaja** on rajoitettu yhteen entiteettiä kohti, mutta entiteetit voivat sisältää nollan, yhden tai useamman **asiakkaan** haku kentän. **Contacts** System-entiteetti sisältää **yrityksen nimi** -kentän, joka on **asiakkaan** haku kenttä.
 
 > [!div class="mx-imgBorder"]
-> ![Tilit, ryhmiä, käyttäjät ja yhteystiedot entiteetit tietoruudun](media/working-with-references/customer-datasources.png)
+> ![Yhteys henkilö-entiteetti, joka näyttää yrityksen nimi-kentän asiakas tieto tyyppinä, jota ei vaadita](media/working-with-references/customer-companyname.png)
 
-Käsittely **asiakkaan** ja **omistaja** kentät on niin samankaltaisia, voit kopioida kirjaimellisesti sovelluksen (**tiedoston** > **Tallenna nimellä**, ja määritä eri nimi) ja tehdä nämä yksinkertainen korvaukset:
+Voit lisätä entiteettiin Lisää **asiakkaan** haku kenttiä valitsemalla uuden kentän **asiakas** tieto tyypin.
 
-| Location | **Omistajan** malli | **Asiakkaan** malli |
+![Asiakas tieto tyyppi tieto tyyppien luettelo kenttää luotaessa](media/working-with-references/customer-datatype.png)
+
+**Asiakas** haku kenttä voi viittaa tietueeseen joko **accounts** -entiteetistä tai **Contacts** -entiteetistä. Käytät **Istype-ja Astynpe** -funktioita näiden entiteettien kanssa, joten nyt on hyvä aika lisätä ne tieto lähteiksi (voit jättää **tiimit** ja **käyttäjät** paikoilleen).
+
+> [!div class="mx-imgBorder"]
+> ![Tieto ruudun accounts, teamsin, users ja Contacts-entiteetit](media/working-with-references/customer-datasources.png)
+
+**Asiakas** -ja **omistaja** -kenttien käsittely on niin samanlaista, että voit kirjaimellisesti kopioida sovelluksen (**tiedosto** > **Tallenna nimellä**ja määrittää sitten eri nimen) ja tehdä nämä yksinkertaiset vaihdot:
+
+| Location | **Omistajan** malli | **Asiakas** malli |
 |----------|-----------|------------------|
-| Koko | **Omistaja** | **Asiakkaan nimi** |
+| Koko | **Omistaja** | **' Asiakkaan nimi '** |
 | Koko | **Käyttäjät** | **Tilit** |
-| Koko | **Ryhmät** | **Yhteystiedot** |
-| Valikoiman **kohteet** ominaisuus | **Tilit** | **Yhteystiedot** |
-| Lomakkeen **kohteet** ominaisuus | **Tilit** | **Yhteystiedot** |
-| Ensimmäisen elementin **korjaustiedosto**<br>painikkeen Click- **OnSelect** ominaisuus | **Tilit** | **Yhteystiedot** |
-| Suodata käyttäjän radio **kohteet** ominaisuus | **[&nbsp;”All”;&nbsp;”käyttäjät”&nbsp;”Teams”&nbsp;]** | **[&nbsp;”All”;&nbsp;”asiakkaat”&nbsp;”yhteystiedot”&nbsp;]** |
-| Patch radio käyttäjän **kohteet** ominaisuus | **[”Käyttäjät”; ”Teams”]** | **[”Asiakkaat”; ”yhteyshenkilöt”]** |
-| Yhdistelmäruudun **näkyvissä** ominaisuus | **”Käyttäjät”** ja **”Teams”** | **”Asiakkaat”** ja **”yhteystiedot”** |
+| Koko | **Teams** | **Yhteys tiedot** |
+| Valikoiman **kohteet** -ominaisuus | **Tilit** | **Yhteys tiedot** |
+| Lomakkeen **Items** -ominaisuus | **Tilit** | **Yhteys tiedot** |
+| **Korjauksen** ensimmäinen argumentti<br>painikkeen **onselect** -ominaisuudessa | **Tilit** | **Yhteys tiedot** |
+| Suodata radion **kohteet** -ominaisuus | **[&nbsp;"Kaikki",&nbsp;"käyttäjät",&nbsp;"tiimit"&nbsp;]** | **[&nbsp;"Kaikki",&nbsp;"Accounts"&nbsp;, "Contacts"&nbsp;]** |
+| Patch radion **Items** -ominaisuus | **["Käyttäjät", "tiimit"]** | **["Accounts", "Contacts"]** |
+| Yhdistelmä ruudun **näkyvä** ominaisuus | **"Käyttäjät"** ja **"tiimit"** | **"Accounts"** ja **"Contacts"** |
 
-Uusi valikoima tulee olla esimerkiksi tämä **kohteet** ominaisuus:
+Esimerkiksi uudella valikoimalla on oltava tämä **Items** -ominaisuus:
 
-```powerapps-comma
-Filter( Contacts;
+```powerapps-dot
+Filter( Contacts,
     Radio1.Selected.Value = "All"
     Or (Radio1.Selected.Value = "Accounts" And 'Company Name' = ComboBox1.Selected)
     Or (Radio1.Selected.Value = "Contacts" And 'Company Name' = ComboBox1_1.Selected)
@@ -351,230 +350,217 @@ Filter( Contacts;
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Asiakkaan sovelluksen johdettu sovelluksen omistajan kanssa yksinkertaisia muutoksia käyttöön](media/working-with-references/customer-simple-update.png)
+> ![Omistaja sovelluksesta johdettu asiakas sovellus, jossa on käytetty yksinkertaisia muutoksia](media/working-with-references/customer-simple-update.png)
 
-Kaksi tärkeitä eroja **asiakkaan** ja **omistaja** edellyttää päivitystä kaavat valikoiman ja lomakkeen sisällä:
+Kaksi tärkeää eroa **asiakkaan** ja **omistajan** välillä edellyttää päivitystä valikoiman ja lomakkeen sisällä oleviin kaavoihin:
 
-1. Yksi moneen suhteita **tilit** ja **yhteystiedot** etusijalla, kun viittaat nämä entiteettityyppejä nimen mukaan. Sijaan **tilit**, käytä  **\[ \@tilit]**; sijaan **yhteystiedot**, käytä  **\[ \@ Yhteystiedot]**. Käyttämällä [yleinen selvitysoperaattoria](functions/operators.md#disambiguation-operator), varmista, että, johon viitataan kohteen tyyppi **IsType** ja **AsType**. Tämä ongelma on olemassa vain kontekstissa tietueen valikoimassa ja lomake-ohjausobjekteja.
+1. Yksi moneen-suhde **asiakkaiden** ja **yhteys henkilöiden** välillä on etusijalla, kun viittaat näihin entiteettityypin nimen mukaan. Käytä  **\[tilin sijaan accounts];yhteystietojensijastayhteystietoja].\@**  **\[ \@** Kun käytät maailmanlaajuista Saksan operaattoria, varmistat, että viittaat entiteettityypin **Istype-ja Astynpe** - [operaattoriin](functions/operators.md#disambiguation-operator). Tämä ongelma on vain valikoima-ja lomake-ohjaus objektien tietue kontekstista.
 
-1. **Omistaja** kentän on oltava arvo, mutta **asiakkaan** kentät voidaan *tyhjä*. Tässä tapauksessa haetaan näyttämään tyyppinimi ilman oikeita tuloksia [ **IsBlank** funktion](functions/function-isblank-isempty.md), ja Näytä tyhjää tekstimerkkijonoa sen sijaan.
+1. **Omistaja** -kentällä on oltava arvo, mutta **asiakas** kentät voivat olla *tyhjiä*. Jos haluat näyttää oikean tuloksen ilman tyypin nimeä, testaa tätä tapausta [ **isblank** -funktiolla](functions/function-isblank-isempty.md)ja Näytä sen sijaan tyhjä teksti merkki jono.
 
-Molemmat nämä muutokset ovat samaa kaavaa, jotka näkyvät lomakkeessa, myös mukautettu kortti esimerkiksi **tekstin** valikoiman nimi-ohjausobjektin ominaisuus:
+Molemmat näistä muutoksista ovat samassa kaavassa, joka näkyy lomakkeen mukautetussa kortissa sekä valikoiman nimi-ohjaus objektin **teksti** -ominaisuudessa:
 
-```powerapps-comma
-If( IsBlank( ThisItem.'Company Name' ); "";
-    IsType( ThisItem.'Company Name'; [@Accounts] );
-        "Account: " & AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
-    "Contact: " & AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
+```powerapps-dot
+If( IsBlank( ThisItem.'Company Name' ), "",
+    IsType( ThisItem.'Company Name', [@Accounts] ),
+        "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
+    "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
 )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Päivitä alaotsikko nimi-ohjausobjektin valikoiman Text-ominaisuus](media/working-with-references/customer-update.png)
+> ![Päivitä valikoiman tekstityksen otsikko-ohjaus objektin Text-ominaisuus](media/working-with-references/customer-update.png)
 
-Nämä muutokset, voit tarkastella ja muuttaa **yrityksen nimi** kenttää **yhteystiedot** entiteetin.
+Näiden muutosten avulla voit tarkastella ja muuttaa **yrityksen nimi** -kenttää **yhteys tiedot** -entiteetissä.
 
 > [!div class="mx-imgBorder"]
-> ![Esitettävä animaatio näyttää, miten valitsemalla yhteystiedon muuttuu muita ohjausobjekteja ja lomake](media/working-with-references/customer-allthree.gif)
+> ![Animaatio, joka osoittaa, miten yhteys henkilön valitseminen muuttaa muita ohjaus objektin ja lomakkeen](media/working-with-references/customer-allthree.gif)
 
-> [!NOTE]
-> Tätä kirjoitettaessa **asiakkaan** hakuja on seuraavat rajoitukset:
->
-> - Ei voi suodattaa luettelon tietyn tietueen perusteella **yhteystiedot** tai **tilit** entiteettejä. Suodattimen valintanapin ympyröiden edellisessä esimerkissä ei toimi.
-> - Vain asiakas-kenttä, joka toimii on järjestelmän määrittämää **yrityksen nimi** , **yhteystiedot** entiteetin, jota käytettiin edellisessä esimerkissä. Lisäämällä asiakkaan mukautetun kentän ei vielä tueta.
-> - Asiakas-kenttää ei voi poistaa käyttämällä **Patch** voit määrittää sen *tyhjä*.
+## <a name="understand-regarding-lookup-fields"></a>Tietoja haku kentistä
 
-## <a name="understand-regarding-lookup-fields"></a>Tutustu liittyy hakukenttiä
+**Liittyy** -haku kenttä eroaa hieman niistä, jotka olet jo käsitellyt tässä aiheessa. Aloitat käyttämällä tähän aiheeseen aiemmin kuvattuja kuvioita, niin opit myös muita temppuja.
 
-**Liittyy** hakukentän eroaa hieman ne, jotka olet jo työskennellyt kanssa tässä ohjeaiheessa. Soveltamalla kuviot, jotka on kuvattu tässä ohjeaiheessa alat ja sitten opit muita vinkkejä.
+Voit aloittaa yksinkertaisesti **Faksi** -entiteetissä. Tällä entiteetillä on polymorfinen **koskien** haku kenttää, joka voi koskea **asiakkaita**, **yhteyshenkilöitä**ja muita entiteettejä. Voit ottaa sovelluksen käyttöön **asiakkaille** ja muokata sitä **fakseja**varten.
 
-Voit aloittaa yksinkertaisesti **faksit** entiteetin. Tällä entiteetillä on polymorfinen **liittyy** hakukenttä, joka voi viitata **tilit**, **yhteystiedot**, ja muihin entiteetteihin. Sovellus voidaan suorittaa **asiakkaille** ja muokata sitä varten **faksit**.
-
-| Location | **Asiakkaan** malli | **Faksit** malli |
+| Location | **Asiakas** malli | **Faksien** malli |
 |----------|-----------|------------------|
-| Koko | **Asiakkaan nimi** | **Liittyy** |
-| Valikoiman **kohteet** ominaisuus | **Yhteystiedot** | **Faksit** |
-| Lomakkeen **kohteet** ominaisuus | **Yhteystiedot** | **Faksit** |
-| Ensimmäisen elementin **korjaustiedosto**<br> painikkeen Click- **OnSelect** ominaisuus | **Yhteystiedot** | **Faksit** |
+| Koko | **' Asiakkaan nimi '** | **Koskevat** |
+| Valikoiman **kohteet** -ominaisuus | **Yhteys tiedot** | **Faksit** |
+| Lomakkeen **Items** -ominaisuus | **Yhteys tiedot** | **Faksit** |
+| **Korjauksen** ensimmäinen argumentti<br> painikkeen **onselect** -ominaisuudessa | **Yhteys tiedot** | **Faksit** |
 
-Uudelleen, sinun tulee Lisää tietolähde: Tämä aika määrittää **faksit**. Käyttöön **Näytä** -välilehden **tietolähteet**:
+Sinun on lisättävä tieto lähde: tällä kertaa **fakseja**varten. Valitse **näkymä** -väli lehdeltä **tieto lähteet**:
 
 > [!div class="mx-imgBorder"]
-> ![Tietoruutu näytetään tilit, Teams, käyttäjät, yhteystiedot ja faksit entiteetit](media/working-with-references/faxes-datasources.png)
+> ![Tieto ruutu, jossa näkyvät Asiakkaat, tiimit, käyttäjät, yhteys henkilöt ja faksit](media/working-with-references/faxes-datasources.png)
 
-Tärkeä ero **liittyy** on, että se ei ole rajoitettu **tilit** ja **yhteystiedot**. Itse asiassa luettelossa on laajennettava mukautettuihin entiteetteihin. Useimmat sovelluksen mahtuu tässä vaiheessa ilman muutoksia, mutta sinun on päivitettävä kaava valikoiman ja lomakkeen nimi:
+Tärkeä **ero liittyy siihen** , että se ei rajoitu vain **asiakkuudet** ja **yhteys henkilöt**. Entiteettien luettelo on itse asiassa laajennettavissa mukautetuilla entiteeteillä. Suurin osa sovelluksesta mahtuu tähän pisteeseen ilman muokkausta, mutta sinun täytyy päivittää kaavan nimi valikoimassa ja lomakkeessa:
 
-```powerapps-comma
-If( IsBlank( ThisItem.Regarding ); "";
-    IsType( ThisItem.Regarding; [@Accounts] );
-        "Account: " & AsType( ThisItem.Regarding; [@Accounts] ).'Account Name';
-    IsType( ThisItem.Regarding; [@Contacts] );
-        "Contacts: " & AsType( ThisItem.Regarding; [@Contacts] ).'Full Name';
+```powerapps-dot
+If( IsBlank( ThisItem.Regarding ), "",
+    IsType( ThisItem.Regarding, [@Accounts] ),
+        "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
+    IsType( ThisItem.Regarding, [@Contacts] ),
+        "Contacts: " & AsType( ThisItem.Regarding, [@Contacts] ).'Full Name',
     ""
 )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Päivitetty Text-ominaisuus alaotsikko ohjausobjekti koskevat haut](media/working-with-references/regarding-label.png)
+> ![Otsikko-ohjaus objektin päivitetty teksti-ominaisuus koskien hakuja](media/working-with-references/regarding-label.png)
 
-Kun teet nämä muutokset, voit käsitellä **liittyy** samalla tavalla kuin teit lookup **omistaja** ja **asiakkaan** hakuja.
-
-> [!div class="mx-imgBorder"]
-> ![Esitettävä animaatio näyttää, miten valitsemalla valikoiman kohde muuttuu muita ohjausobjekteja ja lomake](media/working-with-references/regarding-allthree.gif)
-
-> [!NOTE]
-> Tätä kirjoitettaessa **liittyy** hakuja on seuraavat rajoitukset:
->
-> - Et voi suodattaa luettelon tietyn tietueen perusteella. Suodattimen valintanapin ympyröiden edellisessä esimerkissä ei toimi.
-> - Liittyen-kenttä ei voi poistaa käyttämällä **Patch** voit määrittää sen *tyhjä*.
-
-## <a name="understand-regarding-relationships"></a>Tutustu liittyy suhteet
-
-**Liittyy** eroaa **omistaja** ja **asiakkaan** koska ensiksi liittyy monta yhteen-suhde. Näytteitä, käänteiseen, yksi-moneen-suhde avulla voit kirjoittaa **ensimmäisen (tiliä). Faksit**.
-
-Aloitetaan Varmuuskopioi ja kohteiden määritelmiä. Common Data Service-entiteettejä, kuten- **faksit**, **tehtäviä**, **sähköpostiviestejä**, **huomautuksia**, **puheluita**, **Kirjaimia**, ja **keskustelut** määritetään [ *toiminnot*](../../developer/common-data-service/activity-entities.md). Voit myös luoda omia [mukautettuun toimintoon entiteetit](../../developer/common-data-service/custom-activities.md). Kun tarkastelet tai toiminnon entiteetin, sen asetukset näkyvät kohdassa **Lisää asetuksia**.
-
-![Toiminnon entiteetin asetusta, kun entiteetin luominen](media/working-with-references/activity-entitytype.png)
-
-Muut entiteetit voivat liittyä toisiinsa toiminta-entiteettiin, jos ne on otettu käyttöön *tehtävän* entiteetin asetuksissa. **Tilien**, **yhteystiedot**, ja monet muut vakioentiteetit ovat siis (uudelleen, valitse **Lisää asetuksia**).
-
-![Toiminnon tehtävä asetusta, kun entiteetin luominen](media/working-with-references/activity-entityuse.png)
-
-Kaikki toiminta entiteettejä ja entiteettejä, toiminta-tehtävä on epäsuora suhde. Jos muutat suodattimen **kaikki** näytön yläreunassa, valitse **faksit** entiteetin ja valitse sitten **suhteita** välilehteä kaikki entiteetit, jotka voivat olla  **Liittyy** lookup näkyvät.
+Kun olet tehnyt nämä muutokset, voit **käyttää liittyy-hakua samalla** tavalla kuin teit **omistajan** ja **asiakkaan** haut.
 
 > [!div class="mx-imgBorder"]
-> ![Näytetään koskien monta yhteen-suhteiden faksit entiteetin suhteet](media/working-with-references/activity-manytoone.png)
+> ![Animaatio, joka osoittaa, miten kohteen valitseminen valikoimassa muuttaa muita ohjaus objektien ja lomakkeen](media/working-with-references/regarding-allthree.gif)
 
-Jos näytät suhteet **tilit** entiteetti, kaikki entiteetit, jotka voidaan lähde **liittyy** hakukentän näkyvät.
+## <a name="understand-regarding-relationships"></a>Tietoja suhteista
+
+**Liittyen** eroaa **omistajasta** ja **asiakkaasta** , koska edellinen koskee monta yhteen-suhdetta. Käänteisen, yksi moneen-suhteen avulla voit kirjoittaa **ensin (accounts). Faksit**.
+
+Varmuuskopioidaan ja tarkastellaan entiteettimäärityksiä. Common Data Service-entiteettejä, **kuten fakseja**, **tehtäviä**, **Sähkö posti viestejä**, **muistiinpanoja**, **puhe luita**, **kirjeitä**ja **keskusteluja** , on määritetty [*aktiviteeteiksi*](../../developer/common-data-service/activity-entities.md). Voit myös luoda omia [mukautettuja toimintoentiteettejä](../../developer/common-data-service/custom-activities.md). Kun tarkastelet tai luot Activity-entiteettiä, sen asetukset näkyvät **Lisää asetuksia**-kohdassa.
+
+![Entiteetin luonnin yhteydessä tehtävän entiteetin asetus](media/working-with-references/activity-entitytype.png)
+
+Muut entiteetit voivat liittyä Activity-entiteettiin, jos ne on otettu käyttöön tehtävä *tehtävinä* entiteetin asetuksissa. **Asiakkaat**, **yhteys henkilöt**ja monet muut vakioentiteetit on määritetty (jälleen **Lisää asetuksia**-kohdassa).
+
+![Tehtävä tehtävän asetus entiteetin luonnin yhteydessä](media/working-with-references/activity-entityuse.png)
+
+Kaikilla toimintoentiteeteillä ja toimintotehtäväentiteeteillä on epäsuora suhde. Jos muutat suodatinta **Kaikki** näytön yläreunassa, valitse **faksit** -entiteetti ja valitse sitten **yhteydet** -väli lehti, Kaikki entiteetit, jotka voivat olla kohteena **olevan haun kohde** , näkyvät.
 
 > [!div class="mx-imgBorder"]
-> ![Tili-entiteetistä, jossa näkyy koskien yksi-moneen-suhteita suhteiden](media/working-with-references/activity-onetomany.png)
+> ![Monta yhteen-suhteita koskevien faksien entiteetin yhteydet](media/working-with-references/activity-manytoone.png)
 
-Mitä se kaikki tarkoittaa?
+Jos näytät **accounts** -entiteetin yhteydet, näkyviin tulee kaikki entiteetit, jotka voivat olla **liittyy** -haku kentän lähde.
 
-- Kun kirjoitat kaavoja, harkitse toiminta luettelossa ei ole kiinteä, että voit luoda omia. Kaava on käsiteltävä toiminta-entiteetti, jonka ei pitäisi asianmukaisesti.
-- Toiminnon tehtäviä ja toiminnot on yksi-moneen-suhde. Voit helposti pyytää kaikki faksit, jotka liittyvät tiliin.
+> [!div class="mx-imgBorder"]
+> ![Asiakkuus-entiteetin yhteydet, jotka koskevat yksi-moneen-suhteita](media/working-with-references/activity-onetomany.png)
 
-Tutki tämä konsepti sovelluksessa:
+Mitä se tarkoittaa?
+
+- Kun kirjoitat kaavoja, sinun on otettava huomioon, että toimintoentiteettien luettelo ei ole kiinteä, ja voit luoda oman. Kaavan on hoidettava asianmukaisesti toiminta-entiteetti, jota ei odotettu.
+- Tehtävä tehtävillä ja aktiviteeteillä on yksi-moneen-suhde. Voit helposti pyytää kaikkia tiliin liittyviä fakseja.
+
+Tutustu tähän käsitteeseen sovelluksessa:
 
 1. Lisää toinen näyttö.
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää tyhjä näyttö](media/working-with-references/activitypointer-newscreen.png)
+    > ![Tyhjän näytön lisääminen](media/working-with-references/activitypointer-newscreen.png)
 
-1. Valikoima-ohjausobjektin lisääminen, muuta sen kokoa ja siirrä se näytön vasemmassa reunassa.
+1. Lisää valikoima-ohjaus objekti, muuta sen kokoa ja siirrä se sitten näytön vasempaan reunaan.
 
-1. Käyttöön **ominaisuudet** välilehti lähellä näytön oikealla puolella, Määritä valikoiman **kohteet** - **tilit**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Määrität kohteet tilien ominaisuus-ruudussa](media/working-with-references/activitypointer-accounts.png)
-
-1. Aseta valikoiman asettelu **otsikko**, ja määritä sitten otsikko-kenttään **tilin nimi**.
+1. Valitse **Ominaisuudet** -väli lehdestä näytön oikean puolen vieressä valikoiman **kohteet** **tiliksi**.
 
     > [!div class="mx-imgBorder"]
-    > ![Otsikon asettelun määrittäminen valikoima-ohjausobjektin ominaisuudet-ruutu](media/working-with-references/activitypointer-account-name.png)
+    > ![Kohteiden lisääminen accounts-ominaisuus ruutuun](media/working-with-references/activitypointer-accounts.png)
 
-1. Lisää toinen valikoima, muuta sen kokoa ja siirrä se näytön oikeassa reunassa.
-
-1. Määritä uusi valikoiman **kohteet** ominaisuudeksi `Gallery2.Selected.Faxes`.
-
-    Tässä vaiheessa palauttaa suodatetun faksiluettelon annettu tili.
+1. Määritä valikoiman asetteluksi **otsikko**ja määritä sitten title-kentän arvoksi **tilin nimi**.
 
     > [!div class="mx-imgBorder"]
-    > ![Valikoiman, joka sisältää faksit Items-ominaisuuden asettaminen](media/working-with-references/activitypointer-faxes.png)
+    > ![Valitse ominaisuudet-ruudun valikoima-ohjaus objektin asetteluksi](media/working-with-references/activitypointer-account-name.png)
 
-1. Aseta valikoiman asettelu **otsikko ja alaotsikko**, ja Aseta otsikkokenttä näyttämään **aihe** kenttä (joka voi olla kirjaimiksi **aihe**).
+1. Lisää toinen valikoima, muuta sen kokoa ja siirrä se sitten näytön oikealle puolelle.
+
+1. Valitse uuden valikoiman **Items** - `Gallery2.Selected.Faxes`ominaisuudeksi.
+
+    Tämä vaihe palauttaa määritetyn tilin suodatetun faksien luettelon.
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä aihe-kentän nimi](media/working-with-references/activitypointer-subject.png)
+    > ![Valitse sen valikoiman Items-ominaisuus, joka sisältää fakseja](media/working-with-references/activitypointer-faxes.png)
 
-Kun valitset kohteen luettelo tileistä, faksien luettelossa faksit vain tilin.
+1. Aseta valikoiman asetteluksi **otsikko ja alaotsikko**ja aseta sitten otsikko-kenttä näyttämään **Aihe** -kenttä (joka voi olla pieni **Aihe**).
 
-> [!div class="mx-imgBorder"]
-> ![Animaatio määrittämiseksi faksiluettelon tilit valikoimassa näytetään valinta](media/working-with-references/activitypointer-allthree.gif)
+    > [!div class="mx-imgBorder"]
+    > ![Valitse otsikko aihe-kenttään](media/working-with-references/activitypointer-subject.png)
 
-## <a name="activity-entity"></a>Toiminta-entiteetti
-
-Edellisen osan ohjeiden mukaan, voit näyttää kaikki faksit tili. Voit kuitenkin myös näyttää kaikki toiminnot on tilille, mukaan lukien faksit, sähköpostiviestit, puhelut ja muu vuorovaikutus.
-
-Jälkimmäisessä skenaariossa käytät **toiminta** entiteetin. Voit näyttää tämän entiteetin ottamalla käyttöön **kaikki** oikeassa yläkulmassa voit poistaa suodattimen entiteettien luettelon.
+Kun valitset kohteen tili luettelosta, faksien luettelossa näkyvät vain kyseisen tilin faksit.
 
 > [!div class="mx-imgBorder"]
-> ![Luettelossa näytetään toiminta-entiteetti](media/working-with-references/activitypointer-entity.png)
+> ![Animaatio, joka näyttää valikoiman Faksi luettelon ajavassa tilit-valikoimassa](media/working-with-references/activitypointer-allthree.gif)
 
-**Toiminta** entiteetti on erityinen. Aina, kun lisäät tietueen **faksit** entiteetin, järjestelmä luo myös tietueen **toiminta** entiteetin kentillä, jotka ovat yhteisiä kaikki toiminta-entiteetit. Näiden kenttien **aihe** on yksi eniten kiinnostavia.
+## <a name="activity-entity"></a>Aktiviteetin entiteetti
 
-Voit näyttää kaikki toiminnot muuttamalla vain yhden rivin edellisessä esimerkissä. Korvaa `Gallery2.Selected.Faxes` kanssa `Gallery2.Selected.Activities`.
+Kuten edellisessä osiossa kuvataan, voit näyttää kaikki tilin faksit. Voit kuitenkin myös näyttää kaikki tilin toiminnot, kuten faksit, sähkö posti viestit, puhelut ja muut toimet.
 
-> [!div class="mx-imgBorder"]
-> ![Toinen valikoima, vaihdetaan faksit toimiin Items-ominaisuuden muutos](media/working-with-references/activitypointer-gallery.png)
-
-Tietueet ovat peräisin **toiminta** entiteetin, mutta voit kuitenkin käyttää **IsType** funktio tunnistaa, millaisen toiminta ne ovat. Uudelleen, ennen kuin voit käyttää **IsType** entiteettityyppi, sinun on lisättävä tietolähteeseen.
+Jälkimmäisessä skenaariossa käytät **Activity** -entiteettiä. Voit näyttää tämän entiteetin kääntämällä **Kaikki** -kohdan oikeassa yläkulmassa, jolloin voit poistaa suodattimen entiteettiluettelosta.
 
 > [!div class="mx-imgBorder"]
-> ![Tietoruutu näytetään kaikki entiteetit, joita tarvitaan IsType-funktio](media/working-with-references/activity-datasources.png)
+> ![Tehtävä-entiteetin näyttämisessä käytettävien entiteettien luettelo](media/working-with-references/activitypointer-entity.png)
 
-Voit näyttää selitteen ohjausobjektin valikoiman sisällä tietuetyyppi käyttämällä tätä kaavaa:
+**Aktiviteetti** -entiteetti on erityinen. Aina, kun lisäät tietueen Faxes-entiteettiin, järjestelmä myös luo **aktiviteetti** - **entiteetissä** tietueen, joka sisältää kaikkien Aktiviteetti entiteettien yleiset kentät. Näistä kentistä **Aihe** on yksi mielenkiintoisimmista.
 
-```powerapps-comma
-If( IsType( ThisItem; [@Faxes] ); "Fax";
-    IsType( ThisItem; [@'Phone Calls'] ); "Phone Call";
-    IsType( ThisItem; [@'Email Messages'] ); "Email Message";
-    IsType( ThisItem; [@Chats] ); "Chat";
+Voit näyttää kaikki aktiviteetit muuttamalla vain yhtä riviä edellisessä esimerkissä. Korvaa `Gallery2.Selected.Faxes` käyttäen `Gallery2.Selected.Activities`.
+
+> [!div class="mx-imgBorder"]
+> ![Toisen valikoiman Items-ominaisuuden muutos, faksauksen muuttaminen toimintoihin](media/working-with-references/activitypointer-gallery.png)
+
+Tietueet tulevat **Activity** -entiteetistä, mutta voit kuitenkin käyttää **istype** -toimintoa tunnistamaan, millaista toimintaa ne ovat. Sinun on lisättävä tieto lähde, ennen kuin käytät **Istype** -kohdetta entiteettityyppiä.
+
+> [!div class="mx-imgBorder"]
+> ![Tieto ruutu, jossa näkyvät kaikki IsType-funktion edellyttämät entiteetit](media/working-with-references/activity-datasources.png)
+
+Käyttämällä tätä kaavaa voit näyttää tietue tyypin valikoiman otsikko-ohjaus objektissa:
+
+```powerapps-dot
+If( IsType( ThisItem, [@Faxes] ), "Fax",
+    IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
+    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
+    IsType( ThisItem, [@Chats] ), "Chat",
     "Unknown"
 )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Aseta text-ominaisuudeksi kaava, joka näyttää tiedot faksit, puhelut ja muita toimintoja](media/working-with-references/activitypointer-type.png)
+> ![Valitse teksti-ominaisuudeksi kaava, joka näyttää faksien, puhe luiden ja muiden toimintojen tiedot](media/working-with-references/activitypointer-type.png)
 
-Voit myös käyttää **AsType** käyttämään tietyn tyypin kentät. Esimerkiksi Tämä kaava määrittää kunkin toiminnon tyyppi, ja näyttää puheluita, phone numero ja kutsu suunta- **puhelinnumerot** entiteetin:
+Voit käyttää myös **asttype** -menetelmää tietyn tyypin kenttien käyttämiseen. Tämä kaava määrittää esimerkiksi kunkin tehtävän tyypin ja puhelin puheluiden puhelin numeron ja puhelu suunnan **Puhelin numerot** -entiteetistä:
 
-```powerapps-comma
-If( IsType( ThisItem; [@Faxes] ); "Fax";
-    IsType( ThisItem; [@'Phone Calls'] );
+```powerapps-dot
+If( IsType( ThisItem, [@Faxes] ), "Fax",
+    IsType( ThisItem, [@'Phone Calls'] ),
        "Phone Call: " &
-       AsType( ThisItem; [@'Phone Calls'] ).'Phone Number' &
-       " (" & AsType( ThisItem; [@'Phone Calls'] ).Direction & ")";
-    IsType( ThisItem; [@'Email Messages'] ); "Email Message";
-    IsType( ThisItem; [@Chats] ); "Chat";
+       AsType( ThisItem, [@'Phone Calls'] ).'Phone Number' &
+       " (" & AsType( ThisItem, [@'Phone Calls'] ).Direction & ")",
+    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
+    IsType( ThisItem, [@Chats] ), "Chat",
     "Unknown"
 )
 ```
 
 > [!div class="mx-imgBorder"]
-> ![Laajennettu tekstiominaisuus, jonka puhelun lisätietoja](media/working-with-references/activitypointer-phonecall.png)
+> ![Laajennetun tekstin ominaisuus, jossa on lisä tietoja puhe luun](media/working-with-references/activitypointer-phonecall.png)
 
-Tällöin sovellus näyttää luettelon kaikista toimintoja. **Aihe** kenttä tulee kaikenlaisia toiminnoista, kaava ottaa niitä huomioon vai ei. Erilaisia toimintoja, jotka tunnet voit näyttää niiden Kirjoita nimet ja kunkin toiminnon tyyppi liittyviä tietoja.
-
-> [!div class="mx-imgBorder"]
-> ![Suorittaa erilaisia toimintoja tiedot näytetään](media/working-with-references/activitypointer-complete.png)
-
-## <a name="notes-entity"></a>Huomautuksia entiteetti
-
-Tähän mennessä kaikista **liittyy** esimerkkejä pitänyt perustua toiminnoista, mutta **huomautuksia** entiteetin edustaa toisesta tapauksesta.
-
-Kun luot entiteetin, voit ottaa liitteet.
+Tämän seura uksena sovellus esittää täydellisen luettelon toiminnoista. **Aihe** -kenttä näkyy kaikentyyppisissä tehtävissä, olipa kaava otettu huomioon tai ei. Jos sinulla on sellaisia toiminta tyyppejä, joista tiedät, voit näyttää niiden tyyppi nimet ja tyyppi tiedot kustakin tehtävästä.
 
 > [!div class="mx-imgBorder"]
-> ![Liitteet ja muistiinpanot käyttöön, kun luot entiteetin](media/working-with-references/notes-entity.png)
+> ![Valmis näyttö, joka näyttää eri toimintojen tiedot](media/working-with-references/activitypointer-complete.png)
 
-Jos valitset valintaruutu käyttöön liitteet, luot **liittyy** suhde **huomautuksia** entiteetin kuin tässä kuvassa näkyvät **tilit** entiteetin:
+## <a name="notes-entity"></a>Notes-entiteetti
+
+Tähän mennessä kaikki **liittyvät** esimerkit perustuvat toimintoihin, mutta **Notes** -entiteetti edustaa toista tapausta.
+
+Kun luot entiteetin, voit ottaa liitteet käyttöön.
 
 > [!div class="mx-imgBorder"]
-> ![Tili-entiteetistä, näytetään suhteen huomautuksia yksi-moneen-suhteen kautta](media/working-with-references/notes-relationships.png)
+> ![Liitteiden ja muistiinpanojen käyttöönottoa entiteetin luonnin yhteydessä](media/working-with-references/notes-entity.png)
 
-Tämä ero kuin voit käyttää **liittyy** haku, jossa toiminnot käyttää samalla tavalla. Entiteettejä, jotka ovat käytössä liitteet olla yksi moneen suhde **huomautuksia**, kuten tässä esimerkissä:
+Jos valitset valinta ruudun liitteiden ottamista käyttöön, luot **liittyvän** suhteen **Notes** -entiteettiin, koska tämä graafinen näytetään **accounts** -entiteetissä:
+
+> [!div class="mx-imgBorder"]
+> ![Tili-entiteetti, joka näyttää suhteen muistiinpanoihin yksi-moneen-suhteen kautta](media/working-with-references/notes-relationships.png)
+
+Tätä eroa lukuun ottamatta käytät **liittyy** -hakua samalla tavalla kuin käytät toimintoja. Entiteeteille, jotka on otettu käyttöön liitteille, on yksi moneen-suhde **muistiinpanoihin**, kuten tässä esimerkissä:
 
 `First( Accounts ).Notes`
 
 > [!NOTE]
-> Tätä kirjoitettaessa **liittyy** haku ei ole käytettävissä **huomautuksia** entiteetin. Ei voi lukea tai suodattimen perusteella **liittyy** kenttää ja ei voi määrittää kentän **Patch**.
+> Tätä kirjoitettaessa **liittyy** -haku ei ole käytettävissä **Notes** -entiteetille. Et voi lukea tai suodattaa **liittyy** -kentän perusteella, etkä voi valita kenttää käyttämällä **patch**-menetelmää.
 >
-> Kuitenkin päinvastoin **huomautuksia** yksi-moneen-suhde on saatavilla, joten voit suodattaa luettelon tietueen, joka on otettu käyttöön liitteet huomautukset. Voit myös käyttää [ **Relate** ](functions/function-relate-unrelate.md) funktio Lisää huomautus tietueen **huomautuksia** taulukkoa, mutta huomautuksen on luotava ensin, tämän esimerkin mukaisesti:
+> Käänteisen **huomautuksen** yksi-moneen-suhde on kuitenkin käytettävissä, joten voit suodattaa liite tietojen luettelon tietueelle, joka on otettu käyttöön liitteille. [**Relate**](functions/function-relate-unrelate.md) -funktiolla voit myös lisätä huomautuksen tietueen **Notes** -taulukkoon, mutta Huomautus täytyy luoda ensin, kuten tässä esimerkissä:
 >
->`Relate( ThisItem.Notes; Patch( Notes; Defaults( Notes ); { Title: "A new note" } ) )`
+>`Relate( ThisItem.Notes, Patch( Notes, Defaults( Notes ), { Title: "A new note" } ) )`
 
-## <a name="activity-parties"></a>Aktiviteetin osapuolet
+## <a name="activity-parties"></a>Aktiviteetti juhlat
 
-Tätä kirjoitettaessa pohjaan perustuvat sovellukset eivät tue aktiviteetin osapuolet.
+Tämän kirjoituksen alusta sovellukset eivät tue toiminta osapuolia.
