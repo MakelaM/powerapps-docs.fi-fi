@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bfe5b35ebfddfe17cbf3898cc6f68f1a91d0b5e0
-ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
+ms.openlocfilehash: 4a86f508950ad890ecaa4d3d5678e3e6f6e415dc
+ms.sourcegitcommit: 544af91dd596f2f6b6c4b9e1d08c16f43e2a7711
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530249"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119035"
 ---
 # <a name="share-a-canvas-app-in-powerapps"></a>Pohjaan perustuvan sovelluksen jakaminen PowerAppsissa
 
@@ -52,7 +52,7 @@ Ennen kuin jaat sovelluksen, tallenna sen pilvipalveluun (ei paikallisesti) ja j
 1. Määritä nimen tai aliaksen mukaan Azure Active Directory käyttäjät tai käyttö oikeus ryhmät, joiden kanssa haluat vaihtaa sovelluksen.
 
     - Jos haluat sallia koko organisaation suorittaa sovelluksen (mutta ei muokata tai jakaa sitä), kirjoita **Kaikki** jako-paneeliin.
-    - Voit jakaa sovelluksen, jossa on luettelo aliaksista, kutsumanimistä tai niiden yhdistelmästä (esimerkiksi  **&lt;Jane Doe jane.doe@contoso.com>** ), jos Kohteet erotetaan puoli pisteillä. Jos useammalla kuin yhdellä henkilöllä on sama nimi mutta eri aliakset, ensimmäinen löydetty henkilö lisätään listaan. Työkalu Vihje tulee näkyviin, jos nimellä tai aliaksella on jo käyttö oikeus tai sitä ei voi selvittää. 
+    - Voit jakaa sovelluksen, jossa on luettelo aliaksista, kutsumanimistä tai niiden yhdistelmästä (esimerkiksi **Jane Doe &lt; jane.doe@contoso.com>** ), jos Kohteet erotetaan puoli pisteillä. Jos useammalla kuin yhdellä henkilöllä on sama nimi mutta eri aliakset, ensimmäinen löydetty henkilö lisätään listaan. Työkalu Vihje tulee näkyviin, jos nimellä tai aliaksella on jo käyttö oikeus tai sitä ei voi selvittää. 
 
     ![Määritä käyttäjät ja osaomistajat](./media/share-app/share-everyone.png)
 
@@ -110,7 +110,7 @@ Jos luot Common Data Service perustuvan sovelluksen, sinun on myös varmistettav
 
 #### <a name="prerequisite"></a>Edellytys
 
-Jotta voit määrittää roolin, sinulla on oltava järjestelmänvalvojan oikeudet Common Data Service-tieto kantaan.
+Jotta voit määrittää roolin, sinulla on **oltava järjestelmänvalvojan oikeudet Common Data Service** -tieto kantaan.
 
 #### <a name="assign-a-security-group-in-azure-ad-to-a-role"></a>Määritä käyttö oikeus ryhmä Azure AD:ssä rooliin
 
@@ -136,16 +136,18 @@ Powerappsin pohjaan liittyvät sovellukset voidaan jakaa Azure Active Directory 
 > Vieraille voidaan määrittää vain **käyttäjä** rooli, ei **osaomistaja-** roolia, heidän kanssaan jaetuille sovelluksille.
 
 ### <a name="prerequisites"></a>Edellytykset
-1. Ota käyttöön Azure Active Directory (Azure AD) vuokraajaan B2B-ulkoinen yhteistyö. Lisätietoja: [Ota käyttöön B2B-ulkoinen yhteistyö ja hallitse, ketkä voivat kutsua vieraita](/azure/active-directory/b2b/delegate-invitations)
+- Ota käyttöön Azure Active Directory (Azure AD) vuokraajaan B2B-ulkoinen yhteistyö. Lisätietoja: [Ota käyttöön B2B-ulkoinen yhteistyö ja hallitse, ketkä voivat kutsua vieraita](/azure/active-directory/b2b/delegate-invitations)
     - Ota käyttöön B2B-ulkoinen yhteistyö on oletus arvon mukaan käytössä. Vuokra ajan järjestelmänvalvoja voi kuitenkin muuttaa asetuksia.  Lisä tietoja Azure AD B2B-artikkelista on Ohje aiheessa [mikä on vieras käyttö oikeus Azure AD B2B](/azure/active-directory/b2b/what-is-b2b) -sovelluksessa?  
-2. Käyttö oikeus tiliin, joka voi lisätä vieras käyttäjiä Azure AD-vuokraajaan. Järjestelmänvalvojat ja käyttäjät, joilla on vieras-Invaiter-rooli, voivat lisätä vieraita vuokraajaan.   
-3. PowerApps-käyttö oikeus on määritettävä vieras käyttäjälle jaettavan sovelluksen yhteydessä. Vaikka ei olekaan vielä mahdollista, ennen kuin kangas sovelluksen vieras käyttö on yleisesti saatavilla, Asiakkaat, joilla on PowerApps-käyttö oikeus koti vuokraajaan, eivät saa määrittää käyttö oikeutta vuokraajaan, jonka he ovat vieras.
+- Käyttö oikeus tiliin, joka voi lisätä vieras käyttäjiä Azure AD-vuokraajaan. Järjestelmänvalvojat ja käyttäjät, joilla on vieras-Invaiter-rooli, voivat lisätä vieraita vuokraajaan.   
+- Vieras käyttäjällä on oltava PowerApps-käyttö oikeus, joka on määritetty jollakin seuraavista vuokralaisista:
+    - Jaettavan sovelluksen isännöivä vuokraaja.
+    - Vieras käyttäjän koti vuokra ajan.
 
 ### <a name="steps-to-grant-guest-access"></a>Vieras käyttö oikeuksien myöntämisen vaiheet
 1. Valitse **Uusi vieras käyttäjä** , jos haluat lisätä vieras käyttäjiä Azure AD:ssä. Lisätietoja: [Pikaopas: Lisää uusi vieras käyttäjä Azure](/azure/active-directory/b2b/b2b-quickstart-add-guest-users-portal)AD:ssä.
     > [!div class="mx-imgBorder"] 
     > ![Lisää vieras Azure AD:ssä](media/share-app/guest_access_doc_1.png "Lisää vieras Azure AD:ssä")
-2. Määritä käyttö oikeus vieras käyttäjälle. 
+2. Jos vierailevassa käyttäjällä ei vielä ole käyttö oikeutta koti vuokraajaan, Anna vieras käyttäjälle käyttö oikeus.
    - Lisä tietoja vieras käyttäjien määrittämisestä osoitteesta admin.microsoft.com on kohdassa [käyttö oikeuksien määritteleminen yhdelle käyttäjälle](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
    - Lisä tietoja vieras käyttäjien määrittämisestä osoitteesta portal.azure.com on kohdassa [käyttö oikeuksien määritteleminen tai poistaminen](/azure/active-directory/fundamentals/license-users-groups).
  
@@ -199,7 +201,6 @@ Kuten muidenkin kuin asiakkaiden, myös sovelluksen käyttämät pohjana olevat 
 #### <a name="what-license-must-be-assigned-to-my-guest-so-they-can-run-an-app-shared-with-them"></a>Mikä käyttö oikeus on määritettävä vierailijalleni, jotta hän voi suorittaa sovelluksen, joka on jaettu heidän kanssaan?
 Sama käyttö oikeus, joka vaaditaan sovelluksen suorittamiseen muille kuin vieraille. Jos sovellus ei käytä esimerkiksi Premium connecters-sovellusta, PowerApps P1-käyttö oikeus on riittävä, jotta se voidaan määrittää vierailijoille.  
 
-Ennen pohjaan liittyvän sovelluksen vieras käyttö oikeutta yleisesti saatavilla olevia asiakkaita, joilla on PowerApps-käyttö oikeus koti vuokraajaan, ei tarvitse määrittää käyttö oikeutta vuokraajaan, jonka he ovat vieras.
 
 |                                 | Mukautettu SharePoint-lomake | Itsenäinen kangas sovellus, joka käyttää muita kuin Premium-liittimiä | Itsenäinen kangas sovellus Premium-liittimillä | Mallipohjainen sovellus |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
@@ -210,8 +211,6 @@ Ennen pohjaan liittyvän sovelluksen vieras käyttö oikeutta yleisesti saatavil
 
 #### <a name="in-powerapps-mobile-how-does-a-guest-see-apps-for-their-home-tenant"></a>Miten asiakas näkee sovelluksia koti vuokraajansa PowerApps Mobilessa?
 Jokainen käyttäjä, joka on käyttänyt pohjaan perustuvia sovelluksia mobiililaitteessaan, joka on julkaistu Azure AD-vuokraajassa, joka ei ole heidän kotivuokraajansa, on kirjauduttava Powerappsiin ja kirjauduttava takaisin sisään PowerApps Mobileen.  
-
-Ennen kangas sovelluksen vieras käyttö oikeutta yleisesti saatavilla olevan organisaation valitsimen avulla käyttäjä voi vaihtaa Azure AD-vuokraajaan, johon hän on kirjautunut, ilman, että sinun tarvitsee erikseen kirja utua ulos sovelluksesta.  
 
 #### <a name="must-a-guest-accept-the-azure-ad-guest-invitation-prior-to-sharing-an-app-with-the-guest"></a>Onko vieras hyväksyttävä Azure AD-vieras kutsu ennen sovelluksen jakamista vieraan kanssa?
 Ei. Jos vieras käynnistää heidän kanssaan jaetun sovelluksen ennen vieras kutsun hyväksymistä, sinua pyydetään hyväksymään kutsu osana sisäänkirjautumiskokemusta, kun sovellus käynnistetään.  
