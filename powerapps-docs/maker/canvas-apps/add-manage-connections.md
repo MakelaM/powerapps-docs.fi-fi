@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d2a7da93835e5fbe588a8683bbdb0393d5b76ee5
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d230d38c8393540bc78fd003ecb167f1f3978b97
+ms.sourcegitcommit: fe18d82dbbd3972c472fd69f7feb3a35c3a31153
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61564261"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150275"
 ---
 # <a name="manage-canvas-app-connections-in-powerapps"></a>Pohjaan perustuvien sovellusten yhteyksien hallinta PowerAppsissa
 [Powerapps.comissa](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) voit luoda yhteyden yhteen tai useampaan tietolähteeseen, poistaa yhteyden tai päivittää sen tunnistetietoja.
@@ -43,9 +43,9 @@ Useimmat PowerApps-sovellukset käyttävät ulkoisia tietoja eli **tietolähteit
 
 Yleisin tietolähde on taulukko, jota voit käyttää tiedon hakemiseen ja tallentamiseen. Voit käyttää yhteyksiä tietolähteisiin tietojen lukemiseksi ja kirjoittamiseksi Microsoft Excel -työkirjoihin, SharePoint-luetteloihin, SQL-taulukoihin ja moniin muihin muotoihin, jotka voidaan tallentaa pilvipalveluihin, kuten OneDrive for Business, DropBox ja SQL Server.
 
-On myös muita tietolähteitä, jotka eivät ole taulukoita, kuten sähköposti, kalenterit, Twitter ja ilmoitukset (tulossa pian).
+On muitakin tieto lähteitä, jotka eivät ole taulu koita, kuten sähkö posti, kalenterit, Twitter ja ilmoitukset.
 
-Käyttämällä **[Valikoima](controls/control-gallery.md)**-, **[Näytä lomake](controls/control-form-detail.md)**- ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekteja on helppoa luoda sovellus, joka lukee ja kirjoittaa tietoa tietolähteestä. Pääset alkuun lukemalla artikkelin [Tutustu tietolomakkeisiin](working-with-forms.md).
+Käyttämällä **[Valikoima](controls/control-gallery.md)** -, **[Näytä lomake](controls/control-form-detail.md)** - ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjekteja on helppoa luoda sovellus, joka lukee ja kirjoittaa tietoa tietolähteestä. Pääset alkuun lukemalla artikkelin [Tutustu tietolomakkeisiin](working-with-forms.md).
 
 Voit luoda ja hallita yhteyksiä osoitteessa [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). Tämän lisäksi luot yhteyksiä, kun suoritat näitä tehtäviä:
 
@@ -86,4 +86,5 @@ Etsi yhteysluettelosta yhteys, jonka haluat päivittää tai poistaa, ja napsaut
 
 * Päivitä yhteyden tunnistetiedot napsauttamalla tai napauttamalla avainkuvaketta ja syötä tunnistetiedot yhteyttä varten.
 * Poista yhteys napsauttamalla tai napauttamalla roskakorikuvaketta.
+* Tarkastele yhteys tietoja napsauttamalla tai napauttamalla tiedot-kuvaketta.
 
