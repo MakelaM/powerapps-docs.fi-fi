@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 03/17/2016
+ms.reviewer: tapanm-msft
+ms.date: 9/20/2019
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 97f9324230e1d935cb056eada294e11d8bfb4d73
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: dfed631c695cd764396a24311826bedc63eacffb
+ms.sourcegitcommit: 7016ff837eff2cb0985fc71edab95cbf99335677
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61535824"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71159846"
 ---
 # <a name="controls-and-properties-in-powerapps"></a>Ohjausobjektit ja ominaisuudet PowerAppsissa
 
@@ -32,7 +32,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Ääni](controls/control-audio-video.md)** – Toista äänileike tai videoleikkeen ääniosa.
 
-**[Viivakoodiskanneri](controls/control-new-barcode-scanner.md)**  – Skannaa viivakoodeja, QR-koodeja ja tietojen matriisi-koodit Android tai iOS-laitteessa.
+**[Viivakoodinlukija](controls/control-new-barcode-scanner.md)** – Skannaa viiva KOODEJA, QR-koodeja ja tieto matriisi koodeja Android-tai iOS-laitteessa.
 
 **[Painike](controls/control-button.md)** – Käsittele sovellusta napsauttamalla tai napauttamalla sitä.
 
@@ -48,6 +48,8 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Yhdistelmäruutu](controls/control-combo-box.md)** – Käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista. Tukee hakua ja monivalintaa.
 
+**[Container (experimental)](controls/control-container.md)** – luo sisäkkäinen hierarkia helppokäyttöisyyttä ja vastaamista varten. 
+
 **[Tietotaulukko](controls/control-data-table.md)** – Näytä tiedot taulukkomuodossa.
 
 **[Päivämäärävalitsin](controls/control-date-picker.md)** – Määritä päivämäärä napsauttamalla tai napauttamalla.
@@ -58,7 +60,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Muokattu lomake](controls/control-form-detail.md)** – Muokkaa ja luo tietueita tietolähteessä lomakkeen avulla.
 
-**[Entiteettilomake](entity-form-control.md)**  -kokeellinen ominaisuus: Lisää dynaamisia lomakkeita, jossa käyttäjät voivat tarkastella, siirry ja muokata Common Data Service-relaatiotietoja.
+**[Entiteettimuoto](entity-form-control.md)** – kokeellinen ominaisuus: Lisää dynaamisia lomakkeita, joissa käyttäjät voivat tarkastella, selata ja muokata relaatio tietoja Common Data Service.
 
 **[Vienti](controls/control-export-import.md)** – Vie tiedot käytettäviksi muualla PowerAppsissa.
 
@@ -90,7 +92,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Luokitus](controls/control-rating.md)**  – Ilmaise arvo 1:n ja määritetyn luvun välillä.
 
-**[Tekstimuotoilueditori](controls/control-richtexteditor.md)**  – mahdollistaa RTF-tekstin muotoilun sovelluksen käyttäjille.
+**[Rich Text-editori](controls/control-richtexteditor.md)** – antaa sovelluksen käyttäjille Rich Text-muotoilun.
 
 **[Näyttö](controls/control-screen.md)** – Näytä ja päivitä tietyn tehtävän tietoja.
 
@@ -108,7 +110,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Video](controls/control-audio-video.md)** – Toista videoleike paikallisesta tiedostosta, tietolähteestä tai YouTubesta.
 
-**[WWW-Viivakoodiskanneri (kokeellinen)](controls/control-barcodescanner.md)**  – vanha Viivakoodiskanneri, joka on vanhentunut, mutta voi olla hyötyä tarkistus koodit selaimessa.
+**[Verkko viivakoodinlukija (kokeellinen)](controls/control-barcodescanner.md)** – vanha viivakoodinlukija, joka on vanhentunut, mutta joka voi olla hyödyllinen koodien tarkistuksessa selaimessa.
 
 ## <a name="common-properties-by-category"></a>Yhteiset ominaisuudet luokittain
 
@@ -238,7 +240,7 @@ Määritä ohjausobjektin ulkoasu ja käytös määrittämällä sen ominaisuuks
 
 **[Fontti](controls/properties-text.md)**  – Tekstissä käytetyn fonttiperheen nimi.  Koskee useita ohjausobjekteja.
 
-**[FontWeight](controls/properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.  Koskee useita ohjausobjekteja.
+**[Fontweight](controls/properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.  Koskee useita ohjausobjekteja.
 
 ### <a name="g"></a>G
 
