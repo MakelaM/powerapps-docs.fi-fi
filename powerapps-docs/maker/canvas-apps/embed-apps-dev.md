@@ -13,12 +13,12 @@ search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3ff359b80dd7129ec91f987a367c1635143d8e5e
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: ac4699818c7f5b3a136db122fad9621d865bf5f1
+ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213836"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256100"
 ---
 # <a name="integrate-canvas-apps-into-websites-and-other-services"></a>Pohjaan perustuvien sovellusten integroiminen verkkosivustoihin ja muihin palveluihin
 Rakentamasi sovellukset ovat usein hyödyllisiä, kun ne ovat käytettävissä, kun käyttäjät tekevät työtään. Upottamalla pohjaan sovelluksia iframe-muodossa voit integroida kyseiset sovellukset verkko sivustoihin ja muihin palveluihin, kuten Power BI tai SharePointiin.
@@ -46,7 +46,7 @@ https://apps.powerapps.com/play/[AppID]?source=iframe
 >
 > Edellinen muoto:
 > 
-> https://web.powerapps.com/webplayer/iframeapp?source=iframe&appId=/providers/Microsoft.PowerApps/apps/ AppID
+> https\://Web.powerapps.com/webplayer/iframeapp? Source = iframe & AppID =/Providers/Microsoft.powerapps/apps/[AppID]
 
 Sinun tarvitsee ainoastaan korvata sovelluksesi tunnus URI:ssä syötteellä [sovellustunnus] (mukaan lukien sulkeet ”[” ja ”]”). Näytämme pian, miten saat tämän arvon, mutta tässä on ensin kaikki URI:tä varten tarvittavat parametrit:
 

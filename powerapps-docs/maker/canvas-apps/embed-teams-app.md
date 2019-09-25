@@ -14,10 +14,10 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ba08437dc144fc81aa9748163b1005222735cb69
-ms.sourcegitcommit: 86ed3ad487f31721155758aa9d87134bb10f8437
+ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70842244"
 ---
 # <a name="embed-a-powerapps-app-in-teams"></a>PowerApps-sovelluksen upottaminen tiimeihin 

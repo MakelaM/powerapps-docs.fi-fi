@@ -7,19 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/30/2019
+ms.date: 09/23/2019
 ms.author: chmoncay
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 562811ebce59660d6033585868afd42da46442d5
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: ea94b076126aca3bc3dd687a853393e20901eeb8
+ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213931"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256124"
 ---
 # <a name="powerapps-custom-visual-for-power-bi"></a>PowerAppsin mukautettu visualisointi Power BI:lle
 
@@ -53,7 +52,7 @@ Katsotaan nyt vaadittavia vaiheita PowerAppsin mukautetun visualisoinnin käytt�
 
     ![Mukautettu kaava](./media/powerapps-custom-visual/custom-formula.png)
 
-    Tämä kaava liittää Power BI -tiedon asiakkaan tietolähteeseen: `LookUp(Customer;Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
+    Tämä kaava liittää Power BI -tiedon asiakkaan tietolähteeseen: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
    Power BI -raportti ja käynnistetty PowerApps Studio -esiintymä jakavat reaaliaikaisen tietoyhteyden. Kun molemmat ovat avoinna, voit suodattaa tai muuttaa raportin tietoa ja nähdä, että päivitetty tieto vaikuttavaa välittömästi sovellukseesi PowerApps Studiossa.
 
@@ -79,6 +78,7 @@ Seuraavat rajoitukset koskevat Powerappsin mukautettua visualisointia:
 - Sinun on jaettava PowerApps-sovellus raportistasi erillisenä. Lue lisätietoja [sovellusten jakamisesta PowerAppsissa](share-app.md).
 - Power BI-raporttipalvelin ja mobiilisovellus Power BI eivät tue Powerappsin mukautettua visualisointia.
 - Jos käytät PowerBIIntegration. Refresh ()-funktioita, sinun on käytettävä lähdettä, joka tukee [Directqueryä](https://docs.microsoft.com/en-us/power-bi/desktop-directquery-data-sources) , ja tieto yhteydet on luotava käyttämällä directquery-menetelmää.
+- Power BI Desktop PowerApps tarjoaa tietoja PowerApps Studio luotaessa sovelluksia, mutta ei muokkaamisen aikana. Esikatsele tietoja Power BI-Webin avulla muokattaessa sovelluksia.
 
 > [!NOTE]
 > Suosittelemme, että julkaiset raporttisi ensin Power BI-palvelu ja sitten luot tai muokkaat sovelluksia.
@@ -96,7 +96,19 @@ Seuraavassa taulukossa on luettelo selain Supportability for View-, Create-ja mu
 |Mozilla Firefox
 |Kaikki muut selaimet
 
+## <a name="accessibility-support"></a>Helppokäyttötoimintojen tuki
+
+Jos haluat navigoida PowerApps-visualisoinnissa näppäimistön avulla, toimi seuraavasti:
+
+1. Halutun PowerApps-visualisoinnin Power BI-raportin kohdistus valinta.
+2. Käytä näppäimistön **SARKAIN-** näppäintä, kunnes visualisointi on korostettu.
+3. Anna visualisointi näppäimistön **Ctrl + oikea** -näppäimen avulla.
+3. Käytä näppäimistön **SARKAIN-** näppäintä, kunnes visualisoinnin haluttu osa on valittuna.
+
+Lisä tietoja: [Power BI Helppokäyttöisyysdokumentaatio]( https://docs.microsoft.com/en-us/power-bi/desktop-accessibility)
+
+
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
 * Käy läpi yksinkertainen [vaiheittainen opetusohjelma](embed-powerapps-powerbi.md).
-* Tutustu  [videoomme](https://aka.ms/powerappscustomvisualvideo).
+* Tutustu [videoomme](https://aka.ms/powerappscustomvisualvideo).
