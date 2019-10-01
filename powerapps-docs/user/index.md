@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 79b6088a9b75a7ac4b41263a73d8ead58520f4dd
-ms.sourcegitcommit: d6b7f98b4ae011a753c1e72d7708f0f8dfbfb1fb
+ms.openlocfilehash: ab91653f26bc9ca177cc5841e7dbc158b13d7696
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896170"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705300"
 ---
 # <a name="how-do-i-find-and-run-apps"></a>Miten voin etsiä ja suorittaa sovelluksia?
 
@@ -31,7 +31,7 @@ Enää ei tarvitse tehdä töitä käsin, jotta ne tulisivat tehtyä. PowerAppsi
 
 Koska pohjaan perustuvat sovellukset voivat olla millaisia tahansa, sovelluksien käyttämiseen liittyen ei yleensä ole paljon tukimateriaalia. Jos tarvitset apua pohjaan perustuvan sovelluksen käyttämisessä, ota yhteyttä sovelluksen luojaan tai PowerAppsin järjestelmänvalvojaan.
 
-[Mallipohjaiset sovellukset](/powerapps/maker/model-driven-apps/model-driven-app-overview) käyttävät [Unified Interfacea](unified-interface.md), joka tarjoaa responsiivisen ja käytettävän rakenteen. Voit suorittaa sovelluksen selaimessa tai suosituissa mobiililaitteissa. Sovelluksessa on useita osia, kuten koontinäyttöjä, lomakkeita, näkymiä, kaavioita ja liiketoimintaprosesseja, jotka yhdessä tekevät sovelluksesta helppokäyttöisen. Mallipohjaiset sovellukset rakennetaan ja mallinnetaan Microsoft Dynamics 365 Customer Engagement -kehyksessä, joten käyttäjäkokemus on samankaltainen Dynamics 365 Customer Engagement -[sovellusten](/dynamics365/customer-engagement/basics/business-apps-dynamics-365) kanssa.
+[Mallipohjaiset sovellukset](/powerapps/maker/model-driven-apps/model-driven-app-overview) käyttävät [Unified Interfacea](unified-interface.md), joka tarjoaa responsiivisen ja käytettävän rakenteen. Voit suorittaa sovelluksen selaimessa tai suosituissa mobiililaitteissa. Sovelluksessa on useita osia, kuten koontinäyttöjä, lomakkeita, näkymiä, kaavioita ja liiketoimintaprosesseja, jotka yhdessä tekevät sovelluksesta helppokäyttöisen.
 
 Tässä osassa on tietoja siitä, miten voit etsiä ja suorittaa pohjaan ja malliin perustuvia sovelluksia eri sijainneista. Tässä osassa kerrotaan myös, kuinka siirtyä ja toimia mallipohjaisessa sovelluksessa: [Mallipohjaisten sovellusten käyttäminen](use-model-driven-apps.md).
 
