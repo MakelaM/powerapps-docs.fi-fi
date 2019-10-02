@@ -9,12 +9,12 @@ featureFlags:
 ms.service: powerapps
 ms.custom:
 - powerapps-hub
-ms.openlocfilehash: 62e6db1361664f8ccce38080e07908237aac5f50
-ms.sourcegitcommit: 9cce0d57113705254c109e6c38fc57a8bd4ef6cf
+ms.openlocfilehash: c91add6569b3a74f26c48a70852df54d0d357657
+ms.sourcegitcommit: 5b623b64fba72dda893c97f497666d0adc39e0c6
 ms.translationtype: HT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313302"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71709231"
 ---
 <div id="main"
    class="v2">
@@ -25,7 +25,7 @@ ms.locfileid: "68313302"
             <a href="#home"></a>
             <ul id="home">
                <li>
-                  <a href="#getstarted"><strong>Aloitus</strong></a>
+                  <a href="#getstarted"><strong>Aloita</strong></a>
                   <ul id="getstarted"
                      class="cardsC">
                      <br/>                            
@@ -353,7 +353,7 @@ ms.locfileid: "68313302"
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-guide">Power Platformin hallinnoiminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Ohjeen ja tuen hakeminen</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Tilaa huhtikuun 2019 päivitykset</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Vuoden 2019 toiseen julkaisuversioon liittyminen</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-settings">Asetusten hallinta</a></p>
                                  </div>
                               </div>

@@ -992,6 +992,15 @@
           href: ./model-driven-apps/create-themes-organization-branding.md
         - name: Raportoinnin lisääminen sovellukseen
           href: ./model-driven-apps/add-reporting-to-app.md
+          items:
+            - name: Huomioitavaa raporteissa
+              href: ./model-driven-apps/reporting-considerations.md
+            - name: RDL-eristys
+              href: ./model-driven-apps/rdl-sandboxing.md
+            - name: 'Power BI:n käyttäminen'
+              href: ./model-driven-apps/use-power-bi.md
+            - name: Power BI -sisältöpakettien mukauttaminen
+              href: ./model-driven-apps/customize-power-bi-content-packs.md
     - name: Sovelluksen tarkistaminen ja julkaiseminen
       href: ./model-driven-apps/validate-app.md
     - name: Sovelluksen jakaminen
