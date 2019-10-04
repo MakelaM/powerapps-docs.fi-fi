@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 10/03/2019
 ms.author: mkaur
 ms.reviewer: ''
 ms.assetid: ''
@@ -14,12 +14,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: e563c1b17e7ef7628efcf51be2a312d3083bf187
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: a46698ddf454c9d0f563575a3553e874f3a7b109
+ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61530843"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71924537"
 ---
 #  <a name="basic-navigation-in-a-model-driven-app"></a>Perussiirtyminen mallipohjaisessa sovelluksessa 
 
@@ -77,7 +77,7 @@ Viitepaneelin avulla saat työt tehtyä niin, ettei sinun tarvitse poistua työs
 
 Lomakkeessa näkyy kolmenlaisia ilmoituksia: tiedottavia, varoituksia ja virheitä. Ilmoitukset ovat aina käytettävissä lomakkeen yläosassa, aivan otsikon yläpuolella.
 
-Alla kuvatut ilmoitukset ovat käytettävissä versiossa 9.1.9.3010.
+Kun valitset virhe ilmoituksen, siirryt sen lomakkeen kenttään, jossa virhe ilmeni.
 
 ![Esimerkki ilmoituksista](media/notifications.png "Esimerkki ilmoituksista")
 
@@ -88,6 +88,10 @@ Jos ilmoituksia on vain yksi, näet yhden rivin.
 Jos ilmoituksia on enemmän kuin yksi, näet ilmoitusten määrän. Voit tarkastella kutakin viestiä valitsemalla nuolenkärjen.
 
 ![Esimerkki useista ilmoituksista](media/multiple_notification.png "Esimerkki useista ilmoituksista")
+
+## <a name="grids"></a>Ruudukoissa
+
+Unified Interface-liittymän ruudukoita on parannettu, jotta näytössä näkyvien tietojen määrää voidaan lisätä. Ruudukoissa on myös parannetut suodatus asetukset, jotka sisältävät viimeisimmän suodattimen ja lajittelu järjestyksen muistamisen. Yksityiskohtainen luettelo parannuksista on tässä blogikirjoituksessa, [parannetuilla toiminnoilla Unified Interface-ruudukoissa](https://powerapps.microsoft.com/en-us/blog/enhanced-functionality-in-unified-interface-grids).
 
 
 

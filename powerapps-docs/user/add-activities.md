@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 8/02/2019
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,16 +15,15 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 8f061078b4401ee1ea2db9a2e7e6a4443bd053b6
-ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
+ms.openlocfilehash: 9ba051395e99dc6f2079d033c10a727a2e95da67
+ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783770"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71924580"
 ---
 # <a name="add-an-appointment-email-phone-call-note-or-task-activity-to-the-timeline"></a>Tapaamisen, sähköpostin, puhelun, huomautuksen tai tehtävän lisääminen aikajanaan 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Lisää **Aktiviteetit** **Aikajana**-seinälle seurataksesi viestintää asiakkaan tai yhteyshenkilön kanssa. Voit esimerkiksi tehdä muistiinpanoja, lisätä julkaisuja ja tehtäviä, lähettää sähköpostiviestejä, lisätä puhelutietoja tai määrittää tapaamisia. Järjestelmä lisää aikaleiman automaattisesti jokaiseen aktiviteettiin ja näyttää, kuka sen on luonut. Sinä ja muut ryhmäsi jäsenet voitte selata aktiviteetteja ja tarkastella historiaa työskentelyn aikana asiakkaan kanssa. 
 
@@ -101,13 +100,13 @@ Jos haluat lisätä tietueeseen sähköpostiaktiviteetin, sinun on ensin tallenn
 
 
     > [!NOTE]
-    > Jos haluat luetella keskustelu näkymässä olevat Sähkö posti viestit, siirry kohtaan **Asetukset** > **mukautus asetukset** > **Sähkö posti** -väli lehti ja valitse sitten **Näytä Sähkö posti keskusteluna aika janalla**. Lisä tietoja henkilökohtaisista asetuksista on kohdassa [henkilökohtaisten asetusten asetukset](set-personal-options.md).
+    > Jos haluat luetella keskustelu näkymässä olevat Sähkö posti viestit, valitse **asetukset** > **mukautus asetukset** > **Sähkö posti** -väli lehti ja valitse sitten **Näytä Sähkö posti viesti keskusteluna aika janalla**. Lisä tietoja henkilökohtaisista asetuksista on kohdassa [henkilökohtaisten asetusten asetukset](https://docs.microsoft.com/en-us/powerapps/user/set-personal-options#email-tab-options). Kun se on käytössä, voit avata minkä tahansa lomakkeen, jolla on aika Jana, ja sähkö postisi ryhmitellään keskustelu säikeiksi, joissa on uusin Sähkö posti viesti ylimpänä.
 
    > [!div class="mx-imgBorder"]
-   > ![Henkilökohtaisten asetusten asetus](media/emailsettings1.png "Henkilökohtaisten asetusten asetus")
+   > Henkilökohtaisten ![asetusten asetus](media/emailsettings1.png "henkilökohtaisten asetusten") asetus
    
     > [!div class="mx-imgBorder"]
-    > ![Henkilökohtaisten asetusten sähkö postin asetukset](media/emailsettings2.png "Henkilökohtaisten asetusten asetus Sähkö posti osoitteille")
+    > ![Henkilökohtaisten asetusten asetus sähkö postin](media/emailsettings2.png "henkilökohtaisten asetusten asetus sähkö postiin")
 
   
 ## <a name="add-an-appointment"></a>Tapaamisen lisääminen  

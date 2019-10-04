@@ -12,12 +12,12 @@ ms.reviewer: kvivek
 searchScope:
 - GetStarted
 - PowerApps
-ms.openlocfilehash: 86a92e1e1723eba0f4d8f1b747a30df93314ca65
-ms.sourcegitcommit: 25a85b462515cb64f3f2b114864a682abf803f4a
+ms.openlocfilehash: 34b2d24771feb246d234c0ce3bd1fc655e571296
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70213816"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705266"
 ---
 # <a name="what-is-powerapps"></a>Mikä on PowerApps?
 
@@ -49,7 +49,7 @@ PowerApps-järjestelmänvalvojat voivat käyttää:
 
 - **PowerApps-hallintakeskusta** ([admin.powerapps.com](https://admin.powerapps.com)) ympäristöjen, käyttäjien, roolien ja tietojen menetyksen estokäytäntöjen luomiseen ja hallinnointiin. 
 
-- **Power Platform -hallintakeskusta** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) ympäristöjen hallinnointiin, Dynamics 365 for Customer Engagement -sovellusten, PowerAppsin ja Microsoft Flow -ohjelman käyttöä koskevien reaaliaikaisten ja omatoimisten suositusten ja tukiartikkeleiden lukemiseen sekä Common Data Service -analyysien tarkasteluun. 
+- **Power Platform-hallinta keskuksen** ([admin.powerplatform.Microsoft.com](https://admin.powerplatform.microsoft.com)) avulla voit hallita ympäristöjä, saada reaaliaikaisia, omatoimisia suosituksia ja tukea powerappsiin ja Microsoft Flow sekä tarkastella Common Data Service analytiikkaa. 
 
 Lisätietoja: [PowerAppsin hallitseminen](/power-platform/admin/admin-guide)
 

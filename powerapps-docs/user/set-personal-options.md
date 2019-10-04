@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/01/2019
+ms.date: 10/03/2019
 ms.author: mduelae
 ms.reviewer: ''
 ms.assetid: ''
@@ -15,23 +15,23 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: 11d9318ac06e264b6b917c81358d060d97864eb8
-ms.sourcegitcommit: 4e4f7945c3f24faf9bb8a856a5f3892cbfd113be
+ms.openlocfilehash: 15ce5ff81abdbf6e2d1170b90ee974265050cc51
+ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783553"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71924393"
 ---
 # <a name="set-personal-options"></a>Omien asetusten määrittäminen
 
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
+
 
 Muuta sovelluksen näyttö asetuksia haluamallasi tavalla. Voit esimerkiksi valita sivun, jonka haluat näkyviin heti, kun kirja udut sisään sovellukseen. Voit myös mukauttaa monia muita asetuksia, kuten kielen, valuutan ja aika vyöhykkeen.  
     
 ## <a name="to-set-personal-options"></a>Henkilökohtaisten asetusten asetukset  
   
-1.  Valitse **Asetukset** - ![](media/options-button.png "painikkeen asetukset-painike powerappsin asetukset-painikkeelle") näytön oikeassa yläkulmassa.  
+1.  Valitse **Asetukset** -painikkeen asetukset-painike ![powerappsin](media/options-button.png "Asetukset-painikkeelle") näytön oikeassa yläkulmassa.  
   
 2.  Valitse **mukautus asetukset**.  
   
@@ -68,7 +68,7 @@ Muuta sovelluksen näyttö asetuksia haluamallasi tavalla. Voit esimerkiksi vali
 |                                                                                                   Asetukset                                                                                                   |                                                                                                                                                                                                                                                                                                                                                           Kuvaus                                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Synkronoi Dynamics 365-kohteet Outlookin tai Exchangen kanssa** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                                                   suodattimet                                                                                                   |                                                                                                        Valitse synkronoitavat tietueet Dynamics 365 ja Dynamics 365 for Outlookin tai Exchangen välillä (käyttämällä palvelin puolen synkronointia).                                                                                                     |
+|                                                                                                   Suodattimet                                                                                                   |                                                                                                        Valitse synkronoitavat tietueet Dynamics 365 ja Dynamics 365 for Outlookin tai Exchangen välillä (käyttämällä palvelin puolen synkronointia).                                                                                                     |
 |                                                                                             synkronoidut kentät                                                                                             | Näytä kentät, jotka synkronoidaan Dynamics 365 ja Dynamics 365 for Outlookin välillä, jotta voit nähdä, mistä tiedot ovat perä isin.|
 |                                       **Hallitse offline-suodattimia ja vie tietosi offline-tilaan Dynamics 365 for Outlookissa**                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                                                                                               offline-suodattimet                                                                                               |                                                                                                                                                                                                                                                      Valitse Dynamics 365-tietojen alijoukko, jota haluat käsitellä, kun siirryt offline-tilaan Dynamics 365 for Outlookissa.                                                                                                                                                                                                                                                      |

@@ -15,24 +15,22 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: be255d4208b2926867ef0e4dec291d3435f64443
-ms.sourcegitcommit: 770906d6a559316b93873ee9b1dbceabcc54fc4e
+ms.openlocfilehash: 76241ae2e26752a98e32e7ad72c54780da3934ae
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71208173"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705322"
 ---
-#  <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Parannettu käyttö kokemus mallipohjaisten sovellusten yhdistetyn liittymän avulla 
+# <a name="enhanced-user-experience-with-the-unified-interface-for-model-driven-apps"></a>Parannettu käyttö kokemus mallipohjaisten sovellusten yhdistetyn liittymän avulla 
 
 Mallipohjaisten sovellusten yhtenäinen liittymä tarjoaa yhdenmukaisen ja helppokäyttöisen käyttö kokemuksen eri laitteilla – joko työpöydällä, kannettavalla, tabletilla tai puhelimella. Sovellukset skaalataan muuttamalla näytön osia. Reagoiva rakenne mukautuu ympäristöösi näytön koon mukaan, joten mitä enemmän käytettävissä olevaa tilaa on, sitä enemmän tietoja voidaan näyttää.
 
 > [!div class="mx-imgBorder"]
 > ![Yhtenäinen liittymä mukautuu näyttöön](media/Reflow.png "Yhtenäinen liittymä mukautuu näyttöön")
 
-
-
 > [!NOTE]
-> Vanha verkko asiakas on vanhentunut, ja asiakkaiden on siirryttävä yhdistettyyn käyttö liittymään ennen 1. loka kuuta 2020. Lisä tietoja on kohdassa [aika janan ilmoittaminen yhdistettyyn liittymään siirtämistä](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/)varten. Jos haluat lisä tietoja siirtymisestä, Katso siirtyminen-kohdan [Pika-aloitus](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
+> Vanha verkko asiakas on vanhentunut, ja asiakkaiden on siirryttävä yhdistettyyn käyttö liittymään ennen 1. loka kuuta 2020. Lisä tietoja on kohdassa [Blogi: Ilmoitetaan aika janalla siirtymään yhdistettyyn liittymään @ no__t-0. Jos haluat lisä tietoja siirtymisestä, Katso siirtyminen-kohdan [Pika-aloitus](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/transition-web-app).
 
 ## <a name="navigation"></a>Siirtyminen
 
@@ -61,6 +59,11 @@ Telakointi mekanismi on parantanut liiketoiminta prosessin kulkua. Voit kiinnitt
 ## <a name="accessibility"></a>Helppokäyttötoimintojen
 Parannetun helppokäyttöisyyden avulla voit näytön luku ohjelmien avulla kääntää näytön tiedot ääni ääneksi ja tulostaa piste kirjoitus lukijaan, jotta useammat käyttäjät voivat käyttää sovellusta. Lisä tietoja [on kohdassa näytön luku ohjelman käyttäminen](screen-reader.md).
 
-##  <a name="unified-interface-community"></a>Unified Interface-yhteisö
+## <a name="create-a-unified-interface-app"></a>Luo yhtenäinen liittymä sovellus
+Jos sinulla on vaatimuksia luoda oma käyttö kokemuksesi Unified Interface-liittymässä, voit luoda mallipohjaisen sovelluksen sovelluksen suunnittelu ohjelmalla. Lue [Yleiskatsaus mallipohjaisten sovellusten luomisesta](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+
+![Luo uusi Unified Interface-sovellus](media/uci-model-driven-app.png "Luo uusi Unified Interface-sovellus")
+
+## <a name="unified-interface-community"></a>Unified Interface-yhteisö
 
 Siirry [Unified Interface-yhteisön sivustoon](https://community.dynamics.com/365/unified-interface/) , niin saat ohjeita, joiden avulla voit suunnitella ja suorittaa sujuvan siirtymisen yhdistettyyn käyttö liittymään ja osallistua asiantuntijoiden ja vertaiskoneiden kanssa blogeissa, verkko seminaareissa, videoissa ja tapahtumissa.

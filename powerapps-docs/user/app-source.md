@@ -1,7 +1,7 @@
 ---
 title: Löydä sovelluksia AppSourcen kautta | Microsoft Docs
 description: Tutustu sovelluksiin, jotka on jaettu organisaatiosi kanssa AppSourcen kautta
-author: linhtranms
+author: mkaur
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
@@ -16,12 +16,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: a5b55a2948ad176d9c30a11d8c6b6adf209e07f3
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: d1e0227284549ae293083ba5ae012d28c6178454
+ms.sourcegitcommit: 60fd1792430b9f3da08ec161cb2277506d795e3a
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61544920"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71705382"
 ---
 # <a name="discover-apps-via-appsource"></a>Löydä sovelluksia AppSourcen kautta
 PowerAppsilla laatimasi ja jakamasi sovellukset ovat löydettävissä ja niitä käytetään Dynamics 365:ssä Internetissä. Siellä näkyvät kaikki sovelluksesi: sekä ne, jotka olet varta vasten valinnut käyttöön (käynnistämällä ne jakosähköpostiviestin kautta tai avaamalla AppSourcesta), että ne, jotka järjestelmänvalvoja on hankkinut käyttöösi. Näihin sisältyvät kaikki sovelluksesi PowerAppsista ja lisäksi Dynamics 365 -sovelluksia Microsoftilta. Voit etsiä sovelluksia, suodattaa ympäristön perusteella ja kiinnittää useimmin käyttämäsi sovellukset sivun yläreunaan.
