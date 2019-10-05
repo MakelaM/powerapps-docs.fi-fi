@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: ''
-ms.date: 03/07/2018
+ms.reviewer: tapanm
+ms.date: 10/04/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 03c520d1cdf8655e93b1f5b74d687cd0abfa533f
-ms.sourcegitcommit: 94ec67b283b9b03aa24cdc0ab43dd448b11b0547
+ms.openlocfilehash: 45790b7a3e6166366a751c812a5d470d5615c3a2
+ms.sourcegitcommit: 4c35aedde46380d5438687ae6f61a3b0cc7e7e2f
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529788"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71969302"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -94,11 +94,11 @@ Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studio
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph – käyttäjä tietojen hakeminen (esimerkiksi profiili kuva) |
 | gallery.azure.com |https |Esimerkki- ja mallisovellukset |
-| \*. azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
-| \*. powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
-| \*. azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
-| \*. blob.core.windows.net |https | Blob-objektisäilö |
-| \*. flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*.azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*.blob.core.windows.net |https | Blob-objektisäilö |
+| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetria |
 | localhost | https | PowerApps Mobile
 
@@ -108,3 +108,28 @@ Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studio
 ## <a name="size-limits"></a>Koko rajoitukset
 
 Saat lisä tietoja teksti-, hyperlinkit-, kuvat-ja tieto väline- [tieto tyyppien](functions/data-types.md#text-hyperlink-image-and-media)koko rajoituksista.
+
+## <a name="powerapps-per-app-plan"></a>PowerApps Sovelluskohtaisen sopimuksen mukaan
+
+Powerappsin sovellus sopimuksen mukaan yksittäiset käyttäjät voivat suorittaa kahta sovellusta yksittäisessä portaalissa tietyn liiketoiminta skenaarion perusteella Powerappsin kaikkien toimintojen avulla. Tämä sopimus tarjoaa helpon tavan, jolla käyttäjät pääsevät aloittamaan käyttö ympäristön ennen laajemman asteikon käyttöönottoa.
+
+Kun järjestelmänvalvoja on varannut Powerappsin sovellus suunnitelmaan, se määritetään käyttäjille oletusarvoisesti, kun sovellus jaetaan heidän kanssaan.
+
+Noudata seuraavia vaiheita, jos haluat poistaa käytöstä sovelluskohtaisesti määrittämisen käyttäjien osalta, kun sovellus jaetaan heidän kanssaan:
+
+- Valitse **sovellus**.
+- Valitse **Asetukset**.
+- Vaihda **Automaattinen määritys per sovellus läpäisee** -vaihto kohdan **Siirrä määritys**-kohdassa.
+
+**Automaattinen määritys per sovellus kulkee** -vaihto painike näkyy kaikissa sovellus asetuksissa.
+
+> [!NOTE]
+> Sovelluskohtaisen sopimuksen poistaminen käytöstä on tällä hetkellä käytettävissä vain pohjaan asennettavissa sovelluksissa.  Mallipohjaiset sovellukset ja portaalit pystyvät jatkossa käyttämään tätä mahdollisuutta.
+
+### <a name="app-settings"></a>Sovelluksen asetukset
+
+![Kangas sovelluksen asetusten]pohjaan liittyvät(./media/limits-and-config/app_settings.png "sovelluksen asetukset")
+
+### <a name="pass-assignment"></a>Välitä varaus
+
+Pohjaan ![sovelluksen asetukset Siirrä määrityksen](./media/limits-and-config/app_settings_pass_assignment.png "piirto alusta sovelluksen asetusten läpäisy määritykset")
