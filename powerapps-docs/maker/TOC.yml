@@ -1102,7 +1102,7 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Palvelinpuolen välimuistin tyhjentäminen
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Dynamics 365 -portaalin määrityksen siirtäminen
+        - name: Dynamics 365 -portaalien määrityksen siirtäminen
           href: ./portals/admin/migrate-portal-configuration.md
     - name: Portaalin lisämukautukset
       items:
