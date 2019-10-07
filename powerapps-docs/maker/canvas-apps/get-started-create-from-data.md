@@ -1,24 +1,24 @@
 ---
 title: Pohjaan perustuvan sovelluksen luominen Excelistä | Microsoft Docs
 description: PowerAppsin käyttäminen pohjaan perustuvan sovelluksen luomiseen automaattisesti käyttämällä pilvitallennustiliin tallennettua Excel-tiedostoa
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 01/14/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7ab85f09ebf88c30b35c963242895cd74ca6a966
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 576e61e6e4ea1aad317fdec8f49f76bfcd1e0b6a
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61554949"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990257"
 ---
 # <a name="generate-a-canvas-app-from-excel-in-powerapps"></a>Pohjaan perustuvan sovelluksen luominen Excelistä PowerAppsissa
 
@@ -67,49 +67,49 @@ Jotta voit noudattaa tämän aiheen ohjeita tarkasti, lataa [Flooring Estimates]
 
 1. Suodata luettelo kirjoittamalla tai liittämällä yksi tai useampi merkki hakukenttään.
 
-    Esimerkiksi, kirjoita tai liitä **hunaja** näyttääksesi vain tietueen, jonka tuotteen nimi, luokka tai yleiskatsaus esiintyy merkkijono.
+    Voit esimerkiksi kirjoittaa tai liittää **hunajaa** näyttämään vain tietueen, jonka merkki jono näkyy tuotteen nimessä, luokassa tai yleiskatsauksessa.
 
-    ![Suodata Esimerkki](./media/get-started-create-from-data/filter-example.png)
+    ![Suodatin esimerkki](./media/get-started-create-from-data/filter-example.png)
 
 1. Lisää tietue:
 
-    1. Valitse plus-kuvake.
+    1. Valitse Plus-kuvake.
 
         ![Plus-kuvake](./media/get-started-create-from-data/plus-icon.png)
 
-    1. Lisää haluamasi tiedot ja valitse sitten Tallenna muutokset valintamerkkikuvaketta.
+    1. Lisää haluamasi tiedot ja tallenna muutoksesi valitsemalla valinta merkki kuvake.
 
-        ![Tallennus-kuvake](./media/get-started-create-from-data/save-icon.png)
+        ![Tallenna kuvake](./media/get-started-create-from-data/save-icon.png)
 
-1. Tietueen muokkaaminen:
+1. Muokkaa tietuetta:
 
-    1. Valitse nuoli tietueen, jota haluat muokata.
+    1. Valitse muokattavan tietueen nuoli.
 
         ![Seuraava-nuoli](./media/get-started-create-from-data/next-arrow.png)
 
-    1. Valitse kynäkuvaketta.
+    1. Valitse kynä kuvake.
 
         ![Kynäkuvake](./media/get-started-create-from-data/pencil-icon.png)
 
-    1. Päivitä yksi tai useampi kenttä ja valitse sitten Tallenna muutokset valintamerkkikuvaketta.
+    1. Päivitä vähintään yksi kenttä ja tallenna muutoksesi valitsemalla valinta merkki kuvake.
 
-        ![Tallennus-kuvake](./media/get-started-create-from-data/save-icon.png)
+        ![Tallenna kuvake](./media/get-started-create-from-data/save-icon.png)
 
-        Vaihtoehtona valitse Peruuta-kuvaketta hylätä tekemäsi muutokset.
+        Valitse vaihtoehtoisesti Peruuta-kuvake, jos haluat hylätä tekemäsi muutokset.
 
 1. Poista tietue:
 
-    1. Valitse, Haluatko varmasti poistaa tietueen seuraava-nuolta.
+    1. Valitse poistettavan tietueen seuraava nuoli.
 
         ![Seuraava-nuoli](./media/get-started-create-from-data/next-arrow.png)
 
-    1. Valitse Roskakorin kuvaketta.
+    1. Valitse roska kori kuvake.
 
         ![Roskakorikuvake](./media/get-started-create-from-data/trash-icon.png)
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-Mukauta oletusselausnäyttö sopimaan paremmin tarpeisiisi. Voit esimerkiksi lajitella ja suodattaa luettelon tuotenimen vain, ei luokan tai yleiskatsaus.
+Mukauta oletusselausnäyttö sopimaan paremmin tarpeisiisi. Voit esimerkiksi lajitella ja suodattaa listaa vain tuote nimen, ei luokan tai yleiskuvauksen mukaan.
 
 > [!div class="nextstepaction"]
 > [Oletusselausnäytön mukauttaminen](customize-layout-sharepoint.md).

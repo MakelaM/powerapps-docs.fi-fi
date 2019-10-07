@@ -1,24 +1,24 @@
 ---
 title: Istuntotunnuksen tai pohjaan perustuvan sovelluksen tunnuksen hakeminen | Microsoft Docs
 description: Istuntotunnuksen tai pohjaan perustuvan sovelluksen tunnuksen hakeminen PowerAppsissa vianmääritystä varten
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 06/18/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 67cfe4ac6c53797e6a18a68d3fbcf29b088f3da8
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 11f749f241f978ebd94e460833e98cca894fe7fa
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61554026"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990188"
 ---
 # <a name="get-a-session-id-or-a-canvas-app-id"></a>Istuntotunnuksen tai pohjaan perustuvan sovelluksen tunnuksen hakeminen
 Jos kohtaat ongelman PowerAppsilla luodussa pohjaan perustuvassa sovelluksessa, voit auttaa Microsoftia ongelman vianmäärityksessä tehokkaammin, jos sinulla on ongelmaan liittyvä istuntotunnus, sovellustunnus tai molemmat.

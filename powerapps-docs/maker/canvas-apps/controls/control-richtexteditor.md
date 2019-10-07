@@ -6,22 +6,22 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: article
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/24/2018
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3174d959a2360b36e82cd7070c4401251ca9fe18
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: c6b94f636ebf6d373c3fc2117b589116b5a4a2fd
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61526259"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986357"
 ---
-# <a name="rich-text-editor-control-in-powerapps"></a>Rich text ohjausobjekti powerappsissa
-Sallii käyttäjien muotoilla tekstiä WYSIWYG-muokkausalueen sisällä.  Tulostemuoto on HTML.
+# <a name="rich-text-editor-control-in-powerapps"></a>Rich Text-editori-ohjaus objekti Powerappsissa
+Sallii käyttäjien muotoilla tekstiä WYSIWYG-muokkaus alueen sisällä.  Tulostemuoto on HTML.
 
 ## <a name="description"></a>Kuvaus
 **Tekstimuotoilueditori**-ohjausobjekti tarjoaa sovelluksen käyttäjälle WYSIWYG-muokkausalueen tekstin muotoilemista varten.  Ohjausobjektin syöte- ja tulostemuoto on HTML.
@@ -69,7 +69,7 @@ Jos haluat käyttää ohjausobjektia lomakkeen sisällä, valitse Muokkaa moniri
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 
 > [!TIP]
-> Käytä **Alt + 0** aikana editorin on kohdistettu lisätietoja muiden pikanäppäimet.
+> Käytä **Alt + 0-näppäin yhdistelmää** , kun editori keskittyy muiden pikanäppäinten käyttämiseen.

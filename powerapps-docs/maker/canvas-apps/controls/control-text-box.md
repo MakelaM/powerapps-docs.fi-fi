@@ -6,22 +6,21 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d909b41dd61fca079fc409b51373af0789a3db84
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: f62aa84867a3aa4eae582b3fde320e84becdeeff
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548704"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986315"
 ---
-# <a name="label-control-in-canvas-apps"></a>Selite-ohjausobjekti pohjaan perustuvat sovellukset
+# <a name="label-control-in-canvas-apps"></a>Otsikko-ohjaus objekti kangas sovelluksissa
 
 Kenttä, jossa näkyy tietoja, kuten tekstiä, numeroita, päivämääriä tai valuutta.
 
@@ -31,7 +30,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 
-**[AutoHeight](properties-core.md)**  – Määritä arvoksi TOSI, jos haluat näyttää kaikki teksti sen korkeus selitteen. Aseta arvoksi epätosi, jos haluat katkaista tekstin määritettyyn korkeuteen.
+**[Autoheight](properties-core.md)** – arvo on True, jotta selite voi kasvattaa korkeuden automaattisesti näyttämään kaiken tekstin. Aseta arvoksi epätosi, jos haluat katkaista tekstin määritettyyn korkeuteen.
 
 **[Color](properties-color-border.md)** – Ohjausobjektin tekstin väri.
 
@@ -45,7 +44,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[Align](properties-text.md)** – Tekstin asettelu suhteessa ohjausobjektin vaakasuoraan keskikohtaan.
 
-**AutoHeight** – Suurentaako selite automaattisesti **[Korkeus](properties-size-location.md)**-ominaisuutta, jos sen **[Teksti](properties-core.md)**-ominaisuus sisältää enemmän merkkejä kuin ohjausobjekti voi näyttää kerralla.
+**AutoHeight** – Suurentaako selite automaattisesti **[Korkeus](properties-size-location.md)** -ominaisuutta, jos sen **[Teksti](properties-core.md)** -ominaisuus sisältää enemmän merkkejä kuin ohjausobjekti voi näyttää kerralla.
 
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.
 
@@ -55,11 +54,11 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledColor](properties-color-border.md)** – Ohjausobjektin tekstin väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -67,7 +66,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -81,15 +80,15 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[LineHeight](properties-text.md)** – Rivin korkeus eli esimerkiksi tekstin tai luettelon rivien välinen etäisyys.
 
-**[Live](properties-accessibility.md)**  – miten Näytönlukuohjelman ilmoittaa otsikon arvon muutokset **tekstin** ominaisuus.
+**[Live](properties-accessibility.md)** – miten näytönlukija ilmoittaa muutokset selitteen **teksti** -ominaisuuden arvoon.
 
-* Kun **käytöstä**, näytönlukuohjelma ei muutoksia.
-* Kun **Polite**, näytönlukuohjelma on valmis, ennen kuin muutokset, joka suoritettaessa näytönlukuohjelma oli puhumalla esittelyssä puhumalla.
-* Kun **Assertive**, näytönlukuohjelma keskeyttää itse koskevista muutoksista, joka suoritettaessa näytönlukuohjelma oli puhumalla.
+* Kun asetus on ei **käytössä**, näytön luku ohjelma ei ilmoita muutoksista.
+* Kun asetus on **kohtelias**, näytönlukija lopettaa puhumisen ennen näytön luku ohjelman puhumisen aikana tapahtuneiden muutosten ilmoittamista.
+* Kun asetus on **vakuuttava**, näytönlukija keskeyttää itsensä ilmoittaakseen muutoksista, jotka tapahtuivat näytön luku ohjelman puhuttua.
 
 **[OnSelect](properties-core.md)** – Miten sovellus reagoi, kun käyttäjä napauttaa tai napsauttaa ohjausobjektia.
 
-**Overflow** – Tuleeko selitteeseen vierityspalkki, jos sen **Rivitys**-ominaisuuden asetuksena on **tosi** ja ohjausobjektin **[Teksti](properties-core.md)**-ominaisuudessa on enemmän merkkejä kuin ohjausobjekti pystyy näyttämään kerralla.
+**Overflow** – Tuleeko selitteeseen vierityspalkki, jos sen **Rivitys**-ominaisuuden asetuksena on **tosi** ja ohjausobjektin **[Teksti](properties-core.md)** -ominaisuudessa on enemmän merkkejä kuin ohjausobjekti pystyy näyttämään kerralla.
 
 **[PaddingBottom](properties-size-location.md)** – Ohjausobjektin tekstin ja alareunan välinen etäisyys.
 
@@ -105,7 +104,7 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 **[PressedFill](properties-color-border.md)** – Ohjausobjektin taustaväri, kun käyttäjä napauttaa tai napsauttaa kyseistä ohjausobjektia.
 
-**Roolin** -semanttisen roolin nimen teksti, kuten otsikko 1. Otsikon tyyli ei muutu, mutta tekee tulos semanttisesti oikea lukema tulkintaa.
+**Role** – nimi tekstin semanttinen rooli, kuten otsikko 1. Ei muuta selitteen tyyliä, mutta se tekee tulos teen semanttisesti oikein näytön luku ohjelmien tulkinnan kannalta.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
@@ -131,34 +130,34 @@ Selitteessä näkyy tietoja, jotka määrität tekstimerkkijonoliteraalina tai k
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 
-[**Text**( *Number*; "*FormatCodes*" )](../functions/function-text.md)
+[**Text**( *Number*, "*FormatCodes*" )](../functions/function-text.md)
 
 ## <a name="examples"></a>Esimerkkejä
 
 ### <a name="show-a-literal-string"></a>Merkkijonoliteraalin näyttäminen
 
-* Lisää selite ja määritä sen **[Teksti](properties-core.md)**-ominaisuudeksi **"Hei maailma"** (mukaan lukien lainausmerkit).
+* Lisää selite ja määritä sen **[Teksti](properties-core.md)** -ominaisuudeksi **"Hei maailma"** (mukaan lukien lainausmerkit).
   
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
 ### <a name="show-the-result-of-a-formula"></a>Näytä kaavan tulos
 
-* Lisää selite ja aseta sen **[Teksti](properties-core.md)**-ominaisuudeksi esimerkiksi seuraavanlainen kaava:<br>
+* Lisää selite ja aseta sen **[Teksti](properties-core.md)** -ominaisuudeksi esimerkiksi seuraavanlainen kaava:<br>
   **Today()**
   
     > [!NOTE]
   > Kun määrität kaavan, älä käytä lainausmerkkejä, ellei kaavan argumentti ole merkkijonoliteraali. Aseta siinä tapauksessa argumentti lainausmerkkeihin, mutta älä itse kaavaa.
   
-    Haluatko lisätietoja **[Today](../functions/function-now-today-istoday.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[Today](../functions/function-now-today-istoday.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
 ### <a name="show-data-in-a-gallery"></a>Tietojen näyttäminen valikoimassa
 
 Tässä toimenpiteessä luot kokoelman, jonka nimi on **KaupunkienVäkiluvut**. Se sisältää tietoja Euroopan kaupunkien väkiluvuista. Seuraavaksi näytät tiedot kolme selitettä sisältävässä valikoimassa ja määrität, minkä tyyppistä tietoa kukin selite näyttää.
 
-1. Lisää painike ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-   **ClearCollect(KaupunkienVäkiluvut; {Kaupunki:"Lontoo"; Maa:"Yhdistynyt kuningaskunta"; Väkiluku:8615000}; {Kaupunki:"Berliini"; Maa:"Saksa"; Väkiluku:3562000}; {Kaupunki:"Madrid"; Maa:"Espanja"; Väkiluku:3165000}; {Kaupunki:"Rooma"; Maa:"Italia"; Väkiluku:2874000}; {Kaupunki:"Pariisi"; Maa:"Ranska"; Väkiluku:2273000}; {Kaupunki:"Hampuri"; Maa:"Saksa"; Väkiluku:1760000}; {Maa:"Barcelona"; Maa:"Espanja"; Väkiluku:1602000}; {Kaupunki:"München"; Maa:"Saksa"; Väkiluku:1494000}; {Kaupunki:"Milano"; Maa:"Italia"; Väkiluku:1344000})**
+1. Lisää painike ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
+   **ClearCollect(KaupunkienVäkiluvut, {Kaupunki:"Lontoo", Maa:"Yhdistynyt kuningaskunta", Väkiluku:8615000}, {Kaupunki:"Berliini", Maa:"Saksa", Väkiluku:3562000}, {Kaupunki:"Madrid", Maa:"Espanja", Väkiluku:3165000}, {Kaupunki:"Rooma", Maa:"Italia", Väkiluku:2874000}, {Kaupunki:"Pariisi", Maa:"Ranska", Väkiluku:2273000}, {Kaupunki:"Hampuri", Maa:"Saksa", Väkiluku:1760000}, {Maa:"Barcelona", Maa:"Espanja", Väkiluku:1602000}, {Kaupunki:"München", Maa:"Saksa", Väkiluku:1494000}, {Kaupunki:"Milano", Maa:"Italia", Väkiluku:1344000})**
 2. Paina F5-painiketta, valitse painike ja paina sitten ESC-näppäintä.
-3. Lisää tekstivalikoima ja määritä sen **[Kohteet](properties-core.md)**-ominaisuuden arvoksi **KaupunkienVäkiluvut**.
+3. Lisää tekstivalikoima ja määritä sen **[Kohteet](properties-core.md)** -ominaisuuden arvoksi **KaupunkienVäkiluvut**.
 
     Kun valikoima on valittuna, oikeanpuoleisessa ruudussa näkyvät valikoimaa koskevat vaihtoehdot.
 4. Määritä **Gallery1**-ruudussa, ylimmäksi luetteloksi **Väkiluku**, keskimmäiseksi luetteloksi **Kaupunki** ja alimmaiseksi luetteloksi **Maa**.
@@ -167,7 +166,7 @@ Tässä toimenpiteessä luot kokoelman, jonka nimi on **KaupunkienVäkiluvut**. 
 
 Nimestään huolimatta **Label**-ohjausobjektia ei tarvitse käyttää toisen ohjausobjektin nimenä. Sen avulla voidaan näyttää mikä tahansa teksti.
 
-**Label**-ohjausobjektia voidaan käyttää painikkeena tai linkkinä määrittämällä **[OnSelect](properties-core.md)**-toiminta. Tällä tavalla käytettynä siinä on samanlaisia helppokäyttötoimintojen kannalta huomioon otettavia seikkoja kuin painikkeilla.
+**Label**-ohjausobjektia voidaan käyttää painikkeena tai linkkinä määrittämällä **[OnSelect](properties-core.md)** -toiminta. Tällä tavalla käytettynä siinä on samanlaisia helppokäyttötoimintojen kannalta huomioon otettavia seikkoja kuin painikkeilla.
 
 ### <a name="color-contrast"></a>Värikontrasti
 
@@ -179,7 +178,7 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 ### <a name="screen-reader-support"></a>Näytönlukuohjelmien tuki
 
 * **[Teksti](properties-core.md)** on oltava käytössä.
-* **[Live](properties-accessibility.md)**  on asetettava **Polite** tai **Assertive** Jos tulee näytönlukuohjelma arvon muutokset **tekstin** ominaisuus.
+* **[Live](properties-accessibility.md)** -asetuksena on oltava **kohtelias** tai **vakuuttava** , jos näytönlukijan tulee ilmoittaa **teksti** -ominaisuuden arvon muutoksista.
 
   > [!NOTE]
   > Näytönlukuohjelmat käsittelevät **Label**-ohjausobjekteja painikkeina, kun **[TabIndex](properties-accessibility.md)** on nolla tai suurempi.
@@ -187,8 +186,8 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 ### <a name="low-vision-support"></a>Huonon näön tuki
 
 * **Label**-ohjausobjektin pitäisi näyttää linkiltä, jos sitä käytetään linkkinä.
-  * Määritä **[Underline](properties-text.md)**-asetuksen arvoksi **true**
-  * **[HoverColor](properties-color-border.md)** -ohjausobjektin asetuksen tulee olla eri kuin  **[Color](properties-color-border.md)**-ohjausobjektin asetuksen
+  * Määritä **[Underline](properties-text.md)** -asetuksen arvoksi **true**
+  * **[HoverColor](properties-color-border.md)** -ohjausobjektin asetuksen tulee olla eri kuin  **[Color](properties-color-border.md)** -ohjausobjektin asetuksen
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 

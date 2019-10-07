@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d41ef04d3cd070373f6772bdfced029a7d09e244
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 5706b2c1b21c0135cc60678b6cf3f882df6fa56c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544219"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986619"
 ---
 # <a name="html-text-control-in-powerapps"></a>HTML-tekstin ohjausobjekti PowerAppsissa
 Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
@@ -43,9 +42,9 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Ei käytössä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Ei käytössä**.
 
-**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Disabled** (ei käytössä).
+**[DisabledFill](properties-color-border.md)** – Ohjausobjektin taustaväri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Disabled** (ei käytössä).
 
 **[Täyttö](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
@@ -76,10 +75,10 @@ Ruutu, joka näyttää tekstiä ja muuntaa HTML-tunnisteet muotoiluksi.
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Find**( *FindString*; *WithinString* )](../functions/function-find.md)
+[**Find**( *FindString*, *WithinString* )](../functions/function-find.md)
 
 ## <a name="example"></a>Esimerkki
-1. Lisää **[Selite](control-text-box.md)**-ohjausobjekti, anna sille nimi **Source** ja määritä sen **[Text](properties-core.md)**-ominaisuudeksi tämä merkkijono:
+1. Lisää **[Selite](control-text-box.md)** -ohjausobjekti, anna sille nimi **Source** ja määritä sen **[Text](properties-core.md)** -ominaisuudeksi tämä merkkijono:
 
 "\<p>Olemme\&nbsp;suorittaneet erittäin \&quot;perusteellisen\&quot; globalisoinnin ja lokalisoinnin.\<p>"
 
@@ -88,7 +87,7 @@ Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](.
 1. Lisää **HTML-tekstin** ohjausobjekti ja aseta sen **HtmlText**-ominaisuuden arvoksi:<br>
    **Source.Text**
    
-     **HTML-tekstin** ohjausobjekti näyttää saman tekstin kuin **[Selite](control-text-box.md)**-ohjausobjekti, mutta se muuntaa tunnisteet sopiviksi merkeiksi.
+     **HTML-tekstin** ohjausobjekti näyttää saman tekstin kuin **[Selite](control-text-box.md)** -ohjausobjekti, mutta se muuntaa tunnisteet sopiviksi merkeiksi.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
@@ -103,4 +102,4 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **HtmlText** on oltava käytössä.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **HtmlText** ei saa sisältää vuorovaikutteisia elementtejä, kuten `<button>`, `<a>` tai `<input>`. PowerAppsin **[TabIndex](properties-accessibility.md)**-järjestelmä ei käsittele **HtmlText**-ominaisuuden sisältämiä elementtejä.
+* **HtmlText** ei saa sisältää vuorovaikutteisia elementtejä, kuten `<button>`, `<a>` tai `<input>`. PowerAppsin **[TabIndex](properties-accessibility.md)** -järjestelmä ei käsittele **HtmlText**-ominaisuuden sisältämiä elementtejä.

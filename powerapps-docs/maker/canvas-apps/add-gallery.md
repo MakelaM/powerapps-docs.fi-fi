@@ -6,24 +6,23 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/28/2017
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f45948bc16f036669a09ed2c566c60440d24a797
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3df6227ed33c5154e1e5dd700e6a87c3e8305f01
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61528027"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987580"
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
 
-Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä pohjaan perustuvaan sovellukseesi **[Valikoima](controls/control-gallery.md)**-ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)**-ohjausobjektissa annettua suodatuskriteeriä.
+Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä pohjaan perustuvaan sovellukseesi **[Valikoima](controls/control-gallery.md)** -ohjausobjekti. Tässä aiheessa käytetään tietolähteenä Exceliä. Suodata luetteloa määrittämällä **Valikoima**-ohjausobjekti näyttämään vain ne kohteet, jotka vastaavat **[Tekstisyöte](controls/control-text-input.md)** -ohjausobjektissa annettua suodatuskriteeriä.
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -45,23 +44,23 @@ Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä pohjaan per
 
     1. [Lisää yhteys](add-data-connection.md) Excel-tiedoston **FlooringEstimates**-taulukkoon.
 
-## <a name="add-a-gallery-to-a-blank-screen"></a>Lisää valikoima tyhjä näyttö
+## <a name="add-a-gallery-to-a-blank-screen"></a>Valikoiman lisääminen tyhjään näyttöön
 
-1. Käyttöön **Lisää** -välilehden **valikoiman**, ja valitse sitten **pystysuuntainen**.
+1. Valitse **Lisää** -väli lehdeltä **valikoima**ja valitse sitten **pysty**.
 
     ![Lisää pystysuuntainen valikoima](./media/add-gallery/gallery-dropdown.png)
 
-1. Valitse **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa **kohteet** luettelo ja valitse sitten **Flooring Estimates**.
+1. Avaa oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdellä **kohteet** -luettelo ja valitse sitten lattia- **arviot**.
 
-    ![Flooring estimates](./media/add-gallery/select-layout.png)
+    ![Lattia päällyste ennusteet](./media/add-gallery/select-layout.png)
 
-1. (valinnainen) Tässä **asettelu** -luettelosta vaihtoehdon.
+1. valinnainen Valitse eri asetus **ulkoasu** -luettelosta.
 
-## <a name="add-a-gallery-in-a-screen"></a>Lisää valikoima näyttöön
+## <a name="add-a-gallery-in-a-screen"></a>Valikoiman lisääminen näyttöön
 
-1. Valitse **aloitus** -välilehden **uuden näytön** > **luettelonäyttö**.
+1. Valitse **Aloitus** -väli lehdeltä **Uusi näyttö** > -**lista näyttö**.
 
-    Näyttö, joka sisältää **valikoiman** ohjausobjektin ja muita ohjausobjekteja, kuten hakupalkin, tulee näkyviin.
+    Näyttöön tulee näyttö, joka sisältää **valikoima** -ohjaus objektin ja muita ohjaus objektin, kuten haku palkin.
 
 1. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `FlooringEstimates`.
 
@@ -70,17 +69,17 @@ Näytä kohdeluettelo mistä tahansa tietolähteestä lisäämällä pohjaan per
     ![Näytä tiedot](./media/add-gallery/show-data-default.png)
 
 ## <a name="add-a-control-to-the-gallery-control"></a>Ohjausobjektin lisääminen Valikoima-ohjausobjektiin
-Ennen kuin teet muita mukautuksia, varmista, että asettelu- **valikoiman** ohjausobjektin aihettasi parhaiten vastaava mitä. Sieltä voit muokata **valikoiman** malli, joka määrittää, miten kaikki tiedot **valikoiman** ohjausobjekti näkyy.
+Ennen kuin teet mitään muita mukautuksia, varmista, että **valikoima** -ohjaus objektin ulkoasu vastaa parhaiten sitä, mitä haluat. Sieltä voit edelleen muokata **valikoima** -mallia, joka määrittää, miten kaikki **valikoima** -ohjaus objektin tiedot näkyvät.
 
-1. Valitse malli napsauttamalla tai napauttamalla lähellä **valikoiman** ohjausobjektin ja valitsemalla sitten sen vasemmassa yläkulmassa olevaa kynäkuvaketta.
+1. Valitse malli napsauttamalla tai napauttamalla **valikoima** -ohjaus objektin alareunaa ja valitsemalla sitten kynä kuvake vasemmasta yläkulmasta.
 
     ![Valikoimamallin muokkaus](./media/add-gallery/edit-item.png)
 
-2. Kun mallipohja on valittuna, lisää **[Selite](controls/control-text-box.md)**-ohjausobjekti ja sitten siirrä sitä ja muuta sen kokoa niin, että se ei ole muiden mallipohjan ohjausobjektien päällä.
+2. Kun mallipohja on valittuna, lisää **[Selite](controls/control-text-box.md)** -ohjausobjekti ja sitten siirrä sitä ja muuta sen kokoa niin, että se ei ole muiden mallipohjan ohjausobjektien päällä.
 
     ![Lisää nimi](./media/add-gallery/add-text-box.png)
 
-3. Valitse valikoima ja valitse sitten **Muokkaa** kohdan **kentät** , **ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
+3. Valitse valikoima ja valitse sitten oikeanpuoleisen ruudun **Ominaisuudet** -väli lehden **kenttien** vierestä **Muokkaa** .
 
 4. Valitse aiemmin lisäämäsi selite ja avaa korostettu luettelo **Tiedot**-ruudussa.
 
@@ -92,27 +91,27 @@ Ennen kuin teet muita mukautuksia, varmista, että asettelu- **valikoiman** ohja
 
     ![Lopullinen valikoima](./media/add-gallery/final-gallery.png)
 
-## <a name="filter-and-sort-a-gallery"></a>Suodattaa ja lajitella valikoiman
-**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuus määrittää, mitä se näyttää. Tässä toimintosarjassa kyseinen ominaisuus määritetään niin, että se myös määrittää, mitkä tietueet näkyvät perusteella suodatusehdot ja missä järjestyksessä.
+## <a name="filter-and-sort-a-gallery"></a>Valikoiman suodattaminen ja lajitteleminen
+**Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)** -ominaisuus määrittää, mitä se näyttää. Tässä toimenpiteessä määrität kyseisen ominaisuuden niin, että se myös määrittää, mitkä tietueet näkyvät suodatus ehtojen ja järjestyksen mukaan.
 
-![Hakukuvaketta ruutuun ja lajitteleminen](./media/add-gallery/text-search-box.png)
+![Haku ruutu ja lajittelu kuvake](./media/add-gallery/text-search-box.png)
 
-1. Aseta **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+1. Aseta **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Sort
         (If
-            (IsBlank(TextSearchBox1.Text);
-            FlooringEstimates;
+            (IsBlank(TextSearchBox1.Text),
+            FlooringEstimates,
             Filter(
-                FlooringEstimates;
+                FlooringEstimates,
                 TextSearchBox1.Text in Text(Name)
             )
-        );
-        Name;
+        ),
+        Name,
         If(
-            SortDescending1;
-            SortOrder.Descending;
+            SortDescending1,
+            SortOrder.Descending,
             SortOrder.Ascending
         )
     )
@@ -120,27 +119,27 @@ Ennen kuin teet muita mukautuksia, varmista, että asettelu- **valikoiman** ohja
 
     Lisätietoja tämän kaavan funktioista on aiheessa [Lisätietoja kaavasta](formula-reference.md).
 
-1. Kaksoisnapsauta hakuruutua ja kirjoita sitten sen tai osa siitä tuotteen nimi.
+1. Kaksoisnapsauta haku ruutua ja kirjoita siihen tuotteen nimi tai osa siitä.
 
-    Näkyvät vain ne kohteet, jotka täyttävät suodatuskriteeriä.
+    Vain ne kohteet, jotka täyttävät suodatus kriteerin, näkyvät.
 
-1. Kun painamalla Alt-näppäintä, valitse lajittelukuvake kerran tai useita kertoja Vaihda lajittelujärjestystä.
+1. Kun painat Alt-näppäintä, valitse lajittelu kuvake vähintään kerran, jos haluat vaihtaa lajittelu järjestystä.
 
-    Tietueet viivakaaviosta nousevan ja laskevan tuotteen nimen mukaan aakkosjärjestyksessä.
+    Tietueet vaihtuva nousevassa ja laskevassa aakkos järjestyksessä tuotteen nimen perusteella.
 
 ## <a name="highlight-the-selected-item"></a>Valitun kohteen korostaminen
-Määritä **valikoiman** ohjausobjektin **TemplateFill** ominaisuudeksi kaava, joka muistuttaa tätä esimerkkiä, mutta voit määrittää eri värejä, jos haluat:
+Määritä **valikoima** -ohjaus objektin **templatefill** -ominaisuudeksi kaava, joka on samankaltainen kuin tässä esimerkissä, mutta voit halutessasi määrittää eri värit:
 
-**If(ThisItem.IsSelected; LightCyan; White)**
+**If(ThisItem.IsSelected, LightCyan, White)**
 
 ## <a name="change-the-default-selection"></a>Oletusvalinnan muuttaminen
-Aseta **Valikoima**-ohjausobjektin **Default**-ominaisuudeksi se tietue, jonka haluat olevan valittuna oletuksena. Voit esimerkiksi määrittää viides **FlooringEstimates** tietolähde:
+Aseta **Valikoima**-ohjausobjektin **Default**-ominaisuudeksi se tietue, jonka haluat olevan valittuna oletuksena. Voit esimerkiksi määrittää viidennen kohteen **Flouringin arviot** -tieto lähteessä:
 
-**Last(FirstN(FlooringEstimates; 5))**
+**Last(FirstN(FlooringEstimates, 5))**
 
 Tässä esimerkissä määritetään **FlooringEstimates**-tietolähteen **Hardwood**-luokka:
 
-**First(Filter(FlooringEstimates; Category = "Hardwood"))**
+**First(Filter(FlooringEstimates, Category = "Hardwood"))**
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 Opi käyttämään [lomakkeita](working-with-forms.md) ja [kaavoja](working-with-formulas.md).

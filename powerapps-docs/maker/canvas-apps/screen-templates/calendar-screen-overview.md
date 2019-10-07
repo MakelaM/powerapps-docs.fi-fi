@@ -1,368 +1,367 @@
 ---
-title: Kalenterin näytön malli | Microsoft Docs
-description: Ymmärtää, miten kalenterin näytön malli on tarkoitettu pohjaan perustuvat sovellukset toimivat, muokata näytön ja laajenna sitä sovelluksen osana
+title: Kalenteri näytön malli | Microsoft Docs
+description: Tutustu siihen, miten pohjaan kuuluvien sovellusten kalenteri näyttö malli toimii, Muokkaa näyttöä ja laajentaa sitä osana sovellusta
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 12/28/2018
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 745b4232a43a06c46866e83ca2452f8a55afeddf
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 470aa0671eddc5f4d3621c4dbdd8d81036c358e4
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61536197"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989401"
 ---
-# <a name="overview-of-the-calendar-screen-template-for-canvas-apps"></a>Pohjaan perustuvat sovellukset kalenterin näytön-mallin yleiskatsaus
+# <a name="overview-of-the-calendar-screen-template-for-canvas-apps"></a>Kangas sovellusten kalenteri näytön mallin yleiskatsaus
 
-Lisää kalenterin näyttö, jossa kerrotaan käyttäjät tulevat tapahtumat Office 365 Outlook-tilinsä kangas-sovellus. Käyttäjät voivat valita päivämäärän kalenterista ja Selaa luettelo kyseisen päivän tapahtumista. Voit muuttaa mitkä tiedot näkyvät luettelossa, Lisää toinen näyttö, joka sisältää lisätietoja tapahtuman, Näytä tapahtuman osallistujien luettelo ja tehdä muita mukautuksia.
+Lisää kangas sovelluksessa kalenteri näyttö, joka sisältää käyttäjien tulevat tapahtumat Office 365 Outlook-tiliinsä. Käyttäjät voivat valita päivä määrän kalenterista ja vierittää luettelon kyseisen päivän tapahtumista. Voit muuttaa luettelossa näkyviä tietoja, lisätä toisen näytön, joka näyttää lisä tietoja kustakin tapahtumasta, näyttää kunkin tapahtuman osallistujien luettelon ja tehdä muita mukautuksia.
 
-Voit myös lisätä malliin perustuvan muun, joka näyttää eri Office 365: stä kuten [sähköpostin](email-screen-overview.md), [ihmiset](people-screen-overview.md) organisaatiossasi, ja [käytettävyysryhmän](meeting-screen-overview.md) ihmiset käyttäjien ehkä haluat kutsua kokoukseen.
+Voit myös lisätä muita mallipohjaisia näyttöjä, jotka näyttävät eri tietoja Office 365-tieto koneesta, kuten [sähkö postista](email-screen-overview.md), organisaation [henkilöistä](people-screen-overview.md) ja käyttäjien [saatavuudesta](meeting-screen-overview.md) .
 
-Tästä yleiskatsauksesta opetetaan:
+Tässä yleiskatsauksessa opit:
 > [!div class="checklist"]
-> * Miten voit käyttää kalenterin oletusnäytön.
-> * Miten voit muokata sitä.
-> * Miten integrointi sovellukseen.
+> * Oletus kalenteri näytön käyttäminen.
+> * Sen muokkaaminen.
+> * Miten voit integroida sen sovellukseen.
 
-Katso tarkemmin tarkemmin tässä näytössä oletusarvon toimintoja [kalenterin näytön viittaus](calendar-screen-reference.md).
+Lisä tietoja tämän näytön oletusarvoisesta toiminnosta on [kalenteri näytön viite](calendar-screen-reference.md)oppaassa.
 
 ## <a name="prerequisite"></a>Edellytys
 
-Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna tuntee [sovelluksen luominen powerappsin](../data-platform-create-app-scratch.md).
+Perehtyneisyys näyttöjen ja muiden ohjaus objektien lisäämiseen ja määrittämiseen [, kun luot sovelluksen Powerappsissa](../data-platform-create-app-scratch.md).
 
-## <a name="default-functionality"></a>Default-toiminnot
+## <a name="default-functionality"></a>Oletus toiminto
 
-Lisää kalenteriin näytön mallista:
+Kalenteri näytön lisääminen mallista:
 
-1. [Kirjaudu sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) powerappsiin, ja luo sovellus tai avaa olemassa olevaa sovellusta PowerApps Studio.
+1. [Kirjaudu sisään](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) powerappsiin ja luo sitten sovellus tai Avaa olemassa oleva sovellus PowerApps Studio.
 
-    Tässä aiheessa näytetään puhelinsovelluksen, mutta samat käsitteet koskevat tablettisovellusta.
+    Tässä ohje aiheessa näytetään Puhelin sovellus, mutta samat käsitteet koskevat myös Tablet-sovellusta.
 
-1. Valitse **aloitus** Valitse valintanauhan välilehti **uuden näytön** > **kalenterin**.
+1. Valitse valinta nauhan **Aloitus** -väli lehdeltä **Uusi näyttö** > -**kalenteri**.
 
-    Oletusarvon mukaan näytön näyttää tältä:
+    Oletus arvon mukaan näyttö näyttää seuraavanlaiselta:
 
-    ![Kalenteri-näyttö](media/calendar-screen/calendar-initial.png)
+    ![Kalenteri näyttö](media/calendar-screen/calendar-initial.png)
 
-1. Tietojen näyttämiseksi Valitse vaihtoehto avattavasta luettelosta näytön yläreunan lähellä.
+1. Jos haluat näyttää tiedot, valitse vaihto ehto näytön yläreunan lähellä olevasta avattavasta luettelosta.
 
-    ![Kalenterin näytön, kun lataus on valmis](./media/calendar-screen/calendar-screen.png)
+    ![Kalenteri näyttö lataamisen jälkeen on valmis](./media/calendar-screen/calendar-screen.png)
 
-Joitakin hyödyllisiä Huomautuksia:
+Muutama hyödyllinen Huomautus:
 
-* Päivämäärä on oletusarvoisesti valittuna, ja voit helposti palauttaa se valitsemalla Kalenteri-kuvaketta oikeassa yläkulmassa.
-* Jos valitset eri päivämäärän, ympyrän kahvoineen ja Vaalea suorakulmio (sininen, jos oletusteema on käytössä) ympäröi kuluvan päivän päivämäärä.
-* Jos vähintään yksi tapahtumasi on ajoitettu tietyn päivämäärän, pienen värillisen ympyrän näkyy päivämäärän kalenterista.
-* Jos valitset päivämäärä, jolle yhden tai useamman tapahtumat ajoitetaan, tapahtuma(t) näkyvät luettelossa, valitse kalenteri.
+* Tämän päivän päivä määrä on oletus arvon mukaan valittuna, ja voit palata siihen helposti valitsemalla Kalenteri kuvakkeen oikeassa yläkulmassa.
+* Jos valitset eri päivä määrän, ympyrä ympäröi sen ja vaalea suora kulmio (sininen, jos oletus teema otetaan käyttöön) ympäröi kuluvan päivän päivä määrää.
+* Jos vähintään yksi tapahtuma on ajoitettu tietylle päivä kohdalle, kyseisenä päivä määränä näkyy pieni värillinen ympyrä kalenterissa.
+* Jos valitset päivä määrän, jolloin vähintään yksi tapahtuma ajoitetaan, tapahtuma näkyy kalenterin alla olevassa luettelossa.
 
-## <a name="modify-the-screen"></a>Muokkaa näyttö
+## <a name="modify-the-screen"></a>Muokkaa näyttöä
 
-Tämä näyttö oletusarvon toimintoja voit muokata joitakin yleisiä käyttötapoja:
+Voit muokata tämän näytön oletus toimintoja muutamalla yhteisellä tavalla:
 
-* [Määrittää kalenteri](calendar-screen-overview.md#specify-the-calendar).
-* [Näytä tapahtuma eri tietoja](calendar-screen-overview.md#show-different-details-about-an-event).
-* [Piilota vaihtamista silloin tapahtumat](calendar-screen-overview.md#hide-nonblocking-events).
+* [Määritä kalenteri](calendar-screen-overview.md#specify-the-calendar).
+* [Näytä tapahtuman eri tiedot](calendar-screen-overview.md#show-different-details-about-an-event).
+* [Piilota muut kuin esto tapahtumat](calendar-screen-overview.md#hide-nonblocking-events).
 
-Jos haluat muokata näytön tarkemmin [kalenterin näytön viittaus](./calendar-screen-reference.md) ohjeena.
+Jos haluat muokata näyttöä edelleen, käytä apuna [kalenteri näytön viittausta](./calendar-screen-reference.md) .
 
-### <a name="specify-the-calendar"></a>Määrittää kalenteri
+### <a name="specify-the-calendar"></a>Määritä kalenteri
 
-Jos tiedät jo mitä käyttäjien pitäisi tarkastella kalenteria, voit helposti näytön määrittämällä kyseisen kalenterin, ennen kuin julkaiset sovelluksen. Tämä muutos poistaa tarpeen kalenterit avattavasta luettelosta, jotta voit poistaa sen.
+Jos tiedät jo, mitä kalenteria käyttäjien tulee tarkastella, voit yksinkertaistaa näyttöä määrittämällä kyseisen kalenterin, ennen kuin julkaiset sovelluksen. Tämä muutos poistaa avattavien kalenterien luettelon tarpeen, jotta voit poistaa sen.
 
-1. Määritä **[OnStart](../controls/control-screen.md)** ominaisuuden oletusnäytön sovelluksessa tämä kaava:
+1. Valitse sovelluksen oletus näytön **[ONSTART](../controls/control-screen.md)** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Set( _userDomain; Right( User().Email; Len( User().Email ) - Find( "@"; User().Email ) ) );;
-    Set( _dateSelected; Today() );;
-    Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days ) );;
-    Set( _firstDayInView; 
-        DateAdd( _firstDayOfMonth; -( Weekday( _firstDayOfMonth) - 2 + 1 ); Days )
-    );;
-    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
-    Set( _calendarVisible; false );;
-    Set( _myCalendar; 
-        LookUp( Office365.CalendarGetTables().value; DisplayName = "{YourCalendarNameHere}" )
-    );;
-    Set( _minDate; 
-        DateAdd( _firstDayOfMonth; -( Weekday(_firstDayOfMonth) - 2 + 1 ); Days )
-    );;
-    Set( _maxDate; 
+    ```powerapps-dot
+    Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
+    Set( _dateSelected, Today() );
+    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
+    Set( _firstDayInView, 
+        DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth) - 2 + 1 ), Days )
+    );
+    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    Set( _calendarVisible, false );
+    Set( _myCalendar, 
+        LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
+    );
+    Set( _minDate, 
+        DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
+    );
+    Set( _maxDate, 
         DateAdd(
-            DateAdd( _firstDayOfMonth; -( Weekday(_firstDayOfMonth) - 2 + 1 ); Days );
-            40; 
+            DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days ),
+            40, 
             Days 
         )
-    );;
-    ClearCollect( MyCalendarEvents; 
-        Office365.GetEventsCalendarViewV2( _myCalendar.Name; 
-            Text( _minDate; UTC ); 
-            Text( _maxDate; UTC ) 
+    );
+    ClearCollect( MyCalendarEvents, 
+        Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
+            Text( _minDate, UTC ), 
+            Text( _maxDate, UTC ) 
         ).value
-    );;
-    Set( _calendarVisible; true )
+    );
+    Set( _calendarVisible, true )
     ```
 
     > [!NOTE]
-    > Tämä kaava on hieman muokata oletusarvo **OnSelect** avattavan luettelon valitsemalla Kalenteri-ominaisuuden. Saat lisätietoja tämän ohjausobjektin sen-kohdassa [kalenterin näytön viittaus](./calendar-screen-reference.md#calendar-drop-down).
+    > Tätä kaavaa muokataan hieman kalenterin valitsemisen avattavan luettelon **onselect** -ominaisuuden oletus arvosta. Lisä tietoja tästä ohjaus objektista on [kalenteri näytön viitta](./calendar-screen-reference.md#calendar-drop-down)uksen osassa.
 
-1. Korvaa `{YourCalendarNameHere}`, mukaan lukien aaltosulkeet kalenteria, jonka haluat näyttää nimi (esimerkiksi **kalenterin**).
+1. Korvaa `{YourCalendarNameHere}`, mukaan lukien aalto sulkeet, sen kalenterin nimellä, jonka haluat näyttää (esimerkiksi **kalenteri**).
 
     > [!IMPORTANT]
-    > Seuraavissa vaiheissa oletetaan, että olet lisännyt vain yhden kalenterin näytön sovellukseen. Jos olet lisännyt useampi kuin yksi, ohjausobjektin nimet (kuten **iconCalendar1**) päättyy numeroon, ja sinun on säätää kaavat vastaavasti.
+    > Seuraavissa vaiheissa oletetaan, että olet lisännyt sovellukseen vain yhden kalenteri näytön. Jos olet lisännyt useamman kuin yhden, ohjaus objektien nimet (kuten **iconCalendar1**) päättyvät eri numeroon, ja sinun on säädettävä kaavoja vastaavasti.
 
-1. Määritä **Y** -ominaisuuden **iconCalendar1** ominaisuudeksi seuraava lauseke:
+1. Määrittää **iconCalendar1** -ohjaus objektin **yy** -ominaisuudeksi tämä lauseke:
 
     `RectQuickActionBar1.Height + 20`
 
-1. Määritä **Y** -ominaisuuden **LblMonthSelected1** ominaisuudeksi seuraava lauseke:
+1. Määrittää **LblMonthSelected1** -ohjaus objektin **yy** -ominaisuudeksi tämä lauseke:
 
     `iconCalendar1.Y + iconCalendar1.Height + 20`
 
-1. Määritä **tekstin** -ominaisuuden **LblNoEvents1** tämä arvo:
+1. Valitse **LblNoEvents1** -ohjaus objektin **Text** -ominaisuudeksi tämä arvo:
 
     `"No events scheduled"`
 
-1. Määritä **näkyvissä** ominaisuuden **LblNoEvents1** tämä kaava:
+1. Valitse **LblNoEvents1** -ominaisuuden **Visible** -ominaisuudeksi Tämä kaava:
 
     `CountRows(CalendarEventsGallery1.AllItems) = 0 && _calendarVisible`
 
-1. Poista nämä ohjausobjektit:
+1. Poista nämä ohjaus objektin:
 
     - **dropdownCalendarSelection1**
     - **LblEmptyState1**
     - **iconEmptyState1**
 
-1. Jos kalenteri-näyttö ei ole oletusnäyttö, Lisää painike, joka siirtyy oletusarvon näytöstä kalenteri-näyttöön, jotta voit testata sovellusta.
+1. Jos kalenteri näyttö ei ole oletus näyttö, Lisää painike, joka siirtyy oletus näytöstä kalenteri-näyttöön, jotta voit testata sovellusta.
 
-    Voit esimerkiksi lisätä painikkeen **Screen1** , joka siirtyy **Screen2** Jos olet lisännyt kalenterin näytön sovellus, jonka olet luonut alusta alkaen.
+    Voit esimerkiksi lisätä painikkeen **Screen1** , joka siirtyy kohteeseen **Screen2** , jos olet lisännyt kalenteri näytön sovellukseen, jonka loit tyhjästä.
 
-1. Tallenna sovellus ja testaa sitä selaimessa tai mobiililaitteessa.
+1. Tallenna sovellus ja testaa sitä sitten selaimessa tai mobiililaitteessa.
 
-### <a name="show-different-details-about-an-event"></a>Tapahtuman eri tietojen näyttäminen
+### <a name="show-different-details-about-an-event"></a>Näytä tapahtuman eri tiedot
 
-Oletusarvoisesti, valitse kalenteri-valikoima nimeltä **CalendarEventsGallery**, näyttää alkamisaika, kesto, aihe ja tapahtuman sijainti. Voit määrittää valikoima näyttämään minkä tahansa kentän (kuten järjestäjä), joka [Office 365-liitin](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) tukee.
+Oletus arvon mukaan kalenterissa, jonka nimi on **Calendareventsgallery**, näytetään kunkin tapahtuman alkamis aika, kesto, aihe ja sijainti. Voit määrittää valikoiman näyttämään mikä tahansa kenttä (kuten järjestäjä), jota [Office 365-liitin](https://docs.microsoft.com/connectors/office365/#calendareventclientreceive) tukee.
 
-1. - **CalendarEventsGallery**, Määritä **tekstin** uusi tai aiemmin selitteen ominaisuuden `ThisItem` perässä on piste.
+1. Valitse **kalenteri-valikoima**-kohdassa uuden tai aiemmin luodun otsikon **Text** -ominaisuudeksi `ThisItem` ja sen jälkeen piste.
 
-    IntelliSense luettelo kentistä, jotka voit valita.
+    IntelliSense näyttää luettelon kentistä, joita voit valita.
 
 1. Valitse haluamasi kenttä.
 
-    Otsikko näyttää määrittämäsi tiedon tyyppi.
+    Selitteessä näytetään määrittämiesi tietojen tyyppi.
 
-### <a name="hide-nonblocking-events"></a>Piilota vaihtamista silloin tapahtumat
+### <a name="hide-nonblocking-events"></a>Piilota nonblocking-tapahtumat
 
-Monta offices tiimin jäsenille Lähetä kokouksen pyyntöjen ilmoittaa toisiinsa, kun ne olla poissa toimistosta. Estä kaikkien ajoitukset välttämiseksi pyynnön henkilön asettaa sen käytettävyysryhmän **vapaa**. Voit piilottaa nämä tapahtumat, kalenterin ja valikoiman päivittämällä muutaman ominaisuudet.
+Monissa toimistoissa työryhmän jäsenet lähettävät Kokous pyyntöjä ilmoittaakseen toisilleen, kun he ovat poissa toimistosta. Jos haluat estää kaikkien aika taulujen estämisen, pyynnön lähettänyt henkilö asettaa sen saatavuuden **vapaaksi**. Voit piilottaa nämä tapahtumat kalenterista ja valikoimasta päivittämällä muutaman ominaisuuden.
 
-1. Määritä **kohteet** ominaisuuden **CalendarEventsGallery** tämä kaava:
+1. Valitse **Calendarevensgallery** - **kohteen Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     SortByColumns(
         Filter(
-            MyCalendarEvents;
-            Text( Start; DateTimeFormat.ShortDate ) = 
-                Text( _dateSelected; DateTimeFormat.ShortDate );
+            MyCalendarEvents,
+            Text( Start, DateTimeFormat.ShortDate ) = 
+                Text( _dateSelected, DateTimeFormat.ShortDate ),
             ShowAs <> "Free"
-        );
+        ),
         "Start"
     )
     ```
 
-    Tässä kaavassa **suodatin** funktion piilottaa nämä tapahtumia, jotka on suunniteltu kuin valittu päivämäärä paitsi myös tapahtumat, jotka saatavuutta on määritetty **vapaa**.
+    Tässä kaavassa **Filter** -Funktiot piilottaa ei vain ne tapahtumat, jotka on ajoitettu muulle kuin valitulle päivä määräksi, vaan myös tapahtumat, joiden käytettävyysasetukseksi on määritetty **ilmainen**.
 
-1. Määritä kalenteri- **näkyvissä** -ominaisuuden **ympyrä** ominaisuudeksi tämä kaava:
+1. Valitse kalenterissa **ympyrä** -ohjaus objektin **Visible** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     CountRows(
         Filter(
-            MyCalendarEvents;
-            DateValue( Text(Start) ) = DateAdd( _firstDayInView; ThisItem.Value; Days );
+            MyCalendarEvents,
+            DateValue( Text(Start) ) = DateAdd( _firstDayInView, ThisItem.Value, Days ),
             ShowAs <> "Free"
         )
     ) > 0 && !Subcircle1.Visible && Title2.Visible
     ```
-    Tämä kaava sisältää samat kuin Edellinen kaava suodattimet. Tämän vuoksi tapahtuman osoitin ympyrän kohtaan päivämäärä vain, jos se on yksi tai useampi tapahtumia, jotka ovat valittuna päivämääränä ja joka käytettävyysryhmä ei ole asetettu **vapaa**.
+    Tämä kaava sisältää samat suodattimet kuin edellinen kaava. Tästä syystä tapahtuma ilmaisimen ympyrä näkyy päivä määrän alla vain, jos sillä on yksi tai useampi tapahtuma, joka on valitulla päivä määrällä ja jonka käytettävyysarvoksi ei ole määritetty **vapaata**.
 
-## <a name="integrate-the-screen-into-an-app"></a>Näytön integrointi sovellukseen
+## <a name="integrate-the-screen-into-an-app"></a>Näytön integroiminen sovellukseen
 
-Kalenteri-näyttö on tehokas nipun ohjausobjektien oma, mutta se toimii parhaiten yleensä suurempi, monipuolisempia sovelluksen osana. Voit integroida tämän näytön suurempi sovelluksen useilla eri tavoilla, muun muassa lisätä nämä asetukset:
+Kalenteri näyttö on tehokas nippu ohjaus objektien omaa oikeutta, mutta se toimii yleensä parhaiten osana suurempaa, monipuolista sovellusta. Voit integroida tämän näytön suurempaan sovellukseen useilla eri tavoilla, kuten lisäämällä näitä asetuksia:
 
-* [Tarkastele tapahtumatiedot](calendar-screen-overview.md#view-event-details).
+* [Näytä tapahtuman tiedot](calendar-screen-overview.md#view-event-details).
 * [Näytä tapahtuman osallistujat](calendar-screen-overview.md#show-event-attendees).
 
-### <a name="view-event-details"></a>Tapahtuman tietojen tarkasteleminen
+### <a name="view-event-details"></a>Näytä tapahtuman tiedot
 
-Jos käyttäjät voivat valita tapahtuma luodaan **CalendarEventsGallery**, voit avata toiseen näyttöön, joka näyttää lisätietoja siitä, että tapahtuma.
+Jos käyttäjät valitsevat tapahtuman **Calendarevensgallery**-kohteessa, voit avata toisen näytön, joka sisältää lisä tietoja kyseiseen tapahtumaan.
 
 > [!NOTE]
-> Seuraavassa kuvataan tapahtumatiedot valikoima, jossa dynaamista sisältöä, mutta voit saavuttaa samanlaiset tulokset ottamalla muilla. Voit esimerkiksi saada suunnittelu tarkemmin käyttämällä sarjan otsikot.
+> Tämä menettely näyttää tapahtuma tiedot valikoimassa, jossa on dynaamista sisältöä, mutta voit saavuttaa samanlaiset tulokset ottamalla muita tapoja. Voit esimerkiksi saada lisää rakenne-ohjaus objektin käyttämällä sen sijaan useita otsikoita.
 
-1. Lisää tyhjä näyttö, jonka nimi on **EventDetailsScreen**, joka sisältää tyhjä joustava korkeus-valikoima ja painike, joka siirtyy takaisin kalenteri-näyttöön.
+1. Lisää tyhjä näyttö nimeltä **Eventdetailsscreen**, joka sisältää tyhjän joustavan korkeuden valikoiman ja painikkeen, joka siirtyy takaisin kalenteri-näyttöön.
 
-1. Joustava korkeus-valikoimassa ja lisää **nimen** ohjausobjektin ja **HTML-tekstin** ohjausobjekti ja määritä **AutoHeight** ominaisuuden kummatkin **true** .
+1. Lisää joustavan korkeuden valikoimaan **Selite** -ohjaus objekti ja **HTML-teksti** -ohjaus objekti sekä määrittää molempien **Automaattinen korkeus** -ominaisuudeksi **True**.
 
     > [!NOTE]
-    > PowerApps hakee tapahtuman tekstin HTML-teksti, joten sinun tarvitsee näyttää kyseisen sisällön **HTML-tekstin** ohjausobjektin.
+    > PowerApps noutaa kunkin tapahtuman sanoman rungon HTML-tekstinä, joten sinun on näytettävä sisältö **HTML-teksti** ohjaus objektissa.
 
-1. Määritä **Y** -ominaisuuden **HTML-tekstin** ominaisuudeksi seuraava lauseke:
+1. Määrittää **HTML-teksti** ohjaus objektin **yy** -ominaisuudeksi tämän lausekkeen:
 
     `Label1.Y + Label1.Height + 20`
 
-1. Säädä lisäominaisuudet tarvittaessa, jotta tarpeisiisi tyyli.
+1. Säädä lisä ominaisuuksia tarvittaessa tyylisi mukaan.
 
-    Esimerkiksi, haluat ehkä Lisää erottimen viivan alla **HTML-tekstin** ohjausobjektin.
+    Saatat esimerkiksi haluta lisätä erotin viivan **HTML-teksti** -ohjaus objektin alapuolelle.
 
-1. Määritä **kohteet** ominaisuus joustava korkeus tämä kaava:
+1. Valitse joustavan korkeuden valikoiman **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Table(
-        { Title: "Subject"; Value: _selectedCalendarEvent.Subject };
+        { Title: "Subject", Value: _selectedCalendarEvent.Subject },
         { 
-            Title: "Time"; 
+            Title: "Time", 
             Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End 
-        };
-        { Title: "Body"; Value: _selectedCalendarEvent.Body }
+        },
+        { Title: "Body", Value: _selectedCalendarEvent.Body }
     )
     ```
 
-    Tämä kaava Luo valikoima, jonka kenttien arvot on määritetty dynaamisen tietojen **_selectedCalendarEvent**, joka on määritetty aina, kun käyttäjä valitsee tapahtuma luodaan **CalendarEventsGallery** ohjausobjektin. Voit laajentaa valikoiman sisältämään enemmän kenttiä lisäämällä useita selitteitä, mutta on hyvä aloituskohta.
+    Tämä kaava luo valikoiman dynaamisia tietoja, jotka on määritetty **_Selectedcalendarevent**-kentän arvoihin, joka määritetään aina, kun käyttäjä valitsee tapahtuman **Calendarevensgallery** -ohjaus objektissa. Voit laajentaa tämän valikoiman sisältämään lisää kenttiä lisäämällä siihen otsikoita, mutta tämä joukko antaa hyvän lähtö kohdan.
 
-1. Määrittää valikoimakohteet paikassa, **tekstin** -ominaisuuden **nimen** ohjausobjektin `ThisItem.Title`, ja **HtmlText** -ominaisuuden **HTML-teksti**  ohjausobjektin `ThisItem.Value`.
+1. Kun valikoiman kohteet ovat paikallaan, Aseta **Label** -ohjaus objektin **Text** -ominaisuudeksi `ThisItem.Title` ja **HTML-teksti** ohjaus objektin **htmltext** -ominaisuudeksi `ThisItem.Value`.
 
-1. - **CalendarEventsGallery**, Määritä **OnSelect** -ominaisuuden **otsikko** ominaisuudeksi tämä kaava:
+1. Määritä **calendareventsgallery**-kohteessa **title** -ohjaus objektin **onselect** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
-    Set( _selectedCalendarEvent; ThisItem );;
-    Navigate( EventDetailsScreen; None )
+    ```powerapps-dot
+    Set( _selectedCalendarEvent, ThisItem );
+    Navigate( EventDetailsScreen, None )
     ```
 
     > [!Note]
-    > Käyttämisen sijasta **_selectedCalendarEvent** muuttujan, voit sen sijaan käyttää **CalendarEventsGallery**. Valittu.
+    > Sen sijaan, että käyttäisit **_Selectedcalendarevent** -muuttujaa, voit käyttää **Calendareventsgallery**-kohdetta. Valitun.
 
 ### <a name="show-event-attendees"></a>Näytä tapahtuman osallistujat
 
-`Office365.GetEventsCalendarViewV2` Toiminto noutaa kentät kullekin tapahtumalle, mukaan lukien puolipistein eroteltu joukon pakolliset ja valinnaiset osallistujat erilaisia. Tässä toimenpiteessä jäsentää jokaiseen osallistujat, määrittää, mitkä osallistujat organisaatiossasi ja hakea, kuka tahansa ovat Office 365-profiilit.
+@No__t-0-toiminto noutaa kullekin tapahtumalle useita kenttiä, mukaan lukien puoli pistein eroteltu pakollisten ja valinnaisten osallistujien joukko. Tässä toimenpiteessä jäsennetään kutakin osanottajajoukkoa, määritetään, ketkä osallistujat ovat organisaatiossasi, ja nouda kaikkien niiden Office 365-profiilit.
 
-1. Jos sovelluksesi ei ole Office 365-käyttäjät-liittimen [lisätä sen](../add-data-connection.md).
+1. Jos sovelluksesi ei sisällä Office 365-käyttäjien liitintä, [Lisää se](../add-data-connection.md).
 
-1. Noutaa kokouksen osallistujille Office 365-profiileja, Määritä **OnSelect** -ominaisuuden **otsikko** ohjausobjektia **CalendarEventsGallery** tämä kaava:
+1. Jos haluat noutaa koko uksen osallistujien Office 365-profiilit, Määritä **Calendarventsgallery** - **ohjaus objektin** **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Set( _selectedCalendarEvent; ThisItem );;
-    ClearCollect( AttendeeEmailsTemp;
+    ```powerapps-dot
+    Set( _selectedCalendarEvent, ThisItem );
+    ClearCollect( AttendeeEmailsTemp,
         Filter(
-            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees; ";" );
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
             !IsBlank( Result )
         )
-    );;
-    ClearCollect( AttendeeEmails;
-        AddColumns( AttendeeEmailsTemp; 
-            "InOrg";
-            Upper( _userDomain ) = Upper( Right( Result; Len( Result ) - Find( "@"; Result ) ) )
+    );
+    ClearCollect( AttendeeEmails,
+        AddColumns( AttendeeEmailsTemp, 
+            "InOrg",
+            Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
         )
-    );;
-    ClearCollect( MyPeople;
-        ForAll( AttendeeEmails; If( InOrg; Office365Users.UserProfile( Result ) ) ) 
-    );;
-    Collect( MyPeople;
-        ForAll( AttendeeEmails;
-            If( !InOrg; 
-                { DisplayName: Result; Id: ""; JobTitle: ""; UserPrincipalName: Result }
+    );
+    ClearCollect( MyPeople,
+        ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) 
+    );
+    Collect( MyPeople,
+        ForAll( AttendeeEmails,
+            If( !InOrg, 
+                { DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result }
             )
         )
     )
     ```
 
-Tämän luettelon käsitellään kunkin **ClearCollect** toiminto:
+Tässä listassa kerrotaan, mitä kukin **Clearcollect** -toiminto tekee:
 
-- ClearCollect(AttendeeEmailsTemp)
-    ```powerapps-comma
-    ClearCollect( AttendeeEmailsTemp;
+- ClearCollect (Attedeeemailstemp)
+    ```powerapps-dot
+    ClearCollect( AttendeeEmailsTemp,
         Filter(
-            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees; ";" ); 
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ), 
             !IsBlank( Result)
         )
-    );;
+    );
     ```
 
-    Tämä kaava yhdistää yksittäiseksi merkkijonoksi pakolliset ja valinnaiset osallistujat ja jakaa sitten Tämä merkkijono yksittäiset osoitteet tällä kunkin puolipisteillä. Kaava sitten suodattaa pois tyhjät arvot kyseisen joukosta ja Lisää muut arvot nimeltä kokoelmaan **AttendeeEmailsTemp**.
+    Tämä kaava yhdistää pakolliset ja valinnaiset osallistujat yksittäiseksi merkki jonoksi ja jakaa sitten merkki jonon yksittäisiksi osoitteiksi kummallakin puoli pisteellä. Kaava suodattaa sitten pois tyhjät arvot kyseisestä joukosta ja Lisää Muut arvot kokoelmaan, jonka nimi on **Attedeeemailstemp**.
 
-- ClearCollect(AttendeeEmails)
-    ```powerapps-comma
-    ClearCollect( AttendeeEmails;
-        AddColumns( AttendeeEmailsTemp; 
-            "InOrg";
-            Upper( _userDomain ) = Upper( Right( Result; Len(Result) - Find("@"; Result) ) )
+- ClearCollect (Attedeemails)
+    ```powerapps-dot
+    ClearCollect( AttendeeEmails,
+        AddColumns( AttendeeEmailsTemp, 
+            "InOrg",
+            Upper( _userDomain ) = Upper( Right( Result, Len(Result) - Find("@", Result) ) )
         )
-    );;
+    );
     ```
-    Tämä kaava määrittää suunnilleen, onko osallistuja organisaatiossasi. Määritys **_userDomain** on yksinkertaisesti toimialueen URL-osoite on käytössä, sovelluksen henkilön sähköpostiosoite. Tämä rivi luo muita tosi/epätosi-sarakkeen nimeltä **InOrg**- **AttendeeEmailsTemp** kokoelma. Sarake sisältää **true** Jos **userDomain** sähköpostiosoitteeseen kyseisen rivin toimialueen URL-osoite vastaa **AttendeeEmailsTemp**.
+    Tämä kaava määrittää suunnilleen, onko osallistuja organisaatiossasi. **_Userdomain** -määrityksen on yksinkertaisesti toimi alueen URL-osoite sovelluksen suorittavan henkilön Sähkö posti osoitteessa. Tämä linja luo ylimääräisen true/false-sarakkeen, jonka nimi on **Inorg**, **Attedeeemailstemp** -kokoelmassa. Tämä sarake sisältää arvon **True** , jos **userdomain** on sama kuin kyseisen rivin **Attendeeemailstemp**-ohjaus objektin toimi alueen URL-osoite.
 
-    Tämä lähestymistapa ei ole aina tarkkoja, mutta noutaa melko Sulje. Esimerkiksi tietyn osallistujat organisaatiossasi saattaa olla sähköpostiosoitetta, kuten Jane@OnContoso.com, olisi **_userDomain** on Contoso.com. Sovelluksen käyttäjälle ja Jane saattaa toimia samassa yrityksessä mutta olla vähäinen variaatioita sähköpostiosoitteet. Tällaisissa tilanteissa, haluat ehkä käyttää kaavaa:
+    Tämä lähestymis tapa ei ole aina tarkka, mutta se tulee melko lähelle. Esimerkiksi tietyillä organisaatiosi osallistujilla voi olla Sähkö posti osoite, kuten Jane@OnContoso.com, kun taas **_Userdomain** on contoso.com. Sovelluksen käyttäjä ja Jane saattavat toimia samassa yrityksessä, mutta niiden sähkö posti osoitteissa on vähäisiä muutoksia. Tällaisissa tapa uksissa haluat ehkä käyttää seuraavaa kaavaa:
 
-    `Upper(_userDomain) in Upper(Right(Result; Len(Result) - Find("@"; Result)))`
+    `Upper(_userDomain) in Upper(Right(Result, Len(Result) - Find("@", Result)))`
 
-    Kuitenkin kaava vastaa sähköpostiosoitteet, kuten Jane@NotTheContosoCompany.com kanssa **_userDomain** kuten Contoso.com ja nämä henkilöt eivät toimi samassa yrityksessä.
+    Tämä kaava vastaa kuitenkin Sähkö posti osoitteita, kuten Jane@NotTheContosoCompany.com, jossa on **_Userdomain** , kuten contoso.com, ja nämä henkilöt eivät toimi samassa yrityksessä.
 
-- ClearCollect(MyPeople)
+- ClearCollect (MyPeople)
 
-    ```powerapps-comma
-    ClearCollect( MyPeople;
-        ForAll( AttendeeEmails; 
-            If( InOrg; 
+    ```powerapps-dot
+    ClearCollect( MyPeople,
+        ForAll( AttendeeEmails, 
+            If( InOrg, 
                 Office365Users.UserProfile( Result )
             )
         )
-    );;
-    Collect( MyPeople;
-        ForAll( AttendeeEmails;
-            If( !InOrg; 
+    );
+    Collect( MyPeople,
+        ForAll( AttendeeEmails,
+            If( !InOrg, 
                 { 
-                    DisplayName: Result; 
-                    Id: ""; 
-                    JobTitle: ""; 
+                    DisplayName: Result, 
+                    Id: "", 
+                    JobTitle: "", 
                     UserPrincipalName: Result
                 }
             )
         )
-    );;
+    );
     ```
-    Noutaa Office 365-profiileja, sinun on käytettävä [Office365Users.UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) tai [Office365Users.UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) toiminto. Nämä toiminnot kerää ensin kaikki Office 365-profiilit osallistujille, joilla on käyttäjän org. Sitten Toiminnot Lisää muutama kenttä osallistujat organisaatiosi ulkopuolella. Nämä kaksi kohdetta jaettu eri toimintoja koska **ForAll** silmukka ei takaa järjestyksessä. Tämän vuoksi **ForAll** saattaa kerätä osallistuja-organisaation ulkopuolisten ensin. Tässä tapauksessa rakennetta **MyPeople** sisältää vain **DisplayName**, **tunnus**, **JobTitle**, ja **UserPrincipalName** . Kuitenkin käyttäjäprofiili toiminnot noutaa paljon monipuolisempaa tietoja, jotka kuin. Jotta voit pakottaa **MyPeople** Lisää Office 365-profiileja, ennen kuin muut profiilit kokoelma.
+    Jos haluat noutaa Officen 365-profiilit, sinun on käytettävä [Office365Users. UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) -tai [Office365Users. UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) -toimintoa. Nämä toiminnot keräävät ensin kaikki Officen 365-profiilit käyttäjän organisaatiossa oleville osallistujille. Sen jälkeen toiminnot lisäävät muutaman kentän osanottajille organisaation ulkopuolelta. Erotit nämä kaksi kohdetta erillisiin toimintoihin, koska **kokeilu** silmukka ei takaa järjestystä. Tästä syystä **kokeilu** voi kerätä osallistujan organisaation ulkopuolelta. Tässä tapa uksessa **Mypeople** -rakenne sisältää vain **DisplayName**-, **ID**-, **jobtitle**-ja **userPrincipalName-nimet**. UserProfile-toiminnot noutavat kuitenkin paljon monipuolisempia tietoja. Pakotat **Mypeople** -kokoelman lisäämään Officen 365-profiileja ennen muita profiileja.
 
     > [!NOTE]
-    > Voit saavuttaa saman tuloksen ainoastaan yhteen **ClearCollect** funktio:
+    > Voit saavuttaa saman tuloksen vain yhdellä **Clearcollect** -funktiolla:
 
-    ```powerapps-comma
-    ClearCollect( MyPeople; 
+    ```powerapps-dot
+    ClearCollect( MyPeople, 
         ForAll(
             AddColumns(
                 Filter(
                     Split(
-                        ThisItem.RequiredAttendees & ThisItem.OptionalAttendees; 
+                        ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, 
                         ";"
-                    ); 
+                    ), 
                     !IsBlank( Result )
-                ); 
-                "InOrg"; _userDomain = Right( Result; Len( Result ) - Find( "@"; Result ) )
-            ); 
-            If( InOrg; 
-                Office365Users.UserProfile( Result ); 
+                ), 
+                "InOrg", _userDomain = Right( Result, Len( Result ) - Find( "@", Result ) )
+            ), 
+            If( InOrg, 
+                Office365Users.UserProfile( Result ), 
                 { 
-                    DisplayName: Result; 
-                    Id: ""; 
-                    JobTitle: ""; 
-                    UserPrincipalName: Result; 
-                    Department: ""; 
-                    OfficeLocation: ""; 
+                    DisplayName: Result, 
+                    Id: "", 
+                    JobTitle: "", 
+                    UserPrincipalName: Result, 
+                    Department: "", 
+                    OfficeLocation: "", 
                     TelephoneNumber: ""
                 }
             )
@@ -370,14 +369,14 @@ Tämän luettelon käsitellään kunkin **ClearCollect** toiminto:
     )
     ```
 
-Viimeistele Tässä harjoituksessa:
+Viimeistele Tämä harjoitus:
 
-1. Lisää näyttö, joka sisältää valikoima, jonka **kohteet** asetuksena on **MyPeople**.
+1. Lisää näyttö, joka sisältää valikoiman, jonka **Items** -ominaisuudeksi on määritetty **mypeople**.
 
-1. - **OnSelect** -ominaisuuden **otsikko** ohjausobjektia **CalendarEventsGallery**, Lisää **Navigate** funktio näyttöön, loit edellisessä vaiheessa.
+1. Lisää **kalenteri-valikoima**-kohdan **onselect** -ominaisuudeksi **siirtymis** -funktiolla edellisessä vaiheessa luomaasi näyttöön.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-* [Näytä tämä näyttö ohjeessa](calendar-screen-reference.md).
-* [Lue lisätietoja Office 365 Outlook-liittimessä](../connections/connection-office365-outlook.md).
-* [Lue lisätietoja Office 365-käyttäjät-liittimen](../connections/connection-office365-users.md).
+* [Näytä tämän näytön viite asiakirjat](calendar-screen-reference.md).
+* [Lue lisä tietoja Office 365 Outlook Connectorista](../connections/connection-office365-outlook.md).
+* [Lue lisä tietoja Office 365-käyttäjien liittimestä](../connections/connection-office365-users.md).

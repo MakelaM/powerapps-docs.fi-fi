@@ -6,26 +6,25 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/14/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9415ab67b93ef64f5caa025af5ac685ca2363305
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ea2668ca295d807bbc19f71c9aa9f477c3b96041
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61563107"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992669"
 ---
 # <a name="guid-function-in-powerapps"></a>PowerAppsin GUID-funktio
 Muuntaa GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) -merkkijonon GUID-arvoksi tai luo uuden GUID-arvon.
 
 ## <a name="description"></a>Kuvaus
-**GUID**-funktiolla muunnetaan GUID-tunnuksen heksadesimaalimuotoisen esityksen sisältävä merkkijono GUID-arvoksi, joka voidaan välittää tietokantaan. GUID-arvoja käytetään avaimet tietokannan järjestelmien, kuten Common Data Service-ja SQL Server.
+**GUID**-funktiolla muunnetaan GUID-tunnuksen heksadesimaalimuotoisen esityksen sisältävä merkkijono GUID-arvoksi, joka voidaan välittää tietokantaan. GUID-arvoja käytetään avaimina tieto kanta järjestelmissä, kuten Common Data Service ja SQL Server.
 
 Välitetty merkkijono voi sisältää isoja tai pieniä kirjaimia. Siinä on oltava 32 heksadesimaalimerkkiä jommassakummassa seuraavista muodoista:
 
@@ -36,14 +35,14 @@ Jos et määritä argumenttia, tämä funktio luo uuden GUID-tunnuksen.
 
 GUID-arvon muuntaminen merkkijonoksi edellyttää vain, että käytät sitä merkkijonon kontekstissa. GUID-arvo muunnetaan heksadesimaalimuotoiseksi merkkijonoksi, joka sisältää väliviivoja ja pieniä kirjaimia. 
 
-Luotaessa uusi GUID-tunnus, tämä funktio käyttää pseudosatunnaislukugeneraattorin satunnaisluvun luoda versiota 4 [IETF RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID-tunnus. Muunnettaessa merkkijonoa GUID-tunnus Tämä funktio tukee hyväksymällä 32 heksadesimaalimerkkinä mitä tahansa merkkijonoa GUID-versiolla.
+Kun luot uuden GUID-tunnuksen, tämä käyttää pseudosatunnaisia lukuja luodaksesi version 4 [IETF:n RFC 4122](https://www.ietf.org/rfc/rfc4122.txt) GUID-version. Muunnettaessa merkki jonoa GUID-muotoon Tämä Function tukee mitä tahansa GUID-versiota hyväksymällä minkä tahansa merkki jonon, joka on 32 heksa desimaali merkkiä.
 
 ## <a name="volatile-functions"></a>Muuttuvat funktiot
 **GUID-tunnus** on muuttuva funktio, kun sitä käytetään ilman argumenttia. Aina, kun funktiota arvioidaan, se palauttaa eri arvon.  
 
 Kun muuttuvaa funktiota käytetään tietotyönkulun kaavassa, muuttuva funktio palauttaa eri arvon vain arvioitaessa uudelleen kaavaa, jossa se esiintyy. Jos mitään muuta ei muuteta kaavassa, sillä on sama arvo koko sovelluksesi suorittamisen ajan.
 
-Esimerkiksi otsikko-ohjausobjekti, jonka **tekstiominaisuudeksi** on asetettu **GUID()**, ei muutu sovelluksen aktiivisena olon aikana. Erilainen arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
+Esimerkiksi otsikko-ohjausobjekti, jonka **tekstiominaisuudeksi** on asetettu **GUID()** , ei muutu sovelluksen aktiivisena olon aikana. Erilainen arvo luodaan vain sulkemalla sovellus ja avaamalla se uudelleen.
 
 Funktio arvioidaan uudelleen, jos se on osa kaavaa, jossa jotakin muuta kohtaa on muutettu. Jos asetamme esimerkiksi **otsikko-ohjausobjektin** **tekstiominaisuuden** tähän kaavaan, GUID-tunnus luodaan aina, kun käyttäjä muuttaa **tekstisyöte-ohjausobjektin** arvoa:
 
@@ -70,7 +69,7 @@ Voit myös antaa GUID-merkkijonon ilman väliviivoja. Tämä kaava palauttaa sam
 
 Tässä kontekstissa määritetään uuden tietokantatietueen **Tila**-kentälle vakiintunut arvo:
 
-* **Patch (tuotteet; oletus (tuotteet); {tila: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
+* **Patch (tuotteet, oletus (tuotteet), {status: GUID ("F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4")})**
 
 Et todennäköisesti halua näyttää GUID-tunnuksia käyttäjille, mutta ne voivat auttaa sovelluksen virheenkorjauksessa. Jos haluat näyttää **Tila**-kentän arvon tietueessa, jonka loit edellisessä esimerkissä, määritä **otsikko-ohjausobjektin** **tekstiominaisuudeksi** tämä kaava:
 
@@ -80,13 +79,13 @@ Et todennäköisesti halua näyttää GUID-tunnuksia käyttäjille, mutta ne voi
 
 #### <a name="create-a-table-of-guids"></a>GUID-tunnustaulukon luominen
 
-1. Määritä **[painikeohjausobjektin](../controls/control-button.md)** **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+1. Määritä **[painikeohjausobjektin](../controls/control-button.md)** **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **ClearCollect( NewGUIDs; ForAll( [ 1; 2; 3; 4; 5 ]; GUID() ) )**
+    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ) )**
 
     Tämä kaava luo yksisarakkeisen taulukon, joka toistetaan viisi kertaa, ja tuloksesi saadaan viisi GUID-tunnusta.
 
-1. Lisää **[tietotaulukko-ohjausobjekti](../controls/control-data-table.md)**, määritä sen **Items**-ominaisuudeksi **NewGUIDs** ja näytä **Arvo**-kenttä.
+1. Lisää **[tietotaulukko-ohjausobjekti](../controls/control-data-table.md)** , määritä sen **Items**-ominaisuudeksi **NewGUIDs** ja näytä **Arvo**-kenttä.
 
 1. Kun pidät alhaalla Alt-näppäintä, valitse painike napsauttamalla tai napauttamalla sitä.
 
@@ -100,4 +99,4 @@ Et todennäköisesti halua näyttää GUID-tunnuksia käyttäjille, mutta ne voi
 
 Luo yksittäinen GUID-tunnus taulukon sijaan tällä kaavalla:
 
-**Set( NewGUID; GUID() )**
+**Set( NewGUID, GUID() )**

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 889f612f3da208d4edfccc43a579ced07933b40d
-ms.sourcegitcommit: aa9f78c304fe46922aecfe3b3fadb6bda72dfb23
+ms.openlocfilehash: 0a56230539990ce51cc9270f71d8c2b7c9a1db73
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66216094"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992877"
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Concat- ja Concatenate-funktiot PowerAppsissa
 
@@ -27,96 +26,96 @@ Yhdistää yksittäisiä tekstimerkkijonoja ja merkkijonoja [taulukoiksi](../wor
 
 ## <a name="description"></a>Kuvaus
 
-**Concatenate**-funktio yhdistää kokoelman yksittäisiä merkkijonoja ja yksisarakkeisen merkkijonotaulukon. Kun käytät tätä funktiota yksittäisten merkkijonojen kanssa, se vastaa **&** [operaattorin](operators.md).
+**Concatenate**-funktio yhdistää kokoelman yksittäisiä merkkijonoja ja yksisarakkeisen merkkijonotaulukon. Kun käytät tätä funktiolla yksilöllisiä merkki jonoja, se vastaa **&-** [operaattorin](operators.md)käyttämistä.
 
 **Concat**-funktio yhdistää kaikkiin taulukon [tietueisiin](../working-with-tables.md#records) käytetyn kaavan tulokset. Tuloksena on yksi merkkijono. Käytä tätä funktiota taulukon merkkijonojen laskemiseen yhteen aivan samalla tavalla kuin **[Sum](function-aggregates.md)** -funktiota luvuille.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 
-Käytä [ **Jaa** ](function-split.md) tai [ **MatchAll** ](function-ismatch.md) funktiota merkkijonon jakamiseen osamerkkijonojen taulukoksi.
+Jaa merkki jono alimerkkijonojen taulukkoon [**Split**](function-split.md) -tai [**matchall**](function-ismatch.md) -funktiolla.
 
 ## <a name="syntax"></a>Syntaksi
 
-**Concat**( *Table*; *Formula* )
+**Concat**( *Table*, *Formula* )
 
 - *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
 - *Formula* – Pakollinen.  Kaikkiin taulukon tietueisiin käytettävä kaava.
 
-**Concatenate**( *String1* [; *String2*; ...] )
+**Concatenate**( *String1* [, *String2*, ...] )
 
 - *String(s)* – Pakollinen.  Yksittäisten merkkijonojen tai yksisarakkeisen taulukon merkkijonojen yhdistelmä.
 
 ## <a name="examples"></a>Esimerkkejä
 
-Tämän osion esimerkeissä käytetään näitä yleisiä muuttujia:
+Tämän osion esimerkeissä käytetään seuraavia yleisiä muuttujia:
 
-- **Etunimi** = ”Jane”
-- **Sukunimi** = ”Doe”
-- **Tuotteiden** = ![taulukon, jossa on kaksi saraketta ja neljä riviä](media/function-concatenate/products.png)
+- **Firstname** = "Jane"
+- **Suku nimi** = "Doe"
+- **Tuotteet** =  @ No__t-2table, jossa on kaksi saraketta ja neljä riviä @ no__t-3
 
-Jos haluat luoda sovelluksen näitä yleisiä muuttujia, Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+Jos haluat luoda nämä yleiset muuttujat sovelluksessa, Lisää [**painike**](../controls/control-button.md) -ohjaus objekti ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
-```powerapps-comma
-Set( FirstName; "Jane" );; Set( LastName; "Doe" );;
-Set( Products;
+```powerapps-dot
+Set( FirstName, "Jane" ); Set( LastName, "Doe" );
+Set( Products,
     Table(
-        { Name: "Violin"; Type: "String" };
-        { Name: "Cello"; Type: "String" };
-        { Name: "Trumpet"; Type: "Wind" }
+        { Name: "Violin", Type: "String" },
+        { Name: "Cello", Type: "String" },
+        { Name: "Trumpet", Type: "Wind" }
     )
 )
 ```
 
-Valitse painike (napsauttamalla sitä pidä Alt-näppäintä).
+Valitse painike (napsauttamalla sitä, kun painat Alt-näppäintä).
 
-### <a name="concatenate-function-and-the--operator"></a>Yhdistä funktio ja & operaattori
+### <a name="concatenate-function-and-the--operator"></a>KETJUTA-funktiolla ja &-operaattorilla
 
-Määritä näissä esimerkeissä **tekstin** ominaisuus [ **nimen** ](../controls/control-text-box.md) seuraavan taulukon ensimmäisen sarakkeen kaavassa ohjausobjektin.
-
-| Kaava | Kuvaus | Tulos |
-|---------|-------------|--------|
-| **Concatenate (&nbsp;Sukunimi,&nbsp;”,&nbsp;”,&nbsp;Etunimi&nbsp;)** | Yhdistää arvo **Sukunimi**, merkkijono **””,** (pilkun ja välilyönnin), ja arvo **Etunimi**. | ”Doe&nbsp;Jane” |
-| **LastName&nbsp;&&nbsp;",&nbsp;"&nbsp;&&nbsp;FirstName** | Sama kuin edellisessä esimerkissä lukuun ottamatta käyttämistä **&** operaattorin sijaan funktio. | ”Doe&nbsp;Jane” |
-| **Concatenate (&nbsp;Etunimi,&nbsp;”&nbsp;”,&nbsp;Sukunimi&nbsp;)** | Yhdistää arvo **Etunimi**, merkkijono **””** (yksi välilyönti), ja arvo **Sukunimi**. | "Jane&nbsp;Doe" |
-| **FirstName&nbsp;&&nbsp;"&nbsp;"&nbsp;&&nbsp;LastName** | Sama kuin edellisessä esimerkissä käyttämällä **&** operaattorin sijaan funktio. | "Jane&nbsp;Doe" |
-
-### <a name="concatenate-with-a-single-column-table"></a>Yhdistä ja yhden sarakkeen taulukko
-
-Tässä esimerkissä Lisää tyhjä, pysty [ **valikoiman** ](../controls/control-gallery.md) ohjausobjekti, määritä sen **kohteet** ominaisuudeksi kaava seuraavan taulukon ja lisää sitten otsikko valikoiman mallipohja.
+Näitä esimerkkejä varten voit määrittää [**Selite**](../controls/control-text-box.md) -ohjaus objektin **Text** -ominaisuudeksi kaavan seuraavan taulukon ensimmäisestä sarakkeesta.
 
 | Kaava | Kuvaus | Tulos |
 |---------|-------------|--------|
-| **Concatenate (”nimi:&nbsp;”,&nbsp;Products.Name ”,,&nbsp;tyyppi:&nbsp;”,&nbsp;Products.Type)** | Jokaiselle tietueelle **tuotteiden** taulukossa, yhdistää merkkijonon **”nimi”:** , merkkijono-tuotteen nimi **”, tyyppi”:** ja tuotteen tyyppi.  | ![Taulukon tuotteita](media/function-concatenate/single-column.png) |
+| **Concatenate (&nbsp;LastName, &nbsp; ", &nbsp;", &nbsp;FirstName @ no__t-5)** | Liittää arvon **suku nimi**, merkki jono **","** (pilkku ja väli lyönti) ja arvon **firstname**. | "Doe, &nbsp;Jane" |
+| **Suku nimi @ no__t-1 @ no__t-2 @ no__t-3 ", &nbsp;" &nbsp; @ no__t-6 @ no__t-7FirstName** | Sama kuin edellisessä esimerkissä, paitsi käytettäessä **&-** operaattoria toiminnon sijaan. | "Doe, &nbsp;Jane" |
+| **Concatenate (&nbsp;FirstName, &nbsp; "&nbsp;", &nbsp;LastName @ no__t-5)** | Yhdistää arvon **firstname**, merkki jonon **""** (yksittäinen väli lyönti) ja arvon **suku nimi**. | "Jane @ no__t-0Doe" |
+| **Etunimi @ no__t-1 @ no__t-2 @ no__t-3 "&nbsp;" &nbsp; @ no__t-6 @ no__t-7LastName** | Sama kuin edellisessä esimerkissä käyttämällä **&-** operaattoria toiminnon sijaan. | "Jane @ no__t-0Doe" |
 
-### <a name="concat-function"></a>Concat-funktio
+### <a name="concatenate-with-a-single-column-table"></a>Yhdistä yksisarakkeisella taulukolla
 
-Määritä näissä esimerkeissä **tekstin** ominaisuuden kaavaa selitteen seuraavan taulukon ensimmäisen sarakkeen.
-
-| Kaava | Kuvaus | Tulos |
-|---------|-------------|--------|
-| **Concat (Products, nimi & ””,)** | Laskee lausekkeen **nimi & ””,** kullekin tietueelle **tuotteiden** ja yhdistää tulokset yhdessä yksittäiseksi merkkijonoksi.  | ”Violin,&nbsp;Cello,&nbsp;Trumpetti,&nbsp;” |
-| **Concat (Filter (&nbsp;tuotteet,&nbsp;tyyppi&nbsp;=&nbsp;”String”&nbsp;), nimi & ””,)** | Laskee kaavan **nimi & ””,** kullekin tietueelle **tuotteiden** , joka täyttää suodatin **tyyppi = ”String”** , ja yhdistää tulokset yksittäiseksi merkkijonoksi.   | ”Violin,&nbsp;Cello,&nbsp;” |
-
-### <a name="trimming-the-end"></a>Siistiminen loppuun
-
-Viimeiset kaksi esimerkkejä ylimääräinen ””, tuloksen lopussa. Funktio lisää pilkun ja välilyönnin- **nimi** jokaisen tietueen taulukon, mukaan lukien viimeisen tietueen arvo.
-
-Joissakin tapauksissa näiden ylimääräisiä merkkejä ei ole merkitystä. Esimerkiksi kaksinkertaista erotinta ei näy, jos voit näyttää tuloksen selitteessä. Jos haluat poistaa nämä ylimääräisiä merkkejä, käytä [ **vasemmalle** ](function-left-mid-right.md) tai [ **vastaavuus** ](function-ismatch.md) funktio.
-
-Määritä näissä esimerkeissä **tekstin** ominaisuuden kaavaa selitteen seuraavan taulukon ensimmäisen sarakkeen.
+Lisää tässä esimerkissä tyhjä, pystysuuntainen [**valikoima**](../controls/control-gallery.md) -ohjaus objekti, määritä sen **Items** -ominaisuudeksi kaava seuraavassa taulukossa ja lisää sitten otsikko valikoima-malliin.
 
 | Kaava | Kuvaus | Tulos |
 |---------|-------------|--------|
-| **Vasen (Concat (&nbsp;tuotteet,&nbsp;nimi&nbsp;&&nbsp;”,&nbsp;”&nbsp;), Len (&nbsp;Concat (&nbsp;tuotteet,&nbsp;nimi&nbsp; & &nbsp;”,&nbsp;”&nbsp;)&nbsp;)&nbsp;-&nbsp;2)** | Palauttaa tuloksen **Concat** mutta poistaa viimeiset kaksi merkkiä, jotka muodostavat ylimääräisten erotin. | ”Violin,&nbsp;Cello,&nbsp;Trumpetti” |
-| **Vastaavuus (Concat (&nbsp;tuotteet,&nbsp;nimi&nbsp;&&nbsp;”,&nbsp;”&nbsp;) ”, ^ (?&lt; TRIM&gt;. *),&nbsp;$”) .trim** | Palauttaa merkit **Concat** alusta loppuun ($) merkkijonon (^) mutta ei sisällä ei-toivottu pilkku ja tilaa loppuun. | ”Violin,&nbsp;Cello,&nbsp;Trumpetti” |
+| **Concatenate ("nimi: &nbsp;", &nbsp;Products.Name, ", &nbsp;Type: &nbsp;", &nbsp;Products. Type)** | Yhdistä **tuotteet** -taulukon kunkin tietueen merkki jono **"Name:"** , tuotteen nimi, merkki jono **", tyyppi:"** ja tuotteen tyyppi.  | ![Tuote taulukko](media/function-concatenate/single-column.png) |
+
+### <a name="concat-function"></a>Conat-Funktiot
+
+Tässä esimerkissä asetat selitteen **teksti** -ominaisuudeksi kaavan seuraavan taulukon ensimmäisestä sarakkeesta.
+
+| Kaava | Kuvaus | Tulos |
+|---------|-------------|--------|
+| **Kopat (tuotteet, nimi & ",")** | Laskee kunkin **tuote** tietueen lausekkeen **nimen & ","** ja yhdistää tulokset yhteen teksti merkki jonoon.  | "Viulu, &nbsp;Cello, &nbsp;Trumpet, &nbsp;" |
+| **Conat (Filter (&nbsp;Products, &nbsp;Type @ no__t-3 @ no__t-4 @ no__t-5 "String" &nbsp;), nimi & ",")** | Laskee kaavan **nimen & ","** kullekin **tuote** tietueelle, joka täyttää suodatin **tyypin = "merkki jonon"** , ja yhdistää tulokset yksittäiseksi teksti merkki jonoksi.   | "Viulu, &nbsp;Cello, &nbsp;" |
+
+### <a name="trimming-the-end"></a>Leikkaus loppu
+
+Viimeiset kaksi esimerkkiä sisältävät ylimääräisen "," tuloksen lopussa. -Funktiolla lisätään pilkku ja väli lyönti kunkin taulukon tietueen **nimi** arvoon, mukaan lukien viimeinen tietue.
+
+Joissakin tapa uksissa nämä ylimääräiset merkit eivät ole tärkeitä. Esimerkiksi yksittäinen väli lyönti-erotin ei näy, jos näytät tuloksen selitteessä. Jos haluat poistaa ylimääräiset merkit, käytä [**vasenta**](function-left-mid-right.md) tai [**Match**](function-ismatch.md) -funktiolla.
+
+Tässä esimerkissä asetat selitteen **teksti** -ominaisuudeksi kaavan seuraavan taulukon ensimmäisestä sarakkeesta.
+
+| Kaava | Kuvaus | Tulos |
+|---------|-------------|--------|
+| **Vasemmalla (Conat (&nbsp;Products, &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;), len (&nbsp;Concat (&nbsp;Products, 0Name @ no__t-11 @ no__t-12 @ no__t-13 ", 4" 5) 6) 7 @ no__t-18 @ no__t-192)** | Palauttaa **Conciat** -kohteen tuloksen, mutta poistaa kaksi viimeistä merkkiä, jotka muodostavat ylimääräisiä erottimia. | "Viulu, &nbsp;Cello, &nbsp;Trumpetti" |
+| **Match (Conat (&nbsp;Products, &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;), "^ (? &lt;trim @ no__t-9. *), @no__t-$10"). Trim** | Palauttaa merkki jonon merkit merkki **jonon alusta (** ^) loppuun ($), mutta ei sisällä ei-toivottua pilkkua ja tilaa lopussa. | "Viulu, &nbsp;Cello, &nbsp;Trumpetti" |
 
 ### <a name="split-and-matchall"></a>Jaa ja MatchAll
 
-Jos käytit **Concat** erotin, jossa voit kääntää toimintoa yhdistämällä **Jaa** ja **MatchAll** funktioita.
+Jos käytit **Conpat** -funktiota erottimen kanssa, voit kumota toiminnon yhdistämällä **Split** -ja **matchall** -funktiot.
 
-Näissä esimerkeissä Lisää tyhjä, pystysuuntainen valikoima, määritä sen **kohteet** ominaisuuden näyttämään kaavan, seuraavassa taulukossa ja lisää sitten otsikko valikoiman mallipohja.
+Lisää näitä esimerkkejä varten tyhjä, pystysuuntainen valikoima, määritä sen **Items** -ominaisuudeksi kaava seuraavassa taulukossa ja lisää sitten otsikko valikoima-malliin.
 
 | Kaava | Kuvaus | Tulos |
 |---------|-------------|--------|
-| **Jaa (Concat (&nbsp;tuotteet,&nbsp;nimi&nbsp;&&nbsp;”,&nbsp;”&nbsp;), ””,)** | Jakaa merkkijonon erottimella **””,** . Merkkijonon lopussa pilkku ja välilyönti, joten tulos viimeistä riviä on tyhjä merkkijono.  | ![Table](media/function-concatenate/split.png) |
-| **MatchAll (Concat (&nbsp;tuotteet;&nbsp;nimi&nbsp;&&nbsp;”;&nbsp;”&nbsp;) ”; [^ \s;]+”). FullMatch** | Jakaa merkkijonon merkkejä, jotka eivät ole välilyöntejä tai pilkkuja perusteella. Tämä kaava poistaa ylimääräiset pilkuin ja tilaa merkkijonon lopussa. | ![Table](media/function-concatenate/matchall.png)
+| **Split (Conat (&nbsp;Products, &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;), ",")** | Jakaa teksti merkki jonon erottimella **","** . Merkki jono päättyy pilkuilla ja väli lyönnillä, joten tuloksen viimeinen rivi on tyhjä merkki jono.  | ![Table](media/function-concatenate/split.png) |
+| **MatchAll (Conat (&nbsp;Products, &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;), "[^ \s,] +"). FullMatch** | Jakaa teksti merkki jonon niiden merkkien perusteella, jotka eivät ole väli lyöntejä tai pilkkuja. Tämä kaava poistaa ylimääräisen pilkun ja väli lyönnin merkki jonon lopusta. | ![Table](media/function-concatenate/matchall.png)

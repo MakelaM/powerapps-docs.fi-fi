@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/30/2016
 ms.author: archanan
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 85806799a5f5ea91a4671a27e71cf95daabcd01a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 0f9b9c3104d407baa3cece76159d65c5be61ab79
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61553562"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983397"
 ---
 # <a name="manage-an-on-premises-data-gateway-in-powerapps"></a>Paikallisen tietoyhdyskäytävän hallitseminen PowerAppsissa
 Asenna paikallinen tietoyhdyskäytävä, jonka avulla voit siirtää tietoja nopeasti ja turvallisesti PowerAppsissa rakennetun kangassovelluksen ja muualla kuin pilvipalvelussa olevan tietolähteen, kuten paikallisella SQL-palvelimella olevan tietokannan tai paikallisen SharePoint-sivuston, välillä. Tarkastele yhdyskäytäviä, joihin sinulla on järjestelmänvalvojan oikeudet, ja hallitse näiden yhdyskäytävien käyttöoikeuksia ja yhteyksiä.
@@ -54,9 +54,9 @@ Yhdyskäytävän avulla voit muodostaa yhteyden paikallisiin tietoihin seuraavie
 
 2. Lisää yhdyskäytävään käyttäjä napsauttamalla tai napauttamalla kohtaa **Käyttäjät**, jonka avulla määritetään käyttäjä tai ryhmä sekä käyttöoikeustaso:
 
-   * **Voit käyttää**: Käyttäjät, joilla voit luoda yhteyksiä sovelluksia ja työnkulkuja varten yhdyskäytävää, mutta ei voi jakaa yhdyskäytävän. Käytä tätä käyttöoikeutta käyttäjille, jotka suorittavat sovelluksia, mutta eivät jaa niitä.
-   * **Voi käyttää ja jakaa**: Käyttäjät, joilla voit luoda sovelluksia ja työnkulkuja varten yhdyskäytävän ja jakaa yhdyskäytävän automaattisesti, kun sovellus jaetaan. Käytä tätä käyttöoikeutta, jos käyttäjä haluaa jakaa sovelluksia muiden käyttäjien tai organisaation kanssa.
-   * **Järjestelmänvalvojan**: Järjestelmänvalvojat, joilla on täydet käyttöoikeudet yhdyskäytävään, mukaan lukien käyttäjien lisääminen, käyttöoikeuksien määrittäminen, yhteyksien käytettävissä olevista tietolähteistä luominen ja yhdyskäytävän poistaminen.
+   * **Voi käyttää**: Käyttäjät, jotka voivat luoda yhteyksiä yhdyskäytävään sovellusten ja työn kulkujen käyttämistä varten, mutta eivät voi käyttää yhdyskäytävää. Käytä tätä käyttöoikeutta käyttäjille, jotka suorittavat sovelluksia, mutta eivät jaa niitä.
+   * **Voi käyttää +-resurssia**: Käyttäjät, jotka voivat luoda yhteyden yhdyskäytävään sovellusten ja työn kulkujen käyttämistä varten ja jakaa yhdyskäytävän automaattisesti, kun sovellus jaetaan. Käytä tätä käyttöoikeutta, jos käyttäjä haluaa jakaa sovelluksia muiden käyttäjien tai organisaation kanssa.
+   * **Järjestelmänvalvoja**: Järjestelmänvalvojat, joilla on täydet oikeudet yhdyskäytävään, mukaan lukien käyttäjien lisääminen, käyttö oikeuksien asettaminen, yhteyksien luominen kaikkiin käytettävissä oleviin tieto lähteisiin ja yhdyskäytävän poistaminen.
 
 Valitse **Can use**- ja **Can use + share** -käyttöoikeustasoille tietolähteet, joihin käyttäjä voi muodostaa yhteyden yhdyskäytävän kautta.
 

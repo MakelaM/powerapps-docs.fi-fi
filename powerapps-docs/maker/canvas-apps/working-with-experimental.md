@@ -7,19 +7,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/20/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c5abda1f3c208567ad9e1e2888647d20b07949be
-ms.sourcegitcommit: 8bad6bff1b3397b21654df4a9357dd0180fbcfe6
+ms.openlocfilehash: b56fcf1b0ee14bf9a39b4c0ad54d4e707d635f37
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65046025"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994756"
 ---
 # <a name="understand-experimental-and-preview-features-in-powerapps"></a>Ymmärrä PowerAppsin esikatseluominaisuuksia ja kokeellisia ominaisuuksia
 
@@ -33,9 +33,9 @@ Tasapainottaaksemme olemassa olevien sovellusten parannuksia esittelemme suuremm
 
 Ominaisuudet kulkevat kolmen eri vaiheen läpi ennen kuin niistä tulee virallinen osa tuotetta:
 
-1. **Kokeellinen**:  Tämä ominaisuus on keskeneräinen työ. Älä laske vielä sen varaan, siihen saattaa tulla merkittäviä muutoksia.
-1. **Esikatselu**:  Tämä ominaisuus on lähes valmis, ja se on vakaa. Aloita olemassa olevien sovellusten siirto.
-1. **Lähetetty**:  Tämä toiminto on valmis. Ominaisuus on käytössä kaikissa sovelluksissa, eikä sitä voida poistaa käytöstä.
+1. **Kokeellinen**:  Tämä ominaisuus on keskeneräinen. Älä laske vielä sen varaan, siihen saattaa tulla merkittäviä muutoksia.
+1. **Esikatselu**:  Tämä ominaisuus on melkein valmista, ja se on vakaa. Aloita olemassa olevien sovellusten siirto.
+1. **Lähetetty**:  Tämä ominaisuus on tehty. Ominaisuus on käytössä kaikissa sovelluksissa, eikä sitä voida poistaa käytöstä.
 
 Kussakin vaiheessa ominaisuutta käyttävien henkilöiden määrä nousee auttaen meitä vahvistamaan, että ominaisuus on tarpeellinen ja ettei sillä ole tahattomia sivuvaikutuksia.
 
@@ -53,9 +53,9 @@ Tämän taulukon avulla voit päättää, koska haluat liittyä mukaan:
 
 Esikatselun lopulla, saatamme ottaa toiminnon käyttöön kaikissa sovelluksissa kerralla ja tämä merkitään **lopulliseksi vahvistukseksi**.  Tämä antaa useimmille käyttäjille viimeisen mahdollisuuden kokeilla ominaisuutta samalla, kun se voidaan vielä poistaa käytöstä. Reaaliaikainen palaute on tänä aikana ratkaisevaa, koska seuraavassa vaiheessa ominaisuus on täysin toimitettu, eikä sitä voida poistaa käytöstä.
 
-Lopullinen siirretään **Shipped**, saatetaan poistaa esikatselu-valitsinta sovelluksissa, jolle toiminto on jo käytössä, tehokkaasti ottaminen ominaisuuden pysyvästi. Tämä muutos koskee useimmat sovelluksia, koska toiminto on käytössä oletusarvoisesti ennen, jotka osoittavat. Sovelluksille, jossa ominaisuus on poistettu käytöstä Vaihda esikatselu ovat edelleen käytettävissä voit ottaa käyttöön, Testaa-toiminnon ja PowerApps Studio samassa istunnossa käytöstä. Kuitenkin Jos tallennat sovelluksen, kun valitsin on käytössä, se ei ole käytettävissä, kun sovellus on ladattu uudelleen, jotta ei voi poistaa ominaisuuden käytöstä uudelleen. Tässä vaiheessa voit [sovelluksen palauttaminen edelliseen versioon](restore-an-app.md) sovellus palaa tilassa ennen kuin toiminto on käytössä.
+Lopullisen siirtymisen yhteydessä voimme poistaa **esiversio-valitsimen**sovelluksissa, joissa toiminto on jo käytössä, ja kääntää toiminnon pysyvästi pysyvästi. Tämä muutos koskee useimpia sovelluksia, koska ominaisuus on ollut Oletus arvon mukaan käytössä ennen tätä pistettä. Sovelluksille, joissa ominaisuus on poistettu käytöstä, esikatselu-valitsin on edelleen käytettävissäsi, kun otat sen käyttöön, testaat ominaisuutta ja poistat käytöstä samassa PowerApps Studio istunnossa. Jos kuitenkin tallennat sovelluksen, kun valitsin on käytössä, se ei ole käytettävissä, kun sovellus ladataan uudelleen, joten et voi poistaa toimintoa käytöstä uudelleen. Tässä vaiheessa voit [palauttaa sovelluksen aiempaan versioon](restore-an-app.md) , jolloin sovellus palautetaan tilaan, jossa se oli, ennen kuin ominaisuus otettiin käyttöön.
 
-## <a name="documentation"></a>Ohjeet
+## <a name="documentation"></a>Asia kirjat
 
 Mistä voit löytää tietoja näistä ominaisuuksista?  Pidämme esikatselussa olevia ominaisuuksia valmiina, ja voit lukea niistä lisätietoja samalla tavalla kuin tuotteen muista ominaisuuksista: 
 - [PowerApps-dokumentaatio](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started). Listaamme uuden ominaisuuden perusteet: edut, käytön aloittaminen ja viitetiedot.

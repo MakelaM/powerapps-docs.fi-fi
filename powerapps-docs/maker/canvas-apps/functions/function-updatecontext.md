@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/08/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 20e06f7c03d0aca18b8351e546ccee3fff528f56
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 7750ad239df87e99d2321be20293b64153110fc1
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61537637"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71991821"
 ---
 # <a name="updatecontext-function-in-powerapps"></a>UpdateContext-funktio PowerAppsissa
 Luo tai päivittää [kontekstimuuttujat](../working-with-variables.md#use-a-context-variable) nykyisessä näytössä.
@@ -54,7 +53,7 @@ Kuten myöhemmin tämän artikkelin esimerkeissä osoitetaan, kontekstimuuttujat
 
 Kontekstimuuttuja säilyttää arvonsa, kunnes sovellus on suljettu.  Jos määrität kontekstimuuttujan ja määrität sen arvon jossakin tietyssä näytössä, tieto säilyy muuttumattomana, vaikka käyttäjä siirtyisikin eri näyttöön.  Kun sovellus on suljettu, kontekstimuuttujan arvo menetetään, ja se on luotava uudelleen, kun sovellus on ladattu uudelleen.  
 
-Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää kontekstimuuttujan yhdessä näytössä ja muokata kyseistä muuttujaa toisesta näytöstä, sinun täytyy muodostaa kaava, joka perustuu **[Navigate](function-navigate.md)**-funktioon.  Vaihtoehtoisesti voit käyttää yleistä muuttujaa.
+Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää kontekstimuuttujan yhdessä näytössä ja muokata kyseistä muuttujaa toisesta näytöstä, sinun täytyy muodostaa kaava, joka perustuu **[Navigate](function-navigate.md)** -funktioon.  Vaihtoehtoisesti voit käyttää yleistä muuttujaa.
 
 **UpdateContext**-funktiolla ei ole palautusarvoa, ja voit käyttää sitä vain [toimintakaavan](../working-with-formulas-in-depth.md) sisällä.
 
@@ -63,11 +62,11 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 
 * *UpdateRecord*  – Pakollinen. Tietue, joka sisältää vähintään yhden sarakkeen nimen ja arvon tälle sarakkeelle. Kontekstimuuttuja luodaan tai päivitetään jokaiselle sarakkeelle ja arvolle, jonka määrität.
 
-**UpdateContext**({ *Kontekstimuuttuja1*: *Arvo1* [; *Kontekstimuuttuja2*: *Arvo2* [;...]]} )
+**Updatecontext**({ *kontekstimuuttuja1*: *Arvo1* [, *kontekstimuuttuja2*: *Arvo2* [,...] ] } )
 
 * *ContextVariable1*  – Pakollinen.  Luotavan tai päivitettävän kontekstimuuttujan nimi.
 * *Value1*  – Pakollinen.  Arvo, joka määritetään kontekstimuuttujalle.
-* *Kontekstimuuttuja2*: *Arvo2*,... – valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
+* *Kontekstimuuttuja2*: *Arvo2*,...-valinnainen. Lisää kontekstimuuttujia, jotka laaditaan tai joiden arvot päivitetään.
 
 ## <a name="examples"></a>Esimerkkejä
 
@@ -75,18 +74,18 @@ Jokainen kontekstimuuttuja rajoittuu näyttöön. Jos haluat määrittää konte
 | --- | --- | --- |
 | **UpdateContext( {&nbsp;Counter:&nbsp;1&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Counter** ja asettaa sen arvoksi **1**. |**Counter**-arvo on **1**. Voit viitata kyseisen muuttujan nimeen **Counter** kaavassa. |
 | **UpdateContext( {&nbsp;Counter:&nbsp;2&nbsp;} )** |Määrittää kontekstimuuttujan **Counter** arvoksi edellisessä esimerkissä **2**. |**Counter**-arvo on **2**. |
-| **UpdateContext( {&nbsp;Name:&nbsp;"Lily";&nbsp;Score:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Name** ja **Score** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Name** arvo on **Lily** ja muuttujan **Score** arvo on **10**. |
-| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton"; Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Person** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |Muuttujan **Person** arvo on tietue **{&nbsp;Name:&nbsp;”Milton”; Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
-| **UpdateContext ({&nbsp;henkilö: Patch (&nbsp;henkilö;&nbsp;{osoite:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;)}&nbsp;)** |Toimii **[Patch](function-patch.md)**-funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”; Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}**. |
+| **UpdateContext( {&nbsp;Name:&nbsp;"Lily",&nbsp;Score:&nbsp;10&nbsp;} )** |Luo tai muokkaa kontekstimuuttujat **Name** ja **Score** ja asettaa niiden arvoiksi vastaavasti **Lily** ja **10**. |Muuttujan **Name** arvo on **Lily** ja muuttujan **Score** arvo on **10**. |
+| **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Luo tai muokkaa kontekstimuuttujan **Person** ja asettaa sen tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |Muuttujan **Person** arvo on tietue **{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}** .<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
+| **UpdateContext ({&nbsp;Person: Patch (&nbsp;Person, &nbsp; {Osoite: &nbsp; "2 @ no__t-3Main @ no__t-4St" &nbsp;} &nbsp;)} &nbsp;)** |Toimii **[Patch](function-patch.md)** -funktion kanssa kontekstimuuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person** arvo on nyt tietue **{&nbsp;Person:&nbsp;”Milton”, Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;}** . |
 
 ### <a name="step-by-step-example"></a>Vaiheittainen esimerkki
 1. Anna oletusnäytön nimeksi **Lähde**, lisää toinen näyttö ja anna sille nimeksi **Kohde**.
-2. Lisää näytössä **Lähde** kaksi painiketta ja määritä niiden **[Text](../controls/properties-core.md)**-ominaisuudet niin, että toisessa lukee **Englanti** ja toisessa lukee **Espanja**.
-3. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Englanti**-painikkeelle seuraava lauseke:<br>**Navigate(Target; ScreenTransition.Fade; {Language:"Englanti"})**
-4. Aseta **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi **Espanja**-painikkeelle seuraava lauseke:<br>**Navigate(Target; ScreenTransition.Fade; {Language:"Espanja"})**
-5. Lisää näytössä **Kohde** otsikko ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava lauseke:<br>**If(Kieli=”Englanti”; ”Hello!”; ”Hola!”)**
+2. Lisää näytössä **Lähde** kaksi painiketta ja määritä niiden **[Text](../controls/properties-core.md)** -ominaisuudet niin, että toisessa lukee **Englanti** ja toisessa lukee **Espanja**.
+3. Aseta **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi **Englanti**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Englanti"})**
+4. Aseta **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi **Espanja**-painikkeelle seuraava lauseke:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"Espanja"})**
+5. Lisää näytössä **Kohde** otsikko ja määritä sen **[Text](../controls/properties-core.md)** -ominaisuudeksi seuraava lauseke:<br>**If(Kieli=”Englanti”, ”Hello!”, ”Hola!”)**
 6. Valitse **Kohde**-näytössä **Shapes** **Lisää**-välilehdeltä ja valitse sitten taaksepäin osoittava nuoli.
-7. Määritä taaksepäin osoittavan nuolen **[OnSelect](../controls/properties-core.md)**-ominaisuudeksi tämä kaava:<br>**Navigate(Source; ScreenTransition.Fade)**
+7. Määritä taaksepäin osoittavan nuolen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:<br>**Navigate(Source, ScreenTransition.Fade)**
 8. Paina **Lähde**-näytössä F5-näppäintä ja valitse sitten painike molemmille kielille.
 
     **Kohde**-näytössä otsikko näkyy kielellä, joka vastaa valitsemaasi painiketta.

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5d20e2324f2efb4f866ed4fc183f289733c10a41
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 00863f00768a0c4eec95ecec778c2da219fd08d3
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560463"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986194"
 ---
 # <a name="timer-control-in-powerapps"></a>Ajastin-ohjausobjekti PowerAppsissa
 Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kuluttua.
@@ -28,7 +27,7 @@ Ohjausobjekti, joka voi määrittää, miten sovelluksesi vastaa tietyn ajan kul
 Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, tai muuttaa ohjausobjektin muita ominaisuuksia tietyn ajan kuluttua.
 
 > [!NOTE]
-> PowerApps Studio ajastimet suorittaa vain esikatselutilassa.
+> PowerApps Studio ajastimet suoritetaan vain esikatselutilassa.
 
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
@@ -69,7 +68,7 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -126,7 +125,7 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 2. Määritä ajastimen **Kesto**-ominaisuudeksi **10000** sekä **Toista**- ja **Autostart**-ominaisuudet tilaan **true**.
 3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)** -ominaisuudeksi **160**, **[Leveys](properties-size-location.md)** -ominaisuudeksi **600** ja **[Koko](properties-text.md)** -ominaisuudeksi **60**.
 4. Lisää selite ja aseta sen **[Teksti](properties-core.md)** -ominaisuudeksi tämä kaava:
-   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000; 0)**
+   <br>**"Number of seconds remaining: " & RoundUp(10-Countdown.Value/1000, 0)**
 
     Haluatko lisätietoja **[RoundUp](../functions/function-round.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
@@ -139,37 +138,37 @@ Ajastimet voivat esimerkiksi määrittää, miten kauan ohjausobjekti näkyy, ta
 2. Määritä ajastimen **Kesto**-ominaisuuden arvoksi **5 000**, **Toista**-ominaisuuden arvoksi **tosi** ja **[Teksti](properties-core.md)** -ominaisuuden arvoksi **Toggle animation** (Vaihda animaatio).
 3. (valinnainen) Tee ajastimen lukemisesta helpompaa asettamalla sen **[Korkeus](properties-size-location.md)** -ominaisuudeksi **160**, **[Leveys](properties-size-location.md)** -ominaisuudeksi **600** ja **[Koko](properties-text.md)** -ominaisuudeksi **60**.
 4. Lisää selite ja aseta sen **[Teksti](properties-core.md)** -ominaisuus näyttämään **Welcome!** ja määritä sen **[Väri](properties-color-border.md)** -ominaisuudeksi tämä kaava:
-   <br>**ColorFade(Color.BlueViolet; FadeIn.Value/5000)**
+   <br>**ColorFade(Color.BlueViolet, FadeIn.Value/5000)**
 
     Haluatko lisätietoja **[ColorFade](../functions/function-colors.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
 5. Käynnistä tai pysäytä animaatio valitsemalla ajastinpainike. Selitteen teksti häivytetään valkoiseksi, minkä jälkeen se palaa täyteen voimakkuuteen. Tämän jälkeen prosessi toistuu.
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
-Ohjeet ovat samat kuin **[painike](control-button.md)** ohjausobjektin koskevat **ajastin** ohjausobjektissa, jos käyttäjät voivat käyttää sitä.
+**[Painike](control-button.md)** -ohjaus objektin samat ohjeet koskevat **ajastin** -ohjaus objektia, jos käyttäjät voivat käyttää sitä.
 
-### <a name="background-timers"></a>Taustan ajastimet
-Taustan ajastimet suorittaa automaattisesti, ja se on piilotettu. Käyttää niitä tukevia roolissa jossa kuluneen ajan on pieni kiinnostuksen käyttäjälle. Voit esimerkiksi päivittää tiedot joka minuutti tai ilmoitussanoma näyttää vain tietyn ajanjakson.
+### <a name="background-timers"></a>Tausta-ajastimet
+Tausta-ajastimet suoritetaan automaattisesti, ja ne piilotetaan. Käytä niitä tuki roolissa, jossa kulunut aika ei juurikaan kiinnosta käyttäjää. Voit esimerkiksi päivittää tiedot joka minuutti tai näyttää ilmoitus sanoman vain tietyn ajan verran.
 
-Taustan ajastimet tulee olla niiden **[näkyvissä](properties-core.md)** ominaisuuden arvoksi epätosi, niin, että ne on piilotettu kaikilta käyttäjiltä.
+Tausta-Ajastimien **[Visible](properties-core.md)** -ominaisuudeksi on asetettava false, jotta ne ovat piilotettuja kaikilta käyttäjiltä.
 
-### <a name="timing-considerations"></a>Ajoitus huomioon otettavia seikkoja
-Jos **ajastin** suoritetaan automaattisesti, mieti onko käyttäjillä riittävästi aikaa lukea ja käyttää sisältöä. Näppäimistön ja Näytönlukuohjelman käyttäjät voivat on enemmän aikaa ajastettuun tapahtumaan.
+### <a name="timing-considerations"></a>Ajoitus näkökohdat
+Jos **ajastin** suoritetaan automaattisesti, harkitse, onko käyttäjillä riittävästi aikaa sisällön lukemiseen ja käyttämiseen. Näppäimistön ja näytön luku ohjelman käyttäjät saattavat tarvita enemmän aikaa ajoitetun tapahtuman reagointiin.
 
-Jokin seuraavista strategioista riittää:
-* Salli käyttäjien peruuttaa ajastettu tapahtuma.
-* Salli käyttäjien säätää aikarajaa ennen sen alkamista.
-* Varoita 20 sekuntia ennen aikarajan ja tarjoavat helpon tavan umpeutumista.
+Jokin näistä strategioista on riittävä:
+* Salli käyttäjien peruuttaa ajoitettu tapahtuma.
+* Salli käyttäjien säätää aika rajaa ennen sen alkamista.
+* Varoita 20 sekuntia ennen aika rajaa ja anna helppo tapa pidentää rajaa.
 
 Nämä vaatimukset eivät koske kaikkia tilanteita. Lue lisää [aikarajoja koskevasta WCAG 2.0 -ohjeesta](https://www.w3.org/TR/WCAG20/#time-limits).
 
 ### <a name="screen-reader-support"></a>Näytönlukuohjelman tuki
-* Jos ajastin käynnistyy muutokset nykyisessä näytössä, käytä [reaaliaikaisen alueen](../accessible-apps-live-regions.md) – Näytönlukuohjelman käyttäjät kertoa, mitä muuttaa.
+* Jos ajastin käynnistää muutoksia nykyisessä näytössä, käytä [reaaliaikaista aluetta](../accessible-apps-live-regions.md) kertomaan näytön luku ohjelman käyttäjille, mikä muuttui.
 
     > [!NOTE]
-    > Ajastin on näkyvissä ja käynnissä, näytönlukuohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein.
+    > Jos ajastin on näkyvissä ja käynnissä, näytön luku ohjelmat ilmoittavat kuluneen ajan viiden sekunnin välein.
 
-* Älä käytä **[tekstin](properties-core.md)** aikasidonnaisiin ja tärkeisiin tietoihin ohjausobjektin ominaisuus. Näytönlukuohjelmat ei ilmoita muutokset  **[tekstin](properties-core.md)** .
-* -Vuorovaikutteinen ajastimet:
+* Älä käytä ohjaus objektin **[Text](properties-core.md)** -ominaisuutta aikasidonnaisia ja tärkeitä tietoja varten. Näytön luku ohjelmat eivät ilmoita muutoksia **[tekstiin](properties-core.md)** .
+* Vuorovaikutteiset ajastimet:
     * **[Teksti](properties-core.md)** on oltava käytössä.
-    * Harkitse **[nimen](control-text-box.md)** ohjausobjektin kuluneen ajan näyttämiseksi. Ajastin ajastimen **[tekstin](properties-core.md)** ominaisuudeksi kehota käyttäjää Käynnistä tai Pysäytä ajastin.
+    * Harkitse, Haluatko lisätä **[Selite](control-text-box.md)** -ohjaus objektin kuluneen ajan näyttämiseksi. Käytä ajastimen **[teksti](properties-core.md)** -ominaisuutta ja kehota käyttäjää käynnistämään tai pysäyttämään ajastin.

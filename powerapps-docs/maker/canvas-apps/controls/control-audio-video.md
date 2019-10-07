@@ -8,23 +8,23 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 7ac87e794341fe79a6e4f949893b64462c384f83
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: aab2b0bb7b236fe8cc6d7f18beb7a5c8ea8246ae
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544633"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993859"
 ---
 # <a name="audio-and-video-controls-in-powerapps"></a>Äänen ja videon ohjausobjektit PowerAppsissa
 Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubessa.
 
 ## <a name="description"></a>Kuvaus
-**Ääni**-ohjausobjekti toistaa äänileikkeen tiedostosta, tallenteen **[Mikrofoni](control-microphone.md)**-ohjausobjektista tai ääniraidan videotiedoston.
+**Ääni**-ohjausobjekti toistaa äänileikkeen tiedostosta, tallenteen **[Mikrofoni](control-microphone.md)** -ohjausobjektista tai ääniraidan videotiedoston.
 
 **Video**-ohjausobjekti toistaa videoleikkeen tiedostosta, YouTubesta tai Microsoft Azure -mediapalveluista.  Tekstitys voidaan näyttää, jos se on määritetty.
 
@@ -54,7 +54,7 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 **[Fill](properties-color-border.md)** – Ohjausobjektin taustaväri.
 
-**[FocusedBorderColor](properties-color-border.md) ** – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
+**[FocusedBorderColor](properties-color-border.md)**  – Ohjausobjektin reunan väri, kun ohjausobjekti on kohdistettu.
 
 **[FocusedBorderThickness](properties-color-border.md)** – Ohjausobjektin reunan paksuus, kun ohjausobjekti on kohdistettu.
 
@@ -72,7 +72,7 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
 
 **Keskeytetty** – *True*, jos median toisto -ohjausobjekti on sillä hetkellä keskeytetty, muuten *false*.
 
-**[Nollaa](properties-core.md) ** – Palautuuko ohjausobjekti oletusarvoonsa.
+**[Nollaa](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
 **Start** – Toistetaanko ääni- tai videoleike.
 
@@ -127,13 +127,13 @@ Ohjausobjekti, joka toistaa äänitiedoston, videotiedoston tai videon YouTubess
   *  YouTube-videoihin voit lisätä tekstityksen YouTuben tarjoamien luontityökalujen avulla.
   *  Muihin videoihin voit luoda tekstityksen WebVTT-muodossa, ladata sen ja määrittää **ClosedCaptionsUrl**-ominaisuuden url-sijaintiin. Rajoituksia on useita. Videota ja tekstitystä isännöivän palvelimen on tuettava CORS:ää ja käytettävä HTTPS-protokollaa. Tekstitys ei toimi Internet Explorerissa.
 * Harkitse ääni- tai videotallenteen antamista käyttämällä jotakin seuraavista menetelmistä:
-  1. Lisää teksti **[selitteeseen](control-text-box.md)** ja sijoita se multimediasoittimen viereen. Halutessasi voit luoda **[painikkeen](control-button.md)**, jolla tekstin voi näyttää tai piilottaa.
-  2. Lisää teksti eri näyttöön. Luo **[painike](control-button.md)**, joka siirtyy näytölle, ja sijoita painike multimediasoittimen viereen.
-  3. Jos kuvaus on lyhyt, se voidaan lisätä **[AccessibleLabel](properties-accessibility.md)**-objektiin.
+  1. Lisää teksti **[selitteeseen](control-text-box.md)** ja sijoita se multimediasoittimen viereen. Halutessasi voit luoda **[painikkeen](control-button.md)** , jolla tekstin voi näyttää tai piilottaa.
+  2. Lisää teksti eri näyttöön. Luo **[painike](control-button.md)** , joka siirtyy näytölle, ja sijoita painike multimediasoittimen viereen.
+  3. Jos kuvaus on lyhyt, se voidaan lisätä **[AccessibleLabel](properties-accessibility.md)** -objektiin.
 
 ### <a name="color-contrast"></a>Värikontrasti
 Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
-* **[FocusedBorderColor](properties-color-border.md) ** ja ulkopuolinen väri
+* **[FocusedBorderColor](properties-color-border.md)**  ja ulkopuolinen väri
 * **[Kuva](properties-visual.md)** ja multimediasoittimen ohjausobjektit (jos sovellettavissa)
 * **[Täyttö](properties-color-border.md)** ja multimediasoittimen ohjausobjektit (jos täyttö on näkyvissä)
 
@@ -143,6 +143,6 @@ Anna tekstitys ja/tai tallenne, jos videosisällössä on värikontrastiongelmia
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 * **AutoStart**-ominaisuuden arvona on oltava false, koska näppäimistön käyttäjien voi olla vaikea lopettaa toistoa nopeasti.

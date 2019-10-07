@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/21/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a6887694f2cc64cd44dcdc74e7769ce874872f70
-ms.sourcegitcommit: d87b2068a63e416e2814791328a3a47bbcb5bb48
+ms.openlocfilehash: 57432024254598ff8216d6fefafa5354844bb7a4
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "61520808"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984295"
 ---
 # <a name="remove-and-removeif-functions-in-powerapps"></a>PowerAppsin Remove- ja RemoveIf-funktio
 Poistaa [tietueita](../working-with-tables.md#records) [tietolähteestä](../working-with-data-sources.md).
@@ -41,19 +40,19 @@ Jos haluat poistaa kaikki tietolähteen tietueet, voit käyttää myös **[Clear
 [!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## <a name="syntax"></a>Syntaksi
-**Remove**( *DataSource*; *Record1* [; *Record2*; ... ] [; **All** ] )
+**Remove**( *DataSource*, *Record1* [, *Record2*, ... ] [, **All** ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen tai tietueet, jotka haluat poistaa.
 * *Record(s)* – Pakollinen. Tietue tai tietueet, jotka haluat poistaa.
 * **All** – Valinnainen. Sama tietue voi näkyä kokoelmassa useamman kerran.  Voit lisätä **All**-argumentin, jos haluat poistaa kaikki tietueen kopiot.
 
-**Remove**( *DataSource*; *Table* [; **All** ] )
+**Remove**( *DataSource*, *Table* [, **All** ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen tai tietueet, jotka haluat poistaa.
 * *Table* – Pakollinen. Taulukko, joka sisältää poistettavat tietueet.
 * **All** – Valinnainen. Sama tietue voi näkyä kokoelmassa useamman kerran.  Voit lisätä **All**-argumentin, jos haluat poistaa kaikki tietueen kopiot.
 
-**RemoveIf**( *DataSource*; *Condition* [; ... ] )
+**RemoveIf**( *DataSource*, *Condition* [, ... ] )
 
 * *DataSource* – Pakollinen. Tietolähde, joka sisältää tietueen tai tietueet, jotka haluat poistaa.
 * *Condition(s)* – Pakollinen. Kaava, joka määrittää poistettavan tietueen tai poistettavien tietueiden arvoksi **true**.  Voit käyttää kaavassa *DataSource*-tietolähteessä olevia sarakenimiä.  Jos määrität useita ehtoja (*Conditions*), niiden kaikkien arvoksi on tultava **true**, ennen kuin tietue tai tietueet poistetaan.
@@ -65,14 +64,14 @@ Näissä esimerkeissä poistat tietueita tietolähteestä, jonka nimi on **IceCr
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Remove(&nbsp;IceCream;<br>First(&nbsp;Filter(&nbsp;IceCream;&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Poistaa tietolähteestä **Chocolate**-tietueen. |<style> img { max-width: none } </style> ![](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
-| **Remove(&nbsp;IceCream;<br>First(&nbsp;Filter(&nbsp;IceCream;&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream;&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Poistaa tietolähteestä kaksi tietuetta. |![](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
-| **RemoveIf(&nbsp;IceCream; Quantity&nbsp;>&nbsp;150 )** |Muokkaa tietueita, joiden määrä (**Quantity**) on suurempi kuin **150**. |![](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
-| **RemoveIf(&nbsp;IceCream; Quantity&nbsp;>&nbsp;150; Left(&nbsp;Flavor;&nbsp;1&nbsp;) = "S" )** |Poistaa tietueita, joiden määrä (**Quantity**) on suurempi kuin 150 ja maku **(Flavor)** alkaa **S**-kirjaimella. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>**IceCream**-tietolähdettä on muokattu. |
-| **RemoveIf(&nbsp;IceCream; true )** |Poistaa tietolähteestä kaikki tietueet. |![](media/function-remove-removeif/icecream-empty.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
+| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Poistaa tietolähteestä **Chocolate**-tietueen. |<style> img { max-width: none } </style> ![](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
+| **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Strawberry"&nbsp;)&nbsp;) )** |Poistaa tietolähteestä kaksi tietuetta. |![](media/function-remove-removeif/icecream-only-vanilla.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150 )** |Muokkaa tietueita, joiden määrä (**Quantity**) on suurempi kuin **150**. |![](media/function-remove-removeif/icecream-only-chocolate.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
+| **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Poistaa tietueita, joiden määrä (**Quantity**) on suurempi kuin 150 ja maku **(Flavor)** alkaa **S**-kirjaimella. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>**IceCream**-tietolähdettä on muokattu. |
+| **RemoveIf(&nbsp;IceCream, true )** |Poistaa tietolähteestä kaikki tietueet. |![](media/function-remove-removeif/icecream-empty.png)<br><br>**IceCream**-tietolähdettä on muokattu. |
 
 ### <a name="step-by-step"></a>Ohjeet vaihe vaiheelta
 1. Tuo tai luo kokoelma, jonka nimi on **Luettelo**, ja näytä se valikoimassa artikkelin [Tietojen näyttäminen valikoimassa](../show-images-text-gallery-sort-filter.md) mukaan.
-2. Aseta **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava lauseke:<br>**Remove(Inventory; ThisItem)**
+2. Aseta **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava lauseke:<br>**Remove(Inventory, ThisItem)**
 3. Paina F5-näppäintä ja valitse valikoimasta kuva.<br>Kohde poistetaan valikoimasta ja kokoelmasta.
 

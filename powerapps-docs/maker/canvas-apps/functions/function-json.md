@@ -1,137 +1,136 @@
 ---
-title: JSON-funktio | Microsoft Docs
-description: Viitetiedot, mukaan lukien syntaksi JSON-funktiosta powerappsissa
+title: JSON-Funktiot | Microsoft Docs
+description: Powerappsin JSON-funktioiden viite tiedot, mukaan lukien syntaksi
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/02/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 74e10a5b073e16ba9f35139441c94e9911446a0f
-ms.sourcegitcommit: 2084789802fc5134dbeb888e759cced46019a017
+ms.openlocfilehash: ba852093da05c3fa69cc47b219a0bef65908c170
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66736395"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992633"
 ---
-# <a name="json-function-in-powerapps"></a>JSON-funktio powerappsissa
+# <a name="json-function-in-powerapps"></a>JSON-Funktiot Powerappsissa
 
-Luo taulukon, tietueen tai arvo JSON-merkkijonon.
+Luo JSON-teksti merkki jonon taulukolle, tietueelle tai arvolle.
 
 ## <a name="description"></a>Kuvaus
 
-**JSON** -funktio palauttaa JavaScript Object Notation (JSON) esitys tietorakenne tekstinä niin, että se sopii tai lähetettäessä verkon kautta. [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) ja [IETF RFC 8259](https://tools.ietf.org/html/rfc8259) kuvataan muodossa, jota käytetään yleisesti JavaScript ja muut ohjelmointikielille.
+**JSON** -funktio palauttaa tieto rakenteen JavaScript Object Notation (JSON)-esityksen tekstinä, jotta se sopii tietojen tallentamiseen tai välittämiseen verkon kautta. [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) ja [ietf RFC 8259](https://tools.ietf.org/html/rfc8259) kuvailevat muotoa, jota JavaScript ja muut Ohjelmointi Kielet käyttävät laajalti.
 
-Pohjaan sovellusten tuki [tietotyyppejä](data-types.md) , joka tässä taulukossa on lueteltu niiden tekstiesitys tietoja:
+Pohjaan liittyvät sovellukset tukevat [tieto tyyppejä](data-types.md) , jotka tässä taulukossa luetellaan, ja niiden tekstin esitys tiedot:
 
-| Tietotyyppi | Kuvaus | Tuloksen esimerkki |
+| Tietotyyppi | Kuvaus | Tulos esimerkki |
 |-----------|-------------|---------|
-| **Boolean** | *TRUE* tai *false*. | `true` |
-| **Väri** | Merkkijono, joka sisältää 8-numeroinen heksadesimaalimuodossa värin. Tämän esityksen käyttää muotoa #*rrggbbaa*, jossa *rr* on punainen komponentti, *gg* on vihreä, *bb* on sininen ja *aa* on alfa-kanavaa. Alfa kanavan **00** on täysin läpinäkyvä ja **ff** on täysin läpinäkymätön. Voit välittää merkkijono [ **ColorValue** ](function-colors.md) funktio.  | `"#102030ff"` |
-| **Valuutta** | Luku, joka käyttää asianmukaisen desimaalierottimena käyttäjän kielen. Tieteellistä merkintätapaa käytetään tarvittaessa. | `1,345` |
-| **Päivämäärä** | Merkkijono, joka sisältää ISO 8601-kalenterin päivämäärää **VVVV-KK-PP** muodossa. | `"2019-03-31"` |
-| **DateTime** | Merkkijono, joka sisältää ISO 8601-päivämäärä ja aika. Päivämäärä ja aika-arvot ovat UTC-muodossa, kuten lopun ”Z” ilmaisee.  | `"2019-03-31T22:32:06.822Z"`  |
-| **GUID** | Merkkijono, joka sisältää GUID-arvon. Kirjaimet ovat pieniä. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
-| **Kuva, Media** | Jos **IncludeBinaryData** on määritetty, mediatiedostoja on koodattu merkkijono. WWW-viittauksia, jotka käyttävät http: tai HTTPS-protokollaa: URL-rakenteen ei muokata. Muistissa binaaritiedot viittaukset ovat koodattu [”tietoja:*mimetype*; base64...”](https://en.wikipedia.org/wiki/Data_URI_scheme) muodossa. Muistin tiedot sisältävät kuvia, jotka käyttäjät siepata käyttämällä [ **kameran** ](../controls/control-camera.md) ohjausobjekti ja muut viittaukset kanssa appres: ja BLOB-objekti: URL-mallit.| `"data:image/jpeg;base64,/9j/4AA..."` |
-| **Numero** | Luku, joka käyttää asianmukaisen desimaalierottimena käyttäjän kielen. Tieteellistä merkintätapaa käytetään tarvittaessa. | `1,345` |
-| **Asetus&nbsp;määrittää** | Numeerinen asetusta arvo, ei otsikko, jota käytetään näyttämistä varten. Numeerinen arvo käytetään, koska se on riippumaton kieli.  | `1001` |
-| **Time** | Merkkijono, joka sisältää ISO 8601-kalenterin *hh:mm:ss.fff* muodossa.  | `"23:12:49.000"` |
-| **Tietue** | Pilkuin erotettu luettelo välillä **{** ja **}** , kentät ja niiden arvojen. Tämä merkintä muistuttaa tietueet pohjaan perustuvat sovellukset, mutta nimi on aina lainausmerkeissä. Tätä muotoa ei tue tietueet, jotka perustuvat monta yhteen-suhteita.  | `{ "First Name": "Fred"; "Age": 21 }` |
-| **Taulukko** | Pilkuin erotettu luettelo välillä **[** ja **]** , tietueet. Tätä muotoa ei tue taulukoita, jotka perustuvat yksi-moneen-suhteita.  | `[ { "First Name": "Fred"; "Age": 21 }; { "First Name": "Jean"; "Age": 20 } ]` |
-| **Kaksi&nbsp;vaihtoehto** | Kaksi vaihtoehtoa totuusarvo *true* tai *false*, ei otsikko, jota käytetään näyttämistä varten. Looginen arvo käytetään, koska se on riippumaton kieli. | `false` |
-| **Hyperlinkin, teksti** | Merkkijono lainausmerkeissä. Funktio escapes upotetun lainausmerkit kenoviivalla, korvaa newlines ”\n” ja tekee muita standard JavaScript-korvausta. | `"This is a string."` |
+| **Totuus arvo** | *True* tai *false*. | `true` |
+| **Väri** | Merkki jono, joka sisältää värin kahdeksannumeroisen heksa desimaali esityksen. Tämä esitys kestää muotoa #*rrggbbaa*, jossa *RR* on punainen osa, *GG* on vihreä, *BB* on sininen ja *aa* on alfa kanava. Alpha-kanavalla **00** on täysin läpinäkyvä, ja **FF** on täysin läpinäkymätön. Voit välittää merkki jonon [**Colorvalue**](function-colors.md) -funktiolla.  | `"#102030ff"` |
+| **Valuutta** | Luku, joka käyttää asianmukaista desimaalimuotoerotinta käyttäjän kielelle. Tieteellistä merkintää käytetään tarvittaessa. | `1.345` |
+| **Päivä määrä** | Merkki jono, joka sisältää päivä määrän ISO 8601 **VVVV-KK-PP** -formaatissa. | `"2019-03-31"` |
+| **DateTime** | Merkki jono, joka sisältää ISO 8601-päivä määrän/-kellon ajan. Päivä määrä-ja aika-arvot ovat UTC-muodossa, kun loppu merkki "Z" ilmaisee.  | `"2019-03-31T22:32:06.822Z"`  |
+| **GUID** | Merkki jono, joka sisältää GUID-arvon. Kirjaimet ovat pieniä kirjaimia. | `"751b58ac-380e-4a04-a925-9f375995cc40"`
+| **Kuva, tieto väline** | Jos **Includebinarydata** on määritetty, tieto väline tiedostot koodataan merkki jonossa. Http:-tai https-verkko viittauksia käyttävät verkko viittaukset: URL-rakennetta ei ole muokattu. Viitta ukset muistissa oleviin binaaritietotietoihin koodataan ["Data:*MimeType*; Base64,..."](https://en.wikipedia.org/wiki/Data_URI_scheme) -muodossa. Muistissa olevat tiedot sisältävät kuvia, jotka käyttäjät sieppaamaan käyttämällä [**kamera**](../controls/control-camera.md) -ohjaus objektia ja muita viitta uksia Appsin: ja BLOB-objektien kanssa: URL-mallit.| `"data:image/jpeg;base64,/9j/4AA..."` |
+| **Numero** | Luku, joka käyttää asianmukaista desimaalimuotoerotinta käyttäjän kielelle. Tieteellistä merkintää käytetään tarvittaessa. | `1.345` |
+| **Vaihto ehto @ no__t-1asetus** | Asetus joukon luku arvo, ei näyttämisessä käytettävä otsikko. Numero-arvoa käytetään, koska se on kielestä riippumaton.  | `1001` |
+| **Aika** | Merkki jono, joka sisältää ISO 8601 *hh:mm: SS. FFF-* muodon.  | `"23:12:49.000"` |
+| **Tietue** | Pilkuilla eroteltu luettelo, joka on **{** – **}** kenttien ja niiden arvojen välillä. Tämä merkitsemis tapa muistuttaa, että kangas sovelluksissa on tietue, mutta nimi on aina lainaus merkeissä. Tämä muoto ei tue tietueita, jotka perustuvat moneen-yhteen-suhteisiin.  | `{ "First Name": "Fred", "Age": 21 }` |
+| **Taulukon** | Pilkuilla eroteltu luettelo tietueiden välillä **[** ja **]** . Tämä muoto ei tue taulu koita, jotka perustuvat yhteen moneen-suhteisiin.  | `[ { "First Name": "Fred", "Age": 21 }, { "First Name": "Jean", "Age": 20 } ]` |
+| **Kaksi @ no__t-1option** | Kahden asetuksen totuus arvo, *tosi* tai *Epätosi*, ei näytettävä otsikko. Totuus arvoa käytetään, koska se on kielestä riippumaton. | `false` |
+| **Hyperlinkki, teksti** | Merkki jono lainaus merkkien välissä. Funktio poistuu upotetuista lainaus merkeistä, joilla on Keno viiva, korvaa rivin vaihdot-kohteen "\n" ja tekee muita JavaScript-vakio korvaavia. | `"This is a string."` |
 
-Määritä valinnainen *muodossa* argumentti hallita, miten luettavissa tulos on ja miten ei tueta ja binary-tietotyypit käsitellään. Oletusarvon mukaan tulos on mahdollisimman tarpeettomia välilyöntejä tai newlines compact ja ei-tuettu tietotyyppejä ja binaaritiedot ei sallita. Voit yhdistää useita muotoja, jos määrität **&** operaattori.
+Määritä valinnainen *muoto* -argumentti, joka määrittää, miten lukukelpoinen tulos on ja miten tuettuja ja binaaritietotyyppejä käsitellään. Oletus arvon mukaan tuloste on mahdollisimman pienikokoinen ilman tarpeettomia väli lyöntejä tai rivin vaihtoja, eikä tieto tyyppejä, joita ei tueta, ja binaaritiedot eivät ole sallittuja. Voit yhdistää useita muotoiluja, jos määrität **&-** operaattorin.
 
-| JSONFormat enum | Kuvaus |
+| JSONFormat-luettelointi | Kuvaus |
 |-----------------|-------------|
-| **CD** | Oletus.  Tulos on mahdollisimman lisätty välilyöntejä tai newlines compact. |
-| **IndentFour** | Voit parantaa luettavuutta tulos sisältää newline jokaiselle sarakkeelle ja sisäkkäisyystaso ja käyttää neljä välilyönnit jokaisen sisennystaso. |
-| **IncludeBinaryData** | Tulos sisältää kuvan, videon ja äänen ClipArt-saraketta. Tätä muotoa huomattavasti kasvattaa tulosten koko ja heikentää sovelluksesi suorituskykyä. |
-| **IgnoreBinaryData** | Tulos ei sisällä kuva, video tai ääni ClipArt-sarakkeita. Jos määrität ei kumpaakaan **IncludeBinaryData** tai **IgnoreBinaryData**, funktio antaa tulokseksi virheen, jos se havaitsee binaaritiedot. |
-| **IgnoreUnsupportedTypes** | Ei-tuettu tietojen tyypit ovat sallittuja, mutta tulos ei sisällyttää ne. Oletusarvon mukaan ei tueta tietotyypit muodostavat virhe. |
+| **Compact** | Oletus.  Tuloste on mahdollisimman pienikokoinen ilman lisättyjä välejä tai rivin vaihtoja. |
+| **IndentFour** | Luettavuuden parantamiseksi tuloste sisältää NewLine-arvon kullekin sarakkeelle ja sisäkkäisyys tasolle ja käyttää neljää väli lyöntiä kullekin sisennys tasolle. |
+| **IncludeBinaryData** | Tulos sisältää kuva-, video-ja ääni leike sarakkeet. Tämä muoto voi merkittävästi suurentaa tuloksen kokoa ja heikentää sovelluksesi suoritus tehoa. |
+| **IgnoreBinaryData** | Tulos ei sisällä kuva-, video-tai ääni leike sarakkeita. Jos määrität kumpaakaan **Includebinarydata** -tai **Ignorebinarydata**-arvoa, funktiolla syntyy virhe, jos se havaitsee binaaritietoja. |
+| **Ei Ignoneusupportedtypes** | Tieto tyyppejä, joita ei tueta, sallitaan, mutta tulos ei sisällä niitä. Oletus arvon mukaan tieto tyypit, joita ei tueta, tuottavat virheen. |
 
-Käytä [ **ShowColumns** ja **DropColumns** ](function-table-shaping.md) Funktiot voit hallita mitä tulos sisältää tietoja ja poistaa tietotyyppejä ei tueta.
+[ **Showcolumns** -ja **dropcolumns** ](function-table-shaping.md) -funktioiden avulla voit määrittää, mitä tietoja tulos sisältää ja poistaa tieto tyyppejä, joita ei tueta.
 
-Koska **JSON** voi olla muistin ja kuluttaa, voit käyttää tätä funktiota vain [toiminta funktiot](../working-with-formulas-in-depth.md). Voit siepata tulos **JSON** tietoja [muuttujan](../working-with-variables.md), joita voit sitten käyttää tietoja työnkulussa.
+Koska **JSON** voi olla sekä muisti-että käsittely teho, voit käyttää tätä funktiota vain [toiminta funktioissa](../working-with-formulas-in-depth.md). Voit siepata **JSON** -tuloksen [muuttujaan](../working-with-variables.md), jota voit käyttää tieto kulussa.
 
-Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vastaavat kieltä sovelluksen käyttäjälle ja on siksi sovellu tiedonsiirto common-palveluun.
+Jos sarakkeella on sekä näyttö nimi että looginen nimi, tulos sisältää loogisen nimen. Näyttö nimet vastaavat sovelluksen käyttäjän kieltä, joten ne eivät sovellu common Service-palvelun tietojen siirtämiseen.
 
 ## <a name="syntax"></a>Syntaksi
 
-**JSON**( *DataStructure* [; *muodossa* ])
+**JSON**( *datastructure* [, *muoto* ])
 
-* *DataStructure* – pakollinen. Muunnettava JSON-tietorakenne.  Taulukoiden, tietueita ja primitiivi arvoja tuetaan, satunnaisia sisäkkäin.
-* *Muotoile* – valinnainen.  **JSONFormat** luettelointiarvo. Oletusarvo on **Compact**, joka ei lisää newlines tai välilyöntejä ja estää binaaritiedot ja sarakkeita ei tueta.
+* *Datastructure* – pakollinen. JSON-muotoon muunnettava tieto rakenne.  Taulu koita, tietueita ja primitiivisiä arvoja tuetaan mielivaltaisesti sisäkkäin.
+* *Muoto* – valinnainen.  **Jsonformat** -luettelointi arvo. Oletus arvo on **Compact**, joka ei lisää rivin vaihtoja tai välejä, ja estää binaaritiedot ja sarakkeet, joita ei tueta.
 
 ## <a name="examples"></a>Esimerkkejä
 
-### <a name="hierarchical-data"></a>Hierarkkiset tiedot
+### <a name="hierarchical-data"></a>Hierarkkinen tieto
 
-1. Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava.
+1. Lisää [**painike**](../controls/control-button.md) -ohjaus objekti ja määritä sen **onselect** -ominaisuudeksi Tämä kaava.
 
-    ```powerapps-comma
-    ClearCollect( CityPopulations;
-        { City: "London";    Country: "United Kingdom"; Population: 8615000 };
-        { City: "Berlin";    Country: "Germany";        Population: 3562000 };
-        { City: "Madrid";    Country: "Spain";          Population: 3165000 };
-        { City: "Hamburg";   Country: "Germany";        Population: 1760000 };
-        { City: "Barcelona"; Country: "Spain";          Population: 1602000 };
-        { City: "Munich";    Country: "Germany";        Population: 1494000 }
-    );;
-    ClearCollect( CitiesByCountry; GroupBy( CityPopulations; "Country"; "Cities" ) )
+    ```powerapps-dot
+    ClearCollect( CityPopulations,
+        { City: "London",    Country: "United Kingdom", Population: 8615000 },
+        { City: "Berlin",    Country: "Germany",        Population: 3562000 },
+        { City: "Madrid",    Country: "Spain",          Population: 3165000 },
+        { City: "Hamburg",   Country: "Germany",        Population: 1760000 },
+        { City: "Barcelona", Country: "Spain",          Population: 1602000 },
+        { City: "Munich",    Country: "Germany",        Population: 1494000 }
+    );
+    ClearCollect( CitiesByCountry, GroupBy( CityPopulations, "Country", "Cities" ) )
     ```
 
-1. Valitse painike, kun pidät alhaalla Alt-näppäintä.
+1. Valitse painike pitäen Alt-näppäintä painettuna.
 
-    **Kaupungitmaittain** tietorakenne, jossa voit näyttää valitsemalla luodaan kokoelma **kokoelmat** - **tiedoston** valikosta ja valitsemalla sitten nimi kokoelma.
-
-    > [!div class="mx-imgBorder"]
-    > ![Kaupungitmaittain kokoelma](media/function-json/cities-grouped.png)
-
-    Voit myös näyttää Tämä kokoelma valitsemalla **tiedoston** > **sovellusasetukset** > **lisäasetukset**  >   **Ota käyttöön kaavarivin tulosnäkymään**, valitsemalla kaavarivin luotavan kokoelman nimeä ja valitsemalla sitten kaavariville-kokoelman nimi viereistä alaspäin osoittavaa nuolta.
+    **Citiesbycountry** -kokoelma luodaan käyttäen tätä tieto rakennetta, joka voidaan näyttää valitsemalla **tiedosto-** valikosta **kokoelmat** ja valitsemalla sitten kokoelman nimi.
 
     > [!div class="mx-imgBorder"]
-    > ![Kokoelman oletuskaava kaavarivillä tulosnäkymään](media/function-json/cities-grouped-resultview.png)
+    > ![CitiesByCountry-kokoelma @ no__t-1
 
-1. Lisää toinen painike ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+    Voit myös näyttää tämän kokoelman valitsemalla **tiedosto** > **sovellus asetukset** > **lisä asetukset** > **Ota käyttöön kaava rivin tulos näkymä**, valitse kokoelman nimi kaava rivillä ja valitse sitten kaava rivin alla olevan kokoelman nimen vieressä oleva alanuoli.
 
-    ```powerapps-comma
-    Set( CitiesByCountryJSON; JSON( CitiesByCountry ) )
+    > [!div class="mx-imgBorder"]
+    > ![Collection kaava rivin tulos näkymässä @ no__t-1
+
+1. Lisää toinen painike ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
+    Set( CitiesByCountryJSON, JSON( CitiesByCountry ) )
     ```
 
-    Tämä kaava määrittää yleisen muuttujan **CitiesByCountryJSON** -for JSON-esityksen **Kaupungitmaittain**.
+    Tämä kaava määrittää yleisen muuttuja **citiesbycountryjson** -kohteen **citiesbycountry**-kohteen JSON-edustukseen.
 
-1. Valitse painike, kun pidät alhaalla Alt-näppäintä.
+1. Valitse painike pitäen Alt-näppäintä painettuna.
 
-1. Lisää [ **nimen** ](../controls/control-text-box.md) ohjausobjekti ja määritä sen **tekstin** -ominaisuuden arvoksi tämä muuttujaa.
+1. Lisää [**Selite**](../controls/control-text-box.md) -ohjaus objekti ja aseta sen **Text** -ominaisuudeksi Tämä muuttuja.
 
-    ```powerapps-comma
+    ```powerapps-dot
     CitiesByCountryJSON
     ```
 
-    Selite näyttää tämän tuloksen kaikki yhdellä rivillä ilman välilyöntejä, sopivan toimittamiseen verkon kautta:
+    Selite esittää tämän tuloksen, kaikki yhdellä rivillä ilman väli lyöntejä, jotka soveltuvat verkossa tapahtuvaan siirtoon:
 
     ```json
     [{"Cities":[{"City":"London","Population":8615000}],"Country":"United Kingdom"},{"Cities":[{"City":"Berlin","Population":3562000},{"City":"Hamburg","Population":1760000},{"City":"Munich","Population":1494000}],"Country":"Germany"},{"Cities":[{"City":"Madrid","Population":3165000},{"City":"Barcelona","Population":1602000}],"Country":"Spain"}]
     ```
 
-1. Muuta toista painiketta kaava tulos helpommin luettavan.
+1. Muuta toisen painikkeen kaavaa niin, että tuloste on helpommin luettavissa.
 
-    ```powerapps-comma
-    Set( CitiesByCountryJSON; JSON(CitiesByCountry; JSONFormat.IndentFour ))
+    ```powerapps-dot
+    Set( CitiesByCountryJSON, JSON(CitiesByCountry, JSONFormat.IndentFour ))
     ```
 
-1. Valitse toinen painike, kun pidät alhaalla Alt-näppäintä.
+1. Valitse toinen painike pitäen Alt-näppäintä painettuna.
 
-    Selite näyttää helpommin luettavan tuloksen.
+    Selite sisältää luettavuuden lisä tuloksen.
 
     ```json
     [
@@ -177,29 +176,29 @@ Jos sarake on näyttönimi ja looginen nimi, tulos on looginen nimi. Nimet vasta
     ]
     ```
 
-### <a name="images-and-media-in-base64"></a>Kuvien ja Base64 media
+### <a name="images-and-media-in-base64"></a>Kuvat ja tieto väline Base64
 
-1. Lisää [ **kuvan** ](../controls/control-image.md) ohjausobjektin.
+1. Lisää [**kuva**](../controls/control-image.md) -ohjaus objekti.
 
-    Tämän ohjausobjektin tuo **SampleImage** sitä.
+    Tämä ohjaus objekti tuo **Sampleimage** -kohteen sen kanssa.
 
-1. Lisää [ **painike** ](../controls/control-button.md) ohjausobjekti ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava.
+1. Lisää [**painike**](../controls/control-button.md) -ohjaus objekti ja määritä sen **onselect** -ominaisuudeksi Tämä kaava.
 
-    ```powerapps-comma
-    Set( ImageJSON; JSON( SampleImage; JSONFormat.IncludeBinaryData ) )
+    ```powerapps-dot
+    Set( ImageJSON, JSON( SampleImage, JSONFormat.IncludeBinaryData ) )
     ```
 
-1. Valitse painike, kun pidät alhaalla Alt-näppäintä.
+1. Valitse painike pitäen Alt-näppäintä painettuna.
 
-1. Lisää selite ja aseta sen **tekstin** -ominaisuuden arvoksi tämä muuttujaa.
+1. Lisää selite ja muuta sen **teksti** -ominaisuudeksi Tämä muuttuja.
 
-    ```powerapps-comma
+    ```powerapps-dot
     ImageJSON
     ```
 
-1. Muuta ohjausobjektin kokoa ja Pienennä fonttikokoa näyttämään eniten tuloksen tarvittaessa.
+1. Muuta ohjaus objektin kokoa ja pienennä fontin kokoa tarpeen mukaan suurimman tuloksen näyttämiseksi.
 
-    Selite näyttää merkkijono, joka **JSON** siepattu funktio.
+    Nimi ilmaisee **JSON** -funktiolla siepatun teksti merkki jonon.
 
     ```json
     "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIg0KCSB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczphPSJodHRwOi8vbnMuYWRvYmUuY29tL0Fkb2JlU1ZHVmlld2VyRXh0ZW5zaW9ucy8zLjAvIg0KCSB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI3MHB4IiBoZWlnaHQ9IjI3MHB4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNzAgMjcwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCgk8ZyBjbGFzcz0ic3QwIj4NCgkJPHJlY3QgeT0iMC43IiBmaWxsPSIjRTlFOUU5IiB3aWR0aD0iMjY5IiBoZWlnaHQ9IjI2OS4zIi8+DQoJCTxwb2x5Z29uIGZpbGw9IiNDQkNCQ0EiIHBvaW50cz0iMjc3LjksMTg3LjEgMjQ1LDE0My40IDE4OC42LDIwMi44IDc1LDgwLjUgLTQuMSwxNjUuMyAtNC4xLDI3MiAyNzcuOSwyNzIiLz4NCgkJPGVsbGlwc2UgZmlsbD0iI0NCQ0JDQSIgY3g9IjIwMi40IiBjeT0iODQuMSIgcng9IjI0LjQiIHJ5PSIyNC4zIi8+DQoJPC9nPg0KPC9zdmc+"

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2017
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 930439325b60b60fefed18b66c22d9d4f97f55b7
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 20515a65a66dc3fea1236924d9c29574f63e16a8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61550981"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992696"
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>PowerAppsin funktiot EditForm, NewForm, SubmitForm, ResetForm ja ViewForm
 Tarkastele ja muokkaa kohdetta, luo kohde, tallenna sisältö ja palauta ohjausobjektit **[Muokkaa lomaketta](../controls/control-form-detail.md)** -ohjausobjektissa.
@@ -60,10 +59,10 @@ Jos vahvistus menee läpi, **SubmitForm** lähettää muutoksen tietolähteeseen
 **ResetForm**-funktio palauttaa lomakkeen sisällön sen alkuarvoihin, jotka edelsivät käyttäjän tekemiä muutoksia. Jos lomake on **FormMode.New**-tilassa, se palautetaan **FormMode.Edit**-tilaan. Myös Lomake-ohjausobjektin **[OnReset](../controls/control-form-detail.md)** -toiminta suoritetaan.  Voit myös palauttaa yksittäisiä ohjausobjekteja **[Reset](function-reset.md)** -funktiolla, mutta vain lomakkeen kautta.
 
 ### <a name="viewform"></a>ViewForm
-**ViewForm**-funktio muuttaa lomakeohjausobjektin tilaksi **FormMode.View**. Tässä tilassa lomake täytetään Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)** -ominaisuuden sisällöllä.  **SubmitForm** ja **ResetForm** funktioilla ei ole tässä tilassa.
+**ViewForm**-funktio muuttaa lomakeohjausobjektin tilaksi **FormMode.View**. Tässä tilassa lomake täytetään Lomake-ohjausobjektin **[Item](../controls/control-form-detail.md)** -ominaisuuden sisällöllä.  **Submitform** -ja **resetform** -funktioilla ei ole vaikutusta tässä tilassa.
 
 ### <a name="displaymode-property"></a>DisplayMode-ominaisuus
-Nykyinen tila voidaan lukea **Mode**-ominaisuuden kautta.  Tila myös määrittää **DisplayMode**-ominaisuuden arvon, jota tietokortit ja ohjausobjektit voivat käyttää Lomake-ohjausobjektissa.  Usein tietokortin **DisplayMode** ominaisuuden arvoksi **Parent.DisplayMode** (viittaa lomakkeeseen) samoin kuin ohjausobjektin **DisplayMode** ominaisuus (viittaa tietokortti): 
+Nykyinen tila voidaan lukea **Mode**-ominaisuuden kautta.  Tila myös määrittää **DisplayMode**-ominaisuuden arvon, jota tietokortit ja ohjausobjektit voivat käyttää Lomake-ohjausobjektissa.  Tieto kortin **DisplayMode** -ominaisuuden arvoksi asetetaan usein **Parent. DisplayMode** (viittaa lomakkeeseen), kuten ohjaus objektin **DisplayMode** -ominaisuus (tieto korttiin viittaava): 
 
 | Tila | DisplayMode | Kuvaus |
 | --- | --- | --- |
@@ -111,12 +110,12 @@ Täydellisiä esimerkkejä löytyy kohdasta [Tutustu tietolomakkeisiin](../worki
    * Jos lähetys epäonnistuu, **ErrorText** näyttää käyttäjäystävällisen virhesanoman. Nykyinen näyttö pysyy näkyvissä, jotta käyttäjä voi korjata ongelman ja yrittää uudelleen.
 4. Lisää Painike-ohjausobjekti, määritä sen **[Teksti](../controls/properties-core.md)** -ominaisuus näyttämään **Peruuta** ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
-    **ResetForm (EditForm);; Back()**
+    **ResetForm (EditForm); Back()**
    
     Kun käyttäjä valitsee **Peruuta**-painikkeen, Lomake-ohjausobjektin arvot palautetaan muokkausta edeltävään tilaan. Edellinen näyttö tulee näkyviin uudelleen ja Lomake-ohjausobjekti palautetaan **Muokkaa**-tilaan, jos se oli **Uusi**-tilassa.
 5. Lisää painikeohjausobjekti, määritä sen **[Teksti](../controls/properties-core.md)** -ominaisuus näyttämään **Uusi** ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
-    **NewForm( EditForm );; Navigate( EditScreen; None )**
+    **NewForm( EditForm ); Navigate( EditScreen, None )**
    
     Kun käyttäjä valitsee **Uusi**-painikkeen, Lomake-ohjausobjekti vaihtuu **Uusi**-tilaan. Lomake-ohjausobjekti täytetään sen tietolähteen oletusarvoilla, ja näkyviin tulee näyttö, joka sisältää Lomake-ohjausobjektin. Kun **SubmitForm**-funktio suoritetaan, tietue luodaan päivittämisen sijaan.
 

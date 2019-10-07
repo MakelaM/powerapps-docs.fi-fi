@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/12/2017
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d5d8b8ebaa2a1d044a09a402a87998980e34f461
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: b544b03fbe181265599bab520eddc2a2a646c477
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63320494"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994474"
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
 
@@ -49,7 +48,7 @@ Voit valita lisättävän mediatiedoston tyypin (esimerkiksi kuvat, video tai ä
 
     ![Valitse mediatyyppi][8]
 
-6. Jos olet lisännyt kuvan ohjausobjektin, aseta sen **[Image](controls/properties-visual.md)**-ominaisuus lisäämääsi tiedostoon:  
+6. Jos olet lisännyt kuvan ohjausobjektin, aseta sen **[Image](controls/properties-visual.md)** -ominaisuus lisäämääsi tiedostoon:  
 
     ![Määritä kuvan ominaisuus](./media/add-images-pictures-audio-video/imageproperty.png)
 
@@ -159,7 +158,7 @@ Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive
 
 8. Lisää **Lisää**-välilehdessä **Button**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    **Patch(Drawings; Defaults(Drawings); {Image:MyPen.Image})**
+    **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
 
 9. Lisää **Kuvavalikoima**-ohjausobjekti (**Lisää**-välilehti > **Valikoima**) ja aseta sen **Items**-ominaisuudeksi `Drawings`. Valikoima-ohjausobjektin **Image**-ominaisuudeksi asetetaan automaattisesti `ThisItem.Image`.
 

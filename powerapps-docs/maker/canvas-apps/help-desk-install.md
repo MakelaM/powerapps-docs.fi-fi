@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/08/2018
 ms.author: yijw
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9d1b7eaecc7bd519e9423e6e64387cb6cad76c7f
-ms.sourcegitcommit: 9ec2853aec74e92ccd1e4a7ca54707cdf8b8cdd3
+ms.openlocfilehash: 5f8744d7cc6b6048debc18775e7bf3ad7cbbff22
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535274"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990224"
 ---
 # <a name="install-and-configure-the-help-desk-sample-in-powerapps"></a>Asenna ja määritä Help Desk -malli PowerAppsissa
 
@@ -89,7 +89,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
 1. Napsauta **Luo sarake**.
 2. Anna **Sarakkeen nimi** -tekstiruutuun **ProsenttiaValmiina**.
-3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Numero (1, 10, 100)**.
+3. Valitse **Tämän sarakkeen tietotyyppi on** -valintanappiluettelossa **Numero (1, 10, 100)** .
 4. Valitse **Edellytä, että sarake sisältää tietoa** -valintanappiluettelossa **Ei**.
 5. Valitse **OK**.
 
@@ -177,7 +177,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 1. Siirry selaimella osoitteeseen https://web.powerapps.com.
 2. Kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
 3. Valitse vasemmasta valikosta **Sovellukset**. 
-4. Napsauta kohtaa **Tuo paketti (esikatselu)**.
+4. Napsauta kohtaa **Tuo paketti (esikatselu)** .
     
    ![Tuo paketti -näyttö](./media/help-desk-install/import-package.png)
 
@@ -209,7 +209,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 
     ![Tuonnin asetukset -näyttö](./media/help-desk-install/import-done.png)
 
-## <a name="configure-the-app-to-use-the-sharepoint-list"></a>Määritä sovellus SharePoint-luettelon avulla
+## <a name="configure-the-app-to-use-the-sharepoint-list"></a>Määritä sovellus käyttämään SharePoint-listaa
 
 1. Valitse seuraavissa vaiheissa **Avaa sovellus**.
 2. Valitse **Salli** oikeutta pyydettäessä.
@@ -217,7 +217,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 ### <a name="delete-connections"></a>Yhteyksien poistaminen
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
-1. - **Tietojen** ruudussa, valitse kolme pistettä (...) kohdan **HelpDesk**, ja valitse sitten **poistaa**.
+1. Valitse **tiedot** -ruudussa kohteen **helpdesk**vierestä kolme pistettä (...) ja valitse sitten **Poista**.
 
 ### <a name="helpdesk-list"></a>HelpDesk-luettelo
 
@@ -228,8 +228,8 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
     > [!TIP] 
     > Jos sivusto ei näy luettelossa, kirjoita tai liitä SharePoint-sivuston URL-osoite tekstiruutuun ja valitse sitten **Siirry**.
 
-1. - **Hae** yläosassa luettelon tyyppi tai liitä **HelpDesk**.
-1. Valitse valintaruutu kohdan **HelpDesk**, ja valitse sitten **Yhdistä**.
+1. Kirjoita tai liitä luettelon yläreunan **haku** ruutuun **helpdesk**.
+1. Valitse tuote **tuki**-kohdan viereinen valinta ruutu ja valitse sitten **Yhdistä**.
 
 ### <a name="update-admin-list"></a>Päivitä järjestelmänvalvojien luettelo
 
@@ -241,7 +241,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
     ![Päivitä järjestelmänvalvojaluettelo](./media/help-desk-install/Change-admin.png)
     
    > [!TIP]
-   > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, pilkkua järjestelmänvalvojien erottelemiseen järjestelmänvalvojien luetteloon. Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
+   > Jos sinulla on useampi kuin yksi järjestelmänvalvoja, rajoita järjestelmänvalvojien luettelo käyttämällä pilkkua. Esimerkki: "admin1@microsoft.com","admin2@microsoft.com".
    > Jos haluat varmistaa, että AdminList-luettelon osoitteet vastaavat PowerAppsin vaatimaa muotoa, valitse Näytä > Muuttujat > Yleiset > Oma profiili ja katso, onko Sähköposti-sarakkeessa vaadittava sähköpostimuoto.
 
 1. Valitse **Tiedosto** > **Tallenna** > **Julkaise** > **Julkaise tämä versio**.
@@ -251,7 +251,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 1.  Valitse vasemmasta valikosta **Työnkulut**.
 2.  Jos sinua pyydetään kirjautumaan sisään, kirjaudu sisään antamalla samat tunnistetiedot, joita käytit rekisteröityessäsi.
 3.  Valitse yläreunan valikosta **Omat työnkulut**.
-4.  Kohdan **HelpDeskFlow** työnkulun vieressä olevaa kynäkuvaketta. 
+4.  Napsauta **Helpdeskflow** -työn kulun vieressä olevaa kynä kuvaketta. 
  
     ![Työnkulun muokkaaminen -näyttö](./media/help-desk-install/edit-flow.png)
 
@@ -275,7 +275,7 @@ Tähän luetteloon tallennetaan tukipalvelun tukipyyntöjä.
 ## <a name="play-the-app"></a>Sovelluksen toistaminen
 
 1. Napsauta selaimessa kohtaa **Sovellukset**.
-2. Napsauta kolmea pistettä (...) tukipalvelun sovelluksen.
+2. Napsauta kolmea pistettä (...) tuki palvelu sovelluksen vieressä.
 3. Napsauta **Avaa**. 
 
 > [!TIP]

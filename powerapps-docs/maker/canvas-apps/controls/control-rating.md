@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1979ad63ce9cd5fbe3f3a9a3fa5a56df5e80966e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 774b5294f9d03564caa658a04aff0f682a7bb43f
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61526052"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993335"
 ---
 # <a name="rating-control-in-powerapps"></a>Luokitus-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjät voivat ilmaista arvon numeron 1 ja määrittämäsi suurimman numeron väliltä.
@@ -76,7 +75,7 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Average**( *Arvo1*; *Arvo2;* ... )](../functions/function-aggregates.md)
+[**Average**( *Arvo1*, *Arvo2,* ... )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **Luokitus**-ohjausobjekti ja anna sille nimeksi **Kvantitatiivinen**.
@@ -84,7 +83,7 @@ Tämän ohjausobjektin avulla käyttäjä voi esimerkiksi tietyn määrän täht
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[Tekstisyöte](control-text-input.md)** -ohjausobjekti, anna sen nimeksi **Kvalitatiivinen** ja siirrä se **Luokitus**-ohjausobjektin alapuolelle.
 3. Määritä **[Tekstisyöte](control-text-input.md)** -ohjausobjektin **[Default](properties-core.md)** -ominaisuudeksi **""** ja määritä sen **HintText**-ominaisuudeksi tämä kaava:
-   <br>**If(Kvantitatiivinen.Value > 3; "Mistä erityisesti pidit"; "Missä meillä olisi parantamisen varaa?")**
+   <br>**If(Kvantitatiivinen.Value > 3, "Mistä erityisesti pidit", "Missä meillä olisi parantamisen varaa?")**
    
     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 4. Paina F5-näppäintä ja napsauta tai napauta sen jälkeen neljä tai viisi tähteä **Luokitus**-ohjausobjektissa.

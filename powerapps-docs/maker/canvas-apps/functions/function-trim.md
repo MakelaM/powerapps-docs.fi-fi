@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/09/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5997df0d6e2a6a2d6732d10cefa146f4ba6e33dc
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 79f035271b2a98faf6ddb7bba716c7107e311183
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548439"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71991929"
 ---
 # <a name="trim-and-trimends-functions-in-powerapps"></a>Trim- ja TrimEnds-funktiot PowerAppsissa
 Poistavat ylimääräiset välilyönnit tekstimerkkijonosta.
@@ -53,8 +52,8 @@ Seuraavissa esimerkeissä käytetään yksisarakkeista kokoelmaa, jonka nimi on 
 
 ![](media/function-trim/input-strings.png)
 
-Luo tämä kokoelma määrittämällä **[Painike](../controls/control-button.md)**-ohjausobjektin **OnSelect**-ominaisuudeksi tämä kaava avaamalla esikatselutila ja napsauttamalla tai napauttamalla painiketta:
-<br>**ClearCollect( Spaces; [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;"; "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill"; "Already&nbsp;trimmed"; "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;"; "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
+Luo tämä kokoelma määrittämällä **[Painike](../controls/control-button.md)** -ohjausobjektin **OnSelect**-ominaisuudeksi tämä kaava avaamalla esikatselutila ja napsauttamalla tai napauttamalla painiketta:
+<br>**ClearCollect( Spaces, [ "&nbsp;&nbsp;&nbsp;Jane&nbsp;&nbsp;&nbsp;Doe&nbsp;&nbsp;&nbsp;", "&nbsp;&nbsp;&nbsp;&nbsp;Jack&nbsp;&nbsp;&nbsp;and&nbsp;&nbsp;&nbsp;Jill", "Already&nbsp;trimmed", "&nbsp;&nbsp;&nbsp;Venus,&nbsp;&nbsp;&nbsp;Earth,&nbsp;&nbsp;&nbsp;Mars&nbsp;&nbsp;", "Oil&nbsp;and&nbsp;Water&nbsp;&nbsp;&nbsp;" ] )**
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
@@ -62,5 +61,5 @@ Luo tämä kokoelma määrittämällä **[Painike](../controls/control-button.md
 | **TrimEnds(&nbsp;Spaces&nbsp;)** |Poistaa kaikki välilyönnit jokaisen merkkijonon alusta ja lopusta **Spaces**-kokoelmassa. |<style> img { max-width: none } </style> ![](media/function-trim/output-trimends.png) |
 
 > [!NOTE]
-> Ylimääräiset välilyönnit eivät näy, jos näytät kokoelman napsauttamalla tai napauttamalla kohtaa **Kokoelmat** **Tiedosto**-valikossa. Voit tarkistaa merkkijonon pituuden käyttämällä **[Len](function-len.md)**-funktiota.
+> Ylimääräiset välilyönnit eivät näy, jos näytät kokoelman napsauttamalla tai napauttamalla kohtaa **Kokoelmat** **Tiedosto**-valikossa. Voit tarkistaa merkkijonon pituuden käyttämällä **[Len](function-len.md)** -funktiota.
 

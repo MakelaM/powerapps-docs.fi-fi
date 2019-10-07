@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d375adeb8a20dfe2d9629a9c34944a8dcd80a8e7
-ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
+ms.openlocfilehash: a06217470482eccdf368279eaabcd297bbf73ce5
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451445"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983355"
 ---
 # <a name="acceleration-app-compass-connection-and-location-signals-in-powerapps"></a>Acceleration-, App-, Compass-, Connection- ja Location-signaalit PowerAppsissa
 
@@ -26,12 +26,12 @@ Palauttavat tietoja sovelluksen ympäristöstä, kuten käyttäjän sijainnin ma
 
 ## <a name="description-and-syntax"></a>Kuvaus ja syntaksi
 
-Signaalit ovat arvoa, voit muuttaa milloin tahansa riippumaton miten käyttäjä voi käyttää sovelluksen kanssa. Kaavat, jotka perustuvat signaalit automaattisesti laskea uudelleen, kun nämä arvot muuttuvat.
+Signaalit ovat arvoja, jotka voivat muuttua milloin tahansa, riippumatta siitä, miten käyttäjä voi olla vuoro vaikutuksessa sovelluksen kanssa. Signaaleihin perustuvat kaavat laskevat automaattisesti uudelleen, kun nämä arvot muuttuvat.
 
-Signaalit palauttavat yleensä [tietueen](../working-with-tables.md#records) tietoja. Voit käyttää tietoja ja tallentaa ne tietueeksi. Voit myös poimia yksittäisiä ominaisuuksia käyttämällä **.** [-operaattoria](operators.md).
+Signaalit palauttavat tiedot yleensä [](../working-with-tables.md#records) . Voit käyttää tietoja ja tallentaa ne tietueeksi. Voit myös poimia yksittäisiä ominaisuuksia käyttämällä **.** [-operaattoria](operators.md).
 
 > [!NOTE]
-> **Acceleration** ja **kompassi** funktiot palauttavat tarkat arvot soitin, kuten iOS: lle tai Androidille, mutta kun ne palauttavat nolla-arvojen luot tai muokkaat sovelluksen selaimessa.
+> **Kiihdytyksen** ja **kompassin** funktiot palauttavat tarkkoja arvoja alkuperäisessä soittimessa, kuten iOS:ssä tai Androidissa, mutta nämä funktiot palauttavat nolla-arvot, kun luot tai muokkaat sovellusta selaimessa.
 
 ### <a name="acceleration"></a>Acceleration
 
@@ -45,13 +45,13 @@ Signaalit palauttavat yleensä [tietueen](../working-with-tables.md#records) tie
 
 ### <a name="app"></a>App
 
-Mm **sovelluksen** objekti sisältää signaalin, joka ilmaisee, mikä näyttö näytetään.
+Muiden ominaisuuksien joukossa **sovellus** -objekti sisältää signaalin, joka ilmaisee, mitä näyttöä näytetään.
 
 | Ominaisuus | Kuvaus |
 | --- | --- |
-| **App.ActiveScreen** |Näyttö, joka näyttää. Palauttaa näytön ohjausobjektin, jota voit käyttää viittaamaan näytön ominaisuuksiin tai vertaamaan toiseen näyttöön määrittääksesi, mikä näyttö näytetään. Voit määrittää **[takaisin](function-navigate.md)** tai **[Navigate](function-navigate.md)** funktiota muuttaaksesi näyttö, joka näyttää. |
+| **App.ActiveScreen** |Näyttö, joka näytetään. Palauttaa näyttö objektin, jonka avulla voit viitata näytön ominaisuuksiin tai verrata toiseen näyttöön, jotta voit määrittää, mitä näyttöä näytetään. Voit käyttää **[Back](function-navigate.md)** -tai **[Navigate](function-navigate.md)** -toimintoa vaihtaaksesi näyt-näyttöä. |
 
-Lisätietoja: [**Sovelluksen** objektin](object-app.md) dokumentaatio.
+Lisätietoja: [ **Sovellus** objektin](object-app.md) dokumentaatio.
 
 ### <a name="compass"></a>Compass
 **Compass**-signaali palauttaa näytön ylälaidan kompassisuunnan. Suunta perustuu magneettiseen pohjoiseen.
@@ -82,18 +82,18 @@ Kun sijainti muuttuu, sijainnin riippuvaisuudet lasketaan jatkuvasti uudelleen. 
 | **Location.Longitude** |Palauttaa luvun väliltä 0–180, joka ilmaisee pituusasteen mitattuna asteina länteen Greenwichistä, Englannista. |
 
 ## <a name="examples"></a>Esimerkkejä
-Heidän kentässä syöttäjä heittää laitteen puhelimella-syöttäjän kummulta siepparille. Puhelin on suorassa linjassa suhteessa maahan, näytön yläosa on siepparia kohden eikä syöttäjä lisää heittoon kierrettä. Tässä sijainnissa puhelimessa on käytön mukaan laskutettava mobiiliverkkopalvelu, mutta ei Wi-Fi-yhteyttä. **PlayBall**-näyttö tulee näkyviin.   
+Baseball-kentässä syöttäjä heittää puhelimen syöttäjän röykkiöstä siepparin koti levylle. Puhelin on suorassa linjassa suhteessa maahan, näytön yläosa on siepparia kohden eikä syöttäjä lisää heittoon kierrettä. Tässä sijainnissa puhelimessa on käytön mukaan laskutettava mobiiliverkkopalvelu, mutta ei Wi-Fi-yhteyttä. **PlayBall**-näyttö tulee näkyviin.   
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Location.Latitude** |Palauttaa nykyisen sijainnin leveysasteen. Kartan koordinaatteina 47.591 N, 122.333 W. sijaitsee kenttä |47.591<br><br>Leveysaste muuttuu jatkuvasti, kun pallo kulkee syöttäjän ja siepparin välillä. |
+| **Location.Latitude** |Palauttaa nykyisen sijainnin leveysasteen. Kenttä sijaitsee kartan koordinaatteina 47,591 N, 122,333 W. |47.591<br><br>Leveysaste muuttuu jatkuvasti, kun pallo kulkee syöttäjän ja siepparin välillä. |
 | **Location.Longitude** |Palauttaa nykyisen sijainnin pituusasteen. |122.333<br><br>Pituusaste muuttuu jatkuvasti, kun pallo kulkee syöttäjän ja siepparin välillä. |
 | **Location** |Palauttaa nykyisen sijainnin leveysasteen ja pituusasteen tietueena. |{&nbsp;Latitude:&nbsp;47.591, Longitude:&nbsp;122.333&nbsp;} |
-| **Compass.Heading** |Palauttaa näytön ylälaidan kompassisuunnan. Tämä kenttä on Kotipesä on kutakuinkin Latinalainen Amerikka syöttäjän kummulta. |230.25 |
+| **Compass.Heading** |Palauttaa näytön ylälaidan kompassisuunnan. Tässä kentässä koti kilpi on suunnilleen lounaaseen kannun röykkiö. |230.25 |
 | **Acceleration.X** |Palauttaa laitteen kiihtyvyyden sivuttain. Syöttäjä heittää puhelimen suoraan eteenpäin suhteessa näytön ylälaitaan, joten laite ei kiihdy sivuttain. |0 |
 | **Acceleration.Y** |Palauttaa laitteen kiihtyvyyden edestä taaksepäin. Syöttäjä saa heittäessään laitteen kiihtymään aluksi voimakkaasti, niin että sen nopeus kasvaa nollasta 90 mailiin tunnissa (132 jalkaa sekunnissa) puolessa sekunnissa. Kun laite on ilmassa (eikä ilmanvastusta huomioida), laite ei kiihdy enempää. Laitteen kiihtyvyys hidastuu, kun sieppari ottaa kopin, ja lopulta laitteen liike pysähtyy. |8.2, kun syöttäjä heittää laitteen.<br><br>0, kun laite on ilmassa.<br><br>-8.2, kun sieppari ottaa laitteesta kopin. |
 | **Acceleration.Z** |Palauttaa laitteen kiihtyvyyden alhaalta ylöspäin. Kun laite on ilmassa, painovoiman vaikutukset vaikuttavat siihen. |0, ennen kuin syöttäjä heittää laitteen.<br><br>1, kun laite on ilmassa.<br><br>0, kun sieppari on ottanut laitteesta kopin. |
-| **Acceleration** |Palauttaa kiihtyvyyden tietueena. |{ X: 0, Y: 264, Z: {0} kuin syöttäjä heittää laitteen. |
+| **Acceleration** |Palauttaa kiihtyvyyden tietueena. |X 0, KY: 264, Z: 0}, koska syöttäjä heittää laitteen. |
 | **Connection.Connected** |Palauttaa totuusarvon, joka ilmaisee, onko laite yhdistetty verkkoon |**true** |
 | **Connection.Metered** |Palauttaa totuusarvon, joka ilmaisee, onko yhteys käytön mukaan laskutettava |**true** |
 | **App.ActiveScreen = PlayBall** |Palauttaa totuusarvon, joka ilmaisee, näytetäänkö **PlayBall**. |**true** |

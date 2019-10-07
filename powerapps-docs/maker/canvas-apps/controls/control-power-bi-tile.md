@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/07/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3e3b9902b535cc21d6e4b26959e9d5c4a0e56144
-ms.sourcegitcommit: b3fd824cf0d540b964b729686b198c7ccf2c2174
+ms.openlocfilehash: f258beee317fcdad46d71b504f9c8a3046bb3641
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316748"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993374"
 ---
 # <a name="power-bi-tile-control-in-powerapps"></a>Power BI -ruudun ohjausobjekti PowerAppsissa
 
@@ -38,23 +38,23 @@ Kun jaat sovelluksen, jossa on Power BI -sisältöä, sinun on jaettava sovelluk
 
 Yli kolmen Power BI -ruudun lataamista sovellukseen yhtä aikaa ei suositella. Voit hallita ruutujen lataamista ja poistamista muistista määrittämällä **LoadPowerBIContent**-ominaisuuden.
 
-## <a name="pass-a-parameter"></a>Välittää parametri
+## <a name="pass-a-parameter"></a>Parametrin läpäisemistä
 
-Välittämällä yksittäinen parametri sovelluksesta, voit suodattaa tulokset, jotka näkyvät Power BI-ruudun. Vain merkkijonoarvoja ja equals-operaattoria, ja suodattimen eivät ehkä toimi taulukon tai sarakkeen nimessä on välilyöntejä.
+Siirtämällä yksittäisen parametrin sovelluksesta voit suodattaa tulokset, jotka näkyvät Power BI-ruutua. Kuitenkin vain merkki jono arvoja ja yhtäläisyys operaattoria tuetaan, eikä suodatin välttämättä toimi, jos taulukon nimi tai sarakkeen nimi sisältää väli lyöntejä.
 
-Voit välittää yhden suodattimen arvon muokkaamalla arvo **TileURL** ominaisuutta, joka noudattaa seuraavaa syntaksia:
+Jos haluat välittää yhden suodattimen arvon, muokkaa **Tileurl** -ominaisuuden arvoa, joka seuraa tätä syntaksia:
 
 ```
 "https://app.powerbi.com/embed?dashboardId=<DashboardID>&tileId=<TileID>&config=<SomeHash>"
 ```
 
-Arvoon Liitä seuraavaa syntaksia:
+Liitä tämä syntaksi tähän arvoon:
 
 ```
 &$filter=<TableName>/<ColumnName> eq '<Value>'
 ```
 
-Parametrin suodattaa raportin tietojoukon arvo Jos ruutu on peräisin.
+Parametri suodattaa raportin tieto joukon arvon, josta ruutu on perä isin.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 

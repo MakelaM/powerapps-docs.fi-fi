@@ -6,22 +6,21 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/25/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ba5df28f03ec5e7c9a3d8146aecb0427d8145b13
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 964f57c427b8e9e2e2f7a50e3d6e149ddea8e8b0
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544242"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986681"
 ---
-# <a name="gallery-control-in-canvas-apps"></a>Valikoima-ohjausobjektin pohjaan perustuvat sovellukset
+# <a name="gallery-control-in-canvas-apps"></a>Valikoima-ohjaus objekti kangas sovelluksissa
 
 Ohjausobjekti, joka sisältää muita ohjausobjekteja ja tietoja.
 
@@ -29,11 +28,11 @@ Ohjausobjekti, joka sisältää muita ohjausobjekteja ja tietoja.
 
 **Valikoima**-ohjausobjekti voi näyttää useita tietolähteen tietueita ja jokainen tietue voi sisältää useita tietotyyppejä. **Valikoima**-ohjausobjekti voi esimerkiksi näyttää useita yhteystietoja ja jokaiselle kohteelle tietoja, kuten nimen, osoitteen ja puhelinnumeron. Jokainen tietokenttä näytetään erillisenä ohjausobjektina **Valikoima**-ohjausobjektin sisällä ja voit määrittää nämä ohjausobjektit niiden mallipohjissa. Mallipohja näytetään valikoiman ensimmäisenä kohteena **Valikoima**-ohjausobjektin vasemmassa reunassa vaakasuuntaisena ja **Valikoima**-ohjausobjektin yläosassa pystysuuntaisena. Mallipohjaan tekemäsi muutokset näkyvät **Valikoima**-ohjausobjektin eri osissa.
 
-Ennalta määritetyt malleja näytetään kuvien ja tekstin näyttäminen valikoimassa ovat käytettävissä sekä valikoiman kohteiden muuttujan korkeus.
+Käytettävissä on esimääritettyjä malleja, joiden avulla näytetään kuvia ja tekstiä valikoimassa sekä valikoiman muuttuja korkeus kohteita.
 
 ## <a name="limitations"></a>Rajoitukset
 
-Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen kuin kaikki kohteet ladataan, kohteen n tällä hetkellä view saattaa sijaita alaspäin ja ole näkymän kun tietojen lataaminen on valmis. Voit välttää tämän ongelman käyttämällä vakio **valikoiman** ohjausobjektin sijaan **joustava korkeus** variant.
+Jos käyttäjä vierittää **joustavan korkeuden** valikoima-ohjaus objektia, ennen kuin kaikki kohteet on ladattu, parhaillaan näkymässä oleva kohde voidaan työntää alas ja olla poissa näkymästä, kun tietojen lataaminen on valmis. Voit välttää tämän ongelman käyttämällä vakio **valikoima** -ohjaus objektia **joustavan korkeuden** muunnoksen sijaan.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 
@@ -45,7 +44,7 @@ Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 
-**[AccessibleLabel](properties-accessibility.md) ** – näytönlukuohjelmien valikoiman (ei sen sisältämät kohteet) nimen. Käytetään kuvaamaan kohteiden luetteloa.
+**[AccessibleLabel](properties-accessibility.md)** – näytön luku ohjelmien valikoiman (ei sen sisältämien kohteiden) otsikko. Käytetään kuvaamaan kohteiden luetteloa.
 
 **AllItems** – Kaikki valikoiman kohteet, mukaan lukien lisäohjausarvot, jotka ovat osa valikoiman mallipohjaa.
 
@@ -61,11 +60,11 @@ Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
-**ItemAccessibleLabel** – näytönlukuohjelmien valikoiman jokaisen kohteen nimi. Tulee kuvata kunkin kohteen ominaisuudet.
+**ItemAccessibleLabel** – näytön luku ohjelmien kunkin valikoiman kohteen nimi. Pitäisi kuvailla, mitä kukin kohde on.
 
 **NavigationStep** – Kuinka paljon valikoimaa vieritetään, jos sen **ShowNavigation**-ominaisuudeksi on asetettu **tosi** ja käyttäjä valitsee valikoiman jommassakummassa päässä olevan siirtymisnuolen.
 
-**Joka voidaan valita** – näytetäänkö valikoimakohteet voidaan valita. Kun **true**, näytönlukuohjelmat määrittää valikoiman, joka voidaan valita luettelona ja valitse kohde napsauttamalla tai napauttamalla sitä. Kun **false**, näytönlukuohjelmat määrittää valikoiman säännöllisesti luettelona ja napsauttamalla tai napauttamalla kohdetta ei valita sen.
+**Selectable** – onko valikoima kohteita valittavissa. Kun asetus on **tosi**, näytön luku ohjelmat tunnistavat valikoiman valittavissa luettelona ja valitset kohteen napsauttamalla tai napauttamalla sitä. Kun asetus on **Epätosi**, näytön luku ohjelmat tunnistavat valikoiman säännölliseksi luetteloksi ja napsauttamalla tai napauttamalla kohdetta ei ole valittuna.
 
 **ShowNavigation** – Näytetäänkö valikoiman päissä nuolet, joiden avulla käyttäjä voi selata valikoiman kohteita napsauttamalla tai napauttamalla nuolta.
 
@@ -93,7 +92,7 @@ Jos käyttäjä vierittää **joustava korkeus** valikoima-ohjausobjektin, ennen
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Filter**( *Tietolähde*; *Kaava* )](../functions/function-filter-lookup.md)
+[**Filter**( *Tietolähde*, *Kaava* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Esimerkkejä
 
@@ -126,20 +125,20 @@ Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, s
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-    > Näytönlukuohjelmat ilmoittavat, kun valikoiman kohteet muuttuvat. **AccessibleLabel** mainitaan myös. Tämä antaa ilmoitukselle kontekstin, mikä on erityisen tärkeää, jos samassa näytössä on useampi valikoima.
+    > Näytön luku ohjelmat ilmoittavat, kun valikoiman kohteet muuttuvat. **AccessibleLabel** mainitaan myös. Tämä antaa ilmoitukselle kontekstin, mikä on erityisen tärkeää, jos samassa näytössä on useampi valikoima.
 
-* Kun valikoiman kohteiden on useita ohjausobjekteja, käytä **ItemAccessibleLabel** laskemiseen valikoiman kohteen sisältö.
+* Kun valikoima kohde sisältää useita ohjaus objektin, voit tehdä yhteenvedon valikoiman kohteen sisällöstä käyttämällä **ItemAccessibleLabel** .
 
-* Määrittää arvon **valittavissa** - **true** Jos haluat, että käyttäjät voivat valita valikoimakohteen. Muussa tapauksessa asetus kyseisen arvon **false**.
+* Määritä **selectable** -arvoksi **True** , jos haluat, että käyttäjät valitsevat valikoiman kohteen. Muussa tapa uksessa valitse arvoksi **false**.
 
-* Kun valikoiman kohteiden on useita ohjausobjekteja, käytä **ItemAccessibleLabel** antaa yhteenvedon valikoiman kohteen sisältö.
+* Kun valikoima kohde sisältää useita ohjaus objektin, voit antaa yhteenvedon valikoiman kohteen sisällöstä **ItemAccessibleLabel** -kohteen avulla.
 
-* **Joka voidaan valita** on asetettava oikein, sen mukaan, onko käyttäjien on tarkoitettu valita valikoimakohteen.
+* **Selectable** tulee määrittää oikein sen mukaan, onko käyttäjien tarkoitus valita valikoima kohde.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
 
 * Suosittelemme asettamaan **ShowScrollbar**-ominaisuuden arvoksi **tosi**. Useimmissa kosketusnäyttölaitteissa vierityspalkki näytetään ainoastaan vierittäessä.
-* Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, vain näppäimistöä käyttävien käyttäjien on myös voitava valita kohteet jollain tavalla. Voit mahdollistaa tämän lisäämällä **[painikkeen](control-button.md)**, jonka **OnSelect**-ominaisuuden arvoksi on asetettu **Select(Parent)**.
+* Jos valikoiman kohteiden on tarkoitus olla valittavissa napsauttamalla niitä, vain näppäimistöä käyttävien käyttäjien on myös voitava valita kohteet jollain tavalla. Voit mahdollistaa tämän lisäämällä **[painikkeen](control-button.md)** , jonka **OnSelect**-ominaisuuden arvoksi on asetettu **Select(Parent)** .
 
     > [!NOTE]
-  > Valikoiman ulkopuolella olevia ohjausobjekteja ei oteta huomioon valikoimassa käytettävässä näppäimistön siirtymisjärjestyksessä. Valikoiman ohjausobjektien **[TabIndex](properties-accessibility.md)**-ominaisuus on rajoitettu. Lue lisätietoja [helppokäyttöisyysasetuksista](properties-accessibility.md).
+  > Valikoiman ulkopuolella olevia ohjausobjekteja ei oteta huomioon valikoimassa käytettävässä näppäimistön siirtymisjärjestyksessä. Valikoiman ohjausobjektien **[TabIndex](properties-accessibility.md)** -ominaisuus on rajoitettu. Lue lisätietoja [helppokäyttöisyysasetuksista](properties-accessibility.md).

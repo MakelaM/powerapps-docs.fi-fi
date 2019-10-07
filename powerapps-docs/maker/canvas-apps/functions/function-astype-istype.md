@@ -1,152 +1,151 @@
 ---
-title: AsType ja IsType funktioiden pohjaan perustuvien sovellusten | Microsoft Docs
-description: Viitetiedot, mukaan lukien syntaksi ja Esimerkki AsType ja IsType-funktioiden pohjaan perustuvia sovelluksia
+title: Astynpe-ja IsType-Funktiot kangas sovelluksissa | Microsoft Docs
+description: Viite tiedot, mukaan lukien syntaksi ja esimerkki, Astynpe-ja IsType-funktioille kangas sovelluksissa
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 999653159f838e840f7f569aa9953633a6a70065
-ms.sourcegitcommit: 93096dfa1aadba77159db1e5922f3d5528eecb7a
+ms.openlocfilehash: 0ecb30a5a452a6ee092ccf9bc9d47f6182ef60ab
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65986320"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992988"
 ---
-# <a name="astype-and-istype-functions-in-canvas-apps"></a>AsType ja IsType funktioiden pohjaan perustuvia sovelluksia
+# <a name="astype-and-istype-functions-in-canvas-apps"></a>Astynpe-ja IsType-Funktiot kangas sovelluksissa
 
-Määritetyn entiteettityypin tietueen viittaus tarkistaa (**IsType**) ja käsittelee viittaus tietyn tyypin (**AsType**).
+Tarkistaa määritetyn entiteettityypin (**Istype**) tietue viittauksen ja käsittelee viitta uksen määritetyllä tyyppinä (**astynpe**).
 
 ## <a name="description"></a>Kuvaus
 
-Lue [ymmärtämään tietueen viittaukset ja polymorfinen hakuja](../working-with-references.md) laajempi esittelyn ja lisätietoja.
+Lue Tutustu [tietue viittauksiin ja polymorfisten hakujen](../working-with-references.md) laajempaan käyttöönottoon ja lisä tietoihin.
 
-Hakukentän viittaa yleensä tietyn entiteetin tietueet. Kohteen tyyppi on hyvin muodostettu, voit käyttää haun kentät käyttämällä yksinkertaisia piste-merkintätapaa. Esimerkiksi **ensimmäisen (tiliä) ”. Ensisijainen yhteyshenkilö ' ”. Koko nimi ”** Ohjaa **tilit** entiteetti **ensisijaisen yhteyshenkilön** tietue **yhteystiedot** entiteetin ja otteet **KokoNimi**  kenttä.
+Haku kenttä viittaa yleensä tietyn entiteetin tietue isiin. Koska entiteettityyppi on vakiintunut, voit käyttää haku kenttiä yksinkertaisen piste merkinnän avulla. Esimerkiksi **First (accounts). Ensisijainen yhteys henkilö. Koko nimi** kulkee **accounts** -entiteetistä **yhteys tiedot** -entiteetin **ensisijaiseen yhteyshenkilö** tietueeseen ja poimii **koko nimi** -kentän.
 
-Common Data Service tukee myös polymorfinen hakukenttiä, jotka voivat viitata tietueita entiteettien, kuten näissä esimerkeissä joukosta.
+Common Data Service tukee myös polymorfisiä haku kenttiä, jotka voivat tarkoittaa entiteettien joukosta perä isin olevia tietueita, kuten Näissä esimerkeissä.
 
-| Hakukenttä | Voit viitata |
+| Haku kenttä | Voi tarkoittaa |
 |--------------|--------------|
-| **Omistaja** | **Käyttäjien** tai **ryhmät** |
-| **Asiakas** | **Tilien** tai **yhteystiedot** |
-| **Liittyy** | **Tilien**, **yhteystiedot**, **tietoartikkelit**jne. |
+| **Omistaja** | **Käyttäjät** tai **tiimit** |
+| **Asiakas** | **Asiakkaat** tai **yhteys henkilöt** |
+| **Koskevat** | **Asiakkaat**, **yhteys henkilöt**, **tietämys artikkelit**jne. |
 
 <!--note from editor: Change "Knowledge Articles" to "Knowledge Base articles" if that is what is being referenced.   -->
 
-Pohjaan perustuvien sovellusten kaavoissa polymorfinen hakuja käsitellä tietueen viittausten avulla. Koska tietueen viittaus voi viitata eri entiteettien, et tiedä, mitkä kentät ovat käytettävissä, kun kirjoitat kaavaa. *. Kentän* notation ei ole käytettävissä. Nämä kaavat on mukautettava tietueet, jotka sovelluksen havaitsee, kun se suoritetaan.
+Canvas-App-kaavoissa voit käyttää tietue viittauksia, jotka toimivat polymorfisten hakujen kanssa. Koska tietue viittaus voi viitata eri entiteetteihin, et tiedä, mitkä kentät ovat käytettävissä, kun kirjoitat kaavaa. *. Kentän* merkintä ei ole käytettävissä. Näiden kaavojen on mukauduttava tietue isiin, joita sovellus kohtaa, kun se suoritetaan.
 
-**IsType** funktio Testaa, onko tietue viittaus viittaa tiettyyn entiteettiin. Funktio palauttaa totuusarvo TOSI tai EPÄTOSI.
+**Istype** -funktiolla testataan, viittaanko tietue viittaus tiettyyn entiteettityypin. Funktio palauttaa totuus arvon TRUE tai FALSE.
 
-**AsType** funktio käsittelee tietueen viitata tiettyyn entiteettityyppi, jota kutsutaan joskus *muuntamista*. Voit käyttää tuloksen kuin jos se olisi entiteetin tietueen ja, käyttää uudelleen *. Kentän* merkintätapaa kaikki tietueen kentät. Jos viittaus ei ole tietyn tapahtuu virhe.
+**Asttype** -funktiolla käsitellään tietue viittausta tiettynä entiteettityypinä, jota kutsutaan joskus myös *valu*-kohteeksi. Voit käyttää Tulosta ikään kuin se olisi tietue entiteetistä ja käyttää sitten kohdetta *. Kentän* merkintä, joka käyttää kaikkia kyseisen tietueen kenttiä. Virhe ilmenee, jos viittaus tyyppi ei ole määritetty.
 
-Näiden funktioiden avulla yhdessä Testaa ensin entiteettityyppi tietueen ja käsitellä sitä kyseisen tietueena niin, että kentät ovat käytettävissä:
+Käytä näitä funktioita yhdessä, testaa ensin tietueen entiteettityyppiä ja käsittele se sitten kyseisen tyypin tietueena niin, että kentät ovat käytettävissä:
 
-```powerapps-comma
-If( IsType( First( Accounts ).Owner; Users );
-    AsType( First( Accounts ).Owner; Users ).'Full Name';
-    AsType( First( Accounts ).Owner; Teams ).'Team Name'
+```powerapps-dot
+If( IsType( First( Accounts ).Owner, Users ),
+    AsType( First( Accounts ).Owner, Users ).'Full Name',
+    AsType( First( Accounts ).Owner, Teams ).'Team Name'
 )
 ```
 
-Tarvitset näitä funktioita vain, jos käytät viittaus tietueen kentät. Voit esimerkiksi käyttää tietueen viitteet [ **suodatin** ](function-filter-lookup.md) toimi ilman **IsType** tai **AsType**:
+Tarvitset näitä funktioita vain, jos käytät tietue viittauksen kenttiä. Voit esimerkiksi käyttää [**Filter**](function-filter-lookup.md) -funktion tietue viittauksia ilman istype-tai **astynpe** -funktioita:
 
-```powerapps-comma
-Filter( Accounts; Owner = First( Users ) )
+```powerapps-dot
+Filter( Accounts, Owner = First( Users ) )
 ```
 
-Vastaavasti voit käyttää tietueen viitteiden [ **Patch** ](function-patch.md) funktio:
+Voit käyttää myös tietue viittauksia [**patch**](function-patch.md) -funktiolla:
 
-```powerapps-comma
-Patch( Accounts; First( Accounts ); { Owner: First( Teams ) } )
+```powerapps-dot
+Patch( Accounts, First( Accounts ), { Owner: First( Teams ) } )
 ```  
 
-Jos käytetään tietueen kontekstissa, kuten [ **valikoiman** ](../controls/control-gallery.md) tai [ **muokkauslomake** ](../controls/control-form-detail.md) ohjausobjektin, saatat joutua käyttämään [Yleinen selvitysoperaattoria](operators.md#disambiguation-operator) viittaamaan kohteen tyyppi. Esimerkiksi Tämä kaava on tehokas valikoiman, jossa näkyy luettelo yhteystiedot jossa **yrityksen nimi** on **asiakkaan** lookup:
+Jos käytetään tietue kontekstia, kuten [**valikoiman**](../controls/control-gallery.md) tai [**Muokkaa lomaketta**](../controls/control-form-detail.md) -ohjaus objektin kanssa, sinun on ehkä käytettävä [yleistä täsmennys operaattoria](operators.md#disambiguation-operator) entiteettityypin viittaamiseksi. Tämä kaava olisi esimerkiksi tehokas valikoima, joka näyttää luettelon yhteys henkilöistä, joissa **yrityksen nimi** on **asiakas** haku:
 
-```powerapps-comma
-If( IsType( ThisItem.'Company Name'; [@Accounts] );
-    AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
-    AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
+```powerapps-dot
+If( IsType( ThisItem.'Company Name', [@Accounts] ),
+    AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
+    AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
 )
 ```
 
-Molemmille funktioille Määritä tietolähde, joka on yhdistetty entiteettiin tyypin nimi kautta. Kaavan työpaikkaan Lisää myös tietolähde tyyppejä, joita haluat testata tai pakottaa sovellukseen. Esimerkiksi, sinun on lisättävä **käyttäjät** entiteetin tietolähteenä, jos haluat käyttää **IsType** ja **AsType** kanssa **omistaja** haku- ja tietueet entiteetistä. Voit lisätä tietolähteitä, joita itse asiassa käyttää sovelluksessasi; Sinun ei tarvitse lisätä kaikki entiteetit, haun voi viitata.
+Molemmissa funktioissa voit määrittää tyypin entiteettiin yhdistetyn tieto lähteen nimen kautta. Jotta kaava toimisi, sinun on myös lisättävä sovellukseen tieto lähde mille tahansa tyypille, jota haluat testata tai luoda. Sinun on esimerkiksi lisättävä **käyttäjät** -entiteetti tieto lähteeksi, jos haluat käyttää istype-ja **astype** - tietoja **omistaja** haun ja kyseisen entiteetin tietueiden kanssa. Voit lisätä vain tieto lähteitä, joita itse käytät sovelluksessasi. sinun ei tarvitse lisätä kaikkia entiteettejä, joihin haku voi viitata.
 
-Jos tietue-viittaus on *tyhjä*, **IsType** palauttaa arvon FALSE, ja **AsType** palauttaa *tyhjä*. Kaikki kentät *tyhjä* tietue on *tyhjä*.
+Jos tietue viittaus on *tyhjä*, istype palauttaa arvon FALSE, ja **astynpe** palauttaa *tyhjän*. Kaikki *tyhjän* tietueen kentät ovat *tyhjiä*.
 
 ## <a name="syntax"></a>Syntaksi
 
-**AsType**( *RecordReference*; *EntityType* )
+**Asttype**( *recordreference*, *EntityType* )
 
-- *RecordReference* – pakollinen. Tietue-viittaus usein hakukenttä, joka voi viitata missä tahansa useita entiteettejä tietueeseen.
-- *EntityType* – pakollinen. Tiettyyn entiteettiin, jonka voit testata.
+- *Recordreference* – pakollinen. Tietue viittaus, joka on usein haku kenttä, joka voi viitata minkä tahansa useamman entiteetin tietueeseen.
+- *EntityType* – pakollinen. Tietty entiteetti, jolle testataan.
 
-**IsType**( *RecordReference*; *EntityType* )
+**Istype**( *recordreference*, *EntityType* )
 
-- *RecordReference* – pakollinen. Tietue-viittaus usein hakukenttä, joka voi viitata missä tahansa useita entiteettejä tietueeseen.
-- *EntityType* – pakollinen. Tiettyyn entiteettiin, johon tietueen kohdetyypille.
+- *Recordreference* – pakollinen. Tietue viittaus, joka on usein haku kenttä, joka voi viitata minkä tahansa useamman entiteetin tietueeseen.
+- *EntityType* – pakollinen. Tietty entiteetti, johon tietue tulee lähettää.
 
 ## <a name="example"></a>Esimerkki
 
-[Tutustu tietueen viittaukset ja polymorfinen hakuja](../working-with-references.md) sisältää kattavat esimerkkejä.
+[Tutustu tietue viittauksiin ja polymorfisiin](../working-with-references.md) hakuihin sisältää laajoja esimerkkejä.
 
-1. Luo tyhjä kangas-sovellus tabletille.
+1. Luo tyhjä kangas sovellus tableteille.
 
-1. Käyttöön **Näytä** -välilehden **tietolähteet**, ja lisää sitten **yhteystiedot** ja **tilit** entiteetit tietolähteinä.
+1. Valitse **näkymä** -väli lehdeltä **tieto lähteet**ja lisää sitten **yhteys tiedot** -ja **accounts** -entiteetit tieto lähteinä.
     > [!div class="mx-imgBorder"]
-    > ![Tyhjä sovellus ja kahdesta tietolähteestä: tilit ja yhteystiedot](media/function-astype-istype/contacts-add-datasources.png)
+    > @no__t – 0Tyhjä sovellus, jossa on kaksi tieto lähdettä: asiakkuudet ja yhteys henkilöt @ no__t-1
 
-1. Lisää **valikoiman** ohjausobjektin **tyhjä, pysty** suunta.
-
-    > [!div class="mx-imgBorder"]
-    > ![Lisää Valikoimaohjausobjekti, jolla on tyhjä pystysuuntainen asettelu](media/function-astype-istype/contacts-customer-gallery.png)
-
-1. Valitse **ominaisuudet** välilehti lähellä näytön oikealla puolella, Määritä valikoiman **kohteet** -ominaisuuden arvoksi **yhteystiedot**.
+1. Lisää **valikoima** -ohjaus objekti, jossa on **tyhjä pystysuuntainen** suunta.
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä kohteiden yhteystietoihin ominaisuudet-ruutu](media/function-astype-istype/contacts-customer-datasource.png)
+    > ![Lisää valikoima-ohjaus objekti, jossa on tyhjä pystysuuntainen ulkoasu @ no__t-1
 
-1. Aseta valikoiman asettelu **otsikko ja alaotsikko**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Avaa asettelu-valitsin ominaisuudet-ruutu](media/function-astype-istype/contacts-customer-layout.png)
+1. Valitse **Ominaisuudet** -väli lehden näytön oikean puolen lähellä olevan valikoiman **kohteet** -ominaisuudeksi **yhteys tiedot**.
 
     > [!div class="mx-imgBorder"]
-    > ![Määritetty asettelu otsikko ja alaotsikko](media/function-astype-istype/contacts-customer-flyout.png)
+    > ![kohteiden lisääminen yhteys tietoihin ominaisuudet-ruudussa @ no__t-1
 
-1. - **Tietojen** ruutu, avattuna **Title1** luettelo ja valitse sitten **KokoNimi**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Otsikon arvo](media/function-astype-istype/contacts-customer-title.png)
-
-1. Valitse **Subtitle1** Selite-ohjausobjekti.
+1. Valitse valikoiman asetteluksi **otsikko ja alaotsikko**.
 
     > [!div class="mx-imgBorder"]
-    > ![Alaotsikko arvo](media/function-astype-istype/contacts-customer-subtitle.png)
+    > ![Avaa asemointi valitsin ominaisuudet-ruudusta @ no__t-1
 
-1. Määritä **tekstin** ominaisuuden **Subtitle1** tämä kaava:
+    > [!div class="mx-imgBorder"]
+    > ![Valitse asetteluksi title ja Subtitle @ no__t-1
 
-    ```powerapps-comma
-    If( IsBlank( ThisItem.'Company Name' ); "--";
-        IsType( ThisItem.'Company Name'; [@Accounts] );
-            "Account: " & AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
-        "Contact: " & AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
+1. Avaa **tiedot** -ruudussa **Title1** -lista ja valitse sitten **koko nimi**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Sarjan otsikon arvo @ no__t-1
+
+1. Valitse **Subtitle1** -otsikko-ohjaus objekti.
+
+    > [!div class="mx-imgBorder"]
+    > ![Valitse tekstityksen arvo @ no__t-1
+
+1. Valitse **Subtitle1** **Text** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
+    If( IsBlank( ThisItem.'Company Name' ), "--",
+        IsType( ThisItem.'Company Name', [@Accounts] ),
+            "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
+        "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
     )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Näyttö on nyt valmis näytetään tilit ja yhteystiedot myöskään keskenään valikoimassa](media/function-astype-istype/contacts-customer-complete.png)
+    > ![Screen on nyt valmis, sillä asiakkaat ja yhteys henkilöt näkyvät valikoimassa @ no__t-1
 
-    Valikoiman alaotsikko näyttää nämä arvot:
-    - ”--” Jos **yrityksen nimi** on *tyhjä*.
-    - ”Tili”: ja valitse sitten **tilin nimi** kenttä **tilit** entiteetin Jos **yrityksen nimi** kenttä viittaa tiliä.
-    - ”Ota yhteyttä”: ja valitse sitten **KokoNimi** kenttä **yhteystiedot** entiteetin Jos **yrityksen nimi** kenttä viittaa yhteystiedon.
+    Valikoiman alaotsikko sisältää seuraavat arvot:
+    - "--" Jos **yrityksen nimi** on *tyhjä*.
+    - "Tili:" ja sitten tilin **nimi** -kenttä **accounts** -entiteetistä, jos **yrityksen nimi** -kenttä viittaa tiliin.
+    - "Contact:" ja sitten **koko nimi** -kenttä **yhteys tiedot** -entiteetistä, jos **yrityksen nimi** -kenttä viittaa yhteys tietoon.
 
-    Tulokset saattavat poikkeavat tämän ohjeaiheen koska se käyttää mallitietoja, joiden muokattiin muita sisältötyyppejä tulokset.
+    Tulokset saattavat poiketa tästä aiheesta, koska se käyttää malli tietoja, joita muokattiin näyttämään lisää tulos tyyppejä.

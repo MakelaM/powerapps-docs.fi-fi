@@ -1,6 +1,6 @@
 ---
-title: 'WWW-viivakoodiskannerin ohjausobjekti: viittaus | Microsoft Docs'
-description: Tietoja, kuten ominaisuudet ja esimerkkejä, Viivakoodiskanneri ohjausobjektista
+title: 'Verkko viiva koodi – skannerin ohjaus objekti: viittaus | Microsoft Docs'
+description: Viiva koodi skannerin ohjaus objektin tiedot, mukaan lukien ominaisuudet ja esimerkit
 author: fikaradz
 manager: kvivek
 ms.service: powerapps
@@ -8,26 +8,25 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 787fa34bdfcabf6103fefd82f66e976b680544e2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d1162c0c9954e67196eb4d3e42b2c91bdc3bf804
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544587"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986986"
 ---
-# <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>WWW-viivakoodiskannerin ohjausobjekti (kokeellinen) powerappsissa
+# <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>Verkko viiva koodi – skannerin ohjaus objekti (kokeellinen) Powerappsissa
 
-Vanhat viivakoodien skannaus ohjausobjektin, joka on vanhentunut, mutta voi olla hyötyä tarkistus koodit selaimessa.
+Vanha viiva koodin tarkistuksen ohjaus objekti, joka on vanhentunut, mutta saattaa olla hyödyllinen koodien skannaamisen kannalta selaimessa.
 
 ## <a name="description"></a>Kuvaus
 
-Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäjät voivat skannata viivakoodeja kaikissa laitteissa. Ohjausobjekti on vanhentunut vuoksi heikentää suorituskykyä ja mobile **[Viivakoodiskanneri](control-new-barcode-scanner.md)** ohjausobjektin korvaa tämän ohjausobjektin.
+Ohjaus objekti esittää kameran syötteen sovelluksessa, jotta käyttäjät voivat skannata viiva koodeja kaikissa laitteissa. Ohjaus objekti on vanhentunut huonon suoritus tehon vuoksi, ja mobiili **[viiva koodi skannerin](control-new-barcode-scanner.md)** ohjaus objekti korvaa tämän ohjaus objektin.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 
@@ -67,7 +66,7 @@ Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäj�
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 
@@ -77,11 +76,11 @@ Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäj�
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
-1. Lisää **nimen** ohjausobjekti ja määritä sen tulosteeksi Viivakoodiskanneri **tekstin** ominaisuus.
+1. Lisää **Selite** -ohjaus objekti ja valitse sen tuloste viiva koodi skannerin **teksti** -ominaisuuteen.
 
-1. Skannaa tyypin viivakoodi **BarcodeType** ominaisuus.
+1. Tarkista **Barcodetype** -ominaisuudessa määritetyn tyypin viiva koodi.
 
-    Selite näyttää skannatun viivakoodin.
+    Nimi näyttää skannatun viiva koodin.
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 
@@ -94,4 +93,4 @@ Ohjausobjekti näyttää kameran syötteen sovelluksessa, niin, että käyttäj�
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
     > [!NOTE]
-  > Näytönlukuohjelmat ilmoittavat, kun uusi viivakoodi on havaittu. Arvo ei voi ilmoitti. Niin kauan kuin viivakoodi on näkyvissä, näytönlukuohjelmat muistuttavat käyttäjän viiden sekunnin välein, joka sama tunnistettu viivakoodi on edelleen.
+  > Näytön luku ohjelmat ilmoittavat, kun uusi viiva koodi on löytynyt. Arvoa ei julkisteta. Niin kauan kuin viiva koodi on näkymässä, näytönlukijat muistuttavat käyttäjää viiden sekunnin välein, että samaa viiva koodia tunnistetaan yhä.

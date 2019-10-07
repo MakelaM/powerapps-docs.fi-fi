@@ -1,208 +1,207 @@
 ---
-title: Viittaus pohjaan perustuvat sovellukset sähköpostin näytön-malli | Microsoft Docs
-description: Tutustu powerappsin pohjaan perustuvat sovellukset sähköpostin näytön malli toimintaan tiedot
+title: Pohja sovellusten Sähkö posti näytön mallin viite tiedot | Microsoft Docs
+description: Tietoja siitä, miten Sähkö posti näytön malli pohja sovelluksille toimii Powerappsissa
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 12/31/2018
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 8f77fe1194ace2f8cb5abeb3f9657cc76aab263a
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 7663668b77c6f8186ef54c3182230fa843f86577
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61538736"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995707"
 ---
-# <a name="reference-information-about-the-email-screen-template-for-canvas-apps"></a>Lisätietoja sähköpostin näytön malli on tarkoitettu pohjaan perustuvat sovellukset
+# <a name="reference-information-about-the-email-screen-template-for-canvas-apps"></a>Viite tietoja Sähkö posti näytön mallista pohjaan liittyviä sovelluksia varten
 
-Pohjaan perustuvia sovelluksia powerappsissa ymmärrä, miten merkittäviä ohjausobjekteja sähköpostin näytön mallin osallistuu näytön yleistä oletusarvon toimintoja. Nämä esittää toiminta-kaavat ja arvot muita ominaisuuksia, jotka määrittävät, miten ohjausobjektit vastata käyttäjän syötettä. Lisätietoja korkean tason tässä näytössä oletusarvon toiminnot-kohdassa [sähköpostin näytön yleiskatsaus](email-screen-overview.md).
+Powerappsin Canvas-sovelluksissa opit ymmärtämään, miten Sähkö posti näytön mallin kaikki merkittävät ohjaus toiminnot edistävät näytön yleistä oletus toiminnallisuutta. Tämä Deep Dive esittelee toiminta kaavat ja muiden ominaisuuksien arvot, jotka määrittävät, miten ohjaus objekti reagoi käyttäjän syöttämiseen. Lisä tietoja tämän näytön oletusarvoisesta toiminnosta on [Sähkö posti-näytön yleiskatsauksessa](email-screen-overview.md).
 
-Tässä ohjeaiheessa korostaa joitakin merkittäviä ohjausobjekteja ja kerrotaan lausekkeita tai kaavoja mitä eri ominaisuuksia (kuten **kohteet** ja **OnSelect**) ohjausobjektit on määritetty:
+Tässä ohje aiheessa esitellään joitakin merkittäviä ohjaus objekteja ja selitetään lausekkeet tai kaavat, joille on määritetty eri ominaisuudet (kuten **kohteet** ja **onselect**):
 
-* [Tekstihakukenttä](#text-search-box)
-* [Lisäämiskuvake](#add-icon)
-* [Ihmiset Selaa valikoimaa](#people-browse-gallery)
-* [Sähköpostiviestin käyttäjien valikoiman](#email-people-gallery) (+ aliohjausobjektit)
-* [Sähköposti-kuvaketta](#mail-icon)
+* [Teksti haku ruutu](#text-search-box)
+* [Lisää kuvake](#add-icon)
+* [Henkilöiden selaus valikoima](#people-browse-gallery)
+* [Sähkö postin käyttäjien valikoima](#email-people-gallery) (+ aliohjausobjektit)
+* [Sähkö posti-kuvake](#mail-icon)
 
 ## <a name="prerequisite"></a>Edellytys
 
-Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna tuntee [sovelluksen luominen powerappsin](../data-platform-create-app-scratch.md).
+Perehtyneisyys näyttöjen ja muiden ohjaus objektien lisäämiseen ja määrittämiseen [, kun luot sovelluksen Powerappsissa](../data-platform-create-app-scratch.md).
 
 ## <a name="text-search-box"></a>Tekstihakukenttä
 
-   ![TextSearchBox ohjausobjekti](media/email-screen/email-search-box.png)
+   ![TextSearchBox-ohjaus objekti](media/email-screen/email-search-box.png)
 
-Useita näytössä muiden ohjausobjektien ole riippuvuutta **tekstihakukenttä** ohjausobjekti:
+Useilla muilla näytön ohjaus objekteilla on riippuvuussuhde **teksti haku ruutu** -ohjaus objektiin:
 
-* Jos käyttäjä kirjoittaa tekstiä, käynnistää **PeopleBrowseGallery** tulee näkyviin.
-* Jos käyttäjä kirjoittaa ulos kelvollinen sähköpostiosoite **AddIcon** tulee näkyviin.
-* Kun käyttäjä valitsee käyttäjän **PeopleBrowseGallery**, Etsi sisältö palautetaan.
+* Jos käyttäjä alkaa kirjoittaa tekstiä, näkyviin tulee **Peoplebrowsegallery** .
+* Jos käyttäjä käyttää kelvollista Sähkö posti osoitetta, esiin tulee **addon** .
+* Kun käyttäjä valitsee henkilön **Peoplebrowsegallery**-kohteessa, haku sisältö nollataan.
 
 ## <a name="add-icon"></a>Lisäämiskuvake
 
-   ![AddIcon ohjausobjekti](media/email-screen/email-add-icon.png)
+   ![Addiktoiva ohjaus objekti](media/email-screen/email-add-icon.png)
 
-**Lisää kuvake** ohjausobjektin avulla sovelluksen käyttäjät voivat lisätä käyttäjät, joilla ei ole parhaillaan toistetusta sähköpostiviestin vastaanottajaluetteloon niiden organisaation sisällä.
+**Lisää kuvake** -ohjaus objektin avulla sovelluksen käyttäjät voivat lisätä henkilöitä, jotka eivät ole organisaatiossaan, vastaanottajien luettelon muodostamasta Sähkö posti viestistä.
 
-* Ominaisuus: **Näkyvissä**<br>
-    Arvo: Logic ohjausobjekti näyttää vain, kun käyttäjä kirjoittaa hakuruutuun kelvollinen sähköpostiosoite:
+* Ominaisuuden **Näkyvissä**<br>
+    Arvo Logiikka, joka näyttää ohjaus objektin vain, kun käyttäjä kirjoittaa kelvollisen Sähkö posti osoitteen haku ruutuun:
 
-    ```powerapps-comma
+    ```powerapps-dot
     !IsBlank( TextSearchBox.Text ) &&
-        IsMatch( TextSearchBox.Text; Match.Email ) &&
+        IsMatch( TextSearchBox.Text, Match.Email ) &&
         Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
     ```
-  Rivi kerrallaan edellisen koodilohko, joka lukee **Lisää kuvake** ohjausobjekti näytetään vain, jos:
+  Rivin mukaan, edeltävä koodi lohko kertoo, että **Lisää kuvake** -ohjaus objekti näkyy vain, jos:
 
-    * **TextSearchBox** sisältää tekstin.
-    * Tekstin **TextSearchBox** on kelvollinen sähköpostiosoite.
-    * Tekstin **TextSearchBox** ei jo ole olemassa **MyPeople** kokoelma.
+    * **Textsearchbox** sisältää tekstiä.
+    * **Textsearchbox** -teksti on kelvollinen Sähkö posti osoite.
+    * **Textsearchbox** -teksti ei ole jo olemassa **mypeople** -kokoelmassa.
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: Valitsemalla tämä Lisää kelvollinen sähköpostiosoite **MyPeople** kokoelma. Tämän kokoelman käyttämän näytön vastaanottajaluettelon:
+* Ominaisuuden **OnSelect**<br>
+    Arvo Tämän valitseminen lisää kelvollisen Sähkö posti osoitteen **Mypeople** -kokoelmaan. Näyttö käyttää tätä kokoelmaa vastaanottajaluettelossa:
 
-    ```powerapps-comma
-    Collect( MyPeople;
+    ```powerapps-dot
+    Collect( MyPeople,
         { 
-            DisplayName: TextSearchBox.Text; 
-            UserPrincipalName: TextSearchBox.Text; 
+            DisplayName: TextSearchBox.Text, 
+            UserPrincipalName: TextSearchBox.Text, 
             Mail: TextSearchBox.Text
         }
-    );;
+    );
     Reset( TextSearchBox )
     ```
   
-  Tämä koodilohko Lisää rivin **MyPeople** kokoelma ja täyttää kolme kenttää tekstillä **TextSearchBox**. Nämä kolme kentät ovat **DisplayName**, **UserPrincipalName**, ja **sähköpostia**. Se sitten palauttaa sisällön **TextSearchBox**.
+  Tämä koodi lohko lisää rivin **Mypeople** -kokoelmaan ja täyttää kolme kenttää **Textsearchbox**-tekstillä. Nämä kolme kenttää ovat **DisplayName**, **userPrincipalName**ja **Mail**. Sen jälkeen se palauttaa **Textsearchbox**-kohteen sisällön.
 
-## <a name="people-browse-gallery"></a>Ihmiset Selaa valikoimaa
+## <a name="people-browse-gallery"></a>Henkilöiden selaus valikoima
 
-   ![PeopleBrowseGallery ohjausobjekti](media/email-screen/email-browse-gall.png)
+   ![PeopleBrowseGallery-ohjaus objekti](media/email-screen/email-browse-gall.png)
 
-* Ominaisuus: **Kohteet**<br>
-    Arvo: Kirjoitetun tekstin top 15 hakutulokset **TextSearchBox** ohjausobjekti:
+* Ominaisuuden **Kohteet**<br>
+    Arvo **Textsearchbox** -ohjaus objektiin kirjoitetun haku tekstin Top 15-haku tulokset:
     
-    ```powerapps-comma
-    If( !IsBlank( Trim(TextSearchBox.Text ) ); 
-        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ); top: 15} )
+    ```powerapps-dot
+    If( !IsBlank( Trim(TextSearchBox.Text ) ), 
+        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ), top: 15} )
     )
     ```
 
-  Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) toiminto. Toiminto hakee teksti `Trim(TextSearchBox)` kuin etsinnän termi ja palauttaa ylimmät 15 tulosten perusteella kyseistä hakua.
+  Tämän valikoiman kohteet täytetään haku tuloksilla [office365. SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) -toiminnosta. Toiminto vie tekstin `Trim(TextSearchBox)` haku terminä ja palauttaa tämän haun perusteella 15 parasta tulosta.
   
-  **TextSearchBox** rivittyy `Trim()` funktiolla, koska käyttäjän haku välilyöntejä, on virheellinen. `Office365Users.SearchUser` Toiminto rivittyy `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` funktio, joka tarkoittaa, että toiminto suoritetaan vain, jos hakuruutuun sisältää käyttäjän tekstiä. Tämä parantaa suorituskykyä. 
+  **Textsearchbox** on kääritty `Trim()`-funktiolla, koska käyttäjä haku väli lyönneillä ei kelpaa. Toiminto `Office365Users.SearchUser` kääritään `If(!IsBlank(Trim(TextSearchBox.Text)) ... )`-funktiolla, mikä tarkoittaa, että toiminto suoritetaan vain, jos haku ruutu sisältää käyttäjän määrittämän tekstin. Tämä parantaa suoritus kykyä. 
 
-### <a name="people-browse-gallery-title-control"></a>Ihmiset Selaa valikoimassa otsikko
+### <a name="people-browse-gallery-title-control"></a>Käyttäjät selaavat valikoiman otsikko-ohjaus objektia
 
-   ![PeopleBrowseGallery otsikko-ohjausobjekti](media/email-screen/email-browse-gall-title.png)
+   ![PeopleBrowseGallery-otsikon ohjaus objekti](media/email-screen/email-browse-gall-title.png)
 
-* Ominaisuus: **Teksti**<br>
+* Ominaisuuden **Teksti**<br>
     Arvo: `ThisItem.DisplayName`
 
-  Näyttää niiden Office 365-profiilista henkilön näyttönimi.
+  Näyttää henkilön näyttö nimen Office 365-profiilista.
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: Voit lisätä käyttäjän sovelluksen tason kokoelmaan Code ja valitse sitten käyttäjä:
+* Ominaisuuden **OnSelect**<br>
+    Arvo Koodi, jolla käyttäjä lisätään sovellus tason kokoelmaan, ja valitse sitten käyttäjä:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Concurrent(
-        Set( _selectedUser; ThisItem );
-        Reset( TextSearchBox );
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
-            Collect( MyPeople; ThisItem )
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
         )
     )
     ```
-Valitsemalla tämän ohjausobjektin tekee kolmesta samanaikaisesti:
+Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
 
-   * Määrittää **_selectedUser** muuttujan valittuna.
-   * Nollaa hakuehto- **TextSearchBox**.
-   * Lisää valittu kohde **MyPeople** kokoelman, kaikki valittujen käyttäjien, joka käyttää joukon vastaanottajat sähköpostiviesti-ruutu kokoelma.
+   * Määrittää **_Selecteduser** -muuttujan valittuun kohteeseen.
+   * Nollaa haku termin **Textsearchbox**-kohteessa.
+   * Lisää valitun kohteen **Mypeople** -kokoelmaan, joka on kokoelma kaikkia valittuja käyttäjiä, joita Sähkö posti näyttö käyttää vastaanottajien joukossa.
 
-## <a name="email-people-gallery"></a>Sähköpostiviestin käyttäjien valikoima
+## <a name="email-people-gallery"></a>Sähkö postin käyttäjien valikoima
 
-   ![EmailPeopleGallery ohjausobjekti](media/email-screen/email-people-gall.png)
+   ![EmailPeopleGallery-ohjaus objekti](media/email-screen/email-people-gall.png)
 
-* Ominaisuus: **Kohteet**<br>
+* Ominaisuuden **Kohteet**<br>
     Arvo: `MyPeople`
 
-  Tämä on alustettu tai valitsemalla lisätään kokoelma **PeopleBrowseGallery otsikko** ohjausobjektin.
+  Tämä on kokoelma henkilöitä, jotka on alustettu tai lisätty, valitsemalla **Peoplebrowsegallery-otsikko** -ohjaus objekti.
 
-* Ominaisuus: **Korkeus**<br>
-    Arvo: Logic määrittämään korkeus valikoiman olevien kohteiden määrän perusteella:
+* Ominaisuuden **Korkeus**<br>
+    Arvo Logiikka, joka vahvistaa korkeuden valikoimassa parhaillaan olevien kohteiden määrän perusteella:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Min( 
         ( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
-            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2; 0 );
+            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
         304
     )
     ```
 
-  Valikoiman korkeus säätää valikoiman kohteiden määrä enimmäiskorkeus 304 kanssa.
+  Tämän valikoiman korkeus muuttuu valikoiman kohteiden määrän mukaan, ja suurin korkeus on 304.
   
-  Kestää `TemplateHeight + TemplatePadding * 2` kuin yhteensä yksittäisen rivin korkeus **EmailPeopleGallery**, kertoo sen rivien määrän mukaan. Koska `WrapCount = 2`, true rivien määrä on `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2; 0)`.
+  Se kestää `TemplateHeight + TemplatePadding * 2`, kun yksi rivi on **Emailpeoplegallery**-kohteen kokonaiskorkeus, ja kertoo sen sitten rivien määrän mukaan. Koska `WrapCount = 2`, todellisten rivien määrä on `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0)`.
 
-* Ominaisuus: **ShowScrollbar**<br>
+* Ominaisuuden **ShowScrollbar**<br>
     Arvo: `EmailPeopleGallery.Height >= 304`
   
-  Kun valikoiman korkeus 304, vierityspalkin on näkyvissä.
+  Kun valikoiman korkeus on 304, vieritys palkki on näkyvissä.
 
-### <a name="email-people-gallery-title-control"></a>Sähköpostin ihmiset valikoiman ohjausobjektin otsikko
+### <a name="email-people-gallery-title-control"></a>Sähkö postin käyttäjien valikoiman otsikko-ohjaus objekti
 
-   ![EmailPeopleGallery otsikko-ohjausobjekti](media/email-screen/email-people-gall-text.png)
+   ![EmailPeopleGallery-otsikko-ohjaus objekti](media/email-screen/email-people-gall-text.png)
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: `Set(_selectedUser; ThisItem)`
+* Ominaisuuden **OnSelect**<br>
+    Arvo: `Set(_selectedUser, ThisItem)`
 
-  Määrittää **_selectedUser** muuttujan valitun kohteen **EmailPeopleGallery**.
+  Määrittää **_Selecteduser** -muuttujan kohteelle, joka on valittu **emailpeoplegallery**-kohteessa.
 
-### <a name="email-people-gallery-iconremove-control"></a>Sähköpostiviestin käyttäjien iconRemove valikoimassa
+### <a name="email-people-gallery-iconremove-control"></a>Sähkö postin käyttäjien valikoima iconRemove-ohjaus objekti
 
-   ![MonthDayGallery otsikko-ohjausobjekti](media/email-screen/email-people-gall-delete.png)
+   ![Kuukauden päivä valikoiman otsikko-ohjaus objekti](media/email-screen/email-people-gall-delete.png)
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
+* Ominaisuuden **OnSelect**<br>
+    Arvo: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
-  Etsii tietueen **MyPeople** kokoelma, jossa **UserPrincipalName** vastaa **UserPrincipalName** valitun kohteen ja poistaa, tietue kokoelma.
+  Hakee tietueen **Mypeople** -kokoelmasta, jossa **userPrincipalName** vastaa valitun kohteen **userPrincipalName** -kohdetta, ja poistaa kyseisen tietueen kokoelmasta.
 
-## <a name="mail-icon"></a>Sähköposti-kuvaketta
+## <a name="mail-icon"></a>Sähkö posti-kuvake
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: Käyttäjän sähköpostin lähettäminen Logic:
+* Ominaisuuden **OnSelect**<br>
+    Arvo Käyttäjän Sähkö posti viestin lähettämisen logiikka:
 
-    ```powerapps-comma
-    Set( _emailRecipientString; Concat( MyPeople; Mail & ";" ) );;
-    'Office365'.SendEmail( _emailRecipientString; 
-        TextEmailSubject.Text;  
-        TextEmailMessage.Text; 
+    ```powerapps-dot
+    Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
+    'Office365'.SendEmail( _emailRecipientString, 
+        TextEmailSubject.Text,  
+        TextEmailMessage.Text, 
         { Importance:"Normal" }
-    );;
-    Reset( TextEmailSubject );;
-    Reset( TextEmailMessage );;
+    );
+    Reset( TextEmailSubject );
+    Reset( TextEmailMessage );
     Clear( MyPeople )
     ```
 
-  Lähettää sähköpostiviestin edellyttää sähköpostiosoitteet puolipistein eroteltu merkkijonon. Edellisen koodi:
-  1. Koodin ensimmäisen rivin tulee **sähköpostia** kenttä kaikki rivit **MyPeople** kokoelman, yhdistää ne yksittäiseksi merkkijonoksi sähköpostiosoitteet puolipisteillä eroteltuina ja määrittää **_ emailRecipientString** muuttujan merkkijono arvoon.
+  Sähkö posti viestin lähettäminen edellyttää puoli pistein eroteltuja Sähkö posti osoitteiden merkki jonoja. Edellisessä koodissa:
+  1. Ensimmäinen koodi rivi vie **Sähkö posti** -kentän kaikista **mypeople** -kokoelman riveistä, yhdistää ne yksittäiseksi merkki jonoksi puoli pisteillä eroteltuina ja asettaa **_emailRecipientString** -muuttujan kyseiselle merkki jonolle. arvo.
 
-  1. Se sitten käyttää [Office365.SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail) toiminto, joka lähettää sähköpostiviestin.
-    Toiminto on kolme pakolliset parametrit **-**, **aihe**, ja **leipätekstin**, ja yksi valinnainen parametri--**tärkeyden**. Edellisen koodi nämä ovat **_emailRecipientString**, **TextEmailSubject**. Teksti, **TextEmailMessage**. Teksti, ja **Normaali**, tässä järjestyksessä.
-  1. Lopuksi nollaa **TextEmailSubject** ja **TextEmailMessage** ohjausobjekteja ja tyhjentää **MyPeople** kokoelma.
+  1. Sen jälkeen se lähettää sähkö posti viestin vastaanottajille käyttämällä [office365. SendEmail](https://docs.microsoft.com/connectors/office365/#sendemail) -toimintoa.
+    Toiminnolla on kolme pakollista parametria:, **Aihe**ja **leipä teksti**sekä yksi valinnainen **parametri –** **tärkeys**. Edellisessä koodissa Nämä ovat **_emailRecipientString**, **textemailsubject**. Teksti, **Textemailmessage**. Teksti ja **Normaali**.
+  1. Lisäksi se Nollaa **Textemailsubject** -ja **Textemailmessage** -ohjaus objektin ja tyhjentää **mypeople** -kokoelman.
 
-* Ominaisuus: **DisplayMode**<br>
-    Arvo: `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ); DisplayMode.Edit; DisplayMode.Disabled )` Sähköpostin lähettäminen sähköpostiviestin aiherivillä on oltava teksti ja vastaanottajan (**MyPeople**) kokoelma ei saa olla tyhjä.
+* Ominaisuuden **Haluat viitata DisplayMode**<br>
+    Arvo `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )` Sähkö posti viesti lähetetään, sähkö posti viestin aihe rivillä on oltava teksti, ja vastaanottajan (**Mypeople**) kokoelma ei saa olla tyhjä.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-* [Lue lisätietoja tässä näytössä](./email-screen-overview.md)
-* [Lue lisätietoja Office 365 Outlook-liittimellä powerappsissa](../connections/connection-office365-outlook.md)
-* [Lue lisätietoja Office 365-käyttäjät-liittimellä powerappsissa](../connections/connection-office365-users.md)
+* [Lue lisä tietoja tästä näytöstä](./email-screen-overview.md)
+* [Lue lisä tietoja Office 365 Outlook Connectorista Powerappsissa](../connections/connection-office365-outlook.md)
+* [Lue lisä tietoja Office 365-käyttäjien liittimestä Powerappsissa](../connections/connection-office365-users.md)

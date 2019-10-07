@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/13/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e6d1b1083fcc7e865fa7c9cfe3f8966e20ed86a5
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: dbbff1f85ccc104a1a0f88c6b9670c45c0528592
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670913"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993486"
 ---
 # <a name="combo-box-control-in-powerapps"></a>Yhdistelmäruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla käyttäjät voivat tehdä valintoja annetuista vaihtoehdoista.  Tukee hakua ja useita valintoja.
@@ -36,7 +36,7 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 ## <a name="key-properties"></a>Keskeiset ominaisuudet
 **[Items](properties-core.md)**  – Valintojen tekemisessä käytetyn tiedon lähde.
 
-**DefaultSelectedItems** – alkuperäiset valitut kohteet, ennen kuin käyttäjä on vuorovaikutuksessa ohjausobjektin kanssa.
+**Defaultselecteditems** – alkuperäiset valitut kohteet, ennen kuin käyttäjä on vuoro vaikutuksessa ohjaus objektin kanssa.
 
 **SelectedItems** – Luettelo kohteista, jotka on valittu käyttäjän toiminnan perusteella.
 
@@ -84,19 +84,19 @@ Voit käyttää **yhdistelmäruutua** henkilöiden valintaan valitsemalla **henk
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön, jos pääsäilöä ei ole).
 
 ## <a name="example"></a>Esimerkki
-1. Käyttöön **Lisää** välilehti, Avaa **ohjausobjekteja** valikko ja valitse sitten **yhdistelmäruudun**.  
+1. Avaa **Lisää** -väli lehdessä **ohjaus objekti** -valikko ja valitse sitten **yhdistelmä ruutu**.  
 
-1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa **Valitse tietolähde** luettelo (kohdan **kohteet**), ja lisätä tai valitse tietolähde.
+1. Avaa oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdellä **Valitse tieto lähde** -luettelo ( **kohteiden**vieressä) ja Lisää tai valitse tieto lähde.
 
-1. Valitse samassa välilehdessä **Muokkaa** (kohdan **kentät**).
+1. Valitse samassa väli lehdessä **Muokkaa** ( **kentät**-kohdan vierestä).
 
-1. - **Tietojen** ruutu, avattuna **ensisijainen tekstin** luettelosta ja valitse sitten se sarake, jonka haluat näyttää **yhdistelmäruudun** ohjausobjektin.
+1. Avaa **tiedot** -ruudussa **ensisijainen teksti** luettelo ja valitse sitten sarake, jonka haluat näkyvän **yhdistelmä ruutu** -ohjaus objektissa.
 
-1. Kun pidät alhaalla Alt-näppäintä, napsauta alanuolta, voit avata **yhdistelmäruudun** ohjausobjektin.
+1. Pidä Alt-näppäintä painettuna ja avaa **yhdistelmä ruutu** -ohjaus objekti valitsemalla alanuoli.
 
-    Ohjausobjekti näyttää sarakkeen, jonka määritit tietolähteen, jonka olet määrittänyt tiedot.
+    Ohjaus objekti esittää tiedot sarakkeesta, jonka määritit määritetyssä tieto lähteessä.
     
-1. (valinnainen) Näytä ensimmäisen tietueen oletusarvoisesti määrittämällä **DefaultSelectedItems** ominaisuudeksi Tämä lauseke korvataan *DataSource* tietolähteen nimi:
+1. valinnainen Jos haluat näyttää ensimmäisen tietueen oletusarvoisesti, valitse **Defaultselecteditems** -ominaisuudeksi tämä lauseke *ja korvaa tieto lähde tieto* lähteen nimellä:
 
     `First(DataSource)`
 
@@ -118,7 +118,7 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
   > Kosketusnäytöissä näytönlukuohjelman käyttäjät voivat siirtyä yhdistelmäruudun sisällössä peräkkäisessä järjestyksessä. Yhdistelmäruutu toimii painikkeena, joka näyttää tai piilottaa sen sisällön, kun se on valittuna.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.
 
     > [!NOTE]

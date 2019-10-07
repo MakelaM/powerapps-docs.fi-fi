@@ -1,330 +1,329 @@
 ---
-title: Viittaus pohjaan perustuvat sovellukset kalenterin näytön-malli | Microsoft Docs
-description: Tutustu powerappsin pohjaan perustuvat sovellukset kalenterin näytön malli toimintaan tiedot.
+title: Kangas sovellusten kalenteri näytön mallin viite tiedot | Microsoft Docs
+description: Tietoja siitä, miten pohjaan liittyviä sovelluksia koskeva kalenteri näyttö malli toimii Powerappsissa.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 12/31/2018
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e3d5f40a604d2cbfa074ed5973d599c40a6c5c05
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: b9e5425244d819816fa05c4b780a6be092b0d22c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61539010"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995710"
 ---
-# <a name="reference-information-about-the-calendar-screen-template-for-canvas-apps"></a>Lisätietoja pohjaan perustuvat sovellukset kalenterin näytön-malli
+# <a name="reference-information-about-the-calendar-screen-template-for-canvas-apps"></a>Viite tietoja kangas sovellusten kalenteri näytön mallista
 
-Pohjaan perustuvia sovelluksia powerappsissa ymmärrä, miten merkittäviä ohjausobjekteja kalenterin näytön mallin osallistuu näytön yleistä oletusarvon toimintoja. Nämä esittää toiminta-kaavat ja arvot muita ominaisuuksia, jotka määrittävät, miten ohjausobjektit vastata käyttäjän syötettä. Lisätietoja korkean tason tässä näytössä oletusarvon toiminnot-kohdassa [kalenterin näytön yleiskatsaus](calendar-screen-overview.md).
+Powerappsin Canvas-sovelluksissa opit ymmärtämään, miten jokainen merkittävä kalenteri näytön malli vaikuttaa osaltaan näytön yleisiin oletus toimintoihin. Tämä Deep Dive esittelee toiminta kaavat ja muiden ominaisuuksien arvot, jotka määrittävät, miten ohjaus objekti reagoi käyttäjän syöttämiseen. Jos kyseessä on tämän näytön oletus toiminnon korkean tason keskustelu, tutustu [kalenteri näytön yleiskatsaukseen](calendar-screen-overview.md).
 
-Tässä ohjeaiheessa korostaa joitakin merkittäviä ohjausobjekteja ja kerrotaan lausekkeita tai kaavoja mitä eri ominaisuuksia (kuten **kohteet** ja **OnSelect**) ohjausobjektit on määritetty:
+Tässä ohje aiheessa esitellään joitakin merkittäviä ohjaus objekteja ja selitetään lausekkeet tai kaavat, joille on määritetty eri ominaisuudet (kuten **kohteet** ja **onselect**):
 
-- [Kalenterin avattavasta (dropdownCalendarSelection)](#calendar-drop-down)
-- [Kalenteri-kuvaketta (iconCalendar)](#calendar-icon)
-- [Edellinen kuukausi chevron (iconPrevMonth)](#previous-month-chevron)
-- [Seuraavan kuukauden chevron (iconNextMonth)](#next-month-chevron)
-- [Kalenterin valikoima (MonthDayGallery) (+ aliohjausobjektit)](#calendar-gallery)
-- [Valikoiman tapahtumat (CalendarEventsGallery)](#events-gallery)
+- [Avattava kalenteri (dropdownCalendarSelection)](#calendar-drop-down)
+- [Kalenteri kuvake (iconCalendar)](#calendar-icon)
+- [Edellisen kuukauden Chevron-kuvake (Iconprempmonth)](#previous-month-chevron)
+- [Seuraavan kuukauden Chevron (Iconnextomonth)](#next-month-chevron)
+- [Kalenteri valikoima (MonthDayGallery) (+ aliohjausobjektit)](#calendar-gallery)
+- [Tapahtuma valikoima (Calendarventsgallery)](#events-gallery)
 
 ## <a name="prerequisite"></a>Edellytys
 
-Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna tuntee [sovelluksen luominen powerappsin](../data-platform-create-app-scratch.md).
+Perehtyneisyys näyttöjen ja muiden ohjaus objektien lisäämiseen ja määrittämiseen [, kun luot sovelluksen Powerappsissa](../data-platform-create-app-scratch.md).
 
-## <a name="calendar-drop-down"></a>Kalenterin avattava valikko
+## <a name="calendar-drop-down"></a>Avattava kalenteri
 
-![dropdownCalendarSelection ohjausobjekti](media/calendar-screen/calendar-dropdown.png)
+![dropdownCalendarSelection-ohjaus objekti](media/calendar-screen/calendar-dropdown.png)
 
-- Ominaisuus: **Kohteet**<br>
+- Ominaisuuden **Kohteet**<br>
     Arvo: `Office365.CalendarGetTables().value`
 
-    Tämä arvo on connector-toimintoa, joka noutaa sovelluksen käyttäjän Outlook kalenterit. Näet [arvo](https://docs.microsoft.com/connectors/office365/#entitylistresponse[table]) , tämä toiminto noutaa.
+    Tämä arvo on kytkentä toiminto, joka noutaa sovelluksen käyttäjän Outlook-kalenterit. Näet tämän toiminnon noutamat [arvot](https://docs.microsoft.com/connectors/office365/#entitylistresponse[table]) .
 
-- Ominaisuus: **OnChange**<br>Arvo: `Select(dropdownCalendarSelection)`
+- Ominaisuuden **OnChange**<br>Arvo: `Select(dropdownCalendarSelection)`
 
-    Kun käyttäjä valitsee ohjausobjektin-funktio-luettelossa vaihtoehtoa **OnSelect** ominaisuus suoritetaan.
+    Kun käyttäjä valitsee luettelosta vaihto ehdon, ohjaus objektin **onselect** -ominaisuuden toiminto suoritetaan.
 
-- Ominaisuus: **OnSelect**<br>
-    Arvo: **Jos** funktio, joka näkyy varten seuraava koodilohko, ja useita muita funktioita, jotka ovat varten koodilohko sen jälkeen.
+- Ominaisuuden **OnSelect**<br>
+    Arvo **IF** -funktio, joka näkyy seuraavassa koodi lohkossa, ja useita lisä funktioita, jotka näkyvät koodi lohkossa sen jälkeen.
 
-   Tämä osa-kaava suoritetaan vain ensimmäisellä kerralla, että käyttäjä valitsee vaihtoehdon avattavasta luettelosta sovelluksen avaamisen jälkeen:
+   Tämä osa kaavaa suoritetaan vain ensimmäisellä kerralla, kun käyttäjä valitsee vaihto ehdon avattavasta luettelo ruudusta sovelluksen avaamisen jälkeen:
 
-    ```powerapps-comma
-    If( IsBlank( _userDomain );
-        UpdateContext( {_showLoading: true} );;
-        Set( _userDomain; Right( User().Email; Len( User().Email ) - Find( "@"; User().Email ) ) );;
-        Set( _dateSelected; Today() );;
-        Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days ) );;  
-        Set( _firstDayInView; DateAdd( _firstDayOfMonth; -(Weekday(_firstDayOfMonth) - 1); Days ) );;
-        Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) )  
-    );;
+    ```powerapps-dot
+    If( IsBlank( _userDomain ),
+        UpdateContext( {_showLoading: true} );
+        Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
+        Set( _dateSelected, Today() );
+        Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );  
+        Set( _firstDayInView, DateAdd( _firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 1), Days ) );
+        Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )  
+    );
     ```
 
-    Yllä olevaa koodia muuttujat:
+    Edeltävä koodi määrittää seuraavat muuttujat:
     
-  - **\_userDomain**: Sovelluksen käyttäjän yrityksen toimialueen, joka näkyy käyttäjän sähköpostiosoite.
-  - **\_dateSelected**: Päivämäärä (oletusarvon mukaan). Kalenterin valikoiman korostaa tämä päivämäärä ja tapahtuman valikoima näyttää tapahtumia, jotka on suunniteltu päivämäärän.
-  - **\_firstDayOfMonth**: Kuluvan kuukauden ensimmäisenä päivänä. Koska `(Today + (1 - Today)) = Today - Today + 1 = 1`, tämä **DateAdd** -funktio palauttaa aina kuukauden ensimmäisenä päivänä.
-  - **\_firstDayInView**: Ensimmäinen päivä, kalenteri-valikoima näyttää. Tämä arvo ei ole sama kuin kuukauden ensimmäisenä päivänä ellei kuukauden alkaa sunnuntai. Voit estää näytetään edellisen kuukauden arvo koko viikko  **\_firstDayInView** on `_firstDayOfMonth - Weekday(_firstDayOfMonth) + 1`.
-  - **\_lastDayOfMonth**: Kuluvan kuukauden viimeisen päivän joka on sama kuin kuukautena, miinus yksi päivä ensimmäisenä päivänä.
+  - **\_userDomain**: Sovelluksen käyttäjän yrityksen toimi alue, joka näkyy käyttäjän Sähkö posti osoitteessa.
+  - **\_dateSelected**: Kuluvan päivän päivä määrä (Oletus arvon mukaan). Kalenteri valikoima korostaa tätä päivä määrää, ja tapahtuma valikoima esittää kyseiseen päivä määrään ajoitetut tapahtumat.
+  - **\_Firstodayofmonth**: Nykyisen kuukauden ensimmäinen päivä. Koska `(Today + (1 - Today)) = Today - Today + 1 = 1`, tämä **DateAdd** -funktio palauttaa aina kuukauden ensimmäisen päivän.
+  - **\_Firndayingview**: Ensimmäinen päivä, jonka kalenteri valikoima voi näyttää. Tämä arvo ei ole sama kuin kuukauden ensimmäinen päivä, ellei kuukausi alkaa sunnuntaina. Jos haluat estää edellisen kuukauden koko viikon, **\_Firndayinview** -arvo on `_firstDayOfMonth - Weekday(_firstDayOfMonth) + 1`.
+  - **\_lastDayOfMonth**: Nykyisen kuukauden viimeisenä päivänä, joka on sama kuin seuraavan kuukauden ensimmäisenä päivänä, josta vähennetään yksi päivä.
 
-   Funktiot jälkeen **Jos** funktio suorittaa aina, kun käyttäjä valitsee vaihtoehdon Kalenteri avattavasta luettelosta (ei pelkästään ensimmäistä kertaa käyttäjä avaa sovelluksen):
+   **IF** -funktion jälkeiset Funktiot suoritetaan aina, kun käyttäjä valitsee vaihto ehdon avattavasta Kalenteri-valikosta (ei vain ensimmäisellä kerralla, kun käyttäjä avaa sovelluksen):
 
-    ```powerapps-comma
-    Set( _calendarVisible; false );;
-    UpdateContext( {_showLoading: true} );;
-    Set( _myCalendar; dropdownCalendarSelection2.Selected );;
-    Set( _minDate; 
-        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days )
-    );;
-    Set(_maxDate; 
+    ```powerapps-dot
+    Set( _calendarVisible, false );
+    UpdateContext( {_showLoading: true} );
+    Set( _myCalendar, dropdownCalendarSelection2.Selected );
+    Set( _minDate, 
+        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
+    );
+    Set(_maxDate, 
         DateAdd(
-            DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days ); 
-            40; 
+            DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ), 
+            40, 
             Days
         )
-    );;
-    ClearCollect( MyCalendarEvents; 
-        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name; 
-            Text( _minDate; UTC ); 
-            Text( _maxDate; UTC )
+    );
+    ClearCollect( MyCalendarEvents, 
+        'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+            Text( _minDate, UTC ), 
+            Text( _maxDate, UTC )
         ).value
-    );;
-    UpdateContext( {_showLoading: false} );;
-    Set( _calendarVisible; true )
+    );
+    UpdateContext( {_showLoading: false} );
+    Set( _calendarVisible, true )
     ```
 
-    Yllä olevaa koodia määrittää muuttujia ja yksi kokoelma:
+    Edellä oleva koodi määrittää nämä muuttujat ja yhden kokoelman:
 
-    - **\_calendarVisible**: Määritetty **false** niin, että kalenterin ei tule näkyviin, kun uusi valinta on ladattu.
-    - **\_showLoading**: Määritetty **true** niin, että lataamisen ilmaisimet näkyviin, kun uusi valinta ladataan.
-    - **\_myCalendar**: Nykyinen arvo arvoksi **kalenterin avattavasta** siten, että oikea kalenterin tapahtumat noudetaan.
-    - **\_minDate**: Määritä sama arvo kuin  **\_firstDayInView**. Tämä muuttujaa määrittää, mitkä tapahtumat on jo noudetut Outlook ja välimuistiin sovelluksessa.
-    - **\_maxDate**: Määrittää voi tarkastella viimeisenä kalenterissa. Kaava on `_firstDayInView + 40`. Kalenterin näyttää enintään 41 päivää, joten  **\_maxDate** muuttujan aina kuvastaa viimeisenä voi tarkastella ja määrittää, mitkä tapahtumat on jo noudetut Outlook ja välimuistiin sovelluksessa.
-    - **MyCalendarEvents**: Määrittää käyttäjän tapahtumien kokoelmaan valitussa kalenterissa, jonka  **\_minDate** -  **\_maxDate**.
-    - **\_showLoading**: Määritetty **false**;  **\_calendarVisible** asetetaan **true** jälkeen kaikki muut on ladattu.
+    - **\_calendarVisible**: Valitse **Epätosi** , jotta kalenteria ei näytetä, kun uusi valinta ladataan.
+    - **\_showLoading**: Valitse **tosi** , jotta lataus ilmaisimet tulevat näkyviin, kun uutta valintaa ladataan.
+    - **\_myCalendar**: Valitse **avattavasta kalenteri-** ohjaus objektista nykyinen arvo, jotta oikean kalenterin tapahtumat noudetaan.
+    - **\_minDate**: Arvoksi on määritetty sama arvo kuin **\_Firndayingview**. Tämä muuttuja määrittää, mitkä tapahtumat on jo Noudettu Outlookista ja väli muistissa sovelluksessa.
+    - **\_maxDate**: Valitse kalenterin viimeiseen katseltavaan päivään. Kaava on `_firstDayInView + 40`. Kalenterissa näkyy enintään 41 päivää, joten **\_maxDate-** muuttuja heijastaa aina viimeisintä katseltavaa päivää ja määrittää, mitkä tapahtumat on jo Noudettu Outlookista ja väli muistissa sovelluksessa.
+    - **Mycalendarevents**: Valitse käyttäjän tapahtumien kokoelma valitusta kalenterista, joka vaihtelee **\_minDate** **\_maxdate**.
+    - **\_showLoading**: Arvo on **false**; **\_calendarVisible-** arvo on **True** , kun kaikki muu on ladattu.
 
-## <a name="calendar-icon"></a>Kalenteri-kuvaketta
+## <a name="calendar-icon"></a>Kalenteri kuvake
 
-![iconCalendar ohjausobjekti](media/calendar-screen/calendar-today-icon.png)
+![iconCalendar-ohjaus objekti](media/calendar-screen/calendar-today-icon.png)
 
-- Ominaisuus: **OnSelect**<br>
-    Arvo: Neljä **määrittää** toiminnot, jotka vaihtaa kalenterin valikoiman päivämäärä:
+- Ominaisuuden **OnSelect**<br>
+    Arvo Neljä toiminto **joukkoa** , jotka nollaamassa kalenteri valikoiman kuluvan päivän päivä määräksi:
 
-    ```powerapps-comma
-    Set( _dateSelected; Today() );;
-    Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days) );;
-    Set( _firstDayInView; DateAdd(_firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days));;
-    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) )
+    ```powerapps-dot
+    Set( _dateSelected, Today() );
+    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days) );
+    Set( _firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days));
+    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) )
     ```
 
-    Yllä olevaa koodia palauttaa kaikki päivämäärä-muuttujia, jotka on täytettävä asianmukaiset kalenterinäkymä näyttäminen:
+    Edeltävä koodi palauttaa kaikki päivämäärä muuttujat, jotka ovat välttämättömiä asianmukaisen Kalenteri näkymän näyttämiseksi:
 
-    - **\_dateSelected** nollataan tänään.
-    - **\_firstDayOfMonth** nollataan kuluvan kuukauden ensimmäisenä päivänä.
-    - **\_firstDayInView** ensimmäisenä voi tarkastella kuluvan kuukauden valittaessa palautetaan.
-    - **\_lastDayOfMonth** nollataan kuluvan kuukauden viimeisenä päivänä.
+    - **\_dateSelected** on palautettu tähän päivään.
+    - **\_Firstodayofmonth** palautetaan kuluvan kuukauden ensimmäisenä päivänä.
+    - **\_Firndayingview** palautetaan ensimmäiseen päivään, joka on nähtävissä, kun kuluvan kuukauden kuukausi on valittuna.
+    - **\_lastDayOfMonth** palautetaan kuluvan kuukauden viimeisenä päivänä.
 
-    [ **Kalenterin avattavasta** ](#calendar-drop-down) osion tässä ohjeaiheessa kerrotaan tarkemmin muuttujia.
+    Tämän ohje aiheen [**avattava kalenteri-** ](#calendar-drop-down) osio kertoo Nämä muuttujat yksityiskohtaisemmin.
 
-## <a name="previous-month-chevron"></a>Edellinen kuukausi kaksoisnuolikuvake
+## <a name="previous-month-chevron"></a>Edellisen kuukauden Chevron
 
-![iconPrevMonth ohjausobjekti](media/calendar-screen/calendar-back.png)
+![Iconprevitkk-ohjaus objekti](media/calendar-screen/calendar-back.png)
 
-- Ominaisuus: **OnSelect**<br>Arvo: Neljä **määrittää** Funktiot ja **Jos** funktion, joka näyttää edellisen kuukauden kalenterin valikoimassa:
+- Ominaisuuden **OnSelect**<br>Arvo Neljä **joukkoa** funktioita ja **IF** -funktio, jotka näyttävät edellisen kuukauden kalenteri valikoimassa:
 
-    ```powerapps-comma
-    Set( _firstDayOfMonth; DateAdd( _firstDayOfMonth; -1; Months ) );;
-    Set( _firstDayInView; 
-        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days )
-    );;
-    Set( _lastDayOfMonth; DateAdd(DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
-    If( _minDate > _firstDayOfMonth;
-        Collect( MyCalendarEvents;
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name;
-                Text( _firstDayInView; UTC ); 
-                Text( DateAdd( _minDate; -1; Days ); UTC )
+    ```powerapps-dot
+    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, -1, Months ) );
+    Set( _firstDayInView, 
+        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days )
+    );
+    Set( _lastDayOfMonth, DateAdd(DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    If( _minDate > _firstDayOfMonth,
+        Collect( MyCalendarEvents,
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name,
+                Text( _firstDayInView, UTC ), 
+                Text( DateAdd( _minDate, -1, Days ), UTC )
             ).value
-        );;
-        Set( _minDate; _firstDayInView )
+        );
+        Set( _minDate, _firstDayInView )
     )
     ```
 
     > [!NOTE]
-    > Määrityksiä  **\_firstDayOfMonth**,  **\_firstDayInView**, ja  **\_lastDayOfMonth** ovat lähes samat kuin - [kalenterin avattavasta](#calendar-drop-down) tämän ohjeaiheen osan.
+    > **@No__t-1Firstodayofmonth**-, **\_Firstodayingview**-ja **\_lastdayofmonth** -määritelmät ovat lähes samanlaiset kuin tämän ohje aiheen [kalenterin avattavassa](#calendar-drop-down) osassa.
 
-    Edellä oleva koodi kolme ensimmäistä riviä suoritetaan aina, kun käyttäjä valitsee nuolenkärjen edellisen kuukauden. Koodin määrittää muuttujia, jotka tarvitaan oikea kalenterinäkymä näyttämiseen. Jäljellä oleva koodi suoritetaan vain, jos käyttäjä ei ole valittu aiemmin tässä kuussa valittuun kalenteriin.
+    Edellisen koodi ajon kolme ensimmäistä riviä, kun käyttäjä valitsee edellisen kuukauden nuolen kärki. Koodi määrittää muuttujat, jotka ovat välttämättömiä asianmukaisen Kalenteri näkymän näyttämiseksi. Jäljelle jäävä koodi suoritetaan vain, jos käyttäjä ei ole aiemmin valinnut tätä kuukautta valitulle kalenterille.
 
-    Jos tämä on tapauksessa  **\_minDate** on ensimmäinen päivä, joka tulee näkyviin, kun edellisen kuukauden näyttää. Ennen kuin käyttäjä valitsee kuvakkeen,  **\_minDate** on pienin mahdollinen arvo kuluvan kuukauden 23. (Kun maaliskuun 1 on lauantaina,  **\_firstDayInView** maaliskuuta on helmikuun 23.) Jos käyttäjä ei ole valittuna, tässä kuussa  **\_minDate** on suurempi kuin uusi  **\_firstDayOfMonth**, ja **Jos** funktio palauttaa **true**. Koodi, suoritukset ja kokoelma ja muuttuja päivitetään:
+    Jos näin on, **\_minDate** on ensimmäinen päivä, joka näkyy, kun edellinen kuukausi näytetään. Ennen kuin käyttäjä valitsee kuvakkeen, **\_minDate-** arvo on pienin mahdollinen nykyisen kuukauden 23. (Kun 1. maaliskuuta kuuluu lauantaina, **\_Firndayingview** for March on 23. helmi kuuta.) Tämä tarkoittaa sitä, että jos käyttäjä ei ole vielä valinnut tätä kuukautta, **\_minDate** on suurempi kuin uusi **\_Firstoddayofmonth**, ja **IF** -funktio palauttaa arvon **True**. Koodi suoritetaan, ja kokoelma ja muuttuja päivitetään:
 
-    - **MyCalendarEvents** hakee kanssa valitun kalenterin tapahtumat [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) toiminto. Päivämääräalue on välillä  **\_firstDayInView** päivämäärä ja  **\_minDate** – 1. Koska **MyCalendarEvents** sisältää jo tapahtumat  **\_minDate** päivämäärän 1 on vähennetty päivämäärän tämän uuden päivämäärävälin suurimman arvon.
+    - **Mycalendarevents** noutaa tapahtumia valitusta kalenterista [office365. GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) -toiminnolla. Päivämäärä alue on **\_Firmdayingview** -päivä määrän ja **\_mindate** -1 välillä. Koska **Mycalendarevents** sisältää jo tapahtumia **\_mindate-** päivä määränä, 1 vähennetään kyseisestä päivästä tämän uuden päivämäärä alueen enimmäisarvolle.
 
-    - **\_minDate** asetetaan nykyisen  **\_firstDayInView** koska tämä on ensimmäinen päivämäärä, jolle on noudettu tapahtumia. Jos käyttäjä palaa tämä päivämäärä edellisenä kuukautena, chevron valitsemalla **Jos** funktio palauttaa **false**; koodi ei toimi, koska tämän näkymän tapahtumat ovat jo välimuistiin  **MyCalendarEvents**.
+    - **\_minDate** on asetettu nykyiseen **\_Firsdayingview** , koska tämä on ensimmäinen päivä määrä, jolle tapahtumat on noudettu. Jos käyttäjä palaa tähän päivä määrään valitsemalla edellisen kuukauden nuolen kärki, **IF** -funktio palauttaa arvon **false**; koodia ei suoriteta, koska tämän näkymän tapahtumat on jo tallennettu väli muistiin **Mycalendarevents**-kohteessa.
 
-## <a name="next-month-chevron"></a>Seuraavan kuukauden kaksoisnuolikuvake
+## <a name="next-month-chevron"></a>Seuraavan kuukauden Chevron
 
-![iconNextMonth ohjausobjekti](media/calendar-screen/calendar-forward.png)
+![Iconnexta month-ohjaus objekti](media/calendar-screen/calendar-forward.png)
 
-- Ominaisuus: **OnSelect**<br>
-    Arvo: Neljä **määrittää** Funktiot ja **Jos** funktion, joka näyttää seuraavan kuukauden kalenterin valikoimassa:
+- Ominaisuuden **OnSelect**<br>
+    Arvo Neljä **joukkoa** funktioita ja **IF** -funktio, jotka näyttävät kalenteri valikoiman seuraavan kuukauden:
 
-    ```powerapps-comma
-    Set( _firstDayOfMonth; DateAdd( _firstDayOfMonth; 1; Months ) );;
-    Set( _firstDayInView; 
-        DateAdd( _firstDayOfMonth; -(Weekday( _firstDayOfMonth ) - 2 + 1); Days ) );;
-    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
-    If( _maxDate < _lastDayOfMonth;
-        Collect( MyCalendarEvents; 
-            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name; 
-                Text( DateAdd( _maxDate; 1; Days ); UTC ); 
-                DateAdd( _firstDayInView; 40; Days )
+    ```powerapps-dot
+    Set( _firstDayOfMonth, DateAdd( _firstDayOfMonth, 1, Months ) );
+    Set( _firstDayInView, 
+        DateAdd( _firstDayOfMonth, -(Weekday( _firstDayOfMonth ) - 2 + 1), Days ) );
+    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
+    If( _maxDate < _lastDayOfMonth,
+        Collect( MyCalendarEvents, 
+            'Office365'.GetEventsCalendarViewV2( _myCalendar.Name, 
+                Text( DateAdd( _maxDate, 1, Days ), UTC ), 
+                DateAdd( _firstDayInView, 40, Days )
             ).value
-        );;
-        Set( _maxDate; DateAdd( _firstDayInView; 40; Days) )    
+        );
+        Set( _maxDate, DateAdd( _firstDayInView, 40, Days) )    
     )
     ```
 
     > [!NOTE]
-    > Määrityksiä  **\_firstDayOfMonth**,  **\_firstDayInView**, ja  **\_lastDayOfMonth** ovat lähes samat kuin - [kalenterin avattavasta](#calendar-drop-down) tämän ohjeaiheen osan.
+    > **@No__t-1Firstodayofmonth**-, **\_Firstodayingview**-ja **\_lastdayofmonth** -määritelmät ovat lähes samanlaiset kuin tämän ohje aiheen [kalenterin avattavassa](#calendar-drop-down) osassa.
 
-    Kolme ensimmäistä riviä edellä oleva koodi, joka suoritetaan, kun käyttäjä valitsee nuolenkärjen seuraavan kuukauden, määritä muuttujia, jotka tarvitaan oikea kalenterinäkymä näyttämiseen. Jäljellä oleva koodi suoritetaan vain, jos käyttäjä ei ole valittu aiemmin tässä kuussa valittuun kalenteriin.
+    Edellisen koodin kolme ensimmäistä riviä, jotka suoritetaan, kun käyttäjä valitsee seuraavan kuukauden nuolen kärki, määrittää muuttujat, jotka ovat välttämättömiä asianmukaisen Kalenteri näkymän näyttämiseksi. Jäljelle jäävä koodi suoritetaan vain, jos käyttäjä ei ole aiemmin valinnut tätä kuukautta valitulle kalenterille.
 
-    Tässä tapauksessa  **\_maxDate** viimeinen päivä, joka tulee näkyviin, kun edellisen kuukauden näyttää. Ennen kuin käyttäjä valitsee seuraavan kuukauden, chevron  **\_maxDate** on kuukautena 13th suurin mahdollinen arvo. (1. helmikuuta on käytössä muita-karkausvuosi sunnuntai, kun  **\_maxDate** on maaliskuun 13, joka on  **\_firstDayInView** + 40 päivää.) Jos käyttäjä ei ole valittuna, tässä kuussa  **\_maxDate** on suurempi kuin uusi  **\_lastDayOfMonth**, ja **Jos** funktio Palauttaa **true**. Koodi, suoritukset ja kokoelma ja muuttuja päivitetään:
+    Tässä tapa uksessa **\_maxDate** on viimeinen päivä, joka näkyy, kun edellinen kuukausi näytetään. Ennen kuin käyttäjä valitsee seuraavan kuukauden nuolen kärki, **\_maxDate** on suurin mahdollinen arvo seuraavan kuukauden 13. (Kun 1. helmi kuuta osuu muuhun kuin karkaus vuoteen sunnuntaina, **\_maxDate** on 13. maaliskuuta, joka on **\_Firndayinsview** + 40 päivää.) Tämä tarkoittaa sitä, että jos käyttäjä ei ole vielä valinnut tätä kuukautta, **\_maxDate** on suurempi kuin uusi **\_lastDayOfMonth**, ja **IF** -funktio palauttaa arvon **True**. Koodi suoritetaan, ja kokoelma ja muuttuja päivitetään:
 
-    - **MyCalendarEvents** hakee kanssa valitun kalenterin tapahtumat [Office365.GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) toiminto. Päivämääräalue on  **\_maxDate** + 1 päivä ja  **\_firstDayInView** + 40 päivää. Koska **MyCalendarEvents** sisältää jo tapahtumat  **\_minDate** päivämäärän 1 lisätään tämän päivämäärän tämän uuden päivämäärävälin pienimmän arvon. **\_firstDayInView** + 40 on kaava  **\_maxDate**, joten toisen päivämäärän välillä on vain uusi  **\_maxDate**.
+    - **Mycalendarevents** noutaa tapahtumia valitusta kalenterista [office365. GetEventsCalendarViewV2](https://docs.microsoft.com/connectors/office365/#get-calendar-view-of-events--v2-) -toiminnolla. Päivämäärä alue on välillä **\_maxDate** + 1 päivä ja **\_Firndayingview** + 40 päivää. Koska **Mycalendarevents** sisältää jo tapahtumia **\_mindate-** päivä määrä, 1 lisätään kyseiseen päivä määrään tämän uuden päivämäärä alueen vähimmäisarvolle. **\_Firndayingview** + 40 on **\_maxdate**-kaava, joten alueen toinen päivä määrä on vain uusi **\_maxdate**.
 
-    - **\_maxDate** asetetaan  **\_firstDayInView** + 40 päivän viimeisen päivän aikana, koska tapahtumille, mikä on noudettu. Jos käyttäjä palaa tämä päivämäärä seuraavan kuukauden, chevron valitsemalla **Jos** funktio palauttaa **false**; koodi ei toimi, koska tämän näkymän tapahtumat ovat jo välimuistiin  **MyCalendarEvents**.
+    - **\_maxDate** -arvoksi on asetettu **\_Firndayinsview** + 40 päivää, koska tämä on viimeinen päivä, jolle tapahtumat on noudettu. Jos käyttäjä palaa tähän päivä määrään valitsemalla seuraavan kuukauden nuolen kärki, **IF** -funktio palauttaa arvon **false**; koodia ei suoriteta, koska tämän näkymän tapahtumat on jo tallennettu väli muistiin **Mycalendarevents**-kohteessa.
 
-## <a name="calendar-gallery"></a>Kalenterin valikoima
+## <a name="calendar-gallery"></a>Kalenteri valikoima
 
-![MonthDayGallery ohjausobjekti](media/calendar-screen/calendar-month-gall.png)
+![Kuukauden päivä valikoima-ohjaus objekti](media/calendar-screen/calendar-month-gall.png)
 
-- Ominaisuus: **Kohteet**<br>
-    Arvo: `[0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;
-    20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41]`
+- Ominaisuuden **Kohteet**<br>
+    Arvo: `[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,
+    20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]`
   
-  0-41 joukko käytetään kalenterin valikoima kohteille, koska huonointa mahdollista tilannetta, Kalenteri-näkymässä on 42 koko päivän näyttämiseen. Näin tapahtuu, kun lauantaina toteutuu kuukauden ensimmäisen ja viimeisen kuukauden sunnuntai käyttöön. Tässä tapauksessa kalenterin näytetään kuuden kuukauden ensimmäisen sisältävän rivin edellisen kuukauden päivän ajan ja kuusi seuraavan kuukauden-rivillä, joka sisältää kuukauden viimeisen päivän ajan. Tämä on 42 yksilöivät arvot, joiden 30 ovat valitun kuukauden.
+  Kohteen 0 – 41 joukkoa käytetään kalenteri valikoiman kohteissa, koska pahimmassa skenaariossa Kalenteri näkymän on näytettävä 42 koko naista päivää. Tämä tapahtuu, kun kuukauden ensimmäinen kuukausi on lauantai ja kuukauden viimeinen tapahtuu sunnuntaina. Tässä tapa uksessa kalenterissa on kuusi päivää edellisestä kuukaudesta, joka sisältää kuukauden ensimmäisen kuukauden, ja kuusi päivää seuraavasta kuukaudesta kuukauden viimeisen kuukauden rivillä. Tämä on 42 ainutlaatuista arvoa, joista 30 on valittua kuukautta varten.
 
-- Ominaisuus: **WrapCount**<br>
+- Ominaisuuden **WrapCount**<br>
     Arvo: `7`
 
-  Tämä arvo vastaa seitsemän päivää viikossa.
+  Tämä arvo vastaa seitsemän päivän viikkoa.
 
-### <a name="title-control-in-the-calendar-gallery"></a>Kalenterin valikoiman ohjausobjektin otsikko
+### <a name="title-control-in-the-calendar-gallery"></a>Otsikko-ohjaus objekti kalenteri valikoimassa
 
-![MonthDayGallery otsikko-ohjausobjekti](media/calendar-screen/calendar-month-text.png)
+![Kuukauden päivä valikoiman otsikko-ohjaus objekti](media/calendar-screen/calendar-month-text.png)
 
-- Ominaisuus: **Teksti**<br>
-    Arvo: `Day( DateAdd( _firstDayInView; ThisItem.Value; Days ) )`
+- Ominaisuuden **Teksti**<br>
+    Arvo: `Day( DateAdd( _firstDayInView, ThisItem.Value, Days ) )`
 
-    Peruuta,  **\_firstDayInView** on määritetty (**\_firstDayOfMonth** -sen weekday-arvo) + 1. Tapaamiset  **\_firstDayInView** on aina sunnuntai, ja  **\_firstDayOfMonth** on aina ensimmäinen rivi **MonthDayGallery**. Nämä kaksi faktaa vuoksi  **\_firstDayInView** on aina ensimmäiselle solua **MonthDayGallery**. **ThisItem.Value** on kyseisen solun **MonthDayGallery** kohteen ominaisuuden. Siis ottaen  **\_firstDayInView** lähtökohtana, kunkin solun näyttää lisäyksen-  **\_firstDayInView** + sen vastaavan solun arvo.
+    Muista, että **\_Firstodayinview** on määritetty muodossa ( **\_Firstodayofmonth** – sen viikon päivä arvo) + 1. Tämä kertoo, että **\_Firstodayingview** on aina sunnuntai, ja **\_Firstodayofmonth** on aina kuukausi **valikoiman**ensimmäisellä rivillä. Näiden kahden faktojen vuoksi **\_Firndayingview** on aina Montdaygallery-kohteenensimmäisessä solussa. **Thisitem. Value** on kyseisen solun numero **Monthdaygallery** -kohteen ominaisuudessa. Kun aloitat **\_firndayingview-** kohteen aloitus pisteenä, jokainen solu näyttää **\_firmdayingview** +-kohteen lisäyksen vastaavan solun arvon.
 
-- Ominaisuus: **Täyttö**<br>
-    Arvo: Yksi **Jos** funktio:
+- Ominaisuuden **Täyttö**<br>
+    Arvo One **IF** -funktiolla:
 
-    ```powerapps-comma
-    If( DateAdd( _firstDayInView; ThisItem.Value ) = Today() && 
-                DateAdd( _firstDayInView; ThisItem.Value ) = _dateSelected; 
-            RGBA( 0; 0; 0; 0 );
-        DateAdd( _firstDayInView; ThisItem.Value) = Today(); 
-            ColorFade( Subcircle.Fill; 0,67 );
-        Abs( Title.Text - ThisItem.Value) > 10;
-            RGBA( 200; 200; 200; 0,3 );
-        RGBA( 0; 0; 0; 0 )
+    ```powerapps-dot
+    If( DateAdd( _firstDayInView, ThisItem.Value ) = Today() && 
+                DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected, 
+            RGBA( 0, 0, 0, 0 ),
+        DateAdd( _firstDayInView, ThisItem.Value) = Today(), 
+            ColorFade( Subcircle.Fill, 0.67 ),
+        Abs( Title.Text - ThisItem.Value) > 10,
+            RGBA( 200, 200, 200, 0.3 ),
+        RGBA( 0, 0, 0, 0 )
     )
     ```
 
-  Kuvatulla tavalla kuvaus **tekstin** ominaisuutta, `DateAdd(_firstDayInView; ThisItem.Value)` edustaa päivän visible-soluun. Ottaen huomioon edellisen koodin suorittaa nämä vertailut:
-  1. Jos solun arvo on päivämäärä ja solun vastaa  **\_dateSelected**, älä anna täyttö arvo.
-  1. Jos solun arvo on päivämäärä, mutta ei vastaa  **\_dateSelected**, anna **ColorFade** täyttö.
-  1. Viimeisin vertailu ei ole yhtä Tyhjennä. Vertailu todellinen tekstiarvo solun ja arvo (luku, Näytä) ja kohteen numero solun on on.<br>
+  Kuten **teksti** -ominaisuuden kuva uksessa on kerrottu, `DateAdd(_firstDayInView, ThisItem.Value)` edustaa näkyvää solua. Kun tämä otetaan huomioon, edeltävä koodi suorittaa nämä vertailut:
+  1. Jos solun arvo on kuluvan päivän päivä määrä ja tämä solu vastaa **\_dateSelected-** arvoa, älä anna täyttö arvoa.
+  1. Jos solun arvo on kuluvan päivän päivä määrä, mutta ei vastaa **\_dateSelected-** arvoa, anna **colorfade** -täyttö.
+  1. Viimeinen vertailu ei ole yhtä selkeä. Siinä verrataan solun todellista teksti arvoa ja solu kohteen arvoa (näytössä oleva numero ja kohteen numero).<br>
 
-      Paremmin ymmärtää tämän, harkitse syyskuun 2018, kuukauden, joka alkaa lauantaina ja sunnuntai päättyy. Tässä tapauksessa, esiin tulee kautta 31 elokuun ja 1 syyskuuta 26th ensimmäisellä rivillä ja `Abs(Title.Text - ThisItem.Value) = 26` kunnes syyskuun 1. Sitten `Abs(Title.Text - ThisItem.Value) = 5`. Se säilyy 5 kunnes kalenterissa, joka näyttää – 6. syyskuuta 30 ja 1. lokakuuta viimeinen rivi. Kyseisessä `Abs(Title.Text - ThisItem.Value)` edelleen on 5 syyskuuta 30, mutta on 35 lokakuuta päivämäärät.<br>
+      Jos haluat ymmärtää tämän paremmin, harkitse syyskuuta 2018, kuukausi, joka alkaa lauantaina ja päättyy sunnuntaina. Tässä tapa uksessa kalenteri näyttää 26. – 31. elokuuta ja syyskuun 1. ensimmäisen rivin ja `Abs(Title.Text - ThisItem.Value) = 26` – 1. syyskuuta. Sitten `Abs(Title.Text - ThisItem.Value) = 5`. Se pysyy 5 päivään, kunnes kalenterissa on viimeinen rivi, joka näyttää 30. syyskuuta ja 1. loka kuuta – kuudes. Tässä `Abs(Title.Text - ThisItem.Value)` on edelleen 5 30. syyskuuta, mutta se on 35 loka kuun päivä määrille.<br>
 
-      Tämä on mallia: Näytetään edellisen kuukauden päivän `Abs(Title.Text - ThisItem.Value)` aina sama kuin `Title.Text` arvon ensimmäisen päivän näytössä. Näytetään seuraavan kuukauden, päivän `Abs(Title.Text - ThisItem.Value)` aina sama kuin **MonthDayGallery** kohteen arvo on 1 (Tässä tapauksessa 1. lokakuuta) kuukauden ensimmäiseen. Ja mikä tärkeintä, valittuna kuukauden päivinä `Abs(Title.Text - ThisItem.Value)` myös aina yhtä suuri kuin 1 kuukauden ensimmäisen kohteen arvo ja koskaan ylittää 5 edellisen esimerkin mukaisesti. Se on täysin kelvollinen kirjoittaa kaavaa, sillä `Abs(Title.Text - ThisItem.Value) > 5`.
+      Tämä on seuraava: Edellisen kuukauden päivien osalta `Abs(Title.Text - ThisItem.Value)` on aina yhtä suuri kuin ensimmäisen päivän `Title.Text`-arvo. Kun päivät näytetään seuraavassa kuussa, `Abs(Title.Text - ThisItem.Value)` on aina sama kuin kuukauden ensimmäisen solun kuukausi **valikoiman** kohteen arvo (tässä tapa uksessa 1. loka kuuta) vähennettynä yhdellä. Ja mikä tärkeintä, valittuna kuukautena näkyvissä päivinä `Abs(Title.Text - ThisItem.Value)` on myös aina sama kuin kuukauden ensimmäisen kohteen arvo vähennettynä arvolla 1 ja ei koskaan ylitä viittä, kuten edellisessä esimerkissä näytetään. On siis täysin perusteltua kirjoittaa kaava `Abs(Title.Text - ThisItem.Value) > 5`.
 
-      Tämä lauseke tarkistaa, onko date-arvon valittuna kuukauden ulkopuolella. Jos näin on, **Täytä** on osittain läpinäkymättömiä harmaa.
+      Tämä lauseke tarkistaa, onko päivämäärä arvo valittuna olevan kuukauden ulkopuolella. Jos se on, **täyttö** on osittain läpinäkymätön harmaa.
 
     > [!NOTE]
-    > Voit tarkistaa viimeisen vertailu kelpoisuuden itse lisäämällä **nimen** ohjausobjektin valikoiman ja asetus sen **tekstin** ominaisuudeksi tämä arvo:<br>`Abs(Title.Text - ThisItem.Value)`.
+    > Voit tarkistaa tämän viimeisimmän vertailun kelvollisuuden lisäämällä **Selite** -ohjaus objektin valikoimaan ja määrittämällä sen **Text** -ominaisuudeksi tämän arvon:<br>`Abs(Title.Text - ThisItem.Value)`.
 
-- Ominaisuus: **Näkyvissä**<br>
-    Arvo:
+- Ominaisuuden **Näkyvissä**<br>
+    Arvo
 
-    ```powerapps-comma
+    ```powerapps-dot
     !(
-        DateAdd( _firstDayInView; ThisItem.Value; Days ) - 
-            Weekday( DateAdd( _firstDayInView; ThisItem.Value;Days ) ) + 1 
+        DateAdd( _firstDayInView, ThisItem.Value, Days ) - 
+            Weekday( DateAdd( _firstDayInView, ThisItem.Value,Days ) ) + 1 
         > _lastDayOfMonth
     )
     ```
 
-    Edellisen lauseke tarkistaa, onko solun rivillä, jossa ei ole valittuna kuukauden päivän tapahtuu. Peruuta, että kaikki päivän päivämäärä sen arvosta viikonpäivä arvojen ja lisäämällä 1 aina palauttaa ensimmäisen kohteen rivillä kyseisen päivän sijaitsee. Jotta tämä lauseke tarkistaa, onko rivillä ensimmäisenä voi tarkastella kuukauden viimeisen päivän jälkeen. Jos näin on, se ei näy, koska koko rivillä on seuraavia kuukauden päivän.
+    Edeltävä lauseke tarkistaa, onko solu rivillä, jossa ei ole valitun kuukauden päiviä. Muista, että jos minkä tahansa päivän päivä määrä-arvon ja arvon lisääminen 1-arvo vähennetään, ensimmäinen kohde palautetaan aina sen rivin ensimmäiseen kohteeseen, jossa päivä asuu. Tämä lauseke tarkistaa, onko rivin ensimmäinen päivä tarkasteltavissa olevan kuukauden viimeisenä päivänä. Jos se on, sitä ei näytetä, koska koko rivi sisältää seuraavan kuukauden päivät.
 
-- Ominaisuus: **OnSelect**<br>
-    Arvo: A **määrittää** funktion, joka määrittää  **\_dateSelected** muuttujan valitun solun päivämäärä:
+- Ominaisuuden **OnSelect**<br>
+    Arvo **Set** -funktiolla, joka asettaa **\_dateselected-** muuttujan valitun solun päivä määräksi:
 
-    ```powerapps-comma
-    Set( _dateSelected; DateAdd( _firstDayInView; ThisItem.Value; Days ) )
+    ```powerapps-dot
+    Set( _dateSelected, DateAdd( _firstDayInView, ThisItem.Value, Days ) )
     ```
 
-### <a name="circle-control-in-the-calendar-gallery"></a>Ympyrä valikoiman ohjausobjektia, kalenteri
+### <a name="circle-control-in-the-calendar-gallery"></a>Ympyrä ohjaus objekti kalenteri valikoimassa
 
-![MonthDayGallery ympyrä-ohjausobjekti](media/calendar-screen/calendar-month-event.png)
+![Kuukaundaygallery-ympyrän ohjaus objekti](media/calendar-screen/calendar-month-event.png)
 
-- Ominaisuus: **Näkyvissä**<br>
-    Arvo: Kaava, joka määrittää, voiko tapahtumat ajoitetaan valitun päivämäärän ja onko **Subcircle** ja **otsikko** ohjausobjektit näkyvät:
+- Ominaisuuden **Näkyvissä**<br>
+    Arvo Kaava, joka määrittää, ajoitetaanko valitun päivä määrän tapahtumat ja onko **Aliympyrä** -ja **otsikko** -ohjaus objekti näkyvissä:
 
-    ```powerapps-comma
+    ```powerapps-dot
     CountRows(
-        Filter( MyCalendarEvents; 
-            DateValue( Text( Start ) ) = DateAdd( _firstDayInView; ThisItem.Value; Days )
+        Filter( MyCalendarEvents, 
+            DateValue( Text( Start ) ) = DateAdd( _firstDayInView, ThisItem.Value, Days )
         )
     ) > 0 && !Subcircle.Visible && Title.Visible
     ```
 
-    **Ympyrä** ohjausobjekti näkyy vain jos **Aloita** kenttä tapauksessa vastaa kyseisen solun päivämäärä Jos **otsikko** ohjausobjekti on näkyvissä, ja, jos  **Subcircle** ohjausobjekti ei ole näkyvissä. Toisin sanoen tämä ohjausobjekti näkyy, kun vähintään yksi tapahtuma ilmenee tämän päivän ja tämän päivän ei ole valittuna. Jos se on valittuna, kyseisen päivän tapahtumat näkyvät **CalendarEventsGallery** ohjausobjektin.
+    **Ympyrä** -ohjaus objekti on näkyvissä, jos minkä tahansa tapahtuman **alku** -kenttä vastaa kyseisen solun päivä määrää, jos **otsikko** -ohjaus objekti on näkyvissä ja jos **aliympyröohjausobjekti** ei ole näkyvissä. Tämä ohjaus objekti on siis näkyvissä, kun vähintään yksi tapahtuma toteutuu tänä päivänä, eikä tätä päivää ole valittu. Jos se on valittuna, kyseisen päivän tapahtumat näytetään **Calendarevensgallery** -ohjaus objektissa.
 
-### <a name="subcircle-control-in-the-calendar-gallery"></a>Subcircle valikoiman ohjausobjektia, kalenteri
+### <a name="subcircle-control-in-the-calendar-gallery"></a>Alcircle-ohjaus objekti kalenteri valikoimassa
 
-![MonthDayGallery Subcircle ohjausobjekti](media/calendar-screen/calendar-month-selected.png)
+![Kuukausi valikoiman Alcircle-ohjaus objekti](media/calendar-screen/calendar-month-selected.png)
 
-- Ominaisuus: **Näkyvissä**<br>
-    Arvo:
+- Ominaisuuden **Näkyvissä**<br>
+    Arvo
 
-    ```powerapps-comma
-    DateAdd( _firstDayInView; ThisItem.Value ) = _dateSelected && Title.Visible
+    ```powerapps-dot
+    DateAdd( _firstDayInView, ThisItem.Value ) = _dateSelected && Title.Visible
     ```
 
-  **Subcircle** ohjausobjekti on näkyvissä, kun  **\_dateSelected** vastaa solun, Date ja **otsikko** ohjausobjekti on näkyvissä. Toisin sanoen tämän ohjausobjektin tulee näkyviin, kun solu on tällä hetkellä valittu päivämäärä.
+  **Aliympyröohjausobjekti** on näkyvissä, kun **\_dateselected** on sama kuin solun päivä määrä ja **otsikko** -ohjaus objekti on näkyvissä. Toisin sanoen tämä ohjaus objekti tulee näkyviin, kun solu on valittuna päivänä.
 
-## <a name="events-gallery"></a>Tapahtumat valikoima
+## <a name="events-gallery"></a>Tapahtuma valikoima
 
-![CalendarEventsGallery ohjausobjekti](media/calendar-screen/calendar-events-gall.png)
+![Kalenteri-valikoima-ohjaus objekti](media/calendar-screen/calendar-events-gall.png)
 
-- Ominaisuus: **Kohteet**<br>
-    Arvo: Kaava, joka lajittelee ja suodattaa valikoiman tapahtumat:
+- Ominaisuuden **Kohteet**<br>
+    Arvo Kaava, joka lajittelee ja suodattaa tapahtuma valikoiman:
 
-    ```powerapps-comma
+    ```powerapps-dot
     SortByColumns(
-        Filter( MyCalendarEvents;
-            Text( Start; DateTimeFormat.ShortDate ) = Text( _dateSelected; DateTimeFormat.ShortDate )
-        );
+        Filter( MyCalendarEvents,
+            Text( Start, DateTimeFormat.ShortDate ) = Text( _dateSelected, DateTimeFormat.ShortDate )
+        ),
         "Start"
     )
     ```
 
-   **MyCalendarEvents** kokoelma sisältää kaikki tapahtumat väliltä  **\_minDate** ja  **\_maxDate**. Jotta voit näyttää vain valitun päivämäärän tapahtumat, suodatin on käytössä **MyCalendarEvents** näyttämään tapahtumia, jotka on vastaa alkamispäivämäärä **\ _dateSelected**. Kohteet lajitellaan sitten niiden alkamis sijoittaminen järjestyksessä.
+   **Mycalendarevents** -kokoelma sisältää kaikki tapahtumat **\_mindate** ja **\_maxdate**välillä. Jos haluat näyttää vain valitun päivä määrän tapahtumat, **Mycalendarevents** -kohteelle käytetään suodatinta, joka näyttää tapahtumat, joiden alkamis päivä on sama kuin kohteen **\ _dateselected**. Kohteet lajitellaan sitten niiden alkamis päivien mukaan, jotta ne voidaan sijoittaa järjestyksessä.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-- [Lue lisätietoja tässä näytössä](./calendar-screen-overview.md)
-- [Lue lisätietoja Office 365 Outlook-liittimellä powerappsissa](../connections/connection-office365-outlook.md)
-- [Lue lisätietoja Office 365-käyttäjät-liittimellä powerappsissa](../connections/connection-office365-users.md)
+- [Lue lisä tietoja tästä näytöstä](./calendar-screen-overview.md)
+- [Lue lisä tietoja Office 365 Outlook Connectorista Powerappsissa](../connections/connection-office365-outlook.md)
+- [Lue lisä tietoja Office 365-käyttäjien liittimestä Powerappsissa](../connections/connection-office365-users.md)

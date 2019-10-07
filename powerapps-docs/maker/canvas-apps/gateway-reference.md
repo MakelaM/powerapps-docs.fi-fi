@@ -1,24 +1,24 @@
 ---
 title: Tutustu kangassovellusten paikallisiin tietoyhdyskäytäviin | Microsoft Docs
 description: Paikallisten tietoyhdyskäytävien viitetietoja, kuten asennus PowerAppsissa ja vianmääritys
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 10/20/2017
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 095496aba49f722d439960a25242153b9daea382
-ms.sourcegitcommit: ea3ab5926541c60a9e7c17f52f937c9812d48c71
+ms.openlocfilehash: 4ac1df1d6a2901345436b899e3c7088f746eb2aa
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70310043"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983350"
 ---
 # <a name="understand-on-premises-data-gateways-for-canvas-apps"></a>Tutustu kangassovellusten paikallisiin tietoyhdyskäytäviin
 ## <a name="installation-and-configuration"></a>Asennus ja määritys
@@ -91,14 +91,16 @@ Voit tarkistaa, estääkö palomuuri tai välityspalvelin yhteyksiä, suorittama
 
 Tulosten tulisi näyttää tätä esimerkkiä vastaavilta. Jos **TcpTestSucceeded** ei ole **tosi**, palomuuri voi estää käytön.
 
-    ComputerName           : watchdog.servicebus.windows.net
-    RemoteAddress          : 70.37.104.240
-    RemotePort             : 5672
-    InterfaceAlias         : vEthernet (Broadcom NetXtreme Gigabit Ethernet - Virtual Switch)
-    SourceAddress          : 10.120.60.105
-    PingSucceeded          : False
-    PingReplyDetails (RTT) : 0 ms
-    TcpTestSucceeded       : True
+```
+ComputerName           : watchdog.servicebus.windows.net
+RemoteAddress          : 70.37.104.240
+RemotePort             : 5672
+InterfaceAlias         : vEthernet (Broadcom NetXtreme Gigabit Ethernet - Virtual Switch)
+SourceAddress          : 10.120.60.105
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : True
+```
 
 Jos haluat olla perusteellinen, korvaa **ComputerName**- ja **Port**-arvot jäljempänä tässä aiheessa kohdassa **Porttien määritys** annetuilla arvoilla.
 

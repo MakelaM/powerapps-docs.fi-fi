@@ -1,29 +1,28 @@
 ---
-title: Luo ja Päivitä kokoelma pohjaan perustuvassa sovelluksessa | Microsoft Docs
-description: Luo kokoelma pohjaan perustuvan sovelluksen, Lisää kohteita kokoelmaan ja vähintään yksi kohteiden poistaminen
-author: aftowen
+title: Kokoelman luominen ja päivittäminen kangas sovelluksessa | Microsoft Docs
+description: Luo kokoelma pohjaan perustuvassa sovelluksessa, lisää kohteita kokoelmaan ja poista niistä yksi tai kaikki kohteet
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 01/28/2019
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6089063e2478c95bb5bfbc5926608d85552cea40
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 375c4f19ed7715eed662c8456c539d5590c9f1ec
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61561625"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993197"
 ---
-# <a name="create-and-update-a-collection-in-a-canvas-app"></a>Luo ja Päivitä kokoelma pohjaan perustuva sovellus
+# <a name="create-and-update-a-collection-in-a-canvas-app"></a>Luo ja Päivitä kokoelma pohjaan sovelluksena
 
-Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovelluksessa. Kokoelma on joukko kohteita, jotka muistuttavat, kuten tuotteen luettelon tuotteita. Saat lisätietoja eri muuttujatyyppiä kuten kokoelmat: [Tutustu pohjaan perustuvien sovellusten muuttujiin](working-with-variables.md).
+Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovelluksessasi. Kokoelma on ryhmä kohteita, jotka ovat samankaltaisia, kuten tuote luettelon tuotteet. Lisä tietoja erityyppisten muuttujien, kuten kokoelmien, tyypeistä: [Tutustu pohjaan ja sovellukseen](working-with-variables.md).
 
 ## <a name="prerequisites"></a>Edellytykset
 
@@ -31,107 +30,107 @@ Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovel
 - Luo sovellus tai avaa olemassa oleva sovellus PowerAppsissa.
 - Lue, miten [ohjausobjekti määritetään](add-configure-controls.md) PowerAppsissa.
 
-## <a name="create-a-multicolumn-collection"></a>Luo monisarakkeisen kokoelma
+## <a name="create-a-multicolumn-collection"></a>Monisarakkeisen kokoelman luominen
 
-1. PowerApps Studio, Lisää **Tekstisyöte** ohjausobjektin.
+1. Lisää PowerApps Studio **teksti syöte** -ohjaus objekti.
 
-    ![Lisää Tekstisyöte](./media/create-update-collection/add-textbox.png)
+    ![Lisää teksti syöte-ohjaus objekti](./media/create-update-collection/add-textbox.png)
 
-1. Ohjausobjektin nimeäminen uudelleen valitsemalla vasemmassa siirtymisruudussa sen pistettä valitsemalla **nimeä**, ja kirjoittamalla sitten **ProductName**.
+1. Nimeä ohjaus objekti uudelleen valitsemalla vasemmassa siirtymis ruudussa sen kolme pistettä, valitsemalla **Nimeä uudelleen**ja kirjoittamalla sitten **ProductName**.
 
-    ![Ohjausobjektin nimeäminen uudelleen](./media/create-update-collection/rename-textbox.png)
+    ![Ohjaus objektin nimeäminen uudelleen](./media/create-update-collection/rename-textbox.png)
 
-1. Lisää **avattava** ohjausobjektin.
+1. Lisää **avattava luettelo** -ohjaus objekti.
 
-    ![Avattavan luettelon lisääminen](./media/create-update-collection/add-dropdown.png)
+    ![Lisää avattava luettelo](./media/create-update-collection/add-dropdown.png)
 
-1. Nimeä uudelleen **avattava** ohjausobjektin **värit**, ja varmista, että **kohteet** ominaisuus valitaan ominaisuusluettelossa.
+1. Nimeä **avattava** luettelo-ohjaus objektin **värit**uudelleen ja varmista, että **Items** -ominaisuus on valittuna ominaisuus-kohdassa.
 
     ![Kohteiden ominaisuus](./media/create-update-collection/items-property.png)
 
-1. Korvaa kaavarivillä **DropDownSample** Tämä lauseke:
+1. Korvaa kaava rivillä **Dropdownsample** tällä lausekkeella:
 
-    `["Red";"Green";"Blue"]`
+    `["Red","Green","Blue"]`
 
-1. Lisää **painike** ohjausobjekti, määritä sen **tekstin** ominaisuudeksi **”Lisää”**, ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+1. Lisää **painike** -ohjaus objekti, määritä sen **Text** -ominaisuudeksi **"Add"** ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Collect(
-        ProductList;
+        ProductList,
         {
-            Product: ProductName.Text;
+            Product: ProductName.Text,
             Color: Colors.Selected.Value
         }
     )
     ```
 
-1. Paina F5-näppäintä, kirjoita tekstiä **ProductName**, valitse vaihtoehto **värit**, ja valitse sitten **Lisää**.
+1. Paina F5- **näppäintä, kirjoita**tekstiä tuote nimi-kohtaan, valitse **väri**-vaihto ehto ja valitse sitten **Lisää**.
 
     ![Sovelluksen esikatselu](./media/create-update-collection/preview-add.png)
 
 1. Toista edellinen vaihe vähintään kaksi kertaa ja paina sitten ESC-näppäintä.
 
-1. Valitse **tiedoston** -valikosta **kokoelmat** näyttämään kokoelman, jonka loit.
+1. Näytä luomasi kokoelma valitsemalla **tiedosto-** valikosta **kokoelmat** .
 
     ![Näytä kokoelma](./media/create-update-collection/show-collection.png)
 
 ## <a name="show-a-collection"></a>Näytä kokoelma
 
-1. Lisää pystysuora **valikoiman** ohjausobjektin.
+1. Lisää pystysuuntainen **valikoima** -ohjaus objekti.
 
     ![Lisää pystysuuntainen valikoima](./media/create-update-collection/add-gallery.png)
 
-1. Määritä valikoiman **kohteet** ominaisuudeksi **ProductList**.
+1. Valitse valikoiman **Items** -ominaisuudeksi **productList**.
 
-1. - **Tietojen** ruudussa alaotsikko kentän arvoksi **väri**, ja otsikkokentän arvoksi **tuotteen**.
+1. Valitse **tiedot** -ruudussa alaotsikko-kentän arvoksi **väri**ja valitse otsikko-kentäksi **tuote**.
 
-    ![Valikoiman Items-ominaisuuden asettaminen ja muuta se näyttää kentät](./media/create-update-collection/configure-gallery.png)
+    ![Valitse valikoiman kohteet-ominaisuus ja muuta siinä olevia kenttiä](./media/create-update-collection/configure-gallery.png)
 
-1. Sulje **tietojen** ruudussa Valitse valikoima ja Aseta **asettelu** kentän **otsikko ja alaotsikko**.
+1. Sulje **tiedot** -ruutu, valitse valikoima ja määritä sitten **ulkoasu** -kentän arvoksi **otsikko ja alaotsikko**.
 
-    ![Valikoiman Items-ominaisuuden asettaminen ja muuta se näyttää kentät](./media/create-update-collection/change-layout.png)
+    ![Valitse valikoiman kohteet-ominaisuus ja muuta siinä olevia kenttiä](./media/create-update-collection/change-layout.png)
 
-    Näytön pitäisi näyttää samalta kuin tässä esimerkissä:
+    Näyttösi muistuttaa tätä esimerkkiä:
 
-    ![Ensimmäinen näyttö-Esimerkki](./media/create-update-collection/screen-example1.png)
+    ![Ensimmäisen näytön esimerkki](./media/create-update-collection/screen-example1.png)
 
 ## <a name="remove-one-or-all-items"></a>Poista yksi tai kaikki kohteet
 
-1. Valitse haluamasi valikoiman mallipohja napsauttamalla tai napauttamalla valikoiman ja napsauttamalla tai napauttamalla vasemmassa yläkulmassa olevaa kynäkuvaketta.
+1. Valitse valikoima malli napsauttamalla tai napauttamalla valikoiman alaosan lähellä ja napsauttamalla tai napauttamalla kynä kuvaketta vasemmassa yläkulmassa.
 
-    ![Valitse valikoiman mallipohja](./media/create-update-collection/select-template.png)
+    ![Valitse valikoima malli](./media/create-update-collection/select-template.png)
 
-1. Lisää **roskakori** kuvake valikoiman mallipohja.
+1. Lisää **roska kori** -kuvake valikoima malliin.
 
-    ![Lisää roskakorikuvake](./media/create-update-collection/trash-icon.png)
+    ![Lisää roska kori-kuvake](./media/create-update-collection/trash-icon.png)
 
-1. Määritä kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+1. Määritä kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    `Remove(ProductList; ThisItem)`
+    `Remove(ProductList, ThisItem)`
 
-1. Valikoiman ulkopuolella Lisää painike, määritä sen **tekstin** ominaisuudeksi **”Tyhjennä”**, ja määritä sen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+1. Lisää valikoima-ruutuun painike, määritä sen **Text** -ominaisuudeksi **"Clear"** ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
     `Clear(ProductList)`
 
-1. Pidät Alt-näppäintä ja valitse **roskakori** kohde kokoelmasta poistettavat sen tai valitsemalla kuvakkeen **Tyhjennä** poistaaksesi kaikki kohteet kokoelmasta.
+1. Pidä Alt-näppäintä painettuna ja Poista kohde kokoelmasta valitsemalla kohteen **roska kori** kuvake tai Poista kaikki kohteet kokoelmasta valitsemalla **Tyhjennä** -painike.
 
 ## <a name="put-a-sharepoint-list-into-a-collection"></a>SharePoint-luettelon asettaminen kokoelmaan
 
 1. [Yhdistä SharePoint-luetteloon](connections/connection-sharepoint-online.md#create-a-connection).
 
-1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)**-ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
+1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
 
-    `Collect(MySPCollection; ListName)`
+    `Collect(MySPCollection, ListName)`
 
     Tämä funktio luo kokoelman, jonka nimi on **MySPCollection** ja joka sisältää samat tiedot kuin SharePoint-luettelokin.
 
 1. Pidä Alt-näppäintä painettuna ja valitse painike.
 
-1. (valinnainen) Jos haluat esikatsella luomasi kokoelman, valitse **kokoelmat** - **tiedoston** valikosta.
+1. valinnainen Jos haluat esikatsella luomaasi kokoelmaa, valitse **tiedosto-** valikosta **kokoelmat** .
 
-Lisätietoja SharePoint-luettelosta (esimerkiksi päivämäärät, vaihtoehtoja ja henkilöt) tietojen näyttäminen valikoimassa: [Näytä luettelon sarakkeet valikoimassa](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). Lisätietoja siitä, miten voit näyttää lomakkeen (avattavia luetteloita, päivämäärävalitsimia ja ihmisten keräilijät): [Muokattu lomake- ja näytetty lomake-ohjausobjektit](controls/control-form-detail.md).
+Saat lisä tietoja siitä, miten voit näyttää tietoja SharePoint-luettelosta (kuten päivä määristä, valinnoista ja henkilöistä) valikoimassa: [Näytä valikoiman luetteloiden sarakkeet](connections/connection-sharepoint-online.md#show-list-columns-in-a-gallery). Tietoja siitä, miten tiedot näytetään lomakkeessa (avattavien luetteloiden, päivämäärä valitsimien ja henkilöiden poimintaan): [Muokkaa lomaketta ja Näytä lomake-ohjaus objektia](controls/control-form-detail.md).
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-- Tarkista [tiedot](functions/function-clear-collect-clearcollect.md) varten **kerätä** funktio.
-- Lue, miten voit muotoilla kokoelman tietoja käyttämällä [AddColumns-, DropColumns-, RenameColumns- ja ShowColumns](functions/function-table-shaping.md) funktioita.
+- Tarkasta **Collect** -funktiolla [viittaus-aihe](functions/function-clear-collect-clearcollect.md) .
+- Lue, miten voit muotoilla kokoelman tietoja käyttämällä [Addcolumns-, DropColumns-, RenameColumns-ja ShowColumns](functions/function-table-shaping.md) -funktioita.

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 302c2fad419146f03fe47e25b8a7563564ee7e2d
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 915f5c15af06914cf10a749bf8d995926fd1bf2f
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61543949"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993403"
 ---
 # <a name="microphone-control-in-powerapps"></a>Mikrofoni-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka avulla sovelluksen käyttäjät voivat tallentaa ääniä laitteestaan.
@@ -96,12 +95,12 @@ Sovelluksen käyttäjät voivat tehdä äänitallenteita, jos laitteessa, jossa 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-sounds-to-a-custom-gallery-control"></a>Lisää ääniä mukautettuun valikoima-ohjausobjektiin
 1. Lisää **Mikrofoni**, anna sen nimeksi **MyMic** ja määritä sen **OnStop**-ominaisuudeksi tämä kaava:<br>
-   **Collect(MySounds; MyMic.Audio)**
+   **Collect(MySounds, MyMic.Audio)**
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
@@ -111,7 +110,7 @@ Sovelluksen käyttäjät voivat tehdä äänitallenteita, jos laitteessa, jossa 
 4. Paina F5-näppäintä, aloita taltiointi napsauttamalla tai napauttamalla **MyMic** ja lopeta taltiointi napsauttamalla tai napauttamalla sitä uudelleen.
 5. Toista taltiointi napsauttamalla tai napauttamalla **Mukautettu valikoima** -ohjausobjektin toistopainiketta **[Ääni](control-audio-video.md)** -ohjausobjektissa.
 6. Lisää niin monta taltiointia kuin haluat ja palaa sitten oletustyötilaan painamalla Esc.
-7. (valinnainen) Lisää **Mukautettu valikoima** -ohjausobjektin mallissa **[Painike](control-button.md)** -ohjausobjekti, määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi **Remove(MySounds; ThisItem)** , paina F5-näppäintä ja poista sitten taltiointi napsauttamalla tai napauttamalla vastaavaa **Painike**-ohjausobjektia.
+7. (valinnainen) Lisää **Mukautettu valikoima** -ohjausobjektin mallissa **[Painike](control-button.md)** -ohjausobjekti, määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi **Remove(MySounds, ThisItem)** , paina F5-näppäintä ja poista sitten taltiointi napsauttamalla tai napauttamalla vastaavaa **Painike**-ohjausobjektia.
 
 Voit tallentaa taltioinnit paikallisesti **[SaveData](../functions/function-savedata-loaddata.md)** -funktiolla tai päivittää tietolähteen **[Ohjelmakorjaus](../functions/function-patch.md)** -funktiolla.
 

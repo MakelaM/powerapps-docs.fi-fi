@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/05/2017
 ms.author: jasongre
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: fb7c2ac88c24197d014ebdc1b2b6a50e4802e0bf
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: f29b3a782ce62c475c80804225787a0a42e85a2c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63319369"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993611"
 ---
 # <a name="data-table-control-in-powerapps"></a>Tietotaulukko-ohjausobjekti PowerAppsissa
 Näyttää tietojoukon taulukkomuodossa.
@@ -84,8 +83,8 @@ PowerAppsin **Tietotaulukko**-ohjausobjekti otettiin käyttöön 5.5.2017. Täss
 * [**Y**](properties-size-location.md) – **Tietotaulukko**-ohjausobjektin yläreunan ja pääsäilön yläreunan välinen etäisyys (tai näytön yläreunan, jos pääsäilöä ei ole).
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-* [**Filter(DataSource; Formula)**](../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
-* [**Search(DataSource; SearchString; Column)**](../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
+* [**Filter(DataSource, Formula)** ](../functions/function-filter-lookup.md)(*DataSource*, *Formula*)
+* [**Search(DataSource, SearchString, Column)** ](../functions/function-filter-lookup.md)(*DataSource*, *SearchString*, *Column*)
 
 ## <a name="examples"></a>Esimerkkejä
 ### <a name="basic-usage"></a>Peruskäyttö
@@ -122,7 +121,7 @@ PowerAppsin **Tietotaulukko**-ohjausobjekti otettiin käyttöön 5.5.2017. Täss
 
 ### <a name="restyle-the-header-for-the-data-table-control"></a>Muotoile Tietotaulukko-ohjausobjektin otsikko
 1. Kun **Tietotaulukko**-ohjausobjekti on valittuna, napsauta tai napauta oikeassa ruudussa olevaa **Lisäasetukset**-välilehteä.
-2. Napsauta tai napauta **HeadingFill**-ominaisuuden kenttää ja muuta arvoksi **RGBA(62;96;170;1)**.
+2. Napsauta tai napauta **HeadingFill**-ominaisuuden kenttää ja muuta arvoksi **RGBA(62,96,170,1)** .
 3. Napsauta tai napauta **HeadingColor**-ominaisuuden kenttää ja muuta arvoksi **Valkoinen**.
 4. Napsauta tai napauta **HeadingSize**-ominaisuuden kenttää ja muuta arvoksi **14**.
    

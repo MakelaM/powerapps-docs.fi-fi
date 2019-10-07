@@ -1,548 +1,547 @@
 ---
-title: Luo yhteenveto lomake pohjaan perustuvan sovelluksen | Microsoft Docs
-description: Luo Yhteenveto lomakkeen pohjaan perustuvan sovelluksen Northwind Traders tietojen hallintaan
+title: Yhteenveto lomakkeen luominen kangas sovelluksessa | Microsoft Docs
+description: Luo Yhteenveto lomake kangas sovellukseen Northwind Traders-tietojen hallintaa varten
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/25/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 5c40cb030241d142a2ee2a68d32f7fb839a350ff
-ms.sourcegitcommit: 55bc11ac6a964f22301c9fdadb06ee34e1399f83
+ms.openlocfilehash: d151249caebdb2a6f142943074a409bc626ff662
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66805916"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995865"
 ---
-# <a name="create-a-summary-form-in-a-canvas-app"></a>Luo yhteenveto lomake pohjaan perustuva sovellus
+# <a name="create-a-summary-form-in-a-canvas-app"></a>Yhteenveto lomakkeen luominen kangas sovelluksessa
 
-Noudata vaiheittaiset ohjeet pohjaan perustuvan sovelluksen hallintaan kuvitteellisia tietoja Northwind Traders tietokannassa Yhteenveto lomakkeen luomiseen. Tämä ohjeaihe on osa pidempää sarjaa, jossa selitetään business-sovelluksen rakentaminen Common Data Service-relaatiotietoja. Saat parhaat tulokset Tutustu aiheet tässä järjestyksessä:
+Noudata vaiheittaisia ohjeita ja luo Yhteenveto lomake kangas sovelluksessa, jotta voit hallita kuvitteellisia tietoja Northwind Traders-tieto kannassa. Tämä ohje aihe on osa sarjaa, jossa kerrotaan, miten voit luoda liiketoiminta sovelluksen relaatio tietoihin Common Data Service. Parhaat tulokset saat tutustumalla seuraaviin aihe isiin:
 
-1. [Luo order-valikoima](northwind-orders-canvas-part1.md).
-2. Luo yhteenveto lomake (**tässä ohjeaiheessa**).
-3. [Luo tietoja-valikoiman](northwind-orders-canvas-part3.md).
+1. [Luo tilaus valikoima](northwind-orders-canvas-part1.md).
+2. Luo Yhteenveto lomake (**Tämä aihe**).
+3. [Luo tieto valikoima](northwind-orders-canvas-part3.md).
 
 > [!div class="mx-imgBorder"]
-> ![Näytön alueiden määritys](media/northwind-orders-canvas-part1/orders-parts.png)
+> ![Näytön alueiden määritelmät @ no__t-1
 
 ## <a name="prerequisites"></a>Edellytykset
 
-1. [Asenna Northwind Traders tietokantaa ja sovelluksia](northwind-install.md).
-1. Tarkista [pohjaan perustuvan sovelluksen yleiskatsaus](northwind-orders-canvas-overview.md) Northwind Traders varten.
-1. [Luo tilauksen valikoiman](northwind-orders-canvas-part1.md) itsellesi tai avaa **Northwind tilaukset (pohjaan perustuvat) - Aloita osa 2** sovelluksen, joka sisältää jo valikoiman.
+1. [Asenna Northwind Traders-tieto kanta ja-sovellukset](northwind-install.md).
+1. Tutustu Northwind Traders- [kangas sovelluksen yleiskatsaukseen](northwind-orders-canvas-overview.md) .
+1. [Luo tilaus valikoima](northwind-orders-canvas-part1.md) itse tai avaa **Northwind-tila ukset (piirto alusta) – Aloita osan 2** sovellus, joka sisältää jo kyseisen valikoiman.
 
 ## <a name="add-a-title-bar"></a>Lisää otsikkorivi
 
-Sovelluksen yläreunassa luoda otsikkorivi, joka mahtuu painikkeita tässä ohjeaiheessa loppuun mennessä.
+Luo sovelluksen yläosassa otsikko rivi, joka sisältää toiminto painikkeita tämän aiheen loppuun mennessä.
 
-1. - **Puu näkymän** ruudussa **Screen1** sen varmistamiseksi, että et vahingossa lisäät ohjausobjektin tilauksen valikoiman:
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse Screen1 puunäkymässä](media/northwind-orders-canvas-part2/titlebar-01.png)
-
-1. Käyttöön **Lisää** -välilehden **nimen** lisätä [ **nimen** ](controls/control-text-box.md) ohjausobjekti:
+1. Valitse **puunäkymä** -ruudussa **Screen1** varmistaaksesi, ettet vahingossa lisää ohjaus objektia tilaus valikoimaan:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää selite](media/northwind-orders-canvas-part2/titlebar-02.png)
+    > ![Valitse Screen1 puunäkymän ruudussa @ no__t-1
 
-    Uusi selite näytetään vain kerran, valikoiman yläpuolelta. Jos se tulee näkyviin valikoiman jokaisen kohteen, poistaa ensimmäisen esiintymän nimen, varmista, että näytön valitaan (kuten edellisessä vaiheessa kuvataan) ja Aseta otsikon uudelleen.
-
-1. Siirrä ja muuta ulottuvan näytön yläreunan uusi nimi:
+1. Lisää [**Selite**](controls/control-text-box.md) -ohjaus objekti valitsemalla **Lisää** -väli lehdestä **otsikko** :
 
     > [!div class="mx-imgBorder"]
-    > ![Siirrä ja muuta selite](media/northwind-orders-canvas-part2/titlebar-03.png)
+    > ![Lisää otsikko @ no__t-1
 
-1. Kaksoisnapsauta otsikon teksti ja kirjoita sitten **Northwind tilaukset**.
+    Uuden nimen pitäisi näkyä vain kerran valikoiman yläpuolella. Jos se näkyy kunkin valikoiman kohdassa, Poista nimen ensimmäinen esiintymä, varmista, että näyttö on valittuna (kuten edellisessä vaiheessa kuvataan), ja lisää sitten selite uudelleen.
 
-    Vaihtoehtoisesti muokata **tekstin** ominaisuus kaavarivillä saman tuloksen:
+1. Siirrä uutta otsikkoa ja muuta sen kokoa niin, että se ulottuu näytön yläreunaan:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta otsikkoriviä](media/northwind-orders-canvas-part2/titlebar-04.png)
+    > ![Siirrä otsikkoa ja muuta sen kokoa @ no__t-1
 
-1. Valitse **aloitus** Muotoile otsikon-välilehdessä:
-    - Fontin kokoa 24 osoittaa.
+1. Kaksoisnapsauta otsikon tekstiä ja kirjoita sitten **Northwind-tila ukset**.
+
+    Vaihtoehtoisesti voit muokata kaava rivin **Text** -ominaisuutta saman tuloksen saavuttamiseksi:
+
+    > [!div class="mx-imgBorder"]
+    > ![ muuta otsikko rivin teksti @ no__t-1
+
+1. Muotoile otsikko **Aloitus** -väli lehdellä:
+    - Suurenna fontin kokoa 24 pisteeseen.
     - Lihavoi teksti.
-    - Tee teksti valkoinen.
+    - Tee tekstistä valkoinen.
     - Keskitä teksti.
-    - Lisää tummansinistä täytön taustalla.
+    - Lisää taustalle tumma sininen täyttö.
 
     > [!div class="mx-imgBorder"]
-    > ![Aloitus-välilehden muotoiluasetukset](media/northwind-orders-canvas-part2/titlebar-05.png)
+    > ![Muotoilun asetukset aloitus-väli lehdessä @ no__t-1
 
-## <a name="add-an-edit-form-control"></a>Muokkaa-lomake-ohjausobjektin lisääminen
+## <a name="add-an-edit-form-control"></a>Muokkaa lomaketta-ohjaus objektin lisääminen
 
-Tässä osassa voit lisätä ohjausobjekteja näyttämään käyttäjä valitsee valikoiman tilauksen yhteenveto.
+Tässä osiossa lisätään ohjaus objektien yhteenveto, joka näyttää yhteenvedon mistä tahansa järjestyksestä, jonka käyttäjä valitsee valikoimasta.
 
-1. Käyttöön **Lisää** Lisää-välilehdessä [ **muokkauslomake** ](controls/control-form-detail.md) ohjausobjekti:
-
-    > [!div class="mx-imgBorder"]
-    > ![Muokkaa-lomake-ohjausobjektin lisääminen](media/northwind-orders-canvas-part2/form-01.png)
-
-    Oletusarvoisesti lomakkeen näkyy vasemmassa yläkulmassa, jossa muita ohjausobjekteja voi vaikeuttaa löytää:
+1. Lisää [**Muokkaa lomaketta**](controls/control-form-detail.md) -ohjaus objekti **Lisää** -väli lehdessä:
 
     > [!div class="mx-imgBorder"]
-    > ![Muokkaa lomaketta-ohjausobjektin oletussijainti](media/northwind-orders-canvas-part2/form-02.png)
+    > ![Lisää Muokkaa lomaketta-ohjaus objekti @ no__t-1
 
-1. Siirrä lomaketta ja muuta sen kattamaan otsikkorivin alapuolella näytön oikeassa yläkulmassa:
+    Oletus arvon mukaan lomake näkyy vasemmassa yläkulmassa, jossa muiden ohjaus objektien löytäminen voi olla hankalaa:
 
     > [!div class="mx-imgBorder"]
-    > ![Siirrä ja muuta muokkaa lomake-ohjausobjekti](media/northwind-orders-canvas-part2/form-03.png)
+    > ![Muokkaa lomake-ohjaus objektia oletus sijainnissa @ no__t-1
 
-1. Määritä kaavarivillä **DataSource** -ominaisuuden arvoksi:
+1. Siirrä lomaketta ja muuta sen kokoa niin, että se kattaa näytön oikean yläkulman otsikko rivin alla:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Muokkaa lomaketta-ohjaus objektin siirtäminen ja koon muuttaminen @ no__t-1
+
+1. Valitse kaava riviltä lomakkeen **DataSource** -ominaisuudeksi tämä arvo:
+
+    ```powerapps-dot
     Orders
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Muokkaa lomakkeen ohjausobjektin DataSource-ominaisuudeksi asetettu](media/northwind-orders-canvas-part2/form-04.png)
+    > ![Muokkaa lomaketta-ohjaus objektin DataSource-ominaisuudeksi @ no__t-1
 
-    Voit määrittää saman ominaisuuden **ominaisuudet** välilehti lähellä oikeaa reunaa, mutta tätä lähestymistapaa Lisää kenttiä, joita et tarvitse lomakkeeseen. Jos käytät kaavariviä, lomake on tyhjä.
+    Voit valita saman ominaisuuden **Ominaisuudet** -väli lehdessä lähellä oikeaa reunaa, mutta tämä lähestymis tapa lisää kenttiä, joita et tarvitse lomakkeeseen. Jos käytät kaava riviä, lomake pysyy tyhjänä.
 
-## <a name="add-and-arrange-fields"></a>Lisää ja Järjestä kentät
+## <a name="add-and-arrange-fields"></a>Kenttien lisääminen ja järjestäminen
 
-1. - **Ominaisuudet** lähellä oikeaa reunaa, valitse välilehti **Muokkaa kenttiä** avaamiseen **kentät** ruudussa:
-
-    > [!div class="mx-imgBorder"]
-    > ![Avaa kentät-ruudussa](media/northwind-orders-canvas-part2/form-05.png)
-
-1. - **Kentät** ruudussa **Lisää kenttä**, ja valitse sitten valintaruudut **asiakkaan** ja **työntekijän** kentät.
+1. Avaa **kentät** -ruutu valitsemalla **Ominaisuudet** -väli lehden lähellä oikeaa reunaa **Muokkaa kenttiä** :
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää asiakkaan ja työntekijä-kenttiä Muokkaa lomake-ohjausobjekti](media/northwind-orders-canvas-part2/form-06.png)
+    > ![Avaa kentät-ruutu @ no__t-1
 
-1. Vieritä alaspäin, kunnes nämä kentät näkyvät ja valitse sitten niiden valintaruudut:
+1. Valitse **kentät** -ruudussa **Lisää kenttä**ja valitse sitten **asiakas** -ja **työntekijä** kenttien valinta ruudut.
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää asiakas-ja työntekijä kentät Muokkaa lomaketta-ohjaus objektiin @ no__t-1
+
+1. Vieritä alaspäin, kunnes nämä kentät tulevat näkyviin, ja valitse sitten niiden valinta ruudut:
 
     - **Muistiinpanot**
-    - **Tilauksen päivämäärä**
-    - **Numero**
-    - **Tilauksen tila**
-    - **Maksettu päivämäärä**
+    - **Tila uksen päivä määrä**
+    - **Tila uksen numero**
+    - **Tila uksen tila**
+    - **Maksettu päivä määrä**
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää viisi kenttää Muokkaa lomake-ohjausobjekti](media/northwind-orders-canvas-part2/form-07.png)
+    > ![Lisää viisi kenttää Muokkaa lomaketta-ohjaus objektiin @ no__t-1
 
-1. Alareunassa **kentät** ruudussa **Lisää**, ja sulje sitten **kentät** ruudussa.
+1. Valitse **kentät** -ruudun alareunasta **Lisää**ja sulje sitten **kentät** -ruutu.
 
-    Lomake näyttää seitsemän kentät:
+    Lomakkeessa näkyvät seitsemän kenttää:
 
     > [!div class="mx-imgBorder"]
-    > ![Muokkaa lomakkeen ohjausobjekti näyttää seitsemän kentät](media/northwind-orders-canvas-part2/form-08.png)
+    > ![Muokkaa lomaketta-ohjaus objekti sisältää seitsemän kenttää @ no__t-1
 
     > [!NOTE]
-    > Minkä tahansa kentän näkyy punainen virhe-kuvake, jos ongelma saattanut, kun tietojen haun lähteestä. Voit ratkaista tämän ongelman päivittämällä tiedot:
+    > Jos jokin kenttä ilmaisee punaista virhe kuvaketta, ilmeni ongelma, kun tietoja vedettiin lähteestä. Ratkaise virhe päivittämällä tiedot:
     >
     > 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
-    > 1. - **Tietojen** ruudussa **tietolähteet**.
-    > 1. Kohdan **tilaukset**, valitse kolme pistettä (...), valitse **Päivitä**, ja sulje sitten **tietojen** ruudussa.
+    > 1. Valitse tieto **ruudussa** **tieto lähteet**.
+    > 1. Valitse **tila ukset**-kohdan vierestä kolme pistettä (...), valitse **Päivitä**ja sulje **tiedot** -ruutu.
     >
-    > Jos asiakkaan tai työntekijän nimi yhdistelmäruutu näyttää edelleen virhe, tarkista **ensisijainen tekstin** ja **käyttämällä SearchField** kunkin valitsemalla sen ja avaamalla ruudun **tietojen** ruutu. -Asiakas-ruudun molempiin kenttiin on asetettava **nwind_company**. Työntekijän-ruudun molempiin kenttiin on asetettava **nwind_lastname**.
+    > Jos asiakkaan tai työn tekijän nimen yhdistelmä ruutu näyttää edelleen virheen, tarkista kunkin ruudun **ensisijainen teksti** -ja haku **kenttä** valitsemalla se ja avaamalla sitten **tieto** ruutu. Asiakas-ruudussa molempien kenttien arvoksi on asetettava **nwind_company**. Työn tekijä-ruudussa molempien kenttien arvoksi on asetettava **nwind_lastname**.
 
-1. Kun lomake on valittuna, Muuta lomakkeen sarakkeiden määrä 3 12 **ominaisuudet** välilehti lähellä oikeaa reunaa.
+1. Kun lomake on valittuna, muuta lomakkeen sarakkeiden määrä 3-12: n **Ominaisuudet** -väli lehdellä lähellä oikeaa reunaa.
 
-    Tässä vaiheessa lisää joustavuutta, kuten Järjestä kentät:
+    Tämä vaihe lisää joustavuutta, kun järjestät kenttiä:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta sitten Muokkaa lomakkeen ohjausobjektin sarakkeiden määrä](media/northwind-orders-canvas-part2/form-08b.png)
+    > ![Muuta sitten sarakkeiden määrä Muokkaa lomaketta-ohjaus objektissa @ no__t-1
 
-    Monta Käyttöliittymän suunnitteluista riippuvaisia 12 sarakkeen asettelut, koska ne tasaisesti mahtuu rivien 1, 2, 3, 4, 6 ja 12 ohjausobjekteja. Tässä aiheessa luot rivit, jotka sisältävät 1, 2 tai 4 ohjausobjekteja.
+    Monet käyttö liittymä mallit käyttävät 12-sarake asetteluja, koska ne voivat sijoittaa tasaisesti 1, 2, 3, 4, 6 ja 12 ohjaus objektin riveihin. Tässä ohje aiheessa luodaan rivejä, jotka sisältävät 1, 2 tai 4 ohjaus objektia.
 
-1. Siirtäminen ja koon muuttaminen kentät vetämällä niiden kahvoista tavalliseen tapaan muun ohjausobjektin siten, että kukin rivi sisältää korttien tiedot ovat määritetyssä järjestyksessä:
+1. Siirrä kenttiä ja muuta niiden kokoa vetämällä niiden kahvoja samalla tavalla kuin mitä tahansa muuta ohjaus objektia, jotta jokainen rivi sisältää nämä tieto kortit määritetyssä järjestyksessä:
 
-    - Ensimmäisellä rivillä: **Tilausnumero**, **tilauksen tila**, **Tilauspäivä**, ja **maksettu päivämäärä**
-    - Toinen rivi: **Asiakkaan** ja **työntekijä**
+    - Ensimmäinen rivi: Tila uksen **numero**, tila uksen **tila**, **tilaus päivämäärä**ja **maksettu päivä määrä**
+    - Toinen rivi: **Asiakas** ja **työn tekijä**
     - Kolmas rivi: **Muistiinpanot**
 
     > [!NOTE]
-    > Olet ehkä helpompi leventää **huomautuksia**, **asiakkaan**, ja **työntekijän** tietojen kortit, ennen kuin voit järjestää ne.
+    > **Muistiinpanojen**, **asiakkaiden**ja **työn tekijöiden** tieto korttien laajentaminen voi olla helpompaa ennen niiden järjestämistä.
 
     > [!div class="mx-imgBorder"]
-    > ![Siirrä ja muuta kentät](media/northwind-orders-canvas-part2/form-rearrange.gif)
+    > ![Siirrä kenttiä ja muuta niiden kokoa @ no__t-1
 
-    Lisätietoja siitä, miten voit järjestää lomakkeen kenttien: [Tutustu tietolomakkeen asetteluun pohjaan perustuvat sovellukset-](working-with-form-layout.md).
+    Lisä tietoja kenttien järjestämisestä lomakkeessa: [Tutustu kangas sovellusten tieto lomakkeen rakenteeseen](working-with-form-layout.md).
 
-## <a name="hide-time-controls"></a>Piilota ohjausobjektien
+## <a name="hide-time-controls"></a>Piilota aika-ohjaus painikkeet
 
-Tässä esimerkissä sinun ei tarvitse päivämääräkentät aika osia, koska kyseinen taso askelväliä voi heikentää käyttäjä. Jos poistat ne, kaavoissa, jotka ovat riippuvaisia näiden ohjausobjektien päivitettävä päivämääräarvot tai määrittää toisen ohjausobjektin sijainnin tiedot-kortti saattaa aiheuttaa ongelmia. Sen sijaan piilottaa aika ohjausobjektit määrittämällä niiden **näkyvissä** ominaisuus.
+Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kyseinen askel väli voi häiritä käyttäjää. Jos poistat ne, saatat aiheuttaa ongelmia kaavoissa, jotka perustuvat kyse isiin ohjaus objekteihin, päivittääkseen päivämäärä arvoja tai määrittäessään toisen ohjaus objektin sijaintia tieto kortissa. Sen sijaan voit piilottaa aika-ohjaus objektin asettamalla sen **Visible** -ominaisuuden.
 
-1. - **Puu näkymän** ruudussa **tilauspäivämäärän** tietokortti.
+1. Valitse **puunäkymä** -ruudussa **Order Date** -tieto kortti.
 
-    Kortti voi olla eri nimi, mutta se sisältää **tilauspäivämäärän**.
+    Kortilla voi olla eri nimi, mutta se sisältää **tilaus päivämäärän**.
 
-1. Valitse tunnin, minuutin ja erotinmerkkiä ohjausobjektit VAIHTO-näppäintä pohjassa **tilauspäivämäärän** tietokortti.
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse aika ohjausobjektit tilauspäivämäärän kortissa](media/northwind-orders-canvas-part2/form-09.png)
-
-1. Määritä niiden **näkyvissä** ominaisuudeksi **false**.
-
-    Kaikkia valittuja ohjausobjekteja kadota muodossa:
+1. Pidä Vaihto näppäintä painettuna ja valitse tunti-, minuutti-ja kaksoispiste-erotin-ohjaus objekti **Order Date** -tieto kortissa.
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä Visible-ominaisuuden arvoksi false.](media/northwind-orders-canvas-part2/form-10.png)
+    > ![Valitse Time-ohjaus painikkeet Order Date-kortissa @ no__t-1
 
-1. Muuta kokoa [ **päivämäärävalitsin** ](controls/control-date-picker.md) täydellisen päivämäärän ohjausobjektin:
+1. Määrittää ohjaus objektien **Visible** -ominaisuudeksi **false**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Muuta päivämäärävalitsimen](media/northwind-orders-canvas-part2/form-11.png)
-
-    Seuraavaksi toista viimeisten muutaman vaiheet **maksettu päivämäärä** kenttä.
-
-1. - **Puu näkymän** ruudussa aika ohjausobjektit **maksettu päivämäärä** tietokortti:
+    Kaikki valitut ohjaus toiminnot katoavat lomakkeesta:
 
     > [!div class="mx-imgBorder"]
-    > ![Valitse ohjausobjekti kortissa maksettu päivämäärä](media/northwind-orders-canvas-part2/form-12.png)
+    > ![Valitse Visible-ominaisuudeksi false. ](media/northwind-orders-canvas-part2/form-10.png)
 
-1. Määritä valittuja ohjausobjekteja **näkyvissä** ominaisuudeksi **false**:
-
-    > [!div class="mx-imgBorder"]
-    > ![Määritä Visible-ominaisuuden arvoksi false.](media/northwind-orders-canvas-part2/form-13.png)
-
-1. Päivämäärävalitsin-kokoa **päivämäärä maksettu** kortti:
+1. Muuta [**päivämäärä valitsin**](controls/control-date-picker.md) -ohjaus objektin kokoa niin, että se näyttää koko päivä määrän:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta päivämäärävalitsimen](media/northwind-orders-canvas-part2/form-14.png)
+    > ![Muuta päivämäärä valitsin-ohjaus objektin kokoa @ no__t-1
 
-## <a name="connect-the-order-gallery"></a>Yhdistä order-valikoima
+    Seuraavaksi toistat viimeiset vaiheet **maksetun päivä määrä** -kentän kohdalla.
 
-1. - **Puu näkymän** ruudussa Kutista löytää tilauksen valikoiman nimi muodossa ja, tarvittaessa nimeä sen **Gallery1**.
+1. Valitse **puunäkymä** -ruudussa Time ohjaus objekteja **maksetun päivä määrä** -tieto kortissa:
 
-1. Määritä Yhteenveto lomakkeen **kohteen** ominaisuudeksi seuraava lauseke:
+    > [!div class="mx-imgBorder"]
+    > ![Valitse Time Control maksetun päivä määrän kortissa @ no__t-1
 
-    ```powerapps-comma
+1. Määrittää valittujen ohjaus objektien **Visible** -ominaisuudeksi **false**:
+
+    > [!div class="mx-imgBorder"]
+    > ![Valitse Visible-ominaisuudeksi false. ](media/northwind-orders-canvas-part2/form-13.png)
+
+1. Muuta päivämäärä valitsimen kokoa **Date maksullisella** kortilla:
+
+    > [!div class="mx-imgBorder"]
+    > ![Muuta päivämäärä valitsin-ohjaus objektin kokoa @ no__t-1
+
+## <a name="connect-the-order-gallery"></a>Yhdistä tilaus valikoima
+
+1. Kutista **puunäkymä** -ruudussa lomake, jotta löydät helpommin tilaus valikoiman nimen, ja nimeä se tarvittaessa uudelleen nimellä **Gallery1**.
+
+1. Valitse Yhteenveto lomakkeen **Item** -ominaisuudeksi tämä lauseke:
+
+    ```powerapps-dot
     Gallery1.Selected
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määrittää kohteen ominaisuuden arvo](media/northwind-orders-canvas-part2/form-15.png)
+    > ![Joukon kohteen ominaisuus lomakkeessa @ no__t-1
 
-    Lomake on haluamassasi järjestyksessä sovelluksen käyttäjä valitsee luettelon yhteenveto.
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse tilaus luetteloa ja näyttää sen yleiskatsaus muodossa](media/northwind-orders-canvas-part2/form-select.gif)
-
-## <a name="replace-a-data-card"></a>Korvaa tietojen kortti
-
-**Tilausnumero** on tunnus, joka Common Data Service-määrittää automaattisesti, kun tietue luodaan. Tämä kenttä on [ **Tekstisyöte** ](controls/control-text-input.md) ohjausobjektin oletusarvon mukaan, mutta se korvataan ja selite niin, että käyttäjä voi muokata tässä kentässä.
-
-1. Valitse lomake, valitse **Muokkaa kenttiä** - **ominaisuudet** välilehti lähellä oikeaa reunaa ja valitse sitten **tilausnumero** kenttä:
+    Lomakkeessa näytetään Yhteenveto siitä, missä järjestyksessä sovellus käyttäjä valitsee luettelossa.
 
     > [!div class="mx-imgBorder"]
-    > ![Valitse tilauksen numerokenttää](media/northwind-orders-canvas-part2/alt-01.png)
+    > ![Valitse luettelosta tila uksen yleiskatsaus muodossa @ no__t-1
 
-1. Avaa **ohjausobjekti tyyppi** luettelo:
+## <a name="replace-a-data-card"></a>Korvaa tieto kortti
 
-    > [!div class="mx-imgBorder"]
-    > ![Avaa ** tyyppi ** luettelo](media/northwind-orders-canvas-part2/alt-02.png)
+**Tilaus numero** on tunnus, joka Common Data Service määrittää automaattisesti, kun luot tietueen. Tällä kentällä on oletus arvon mukaan [**teksti syöte**](controls/control-text-input.md) -ohjaus objekti, mutta korvaat sen otsikolla, jotta käyttäjä ei voi muokata tätä kenttää.
 
-1. Valitse **Näytä teksti** tietokortti:
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse ** tekstin ** tietojen kortti](media/northwind-orders-canvas-part2/alt-02b.png)
-
-1. Sulje **kentät** ruudussa.
-
-    Käyttäjä voi enää muuttaa tilausnumero:
+1. Valitse lomake, valitse **Muokkaa kenttiä** **Ominaisuudet** -väli lehdellä lähellä oikeaa reunaa ja valitse sitten **tila uksen numero** -kenttä:
 
     > [!div class="mx-imgBorder"]
-    > ![Numero on vain luku-tilassa](media/northwind-orders-canvas-part2/alt-03.png)
+    > ![Valitse tilaus numero kenttä @ no__t-1
 
-1. Valitse **aloitus** muuttaa 20 pisteeseen tilausnumero fonttikokoa niin, että kenttä on helpompi löytää-välilehdessä:
-
-    > [!div class="mx-imgBorder"]
-    > ![Muuta tilausnumero fonttikokoa](media/northwind-orders-canvas-part2/alt-04.png)
-
-## <a name="use-a-many-to-one-relationship"></a>Käytä monta yhteen-suhde
-
-**Tilaukset** entiteetillä on monta-yhteen suhdetta **työntekijät** entiteetin: kullakin työntekijällä voit luoda useita tilauksia, mutta kunkin tilauksen voidaan määrittää vain yhdelle työntekijälle. Kun käyttäjä valitsee työntekijä [ **yhdistelmäruutu** ](controls/control-combo-box.md) ohjausobjektin, sen **valittu** ominaisuus tarjoaa kyseisen työntekijän koko tietue **työntekijät**  entiteetin. Näin ollen voit määrittää [ **kuvan** ](controls/control-image.md) ohjausobjekti näyttämään haluamasi työntekijän kuvan käyttäjä valitsee yhdistelmäruudun.
-
-1. Valitse **työntekijän** tietokortti:
+1. Avaa **ohjaus objektin tyyppi** -lista:
 
     > [!div class="mx-imgBorder"]
-    > ![Valitse työntekijän tietokortti](media/northwind-orders-canvas-part2/employee-01.png)
+    > ![Avaa * * ohjaus objekti tyyppi * * List @ no__t-1
 
-1. Tässä **lisäasetukset** lähellä oikeaa reunaa välilehdeltä tiedot Avaa kortin lukitus jotta voit muokata kaavoja, jotka olivat aiemmin vain luku-tilassa:
-
-    > [!div class="mx-imgBorder"]
-    > ![Työntekijän tietoja kortin lukituksen avaaminen](media/northwind-orders-canvas-part2/employee-02.png)
-
-1. Vähennä tietokortti, tehdäksemme työntekijän kuva yhdistelmäruudun leveys:
+1. Valitse **Näytä teksti** tieto kortti:
 
     > [!div class="mx-imgBorder"]
-    > ![Yhdistelmäruutu ohjausobjektin koon](media/northwind-orders-canvas-part2/employee-03b.png)
+    > ![Valitse * * Näytä teksti * * tieto kortti @ no__t-1
 
-1. Valitse **Lisää** -välilehden **Media** > **kuvan**:
+1. Sulje **kentät** -ruutu.
 
-    > [!div class="mx-imgBorder"]
-    > ![Lisää kuva](media/northwind-orders-canvas-part2/employee-04.png)
-
-    Kuva näkyy tietokortti, joka laajentaa sen mukaisesti:
+    Käyttäjä ei voi enää muuttaa järjestys numeroa:
 
     > [!div class="mx-imgBorder"]
-    > ![Työntekijän tietoja kortin, jossa kuva-ohjausobjekti](media/northwind-orders-canvas-part2/employee-05.png)
+    > @no__t – 0Tilausnumero on vain luku-tilassa @ no__t-1
 
-1. Muuta kuvan kokoa ja siirrä se yhdistelmäruudun oikealla:
+1. Vaihda **Aloitus** -väli lehdellä järjestys numeron fontin kooksi 20 pistettä, jotta kenttää on helpompi löytää:
 
     > [!div class="mx-imgBorder"]
-    > ![Siirrä ja muuta kuva-ohjausobjektin](media/northwind-orders-canvas-part2/employee-06.png)
+    > ![Muuta järjestys numeron fontin koko @ no__t-1
 
-1. Määritä **kuvan** ominaisuudeksi tämä kaava numero DataCardValue loppuun korvaamalla tarvittaessa:
+## <a name="use-a-many-to-one-relationship"></a>Monta yhteen-suhteen käyttäminen
 
-    ```powerapps-comma
+**Order** -entiteetillä on monta yhteen-suhde **työn tekijät** -entiteettiin: jokainen työn tekijä voi luoda useita tila uksia, mutta jokainen tilaus voidaan määrittää vain yhdelle työn tekijälle. Kun käyttäjä valitsee työn tekijän [**yhdistelmä ruutu**](controls/control-combo-box.md) -ohjaus objektissa, sen **valittu** ominaisuus antaa työn tekijän koko tietueen **työn tekijät** -entiteetistä. Tämän seura uksena voit määrittää [**kuva**](controls/control-image.md) -ohjaus objektin näyttämään kuvan siitä, mitä työn tekijää käyttäjä valitsee yhdistelmä ruudusta.
+
+1. Valitse **työn tekijän** tieto kortti:
+
+    > [!div class="mx-imgBorder"]
+    > @no__t – 0Valitse työn tekijän tieto kortti @ no__t-1
+
+1. Avaa **lisä asetukset** -väli lehden oikean reunan lähellä oleva tieto kortti, jotta voit muokata vain luku-tilassa olevia kaavoja:
+
+    > [!div class="mx-imgBorder"]
+    > ![Työn tekijän tieto kortin lukituksen poistaminen @ no__t-1
+
+1. Pienennä tieto kortissa yhdistelmä ruudun leveyttä, jotta voit tehdä tilaa työn tekijän kuvalle:
+
+    > [!div class="mx-imgBorder"]
+    > ![Muuta yhdistelmä ruudun ohjaus objektin kokoa @ no__t-1
+
+1. Valitse **Lisää** -väli lehdeltä **tieto väline** > -**kuva**:
+
+    > [!div class="mx-imgBorder"]
+    > ![Lisää kuva @ no__t-1
+
+    Tieto kortissa näkyy kuva, joka laajenee sen mukaan:
+
+    > [!div class="mx-imgBorder"]
+    > ![Työntekijätietokortti ja kuva ohjaus objekti @ no__t-1
+
+1. Muuta kuvan kokoa ja siirrä se yhdistelmä ruudun oikealle puolelle:
+
+    > [!div class="mx-imgBorder"]
+    > ![Siirrä kuva-ohjaus objektia ja muuta sen kokoa @ no__t-1
+
+1. Valitse kuvan **ominaisuudeksi** Tämä kaava ja korvaa luku DataCardValue-kohteen lopussa tarvittaessa:
+
+    ```powerapps-dot
     DataCardValue7.Selected.Picture
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määrittää kuvan Image-ominaisuus](media/northwind-orders-canvas-part2/employee-07.png)
+    > ![Kuvaa kuvan ominaisuudeksi @ no__t-1
 
-    Valitun työntekijän kuva näkyy.
+    Valitun työn tekijän kuva tulee näkyviin.
 
-1. Kun pidät Alt-näppäintä, valitse eri työntekijä yhdistelmäruudussa vahvistaaksesi, että kuva muuttuu.
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse työntekijä näyttää kyseisen työntekijän kuva](media/northwind-orders-canvas-part2/employee-select.gif)
-
-## <a name="add-a-save-icon"></a>Tallenna lisäämiskuvake
-
-1. - **Puu näkymän** ruudussa **Screen1**, ja valitse sitten **Lisää** > **kuvakkeet**  >  **Tarkista**:
+1. Kun pidät Alt-näppäintä painettuna, valitse toinen työn tekijä yhdistelmä ruudusta vahvistaaksesi, että kuva muuttuu myös.
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää valintamerkki kuvake](media/northwind-orders-canvas-part2/save-01.png)
+    > ![Valitse työn tekijä, joka näyttää, että työn tekijän kuva @ no__t-1
 
-    [ **Tarkista** ](controls/control-shapes-icons.md) kuvake näkyy vasemmassa yläkulmassa oletusarvon mukaan, jossa muita ohjausobjekteja voi tehdä kuvake vaikea löytää:
+## <a name="add-a-save-icon"></a>Lisää tallennus kuvake
 
-    > [!div class="mx-imgBorder"]
-    > ![Oletussijainti kuvake](media/northwind-orders-canvas-part2/save-02.png)
-
-1. Käyttöön **aloitus** muuttaa-välilehden **väri** valkoinen, kuvakkeen kokoa ja siirrä se otsikkorivin oikean reunan lähellä olevaa kuvaketta ominaisuus:
+1. Valitse **puunäkymä** -ruudussa **Screen1**ja valitse sitten **lisää** > **kuvaketta** > **Tarkista**:
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä väriä, kokoa ja Tallenna sijainti kuvake](media/northwind-orders-canvas-part2/save-03.png)
+    > ![Lisää Check-Mark-kuvake @ no__t-1
 
-1. - **Puu näkymän** ruudussa Vahvista, että lomakkeen nimi on **Form1**, ja määritä sitten kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+    [**Tarkistus**](controls/control-shapes-icons.md) kuvake näkyy Oletus arvon mukaan vasemmassa yläkulmassa, jossa muut ohjaus objektin kuvakkeet saattavat vaikeuttaa sen löytämistä:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Icon oletus sijainnissa @ no__t-1
+
+1. Vaihda **Aloitus** -väli lehdessä kuvakkeen **väri** -ominaisuudeksi valkoinen, muuta kuvakkeen kokoa ja siirrä se otsikko rivin oikean reunan lähelle:
+
+    > [!div class="mx-imgBorder"]
+    > ![Määritä Save-kuvakkeen väri, koko ja sijainti @ no__t-1
+
+1. Varmista **puunäkymä** -ruudussa, että lomakkeen nimi on **Form1**, ja määritä sitten kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
     SubmitForm( Form1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä Tallenna kuvakkeen OnSelect-ominaisuus](media/northwind-orders-canvas-part2/save-04.png)
+    > ![Määritä Tallenna-kuvakkeen OnSelect-ominaisuudeksi @ no__t-1
 
-    Kun käyttäjä valitsee kuvakkeen, [ **SubmitForm** ](functions/function-form.md) funktio kerää muodossa muutettu arvoja ja lähettää ne tietolähteeseen. Pistettä maaliskuuta näytön yläreunassa, kun tiedot lähetetään ja tilauksen valikoima päivittyy muutokset, kun prosessi on valmis.
+    Kun käyttäjä valitsee kuvakkeen, [**Submitform**](functions/function-form.md) -funktiolla kerätään kaikki muuttuneet arvot lomakkeeseen ja lähetetään ne tieto lähteeseen. Pisteet maaliskuussa näytön yläreunassa, kun tiedot lähetetään, ja järjestys valikoima heijastaa muutoksia prosessin päättymisen jälkeen.
 
-1. Määritä kuvakkeen **DisplayMode** -ominaisuuden arvoksi tämä kaava:
+1. Valitse kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    If( Form1.Unsaved; DisplayMode.Edit; DisplayMode.Disabled )
+    ```powerapps-dot
+    If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Kuvakkeen DisplayMode-ominaisuuden](media/northwind-orders-canvas-part2/save-05.png)
+    > ![Asenna kuvakkeen DisplayMode-ominaisuus @ no__t-1
 
-    Jos lomake-kaikki muutokset on tallennettu, kuvake on poistettu käytöstä, ja se näkyy **DisabledColor**, jonka määrittää Seuraava.
+    Jos kaikki lomakkeen muutokset on tallennettu, kuvake on poistettu käytöstä ja näkyy **Disabledcolor**-kohteessa, joka määritetään seuraavaksi.
 
-1. Määritä kuvakkeen **DisabledColor** ominaisuudeksi tämä arvo:
+1. Valitse kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Kuvakkeen DisabledColor ominaisuuden](media/northwind-orders-canvas-part2/save-06.png)
+    > ![Asenna kuvakkeen DisabledColor-ominaisuus @ no__t-1
 
-    Käyttäjä voi tallentaa muutoksia tilaus valitsemalla Tarkista-kuvakkeen, joka on poistettu käytöstä ja himmennettynä, kunnes käyttäjä tekee muutoksen jälkeen:
-
-    > [!div class="mx-imgBorder"]
-    > ![muutosten tallentaminen](media/northwind-orders-canvas-part2/save-submit.gif)
-
-## <a name="add-a-cancel-icon"></a>Lisää Peruuta-kuvaketta
-
-1. Valitse **Lisää** -välilehden **kuvakkeet** > **Peruuta**:
+    Käyttäjä voi tallentaa tila uksen muutokset valitsemalla Tarkista-kuvakkeen, joka poistetaan käytöstä ja himmennetään, kunnes käyttäjä tekee toisen muutoksen:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää Peruuta-kuvaketta](media/northwind-orders-canvas-part2/save-07.png)
+    > ![muutosten tallentaminen @ no__t-1
 
-    Kuvake näkyy vasemmassa yläkulmassa oletusarvoisesti, jossa muita ohjausobjekteja voi tehdä kuvake vaikea löytää:
+## <a name="add-a-cancel-icon"></a>Lisää peruutus kuvake
 
-    > [!div class="mx-imgBorder"]
-    > ![Peruuta-kuvaketta oletussijainti](media/northwind-orders-canvas-part2/save-08.png)
-
-1. - **Aloitus** -välilehdessä olevaa kuvaketta muuttaa **väri** valkoinen, kuvakkeen kokoa ja siirrä se tarkistus-kuvake vasemmalta ominaisuus:
+1. Valitse **Lisää** -väli lehdeltä **kuvakkeet** > **Peruuta**:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta väriä, kokoa ja sijaintia Peruuta-kuvaketta](media/northwind-orders-canvas-part2/save-09.png)
+    > ![Lisää peruutus kuvake @ no__t-1
 
-1. Määritä Peruuta-kuvaketta **OnSelect** -ominaisuuden arvoksi tämä kaava:
+    Kuvake näkyy Oletus arvon mukaan vasemmassa yläkulmassa, jossa muut ohjaus objektin kuvakkeet saattavat vaikeuttaa sen löytämistä:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Peruuta-kuvake oletus sijainnissa @ no__t-1
+
+1. Vaihda **Aloitus** -väli lehdessä kuvakkeen **väri** -ominaisuudeksi valkoinen, muuta kuvakkeen kokoa ja siirrä se tarkistus kuvakkeen vasemmalle puolelle:
+
+    > [!div class="mx-imgBorder"]
+    > ![Peruuta-kuvakkeen värin, koon ja sijainnin muuttaminen @ no__t-1
+
+1. Määritä peruutus kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
     ResetForm( Form1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Peruuta-kuvaketta OnSelect-ominaisuuden](media/northwind-orders-canvas-part2/save-10.png)
+    > ![Määritä peruutus kuvakkeen OnSelect-ominaisuudeksi @ no__t-1
 
-    [ **ResetForm** ](functions/function-form.md) funktio Hylkää kaikki muutokset lomakkeeseen, joka palauttaa sen alkuperäiseen tilaan.
+    [**Resetform**](functions/function-form.md) -funktio hylkää kaikki lomakkeen muutokset, mikä palauttaa sen alkuperäiseen tilaan.
 
-1. Määritä Peruuta-kuvaketta **DisplayMode** -ominaisuuden arvoksi tämä kaava:
+1. Valitse Peruuta-kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Edit; DisplayMode.Disabled )
+    ```powerapps-dot
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Peruuta-kuvaketta DisplayMode-ominaisuuden](media/northwind-orders-canvas-part2/save-11.png)
+    > ![Valitse peruutus kuvakkeen DisplayMode-ominaisuus @ no__t-1
 
-    Tämä kaava eroaa hieman se tarkistus-kuvakkeen. Peruuta-kuvaketta on poistettu käytöstä, jos kaikki muutokset on tallennettu tai lomake on **uusi** tilan, joka ottaa Seuraava. Tässä tapauksessa **ResetForm** hylkää uuden tietueen.
+    Tämä kaava eroaa hieman tarkistus kuvakkeen yhdestä kohteesta. Peruutus kuvake on poistettu käytöstä, jos kaikki muutokset on tallennettu tai jos lomake on **uudessa** tilassa, joka otetaan käyttöön seuraavaksi. Tässä tapa uksessa **Resetform** hylkää uuden tietueen.
 
-1. Määritä Peruuta-kuvaketta **DisabledColor** ominaisuudeksi tämä arvo:
+1. Valitse Peruuta-kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Peruuta-kuvaketta DisabledColor ominaisuuden](media/northwind-orders-canvas-part2/save-12.png)
+    > ![Valitse Peruuta-kuvakkeen DisabledColor-ominaisuus @ no__t-1
 
-    Käyttäjä peruuttaa tilauksen muutokset ja tarkista ja Peruuta-kuvakkeet on poistettu käytöstä ja himmennettynä, jos kaikki muutokset on tallennettu:
-
-    > [!div class="mx-imgBorder"]
-    > ![Tallennetaan ja peruutetaan muutokset](media/northwind-orders-canvas-part2/save-cancel.gif)
-
-## <a name="add-an-add-icon"></a>Lisää Lisää-kuvake
-
-1. Valitse **Lisää** -välilehden **kuvakkeet** > **Lisää**.
+    Käyttäjä voi peruuttaa tila uksen muutokset, ja tarkistus-ja peruutus kuvakkeet on poistettu käytöstä ja himmennettynä, jos kaikki muutokset on tallennettu:
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää Lisää-kuvake](media/northwind-orders-canvas-part2/save-13.png)
+    > ![Muutosten tallentaminen ja peruuttaminen @ no__t-1
 
-    **Lisää** kuvake näkyy vasemmassa yläkulmassa oletusarvon mukaan, jossa muita ohjausobjekteja voi vaikeuttaa löytää:
+## <a name="add-an-add-icon"></a>Lisää kuvake
 
-    > [!div class="mx-imgBorder"]
-    > ![Lisää kuvake oletussijainti](media/northwind-orders-canvas-part2/save-14.png)
-
-1. Käyttöön **aloitus** välilehti, Määritä **väri** Lisää-kuvaketta, valkoinen, kuvakkeen kokoa ja siirrä se vasemmalla puolella Peruuta-kuvaketta ominaisuus:
+1. Valitse **Lisää** -väli lehdeltä **kuvakkeet** > **Add**.
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta väriä, kokoa ja lisää kuvaketta sijainti](media/northwind-orders-canvas-part2/save-15.png)
+    > ![Lisää kuvake @ no__t-1
 
-1. Määritä lisää kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava:
+    **Lisää** -kuvake näkyy Oletus arvon mukaan vasemmassa yläkulmassa, jossa muiden ohjaus objektien löytäminen voi olla hankalaa:
 
-    ```powerapps-comma
+    > [!div class="mx-imgBorder"]
+    > ![Lisää-kuvakkeen oletus sijainti @ no__t-1
+
+1. Valitse **Aloitus** -väli lehdeltä lisää-kuvakkeen **väri** -ominaisuudeksi valkoinen, muuta kuvakkeen kokoa ja siirrä se peruutus kuvakkeen vasemmalle puolelle:
+
+    > [!div class="mx-imgBorder"]
+    > ![Muuta lisää-kuvakkeen väriä, kokoa ja sijaintia @ no__t-1
+
+1. Määritä lisää-kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
     NewForm( Form1 )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää kuvake OnSelect-ominaisuuden](media/northwind-orders-canvas-part2/save-15b.png)
+    > ![Määritä lisää-kuvakkeen OnSelect-ominaisuudeksi @ no__t-1
 
-    [ **NewForm** ](functions/function-form.md) funktio näyttää tyhjä tietue muodossa.  
+    [**NewForm**](functions/function-form.md) -funktiolla näytetään tyhjä tietue lomakkeessa.  
 
-1. Määritä lisää kuvakkeen **DisplayMode** -ominaisuuden arvoksi tämä kaava:
+1. Valitse Lisää-kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
+    ```powerapps-dot
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää kuvake DisplayMode-ominaisuuden](media/northwind-orders-canvas-part2/save-16.png)
+    > ![Lisää kuvakkeen DisplayMode-ominaisuus @ no__t-1
 
-    Kaava poistaa käytöstä näissä olosuhteissa Lisää-kuvaketta:
+    Kaava poistaa Lisää-kuvakkeen käytöstä näissä olosuhteissa:
 
-    - Käyttäjä tekee muutoksia, mutta ei tallenna tai Peruuta, joka on Vastakkaiset toiminta-valintaruutu ja Peruuta-kuvakkeet.
-    - Käyttäjä valitsee Lisää-kuvaketta, mutta ei tee muutoksia.
+    - Käyttäjä tekee muutoksia, mutta ei Tallenna tai Peruuta niitä, mikä on päinvastainen käyttäytyminen tarkistus-ja peruutus kuvakkeissa.
+    - Käyttäjä valitsee lisää-kuvakkeen, mutta ei tee muutoksia.
 
-1. Määritä lisää kuvakkeen **DisabledColor** ominaisuudeksi tämä arvo:
+1. Valitse Lisää-kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Lisää kuvake DisabledColor ominaisuuden](media/northwind-orders-canvas-part2/save-17.png)
+    > ![Valitse lisää-kuvakkeen DisabledColor-ominaisuus @ no__t-1
 
-    Käyttäjä voi luoda tilauksen, jos hän ei tehdä muutoksia tai ne tallentaa tai peruuttaa ne tehdyt muutokset. (Jos käyttäjä valitsee tämän kuvakkeen, hän voi valita sitä uudelleen, kunnes ne yhden tai useamman muutokset ja Tallenna tai Peruuta muutokset):
+    Käyttäjä voi luoda tila uksen, jos hän ei tee muutoksia tai jos hän tallentaa tai peruuttaa tekemäsi muutokset. (Jos käyttäjä valitsee tämän kuvakkeen, hän ei voi valita sitä uudelleen, ennen kuin hän tekee yhden tai useamman muutoksen ja tallentaa tai peruuttaa muutokset):
 
     > [!div class="mx-imgBorder"]
-    > ![Tilauksen luominen](media/northwind-orders-canvas-part2/save-new.gif)
+    > ![Luo tilaus @ no__t-1
 
 > [!NOTE]
-> Jos luot ja tallennat tilauksen, joudut ehkä vierittämään tilauksen valikoima näyttämään uuden tilauksen. Se ei ole yhteensä hinta, koska et ole lisännyt mitään Tilaustiedot vielä.
+> Jos luot ja tallennat tila uksen, sinun on ehkä vieritettävä alaspäin järjestys valikoimassa, jotta voit näyttää uuden tilauksesi. Sillä ei ole kokonaishintaa, koska et ole vielä lisännyt tila uksen tietoja.
 
-## <a name="add-a-trash-icon"></a>Lisää Roskakori-kuvaketta
+## <a name="add-a-trash-icon"></a>Lisää roska kori-kuvake
 
-1. Valitse **Lisää** -välilehden **kuvakkeet** > **roskakori**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Lisää roskakorikuvake](media/northwind-orders-canvas-part2/save-18.png)
-
-    **Roskakori** kuvake näkyy vasemmassa yläkulmassa oletusarvon mukaan, jossa muita ohjausobjekteja voi vaikeuttaa löytää:
+1. Valitse **Lisää** -väli lehdeltä **kuvakkeet** > **roska koriin**.
 
     > [!div class="mx-imgBorder"]
-    > ![Oletussijainti Roskakorin kuvaketta](media/northwind-orders-canvas-part2/save-19.png)
+    > ![Lisää roska kori kuvake @ no__t-1
 
-1. - **Aloitus** välilehdeltä muuttaa roskakorin kuvaketta **väri** ominaisuuden valkoinen, kuvakkeen kokoa ja siirrä se vasemmalta puolelta Lisää kuvaketta:
+    **Roska kori** -kuvake näkyy Oletus arvon mukaan vasemmassa yläkulmassa, jossa muiden ohjaus objektien löytäminen voi olla hankalaa:
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta väriä, kokoa ja sijaintia Roskakorin kuvaketta](media/northwind-orders-canvas-part2/save-20.png)
+    > ![Roska kori kuvakkeen oletus sijainti @ no__t-1
 
-1. Määritä Roskakorin kuvaketta **OnSelect** -ominaisuuden arvoksi tämä kaava:
+1. Vaihda **Aloitus** -väli lehdellä roska kori-kuvakkeen **väri** -ominaisuudeksi valkoinen, muuta kuvakkeen kokoa ja siirrä se lisää-kuvakkeen vasemmalle puolelle:
 
-    ```powerapps-comma
-    Remove( Orders; Gallery1.Selected )
+    > [!div class="mx-imgBorder"]
+    > ![Roska kori kuvakkeen värin, koon ja sijainnin muuttaminen @ no__t-1
+
+1. Määritä Trash-kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
+
+    ```powerapps-dot
+    Remove( Orders, Gallery1.Selected )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Määritä Roskakorin kuvaketta OnSelect-ominaisuus](media/northwind-orders-canvas-part2/save-21.png)
+    > ![Määritä Trash-kuvakkeen OnSelect-ominaisuudeksi @ no__t-1
 
-    [ **Poistaa** ](functions/function-remove-removeif.md) -funktio poistaa tietueen tietolähteestä. Tässä kaavassa funktio poistaa tietueen, joka valitaan tilauksen valikoimassa. Koska lomake näyttää lisätietoja tietuetta, jotta käyttäjä helpommin tunnistaa tietueen, joka poistaa kaavan lähellä yhteenvetona (ei valikoiman tilauksen) näkyy Roskakorin kuvaketta.
+    [**Remove**](functions/function-remove-removeif.md) -funktiolla poistetaan tietue tieto lähteestä. Tässä kaavassa tämä ominaisuus poistaa tila uksen valikoimasta valitun tietueen. Roska kori-kuvake näkyy yhteenveto lomakkeen lähellä (ei järjestys valikoimassa), koska lomake näyttää lisä tietoja tietueesta, joten käyttäjä voi helpommin tunnistaa tietueen, jonka kaava poistaa.
 
-1. Määritä Roskakorin kuvaketta **DisplayMode** -ominaisuuden arvoksi tämä kaava:
+1. Valitse Trash-kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    If( Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
+    ```powerapps-dot
+    If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![Roskakorin kuvaketta DisplayMode-ominaisuuden](media/northwind-orders-canvas-part2/save-22.png)
+    > ![Roska korin kuvakkeen DisplayMode-ominaisuuden arvo on @ no__t-1
 
-    Tämä kaava poistaa käytöstä Roskakorin kuvaketta, jos käyttäjä on luomassa tietuetta. Ennen kuin käyttäjä tallentaa tietueen **poistaa** funktiolla ei ole tietuetta, poista.
+    Tämä kaava poistaa käytöstä roska kori-kuvakkeen, jos käyttäjä luo tietueen. **Poista** -funktiolla ei ole poistettavaa tietuetta, ennen kuin käyttäjä tallentaa tietueen.
 
-1. Määritä Roskakorin kuvaketta **DisabledColor** ominaisuudeksi tämä arvo:
+1. Valitse Trash-kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Gray
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![DisabledColor ominaisuuden Roskakori-kuvaketta](media/northwind-orders-canvas-part2/save-23.png)
+    > ![Roska korin kuvakkeen DisabledColor-ominaisuuden arvo on @ no__t-1
 
-    Käyttäjä voi poistaa tilaus.
+    Käyttäjä voi poistaa tila uksen.
 
     > [!div class="mx-imgBorder"]
-    > ![Poistetaan tilauksia](media/northwind-orders-canvas-part2/save-delete.gif)
+    > ![Tilausten poistaminen @ no__t-1
 
 ## <a name="summary"></a>Yhteenveto
 
-Recap, lisätä lomakkeen, jonka käyttäjä voi näyttää ja muokata kunkin tilauksen yhteenveto ja käyttää näitä elementtejä:
+Voit lisätä yhteenvedon lomakkeeseen, jossa käyttäjä voi näyttää ja muokata kunkin tila uksen yhteenvetoa, ja käytit näitä elementtejä:
 
-- Lomake, joka näyttää tietoja **tilaukset** entiteetin: **Form1.DataSource =** `Orders`
-- Lomakkeen ja tilauksen valikoiman välinen yhteys: **Form1.Item =** `Gallery1.Selected`
-- Vaihtoehtoinen ohjausobjektille **tilausnumero** kenttä: **Näytä teksti**
-- Näytä kuva työntekijän monta yhteen suhde **työntekijän** tietokortti: `DataCardValue1.Selected.Picture`
-- Kuvake muutosten tallentamiseksi tilauksen: `SubmitForm( Form1 )`
-- Kuvakkeen Peruuta tilaus muutokset: `ResetForm( Form1 )`
-- Kuvakkeen tilauksen luominen: `NewForm( Form1 )`
-- Kuvakkeen poistaa tilauksen: `Remove( Orders; Gallery1.Selected )`
+- Lomake, joka sisältää **tila ukset** -entiteetin tiedot: **Form1. DataSource =** `Orders`
+- Lomakkeen ja järjestys valikoiman välinen kytkentä: **Form1. Item =** `Gallery1.Selected`
+- **Järjestys numero** -kentän vaihtoehtoinen ohjaus objekti: **Näytä teksti**
+- Monta yhteen-suhde, joka näyttää työn tekijän kuvan **työn tekijän** tieto kortissa: `DataCardValue1.Selected.Picture`
+- Kuvake, joka tallentaa tila uksen muutokset: `SubmitForm( Form1 )`
+- Kuvake, joka peruuttaa tila uksen muutokset: `ResetForm( Form1 )`
+- Tila uksen luonnin kuvake: `NewForm( Form1 )`
+- Tila uksen poistamis kuvake: `Remove( Orders, Gallery1.Selected )`
 
 ## <a name="next-step"></a>Seuraava vaihe
 
-Seuraavassa aiheessa lisäät toisen valikoima näyttämään jokaisen order tuotteet ja muutat näiden tietojen avulla [ **Patch** ](functions/function-patch.md) funktio.
+Seuraavassa ohje aiheessa lisäät toisen valikoiman, joka näyttää kunkin tila uksen tuotteet, ja muutat näitä tietoja käyttämällä [**patch**](functions/function-patch.md) -funktiolla.
 
 > [!div class="nextstepaction"]
-> [Luo tietoja-valikoiman](northwind-orders-canvas-part3.md)
+> [Luo tieto valikoima](northwind-orders-canvas-part3.md)

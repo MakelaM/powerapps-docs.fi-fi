@@ -6,32 +6,31 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/26/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ce8128f3a5eddf3a67fe2082844bf996c25adc05
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 7ab695d461cb980556a3027297c3e7f5ac5bde61
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551381"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985507"
 ---
 # <a name="concurrent-function-in-powerapps"></a>PowerAppsin Concurrent-funktio
 Arvioi useita kaavoja keskenään samanaikaisesti.
 
 ## <a name="description"></a>Kuvaus
-**Concurrent**-funktio arvioi useita kaavoja samaan aikaan. Yleensä kaavat lasketaan ketjuttamalla niitä yhdessä [ **;** ](operators.md) operaattoria, joka laskee kaikki peräkkäisessä järjestyksessä järjestyksessä. Kun sovellus suorittaa toimintoja samanaikaisesti, käyttäjät saavat tuloksen tavallista nopeammin.
+**Concurrent**-funktio arvioi useita kaavoja samaan aikaan. Yleensä useita kaavoja arvioidaan ketjuttamalla ne yhdessä [ **.** ](operators.md) -operaattorin kanssa, joka arvioi kunkin järjestyksessä järjestyksessä. Kun sovellus suorittaa toimintoja samanaikaisesti, käyttäjät saavat tuloksen tavallista nopeammin.
 
 Paranna sovelluksesi suorituskykyä, kun se lataa tietoja, käyttämällä sovelluksen [**OnStart**](../controls/control-screen.md)-ominaisuuden **Concurrent**-funktiota. Kun tietokutsut eivät ala ennen edellisten kutsujen valmistumista, sovelluksen on odotettava kaikkien pyyntöaikojen summaa. Jos tietokutsut alkavat samanaikaisesti, sovelluksen on odotettava vain pisimmän pyyntöajan verran. Selaimet parantavat usein suorituskykyä suorittamalla tietotoimintoja samanaikaisesti.
 
-Ei voida ennustaa, missä järjestyksessä kaavojen arviointi **Concurrent**-funktiossa alkaa ja päättyy. **Concurrent**-funktion kaavoissa ei tulisi olla riippuvuuksia muihin kaavoihin samassa **Concurrent**-funktiossa, ja PowerApps tuo näyttöön virhesanoman, jos riippuvuuksia on. Funktion sisältä voi turvallisesti käyttää riippuvuuksia **Concurrent**-funktion ulkopuolisiin kaavoihin, koska ne päättyvät ennen **Concurrent**-funktion käynnistymistä. Kaavat jälkeen **samanaikaisten** funktio voi olla riippuvuudet turvallisesti kaavoja: kaikki suoritetaan loppuun ennen **samanaikaisten** funktio on valmis ja siirtyy seuraava kaava ketjun (Jos voit Käytä **;** operaattorin). Varo hienovaraisia järjestysriippuvuuksia, jos kutsut funktioita tai palvelumenetelmiä, joilla on sivuvaikutuksia.
+Ei voida ennustaa, missä järjestyksessä kaavojen arviointi **Concurrent**-funktiossa alkaa ja päättyy. **Concurrent**-funktion kaavoissa ei tulisi olla riippuvuuksia muihin kaavoihin samassa **Concurrent**-funktiossa, ja PowerApps tuo näyttöön virhesanoman, jos riippuvuuksia on. Funktion sisältä voi turvallisesti käyttää riippuvuuksia **Concurrent**-funktion ulkopuolisiin kaavoihin, koska ne päättyvät ennen **Concurrent**-funktion käynnistymistä. Concurrent- funktiolla jälkeiset kaavat voivat turvallisesti ottaa riippuvuuksia seuraaviin kaavoihin: ne kaikki suoritetaan loppuun, ennen kuin **samanaikainen** toiminto loppuu ja siirtyy ketjun seuraavaan kaavaan (jos käytät **;** -operaattoria). Varo hienovaraisia järjestysriippuvuuksia, jos kutsut funktioita tai palvelumenetelmiä, joilla on sivuvaikutuksia.
 
-Voit ketjun kaavat yhdessä **;** operaattorin argumentti sisällä **samanaikaisten**. Esimerkiksi funktio **Concurrent( Set( a; 1 );; Set( b; a+1 ); Set( x; 2 );; Set( y; x+2 ) )** arvioi kaavan **Set( a; 1 );; Set( b; a+1 )** samanaikaisesti kaavan **Set( x; 2 );; Set( y; x+2 )** kanssa. Tässä tapauksessa kaavojen sisäisiä riippuvuuksia voidaan käyttää: **a** määritetään ennen **b**:tä ja **x** määritetään ennen **y**:tä.
+Voit ketjuttaa kaavoja **yhdessä.-operaattorin kanssa** argumentissa **samanaikaisiin**. Esimerkiksi funktio **Concurrent( Set( a, 1 ); Set( b, a+1 ), Set( x, 2 ); Set( y, x+2 ) )** arvioi kaavan **Set( a, 1 ); Set( b, a+1 )** samanaikaisesti kaavan **Set( x, 2 ); Set( y, x+2 )** kanssa. Tässä tapauksessa kaavojen sisäisiä riippuvuuksia voidaan käyttää: **a** määritetään ennen **b**:tä ja **x** määritetään ennen **y**:tä.
 
 Sen mukaan, missä laitteessa tai selaimessa sovellus on käynnissä, vain kourallinen kaavoja saatetaan arvioida samanaikaisesti. **Concurrent** käyttää käytettävissä olevia ominaisuuksia, eikä sen suoritus pääty, ennen kuin kaikki kaavat on arvioitu.
 
@@ -40,7 +39,7 @@ Jos otat **kaavatason virheiden hallinnan** käyttöön (lisäasetuksissa), ensi
 Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
 
 ## <a name="syntax"></a>Syntaksi
-**Concurrent**( *Formula1*; *Formula2* [; ...] )
+**Concurrent**( *Formula1*, *Formula2* [, ...] )
 
 * *Formula(s)* – Pakollinen. Samanaikaisesti arvioitavat kaavat. Vähintään kaksi kaavaa on annettava.
 
@@ -48,19 +47,19 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 #### <a name="loading-data-faster"></a>Tietojen lataamisen nopeuttaminen
 
-1. Luo sovellus ja lisää neljä tietolähteitä Common Data Service, SQL Server-tai SharePoint. 
+1. Luo sovellus ja lisää neljä tieto lähdettä Common Data Service, SQL Server tai SharePointista. 
 
     Tässä esimerkissä käytetään neljää taulukkoa [SQL Azuren Adventure Works -mallitietokannasta](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal). Kun olet luonut tietokannan, yhdistä se PowerAppsista käyttämällä täydellistä palvelimen nimeä (esimerkiksi srvname.database.windows.net):
 
     ![Yhteyden muodostaminen Azuren Adventure Works -tietokantaan](media/function-concurrent/connect-database.png)
 
-2. Lisää **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
+2. Lisää **[Painike](../controls/control-button.md)** -ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
-    ClearCollect( Product; '[SalesLT].[Product]' );;
-    ClearCollect( Customer; '[SalesLT].[Customer]' );;
-    ClearCollect( SalesOrderDetail; '[SalesLT].[SalesOrderDetail]' );; 
-    ClearCollect( SalesOrderHeader; '[SalesLT].[SalesOrderHeader]' )
+    ```powerapps-dot
+    ClearCollect( Product, '[SalesLT].[Product]' );
+    ClearCollect( Customer, '[SalesLT].[Customer]' );
+    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ); 
+    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
     ```
 
 3. Ota [Microsoft Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide/network)- tai [Google Chrome](https://developers.google.com/web/tools/chrome-devtools/network-performance/) -selaimessa kehitystyökalut käyttöön, jotta voit tarkkailla verkkoliikennettä sovelluksen ollessa käynnissä.
@@ -77,14 +76,14 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
     PowerApps tallentaa tietoja välimuistiin, joten painikkeen valitseminen uudelleen ei välttämättä aiheuta neljää uutta pyyntöä. Aina, kun haluat testata suorituskykyä, sulje ja avaa sovellus uudelleen. Jos olet ottanut verkon rajoituksen käyttöön, voit halutessasi poistaa sen käytöstä, kunnes olet valmis toiseen testiin.
 
-1. Lisää toinen **[Painike](../controls/control-button.md)**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
+1. Lisää toinen **[Painike](../controls/control-button.md)** -ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Concurrent( 
-        ClearCollect( Product; '[SalesLT].[Product]' ); 
-        ClearCollect( Customer; '[SalesLT].[Customer]' );
-        ClearCollect( SalesOrderDetail; '[SalesLT].[SalesOrderDetail]' );
-        ClearCollect( SalesOrderHeader; '[SalesLT].[SalesOrderHeader]' )
+        ClearCollect( Product, '[SalesLT].[Product]' ), 
+        ClearCollect( Customer, '[SalesLT].[Customer]' ),
+        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
+        ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
     )
     ```
 
@@ -112,19 +111,19 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 3. Lisää **Painike**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
-    Set( StartTime; Value( Now() ) );;
+    ```powerapps-dot
+    Set( StartTime, Value( Now() ) );
     Concurrent(
-        Set( FRTrans; MicrosoftTranslator.Translate( TextInput1.Text; "fr" ) );; 
-            Set( FRTransTime; Value( Now() ) );
-        Set( DETrans; MicrosoftTranslator.Translate( TextInput1.Text; "de" ) );; 
-            Set( DETransTime; Value( Now() ) )
-    );;
-    Collect( Results;
+        Set( FRTrans, MicrosoftTranslator.Translate( TextInput1.Text, "fr" ) ); 
+            Set( FRTransTime, Value( Now() ) ),
+        Set( DETrans, MicrosoftTranslator.Translate( TextInput1.Text, "de" ) ); 
+            Set( DETransTime, Value( Now() ) )
+    );
+    Collect( Results,
         { 
-            Input: TextInput1.Text;
-            French: FRTrans; FrenchTime: FRTransTime - StartTime; 
-            German: DETrans; GermanTime: DETransTime - StartTime; 
+            Input: TextInput1.Text,
+            French: FRTrans, FrenchTime: FRTransTime - StartTime, 
+            German: DETrans, GermanTime: DETransTime - StartTime, 
             FrenchFaster: FRTransTime < DETransTime
         }
     )
@@ -132,7 +131,7 @@ Voit käyttää **Concurrent**-funktiota vain [toimintakaavoissa](../working-wit
 
 4. Lisää [**Arvotaulukko**](../controls/control-data-table.md)-ohjausobjekti ja aseta sen **Items**-ominaisuudeksi **Tulokset**.
 
-1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **Muokkaa kenttiä** avaamiseen **kentät** ruudussa.
+1. Avaa **kentät** -ruutu valitsemalla oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdestä **Muokkaa kenttiä** .
 
 1. Valitse kenttäluettelossa kaikkien niiden kenttien valintaruutu, joiden haluat näkyvän arvotaulukossa.
 

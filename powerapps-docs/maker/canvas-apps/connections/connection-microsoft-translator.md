@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 405dcf432526206aa3a5f341a38e2ae5547cea1f
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 4eab4585a2abd8633704c76b57cde52702982e97
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61545609"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994036"
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Yhdistä Microsoft Translatoriin PowerAppsista
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -53,12 +52,12 @@ Tässä aiheessa kerrotaan, miten voit muodostaa Microsoft Translator -yhteyden 
 
     ![Nimeä uudelleen](./media/connection-microsoft-translator/renametosource.png)
 2. Lisää **Avattava** luettelo (**Lisää**-valikko > **Ohjausobjektit**), nimeä se uudelleen nimellä **TargetLang** ja siirrä se **Source**n alapuolelle.
-3. Määritä kohteen **TargetLang**  **[Items](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+3. Määritä kohteen **TargetLang**  **[Items](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:  
 
     `MicrosoftTranslator.Languages()`
-4. Lisää selite, siirrä se kohteen **TargetLang** alle ja määritä sen **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
+4. Lisää selite, siirrä se kohteen **TargetLang** alle ja määritä sen **[Text](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:  
 
-    `MicrosoftTranslator.Translate(Source.Text; TargetLang.Selected.Value)`
+    `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
 5. Kirjoita tekstiä kohtaan **Source** ja valitse kieli kohdasta **TargetLang**. Selite näyttää kirjoittamasi tekstin valitulla kielellä:  
 
     ![Käännä teksti englannista espanjaksi](./media/connection-microsoft-translator/translate-text.png)
@@ -66,13 +65,13 @@ Tässä aiheessa kerrotaan, miten voit muodostaa Microsoft Translator -yhteyden 
 ### <a name="speak-translated-text"></a>Puhu käännetty teksti
 Käännä tekstiä edellisen osan ohjeiden mukaisesti, jos et vielä ole tehnyt niin. Seuraavat vaiheet käyttävät samoja ohjausobjekteja.
 
-1. Määritä avattavan **TargetLang**-luettelon **[Items](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
+1. Määritä avattavan **TargetLang**-luettelon **[Items](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:  
 
     `MicrosoftTranslator.SpeechLanguages()`
 2. Nimeä toinen selite (ei **Source**-ruutu) uudelleen nimellä **Target**.
 3. Lisää **Audio**-ohjausobjekti (**Lisää**-valikko > **Media**) ja määritä sen **Media**-ominaisuudeksi seuraava kaava:  
 
-    `MicrosoftTranslator.TextToSpeech(Target.Text; TargetLang.Selected.Value)`
+    `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
 4. Paina F5-näppäintä tai valitse Esikatselu-painike (![](./media/connection-microsoft-translator/preview.png)). Kirjoita tekstiä **Source**-ruutuun ja valitse kieli kohdasta **TargetLang**. Valitse sitten audio-ohjausobjektin Toista-painike.
 
     Sovellus toistaa kirjoittamasi tekstin ääniversion kielellä, jonka valitsit.
@@ -81,7 +80,7 @@ Käännä tekstiä edellisen osan ohjeiden mukaisesti, jos et vielä ole tehnyt 
 ### <a name="detect-the-source-language"></a>Tunnista lähdekieli
 Seuraavat vaiheet käyttävät samaa **Source**-tekstisyötettä ja **Target**-tekstiohjausobjekteja. Voit luoda halutessasi uusia ohjausobjekteja, kunhan muistat päivittää nimet kaavaan.
 
-1. Valitse **Target**-tekstiohjausobjekti ja määritä **[Text](../controls/properties-core.md)**-ominaisuudeksi seuraava kaava:  
+1. Valitse **Target**-tekstiohjausobjekti ja määritä **[Text](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:  
 
     `MicrosoftTranslator.Detect(Source.Text).Name`
 2. Kirjoita tekstiä kohtaan **Source**.
@@ -100,7 +99,7 @@ Tämä yhteys sisältää seuraavat funktiot:
 | [TextToSpeech](connection-microsoft-translator.md#texttospeech) |Muuntaa annetun tekstin puheeksi äänivirtana WAV-muodossa |
 
 ### <a name="languages"></a>Languages
-Hae kielet: Noutaa kaikki kielet, joita Microsoft Translator tukee
+Hae Kielet: Noutaa kaikki kielet, joita Microsoft Translator tukee
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 Ei mitään.
@@ -144,7 +143,7 @@ Tunnista kieli: Tunnistaa annetun tekstin lähdekielen
 | Nimi |merkkijono |Ei | |
 
 ### <a name="speechlanguages"></a>SpeechLanguages
-Hae puhekielet: Noutaa puhesynteesille käytettävissä olevat kielet
+Hae puhe Kielet: Noutaa puhesynteesille käytettävissä olevat kielet
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 Ei mitään.

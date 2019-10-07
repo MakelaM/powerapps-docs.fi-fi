@@ -1,212 +1,211 @@
 ---
-title: Luo pohjaan perustuvan sovelluksen riippuvaiset avattavasta | Microsoft Docs
-description: Luo Powerappsissa avattavan luettelon, joka suodattaa toisen avattavan luettelon pohjaan perustuvassa sovelluksessa.
+title: Riippuvien avattavien luetteloiden luominen kangas sovelluksessa | Microsoft Docs
+description: Luo Powerappsissa avattava luettelo, joka suodattaa toisen avattavan luettelo ruudun kangas sovelluksessa.
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/04/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: dc1b3b87e2c1fdcd4ab7eb6634db7f9e7c049ec2
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 57abde44541a2a1e40e3a8ffc55a89e37a8c6478
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61550694"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985762"
 ---
-# <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Luo pohjaan perustuva sovellus riippuvaiset avattavia luetteloita
+# <a name="create-dependent-drop-down-lists-in-a-canvas-app"></a>Riippuvien avattavien luetteloiden luominen kangas sovelluksessa
 
-Kun luot riippuvaiset (tai CSS) avattavia luetteloita, käyttäjät valita vaihtoehto-luettelon toisen luettelon asetukset. Monet organisaatiot luoda riippuvaiset avulla käyttäjät voivat täyttää lomakkeita entistä tehokkaammin. Esimerkiksi käyttäjien valita maata tai aluetta, voit suodattaa kaupungit tai käyttäjien valita luokan näyttämään vain koodit luokan.
+Kun luot riippuvaisten (tai limittäisten) avattavien luetteloiden, käyttäjät valitsevat vaihto ehdon luettelosta, jos haluat suodattaa toisen luettelon asetuksia. Monet organisaatiot luovat riippuvaisten luetteloiden avulla käyttäjiä täyttämään lomakkeita entistä tehokkaammin. Käyttäjät voivat esimerkiksi valita maan tai alueen kaupunki luettelon suodattamiseksi, tai käyttäjät voivat valita luokan näyttämään vain kyseisen luokan koodit.
 
-Paras käytäntö on luoda ”ylätasoksi” ja ”lapsi” arvojen tietolähteeseen (esimerkiksi maat tai alueet ja kaupungit) eli erillään tietolähde, joka käyttäjät päivittää sovelluksen avulla. Jos otat tämän lähestymistavan, voit käyttää samaa pää- ja tiedot useampi kuin yksi sovellus ja voit päivittää tiedot ilman uudelleenjulkaisemista sovellusta tai sovelluksia, jotka käyttävät niitä. Voit tehdä samat käyttämällä kokoelman tai staattisia tietoja, mutta se ei ole suositeltavaa yrityksen skenaarioita varten.
+Paras käytäntö on luoda tieto lähde "Parent"-ja "Child"-luetteloiden arvoille (esimerkiksi maat/alueet ja kaupungit), jotka ovat erillään tieto lähteestä, jonka käyttäjät päivittävät sovelluksen avulla. Jos otat tämän lähestymis tavan käyttöön, voit käyttää samoja pää-ja alitietoja useammassa kuin yhdessä sovelluksessa, ja voit päivittää nämä tiedot julkaisematta uudelleen sovellusta tai sovelluksia, jotka käyttävät niitä. Voit suorittaa saman tuloksen käyttämällä kokoelmaa tai staattisia tietoja, mutta sitä ei suositella yritys tilanteisiin.
 
-Tässä aiheessa skenaarion tallentaa työntekijät Lähetä ongelmat **tapaukset** luettelon lomakkeen kautta. Työntekijät määrittää ei vain säilön sijainnin ilmenivät mutta jotka myös osasto sisällä kyseiseen sijaintiin. Kaikki sijainnit on sama Osastot, joten **sijaintien** luettelon avulla voidaan varmistaa, että työntekijät ei voi määrittää sijaintiin, joka ei ole osaston osasto.
+Tämän ohje aiheen skenaariossa Tallenna työn tekijät lähettävät ongelmia **tapa** ukset-listaan lomakkeen kautta. Työn tekijät määrittävät sen säilön sijainnin, jossa tapaus sattui, mutta myös kyseisen sijainnin osaston. Kaikilla sijainneissa ei ole samoja osastoja, joten **sijaintien** luettelon avulla varmistetaan, että työn tekijät eivät voi määrittää osastoa sijainnille, jolla ei ole kyseistä osastoa.
 
-Tässä aiheessa käytetään tietolähteenä Microsoft SharePoint-luetteloihin, mutta kaikki taulukkomuotoisia tietolähteitä toimivat samalla tavalla.
+Tässä ohje aiheessa käytetään Microsoft SharePoint-luetteloita tieto lähteinä, mutta kaikki taulukkomuotoiset tieto lähteet toimivat samalla tavalla.
 
-## <a name="create-data-sources"></a>Luo tietolähteitä
+## <a name="create-data-sources"></a>Luo tieto lähteitä
 
-A **sijaintien** luettelossa näytetään kussakin osastojen.
+**Sijainnit** -luettelossa näkyvät kunkin sijainnin osastot.
 
 | Location | Department |
 |----------------|------------------|
-| Eganville      | Leipomoon           |
+| Eganville      | Leipomo           |
 | Eganville      | Deli             |
 | Eganville      | Tuottaa          |
-| Renfrew        | Leipomoon           |
+| Renfrew        | Leipomo           |
 | Renfrew        | Deli             |
 | Renfrew        | Tuottaa          |
-| Renfrew        | Apteekin         |
-| Renfrew        | Kukikas           |
-| Pembroke       | Leipomoon           |
+| Renfrew        | Apteekki         |
+| Renfrew        | Kukanvalkoinen           |
+| Pembroke       | Leipomo           |
 | Pembroke       | Deli             |
 | Pembroke       | Tuottaa          |
-| Pembroke       | Kukikas           |
+| Pembroke       | Kukanvalkoinen           |
 
-**Tapaukset** luettelossa näytetään yhteystiedot ja kunkin tapauksen tietoja. Kuin päivämäärä-sarakkeen luominen **päivämäärä** saraketta, mutta luoda muita sarakkeita kuin **Yksi tekstirivi** määritystä ja vältä sarakkeita [delegointia](./delegation-overview.md) varoitukset Microsoft PowerApps.
+Tapaus **luettelossa näkyvät kunkin tapa uksen** yhteys tiedot ja tiedot. Luo päivämäärä sarake **päivämäärä** sarakkeeksi, mutta luo Muut sarakkeet **yhdeksi teksti** sarakkeeksi, jotta voit yksinkertaistaa määritystä ja välttää [delegointi](./delegation-overview.md) varoituksia Microsoft PowerApps.
 
-| Etunimi | Sukunimi | Puhelinnumero     | Location | Department | Kuvaus       | Date      |
+| Etunimi | Suku nimi | Puhelin numero     | Location | Department | Kuvaus       | Date      |
 |------------|-----------|------------------|----------------|------------|-------------------------|-----------|
-| Tonya       | Cortez   | (206) 555 - 1022 | Eganville      | Tuottaa    | Minulla oli ongelma...   | 2/12/2019 |
-| Moses     | Laflamme     | (425) 555 - 1044 | Renfrew        | Kukikas     | Olen kohtasi ongelman... | 2/13/2019 |
+| Tonya       | Cortez   | (206) 555-1022 | Eganville      | Tuottaa    | Minulla oli ongelma...   | 2/12/2019 |
+| Mooses     | Laflamme     | (425) 555-1044 | Renfrew        | Kukanvalkoinen     | Koin ongelman... | 2/13/2019 |
 
-Mukautettuja SharePoint-luetteloita sisältävät oletusarvoisesti **otsikko** sarake ei voi nimetä uudelleen tai poistaa, että niissä on tietoja, ennen kuin voit tallentaa kohde luettelosta. Voit määrittää sarakkeen, niin, että se ei tarvitse tiedot seuraavasti:
+Oletus arvon mukaan mukautetut SharePoint-luettelot sisältävät **otsikko** sarakkeen, jota ei voi nimetä uudelleen tai poistaa, ja sen on sisällettävä tiedot, ennen kuin voit tallentaa kohteen luetteloon. Jos haluat määrittää sarakkeen niin, että se ei edellytä tietoja:
 
-1. Oikeassa yläkulmassa oleva rataskuvake ja valitse sitten **Luetteloasetukset**.
-1. Valitse **asetukset** sivulla **otsikko** luettelossa olevien sarakkeiden.
-1. Valitse **edellyttävät, että sarake sisältää tietoa**, valitse **ei**.
+1. Valitse oikean yläkulman lähellä ratas kuvake ja valitse sitten **luettelosta asetukset**.
+1. Valitse **Asetukset** -sivulla sarake luettelosta **otsikko** .
+1. Valitse **edellytä, että tämä sarake sisältää tietoja**, valitse **ei**.
 
-Tämän muutoksen jälkeen voit ohittaa **otsikko** sarakkeen, tai voit [poistaa sen](https://support.office.com/article/edit-a-list-column-in-sharepoint-online-77130c2e-76d1-4f80-af8b-4c6f47b264b8) oletusnäkymän, jos vähintään yksi sarake.
+Tämän muutoksen jälkeen voit ohittaa **otsikko** -sarakkeen, tai voit [poistaa sen](https://support.office.com/article/edit-a-list-column-in-sharepoint-online-77130c2e-76d1-4f80-af8b-4c6f47b264b8) oletus näkymästä, jos vähintään yksi muu sarake tulee näkyviin.
 
 ## <a name="open-the-form"></a>Avaa lomake
 
-1. Avaa **tapaukset** luettelo ja valitse sitten **Powerappsin** > **lomakkeiden**.
+1. Avaa **tapa** ukset-lista ja valitse sitten **powerapps** > **Mukauta lomakkeita**.
 
     > [!div class="mx-imgBorder"]
-    > ![Avaa tapaukset-luettelo ja valitse sitten PowerApps > lomakkeiden mukauttaminen. ](./media/dependent-drop-down-lists/open-form.png "Avaa tapaukset-luettelo ja valitse sitten PowerApps > lomakkeiden mukauttaminen.")
+    > ![Avaa tapa ukset-lista ja valitse sitten PowerApps > Mukauta lomakkeita.](./media/dependent-drop-down-lists/open-form.png "Avaa tapa ukset-lista ja valitse sitten PowerApps > Mukauta lomakkeita.")
 
-    Oletuslomakkeen PowerApps Studio avautuu selaimen välilehti.
+    Selain väli lehti avautuu, ja oletus lomake on PowerApps Studio.
 
-1. (valinnainen) - **Kentät** ruudussa hiirtä **otsikko** kentän, valitse kolme pistettä (...), joka näkyy ja valitse sitten **poistaa**.
+1. valinnainen Vie hiiren osoitin **kentät** -ruudun **otsikko** -kentän päälle, valitse esiin tulevassa kolme pistettä (...) ja valitse sitten **Poista**.
 
-    Jos olet suljettu **kentät** ruudussa voit avata sen uudelleen valitsemalla **SharePointForm1** vasemmassa siirtymispalkissa ja valitsemalla sitten **Muokkaa kenttiä** , **Ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
+    Jos olet sulkenut **kentät** -ruudun, voit avata sen uudelleen valitsemalla vasemmassa siirtymis palkissa **SharePointForm1** ja valitsemalla sitten oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdestä **Muokkaa kenttiä** .
 
-1. (valinnainen) Toista edellinen vaihe voit poistaa **liitteet** kenttä muodossa.
+1. valinnainen Poista **Liitteet** -kenttä lomakkeesta toistamalla edellinen vaihe.
 
-    Lomake tulee näkyviin vain kentät, jotka olet lisännyt.
-
-    > [!div class="mx-imgBorder"]
-    > ![Lomakkeen otsikko ja liitteitä kentät ilman](./media/dependent-drop-down-lists/default-form.png)
-
-## <a name="replace-the-controls"></a>Korvaa ohjausobjektit
-
-1. - **Kentät** ruudussa Valitse nuoli kohdan **sijainti**.
-
-    Jos olet suljettu **kentät** ruudussa voit avata sen uudelleen valitsemalla **SharePointForm1** vasemmassa siirtymispalkissa ja valitsemalla sitten **Muokkaa kenttiä** , **Ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
-
-1. Avaa **ohjausobjekti tyyppi** luettelo ja valitse sitten **sallita arvot**.
+    Näkyviin tulee lomake, joka sisältää vain lisäämäsi kentät.
 
     > [!div class="mx-imgBorder"]
-    > ![Sallitut arvot](./media/dependent-drop-down-lists/change-control.png)
+    > ![Form ilman title-ja Attachments-kenttiä @ no__t-1
 
-    Syötteen mekanismi muuttuu **avattava** ohjausobjektin.
+## <a name="replace-the-controls"></a>Korvaa ohjaus objekti
 
-1. Toista nämä vaiheet **osasto** kortti.
+1. Valitse **kentät** -ruudussa **Sijainti**-kohdan vieressä oleva nuoli.
 
-## <a name="add-the-locations-list"></a>Sijaintien luettelon lisääminen
+    Jos olet sulkenut **kentät** -ruudun, voit avata sen uudelleen valitsemalla vasemmassa siirtymis palkissa **SharePointForm1** ja valitsemalla sitten oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdestä **Muokkaa kenttiä** .
 
-1. Valitse **Näytä** > **tietolähteet** > **tietolähde**.
-
-1. Valitse tai luo SharePoint-yhteyden ja määritä sitten sivuston, joka sisältää **sijaintien** luettelo.
-
-1. Valitse luettelon valintaruutu ja valitse sitten **Yhdistä**.
+1. Avaa **ohjaus objekti tyyppi** -luettelosta ja valitse sitten **Sallitut arvot**.
 
     > [!div class="mx-imgBorder"]
-    > ![Tietoruutu](./media/dependent-drop-down-lists/select-list.png)
+    > ![Sallitut arvot @ no__t-1
 
-    Yhteydet näkyy luettelo **tapaukset** luettelon, joka perustuu lomakkeen, ja **sijaintien** luettelo, joka tunnistaa sijainnit ja osastojen muodossa.
+    Syöttö mekanismi muuttuu **avattavasta** ohjaus objektille.
 
-    > [!div class="mx-imgBorder"]
-    > ![SharePoint-tietolähteet](./media/dependent-drop-down-lists/data-sources.png)
+1. Toista nämä vaiheet **osasto** kortille.
 
-## <a name="unlock-the-cards"></a>Lukituksen kortit
+## <a name="add-the-locations-list"></a>Lisää sijainnit-luettelon
 
-1. Valitse **sijainti** , kortti **lisäasetukset** välilehti oikeanpuoleisessa ruudussa ja valitse sitten **lukituksen, voit muuttaa ominaisuuksia**.
+1. Valitse **näytä** > **tieto lähteet** > **Lisää tieto lähde**.
 
-1. Toista edellinen vaihe **osasto** kortti.
+1. Valitse tai luo SharePoint-liittymä ja määritä sitten toimi paikka, joka sisältää **sijainnit** -luettelon.
 
-## <a name="rename-the-controls"></a>Nimeä ohjausobjektit uudelleen
-
-Jos nimeät ohjausobjektit, voi määrittää entistä helpommin ja esimerkit on helpompi seurata. Löytää muita parhaita käytäntöjä, tarkista [koodaamisen standardeja ja ohjeet tekninen raportti](https://aka.ms/powerappscanvasguidelines).
-
-1. - **Sijainti** , kortti **avattava** ohjausobjektin.
-
-1. Oikeanpuoleisen ruudun yläosassa nimeä kirjoittamalla tai liittämällä valitun ohjausobjektin **ddLocation**.
+1. Valitse kyseisen luettelo ruudun valinta ruutu ja valitse sitten **Yhdistä**.
 
     > [!div class="mx-imgBorder"]
-    > ![Ohjausobjektin nimeäminen uudelleen](./media/dependent-drop-down-lists/rename-control.png)
+    > ![Tietoruutu @ no__t-1
 
-1. Toista edellisen kaksi vaiheet **osasto** kortin nimetä uudelleen **avattava** ohjausobjektin **ddDepartment**.
+    Yhteyksien luettelossa näytetään **tapa** ukset-luettelo, johon lomake perustuu, ja **sijainnit** -luettelo, joka tunnistaa lomakkeen sijainnit ja osastot.
+
+    > [!div class="mx-imgBorder"]
+    > ![Sharepointin tieto lähteet @ no__t-1
+
+## <a name="unlock-the-cards"></a>Poista korttien lukitus
+
+1. Valitse **Sijainti** kortti, valitse **lisä asetukset** -väli lehti oikeanpuoleisessa ruudussa ja **Muuta ominaisuuksia valitsemalla Avaa**.
+
+1. Toista edellinen vaihe **osaston** kortille.
+
+## <a name="rename-the-controls"></a>Ohjaus objektien nimeäminen uudelleen
+
+Jos nimeät ohjaus objektin uudelleen, voit tunnistaa ne helpommin, ja esimerkkejä on helpompi seurata. Jos haluat löytää muita parhaita käytäntöjä, tarkista [koodaus standardit ja ohjeistojen tekninen raportti](https://aka.ms/powerappscanvasguidelines).
+
+1. Valitse **Sijainti** kortissa **avattava** luettelo-ohjaus objekti.
+
+1. Nimeä valittu ohjaus objekti uudelleen oikean ruudun yläosassa kirjoittamalla tai liittämällä **Ddlocation**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Ohjaus objektin uudelleennimeäminen @ no__t-1
+
+1. Toista kaksi edellistä vaihetta **osaston** kortissa ja nimeä **avattava** luettelo-ohjaus objekti uudelleen **ddendepartment**-arvoksi.
 
 ## <a name="configure-the-locations"></a>Määritä sijainnit
 
-1. Määritä **kohteet** ominaisuuden **ddlocation** tämä kaava:
+1. Valitse **ddadencation** - **kohteen Items** -ominaisuudeksi Tämä kaava:
 
-    `Distinct(Locations; Location)`
+    `Distinct(Locations, Location)`
 
-1. (valinnainen) Kun pidät alhaalla Alt-näppäintä, Avaa **ddLocation**, ja varmista, että luettelossa on kolme sijainteja.
+1. valinnainen Pidä Alt-näppäintä painettuna ja avaa **Ddacation**ja vahvista, että luettelossa näkyvät kolme sijaintia.
 
-## <a name="configure-the-departments"></a>Määritä yksiköiden
+## <a name="configure-the-departments"></a>Määritä osastot
 
-1. Valitse **ddDepartment**, ja sitten, **ominaisuudet** välilehti oikeanpuoleisessa ruudussa Valitse **on riippuvainen.**
+1. Valitse **Dddepartment**ja valitse sitten oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdestä **depends on.**
 
-1. Kohdassa **ohjausobjektin Parent**, varmista, että **ddLocation** näkyy ylempi luettelo ja **tuloksen** on alempi luettelo.
+1. Varmista **pääohjaus objektin**alla, että **ddlocation** näkyy ylemmässä luettelossa ja **tulos** näkyy alemmassa luettelossa.
 
     > [!NOTE]
-    > Jos et halua vastaamaan merkkijonon, mutta todellinen tunnus rivin tiedot, valitse **tunnus** sijaan **tuloksen**.
+    > Jos et halua täsmäyttää merkki jonoa, mutta tieto rivin todellisesta TUNNUKSESTA, valitse **tunnus** **tuloksen**sijaan.
 
-1. Valitse **Matching kentän**, valitse **sijaintien** Valitse ylempi luettelo **sijainti** alempi luettelo ja valitse sitten **Käytä**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Linkki on riippuvainen](./media/dependent-drop-down-lists/depends-on.png)
-
-    **Kohteet** ominaisuuden **ddDepartment** on asetettu tämä kaava:
-
-    `Filter(Locations; Location = ddLocation.Selected.Result)`
-
-    Tämä kaava suodattaa kohteet **ddDepartment** perusteella käyttäjä valitsee- **ddLocation**. Kokoonpanossa varmistaa, että osastojen ”lapsi”-luettelo päivittyy ”ylätasoksi” sen sijainnin tiedot kuin **sijaintien** luettelo SharePointissa määrittää.
-
-1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa luettelo kohdan **arvo**, ja valitse sitten **osasto**.
-
-    Tässä vaiheessa määrittää näytettävän tekstin asetukset **osasto** sarakkeen **sijaintien** luettelo SharePointissa.
+1. Valitse **vastaava kenttä**-kohdassa **sijainnit** Yläluettelosta, valitse **Sijainti** alemmassa listassa ja valitse sitten **Käytä**.
 
     > [!div class="mx-imgBorder"]
-    > ![Osasto arvo](./media/dependent-drop-down-lists/dept-value.png)
+    > ![Riippuu linkistä @ no__t-1
 
-## <a name="test-the-form"></a>Testaa lomake
+    **Dddepartment** - **kohteen Items** -ominaisuudeksi määritetään Tämä kaava:
 
-Kun pidät Alt-näppäintä, Avaa luettelo sijainneista, valitse jokin, Avaa osastojen luettelo ja valitse sitten yksi.
+    `Filter(Locations, Location = ddLocation.Selected.Result)`
 
-Luettelot sijaintien ja osastojen kuvastaa tiedot **sijaintien** luettelo SharePointissa.
+    Tämä kaava suodattaa **Ddendepartment** -kohteiden kohteet sen perusteella, mitä käyttäjä valitsee **Ddindlocation**-kohteessa. Tällaisella kokoonpanolla varmistetaan, että osastojen "alatason" luettelo kuvastaa sen "Parent"-sijainnin tietoja, kuten SharePointin **sijainnit** -luettelo määrittää.
+
+1. Avaa oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdeltä **arvo**-kohdan vieressä oleva luettelo ja valitse sitten **osasto**.
+
+    Tämä vaihe määrittää näyttö tekstin asetukset SharePointin **sijainnit** -luettelon **osasto** -sarakkeesta.
+
+    > [!div class="mx-imgBorder"]
+    > ![Osaston arvo @ no__t-1
+
+## <a name="test-the-form"></a>Testaa lomaketta
+
+Kun pidät Alt-näppäintä painettuna, avaa sijainti luettelo, valitse yksi, avaa osastojen luettelo ja valitse sitten yksi.
+
+Sijaintien ja osastojen luettelot vastaavat SharePointin **sijainnit** -luettelon tietoja.
 
 > [!div class="mx-imgBorder"]
-> ![Avaa luettelo sijainneista, Muuta valinta Renfrew Pembroke ja avaa sitten osastojen luettelo](./media/dependent-drop-down-lists/dropdowns.gif)
+> ![Avaa sijaintien luettelo, muuta valintaa Renfrew-kohteesta Pembroke-kohteeksi ja avaa sitten osastojen luettelo @ no__t-1
 
-## <a name="save-and-open-the-form-optional"></a>Tallenna ja Avaa lomake (valinnainen)
+## <a name="save-and-open-the-form-optional"></a>Tallenna ja avaa lomake (valinnainen)
 
-1. Avaa **tiedoston** valikko ja valitse sitten **Tallenna** > **Julkaise SharePointiin** > **Julkaise SharePointiin**.
+1. Avaa **tiedosto** -valikko ja valitse sitten **Tallenna** > **Julkaise SharePointiin** > **Julkaise SharePointiin**.
 
 1. Valitse vasemmassa yläkulmassa, paluunuoli ja valitse sitten **Takaisin SharePointiin**.
 
 1. Avaa mukautettu lomakkeesi valitsemalla komentopalkissa **Uusi**.
 
-## <a name="faq"></a>USEIN KYSYTYT KYSYMYKSET
+## <a name="faq"></a>UKK
 
-**En näe mitään tietoja: lähteet ovat kaikki tyhjiä tai on virheellisiä tietoja.**
-Vahvista onko näytät oikeaan kenttään ohjausobjektin jommankumman seuraavista tavoista:
+**En näe mitään tietoja: lähteet ovat tyhjiä tai niissä on vääriä tietoja.**
+Varmista, että näytät oikean kentän ohjaus objektille jommallakummalla seuraavista tavoista:
 
-- Valitse avattavasta luettelosta ja valitse sitten **arvo** ominaisuus **ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
-
-    > [!div class="mx-imgBorder"]
-    > ![Muuta avattava luettelo](./media/dependent-drop-down-lists/drop-down-display-field.png)
-
-- Valitse yhdistelmäruudun ja varmista, että ensisijainen teksti on kenttä, jonka haluat näyttää.
+- Valitse avattava luettelo ja valitse sitten **arvo** -ominaisuus oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdestä.
 
     > [!div class="mx-imgBorder"]
-    > ![Muuta yhdistelmäruudun](./media/dependent-drop-down-lists/combo-box-display-field.png)
+    > ![Avattavasta vaihto-valikosta @ no__t-1
 
-**Omat alikohde avattavasta luettelosta sisältää päällekkäisyyksiä.**
-Tämä ongelma on todennäköisesti vuoksi käyttämällä **LookUp** sarakkeen SharePointissa tai **vaihtoehtoja** -funktio powerappsissa. Voit poistaa kohteen rivitys **Distinct** funktio palauttaa oikein tietojen ympärille. Lisätietoja: [DISTINCT-funktio](functions/function-distinct.md).
+- Valitse yhdistelmä ruutu ja varmista, että ensisijainen teksti on kenttä, jonka haluat näyttää.
+
+    > [!div class="mx-imgBorder"]
+    > ![Vaihda yhdistelmä ruutua @ no__t-1
+
+**Avattava lapseni-luettelo sisältää kohteiden kaksoiskappaleita.**
+Tämä oire aiheutuu todennäköisesti **haku** sarakkeen käyttämisestä SharePointissa tai Powerappsin **Choices** -funktiolla. Jos haluat poistaa päällekkäisyyden, kääri **erillinen** -funktiolla oikein palauttavien tietojen ympärille. Lisätietoja: [DISTINCT-funktiolla](functions/function-distinct.md).
 
 ## <a name="known-limitations"></a>Tunnetut rajoitukset
 
-Tämä määritys on käytettävissä **avattava** ohjausobjekteja, sekä **yhdistelmäruudun** ja **luetteloruutu** ohjausobjekteja, jotka sallivat kerrallaan yhden valinnan. Et voi käyttää **riippuu-** määritys jonkin näiden ohjausobjektien, jos ne Salli useita valintoja. Tämä lähestymistapa ei ole suositeltavaa käsitteleminen asetusjoukkoja tässä Common Data Service.
+Tämä määritys on käytettävissä **avattavissa** ohjaus objekteissa sekä **yhdistelmä ruutu** -ja **luettelo ruutu** -ohjaus objekteissa, jotka sallivat yhden valinnan kerrallaan. Et voi käyttää **depends-** määritystä mihinkään näistä ohjaus objekteista, jos ne sallivat useita valintoja. Tätä lähestymis tapaa ei suositella käytettäessä asetus joukkoja Common Data Service.
 
-**Riippuu-** määritys ei tue staattisia tietoja tai kokoelmia. Määrittämään näiden tietolähteiden riippuvaiset avattavia luetteloita Muokkaa lauseketta suoraan kaavarivillä. Lisäksi PowerApps ei tue kaksi valinta-kenttiä SharePointissa ilman mitään vastaavaa taulukon ja ei voi määrittää **Matching kentän** sisällä tämän Käyttöliittymän.
+**Depends on** Configuration ei tue staattisia tietoja tai kokoelmia. Jos haluat määrittää riippuvuussuhteessa olevia avattavia luetteloita näiden lähteiden avulla, Muokkaa lauseketta suoraan kaava rivillä. Lisäksi PowerApps ei tue kahden vaihtoehto kentän käyttämistä SharePointissa ilman vastaavaa tieto taulukkoa, etkä voi määrittää **vastaavaa kenttää** tässä käyttö liittymässä.

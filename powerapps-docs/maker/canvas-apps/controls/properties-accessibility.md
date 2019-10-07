@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 01/26/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e1baf96ab96dc6fe783fccdf243c0ae4ba6d0c1d
-ms.sourcegitcommit: b4df7d781cda50dfe2f6609f1cc4d2b531428b3c
+ms.openlocfilehash: 2c11e05c93d5a505408948178bf3efbd31f2dbf7
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161277"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986162"
 ---
 # <a name="accessibility-properties-for-canvas-apps"></a>Kangas sovellusten helppokäyttöominaisuudet
 
@@ -52,7 +52,7 @@ Yllä olevat vaatimukset on täytetty käyttäen oletus arvoista **Tabindexes** 
 | 0 | Ohjaus objekti osallistuu näppäimistö navigointiin. | [**Painikkeen**](control-button.md), [**tekstin syötön**](control-text-input.md), [**yhdistelmä ruudun**](control-combo-box.md)ja muiden yleensä vuorovaikutteisten ohjaus objektien välillä. |
 | &minus;1 | Ohjaus objekti ei osallistu näppäimistö navigointiin. | [**Otsikko**](control-text-box.md), [**kuva**](control-image.md), [**kuvake**](control-shapes-icons.md)ja muut yleensä ei-vuorovaikutteiset ohjaus painikkeet. |
 
-Siirtymis järjestys kulkee yleensä vasemmalta oikealle ja sitten ylhäältä alas "Z"-rakenteessa. Järjestys perustuu ohjaus objektien **X** -ja **yn** -ominaisuus arvoihin. Jos ohjaus objekteilla siirretään dynaamisesti näytössä esimerkiksi kaavan **X** -tai y:lle, joka perustuu ajastimeen tai muuhun ohjaus objektiin, myös siirtymis järjestys muuttuu dynaamisesti.
+Siirtymis järjestys kulkee yleensä vasemmalta oikealle ja sitten ylhäältä alas "Z"-rakenteessa. Järjestys perustuu ohjaus objektien **X** -ja **yn** -ominaisuus arvoihin. Jos ohjaus objekteilla siirretään dynaamisesti näytössä esimerkiksi kaavan X-tai **Y:lle** , joka perustuu ajastimeen **tai muuhun** ohjaus objektiin, myös siirtymis järjestys muuttuu dynaamisesti.
 
 Käytä [ **parannettua Group** Control](https://powerapps.microsoft.com/en-us/blog/enhanced-group-experimental-control-with-layout-control-and-nesting/) (experimental)-menetelmää niputtaa ohjaus objekteista, jotka tulee yhdistää yhteen, tai luoda sarakkeita käänteis-N-malliin.  Seuraavan esimerkin yläosassa olevat nimi kentät sisältyvät laajennettuun ryhmä ohjaus objektiin, joka saa siirtymisen siirtymään alaspäin ennen siirtymistä.  Esimerkin alaosassa ei käytetä ryhmä ohjaus objektia, ja siirtyminen etenee normaalisti ja alas normaalisti, mikä ei ole intuitiivista ohjaus objektien ryhmittelyjen vuoksi. 
 
@@ -67,7 +67,7 @@ Kun käytät selainta, siirtyminen näytön viimeisestä ohjaus objektista siirt
 > [!WARNING]
 > Vältä **Tabdex** -arvoja, jotka ovat suurempia kuin 0. Viime kädessä kontrollit hahmonnetaan HTML-muodossa, jossa myös [W3C on varoittanut](https://www.w3.org/TR/wai-aria-practices/#kbd_general_between) "KIRJOITTAJIA kehotetaan olemaan käyttämättä näitä arvoja." Monet HTML-työkalut varoittavat arvoja, jotka ovat suurempia kuin 0, kuten [sovelluksen tarkistus toiminto](../accessibility-checker.md) ilmoittaa, kun se raportoi "Tarkista näyttö kohteiden järjestys".  Kaikki on hyvästä syystä: käyttämällä **Tabindextä** tällä tavalla voi olla hyvin vaikea saada oikeutta ja tehdä avustavien tekniikoiden, kuten näytönlukijoiden, käyttökelvottomia.
 > 
-> Kun ohjaus objektien olemassa on suurempi kuin 0, käyttäjät siirtyvät ohjaus objekteihin, joissa on yhä **TabIndex** -arvoja (1, sitten 2 jne.). Kun käyttäjät ovat suunnistaa kaikki ohjaus objektit positiivisilla **tabindexes** -arvoilla, he siirtyvät lopulta ohjaus objekteihin, joissa on 0, mukaan lukien selaimen sisäiset ohjaus objektit. Kun samassa **Tabindexissä**on useita ohjaus objektin, niiden **X** -ja **Y** -sijainnit määrittävät suhteellisen järjestyksen.
+> Kun ohjaus objektien olemassa **on suurempi kuin** 0, käyttäjät siirtyvät ohjaus objekteihin, joissa on yhä **TabIndex** -arvoja (1, sitten 2 jne.). Kun käyttäjät ovat suunnistaa kaikki ohjaus objektit positiivisilla **tabindexes** -arvoilla, he siirtyvät lopulta ohjaus objekteihin **, joissa on 0, mukaan** lukien selaimen sisäiset ohjaus objektit. Kun samassa **Tabindexissä**on useita ohjaus objektin, niiden **X** -ja **Y** -sijainnit määrittävät suhteellisen järjestyksen.
 
 
 

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/16/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 45ffd324ff5409a49f1ec8c4c8ea3529c1cf5c5f
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 307950cf7e0aa67d7bf31daf29b3f8a3bb11d465
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61563074"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984589"
 ---
 # <a name="language-function-in-powerapps"></a>PowerAppsin Kieli-funktio
 Palauttaa nykyisen käyttäjän kielitunnisteen.
@@ -40,9 +39,9 @@ Kielitietojen avulla voit tehdä sovelluksestasi paikallisen version.  Jos esime
 
 PowerApps käyttää kielitunnisteen muotoa [IETF BCP-47 ](https://tools.ietf.org/html/bcp47).  
 
-Voit tarkastella tuettujen kielitunnisteiden luetteloa kirjoittamalla kaavariville tai lisänäkymään **Value( "1"; )** ja selaamalla toiselle argumentille ehdotettuja kielialueita.  
+Voit tarkastella tuettujen kielitunnisteiden luetteloa kirjoittamalla kaavariville tai lisänäkymään **Value( "1", )** ja selaamalla toiselle argumentille ehdotettuja kielialueita.  
 
-Myös **[Teksti](function-text.md)**- ja **[Arvo](function-value.md)**-funktiot käyttävät kielen tunnisteita.  Näiden funktioiden avulla voit kääntää merkkijonoja globaalisti toimivalla tavalla.  Kun välität näihin funktioihin kielitunnisteen, mutta alueella ei ole merkitystä, voit käyttää tunnisteen pelkkää kieliosaa.
+Myös **[Teksti](function-text.md)** - ja **[Arvo](function-value.md)** -funktiot käyttävät kielen tunnisteita.  Näiden funktioiden avulla voit kääntää merkkijonoja globaalisti toimivalla tavalla.  Kun välität näihin funktioihin kielitunnisteen, mutta alueella ei ole merkitystä, voit käyttää tunnisteen pelkkää kieliosaa.
 
 ## <a name="syntax"></a>Syntaksi
 **Language**()
@@ -78,9 +77,9 @@ kokoelmaa tai mitä tahansa muuta tietolähdettä, mutta valitsimme Excelin, kos
 5. Napsauta tai napauta **Lisää sovellukseen staattisia tietoja** (Add static data to your app). Napsauta tai napauta tallentamaasi Excel-tiedostoa ja sitten **Avaa**.
 6. Valitse luomasi taulukko ja napsauta tai napauta **Yhdistä**.
 
-Siirry siihen sovelluksen kohtaan, jossa olisit aiemmin käyttänyt tekstiä **"Hello"**, ja käytä sen sijaan tätä kaavaa:
+Siirry siihen sovelluksen kohtaan, jossa olisit aiemmin käyttänyt tekstiä **"Hello"** , ja käytä sen sijaan tätä kaavaa:
 
-* **LookUp( Table1; TextID = "Hello" && (LanguageTag = Left( Language(); 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
+* **LookUp( Table1, TextID = "Hello" && (LanguageTag = Left( Language(), 2 ) || IsBlank( LanguageTag ))).LocalizedText**  
 
 Tämä kaava hakee sopivan **LocalizedText**-arvon, joka on käännetty käyttäjän kielelle. Jos lokalisoitua arvoa ei löydy, kaava ottaa käyttöön oletusmuotoisen *tyhjän* version. 
 
@@ -92,9 +91,9 @@ Voit kääntää tekstiä tarpeen mukaan käyttämällä käännöspalvelua, kut
 1. Napsauta tai napauta PowerAppsin oikeanpuoleisessa ruudussa olevaa **Tietolähteet**-välilehteä ja napsauta tai napauta sitten **Lisää tietolähde**.
 2. Napsauta tai napauta **Microsoft Translator**.
 
-Siirry siihen sovelluksen kohtaan, jossa olisit aiemmin käyttänyt tekstiä **”Hello”**, ja käytä sen sijaan tätä kaavaa:
+Siirry siihen sovelluksen kohtaan, jossa olisit aiemmin käyttänyt tekstiä **”Hello”** , ja käytä sen sijaan tätä kaavaa:
 
-* **MicrosoftTranslator.Translate( "Hello"; Language() )**
+* **MicrosoftTranslator.Translate( "Hello", Language() )**
 
 Microsoft Translator-palvelu käyttää samoja kielitunnisteita, jotka **Kieli**-funktio palauttaa.
 

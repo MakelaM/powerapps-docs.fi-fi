@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2018
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2b1527f8a7bf157c88b85ae9721626b6fc14f5a9
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: e3a1e1c5a62552f9ef034b6f4985213b65247627
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517361"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986374"
 ---
 # <a name="radio-control-in-powerapps"></a>Valintanappi PowerAppsissa
 
@@ -41,7 +40,7 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 **[Arvo](properties-core.md)** – Ohjausobjektiin syötetty arvo.
 
-**Valitun** – tietueen, joka edustaa valittu kohde.
+**Valitun** – valittua kohdetta edustava tieto tietue.
 
 ## <a name="all-properties"></a>Kaikki ominaisuudet
 
@@ -71,7 +70,7 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -109,7 +108,7 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 **[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**SelectedText (vanhentunut)** – merkkijonoarvon, joka edustaa valittu kohde.
+**SelectedText (vanhentunut)** – merkki jono arvo, joka edustaa valittua kohdetta.
 
 **[Size](properties-text.md)** – Ohjausobjektissa näkyvän tekstin fonttikoko.
 
@@ -131,13 +130,13 @@ Ohjausobjektin asettelu voi olla vaaka- tai pystysuuntainen.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
 
-[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 
 1. Lisää **Valintanappi**-ohjausobjekti, anna sille nimeksi **Hinnoittelu** ja aseta sen **[Items](properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **["Standard"; "Premium"]**
+    **["Standard", "Premium"]**
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 

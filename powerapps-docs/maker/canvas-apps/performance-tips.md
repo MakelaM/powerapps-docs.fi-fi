@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/17/2019
 ms.author: yingchin
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c0926c2c38adac6b3377de9a87eef4dd7d7a7cf7
-ms.sourcegitcommit: 9c4d95eeace85a3e91a00ef14fefe7cce0af69ec
+ms.openlocfilehash: 9943678815b53df048ad197e3cdcbd56f4070fa3
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67349817"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995790"
 ---
 # <a name="optimize-canvas-app-performance-in-powerapps"></a>Kangassovellusten suorituskyvyn optimointi PowerAppsissa
 Microsoft tekee kaikkensa parantaakseen kaikkien PowerApps-ympäristössä toimivien sovellusten suorituskykyä. Tämän aiheen parhaiden käytäntöjen avulla voit myös tehostaa luomiesi sovellusten suorituskykyä.
@@ -32,7 +32,7 @@ Kun käyttäjä avaa sovelluksen, sovellus käy seuraavat suoritusvaiheet läpi,
 ## <a name="limit-data-connections"></a>Rajoita tietoyhteyksiä 
 **Älä yhdistä yli 30 tietolähteeseen samassa sovelluksessa**. Sovellus pyytää uusia käyttäjiä kirjautumaan sisään jokaiseen liittimeen, joten jokainen ylimääräinen liitin kasvattaa sovelluksen käynnistysaikaa. Kun sovellusta suoritetaan, jokainen liitin käyttää suoritinresursseja, muistia ja verkon kaistanleveyttä, kun sovellus pyytää tietoja kyseisestä tietolähteestä. 
 
-Voit nopeasti mitata sovelluksesi suorituskykyä ottamalla käyttöön kehittäjätyökalut [Microsoft Edgessä](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) tai [Google Chromessa](https://developers.google.com/web/tools/chrome-devtools/network-performance/) sovelluksen suorittamisen aikana. Sovelluksesi on todennäköisesti kestää kauemmin kuin 15 sekuntia palauttamana tietoja, jos se pyytää tietoja usein yli 30 tietolähteisiin, kuten Common Data Service-, Azure SQL-, SharePoint- ja Excel onedrivessa.  
+Voit nopeasti mitata sovelluksesi suorituskykyä ottamalla käyttöön kehittäjätyökalut [Microsoft Edgessä](https://docs.microsoft.com/microsoft-edge/devtools-guide/network) tai [Google Chromessa](https://developers.google.com/web/tools/chrome-devtools/network-performance/) sovelluksen suorittamisen aikana. Sovelluksesi vie todennäköisemmin yli 15 sekuntia aikaa tietojen palauttamiseen, jos se pyytää usein tietoja yli 30 tieto lähteestä, kuten Common Data Service, Azure SQL:stä, SharePointista ja Excelistä OneDrivessa.  
 
 ## <a name="limit-the-number-of-controls"></a>Rajoita ohjausobjektien määrää 
 **Älä lisää yli 500 ohjausobjektia samaan sovellukseen**. PowerApps luo HTML DOMin kunkin ohjausobjektin hahmontamista varten. Mitä enemmän ohjausobjekteja lisäät, sitä enemmän muodostamisaikaa PowerApps tarvitsee. 
@@ -46,10 +46,12 @@ Kuten [tässä aiheessa](functions/function-concurrent.md) esitellään, **Concu
 
 Ilman **Concurrent**-funktiota, tämä kaava joutuu lataamaan nämä neljä taulukkoa aina yksi kerrallaan:
 
-    ClearCollect( Product, '[SalesLT].[Product]' );
-    ClearCollect( Customer, '[SalesLT].[Customer]' );
-    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
-    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+```
+ClearCollect( Product, '[SalesLT].[Product]' );
+ClearCollect( Customer, '[SalesLT].[Customer]' );
+ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' );
+ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' )
+```
 
 Voit varmistaa tämän toiminnan selaimesi kehittäjätyökalujen avulla:
 
@@ -57,33 +59,37 @@ Voit varmistaa tämän toiminnan selaimesi kehittäjätyökalujen avulla:
     
 Voit sisällyttää saman kaavan **Concurrent**-funktioon vähentääksesi toiminnon vaatiman kokonaisajan:
 
-    Concurrent( 
-        ClearCollect( Product, '[SalesLT].[Product]' ),
-        ClearCollect( Customer, '[SalesLT].[Customer]' ),
-        ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
-        ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
-        
+```
+Concurrent( 
+    ClearCollect( Product, '[SalesLT].[Product]' ),
+    ClearCollect( Customer, '[SalesLT].[Customer]' ),
+    ClearCollect( SalesOrderDetail, '[SalesLT].[SalesOrderDetail]' ),
+    ClearCollect( SalesOrderHeader, '[SalesLT].[SalesOrderHeader]' ))
+```
+
 Tämän muutoksen jälkeen sovellus noutaa taulukot rinnakkain: 
 
-![Rinnakkaisen ClearCollect](./media/performance-tips/perfconcurrent2.png)  
+![Rinnakkainen ClearCollect](./media/performance-tips/perfconcurrent2.png)  
 
 ## <a name="cache-lookup-data"></a>Välimuistin hakutiedot
 Käytä **Joukko**-funktiota tallentaaksesi hakutaulukkotietoja välimuistiin paikallisesti, jolloin et joudu toistuvasti noutamaan tietoja lähteestä. Tämä menetelmä auttaa optimoimaan suorituskykyä, jos tiedot eivät oletettavasti tule muuttumaan istunnon aikana. Kuten tässä esimerkissä näytetään, tiedot noudetaan lähteestä kerran, jonka jälkeen niihin viitataan paikallisesti siihen asti, kunnes käyttäjä sulkee sovelluksen. 
 
-    Set(CustomerOrder, Lookup(Order, id = “123-45-6789”));
-    Set(CustomerName, CustomerOrder.Name);
-    Set(CustomerAddress, CustomerOrder.Address);
-    Set(CustomerEmail, CustomerOrder.Email);
-    Set(CustomerPhone, CustomerOrder.Phone);
+```
+Set(CustomerOrder, Lookup(Order, id = “123-45-6789”));
+Set(CustomerName, CustomerOrder.Name);
+Set(CustomerAddress, CustomerOrder.Address);
+Set(CustomerEmail, CustomerOrder.Email);
+Set(CustomerPhone, CustomerOrder.Phone);
+```
 
 Yhteystiedot, oletusarvot ja käyttäjätiedot eivät muutu usein. Siksi voit yleisesti ottaen käyttää tätä menetelmää myös **Defaults**- ja **Käyttäjä**-funktioiden kanssa. 
 
 ## <a name="avoid-controls-dependency-between-screens"></a>Vältä näyttöjen välistä ohjausobjektiriippuvuutta
-Voit parantaa suorituskykyä sovelluksen näytöt ladataan muistiin, vain, kun niitä tarvitaan. Tämä optimointi voit mallisuoja, jos esimerkiksi näytön 1 on ladattu ja sen kaavoista käyttää näytöstä 2 ohjausobjektin ominaisuuden. Nyt näytön 2 on ladattava täyttämiseksi riippuvuuden, ennen kuin näyttö 1 voidaan näyttää. Kuvittele näytön 2 on riippuvaista näytössä 3, jossa on toinen riippuvuus näytön 4 ja niin edelleen. Tämä riippuvuusketju voi aiheuttaa ladata useita näyttöjä.
+Jos haluat parantaa suoritus tehoa, sovelluksen näytöt ladataan muistiin vain, kun niitä tarvitaan. Tämä optimointi voi vaikeutua, jos esimerkiksi näyttö 1 on ladattu ja jokin sen kaavoista käyttää ohjaus objektin ominaisuutta näytöstä 2. Nyt näyttö 2 on ladattava riippuvuuden täyttämiseksi, ennen kuin näyttö 1 voidaan näyttää. Imagine Screen 2: lla on riippuvuussuhde näytössä 3, jossa on toinen riippuvuus näytöstä 4 ja niin edelleen. Tämä riippuvuusketju voi aiheuttaa useiden näyttöjen lataamisen.
 
-Tästä syystä Vältä kaavan riippuvuudet näyttöjen välillä. Joissakin tapauksissa voit käyttää yleistä muuttujaa tai kokoelma jakaa tietoja näyttöjen välillä.
+Tästä syystä Vältä kaavojen riippuvuuksia näyttöjen välillä. Joissakin tapa uksissa voit käyttää yleistä muuttujaa tai kokoelmaa tietojen jakamiseen näyttöjen välillä.
 
-On poikkeuksen. Edellisessä esimerkissä imagine, ainoa tapa näytön 1 on siirtymällä näytöstä 2. Sitten näytön 2 on jo ladattu muistiin 1 näytön ollessa voi ladata. Ei ole muita toimia ei tarvita täyttämiseksi näytön 2 kokoonpanoresurssin ja näin ollen ei ole suorituskykyyn.
+On olemassa poikkeus. Edellisessä esimerkissä voidaan kuvitella, että näyttö 1 voidaan näyttää vain siirtymällä näytöstä 2. Sitten näyttö 2 olisi jo ladattu muistiin, kun näyttö 1 ladattiin. Lisä työtä ei tarvita näytön 2 riippuvuuden täyttämiseksi, joten suoritus kyky ei ole vaikutusta.
 
 ## <a name="use-delegation"></a>Käytä delegointia
 Mikäli mahdollista, käytä funktioita, jotka delegoivat tietojen käsittelyä tietolähteeseen sen sijaan, että ne noutaisivat tietoja paikallisen laitteen käsiteltäväksi. Jos sovelluksen on käsiteltävä tietoja paikallisesti, toiminto vaatii paljon enemmän käsittelytehoa, muistia ja verkon kaistanleveyttä, erityisesti jos tietojoukko on suuri.
@@ -103,14 +109,14 @@ Käyttämällä delegoitavia tietolähteitä ja kaavoja voit varmistaa sovelluks
 ## <a name="republish-apps-regularly"></a>Julkaise sovelluksesi uudelleen säännöllisesti
 [Julkaise sovelluksesi uudelleen](https://powerapps.microsoft.com/blog/republish-your-apps-to-get-performance-improvements-and-additional-features/) (blogikirjoitus) saadaksesi suorituskyvyn parannuksia ja muita ominaisuuksia PowerApps-ympäristöstä.
 
-## <a name="avoid-repeating-the-same-formula-in-multiple-places"></a>Toistaa saman kaavan useita paikoissa
-Jos useita ominaisuudet (etenkin, jos se on monimutkainen) samaa kaavaa, harkitse määritetty kerran ja viittaavat kaikki lisäehdot ensimmäisen ominaisuus tulos. Esimerkiksi ei määritetty **DisplayMode** saman monimutkaisia kaavan ohjausobjekteja A, B, C, D ja E-ominaisuuden. Määritä sen sijaan A: n **DisplayMode** ominaisuus monimutkaisia kaava B **DisplayMode** A: n tuloksen ominaisuudeksi **DisplayMode** -ominaisuuden, ja niin edelleen C D ja E.
+## <a name="avoid-repeating-the-same-formula-in-multiple-places"></a>Vältä saman kaavan toistamista useissa paikoissa
+Jos useita ominaisuuksia suoritetaan samalla kaavalla (etenkin jos se on monimutkainen), harkitse sen asettamista kerran ja viittaa sitten ensimmäisen ominaisuuden tulos teen myöhempiin ominaisuuksiin. Älä esimerkiksi määrittää ohjaus objektien A, B, C, D ja E **DisplayMode** -ominaisuudeksi samaa monimutkaista kaavaa. Sen sijaan, Set A **DisplayMode** -ominaisuudeksi Complex Formula, Set B: n **DisplayMode** -ominaisuudeksi n **DisplayMode** -ominaisuuden tulos ja niin edelleen C, D ja E.
 
-## <a name="enable-delayoutput-on-all-text-input-controls"></a>DelayOutput käyttöön kaikki teksti syöteohjausobjektit
-Jos sinulla on useita kaavat tai sääntöjä, jotka viittaavat arvo **Tekstisyöte** ohjausobjekti, Määritä **DelayedOutput** TRUE tämän ohjausobjektin ominaisuuden. **Tekstin** päivitetään vasta, kun näppäilyt annettu nopeasti peräkkäin on lopettanut tämän ohjausobjektin ominaisuuden. Kaavoja tai sääntöjä ei suoriteta niin monta kertaa ja parantaa sovelluksen suorituskykyä.
+## <a name="enable-delayoutput-on-all-text-input-controls"></a>Ota DelayOutput käyttöön kaikissa teksti syöte ohjaus objekteissa
+Jos sinulla on useita kaavoja tai sääntöjä, jotka viittaavat **teksti syöte** -ohjaus objektin arvoon, voit määrittää kyseisen ohjaus objektin **Delayedoutput** -ominaisuudeksi True. Ohjaus objektin **Text** -ominaisuus päivitetään vain, kun pikanäppäimen painallukset on lopetettu. Kaavoja tai sääntöjä ei suoriteta niin monta kertaa, ja sovelluksen suoritus kyky paranee.
 
-## <a name="avoid-using-formupdates-in-rules-and-formulas"></a>Vältä Form.Updates säännöt ja kaavat
-Jos viittaat käyttäjän syötteen arvon sääntö tai kaavan avulla **Form.Updates** muuttujan, se laskee kaikki lomakkeen tiedot kortteja funktion ja luo tietueen aina, kun. Jos haluat tehdä sovelluksen tehokkaampia, viitata suoraan kortin tai ohjausobjektin arvo arvo.
+## <a name="avoid-using-formupdates-in-rules-and-formulas"></a>Vältä lomakkeen käyttämistä. päivitykset sään töihin ja kaavoihin
+Jos viittaat käyttäjän syöte arvoon säännössä tai kaavassa **lomakkeen avulla. päivittää** muuttujan, se iteroi kaikki lomakkeen tieto kortit ja luo tietueen joka kerta. Jos haluat tehostaa sovelluksesi käyttöä, viittaa arvoon suoraan tieto kortista tai ohjaus objektin arvosta.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tarkista [koodausstandardeja](https://aka.ms/powerappscanvasguidelines) maksimoida sovellusta ja pitämällä sovellukset ylläpitämistä.
+Lue [koodaus standardit](https://aka.ms/powerappscanvasguidelines) , joiden avulla voit maksimoida sovelluksen suoritus tehon ja pitää sovelluksia helpommin ylläpidetä.

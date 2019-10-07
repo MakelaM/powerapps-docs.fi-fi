@@ -1,101 +1,101 @@
 ---
-title: Northwind Traders kangas-sovelluksen yleiskatsaus | Microsoft Docs
+title: Northwind Traders-kangas sovelluksen Yleiskatsaus | Microsoft Docs
 description: ''
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/17/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: e2f28b07f53646e6fbf5afc0b1510bd37e3262b8
-ms.sourcegitcommit: e85072f7a80da308c4caabe20adbf2509588ca57
+ms.openlocfilehash: 48966659ca12ada12448543492731fff8431fbde
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761047"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995835"
 ---
-# <a name="overview-of-the-canvas-app-for-northwind-traders"></a>Yleiskatsaus Northwind Traders kangas-sovellus
+# <a name="overview-of-the-canvas-app-for-northwind-traders"></a>Northwind Traders-kangas sovelluksen Yleiskatsaus
 
-Lue lisätietoja pohjaan perustuvan sovelluksen hallintaan suhteellisena Northwind Traders tietoja tietokannan, [asennettu ympäristösi](northwind-install.md). Noudata tämän sovelluksen alusta alkaen, kasvun siten käytännönläheisen kokemuksen relaatiotietoja seuraavat aiheet vaiheittaiset ohjeet.
+Lue tietoja kangas sovelluksesta, jonka avulla voit hallita relaatio tietoja [ympäristössäsi asennetussa](northwind-install.md)Northwind Traders-tieto kannassa. Tämän jälkeen voit luoda tämän sovelluksen alusta alkaen noudattamalla vaiheittaisia ohjeita ja hankkimalla näin käytännön kokemusta relaatio tietojen käyttämisestä.
 
-Tässä ohjeaiheessa löytää:
+Tutustu tähän aiheeseen:
 
-- Miten sovelluksen käyttäjälle näytetään ja hallitsee relaatiotietoja sovelluksessa.
-- Näytettävien tietojen asema sovelluksen.
-- Miten kyseiset tietotyyppejä välisiä luotiin.
+- Miten sovelluksen käyttäjä näkee ja hallitsee relaatio tietoja sovelluksessa.
+- Minkä tyyppiset tiedot ohjaavat sovellusta.
+- Miten näiden tieto tyyppien väliset yhteydet luotiin.
 
-Samassa näytössä sovelluksen käyttäjälle voi näyttää, päivittää, luoda ja poistaa tilauksia.
-
-> [!div class="mx-imgBorder"]
-> ![Valmis kangas-sovellus](media/northwind-orders-canvas-part1/orders-finished.png)
-
-## <a name="explore-the-user-interface"></a>Tutustu käyttöliittymän
-
-### <a name="order-gallery"></a>Tilauksen valikoima
-
-Sovelluksen vasemmassa reunassa valikoimassa näytetään tilauksia, mukaan lukien tilausnumero, tilan, joiden asiakkaan nimi ja tilauksen kokonaiskustannusten luettelo. Käyttäjä voi selata luettelon tilauksen etsii ja näyttää lisätietoja siitä sitten valitsemalla tilauksen nuolta. Lisätietoja: [Luo tilauksen valikoiman](northwind-orders-canvas-part1.md).
-
-### <a name="summary-form"></a>Yhteenveto
-
-Oikeassa yläkulmassa lomakkeen on, että käyttäjä valitsi valikoimassa tilauksen tilauksen yhteenveto. Yhteenveto sisältää paljon samoja tietoja, kuten valikoiman ei, mutta yhteenveto näkyy myös päivämäärät, kun tilaus on luotu ja maksettu sekä nimi ja työntekijä, joka hallittu tilauksen kuva. Käyttäjä muuttaa lomakkeen tietoja, tallennat muutokset, Peruuta ne tai Poista tilaus valitsemalla kuvake lähellä oikeaa reunaa otsikkorivin. Lisätietoja: [Luo yhteenveto lomake](northwind-orders-canvas-part2.md).
-
-### <a name="detail-gallery"></a>Valikoiman tiedot
-
-Oikeassa yläkulmassa toinen valikoima näyttää tiedot siitä, mitkä tuotteet valitun tilauksen sisältää ja kuinka paljon. Valikoiman kohteen kutsutaan tilauksen tiedot. Sovelluksen käyttäjälle voit lisätä ja poistaa minkä tahansa valikoiman kohteen käyttämällä ohjausobjekteja- ja sen alla. Lisätietoja: [Luo tietoja-valikoiman](northwind-orders-canvas-part3.md).
+Yhdessä näytössä sovelluksen käyttäjä voi näyttää, päivittää, luoda ja poistaa tila uksia.
 
 > [!div class="mx-imgBorder"]
-> ![Näytön alueiden määritys](media/northwind-orders-canvas-part1/orders-parts.png)
+> ![Viimeistele kangas sovellus @ no__t-1
 
-## <a name="explore-the-data-sources"></a>Tutustu tietolähteisiin
+## <a name="explore-the-user-interface"></a>Tutustu käyttö liittymään
 
-Tämän sovelluksen luomiseen näytät tiedot viisi entiteetit ja asetusjoukon. Itse asiassa useimmissa alue tämän sovelluksen esittää useita entiteettejä tietoja. Esimerkiksi valikoiman tilaus sisältää nämä tiedot:
+### <a name="order-gallery"></a>Tilaus valikoima
 
-- Tilausnumero on kenttä **tilaukset** entiteetin.
-- Tila on toisen kentän **tilaukset** entiteetin, vaihtoehto **tilausten tila** asetusjoukko.
-- Asiakkaan nimi on kenttä **asiakkaille** entiteetin.
-- Kokonaiskustannukset lasketaan tietojen perusteella **Tilaustiedot** entiteetin.
+Sovelluksen vasemmassa reunassa olevassa valikoimassa näytetään luettelo tila uksista, mukaan lukien tila uksen numero, tila, asiakkaan nimi ja tila uksen kokonaiskustannukset. Käyttäjä voi selata luetteloa löytääksesi tila uksen ja näyttää sen jälkeen lisä tietoja valitsemalla tila uksen nuolen. Lisätietoja: [Luo tilaus valikoima](northwind-orders-canvas-part1.md).
 
-Yhteenveto sisältää joitakin samat tiedot kuin luettelon tilausten, mutta se sisältää myös nimi ja työntekijä, joka hallittu tilauksen kuva. Tiedot tulevat kenttien **työntekijät** entiteetin. Tiedot-valikoima näyttää tietueita **Tilaustiedot** entiteetin ja kunkin tuotteen nämä tiedot on tietueen **tilata tuotteita** entiteetin.
+### <a name="summary-form"></a>Yhteenveto lomake
 
-## <a name="explore-the-relationships"></a>Tutustu suhteet
+Oikeassa yläkulmassa oleva lomake tekee yhteenvedon järjestyksestä, jonka käyttäjä valitsi järjestys valikoimassa. Yhteenvedossa on paljon samoja tietoja kuin valikoimassa, mutta yhteenvedossa näytetään myös päivä määrät, jolloin tilaus luotiin ja maksetaan, sekä tila uksen hallinnoidun työn tekijän nimi ja kuva. Käyttäjä voi muuttaa lomakkeen tietoja, tallentaa muutokset, peruuttaa ne tai poistaa tila uksen valitsemalla kuvakkeen otsikko rivin oikean reunan läheltä. Lisätietoja: [Luo Yhteenveto lomake](northwind-orders-canvas-part2.md).
 
-Voit näyttää tietoja eri lähteistä (esimerkiksi entiteetit) ovat samassa valikoimassa tai lomakkeessa koska entiteeteistä on suhteita, jotka on luotu tietokannan puolestasi.
+### <a name="detail-gallery"></a>Tieto valikoima
 
-### <a name="many-to-one-relationships"></a>Monta yhteen-suhteita
+Oikeassa alakulmassa on toinen valikoima, joka sisältää tietoja siitä, mitä tuotteita valittu järjestys sisältää ja mitä määriä. Kutakin tämän valikoiman kohdetta kutsutaan tila uksen yksityiseksi. Sovelluksen käyttäjä voi lisätä ja poistaa minkä tahansa kyseisen valikoiman kohteen käyttämällä ohjaus objektien käyttö-ja hallinta-kohteita. Lisätietoja: [Luo tieto valikoima](northwind-orders-canvas-part3.md).
 
-Esimerkiksi asiakkaan ja kunkin tilauksen työntekijän tietoja sijaitsevat **asiakkaille** ja **työntekijät** entiteettejä. Tämän vuoksi **tilaukset** entiteetillä on monta-yhteen suhteita kyseisten entiteetteihin, koska on olemassa useita tilauksia, jotka voidaan asettaa vain yksi asiakkaan mukaan ja vain yksi työntekijä hallitsee.
+> [!div class="mx-imgBorder"]
+> ![Näytön alueiden määritelmät @ no__t-1
 
-Jokaisen order on myös yksi tai useampi rivit, jotka edustavat tuotetta, jotka tilaus sisältää sekä niiden määrät. Kunkin on tietueen **Tilaustiedot** entiteettiä, joka hakee tietoja kunkin tuotteen **tilata tuotteita** entiteetin. Kunkin tiedot tunnistaa vain yhdessä tuotteessa, mutta jokainen tuote voi olla useita tiedot. Tämän vuoksi **Tilaustiedot** entiteetillä on monta-yhteen suhdetta **tilata tuotteita** entiteetin.
+## <a name="explore-the-data-sources"></a>Tutustu tieto lähteisiin
 
-### <a name="one-to-many-relationships"></a>Yksi moneen suhteita
+Jos haluat luoda tämän sovelluksen, Näytä tiedot viidestä entiteetistä ja asetus joukosta. Itse asiassa suurin osa tämän sovelluksen alueista näyttää tietoja useista entiteeteistä. Esimerkiksi tilaus valikoima sisältää nämä tiedot:
 
-Jokaisen order voi sisältää useita nimikkeiden, mutta kunkin koskee vain yksi tilaus. Tämän vuoksi **tilaukset** entiteetillä on yksi moneen suhteen **Tilaustiedot** entiteetin.
+- Järjestys numero on **tila ukset** -entiteetin kenttä.
+- Tila on toinen kenttä **tila ukset** -entiteetissä, joka on vaihto ehto **tilausten tila** -asetus joukosta.
+- Asiakkaan nimi on kenttä **Customers** -entiteetissä.
+- Kokonaiskustannukset lasketaan **Order Details** -entiteetin tietojen perusteella.
 
-### <a name="dot-notation-for-relationships"></a>Suhteiden merkintätapaa piste 
+Yhteenvedossa on joitakin samoja tietoja kuin tilausten luettelossa, mutta se sisältää myös tila uksen hallinnoidun työn tekijän nimen ja kuvan. Nämä tiedot vedetään **työn tekijät** -entiteetin kentistä. Tieto valikoima sisältää **tila uksen tiedot** -entiteetin tietueet, ja kukin kyseisten tietojen tuote on tietue **Order Products** -entiteetissä.
 
-Näytetään entiteettien välisen suhteen perusteella, voit piste ominaisuuden valitsin ja opit luomaan suhdetta kaikissa yhdestä entiteetistä toiseen.  Esimerkiksi jokaiselle tietueelle **tilaukset** entiteetin hakee tiedot **asiakkaille** entiteetti niin, että tilauksen valikoima näyttää asiakkaiden nimiä. Valikoiman, voit määrittää tämän ongelman määrittämällä **tekstin** ominaisuuden nimen seuraava lauseke:<br>`ThisItem.Customer.Company`
+## <a name="explore-the-relationships"></a>Tutki suhteita
 
-**ThisItem** määrittää tietueen **tilaukset** entiteetin sekä vedetään **asiakkaille** entiteettiin tilauksen tehneen asiakkaan tietoja. Tässä tapauksessa lauseke määrittää, että asiakkaan yrityksen nimi näkyy. Kuitenkin asiakkaan koko tietueen on koonneet, joten voit aivan yhtä vaivattomasti näyttää, esimerkiksi sähköpostiosoite asiakkaan sen sijaan.
+Voit näyttää tietoja eri lähteistä (esimerkiksi entiteeteistä) samassa valikoimassa tai lomakkeessa, koska näillä entiteeteillä on suhteita, jotka luotiin tieto kannassa.
 
-Toinen esimerkki, tarvitset lisäapua toiseen yhdestä entiteetistä luomiseen voit määrittää, valikoima näyttää yhden entiteetin, jonka käyttäjä valitsi toinen valikoiman, joka ei toisen entiteetin tietueen perusteella tietueet. Tilauksen tiedot näytetään, määritä tietoja-valikoiman **kohteet** ominaisuudeksi seuraava lauseke:<br>`Gallery1.Selected.'Order Details'`
+### <a name="many-to-one-relationships"></a>Monta yhteen-yhteydet
 
-Tässä tapauksessa **Gallery1.Selected** määrittää tietueen **tilaukset** entiteetin, samoin kuin **ThisItem** ollut edellisessä esimerkissä. Tämä lauseke ei kuitenkaan Nouda vain yhden tietueen kuin edellisen lausekkeen. Sen sijaan se hakee koko taulukon tietueiden näyttää kunkin tuotteen nimi ja yksikköä kohti resurssitarve (joka näkyy **tilata tuotteita** entiteetin) ja määrä (joka näkyy **Tilaustiedot** entiteetti).
+Esimerkiksi tietoja asiakkaasta ja työn tekijästä kullekin tilaukselle on **Asiakkaat** -ja **työn tekijät** -entiteeteissä. Näin ollen **tila ukset** -entiteetillä on monta yhteen-suhteita näihin entiteetteihin, koska on olemassa useita tila uksia, joista kutakin voi tehdä vain yksi asiakas ja joita hallitsee vain yksi työn tekijä.
 
-## <a name="do-it-yourself"></a>Tehdä sen itse
+Jokaisella tila uksessa on myös yksi tai useampi Line-kohde, joka edustaa tila uksen sisältämiä tuotteita ja niiden määriä. Jokainen rivin kohde on **tila uksen tiedot** -entiteetin tietue, joka noutaa tietoja kustakin tuotteesta **Order Products** -entiteetistä. Jokainen yksityiskohta tunnistaa vain yhden tuotteen, mutta jokainen tuote voi näkyä useissa tiedoissa. Näin ollen **Order Details** -entiteetillä on monta yhteen-suhde **Order Products** -entiteettiin.
 
-Voit seurata vaiheittaiset ohjeet Northwind tilaukset pohjaan perustuvan sovelluksen luomiseen.  Ohjeita jaetaan kolme osaa:
+### <a name="one-to-many-relationships"></a>Yksi moneen-suhde
 
-1. [Luo order-valikoima](northwind-orders-canvas-part1.md).
-1. [Luo yhteenveto lomake](northwind-orders-canvas-part2.md).
-1. [Luo tietoja-valikoiman](northwind-orders-canvas-part3.md).
+Jokainen järjestys voi sisältää useita Line-kohteita, mutta kukin rivin osa koskee vain yhtä tilausta. Tästä syystä **tila ukset** -entiteetillä on yksi-moneen-suhde **Order Details** -entiteettiin.
 
-Jos haluat Ohita ratkaisu sisältää kunkin osan aloituskohta-sovellus.  Etsi sovellusten luettelo **Northwind tilaukset (pohjaan perustuvat) - Aloita osa 1** ja niin edelleen.
+### <a name="dot-notation-for-relationships"></a>Yhteyksien piste merkintä 
+
+Jos haluat näyttää tiedot entiteettien välisen suhteen perusteella, voit käyttää dot-ominaisuuden valitsinta, kun haluat kävellä suhteessa entiteetistä toiseen.  Esimerkiksi jokainen **tila ukset** -entiteetin tietue noutaa tietoja **Customers** -entiteetistä niin, että tilaus valikoima voi näyttää asiakkaiden nimet. Tämän valikoiman avulla voit määrittää tämän toiminnon asettamalla selitteen **Text** -ominaisuudeksi tämän lausekkeen:<br>`ThisItem.Customer.Company`
+
+**Thisitem** määrittää **tila ukset** -entiteetin tietueen ja noutaa tila uksen tehneelle asiakkaalle tietoja **Customers** -entiteetistä. Tässä tapa uksessa lauseke määrittää, että asiakkaan yrityksen nimi tulee näkyviin. Kyseisen asiakkaan koko tietue on kuitenkin vedetty, joten voit yhtä helposti näyttää esimerkiksi kyseisen asiakkaan Sähkö posti osoitteen sen sijaan.
+
+Toisena esimerkkinä siitä, miten voit kävellä entiteetistä toiseen, voit määrittää, että valikoiman tulee näyttää tietueita yhdessä entiteetissä sellaisen tietueen perusteella, jonka käyttäjä on valinnut toisessa valikoimassa ja joka on toisessa entiteetissä. Jos haluat näyttää tila uksen tiedot, sinun on asetettava yksityiskohta valikoiman **Items** -ominaisuudeksi tämä lauseke:<br>`Gallery1.Selected.'Order Details'`
+
+Tässä tapa uksessa **Gallery1. Selected** määrittää tietueen **tila ukset** -entiteetissä samalla tavalla kuin **thisitem** edellisessä esimerkissä. Tämä lauseke ei kuitenkaan Vedä vain yhtä tietuetta kuin edellinen lauseke. Sen sijaan se poimii koko tietue taulukon, joka näyttää kunkin tuotteen nimen ja yksikkökohtaisen hinnan (mikä näkyy **Order Products** -entiteetissä) ja määrän ( **tila uksen tiedot** -entiteetissä).
+
+## <a name="do-it-yourself"></a>Tee se itse
+
+Voit seurata vaiheittaisia ohjeita Northwind orders Canvas-sovelluksen luomi seksi.  Ohjeet on jaettu kolmeen osaan:
+
+1. [Luo tilaus valikoima](northwind-orders-canvas-part1.md).
+1. [Luo Yhteenveto lomake](northwind-orders-canvas-part2.md).
+1. [Luo tieto valikoima](northwind-orders-canvas-part3.md).
+
+Jos haluat siirtyä eteenpäin, liuos sisältää aloitus kohdan sovelluksen kullekin osalle.  Etsi sovellus listasta **Northwind-tila ukset (piirto alusta) – Aloita osa 1** ja niin edelleen.
 
 > [!div class="nextstepaction"]
-> [Jatka luomalla order-valikoima](northwind-orders-canvas-part1.md)
+> [Jatka luomalla tilaus valikoima](northwind-orders-canvas-part1.md)

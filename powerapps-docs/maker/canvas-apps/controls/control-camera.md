@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bffbc86dda86c0b179634d2f59e0fb4f5d063ecd
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 88b6b9faf8c4d7c14a09bfc89791a050e3c07ca2
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63321317"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986859"
 ---
 # <a name="camera-control-in-powerapps"></a>Kameran ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi ottaa valokuvia laitteen kameralla.
@@ -74,34 +73,34 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-photos-to-an-image-gallery-control"></a>Lisää valokuvia Kuvavalikoima-ohjausobjektiin
-1. Lisää **Kamera**-ohjausobjekti, anna sen nimeksi **MyCamera** ja määritä sen **[OnSelect](properties-core.md)**-ominaisuudeksi seuraava kaava:<br>
-   **Collect(MyPix; MyCamera.Photo)**
+1. Lisää **Kamera**-ohjausobjekti, anna sen nimeksi **MyCamera** ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
+   **Collect(MyPix, MyCamera.Photo)**
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
-    Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 2. Paina F5 ja ota valokuva napsauttamalla tai napauttamalla **MyCamera**.
-3. Lisää **[Pystysuuntainen valikoima](control-gallery.md)** -ohjausobjekti ja muuta sen **[Kuva](control-image.md)**-ohjausobjektin sekä itse **Kuvavalikoima**-ohjausobjektin koko näyttöön sopivaksi.
-4. Aseta **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)**-ominaisuuden arvoksi:<br>**MyPix**.
-5. Määritä **Kuva**-ohjausobjektin **[Image](properties-visual.md)**-ominaisuudeksi seuraava lauseke:<br>
+3. Lisää **[Pystysuuntainen valikoima](control-gallery.md)** -ohjausobjekti ja muuta sen **[Kuva](control-image.md)** -ohjausobjektin sekä itse **Kuvavalikoima**-ohjausobjektin koko näyttöön sopivaksi.
+4. Aseta **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)** -ominaisuuden arvoksi:<br>**MyPix**.
+5. Määritä **Kuva**-ohjausobjektin **[Image](properties-visual.md)** -ominaisuudeksi seuraava lauseke:<br>
    **ThisItem.Url**
 
     Ottamasi kuva näkyy **Kuvavalikoima**-ohjausobjektissa.
 6. Ota niin monta kuvaa kuin haluat ja palaa oletustyötilaan painamalla Esc.
-7. (valinnainen) Määritä **Kuva**-ohjausobjektin **OnSelect**-ominaisuudeksi **Kuvavalikoima**-ohjausobjektissa **Remove(MyPix; ThisItem)**, paina F5 ja poista valokuva napsauttamalla tai napauttamalla sitä.
+7. (valinnainen) Määritä **Kuva**-ohjausobjektin **OnSelect**-ominaisuudeksi **Kuvavalikoima**-ohjausobjektissa **Remove(MyPix, ThisItem)** , paina F5 ja poista valokuva napsauttamalla tai napauttamalla sitä.
 
-Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)**-funktiota tallentaaksesi valokuvat paikallisesti tai **[Patch](../functions/function-patch.md)**-funktiota tietolähteen päivittämiseksi.
+Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)** -funktiota tallentaaksesi valokuvat paikallisesti tai **[Patch](../functions/function-patch.md)** -funktiota tietolähteen päivittämiseksi.
 
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 Kamerasyötteen näyttämisen lisäksi kameran ohjausobjekti toimii myös painikkeena, joka ottaa kuvan. Siinä on siis samanlaisia helppokäyttötoimintojen kannalta huomioon otettavia seikkoja kuin painikkeilla.
 
 ### <a name="video-alternatives"></a>Vaihtoehdot videoille
-* Harkitse vaihtoehtoisen syöttötavan lisäämistä näkövammaisille käyttäjille. Esimerkiksi **[Lisää kuva](control-add-picture.md)**, jonka avulla käyttäjät voivat ladata kuvan laitteestaan.
+* Harkitse vaihtoehtoisen syöttötavan lisäämistä näkövammaisille käyttäjille. Esimerkiksi **[Lisää kuva](control-add-picture.md)** , jonka avulla käyttäjät voivat ladata kuvan laitteestaan.
 
 ### <a name="color-contrast"></a>Värikontrasti
 Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
@@ -111,5 +110,5 @@ Seuraavien kohteiden välillä on oltava asianmukainen värikontrasti:
 * **[AccessibleLabel](properties-accessibility.md)** on oltava läsnä.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a7128ace53cc1e0754eb7247282b2ecae7642672
-ms.sourcegitcommit: 8d0ba2ec0c97be91d1350180dd6881c14dec8f2d
+ms.openlocfilehash: 4b12bb62011e24e2dfdb12d9d355432aa2bcadb6
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65517416"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986590"
 ---
 # <a name="list-box-control-in-powerapps"></a>Luetteloruutu-ohjausobjekti PowerAppsissa
 Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
@@ -32,7 +31,7 @@ Luettelo, josta käyttäjä voi valita yhden tai useita kohteita.
 
 **[Kohteet](properties-core.md)** – Tietolähde, joka näkyy ohjausobjektissa, kuten valikoimassa, luettelossa tai kaaviossa.
 
-**Valitun** – tietueen, joka edustaa valittu kohde.
+**Valitun** – valittua kohdetta edustava tieto tietue.
 
 Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät **kohteet** oletusarvoisesti niin, että voit helposti määrittää tiedot, jotka uuden ohjausobjektin on tarkoitus näyttää. Voit esimerkiksi määrittää valikoiman **Kohteet**-ominaisuudeksi **Tili**-taulukon Salesforcessa, taulukon nimeltä **Varasto**, jonka loit Excelissä ja latasit pilveen, tai SharePoint-luettelon nimeltä **ConferenceSpeakers**.
 
@@ -63,7 +62,7 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -99,7 +98,7 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 
 **[Reset](properties-core.md)**  – Palautuuko ohjausobjekti oletusarvoonsa.
 
-**SelectedText (vanhentunut)** – merkkijonoarvon, joka edustaa valittu kohde.
+**SelectedText (vanhentunut)** – merkki jono arvo, joka edustaa valittua kohdetta.
 
 **[SelectionColor](properties-color-border.md)** – Luettelosta valitun kohteen tai kohteiden tekstin väri tai kynä-ohjausobjektin valintatyökalun väri.
 
@@ -126,11 +125,11 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **CategoryList** ja aseta sen **[Kohteet](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **["Matto";"Kovapuu";"Laatta"]**
+   **["Matto","Kovapuu","Laatta"]**
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
    
@@ -138,16 +137,16 @@ Kun lisäät valikoiman, luettelon tai kaavion, ominaisuusluettelossa näkyvät 
 2. Lisää kolme **[Avattava luettelo](control-drop-down.md)** -ohjausobjektia, siirrä ne kohtaan **CategoryList** ja anna niille nimeksi **CarpetList**, **HardwoodList**  ja **TileList**.
 3. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Kohteet](properties-core.md)** -ominaisuudeksi jokin näistä arvoista:
    
-   * CarpetList: **["Caserta Stone Beige";"Ageless Beauty Clay"; "Lush II Tundra"]**
-   * HardwoodList: **["Golden Teak";"Natural Hickory"; "Victoria Mahogany"]**
-   * TileList: **["Honey Onyx Marble";"Indian Autumn Slate"; "Panaria Vitality Ceramic"]**
+   * CarpetList: **["Caserta Stone Beige","Ageless Beauty Clay", "Lush II Tundra"]**
+   * HardwoodList: **["Golden Teak","Natural Hickory", "Victoria Mahogany"]**
+   * TileList: **["Honey Onyx Marble","Indian Autumn Slate", "Panaria Vitality Ceramic"]**
      
      ![Lattiapäällysteiden nimet avattavissa luetteloissa](./media/control-list-box/flooring-names.png)
 4. Määritä kunkin **[Avattava luettelo](control-drop-down.md)** -ohjausobjektin **[Näkyvissä](properties-core.md)** -ominaisuudeksi jokin näistä arvoista:
    
-   * CarpetList: **Jos (”matto” in CategoryList.SelectedItems.Value, true)**
-   * HardwoodList: **IF (”Kovapuu” in CategoryList.SelectedItems.Value, true)**
-   * TileList: **IF (”laatta” in CategoryList.SelectedItems.Value, true)**
+   * CarpetList **If ("Carpet" Categorystlist. SelectedItems. Value, True)**
+   * HardwoodList **If ("Hardwood" Categorystlist. SelectedItems. Value, True)**
+   * TileList **If ("Tile" Categoryslist. SelectedItems. Value, True)**
      
      Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 5. Paina F5-näppäintä ja valitse sitten yksi tai useampi kohde kohdasta **CategoryList**.

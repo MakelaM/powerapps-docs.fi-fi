@@ -8,31 +8,31 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 04/23/2018
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 9d24094bfbc596c232e7455ef3d8b8dcdfc5be5c
-ms.sourcegitcommit: 9b2648a9066fe5d3b27b3d893daacba9b18eb75e
+ms.openlocfilehash: bc46f2a01e76741ccb046f382b0dd2829d23b368
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65609376"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987012"
 ---
 # <a name="attachments-control-in-powerapps"></a>Liiteohjausobjekti PowerAppsissa
-Ohjausobjekti, jonka avulla käyttäjät voivat ladata tiedostoja laitteensa, sekä ladata ja poistaa tiedostoja SharePoint-luetteloon tai Common Data Service-entiteetistä.
+Ohjaus objekti, jonka avulla käyttäjät voivat ladata tiedostoja laitteiinsa sekä ladata ja poistaa tiedostoja SharePoint-listasta tai Common Data Service-entiteetistä.
 
 ## <a name="limitations"></a>Rajoitukset
 Liiteohjausobjektilla on seuraavat rajoitukset:
-1. SharePoint-luetteloiden ja Common Data Service-entiteettejä tuetaan liitteet.
+1. Liitteitä tuetaan SharePoint-luetteloissa ja Common Data Service entiteeteissä.
 
-1. Lataaminen ja poistaminen toimivat vain lomakkeen sisällä. Liiteohjausobjekti näkyy käytöstä Kun muokkaustilassa ja lomakkeen sisällä. Jos haluat tallentaa tiedoston lisäykset ja poistot, sovelluksen käyttäjälle on tallennettava lomake. Tämän rajoituksen vuoksi liitetiedosto-ohjausobjektilla ei ole käytettävissä **Lisää** välilehti näkyvät lomakkeessa mutta, kun liite lomakekenttä on käytössä SharePoint- tai Common Data Service-muodossa.
+1. Palvelimeen lataamisen ja poistamisen toiminnot toimivat vain lomakkeen sisällä. Liite ohjaus objekti näkyy poissa käytöstä muokkaus tilassa, ei lomakkeen sisällä. Jos haluat tallentaa tiedostojen lisäykset ja poistot, sovelluksen käyttäjän on tallennettava lomake. Tämän rajoituksen vuoksi liite-ohjaus objekti ei ole käytettävissä **Lisää** -väli lehdestä, mutta se näkyy lomakkeessa, kun liite lomake-kenttä on otettu käyttöön SharePointissa tai Common Data Service lomakkeessa.
 
-1. Voit ladata vain, jos ne ovat 10 Mt tai pienempiä tiedostoja.  
+1. Voit ladata tiedostoja vain, jos ne ovat enintään 10 Mega tavua.  
 
 ## <a name="description"></a>Kuvaus
-**Liitteet** ohjausobjektin avulla voit avata, lisätä ja poistaa tiedostoja SharePoint-luetteloon tai Common Data Service-entiteetistä.
+**Liite** ohjaus objektin avulla voit avata, lisätä ja poistaa tiedostoja SharePoint-listasta tai Common Data Service-entiteetistä.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **[Items](properties-core.md)**  – Ladattavia tiedostoja kuvaava lähde.
@@ -118,5 +118,5 @@ Seuraavat ominaisuudet on oltava käytössä:
 * **NoAttachmentsText**
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.

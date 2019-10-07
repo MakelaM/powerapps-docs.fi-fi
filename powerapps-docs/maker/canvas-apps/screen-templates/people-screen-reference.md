@@ -1,147 +1,146 @@
 ---
-title: Käyttäjät-näytön mallin viittauksen | Microsoft Docs
-description: Tutustu powerappsin pohjaan perustuvat sovellukset käyttäjät-näytön malli toimintaan tiedot
+title: Henkilö näytön malli viittaus | Microsoft Docs
+description: Tietoja siitä, miten Canvas-sovellusten People-Screen-malli toimii Powerappsissa
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 1/2/2019
 ms.author: emcoope
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 09b92a1e2bc87ac6f4e2ec651aa67a845e0f07b1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 0a1626583300e6fe696415a91de68ff08596f081
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61540691"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989396"
 ---
-# <a name="reference-information-about-the-people-screen-template-for-canvas-apps"></a>Lisätietoja pohjaan perustuvat sovellukset käyttäjät-näytön-malli
+# <a name="reference-information-about-the-people-screen-template-for-canvas-apps"></a>Viite tietoja Canvas-sovellusten ihmisinäyttömallista
 
-Pohjaan perustuvia sovelluksia powerappsissa ymmärrä, miten merkittäviä ohjausobjekteja käyttäjät-näytön mallin osallistuu näytön yleistä oletusarvon toimintoja. Nämä esittää toimintakaavoissa ja muita ominaisuuksia, jotka määrittävät, miten ohjausobjektit vastata käyttäjän syötettä arvot. Lisätietoja korkean tason tässä näytössä oletusarvon toiminnot-kohdassa [ihmiset näytön yleiskatsaus](people-screen-overview.md).
+Powerappsin Canvas-sovelluksissa opit ymmärtämään, miten jokainen tärkeä ihmisten näytön mallin ohjaus objekti vaikuttaa näytön yleisiin oletus toimintoihin. Tämä Deep Dive esittelee toiminta kaavoja ja muiden ominaisuuksien arvoja, jotka määrittävät, miten ohjaus objekti reagoi käyttäjän syöttämiseen. Lisä tietoja tämän näytön oletusarvoisesta toiminnosta on Ohje aiheessa [ihmisten näytön yleiskatsaus](people-screen-overview.md).
 
-Tässä ohjeaiheessa korostaa joitakin merkittäviä ohjausobjekteja ja kerrotaan lausekkeita tai kaavoja mitä eri ominaisuuksia (kuten **kohteet** ja **OnSelect**) ohjausobjektit on määritetty:
+Tässä ohje aiheessa esitellään joitakin merkittäviä ohjaus objekteja ja selitetään lausekkeet tai kaavat, joille on määritetty eri ominaisuudet (kuten **kohteet** ja **onselect**):
 
-* [Tekstihakukenttä](#text-search-box)
-* [Käyttäjä Selaa valikoimaa](#user-browse-gallery) (+ aliohjausobjektit)
-* [Ihmisiä lisätä valikoiman](#people-added-gallery) (+ aliohjausobjektit)
+* [Teksti haku ruutu](#text-search-box)
+* [Käyttäjän selaus valikoima](#user-browse-gallery) (+ aliohjausobjektit)
+* [Käyttäjät lisätty valikoima](#people-added-gallery) (+ aliohjausobjektit)
 
 ## <a name="prerequisite"></a>Edellytys
 
-Miten voit lisätä ja määrittää näyttöjä ja muita ohjausobjekteja sinuna tuntee [sovelluksen luominen powerappsin](../data-platform-create-app-scratch.md).
+Perehtyneisyys näyttöjen ja muiden ohjaus objektien lisäämiseen ja määrittämiseen [, kun luot sovelluksen Powerappsissa](../data-platform-create-app-scratch.md).
 
 ## <a name="text-search-box"></a>Tekstihakukenttä
 
-![TextSearchBox ohjausobjekti](media/people-screen/people-search-box.png)
+![TextSearchBox-ohjaus objekti](media/people-screen/people-search-box.png)
 
-Muutamia muita ohjausobjekteja toimia, tai se on riippuvuus teksti-hakuruudun:
+Parilla muulla ohjaus objekteilla on vuoro vaikutuksessa tai on riippuvuussuhde teksti haku ruutuun:
 
-* Jos käyttäjä kirjoittaa tekstiä, käynnistää **UserBrowseGallery** tulee näkyviin.
-* Kun käyttäjä valitsee käyttäjän **UserBrowseGallery**, Etsi sisältö palautetaan.
+* Jos käyttäjä alkaa kirjoittaa tekstiä, **Userbrowsegallery** tulee näkyviin.
+* Kun käyttäjä valitsee henkilön, joka sijaitsee **Userbrowsegallery**-kohteessa, haku sisältö nollataan.
 
-## <a name="user-browse-gallery"></a>Käyttäjä Selaa valikoimaa
+## <a name="user-browse-gallery"></a>Käyttäjän selaus valikoima
 
-![UserBrowseGallery ohjausobjekti](media/people-screen/people-browse-gall.png)
+![UserBrowseGallery-ohjaus objekti](media/people-screen/people-browse-gall.png)
 
-* Ominaisuus: **Kohteet**<br>
-    Arvo: Voit hakea käyttäjille, kun käyttäjä aloittaa kirjoittamisen Logic:
+* Ominaisuuden **Kohteet**<br>
+    Arvo Logiikka, joka etsii käyttäjiä, kun käyttäjä aloittaa kirjoittamisen:
     
-    ```powerapps-comma
-    If( !IsBlank( Trim( TextSearchBox.Text ) ); 
+    ```powerapps-dot
+    If( !IsBlank( Trim( TextSearchBox.Text ) ), 
         'Office365Users'.SearchUser(
             {
-                searchTerm: Trim( TextSearchBox.Text ); 
+                searchTerm: Trim( TextSearchBox.Text ), 
                 top: 15
             }
         )
     )
     ```
     
-Valikoiman kohteet täytetään hakutulosten mukaan [Office365.SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) toiminto. Toiminto hakee teksti `Trim(TextSearchBox)` kuin etsinnän termi ja palauttaa ylimmät 15 tulosten perusteella kyseistä hakua. **TextSearchBox** rivittyy `Trim()` funktiolla, koska käyttäjän haku välilyöntejä, on virheellinen.
+Tämän valikoiman kohteet täytetään haku tuloksilla [office365. SearchUser](https://docs.microsoft.com/connectors/office365users/#searchuser) -toiminnosta. Toiminto vie tekstin `Trim(TextSearchBox)` haku terminä ja palauttaa tämän haun perusteella 15 parasta tulosta. **Textsearchbox** on kääritty `Trim()`-funktiolla, koska käyttäjä haku väli lyönneillä ei kelpaa.
 
-`Office365Users.SearchUser` Toiminto rivittyy `If(!IsBlank(Trim(TextSearchBox.Text)) ... )` funktiolla, koska haluat kutsua toimintoa, kun hakuruutuun sisältää käyttäjän teksti. Tämä parantaa suorituskykyä.
+@No__t-0-toiminto kääritään `If(!IsBlank(Trim(TextSearchBox.Text)) ... )`-funktiolla, koska sinun tarvitsee kutsua vain toiminto, kun haku ruutu sisältää käyttäjän määrittämän tekstin. Tämä parantaa suoritus kykyä.
 
-### <a name="userbrowsegallery-title-control"></a>UserBrowseGallery otsikko-ohjausobjekti
+### <a name="userbrowsegallery-title-control"></a>UserBrowseGallery-otsikon ohjaus objekti
 
-![UserBrowseGallery otsikko-ohjausobjekti](media/people-screen/people-browse-gall-title.png)
+![UserBrowseGallery-otsikon ohjaus objekti](media/people-screen/people-browse-gall-title.png)
 
-* Ominaisuus: **Teksti**<br>Arvo: `ThisItem.DisplayName`
+* Ominaisuuden **Teksti**<br>Arvo: `ThisItem.DisplayName`
 
-  Näyttää niiden Office 365-profiilista henkilön näyttönimi.
+  Näyttää henkilön näyttö nimen Office 365-profiilista.
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: Voit lisätä käyttäjän sovelluksen tason kokoelmaan Code ja valitse sitten käyttäjä:
+* Ominaisuuden **OnSelect**<br>
+    Arvo Koodi, jolla käyttäjä lisätään sovellus tason kokoelmaan, ja valitse sitten käyttäjä:
 
-    ```powerapps-comma
+    ```powerapps-dot
     Concurrent(
-        Set( _selectedUser; ThisItem );
-        Reset( TextSearchBox );
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
-            Collect( MyPeople; ThisItem )
+        Set( _selectedUser, ThisItem ),
+        Reset( TextSearchBox ),
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
+            Collect( MyPeople, ThisItem )
         )
     )
     ```
-Valitsemalla tämän ohjausobjektin tekee kolmesta samanaikaisesti:
+Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
 
-   * Määrittää  **\_selectedUser** muuttujan valittuna.
-   * Nollaa hakuehto- **TextSearchBox**.
-   * Lisää valittu kohde **MyPeople** kokoelman, kaikki käyttäjät kokoelma sovelluksen käyttäjälle on valittu.
+   * Määrittää valitulle kohteelle **\_selectedUser-** muuttujan.
+   * Nollaa haku termin **Textsearchbox**-kohteessa.
+   * Lisää valitun kohteen **Mypeople** -kokoelmaan, joka on kokoelma kaikkia käyttäjiä, jotka sovellus käyttäjä on valinnut.
 
-### <a name="userbrowsegallery-profileimage-control"></a>UserBrowseGallery ProfileImage ohjausobjekti
+### <a name="userbrowsegallery-profileimage-control"></a>UserBrowseGallery Profiledimage-ohjaus objekti
 
-![UserBrowseGallery ProfileImage ohjausobjekti](media/people-screen/people-browse-gall-image.png)
+![UserBrowseGallery Profiledimage-ohjaus objekti](media/people-screen/people-browse-gall-image.png)
 
-* Ominaisuus: **Kuva**<br>
-    Arvo: Noutaa käyttäjäprofiilin valokuva logiikka.
+* Ominaisuuden **Kuva**<br>
+    Arvo Käyttäjän profiili kuvan noutamiseen käytettävä logiikka.
 
-    ```powerapps-comma
+    ```powerapps-dot
     If( !IsBlank( ThisItem.Id ) && 
-            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto;
+            'Office365Users'.UserPhotoMetadata( ThisItem.Id ).HasPhoto,
         'Office365Users'.UserPhoto( ThisItem.Id )
     )
     ```
 
-**Kuvan** ohjausobjekti hakee käyttäjän kuvan [Office365Users.UserPhoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) toiminto. Ennen kuin teet, se etsii kaksi asiaa:
+**Kuva** -ohjaus objekti noutaa käyttäjän kuvan [Office365Users. userphoto](https://docs.microsoft.com/connectors/office365users/#get-user-photo--v1-) -toiminnolla. Ennen sitä se tarkistaa kuitenkin kaksi asiaa:
   
-   * Onko tunnuskenttä tyhjä, tai sitä ei ole tyhjä. Tämä estää **kuvan** ohjausobjekti-yritettäessä noutaa käyttäjän valokuva, ennen kuin valikoima on täytetty hakutulokset.
-   * Onko käyttäjän valokuva (kanssa [Office365Users.UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) toiminto). Tämä estää `Office365Users.UserPhoto` haun palauttamasta poikkeus, jos käyttäjällä ei ole profiilikuvan.
+   * Onko tunnus kenttä tyhjä vai ei tyhjä. Tämä estää **kuva** -ohjaus objektia yrittämästä noutaa käyttäjän valo kuvaa, ennen kuin valikoima on täytetty haku tuloksilla.
+   * Onko käyttäjällä valo kuva ( [Office365Users. UserPhotoMetadata](https://docs.microsoft.com/connectors/office365users/#get-user-photo-metadata) -toiminto). Tämä estää `Office365Users.UserPhoto`-haku-funktion palauttamasta poikkeusta, jos käyttäjällä ei ole profiili kuvaa.
 
-Huomaa, että jos kuvaa ei ole noudetaan, **kuvan** ohjausobjekti on tyhjä, ja **iconUser** ohjausobjekti näkyy sen sijaan.
+Ota huomioon, että jos kuvaa ei noudeta, **kuva** -ohjaus objekti on tyhjä ja **iconuser** -ohjaus objekti näkyy sen sijaan.
 
-## <a name="people-added-gallery"></a>Ihmisiä lisätä valikoima
+## <a name="people-added-gallery"></a>Henkilö-lisätty valikoima
 
-![PeopleAddedGallery ohjausobjekti](media/people-screen/people-people-gall.png)
+![PeopleAddedGallery-ohjaus objekti](media/people-screen/people-people-gall.png)
 
-* Ominaisuus: **Kohteet**<br>
+* Ominaisuuden **Kohteet**<br>
     Arvo: `MyPeople`
 
-Tämä on alustettu tai valitsemalla lisätään kokoelma **UserBrowseGallery otsikko** ohjausobjektin.
+Tämä on kokoelma henkilöitä, jotka on alustettu tai lisätty, valitsemalla **Userbrowsegallery-otsikko** -ohjaus objekti.
 
-### <a name="peopleaddedgallery-title-control"></a>PeopleAddedGallery otsikko-ohjausobjekti
+### <a name="peopleaddedgallery-title-control"></a>PeopleAddedGallery-otsikon ohjaus objekti
 
-![PeopleAddedGallery otsikko-ohjausobjekti](media/people-screen/people-people-gall-title.png)
+![PeopleAddedGallery-otsikon ohjaus objekti](media/people-screen/people-people-gall-title.png)
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: `Set( _selectedUser; ThisItem )`
+* Ominaisuuden **OnSelect**<br>
+    Arvo: `Set( _selectedUser, ThisItem )`
 
-Määrittää **_selectedUser** muuttujan valitun kohteen **EmailPeopleGallery**.
+Määrittää **_Selecteduser** -muuttujan kohteelle, joka on valittu **emailpeoplegallery**-kohteessa.
 
-### <a name="peopleaddedgallery-iconremove-control"></a>PeopleAddedGallery iconRemove ohjausobjekti
+### <a name="peopleaddedgallery-iconremove-control"></a>Peopenleaddedgallery iconRemove-ohjaus objekti
 
-![PeopleAddedGallery iconRemove ohjausobjekti](media/people-screen/people-people-gall-delete.png)
+![Peopenleaddedgallery iconRemove-ohjaus objekti](media/people-screen/people-people-gall-delete.png)
 
-* Ominaisuus: **OnSelect**<br>
-    Arvo: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
+* Ominaisuuden **OnSelect**<br>
+    Arvo: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
-Etsii tietueen **MyPeople** kokoelma, jossa **UserPrincipalName** vastaa **UserPrincipalName** valitun kohteen ja sitten poistaa, tietue kokoelma.
+Hakee tietueen **Mypeople** -kokoelmasta, jossa **userPrincipalName** vastaa valitun kohteen **userPrincipalName** -kohdetta, ja poistaa sitten tietueen kokoelmasta.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 
-* [Lue lisätietoja tässä näytössä](./people-screen-overview.md).
-* [Lue lisätietoja Office 365 Outlook-liittimessä](../connections/connection-office365-outlook.md).
-* [Lue lisätietoja Office 365-käyttäjät-liittimen](../connections/connection-office365-users.md).
+* [Lue lisä tietoja tästä näytöstä](./people-screen-overview.md).
+* [Lue lisä tietoja Office 365 Outlook Connectorista](../connections/connection-office365-outlook.md).
+* [Lue lisä tietoja Office 365-käyttäjien liittimestä](../connections/connection-office365-users.md).

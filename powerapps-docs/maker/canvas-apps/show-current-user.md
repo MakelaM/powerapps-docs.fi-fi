@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/16/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 12a6cd6f3df6c83f39b08608e1057f5e31e7d46e
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
-ms.translationtype: HT
+ms.openlocfilehash: afd5dffc75dea4186058ba96adbaf0dbde8dc3d8
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63319181"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71988529"
 ---
 # <a name="show-information-about-a-powerapps-user-in-a-canvas-app"></a>Hae tietoa PowerAppsin käyttäjästä pohjaan perustuvassa sovelluksessa
 
@@ -39,14 +39,14 @@ Periaatteessa voit käyttää tätä kaikissa tilanteissa, joissa käyttäjä hy
 1. Napsauta tai napauta **Lisää**-välilehdeltä **Media** ja napsauta tai napauta **Kuva**.
    
    ![][2]
-2. Määritä **[Image](controls/properties-visual.md)**-ominaisuudeksi tämä kaava:
+2. Määritä **[Image](controls/properties-visual.md)** -ominaisuudeksi tämä kaava:
    <br>**User().Image**
    
     ![][3]
 3. Napsauta tai napauta **Lisää**-välilehdeltä **Text** ja napsauta tai napauta sitten **Selite**:  
    
     ![][4]
-4. Aseta **[Text](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+4. Aseta **[Text](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    <br>**User().FullName**
    
    ![][6]
@@ -54,7 +54,7 @@ Periaatteessa voit käyttää tätä kaikissa tilanteissa, joissa käyttäjä hy
    Kun toimit näin, selitteeseen täytetään automaattisesti koko nimesi. Siirrä selite Kuva-ohjausobjektin alapuolelle, kuten seuraavassa:
    
    ![][5]
-5. Lisää toinen selite ja aseta sen **[Text](controls/properties-core.md)**-ominaisuudeksi tämä kaava:
+5. Lisää toinen selite ja aseta sen **[Text](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    <br>**User().Email**  
    
     ![][8]

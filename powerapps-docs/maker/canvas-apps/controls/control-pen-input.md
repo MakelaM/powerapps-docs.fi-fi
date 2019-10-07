@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: bad3dcf3b0268a8bb08036fec709281b2cbba253
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 1600f765e40849b47cb41b29c5d4c3fab86b4caf
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61546243"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993385"
 ---
 # <a name="pen-input-control-in-powerapps"></a>PowerAppsin Kynän syöte -ohjausobjekti
 Ohjausobjekti, jolla käyttäjä voi piirtää, pyyhkiä ja korostaa kuvan alueita.
@@ -72,7 +71,7 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
-[**Collect**( *CollectionName*; *DatatoCollect* )](../functions/function-clear-collect-clearcollect.md)
+[**Collect**( *CollectionName*, *DatatoCollect* )](../functions/function-clear-collect-clearcollect.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="create-a-set-of-images"></a>Kuvajoukon luominen
@@ -81,7 +80,7 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[Painike](control-button.md)** -ohjausobjekti, siirrä se **MyDoodles**-kohdan alle ja aseta **[Painike](control-button.md)** -ohjausobjektin **[Teksti](properties-core.md)** -ominaisuudeksi **Lisää**.
 3. Määritä **[Painikkeen](control-button.md)** **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **Collect(Doodles; {Sketch:MyDoodles.Image})**
+   **Collect(Doodles, {Sketch:MyDoodles.Image})**
 4. Lisää **Kuvavalikoima**-ohjausobjekti, siirrä se **[Painike](control-button.md)** -ohjausobjektin alle ja pienennä **Kuvavalikoima**-ohjausobjektin kokoa, kunnes se näyttää vain kolme kohdetta.
 5. Määritä **Kuvavalikoima**-ohjausobjektin **[Kohteet](properties-core.md)** -ominaisuudeksi **Doodles** ja paina F5-näppäintä.
 6. Piirrä **MyDoodles**-kohtaan kuva ja napsauta tai napauta **[Painike](control-button.md)** -ohjausobjektia.
@@ -89,7 +88,7 @@ Käyttäjä voi käyttää tätä ohjausobjektia valkotaulun tavoin ja piirtää
     Piirtämäsi kuva näkyy **Kuvavalikoima**-ohjausobjektissa.
 7. (valinnainen) Napsauta tai napauta **Kynän syöte** -ohjausobjektissa kuvaketta, niin piirtämäsi kuva poistetaan. Piirrä toinen kuva ja sitten napsauta tai napauta **[Painike](control-button.md)** -ohjausobjektia.
 8. Aseta **Kuvavalikoima**-ohjausobjektissa **[Kuva](control-image.md)** -ohjausobjektin **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
-   **Remove(Doodles; ThisItem)**
+   **Remove(Doodles, ThisItem)**
 9. Poista piirustus napsauttamalla tai napauttamalla sitä **Kuvavalikoima**-ohjausobjektissa.
 
 Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)** -funktiota piirustusten paikalliseen tallentamiseen tai **[Ohjelmakorjaus](../functions/function-patch.md)** -funktiota niiden tallentamiseksi tietolähteeseen.

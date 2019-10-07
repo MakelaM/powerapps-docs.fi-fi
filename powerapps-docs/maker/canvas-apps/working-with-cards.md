@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d2b4229cc39a84bcffa624be8352762bcdc7a47b
-ms.sourcegitcommit: 21163a6d77b784f4864fce4695776c9b4652cb29
+ms.openlocfilehash: 113d76a3b80c2ef68f5e267714e4f792c988d237
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66225162"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71988886"
 ---
 # <a name="understand-data-cards-in-powerapps"></a>Tietokorttien ymmärtäminen PowerAppsissa
 
@@ -136,7 +136,7 @@ Tutustumme nyt ohjausobjekteihin, joista perustiedonsyöttökortti koostuu. Väl
 
 ![](./media/working-with-cards/dissect-card1.png)
 
-Kortin ohjausobjekteille on poistettu otsikko Tässä kuvassa:
+Tässä kuvassa tieto kortin ohjaus objekteilla on merkintä:
 
 ![](./media/working-with-cards/dissect-card2.png)
 
@@ -159,7 +159,7 @@ Näiden ohjausobjektien tiedot täytetään noutamalla niiden ominaisuudet korti
 | **TextErrorMessage.Text** |**Parent.Error** |Jos vahvistusongelma ilmenee, kortin **Virhe**-ominaisuus näyttää asianmukaisen virhesanoman. |
 
 > [!NOTE]
-> **Parent.Error** ominaisuus on vain output-ominaisuus, ei voi määrittää käyttämällä kaavaa. Tämän vuoksi tämä ominaisuus ei näy vasemmassa yläkulmassa tai ominaisuuksien luettelo **ominaisuudet** tai **lisäasetukset** välilehdet lähellä oikeaa reunaa. Kaavarivi ehdottaa tätä ominaisuutta, jos kirjoitat kaavan, joka voi viitata ominaisuus.
+> **Parent. Error** -ominaisuus on vain tuloste-ominaisuus, jota ei voi käyttää kaavan avulla. Tämän vuoksi tämä ominaisuus ei ole vasemmassa yläkulmassa olevien ominaisuuksien luettelossa tai oikean reunan lähellä olevissa **ominaisuuksissa** tai **lisä** väli lehdissä. Kaava rivi ehdottaa tätä ominaisuutta, jos kirjoitat kaavaa, joka voi viitata ominaisuuteen.
 
 Käytämme seuraavia keskeisiä kaavoja tietojen hakemiseksi näistä ohjausobjekteista ja niiden siirtämiseksi takaisin tietolähteeseen:
 

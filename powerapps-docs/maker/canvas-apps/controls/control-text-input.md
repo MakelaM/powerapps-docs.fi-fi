@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 60340c3833f61be4acf4780a90d18e483c1dc010
-ms.sourcegitcommit: 26704369b17d2358a77cd4841bd70bbcca3384f2
+ms.openlocfilehash: b5b8e0b9bae3a7733a8499fb096c04e19c878045
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65521031"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993267"
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerAppsin Tekstisyöte-ohjausobjekti
 Ruutu, johon käyttäjä voi kirjoittaa tekstiä, numeroita ja muuta tietoa.
@@ -65,7 +64,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **Format** – Onko käyttäjän syöte rajoitettu vain numeroihin vai voiko se olla mitä tahansa tekstiä.
 
@@ -125,7 +124,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 
 **[Underline](properties-text.md)**  – Onko ohjausobjektissa näkyvä teksti alleviivattu.
 
-**VirtualKeyboardMode** – näppäimistön, teksti tai numeric, joka näkyy sovelluksen käyttäjälle kosketusnäytöllä vaikeaa. **Muodossa** ominaisuus määrittää oletusarvo. Laitteen tuki vaihtelee. Laitteet, joissa on iOS on oltava vähintään 12.2 versio. Suositellut Android-versio on 9.0 ja numeerinen näppäimistöt ominaisuudet vaihtelevat Android-laitteille. Windows 10 ei tue tätä ominaisuutta.  
+**Virtualkeyboardmode** – virtuaalisen näppäimistön, tekstin tai numeron tyyppi, joka näkyy sovelluksen käyttäjän kosketus näytössä. **Format** -ominaisuus määrittää Oletus arvon. Laite tuki vaihtelee. IOS-laitteissa on oltava vähintään versio 12,2. Suositeltu Android-versio on 9,0, ja numero-näppäimistöjen toiminnot vaihtelevat Android-laitteissa. Windows 10 ei tue tätä ominaisuutta.  
 
 **[Visible](properties-core.md)** – Ilmaisee, onko ohjausobjekti näkyvissä vai piilossa.
 
@@ -144,7 +143,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää painike, määritä sen **[Text](properties-core.md)** -ominaisuus näyttämään **Lisää** ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
+   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
    
     Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Lisää tekstivalikoima pysty- tai vaakasuunnassa, aseta sen **[Items](properties-core.md)** -ominaisuus näyttämään **Nimet** ja aseta **Subtitle1**-kohdan **[Text](properties-core.md)** -ominaisuudeksi **ThisItem.FirstName**.
@@ -157,7 +156,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 1. Lisää tekstisyötteen ohjausobjekti, anna sen nimeksi **inputPassword** ja aseta sen **Tila**-ominaisuudeksi **Salasana**.
 
 1. Lisää selite ja aseta sen **[Text](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
+   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
 
     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 

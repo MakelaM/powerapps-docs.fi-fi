@@ -1,126 +1,125 @@
 ---
-title: Sovelluksen objektin | Microsoft Docs
-description: Viitetiedot, mukaan lukien syntaksi ja esimerkkejä powerappsin App-objekti
+title: Sovellus objekti | Microsoft Docs
+description: Powerappsin sovellus objektin viite tiedot, mukaan lukien syntaksi ja esimerkit
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/29/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 232accd1050fb84816e86ea95069b8c8778f6586
-ms.sourcegitcommit: 562c7ed5fbb116be1cbb0f45e3f6e75e3e4cf011
+ms.openlocfilehash: b0ab20ce5e0700337bb059644c458a2665d20f1e
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451606"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71983564"
 ---
-# <a name="app-object-in-powerapps"></a>Sovelluksen objektin powerappsissa
+# <a name="app-object-in-powerapps"></a>Sovellus objekti Powerappsissa
 
-Tietoja käynnissä sovelluksen ja hallita sovelluksen toiminnan.
+Antaa tietoja käynnissä olevasta sovelluksesta ja valvoo sovelluksen toimintaa.
 
 ## <a name="description"></a>Kuvaus
 
-Ohjausobjekti, kuten **sovelluksen** objekti sisältää ominaisuuksia, joka määrittää, mikä näyttö näytetään ja, jotka kehottavat käyttäjää korjaamaan sen tallentamaan muutokset, jotta ne eivät ole menettää. Jokaisella on **sovelluksen** objekti.
+Ohjaus objektin tavoin **sovellus** objekti tarjoaa ominaisuuksia, jotka määrittävät, mitä näyttöä näytetään, ja kehottaa käyttäjää tallentamaan muutokset niin, että ne eivät häviä. Jokaisella sovelluksella on **sovellus** objekti.
 
-Voit kirjoittaa kaavoja joitakin ominaisuuksia **sovelluksen** objekti. Yläosassa **puu näkymän** ruudussa **sovelluksen** objekti sinuna haluat muiden ohjausobjekti tai näyttö. Tarkastele ja Muokkaa yksi objektin ominaisuuksia valitsemalla sen vasemmalla puolella kaavarivin avattavasta-luettelosta.
+Voit kirjoittaa kaavoja joihinkin **sovellus** objektin ominaisuuksiin. Valitse **puunäkymä** ruudun yläosasta **sovellus** objekti samalla tavalla kuin mitä tahansa muuta ohjaus objektia tai näyttöä. Tarkastele ja Muokkaa jotakin objektin ominaisuutta valitsemalla se kaava rivin vasemmalla puolella olevasta avattavasta valikosta.
 
 > [!div class="mx-imgBorder"]
-> ![Puunäkymässä App-objekti](media/object-app/appobject.png)
+> ![Sovellus-objekti puunäkymän ruudussa @ no__t-1
 
-## <a name="activescreen-property"></a>ActiveScreen ominaisuus
+## <a name="activescreen-property"></a>ActiveScreen-ominaisuus
 
-**ActiveScreen** ominaisuus tunnistaa näyttö, joka näyttää.
+**Activescreen** -ominaisuus määrittää näkyvissä olevan näytön.
 
-Tämä ominaisuus palauttaa näytön ohjausobjektin, jota voit käyttää viittaamaan näytön ominaisuuksiin tai vertaamaan toiseen näyttöön määrittääksesi, mikä näyttö näytetään. Voit myös käyttää lauseke **App.ActiveScreen.Name** noutaa näyttö, joka näyttää nimi.
+Tämä ominaisuus palauttaa näyttö objektin, jonka avulla voit viitata näytön ominaisuuksiin tai verrata toiseen näyttöön määrittääksesi, mitä näyttöä näytetään. Voit myös hakea näytettävän näytön nimen käyttämällä lauseketta **app.ActiveScreen.name** .
 
-Käytä **[takaisin](function-navigate.md)** tai **[Navigate](function-navigate.md)** funktiota muuttaaksesi näyttö, joka näyttää.
+Voit muuttaa **[näytellä näyttöä Back](function-navigate.md)** -tai **[Navigate](function-navigate.md)** -funktiolla.
 
 ## <a name="onstart-property"></a>OnStart-ominaisuus
 
-**OnStart** ominaisuus suoritetaan, kun käyttäjä käynnistää sovelluksen. Sovellusten tekijöille usein tämän ominaisuuden avulla voit suorittaa seuraavia tehtäviä:
+**ONSTART** -ominaisuus suoritetaan, kun käyttäjä käynnistää sovelluksen. Sovellusten tekijät käyttävät tätä ominaisuutta usein näiden tehtävien suorittamiseen:
 
-- Hae ja tietoja välimuistiin kokoelmiin käyttämällä **[kerätä](function-clear-collect-clearcollect.md)** funktio.
-- Yleiset muuttujat määrittää käyttämällä **[määrittää](function-set.md)** funktio.
-- Siirry ensimmäisen näytön käyttämällä **[Navigate](function-navigate.md)** funktio.
+- Nouda ja Tallenna tiedot kokoelmiin **[Collect](function-clear-collect-clearcollect.md)** -funktiolla.
+- Määritä yleiset muuttujat käyttämällä **[joukkoa](function-set.md)** -funktiolla.
+- Siirry ensimmäiseen näyttöön **[Navigoi](function-navigate.md)** -funktiolla.
 
-Kaava lasketaan, ennen kuin ensimmäinen näyttö näytetään. Yhtään näyttöä ei ladattu, joten et voi määrittää kontekstimuuttujan kanssa **[UpdateContext](function-updatecontext.md)** funktio. Voit kuitenkin välittää kontekstimuuttujia kanssa **Navigate** funktio.
+Tämä kaava arvioidaan, ennen kuin ensimmäinen näyttö tulee näkyviin. Mitään näyttöä ei ole ladattu, joten et voi valita Context-muuttujia, joilla on **[updatecontext](function-updatecontext.md)** -funktiolla. Voit kuitenkin välittää Context-muuttujia **Navigoi** -funktiolla.
 
-Sen jälkeen, kun muutat **OnStart** ominaisuutta, testata sitä hiiri **sovelluksen** objektin **puu näkymän** ruutu valitsemalla kolme pistettä (...), joka näkyy ja valitsemalla sitten **Suorittaa OnStart**. Toisin kuin kun sovellusta ladataan ensimmäistä kertaa olemassa oleviin kokoelmiin ja muuttujat jo määritetään. Aloita tyhjä kokoelmia, käytä **[ClearCollect](function-clear-collect-clearcollect.md)** funktion sijaan **kerätä** funktio.
+Kun olet muuttanut **ONSTART** -ominaisuutta, testaa sitä viemällä hiiren osoitin **sovellus** -objektin päälle **puunäkymä** -ruudussa, valitse kolme pistettä (...), joka tulee näkyviin, ja valitsemalla sitten **Suorita ONSTART**. Toisin kuin silloin, kun sovellus ladataan ensimmäistä kertaa, olemassa olevat kokoelmat ja muuttujat on jo määritetty. Jos haluat aloittaa tyhjillä kokoelmilla, käytä **[Clearcollect](function-clear-collect-clearcollect.md)** -funktiota **Collect** -funktiolla.
 
 > [!div class="mx-imgBorder"]
-> ![Suorita OnStart App-kohteen pikavalikko](media/object-app/appobject-runonstart.png)
+> ![Sovelluskohteen pikavalikko kohteelle Run OnStart @ no__t-1
 
-## <a name="confirmexit-properties"></a>ConfirmExit ominaisuudet
+## <a name="confirmexit-properties"></a>Conconmexit-ominaisuudet
 
-Kukaan haluaa menettää tallentamattomat muutokset. Käytä **ConfirmExit** ja **ConfirmExitMessage** voit varoittaa käyttäjää ennen kuin käyttäjä sulkee sovelluksen ominaisuudet.
-
-> [!NOTE]
-> **ConfirmExit** ei toimi sovelluksia, jotka on upotettu, esimerkiksi Power BI- ja SharePoint.
+Kukaan ei halua menettää tallentamattomia muutoksia. Varoita käyttäjää, ennen kuin hän sulkee sovelluksesi, käyttämällä **Conconmexit** -ja **Consmexitmessage** -ominaisuuksia.
 
 > [!NOTE]
-> Tällä hetkellä nämä ominaisuudet voi viitata vain ensimmäisessä näytössä ohjausobjekteja, jos **Delayed lataaminen** esiversio-ominaisuus on käytössä (se on oletusarvoisesti uusia sovelluksia). Jos viittaukset tehdään, PowerApps Studio ei Näytä virhe, mutta tuloksena julkaistun sovelluksen ei avaa PowerApps Mobilessa tai selaimessa. Pyrimme aktiivisesti poistamaan tämän rajoituksen. Sillä välin, voit poistaa käytöstä **Delayed lataaminen** - **tiedoston** > **sovellusasetukset** > **lisäasetukset**(kohdassa **esiversio-ominaisuudet**).
+> **Conconmexit** ei toimi sovelluksissa, jotka on upotettu esimerkiksi Power BI ja SharePointiin.
 
-### <a name="confirmexit"></a>ConfirmExit
+> [!NOTE]
+> Tällä hetkellä nämä ominaisuudet voivat viitata ohjaus objekteihin vain ensimmäisessä näytössä, jos **viivästetty kuormituksen** esikatselu on käytössä (se on oletuksena uusille sovelluksille). Jos viitta uksia tehdään, PowerApps Studio ei Näytä virhettä, mutta tuloksena saatu julkaistu sovellus ei avaudu PowerApps Mobilessa tai selaimessa. Pyrimme aktiivisesti poistamaan tämän rajoituksen. Tällä välin voit poistaa **viivästyneen kuormituksen** käytöstä **tiedosto** > -**sovelluksen asetuksissa** > **lisä asetukset** (kohdassa **esikatselutoiminnot**).
 
-**ConfirmExit** on totuusarvo, joka, kun *true*, näyttöön tulee valintaikkuna, vahvistus, ennen kuin sovellus on suljettu. Oletusarvon mukaan tämä ominaisuus on *false*, ja ei-valintaikkuna.
+### <a name="confirmexit"></a>Conconmexit
 
-Tämän ominaisuuden avulla voit näyttää vahvistusvalintaikkuna, jos käyttäjä on tehnyt muutoksia, mutta ei tallennettu. Käytetään kaavaa, joka voit tarkistaa muuttujia ja ohjausobjektien ominaisuudet (esimerkiksi **Unsaved** -ominaisuuden [ **muokkauslomake** ](../controls/control-form-detail.md) ohjausobjektin).
+**Confirmexit** on Boolean-ominaisuus, joka, kun se on *tosi*, avaa vahvistus valinta ikkunan, ennen kuin sovellus suljetaan. Oletus arvon mukaan tämä ominaisuus on *Epätosi*, eikä valinta ikkunaa tule näkyviin.
 
-Vahvistus-valintaikkuna tulee näkyviin missä tahansa tilanteessa, jossa tiedot voidaan menettää, kuten näissä esimerkeissä:
+Tämän ominaisuuden avulla voit näyttää vahvistus valinta ikkunan, jos käyttäjä on tehnyt muutoksia, mutta ei tallentanut niitä. Käytä kaavaa, joka voi tarkistaa muuttujia ja ohjaus objektin ominaisuuksia (esimerkiksi [**Muokkaa lomaketta**](../controls/control-form-detail.md) -ohjaus objektin **tallentamaton** ominaisuus).
 
-- Käynnissä [ **poistu** ](function-exit.md) funktio.
-- Jos sovellus on käynnissä selaimessa:
-  - Sulkemisen selaimen tai selaimen välilehteä, jossa sovellus on käynnissä.
-  - Selaimen Edellinen-painikkeen valitseminen
-- Jos sovellus on käynnissä PowerApps Mobilen (iOS- tai Android):
-  - Käynnissä [ **Käynnistä** ](function-param.md) funktio.<br>**Käynnistä** funktio ei käynnistin valintaikkunassa selaimessa, koska toinen välilehti avautuu siten, että tiedot eivät ole menetetty.
-  - Vaihda eri sovelluksen PowerApps Mobilessa kosketusnäyttöä.
-  - Valitsemalla Takaisin-painike Android-laitteessa.
+Vahvistus valinta ikkuna tulee näkyviin missä tahansa tilanteessa, jossa tietoja voidaan menettää, kuten Näissä esimerkeissä:
 
-Kaikilla laitteilla ja versioista Powerappsin saattavat vaihdella vahvistusvalintaikkunassa tarkka ulkoasun.
+- Suoritetaan [**Lopetus**](function-exit.md) -funktiolla.
+- Jos sovellusta suoritetaan selaimessa:
+  - Suljetaan selain tai selain väli lehti, jossa sovellus on käynnissä.
+  - Selaimen Edellinen-painikkeen valitseminen.
+- Jos sovellusta suoritetaan PowerApps Mobilessa (iOS tai Android):
+  - [**Käynnistetään Käynnistys**](function-param.md) -funktiolla.<br>**Launch** -funktiolla ei laukaista valinta ikkunaa selaimessa, koska toinen väli lehti avautuu niin, että tietoja ei häviä.
+  - Pyyhkäisemällä voit vaihtaa eri sovellukseen PowerApps Mobilessa.
+  - Valitsemalla Android-laitteen takaisin-painikkeen.
 
-Vahvistusvalintaikkunassa näy PowerApps Studio.
+Vahvistus valinta ikkunan tarkka ulkoasu voi vaihdella eri laitteissa ja Powerappsin versioissa.
 
-### <a name="confirmexitmessage"></a>ConfirmExitMessage
+Vahvistus valinta ikkuna ei näy PowerApps Studio.
 
-Vahvistusvalintaikkunassa näytetään oletuksena yleinen viesti, kuten **”saattaa tallentamattomia muutoksia”.** käyttäjän kielellä.
+### <a name="confirmexitmessage"></a>Conconmexitmessage
 
-Käytä **ConfirmExitMessage** antamaan Mukautettu viesti tässä vahvistusikkunassa. Jos tämä ominaisuus on *tyhjä*, oletusarvo on käytössä. Mukautettuja viestejä katkaistaan kuin on tarpeen vahvistusvalintaikkunassa mahtumaan, joten viestin joitakin riveille enintään.
+Oletus arvon mukaan vahvistus-valinta ikkunassa näytetään yleinen sanoma, kuten **"sinulla voi olla tallentamattomia muutoksia".** käyttäjän kielellä.
 
-Selaimessa vahvistusvalintaikkunassa saattaa näkyä yleinen viesti selaimesta.
+Anna **confirmexitmessage** -kohteen avulla mukautettu sanoma vahvistus valinta ikkunassa. Jos tämä ominaisuus on *tyhjä*, käytetään oletus arvoa. Mukautetut sanomat katkaistaan tarvittaessa, jotta ne mahtuisivat vahvistus valinta ikkunaan, joten pidä viesti vain muutaman rivin päässä.
+
+Selaimessa vahvistus valinta ikkuna saattaa näkyä selaimessa yleisellä viestillä.
 
 ### <a name="example"></a>Esimerkki
 
-1. Luo sovellus, joka sisältää kaksi lomake-ohjausobjektit **AccountForm** ja **ContactForm**.
+1. Luo sovellus, joka sisältää kaksi lomakkeen ohjaus objektia, **accountaform** ja **contaceform**.
 
-1. Määritä **sovelluksen** objektin **ConfirmExit** ominaisuudeksi seuraava lauseke:
+1. Valitse **sovellus** objektin **Conformexit** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-comma
+    ```powerapps-dot
     AccountForm.Unsaved Or ContactForm.Unsaved
     ```
 
-    Tämä valintaikkuna tulee näyttöön, jos käyttäjä muuttaa kummassa tiedot ja yrittää sitten sulkea sovelluksen muutokset tallentamatta.
+    Tämä valinta ikkuna tulee näkyviin, jos käyttäjä vaihtaa tietoja jommassakummassa muodossa ja yrittää sitten sulkea sovelluksen tallentamatta muutoksia.
 
     > [!div class="mx-imgBorder"]
-    > ![Yleinen vahvistusvalintaikkuna](media/object-app/confirm-native.png)
+    > ![Yleinen vahvistus-valinta ikkuna @ no__t-1
 
-1. Määritä **sovelluksen** objektin **ConfirmExitMessage** -ominaisuuden arvoksi tämä kaava:
+1. Valitse **sovellus** objektin **Constmexitmessage** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    If( AccountsForm.Unsaved;
-        "Accounts form has unsaved changes.";
+    ```powerapps-dot
+    If( AccountsForm.Unsaved,
+        "Accounts form has unsaved changes.",
         "Contacts form has unsaved changes."
     )
     ```
 
-    Tämä valintaikkuna tulee näyttöön, jos käyttäjä muuttaa lomakkeen tilin tietoja ja yrittää sitten sulkea sovelluksen muutokset tallentamatta.
+    Tämä valinta ikkuna tulee näkyviin, jos käyttäjä muuttaa tili lomakkeessa olevia tietoja ja yrittää sulkea sovelluksen tallentamatta muutoksia.
 
     > [!div class="mx-imgBorder"]
-    > ![Lomakkeeseen liittyvät vahvistusvalintaikkuna](media/object-app/confirm-native-custom.png)
+    > ![Lomakekohtainen vahvistus-valinta ikkuna @ no__t-1

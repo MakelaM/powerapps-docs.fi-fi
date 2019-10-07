@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 66813cf8c31fad82eeb25fd515acad4a5ea1f756
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 9fdd7f25a729fa71111e1fd5d82e04b7cea874f3
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548796"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986427"
 ---
 # <a name="pdf-viewer-control-experimental-in-powerapps"></a>PDF-katseluohjelman ohjausobjekti (kokeellinen) PowerAppsissa
 Kokeellinen ohjausobjekti, joka näyttää PDF-tiedoston sisällön.
@@ -27,17 +27,17 @@ Kokeellinen ohjausobjekti, joka näyttää PDF-tiedoston sisällön.
 Näytä tekstiä, grafiikkaa ja muuta sisältöä PDF-tiedostossa lisäämällä tämä ohjausobjekti. Määritä ohjausobjektin **Document**-ominaisuuden arvoksi kaksoislainausmerkeissä oleva URL-osoite, joka viittaa tiedostoon, jonka haluat näyttää.
 
 ## <a name="limitations"></a>Rajoitukset
-1. Powerappsin tietoturva-arkkitehtuurin edellyttää PDF-katseluohjelma tukee vain HTTPS linkkejä, ei HTTP.  
+1. Powerappsin suojaus arkkitehtuuri edellyttää, että PDF-katselu ohjelma tukee vain HTTPS-linkkejä, ei http:tä.  
 
-2. **Asiakirjan** ominaisuus on linkki suoraan PDF-tiedoston. Palvelimien uudelleenohjauksen tai HTML-tiedoston näkymiä ei tueta.
+2. **Document** -ominaisuuden on linkitettävä suoraan PDF-tiedostoon. Palvelimen uudelleenohjauksia tai HTML-näkymiä asia kirjasta ei tueta.
 
-3. Asiakirjan isännöivän palvelimen on oltava edellytä todennusta.
+3. Tiedostoa isännöivä palvelin ei saa vaatia todentamista.
 
-4. Ei voi olla pysty tarkastelemaan PDF-tiedosto sovelluksessasi, jos tiedosto sijaitsee palvelimessa, jossa on rajoittava rajat alkuperä resurssien jakaminen (CORS)-asetukset. Voit ratkaista tämän ongelman PDF-tiedostoja isännöivän palvelimen on mahdollistettava rajat alkuperä pyyntöjen powerapps.com.
+4. Et välttämättä pysty lukemaan PDF-tiedostoa sovelluksessasi, jos tiedosto sijaitsee palvelimessa, jossa on rajoittavia ristiinorigon resurssien jakamis asetuksia (CORS). Jos haluat ratkaista tämän ongelman, PDF-tiedostoja isännöivän palvelimen on sallittava ristiinorigin-pyynnöt osoitteesta powerapps.com.
 
-Sovelluksen käyttäjät kiertää nämä rajoitukset avaamalla PDF-tiedostoja ulkoisten selaimessa, kun niin kehotetaan tekemään, jos ohjausobjektia ei voi avata tiedosto. Vaihtoehto on käytettävissä myös järjestelmävalikossa kaikille ulkoisille asiakirjoille.
+Sovelluksen käyttäjät voivat kiertää nämä rajoitukset avaamalla PDF-tiedostoja ulkoisessa selaimessa pyydettäessä, jos ohjaus objekti ei voi avata asia kirjaa. Vaihtoehto on käytettävissä myös järjestelmävalikossa kaikille ulkoisille asiakirjoille.
 
-Sovellusten tekijöille voit kiertää nämä rajoitukset mukaan lukien PDF-tiedostoja media-resursseina sovelluksessa. Näin PDF-katseluohjelman ohjausobjekti voi näyttää aina tiedoston.
+Sovellusten tekijät voivat kiertää näitä rajoituksia sisällyttämällä PDF-dokumentteja sovelluksen multimediaresurssina. Tällä tavalla PDF-katselu ohjelman ohjaus objekti voi aina näyttää asia kirjan.
 
 ## <a name="key-properties"></a>Tärkeimmät ominaisuudet
 **Document** – Kaksoislainausmerkeissä oleva PDF-tiedoston URL-osoite.
@@ -109,9 +109,9 @@ Lisää **PDF-katseluohjelman** ohjausobjekti ja määritä sen **Document**-omi
 
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    The control shows the PDF file.
+Ohjausobjekti näyttää PDF-tiedoston.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
 
 ## <a name="accessibility-guidelines"></a>Helppokäyttötoimintojen ohjeet
 

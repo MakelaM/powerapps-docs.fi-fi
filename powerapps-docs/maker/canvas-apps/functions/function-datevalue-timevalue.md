@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c1f11be30f56859ede0950feebc27dd1be39d011
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 3914c55bf3be5d172bc80832e437c3e3775a1859
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551188"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985095"
 ---
 # <a name="datevalue-timevalue-and-datetimevalue-functions-in-powerapps"></a>DateValue-, TimeValue- ja DateTimeValue-funktiot PowerAppsissa
 Muuntavat merkkijonon päivämäärän ja/tai ajan päivämäärä- ja aika-arvoksi.
@@ -49,7 +48,7 @@ Lisätietoja on myös kohdassa [Päivämäärien ja kellonaikojen käsittely](..
 Jos haluat muuntaa numeroita, tutustu **[Value](function-value.md)** -funktioon.
 
 ## <a name="syntax"></a>Syntaksi
-**DateValue**( *String* [; *Language* ])<br>**DateTimeValue**( *String* [; *Language* ])<br>**TimeValue**( *String* [; *Language* ])
+**DateValue**( *String* [, *Language* ])<br>**DateTimeValue**( *String* [, *Language* ])<br>**TimeValue**( *String* [, *Language* ])
 
 * *String* – Pakollinen.  Tekstimerkkijono, joka sisältää päivämäärän, kellonajan tai niiden yhdistelmän.
 * *Language* – valinnainen.  Kielimerkkijono, vastaa **[Language](function-language.md)** -funktion kahta ensimmäistä merkkiä.  Jos kieltä ei syötetä, käytetään nykyisen käyttäjän asiakkaan kieltä.  
@@ -58,35 +57,35 @@ Jos haluat muuntaa numeroita, tutustu **[Value](function-value.md)** -funktioon.
 ### <a name="datevalue"></a>DateValue
 Jos syötit **10/11/2014** tekstinsyöttöohjausobjektiin, jonka nimi on **Aloituspäivä**, ja asetit sitten tälle funktiolle selitteen ominaisuuden **[Text](../controls/properties-core.md)** :
 
-* **Text(DateValue(Aloituspäivä.Text); DateTimeFormat.LongDate)**
+* **Text(DateValue(Aloituspäivä.Text), DateTimeFormat.LongDate)**
   
     Selitteenä näkyisi **Saturday, October 11, 2014**, jos tietokoneen kielialueen tunnukseksi on asetettu **EN**.
   
     > [!NOTE]
   > Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
-* **Text(DateValue(Aloituspäivä.Text; "fr"); DateTimeFormat.LongDate)**
+* **Text(DateValue(Aloituspäivä.Text, "fr"), DateTimeFormat.LongDate)**
   
     Selitteessä näkyisi **Monday, November 10, 2014**.
 
 Jos tekisit saman päivämäärälle **20. lokakuuta 2014**:
 
-* **DateDiff(DateValue(Aloituspäivä.Text); Today())**
+* **DateDiff(DateValue(Aloituspäivä.Text), Today())**
   
     Jos tietokoneesi kielialueeksi on asetettu **EN**, selitteessä näkyisi **9**. Se vastaa päivämäärien 11. ja 20. lokakuuta välissä olevien päivien lukumäärää. **[DateDiff](function-dateadd-datediff.md)** -funktio voi näyttää eron myös kuukausina, vuosineljänneksinä tai vuosina.
 
 ### <a name="datetimevalue"></a>DateTimeValue
 Jos syötät **10/11/2014 1:50:24.765 PM** tekstinsyöttöohjausobjektiin, jonka nimi on **Alku**, ja määrität sitten selitteen **[Text](../controls/properties-core.md)** -ominaisuuden seuraavalla tavalla:
 
-* **Text(DateTimeValue(Alku.Text); DateTimeFormat.LongDateTime)**
+* **Text(DateTimeValue(Alku.Text), DateTimeFormat.LongDateTime)**
   
     Selitteenä näkyisi **Saturday, October 11, 2014 1:50:24 PM**, jos tietokoneen kielialueen tunnukseksi on asetettu EN.
   
     > [!NOTE]
   > Voit käyttää useita muita vaihtoehtoja kuin **LongDateTime** käyttämällä **DateTimeFormat**-parametria. Saat luettelon näistä vaihtoehdoista, kun kirjoitat funktiokenttään kyseisen parametrin ja huutomerkin välittömästi sen perään.
-* **Text(DateTimeValue(Alku.Text; "fr"); DateTimeFormat.LongDateTime)**
+* **Text(DateTimeValue(Alku.Text, "fr"), DateTimeFormat.LongDateTime)**
   
     Selitteessä näkyisi **Monday, November 10, 2014 1:50:24 PM**.
-* **Text(DateTimeValue(Alku.Text); "pppp, kkkk pp, vvvv hh:mm:ss.fff AM/PM")**
+* **Text(DateTimeValue(Alku.Text), "pppp, kkkk pp, vvvv hh:mm:ss.fff AM/PM")**
   
     Selitteenä näkyisi **Saturday, October 11, 2014 01:50:24:765 PM**, jos tietokoneen kielialueen tunnukseksi on asetettu **EN**.
   
@@ -95,7 +94,7 @@ Jos syötät **10/11/2014 1:50:24.765 PM** tekstinsyöttöohjausobjektiin, jonka
 ### <a name="timevalue"></a>TimeValue
 Määritä tekstinsyöttöohjausobjekti **Päättynyt** ja määritä selitteen **[Text](../controls/properties-core.md)** -ominaisuus seuraavalla tavalla:
 
-**If(TimeValue(Päättynyt.Text)<TimeValue("5:00:00.000 PM"); "Ehdit!"; "Myöhästyit!")**
+**If(TimeValue(Päättynyt.Text)<TimeValue("5:00:00.000 PM"), "Ehdit!", "Myöhästyit!")**
 
 * Jos kirjoitat **4:59:59.999 PM** ohjausobjektiin **Päättynyt**, selitteessä näkyy ”Ehdit!”
 * Jos kirjoitat **5:00:00.000 PM** ohjausobjektiin **Päättynyt**, selitteessä näkyy ”Myöhästyit!”

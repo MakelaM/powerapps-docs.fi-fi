@@ -8,17 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/02/2016
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: d70756e275ff129265661211f4dc6d95e6cefa96
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 565f751017bc8c145c34058bd4dd57d047127d45
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61545423"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987186"
 ---
 # <a name="connect-to-excel-from-powerapps"></a>Yhdistä Exceliin PowerAppsista
 ![Excel](./media/connection-excel/excelicon.png)
@@ -31,7 +31,7 @@ Excel on *tavallaan* yhteys. Excel-tietojen näyttäminen sovelluksessa:
 4. Näytä nämä tiedot sovelluksessa [luomalla sovellus automaattisesti](../get-started-create-from-data.md) tai lisäämällä ja määrittämällä esimerkiksi **Valikoima**-ohjausobjekti.
 
 > [!NOTE]
-> Kun muodostat yhteyden Excel-taulukkoon PowerAppsista, PowerApps luo uuden sarakkeen nimeltä **\_PowerAppsId_**, jossa on yksilöivä tunnus jokaiselle Excel-taulukon riville.
+> Kun muodostat yhteyden Excel-taulukkoon PowerAppsista, PowerApps luo uuden sarakkeen nimeltä **\_PowerAppsId_** , jossa on yksilöivä tunnus jokaiselle Excel-taulukon riville.
 
 [Pilvitallennusyhteyden yleiskatsauksessa](cloud-storage-blob-connections.md) esitetään, miten yhteys lisätään, Excel-taulukko lisätään tietolähteenä ja Excel-tietoja käytetään sovelluksessa.
 

@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/12/2017
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 23a61dd1300fab71bed4d8c72b861c3c38a1cdea
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 476285021e6a65a32c2e16e4ff95c74be9da933a
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557476"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987230"
 ---
 # <a name="connect-to-twitter-from-powerapps"></a>Twitter-yhteyden luominen PowerAppsista
 ![Twitter](./media/connection-twitter/twittericon.png)
@@ -53,11 +52,11 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 1. Valitse **Lisää**-valikosta **Valikoima** ja lisää jokin **tekstiä käyttävistä** valikoimista.
 2. Seuraavassa esitellään aikajanoja:  
 
-   * Kun haluat hakea näyttöön nykyisen käyttäjän aikajanan, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:
+   * Kun haluat hakea näyttöön nykyisen käyttäjän aikajanan, määritä valikoiman **[Kohteet](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:
 
        `Twitter.HomeTimeline().TweetText`  
        `Twitter.HomeTimeline({maxResults:3}).TweetText`  
-   * Kun haluat hakea näyttöön jonkun toisen käyttäjän aikajanan, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+   * Kun haluat hakea näyttöön jonkun toisen käyttäjän aikajanan, määritä valikoiman **[Kohteet](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:  
 
        `Twitter.UserTimeline( *TwitterHandle* ).TweetText`
 
@@ -66,7 +65,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
 
-       `Twitter.UserTimeline(Tweep.Text; {maxResults:5}).TweetText`
+       `Twitter.UserTimeline(Tweep.Text, {maxResults:5}).TweetText`
 
        Valikoiman ohjausobjektiin ilmaantuvat automaattisesti ne twiitit, joiden julkaisijan tunnuksen kirjoitit tekstiruutuun.
 
@@ -82,11 +81,11 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 ### <a name="show-followers"></a>Näytä seuraajat
 1. Nyt haemme näyttöön joitakin seuraajia käyttämällä **tekstiä käyttäviä**  vaihtoehtoja:  
 
-   * Jos haluat nähdä nykyisen käyttäjän seuraajat, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+   * Jos haluat nähdä nykyisen käyttäjän seuraajat, määritä valikoiman **[Kohteet](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:  
 
        `Twitter.MyFollowers()`  
        `Twitter.MyFollowers({maxResults:3})`
-   * Jos haluat nähdä jonkun toisen käyttäjän seuraajat, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+   * Jos haluat nähdä jonkun toisen käyttäjän seuraajat, määritä valikoiman **[Kohteet](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:  
 
        `Twitter.Followers( *TwitterHandle* )`
 
@@ -95,7 +94,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
 
-       `Twitter.Followers(Tweep.Text; {maxResults:5})`
+       `Twitter.Followers(Tweep.Text, {maxResults:5})`
 
        Valikoiman ohjausobjektiin ilmaantuvat automaattisesti sen Twitter-tunnuksen seuraajat, jonka kirjoitit tekstiruutuun.
 
@@ -111,11 +110,11 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 ### <a name="show-followed-users"></a>Näytä seuratut käyttäjät
 1. Seuraavaksi haemme seurattuja käyttäjiä **tekstiä käyttävän** valikoiman avulla:  
 
-   * Jos haluat nähdä, keitä nykyinen käyttäjä seuraa, määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+   * Jos haluat nähdä, keitä nykyinen käyttäjä seuraa, määritä valikoiman **[Kohteet](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:  
 
        `Twitter.MyFollowing()`  
        `Twitter.MyFollowing({maxResults:3})`
-   * Jos haluat nähdä, keitä toinen käyttäjä seuraa, Määritä **[kohteet](../controls/properties-core.md)** ominaisuus seuraavalla kaavalla:
+   * Jos haluat näyttää, mitä käyttäjiä toinen käyttäjä seuraa, valitse valikoiman **[Items](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:
 
        `Twitter.Following( *TwitterHandle* )`
 
@@ -124,7 +123,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
 
        Määritä valikoiman ohjausobjektin Kohteet-ominaisuus seuraavalla kaavalla:  
 
-       `Twitter.Following(Tweep.Text; {maxResults:5})`
+       `Twitter.Following(Tweep.Text, {maxResults:5})`
 
        Valikoiman ohjausobjekti näyttää automaattisesti muut Twitter-tunnukset, joita seuraat.
 
@@ -134,7 +133,7 @@ Twitter-yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis käytettäv�
     Valikoimassa näkyvät nyt valitsemasi ominaisuuksien arvot.
 
 ### <a name="show-information-about-a-user"></a>Hae tietoa käyttäjästä
-Lisää selite ja lisää sen jälkeen selitteen **[Teksti](../controls/properties-core.md)**-ominaisuus käyttämällä jotain näistä kaavoista:  
+Lisää selite ja lisää sen jälkeen selitteen **[Teksti](../controls/properties-core.md)** -ominaisuus käyttämällä jotain näistä kaavoista:  
 
 * `twitter.User( *TwitterHandle* ).Description`
 * `twitter.User( *TwitterHandle* ).FullName`
@@ -150,7 +149,7 @@ Anna Twitter-tunnus lainausmerkkien sisällä tai käytä jotain muuta vastaavaa
 Vaihtoehtoisesti voit käyttää syötetekstin ohjausobjektia ja kirjoittaa Twitter-tunnuksen samalla tavoin kuin olemme tehneet aiemminkin tämän opastusjakson aikana.
 
 ### <a name="search-tweets"></a>Hae twiittejä
-1. Käytä **tekstillä varustettuja** vaihtoehtoja ja määritä valikoiman **[Kohteet](../controls/properties-core.md)**-ominaisuus seuraavalla kaavalla:  
+1. Käytä **tekstillä varustettuja** vaihtoehtoja ja määritä valikoiman **[Kohteet](../controls/properties-core.md)** -ominaisuus seuraavalla kaavalla:  
 
     `Twitter.SearchTweet( *SearchTerm* ).TweetText`
 
@@ -161,8 +160,8 @@ Vaihtoehtoisesti voit käyttää syötetekstin ohjausobjektia ja kirjoittaa Twit
     > [!TIP]
    > Näytä viisi ensimmäistä tulosta käyttämällä maxResults-ominaisuutta:  
 
-    `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5}).TweetText`
-2. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `Twitter.SearchTweet(SearchTerm.Text; {maxResults:5})`.
+    `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5}).TweetText`
+2. Määritä valikoiman **Kohteet**-ominaisuuden arvoksi `Twitter.SearchTweet(SearchTerm.Text, {maxResults:5})`.
 
     Valittuna olevan valikoiman käytettävissä olevat vaihtoehdot näkyvät oikeanpuoleisessa ruudussa.
 3. Valitse ensimmäisestä luettelosta **TweetText**, toisesta luettelosta **TweetedBy** ja kolmannesta luettelosta **CreatedAt**.
@@ -193,7 +192,7 @@ Tämä yhteys sisältää seuraavat funktiot:
 | [OnNewTweet](connection-twitter.md#onnewtweet) |Käynnistää työnkulun, kun Twitterissä julkaistaan uusi twiitti, joka vastaa hakuehtojasi |
 
 ### <a name="usertimeline"></a>UserTimeline
-Hae käyttäjän aikajana: Hakee määritetyn käyttäjän uusimmat twiitit
+Hae käyttäjän aika Jana: Hakee määritetyn käyttäjän uusimmat twiitit
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -214,7 +213,7 @@ Hae käyttäjän aikajana: Hakee määritetyn käyttäjän uusimmat twiitit
 | MediaUrls |matriisi |Ei | |
 
 ### <a name="hometimeline"></a>HomeTimeline
-Hae kotiaikajana: Hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on kirjattu minulle ja seuraajilleni
+Hae aloitus aika Jana: Hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on kirjattu minulle ja seuraajilleni
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -234,7 +233,7 @@ Hae kotiaikajana: Hakee uusimmat twiitit ja uudelleentwiittaukset, jotka on kirj
 | MediaUrls |matriisi |Ei | |
 
 ### <a name="searchtweet"></a>SearchTweet
-Hae twiittiä: Hakee hakuehtojen mukaiset twiitit
+Hae twiittistä: Hakee hakuehtojen mukaiset twiitit
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -255,7 +254,7 @@ Hae twiittiä: Hakee hakuehtojen mukaiset twiitit
 | MediaUrls |matriisi |Ei | |
 
 ### <a name="followers"></a>Seuraajat
-Hae seuraajat: Hakee määritetyn käyttäjän seuraajat
+Hae seuraajia: Hakee määritetyn käyttäjän seuraajat
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -278,7 +277,7 @@ Hae seuraajat: Hakee määritetyn käyttäjän seuraajat
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="myfollowers"></a>MyFollowers
-Hae Omat seuraajat: Hakee minua seuraavat käyttäjät
+Hae seuraajani: Hakee minua seuraavat käyttäjät
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -300,7 +299,7 @@ Hae Omat seuraajat: Hakee minua seuraavat käyttäjät
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="following"></a>Seurattavat
-Hae seurattavat: Hakee käyttäjät, joita määritetty käyttäjä seuraa
+Hae seuraavat: Hakee käyttäjät, joita määritetty käyttäjä seuraa
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -323,7 +322,7 @@ Hae seurattavat: Hakee käyttäjät, joita määritetty käyttäjä seuraa
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="myfollowing"></a>MyFollowing
-Hae Omat seurattavat: Hakee käyttäjät, joita itse seuraan
+Hae seuraavat: Hakee käyttäjät, joita itse seuraan
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 
@@ -345,7 +344,7 @@ Hae Omat seurattavat: Hakee käyttäjät, joita itse seuraan
 | FriendsCount |kokonaisluku |Ei | |
 
 ### <a name="user"></a>User
-Hae käyttäjän: Hakee tietoja määritetystä käyttäjästä (esimerkiksi käyttäjänimi, kuvaus, seuraajien määrä jne.)
+Hae käyttäjä: Hakee tietoja määritetystä käyttäjästä (esimerkiksi käyttäjänimi, kuvaus, seuraajien määrä jne.)
 
 #### <a name="input-properties"></a>Syöteominaisuudet
 

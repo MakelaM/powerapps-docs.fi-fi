@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/24/2018
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 293c850c5af980a480a56cb9fb3b8c7866950580
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 211a5be4a97780a440bf151157576a5ab56933a5
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61555866"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987509"
 ---
 # <a name="add-a-list-box-a-drop-down-list-or-radio-buttons-to-a-canvas-app"></a>Lisää luetteloruutu, avattava luettelo tai valintanappeja pohjaan perustuvaan sovellukseen
 
@@ -37,7 +36,7 @@ Tässä artikkelissa käsitellään erityisesti luetteloruutuja ja valintanappej
 
 1. Lisää **Luetteloruutu**-ohjausobjekti, anna sille nimeksi **MyListBox** ja aseta sen **Kohteet**-ominaisuudeksi tämä lauseke:
 
-    ```["circle";"triangle";"rectangle"]```  <br/>
+    ```["circle","triangle","rectangle"]```  <br/>
 
     Suunnittelutyökalusi näyttää jotakuinkin seuraavalta:
 
@@ -51,13 +50,13 @@ Tässä artikkelissa käsitellään erityisesti luetteloruutuja ja valintanappej
 
     ![][6]  
 
-6. Määritä seuraavien muotojen **[Visible](controls/properties-core.md)**-ominaisuudeksi seuraavat funktiot:  
+6. Määritä seuraavien muotojen **[Visible](controls/properties-core.md)** -ominaisuudeksi seuraavat funktiot:  
 
    | Muoto | Määritä Visible-funktioksi |
    | --- | --- |
-   | circle |```If("circle" in MyListBox.SelectedItems.Value; true)``` |
-   | triangle |```If("triangle" in MyListBox.SelectedItems.Value; true)``` |
-   | rectangle |```If("rectangle" in MyListBox.SelectedItems.Value; true)``` |
+   | circle |```If("circle" in MyListBox.SelectedItems.Value, true)``` |
+   | triangle |```If("triangle" in MyListBox.SelectedItems.Value, true)``` |
+   | rectangle |```If("rectangle" in MyListBox.SelectedItems.Value, true)``` |
 
 7. Pidä Alt-näppäintä painettuna ja valitse yksi tai useampia muotoja **MyListBox**-ohjausobjektista.
 
@@ -72,8 +71,8 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseen. Voit käyttää tät�
 
     ![][10]  
 
-3. Anna **Valintanappi**-ohjausobjektille nimi **Choices** ja aseta sen **[Items](controls/properties-core.md)**-ominaisuudeksi tämä kaava:  
-   ```["red";"green";"blue"]```  <br/>
+3. Anna **Valintanappi**-ohjausobjektille nimi **Choices** ja aseta sen **[Items](controls/properties-core.md)** -ominaisuudeksi tämä kaava:  
+   ```["red","green","blue"]```  <br/>
 
     ![][12]  
 
@@ -81,8 +80,8 @@ Näissä vaiheissa käytit lauseketta luettelon luomiseen. Voit käyttää tät�
 
 4. Valitse **Lisää**-välilehdeltä **Kuvakkeet** ja valitse ympyrä.
 
-5. Määritä ympyrän **[Fill](controls/properties-color-border.md)**-ominaisuudeksi seuraava funktio:  
-   ```If(Choices.Selected.Value = "red"; Red; Choices.Selected.Value = "green"; Green; Choices.Selected.Value = "blue"; Blue)```  
+5. Määritä ympyrän **[Fill](controls/properties-color-border.md)** -ominaisuudeksi seuraava funktio:  
+   ```If(Choices.Selected.Value = "red", Red, Choices.Selected.Value = "green", Green, Choices.Selected.Value = "blue", Blue)```  
 
     Tällä kaavalla ympyrä vaihtaa väriään valitun valintanapin mukaan.
 

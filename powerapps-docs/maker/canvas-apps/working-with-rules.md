@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/10/2017
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4a3682a913dbbdf0c1848378dad9ab06ccc78aaf
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 52a28f73a0a9dae0e410714102f1bc78fe706fab
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557135"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994735"
 ---
 # <a name="create-a-rule-in-powerapps"></a>Säännön luominen PowerAppsissa
 Voit luoda sääntöjä, joilla voit muokata sovellusta automaattisesti määrittämiesi ehtojen perusteella. Luo esimerkiksi sellainen sääntö, jolla luettelokohteet näytetään punaisella, keltaisella tai vihreällä niiden tilan perusteella tai jolla hyväksyntäpainike näytetään vain tietyille käyttäjille (esimerkiksi esimiehille).
@@ -56,7 +56,7 @@ Toiminnot määrittävät, mitä tapahtuu, kun sääntöä sovelletaan. PowerApp
 
     ![Määritä toiminnot](./media/working-with-rules/rule-define-actions.png)
 
-1. Napsauta tai napauta vahvistusvalintaikkunassa **Selvä!**, niin PowerApps sieppaa seuraavan muutoksen tai muutokset yhdeksi tai useaksi toiminnoksi.
+1. Napsauta tai napauta vahvistusvalintaikkunassa **Selvä!** , niin PowerApps sieppaa seuraavan muutoksen tai muutokset yhdeksi tai useaksi toiminnoksi.
 
 1. Määritä vähintään yksi ohjausobjekti vastaamaan odotuksia, kun ehto on tosi.
 

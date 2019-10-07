@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/17/2017
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a8abc0a641f13cc05e723b96d48dd2d877f0b70f
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 2ef11e767fcf92259839c4bebe282757b0004f21
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318297"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989134"
 ---
 # <a name="understand-data-form-layout-for-canvas-apps-in-powerapps"></a>Pohjaan perustuvien sovellusten tietolomakkeen asettelun ymmärtäminen PowerAppsissa
 
@@ -32,11 +32,11 @@ Tässä opetusohjelmassa käymme läpi vaiheet tämän lomakkeen luomiseen. Tark
 
 Jos olet uusi PowerApps-käyttäjä (tai olet luonut sovelluksia vain automaattisesti), kannattaa [luoda sovellus alusta](get-started-create-from-blank.md), ennen kuin ryhdyt toimimaan tämän ohjeaiheen mukaan. Luomalla sovelluksen alusta opit välttämättömiä käsitteitä, joita mainitaan tässä ohjeaiheessa, mutta ei selitetä, kuten tietolähteiden ja ohjausobjektien lisääminen.
 
-Tämä ohjeaihe on kirjoitettu aivan kuin sinulla tietoja tietolähteen, jonka nimi on **myyntitilaus** , joka sisältää kenttien edellisessä kuvassa. Jos sinulla on Powerappsin palvelupaketin 2 käyttöoikeus tai [kokeiluversion käyttöoikeus](../signup-for-powerapps.md) järjestelmänvalvojaan tai järjestelmän mukauttajat oikeudet, voit [entiteetin](../common-data-service/data-platform-create-entity.md) Common Data Service- ja lisää samanlaiset kentät. 
+Tämä aihe on kirjoitettu niin, että sinulla on tieto lähde, jonka nimi on **myynti tilaus** ja joka sisältää edellisessä kuvassa olevat kentät. Jos sinulla on Powerappsin sopimus 2-käyttö oikeus tai [kokeilu version käyttö oikeus](../signup-for-powerapps.md) ja järjestelmänvalvojan tai järjestelmämukauttajan käyttö oikeudet, voit [luoda entiteetin](../common-data-service/data-platform-create-entity.md) Common Data Service ja lisätä samankaltaisia kenttiä. 
 
 ## <a name="add-a-gallery"></a>Lisää valikoima
 
-1. Luo tablettisovellus alusta ja lisätä tietolähteen.
+1. Luo Tablet-sovellus alusta alkaen ja lisää tieto lähteesi.
 
     Kaikki tässä aiheessa kuvatut asiat koskevat myös puhelinasetteluja, paitsi että puhelinsovelluksissa on usein vain yksi pystysuuntainen sarake.
     
@@ -55,7 +55,7 @@ Tämä ohjeaihe on kirjoitettu aivan kuin sinulla tietoja tietolähteen, jonka n
 1. Lisää tyhjä näyttö, johon lisäät lomakkeen.
    
     Tämän opetusohjelman ulkopuolella voit sijoittaa **Valikoima**- ja **[Muokkaa lomaketta](controls/control-form-detail.md)** -ohjausobjektit samaan näyttöön, mutta saat enemmän työskentelytilaa, jos sijoitat ne eri näyttöihin.
-2. Lisää uuden näytön yläosaan **[Nimi](controls/control-text-box.md)**-ohjausobjekti ja määritä sen **Teksti**-ominaisuudeksi seuraava lauseke:
+2. Lisää uuden näytön yläosaan **[Nimi](controls/control-text-box.md)** -ohjausobjekti ja määritä sen **Teksti**-ominaisuudeksi seuraava lauseke:
    <br>**"Sales Order " & Gallery1.Selected.SalesOrderId**
    
     Nimi näyttää valikoimasta valitsemasi tietueen myyntitilausnumeron.
@@ -201,11 +201,11 @@ Mitä voimme siis päätellä **Kohdista sarakkeisiin** -valinnan käytöstä ve
 ## <a name="set-width-and-height"></a>Määritä leveys ja korkeus
 Kuten kaikkialla PowerAppsissa, lomakkeen asettelua säätelevät kortin ohjausobjektien ominaisuudet. Kuten jo kerroimme, voit muuttaa näiden ominaisuuksien arvoja vetämällä ohjausobjekteja eri paikkoihin tai muuttamalla ohjausobjektien kokoa vetämällä kahvoista. Huomaat kuitenkin tilanteita, joissa haluat ymmärtää ja käsitellä näitä ominaisuuksia tarkemmin, erityisesti silloin, kun teet lomakkeista dynaamisia kaavojen avulla.
 
-### <a name="basic-layout-x-y-and-width"></a>Perusasettelu: X, Y ja leveys
+### <a name="basic-layout-x-y-and-width"></a>Perusrakenne: X, Ky ja Width
 Ominaisuudet **X** ja **Y** määräävät korttien sijainnin. Kun käytämme ohjausobjekteja tyhjällä pohjalla, nämä ominaisuudet tarjoavat absoluuttisen sijainnin. Lomakkeessa näillä ominaisuuksilla on eri merkitys:
 
-* **X**: Tilauksen rivin.
-* **Y**: Rivin numero.
+* **X**: Järjestys rivin sisäpuolella.
+* K: Rivin numero.
 
 Kuten mallipohjan ohjausobjektit, **Leveys**-ominaisuus määrittää kortin vähimmäisleveyden (lisätietoja vähimmäissuhteesta hieman myöhemmin).
 
@@ -224,7 +224,7 @@ Ylimmän rivin kolme korttia eivät enää mahdu vaakasuunnassa, ja toinen rivi 
 
 Voit käyttää tätä toimintoa täysin dynaamisen asettelun luomiseen. Siinä kortit sijoitetaan Z-järjestyksen perusteella niin, että ne täyttävät tilaa niin paljon kuin mahdollista ennen seuraavalle riville siirtymistä. Tämä saadaan aikaan, kun kaikille korteille annetaan sama **Y**-arvo ja **X**-arvoa käytetään korttien järjestykseen.
 
-### <a name="filling-spaces-widthfit"></a>Välien täyttäminen: WidthFit
+### <a name="filling-spaces-widthfit"></a>Täyttö tilat: WidthFit
 Viimeisen esimerkin ylivuoto loi tilaa **Tilauksen tila** -kortin jälkeen, joka oli toinen kortti ensimmäisellä rivillä. Voisimme manuaalisesti säätää kahden muun kortin **Leveys**-ominaisuutta tilan täyttämiseksi, mutta se olisi vaivalloista.
 
 Vaihtoehtona käytämme **WidthFit**-ominaisuutta. Jos tämä ominaisuus on **true** yhdelle tai useammalle rivin kortille, jäljellä oleva tila rivillä jaetaan tasaisesti niiden välillä. Tästä syystä mainitsimme aiemmin, että kortin **Leveys**-ominaisuus on *vähimmäisarvo*, ja mitä todellisuudessa näemme, voi olla leveämpi. Tämä ominaisuus ei koskaan aiheuta kortin pienenemistä, vain suurenemista.

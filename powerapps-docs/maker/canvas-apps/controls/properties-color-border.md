@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 2f17dd975a5b8320f4b67688ab986c4e8cc98514
-ms.sourcegitcommit: 21163a6d77b784f4864fce4695776c9b4652cb29
+ms.openlocfilehash: 528dc54fe18971ff8971b4d0d7e87c3bf3c5367a
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/26/2019
-ms.locfileid: "66225153"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986040"
 ---
 # <a name="color-and-border-properties-in-powerapps"></a>Väri- ja reunaominaisuudet PowerAppsissa
 
@@ -26,27 +26,27 @@ ms.locfileid: "66225153"
 
 Määritä ohjausobjektin tyyli sen perusteella, miten käyttäjä käsittelee sitä.
 
-Voit määrittää värit monella tavalla:
+Voit määrittää värejä monella tavalla:
 
-- [**Väri** ](../functions/function-colors.md) luettelointi: Määritä väri nimet limittäisiä tyylejä, kuten näissä esimerkeissä:
+- [**Värien**](../functions/function-colors.md) luettelointi: Määritä väri nimet Cascading Style Sheet-tyylisiltä, kuten Näissä esimerkeissä:
 
   - **Color.Red**
   - **Color.Indigo**
 
-- [**ColorValue** ](../functions/function-colors.md) funktio: Määritä tekstimerkkijonoa, kuten värien nimiä CSS-ja heksadesimaaleina koodin notation ( **#** ), kuten näissä esimerkeissä:
+- [**Colorvalue**](../functions/function-colors.md) -ominaisuus: Määritä teksti merkki jonot, kuten väri nimet, CSS-tyyli sivuista ja heksa desimaali koodista ( **#** ), kuten Näissä esimerkeissä:
 
-  - **ColorValue (”erittäin Vaalea sininen”)**
+  - **ColorValue ("AliceBlue")**
   - **ColorValue( "#ff00ff" )**
 
-- [**ColorFade** ](../functions/function-colors.md) funktio: Määritä, miten häivytetyn väri on täysin musta (-100 %) Jos haluat valkoinen täysin (100 %), kuten seuraavassa esimerkissä:
+- [**Colorfade**](../functions/function-colors.md) -ominaisuus: Määritä, miten haalistuneet väri on, täysin mustaksi (-100%) täysin valkoiseksi (100%), kuten tässä esimerkissä:
 
-  - **ColorFade (Color.Red, 50 %)**
+  - **ColorFade (Color. Red, 50%)**
 
-- [**RGBA** ](../functions/function-colors.md) funktio: Määritä 0 – 255 värin punaisen, vihreän ja sinisen osista ja alfa kanavan 0: sta (täysin läpinäkyvä) 100-prosentin (täysin läpinäkymätön), kuten seuraavassa esimerkissä:
+- [**RGBA**](../functions/function-colors.md) -Funktiot: Määritä värin punaiset, vihreät ja siniset osat 0 – 255 ja määritä alfa kanava 0 prosentista (täysin läpinäkyvä) arvoksi 100% (täysin läpinäkymätön), kuten tässä esimerkissä:
 
-  - **RGBA (255, 0, 255, 25 %)**
+  - **RGBA (255, 0, 255, 25%)**
 
-Väri-ominaisuuksia myös viitata väri muita ominaisuuksia. Esimerkiksi **Label.PressedColor** tyyppieditori voidaan määrittää kaavaan **Label1.Color**, automaattisesti yhden ominaisuuden muutokseen toiseen tyylimäärityksen mukainen.
+Väri ominaisuudet voivat viitata myös muihin väri ominaisuuksiin. Esimerkiksi **Label. PressedColor** -arvo voidaan määrittää kaavalla **Label1. Color**, automaattisesti limittäen muutoksen yhdestä ominaisuudesta toiseen.
 
 ## <a name="normal"></a>Tavallinen
 

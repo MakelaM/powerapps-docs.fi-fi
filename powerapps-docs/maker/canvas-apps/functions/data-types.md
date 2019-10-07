@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/19/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 10c5ff9eaa709ab950fa3c3f0efce4f859a71dbc
-ms.sourcegitcommit: 5899d37e38ed7111d5a9d9f3561449782702a5e9
+ms.openlocfilehash: 592399e6b5a95d27e5c0afe48541d04d444528bb
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038001"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985579"
 ---
 # <a name="data-types-in-canvas-apps"></a>Tieto tyypit kangas sovelluksissa
 
@@ -40,9 +39,9 @@ Tässä artikkelissa on tietoja kangas sovellusten tukemista tieto tyypeistä. K
 | **Media** | URI-teksti merkki jono video-tai ääni tallenteeseen. | **MyVideo** lisättiin sovellus resurssina<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Numero** | Liuku luku numero. | **123**<br>**-4,567**<br>**8.903e121** |
 | **Asetus asetus** | Valinta vaihtoehto joukosta, jota tukee luku. Tämä tieto tyyppi yhdistää lokalisoitavan teksti nimen, jolla on luku arvo. Nimi näkyy sovelluksessa, ja numero-arvo tallennetaan ja sitä käytetään vertailuissa. | **ThisItem. OrderStatus** |
-| **Tietue** | Tieto arvojen tietue. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Yritys "Northwind Traders";<br>henkilöstö: 35; <br>kaupallinen: False}** |
+| **Tietue** | Tieto arvojen tietue. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **{yritys: "Northwind Traders", <br>Esikunta: 35, <br>NonProfit: False}** |
 | **Tietue viittaus** | Viittaus entiteetin tietueeseen. Tällaisia viitta uksia käytetään usein polymorfisten hakujen yhteydessä. Lisätietoja: [Käsitellään viitta uksia](../working-with-references.md).| **First (accounts). Omistaja** |
-| **Taulukon** | Tietue taulukko.  Kaikilla tietueilla on oltava samat nimet kentissä, joilla on samat tieto tyypit, ja pois jätetyt kentät käsitellään *tyhjinä*. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Taulukko ({FirstName: "Sidney";<br>suku nimi: "Higa"}; <br>{firstname: "Nancy";<br>suku nimi: "Anderson"})**
+| **Taulukon** | Tietue taulukko.  Kaikilla tietueilla on oltava samat nimet kentissä, joilla on samat tieto tyypit, ja pois jätetyt kentät käsitellään *tyhjinä*. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Table ({FirstName: "Sidney", <br>LastName: "Higa"}, <br> {FirstName: "Nancy", <br>LastName: "Anderson"})**
 | **Teksti** | Unicode-teksti merkki jono. | **"Hei maailma"** |
 | **Aika** | Aika ilman päivä määrää sovelluksen käyttäjän aika vyöhykkeellä. | **Aika (11, 23, 45)** |
 | **Kaksi vaihto ehtoa** | Vaihto ehto kahdesta vaihto ehdosta, joiden tukena on totuus arvo. Tämä tieto tyyppi yhdistää lokalisoitavan teksti nimen, jolla on totuus arvo. Nimi näkyy sovelluksessa, ja totuus arvo tallennetaan ja sitä käytetään vertailuissa. | **ThisItem. verotettava** |
@@ -83,7 +82,7 @@ Pohjaan liittyvät sovellukset viittaavat kuhunkin kuvaan tai muuhun multimediat
 
 Esimerkiksi kuva-ohjaus objektin **Image** -ominaisuus hyväksyy sovellus resurssien lisäksi myös linkit verkossa oleviin kuviin, kuten "https://northwindtraders.com/logo.jpg". Ominaisuus hyväksyy myös sisäiset kuvat, jotka käyttävät [tietojen URI-rakennetta](https://en.wikipedia.org/wiki/Data_URI_scheme), kuten tässä esimerkissä:
 
-```powerapps-comma
+```powerapps-dot
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
@@ -130,8 +129,8 @@ Tässä taulukossa on joitakin esimerkkejä:
 
 | Päivä määrän/kellon ajan tyyppi | Tieto kantaan tallennettu arvo | Arvo näytetään ja annettiin 7 tuntia UTC-aika länteen | Arvo näytetään ja annettiin 4 tuntia UTC-ajan itäpuolella |
 |--------------------------|------------------------------|------------------------------|
-| **Käyttäjän paikallinen** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Lauantai,&nbsp;18&nbsp;.toukokuuta2019&nbsp;<br>9:00 PM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>8:00 AM |
-| **Aika vyöhyke, riippumaton** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | 
+| **Käyttäjän paikallinen** | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM | Lauantai, &nbsp;May @ no__t-118, &nbsp;2019<br>9:00 PM | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>8:00 AM |
+| **Aika vyöhyke, riippumaton** | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM | 
 
 **Käyttäjän paikallisissa** päivä määrä-ja kellon aikoina pohjaan perustuvat sovellukset käyttävät selaimen tai laitteen aika vyöhykettä, mutta mallipohjaiset sovellukset käyttävät käyttäjän asetusta Common Data Service. Nämä asetukset ovat yleensä samat, mutta tulokset eroavat toisistaan, jos nämä asetukset eroavat toisistaan.
 
@@ -151,8 +150,8 @@ Palautetaan esimerkkiin ylhäältä:
 
 | Päivä määrän/kellon ajan tyyppi | Tieto kantaan tallennettu arvo | Arvo näytetään ja annettiin 7 tuntia UTC-aika länteen | **Value** -funktio palauttaa |
 |--------------------------|------------------------------|------------------------------|
-| **Käyttäjän paikallinen** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Lauantai,&nbsp;18&nbsp;.toukokuuta2019&nbsp;<br>9:00 PM | 1 558 238 400 000<br> (Sunnuntai&nbsp;19&nbsp;. toukokuuta 2019&nbsp;<br>4:00 UTC) |
-| **Aika vyöhyke, riippumaton** | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM | Sunnuntai 19&nbsp;.&nbsp;toukokuuta2019&nbsp;<br>4:00 AM |1 558 263 600 000<br> (Sunnuntai&nbsp;19&nbsp;. toukokuuta 2019&nbsp;<br>11:00 UTC) |
+| **Käyttäjän paikallinen** | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM | Lauantai, &nbsp;May @ no__t-118, &nbsp;2019<br>9:00 PM | 1 558 238 400 000<br> (Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 UTC) |
+| **Aika vyöhyke, riippumaton** | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM | Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>4:00 AM |1 558 263 600 000<br> (Sunnuntai, &nbsp;May @ no__t-119, &nbsp;2019<br>11:00 UTC) |
 
 ### <a name="converting-unix-times"></a>Muunnetaan UNIX-aikoja
 
@@ -176,11 +175,11 @@ Canvas-sovellukset käyttävät **DateTime-offset** -kentissä olevia aika vyöh
 
 Kangas sovellukset lukevat ja kirjoittavat [**Time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) -tieto tyypin arvoja SQL Server teksti merkki jonoina [ISO 8601-kesto muodossa](https://en.wikipedia.org/wiki/ISO_8601#Durations). Sinun täytyy esimerkiksi jäsentää tämä merkki jono muoto ja käyttää [**Time**](function-date-time.md) -funktiolla teksti merkki jonon **"PT2H1M39S"** muuntamista **Time** -arvoksi:
 
-```powerapps-comma
+```powerapps-dot
 First(
     ForAll(
-        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
-        Time( Value( hours ); Value( minutes ); Value( seconds ) )
+        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+        Time( Value( hours ), Value( minutes ), Value( seconds ) )
     )
 ).Value
 ```
@@ -203,18 +202,18 @@ Kun sovelluksen käyttäjä valitsee vaihto ehdon ja tallentaa tämän muutoksen
 
 Nimet ovat vain näyttö tarkoituksia varten. Et voi tehdä suoria vertailuja otsikoihin, koska ne ovat kielikohtaisia. Sen sijaan kullakin asetus joukko sisältää luetteloinnin, joka toimii pohjana olevan luvun tai totuus arvon kanssa. Et voi esimerkiksi käyttää seuraavaa kaavaa:
 
-`If( ThisItem.OrderStatus = "Active"; ...`
+`If( ThisItem.OrderStatus = "Active", ...`
 
 Voit kuitenkin käyttää seuraavaa kaavaa:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
 
 Yleisasetuksille (mitkä entiteetit jakavat) asetus joukon luetteloinnin nimi vastaa yleisen asetus joukon nimeä. Paikallisissa asetus joukoissa (jotka on määritetty entiteettiin) nimi voi sisältää entiteetin nimen. Tämä estää risti riidat, jos useilla entiteeteillä on asetus joukkoja, joilla on sama nimi. Esimerkiksi **accounts** -entiteetillä voi olla **orderstatus** -asetus asetus, ja sen nimi voi olla **orderstatus (accounts)** . Nimi sisältää vähintään yhden väli lyöntien ja sulkeiden, joten sinun on ympäröidä se heitto merkeillä, jos viittaat siihen kaavassa.
 
 Lisäksi kahden vaihto ehdon arvot voivat myös käyttäytyä totuus arvo-arvoina. Esimerkiksi kahden asetuksen **Taxstatus** -arvolla voi olla **verovelvolliset** ja **verottomat**nimet, jotka vastaavat arvoa *True* ja *false* . Voit osoittaa tätä kaavaa käyttämällä seuraavaa kaavaa:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
 
 Voit myös käyttää tätä vastaavaa kaavaa:
 
-`If( ThisItem.Taxable; ...`
+`If( ThisItem.Taxable, ...`

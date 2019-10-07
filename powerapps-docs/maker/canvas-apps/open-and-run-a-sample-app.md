@@ -1,26 +1,26 @@
 ---
 title: Malliohjelman käyttäminen | Microsoft Docs
 description: Vaiheittaiset ohjeet malliin perustuvan kangas-sovelluksen luomiseen PowerAppsissa
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/11/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 1cac73bad25bf1179f88030ee1f02589189610e0
-ms.sourcegitcommit: 4201d95421a74da19c585239b34d7d8620c74113
+ms.openlocfilehash: f03240e2fb2e850df0f1b18fb126833fb5759326
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65546866"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989716"
 ---
-# <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>Luo kangas-sovellus mallin perusteella powerappsissa
+# <a name="create-a-canvas-app-from-a-sample-in-powerapps"></a>Kangas sovelluksen luominen näytteestä Powerappsissa
 Tässä pikaoppaassa luot kangas-sovelluksen mallin perusteella, jolloin voit tutkia suunnittelumahdollisuuksia ja löytää ideoita, joita voit käyttää kehittäessäsi omia kangas-sovelluksiasi.
 
 Jokaiseen malliin liittyy tosimaailman skenaario, mutta tiedot ovat kuvitteellisia. Näiden tietojen tallentamista varten tarvitset pilvitallennustilin, kuten Dropboxin, Google Driven tai OneDriven.
@@ -64,7 +64,7 @@ Jos sinulla ei ole PowerApps-käyttöoikeutta, voit [rekisteröityä ilmaiseksi]
 1. Napsauta tai napauta vasemman reunan lähellä **Tallenna**. 
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-Tässä pikaoppaassa loit oman mallisovellukseen perustuvan sovelluksen, jossa käytetään kuvitteellisia tietoja, jotka tallennetaan pilvitallennuspalvelutilillesi. Jos haluat lisäapua sovelluksen luomisen opetteluun, voit luoda myös automaattisesti sovelluksen muista lähteistä, kuten Common Data Service, SharePoint tai Excel-tietojen perusteella.
+Tässä pikaoppaassa loit oman mallisovellukseen perustuvan sovelluksen, jossa käytetään kuvitteellisia tietoja, jotka tallennetaan pilvitallennuspalvelutilillesi. Jos haluat lisä tietoja sovelluksen luomisesta, voit myös luoda automaattisesti sovelluksen, joka perustuu tietoihin muissa lähteissä, kuten Common Data Service, SharePointissa tai Excelissä.
 
 > [!div class="nextstepaction"]
 > [Luo sovellus](data-platform-create-app.md)

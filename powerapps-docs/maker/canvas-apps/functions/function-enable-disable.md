@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f3932d21683b83008e95f03ba2aae646d2b8e491
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 1b58b57ae880f54fc7fccb5aa4c49f0e2fcad6d0
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551073"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992774"
 ---
 # <a name="enable-and-disable-functions-in-powerapps"></a>PowerAppsin Enable- ja Disable-funktiot
 Kytkevät [signaalin](signals.md) päälle tai pois.
@@ -31,7 +31,7 @@ Kun signaalia ei käytetä, se kytketään automaattisesti pois päältä.
 ## <a name="description"></a>Kuvaus
 **Enable**- ja **Disable**-funktiot kytkevät signaalin päälle tai pois, tässä järjestyksessä.
 
-Nämä funktiot toimivat tällä hetkellä vain **[Sijainti](signals.md)**-signaalin kanssa.
+Nämä funktiot toimivat tällä hetkellä vain **[Sijainti](signals.md)** -signaalin kanssa.
 
 Funktioilla ei ole paluuarvoa. Niitä voidaan käyttää vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
 

@@ -1,24 +1,24 @@
 ---
 title: Kangassovelluksen tallentaminen ja julkaiseminen| Microsoft Docs
 description: Vaiheittaiset ohjeet kangassovellusten tallentamiseen ja julkaisemiseen sovellusten tekijöille
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 09/14/2017
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: c255daf93cdb4807572f1a663c7bb87be0bb39e1
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 19d793b879d42e9446cc8ad366bc08879162185d
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61536661"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995771"
 ---
 # <a name="save-and-publish-a-canvas-app-in-powerapps"></a>Kangassovelluksen tallentaminen ja julkaiseminen PowerAppsissa
 Kun tallennat kangassovellukseen muutoksia, julkaiset ne automaattisesti itsellesi ja muille, joilla on käyttöoikeus sovelluksen muokkaamiseen. Kun muutokset on tehty, ne pitää julkaista erikseen. Tällöin myös muut käyttäjät, joille sovellus on jaettu, saavat muutokset käyttöönsä.
@@ -60,6 +60,6 @@ Siirry osoitteeseen [powerapps.com](https://web.powerapps.com?utm_source=padocs&
 Julkaise uusin versio valitsemalla **Julkaise tämä versio** ja napsauta tai napauta **Julkaise**-valintaikkunan **Julkaise tämä versio** -painiketta.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
-* Etsi ja suorita sovellus [selaimen](../../user/run-app-browser.md) tai [Puhelin](../../user/run-app-client.md).
+* Etsi ja suorita sovellus [selaimessa](../../user/run-app-browser.md) tai [puhelimessa](../../user/run-app-client.md).
 * [Nimeä sovellus uudelleen](set-name-tile.md) osoitteesta powerapps.com.
 * [Palauta sovellus](restore-an-app.md), jos sinulla on useita versioita sovelluksesta.

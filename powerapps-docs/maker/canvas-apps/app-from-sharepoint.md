@@ -1,24 +1,24 @@
 ---
 title: Pohjaan perustuvan sovelluksen luominen SharePoint-luettelosta | Microsoft Docs
 description: Luo pohjaan perustuva sovellus automaattisesti PowerAppsissa SharePoint-luettelon tiedonhallintaa varten
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 08/09/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 042819241a40b9ad01f95085faf23b6393f62559
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: af06a3707073498df65f782fc634c1e93b1760c5
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61552720"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71994088"
 ---
 # <a name="generate-a-canvas-app-in-powerapps-from-a-sharepoint-list"></a>Pohjaan perustuvan sovelluksen luominen PowerAppsissa SharePoint-luettelosta
 

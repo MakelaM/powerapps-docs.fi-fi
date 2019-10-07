@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2017
 ms.author: aneesa
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4d7b21286f793aefdcc66a3dcbb027ab8f9ac4e7
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 0b25a22e732c96bf35f8951602e706f71b1733a7
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61544296"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986719"
 ---
 # <a name="edit-form-and-display-form-controls-in-powerapps"></a>Muokattu lomake- ja Näytetty lomake -ohjausobjektit PowerAppsissa
 Näytä ja luo tietue tai muokkaa sitä tietolähteessä.
@@ -29,35 +28,35 @@ Jos lisäät **Näytetty lomake** -ohjausobjektin, käyttäjä voi näyttää ka
 
 ![Esimerkkilomake ja lomakenäkymän ohjausobjektit](./media/control-form-detail/form-detail-intro.png)
 
-Jos lisäät **[Valikoima](control-gallery.md)**-ohjausobjektin, voit määrittää sen näyttämään taulukon tietolähteessä. Tämän jälkeen voit määrittää lomakkeen näyttämään tietueen, jonka käyttäjä valitsee valikoimasta. Voit myös lisätä yhden tai useamman **[Painike](control-button.md)**-ohjausobjektin, joiden avulla käyttäjä voi tallentaa tai peruuttaa muokkauksia ja luoda tietueita. Ohjausobjekteja yhdistelemällä voit [luoda täydellisen ratkaisun](../working-with-forms.md).
+Jos lisäät **[Valikoima](control-gallery.md)** -ohjausobjektin, voit määrittää sen näyttämään taulukon tietolähteessä. Tämän jälkeen voit määrittää lomakkeen näyttämään tietueen, jonka käyttäjä valitsee valikoimasta. Voit myös lisätä yhden tai useamman **[Painike](control-button.md)** -ohjausobjektin, joiden avulla käyttäjä voi tallentaa tai peruuttaa muokkauksia ja luoda tietueita. Ohjausobjekteja yhdistelemällä voit [luoda täydellisen ratkaisun](../working-with-forms.md).
 
 ### <a name="record-selection"></a>Tietueen valitseminen
-Määritä kumman tahansa lomaketyypin **DataSource**-ominaisuudeksi taulukon tietueet ja määritä lomakkeen **Item**-ominaisuus näyttämään tietty tietue kyseisessä taulukossa. Voit esimerkiksi määrittää lomakkeen **Item**-ominaisuudeksi **[Valikoima](control-gallery.md)**-ohjausobjektin **SelectedItem**-ominaisuuden. Kun käyttäjä valitsee valikoimasta tietueen, sama tietue näytetään myös lomakkeessa, mutta siinä voidaan näyttää enemmän kenttiä. Jos käyttäjä palaa valikoimaan ja valitsee toisen tietueen, valikoiman **SelectedItem**-ominaisuus muuttuu. Tämä muutos päivittää lomakkeen **Item**-ominaisuuden, jonka jälkeen lomakkeessa näytetään juuri valittu tietue.
+Määritä kumman tahansa lomaketyypin **DataSource**-ominaisuudeksi taulukon tietueet ja määritä lomakkeen **Item**-ominaisuus näyttämään tietty tietue kyseisessä taulukossa. Voit esimerkiksi määrittää lomakkeen **Item**-ominaisuudeksi **[Valikoima](control-gallery.md)** -ohjausobjektin **SelectedItem**-ominaisuuden. Kun käyttäjä valitsee valikoimasta tietueen, sama tietue näytetään myös lomakkeessa, mutta siinä voidaan näyttää enemmän kenttiä. Jos käyttäjä palaa valikoimaan ja valitsee toisen tietueen, valikoiman **SelectedItem**-ominaisuus muuttuu. Tämä muutos päivittää lomakkeen **Item**-ominaisuuden, jonka jälkeen lomakkeessa näytetään juuri valittu tietue.
 
-Voit myös määrittää lomakkeen **Item**-ominaisuus käyttämällä **avattavan luettelon** ohjausobjektia [Tietueen tarkasteleminen, muokkaaminen tai lisääminen](../add-form.md) -kohdassa kuvatulla tavalla, tai funktiota, kuten **Haku** tai **Ensimmäinen**. Voit esimerkiksi määrittää **kohteen** ominaisuuden joko näyttämään Fabrikam-merkintää nämä kaavat **tilit** Common Data Service-entiteettiin:
+Voit myös määrittää lomakkeen **Item**-ominaisuus käyttämällä **avattavan luettelon** ohjausobjektia [Tietueen tarkasteleminen, muokkaaminen tai lisääminen](../add-form.md) -kohdassa kuvatulla tavalla, tai funktiota, kuten **Haku** tai **Ensimmäinen**. Voit esimerkiksi valita, että **Item** -ominaisuudeksi on määritetty jompikumpi näistä kaavoista, jotta voit näyttää Fabrikam-merkinnän **accounts** -entiteetissä Common Data Service:
 
 ```First(Accounts)```
 
-```Lookup(Accounts; "Fabrikam" in name)```
+```Lookup(Accounts, "Fabrikam" in name)```
 
-Jokainen Lomake-ohjausobjekti sisältää vähintään yhden **[Kortti](control-card.md)**-ohjausobjektin. Voit [määrittää, minkä kentän kortti näyttää ja muita tietoja](../add-form.md) määrittämällä kortin **[DataField](control-card.md)**-ominaisuuden.
+Jokainen Lomake-ohjausobjekti sisältää vähintään yhden **[Kortti](control-card.md)** -ohjausobjektin. Voit [määrittää, minkä kentän kortti näyttää ja muita tietoja](../add-form.md) määrittämällä kortin **[DataField](control-card.md)** -ominaisuuden.
 
 ### <a name="create-a-record"></a>Tietueen luominen
 Kun **Muokattu lomake** -ohjausobjekti on **Muokkaa**-tilassa, käyttäjä voi päivittää tietueen, joka on määritetty lomakkeen **Item**-ominaisuudessa. **Mode**-ominaisuus palauttaa tarkastettaessa arvon **Muokkaa**.
 
-Kun **Muokattu lomake** -ohjausobjekti on **Uusi**-tilassa, **Item**-ominaisuus ohitetaan. Lomake ei näytä olemassa olevaa tietuetta. Sen sijaan kunkin kentän arvot vastaavat lomakkeen määrittämiseen käytetyn tietolähteen oletusarvoja. **[NewForm](../functions/function-form.md)**-funktio siirtää lomakkeen tähän tilaan.
+Kun **Muokattu lomake** -ohjausobjekti on **Uusi**-tilassa, **Item**-ominaisuus ohitetaan. Lomake ei näytä olemassa olevaa tietuetta. Sen sijaan kunkin kentän arvot vastaavat lomakkeen määrittämiseen käytetyn tietolähteen oletusarvoja. **[NewForm](../functions/function-form.md)** -funktio siirtää lomakkeen tähän tilaan.
 
-Voit esimerkiksi määrittää painikkeen **[Teksti](properties-core.md)**-ominaisuuden näyttämään **Uusi** ja **[OnSelect](properties-core.md)**-ominaisuuden näyttämään kaavan, joka sisältää **[NewForm](../functions/function-form.md)**-funktion. Jos käyttäjä valitsee kyseisen painikkeen, lomake siirtyy **Uusi**-tilaan ja käyttäjä voi luoda tietueen, joka alkaa tunnetuilla arvoilla.
+Voit esimerkiksi määrittää painikkeen **[Teksti](properties-core.md)** -ominaisuuden näyttämään **Uusi** ja **[OnSelect](properties-core.md)** -ominaisuuden näyttämään kaavan, joka sisältää **[NewForm](../functions/function-form.md)** -funktion. Jos käyttäjä valitsee kyseisen painikkeen, lomake siirtyy **Uusi**-tilaan ja käyttäjä voi luoda tietueen, joka alkaa tunnetuilla arvoilla.
 
-Jos joko **[ResetForm](../functions/function-form.md)**-funktion tai **[SubmitForm](../functions/function-form.md)**-funktion suorittaminen onnistuu, lomake siirtyy takaisin **Muokkaa**-tilaan.
+Jos joko **[ResetForm](../functions/function-form.md)** -funktion tai **[SubmitForm](../functions/function-form.md)** -funktion suorittaminen onnistuu, lomake siirtyy takaisin **Muokkaa**-tilaan.
 
-* Voit esimerkiksi määrittää painikkeen **[Teksti](properties-core.md)**-ominaisuuden näyttämään **Peruuta** ja **[OnSelect](properties-core.md)**-ominaisuuden näyttämään kaavan, joka sisältää **[ResetForm](../functions/function-form.md)**-funktion. Jos käyttäjä valitsee kyseisen painikkeen, keskeneräiset muutokset hylätään, ja lomakkeen arvot vastaavat jälleen tietolähteen oletusarvoja.
-* Voit esimerkiksi määrittää painikkeen **[Teksti](properties-core.md)**-ominaisuuden näyttämään **Tallenna muutokset** ja **[OnSelect](properties-core.md)**-ominaisuuden näyttämään kaavan, joka sisältää **[SubmitForm](../functions/function-form.md)**-funktion. Jos käyttäjä valitsee kyseisen painikkeen ja tietolähde päivitetään, lomakkeen arvot palautetaan tietolähteen oletusarvoiksi.
+* Voit esimerkiksi määrittää painikkeen **[Teksti](properties-core.md)** -ominaisuuden näyttämään **Peruuta** ja **[OnSelect](properties-core.md)** -ominaisuuden näyttämään kaavan, joka sisältää **[ResetForm](../functions/function-form.md)** -funktion. Jos käyttäjä valitsee kyseisen painikkeen, keskeneräiset muutokset hylätään, ja lomakkeen arvot vastaavat jälleen tietolähteen oletusarvoja.
+* Voit esimerkiksi määrittää painikkeen **[Teksti](properties-core.md)** -ominaisuuden näyttämään **Tallenna muutokset** ja **[OnSelect](properties-core.md)** -ominaisuuden näyttämään kaavan, joka sisältää **[SubmitForm](../functions/function-form.md)** -funktion. Jos käyttäjä valitsee kyseisen painikkeen ja tietolähde päivitetään, lomakkeen arvot palautetaan tietolähteen oletusarvoiksi.
 
 ### <a name="save-changes"></a>Muutosten tallentaminen
-Jos luot **Tallenna muutokset** -painikkeen edellisessä osassa kuvatulla tavalla, käyttäjä voi luoda tai päivittää tietuetta ja tallentaa tekemänsä muutokset tietolähteeseen valitsemalla painikkeen. Voit halutessasi määrittää **[Kuva](control-image.md)**-ohjausobjektin tai jonkin muun ohjausobjektin suorittamaan saman tehtävän, kunhan määrität kyseiselle ohjausobjektille **[SubmitForm](../functions/function-form.md)**-funktion. **Virhe**-, **ErrorKind**-, **OnSuccess**- ja **OnFailure**-ominaisuudet antavat joka tapauksessa palautetta tuloksesta.
+Jos luot **Tallenna muutokset** -painikkeen edellisessä osassa kuvatulla tavalla, käyttäjä voi luoda tai päivittää tietuetta ja tallentaa tekemänsä muutokset tietolähteeseen valitsemalla painikkeen. Voit halutessasi määrittää **[Kuva](control-image.md)** -ohjausobjektin tai jonkin muun ohjausobjektin suorittamaan saman tehtävän, kunhan määrität kyseiselle ohjausobjektille **[SubmitForm](../functions/function-form.md)** -funktion. **Virhe**-, **ErrorKind**-, **OnSuccess**- ja **OnFailure**-ominaisuudet antavat joka tapauksessa palautetta tuloksesta.
 
-Kun **[SubmitForm](../functions/function-form.md)**-funktio suoritetaan, se vahvistaa ensin tiedot, jotka käyttäjä haluaa lähettää. Jos pakollinen kenttä ei sisällä arvoa tai jokin toinen arvo ei vastaa muita rajoitteita, **ErrorKind**-ominaisuudet määritetään ja **OnFailure**-kaava suoritetaan. Voit määrittää **Tallenna muutokset** -painikkeen tai muun ohjausobjektin siten, että käyttäjä voi valita sen vain, jos tiedot ovat kelvolliset (toisin sanoen, jos **Valid**-ominaisuuden arvo on **true**). Huomaa, että käyttäjän on paitsi korjattava ongelma, myös valittava **Tallenna muutokset** -painike uudelleen (tai hylättävä muutokset valitsemalla **Peruuta**-painike aiempien ohjeiden mukaisesti), joka nollaa **Virhe**- ja **ErrorKind**-ominaisuudet.
+Kun **[SubmitForm](../functions/function-form.md)** -funktio suoritetaan, se vahvistaa ensin tiedot, jotka käyttäjä haluaa lähettää. Jos pakollinen kenttä ei sisällä arvoa tai jokin toinen arvo ei vastaa muita rajoitteita, **ErrorKind**-ominaisuudet määritetään ja **OnFailure**-kaava suoritetaan. Voit määrittää **Tallenna muutokset** -painikkeen tai muun ohjausobjektin siten, että käyttäjä voi valita sen vain, jos tiedot ovat kelvolliset (toisin sanoen, jos **Valid**-ominaisuuden arvo on **true**). Huomaa, että käyttäjän on paitsi korjattava ongelma, myös valittava **Tallenna muutokset** -painike uudelleen (tai hylättävä muutokset valitsemalla **Peruuta**-painike aiempien ohjeiden mukaisesti), joka nollaa **Virhe**- ja **ErrorKind**-ominaisuudet.
 
 Jos tiedot läpäisevät tarkistuksen, **[SubmitForm](../functions/function-form.md)** lähettää ne tietolähteeseen. Lähettämisessä voi kestää jonkin aikaa verkkoviiveen vuoksi.
 
@@ -67,7 +66,7 @@ Jos tiedot läpäisevät tarkistuksen, **[SubmitForm](../functions/function-form
 Jotkin tietolähteet voivat tunnistaa, jos kaksi henkilöä yrittää päivittää samaa tietuetta samaan aikaan. Tässä tapauksessa **ErrorKind**-ominaisuudeksi määritetään **ErrorKind.Conflict**. Ongelma korjataan päivittämällä tietolähde toisen käyttäjän muutoksilla ja ottamalla käyttäjän muutokset käyttöön uudelleen.
 
 > [!TIP]
-> Lomakkeessasi voi olla **Peruuta**-painike, jolla käyttäjä voi hylätä keskeneräiset muutokset. Voit lisätä painikkeen **[OnSelect](properties-core.md)**-ominaisuuteen **[ResetForm](../functions/function-form.md)**-funktion, vaikka ominaisuus sisältäisi myös **[Siirry](../functions/function-navigate.md)**-funktion näytön vaihtamiseen. Muussa tapauksessa lomake säilyttää käyttäjän tekemät muutokset.
+> Lomakkeessasi voi olla **Peruuta**-painike, jolla käyttäjä voi hylätä keskeneräiset muutokset. Voit lisätä painikkeen **[OnSelect](properties-core.md)** -ominaisuuteen **[ResetForm](../functions/function-form.md)** -funktion, vaikka ominaisuus sisältäisi myös **[Siirry](../functions/function-navigate.md)** -funktion näytön vaihtamiseen. Muussa tapauksessa lomake säilyttää käyttäjän tekemät muutokset.
 
 ### <a name="layout"></a>Asettelu
 Kortit sijoitetaan oletusarvoisesti yhteen sarakkeeseen puhelinsovelluksissa ja kolmeen sarakkeeseen tablettisovelluksissa. Voit määrittää, kuinka monta saraketta lomakkeessa on, ja kohdistetaanko kortit sarakkeisiin, kun määrität lomaketta. Nämä asetukset eivät näy ominaisuuksina, koska niitä käytetään vain korttien **X**-, **Y**- ja **Leveys**-ominaisuuksien määrittämiseen.
@@ -91,21 +90,21 @@ Johdettu **Mode**-ominaisuudesta, eikä sitä voi määrittää erikseen:
 | **FormMode.New** |**DisplayMode.Edit** |Tietokortit ja ohjausobjektit ovat muokattavissa ja valmiit hyväksymään uuden tietueen. |
 | **FormMode.View** |**DisplayMode.View** |Tietokortit ja ohjausobjektit eivät ole muokattavissa vaan optimoituja tarkastelemista varten. |
 
-**Virhe** – Lomakkeessa näytettävä käyttäjäystävällinen virhesanoma, kun **[SubmitForm](../functions/function-form.md)**-funktio epäonnistuu.
+**Virhe** – Lomakkeessa näytettävä käyttäjäystävällinen virhesanoma, kun **[SubmitForm](../functions/function-form.md)** -funktio epäonnistuu.
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
-* Tämä ominaisuus muuttuu vain, kun **[SubmitForm](../functions/function-form.md)**-, **EditForm**-, tai **[ResetForm](../functions/function-form.md)**-funktio suoritetaan.
+* Tämä ominaisuus muuttuu vain, kun **[SubmitForm](../functions/function-form.md)** -, **EditForm**-, tai **[ResetForm](../functions/function-form.md)** -funktio suoritetaan.
 * Jos virhettä ei tapahdu, ominaisuus on *tyhjä* ja **ErrorKind** määritetään arvoksi **ErrorKind.None**.
 * Jos mahdollista, palautettu virhesanoma näytetään käyttäjän kielellä. Jotkin virhesanomat ovat peräisin suoraan tietolähteestä, eikä niitä voida välttämättä näyttää käyttäjän kielellä.
 
 **ErrorKind** – Ilmaisee tapahtuneen virheen lajin, jos **SubmitForm**-funktiota suorittaessa ilmenee virhe.
 
 * Koskee vain **Muokattu lomake** -ohjausobjektia.
-* Tällä ominaisuudella on sama luettelointi kuin **[Virheet](../functions/function-errors.md)**-funktiolla. **Muokattu lomake** -ohjausobjekti voi palauttaa seuraavat arvot:
+* Tällä ominaisuudella on sama luettelointi kuin **[Virheet](../functions/function-errors.md)** -funktiolla. **Muokattu lomake** -ohjausobjekti voi palauttaa seuraavat arvot:
 
 | ErrorKind | Kuvaus |
 | --- | --- |
-| **ErrorKind.Conflict** |Toinen käyttäjä muutti samaa tietuetta, mikä aiheutti muutosristiriidan. Lataa tietue uudestaan suorittamalla **[Päivitä](../functions/function-refresh.md)**-funktio ja yritä tehdä muutos uudelleen. |
+| **ErrorKind.Conflict** |Toinen käyttäjä muutti samaa tietuetta, mikä aiheutti muutosristiriidan. Lataa tietue uudestaan suorittamalla **[Päivitä](../functions/function-refresh.md)** -funktio ja yritä tehdä muutos uudelleen. |
 | **ErrorKind.None** |Virheen laji on tuntematon. |
 | **ErrorKind.Sync** |Tietolähde ilmoitti virheestä. Jos haluat lisätietoa, tarkasta **Virhe**-ominaisuus. |
 | **ErrorKind.Validation** |Yleinen vahvistusongelma havaittu. |
@@ -122,15 +121,15 @@ Johdettu **Mode**-ominaisuudesta, eikä sitä voi määrittää erikseen:
 
 | Tila | Kuvaus |
 | --- | --- |
-| **FormMode.Edit** |Käyttäjä voi muokata tietuetta lomakkeen avulla. Lomakkeen korteissa olevat arvot on täytetty olemassa olevalla tietueella. Käyttäjä voi muuttaa niitä halutessaan. Jos **[SubmitForm](../functions/function-form.md)**-funktion suorittaminen onnistuu, olemassa olevaa tietuetta muokataan. |
-| **FormMode.New** |Käyttäjä voi luoda tietueen lomakkeen avulla. Lomakkeen ohjausobjekteissa arvot esitäytetty tietueen tietolähteen oletusarvot. Jos **[SubmitForm](../functions/function-form.md)**-funktion suorittaminen onnistuu, tietue luodaan. |
-| **FormMode.View** |Käyttäjä voi tarkastella tietuetta lomakkeen avulla. Lomakkeen ohjausobjekteissa arvot esitäytetty tietueen tietolähteen oletusarvot. |
+| **FormMode.Edit** |Käyttäjä voi muokata tietuetta lomakkeen avulla. Lomakkeen korteissa olevat arvot on täytetty olemassa olevalla tietueella. Käyttäjä voi muuttaa niitä halutessaan. Jos **[SubmitForm](../functions/function-form.md)** -funktion suorittaminen onnistuu, olemassa olevaa tietuetta muokataan. |
+| **FormMode.New** |Käyttäjä voi luoda tietueen lomakkeen avulla. Lomakkeen ohjaus objektien arvoihin täytetään valmiiksi tieto lähteen tietueen oletus arvot. Jos **[Submitform](../functions/function-form.md)** -funktiolla suoritetaan onnistuneesti, tietue luodaan. |
+| **FormMode.View** |Käyttäjä voi tarkastella tietuetta lomakkeen avulla. Lomakkeen ohjaus objektien arvoihin täytetään valmiiksi tieto lähteen tietueen oletus arvot. |
 
 Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutoksista tapahtuu:
 
 * Lomakkeen lähettäminen onnistuu ja tietue luodaan. Jos valikoima on määritetty siirtämään valinta automaattisesti uuteen tietueeseen, lomake on luodun tietueen osalta **Muokkaa**-tilassa, jotta käyttäjä voi tehdä lisämuutoksia.
-* **[EditForm](../functions/function-form.md)**-funktio suoritetaan.
-* **[ResetForm](../functions/function-form.md)**-funktio suoritetaan. Käyttäjä voi esimerkiksi valita **Peruuta**-painikkeen, johon on määritetty tämä funktio.
+* **[EditForm](../functions/function-form.md)** -funktio suoritetaan.
+* **[ResetForm](../functions/function-form.md)** -funktio suoritetaan. Käyttäjä voi esimerkiksi valita **Peruuta**-painikkeen, johon on määritetty tämä funktio.
 
 **OnFailure** – Kuinka sovellus vastaa, kun tietotoiminto epäonnistuu.
 
@@ -147,21 +146,21 @@ Lomake siirtyy **Uusi**-tilasta **Muokkaa**-tilaan, kun jokin seuraavista muutok
 **Tallentamaton** – Tosi, jos **Muokattu lomake** -ohjausobjekti sisältää käyttäjän tekemiä muutoksia, joita ei ole tallennettu.
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
-* Tällä ominaisuudella voit varoittaa käyttäjää ennen tallentamattomien tietojen menettämistä.  Voit estää käyttäjää valitsemasta eri tietuetta **[Valikoima](control-gallery.md)**-ohjausobjektissa ennen muutosten tallentamista nykyiseen tietueeseen, kun määrität valikoiman **[Poistettu käytöstä](properties-core.md)** -ominaisuuden arvoksi **Form.Unsaved** ja poistat päivitystoiminnot käytöstä.
+* Tällä ominaisuudella voit varoittaa käyttäjää ennen tallentamattomien tietojen menettämistä.  Voit estää käyttäjää valitsemasta eri tietuetta **[Valikoima](control-gallery.md)** -ohjausobjektissa ennen muutosten tallentamista nykyiseen tietueeseen, kun määrität valikoiman **[Poistettu käytöstä](properties-core.md)** -ominaisuuden arvoksi **Form.Unsaved** ja poistat päivitystoiminnot käytöstä.
 
 **Päivitykset** – Lomakeohjausobjektiin ladatun tietueen arvot, jotka kirjoitetaan takaisin tietolähteeseen.  
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
-* Tämän ominaisuuden avulla voit poimia kenttäarvoja ohjausobjektin korteista.  Voit käyttää näitä arvoja tietolähteen manuaaliseen päivittämiseen **[Ohjelmakorjaus](../functions/function-patch.md)**-funktiokutsulla tai muulla yhteyden näyttämällä menetelmällä.  Tätä toimintoa ei tarvita, jos **[SubmitForm](../functions/function-form.md)**-funktio on käytössä.
-* Ominaisuus palauttaa tietueen arvoista.  Jos lomake-ohjausobjekti sisältää kortti-ohjausobjektit **nimi** ja **määrä** kentät ja arvot **[päivitys](control-card.md)** kyseisten korttien ominaisuudet palauttavat ”Widget” ja 10, myös **päivitykset** lomake-ohjausobjektin ominaisuus palauttaa arvon **{nimi: ”Widget”; Quantity: 10 }**.
+* Tämän ominaisuuden avulla voit poimia kenttäarvoja ohjausobjektin korteista.  Voit käyttää näitä arvoja tietolähteen manuaaliseen päivittämiseen **[Ohjelmakorjaus](../functions/function-patch.md)** -funktiokutsulla tai muulla yhteyden näyttämällä menetelmällä.  Tätä toimintoa ei tarvita, jos **[SubmitForm](../functions/function-form.md)** -funktio on käytössä.
+* Ominaisuus palauttaa tietueen arvoista.  Jos lomake-ohjaus objekti sisältää esimerkiksi **nimi** -ja **määrä** -kenttien kortti-ohjaus objektin ja kyseisten korttien **[päivitys](control-card.md)** ominaisuuksien arvot palauttavat pienoissovelluksen ja 10: n, lomake-ohjaus objektin **päivitykset** -ominaisuus palauttaisi **{Name: "Widget", määrä: 10}** .
 
-**Valid** – Sisältääkö **[Kortti](control-card.md)**- tai **Muokattu lomake** -ohjausobjekti kelvollisia merkintöjä, jotka voidaan lähettää tietolähteeseen.
+**Valid** – Sisältääkö **[Kortti](control-card.md)** - tai **Muokattu lomake** -ohjausobjekti kelvollisia merkintöjä, jotka voidaan lähettää tietolähteeseen.
 
 * Tämä ominaisuus koskee vain **Muokattu lomake** -ohjausobjektia.
-* **Lomake**-ohjausobjektin **Valid**-ominaisuus koostaa kaikkien lomakkeen **[Kortti](control-card.md)**-ohjausobjektien **Valid**-ominaisuudet. Lomakkeen **Valid**-ominaisuuden arvo on **true** vain, jos lomakkeen kaikkien korttien tiedot ovat kelvollisia. Muussa tapauksessa **Valid**-ominaisuus on **false**.
+* **Lomake**-ohjausobjektin **Valid**-ominaisuus koostaa kaikkien lomakkeen **[Kortti](control-card.md)** -ohjausobjektien **Valid**-ominaisuudet. Lomakkeen **Valid**-ominaisuuden arvo on **true** vain, jos lomakkeen kaikkien korttien tiedot ovat kelvollisia. Muussa tapauksessa **Valid**-ominaisuus on **false**.
 * Voit määrittää painikkeen tallentamaan muutokset vain, jos lomakkeen tiedot ovat kelvollisia, mutta niitä ei ole vielä lähetetty, määrittämällä painikkeen **DisplayMode**-arvoksi seuraavan kaavan:
   
-    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid; DisplayMode.Edit; DisplayMode.Disabled)**
+    **SubmitButton.DisplayMode = If(IsBlank( Form.Error ) || Form.Valid, DisplayMode.Edit, DisplayMode.Disabled)**
 
 ## <a name="additional-properties"></a>Lisäominaisuudet
 **[BorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri.

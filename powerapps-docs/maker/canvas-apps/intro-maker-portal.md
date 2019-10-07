@@ -1,24 +1,24 @@
 ---
 title: Kirjautuminen sisään ensimmäistä kertaa | Microsoft Docs
 description: Uusi koti kaikille sovellusten tekijöille.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 08/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 735894f8e28d25777aa7f66146f5782da2ab2f3e
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: dd50652f0021079b4b9d4d23568ba148a8ce6a5b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61553451"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71989987"
 ---
 # <a name="sign-in-to-powerapps-for-the-first-time"></a>Kirjautuminen sisään PowerAppsiin ensimmäistä kertaa
 
@@ -42,7 +42,7 @@ Aloita varmistamalla, että aloitussivu on määritetty oikealle ympäristölle.
 
 ## <a name="choose-an-environment"></a>Ympäristön valitseminen
 
-Kun esimerkiksi luot sovelluksen, työnkulun, tietoyhteyden tai entiteetin tässä Common Data Service, paljon mitä teet PowerApps sisältyy tietyssä ympäristössä. Ympäristöt luovat rajoja erityyppisille töille. Esimerkiksi organisaatiolla voi olla erilliset ympäristöt eri osastoille. Monet organisaatiot käyttävät ympäristöjä vielä kehitteillä olevien sovellusten erottamiseen jo laajaan käyttöön valmiista sovelluksista. Sinulla voi olla käyttöoikeus useisiin ympäristöihin tai esimerkiksi vain yhteen. Voit luoda omia ympäristöjäsi, jos sinulla on siihen asianmukaiset oikeudet.
+Olitpa luomassa sovellusta, työn kulkua, tieto yhteyksiä tai entiteettiä Common Data Service, paljon siitä, mitä teet Powerappsissa, on tietyssä ympäristössä. Ympäristöt luovat rajoja erityyppisille töille. Esimerkiksi organisaatiolla voi olla erilliset ympäristöt eri osastoille. Monet organisaatiot käyttävät ympäristöjä vielä kehitteillä olevien sovellusten erottamiseen jo laajaan käyttöön valmiista sovelluksista. Sinulla voi olla käyttöoikeus useisiin ympäristöihin tai esimerkiksi vain yhteen. Voit luoda omia ympäristöjäsi, jos sinulla on siihen asianmukaiset oikeudet.
 
 Otsikon oikealla puolella oleva ympäristövalitsin näyttää nykyisen ympäristön.
 
@@ -60,9 +60,9 @@ Lisätietoja on kohdassa [Ympäristöjen yleiskatsaus](../../administrator/envir
 PowerAppsissa voit luoda ja suorittaa seuraavantyyppisiä sovelluksia:
 
 - **Pohjaan perustuvat sovellukset** tukevat mukautetun käyttöliittymän suunnittelua ja yhteyden muodostamista useissa lähteissä oleviin tietoihin.
-- **Mallipohjaisten sovellusten** on standard Käyttöliittymän ja vain Common Data Service-tietoihin yhdistäminen. Niissä voit kuitenkin helpommin luoda muita elementtejä, kuten näkymiä, koontinäyttöjä ja erityyppisiä liiketoimintalogiikkoja.
+- **Mallipohjaisissa sovelluksissa** on vakio käyttö liittymä ja yhteys tietoihin vain Common Data Service. Niissä voit kuitenkin helpommin luoda muita elementtejä, kuten näkymiä, koontinäyttöjä ja erityyppisiä liiketoimintalogiikkoja.
 
-Jos ympäristö, joka on Common Data Service-tietokanta, voit rakentaa pohjaan perustuvan tai mallipohjaisen sovelluksen saman **aloitus** sivun.
+Jos valitset ympäristön, jossa on Common Data Service-tieto kanta, voit luoda pohjaan perustuvia tai mallipohjaisia sovelluksia samalta **Aloitus** sivulta.
 
 ## <a name="play-or-edit-an-app"></a>Sovelluksen toistaminen tai muokkaaminen
 
@@ -120,6 +120,6 @@ Otsikon ja vasemman siirtymispalkin vaihtoehdoilla voit tehdä paljon muutakin k
 
 Laajentaa sovellustesi toimintoja suorittamalla seuraavia tehtäviä:
 
-- Entiteettien, asetusjoukkojen ja tietojen integroinnin hallinta [Common Data Service-](../common-data-service/data-platform-intro.md).
+- Entiteettien, asetus joukkojen ja tietojen integroimisen hallinta [Common Data Service](../common-data-service/data-platform-intro.md).
 - Määritä liiketoimintalogiikka [Microsoft Flow’ssa](https://docs.microsoft.com/flow/getting-started).
 - Kehitä, paketoi ja ylläpidä [ratkaisuja](../../developer/common-data-service/introduction-solutions.md).

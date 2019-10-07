@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/01/2017
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: b724bff09e02a3f69166b3c3357833804c8172b6
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: fb051ffcdfed2aef2cb635d8dd2bf2bcfb44176e
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61554696"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71990322"
 ---
 # <a name="show-items-of-different-heights-in-a-powerapps-gallery"></a>Erikorkuisten kohteiden näyttäminen PowerApps-valikoimassa
 Jos tietojoukon kentässä on kohteita, joiden tietomäärät poikkeavat toisistaan, voit näyttää enemmän tietoja sisältävän kohteen kokonaan tarvitsematta jättää tyhjää tilaa vähemmän tietoja sisältävien kenttien loppuun. Lisää ja määritä valikoiman ohjausobjektille **joustava korkeus**, jotta voit:

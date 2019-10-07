@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/14/2017
 ms.author: lanced
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: f431373b2c36a84b54a3241ad2d49af019c37419
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 1ca519e4b082f45c03184510182fb8dce07b9eec
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61557986"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993912"
 ---
 # <a name="connect-to-an-oracle-database-from-powerapps"></a>Yhteyden muodostaminen PowerAppsista Oracle-tietokantaan
 Luetteloi taulukoita ja luo, lue ja poista taulukon rivejä Oracle-tietokannassa sen jälkeen, kun olet luonut yhteyden ja luonut sovelluksen PowerAppsissa. Oracle Database -tietokantayhteys tukee suodatuksen, lajittelun ja muiden funktioiden täyttä delegointia mutta ei käynnistimiä tai tallennettuja toimintosarjoja.

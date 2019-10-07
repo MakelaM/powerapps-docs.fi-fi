@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/11/2018
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 74584e5855c6c72c619b4baefc2652f9ccc68997
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: ed31bd165eb2289819800b6f2e01121c2681ae9e
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61520613"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71984071"
 ---
 # <a name="select-function-in-powerapps"></a>PowerAppsin Select-funktio
 Simuloi valintatoiminnon käyttämistä ohjausobjektiin, aiheuttaen **OnSelect**-kaavan laskennan.
@@ -84,7 +83,7 @@ Ohjausobjekti ei voi **Valita** itseään suoraan tai epäsuorasti muiden ohjaus
 
 5. Määritä kuvanhallinnan **OnSelect**-ominaisuudeksi tämä kaava:
 
-    **Notify( ”Kuva valittu”; Onnistui )**
+    **Notify( ”Kuva valittu”, Onnistui )**
 
 6. Pidä Alt-näppäintä pohjassa, napsauta tai napauta valikoiman eri elementtejä.
 

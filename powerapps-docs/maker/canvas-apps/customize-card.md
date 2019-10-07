@@ -1,26 +1,26 @@
 ---
-title: Pohjaan perustuvan sovelluksen kortin mukauttaminen | Microsoft Docs
-description: Muuta oletuksena näytettävää ohjausobjektia tiedot-kortin tai Muokkaa lomaketta pohjaan perustuvassa sovelluksessa
-author: AFTOwen
+title: Kortin mukauttaminen kangas sovelluksessa | Microsoft Docs
+description: Kortissa näkyvän tietojen tai muokkaus lomakkeen oletus ohjaus objektin muuttaminen kangas sovelluksessa
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 03/18/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ddc1c677ed95caf10d8cd6e0e7e12e6aaf88a0f5
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 5bcf1515f72bdce0872f91c64b5ac4fe5028ee2c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559799"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71985910"
 ---
-# <a name="customize-a-card-in-a-canvas-app"></a>Pohjaan perustuvan sovelluksen kortin mukauttaminen
+# <a name="customize-a-card-in-a-canvas-app"></a>Kortin mukauttaminen kangas sovelluksessa
 
 Voit suorittaa kortille perustason mukautuksia (poistamatta kortin lukitusta) esimerkiksi vaihtamalla sen ohjausobjektia. Edistyneitä mukautuksia varten kortin lukitus täytyy poistaa. Näihin kuuluu esimerkiksi sellaisen ohjausobjektin lisääminen, joka ei ole oletuksena käytettävissä kyseiselle kortille.
 
@@ -29,7 +29,7 @@ Katso yleiskatsaus aiheesta [Tutustu tietokortteihin](working-with-cards.md).
 ## <a name="prerequisites"></a>Edellytykset
 
 - Lue, kuinka [voit lisätä ja määrittää ohjausobjekteja](add-configure-controls.md).
-- Voit tarkastella tämän aiheen yleisiä käsitteitä tai vaihtoehtoisesti seurata vaihe vaiheelta toimit näiden aiheiden vaiheet toimintosarjoja:
+- Voit tutustua tähän aiheeseen vain yleisiin käsitteisiin tai voit seurata sitä vaiheittain, jos suoritat ensin näiden aiheiden toimet:
 
     1. [Sovelluksen luominen](data-platform-create-app.md).
     1. [Valikoiman mukauttaminen](customize-layout-sharepoint.md).
@@ -37,45 +37,45 @@ Katso yleiskatsaus aiheesta [Tutustu tietokortteihin](working-with-cards.md).
 
 ## <a name="customize-a-locked-card"></a>Lukitun kortin mukauttaminen
 
-Tässä toimenpiteessä korvaat **[tekstisyötteen](controls/control-text-input.md)** ohjausobjektin **[liukusäätimen] (ohjausobjekteja/ohjausobjektin-slider.md** ohjausobjektilla poistamatta kortin.
+Tässä toimenpiteessä korvaat **[teksti syöte-](controls/control-text-input.md)** ohjaus objektin, jonka **[Slider] (Controls/Control-Slider. MD-** ohjaus objekti ei poista kortin lukitusta.
 
-1. Valitse luomasi ja mukauttamasi sovellus **EditForm1** vasemmassa siirtymisruudussa ja valitse sitten **Muokkaa kenttiä** , **ominaisuudet** välilehti oikeanpuoleisessa ruudussa.
+1. Valitse luomasi ja mukauttamasi sovelluksen vasemmasta siirtymis palkista **EditForm1** ja valitse sitten **Muokkaa kenttiä** oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdeltä.
 
-1. Valitse kentät-luettelosta alanuolta **työntekijöiden määrä**, ja Avaa luettelo kohdassa **ohjausobjekti tyyppi**.
+1. Valitse kenttä luettelosta **työn tekijöiden määrän**alaspäin osoittava nuoli ja avaa sitten luettelo **ohjaus objektin tyyppi**-kohdassa.
 
     > [!div class="mx-imgBorder"]
-    > ![Avattavasta luettelosta, jolla asetukset](./media/customize-card/card-selector.png)
+    > ![Avattavasta numero kortin asetusten luettelo @ no__t-1
 
-1. Valitse **Muokkaa liukusäädintä**.
+1. Valitse **Muokkaa liuku säädintä**.
 
     Näyttö päivittyy muutoksen mukaisesti.
 
     > [!div class="mx-imgBorder"]
-    > ![EditForm1 liukusäätimellä](./media/customize-card/add-slider.png)
+    > ![editform1 ja liuku säätimen-ohjaus objekti @ no__t-1
 
 ## <a name="unlock-and-customize-a-card"></a>Kortin lukituksen poistaminen ja mukauttaminen
 
-Tässä toimenpiteessä poistetaan kortin lukitus ja päivittää **Max** -ominaisuuden **liukusäätimen** juuri lisäämäsi ohjausobjektin.
+Tässä toimenpiteessä poistat kortin lukituksen ja päivität juuri lisäämäsi **liuku säädin** -ohjaus objektin **Max** -ominaisuuden.
 
-1. - **EditForm1**, valitse **liukusäätimen** ohjausobjektia **työntekijöiden määrä** kortti.
-
-    > [!div class="mx-imgBorder"]
-    > ![Valitse liukusäädin](./media/customize-card/select-slider.png)
-
-1. Valitse **lisäasetukset** välilehti oikeanpuoleisessa ruudussa Valitse Avaa kortin lukitus lukkokuvaketta.
+1. Valitse **EditForm1**-kohdassa **liuku säädin** **työn tekijöiden määrän** kortissa.
 
     > [!div class="mx-imgBorder"]
-    > ![Kortin lukituksen avaaminen](./media/customize-card/lock-icon.png)
+    > ![Valitse liuku säädin @ no__t-1
 
-1. Määritä **Max** -ominaisuuden **liukusäätimen** ohjausobjektin 10 000.
-
-    > [!div class="mx-imgBorder"]
-    > ![Suurin-ominaisuus Lisäasetukset-välilehdessä](./media/customize-card/max-property.png)
-
-    **Liukusäätimen** ohjausobjekti näyttää tarkemman arvon.
+1. Avaa kortin lukitus valitsemalla oikeanpuoleisen ruudun **lisä asetukset** -väli lehdestä lukko kuvake.
 
     > [!div class="mx-imgBorder"]
-    > ![Liukusäätimen alue: 0-10,000](./media/customize-card/final-slider.png)
+    > ![Poista kortin lukitus @ no__t-1
+
+1. Säädä **liuku säädin** -ohjaus objektin **Max** -ominaisuudeksi 10 000.
+
+    > [!div class="mx-imgBorder"]
+    > ![Max-ominaisuus lisä asetukset-väli lehdessä @ no__t-1
+
+    **Liuku säädin** -ohjaus objektissa näytetään tarkempi arvo.
+
+    > [!div class="mx-imgBorder"]
+    > ![Slider-alue: 0-10000 @ no__t-0
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

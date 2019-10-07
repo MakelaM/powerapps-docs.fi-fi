@@ -6,25 +6,24 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/11/2017
 ms.author: aneesa
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: ee8573cb9ae4df5ac42deefad4ac67aede3a3502
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: a1bffa509f382c2f706c2163d89c5788f8607ec7
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61547641"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993038"
 ---
 # <a name="use-the-entity-form-control"></a>Entiteettilomake-ohjausobjektin käyttäminen
 Luo sovelluksia nopeammin käyttämällä **Entiteettilomake**-ohjausobjektia monipuolisten lomakkeiden lisäämiseksi Common Data Service -entiteetille.
 
-Johdanto **entiteettilomake** ohjausobjekti, tästä blogikirjoituksesta: [Uusi entiteettilomakkeen ohjausobjekti (kokeellinen ominaisuus) Common Data Service-](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
+Jos haluat Johdatus **entiteettilomake** -ohjaus objektiin, Lue tämä blogikirjoitus: [Uusi entiteettilomake-ohjaus objekti (kokeellinen ominaisuus) Common Data Service](https://powerapps.microsoft.com/blog/new-entity-form-control-experimental-feature-for-common-data-service/).
 
 > [!IMPORTANT]
 > Ota huomioon blogikirjoituksessa mainittu **Entiteettilomake**-ohjausobjektin kokeellisuus ja ole varovainen, jos käytät **entiteettilomake**-ohjausobjektia käyttöä tuotantosovelluksissa ainakin toistaiseksi.
@@ -46,15 +45,15 @@ Tässä ovat **Entiteettilomake**-ohjausobjektin tärkeimmät ominaisuudet.
 **Item** – Määrittää tietolähteen tietueen, jonka **Entiteettilomake**-ohjausobjektin tulisi näyttää. Tätä ominaisuutta käytetään vain, kun **Pattern**in arvoksi on määritetty **FormPattern.Details**.
 
 **Selected** – Hakee tällä hetkellä valittuna olevan tietueen.  
-Esimerkki: Jos **entiteettilomake** ohjausobjekti näyttää myyntitilaustietueiden, luettelo **valittu** ominaisuus antaa tällä hetkellä valitun tietueen. Voit myös käyttää tietueen kenttää. (Määritä esimerkiksi valitun tietueen **Account**-kentän arvoksi **Selected.Account**.)
+Esimerkiksi Jos **entiteettilomake** -ohjaus objekti näyttää myynti tilaus tietueiden luettelon, **valittu** ominaisuus antaa sinulle valittuna olevan tietueen. Voit myös käyttää tietueen kenttää. (Määritä esimerkiksi valitun tietueen **Account**-kentän arvoksi **Selected.Account**.)
 
 **SelectableFields** – Määrittää, mitkä kentät tulee näyttää linkkeinä. Aseta tämän ominaisuuden arvo tällä syntaksilla:  
-**{Field1Name : true; Field2Name : true}**  
-Esimerkki: Jos haluat **SalesOrderId** ja **tilin** kentät näkyvät linkkeinä lomakkeessa, aseta **SelectableFields** ominaisuuden kyseisen lomakkeen tämä arvo:  
-**{SalesOrderId : true; Account : true}**
+**{Field1Name : true, Field2Name : true}**  
+Esimerkiksi Jos haluat, että **Salesorderid** -ja **tili** -kentät näkyvät linkkeinä lomakkeessa, valitse kyseisen lomakkeen **selectablefields** -ominaisuudeksi tämä arvo:  
+**{SalesOrderId : true, Account : true}**
 
 **SelectedField** – Määrittää, mitä kenttää on napsautettu tai napautettu. Tämä pätee vain kenttiin, joille on määritetty **SelectableFields**-ominaisuus.  
-Esimerkki: Jos määrität **SelectableFields** ominaisuudeksi **{SalesOrderId: true; Account: true}** ja käyttäjä napsauttaa tai napauttaa **tilin** kentän  **SelectedField.Account** asetetaan tosi.
+Esimerkiksi Jos asetat **Selectablefields** -ominaisuudeksi **{Salesorderid: True, Account: True}** ja käyttäjä napsauttaa tai napauttaa **tili** -kenttää, **selectedfield. Account** -arvoksi on määritetty TRUE.
 
 **OnFieldSelect** – Kuinka sovellus reagoi, kun käyttäjä napsauttaa tai napauttaa kenttää. Tämä pätee vain kenttiin, joille on määritetty **SelectableFields**-ominaisuus.
 
@@ -97,7 +96,7 @@ Seuraavassa viidessä kohdassa suoritetaan alusta loppuun yksi **Entiteettilomak
 2. Anna ensimmäiselle näytölle nimi **SalesOrderListScreen**.
    
     ![](media/entity-form-control/entityform-tutorial-01-02.png)
-3. Napsauta tai napauta **Lisää**-välilehdellä kohtaa **Lomakkeet** ja napsauta tai napauta kohtaa **Entiteettilomake (kokeellinen)**.  
+3. Napsauta tai napauta **Lisää**-välilehdellä kohtaa **Lomakkeet** ja napsauta tai napauta kohtaa **Entiteettilomake (kokeellinen)** .  
    
     Näyttöön lisätään **Entiteettilomake**-ohjausobjekti.  
    
@@ -191,7 +190,7 @@ Katsotaanpa, kuinka lomakkeen mukautusruutu lisää siirtymisen ja kontekstin.
 
 Tämä määritettiin automaattisesti, kun määritimme lomakkeen mukautusruudulla **SalesOrderId**-kentän siirtämään näkymän **SalesOrderDetailsScreen**-näyttöön. Näin ollen **SalesOrderId**-kentän arvot näytetään linkkeinä.
 
-**OnFieldSelect** -ominaisuuden **SalesOrderListForm** asetetaan [ **Jos** ](functions/function-if.md) funktio, joka määrittää, onko käyttäjä napsauttaa tai napauttaa **salesorderid** kenttä: **SalesOrderListForm.SelectedField.SalesOrderId = true**.  
+**Salesorderlistform** -kohteen **Onfieldselect** -ominaisuudeksi on määritetty [**IF**](functions/function-if.md) -arvo, joka määrittää, NAPSAUTETAANKO tai napautetaanko **myynti tilauksen tunnus** -kenttää: **Salesorderlistform. SelectedField. SalesOrderId = True**.  
 
 Jos funktion tulos on tosi, **SalesOrderDetailsScreen** avautuu aiemmin käyttämämme **NavigationContext**-kontekstimuuttujan kanssa.  
 

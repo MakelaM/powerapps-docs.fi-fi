@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 198275ef72129b17cbf73a5f4eb47fd342de3b24
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 4c0d108f6aac4df7d0e10a316ba51f6f35ee3338
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61548750"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993291"
 ---
 # <a name="slider-control-in-powerapps"></a>Liukusäädin PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi määrittää arvon vetämällä kahvaa.
@@ -100,11 +99,11 @@ Käyttäjä voi valita arvon pienimmän ja suurimman määrittämäsi arvon väl
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät funktiot
-[**Sum**( *Arvo1*; *Arvo2* )](../functions/function-aggregates.md)
+[**Sum**( *Arvo1*, *Arvo2* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää painike ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:
-   <br>**ClearCollect(KaupunkienVäkiluvut; {Kaupunki:"Lontoo"; Maa:"Yhdistynyt kuningaskunta"; Väkiluku:8615000}; {Kaupunki:"Berliini"; Maa:"Saksa"; Väkiluku:3562000}; {Kaupunki:"Madrid"; Maa:"Espanja"; Väkiluku:3165000}; {Kaupunki:"Rooma"; Maa:"Italia"; Väkiluku:2874000}; {Kaupunki:"Pariisi"; Maa:"Ranska"; Väkiluku:2273000}; {Kaupunki:"Hampuri"; Maa:"Saksa"; Väkiluku:1760000}; {Maa:"Barcelona"; Maa:"Espanja"; Väkiluku:1602000}; {Kaupunki:"München"; Maa:"Saksa"; Väkiluku:1494000}; {Kaupunki:"Milano"; Maa:"Italia"; Väkiluku:1344000})**
+   <br>**ClearCollect(KaupunkienVäkiluvut, {Kaupunki:"Lontoo", Maa:"Yhdistynyt kuningaskunta", Väkiluku:8615000}, {Kaupunki:"Berliini", Maa:"Saksa", Väkiluku:3562000}, {Kaupunki:"Madrid", Maa:"Espanja", Väkiluku:3165000}, {Kaupunki:"Rooma", Maa:"Italia", Väkiluku:2874000}, {Kaupunki:"Pariisi", Maa:"Ranska", Väkiluku:2273000}, {Kaupunki:"Hampuri", Maa:"Saksa", Väkiluku:1760000}, {Maa:"Barcelona", Maa:"Espanja", Väkiluku:1602000}, {Kaupunki:"München", Maa:"Saksa", Väkiluku:1494000}, {Kaupunki:"Milano", Maa:"Italia", Väkiluku:1344000})**
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
    
@@ -113,8 +112,8 @@ Käyttäjä voi valita arvon pienimmän ja suurimman määrittämäsi arvon väl
 3. Lisää liukusäädin, siirrä se painikkeen alapuolelle ja anna liukusäätimelle nimi **MinVäkiluku**.
 4. Määritä liukusäätimen **Max**-ominaisuuden arvoksi **5000000** ja sen **Min**-ominaisuuden arvoksi **1000000**.
 5. Lisää pystysuunnassa oleva tekstivalikoima, siirrä se liukusäätimen alapuolelle ja määritä valikoiman **[Items](properties-core.md)** -ominaisuuden arvoksi tämä kaava:<br>
-   **Filter(KaupunkienVäkiluvut; Väkiluku > MinVäkiluku)**
-6. Määritä valikoiman ensimmäisen kohteen ylimmän otsikon **[Text](properties-core.md)** -ominaisuudeksi **TämäKohde.Kaupunki** ja määritä alimman otsikon **[Text](properties-core.md)** -ominaisuudeksi seuraava kaava:<br> **Text(ThisItem.Väkiluku; "##,###")**
+   **Filter(KaupunkienVäkiluvut, Väkiluku > MinVäkiluku)**
+6. Määritä valikoiman ensimmäisen kohteen ylimmän otsikon **[Text](properties-core.md)** -ominaisuudeksi **TämäKohde.Kaupunki** ja määritä alimman otsikon **[Text](properties-core.md)** -ominaisuudeksi seuraava kaava:<br> **Text(ThisItem.Väkiluku, "##,###")**
 7. Paina F5-näppäintä ja säädä **MinVäkiluku**-liukusäädin näyttämään vain ne kaupungit, joiden väkiluku on suurempi kuin määrittämäsi arvo.
 8. Palaa oletustyötilaan painamalla ESC-näppäintä.
 

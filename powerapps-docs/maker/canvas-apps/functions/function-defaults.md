@@ -6,19 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 83021ff0d18eb5d7322ef40eaa2bc0839b56f452
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: b51d956f2c188e0b877530b28dec933d42c905a6
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61551165"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992848"
 ---
 # <a name="defaults-function-in-powerapps"></a>PowerAppsin Defaults-funktio
 Palauttaa [tietolähteen](../working-with-data-sources.md) oletusarvot.  
@@ -30,7 +30,7 @@ Funktio palauttaa [tietueen](../working-with-tables.md#records), joka sisältä�
 
 Tietolähteiden antamat oletustietomäärät vaihtelevat, ja joissakin tapauksissa ei anneta mitään tietoja.  Kun käsittelet [valikoimaa](../working-with-data-sources.md#collections) tai muuta tietolähdettä, joka ei tue oletusarvoja, **Defaults**-funktio palauttaa [tyhjän](function-isblank-isempty.md) tietueen.
 
-Voit [luoda tietueen](../working-with-data-sources.md) yhdistämällä **Defaults**-funktion **[Ohjelmakorjaus](function-patch.md)**-funktioon.
+Voit [luoda tietueen](../working-with-data-sources.md) yhdistämällä **Defaults**-funktion **[Ohjelmakorjaus](function-patch.md)** -funktioon.
 
 ## <a name="syntax"></a>Syntaksi
 **Defaults**( *DataSource* )
@@ -41,5 +41,5 @@ Voit [luoda tietueen](../working-with-data-sources.md) yhdistämällä **Default
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Defaults(&nbsp;Scores&nbsp;)** |Palauttaa **Pisteet**-tietolähteen oletusarvot. |**{Pistemäärä: 0 }** |
+| **Defaults(&nbsp;Scores&nbsp;)** |Palauttaa **Pisteet**-tietolähteen oletusarvot. |**{Score: 0}** |
 

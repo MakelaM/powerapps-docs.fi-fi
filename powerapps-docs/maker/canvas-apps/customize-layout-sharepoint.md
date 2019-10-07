@@ -1,27 +1,26 @@
 ---
 title: Opetusohjelma – Luodun sovelluksen valikoiman mukauttaminen | Microsoft Docs
 description: Tässä opetusohjelmassa mukautat PowerAppsissa automaattisesti luodun sovelluksen valikoimassa ja muissa elementeissä näkyvät tiedot.
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: ''
 ms.date: 05/06/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4ca9ed14f96dbad52fe6f7b0318f520dbdd33d10
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d12f667c1ff1fbf8424840b887e0f9394197ee2c
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61561257"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986044"
 ---
-# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opetusohjelma: Powerappsin valikoiman mukauttaminen
+# <a name="tutorial-customize-a-gallery-in-powerapps"></a>Opetusohjelma: Valikoiman mukauttaminen Powerappsissa
 
 Tässä opetusohjelmassa mukautat valikoimaksi kutsutun tietueluettelon ja teet muita muutoksia sovellukseen, joka luotiin automaattisesti Microsoft PowerAppsissa. Käyttäjät voivat hallita sovelluksen tietoja, vaikka et tee näitä muutoksia, mutta sovellusta on helpompi käyttää, jos mukautat sitä organisaatiosi tarpeiden mukaan.
 
@@ -48,13 +47,13 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 ## <a name="prerequisites"></a>Edellytykset
 
-[Sovelluksen luominen](data-platform-create-app.md) - **tilit** Common Data Service-entiteettiin.
+[Luo sovellus](data-platform-create-app.md) Common Data Service **accounts** -entiteetistä.
 
 ## <a name="open-the-generated-app"></a>Avaa luotu sovellus
 
 1. Kirjaudu [PowerAppsiin](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) ja valitse **Sovellukset** lähellä vasenta reunaa.
 
-1. Etsi luomasi sovellus, valitse kolme pistettä (**...**) sovelluksen kohdalla ja valitse sitten **Muokkaa**.
+1. Etsi luomasi sovellus, valitse kolme pistettä ( **...** ) sovelluksen kohdalla ja valitse sitten **Muokkaa**.
 
     ![Avaa sovellus muokkaamista varten](./media/customize-layout-sharepoint/open-app.png)
 
@@ -68,15 +67,15 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
     ![Valitse valikoima](media/customize-layout-sharepoint/select-gallery-1.png)
 
-1. Käyttöön **ominaisuudet** välilehti oikeanpuoleisessa ruudussa, Avaa kohdan vaihtoehtoluettelo **asettelu**, ja valitse sitten haluamasi vaihtoehdon näkyy vain otsikko.
+1. Avaa oikeanpuoleisen ruudun **Ominaisuudet** -väli lehdellä **ulkoasu**-kohdan asetus luettelo ja valitse sitten vaihto ehto, joka sisältää vain otsikon.
 
     ![Valitse vain otsikko -asettelu](./media/customize-layout-sharepoint/choose-layout.png)
 
-1. Kohdan **kentät**, valitse **Muokkaa**, ja valitse sitten otsikkoruutuun alanuolta.
+1. Valitse **kentät**-kohdan vierestä **Muokkaa**ja valitse sitten otsikko-ruudun alanuoli.
 
     Tämän ohjausobjektin nimi päättyy numeroon, kuten **Title1**, mutta numero saattaa vaihdella muiden mahdollisesti tekemiesi toimintojen perusteella.
 
-1. Valitse valintaluettelossa, **tilin nimi**, ja sulje sitten **tietojen** ruudussa.
+1. Valitse vaihto ehtojen luettelosta **tilin nimi**ja sulje **tiedot** -ruutu.
 
     Valikoima näyttää kunkin tilin nimen.
 
@@ -96,7 +95,7 @@ Jos et ole rekisteröitynyt PowerAppsiin, [rekisteröidy ilmaiseksi](https://web
 
 1. Kopioi tämä kaava ja liitä se kaavariville.
 
-    ```SortByColumns(Search(Accounts; TextSearchBox1.Text; "name"); "name"; If(SortDescending1; Descending; Ascending))```
+    ```SortByColumns(Search(Accounts, TextSearchBox1.Text, "name"), "name", If(SortDescending1, Descending, Ascending))```
 
     Käyttämällä tätä kaavaa varmistat seuraavat seikat:
 
@@ -143,7 +142,7 @@ Jos käyttäjillä ei mahdollisesti ole kosketusnäyttöä tai hiiren kiekkopain
 
     ![Valitse valikoima](./media/customize-layout-sharepoint/select-gallery-sorted.png)
 
-1. Määritä valikoiman **Näytä vierityspalkki** ominaisuudeksi **true**.
+1. Valitse valikoiman **Näytä vieritys palkki** -ominaisuudeksi **True**.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

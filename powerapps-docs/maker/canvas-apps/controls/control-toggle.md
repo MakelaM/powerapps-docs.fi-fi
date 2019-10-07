@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 6ab5ddf93351547afb752e838ab4929c7138df87
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: 4ec115eecc676a7ec5bea3b04b135eeb63268449
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61560434"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71993257"
 ---
 # <a name="toggle-control-in-powerapps"></a>Ohjausobjektin vaihtopainike PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi ottaa käyttöön tai poistaa käytöstä siirtämällä sen kahvaa.
@@ -43,7 +42,7 @@ Vaihtopainike on suunniteltu uusimpia käyttöliittymiä varten, mutta se toimii
 
 **[DisplayMode](properties-core.md)** – Onko käyttäjällä oikeus muokata (**Muokkaa**) vai vain tarkastella tietoja (**Näytä**), vai onko ominaisuus poistettu käytöstä (**Ei käytössä**).
 
-**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)**-asetuksena on **Poistettu käytöstä**.
+**[DisabledBorderColor](properties-color-border.md)** – Ohjausobjektin reunan väri, jos sen **[DisplayMode](properties-core.md)** -asetuksena on **Poistettu käytöstä**.
 
 **FalseFill** – Värintäytön vaihtopainike, kun Poistettu käytöstä on valittuna.
 
@@ -106,16 +105,16 @@ Vaihtopainike on suunniteltu uusimpia käyttöliittymiä varten, mutta se toimii
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
-[**If**( *Ehto*; *Tulos* )](../functions/function-if.md)
+[**If**( *Ehto*, *Tulos* )](../functions/function-if.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää vaihtopainike ja anna sille nimeksi **MemberDiscount**.
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
-2. Lisää selite ja aseta sen **[Text](properties-core.md)**-ominaisuudeksi tämä kaava:
-   <br>**If(MemberDiscount.Value = true; "Price: $75"; "Price: $100")**
+2. Lisää selite ja aseta sen **[Text](properties-core.md)** -ominaisuudeksi tämä kaava:
+   <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
 
-    Haluatko lisätietoja **[If](../functions/function-if.md)**-funktiosta tai [muista funktioista](../formula-reference.md)?
+    Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä ja muuta **MemberDiscount**-arvoa.
 
     Selitteessä on eri hinta sen mukaan, onko **MemberDiscount** käytössä vai poissa käytöstä.
@@ -145,5 +144,5 @@ Tämä tulee [värikontrastin vakiovaatimusten lisäksi](../accessible-apps-colo
 * Harkitse **ShowLabel**-ominaisuuden asettamista arvoon **true**, jotta käyttäjät voivat nopeasti määrittää vaihtoarvon.
 
 ### <a name="keyboard-support"></a>Näppäimistön tuki
-* **[TabIndex](properties-accessibility.md)**-kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
+* **[TabIndex](properties-accessibility.md)** -kohteen on oltava nolla tai yli, jotta näppäimistön käyttäjät voivat siirtyä siihen.
 * Kohdistuksen ilmaisinten on oltava selvästi näkyvissä. Voit tehdä tämän kohteiden **[FocusedBorderColor](properties-color-border.md)** ja **[FocusedBorderThickness](properties-color-border.md)** avulla.

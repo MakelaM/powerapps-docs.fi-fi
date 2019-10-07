@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 08/08/2017
 ms.author: kaagar
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: a32dd9f483682ba462aae1d3bd9d257d3204b8f5
-ms.sourcegitcommit: c52c1869510a9a37d9f7b127e06f07583529588b
+ms.openlocfilehash: 22dfcb085c2de4aabd849e0a1fedc8a231f0e55f
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64670440"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71987359"
 ---
 # <a name="send-a-push-notification-in-powerapps"></a>Palveluilmoituksen lähettäminen PowerAppsissa
 Palveluilmoituksia käytetään kuluttaja- ja yritysmobiilisovelluksissa ensisijaisesti yhteydenpitoon sovellusten käyttäjien kanssa ja auttamaan heitä priorisoimaan tärkeitä tehtäviä. Voit lähettää PowerAppsissa ilmoituksia käyttämällä PowerApps Notification -yhdistintä. Voit lähettää natiiveja palveluilmoituksia mille tahansa sovellukselle, jonka luot PowerAppsissa. Aiomme lisätä tulevaisuudessa ilmoitustyyppejä.
@@ -81,15 +80,15 @@ Voit lähettää palveluilmoituksen yhdestä sovelluksesta toiseen tai samaan so
 
 ## <a name="load-a-specific-page-and-context-when-a-user-taps-the-notification"></a>Tietyn sivun ja kontekstin lataaminen, kun käyttäjä napauttaa ilmoitusta
 ### <a name="pass-parameters"></a>Parametrien välittäminen
-Palveluilmoituksesi voivat välittää sovellukselle parametreja. Esimerkiksi **CaseID**-arvon lukemiseen käytetään kaavaa *Param("CaseID")*. Tämän parametrin nopeaa tunnistamista varten lisää sovellukseesi **Otsikko**-ohjausobjekti. Aseta sen **Text**-ominaisuudeksi **Param("CaseID")**. Jos käyttäjä avaa sovelluksen **Kaikki sovellukset** -luettelon kautta, arvo on tyhjä. Jos käyttäjä avaa sovelluksen eri sijainnista laitteella, arvo täytetään **CaseID**-arvolla.
+Palveluilmoituksesi voivat välittää sovellukselle parametreja. Esimerkiksi **CaseID**-arvon lukemiseen käytetään kaavaa *Param("CaseID")* . Tämän parametrin nopeaa tunnistamista varten lisää sovellukseesi **Otsikko**-ohjausobjekti. Aseta sen **Text**-ominaisuudeksi **Param("CaseID")** . Jos käyttäjä avaa sovelluksen **Kaikki sovellukset** -luettelon kautta, arvo on tyhjä. Jos käyttäjä avaa sovelluksen eri sijainnista laitteella, arvo täytetään **CaseID**-arvolla.
 
 ### <a name="set-the-start-page"></a>Aloitussivun asettaminen
 Voit asettaa sovelluksen avaamaan esimerkiksi **Case details** -sivun, kun sovellus avautuu:
 
 1. Lisää **Ajastin**-ohjausobjekti ja aseta sen **OnTimerEnd**-ominaisuudeksi seuraava kaava:
-   <br>**Navigate(EditCase; ScreenTransition.None)**
+   <br>**Navigate(EditCase, ScreenTransition.None)**
 2. (valinnainen) Piilota **Ajastin**-ohjausobjekti asettamalla sen **Visible**-ominaisuudeksi **false**.
-3. Aseta näytön **OnVisible**-ominaisuudeksi **Timer.Start()**.
+3. Aseta näytön **OnVisible**-ominaisuudeksi **Timer.Start()** .
 
 > [!TIP]
 > Ilmoitusta varten sovellukseen voidaan luoda yksilöllinen aloitussivu:
@@ -115,10 +114,10 @@ Voit asettaa sovelluksen avaamaan esimerkiksi **Case details** -sivun, kun sovel
 ### <a name="sample-formulas"></a>Esimerkkikaavoja
 Perusilmoituksen lähettäminen.
 
-```powerapps-comma
+```powerapps-dot
 PowerAppsNotification.SendPushNotification(
     {
-        recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b"; "72f988bf-86f1-41af-91ab-2d7cd011db47"];
+        recipients: ["f60ccf6f-7579-4f92-967c-2920473c966b", "72f988bf-86f1-41af-91ab-2d7cd011db47"],
         message: "A new case was assigned to you."
     }
 )
@@ -126,12 +125,12 @@ PowerAppsNotification.SendPushNotification(
 
 Sovelluksen avaavan ja parametreja välittävän ilmoituksen lähettäminen.
 
-```powerapps-comma
+```powerapps-dot
 PowerAppsNotification.SendPushNotification(
     {
-        recipients: ["email1@contoso.com"; "email2@contoso.com"];
-        message: "message in the notif toast";
-        params: Table({key:"notificationKey"; value:"The value for notificationKey"});
+        recipients: ["email1@contoso.com", "email2@contoso.com"],
+        message: "message in the notif toast",
+        params: Table({key:"notificationKey", value:"The value for notificationKey"}),
         openApp: true
     }
 )

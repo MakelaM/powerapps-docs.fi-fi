@@ -6,20 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/23/2016
 ms.author: fikaradz
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 0b710346c5e264fc13ee3cacb00073a32a4de0f0
-ms.sourcegitcommit: 4ed29d83e90a2ecbb2f5e9ec5578e47a293a55ab
+ms.openlocfilehash: 9204c26cc54f4230496943d48934af75d21c5319
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63318311"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71995109"
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Tietojen näyttäminen viiva-, ympyrä- tai palkkikaavioina PowerAppsissa
 
@@ -48,9 +47,9 @@ Näissä vaiheissa tuomme mallitiedot kokoelmaan, jonka nimi on **ProductRevenue
 
     ![][11]  
 
-2. Määritä ohjausobjektin **[OnSelect](controls/properties-core.md)**-ominaisuudeksi seuraava funktio:  
+2. Määritä ohjausobjektin **[OnSelect](controls/properties-core.md)** -ominaisuudeksi seuraava funktio:  
 
-   ```Collect(ProductRevenue; Import1.Data)```
+   ```Collect(ProductRevenue, Import1.Data)```
 
 3. Avaa esikatselutila painamalla F5-näppäintä ja valitse **Tuo tiedot** -painike.
 
@@ -77,7 +76,7 @@ Näissä vaiheissa tuomme mallitiedot kokoelmaan, jonka nimi on **ProductRevenue
 
     ![][10]
 
-4. Määritä ympyräkaavion **[Items](controls/properties-core.md)**-ominaisuudeksi seuraava lauseke: `ProductRevenue.Revenue2014`
+4. Määritä ympyräkaavion **[Items](controls/properties-core.md)** -ominaisuudeksi seuraava lauseke: `ProductRevenue.Revenue2014`
 
     ![][2]  
 
@@ -92,7 +91,7 @@ Käytämme seuraavaksi ProductRevenue-kokoelmaa palkkikaaviossa:
 
 2. Valitse **Lisää**-välilehdellä **Kaaviot** ja valitse sitten **Pylväskaavio**.
 
-3. Valitse pylväskaavion keskikohta. Määritä pylväskaavion **[Items](controls/properties-core.md)**-ominaisuudeksi ```ProductRevenue```:
+3. Valitse pylväskaavion keskikohta. Määritä pylväskaavion **[Items](controls/properties-core.md)** -ominaisuudeksi ```ProductRevenue```:
 
     ![][12]  
 

@@ -8,18 +8,17 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
 ms.author: fikaradz
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 3504c80cbf2414959cadc218339d959d168d15ba
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d943eacabaab8d9542352ee0b1c092244c171d86
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61559445"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71986803"
 ---
 # <a name="check-box-control-in-powerapps"></a>Valintaruutu-ohjausobjekti PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi valita tai tyhjentää ja asettaa siten sen arvoksi **tosi** tai **epätosi**.
@@ -67,7 +66,7 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 
 **[Font](properties-text.md)** – Näytössä näkyvän fonttiperheen nimi.
 
-**[FontWeight](properties-text.md)**  – ohjausobjektin tekstin paino: **Lihavoitu**, **Semibold**, **Normaali**, tai **ohuempi**.
+**[Fontweight](properties-text.md)** – ohjaus objektin tekstin paino: **Lihavoitu**, **puolilihavoitu**, **Normaali**tai **kevyempi**.
 
 **[Height](properties-size-location.md)** – Ohjausobjektin ylä- ja alareunan välinen etäisyys.
 
@@ -122,14 +121,14 @@ Käyttäjä voi määrittää totuusarvon käyttämällä tätä tuttua ohjausob
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
-[**If**( *Ehto*; *Tulos* )](../functions/function-if.md)
+[**If**( *Ehto*, *Tulos* )](../functions/function-if.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **valintaruutu**-ohjausobjekti, anna sen nimeksi **chkReserve**, ja määritä sen **[Teksti](properties-core.md)** -ominaisuus näyttämään teksti **Varaa nyt**.
    
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää **[päivämäärävalitsin](control-date-picker.md)** -ohjausobjekti ja määritä sen **[Näkyvä](properties-core.md)** -ominaisuudeksi tämä kaava:
-   <br>**If(chkReserve.Value = true; true)**
+   <br>**If(chkReserve.Value = true, true)**
    
     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä, napsauta tai napauta kohdetta **chkReserve** ja määritä sen **[Arvo](properties-core.md)** -ominaisuuden arvoksi **tosi**. Napsauta tai napauta sitten uudestaan **chkReserve**  ja määritä sen **[Arvo](properties-core.md)** -ominaisuuden arvoksi **epätosi**.

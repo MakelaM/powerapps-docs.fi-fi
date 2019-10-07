@@ -1,342 +1,341 @@
 ---
-title: Liittyvät ja Unrelate Funktiot | Microsoft Docs
-description: Viitetiedot, mukaan lukien syntaksi ja Esimerkki Relate ja Unrelate-Funktiot powerappsissa
+title: Relate-ja Unrelate-Funktiot | Microsoft Docs
+description: Powerappsin Relate-ja Unrelate-funktioiden viite tiedot, mukaan lukien syntaksi ja esimerkki
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 01/22/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 4b2c6b9518e987ef17f2ff2b50987568c8a0b69f
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
+ms.openlocfilehash: d8ba0cef60b268caafb57e18ae80a522905ba45b
+ms.sourcegitcommit: 7dae19a44247ef6aad4c718fdc7c68d298b0a1f3
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61527207"
-ms.PowerAppsDecimalTransform: true
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71992757"
 ---
-# <a name="relate-and-unrelate-functions-in-powerapps"></a>Liittyvät ja Unrelate-Funktiot powerappsissa
+# <a name="relate-and-unrelate-functions-in-powerapps"></a>Powerappsin Relate-ja Unrelate-Funktiot
 
-Liittyvät ja unrelate kautta yksi-moneen- tai monta-moneen-suhteen kahden entiteetin tietueet.
+Yhdistä Kahden entiteetin tietueet yhteen moneen-tai monta-moneen-suhteen kautta.
 
 ## <a name="description"></a>Kuvaus
 
-**Relate** funktio yhdistää kaksi tietuetta yksi-moneen- tai monta-moneen-suhteen Common Data Service-kautta. **Unrelate** funktio kääntää prosessi ja poistaa linkin.
+**Relate** -funktiolla linkit ovat kaksi tietuetta yksi-moneen-tai monta-moneen-suhteen Common Data Service. **Unrelate** -toiminto kumoaa prosessin ja poistaa linkin.
 
-Yksi moneen suhteiden monta kohteella viiteavain kenttä, joka osoittaa yhden entiteetin tietueen. **Liittyvät** määrittää tämän kentän osoittamaan tietyn tietueen yhden entiteetin, kun **Unrelate** määrittää tämän kentän *tyhjä*. Jos kenttä on jo määritetty kun **Relate** on nimeltään, nykyisen linkin menetetään, koska uuden linkin. Voit myös määrittää tämän kentän avulla [ **Patch** ](function-patch.md) funktio tai **[muokkauslomake](../controls/control-form-detail.md)** ohjausobjektin; mitä tarvitset Käytä **yhdistäminen**  funktio.
+Yksi-moneen-yhteyksissä monilla entiteetillä on viite avain kenttä, joka osoittaa yhden entiteetin tietueeseen. **Relate** määrittää tämän kentän näyttämään yhden entiteetin tietyn tietueen, kun taas **unrelate** määrittää tämän kentän *tyhjäksi*. Jos kenttä on jo määritetty, kun **Relate** kutsutaan, olemassa oleva linkki katoaa uuden linkin hyväksi. Voit myös määrittää tämän kentän käyttämällä [**patch**](function-patch.md) -toimintoa tai **[Muokkaa lomaketta](../controls/control-form-detail.md)** -ohjaus objektia. **Relate** -funktiolla ei tarvitse käyttää.
 
-Monta-moneen-suhteita järjestelmän, joka yhdistää tietueet ylläpitää piilotettu join-taulukoksi. Liity tässä taulukossa ei voi käyttää suoraan. se voidaan lukea vain yksi-moneen-projektion ja asetettu kautta **Relate** ja **Unrelate** funktioita. Kumpikaan liittyvä entiteetti on foreign key.
+Monille moneen-suhteille järjestelmä, joka linkittää tietueet, ylläpitää piilotetun liitoksen taulukkoa. Et voi käyttää tätä Join-taulukkoa suoraan; sitä voi lukea vain yksi-moneen-projektion avulla ja asettaa **Relate** -ja **unrelate** -funktioiden kautta. Millään liittyvällä entiteetillä ei ole viite avainta.
 
-Ensimmäinen argumentti määrittämääsi entiteettiin tiedot päivitetään muutoksen, mutta toinen argumentti määrittämääsi entiteettiin tiedot eivät. Tietojen on oltava manuaalisesti päivittää kanssa **[Päivitä](function-refresh.md)** funktiota näyttämään toiminnon tuloksen.
+Ensimmäisessä argumentissa määrittämäsi entiteetin tiedot päivitetään vastaamaan muutosta, mutta toisessa argumentissa määrittämäsi entiteetin tiedot eivät. Tiedot on päivitettävä manuaalisesti **[Refresh](function-refresh.md)** -funktiolla näyttämään toiminnon tuloksen.
 
-Nämä funktiot koskaan luoda tai poistaa tietueen. He vain liittyvät tai unrelate kaksi tietuetta, jotka on jo olemassa.
+Nämä funktiot eivät koskaan Luo tai poista tietuetta. Ne koskevat vain kahta jo olemassa olevaa tietuetta tai yhdistävät ne.
 
-Voit käyttää näitä funktioita vain [toimintakaavoissa](../working-with-formulas-in-depth.md).
+Voit käyttää näitä funktioita vain [toiminta kaavoissa](../working-with-formulas-in-depth.md).
 
 > [!NOTE]
-> Nämä funktiot ovat osa esikatseluominaisuudet ja niiden toiminta on käytettävissä vain, kun **relaatiotietoja asetusjoukkoja ja muihin uusiin ominaisuuksiin cds** on käytössä. Tämä on sovelluksen tason-asetus, joka on oletusarvoisesti uusille sovelluksille. Voit etsiä tämän ominaisuusvalitsimen avaamalla **tiedoston** valikosta **sovellusasetukset**, ja valitse sitten **lisäasetukset**. Palautteesi on meille erittäin arvokasta. Kerro meille mielipiteesi [PowerApps-yhteisön keskustelupalstoilla](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> Nämä funktiot ovat osa esikatselutoimintoa, ja niiden käyttäytyminen on käytettävissä vain, kun **relaatio tiedot, asetus joukot ja muut CDS-ominaisuuden uudet ominaisuudet** ovat käytössä. Tämä on sovellus tason asetus, joka on oletus arvon mukaan käytössä uusille sovelluksille. Jos haluat löytää tämän ominaisuuden valitsimen, avaa **tiedosto-** valikko, valitse **sovellus asetukset**ja valitse sitten **lisä asetukset**. Palautteesi on meille erittäin arvokasta. Kerro meille mielipiteesi [PowerApps-yhteisön keskustelupalstoilla](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 ## <a name="syntax"></a>Syntaksi
 
-**Liittyvät**( *Entity1RelatedTable*; *Entity2Record* )
+**Relate**( *Entity1RelatedTable*, *Entity2Record* )
 
-* *Entity1RelatedTable* – pakollinen. Tietueen *Entity1*, on *Entity2* liittyvät yksi-moneen- tai monta-moneen-suhteen kautta.
-* *Entity2Record* – pakollinen. *Entity2* tietueen lisäämiseen suhteen.
+* *Entity1RelatedTable* – pakollinen. Jos kyseessä on *Entity1*-tietue, *Entity2* -tietueiden taulukko, joka liittyy yksi-moneen-tai monta-moneen-suhteen kautta.
+* *Entity2Record* – pakollinen. Suhteeseen lisättävä *Entity2* -tietue.
 
-**Unrelate**( *Entity1RelatedTable*; *Entity2Record* )
+**Unrelate**( *Entity1RelatedTable*, *Entity2Record* )
 
-* *Entity1RelatedTable* – pakollinen. Tietueen *Entity1*, on *Entity2* liittyvät yksi-moneen- tai monta-moneen-suhteen kautta.
-* *Entity2Record* – pakollinen. *Entity2* tietueen Poista suhde.
+* *Entity1RelatedTable* – pakollinen. Jos kyseessä on *Entity1*-tietue, *Entity2* -tietueiden taulukko, joka liittyy yksi-moneen-tai monta-moneen-suhteen kautta.
+* *Entity2Record* – pakollinen. Suhteesta poistettava *Entity2* -tietue.
 
 ## <a name="examples"></a>Esimerkkejä
 
-Harkitse **tuotteiden** entiteettiä seuraava suhteita osoitetulla tavalla [PowerApps-portaali entiteetin katseluohjelman](../../common-data-service/create-edit-entities-portal.md):
+Harkitse **tuote** -entiteettiä, jolla on seuraavat suhteet, kuten näkyy [powerapps-portaalin entiteetin katselu ohjelmassa](../../common-data-service/create-edit-entities-portal.md):
 
-| Suhteen näyttönimi | Liittyvä entiteetti | Suhteen tyyppi |
+| Suhteen näyttö nimi | Liittyvä entiteetti | Suhde tyyppi |
 | --- | --- |
-| Tuotteen varaus | Varauksen | Yksi-moneen |
-| Tuotteen &harr; yhteyttä | Yhteystiedot | Monta moneen |
+| Tuote varaus | Tekeminen | Yksi moneen |
+| Tuote &harr; yhteys henkilö | Yhteystiedot | Monta moneen |
 
-**Tuotteiden** ja **varaukset** liittyvät yksi-moneen-suhde.  Yhdistetään ensimmäisen tietueen **varaukset** entiteetti, jolla ensimmäisen tietueen **tuotteiden** entiteetin:
+**Tuotteet** ja **vara ukset** liittyvät yhden moneen-suhteen kautta.  Jos haluat liittää **vara ukset** -entiteetin ensimmäisen tietueen **Products** -entiteetin ensimmäiseen tietueeseen:
 
-`Relate( First( Products ).Reservations; First( Reservations ) )`
+`Relate( First( Products ).Reservations, First( Reservations ) )`
 
-Jos haluat poistaa nämä tietueet suhdetta:
+Näiden tietueiden välisen suhteen poistaminen:
 
-`Unrelate( First( Products ).Reservations; First( Reservations ) )`
+`Unrelate( First( Products ).Reservations, First( Reservations ) )`
 
-Milloin ei ollut Luomme tai poista tai tietue, vain tietueen välisen suhteen on muokattu.
+Emme luo tai poista tietueita tai kirjaa, mutta vain tietueiden välistä suhdetta muokattiin.
 
-**Tuotteiden** ja **yhteystiedot** liittyvät monta-moneen-suhde.  Yhdistetään ensimmäisen tietueen **yhteystiedot** entiteetti, jolla ensimmäisen tietueen **tuotteiden** entiteetin:
+**Tuotteet** ja **yhteys tiedot** liittyvät monen moneen-suhteen kautta.  Jos haluat liittää **yhteys tiedot** -entiteetin ensimmäisen tietueen **Products** -entiteetin ensimmäiseen tietueeseen:
 
-`Relate( First( Products ).Contacts; First( Contacts ) )`
+`Relate( First( Products ).Contacts, First( Contacts ) )`
 
-Kuin monta moneen suhteita symmetrisen, emme voi myös olet tehnyt tämän vastakkaiseen suuntaan:
+Kuten monta moneen-yhteydet ovat symmetriset, olisimme voineet tehdä tämän myös vastakkaiseen suuntaan:
 
-`Relate( First( Contacts ).Products; First( Products ) )`
+`Relate( First( Contacts ).Products, First( Products ) )`
 
-Jos haluat poistaa nämä tietueet suhdetta:
+Näiden tietueiden välisen suhteen poistaminen:
 
-`Unrelate( First( Products ).Contacts; First( Contacts ) )`
+`Unrelate( First( Products ).Contacts, First( Contacts ) )`
 
-tai:
+tai
 
-`Unrelate( First( Contacts ).Products; First( Products ) )`
+`Unrelate( First( Contacts ).Products, First( Products ) )`
 
-Läpikäyntiin, että seuraavat tarkalleen näitä entiteettejä avulla sovellus nämä toiminnot **valikoiman** ja **yhdistelmäruudun** ohjausobjektit valitsemalla liittyvät tietueet.
+Tämän jälkeen käydään läpi nämä toiminnot näillä entiteeteillä käyttämällä sovellusta, jonka **valikoima** -ja **yhdistelmä ruutu** -ohjaus objekteilla voit valita tietueita.
 
-Näissä esimerkeissä riippuu asennetaan ympäristösi mallitiedot. Joko [luoda kokeiluympäristöön, mukaan lukien näytetiedot](../../model-driven-apps/overview-model-driven-samples.md#get-sample-apps) tai [mallitietoja lisääminen olemassa ympäristön](../../model-driven-apps/overview-model-driven-samples.md#install-or-uninstall-sample-data).
+Nämä esimerkit riippuvat ympäristöösi asenne tuista malli tiedoista. [Luo kokeilu ympäristö, joka sisältää malli tiedot](../../model-driven-apps/overview-model-driven-samples.md#get-sample-apps) [, tai Lisää malli tietoja olemassa olevaan ympäristöön](../../model-driven-apps/overview-model-driven-samples.md#install-or-uninstall-sample-data).
 
-### <a name="one-to-many"></a>Yksi-moneen
+### <a name="one-to-many"></a>Yksi moneen
 
-#### <a name="relate-function"></a>**Liittyvät** funktio
+#### <a name="relate-function"></a>**Relate** -funktiolla
 
-Ensin luot yksinkertaisen sovelluksen, voit tarkastella ja määrittää varaukset, jotka liittyvät tuote uudelleen.
+Luot ensin yksinkertaisen sovelluksen, jotta voit tarkastella ja määrittää tuotteeseen liittyviä vara uksia.
 
-1. Luo [tyhjä tablettisovellus](../data-platform-create-app-scratch.md).
+1. Luo [Tablet-sovellus](../data-platform-create-app-scratch.md)tyhjästä.
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
-1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-**  > **tuotteiden**  >  **Yhteyden**.  
+1. Valitse **tiedot** -ruudussa **lisää tieto lähde** > **Common Data Service** > **tuotetta** > **Muodosta yhteys**.  
 
-    Tuotteiden entiteetti on osa ladata yllä mallitiedot.
+    Products-entiteetti on osa yllä ladattuja malli tietoja.
 
-     ![Lisää tietolähde tuotteet-entiteettiin](media/function-relate-unrelate/products-connect.png)
+     ![Lisää Products-entiteetti tieto lähteeksi](media/function-relate-unrelate/products-connect.png)
 
-1. Valitse **Lisää** -välilehden Lisää tyhjä vaakasuuntainen **[valikoiman](../controls/control-gallery.md)** ohjausobjektin.
+1. Lisää tyhjä pystysuuntainen **[valikoima](../controls/control-gallery.md)** -ohjaus **objekti Lisää-väli lehdessä** .
 
-1. Varmista, että ohjausobjekti, jonka juuri lisäsit nimeltä **Gallery1**, ja Siirrä ja muuta se täyttää näytön vasemmassa reunassa.
+1. Varmista, että juuri lisäämäsi ohjaus objekti on nimeltään **Gallery1**, ja Siirrä ja muuta sen kokoa niin, että se täyttää näytön vasemman puolen.
 
-1. Käyttöön **ominaisuudet** välilehti, Määritä **Gallery1**käyttäjän **kohteet** -ominaisuuden arvoksi **tuotteiden** ja sen **asettelu** avulla **Kuva ja otsikko**.
+1. Valitse **Ominaisuudet** -väli lehdeltä **Gallery1** **Items** -ominaisuudeksi **tuotteet** ja sen **ulkoasu** **kuvaan ja otsikkoon**.
 
-    ![Määritä ProductsGallery](media/function-relate-unrelate/products-gallery.png)
+    ![Määritä Tuottetvalikoima](media/function-relate-unrelate/products-gallery.png)
 
-1. - **Gallery1**, varmista, että **nimen** ohjausobjektin nimi on **Title1**, ja aseta sen **tekstin** ominaisuudeksi  **ThisItem.Name**.
+1. Varmista **Gallery1**, että **nimi** -ohjaus objektin nimi on **Title1**ja aseta sen **teksti** -ominaisuudeksi **ThisItem.name**.
 
-    ![Määritä selitteen Gallery1](media/function-relate-unrelate/products-title.png)
+    ![Määritä nimi Gallery1](media/function-relate-unrelate/products-title.png)
 
-1. Valitse näytön välttämiseksi seuraavan kohteen lisääminen **Gallery1**.  Lisää toinen tyhjä vaakasuuntainen **valikoiman** ohjausobjekti ja varmista, että se on nimetty **Gallery2**.
+1. Valitse näyttö, jos haluat välttää seuraavan kohteen lisäämisen **Gallery1**.  Lisää toinen tyhjä pystysuuntainen **valikoima** -ohjaus objekti ja varmista, että sen nimi on **gallery2**.
 
-    **Gallery2** näyttää haluamasi tuotteen, jonka käyttäjä valitsee varaukset **Gallery1**.
+    **Gallery2** näyttää vara ukset siitä, mitä tuotetta käyttäjä valitsee **Gallery1**.
 
-1. Siirtäminen ja koon muuttaminen **Gallery2** täyttää näytön oikeassa-neljännes.
+1. Siirrä **gallery2** ja muuta sen kokoa niin, että se täyttää näytön oikean yläneljänneksen.
 
-1. (valinnainen) Lisää sininen **nimen** ohjausobjektin yllä **Gallery2**, kuten seuraavassa kuvassa.
+1. valinnainen Lisää sininen **Selite** -ohjaus objekti yllä **gallery2**, kuten seuraavassa kuvassa näytetään.
 
-1. Määritä kaavarivillä **kohteet** ominaisuuden **Gallery2** - **Gallery1.Selected.Reservations**.
+1. Valitse kaava riviltä **gallery2** - **kohteen Items** -ominaisuudeksi **Gallery1. selected. Reservations**.
 
-    ![Määritä Gallery2 kohteet](media/function-relate-unrelate/reservations-gallery.png)
+    ![Määritä gallery2 Items](media/function-relate-unrelate/reservations-gallery.png)
 
-1. Määritä ominaisuudet-ruudussa **Gallery2**käyttäjän **asettelu** - **otsikko**.
+1. Valitse Ominaisuudet-ruudussa **gallery2**- **asetteluksi** **title**.
 
-    ![Määritä Gallery2 asettelu](media/function-relate-unrelate/reservations-gallery-right.png)
+    ![Määritä gallery2-ulkoasu](media/function-relate-unrelate/reservations-gallery-right.png)
 
-1. - **Gallery2**, Lisää **[yhdistelmäruudun](../controls/control-combo-box.md)** ohjausobjekti, varmista, että se on nimetty **ComboBox1**, ja Siirrä ja muuta sen välttämiseksi, estä muiden ohjausobjektien **Gallery2**.
+1. Lisää **gallery2**-ohjaus objektiin **[yhdistelmä ruutu](../controls/control-combo-box.md)** -ohjaus objekti, varmista, että sen nimi on **ComboBox1**, ja Siirrä ja muuta sen kokoa, jotta muut ohjaus objektin **gallery2**eivät estä.
 
-1. Käyttöön **ominaisuudet** välilehti, Määritä **ComboBox1**käyttäjän **kohteet** ominaisuudeksi **tuotteiden**.
+1. Valitse **Ominaisuudet** -väli lehdessä **ComboBox1** **Items** -ominaisuudeksi **tuotteet**.
 
-    ![Items-ominaisuuden arvoksi tuotteet](media/function-relate-unrelate/reservations-combo-right.png)
+    ![Kohteiden ominaisuuksien asetus tuotteisiin](media/function-relate-unrelate/reservations-combo-right.png)
 
-1. Vieritä alaspäin **ominaisuudet** välilehti ja määritä **ComboBox1**käyttäjän **Monivalinnan salliminen** ominaisuudeksi **käytöstä**.
+1. Vieritä alas **Ominaisuudet** -väli lehdessä ja valitse **ComboBox1** **Salli usean valinnan** ominaisuudeksi ei **käytössä**.
 
-    ![Määritä Salli useita valintoja ei ole käytössä](media/function-relate-unrelate/reservations-singleselect-right.png)
+    ![Salli usean valinnan asetukseksi ei käytössä](media/function-relate-unrelate/reservations-singleselect-right.png)
 
-1. Määritä kaavarivillä **ComboBox1**käyttäjän **DefaultSelectedItems** ominaisuudeksi **ThisItem. 'Tuotteen varauksen'** .
+1. Valitse kaava riviltä **ComboBox1** **Defaulttselecteditems** -ominaisuudeksi **Thisitem. ' Product Reservation '** .
 
-    ![Määritä DefaultSelectedItems ReserveCombo](media/function-relate-unrelate/reservations-combo.png)
+    ![Valitse ReserveCombo-kohteelle DefaultSelectedItems](media/function-relate-unrelate/reservations-combo.png)
 
-1. - **Gallery2**, Määritä **NextArrow2**käyttäjän **OnSelect** -ominaisuuden arvoksi tämä kaava:
+1. Määritä **gallery2** **NextArrow2** **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-comma
-    Relate( ComboBox1.Selected.Reservations; ThisItem )
+    ```powerapps-dot
+    Relate( ComboBox1.Selected.Reservations, ThisItem )
     ```
 
-    Kun käyttäjä valitsee tämän kuvakkeen, nykyinen varauksen muuttuu tuote, jonka käyttäjä valitsi **ComboBox1**.
+    Kun käyttäjä valitsee tämän kuvakkeen, nykyinen varaus muuttuu tuotteeseen, jonka käyttäjä valitsi kohteessa **ComboBox1**.
 
     ![Määritä NextArrow2](media/function-relate-unrelate/reservations-relate.png)
 
-1. Paina F5-näppäintä testaat sovellustasi esikatselutilassa.
+1. Testaa sovellusta esikatselutilassa painamalla F5-näppäintä.
 
-Tämän sovelluksen avulla käyttäjä voi siirtää varauksen yhdessä tuotteessa toiseen. Varauksen yksi tuote, käyttäjä voi valita eri tuotteen **ComboBox1** ja valitse sitten **NextArrow2** muuttamiseksi kyseisen varaus.
+Tämän sovelluksen avulla käyttäjä voi siirtää vara uksen yhdestä tuotteesta toiseen. Jos haluat tehdä vara uksen yhdelle tuotteelle, käyttäjä voi valita eri tuotteen **ComboBox1** ja muuttaa tätä varausta valitsemalla **NextArrow2** .
 
-![Osoittaa funktion Relate yksi-moneen-sovelluksessa](media/function-relate-unrelate/reservations-reassign.gif)
+![Osoittaminen Relate-funktiolla yksi moneen-sovelluksessa](media/function-relate-unrelate/reservations-reassign.gif)
 
-#### <a name="unrelate-function"></a>**Unrelate** funktio
+#### <a name="unrelate-function"></a>**Unrelate** -funktiolla
 
-Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta ei voi poistaa yhteyden kokonaan. Voit määrittää **Unrelate** funktiota varauksen tietueen katkaista tuotetta.
+Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta et voi poistaa suhdetta kokonaan. Voit käyttää **Unrelationate** -funktiolla katkaisemaan varaus tietueen mistä tahansa tuotteesta.
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
-1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-**  > **varaukset**  >  **Yhteyden**.
+1. Valitse **tiedot** -ruudussa **lisää tieto lähde** > **Common Data Service** > **vara ukset** > **Connect**.
 
-1. - **Gallery2**, Määritä **OnSelect** kaavaa **NextArrow2** tämä kaava:
+1. **Gallery2**, Määritä **onselect** -kaava kohteelle **NextArrow2** tähän kaavaan:
 
-    ```powerapps-comma
-    If( IsBlank( ComboBox1.Selected );
-        Unrelate( Gallery1.Selected.Reservations; ThisItem );
-        Relate( ComboBox1.Selected.Reservations; ThisItem )
-    );;
+    ```powerapps-dot
+    If( IsBlank( ComboBox1.Selected ),
+        Unrelate( Gallery1.Selected.Reservations, ThisItem ),
+        Relate( ComboBox1.Selected.Reservations, ThisItem )
+    );
     Refresh( Reservations )
     ```
-    ![Määritä oikea kuvake](media/function-relate-unrelate/reservations-relate-unrelate.png)
+    ![Määritä oikea-kuvake](media/function-relate-unrelate/reservations-relate-unrelate.png)
 
-1. Kopioi **Gallery2** valitsemalla sen ja painamalla Ctrl-C. Leikepöydälle
+1. Kopioi **gallery2** leike pöydälle valitsemalla se ja painamalla CTRL-C.
 
-1. Liitä kaksoiskappaleen **Gallery2** sama näytön painamalla Ctrl-V ja siirrä se oikeaan neljännes näytön.
+1. Liitä **gallery2** -kaksoiskappale samaan näyttöön painamalla CTRL-V ja siirrä se sitten näytön oikeaan alakulmaan.
 
-1. (valinnainen) Jos olet lisännyt yllä selitteen **Gallery2**, toista edelliset kaksi vaihetta merkin.
+1. valinnainen Jos lisäsit otsikon **gallery2**yläpuolelle, toista kaksi edellistä vaihetta tälle otsikolle.
 
-1. Varmista, kaksoiskappale **Gallery2** nimeltä **Gallery2_1**, ja aseta sen **kohteet** -ominaisuuden arvoksi tämä kaava:
+1. Varmista, että **gallery2** -kohteen kaksoiskappale on nimeltään **Gallery2_1**ja aseta sen **Items** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-comma
-    Filter( Reservations; IsBlank( 'Product Reservation' ) )
+    ```powerapps-dot
+    Filter( Reservations, IsBlank( 'Product Reservation' ) )
     ```
 
-    Delegointi varoituksen, mutta luontimenetelmällä ei tässä esimerkissä pieni tietomäärän kanssa.
+    Näyttöön tulee delegointi varoitus, mutta tässä esimerkissä ei ole merkitystä pienen tieto määrän kanssa.
 
-    ![Gallery2_1 Items-ominaisuuden asettaminen](media/function-relate-unrelate/reservations-lost.png)
+    ![Gallery2_1-kohteen Items-ominaisuuden asetus](media/function-relate-unrelate/reservations-lost.png)
 
-Nämä muutokset käyttäjät poistamalla valinnan **ComboBox1** yhteyshenkilön, jos hän ei ole varattu tuote. Yhteyshenkilöt, joilla ei ole vielä varattu tuotteen näkyvät **Gallery2_1** tuotetta, jossa käyttäjät voivat määrittää jokaisen yhteystiedon.
+Näiden muutosten avulla käyttäjät voivat tyhjentää **ComboBox1** -kohteen valinnan, jos kyseinen henkilö ei ole varannut tuotetta. Yhteys henkilöt, jotka eivät ole varanneet tuotetta, näkyvät **Gallery2_1** , joissa käyttäjät voivat antaa kunkin yhteys tiedon tuotteeseen.
 
-   ![Esitellä Relate ja Unrelate Funktiot yksi-moneen-sovelluksessa](media/function-relate-unrelate/reservations-lostandfound.gif)
+   ![Osoita Relate-ja Unrelate-Funktiot yhdessä moneen-sovelluksessa](media/function-relate-unrelate/reservations-lostandfound.gif)
 
 ### <a name="many-to-many"></a>Monta moneen
 
-#### <a name="create-a-many-to-many-relationship"></a>Luo monta-moneen-suhde
+#### <a name="create-a-many-to-many-relationship"></a>Monta-moneen-suhteen luominen
 
-Mallitietojen ei sisällä monta-moneen-suhde, mutta luot tuotteet-entiteettiin ja yhteystiedot-entiteetin välillä. Käyttäjille voidaan liittää kunkin tuotteen useita yhteystietoja ja jokaisen yhteystiedon useampi kuin yksi tuotteeseen.
+Malli tiedot eivät sisällä monta-moneen-suhdetta, mutta luot sellaisen tuote-entiteetin ja yhteys tiedot-entiteetin välille. Käyttäjät voivat liittää kunkin tuotteen useampaan kuin yhteen yhteys tietoon ja kuhunkin yhteys tietoon useampaan kuin yhteen tuotteeseen.
 
-1. - [Tämän sivun](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), valitse **tietojen** vasemmassa siirtymisruudussa ja sitten Valitse **entiteetit**.
+1. Valitse [tältä sivulta](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)vasemmasta siirtymis palkista **tiedot** ja valitse sitten **entiteetit**.
 
     ![Avaa entiteettien luettelo](media/function-relate-unrelate/entity-list.png)
 
-1. Sisällytä kaikki entiteetit suodattimeen entiteetin.
+1. Muuta entiteettisuodinta sisältämään kaikki entiteetit.
 
-    Oletusarvon mukaan malli-entiteetit eivät näy.
+    Oletus arvon mukaan malli entiteetit eivät ole näkyvissä.
 
-    ![Poista entiteetti suodatin](media/function-relate-unrelate/entity-all.png)
+    ![Poista entiteettisuodatin](media/function-relate-unrelate/entity-all.png)
 
-1. Vieritä alaspäin, Avaa **tuotteen** entiteetin ja valitse **suhteita**.
+1. Vieritä alaspäin, avaa **tuote** -entiteetti ja valitse **yhteydet**.
 
-    ![Tuote-entiteetin suhteet-välilehti](media/function-relate-unrelate/entity-relationships.png)
+    ![Tuote-entiteetin yhteydet-väli lehti](media/function-relate-unrelate/entity-relationships.png)
 
-1. Valitse **Lisää suhde** > **monta-moneen**.
+1. Valitse **Lisää suhde** > **monta-** moneen.
 
-    ![Lisää monta-moneen-suhde](media/function-relate-unrelate/entity-manytomany.png)
+    ![Lisää monta moneen-suhde](media/function-relate-unrelate/entity-manytomany.png)
 
-1. Valitse **yhteyttä** entiteetin suhteen.
+1. Valitse suhteen **yhteys** henkilö-entiteetti.
 
-    ![Valitse yhteyshenkilö-entiteetin](media/function-relate-unrelate/entity-contact.png)
+    ![Valitse yhteys henkilö-entiteetti](media/function-relate-unrelate/entity-contact.png)
 
-1. Valitse **valmis** > **Tallenna entiteetti**.
+1. Valitse **Done** > **Tallenna entiteetti**.
 
-    ![Suhteet tuotteiden entiteetin luettelo](media/function-relate-unrelate/entity-done.png)
+    ![Tuote-entiteetin suhde luettelo](media/function-relate-unrelate/entity-done.png)
 
-#### <a name="relate-and-unrelate-contacts-with-one-or-more-products"></a>Liittyvät ja unrelate yhteystietoja ja vähintään yksi tuote
+#### <a name="relate-and-unrelate-contacts-with-one-or-more-products"></a>Suhteuttaa ja poistaa yhteys tietoja yhdestä tai useammasta tuotteesta
 
-Luot toiseen sovellukseen, joka muistuttaa loit aiemmin tässä ohjeaiheessa, mutta uusi sovellus tarjouksen monta-moneen-suhde. Jokaisen yhteystiedon voi varata useita tuotteita vain yksi sijaan.
+Luot toisen sovelluksen, joka muistuttaa aiemmin tässä aiheessa luomaasi sovellusta, mutta uusi sovellus tarjoaa monta-moneen-suhteen. Jokainen yhteys henkilö voi varata useita tuotteita vain yhden sijaan.
 
-1. Luo tyhjä sovellus tabletille, **Gallery1** kuin [ensimmäisessä toimintosarjassa](#one-to-many) Tässä aiheessa kuvataan.
+1. Luo tyhjään sovellukseen tableteille **Gallery1** , kun tämän ohje aiheen [ensimmäinen menettely](#one-to-many) on kuvattu.
 
-1. Lisää toinen tyhjä, pysty **valikoiman** ohjausobjekti, varmista, että se on nimetty **Gallery2**, ja siirrä se sitten näytön oikeassa yläkulmassa.
+1. Lisää toinen tyhjä pystysuuntainen **valikoima** -ohjaus objekti, varmista, että sen nimi on **gallery2**, ja siirrä se sitten näytön oikeaan yläkulmaan.
 
-    Myöhemmin tässä aiheessa lisäämme **yhdistelmäruudun** ohjausobjekti kohdassa **Gallery2**.
+    Myöhemmin tässä ohje aiheessa lisäät **yhdistelmä ruutu** -ohjaus objektin kohdassa **gallery2**.
 
-1. Määritä kaavarivillä **Gallery2**käyttäjän **kohteet** ominaisuudeksi **Gallery1.Selected.Contacts**.
+1. Valitse kaava riviltä **gallery2** **Items** -ominaisuudeksi **Gallery1. selected. Contacts**.
 
     ![Määritä ContactsGallery](media/function-relate-unrelate/contacts-gallery.png)
 
-1. Valitse **ominaisuudet** välilehti, Määritä **asettelu** - **kuva ja otsikko**.
+1. Valitse **Ominaisuudet** -väli lehdeltä **asetteluksi** **Image and title**.
 
     ![Määritä ContactsGallery](media/function-relate-unrelate/contacts-gallery-right.png)
 
-1. - **Gallery2**, varmista, että **nimen** ohjausobjektin nimi on **Otsikko2**, ja aseta sen **tekstin** ominaisuudeksi  **ThisItem. 'Koko nimi ”** .
+1. Varmista **gallery2**, **että nimi-ohjaus objektin** nimi on **Title2**ja aseta sen **teksti** -ominaisuudeksi **thisitem. ' Full Name '** .
 
-    Ei näy tekstiä, jotta ohjausobjektin ennen kuin tämän vaiheen ja määrittää yhteystiedon tuote.
+    Tähän ohjaus objektiin ei tule tekstiä, ennen kuin suoritat tämän toiminnon ja määrität yhteys tiedon tuotteeksi.
 
-    ![Näytä yhteyshenkilön nimi](media/function-relate-unrelate/contacts-title.png)
+    ![Näytä yhteys henkilön nimi](media/function-relate-unrelate/contacts-title.png)
 
-1. Poistaa **NextArrow2**, Lisää **Peruuta** kuvake, ja varmista, että se on nimetty **icon1**.
+1. Poista **NextArrow2**, Lisää **peruutus** kuvake ja varmista, että sen nimi on **icon1**.
 
-1. Määritä **Peruuta** kuvakkeen **OnSelect** -ominaisuuden arvoksi tämä kaava: 
+1. Määritä **peruutus** kuvakkeen **onselect** -ominaisuudeksi Tämä kaava: 
 
-    ```powerapps-comma
-    Unrelate( Gallery1.Selected.Contacts; ThisItem )
+    ```powerapps-dot
+    Unrelate( Gallery1.Selected.Contacts, ThisItem )
     ```
 
-    ![Määritä Peruuta-kuvaketta](media/function-relate-unrelate/contacts-unrelate.png)
+    ![Määritä peruutus kuvake](media/function-relate-unrelate/contacts-unrelate.png)
 
 1. Valitse **Näytä**-välilehdessä **Tietolähteet**.
 
-1. - **Tietojen** ruudussa **tietolähde** > **Common Data Service-**  > **yhteystiedot**  >  **Yhteyden**.
+1. Valitse **tiedot** -ruudussa **lisää tieto lähde** > **Common Data Service** > **yhteys tiedot** > **Connect**.
 
-1. Kohdassa **Gallery2**, Lisää **yhdistelmäruudun** ohjausobjekti, varmista, että se on nimetty **ComboBox1**, ja aseta sen **kohteet** ominaisuudeksi**Yhteystiedot**.
+1. Lisää **gallery2**-kohtaan **yhdistelmä ruutu** -ohjaus objekti, varmista, että sen nimi on **ComboBox1**, ja määritä sen **kohteet** -ominaisuudeksi **yhteys tiedot**.
 
-    ![Määritä combo box Items-ominaisuuden](media/function-relate-unrelate/contacts-combo.png)
+    ![Yhdistelmä ruudun kohteet-ominaisuuden määrittäminen](media/function-relate-unrelate/contacts-combo.png)
 
-1. Valitse **ominaisuudet** välilehti, Määritä **Monivalinnan salliminen** - **käytöstä**.
+1. Valitse **Ominaisuudet** -väli lehdestä **Salli usean valinnan** **asetukseksi ei käytössä**.
 
-    ![Yhdistelmäruudun asettelu-ominaisuuden määrittäminen](media/function-relate-unrelate/contacts-combo-right.png)
+    ![Yhdistelmä ruudun rakenne-ominaisuuden määrittäminen](media/function-relate-unrelate/contacts-combo-right.png)
 
-1. Lisää **Lisää** kuvaketta ja aseta sen **OnSelect** -ominaisuuden arvoksi tämä kaava: 
+1. Lisää **Lisää** -kuvake ja määritä sen **onselect** -ominaisuudeksi Tämä kaava: 
 
-    ```powerapps-comma
-    Relate( Gallery1.Selected.Contacts; ComboBox1.Selected )
+    ```powerapps-dot
+    Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )
     ```
 
-    ![Määritä Lisää kuvake](media/function-relate-unrelate/contacts-relate.png)
+    ![Määritä lisää-kuvake](media/function-relate-unrelate/contacts-relate.png)
 
-Tämän sovelluksen avulla käyttäjät voivat nyt vapaasti liittyvät ja unrelate yhteystietojen kunkin tuotteen.
+Tämän sovelluksen avulla käyttäjät voivat nyt vapaasti yhdistää ja poistaa yhteys tieto joukon kuhunkin tuotteeseen.
 
-- Lisäämään yhteystiedon tuotteen valitsemalla henkilön näytön alareunassa yhdistelmäruutu ja valitse sitten **Lisää** kuvake.
-- Jos haluat poistaa yhteystiedon tuotteen, valitse **Peruuta** sen kuvake.
+- Jos haluat lisätä yhteys tiedon tuotteeseen, valitse yhteys tieto näytön alareunassa olevasta yhdistelmä ruudusta ja valitse sitten **Lisää** -kuvake.
+- Jos haluat poistaa yhteys tiedon tuotteesta, valitse kyseisen yhteys henkilön **peruutus** kuvake.
 
-    Toisin kuin yksi-moneen-monta-moneen-suhde käyttäjät voivat liittää useita tuotteita samaa yhteyttä.
+    Toisin kuin yksi moneen, monta moneen-suhde sallii käyttäjien liittää saman kontaktin useisiin tuotteisiin.
 
-![Esitellä Relate ja Unrelate Funktiot monta-moneen-sovelluksessa](media/function-relate-unrelate/contacts-relate-unrelate.gif)
+![Osoita Relate-ja Unrelate-Funktiot monta moneen-sovelluksessa](media/function-relate-unrelate/contacts-relate-unrelate.gif)
 
-#### <a name="in-reverse-relate-and-unrelate-products-with-multiple-contacts"></a>Käänteisessä: liittyvät ja unrelate tuotteita useita yhteystietoja
+#### <a name="in-reverse-relate-and-unrelate-products-with-multiple-contacts"></a>Käänteisesti: Yhdistä ja poista toisiinsa liittyvät tuotteet useilla yhteys tiedoilla
 
-Monta-moneen-suhteet ovat symmetrisen. Voit laajentaa katselutilaan näyttämään, miten suhteen näkyy suuntaan kaksi näyttöä ja lisätä tuotteita yhteystiedon esimerkki.
+Monta moneen-yhteydet ovat symmetriset. Voit laajentaa esimerkin, jos haluat lisätä tuotteita yhteys tietoon ja näyttää sitten kahden näytön välillä, miltä suhde näyttää kummassakin suunnassa.
 
-1. Määritä **OnVisible** ominaisuuden **Screen1** - **päivitys (tuotteet)** .
+1. Valitse **Onvisible** -ominaisuudeksi **Screen1** , jos haluat **päivittää (tuotteet)** .
 
-    Kun päivität yksi-moneen- tai monta-moneen-suhde, vain ensimmäinen argumentti entiteetin tiedot **Relate** tai **Unrelate** kutsun päivitetään. Toinen on päivitettävä manuaalisesti, jos haluat kääntää tämän sovelluksen näyttöjen välillä.
+    Kun päivität yksi-moneen-tai monta-moneen-suhteen, vain **Relate** -tai **unrelate** -kutsun ensimmäisen argumentin entiteetin tiedot päivitetään. Toinen on päivitettävä manuaalisesti, jos haluat kääntää tämän sovelluksen näyttöjen välillä.
 
-    ![Määritä OnVisible-ominaisuuden arvoksi päivitystoiminto](media/function-relate-unrelate/contacts-refresh.png)
+    ![Asenna OnVisible-ominaisuus Päivitä-funktiolla](media/function-relate-unrelate/contacts-refresh.png)
 
-1. Monista **Screen1**.
+1. Kaksinkertainen **Screen1**.
 
-    Kaksoiskappale nimetään **Screen1_1** ja katsomalla suhteet laidasta yhteyshenkilöt perusta.
+    Kaksoiskappaleen nimi on **Screen1_1** , ja se muodostaa perustan yhteys tietojen puolen suhteen katseluille.
 
     ![Näytön kaksoiskappale](media/function-relate-unrelate/contacts-duplicate.png)
 
-1. Käänteinen näkymän luomiseksi muuttaa näistä kaavoista ohjausobjekteilla **Screen1_1**:
+1. Jos haluat luoda käänteisen näkymän, muuta näitä kaavoja **Screen1_1**-ohjaus objekteilla:
 
-    - Screen1_1.OnVisible = `Refresh( Contacts )`
-    - Gallery1_1.items = `Contacts`
-    - Title1_1.Text = `ThisItem.'Full Name'`
-    - Label1_1.Text = `"Selected Contact Products"`
-    - Gallery2_1.items = `Gallery1_1.Selected.Products`
-    - Title2_1.Text = `ThisItem.Name`
-    - Icon1_1.OnSelect = `Unrelate( Gallery1_1.Selected.Products; ThisItem )`
-    - ComboBox1_1.Items = `Products`
-    - Icon2_1.OnSelect = `Relate( Gallery1_1.Selected.Products; ComboBox1_1.Selected )`
+    - Screen1_1. OnVisible = `Refresh( Contacts )`
+    - Gallery1_1. Items = `Contacts`
+    - Title1_1. Text = `ThisItem.'Full Name'`
+    - Label1_1. Text = `"Selected Contact Products"`
+    - Gallery2_1. Items = `Gallery1_1.Selected.Products`
+    - Title2_1. Text = `ThisItem.Name`
+    - Icon1_1. OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
+    - ComboBox1_1. Items = `Products`
+    - Icon2_1. OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
 
-    Tulos näyttää samalta kuin hyvin edelliseen näyttöön, mutta se tulee suhteen **yhteystiedot** puolella.
+    Tulos näyttää hyvin samanlaiselta kuin edellinen näyttö, mutta se tulee **yhteys tietojen** puolelta.
 
-    ![Näytä yhteystiedot alkaen monta-moneen-suhde](media/function-relate-unrelate/reverse-screen.png)
+    ![Näytä monta moneen-suhde alkaen yhteys henkilöistä](media/function-relate-unrelate/reverse-screen.png)
 
-1. Lisää **nuolet ylös ja alas** kuvaketta ja aseta sen **OnSelect** ominaisuudeksi **Navigate (Screen1, ei mitään)** .  Tehdä saman asian **Screen1** kaavalla **Navigate (Screen1_1, ei mitään)** .
+1. Lisää **nuolet ylös alaspäin** -kuvake ja määritä sen **onselect** -ominaisuudeksi **siirtyminen (Screen1, ei mitään)** .  Tee sama **Screen1** kaavalla **Navigoi (Screen1_1, None)** .
 
-    ![Lisää näyttöjen välillä siirtyminen](media/function-relate-unrelate/reverse-navigate.png)
+    ![Lisää siirtyminen näyttöjen välillä](media/function-relate-unrelate/reverse-navigate.png)
 
-Tämän uuden näytön, jossa käyttäjät voivat yhteystietojen lisääminen tuotteen ja sitten Käännä näkymään, yhteystiedot ja näet liittyvät tuotteen. Suhteet ovat symmetrisen ja jaettu kaksi näyttöjen välillä.
+Tämän uuden näytön avulla käyttäjät voivat lisätä yhteys tiedon tuotteeseen ja siirtyä sitten yhteys tietojen näkymään ja nähdä liittyvän tuotteen. Yhteydet ovat symmetriset ja jaettu kahden näytön välillä.
 
-![Esitetään monelle-suhteen puolella](media/function-relate-unrelate/contacts-reverse.gif)
+![Näyttää monta moneen-suhteen kummallakin puolella](media/function-relate-unrelate/contacts-reverse.gif)
