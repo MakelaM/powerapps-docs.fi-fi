@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71987580"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-a-list-of-items-in-powerapps"></a>Kohdeluettelon näyttäminen PowerAppsissa
 
@@ -98,20 +99,20 @@ Ennen kuin teet mitään muita mukautuksia, varmista, että **valikoima** -ohjau
 
 1. Aseta **Valikoima**-ohjausobjektin **[Items](controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Sort
         (If
-            (IsBlank(TextSearchBox1.Text),
-            FlooringEstimates,
+            (IsBlank(TextSearchBox1.Text);
+            FlooringEstimates;
             Filter(
-                FlooringEstimates,
+                FlooringEstimates;
                 TextSearchBox1.Text in Text(Name)
             )
-        ),
-        Name,
+        );
+        Name;
         If(
-            SortDescending1,
-            SortOrder.Descending,
+            SortDescending1;
+            SortOrder.Descending;
             SortOrder.Ascending
         )
     )
@@ -130,16 +131,16 @@ Ennen kuin teet mitään muita mukautuksia, varmista, että **valikoima** -ohjau
 ## <a name="highlight-the-selected-item"></a>Valitun kohteen korostaminen
 Määritä **valikoima** -ohjaus objektin **templatefill** -ominaisuudeksi kaava, joka on samankaltainen kuin tässä esimerkissä, mutta voit halutessasi määrittää eri värit:
 
-**If(ThisItem.IsSelected, LightCyan, White)**
+**If(ThisItem.IsSelected; LightCyan; White)**
 
 ## <a name="change-the-default-selection"></a>Oletusvalinnan muuttaminen
 Aseta **Valikoima**-ohjausobjektin **Default**-ominaisuudeksi se tietue, jonka haluat olevan valittuna oletuksena. Voit esimerkiksi määrittää viidennen kohteen **Flouringin arviot** -tieto lähteessä:
 
-**Last(FirstN(FlooringEstimates, 5))**
+**Last(FirstN(FlooringEstimates; 5))**
 
 Tässä esimerkissä määritetään **FlooringEstimates**-tietolähteen **Hardwood**-luokka:
 
-**First(Filter(FlooringEstimates, Category = "Hardwood"))**
+**First(Filter(FlooringEstimates; Category = "Hardwood"))**
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 Opi käyttämään [lomakkeita](working-with-forms.md) ja [kaavoja](working-with-formulas.md).

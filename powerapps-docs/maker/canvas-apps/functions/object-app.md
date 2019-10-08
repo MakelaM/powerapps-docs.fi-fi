@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71983564"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="app-object-in-powerapps"></a>Sovellus objekti Powerappsissa
 
@@ -101,7 +102,7 @@ Selaimessa vahvistus valinta ikkuna saattaa näkyä selaimessa yleisellä viesti
 
 1. Valitse **sovellus** objektin **Conformexit** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     AccountForm.Unsaved Or ContactForm.Unsaved
     ```
 
@@ -112,9 +113,9 @@ Selaimessa vahvistus valinta ikkuna saattaa näkyä selaimessa yleisellä viesti
 
 1. Valitse **sovellus** objektin **Constmexitmessage** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    If( AccountsForm.Unsaved,
-        "Accounts form has unsaved changes.",
+    ```powerapps-comma
+    If( AccountsForm.Unsaved;
+        "Accounts form has unsaved changes.";
         "Contacts form has unsaved changes."
     )
     ```

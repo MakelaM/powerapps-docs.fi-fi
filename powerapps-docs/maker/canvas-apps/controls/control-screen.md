@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993329"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="screen-control-in-powerapps"></a>Screen-ohjausobjekti PowerAppsissa
 
@@ -54,13 +55,13 @@ Useimmissa sovelluksissa on useita **näytön** ohjausobjekteja, jotka sisältä
 
 ## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
 
-[**Distinct**( *Tietolähde*, *SarakkeenNimi* )](../functions/function-distinct.md)
+[**Distinct**( *Tietolähde*; *SarakkeenNimi* )](../functions/function-distinct.md)
 
 ## <a name="example"></a>Esimerkki
 
 1. Lisää **[Valintanappi](control-radio.md)** -ohjausobjekti, anna sille nimeksi **ScreenFills** ja aseta sen **[Items](properties-core.md)** -ominaisuudeksi tämä arvo:
 
-    `["Red", "Green"]`
+    `["Red"; "Green"]`
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
@@ -68,17 +69,17 @@ Useimmissa sovelluksissa on useita **näytön** ohjausobjekteja, jotka sisältä
 
 1. Lisää **lähteessä** **[muoto](control-shapes-icons.md)** -ohjaus objekti (kuten nuoli) ja määritä sen **[onselect](properties-core.md)** -ominaisuudeksi Tämä kaava:
 
-    `Navigate(Target, ScreenTransition.Fade)`
+    `Navigate(Target; ScreenTransition.Fade)`
 
     Haluatko lisätietoja **[Navigate](../functions/function-navigate.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 
 1. Lisää **Target**-ohjausobjektiin **[Muoto](control-shapes-icons.md)** -ohjausobjekti (kuten nuoli), ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    `Navigate(Source, ScreenTransition.Fade)`
+    `Navigate(Source; ScreenTransition.Fade)`
 
 1. Määritä **Target**-ohjausobjektin **[Fill](properties-color-border.md)** -ominaisuudeksi tämä kaava:
 
-    `If("Red" in ScreenFills.Selected.Value, RGBA(255, 0, 0, 1), RGBA(54, 176, 75, 1))`
+    `If("Red" in ScreenFills.Selected.Value; RGBA(255; 0; 0; 1); RGBA(54; 176; 75; 1))`
 
 1. Valitse **lähde** näyttö ja pidä sitten ALT-näppäintä painettuna, valitse joko vaihto ehto **[Radio](control-radio.md)** -ohjaus objektissa ja valitse sitten **[muoto](control-shapes-icons.md)** -ohjaus objekti.
 

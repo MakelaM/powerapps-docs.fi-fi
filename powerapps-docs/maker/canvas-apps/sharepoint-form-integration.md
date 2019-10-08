@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71988369"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-sharepoint-forms-integration"></a>Tutustu SharePoint-lomakkeiden integrointiin
 Nyt voit helposti [mukauttaa mitä tahansa SharePoint-luettelolomakkeita](customize-list-form.md) PowerAppsissa. Näissä ohjeissa neuvomme vaiheittain, miten nämä lomakkeet toimivat ja miten niitä voi mukauttaa lisää.
@@ -37,11 +38,11 @@ Oletuslomake muodostuu seuraavista ohjausobjekteista ja niiden oletusarvoista:
 
     * **Kohde** – Luettelosta valittu kohde. Tämän oletusarvona on First(), joka valitsee luettelon ensimmäisen kohteen PowerApps Studiossa.
 
-        **If(IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected),First('*YourListName*'),SharePointIntegration.Selected)**
+        **If(IsBlank(SharePointIntegration.Selected) || IsEmpty(SharePointIntegration.Selected);First('*YourListName*');SharePointIntegration.Selected)**
 
     * **OnSuccess** – Kun kohteen luominen tai tallentaminen onnistuu, lomake nollataan ja SharePoint piilottaa lomakkeen.
 
-        **ResetForm(SharePointForm1); RequestHide()**
+        **ResetForm(SharePointForm1);; RequestHide()**
 
 * **SharePointIntegration** – Ohjausobjekti, joka vastaa käyttäjien toimiin liittyvästä tiedonsiirrosta SharePointin ja PowerAppsin välillä.
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985579"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="data-types-in-canvas-apps"></a>Tieto tyypit kangas sovelluksissa
 
@@ -39,9 +40,9 @@ Tässä artikkelissa on tietoja kangas sovellusten tukemista tieto tyypeistä. K
 | **Media** | URI-teksti merkki jono video-tai ääni tallenteeseen. | **MyVideo** lisättiin sovellus resurssina<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Numero** | Liuku luku numero. | **123**<br>**-4,567**<br>**8.903e121** |
 | **Asetus asetus** | Valinta vaihtoehto joukosta, jota tukee luku. Tämä tieto tyyppi yhdistää lokalisoitavan teksti nimen, jolla on luku arvo. Nimi näkyy sovelluksessa, ja numero-arvo tallennetaan ja sitä käytetään vertailuissa. | **ThisItem. OrderStatus** |
-| **Tietue** | Tieto arvojen tietue. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **{yritys: "Northwind Traders", <br>Esikunta: 35, <br>NonProfit: False}** |
+| **Tietue** | Tieto arvojen tietue. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **{yritys: "Northwind Traders"; <br>Esikunta: 35; <br>NonProfit: False}** |
 | **Tietue viittaus** | Viittaus entiteetin tietueeseen. Tällaisia viitta uksia käytetään usein polymorfisten hakujen yhteydessä. Lisätietoja: [Käsitellään viitta uksia](../working-with-references.md).| **First (accounts). Omistaja** |
-| **Taulukon** | Tietue taulukko.  Kaikilla tietueilla on oltava samat nimet kentissä, joilla on samat tieto tyypit, ja pois jätetyt kentät käsitellään *tyhjinä*. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Table ({FirstName: "Sidney", <br>LastName: "Higa"}, <br> {FirstName: "Nancy", <br>LastName: "Anderson"})**
+| **Taulukon** | Tietue taulukko.  Kaikilla tietueilla on oltava samat nimet kentissä, joilla on samat tieto tyypit, ja pois jätetyt kentät käsitellään *tyhjinä*. Tämä yhdistelmä tieto tyyppi sisältää esiintymiä muista tieto tyypeistä, jotka on lueteltu tässä ohje aiheessa. Lisätietoja: [Taulu koiden käsitteleminen](../working-with-tables.md). | **Table ({FirstName: "Sidney"; <br>LastName: "Higa"}; <br> {FirstName: "Nancy"; <br>LastName: "Anderson"})**
 | **Teksti** | Unicode-teksti merkki jono. | **"Hei maailma"** |
 | **Aika** | Aika ilman päivä määrää sovelluksen käyttäjän aika vyöhykkeellä. | **Aika (11, 23, 45)** |
 | **Kaksi vaihto ehtoa** | Vaihto ehto kahdesta vaihto ehdosta, joiden tukena on totuus arvo. Tämä tieto tyyppi yhdistää lokalisoitavan teksti nimen, jolla on totuus arvo. Nimi näkyy sovelluksessa, ja totuus arvo tallennetaan ja sitä käytetään vertailuissa. | **ThisItem. verotettava** |
@@ -82,7 +83,7 @@ Pohjaan liittyvät sovellukset viittaavat kuhunkin kuvaan tai muuhun multimediat
 
 Esimerkiksi kuva-ohjaus objektin **Image** -ominaisuus hyväksyy sovellus resurssien lisäksi myös linkit verkossa oleviin kuviin, kuten "https://northwindtraders.com/logo.jpg". Ominaisuus hyväksyy myös sisäiset kuvat, jotka käyttävät [tietojen URI-rakennetta](https://en.wikipedia.org/wiki/Data_URI_scheme), kuten tässä esimerkissä:
 
-```powerapps-dot
+```powerapps-comma
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFAQMAAACtnVQoAAAABlBMVEUAAAB0J3UMNU6VAAAAAXRSTlMAQObYZgAAABRJREFUCNdjUGJgCGVg6GgAkkA2AA8/AffqCEBsAAAAAElFTkSuQmCC"
 ```
 
@@ -175,11 +176,11 @@ Canvas-sovellukset käyttävät **DateTime-offset** -kentissä olevia aika vyöh
 
 Kangas sovellukset lukevat ja kirjoittavat [**Time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) -tieto tyypin arvoja SQL Server teksti merkki jonoina [ISO 8601-kesto muodossa](https://en.wikipedia.org/wiki/ISO_8601#Durations). Sinun täytyy esimerkiksi jäsentää tämä merkki jono muoto ja käyttää [**Time**](function-date-time.md) -funktiolla teksti merkki jonon **"PT2H1M39S"** muuntamista **Time** -arvoksi:
 
-```powerapps-dot
+```powerapps-comma
 First(
     ForAll(
-        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-        Time( Value( hours ), Value( minutes ), Value( seconds ) )
+        MatchAll( "PT2H1M39S"; "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" );
+        Time( Value( hours ); Value( minutes ); Value( seconds ) )
     )
 ).Value
 ```
@@ -202,18 +203,18 @@ Kun sovelluksen käyttäjä valitsee vaihto ehdon ja tallentaa tämän muutoksen
 
 Nimet ovat vain näyttö tarkoituksia varten. Et voi tehdä suoria vertailuja otsikoihin, koska ne ovat kielikohtaisia. Sen sijaan kullakin asetus joukko sisältää luetteloinnin, joka toimii pohjana olevan luvun tai totuus arvon kanssa. Et voi esimerkiksi käyttää seuraavaa kaavaa:
 
-`If( ThisItem.OrderStatus = "Active", ...`
+`If( ThisItem.OrderStatus = "Active"; ...`
 
 Voit kuitenkin käyttää seuraavaa kaavaa:
 
-`If( ThisItem.OrderStatus = OrderStatus.Active, ...`
+`If( ThisItem.OrderStatus = OrderStatus.Active; ...`
 
 Yleisasetuksille (mitkä entiteetit jakavat) asetus joukon luetteloinnin nimi vastaa yleisen asetus joukon nimeä. Paikallisissa asetus joukoissa (jotka on määritetty entiteettiin) nimi voi sisältää entiteetin nimen. Tämä estää risti riidat, jos useilla entiteeteillä on asetus joukkoja, joilla on sama nimi. Esimerkiksi **accounts** -entiteetillä voi olla **orderstatus** -asetus asetus, ja sen nimi voi olla **orderstatus (accounts)** . Nimi sisältää vähintään yhden väli lyöntien ja sulkeiden, joten sinun on ympäröidä se heitto merkeillä, jos viittaat siihen kaavassa.
 
 Lisäksi kahden vaihto ehdon arvot voivat myös käyttäytyä totuus arvo-arvoina. Esimerkiksi kahden asetuksen **Taxstatus** -arvolla voi olla **verovelvolliset** ja **verottomat**nimet, jotka vastaavat arvoa *True* ja *false* . Voit osoittaa tätä kaavaa käyttämällä seuraavaa kaavaa:
 
-`If( ThisItem.Taxable = TaxStatus.Taxable, ...`
+`If( ThisItem.Taxable = TaxStatus.Taxable; ...`
 
 Voit myös käyttää tätä vastaavaa kaavaa:
 
-`If( ThisItem.Taxable, ...`
+`If( ThisItem.Taxable; ...`

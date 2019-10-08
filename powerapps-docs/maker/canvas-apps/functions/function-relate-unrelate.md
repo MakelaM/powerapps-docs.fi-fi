@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992757"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="relate-and-unrelate-functions-in-powerapps"></a>Powerappsin Relate-ja Unrelate-Funktiot
 
@@ -43,12 +44,12 @@ Voit käyttää näitä funktioita vain [toiminta kaavoissa](../working-with-for
 
 ## <a name="syntax"></a>Syntaksi
 
-**Relate**( *Entity1RelatedTable*, *Entity2Record* )
+**Relate**( *Entity1RelatedTable*; *Entity2Record* )
 
 * *Entity1RelatedTable* – pakollinen. Jos kyseessä on *Entity1*-tietue, *Entity2* -tietueiden taulukko, joka liittyy yksi-moneen-tai monta-moneen-suhteen kautta.
 * *Entity2Record* – pakollinen. Suhteeseen lisättävä *Entity2* -tietue.
 
-**Unrelate**( *Entity1RelatedTable*, *Entity2Record* )
+**Unrelate**( *Entity1RelatedTable*; *Entity2Record* )
 
 * *Entity1RelatedTable* – pakollinen. Jos kyseessä on *Entity1*-tietue, *Entity2* -tietueiden taulukko, joka liittyy yksi-moneen-tai monta-moneen-suhteen kautta.
 * *Entity2Record* – pakollinen. Suhteesta poistettava *Entity2* -tietue.
@@ -64,29 +65,29 @@ Harkitse **tuote** -entiteettiä, jolla on seuraavat suhteet, kuten näkyy [powe
 
 **Tuotteet** ja **vara ukset** liittyvät yhden moneen-suhteen kautta.  Jos haluat liittää **vara ukset** -entiteetin ensimmäisen tietueen **Products** -entiteetin ensimmäiseen tietueeseen:
 
-`Relate( First( Products ).Reservations, First( Reservations ) )`
+`Relate( First( Products ).Reservations; First( Reservations ) )`
 
 Näiden tietueiden välisen suhteen poistaminen:
 
-`Unrelate( First( Products ).Reservations, First( Reservations ) )`
+`Unrelate( First( Products ).Reservations; First( Reservations ) )`
 
 Emme luo tai poista tietueita tai kirjaa, mutta vain tietueiden välistä suhdetta muokattiin.
 
 **Tuotteet** ja **yhteys tiedot** liittyvät monen moneen-suhteen kautta.  Jos haluat liittää **yhteys tiedot** -entiteetin ensimmäisen tietueen **Products** -entiteetin ensimmäiseen tietueeseen:
 
-`Relate( First( Products ).Contacts, First( Contacts ) )`
+`Relate( First( Products ).Contacts; First( Contacts ) )`
 
 Kuten monta moneen-yhteydet ovat symmetriset, olisimme voineet tehdä tämän myös vastakkaiseen suuntaan:
 
-`Relate( First( Contacts ).Products, First( Products ) )`
+`Relate( First( Contacts ).Products; First( Products ) )`
 
 Näiden tietueiden välisen suhteen poistaminen:
 
-`Unrelate( First( Products ).Contacts, First( Contacts ) )`
+`Unrelate( First( Products ).Contacts; First( Contacts ) )`
 
 tai
 
-`Unrelate( First( Contacts ).Products, First( Products ) )`
+`Unrelate( First( Contacts ).Products; First( Products ) )`
 
 Tämän jälkeen käydään läpi nämä toiminnot näillä entiteeteillä käyttämällä sovellusta, jonka **valikoima** -ja **yhdistelmä ruutu** -ohjaus objekteilla voit valita tietueita.
 
@@ -152,8 +153,8 @@ Luot ensin yksinkertaisen sovelluksen, jotta voit tarkastella ja määrittää t
 
 1. Määritä **gallery2** **NextArrow2** **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Relate( ComboBox1.Selected.Reservations, ThisItem )
+    ```powerapps-comma
+    Relate( ComboBox1.Selected.Reservations; ThisItem )
     ```
 
     Kun käyttäjä valitsee tämän kuvakkeen, nykyinen varaus muuttuu tuotteeseen, jonka käyttäjä valitsi kohteessa **ComboBox1**.
@@ -176,11 +177,11 @@ Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta et voi poista
 
 1. **Gallery2**, Määritä **onselect** -kaava kohteelle **NextArrow2** tähän kaavaan:
 
-    ```powerapps-dot
-    If( IsBlank( ComboBox1.Selected ),
-        Unrelate( Gallery1.Selected.Reservations, ThisItem ),
-        Relate( ComboBox1.Selected.Reservations, ThisItem )
-    );
+    ```powerapps-comma
+    If( IsBlank( ComboBox1.Selected );
+        Unrelate( Gallery1.Selected.Reservations; ThisItem );
+        Relate( ComboBox1.Selected.Reservations; ThisItem )
+    );;
     Refresh( Reservations )
     ```
     ![Määritä oikea-kuvake](media/function-relate-unrelate/reservations-relate-unrelate.png)
@@ -193,8 +194,8 @@ Tässä vaiheessa voit siirtää suhteen tietueesta toiseen, mutta et voi poista
 
 1. Varmista, että **gallery2** -kohteen kaksoiskappale on nimeltään **Gallery2_1**ja aseta sen **Items** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    Filter( Reservations, IsBlank( 'Product Reservation' ) )
+    ```powerapps-comma
+    Filter( Reservations; IsBlank( 'Product Reservation' ) )
     ```
 
     Näyttöön tulee delegointi varoitus, mutta tässä esimerkissä ei ole merkitystä pienen tieto määrän kanssa.
@@ -265,8 +266,8 @@ Luot toisen sovelluksen, joka muistuttaa aiemmin tässä aiheessa luomaasi sovel
 
 1. Määritä **peruutus** kuvakkeen **onselect** -ominaisuudeksi Tämä kaava: 
 
-    ```powerapps-dot
-    Unrelate( Gallery1.Selected.Contacts, ThisItem )
+    ```powerapps-comma
+    Unrelate( Gallery1.Selected.Contacts; ThisItem )
     ```
 
     ![Määritä peruutus kuvake](media/function-relate-unrelate/contacts-unrelate.png)
@@ -285,8 +286,8 @@ Luot toisen sovelluksen, joka muistuttaa aiemmin tässä aiheessa luomaasi sovel
 
 1. Lisää **Lisää** -kuvake ja määritä sen **onselect** -ominaisuudeksi Tämä kaava: 
 
-    ```powerapps-dot
-    Relate( Gallery1.Selected.Contacts, ComboBox1.Selected )
+    ```powerapps-comma
+    Relate( Gallery1.Selected.Contacts; ComboBox1.Selected )
     ```
 
     ![Määritä lisää-kuvake](media/function-relate-unrelate/contacts-relate.png)
@@ -324,9 +325,9 @@ Monta moneen-yhteydet ovat symmetriset. Voit laajentaa esimerkin, jos haluat lis
     - Label1_1. Text = `"Selected Contact Products"`
     - Gallery2_1. Items = `Gallery1_1.Selected.Products`
     - Title2_1. Text = `ThisItem.Name`
-    - Icon1_1. OnSelect = `Unrelate( Gallery1_1.Selected.Products, ThisItem )`
+    - Icon1_1. OnSelect = `Unrelate( Gallery1_1.Selected.Products; ThisItem )`
     - ComboBox1_1. Items = `Products`
-    - Icon2_1. OnSelect = `Relate( Gallery1_1.Selected.Products, ComboBox1_1.Selected )`
+    - Icon2_1. OnSelect = `Relate( Gallery1_1.Selected.Products; ComboBox1_1.Selected )`
 
     Tulos näyttää hyvin samanlaiselta kuin edellinen näyttö, mutta se tulee **yhteys tietojen** puolelta.
 

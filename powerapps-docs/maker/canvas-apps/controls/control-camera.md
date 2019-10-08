@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71986859"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="camera-control-in-powerapps"></a>Kameran ohjausobjekti PowerAppsissa
 Ohjausobjekti, jolla käyttäjä voi ottaa valokuvia laitteen kameralla.
@@ -73,12 +74,12 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 ### <a name="add-photos-to-an-image-gallery-control"></a>Lisää valokuvia Kuvavalikoima-ohjausobjektiin
 1. Lisää **Kamera**-ohjausobjekti, anna sen nimeksi **MyCamera** ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
-   **Collect(MyPix, MyCamera.Photo)**
+   **Collect(MyPix; MyCamera.Photo)**
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
@@ -91,7 +92,7 @@ Jos lisäät tämän ohjausobjektin, käyttäjä voi päivittää tietolähteese
 
     Ottamasi kuva näkyy **Kuvavalikoima**-ohjausobjektissa.
 6. Ota niin monta kuvaa kuin haluat ja palaa oletustyötilaan painamalla Esc.
-7. (valinnainen) Määritä **Kuva**-ohjausobjektin **OnSelect**-ominaisuudeksi **Kuvavalikoima**-ohjausobjektissa **Remove(MyPix, ThisItem)** , paina F5 ja poista valokuva napsauttamalla tai napauttamalla sitä.
+7. (valinnainen) Määritä **Kuva**-ohjausobjektin **OnSelect**-ominaisuudeksi **Kuvavalikoima**-ohjausobjektissa **Remove(MyPix; ThisItem)** , paina F5 ja poista valokuva napsauttamalla tai napauttamalla sitä.
 
 Voit käyttää **[SaveData](../functions/function-savedata-loaddata.md)** -funktiota tallentaaksesi valokuvat paikallisesti tai **[Patch](../functions/function-patch.md)** -funktiota tietolähteen päivittämiseksi.
 

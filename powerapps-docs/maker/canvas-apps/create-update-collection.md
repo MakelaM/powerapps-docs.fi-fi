@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993197"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-and-update-a-collection-in-a-canvas-app"></a>Luo ja Päivitä kokoelma pohjaan sovelluksena
 
@@ -50,15 +51,15 @@ Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovel
 
 1. Korvaa kaava rivillä **Dropdownsample** tällä lausekkeella:
 
-    `["Red","Green","Blue"]`
+    `["Red";"Green";"Blue"]`
 
 1. Lisää **painike** -ohjaus objekti, määritä sen **Text** -ominaisuudeksi **"Add"** ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Collect(
-        ProductList,
+        ProductList;
         {
-            Product: ProductName.Text,
+            Product: ProductName.Text;
             Color: Colors.Selected.Value
         }
     )
@@ -106,7 +107,7 @@ Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovel
 
 1. Määritä kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    `Remove(ProductList, ThisItem)`
+    `Remove(ProductList; ThisItem)`
 
 1. Lisää valikoima-ruutuun painike, määritä sen **Text** -ominaisuudeksi **"Clear"** ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
@@ -120,7 +121,7 @@ Kokoelman avulla voit tallentaa tietoja, joita käyttäjät voivat hallita sovel
 
 1. Lisää painike ja määritä sen **[OnSelect](controls/properties-core.md)** -ominaisuudeksi tämä funktio. Korvaa *ListName* SharePoint-luettelon nimellä:<br>
 
-    `Collect(MySPCollection, ListName)`
+    `Collect(MySPCollection; ListName)`
 
     Tämä funktio luo kokoelman, jonka nimi on **MySPCollection** ja joka sisältää samat tiedot kuin SharePoint-luettelokin.
 

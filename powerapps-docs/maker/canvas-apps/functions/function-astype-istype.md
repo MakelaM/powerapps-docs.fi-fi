@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992988"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="astype-and-istype-functions-in-canvas-apps"></a>Astynpe-ja IsType-Funktiot kangas sovelluksissa
 
@@ -48,31 +49,31 @@ Canvas-App-kaavoissa voit käyttää tietue viittauksia, jotka toimivat polymorf
 
 Käytä näitä funktioita yhdessä, testaa ensin tietueen entiteettityyppiä ja käsittele se sitten kyseisen tyypin tietueena niin, että kentät ovat käytettävissä:
 
-```powerapps-dot
-If( IsType( First( Accounts ).Owner, Users ),
-    AsType( First( Accounts ).Owner, Users ).'Full Name',
-    AsType( First( Accounts ).Owner, Teams ).'Team Name'
+```powerapps-comma
+If( IsType( First( Accounts ).Owner; Users );
+    AsType( First( Accounts ).Owner; Users ).'Full Name';
+    AsType( First( Accounts ).Owner; Teams ).'Team Name'
 )
 ```
 
 Tarvitset näitä funktioita vain, jos käytät tietue viittauksen kenttiä. Voit esimerkiksi käyttää [**Filter**](function-filter-lookup.md) -funktion tietue viittauksia ilman istype-tai **astynpe** -funktioita:
 
-```powerapps-dot
-Filter( Accounts, Owner = First( Users ) )
+```powerapps-comma
+Filter( Accounts; Owner = First( Users ) )
 ```
 
 Voit käyttää myös tietue viittauksia [**patch**](function-patch.md) -funktiolla:
 
-```powerapps-dot
-Patch( Accounts, First( Accounts ), { Owner: First( Teams ) } )
+```powerapps-comma
+Patch( Accounts; First( Accounts ); { Owner: First( Teams ) } )
 ```  
 
 Jos käytetään tietue kontekstia, kuten [**valikoiman**](../controls/control-gallery.md) tai [**Muokkaa lomaketta**](../controls/control-form-detail.md) -ohjaus objektin kanssa, sinun on ehkä käytettävä [yleistä täsmennys operaattoria](operators.md#disambiguation-operator) entiteettityypin viittaamiseksi. Tämä kaava olisi esimerkiksi tehokas valikoima, joka näyttää luettelon yhteys henkilöistä, joissa **yrityksen nimi** on **asiakas** haku:
 
-```powerapps-dot
-If( IsType( ThisItem.'Company Name', [@Accounts] ),
-    AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+```powerapps-comma
+If( IsType( ThisItem.'Company Name'; [@Accounts] );
+    AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
+    AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
 )
 ```
 
@@ -82,12 +83,12 @@ Jos tietue viittaus on *tyhjä*, istype palauttaa arvon FALSE, ja **astynpe** pa
 
 ## <a name="syntax"></a>Syntaksi
 
-**Asttype**( *recordreference*, *EntityType* )
+**Asttype**( *recordreference*; *EntityType* )
 
 - *Recordreference* – pakollinen. Tietue viittaus, joka on usein haku kenttä, joka voi viitata minkä tahansa useamman entiteetin tietueeseen.
 - *EntityType* – pakollinen. Tietty entiteetti, jolle testataan.
 
-**Istype**( *recordreference*, *EntityType* )
+**Istype**( *recordreference*; *EntityType* )
 
 - *Recordreference* – pakollinen. Tietue viittaus, joka on usein haku kenttä, joka voi viitata minkä tahansa useamman entiteetin tietueeseen.
 - *EntityType* – pakollinen. Tietty entiteetti, johon tietue tulee lähettää.
@@ -132,11 +133,11 @@ Jos tietue viittaus on *tyhjä*, istype palauttaa arvon FALSE, ja **astynpe** pa
 
 1. Valitse **Subtitle1** **Text** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    If( IsBlank( ThisItem.'Company Name' ), "--",
-        IsType( ThisItem.'Company Name', [@Accounts] ),
-            "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-        "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+    ```powerapps-comma
+    If( IsBlank( ThisItem.'Company Name' ); "--";
+        IsType( ThisItem.'Company Name'; [@Accounts] );
+            "Account: " & AsType( ThisItem.'Company Name'; [@Accounts] ).'Account Name';
+        "Contact: " & AsType( ThisItem.'Company Name'; [@Contacts] ).'Full Name'
     )
     ```
 

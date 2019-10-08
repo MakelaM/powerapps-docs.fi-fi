@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994786"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="get-started-with-canvas-app-formulas-in-powerapps"></a>Pohjaan perustuvan sovelluksen kaavojen käytön aloittaminen PowerAppsissa
 
@@ -70,11 +71,11 @@ Excelissä voit syöttää tietoja, kuten luvun **42** tai lauseen **Hei maailma
 
     Tämä selitteen uusi arvo päivittyy heti sitä kirjoitettaessa.  Näytössä saattaa näkyä keltaisia huutomerkkikuvakkeita kirjoitettaessa. Nämä kuvakkeet ovat merkkejä virheistä, mutta ne poistuvat, kun olet kirjoittanut kelvollisen arvon. Esimerkiksi merkkijono ilman lainausmerkkejä molemmissa päissä ei ole kelvollinen.
 
-    Excelissä voit näyttää luvun, kuten **42**, kirjoittamalla sen soluun tai kirjoittamalla kaavan, jonka tuloksena on tämä luku, kuten **=SUM(30,12)** . PowerAppsissa saat aikaan saman vaikutuksen määrittämällä ohjausobjektille, kuten selitteelle, **42**:lle tai **Sum(30,12)** :lle ominaisuuden **Teksti**. Solu ja selite näyttävät aina tämän numeron riippumatta siitä, mikä laskentataulukossa tai sovelluksessa muuttuu.
+    Excelissä voit näyttää luvun, kuten **42**, kirjoittamalla sen soluun tai kirjoittamalla kaavan, jonka tuloksena on tämä luku, kuten **=SUM(30;12)** . PowerAppsissa saat aikaan saman vaikutuksen määrittämällä ohjausobjektille, kuten selitteelle, **42**:lle tai **Sum(30;12)** :lle ominaisuuden **Teksti**. Solu ja selite näyttävät aina tämän numeron riippumatta siitä, mikä laskentataulukossa tai sovelluksessa muuttuu.
 
     > [!NOTE]
    > PowerAppsissa ei aseteta kaavan eteen yhtäläisyysmerkkiä tai plus-merkkiä, kuten Excelissä. Kaavarivi käsittelee kaikkea siihen kirjoitettua oletusarvoisesti kaavana. Kaavaa ei myöskään ympäröidä lainausmerkeillä (”) kuten aikaisemmin määrittäessäsi merkkijonoa.
-5. Korvaa selitteen **[Teksti](controls/properties-core.md)** -ominaisuuden sisältö **”Hei maailma”** kirjoittamalla sen tilalle **Sum(1,2,3)** .
+5. Korvaa selitteen **[Teksti](controls/properties-core.md)** -ominaisuuden sisältö **”Hei maailma”** kirjoittamalla sen tilalle **Sum(1;2;3)** .
 
     ![Osittaisen funktion Sum(1,2,3 kirjoittaminen ilman oikeaa suljetta tuo esiin virheitä](./media/working-with-formulas/label-sum-partial.png)
 
@@ -100,7 +101,7 @@ Riippumatta siitä, mitä numeroita kirjoitat tekstin syötön ohjausobjekteihin
 
 Excelissä voit käyttää ehdollisen muotoilun kaavoja näyttämään esimerkiksi negatiivisia arvoja punaisena. PowerAppsissa voidaan käyttää kaavoja määrittämään ohjausobjektin ensisijaisen arvon lisäksi myös ominaisuuksia, kuten muotoilun. Seuraavassa esimerkissä selitteen **[väri](controls/properties-color-border.md)** -ominaisuuden kaava esittää automaattisesti negatiiviset arvot punaisena. **[If](functions/function-if.md)** -funktio näyttää hyvin tutulta Excelistä:
 
-`If( Value(Label1.Text) < 0, Red, Black )`
+`If( Value(Label1.Text) < 0; Red; Black )`
 
 ![Ehdollisen muotoilun Animaatio](media/working-with-variables/recalc-color.gif)
 
@@ -119,7 +120,7 @@ Voit määrittää sovelluksesi kaavojen avulla siten, että käyttäjät voivat
     Voit määrittää **Max**-ominaisuuden valitsemalla sen **Sisältö**-välilehdessä tai ominaisuusluettelossa:
 
     ![Muuta jokaisen liukusäätimen enimmäisarvoa](./media/working-with-formulas/three-sliders-max.png)
-4. Valitse näyttö napsauttamalla ohjausobjektin ulkopuolella olevaa kohtaa ja määritä sitten näytön **[Täyttö](controls/properties-color-border.md)** -ominaisuuden arvoksi tämä kaava:<br>**RGBA( Slider1.Value, Slider2.Value, Slider3.Value, 1 )**
+4. Valitse näyttö napsauttamalla ohjausobjektin ulkopuolella olevaa kohtaa ja määritä sitten näytön **[Täyttö](controls/properties-color-border.md)** -ominaisuuden arvoksi tämä kaava:<br>**RGBA( Slider1.Value; Slider2.Value; Slider3.Value; 1 )**
 
     Kuten yllä kuvailtiin, voit muokata ohjausobjektin ominaisuuksia käyttämällä **.** -operaattoria.  **Slider1.Value** viittaa liukusäätimen **[Arvo](controls/properties-core.md)** -ominaisuuteen, joka vastaa sitä kohtaa, johon käyttäjä on asettanut liukusäätimen **Min**- ja **Max**-arvojen välillä. Kun kirjoitat tätä kaavaa, jokainen siihen sisältyvä ohjausobjekti värikoodataan näytön ja kaavarivin välillä:
 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71989401"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-calendar-screen-template-for-canvas-apps"></a>Kangas sovellusten kalenteri näytön mallin yleiskatsaus
 
@@ -79,35 +80,35 @@ Jos tiedät jo, mitä kalenteria käyttäjien tulee tarkastella, voit yksinkerta
 
 1. Valitse sovelluksen oletus näytön **[ONSTART](../controls/control-screen.md)** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Set( _userDomain, Right( User().Email, Len( User().Email ) - Find( "@", User().Email ) ) );
-    Set( _dateSelected, Today() );
-    Set( _firstDayOfMonth, DateAdd( Today(), 1 - Day( Today() ), Days ) );
-    Set( _firstDayInView, 
-        DateAdd( _firstDayOfMonth, -( Weekday( _firstDayOfMonth) - 2 + 1 ), Days )
-    );
-    Set( _lastDayOfMonth, DateAdd( DateAdd( _firstDayOfMonth, 1, Months ), -1, Days ) );
-    Set( _calendarVisible, false );
-    Set( _myCalendar, 
-        LookUp( Office365.CalendarGetTables().value, DisplayName = "{YourCalendarNameHere}" )
-    );
-    Set( _minDate, 
-        DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days )
-    );
-    Set( _maxDate, 
+    ```powerapps-comma
+    Set( _userDomain; Right( User().Email; Len( User().Email ) - Find( "@"; User().Email ) ) );;
+    Set( _dateSelected; Today() );;
+    Set( _firstDayOfMonth; DateAdd( Today(); 1 - Day( Today() ); Days ) );;
+    Set( _firstDayInView; 
+        DateAdd( _firstDayOfMonth; -( Weekday( _firstDayOfMonth) - 2 + 1 ); Days )
+    );;
+    Set( _lastDayOfMonth; DateAdd( DateAdd( _firstDayOfMonth; 1; Months ); -1; Days ) );;
+    Set( _calendarVisible; false );;
+    Set( _myCalendar; 
+        LookUp( Office365.CalendarGetTables().value; DisplayName = "{YourCalendarNameHere}" )
+    );;
+    Set( _minDate; 
+        DateAdd( _firstDayOfMonth; -( Weekday(_firstDayOfMonth) - 2 + 1 ); Days )
+    );;
+    Set( _maxDate; 
         DateAdd(
-            DateAdd( _firstDayOfMonth, -( Weekday(_firstDayOfMonth) - 2 + 1 ), Days ),
-            40, 
+            DateAdd( _firstDayOfMonth; -( Weekday(_firstDayOfMonth) - 2 + 1 ); Days );
+            40; 
             Days 
         )
-    );
-    ClearCollect( MyCalendarEvents, 
-        Office365.GetEventsCalendarViewV2( _myCalendar.Name, 
-            Text( _minDate, UTC ), 
-            Text( _maxDate, UTC ) 
+    );;
+    ClearCollect( MyCalendarEvents; 
+        Office365.GetEventsCalendarViewV2( _myCalendar.Name; 
+            Text( _minDate; UTC ); 
+            Text( _maxDate; UTC ) 
         ).value
-    );
-    Set( _calendarVisible, true )
+    );;
+    Set( _calendarVisible; true )
     ```
 
     > [!NOTE]
@@ -164,14 +165,14 @@ Monissa toimistoissa työryhmän jäsenet lähettävät Kokous pyyntöjä ilmoit
 
 1. Valitse **Calendarevensgallery** - **kohteen Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SortByColumns(
         Filter(
-            MyCalendarEvents,
-            Text( Start, DateTimeFormat.ShortDate ) = 
-                Text( _dateSelected, DateTimeFormat.ShortDate ),
+            MyCalendarEvents;
+            Text( Start; DateTimeFormat.ShortDate ) = 
+                Text( _dateSelected; DateTimeFormat.ShortDate );
             ShowAs <> "Free"
-        ),
+        );
         "Start"
     )
     ```
@@ -180,11 +181,11 @@ Monissa toimistoissa työryhmän jäsenet lähettävät Kokous pyyntöjä ilmoit
 
 1. Valitse kalenterissa **ympyrä** -ohjaus objektin **Visible** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     CountRows(
         Filter(
-            MyCalendarEvents,
-            DateValue( Text(Start) ) = DateAdd( _firstDayInView, ThisItem.Value, Days ),
+            MyCalendarEvents;
+            DateValue( Text(Start) ) = DateAdd( _firstDayInView; ThisItem.Value; Days );
             ShowAs <> "Free"
         )
     ) > 0 && !Subcircle1.Visible && Title2.Visible
@@ -222,14 +223,14 @@ Jos käyttäjät valitsevat tapahtuman **Calendarevensgallery**-kohteessa, voit 
 
 1. Valitse joustavan korkeuden valikoiman **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Table(
-        { Title: "Subject", Value: _selectedCalendarEvent.Subject },
+        { Title: "Subject"; Value: _selectedCalendarEvent.Subject };
         { 
-            Title: "Time", 
+            Title: "Time"; 
             Value: _selectedCalendarEvent.Start & " - " & _selectedCalendarEvent.End 
-        },
-        { Title: "Body", Value: _selectedCalendarEvent.Body }
+        };
+        { Title: "Body"; Value: _selectedCalendarEvent.Body }
     )
     ```
 
@@ -239,9 +240,9 @@ Jos käyttäjät valitsevat tapahtuman **Calendarevensgallery**-kohteessa, voit 
 
 1. Määritä **calendareventsgallery**-kohteessa **title** -ohjaus objektin **onselect** -ominaisuudeksi seuraava kaava:
 
-    ```powerapps-dot
-    Set( _selectedCalendarEvent, ThisItem );
-    Navigate( EventDetailsScreen, None )
+    ```powerapps-comma
+    Set( _selectedCalendarEvent; ThisItem );;
+    Navigate( EventDetailsScreen; None )
     ```
 
     > [!Note]
@@ -255,27 +256,27 @@ Jos käyttäjät valitsevat tapahtuman **Calendarevensgallery**-kohteessa, voit 
 
 1. Jos haluat noutaa koko uksen osallistujien Office 365-profiilit, Määritä **Calendarventsgallery** - **ohjaus objektin** **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Set( _selectedCalendarEvent, ThisItem );
-    ClearCollect( AttendeeEmailsTemp,
+    ```powerapps-comma
+    Set( _selectedCalendarEvent; ThisItem );;
+    ClearCollect( AttendeeEmailsTemp;
         Filter(
-            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ),
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees; ";" );
             !IsBlank( Result )
         )
-    );
-    ClearCollect( AttendeeEmails,
-        AddColumns( AttendeeEmailsTemp, 
-            "InOrg",
-            Upper( _userDomain ) = Upper( Right( Result, Len( Result ) - Find( "@", Result ) ) )
+    );;
+    ClearCollect( AttendeeEmails;
+        AddColumns( AttendeeEmailsTemp; 
+            "InOrg";
+            Upper( _userDomain ) = Upper( Right( Result; Len( Result ) - Find( "@"; Result ) ) )
         )
-    );
-    ClearCollect( MyPeople,
-        ForAll( AttendeeEmails, If( InOrg, Office365Users.UserProfile( Result ) ) ) 
-    );
-    Collect( MyPeople,
-        ForAll( AttendeeEmails,
-            If( !InOrg, 
-                { DisplayName: Result, Id: "", JobTitle: "", UserPrincipalName: Result }
+    );;
+    ClearCollect( MyPeople;
+        ForAll( AttendeeEmails; If( InOrg; Office365Users.UserProfile( Result ) ) ) 
+    );;
+    Collect( MyPeople;
+        ForAll( AttendeeEmails;
+            If( !InOrg; 
+                { DisplayName: Result; Id: ""; JobTitle: ""; UserPrincipalName: Result }
             )
         )
     )
@@ -284,84 +285,84 @@ Jos käyttäjät valitsevat tapahtuman **Calendarevensgallery**-kohteessa, voit 
 Tässä listassa kerrotaan, mitä kukin **Clearcollect** -toiminto tekee:
 
 - ClearCollect (Attedeeemailstemp)
-    ```powerapps-dot
-    ClearCollect( AttendeeEmailsTemp,
+    ```powerapps-comma
+    ClearCollect( AttendeeEmailsTemp;
         Filter(
-            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, ";" ), 
+            Split( ThisItem.RequiredAttendees & ThisItem.OptionalAttendees; ";" ); 
             !IsBlank( Result)
         )
-    );
+    );;
     ```
 
     Tämä kaava yhdistää pakolliset ja valinnaiset osallistujat yksittäiseksi merkki jonoksi ja jakaa sitten merkki jonon yksittäisiksi osoitteiksi kummallakin puoli pisteellä. Kaava suodattaa sitten pois tyhjät arvot kyseisestä joukosta ja Lisää Muut arvot kokoelmaan, jonka nimi on **Attedeeemailstemp**.
 
 - ClearCollect (Attedeemails)
-    ```powerapps-dot
-    ClearCollect( AttendeeEmails,
-        AddColumns( AttendeeEmailsTemp, 
-            "InOrg",
-            Upper( _userDomain ) = Upper( Right( Result, Len(Result) - Find("@", Result) ) )
+    ```powerapps-comma
+    ClearCollect( AttendeeEmails;
+        AddColumns( AttendeeEmailsTemp; 
+            "InOrg";
+            Upper( _userDomain ) = Upper( Right( Result; Len(Result) - Find("@"; Result) ) )
         )
-    );
+    );;
     ```
     Tämä kaava määrittää suunnilleen, onko osallistuja organisaatiossasi. **_Userdomain** -määrityksen on yksinkertaisesti toimi alueen URL-osoite sovelluksen suorittavan henkilön Sähkö posti osoitteessa. Tämä linja luo ylimääräisen true/false-sarakkeen, jonka nimi on **Inorg**, **Attedeeemailstemp** -kokoelmassa. Tämä sarake sisältää arvon **True** , jos **userdomain** on sama kuin kyseisen rivin **Attendeeemailstemp**-ohjaus objektin toimi alueen URL-osoite.
 
     Tämä lähestymis tapa ei ole aina tarkka, mutta se tulee melko lähelle. Esimerkiksi tietyillä organisaatiosi osallistujilla voi olla Sähkö posti osoite, kuten Jane@OnContoso.com, kun taas **_Userdomain** on contoso.com. Sovelluksen käyttäjä ja Jane saattavat toimia samassa yrityksessä, mutta niiden sähkö posti osoitteissa on vähäisiä muutoksia. Tällaisissa tapa uksissa haluat ehkä käyttää seuraavaa kaavaa:
 
-    `Upper(_userDomain) in Upper(Right(Result, Len(Result) - Find("@", Result)))`
+    `Upper(_userDomain) in Upper(Right(Result; Len(Result) - Find("@"; Result)))`
 
     Tämä kaava vastaa kuitenkin Sähkö posti osoitteita, kuten Jane@NotTheContosoCompany.com, jossa on **_Userdomain** , kuten contoso.com, ja nämä henkilöt eivät toimi samassa yrityksessä.
 
 - ClearCollect (MyPeople)
 
-    ```powerapps-dot
-    ClearCollect( MyPeople,
-        ForAll( AttendeeEmails, 
-            If( InOrg, 
+    ```powerapps-comma
+    ClearCollect( MyPeople;
+        ForAll( AttendeeEmails; 
+            If( InOrg; 
                 Office365Users.UserProfile( Result )
             )
         )
-    );
-    Collect( MyPeople,
-        ForAll( AttendeeEmails,
-            If( !InOrg, 
+    );;
+    Collect( MyPeople;
+        ForAll( AttendeeEmails;
+            If( !InOrg; 
                 { 
-                    DisplayName: Result, 
-                    Id: "", 
-                    JobTitle: "", 
+                    DisplayName: Result; 
+                    Id: ""; 
+                    JobTitle: ""; 
                     UserPrincipalName: Result
                 }
             )
         )
-    );
+    );;
     ```
     Jos haluat noutaa Officen 365-profiilit, sinun on käytettävä [Office365Users. UserProfile](https://docs.microsoft.com/connectors/office365users/#userprofile) -tai [Office365Users. UserProfileV2](https://docs.microsoft.com/connectors/office365users/#userprofile) -toimintoa. Nämä toiminnot keräävät ensin kaikki Officen 365-profiilit käyttäjän organisaatiossa oleville osallistujille. Sen jälkeen toiminnot lisäävät muutaman kentän osanottajille organisaation ulkopuolelta. Erotit nämä kaksi kohdetta erillisiin toimintoihin, koska **kokeilu** silmukka ei takaa järjestystä. Tästä syystä **kokeilu** voi kerätä osallistujan organisaation ulkopuolelta. Tässä tapa uksessa **Mypeople** -rakenne sisältää vain **DisplayName**-, **ID**-, **jobtitle**-ja **userPrincipalName-nimet**. UserProfile-toiminnot noutavat kuitenkin paljon monipuolisempia tietoja. Pakotat **Mypeople** -kokoelman lisäämään Officen 365-profiileja ennen muita profiileja.
 
     > [!NOTE]
     > Voit saavuttaa saman tuloksen vain yhdellä **Clearcollect** -funktiolla:
 
-    ```powerapps-dot
-    ClearCollect( MyPeople, 
+    ```powerapps-comma
+    ClearCollect( MyPeople; 
         ForAll(
             AddColumns(
                 Filter(
                     Split(
-                        ThisItem.RequiredAttendees & ThisItem.OptionalAttendees, 
+                        ThisItem.RequiredAttendees & ThisItem.OptionalAttendees; 
                         ";"
-                    ), 
+                    ); 
                     !IsBlank( Result )
-                ), 
-                "InOrg", _userDomain = Right( Result, Len( Result ) - Find( "@", Result ) )
-            ), 
-            If( InOrg, 
-                Office365Users.UserProfile( Result ), 
+                ); 
+                "InOrg"; _userDomain = Right( Result; Len( Result ) - Find( "@"; Result ) )
+            ); 
+            If( InOrg; 
+                Office365Users.UserProfile( Result ); 
                 { 
-                    DisplayName: Result, 
-                    Id: "", 
-                    JobTitle: "", 
-                    UserPrincipalName: Result, 
-                    Department: "", 
-                    OfficeLocation: "", 
+                    DisplayName: Result; 
+                    Id: ""; 
+                    JobTitle: ""; 
+                    UserPrincipalName: Result; 
+                    Department: ""; 
+                    OfficeLocation: ""; 
                     TelephoneNumber: ""
                 }
             )

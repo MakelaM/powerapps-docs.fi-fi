@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993267"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="text-input-control-in-powerapps"></a>PowerAppsin Tekstisyöte-ohjausobjekti
 Ruutu, johon käyttäjä voi kirjoittaa tekstiä, numeroita ja muuta tietoa.
@@ -143,7 +144,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
    
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää painike, määritä sen **[Text](properties-core.md)** -ominaisuus näyttämään **Lisää** ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **Collect(Names, {FirstName:inputFirst.Text, LastName:inputLast.Text})**
+   **Collect(Names; {FirstName:inputFirst.Text; LastName:inputLast.Text})**
    
     Haluatko lisätietoja **[Collect](../functions/function-clear-collect-clearcollect.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Lisää tekstivalikoima pysty- tai vaakasuunnassa, aseta sen **[Items](properties-core.md)** -ominaisuus näyttämään **Nimet** ja aseta **Subtitle1**-kohdan **[Text](properties-core.md)** -ominaisuudeksi **ThisItem.FirstName**.
@@ -156,7 +157,7 @@ Käyttäjä voi määrittää tietoa kirjoittamalla tekstisyötteen ohjausobjekt
 1. Lisää tekstisyötteen ohjausobjekti, anna sen nimeksi **inputPassword** ja aseta sen **Tila**-ominaisuudeksi **Salasana**.
 
 1. Lisää selite ja aseta sen **[Text](properties-core.md)** -ominaisuudeksi tämä kaava:<br>
-   **If(inputPassword.Text = "P@ssw0rd", "Access granted", "Access denied")**
+   **If(inputPassword.Text = "P@ssw0rd"; "Access granted"; "Access denied")**
 
     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 

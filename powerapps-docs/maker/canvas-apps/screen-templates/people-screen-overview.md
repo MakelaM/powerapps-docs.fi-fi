@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995680"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-people-screen-template-for-canvas-apps"></a>Kangas sovellusten ihmisinäyttömallin yleiskatsaus
 
@@ -94,19 +95,19 @@ People-näyttö tallentaa henkilö valinnat **Mypeople** -kokoelmaan. Jos liiket
 1. Määritä **Backicon** **onselect** -ominaisuudeksi `Back()`.
 1. Määritä **Sendicon** -kohteen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Office365.SendEmail( 
-        Concat( MyPeople, UserPrincipalName & ";" ), 
-        SubjectLine.Text, 
+        Concat( MyPeople; UserPrincipalName & ";" ); 
+        SubjectLine.Text; 
         MessageBody.Text 
     )
     ```
     
-    Tässä käytät Outlook Connectoria Sähkö posti viestin lähettämiseen. Ohitat sen `Concat(MyPeople, UserPrincipalName & ";")` vastaanottajien luettelona. Tämä kaava yhdistää kaikki **Mypeople** -kokoelman Sähkö posti osoitteet yhdeksi merkki jonoksi ja erottaa ne toisistaan puoli pisteillä. Tämä ei eroa siitä, että kirjoitat merkki jonon puoli pisteillä eroteltuina suosikki Sähkö posti ohjelmasi "to"-riville.
+    Tässä käytät Outlook Connectoria Sähkö posti viestin lähettämiseen. Ohitat sen `Concat(MyPeople; UserPrincipalName & ";")` vastaanottajien luettelona. Tämä kaava yhdistää kaikki **Mypeople** -kokoelman Sähkö posti osoitteet yhdeksi merkki jonoksi ja erottaa ne toisistaan puoli pisteillä. Tämä ei eroa siitä, että kirjoitat merkki jonon puoli pisteillä eroteltuina suosikki Sähkö posti ohjelmasi "to"-riville.
     * Olet välittämällä `SubjectLine.Text` viestin kohteena ja `MessageBody.Text` viestin leipä tekstinä.
 1. Lisää **Sähkö posti** -kuvake People-näytön oikeassa yläkulmassa.
    Vaihda kuvakkeen väriksi mitä tahansa.
-1. Määritä **Sendicon** -ominaisuuden **onselect** -ominaisuudeksi `Navigate( EmailScreen, None )`.
+1. Määritä **Sendicon** -ominaisuuden **onselect** -ominaisuudeksi `Navigate( EmailScreen; None )`.
 
     Sinulla on nyt kahden näytön sovellus, jossa voit valita käyttäjiä, säveltää Sähkö posti viestin ja lähettää sen. Voit kokeilla sitä vapaasti, mutta ole varovainen, koska sovellus lähettää sähkö posti viestejä kaikille, jotka lisäät **Mypeople** -kokoelmaan.
 

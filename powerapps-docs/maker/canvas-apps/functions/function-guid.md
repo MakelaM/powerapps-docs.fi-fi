@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992669"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="guid-function-in-powerapps"></a>PowerAppsin GUID-funktio
 Muuntaa GUID ([Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) -merkkijonon GUID-arvoksi tai luo uuden GUID-arvon.
@@ -69,7 +70,7 @@ Voit myös antaa GUID-merkkijonon ilman väliviivoja. Tämä kaava palauttaa sam
 
 Tässä kontekstissa määritetään uuden tietokantatietueen **Tila**-kentälle vakiintunut arvo:
 
-* **Patch (tuotteet, oletus (tuotteet), {status: GUID ("F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4")})**
+* **Patch (tuotteet; oletus (tuotteet); {status: GUID ("F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4")})**
 
 Et todennäköisesti halua näyttää GUID-tunnuksia käyttäjille, mutta ne voivat auttaa sovelluksen virheenkorjauksessa. Jos haluat näyttää **Tila**-kentän arvon tietueessa, jonka loit edellisessä esimerkissä, määritä **otsikko-ohjausobjektin** **tekstiominaisuudeksi** tämä kaava:
 
@@ -81,7 +82,7 @@ Et todennäköisesti halua näyttää GUID-tunnuksia käyttäjille, mutta ne voi
 
 1. Määritä **[painikeohjausobjektin](../controls/control-button.md)** **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ) )**
+    **ClearCollect( NewGUIDs; ForAll( [ 1; 2; 3; 4; 5 ]; GUID() ) )**
 
     Tämä kaava luo yksisarakkeisen taulukon, joka toistetaan viisi kertaa, ja tuloksesi saadaan viisi GUID-tunnusta.
 
@@ -99,4 +100,4 @@ Et todennäköisesti halua näyttää GUID-tunnuksia käyttäjille, mutta ne voi
 
 Luo yksittäinen GUID-tunnus taulukon sijaan tällä kaavalla:
 
-**Set( NewGUID, GUID() )**
+**Set( NewGUID; GUID() )**

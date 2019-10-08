@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71985659"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="understand-delegation-in-a-canvas-app"></a>Tutustu delegointiin pohjaan perustuvassa sovelluksessa
 PowerApps sisältää tehokkaan joukon funktioita tieto taulukoiden suodattamiseen, lajittelemiseen ja muotoiluun kangas sovelluksessa: **[Suodata](functions/function-filter-lookup.md)** -, **[Lajittele](functions/function-sort.md)** -ja **[addcolumns](functions/function-table-shaping.md)** -Funktiot vain muutamia mainitakseni. Näillä funktioilla voit antaa käyttäjille keskitetyn käyttöoikeuden heidän tarvitsemiinsa tietoihin. Tietokannat tunteville käyttäjille näiden funktioiden käyttäminen vastaa tietokantakyselyn kirjoittamista.
@@ -93,10 +94,10 @@ Muita koostefunktioita, kuten **[StdevP](functions/function-aggregates.md)** ja 
 
 Kuten tässä esimerkissä, päättäjät käyttävät usein **Addcolumns** -ja **lookup** -tietoja yhdistettäessä tietoja yhdestä taulukosta toiseen, jota kutsutaan yleisesti Join in Database parlance-tieto kantaan:
 
-```powerapps-dot
-AddColumns( Products, 
-    "Supplier Name", 
-    LookUp( Suppliers, Suppliers.ID = Product.SupplierID ).Name 
+```powerapps-comma
+AddColumns( Products; 
+    "Supplier Name"; 
+    LookUp( Suppliers; Suppliers.ID = Product.SupplierID ).Name 
 )
 ```
 

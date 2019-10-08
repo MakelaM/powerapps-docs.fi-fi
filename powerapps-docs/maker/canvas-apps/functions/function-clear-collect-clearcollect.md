@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992913"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="collect-clear-and-clearcollect-functions-in-powerapps"></a>Collect-, Clear- ja ClearCollect-funktiot PowerAppsissa
 
@@ -48,7 +49,7 @@ Voit käyttää myös **[Patch](function-patch.md)** -funktiota tietolähteen ti
 
 **Clear**-funktio poistaa kaikki tietueet kokoelmasta.  Kokoelman sarakkeet säilyvät.
 
-Huomaa, että **Clear** toimii vain kokoelmissa, ei muissa tietolähteissä.  Voit käyttää lauseketta **[RemoveIf](function-remove-removeif.md)( *DataSource*, true)** tähän tarkoitukseen.  Ole varovainen, sillä tämä poistaa kaikki tietueet tietolähteen tallennustilasta ja voi vaikuttaa muihin käyttäjiin.
+Huomaa, että **Clear** toimii vain kokoelmissa, ei muissa tietolähteissä.  Voit käyttää lauseketta **[RemoveIf](function-remove-removeif.md)( *DataSource*; true)** tähän tarkoitukseen.  Ole varovainen, sillä tämä poistaa kaikki tietueet tietolähteen tallennustilasta ja voi vaikuttaa muihin käyttäjiin.
 
 Voit käyttää **[Remove](function-remove-removeif.md)** -funktiota tietueiden poistamiseen valikoivasti.
 
@@ -62,7 +63,7 @@ Voit käyttää **[Remove](function-remove-removeif.md)** -funktiota tietueiden 
 
 ## <a name="syntax"></a>Syntaksi
 
-**Collect**( *DataSource*, *Item*, ... )
+**Collect**( *DataSource*; *Item*; ... )
 
 * *DataSource* – Pakollinen. Tietolähde, johon haluat lisätä tiedot.  Jos sitä ei vielä ole olemassa, luodaan uusi kokoelma.
 * *Item* – pakollinen.  Yksi tai useampia tietueita tai taulukoita tietolähteeseen lisättäväksi.  
@@ -71,7 +72,7 @@ Voit käyttää **[Remove](function-remove-removeif.md)** -funktiota tietueiden 
 
 * *Collection* – pakollinen. Kokoelma, jonka haluat tyhjentää.
 
-**ClearCollect**( *Collection*, *Item*, ... )
+**ClearCollect**( *Collection*; *Item*; ... )
 
 * *Collection* – pakollinen. Kokoelma, jonka tahdot tyhjentää ja johon haluat lisätä sen jälkeen tietoa.
 * *Item* – pakollinen.  Yksi tai useampia tietueita tai taulukoita tietolähteeseen lisättäväksi.  
@@ -86,8 +87,8 @@ Näissä esimerkeissä poistetaan ja lisätään kohteita kokoelmaan, jonka nimi
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |Tyhjentää kaikki tiedot **IceCream**-kokoelmasta ja lisää sitten tietueen, joka sisältää mansikkajäätelön määrän. |<style>IMG {Max-width: none}</style> ![Table yhdellä tietueella @ no__t-2<br><br>**Icecream** -kokoelmaa on myös muokattu. |
-| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Lisää kaksi tietuetta **icecream** -kokoelmaan, joka sisältää määrän pistaasi-ja appelsiini-jäätelöä. |![Taulukko, jossa on kaksi tietuetta @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
+| **ClearCollect( IceCream; {&nbsp;Flavor:&nbsp;"Strawberry";&nbsp;Quantity:&nbsp;300&nbsp;} )** |Tyhjentää kaikki tiedot **IceCream**-kokoelmasta ja lisää sitten tietueen, joka sisältää mansikkajäätelön määrän. |<style>IMG {Max-width: none}</style> ![Table yhdellä tietueella @ no__t-2<br><br>**Icecream** -kokoelmaa on myös muokattu. |
+| **Collect( IceCream; {&nbsp;Flavor:&nbsp;"Pistachio";&nbsp;Quantity:&nbsp;40&nbsp;}; {&nbsp;Flavor:&nbsp;"Orange";&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Lisää kaksi tietuetta **icecream** -kokoelmaan, joka sisältää määrän pistaasi-ja appelsiini-jäätelöä. |![Taulukko, jossa on kaksi tietuetta @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
 | **Clear( IceCream )** |Poistaa kaikki tietueet **IceCream**-kokoelmasta. |![Tyhjä taulukko @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
 
 Vaiheittaisia esimerkkejä kokoelman luomisesta on kohdassa [kokoelman luominen ja päivittäminen](../create-update-collection.md).
@@ -98,7 +99,7 @@ Näissä esimerkeissä tarkastellaan sitä, miten **kerätyt** ja **clearcollect
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **ClearCollect (IceCream, {&nbsp;Flavor: &nbsp; "Chocolate", &nbsp;Määrä: &nbsp;100 @ no__t-5}, {&nbsp;Flavor: &nbsp; "Vanilla", &nbsp;Quantity: &nbsp;200 @ no__t-10})** | Tyhjennä kaikki tiedot ja lisää sitten kaksi tietuetta **icecream** -kokoelmaan, joka sisältää määrän suklaata ja vanilja jäätelöä.  Lisättävät tietueet annetaan funktiolla yksittäisinä argumentteina.| ![Suklaa ja vanilja Records lisättiin kokoelmaan @ no__t-1 <br><br>**Icecream** -kokoelmaa on myös muokattu. |
-| **ClearCollect (IceCream, Table ({&nbsp;Flavor: &nbsp; "Chocolate", &nbsp;Määrä: &nbsp;100 @ no__t-5}, {&nbsp;Flavor: &nbsp; "Vanilla", &nbsp;Quantity: &nbsp;200 @ no__t-10}))** | Sama kuin edellisessä esimerkissä, mutta tietueet yhdistetään taulukossa ja välitetään yksittäisen argumentin kautta. Taulukon sisältö poimitaan tietue tietueen mukaan, ennen kuin se lisätään **icecream** -kokoelmaan. | ![Suklaa ja vanilja Records lisättiin kokoelmaan @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
-| **ClearCollect (IceCream, <br> {&nbsp;MyFavorites: Taulukko ({&nbsp;Flavor: &nbsp; "Chocolate", &nbsp;Määrä: &nbsp;100 @ no__t-4}, {&nbsp;Flavor: &nbsp; "Vanilla", &nbsp;Määrä: &nbsp;200 @ no__t-9})}) 0 | Sama kuin edellisessä esimerkissä, mutta taulukko on kääritty tietueeseen.  Taulukon tietueita ei poimita, vaan koko taulukko lisätään tietueen alitaulukoksi. | ![Suklaa ja vanilja Records lisättiin kokoelmaan @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
+| **ClearCollect (IceCream; {&nbsp;Flavor: &nbsp; "Chocolate"; &nbsp;Määrä: &nbsp;100 @ no__t-5}; {&nbsp;Flavor: &nbsp; "Vanilla"; &nbsp;Quantity: &nbsp;200 @ no__t-10})** | Tyhjennä kaikki tiedot ja lisää sitten kaksi tietuetta **icecream** -kokoelmaan, joka sisältää määrän suklaata ja vanilja jäätelöä.  Lisättävät tietueet annetaan funktiolla yksittäisinä argumentteina.| ![Suklaa ja vanilja Records lisättiin kokoelmaan @ no__t-1 <br><br>**Icecream** -kokoelmaa on myös muokattu. |
+| **ClearCollect (IceCream; Table ({&nbsp;Flavor: &nbsp; "Chocolate"; &nbsp;Määrä: &nbsp;100 @ no__t-5}; {&nbsp;Flavor: &nbsp; "Vanilla"; &nbsp;Quantity: &nbsp;200 @ no__t-10}))** | Sama kuin edellisessä esimerkissä, mutta tietueet yhdistetään taulukossa ja välitetään yksittäisen argumentin kautta. Taulukon sisältö poimitaan tietue tietueen mukaan, ennen kuin se lisätään **icecream** -kokoelmaan. | ![Suklaa ja vanilja Records lisättiin kokoelmaan @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
+| **ClearCollect (IceCream; <br> {&nbsp;MyFavorites: Taulukko ({&nbsp;Flavor: &nbsp; "Chocolate"; &nbsp;Määrä: &nbsp;100 @ no__t-4}; {&nbsp;Flavor: &nbsp; "Vanilla"; &nbsp;Määrä: &nbsp;200 @ no__t-9})}) 0 | Sama kuin edellisessä esimerkissä; mutta taulukko on kääritty tietueeseen.  Taulukon tietueita ei poimita; vaan koko taulukko lisätään tietueen alitaulukoksi. | ![Suklaa ja vanilja Records lisättiin kokoelmaan @ no__t-1<br><br>**Icecream** -kokoelmaa on myös muokattu. |
 

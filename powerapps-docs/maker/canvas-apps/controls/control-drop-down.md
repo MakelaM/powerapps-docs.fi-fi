@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993432"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="drop-down-control-in-powerapps"></a>Avattava luettelo -ohjausobjekti PowerAppsissa
 Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luettelon.
@@ -130,7 +131,7 @@ Luettelo, joka näyttää vain ensimmäisen kohdan, kunnes käyttäjä avaa luet
 
 1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)** -ominaisuudeksi tämä lauseke:
 
-    `["Seattle", "Tokyo", "London", "Johannesburg", "Rio de Janeiro"]`
+    `["Seattle"; "Tokyo"; "London"; "Johannesburg"; "Rio de Janeiro"]`
 
     Etkö tiedä, miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 
@@ -143,13 +144,13 @@ Tämän toiminnon periaatteet koskevat mitä tahansa [tieto lähdettä, joka tar
 
 1. Lisää **Avattava luettelo** -ohjausobjekti ja aseta sen **[Kohteet](properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    `Distinct(Accounts, address1_city)`
+    `Distinct(Accounts; address1_city)`
 
     Tämä kaava näyttää kaikki **Tilit**-entiteetin kaupungit. Jos sama kaupunki on useassa tietueessa, **[Distinct](../functions/function-distinct.md)** -funktio piilottaa kaksoiskappaleen avattavan valikon ohjausobjektissa.
 
 1. (valinnainen) Vaihda **Avattava luettelo** -ohjausobjektin nimeksi **Kaupungit** ja lisää pystysuora **Valikoima**-ohjausobjekti. Aseta valikoiman **[Kohteet](properties-core.md)** -ominaisuudeksi tämä kaava:
 
-    `Filter(Accounts, address1_city = Cities.Selected.Value)`
+    `Filter(Accounts; address1_city = Cities.Selected.Value)`
 
     Tämä **[suodatinfunktio](../functions/function-filter-lookup.md)** näyttää vain ne **Tilit**-entiteetin tietueet, joissa kaupunki vastaa **Kaupungit**-ohjausobjektissa valittua arvoa.
 

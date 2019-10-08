@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994118"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-edit-or-add-a-record-in-a-canvas-app"></a>Tietueen näyttäminen, muokkaaminen tai lisääminen kangas sovelluksessa
 
@@ -56,7 +57,7 @@ Lisää ja Määritä Näytä lomake-ohjaus objekti kangas **[sovelluksessa näy
 
 1. Valitse lomakkeen **[DataSource](controls/control-form-detail.md)** -ominaisuudeksi **Floaltingestilages** ja sen **[Item](controls/control-form-detail.md)** -ominaisuudeksi seuraava kaava:
 
-    `First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))`
+    `First(Filter(FlooringEstimates; Name=ChooseProduct.Selected.Value))`
 
    Tällä kaavalla määritetään, että lomakkeen määritysten suorittamisen jälkeen siinä näkyvät tietueet, jotka käyttäjä valitsee kohdassa **ChooseProduct**.
 

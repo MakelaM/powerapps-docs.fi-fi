@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995640"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="overview-of-the-meeting-screen-template-for-canvas-apps"></a>Kangas sovellusten koko uksen näytön mallin yleiskatsaus
 
@@ -58,10 +59,10 @@ Muutama hyödyllinen Huomautus:
 * Jotta voit luoda koko uksen, sinun on lisättävä vähintään yksi henkilö osallistujaksi, annettava aihe ja valittava koko uksen aika **ajoitus** -väli lehdestä.
 * Kun olet lähettänyt Kokous pyynnön, kaikki kyseisen koko uksen tiedot tyhjennetään.
 * Lähetys kuvakkeen (oikean yläkulman) **onselect** -lauseke sisältää seuraavan kaavan:
-    ```powerapps-dot
-    Set( _myCalendarName, 
-        LookUp( 'Office365'.CalendarGetTables().value, DisplayName = "Calendar" ).Name 
-    );
+    ```powerapps-comma
+    Set( _myCalendarName; 
+        LookUp( 'Office365'.CalendarGetTables().value; DisplayName = "Calendar" ).Name 
+    );;
     ```
 * "Calendar" on useimpien Office-käyttäjien kalenterien oletusarvoinen näyttö nimi, mutta organisaatiosi saattaa poiketa siitä. Jos näin on, voit muuttaa "kalenteri"-kohdetta organisaatiosi asianmukaiseksi termiksi.
 * Saat virhe ilmoituksen, jos yrität ajoittaa kokousta, joka tapahtuu menneisyydessä, tai lisätä koko ukseen yli 20 henkeä.

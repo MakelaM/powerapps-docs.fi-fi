@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992877"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="concat-and-concatenate-functions-in-powerapps"></a>Concat- ja Concatenate-funktiot PowerAppsissa
 
@@ -36,12 +37,12 @@ Jaa merkki jono alimerkkijonojen taulukkoon [**Split**](function-split.md) -tai 
 
 ## <a name="syntax"></a>Syntaksi
 
-**Concat**( *Table*, *Formula* )
+**Concat**( *Table*; *Formula* )
 
 - *Table* – Pakollinen.  Taulukko, jolle toiminto suoritetaan.
 - *Formula* – Pakollinen.  Kaikkiin taulukon tietueisiin käytettävä kaava.
 
-**Concatenate**( *String1* [, *String2*, ...] )
+**Concatenate**( *String1* [; *String2*; ...] )
 
 - *String(s)* – Pakollinen.  Yksittäisten merkkijonojen tai yksisarakkeisen taulukon merkkijonojen yhdistelmä.
 
@@ -55,13 +56,13 @@ Tämän osion esimerkeissä käytetään seuraavia yleisiä muuttujia:
 
 Jos haluat luoda nämä yleiset muuttujat sovelluksessa, Lisää [**painike**](../controls/control-button.md) -ohjaus objekti ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
-```powerapps-dot
-Set( FirstName, "Jane" ); Set( LastName, "Doe" );
-Set( Products,
+```powerapps-comma
+Set( FirstName; "Jane" );; Set( LastName; "Doe" );;
+Set( Products;
     Table(
-        { Name: "Violin", Type: "String" },
-        { Name: "Cello", Type: "String" },
-        { Name: "Trumpet", Type: "Wind" }
+        { Name: "Violin"; Type: "String" };
+        { Name: "Cello"; Type: "String" };
+        { Name: "Trumpet"; Type: "Wind" }
     )
 )
 ```
@@ -118,4 +119,4 @@ Lisää näitä esimerkkejä varten tyhjä, pystysuuntainen valikoima, määrit�
 | Kaava | Kuvaus | Tulos |
 |---------|-------------|--------|
 | **Split (Conat (&nbsp;Products, &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;), ",")** | Jakaa teksti merkki jonon erottimella **","** . Merkki jono päättyy pilkuilla ja väli lyönnillä, joten tuloksen viimeinen rivi on tyhjä merkki jono.  | ![Table](media/function-concatenate/split.png) |
-| **MatchAll (Conat (&nbsp;Products, &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;), "[^ \s,] +"). FullMatch** | Jakaa teksti merkki jonon niiden merkkien perusteella, jotka eivät ole väli lyöntejä tai pilkkuja. Tämä kaava poistaa ylimääräisen pilkun ja väli lyönnin merkki jonon lopusta. | ![Table](media/function-concatenate/matchall.png)
+| **MatchAll (Conat (&nbsp;Products; &nbsp;Name @ no__t-3 @ no__t-4 @ no__t-5 ", &nbsp;" &nbsp;); "[^ \s,] +"). FullMatch** | Jakaa teksti merkki jonon niiden merkkien perusteella, jotka eivät ole väli lyöntejä tai pilkkuja. Tämä kaava poistaa ylimääräisen pilkun ja väli lyönnin merkki jonon lopusta. | ![Table](media/function-concatenate/matchall.png)

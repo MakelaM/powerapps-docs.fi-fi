@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993496"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="column-chart-and-line-chart-controls-in-powerapps"></a>Pylväskaavio- ja viivakaavio-ohjausobjektit PowerAppsissa
 Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
@@ -113,11 +114,11 @@ Ohjausobjektit, jotka esittävät tiedon x- ja y-akselisina kaavioina.
 **YLabelAngle** – Pylväs- tai viivakaavion y-akselin vieressä olevien otsikoiden kulma.
 
 ## <a name="related-functions"></a>Liitetyt toiminnot
-[**Max**( *DataSource*, *ColumnName* )](../functions/function-aggregates.md)
+[**Max**( *DataSource*; *ColumnName* )](../functions/function-aggregates.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää **[painike](control-button.md)** ohjausobjekti ja määritä sen **[OnSelect](properties-core.md)** -ominaisuudeksi seuraava kaava:<br>
-   **Collect(Tuotto, {Vuosi:"2013", Europa:24000, Ganymede:22300, Callisto:21200}, {Vuosi:"2014", Europa:26500, Ganymede:25700, Callisto:24700},{Vuosi:"2014", Europa:27900, Ganymede:28300, Callisto:25600})**
+   **Collect(Tuotto; {Vuosi:"2013"; Europa:24000; Ganymede:22300; Callisto:21200}; {Vuosi:"2014"; Europa:26500; Ganymede:25700; Callisto:24700};{Vuosi:"2014"; Europa:27900; Ganymede:28300; Callisto:25600})**
    
     Etkö tiedä, miten [ohjausobjekti lisätään ja määritetään](../add-configure-controls.md)?
    

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993949"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-office-365-outlook-from-powerapps"></a>Yhteyden muodostaminen PowerAppsista Office 365 Outlookiin
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
@@ -58,10 +59,10 @@ Office 365 Outlook -yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis 
 4. Funktion käytettävissä on useita valinnaisia parametreja. Määritä valikoiman **Items**-ominaisuudeksi jokin seuraavista kaavoista:
    
     `Office365.GetEmails({fetchOnlyUnread:false})`  
-    `Office365.GetEmails({fetchOnlyUnread:false, top:2})`  
-    `Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2})`  
-    `Office365.GetEmails({folderPath:"Sent Items", fetchOnlyUnread:false, top:2, searchQuery:"powerapps"})`  
-    `Office365.GetEmails({folderPath:"Deleted Items", fetchOnlyUnread:false, top:2, skip:3})`
+    `Office365.GetEmails({fetchOnlyUnread:false; top:2})`  
+    `Office365.GetEmails({folderPath:"Sent Items"; fetchOnlyUnread:false; top:2})`  
+    `Office365.GetEmails({folderPath:"Sent Items"; fetchOnlyUnread:false; top:2; searchQuery:"powerapps"})`  
+    `Office365.GetEmails({folderPath:"Deleted Items"; fetchOnlyUnread:false; top:2; skip:3})`
 
 ## <a name="send-a-message"></a>Viestin lähettäminen
 1. Valitse **Lisää**-valikosta **Teksti** ja valitse sitten **Tekstisyöte**.
@@ -75,7 +76,7 @@ Office 365 Outlook -yhteys on luotu ja lisätty sovellukseesi. Se on nyt valmis 
    * **inputBody**
 4. Valitse **Lisää**-valikosta **Ohjausobjektit** ja valitse **Painike**. Määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:  
    
-    `Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text)`
+    `Office365.SendEmail(inputTo.Text; inputSubject.Text; inputBody.Text)`
 5. Siirrä painiketta niin, että se näkyy kaikkien muiden ohjausobjektien alapuolella, ja määritä sen **[Text](../controls/properties-core.md)** -ominaisuudeksi **"Send email"** .
 6. Paina F5 tai valitse Esikatselu-painike (![Esikatselu-painike](./media/connection-office365-outlook/preview.png)). Kirjoita kelvollinen sähköpostiosoite kohtaan **inputTo** ja haluamasi teksti toisiin **Tekstisyöte**-ohjausobjekteihin.
 7. Lähetä viesti valitsemalla **Lähetä sähköposti**. Palaa oletustyötilaan painamalla ESC-näppäintä.
@@ -94,11 +95,11 @@ Lisää viestiin liite seuraamalla edellisen osan ohjeita, mutta lisää paramet
 
 Tässä esimerkissä lähetetään valokuva nimellä **file1.jpg**:
 
-`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""})})`
+`Office365.SendEmail(inputTo.Text; inputSubject.Text; inputBody.Text; {Attachments:Table({Name:"file1.jpg"; ContentBytes:Camera1.Photo; '@odata.type':""})})`
 
 Tässä esimerkissä lähetetään kuvan lisäksi äänitiedosto:
 
-`Office365.SendEmail(inputTo.Text, inputSubject.Text, inputBody.Text, {Attachments:Table({Name:"file1.jpg", ContentBytes:Camera1.Photo, '@odata.type':""}, {Name:"AudioFile", ContentBytes:microphone1.audio })})`
+`Office365.SendEmail(inputTo.Text; inputSubject.Text; inputBody.Text; {Attachments:Table({Name:"file1.jpg"; ContentBytes:Camera1.Photo; '@odata.type':""}; {Name:"AudioFile"; ContentBytes:microphone1.audio })})`
 
 ## <a name="delete-a-message"></a>Viestin poistaminen
 1. Valitse **Lisää**-valikosta **Valikoima** ja valitse jokin **Tekstivalikoima**-ohjausobjekti.

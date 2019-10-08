@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995865"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-a-summary-form-in-a-canvas-app"></a>Yhteenveto lomakkeen luominen kangas sovelluksessa
 
@@ -96,7 +97,7 @@ Tässä osiossa lisätään ohjaus objektien yhteenveto, joka näyttää yhteenv
 
 1. Valitse kaava riviltä lomakkeen **DataSource** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Orders
     ```
 
@@ -215,7 +216,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Yhteenveto lomakkeen **Item** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gallery1.Selected
     ```
 
@@ -294,7 +295,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse kuvan **ominaisuudeksi** Tämä kaava ja korvaa luku DataCardValue-kohteen lopussa tarvittaessa:
 
-    ```powerapps-dot
+    ```powerapps-comma
     DataCardValue7.Selected.Picture
     ```
 
@@ -327,7 +328,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Varmista **puunäkymä** -ruudussa, että lomakkeen nimi on **Form1**, ja määritä sitten kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     SubmitForm( Form1 )
     ```
 
@@ -338,8 +339,8 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    If( Form1.Unsaved, DisplayMode.Edit, DisplayMode.Disabled )
+    ```powerapps-comma
+    If( Form1.Unsaved; DisplayMode.Edit; DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -349,7 +350,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -380,7 +381,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Määritä peruutus kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ResetForm( Form1 )
     ```
 
@@ -391,8 +392,8 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Peruuta-kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Edit, DisplayMode.Disabled )
+    ```powerapps-comma
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Edit; DisplayMode.Disabled )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -402,7 +403,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Peruuta-kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -433,7 +434,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Määritä lisää-kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
+    ```powerapps-comma
     NewForm( Form1 )
     ```
 
@@ -444,8 +445,8 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Lisää-kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    If( Form1.Unsaved Or Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
+    ```powerapps-comma
+    If( Form1.Unsaved Or Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -458,7 +459,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Lisää-kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -492,8 +493,8 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Määritä Trash-kuvakkeen **onselect** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Remove( Orders, Gallery1.Selected )
+    ```powerapps-comma
+    Remove( Orders; Gallery1.Selected )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -503,8 +504,8 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Trash-kuvakkeen **DisplayMode** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    If( Form1.Mode = FormMode.New, DisplayMode.Disabled, DisplayMode.Edit )
+    ```powerapps-comma
+    If( Form1.Mode = FormMode.New; DisplayMode.Disabled; DisplayMode.Edit )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -514,7 +515,7 @@ Tässä esimerkissä et tarvitse päivämäärä kenttien aika-osia, koska kysei
 
 1. Valitse Trash-kuvakkeen **disabledcolor** -ominaisuudeksi tämä arvo:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Gray
     ```
 
@@ -537,7 +538,7 @@ Voit lisätä yhteenvedon lomakkeeseen, jossa käyttäjä voi näyttää ja muok
 - Kuvake, joka tallentaa tila uksen muutokset: `SubmitForm( Form1 )`
 - Kuvake, joka peruuttaa tila uksen muutokset: `ResetForm( Form1 )`
 - Tila uksen luonnin kuvake: `NewForm( Form1 )`
-- Tila uksen poistamis kuvake: `Remove( Orders, Gallery1.Selected )`
+- Tila uksen poistamis kuvake: `Remove( Orders; Gallery1.Selected )`
 
 ## <a name="next-step"></a>Seuraava vaihe
 

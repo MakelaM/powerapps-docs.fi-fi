@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994845"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="color-enumeration-and-colorfade-colorvalue-and-rgba-functions-in-powerapps"></a>Color-luettelointi ja ColorFade-, ColorValue- ja RGBA-funktiot PowerAppsissa
 
@@ -62,12 +63,12 @@ Jos määrität **väri** luettelointi arvon tai rakennat **colorvalue** -kaavan
 
 - *CSSColor* – Pakollinen.  CSS-tyylimäärityksen mukainen värin määritys. Voit määrittää joko nimen, kuten **Olivedrab**tai HEX-arvon, kuten **#6b8e23** tai **#7fffd420**. Hex-arvot voivat olla joko #*rrggbb* tai #*rrggbbaa*.
 
-**RGBA**( *punainen*, *vihreä*, *sininen*, *alfa* )
+**RGBA**( *punainen*; *vihreä*; *sininen*; *alfa* )
 
 - *Punainen*, *vihreä*, *sininen* – Pakollinen.  Väri-komponentti arvot, jotka ovat 0 (ei kylläisyyttä) – 255 (täysi kylläisyys).
 - *Alfa* – pakollinen.  Alpha-komponentti, joka on 0 (täysin läpinäkyvä) – 1 (täysin läpinäkymätön). Voit käyttää myös prosenttimäärää 0–100 %.
 
-**ColorFade**( *Color*, *FadeAmount* )
+**ColorFade**( *Color*; *FadeAmount* )
 
 - *Color* – Pakollinen.  Väriarvo, kuten **Color.Red** tai **ColorValue**- tai **RGBA**-määritys.
 - *FadeAmount* – Pakollinen.  Luku väliltä –1 ja 1. -1 tummenee väriksi musta, 0 ei vaikuta väriin ja yksi väri valkoiseksi. Voit myös käyttää prosentti osuutta-100%-100%.

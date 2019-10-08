@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992963"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="char-function-in-powerapps"></a>Char-funktio PowerAppsissa
 
@@ -46,7 +47,7 @@ Muuntaa merkkikoodin merkkijonoksi.
 
 1. Lisää Tablet-sovelluksen tyhjässä näytössä [**valikoima**](../controls/control-gallery.md) -ohjaus objekti, jossa on **tyhjä vaakasuuntainen** ulkoasu, ja määritä sitten nämä ominaisuudet:
 
-    - **Kohteet**: `[0,1,2,3,4,5,6,7]`
+    - **Kohteet**: `[0;1;2;3;4;5;6;7]`
     - **Leveys**: 800
     - **Korkeus**: 500
     - **Templatesize**: 100
@@ -54,7 +55,7 @@ Muuntaa merkkikoodin merkkijonoksi.
 
 1. Lisää tämän valikoiman sisällä **valikoima** -ohjaus objekti, jossa on **tyhjä pystysuuntainen** ulkoasu, ja määritä sitten nämä ominaisuudet:
 
-    - **Kohteet**: `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
+    - **Kohteet**: `ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 )`
     - **Leveys**: 100
     - **Korkeus**: 500
     - **Templatesize**: 30
@@ -79,7 +80,7 @@ Olet luonut kaavion ensimmäisistä 128 ASCII-merkeistä. Pieniä nelikulmion n�
 
 Jos haluat näyttää laajennetun ASCII-merkistön merkit, valitse toisen valikoiman **Items** -ominaisuudeksi Tämä kaava, joka lisää 128 kuhunkin merkki arvoon:
 
-`ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
+`ForAll( [0;2;3;4;5;6;7;8;9;10;11;12;13;14;15]; Value + ThisItem.Value * 16 + 128)`
 
 ![Laajennetut ASCII-merkit](media/function-char/chart-higher.png)
 

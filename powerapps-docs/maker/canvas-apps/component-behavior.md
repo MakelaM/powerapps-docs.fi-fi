@@ -17,6 +17,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71705038"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="behavior-formulas-for-components"></a>Komponenttien toiminta kaavat
 
@@ -59,4 +60,4 @@ Component-esiintymän nollaamisen lisäksi komponentin ulkopuolelta on olemassa 
 
 Tämä on esimerkki järjestys numeroiden tarkistamisesta ja lukujen päivittämisestä. Numero ylös ja alas-osaa käytetään tilausten määrän lisäämiseen tai pienentymiseen. Kun valitset valikoiman vasemmalla puolella, numero ylös ja alas-osan oletus arvo palautetaan näyttämään valitun työkalun järjestys numero. "**Nosta OnReset, kun arvon muutokset**"-vaihto ehdon avulla voitiin nollata oletus arvo, kun syöte muuttuu. 
 
-Voit tehdä tämän valitsemalla Lisää**OnReset, kun arvon muutokset**on oletus syöte-ominaisuudessa. Komponentin **Onreset** on määritetty arvoksi **(_numericValue, numero ylös alas). DefaultValue)** . _numericValue on muuttuja, joka tallentaa nykyisen tila uksen arvon arvon. Ja Määritä teksti syöte-ohjaus objektin **oletus** arvoksi **if (Onblank (_numericValue), ' numeric up Down '. DefaultValue, _numericValue)** . 
+Voit tehdä tämän valitsemalla Lisää**OnReset, kun arvon muutokset**on oletus syöte-ominaisuudessa. Komponentin **Onreset** on määritetty arvoksi **(_numericValue; numero ylös alas). DefaultValue)** . _numericValue on muuttuja, joka tallentaa nykyisen tila uksen arvon arvon. Ja Määritä teksti syöte-ohjaus objektin **oletus** arvoksi **if (Onblank (_numericValue), ' numeric up Down '. DefaultValue, _numericValue)** . 

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71990878"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="create-an-order-gallery-in-a-canvas-app"></a>Tilaus valikoiman luominen kangas sovelluksessa
 
@@ -105,8 +106,8 @@ Noudata vaiheittaisia ohjeita luodaksesi tilaus valikoiman kangas sovellukseen, 
 
 1. Valitse kaava riviltä valikoiman **Items** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Sort( Orders, 'Order Number', Descending )
+    ```powerapps-comma
+    Sort( Orders; 'Order Number'; Descending )
     ```
 
     Lajittelu-funktiolla [**lajitellaan**](functions/function-sort.md) luettelossa, että uusin järjestys (jonka järjestys numero on suurin) näkyy ensin.
@@ -132,7 +133,7 @@ Noudata vaiheittaisia ohjeita luodaksesi tilaus valikoiman kangas sovellukseen, 
 
 1. Valitse kaava riviltä selitteen **teksti** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     "Order " & ThisItem.'Order Number'
     ```
 
@@ -148,7 +149,7 @@ Noudata vaiheittaisia ohjeita luodaksesi tilaus valikoiman kangas sovellukseen, 
 
 1. Valitse kaava riviltä selitteen **teksti** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.Customer.Company
     ```
 
@@ -192,7 +193,7 @@ Tässä toimenpiteessä lisäät tilaa valikoimaan otsikkoa varten ja määritä
 
 1. Valitse uuden otsikon **Text** -ominaisuudeksi tämä lauseke:
 
-    ```powerapps-dot
+    ```powerapps-comma
     ThisItem.'Order Status'
     ```
 
@@ -215,12 +216,12 @@ Tässä toimenpiteessä lisäät tilaa valikoimaan otsikkoa varten ja määritä
 
 1. Valitse kaava riviltä tila-otsikon **Color** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Switch( ThisItem.'Order Status',
-        'Orders Status'.Closed, Green,
-        'Orders Status'.New, Black,
-        'Orders Status'.Invoiced, Blue,
-        'Orders Status'.Shipped, Purple
+    ```powerapps-comma
+    Switch( ThisItem.'Order Status';
+        'Orders Status'.Closed; Green;
+        'Orders Status'.New; Black;
+        'Orders Status'.Invoiced; Blue;
+        'Orders Status'.Shipped; Purple
     )
     ```
 
@@ -250,8 +251,8 @@ Tässä toimenpiteessä lisäät tilaa valikoimaan otsikkoa varten ja määritä
 
 1. Valitse kaava riviltä uuden nimen **teksti** -ominaisuudeksi Tämä kaava:
 
-    ```powerapps-dot
-    Text( Sum( ThisItem.'Order Details', Quantity * 'Unit Price' ), "[$-en-US]$ #,###.00" )
+    ```powerapps-comma
+    Text( Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' ); "[$-en-US]$ #,###.00" )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -282,8 +283,8 @@ Voit kerrata uudelleen luomalla yhden näytön kangas sovelluksen lisäämällä
 - Järjestys numeron näyttämisen lauseke: `"Orders " & ThisItem.OrderNumber`
 - Kenttä monta yhteen-suhteessa: `ThisItem.Customer.Company`
 - Nimi, joka sisältää joukon asetuksen nimen: `ThisItem.'Order Status'`
-- Selite, joka muuttaa muotoa sen perusteella, mikä asetus on kohteessa, jonka nimi näytetään: `Switch( ThisItem.'Order Status', 'Orders Status'.Closed, Green, ...`
-- Monitasoinen kooste funktio yksi-moneen-suhteen kanssa: `Sum( ThisItem.'Order Details', Quantity * 'Unit Price' )`
+- Selite, joka muuttaa muotoa sen perusteella, mikä asetus on kohteessa, jonka nimi näytetään: `Switch( ThisItem.'Order Status'; 'Orders Status'.Closed; Green; ...`
+- Monitasoinen kooste funktio yksi-moneen-suhteen kanssa: `Sum( ThisItem.'Order Details'; Quantity * 'Unit Price' )`
 
 ## <a name="next-topic"></a>Seuraava aihe
 

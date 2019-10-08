@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994474"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="using-multimedia-files-in-powerapps"></a>Multimediatiedostojen käyttäminen PowerAppsissa
 
@@ -158,7 +159,7 @@ Tässä skenaariossa opit lataamaan kynäpiirustukset tietolähteeseen, OneDrive
 
 8. Lisää **Lisää**-välilehdessä **Button**-ohjausobjekti ja määritä sen **OnSelect**-ominaisuudeksi tämä kaava:
 
-    **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
+    **Patch(Drawings; Defaults(Drawings); {Image:MyPen.Image})**
 
 9. Lisää **Kuvavalikoima**-ohjausobjekti (**Lisää**-välilehti > **Valikoima**) ja aseta sen **Items**-ominaisuudeksi `Drawings`. Valikoima-ohjausobjektin **Image**-ominaisuudeksi asetetaan automaattisesti `ThisItem.Image`.
 

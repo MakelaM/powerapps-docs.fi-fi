@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995589"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-sort-and-filter-data-in-a-powerapps-gallery"></a>Näytä, lajittele ja suodata tietoja PowerApps-valikoimassa
 Luo valikoima, jonka avulla voit näyttää kuvia ja tekstiä useista tuotteista, ja lajittele ja suodata näitä tietoja.
@@ -120,7 +121,7 @@ Näissä vaiheissa lajittelemme valikoiman kohteet nousevassa ja laskevassa jär
 1. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen.
 2. **[Items](controls/properties-core.md)** -ominaisuutena on tällä hetkellä Inventory (kokoelmasi nimi). Muuta se seuraavaksi:  
    
-    **Sort(Inventory, ProductName)**
+    **Sort(Inventory; ProductName)**
    
     Kun teet näin, valikoiman kohteet lajitellaan nousevassa järjestyksessä tuotteen nimen mukaan:  ![][11]  
    
@@ -133,11 +134,11 @@ Näissä vaiheissa lajittelemme valikoiman kohteet nousevassa ja laskevassa jär
 2. Määritä liukusäädin niin, että käyttäjät eivät voi määrittää sitä varastossa olevien kohteiden lukumäärän ulkopuolelle:  
    
    1. Valitse **Sisältö**-välilehdestä **Pienin** ja kirjoita sitten seuraava lauseke:  
-      ```Min(Inventory, UnitsInStock)```  
+      ```Min(Inventory; UnitsInStock)```  
    2. Valitse **Sisältö**-välilehdestä **Suurin** ja kirjoita sitten seuraava lauseke:  
-      ```Max(Inventory, UnitsInStock)```
+      ```Max(Inventory; UnitsInStock)```
 3. Valitse mikä tahansa valikoiman kohde *paitsi* ensimmäinen. Määritä valikoiman **[Items](controls/properties-core.md)** -ominaisuudeksi seuraava lauseke:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter.Value)```
+   ```Filter(Inventory; UnitsInStock<=StockFilter.Value)```
 4. Aseta **esikatselussa** liukusäädin arvoon, joka on valikoiman suurimman ja pienimmän määrän välissä. Kun säädät liukusäädintä, valikoimassa näkyvät vain ne tuotteet, joita on valitsemaasi arvoa vähemmän:  
    ![][13]  
 
@@ -146,7 +147,7 @@ Lisätään seuraavaksi suodatin:
 1. Palaa takaisin suunnittelutyökaluun.
 2. Valitse **Lisää**-välilehdessä **Teksti**, valitse **Syöteteksti** ja anna uudelle ohjausobjektille uusi nimi **NameFilter**. Siirrä Teksti-ohjausobjekti liukusäätimen alle.
 3. Määritä valikoiman **[Items](controls/properties-core.md)** -ominaisuudeksi seuraava lauseke:  
-   ```Filter(Inventory, UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
+   ```Filter(Inventory; UnitsInStock<=StockFilter.Value && NameFilter.Text in ProductName)```
 4. Aseta **esikatselussa** liukusäädin arvoon *30* ja kirjoita kirjain *g* Tekstisyöte-ohjausobjektiin. Näyttöön tulee valikoiman ainoa tuote, jota on varastossa alle 30 kappaletta *ja* jonka nimessä on g-kirjain:  
    ![][14]  
 

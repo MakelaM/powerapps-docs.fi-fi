@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992696"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="editform-newform-submitform-resetform-and-viewform-functions-in-powerapps"></a>PowerAppsin funktiot EditForm, NewForm, SubmitForm, ResetForm ja ViewForm
 Tarkastele ja muokkaa kohdetta, luo kohde, tallenna sisältö ja palauta ohjausobjektit **[Muokkaa lomaketta](../controls/control-form-detail.md)** -ohjausobjektissa.
@@ -110,12 +111,12 @@ Täydellisiä esimerkkejä löytyy kohdasta [Tutustu tietolomakkeisiin](../worki
    * Jos lähetys epäonnistuu, **ErrorText** näyttää käyttäjäystävällisen virhesanoman. Nykyinen näyttö pysyy näkyvissä, jotta käyttäjä voi korjata ongelman ja yrittää uudelleen.
 4. Lisää Painike-ohjausobjekti, määritä sen **[Teksti](../controls/properties-core.md)** -ominaisuus näyttämään **Peruuta** ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
-    **ResetForm (EditForm); Back()**
+    **ResetForm (EditForm);; Back()**
    
     Kun käyttäjä valitsee **Peruuta**-painikkeen, Lomake-ohjausobjektin arvot palautetaan muokkausta edeltävään tilaan. Edellinen näyttö tulee näkyviin uudelleen ja Lomake-ohjausobjekti palautetaan **Muokkaa**-tilaan, jos se oli **Uusi**-tilassa.
 5. Lisää painikeohjausobjekti, määritä sen **[Teksti](../controls/properties-core.md)** -ominaisuus näyttämään **Uusi** ja määritä sen **[OnSelect](../controls/properties-core.md)** -ominaisuudeksi tämä kaava:
    
-    **NewForm( EditForm ); Navigate( EditScreen, None )**
+    **NewForm( EditForm );; Navigate( EditScreen; None )**
    
     Kun käyttäjä valitsee **Uusi**-painikkeen, Lomake-ohjausobjekti vaihtuu **Uusi**-tilaan. Lomake-ohjausobjekti täytetään sen tietolähteen oletusarvoilla, ja näkyviin tulee näyttö, joka sisältää Lomake-ohjausobjektin. Kun **SubmitForm**-funktio suoritetaan, tietue luodaan päivittämisen sijaan.
 

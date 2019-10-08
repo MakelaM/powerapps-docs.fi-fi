@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71993257"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="toggle-control-in-powerapps"></a>Ohjausobjektin vaihtopainike PowerAppsissa
 Ohjausobjekti, jonka käyttäjä voi ottaa käyttöön tai poistaa käytöstä siirtämällä sen kahvaa.
@@ -105,14 +106,14 @@ Vaihtopainike on suunniteltu uusimpia käyttöliittymiä varten, mutta se toimii
 **[Y](properties-size-location.md)** – Ohjausobjektin yläreunan ja pääsäilön (näytön, jos pääsäilöä ei ole) yläreunan välinen etäisyys.
 
 ## <a name="related-functions"></a>Aiheeseen liittyvät funktiot
-[**If**( *Ehto*, *Tulos* )](../functions/function-if.md)
+[**If**( *Ehto*; *Tulos* )](../functions/function-if.md)
 
 ## <a name="example"></a>Esimerkki
 1. Lisää vaihtopainike ja anna sille nimeksi **MemberDiscount**.
 
     Miten [ohjausobjekti lisätään, nimetään ja määritetään](../add-configure-controls.md)?
 2. Lisää selite ja aseta sen **[Text](properties-core.md)** -ominaisuudeksi tämä kaava:
-   <br>**If(MemberDiscount.Value = true, "Price: $75", "Price: $100")**
+   <br>**If(MemberDiscount.Value = true; "Price: $75"; "Price: $100")**
 
     Haluatko lisätietoja **[If](../functions/function-if.md)** -funktiosta tai [muista funktioista](../formula-reference.md)?
 3. Paina F5-näppäintä ja muuta **MemberDiscount**-arvoa.

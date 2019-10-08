@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71994036"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="connect-to-microsoft-translator-from-powerapps"></a>Yhdistä Microsoft Translatoriin PowerAppsista
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
@@ -57,7 +58,7 @@ Tässä aiheessa kerrotaan, miten voit muodostaa Microsoft Translator -yhteyden 
     `MicrosoftTranslator.Languages()`
 4. Lisää selite, siirrä se kohteen **TargetLang** alle ja määritä sen **[Text](../controls/properties-core.md)** -ominaisuudeksi seuraava kaava:  
 
-    `MicrosoftTranslator.Translate(Source.Text, TargetLang.Selected.Value)`
+    `MicrosoftTranslator.Translate(Source.Text; TargetLang.Selected.Value)`
 5. Kirjoita tekstiä kohtaan **Source** ja valitse kieli kohdasta **TargetLang**. Selite näyttää kirjoittamasi tekstin valitulla kielellä:  
 
     ![Käännä teksti englannista espanjaksi](./media/connection-microsoft-translator/translate-text.png)
@@ -71,7 +72,7 @@ Käännä tekstiä edellisen osan ohjeiden mukaisesti, jos et vielä ole tehnyt 
 2. Nimeä toinen selite (ei **Source**-ruutu) uudelleen nimellä **Target**.
 3. Lisää **Audio**-ohjausobjekti (**Lisää**-valikko > **Media**) ja määritä sen **Media**-ominaisuudeksi seuraava kaava:  
 
-    `MicrosoftTranslator.TextToSpeech(Target.Text, TargetLang.Selected.Value)`
+    `MicrosoftTranslator.TextToSpeech(Target.Text; TargetLang.Selected.Value)`
 4. Paina F5-näppäintä tai valitse Esikatselu-painike (![](./media/connection-microsoft-translator/preview.png)). Kirjoita tekstiä **Source**-ruutuun ja valitse kieli kohdasta **TargetLang**. Valitse sitten audio-ohjausobjektin Toista-painike.
 
     Sovellus toistaa kirjoittamasi tekstin ääniversion kielellä, jonka valitsit.

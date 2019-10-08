@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992197"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="set-function-in-powerapps"></a>PowerAppsin Set-funktio
 Asettaa yleisen muuttujan arvon.
@@ -50,7 +51,7 @@ Yleiset muuttujat eivät voi käyttää samaa nimeä kuin olemassa oleva kokoelm
 **Set**-funktiolla ei ole palautusarvoa, ja voit käyttää sitä vain [toimintakaavan](../working-with-formulas-in-depth.md) sisällä.
 
 ## <a name="syntax"></a>Syntaksi
-**Set**( *VariableName*, *Value* )
+**Set**( *VariableName*; *Value* )
 
 * *VariableName* – Pakollinen.  Luotavan tai päivitettävän yleisen muuttujan nimi.
 * *Value* – Pakollinen.  Arvo, joka määritetään kontekstimuuttujalle.
@@ -59,10 +60,10 @@ Yleiset muuttujat eivät voi käyttää samaa nimeä kuin olemassa oleva kokoelm
 
 | Kaava | Kuvaus | Tulos |
 | --- | --- | --- |
-| **Set(&nbsp;Counter,&nbsp;1&nbsp;)** |Luo yleisen muuttujan **Counter** tai muokkaa sitä ja asettaa sen arvoksi **1**. |**Counter**-arvo on **1**. Voit viitata kyseiseen muuttujaan käyttämällä kaavassa nimeä **Counter** missä tahansa näytössä. |
-| **Set(&nbsp;Counter,&nbsp;2&nbsp;)** |Määrittää edellisen esimerkin yleisen muuttujan **Counter** arvoksi **2**. |**Counter**-arvo on **2**. |
-| **Set(&nbsp;Counter,&nbsp;Counter + 1&nbsp;)** |Lisää 1:n edellisen esimerkin yleisen muuttujan **Counter**-arvoon, jolloin arvo on **3**. |**Counter**-arvo on **3**. |
-| **Set(&nbsp;Name,&nbsp;”Lily” )** |Luo yleisen muuttujan **Name**tai muokkaa sitä ja asettaa sen arvoksi **Lily**. |**Name**-arvo on **Lily**. |
-| **Set(&nbsp;Person,&nbsp;{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;} )** |Luo yleisen muuttujan **Person** tai muokkaa sitä ja asettaa sen arvon tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |**Person**-kohdalla on tietueen **{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}** arvo.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
-| **Set(&nbsp;Person, Patch(&nbsp;Person,&nbsp;{Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;)&nbsp;)** |Toimii **[Patch](function-patch.md)** -funktion kanssa yleisen muuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person**  arvo on nyt tietue **{&nbsp;Name:&nbsp;”Milton”, Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}** . |
+| **Set(&nbsp;Counter;&nbsp;1&nbsp;)** |Luo yleisen muuttujan **Counter** tai muokkaa sitä ja asettaa sen arvoksi **1**. |**Counter**-arvo on **1**. Voit viitata kyseiseen muuttujaan käyttämällä kaavassa nimeä **Counter** missä tahansa näytössä. |
+| **Set(&nbsp;Counter;&nbsp;2&nbsp;)** |Määrittää edellisen esimerkin yleisen muuttujan **Counter** arvoksi **2**. |**Counter**-arvo on **2**. |
+| **Set(&nbsp;Counter;&nbsp;Counter + 1&nbsp;)** |Lisää 1:n edellisen esimerkin yleisen muuttujan **Counter**-arvoon, jolloin arvo on **3**. |**Counter**-arvo on **3**. |
+| **Set(&nbsp;Name;&nbsp;”Lily” )** |Luo yleisen muuttujan **Name**tai muokkaa sitä ja asettaa sen arvoksi **Lily**. |**Name**-arvo on **Lily**. |
+| **Set(&nbsp;Person;&nbsp;{&nbsp;Name:&nbsp;”Milton”; Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;} )** |Luo yleisen muuttujan **Person** tai muokkaa sitä ja asettaa sen arvon tietueeksi. Tietue sisältää kaksi saraketta, joiden nimet ovat **Name** ja **Address**. Sarakkeen **Name** arvo on **Milton** ja sarakkeen **Address** arvo on **1 Main St**. |**Person**-kohdalla on tietueen **{&nbsp;Name:&nbsp;”Milton”; Address:&nbsp;”1&nbsp;Main&nbsp;St”&nbsp;}** arvo.<br><br>Viittaa tähän tietueeseen kokonaisuutena nimellä **Person** tai tämän tietueen yksittäiseen sarakkeeseen seuraavasti: **Person.Name** tai **Person.Address**. |
+| **Set(&nbsp;Person; Patch(&nbsp;Person;&nbsp;{Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}&nbsp;)&nbsp;)** |Toimii **[Patch](function-patch.md)** -funktion kanssa yleisen muuttujan **Person** päivittämiseksi ja asettaa sarakkeen **Address** arvoksi **2 Main St**. |Muuttujan **Person**  arvo on nyt tietue **{&nbsp;Name:&nbsp;”Milton”; Address:&nbsp;”2&nbsp;Main&nbsp;St”&nbsp;}** . |
 

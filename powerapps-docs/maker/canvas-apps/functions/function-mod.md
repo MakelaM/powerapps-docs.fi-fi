@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992514"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="mod-function-in-powerapps"></a>PowerAppsin Mod-funktio
 Palauttaa jakolaskun jakojäännöksen.
@@ -29,7 +30,7 @@ Palauttaa jakolaskun jakojäännöksen.
 Tuloksen merkki on sama kuin jakajalla.
 
 ## <a name="syntax"></a>Syntaksi
-**Mod**( *Number*, *Divisor* )
+**Mod**( *Number*; *Divisor* )
 
 * *Number* – pakollinen. Jaettava luku.
 * *Divisor* – Pakollinen.  Luku, jolla jaetaan.

@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995109"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="show-data-in-a-line-pie-or-bar-chart-in-powerapps"></a>Tietojen näyttäminen viiva-, ympyrä- tai palkkikaavioina PowerAppsissa
 
@@ -49,7 +50,7 @@ Näissä vaiheissa tuomme mallitiedot kokoelmaan, jonka nimi on **ProductRevenue
 
 2. Määritä ohjausobjektin **[OnSelect](controls/properties-core.md)** -ominaisuudeksi seuraava funktio:  
 
-   ```Collect(ProductRevenue, Import1.Data)```
+   ```Collect(ProductRevenue; Import1.Data)```
 
 3. Avaa esikatselutila painamalla F5-näppäintä ja valitse **Tuo tiedot** -painike.
 

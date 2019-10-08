@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71986986"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="web-barcode-scanner-control-experimental-in-powerapps"></a>Verkko viiva koodi – skannerin ohjaus objekti (kokeellinen) Powerappsissa
 
@@ -66,7 +67,7 @@ Ohjaus objekti esittää kameran syötteen sovelluksessa, jotta käyttäjät voi
 
 ## <a name="related-functions"></a>Liittyvät toiminnot
 
-[**Patch**( *DataSource*, *BaseRecord*, *ChangeRecord* )](../functions/function-patch.md)
+[**Patch**( *DataSource*; *BaseRecord*; *ChangeRecord* )](../functions/function-patch.md)
 
 ## <a name="example"></a>Esimerkki
 

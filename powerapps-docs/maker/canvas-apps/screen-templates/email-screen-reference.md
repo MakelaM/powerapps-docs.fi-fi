@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71995707"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="reference-information-about-the-email-screen-template-for-canvas-apps"></a>Viite tietoja Sähkö posti näytön mallista pohjaan liittyviä sovelluksia varten
 
@@ -55,9 +56,9 @@ Useilla muilla näytön ohjaus objekteilla on riippuvuussuhde **teksti haku ruut
 * Ominaisuuden **Näkyvissä**<br>
     Arvo Logiikka, joka näyttää ohjaus objektin vain, kun käyttäjä kirjoittaa kelvollisen Sähkö posti osoitteen haku ruutuun:
 
-    ```powerapps-dot
+    ```powerapps-comma
     !IsBlank( TextSearchBox.Text ) &&
-        IsMatch( TextSearchBox.Text, Match.Email ) &&
+        IsMatch( TextSearchBox.Text; Match.Email ) &&
         Not( Trim( TextSearchBox.Text ) in MyPeople.UserPrincipalName )
     ```
   Rivin mukaan, edeltävä koodi lohko kertoo, että **Lisää kuvake** -ohjaus objekti näkyy vain, jos:
@@ -69,14 +70,14 @@ Useilla muilla näytön ohjaus objekteilla on riippuvuussuhde **teksti haku ruut
 * Ominaisuuden **OnSelect**<br>
     Arvo Tämän valitseminen lisää kelvollisen Sähkö posti osoitteen **Mypeople** -kokoelmaan. Näyttö käyttää tätä kokoelmaa vastaanottajaluettelossa:
 
-    ```powerapps-dot
-    Collect( MyPeople,
+    ```powerapps-comma
+    Collect( MyPeople;
         { 
-            DisplayName: TextSearchBox.Text, 
-            UserPrincipalName: TextSearchBox.Text, 
+            DisplayName: TextSearchBox.Text; 
+            UserPrincipalName: TextSearchBox.Text; 
             Mail: TextSearchBox.Text
         }
-    );
+    );;
     Reset( TextSearchBox )
     ```
   
@@ -89,9 +90,9 @@ Useilla muilla näytön ohjaus objekteilla on riippuvuussuhde **teksti haku ruut
 * Ominaisuuden **Kohteet**<br>
     Arvo **Textsearchbox** -ohjaus objektiin kirjoitetun haku tekstin Top 15-haku tulokset:
     
-    ```powerapps-dot
-    If( !IsBlank( Trim(TextSearchBox.Text ) ), 
-        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ), top: 15} )
+    ```powerapps-comma
+    If( !IsBlank( Trim(TextSearchBox.Text ) ); 
+        'Office365Users'.SearchUser( {searchTerm: Trim( TextSearchBox.Text ); top: 15} )
     )
     ```
 
@@ -111,12 +112,12 @@ Useilla muilla näytön ohjaus objekteilla on riippuvuussuhde **teksti haku ruut
 * Ominaisuuden **OnSelect**<br>
     Arvo Koodi, jolla käyttäjä lisätään sovellus tason kokoelmaan, ja valitse sitten käyttäjä:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Concurrent(
-        Set( _selectedUser, ThisItem ),
-        Reset( TextSearchBox ),
-        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ), 
-            Collect( MyPeople, ThisItem )
+        Set( _selectedUser; ThisItem );
+        Reset( TextSearchBox );
+        If( Not( ThisItem.UserPrincipalName in MyPeople.UserPrincipalName ); 
+            Collect( MyPeople; ThisItem )
         )
     )
     ```
@@ -138,17 +139,17 @@ Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
 * Ominaisuuden **Korkeus**<br>
     Arvo Logiikka, joka vahvistaa korkeuden valikoimassa parhaillaan olevien kohteiden määrän perusteella:
 
-    ```powerapps-dot
+    ```powerapps-comma
     Min( 
         ( EmailPeopleGallery.TemplateHeight + EmailPeopleGallery.TemplatePadding * 2) *
-            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0 ),
+            RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2; 0 );
         304
     )
     ```
 
   Tämän valikoiman korkeus muuttuu valikoiman kohteiden määrän mukaan, ja suurin korkeus on 304.
   
-  Se kestää `TemplateHeight + TemplatePadding * 2`, kun yksi rivi on **Emailpeoplegallery**-kohteen kokonaiskorkeus, ja kertoo sen sitten rivien määrän mukaan. Koska `WrapCount = 2`, todellisten rivien määrä on `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2, 0)`.
+  Se kestää `TemplateHeight + TemplatePadding * 2`, kun yksi rivi on **Emailpeoplegallery**-kohteen kokonaiskorkeus, ja kertoo sen sitten rivien määrän mukaan. Koska `WrapCount = 2`, todellisten rivien määrä on `RoundUp(CountRows(EmailPeopleGallery.AllItems) / 2; 0)`.
 
 * Ominaisuuden **ShowScrollbar**<br>
     Arvo: `EmailPeopleGallery.Height >= 304`
@@ -160,7 +161,7 @@ Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
    ![EmailPeopleGallery-otsikko-ohjaus objekti](media/email-screen/email-people-gall-text.png)
 
 * Ominaisuuden **OnSelect**<br>
-    Arvo: `Set(_selectedUser, ThisItem)`
+    Arvo: `Set(_selectedUser; ThisItem)`
 
   Määrittää **_Selecteduser** -muuttujan kohteelle, joka on valittu **emailpeoplegallery**-kohteessa.
 
@@ -169,7 +170,7 @@ Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
    ![Kuukauden päivä valikoiman otsikko-ohjaus objekti](media/email-screen/email-people-gall-delete.png)
 
 * Ominaisuuden **OnSelect**<br>
-    Arvo: `Remove( MyPeople, LookUp( MyPeople, UserPrincipalName = ThisItem.UserPrincipalName ) )`
+    Arvo: `Remove( MyPeople; LookUp( MyPeople; UserPrincipalName = ThisItem.UserPrincipalName ) )`
 
   Hakee tietueen **Mypeople** -kokoelmasta, jossa **userPrincipalName** vastaa valitun kohteen **userPrincipalName** -kohdetta, ja poistaa kyseisen tietueen kokoelmasta.
 
@@ -178,15 +179,15 @@ Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
 * Ominaisuuden **OnSelect**<br>
     Arvo Käyttäjän Sähkö posti viestin lähettämisen logiikka:
 
-    ```powerapps-dot
-    Set( _emailRecipientString, Concat( MyPeople, Mail & ";" ) );
-    'Office365'.SendEmail( _emailRecipientString, 
-        TextEmailSubject.Text,  
-        TextEmailMessage.Text, 
+    ```powerapps-comma
+    Set( _emailRecipientString; Concat( MyPeople; Mail & ";" ) );;
+    'Office365'.SendEmail( _emailRecipientString; 
+        TextEmailSubject.Text;  
+        TextEmailMessage.Text; 
         { Importance:"Normal" }
-    );
-    Reset( TextEmailSubject );
-    Reset( TextEmailMessage );
+    );;
+    Reset( TextEmailSubject );;
+    Reset( TextEmailMessage );;
     Clear( MyPeople )
     ```
 
@@ -198,7 +199,7 @@ Tämän ohjaus objektin valitseminen tekee kolme asiaa samanaikaisesti:
   1. Lisäksi se Nollaa **Textemailsubject** -ja **Textemailmessage** -ohjaus objektin ja tyhjentää **mypeople** -kokoelman.
 
 * Ominaisuuden **Haluat viitata DisplayMode**<br>
-    Arvo `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ), DisplayMode.Edit, DisplayMode.Disabled )` Sähkö posti viesti lähetetään, sähkö posti viestin aihe rivillä on oltava teksti, ja vastaanottajan (**Mypeople**) kokoelma ei saa olla tyhjä.
+    Arvo `If( Len( Trim( TextEmailSubject.Text ) ) > 0 && !IsEmpty( MyPeople ); DisplayMode.Edit; DisplayMode.Disabled )` Sähkö posti viesti lähetetään, sähkö posti viestin aihe rivillä on oltava teksti, ja vastaanottajan (**Mypeople**) kokoelma ei saa olla tyhjä.
 
 ## <a name="next-steps"></a>Seuraavat vaiheet
 

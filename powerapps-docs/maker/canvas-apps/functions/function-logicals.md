@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992568"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="and-or-and-not-functions-in-powerapps"></a>PowerAppsin And-, Or- ja Not-funktiot
 
@@ -44,8 +45,8 @@ Nämä funktiot toimivat loogisten arvojen kanssa. Et voi välittää heille num
 
 ## <a name="syntax"></a>Syntaksi
 
-**And**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
-**Or**( *LogicalFormula1*, *LogicalFormula2* [, *LogicalFormula3*, ... ] )<br>
+**And**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
+**Or**( *LogicalFormula1*; *LogicalFormula2* [; *LogicalFormula3*; ... ] )<br>
 **Not**( *LogicalFormula* )
 
 - *LogicalFormula(s)* – Pakollinen.  Loogiset kaavat, jotka arvioidaan ja joille toiminto suoritetaan.
@@ -62,8 +63,8 @@ Tämän osion esimerkeissä käytetään seuraavia yleisiä muuttujia:
 
 Jos haluat luoda nämä yleiset muuttujat sovelluksessa, Lisää [**painike**](../controls/control-button.md) -ohjaus objekti ja määritä sen **onselect** -ominaisuudeksi Tämä kaava:
 
-```powerapps-dot
-Set( a, false ); Set( b, true ); Set( x, 10 ); Set( y, 100 ); Set( s, "Hello World" )
+```powerapps-comma
+Set( a; false );; Set( b; true );; Set( x; 10 );; Set( y; 100 );; Set( s; "Hello World" )
 ```
 
 Valitse painike (napsauttamalla sitä, kun painat Alt-näppäintä), ja määritä sitten [**Selite**](../controls/control-text-box.md) -ohjaus objektin **Text** -ominaisuudeksi kaava seuraavan taulukon ensimmäisessä sarakkeessa.

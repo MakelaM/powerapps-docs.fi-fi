@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71986681"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="gallery-control-in-canvas-apps"></a>Valikoima-ohjaus objekti kangas sovelluksissa
 
@@ -92,7 +93,7 @@ Jos käyttäjä vierittää **joustavan korkeuden** valikoima-ohjaus objektia, e
 
 ## <a name="related-functions"></a>Liittyvät funktiot
 
-[**Filter**( *Tietolähde*, *Kaava* )](../functions/function-filter-lookup.md)
+[**Filter**( *Tietolähde*; *Kaava* )](../functions/function-filter-lookup.md)
 
 ## <a name="examples"></a>Esimerkkejä
 

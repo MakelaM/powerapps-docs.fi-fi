@@ -19,6 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: fi-FI
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "71992730"
+ms.PowerAppsDecimalTransform: true
 ---
 # <a name="first-firstn-last-and-lastn-functions-in-powerapps"></a>PowerAppsin First-, FirstN-, Last- ja LastN-funktiot
 Palauttaa taulukon ensimmäiset tai viimeiset [tietueet](../working-with-tables.md#records).
@@ -41,7 +42,7 @@ Palauttaa taulukon ensimmäiset tai viimeiset [tietueet](../working-with-tables.
 
 * *Table* – Pakollinen. Taulukko, jolle toiminto suoritetaan.
 
-**FirstN**( *Table* [, *NumberOfRecords* ] )<br>**LastN**( *Table* [, *NumberOfRecords* ] )
+**FirstN**( *Table* [; *NumberOfRecords* ] )<br>**LastN**( *Table* [; *NumberOfRecords* ] )
 
 * *Table* – Pakollinen. Taulukko, jolle toiminto suoritetaan.
 * *NumberOfRecords* – Valinnainen.  Palautettavien tietueiden määrä. Jos et määritä tätä argumenttia, funktio palauttaa yhden tietueen.
@@ -51,5 +52,5 @@ Tämä taulukko palauttaa ensimmäisen tietueen taulukosta nimeltä **Työntekij
 **First(Työntekijät)**
 
 Tämä taulukko palauttaa viimeiset 15 tietuetta taulukosta nimeltä **Työntekijät**:<br>
-**LastN(Työntekijät, 15)**
+**LastN(Työntekijät; 15)**
 
