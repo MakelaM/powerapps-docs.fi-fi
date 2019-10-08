@@ -47,6 +47,10 @@
               items:
                 - name: Usein kysyttyjä kysymyksiä toiminnoista
                   href: ../user/faq-for-timeline-and-activity.md
+            - name: Tietueen hakukentän käyttäminen
+              href: ../user/lookup-field.md
+            - name: Profiilikortin näyttäminen
+              href: ../user/profile-cards.md
             - name: Tietueiden määrittäminen tai jakaminen
               href: ../user/assign-or-share-records.md
             - name: Tietueiden jakaminen käyttämällä käyttöoikeusryhmää
@@ -59,6 +63,8 @@
               href: ../user/track-your-progress-with-dashboard-and-charts.md
         - name: Tietueista hakeminen
           items:
+            - name: Haun ja etsinnän asetusten vertailu
+              href: ../user/search-and-find.md
             - name: Tietueiden hakeminen
               href: ../user/search-records.md
             - name: Erikoishaun käyttäminen
