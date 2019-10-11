@@ -1318,6 +1318,8 @@
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: Julkaise muutokset
           href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+        - name: Parhaat käytännöt
+          href: ./common-data-service/solution-best-practices.md
     - name: Tietovoiden käsitteleminen
       href: ./common-data-service/self-service-data-prep-with-dataflows.md
       items:
