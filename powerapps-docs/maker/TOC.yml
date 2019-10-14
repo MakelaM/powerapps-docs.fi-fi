@@ -1050,7 +1050,7 @@
       href: ./model-driven-apps/app-for-outlook-customize.md
     - name: Kehittäjiä varten
       href: ../developer/model-driven-apps/overview.md
-- name: Portaalit (esikatselu)
+- name: Portaalien
   items:
     - name: Mitä PowerApps-portaalit ovat?
       href: ./portals/overview.md
@@ -1058,9 +1058,9 @@
       items:
         - name: Portaalien mallit
           href: ./portals/portal-templates.md
-        - name: Portaalin luominen
+        - name: Aloitusportaalin luominen
           href: ./portals/create-portal.md
-        - name: Dynamics 365 -portaalin luominen
+        - name: Portaalin luominen Dynamics 365 -ympäristössä
           href: ./portals/create-dynamics-portal.md
         - name: Portaalin suunnittelun lähtökohdat
           href: ./portals/portal-designer-anatomy.md
@@ -1072,10 +1072,10 @@
           href: ./portals/compose-page.md
         - name: Mallien käsitteleminen
           href: ./portals/work-with-templates.md
+        - name: 'CSS:n muokkaaminen'
+          href: ./portals/edit-css.md
     - name: Olemassa olevien portaalien hallinta
       href: ./portals/manage-existing-portals.md
-    - name: Sivuston asetusten määrittäminen
-      href: ./portals/configure-site-settings.md
     - name: Portaalien lisäasetukset
       items:
         - name: Yleiskatsaus
@@ -1108,8 +1108,16 @@
           href: ./portals/admin/update-portal-domain.md
         - name: Palvelinpuolen välimuistin tyhjentäminen
           href: ./portals/admin/clear-server-side-cache.md
-        - name: Dynamics 365 -portaalien määrityksen siirtäminen
+        - name: Portaalin määritysten siirtäminen
           href: ./portals/admin/migrate-portal-configuration.md
+        - name: Tietoja portaalin elinkaaresta
+          href: ./portals/admin/portal-lifecycle.md
+    - name: Portaalin lisämääritykset
+      items:
+        - name: Yleiskatsaus
+          href: ./portals/configure/configure-portal.md
+        - name: Sivuston asetusten määrittäminen
+          href: ./portals/configure/configure-site-settings.md
     - name: Portaalin lisämukautukset
       items:
         - name: Liquid-mallien käsitteleminen
@@ -1156,6 +1164,18 @@
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: 'OAuth 2.0:n implicit grant -työnkulku'
           href: ./portals/oauth-implicit-grant-flow.md
+    - name: Tiedostojen tallentaminen portaaleissa
+      items:
+        - name: Muistiinpanojen määrittäminen
+          href: ./portals/configure-notes.md
+        - name: Azure-tallennus
+          items:
+            - name: Azure-tallennuksen ottaminen käyttöön
+              href: ./portals/enable-azure-storage.md
+            - name: Azure-tallennuksen verkkoresurssin lisääminen lomakkeeseen
+              href: ./portals/add-web-resource.md
+        - name: SharePoint-tiedostojen hallinta
+          href: ./portals/manage-sharepoint-documents.md
     - name: Tunnetut ongelmat
       href: ./portals/known-issues.md
     - name: PowerApps-portaalien UKK
