@@ -1,0 +1,48 @@
+---
+title: Forformainteger | Microsoft Docs
+description: ''
+keywords: ''
+ms.author: nabuthuk
+author: Nkrb
+manager: kvivek
+ms.date: 10/01/2019
+ms.service: powerapps
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 58ce031a-cd68-4f19-a755-59a7b6030ddc
+ms.openlocfilehash: 6632ed6296f43faf9629c33268e82a54717fa65a
+ms.sourcegitcommit: 2a3430bb1b56dbf6c444afe2b8eecd0e499db0c3
+ms.translationtype: MT
+ms.contentlocale: fi-FI
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72343423"
+---
+# <a name="formatinteger"></a>formatInteger
+
+[!INCLUDE [formatinteger-description](includes/formatinteger-description.md)]
+
+## <a name="syntax"></a>Syntaksi
+
+`context.formatting.formatInteger(value);`
+
+## <a name="available-for"></a>Käytettävissä kohteelle 
+
+Mallipohjaiset sovellukset ja pohjaan perustuvat sovellukset (kokeellinen esikatselu)
+
+## <a name="parameters"></a>Parametrit
+
+| Parametrin nimi|Tyyppi|Pakollinen|Kuvaus|
+| ------------- |----|--------|-----------|
+|arvo|`number`|Kyllä|Muotoiltava luku.|
+
+## <a name="return-value"></a>Palautusarvo
+
+Tyyppi: `string`
+
+
+### <a name="related-topics"></a>Aiheeseen liittyviä ohjeaiheita
+
+[Muotoilu](../formatting.md)<br/>
+[PowerApps Component Framework-ohjelmointi raja pinnan viite](../../reference/index.md)<br/>
+[PowerApps Component Frameworkin yleiskatsaus](../../overview.md)

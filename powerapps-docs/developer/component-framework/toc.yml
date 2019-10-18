@@ -2,32 +2,34 @@
   items:
     - name: Yleiskatsaus
       href: overview.md
-    - name: Mitä ovat mukautetut osat?
+    - name: Mitä ovat koodi komponentit
       href: custom-controls-overview.md
-    - name: Käytä työkaluja
+    - name: Kangas sovellusten saatavuus
+      href: component-framework-for-canvas-apps.md
+    - name: Hanki PowerApps CLI
       href: get-powerapps-cli.md
     - name: Opetusohjelma
       items:
-        - name: Ota malliosa käyttöön
+        - name: Malli osan toteutus
           href: implementing-controls-using-typescript.md
     - name: Ohjeet
       items:
-        - name: Mukautetun osan luominen ja rakentaminen
+        - name: Luo ja Rakenna koodi komponentti
           href: create-custom-controls-using-pcf.md
-        - name: Mukautetun osan virheenkorjaus
-          href: debugging-custom-controls.md
-        - name: Mukautetun osan pakkaus
+        - name: Pakkaa koodi komponentti
           href: import-custom-controls.md
-        - name: Osien lisääminen entiteetteihin tai kenttiin
+        - name: Koodi komponentin virheen korjaus
+          href: debugging-custom-controls.md
+        - name: Komponenttien lisääminen mallipohjaisia sovelluksia varten
           href: add-custom-controls-to-a-field-or-entity.md
-        - name: Aiemmin luotujen mukautettujen osien päivittäminen
+        - name: Komponenttien lisääminen kangas sovelluksiin
+          href: 'component-framework-for-canvas-apps.md#add-components-to-a-canvas-app'
+        - name: Päivitä aiemmin luodut koodi komponentit
           href: updating-existing-controls.md
-        - name: Mukautettujen osien julkaiseminen AppSourcessa
+        - name: Koodi komponenttien julkaiseminen Appsourcessa
           href: publish-components-app-source.md
     - name: Rajoitukset
       href: limitations.md
-    - name: UKK
-      href: faq.md
     - name: Malliosat
       items:
         - name: Lisäävä osa
@@ -60,7 +62,7 @@
           href: sample-controls/table-grid-control.md
         - name: Web API -osa
           href: sample-controls/webapi-control.md
-    - name: Lisätietoja
+    - name: Viittaus
       items:
         - name: PowerApps-osakehys
           href: reference/index.md
@@ -80,17 +82,6 @@
               href: reference/conditionexpression.md
             - name: Konteksti
               href: reference/context.md
-            - name: Ohjausobjekti
-              href: reference/control.md
-              items:
-                - name: destroy
-                  href: reference/control/destroy.md
-                - name: getOutputs
-                  href: reference/control/getOutputs.md
-                - name: init
-                  href: reference/control/init.md
-                - name: updateView
-                  href: reference/control/updateview.md
             - name: Tietojoukko
               href: reference/dataset.md
               items:
@@ -127,6 +118,21 @@
                   href: reference/device/pickfile.md
             - name: DateFormattingInfo
               href: reference/dateformattinginfo.md
+            - name: Entiteetti
+              href: reference/entity.md
+            - name: Ententforcriptions
+              href: reference/entityformoptions.md
+            - name: Entitietuerecord
+              href: reference/entityrecord.md
+              items:
+                - name: Getformattetedvalue
+                  href: reference/entityrecord/getformattedvalue.md
+                - name: getNamedreference
+                  href: reference/entityrecord/getnamedreference.md
+                - name: Getrecorddid
+                  href: reference/entityrecord/getrecordid.md
+                - name: getValue
+                  href: reference/entityrecord/getvalue.md
             - name: EntityReference
               href: reference/entityreference.md
             - name: Factory
@@ -136,13 +142,19 @@
                   href: reference/factory/getpopupservice.md
                 - name: requestRender
                   href: reference/factory/requestrender.md
-            - name: Linkittäminen
-              href: reference/linking.md
+            - name: FileObject
+              href: reference/fileobject.md
+            - name: suodatusta
+              href: reference/filtering.md
               items:
-                - name: addLinkedEntity
-                  href: reference/linking/addlinkedentity.md
-                - name: getLinkedEntity
-                  href: reference/linking/getlinkedentities.md
+                - name: clearFilter
+                  href: reference/filtering/clearfilter.md
+                - name: getFilter
+                  href: reference/filtering/getfilter.md
+                - name: setFilter
+                  href: reference/filtering/setfilter.md
+            - name: FilterExpression ominaisuudessa
+              href: reference/filterexpression.md
             - name: Muotoilu
               href: reference/formatting.md
               items:
@@ -168,6 +180,15 @@
                   href: reference/formatting/formattime.md
                 - name: getWeekOfYear
                   href: reference/formatting/getweekofyear.md
+            - name: Linkittäminen
+              href: reference/linking.md
+              items:
+                - name: addLinkedEntity
+                  href: reference/linking/addlinkedentity.md
+                - name: getLinkedEntity
+                  href: reference/linking/getlinkedentities.md
+            - name: LookupOptions
+              href: reference/lookupoptions.md
             - name: Tila
               href: reference/mode.md
               items:
@@ -205,7 +226,7 @@
                   href: reference/paging/loadpreviouspage.md
                 - name: reset
                   href: reference/paging/reset.md
-                - name: setpageSize
+                - name: setPageSize
                   href: reference/paging/setpagesize.md
             - name: Ikkuna
               href: reference/popup.md
@@ -226,15 +247,32 @@
                   href: reference/popupservice/setpopupsid.md
                 - name: updatePopup
                   href: reference/popupservice/updatepopup.md
-            - name: Resurssit
+            - name: Ominaisuus
+              href: reference/property.md
+            - name: Retrievemultikeresponse
+              href: reference/retrievemultipleresponse.md
+            - name: Resursseja
               href: reference/resources.md
               items:
                 - name: getResource
                   href: reference/resources/getresource.md
                 - name: getString
                   href: reference/resources/getstring.md
+            - name: SecurityValues
+              href: reference/securityvalues.md
             - name: SortStatus
               href: reference/sortstatus.md
+            - name: StandardControl
+              href: reference/control.md
+              items:
+                - name: destroy
+                  href: reference/control/destroy.md
+                - name: getOutputs
+                  href: reference/control/getOutputs.md
+                - name: init
+                  href: reference/control/init.md
+                - name: updateView
+                  href: reference/control/updateview.md
             - name: UserSettings
               href: reference/usersettings.md
             - name: Apuohjelma
@@ -259,7 +297,7 @@
                   href: reference/webapi/retrieverecord.md
                 - name: updateRecord
                   href: reference/webapi/updaterecord.md
-        - name: Luettelotiedoston rakenneviittaus
+        - name: Luettelotiedoston rakenteen tietoja
           href: manifest-schema-reference/index.md
           items:
             - name: code
@@ -288,3 +326,11 @@
               href: manifest-schema-reference/type.md
             - name: type-group
               href: manifest-schema-reference/type-group.md
+            - name: ominaisuus – käyttö
+              href: manifest-schema-reference/feature-usage.md
+            - name: käyttö-ominaisuus
+              href: manifest-schema-reference/uses-feature.md
+    - name: Yhteisön resurssit
+      href: 'https://powerusers.microsoft.com/t5/PowerApps-Component-Framework/Community-content-sample-components-blogs-etc-Link-to-this-page/m-p/280710#M100'
+    - name: Anna palautteesi
+      href: share-your-feedback-for-pcf.md

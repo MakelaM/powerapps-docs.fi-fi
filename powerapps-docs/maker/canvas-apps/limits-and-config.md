@@ -7,18 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/04/2019
+ms.date: 10/15/2019
 ms.author: gregli
 search.audienceType:
 - maker
 search.app:
 - PowerApps
-ms.openlocfilehash: 45790b7a3e6166366a751c812a5d470d5615c3a2
-ms.sourcegitcommit: 4c35aedde46380d5438687ae6f61a3b0cc7e7e2f
+ms.openlocfilehash: 0ce5218143a8283690cdaf7c1d9be2b1da3d629e
+ms.sourcegitcommit: 60a7dc7855d482b63719d121dbe5353e304d67f4
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71969302"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393135"
 ---
 # <a name="system-requirements-limits-and-configuration-values-for-canvas-apps"></a>Kangassovellusten järjestelmävaatimukset, rajoitukset ja konfigurointiarvot
 Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaatimukset sekä rajoitukset ja konfigurointiarvot PowerAppsia varten.
@@ -30,6 +30,9 @@ Tämä artikkeli sisältää laiteympäristöä ja verkkoselaimia koskevat vaati
 | iOS 9.3 tai uudempi |iOS 10 tai uudempi sekä vähintään 2 gigatavua RAM-muistia |
 | Android 5 tai uudempi |Android 7 tai uudempi sekä vähintään 4 gigatavua RAM-muistia |
 | Windows 8.1 tai uudempi (ainoastaan PC) |Windows 10 Fall Creators -päivitys sekä vähintään 8 gigatavua RAM-muistia|
+
+> [!NOTE]
+> Emme tällä hetkellä tue Windows-ympäristön uusia ominaisuuksia PowerApps-sovelluksessa. Ominaisuudet, kuten parannettu Common Data Service-vaihto ehto ja vieras käyttö, eivät ole käytettävissä tässä ympäristössä. Suosittelemme, että käytät Windowsin verkko soitinta, jotta voit hyödyntää kaikkia ominaisuuksia. Windows-ympäristön PowerApps-sovelluksen päivitykset julkistetaan jatkossa.
 
 ## <a name="supported-browsers-for-running-canvas-apps"></a>Tuetut selaimet kangassovellusten suorittamista varten
 
@@ -94,11 +97,11 @@ Tässä luettelossa esitellään kaikki palvelut, joiden kanssa PowerApps Studio
 | login.microsoft.com<br>login.windows.net<br>login.microsoftonline.com<br>secure.aadcdn.microsoftonline-p.com |https |ADAL |
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph – käyttäjä tietojen hakeminen (esimerkiksi profiili kuva) |
 | gallery.azure.com |https |Esimerkki- ja mallisovellukset |
-| \*.azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
-| \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
-| \*.blob.core.windows.net |https | Blob-objektisäilö |
-| \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*. azure-apim.net |https |API Hubs – eri alitoimialueet kutakin lokaalia varten |
+| \*. powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*. azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
+| \*. blob.core.windows.net |https | Blob-objektisäilö |
+| \*. flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com ja web.powerapps.com |
 | vortex.data.microsoft.com |https |Telemetria |
 | localhost | https | PowerApps Mobile
 
@@ -111,7 +114,7 @@ Saat lisä tietoja teksti-, hyperlinkit-, kuvat-ja tieto väline- [tieto tyyppie
 
 ## <a name="powerapps-per-app-plan"></a>PowerApps Sovelluskohtaisen sopimuksen mukaan
 
-Powerappsin sovellus sopimuksen mukaan yksittäiset käyttäjät voivat suorittaa kahta sovellusta yksittäisessä portaalissa tietyn liiketoiminta skenaarion perusteella Powerappsin kaikkien toimintojen avulla. Tämä sopimus tarjoaa helpon tavan, jolla käyttäjät pääsevät aloittamaan käyttö ympäristön ennen laajemman asteikon käyttöönottoa.
+Powerappsin sovellus sopimuksen mukaan yksittäiset käyttäjät voivat suorittaa kaksi sovellusta yksittäisessä portaalissa tietyssä liiketoiminta skenaariossa Powerappsin kaikkien toimintojen avulla. Tämä sopimus tarjoaa helpon tavan, jolla käyttäjät pääsevät aloittamaan käyttö ympäristön ennen laajemman asteikon käyttöönottoa.
 
 Kun järjestelmänvalvoja on varannut Powerappsin sovellus suunnitelmaan, se määritetään käyttäjille oletusarvoisesti, kun sovellus jaetaan heidän kanssaan.
 
@@ -128,8 +131,8 @@ Noudata seuraavia vaiheita, jos haluat poistaa käytöstä sovelluskohtaisesti m
 
 ### <a name="app-settings"></a>Sovelluksen asetukset
 
-![Kangas sovelluksen asetusten]pohjaan liittyvät(./media/limits-and-config/app_settings.png "sovelluksen asetukset")
+![Kangas sovelluksen asetukset](./media/limits-and-config/app_settings.png "Kangas sovelluksen asetukset")
 
 ### <a name="pass-assignment"></a>Välitä varaus
 
-Pohjaan ![sovelluksen asetukset Siirrä määrityksen](./media/limits-and-config/app_settings_pass_assignment.png "piirto alusta sovelluksen asetusten läpäisy määritykset")
+![Pohjaan-sovelluksen asetusten läpäisy määritykset](./media/limits-and-config/app_settings_pass_assignment.png "Pohjaan-sovelluksen asetusten läpäisy määritykset")
