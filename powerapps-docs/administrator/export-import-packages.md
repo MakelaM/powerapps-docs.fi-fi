@@ -1,4 +1,5 @@
 ---
+redirect_url: https://docs.microsoft.com/power-platform/admin/powerapps-gdpr-export-dsr
 title: Tuo ja vie resursseja | Microsoft Docs
 description: Lue lisätietoja resurssien viennistä ja tuonnista PowerAppsissa
 author: nimakms
@@ -14,12 +15,12 @@ search.app:
 - D365CE
 - PowerApps
 - Powerplatform
-ms.openlocfilehash: 1edaacc3a013646d8da0a286e28723926817ee71
-ms.sourcegitcommit: 483c777a1537ccab6a2a2da6a5d1fe4470dd0e7e
+ms.openlocfilehash: ce01bf68e892b60fa1401ee9366d9d1d0acaecaf
+ms.sourcegitcommit: 6984ce43cc5653ccb957219d2a687907ebb5520c
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "61528615"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72560950"
 ---
 # <a name="export-and-import-resources"></a>Tuo ja vie resursseja
 Jos kehität tietokantaa ja sovelluksia usean ympäristön avulla, muutokset on siirrettävä ympäristöstä toiseen. Voit siirtää resursseja ympäristöstä toiseen **Vie resurssit**- ja **Tuo resurssit** -toiminnoilla.
@@ -54,7 +55,7 @@ Vientipaketti sisältää kaikki **entiteettien ja valintaluetteloiden muutokset
 7. Vaihtoehtoisesti voit valita, että määritykset tehdään vasta resurssien tuonnin yhteydessä:
    1. Avaa kunkin resurssin valintaikkuna valitsemalla sen kohdalla **Tuonnin määritykset**.
    2. Valitse paketin tuonnin yhteydessä oletusarvoisesti suoritettava määritystoimenpide.
-   3. Valitse **Tallenna**.
+   3. Napsauta **Tallenna**.
 8. Valitse **Vie**.
 9. Kun vienti on valmis, tallenna pakettitiedosto paikalliseen tallennustilaan.
 

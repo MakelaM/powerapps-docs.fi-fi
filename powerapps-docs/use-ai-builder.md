@@ -6,22 +6,22 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: ''
-ms.date: 06/10/2019
+ms.date: 10/15/2019
 ms.author: v-dehaas
 ms.reviewer: kvivek
-ms.openlocfilehash: af804897b2334664d5f8ab92ab97840723b09e65
-ms.sourcegitcommit: e6ceedd574b2d93adade49100982f0b523a5c4b6
+ms.openlocfilehash: 10b4a92285c33727ad5a53b85666b07debb2434c
+ms.sourcegitcommit: 6984ce43cc5653ccb957219d2a687907ebb5520c
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829269"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72560998"
 ---
 # <a name="use-ai-builder-in-powerapps"></a>AI-muodostimen käyttäminen PowerAppsissa
 
-AI Builder (esikatselu) on uusi Power Platform-kyky tiimeille, joilla on liiketoiminta osaamista automatisoida prosesseja ja ennustaa tuloksia liike toiminnan suoritus tason parantamiseksi. AI Builder on avaimet käteen-ratkaisun, joka tuo Microsoft Ain-käyttö kokemuksen läpi Point-and-click-käyttö kokemuksen ja on suoraan integroitu Powerappsiin ja Microsoft Flow. Lisätietoja: [Mikä on tekoäly muodostin?](/ai-builder/)
+TEKOÄLY rakentaja on uusi Power Platform-kyky tiimeille, joiden liiketoiminta osaaminen on helppo automatisoida prosesseja ja ennustaa tuloksia liike toiminnan suoritus tason parantamiseksi. AI Builder on avaimet käteen-ratkaisun, joka tuo Microsoft Ain-käyttö kokemuksen läpi Point-and-click-käyttö kokemuksen ja on suoraan integroitu Powerappsiin ja Microsoft Flow. Lisä tietoja: [mikä on Ai Builder?](/ai-builder/)
 
-Voit luoda AI-malleja käyttämällä uutta **Ai Builder (esikatselu)** -vaihto ehtoa vasemmassa siirtymis ruudussa [Web.powerapps.com](https://web.powerapps.com). Lisätietoja: [AI-malli tyypit](/ai-builder/model-types)
+Voit luoda AI-malleja käyttämällä uutta **Ai Builder** -vaihto ehtoa vasemmassa siirtymis ruudussa [Web.powerapps.com](https://web.powerapps.com). Lisä tietoja: [Ai-malli tyypit](/ai-builder/model-types)
 
-![Tekoäly rakentaja Powerappsissa](media/ai-builder.png "Tekoäly rakentaja Powerappsissa")
+![TEKOÄLY rakentaja Powerappsissa](media/ai-builder.png "TEKOÄLY rakentaja Powerappsissa")
 
-Voit käyttää tekoäly malleja, jotka on luotu käyttämällä AI Builderia kangas-ja mallipohjaisten sovellusten avulla, jotta voit lisätä tietoja sovelluksiisi. Lisätietoja: [Käytä AI Builderia Powerappsissa](/ai-builder/use-in-powerapps-overview)
+Voit käyttää tekoäly malleja, jotka on luotu käyttämällä AI Builderia kangas-ja mallipohjaisten sovellusten avulla, jotta voit lisätä tietoja sovelluksiisi. Lisä tietoja: [tekoäly-muodostimen käyttö Powerappsissa](/ai-builder/use-in-powerapps-overview)

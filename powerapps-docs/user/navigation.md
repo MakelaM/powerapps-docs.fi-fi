@@ -14,12 +14,12 @@ search.audienceType:
 search.app:
 - PowerApps
 - D365CE
-ms.openlocfilehash: a46698ddf454c9d0f563575a3553e874f3a7b109
-ms.sourcegitcommit: 9a16bb75c856f7c84cd385811b7135ab2804ae69
+ms.openlocfilehash: a53aaf84530935e525f1177d85f74e125711fc40
+ms.sourcegitcommit: 4c35aedde46380d5438687ae6f61a3b0cc7e7e2f
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71924537"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71969119"
 ---
 #  <a name="basic-navigation-in-a-model-driven-app"></a>Perussiirtyminen mallipohjaisessa sovelluksessa 
 
@@ -75,7 +75,7 @@ Viitepaneelin avulla saat työt tehtyä niin, ettei sinun tarvitse poistua työs
 
 ## <a name="notifications"></a>Notifications 
 
-Lomakkeessa näkyy kolmenlaisia ilmoituksia: tiedottavia, varoituksia ja virheitä. Ilmoitukset ovat aina käytettävissä lomakkeen yläosassa, aivan otsikon yläpuolella.
+Lomakkeessa näytetään kolmenlaisia ilmoituksia: Tiedottava, varoitus ja virhe. Ilmoitukset ovat aina käytettävissä lomakkeen yläosassa, aivan otsikon yläpuolella.
 
 Kun valitset virhe ilmoituksen, siirryt sen lomakkeen kenttään, jossa virhe ilmeni.
 
@@ -91,7 +91,36 @@ Jos ilmoituksia on enemmän kuin yksi, näet ilmoitusten määrän. Voit tarkast
 
 ## <a name="grids"></a>Ruudukoissa
 
-Unified Interface-liittymän ruudukoita on parannettu, jotta näytössä näkyvien tietojen määrää voidaan lisätä. Ruudukoissa on myös parannetut suodatus asetukset, jotka sisältävät viimeisimmän suodattimen ja lajittelu järjestyksen muistamisen. Yksityiskohtainen luettelo parannuksista on tässä blogikirjoituksessa, [parannetuilla toiminnoilla Unified Interface-ruudukoissa](https://powerapps.microsoft.com/en-us/blog/enhanced-functionality-in-unified-interface-grids).
+Unified Interface-liittymän ruudukoita on parannettu, jotta näytössä näkyvien tietojen määrää voidaan lisätä. Ruudukoissa on myös parannetut suodatus asetukset, jotka sisältävät viimeisimmän suodattimen ja lajittelu järjestyksen muistamisen. 
 
+Kun ruudukot-alue hakee tietoja, näet lataus ilmaisimen, jossa kerrotaan, että järjestelmä käsittelee tietojen noutamista.
+
+Ruudukon Pääsivu muistaa suodattimen, lajittelun ja sivun tilan, kun siirryt pois ja takaisin. Tähän sisältyvät pikahaku, sarake suodatus, sivu numero ja paljon muuta. Sivun ulkopuolinen siirtyminen avautuu alkuperäisen tilan kanssa.
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Ruudukon muistamisen tila](media/grid-remember-state-on-back-navigate.gif "ristikot muistavat tilan")
+
+
+Hyppy palkki käyttää ensimmäistä lajiteltua kenttää. Jos lajittelu muutoksia ei ole tehty, hyppy palkki käyttää ensisijaista kenttää. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Ruudukon muistamisen tila](media/jumpbar-filter-on-sorted-column.gif "ristikot muistavat tilan")
+   
+
+Voit suodattaa **aktiviteetin tyyppi** -kentän ja valita useita suodatus tyyppejä. Myös liittyvät entiteettikentät, kuten omistaja, tila ja syy voidaan suodattaa.
+
+   > [!div class="mx-imgBorder"]
+   > ![Ruudukot suodattavat](media/grid-activity-type-column-filter.gif "ruudukot")
+   
+Kun valitset hierarkia kuvakkeen, se siirtyy hierarkia lomakkeeseen.
+
+   > [!div class="mx-imgBorder"]
+   > ![Hierarkia kuvake](media/grid-row-hierarchy-icon.png "hierarkian kuvake")
+   
+Voit myös avata ensisijaisen kentän ja haku kentät uudessa väli lehdessä tai ikkunassa.
+
+   > [!div class="mx-imgBorder"]
+   > ![Avaa uudessa]ikkunassa(media/newtab.png "[Avaa uudessa ikkunassa")
 
 

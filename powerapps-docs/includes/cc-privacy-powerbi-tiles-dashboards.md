@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 41ec7aed42a950e5adf0b87783fc568dbe9d02af
-ms.sourcegitcommit: 4042388fa5e7ef50bc59f9e35df330613fea29ae
-ms.translationtype: HT
+ms.openlocfilehash: 162e914a6753e9fd95a8ec57857c280469308a68
+ms.sourcegitcommit: 9576b34403634a8e960eb5f8e320a14c4a03746c
+ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61573731"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517332"
 ---
-Kun Power BI -ruutujen ja -koontinäyttöjen upotus on käytössä ja käyttäjä upottaa Power BI -ruudun tai -koontinäytön, kyseisen käyttäjän [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)]-todennustunnusta kohteelle [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)] käytetään implisiittiseen todentamiseen Power BI -palvelussa, mikä antaa loppukäyttäjälle saumattoman kertakirjautumiskokemuksen.  
+Kun käyttäjä upottaa Power BI ruudun tai koonti näytön ottamalla käyttöön Power BI ruutujen ja koonti näyttöjen upottamisen, käyttäjän [!INCLUDE[pn_azure_active_directory](pn-azure-active-directory.md)] valtuutus tunnusta Common Data Service käytetään todentamisessa Power BI-palvelu kanssa implisiittisellä avuslla, joka tarjoaa saumattoman " kertakirjautuminen – käyttö kokemus loppu käyttäjälle.  
   
  Järjestelmänvalvoja voi poistaa käytöstä Power BI -ruutujen ja -koontinäyttöjen upottamisen milloin tahansa, jotta [!INCLUDE[pn_dynamics_crm](pn-dynamics-crm.md)]-todennustunnusta ei voida käyttää todentamiseen Power BI -palvelussa. Mitään olemassa olevia ruutuja tai koontinäyttöjä ei tällöin enää hahmonneta loppukäyttäjälle.  
   
