@@ -14,15 +14,15 @@ search.audienceType:
 search.app:
 - PowerApps
 ms.openlocfilehash: ba08437dc144fc81aa9748163b1005222735cb69
-ms.sourcegitcommit: f296922b8039b573e5adb81423a544f70c56c1ee
+ms.sourcegitcommit: a560630f5ee83629a7236ae774fc0c8195b95efa
 ms.translationtype: MT
 ms.contentlocale: fi-FI
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70842244"
 ---
 # <a name="embed-a-powerapps-app-in-teams"></a>PowerApps-sovelluksen upottaminen tiimeihin 
 
-Voit kertoa luomiasi PowerApps-sovelluksia upottamalla ne suoraan Microsoft Teamsiin. Kun käyttäjä on valmis, hän **+** voi lisätä sovelluksesi mihin tahansa ryhmäsi kanavasi tai **keskustelujasi työryhmäänsä** . Sovellus näkyy ruutuna **ryhmäsi väli lehtien**alla. 
+Voit kertoa luomiasi PowerApps-sovelluksia upottamalla ne suoraan Microsoft Teamsiin. Kun käyttäjä on valmis, hän voi valita **+** , jos haluat lisätä sovelluksesi mihin tahansa ryhmäsi kanavasi tai **keskusteluisi** ryhmässä, jossa olet. Sovellus näkyy ruutuna **ryhmäsi väli lehtien**alla. 
 
 Järjestelmänvalvoja voi ladata sovelluksen, jotta se näkyy **kaikissa** vuokra ajan tiimeissä **Kaikki väli lehdet-osiossa**. Tutustu [sovelluksen jakamiseen Microsoft teamsissa](https://docs.microsoft.com/en-us/power-platform/admin/embed-app-teams).
 
@@ -38,10 +38,10 @@ Järjestelmänvalvoja voi ladata sovelluksen, jotta se näkyy **kaikissa** vuokr
 
 Etsi ja pane muistiin Powerappin GUID, jota voit käyttää myöhemmässä vaiheessa.
 
-1. Kirjaudu sisään ja valitse sitten valikosta **sovellukset.** [https://web.powerapps.com](https://web.powerapps.com)
+1. Kirjaudu sisään [https://web.powerapps.com](https://web.powerapps.com)ja valitse sitten valikosta **sovellukset** .
 
    > [!div class="mx-imgBorder"] 
-   > ![Näytä sovellusten luettelo](./media/embed-teams-app/file-apps2.png "Näytä sovellusten luettelo")
+   > ![Näytä sovellusten luettelo](./media/embed-teams-app/file-apps2.png "Näytä sovellusluettelo")
 
 2. Valitse **Lisää komentoja** (...) sovellukselle, jonka haluat jaettavan teamsissa, ja valitse sitten **tiedot**.
 
@@ -58,7 +58,7 @@ Etsi ja pane muistiin Powerappin GUID, jota voit käyttää myöhemmässä vaihe
 
 Voit ohittaa nämä vaiheet, jos sovellus Studio on jo asennettuna. 
 
-1. Valitse tiimeissä joukkueet-valikon vasemmassa alakulmassa **sovellukset** (![apps Icon](./media/embed-teams-app/apps-icon.png "apps-kuvake")).
+1. Valitse joukkueet-kohdassa ryhmät-valikon vasemmasta alavalikosta **sovellukset** (![apps-kuvake](./media/embed-teams-app/apps-icon.png "Sovellukset-kuvake")).
 
 2. Hae haku ruudusta "App Studio" ja valitse se.
 
@@ -129,7 +129,7 @@ Lisä tietoja on kohdassa [luettelo editori](https://docs.microsoft.com/microsof
    > [!div class="mx-imgBorder"] 
    > ![Ryhmän väli lehti lisää](./media/embed-teams-app/team-tab-add.png "Ryhmän väli lehti lisää")
 
-7. Lisää sovelluksesi määrityksen URL-osoite "määrityksen URL-osoite"-syöte kenttään käyttäen seuraavaa muotoa:`https://apps.powerapps.com/teams/settings/<PowerApp ID>`
+7. Lisää sovelluksesi määrityksen URL-osoite "määrityksen URL-osoite"-syöte kenttään käyttäen seuraavaa muotoa: `https://apps.powerapps.com/teams/settings/<PowerApp ID>`
 
    Korvaa `<PowerApp ID>` yllä mainitulla sovellus tunnuksen GUID-tunnuksella.
 
@@ -161,7 +161,7 @@ Lisä tietoja on kohdassa [luettelo editori](https://docs.microsoft.com/microsof
 
 ## <a name="add-the-app-as-a-tab"></a>Lisää sovellus väli lehti
 
-Jos haluat lisätä sovelluksen väli lehdeksi mihin tahansa kanavaan tai keskusteluun, valitse **+** ja sitten kohdassa **väli lehdet joukkueellesi** Valitse sovelluksesi. 
+Jos haluat lisätä sovelluksen väli lehdeksi mihin tahansa kanavaan tai keskusteluun, valitse **+** ja valitse sitten ryhmäsi **väli lehdet** -kohdasta sovelluksesi. 
 
 > [!div class="mx-imgBorder"] 
 > ![Lisää sovellus väli lehdelle](./media/embed-teams-app/add-app-as-tab.png "Lisää sovellus väli lehdelle")
@@ -173,4 +173,4 @@ Sovellus näkyy nyt väli lehdellä.
 
 ### <a name="see-also"></a>Katso myös
 [Tervetuloa Microsoft Teamsille](https://docs.microsoft.com/MicrosoftTeams/teams-overview)<br />
-[Järjestelmänvalvojille: Sovelluksen upottaminen Microsoft Teamsissa](https://docs.microsoft.com/power-platform/admin/share-app-teams)
+[Järjestelmänvalvojille: sovelluksen upottaminen Microsoft Teamsissa](https://docs.microsoft.com/power-platform/admin/share-app-teams)
