@@ -61,6 +61,8 @@
               href: ../user/deactivate-activate-account-contact.md
             - name: Oman edistymisen seuraaminen kaavioilla ja koontinäytöillä
               href: ../user/track-your-progress-with-dashboard-and-charts.md
+            - name: Lisää Power BI -koontinäyttöjä
+              href: ../user/add-powerbi-dashboards.md
         - name: Tietueista hakeminen
           items:
             - name: Haun ja etsinnän asetusten vertailu
