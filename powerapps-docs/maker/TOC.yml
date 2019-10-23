@@ -1094,6 +1094,10 @@
           href: ./portals/admin/change-base-url.md
         - name: Ylläpitotilan käyttöönotto
           href: ./portals/admin/enable-maintenance-mode.md
+        - name: Lisää mukautettu verkkotunnus
+          href: ./portals/admin/add-custom-domain.md
+        - name: Tuo metatietojen käännös
+          href: ./portals/admin/import-metadata-translation.md
         - name: Power BI -integraatio
           items:
             - name: Power BI -integraation määrittäminen
@@ -1120,6 +1124,24 @@
           href: ./portals/configure/configure-portal.md
         - name: Sivuston asetusten määrittäminen
           href: ./portals/configure/configure-site-settings.md
+        - name: Portaalin todentaminen
+          items:
+            - name: Portaalin todentamisen määrittäminen
+              href: ./portals/configure/configure-portal-authentication.md
+            - name: Määritä todentamisen käyttäjätiedot
+              href: ./portals/configure/set-authentication-identity.md
+            - name: Azure AD B2C -palvelutoiminnon asetukset portaaleille
+              href: ./portals/configure/azure-ad-b2c.md
+            - name: Määritä OAuth2-palvelutoiminnon asetukset
+              href: ./portals/configure/configure-oauth2-settings.md
+            - name: Määritä OpenID-palvelutoiminnon asetukset
+              href: ./portals/configure/configure-openid-settings.md
+            - name: Määritä WS-Federation-palvelutoiminnon asetukset
+              href: ./portals/configure/configure-ws-federation-settings.md
+            - name: Määritä SAML 2.0 -palvelutoiminnon asetukset
+              href: ./portals/configure/configure-saml2-settings.md
+            - name: 'Siirrä tunnistetietopalvelut Azure AD B2C:hen'
+              href: ./portals/configure/migrate-identity-providers.md
     - name: Portaalin lisämukautukset
       items:
         - name: Liquid-mallien käsitteleminen
